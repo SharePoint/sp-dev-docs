@@ -131,16 +131,16 @@ upgrade actions should apply.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="addcontenttypefield-element-feature.htm">AddContentTypeField Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="addcontenttypefield-element-feature.md">AddContentTypeField Element (Feature)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="applyelementmanifests-element-feature.htm">ApplyElementManifests Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="applyelementmanifests-element-feature.md">ApplyElementManifests Element (Feature)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customupgradeaction-element-feature.htm">CustomUpgradeAction Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="customupgradeaction-element-feature.md">CustomUpgradeAction Element (Feature)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="mapfile-element-feature.htm">MapFile Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="mapfile-element-feature.md">MapFile Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -154,7 +154,7 @@ upgrade actions should apply.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.htm">UpgradeActions Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -183,7 +183,7 @@ class="nolink">SPWeb</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AnonymousState**</p></td>
-<td align="left"><p><span sdata="link"><a href="anonymousstate-simple-type-deploymentmanifest.htm">AnonymousState Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="anonymousstate-simple-type-deploymentmanifest.md">AnonymousState Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies the level of access available to anonymous users on the Web site.</p></td>
 </tr>
 <tr class="even">
@@ -258,7 +258,7 @@ class="nolink">SPWeb</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier for the site.</p></td>
 </tr>
 <tr class="odd">
@@ -328,12 +328,12 @@ class="nolink">SPWeb</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**RootFolderId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the root folder for the Web site.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SecurityProvider**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional.</p></td>
 </tr>
 <tr class="even">
@@ -433,10 +433,10 @@ class="nolink">SPWeb</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspweb.htm">Properties Element (DeploymentManifest - SPWeb)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspweb.md">Properties Element (DeploymentManifest - SPWeb)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspweb.htm">EventReceivers Element (DeploymentManifest - SPWeb)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspweb.md">EventReceivers Element (DeploymentManifest - SPWeb)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -450,7 +450,7 @@ class="nolink">SPWeb</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

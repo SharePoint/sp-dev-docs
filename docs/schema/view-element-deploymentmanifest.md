@@ -182,7 +182,7 @@ class="nolink">SPView</span></span> object.
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the view.</p></td>
 </tr>
 <tr class="odd">
@@ -207,7 +207,7 @@ class="nolink">SPView</span></span> object.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Scope**</p></td>
-<td align="left"><p><span sdata="link"><a href="spviewscope-simple-type-deploymentmanifest.htm">SPViewScope Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spviewscope-simple-type-deploymentmanifest.md">SPViewScope Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Sets the recursive scope for the view of a document library.</p></td>
 </tr>
 <tr class="even">
@@ -242,70 +242,70 @@ class="nolink">SPView</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="script-element-deploymentmanifestspview.htm">Script Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="script-element-deploymentmanifestspview.md">Script Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="pagedrowset-element-deploymentmanifestspview.htm">PagedRowset Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="pagedrowset-element-deploymentmanifestspview.md">PagedRowset Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="pagedclientcallbackrowset-element-deploymentmanifestspview.htm">PagedClientCallbackRowset Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="pagedclientcallbackrowset-element-deploymentmanifestspview.md">PagedClientCallbackRowset Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="pagedrecurrencerowset-element-deploymentmanifestspview.htm">PagedRecurrenceRowset Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="pagedrecurrencerowset-element-deploymentmanifestspview.md">PagedRecurrenceRowset Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewfields-element-deploymentmanifestspview.htm">ViewFields Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewfields-element-deploymentmanifestspview.md">ViewFields Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="viewdata-element-deploymentmanifestspview.htm">ViewData Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewdata-element-deploymentmanifestspview.md">ViewData Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="query-element-deploymentmanifestspview.htm">Query Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="query-element-deploymentmanifestspview.md">Query Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="rowlimit-element-deploymentmanifestspview.htm">RowLimit Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="rowlimit-element-deploymentmanifestspview.md">RowLimit Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="rowlimitexceeded-element-deploymentmanifestspview.htm">RowLimitExceeded Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="rowlimitexceeded-element-deploymentmanifestspview.md">RowLimitExceeded Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="toolbar-element-deploymentmanifestspview.htm">Toolbar Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="toolbar-element-deploymentmanifestspview.md">Toolbar Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="formats-element-deploymentmanifestspview.htm">Formats Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="formats-element-deploymentmanifestspview.md">Formats Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="aggregations-element-deployment-manifestspview.htm">Aggregations Element (Deployment Manifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="aggregations-element-deployment-manifestspview.md">Aggregations Element (Deployment Manifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewstyle-element-deploymentmanifestspview.htm">ViewStyle Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewstyle-element-deploymentmanifestspview.md">ViewStyle Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="view-body-element-deploymentmanifestspview.htm">View Body Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="view-body-element-deploymentmanifestspview.md">View Body Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewempty-element-deploymentmanifestspview.htm">ViewEmpty Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewempty-element-deploymentmanifestspview.md">ViewEmpty Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="viewfooter-element-deploymentmanifestspview.htm">ViewFooter Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewfooter-element-deploymentmanifestspview.md">ViewFooter Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewheader-element-deploymentmanifestspview.htm">ViewHeader Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewheader-element-deploymentmanifestspview.md">ViewHeader Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="viewbidiheader-element-deploymentmanifestspview.htm">ViewBidiHeader Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewbidiheader-element-deploymentmanifestspview.md">ViewBidiHeader Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="groupbyfooter-element-deploymentmanifestspview.htm">GroupByFooter Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="groupbyfooter-element-deploymentmanifestspview.md">GroupByFooter Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="groupbyheader-deploymentmanifestspview.htm">GroupByHeader (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="groupbyheader-deploymentmanifestspview.md">GroupByHeader (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="calendarviewstyles-element-deploymentmanifestspview.htm">CalendarViewStyles Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="calendarviewstyles-element-deploymentmanifestspview.md">CalendarViewStyles Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="listformbody-element-deploymentmanifestspview.htm">ListFormBody Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listformbody-element-deploymentmanifestspview.md">ListFormBody Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -319,7 +319,7 @@ class="nolink">SPView</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="views-element-deploymentmanifest.htm">Views Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="views-element-deploymentmanifest.md">Views Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -101,7 +101,7 @@ created through the list definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttype-element-contenttype.htm">ContentType</a>, <a href="contenttyperef-element-list.htm">ContentTypeRef</a></p></td>
+<td align="left"><p><a href="contenttype-element-contenttype.md">ContentType</a>, <a href="contenttyperef-element-list.md">ContentTypeRef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -115,7 +115,7 @@ created through the list definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="metadata-element-list.htm">MetaData (List)</a>, <a href="metadata-element-site.htm">MetaData (Site)</a></p></td>
+<td align="left"><p><a href="metadata-element-list.md">MetaData (List)</a>, <a href="metadata-element-site.md">MetaData (Site)</a></p></td>
 </tr>
 </tbody>
 </table>

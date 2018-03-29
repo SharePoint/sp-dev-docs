@@ -133,7 +133,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.htm">DeclarativeFormRegion Element in DeclarativeFormRegions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.md">DeclarativeFormRegion Element in DeclarativeFormRegions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The form region that this picture is for.</p></td>
 </tr>
 </tbody>

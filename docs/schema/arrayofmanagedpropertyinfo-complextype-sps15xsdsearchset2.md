@@ -120,7 +120,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="managedpropertyinfo-element-arrayofmanagedpropertyinfo-complextypesps15xsdsearch.htm">ManagedPropertyInfo</a></p></td>
+<td align="left"><p><a href="managedpropertyinfo-element-arrayofmanagedpropertyinfo-complextypesps15xsdsearch.md">ManagedPropertyInfo</a></p></td>
 <td align="left"><p>tns:ManagedPropertyInfo</p></td>
 <td align="left"><p></p></td>
 </tr>

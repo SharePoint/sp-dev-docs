@@ -123,22 +123,22 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="propertyname-element-propertyrule-complextypesps15xsdsearchset2.htm">PropertyName</a></p></td>
+<td align="left"><p><a href="propertyname-element-propertyrule-complextypesps15xsdsearchset2.md">PropertyName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="propertyoperator-element-propertyrule-complextypesps15xsdsearchset2.htm">PropertyOperator</a></p></td>
+<td align="left"><p><a href="propertyoperator-element-propertyrule-complextypesps15xsdsearchset2.md">PropertyOperator</a></p></td>
 <td align="left"><p>tns:PropertyRuleOperator</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="propertyvalues-element-propertyrule-complextypesps15xsdsearchset2.htm">PropertyValues</a></p></td>
+<td align="left"><p><a href="propertyvalues-element-propertyrule-complextypesps15xsdsearchset2.md">PropertyValues</a></p></td>
 <td align="left"><p>q1:ArrayOfstring</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="rulenamelsid-element-propertyrule-complextypesps15xsdsearchset2.htm">RuleNameLSID</a></p></td>
+<td align="left"><p><a href="rulenamelsid-element-propertyrule-complextypesps15xsdsearchset2.md">RuleNameLSID</a></p></td>
 <td align="left"><p>q2:LocStringId</p></td>
 <td align="left"><p></p></td>
 </tr>

@@ -108,7 +108,7 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="propertybag-element-property-bag.htm">PropertyBag Element (Property Bag)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="propertybag-element-property-bag.md">PropertyBag Element (Property Bag)</a></span></p></td>
 </tr>
 </tbody>
 </table>

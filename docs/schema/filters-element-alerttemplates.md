@@ -120,7 +120,7 @@ filter by using [Collaborative Application Markup Language
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="filterdefinition-element-alerttemplates.htm">FilterDefinition</a></p></td>
+<td align="left"><p><a href="filterdefinition-element-alerttemplates.md">FilterDefinition</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +134,7 @@ filter by using [Collaborative Application Markup Language
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="alerttemplate-element-alerttemplates.htm">AlertTemplate</a></p></td>
+<td align="left"><p><a href="alerttemplate-element-alerttemplates.md">AlertTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

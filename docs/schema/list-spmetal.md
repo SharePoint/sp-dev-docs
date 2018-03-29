@@ -138,11 +138,11 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttype-spmetal.htm">ContentType</a></p></td>
+<td align="left"><p><a href="contenttype-spmetal.md">ContentType</a></p></td>
 <td align="left"><p>Includes a content type for code generation and modifies which fields (columns) in the content type are included in code generation.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="excludecontenttype-spmetal.htm">ExcludeContentType</a></p></td>
+<td align="left"><p><a href="excludecontenttype-spmetal.md">ExcludeContentType</a></p></td>
 <td align="left"><p>Excludes a content type from code generation.</p></td>
 </tr>
 </tbody>
@@ -163,7 +163,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="web-spmetal.htm">Web (SPMetal)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="web-spmetal.md">Web (SPMetal)</a></span></p></td>
 <td align="left"><p>Specifies the name and access level (public or internal) of the class (derived from <span sdata="cer" target="T:Microsoft.SharePoint.Linq.DataContext"><span class="nolink">DataContext</span></span>) that SPMetal generates.</p></td>
 </tr>
 </tbody>

@@ -109,10 +109,10 @@ Defines tab scaling.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="maxsize-element.htm">MaxSize</a></p></td>
+<td align="left"><p><a href="maxsize-element.md">MaxSize</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="scale-element.htm">Scale</a></p></td>
+<td align="left"><p><a href="scale-element.md">Scale</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ Defines tab scaling.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tab-element.htm">Tab</a></p></td>
+<td align="left"><p><a href="tab-element.md">Tab</a></p></td>
 </tr>
 </tbody>
 </table>

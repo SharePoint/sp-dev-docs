@@ -117,7 +117,7 @@ Specifies the filter for the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="receiver-element-event.htm">Receiver Element (Event)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="receiver-element-event.md">Receiver Element (Event)</a></span></p></td>
 </tr>
 </tbody>
 </table>

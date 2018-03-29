@@ -113,7 +113,7 @@ type values.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldref-element-query.htm">FieldRef</a>, <a href="value-element-query.htm">Value</a>, <a href="xml-element.htm">XML</a></p></td>
+<td align="left"><p><a href="fieldref-element-query.md">FieldRef</a>, <a href="value-element-query.md">Value</a>, <a href="xml-element.md">XML</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ type values.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="and-element-query.htm">And</a>, <a href="expr1-element-view.htm">Expr1</a>, <a href="expr2-element-view.htm">Expr2</a>, <a href="or-element-query.htm">Or</a>, <a href="where-element-query.htm">Where</a></p></td>
+<td align="left"><p><a href="and-element-query.md">And</a>, <a href="expr1-element-view.md">Expr1</a>, <a href="expr2-element-view.md">Expr2</a>, <a href="or-element-query.md">Or</a>, <a href="where-element-query.md">Where</a></p></td>
 </tr>
 </tbody>
 </table>

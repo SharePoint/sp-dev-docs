@@ -123,7 +123,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-list.htm">Field</a>, <a href="metadata-element-list.htm">Metadata (List)</a>, <a href="metadata-element-site.htm">MetaData (Site)</a></p></td>
+<td align="left"><p><a href="field-element-list.md">Field</a>, <a href="metadata-element-list.md">Metadata (List)</a>, <a href="metadata-element-site.md">MetaData (Site)</a></p></td>
 </tr>
 </tbody>
 </table>

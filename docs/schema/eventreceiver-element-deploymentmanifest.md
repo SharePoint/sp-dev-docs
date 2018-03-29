@@ -134,7 +134,7 @@ class="nolink">SPEventReceiverDefinition</span></span>
 <tbody>
 <tr class="odd">
 <td align="left"><p>ID</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier of the event receiver definition.</p></td>
 </tr>
 <tr class="even">
@@ -144,22 +144,22 @@ class="nolink">SPEventReceiverDefinition</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>WebId</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier of the site in which the event receiver is registered.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>HostId</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier of the object that is hosting the event.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>HostType</p></td>
-<td align="left"><p><span sdata="link"><a href="speventhosttype-simple-type-deploymentmanifest.htm">SPEventHostType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="speventhosttype-simple-type-deploymentmanifest.md">SPEventHostType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Type of object that is hosting the event. The host type must be an enumeration value defined in the **SPEventHostType**simple type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><span sdata="link"><a href="speventreceivertype-simple-type-deploymentmanifest.htm">SPEventReceiverType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="speventreceivertype-simple-type-deploymentmanifest.md">SPEventReceiverType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Type of event for the event receiver. The event receiver type must be an enumeration value defined in the **SPEventReceiverType** simple type.</p></td>
 </tr>
 <tr class="odd">
@@ -223,16 +223,16 @@ class="nolink">SPEventReceiverDefinition</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspfile.htm">EventReceivers Element (DeploymentManifest - SPFile)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspfile.md">EventReceivers Element (DeploymentManifest - SPFile)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplist.htm">EventReceivers Element (DeploymentManifest - SPList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplist.md">EventReceivers Element (DeploymentManifest - SPList)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplistitem.htm">EventReceivers Element (DeploymentManifest - SPListItem)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplistitem.md">EventReceivers Element (DeploymentManifest - SPListItem)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspweb.htm">EventReceivers Element (DeploymentManifest - SPWeb)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspweb.md">EventReceivers Element (DeploymentManifest - SPWeb)</a></span></p></td>
 </tr>
 </tbody>
 </table>

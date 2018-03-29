@@ -118,7 +118,7 @@ warn that the site will be automatically deleted.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="autodeletewarning-element-site-deletion.htm">AutoDeleteWarning</a>, <a href="confirmation-element-site-deletion.htm">Confirmation</a></p></td>
+<td align="left"><p><a href="autodeletewarning-element-site-deletion.md">AutoDeleteWarning</a>, <a href="confirmation-element-site-deletion.md">Confirmation</a></p></td>
 </tr>
 </tbody>
 </table>

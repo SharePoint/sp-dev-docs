@@ -92,7 +92,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assemblyredirect-element-workflowinfo.htm">AssemblyRedirect</a></p></td>
+<td align="left"><p><a href="assemblyredirect-element-workflowinfo.md">AssemblyRedirect</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -106,7 +106,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-workflowinfo.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-workflowinfo.md">WorkflowInfo</a></p></td>
 </tr>
 </tbody>
 </table>

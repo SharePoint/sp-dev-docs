@@ -125,7 +125,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="modifications-element-workflowactions.htm">Modifications</a></p></td>
+<td align="left"><p><a href="modifications-element-workflowactions.md">Modifications</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -112,7 +112,7 @@ elements specifying default data for lists.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="row-element-site.htm">Row</a></p></td>
+<td align="left"><p><a href="row-element-site.md">Row</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ elements specifying default data for lists.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="data-element-site.htm">Data</a></p></td>
+<td align="left"><p><a href="data-element-site.md">Data</a></p></td>
 </tr>
 </tbody>
 </table>

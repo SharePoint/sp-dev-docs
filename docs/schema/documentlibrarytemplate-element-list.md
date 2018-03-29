@@ -124,7 +124,7 @@ serves as the template document for a document library.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="metadata-element-list.htm">Metadata</a></p></td>
+<td align="left"><p><a href="metadata-element-list.md">Metadata</a></p></td>
 </tr>
 </tbody>
 </table>

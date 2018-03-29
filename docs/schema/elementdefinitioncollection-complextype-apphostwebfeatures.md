@@ -138,13 +138,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="clientwebpart-element-elementdefinitioncollection-complextypeapphostwebfeatures.htm">ClientWebPart</a></p></td>
-<td align="left"><p><a href="clientwebpartdefinition-complextype-apphostwebfeatures.htm">ClientWebPartDefinition</a></p></td>
+<td align="left"><p><a href="clientwebpart-element-elementdefinitioncollection-complextypeapphostwebfeatures.md">ClientWebPart</a></p></td>
+<td align="left"><p><a href="clientwebpartdefinition-complextype-apphostwebfeatures.md">ClientWebPartDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.htm">CustomAction</a></p></td>
-<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.htm">CustomActionDefinition</a></p></td>
+<td align="left"><p><a href="customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.md">CustomAction</a></p></td>
+<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.md">CustomActionDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

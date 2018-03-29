@@ -113,7 +113,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="applicationresourcefiles-element-solution.htm">ApplicationResourceFiles Element (Solution)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="applicationresourcefiles-element-solution.md">ApplicationResourceFiles Element (Solution)</a></span></p></td>
 </tr>
 </tbody>
 </table>

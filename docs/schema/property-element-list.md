@@ -120,7 +120,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="arrayofproperty-element-list.htm">ArrayOfProperty</a></p></td>
+<td align="left"><p><a href="arrayofproperty-element-list.md">ArrayOfProperty</a></p></td>
 </tr>
 </tbody>
 </table>

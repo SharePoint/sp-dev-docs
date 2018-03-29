@@ -130,7 +130,7 @@ schema.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-contenttypebinding.htm">Elements Element (ContentTypeBinding)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="elements-element-contenttypebinding.md">Elements Element (ContentTypeBinding)</a></span></p></td>
 </tr>
 </tbody>
 </table>

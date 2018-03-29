@@ -192,7 +192,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.htm">Picture Element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md">Picture Element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DOCS-LESSTHANPictureDOCS-GREATERTHAN** element is used to describe the icon to use in Outlook 2010 for the form region.</p></td>
 </tr>
 </tbody>
@@ -213,7 +213,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.htm">DeclarativeFormRegions Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.md">DeclarativeFormRegions Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DeclarativeFormRegions** element that contains this form region.</p></td>
 </tr>
 </tbody>

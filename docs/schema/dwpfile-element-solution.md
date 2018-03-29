@@ -128,7 +128,7 @@ Specifies a Web Part file (.dwp or .webpart) to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="dwpfiles-element-solution.htm">DwpFiles</a></p></td>
+<td align="left"><p><a href="dwpfiles-element-solution.md">DwpFiles</a></p></td>
 </tr>
 </tbody>
 </table>

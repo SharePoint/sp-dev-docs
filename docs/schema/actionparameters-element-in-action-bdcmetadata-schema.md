@@ -110,7 +110,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadata-schema.htm">ActionParameter Element in ActionParameters (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadata-schema.md">ActionParameter Element in ActionParameters (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An **ActionParameter**.</p></td>
 </tr>
 </tbody>
@@ -131,7 +131,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadata-schema.htm">Action Element in Actions (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadata-schema.md">Action Element in Actions (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **Action</span> that these <span class="keyword">ActionParameters** belong to.</p></td>
 </tr>
 </tbody>

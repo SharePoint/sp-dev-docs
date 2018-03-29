@@ -126,7 +126,7 @@ Microsoft SharePoint Foundation field type in
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="row-element-site.htm">Row</a></p></td>
+<td align="left"><p><a href="row-element-site.md">Row</a></p></td>
 </tr>
 </tbody>
 </table>

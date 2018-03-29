@@ -113,12 +113,12 @@ USAGE
 <tbody>
 <tr class="odd">
 <td align="left"><p>Id</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentsystemdata.htm">Guid Simple Type (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentsystemdata.md">Guid Simple Type (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the system object.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentsystemdata.htm">SPDeploymentObjectType Simple Type (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentsystemdata.md">SPDeploymentObjectType Simple Type (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Optional. Specification of the object type: **Site</span>, <span class="keyword">Web</span>, <span class="keyword">Folder</span>, <span class="keyword">List</span>, <span class="keyword">ListItem</span>, or <span class="keyword">File**.</p></td>
 </tr>
 <tr class="odd">
@@ -152,7 +152,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="systemobjects-element-deploymentsystemdata.htm">SystemObjects Element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="systemobjects-element-deploymentsystemdata.md">SystemObjects Element (DeploymentSystemData)</a></span></p></td>
 </tr>
 </tbody>
 </table>

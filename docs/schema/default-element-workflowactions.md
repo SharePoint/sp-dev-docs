@@ -96,7 +96,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ruledesigner-element-workflowactions.htm">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-workflowactions.md">RuleDesigner</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -110,7 +110,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowactions-element-workflowactions.htm">WorkflowActions</a></p></td>
+<td align="left"><p><a href="workflowactions-element-workflowactions.md">WorkflowActions</a></p></td>
 </tr>
 </tbody>
 </table>

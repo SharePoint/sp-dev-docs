@@ -102,7 +102,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="property-element-in-properties-bdcmetadataresource-schema.htm">Property Element in Properties (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="property-element-in-properties-bdcmetadataresource-schema.md">Property Element in Properties (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -120,49 +120,49 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadataresource-schema.htm">Model Element (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadataresource-schema.md">Model Element (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadataresource-schema.htm">LobSystem Element in LobSystems (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md">LobSystem Element in LobSystems (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.htm">LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md">LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.htm">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identifier-element-in-identifiers-bdcmetadataresource-schema.htm">Identifier Element in Identifiers (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="identifier-element-in-identifiers-bdcmetadataresource-schema.md">Identifier Element in Identifiers (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.htm">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.htm">FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md">FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadataresource-schema.htm">Parameter Element in Parameters (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadataresource-schema.md">Parameter Element in Parameters (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-parameter-bdcmetadataresource-schema.htm">TypeDescriptor Element in Parameter (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-parameter-bdcmetadataresource-schema.md">TypeDescriptor Element in Parameter (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.htm">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadataresource-schema.htm">Association Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadataresource-schema.md">Association Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadataresource-schema.htm">MethodInstance Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md">MethodInstance Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadataresource-schema.htm">AssociationGroup Element in AssociationGroups (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadataresource-schema.md">AssociationGroup Element in AssociationGroups (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.htm">Action Element in Actions (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action Element in Actions (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadataresource-schema.htm">ActionParameter Element in ActionParameters (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md">ActionParameter Element in ActionParameters (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

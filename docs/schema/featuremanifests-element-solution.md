@@ -110,7 +110,7 @@ Specifies the Features to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="featuremanifest-element-solution.htm">FeatureManifest</a></p></td>
+<td align="left"><p><a href="featuremanifest-element-solution.md">FeatureManifest</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ Specifies the Features to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="solution-element-solution.htm">Solution</a></p></td>
+<td align="left"><p><a href="solution-element-solution.md">Solution</a></p></td>
 </tr>
 </tbody>
 </table>

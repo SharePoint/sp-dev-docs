@@ -130,7 +130,7 @@ class="nolink">SPField</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the field in which to display the data.</p></td>
 </tr>
 <tr class="odd">
@@ -165,12 +165,12 @@ class="nolink">SPField</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.htm">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies whether the field value is hidden in the user interface. **TRUE</span> if the value is hidden. The default is <span class="keyword">FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Required**</p></td>
-<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.htm">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies whether the field requires a value (cannot be **null</span>). <span class="keyword">TRUE</span> if the field value is required. The default is <span class="keyword">FALSE**.</p></td>
 </tr>
 <tr class="odd">
@@ -210,10 +210,10 @@ class="nolink">SPField</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="field-element-deploymentmanifestspfieldcollection.htm">Field Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="field-element-deploymentmanifestspfieldcollection.md">Field Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="fieldref-element-deploymentmanifestspfieldcollection.htm">FieldRef Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldref-element-deploymentmanifestspfieldcollection.md">FieldRef Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -227,7 +227,7 @@ class="nolink">SPField</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.htm">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.md">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
 </tr>
 </tbody>
 </table>

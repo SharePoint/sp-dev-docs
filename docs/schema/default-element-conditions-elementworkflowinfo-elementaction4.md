@@ -145,7 +145,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="conditions-element-workflowinfo-elementaction4.htm">Conditions</a></p></td>
+<td align="left"><p><a href="conditions-element-workflowinfo-elementaction4.md">Conditions</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -169,8 +169,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ruledesigner-element-default-elementconditions-elementworkflowinfo-elementaction.htm">RuleDesigner</a></p></td>
-<td align="left"><p><a href="ruledesignertype-complextype-action4.htm">ruleDesignerType</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-default-elementconditions-elementworkflowinfo-elementaction.md">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesignertype-complextype-action4.md">ruleDesignerType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

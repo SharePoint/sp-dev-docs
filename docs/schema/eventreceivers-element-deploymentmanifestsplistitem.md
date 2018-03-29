@@ -128,7 +128,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="eventreceiver-element-deploymentmanifest.htm">EventReceiver Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceiver-element-deploymentmanifest.md">EventReceiver Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.htm">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.md">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
 </tr>
 </tbody>
 </table>

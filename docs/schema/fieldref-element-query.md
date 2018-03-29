@@ -139,7 +139,7 @@ Represents a reference to a field within a query.
 </tr>
 <tr class="odd">
 <td align="left"><p>**List**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the parent foreign list when the <span class="keyword">FieldRef</span> element is a child of an <a href="eq-element-query.htm">Eq</a> element in <a href="join-element-view.htm">Join</a> element. The value is an alias for the list that is defined by the <span class="keyword">ListAlias** attribute of the <a href="join-element-view.htm">Join</a> element.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the parent foreign list when the <span class="keyword">FieldRef</span> element is a child of an <a href="eq-element-query.md">Eq</a> element in <a href="join-element-view.md">Join</a> element. The value is an alias for the list that is defined by the <span class="keyword">ListAlias** attribute of the <a href="join-element-view.md">Join</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**LookupId**</p></td>
@@ -202,7 +202,7 @@ Represents a reference to a field within a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="beginswith-element-query.htm">BeginsWith</a>, <a href="contains-element-query.htm">Contains</a>, <a href="daterangesoverlap-element-query.htm">DateRangesOverlap</a>, <a href="eq-element-query.htm">Eq</a>, <a href="fieldrefs-element-list.htm">FieldRefs</a>, <a href="geq-element-query.htm">Geq</a>, <a href="groupby-element-query.htm">GroupBy</a>, <a href="gt-element-query.htm">Gt</a>, <a href="in-element-query.htm">In</a>, <a href="includes-element-query.htm">Includes</a>, <a href="isnotnull-element-query.htm">IsNotNull</a>, <a href="isnull-element-query.htm">IsNull</a>, <a href="leq-element-query.htm">Leq</a>, <a href="lt-element-query.htm">Lt</a>, <a href="neq-element-query.htm">Neq</a>, <a href="notincludes-element-query.htm">NotIncludes</a>, <a href="orderby-element-query.htm">OrderBy</a></p></td>
+<td align="left"><p><a href="beginswith-element-query.md">BeginsWith</a>, <a href="contains-element-query.md">Contains</a>, <a href="daterangesoverlap-element-query.md">DateRangesOverlap</a>, <a href="eq-element-query.md">Eq</a>, <a href="fieldrefs-element-list.md">FieldRefs</a>, <a href="geq-element-query.md">Geq</a>, <a href="groupby-element-query.md">GroupBy</a>, <a href="gt-element-query.md">Gt</a>, <a href="in-element-query.md">In</a>, <a href="includes-element-query.md">Includes</a>, <a href="isnotnull-element-query.md">IsNotNull</a>, <a href="isnull-element-query.md">IsNull</a>, <a href="leq-element-query.md">Leq</a>, <a href="lt-element-query.md">Lt</a>, <a href="neq-element-query.md">Neq</a>, <a href="notincludes-element-query.md">NotIncludes</a>, <a href="orderby-element-query.md">OrderBy</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -217,7 +217,7 @@ Represents a reference to a field within a query.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: 1 (Unbounded within <a href="orderby-element-query.htm">OrderBy</a>)</p></td>
+<p>Maximum: 1 (Unbounded within <a href="orderby-element-query.md">OrderBy</a>)</p></td>
 </tr>
 </tbody>
 </table>

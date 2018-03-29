@@ -86,7 +86,7 @@ code] "Copy code")Copy code</span>
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="datasourcestype-complextype-action4.htm">dataSourcesType</a></p></td>
+<td align="left"><p><a href="datasourcestype-complextype-action4.md">dataSourcesType</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -137,7 +137,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-actions-elementworkflowinfo-elementaction4.htm">Action</a></p></td>
+<td align="left"><p><a href="action-element-actions-elementworkflowinfo-elementaction4.md">Action</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -161,8 +161,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.htm">DataSource</a></p></td>
-<td align="left"><p><a href="datasourcetype-complextype-action4.htm">dataSourceType</a></p></td>
+<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource</a></p></td>
+<td align="left"><p><a href="datasourcetype-complextype-action4.md">dataSourceType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

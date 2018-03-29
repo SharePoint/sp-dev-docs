@@ -141,7 +141,7 @@ page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="navbarlink-element-site.htm">NavBarLink</a>, <a href="navbarpage-element-sitemodule.htm">NavBarPage</a></p></td>
+<td align="left"><p><a href="navbarlink-element-site.md">NavBarLink</a>, <a href="navbarpage-element-sitemodule.md">NavBarPage</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -155,7 +155,7 @@ page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="navbars-element-site.htm">NavBars</a></p></td>
+<td align="left"><p><a href="navbars-element-site.md">NavBars</a></p></td>
 </tr>
 </tbody>
 </table>

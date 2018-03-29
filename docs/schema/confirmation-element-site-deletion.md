@@ -116,7 +116,7 @@ confirm whether the site collection is still in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="confirmationbody-element-site-deletion.htm">ConfirmationBody</a>, <a href="confirmationsubject-element-site-deletion.htm">ConfirmationSubject</a></p></td>
+<td align="left"><p><a href="confirmationbody-element-site-deletion.md">ConfirmationBody</a>, <a href="confirmationsubject-element-site-deletion.md">ConfirmationSubject</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -130,7 +130,7 @@ confirm whether the site collection is still in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="email-element-site-deletion.htm">Email</a></p></td>
+<td align="left"><p><a href="email-element-site-deletion.md">Email</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -125,12 +125,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="managedpid-element-aliasinfo-complextypesps15xsdsearchset2.htm">ManagedPid</a></p></td>
+<td align="left"><p><a href="managedpid-element-aliasinfo-complextypesps15xsdsearchset2.md">ManagedPid</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="schemaid-element-aliasinfo-complextypesps15xsdsearchset2.htm">SchemaId</a></p></td>
+<td align="left"><p><a href="schemaid-element-aliasinfo-complextypesps15xsdsearchset2.md">SchemaId</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>

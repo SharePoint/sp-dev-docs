@@ -108,7 +108,7 @@ Contains the collection of lists for a configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="list-element-site.htm">List</a></p></td>
+<td align="left"><p><a href="list-element-site.md">List</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +122,7 @@ Contains the collection of lists for a configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="configuration-element-site.htm">Configuration</a></p></td>
+<td align="left"><p><a href="configuration-element-site.md">Configuration</a></p></td>
 </tr>
 </tbody>
 </table>

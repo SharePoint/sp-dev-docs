@@ -156,7 +156,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="systemdata-element-deploymentsystemdata.htm">SystemData Element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="systemdata-element-deploymentsystemdata.md">SystemData Element (DeploymentSystemData)</a></span></p></td>
 </tr>
 </tbody>
 </table>

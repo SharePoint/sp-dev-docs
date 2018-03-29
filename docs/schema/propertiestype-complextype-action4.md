@@ -134,7 +134,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-propertiestype-complextypeaction4.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-propertiestype-complextypeaction4.md">Property</a></p></td>
 <td align="left"><p>propertiesType</p></td>
 <td align="left"><p></p></td>
 </tr>

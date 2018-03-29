@@ -137,82 +137,82 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="active-element-source-complextypesps15xsdsearchset1.htm">Active</a></p></td>
+<td align="left"><p><a href="active-element-source-complextypesps15xsdsearchset1.md">Active</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="authinfo-element-source-complextypesps15xsdsearchset1.htm">AuthInfo</a></p></td>
+<td align="left"><p><a href="authinfo-element-source-complextypesps15xsdsearchset1.md">AuthInfo</a></p></td>
 <td align="left"><p>q1:AuthenticationInformation</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="builtin-element-source-complextypesps15xsdsearchset1.htm">BuiltIn</a></p></td>
+<td align="left"><p><a href="builtin-element-source-complextypesps15xsdsearchset1.md">BuiltIn</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="connectiontimeout-element-source-complextypesps15xsdsearchset1.htm">ConnectionTimeout</a></p></td>
+<td align="left"><p><a href="connectiontimeout-element-source-complextypesps15xsdsearchset1.md">ConnectionTimeout</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="connectionurltemplate-element-source-complextypesps15xsdsearchset1.htm">ConnectionUrlTemplate</a></p></td>
+<td align="left"><p><a href="connectionurltemplate-element-source-complextypesps15xsdsearchset1.md">ConnectionUrlTemplate</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="createddate-element-source-complextypesps15xsdsearchset1.htm">CreatedDate</a></p></td>
+<td align="left"><p><a href="createddate-element-source-complextypesps15xsdsearchset1.md">CreatedDate</a></p></td>
 <td align="left"><p>xs:dateTime</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="description-element-source-complextypesps15xsdsearchset1.htm">Description</a></p></td>
+<td align="left"><p><a href="description-element-source-complextypesps15xsdsearchset1.md">Description</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="haspermissiontoreadauthinfo-element-source-complextypesps15xsdsearchset1.htm">HasPermissionToReadAuthInfo</a></p></td>
+<td align="left"><p><a href="haspermissiontoreadauthinfo-element-source-complextypesps15xsdsearchset1.md">HasPermissionToReadAuthInfo</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="id-element-source-complextypesps15xsdsearchset1.htm">Id</a></p></td>
+<td align="left"><p><a href="id-element-source-complextypesps15xsdsearchset1.md">Id</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="indexoffset-element-source-complextypesps15xsdsearchset1.htm">IndexOffset</a></p></td>
+<td align="left"><p><a href="indexoffset-element-source-complextypesps15xsdsearchset1.md">IndexOffset</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="lastmodifieddate-element-source-complextypesps15xsdsearchset1.htm">LastModifiedDate</a></p></td>
+<td align="left"><p><a href="lastmodifieddate-element-source-complextypesps15xsdsearchset1.md">LastModifiedDate</a></p></td>
 <td align="left"><p>xs:dateTime</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="maximumresponselength-element-source-complextypesps15xsdsearchset1.htm">MaximumResponseLength</a></p></td>
+<td align="left"><p><a href="maximumresponselength-element-source-complextypesps15xsdsearchset1.md">MaximumResponseLength</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="name-element-source-complextypesps15xsdsearchset1.htm">Name</a></p></td>
+<td align="left"><p><a href="name-element-source-complextypesps15xsdsearchset1.md">Name</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="owner-element-source-complextypesps15xsdsearchset1.htm">Owner</a></p></td>
+<td align="left"><p><a href="owner-element-source-complextypesps15xsdsearchset1.md">Owner</a></p></td>
 <td align="left"><p>q2:SearchObjectOwner</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="providerid-element-source-complextypesps15xsdsearchset1.htm">ProviderId</a></p></td>
+<td align="left"><p><a href="providerid-element-source-complextypesps15xsdsearchset1.md">ProviderId</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="querytransform-element-source-complextypesps15xsdsearchset1.htm">QueryTransform</a></p></td>
+<td align="left"><p><a href="querytransform-element-source-complextypesps15xsdsearchset1.md">QueryTransform</a></p></td>
 <td align="left"><p>q3:QueryTransform</p></td>
 <td align="left"><p></p></td>
 </tr>

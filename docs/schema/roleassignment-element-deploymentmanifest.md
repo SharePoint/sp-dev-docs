@@ -159,7 +159,7 @@ class="nolink">SPRoleAssignment</span></span>)
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="assignment-element-deploymentmanifest.htm">Assignment Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="assignment-element-deploymentmanifest.md">Assignment Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@ class="nolink">SPRoleAssignment</span></span>)
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="roleassignments-element-deploymentmanifest.htm">RoleAssignments Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="roleassignments-element-deploymentmanifest.md">RoleAssignments Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

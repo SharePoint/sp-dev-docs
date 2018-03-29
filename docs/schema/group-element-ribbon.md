@@ -136,7 +136,7 @@ Defines a group of controls.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Template**</p></td>
-<td align="left"><p>Optional. A string that corresponds to the **Id** attribute of a <a href="grouptemplate-element.htm">GroupTemplate</a> element.</p></td>
+<td align="left"><p>Optional. A string that corresponds to the **Id** attribute of a <a href="grouptemplate-element.md">GroupTemplate</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Title**</p></td>
@@ -154,7 +154,7 @@ Defines a group of controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="controls-element-group.htm">Controls</a></p></td>
+<td align="left"><p><a href="controls-element-group.md">Controls</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -168,10 +168,10 @@ Defines a group of controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="groups-element.htm">Groups</a></p></td>
+<td align="left"><p><a href="groups-element.md">Groups</a></p></td>
 </tr>
 </tbody>
 </table>

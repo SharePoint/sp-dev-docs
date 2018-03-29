@@ -99,7 +99,7 @@ form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-workflowconfig.htm">Parameter Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameter-element-workflowconfig.md">Parameter Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -113,7 +113,7 @@ form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="initiation-element-workflowconfig.htm">Initiation Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>

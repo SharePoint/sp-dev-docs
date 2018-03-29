@@ -132,7 +132,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="override-mobile-document-viewer.htm">Override (Mobile Document Viewer)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="override-mobile-document-viewer.md">Override (Mobile Document Viewer)</a></span></p></td>
 <td align="left"><p>Specifies an alternative redirection URL.</p></td>
 </tr>
 </tbody>
@@ -153,7 +153,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="mobiledocviewer-mobile-document-viewer.htm">MobileDocViewer (Mobile Document Viewer)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="mobiledocviewer-mobile-document-viewer.md">MobileDocViewer (Mobile Document Viewer)</a></span></p></td>
 <td align="left"><p>Specifies redirection of a request for a document from a mobile device.</p></td>
 </tr>
 </tbody>

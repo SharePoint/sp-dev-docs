@@ -102,7 +102,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.htm">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -120,10 +120,10 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.htm">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-parameter-bdcmetadataresource-schema.htm">TypeDescriptor Element in Parameter (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-parameter-bdcmetadataresource-schema.md">TypeDescriptor Element in Parameter (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

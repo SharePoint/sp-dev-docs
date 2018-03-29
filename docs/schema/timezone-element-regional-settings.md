@@ -137,7 +137,7 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="bias-element-regional-settings.htm">Bias</a>, <a href="daylighttime-element-regional-settings.htm">DaylightTime</a>, <a href="history-element-regional-settings.htm">History</a>, <a href="standardtime-element-regional-settings.htm">StandardTime</a></p></td>
+<td align="left"><p><a href="bias-element-regional-settings.md">Bias</a>, <a href="daylighttime-element-regional-settings.md">DaylightTime</a>, <a href="history-element-regional-settings.md">History</a>, <a href="standardtime-element-regional-settings.md">StandardTime</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -151,7 +151,7 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="timezones-element-regional-settings.htm">TimeZones</a></p></td>
+<td align="left"><p><a href="timezones-element-regional-settings.md">TimeZones</a></p></td>
 </tr>
 </tbody>
 </table>

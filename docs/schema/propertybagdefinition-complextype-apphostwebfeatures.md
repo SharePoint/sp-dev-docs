@@ -141,8 +141,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-propertybagdefinition-complextypeapphostwebfeatures.htm">Property</a></p></td>
-<td align="left"><p><a href="propertyvalueattributedefinition-complextype-apphostwebfeatures.htm">PropertyValueAttributeDefinition</a></p></td>
+<td align="left"><p><a href="property-element-propertybagdefinition-complextypeapphostwebfeatures.md">Property</a></p></td>
+<td align="left"><p><a href="propertyvalueattributedefinition-complextype-apphostwebfeatures.md">PropertyValueAttributeDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -184,7 +184,7 @@ class="keyword">choice</span>, see the definition section.
 </tr>
 <tr class="odd">
 <td align="left"><p>ParentType</p></td>
-<td align="left"><p><a href="propertybagparenttypedefinition-simpletype-apphostwebfeatures.htm">PropertyBagParentTypeDefinition</a></p></td>
+<td align="left"><p><a href="propertybagparenttypedefinition-simpletype-apphostwebfeatures.md">PropertyBagParentTypeDefinition</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the PropertyBagParentTypeDefinition type.</p></td>

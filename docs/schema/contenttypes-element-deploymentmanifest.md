@@ -134,7 +134,7 @@ class="nolink">SPContentTypeCollection</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="list-element-deploymentmanifest.htm">List Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="list-element-deploymentmanifest.md">List Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

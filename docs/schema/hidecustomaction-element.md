@@ -100,7 +100,7 @@ custom action.
 </tr>
 <tr class="even">
 <td align="left"><p>**HideActionId**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the ID of the custom action to hide, for example, <span class="code">&quot;DeleteWeb&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.htm">Default Custom Action Locations and IDs</a>** for a list of the default custom action IDs that are used in SharePoint Foundation. For more information about hiding custom action IDs, see the Remarks section, below.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the ID of the custom action to hide, for example, <span class="code">&quot;DeleteWeb&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action IDs that are used in SharePoint Foundation. For more information about hiding custom action IDs, see the Remarks section, below.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
@@ -108,7 +108,7 @@ custom action.
 </tr>
 <tr class="even">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the location of the custom action to hide, for example, <span class="code">&quot;Microsoft.SharePoint.SiteSettings&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.htm">Default Custom Action Locations and IDs</a>** for a list of the default custom action locations that are used in SharePoint Foundation.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the location of the custom action to hide, for example, <span class="code">&quot;Microsoft.SharePoint.SiteSettings&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action locations that are used in SharePoint Foundation.</p></td>
 </tr>
 </tbody>
 </table>
@@ -136,7 +136,7 @@ custom action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-custom-action.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-custom-action.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

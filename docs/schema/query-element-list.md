@@ -115,7 +115,7 @@ Defines the query for a view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="groupby-element-query.htm">GroupBy</a>, <a href="orderby-element-query.htm">OrderBy</a>, <a href="where-element-query.htm">Where</a></p></td>
+<td align="left"><p><a href="groupby-element-query.md">GroupBy</a>, <a href="orderby-element-query.md">OrderBy</a>, <a href="where-element-query.md">Where</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +129,7 @@ Defines the query for a view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 </tr>
 </tbody>
 </table>

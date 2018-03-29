@@ -134,7 +134,7 @@ Defines a group of tabs that are presented when they are relevant.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tab-element.htm">Tab</a></p></td>
+<td align="left"><p><a href="tab-element.md">Tab</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -148,10 +148,10 @@ Defines a group of tabs that are presented when they are relevant.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="contextualtabs-element.htm">ContextualTabs</a></p></td>
+<td align="left"><p><a href="contextualtabs-element.md">ContextualTabs</a></p></td>
 </tr>
 </tbody>
 </table>

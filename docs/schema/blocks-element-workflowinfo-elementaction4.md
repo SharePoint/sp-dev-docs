@@ -144,7 +144,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-action4.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-action4.md">WorkflowInfo</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -168,8 +168,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="block-element-blocks-elementworkflowinfo-elementaction4.htm">Block</a></p></td>
-<td align="left"><p><a href="propertiestype-complextype-action4.htm">propertiesType</a></p></td>
+<td align="left"><p><a href="block-element-blocks-elementworkflowinfo-elementaction4.md">Block</a></p></td>
+<td align="left"><p><a href="propertiestype-complextype-action4.md">propertiesType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

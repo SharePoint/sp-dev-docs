@@ -114,7 +114,7 @@ Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="currency-element-regional-settings.htm">Currency</a></p></td>
+<td align="left"><p><a href="currency-element-regional-settings.md">Currency</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,7 @@ Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="regionalsettings-element-regional-settings.htm">RegionalSettings</a></p></td>
+<td align="left"><p><a href="regionalsettings-element-regional-settings.md">RegionalSettings</a></p></td>
 </tr>
 </tbody>
 </table>

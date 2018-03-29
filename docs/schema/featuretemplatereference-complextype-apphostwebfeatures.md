@@ -139,8 +139,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="properties-element-featuretemplatereference-complextypeapphostwebfeatures.htm">Properties</a></p></td>
-<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.htm">FeaturePropertyDefinitions</a></p></td>
+<td align="left"><p><a href="properties-element-featuretemplatereference-complextypeapphostwebfeatures.md">Properties</a></p></td>
+<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.md">FeaturePropertyDefinitions</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -182,7 +182,7 @@ class="keyword">choice</span>, see the definition section.
 </tr>
 <tr class="odd">
 <td align="left"><p>SourceVersion</p></td>
-<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.htm">FeatureVersion</a></p></td>
+<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.md">FeatureVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureVersion type.</p></td>

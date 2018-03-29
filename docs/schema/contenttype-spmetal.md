@@ -164,19 +164,19 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="column-spmetal.htm">Column</a></p></td>
+<td align="left"><p><a href="column-spmetal.md">Column</a></p></td>
 <td align="left"><p>Includes a column (field) in code generation.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="excludecolumn-spmetal.htm">ExcludeColumn</a></p></td>
+<td align="left"><p><a href="excludecolumn-spmetal.md">ExcludeColumn</a></p></td>
 <td align="left"><p>Excludes a column in code generation.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="excludeothercolumns-spmetal.htm">ExcludeOtherColumns</a></p></td>
+<td align="left"><p><a href="excludeothercolumns-spmetal.md">ExcludeOtherColumns</a></p></td>
 <td align="left"><p>Excludes from code generation all columns not explicitly included with a Column element.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="includehiddencolumns-spmetal.htm">IncludeHiddenColumns</a></p></td>
+<td align="left"><p><a href="includehiddencolumns-spmetal.md">IncludeHiddenColumns</a></p></td>
 <td align="left"><p>Includes hidden columns in code generation.</p></td>
 </tr>
 </tbody>
@@ -197,11 +197,11 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="web-spmetal.htm">Web (SPMetal)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="web-spmetal.md">Web (SPMetal)</a></span></p></td>
 <td align="left"><p>Specifies the name and access level (public or internal) of the class (derived from <span sdata="cer" target="T:Microsoft.SharePoint.Linq.DataContext"><span class="nolink">DataContext</span></span>) that SPMetal generates.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="list-spmetal.htm">List (SPMetal)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="list-spmetal.md">List (SPMetal)</a></span></p></td>
 <td align="left"><p>Includes a list in code generation and modifies how code is generated for list-scoped content types.</p></td>
 </tr>
 </tbody>

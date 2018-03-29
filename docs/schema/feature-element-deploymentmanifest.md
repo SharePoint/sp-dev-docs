@@ -110,12 +110,12 @@ class="nolink">SPFeature</span></span>
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the Feature object.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**WebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the Web site to which the Feature is associated.</p></td>
 </tr>
 <tr class="odd">
@@ -154,7 +154,7 @@ class="nolink">SPFeature</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

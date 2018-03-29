@@ -92,7 +92,7 @@ code] "Copy code")Copy code</span>
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.htm">parametersType</a></p></td>
+<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -143,7 +143,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="flow-element-flows-elementworkflowinfo-elementaction4.htm">Flow</a></p></td>
+<td align="left"><p><a href="flow-element-flows-elementworkflowinfo-elementaction4.md">Flow</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -167,7 +167,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameter-element-parameterstype-complextypeaction4.htm">Parameter</a></p></td>
+<td align="left"><p><a href="parameter-element-parameterstype-complextypeaction4.md">Parameter</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

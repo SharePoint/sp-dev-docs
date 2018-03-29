@@ -111,7 +111,7 @@ Datasheet view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="formatdef-element.htm">FormatDef</a></p></td>
+<td align="left"><p><a href="formatdef-element.md">FormatDef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ Datasheet view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="formats-element.htm">Formats</a></p></td>
+<td align="left"><p><a href="formats-element.md">Formats</a></p></td>
 </tr>
 </tbody>
 </table>

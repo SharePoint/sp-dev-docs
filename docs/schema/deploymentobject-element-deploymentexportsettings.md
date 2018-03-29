@@ -119,17 +119,17 @@ class="nolink">SPExportObject</span></span>
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentexportsettings.htm">Guid Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentexportsettings.md">Guid Simple Type (DeploymentExportSettings)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the export object.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentexportsettings.htm">SPDeploymentObjectType Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentexportsettings.md">SPDeploymentObjectType Simple Type (DeploymentExportSettings)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration providing values to specify the object type.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentexportsettings.htm">Guid Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentexportsettings.md">Guid Simple Type (DeploymentExportSettings)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the object's parent site.</p></td>
 </tr>
 <tr class="even">
@@ -144,7 +144,7 @@ class="nolink">SPExportObject</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**IncludeDescendants**</p></td>
-<td align="left"><p><span sdata="link"><a href="spincludedescendents-simple-type-deploymentexportsettings.htm">SPIncludeDescendents Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spincludedescendents-simple-type-deploymentexportsettings.md">SPIncludeDescendents Simple Type (DeploymentExportSettings)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration providing values to specify which descendents, if any, to include in the content migration package.</p></td>
 </tr>
 <tr class="odd">
@@ -178,7 +178,7 @@ class="nolink">SPExportObject</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="exportobjects-element-deploymentexportsettings.htm">ExportObjects Element (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="exportobjects-element-deploymentexportsettings.md">ExportObjects Element (DeploymentExportSettings)</a></span></p></td>
 </tr>
 </tbody>
 </table>

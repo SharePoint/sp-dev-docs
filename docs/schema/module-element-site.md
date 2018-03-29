@@ -185,7 +185,7 @@ site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element.htm">File</a></p></td>
+<td align="left"><p><a href="file-element.md">File</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -199,7 +199,7 @@ site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="modules-element-site.htm">Modules</a></p></td>
+<td align="left"><p><a href="modules-element-site.md">Modules</a></p></td>
 </tr>
 </tbody>
 </table>

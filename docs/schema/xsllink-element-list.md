@@ -127,7 +127,7 @@ the list view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 </tr>
 </tbody>
 </table>

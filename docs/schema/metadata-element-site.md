@@ -110,7 +110,7 @@ to contain metadata for list base types.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttypes-element-list.htm">ContentTypes</a>, <a href="default-element-listform.htm">Default</a>, <a href="defaultdescription-element-list.htm">DefaultDescription</a>, <a href="fields-element-list.htm">Fields</a>, <a href="forms-element-list.htm">Forms</a>, <a href="toolbar-element-list.htm">Toolbar</a>, <a href="validation-element-list.htm">Validation</a>, <a href="views-element-list.htm">Views</a></p></td>
+<td align="left"><p><a href="contenttypes-element-list.md">ContentTypes</a>, <a href="default-element-listform.md">Default</a>, <a href="defaultdescription-element-list.md">DefaultDescription</a>, <a href="fields-element-list.md">Fields</a>, <a href="forms-element-list.md">Forms</a>, <a href="toolbar-element-list.md">Toolbar</a>, <a href="validation-element-list.md">Validation</a>, <a href="views-element-list.md">Views</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ to contain metadata for list base types.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="basetype-element-site.htm">BaseType</a></p></td>
+<td align="left"><p><a href="basetype-element-site.md">BaseType</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -120,7 +120,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="propertyrule-element-arrayofpropertyrule-complextypesps15xsdsearchset2.htm">PropertyRule</a></p></td>
+<td align="left"><p><a href="propertyrule-element-arrayofpropertyrule-complextypesps15xsdsearchset2.md">PropertyRule</a></p></td>
 <td align="left"><p>tns:PropertyRule</p></td>
 <td align="left"><p></p></td>
 </tr>

@@ -66,7 +66,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Important note" alt="Important note" /><strong>Important</strong></th>
+<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -144,7 +144,7 @@ column based on the field type is created.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="default-element-field-types-property-schema.htm">Default Element (Field Types Property Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="default-element-field-types-property-schema.md">Default Element (Field Types Property Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -158,7 +158,7 @@ column based on the field type is created.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-field-types-property-schema.htm">Fields Element (Field Types Property Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fields-element-field-types-property-schema.md">Fields Element (Field Types Property Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

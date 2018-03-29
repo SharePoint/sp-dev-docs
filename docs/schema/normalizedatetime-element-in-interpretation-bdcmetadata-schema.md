@@ -163,7 +163,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.htm">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An **Interpretation</span> element that specifies the rules to apply to the data that is stored in the data structures represented by a <span class="keyword">TypeDescriptor**.</p></td>
 </tr>
 </tbody>

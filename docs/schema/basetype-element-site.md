@@ -127,7 +127,7 @@ site inherits its schema from a base type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="metadata-element-site.htm">MetaData</a></p></td>
+<td align="left"><p><a href="metadata-element-site.md">MetaData</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -141,7 +141,7 @@ site inherits its schema from a base type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="basetypes-element-site.htm">BaseTypes</a></p></td>
+<td align="left"><p><a href="basetypes-element-site.md">BaseTypes</a></p></td>
 </tr>
 </tbody>
 </table>

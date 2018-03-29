@@ -149,9 +149,9 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="flows-element-workflowinfo-elementaction4.htm">Flows</a></p></td>
+<td align="left"><p><a href="flows-element-workflowinfo-elementaction4.md">Flows</a></p></td>
 <td align="left"><p></p></td>
-<td align="left"><p>Container element for individual <span sdata="link"><a href="flow-element-flows-elementworkflowinfo-elementaction4.htm">Flow element (Flows element) (WorkflowInfo element) (Action4)</a></span> elements.</p></td>
+<td align="left"><p>Container element for individual <span sdata="link"><a href="flow-element-flows-elementworkflowinfo-elementaction4.md">Flow element (Flows element) (WorkflowInfo element) (Action4)</a></span> elements.</p></td>
 </tr>
 </tbody>
 </table>
@@ -173,13 +173,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameters-element-flow-elementflows-elementworkflowinfo-elementaction4.htm">Parameters</a></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.htm">parametersType</a></p></td>
+<td align="left"><p><a href="parameters-element-flow-elementflows-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
+<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
 <td align="left"><p>Serves as a container for **Parameter** elements, and contains no definable attributes. Includes the descriptions of the parameters in an action method signature.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="ruledesigner-element-flow-elementflows-elementworkflowinfo-elementaction4.htm">RuleDesigner</a></p></td>
-<td align="left"><p><a href="ruledesignertype-complextype-action4.htm">ruleDesignerType</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-flow-elementflows-elementworkflowinfo-elementaction4.md">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesignertype-complextype-action4.md">ruleDesignerType</a></p></td>
 <td align="left"><p>Contains information that allows the rendering of a declarative sentence in the visual workflow editor in SharePoint Designer or Visual Studio.</p></td>
 </tr>
 </tbody>

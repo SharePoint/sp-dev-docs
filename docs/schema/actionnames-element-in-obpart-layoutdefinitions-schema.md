@@ -107,7 +107,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionname-element-in-arrayofactions-layoutdefinitions-schema.htm">ActionName Element in ArrayOfActions (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionname-element-in-arrayofactions-layoutdefinitions-schema.md">ActionName Element in ArrayOfActions (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The name of the action.</p></td>
 </tr>
 </tbody>
@@ -128,7 +128,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.htm">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The Office External Part.</p></td>
 </tr>
 </tbody>

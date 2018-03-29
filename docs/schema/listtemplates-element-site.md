@@ -110,7 +110,7 @@ file for lists that can be created on a site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="listtemplate-element-site.htm">ListTemplate</a></p></td>
+<td align="left"><p><a href="listtemplate-element-site.md">ListTemplate</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ file for lists that can be created on a site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="project-element-site.htm">Project</a></p></td>
+<td align="left"><p><a href="project-element-site.md">Project</a></p></td>
 </tr>
 </tbody>
 </table>

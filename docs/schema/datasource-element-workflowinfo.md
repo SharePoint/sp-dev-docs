@@ -96,7 +96,7 @@ Specifies the sources of data for an action or composite step.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**InternalName**</p></td>
-<td align="left"><p>Required **text**. Specifies the internal name for the data source for a reference from a <a href="datasourceref-element-workflowinfo.htm">DataSourceRef</a> element.</p></td>
+<td align="left"><p>Required **text**. Specifies the internal name for the data source for a reference from a <a href="datasourceref-element-workflowinfo.md">DataSourceRef</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
@@ -118,8 +118,8 @@ Specifies the sources of data for an action or composite step.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="schemasource-element-workflowinfo.htm">SchemaSource</a></p>
-<p><a href="evaluation-element-workflowinfo.htm">Evaluation</a></p></td>
+<td align="left"><p><a href="schemasource-element-workflowinfo.md">SchemaSource</a></p>
+<p><a href="evaluation-element-workflowinfo.md">Evaluation</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -133,8 +133,8 @@ Specifies the sources of data for an action or composite step.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-workflowinfo.htm">Action</a></p>
-<p><a href="compositestep-element-workflowinfo.htm">CompositeStep</a></p></td>
+<td align="left"><p><a href="action-element-workflowinfo.md">Action</a></p>
+<p><a href="compositestep-element-workflowinfo.md">CompositeStep</a></p></td>
 </tr>
 </tbody>
 </table>

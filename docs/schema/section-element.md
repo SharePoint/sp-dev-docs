@@ -98,7 +98,7 @@ Defines a section of a layout.
 <td align="left"><p>**Type**</p></td>
 <td align="left"><p>Optional. An enumeration value that specifies the type of section.</p>
 <ul>
-<li><p>**Divider**. The section cannot contain child <a href="row-element.htm">Row</a> elements.</p></li>
+<li><p>**Divider**. The section cannot contain child <a href="row-element.md">Row</a> elements.</p></li>
 <li><p>**OneRow</span>. The section can contain one child <span class="keyword">Row** element.</p></li>
 <li><p>**TwoRow</span>. The section can contain two child <span class="keyword">Row** elements.</p></li>
 <li><p>**ThreeRow</span>. The section can contain three child <span class="keyword">Row** elements.</p></li>
@@ -125,7 +125,7 @@ Defines a section of a layout.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="row-element.htm">Row</a></p></td>
+<td align="left"><p><a href="row-element.md">Row</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -139,7 +139,7 @@ Defines a section of a layout.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="layout-element.htm">Layout</a></p></td>
+<td align="left"><p><a href="layout-element.md">Layout</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -124,7 +124,7 @@ class="keyword">Choice</span> field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="mappings-element-list.htm">Mappings</a></p></td>
+<td align="left"><p><a href="mappings-element-list.md">Mappings</a></p></td>
 </tr>
 </tbody>
 </table>

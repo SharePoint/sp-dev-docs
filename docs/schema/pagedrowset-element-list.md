@@ -128,7 +128,7 @@ Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922(O
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a>, <a href="viewstyle-element-list.htm">ViewStyle</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a>, <a href="viewstyle-element-list.md">ViewStyle</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -128,7 +128,7 @@ Returns a reference to a field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="aggregations-element-list.htm">Aggregations</a>, <a href="viewdata-element-list.htm">ViewData</a>, <a href="viewfields-element-list.htm">ViewFields</a></p></td>
+<td align="left"><p><a href="aggregations-element-list.md">Aggregations</a>, <a href="viewdata-element-list.md">ViewData</a>, <a href="viewfields-element-list.md">ViewFields</a></p></td>
 </tr>
 </tbody>
 </table>

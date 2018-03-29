@@ -133,7 +133,7 @@ Specifies an assembly in a solution's code access security policy.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assemblies-element-solutioncodeaccesssecurity.htm">Assemblies</a></p></td>
+<td align="left"><p><a href="assemblies-element-solutioncodeaccesssecurity.md">Assemblies</a></p></td>
 </tr>
 </tbody>
 </table>

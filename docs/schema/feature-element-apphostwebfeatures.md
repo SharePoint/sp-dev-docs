@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="featuredefinition-complextype-apphostwebfeatures.htm">FeatureDefinition</a></p></td>
+<td align="left"><p><a href="featuredefinition-complextype-apphostwebfeatures.md">FeatureDefinition</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -136,23 +136,23 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="activationdependencies-element-featuredefinition-complextypeapphostwebfeatures.htm">ActivationDependencies</a></p></td>
-<td align="left"><p><a href="featureactivationdependencydefinitions-complextype-apphostwebfeatures.htm">FeatureActivationDependencyDefinitions</a></p></td>
+<td align="left"><p><a href="activationdependencies-element-featuredefinition-complextypeapphostwebfeatures.md">ActivationDependencies</a></p></td>
+<td align="left"><p><a href="featureactivationdependencydefinitions-complextype-apphostwebfeatures.md">FeatureActivationDependencyDefinitions</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="elementmanifests-element-featuredefinition-complextypeapphostwebfeatures.htm">ElementManifests</a></p></td>
-<td align="left"><p><a href="elementmanifestreferences-complextype-apphostwebfeatures.htm">ElementManifestReferences</a></p></td>
+<td align="left"><p><a href="elementmanifests-element-featuredefinition-complextypeapphostwebfeatures.md">ElementManifests</a></p></td>
+<td align="left"><p><a href="elementmanifestreferences-complextype-apphostwebfeatures.md">ElementManifestReferences</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="properties-element-featuredefinition-complextypeapphostwebfeatures.htm">Properties</a></p></td>
-<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.htm">FeaturePropertyDefinitions</a></p></td>
+<td align="left"><p><a href="properties-element-featuredefinition-complextypeapphostwebfeatures.md">Properties</a></p></td>
+<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.md">FeaturePropertyDefinitions</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="upgradeactions-element-featuredefinition-complextypeapphostwebfeatures.htm">UpgradeActions</a></p></td>
-<td align="left"><p><a href="upgradeactionsdefinition-complextype-apphostwebfeatures.htm">UpgradeActionsDefinition</a></p></td>
+<td align="left"><p><a href="upgradeactions-element-featuredefinition-complextypeapphostwebfeatures.md">UpgradeActions</a></p></td>
+<td align="left"><p><a href="upgradeactionsdefinition-complextype-apphostwebfeatures.md">UpgradeActionsDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -271,7 +271,7 @@ None.
 </tr>
 <tr class="even">
 <td align="left"><p>Scope</p></td>
-<td align="left"><p><a href="featurescope-simpletype-apphostwebfeatures.htm">FeatureScope</a></p></td>
+<td align="left"><p><a href="featurescope-simpletype-apphostwebfeatures.md">FeatureScope</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureScope type.</p></td>
@@ -292,14 +292,14 @@ None.
 </tr>
 <tr class="odd">
 <td align="left"><p>UIVersion</p></td>
-<td align="left"><p><a href="uiversion-simpletype-apphostwebfeatures.htm">UIVersion</a></p></td>
+<td align="left"><p><a href="uiversion-simpletype-apphostwebfeatures.md">UIVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the UIVersion type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Version</p></td>
-<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.htm">FeatureVersion</a></p></td>
+<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.md">FeatureVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureVersion type.</p></td>

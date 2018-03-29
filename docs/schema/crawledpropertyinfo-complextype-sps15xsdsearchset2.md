@@ -130,37 +130,37 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="categoryname-element-crawledpropertyinfo-complextypesps15xsdsearchset2.htm">CategoryName</a></p></td>
+<td align="left"><p><a href="categoryname-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md">CategoryName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="ismappedtocontents-element-crawledpropertyinfo-complextypesps15xsdsearchset2.htm">IsMappedToContents</a></p></td>
+<td align="left"><p><a href="ismappedtocontents-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md">IsMappedToContents</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="isnameenum-element-crawledpropertyinfo-complextypesps15xsdsearchset2.htm">IsNameEnum</a></p></td>
+<td align="left"><p><a href="isnameenum-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md">IsNameEnum</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mappedmanagedproperties-element-crawledpropertyinfo-complextypesps15xsdsearchset.htm">MappedManagedProperties</a></p></td>
+<td align="left"><p><a href="mappedmanagedproperties-element-crawledpropertyinfo-complextypesps15xsdsearchset.md">MappedManagedProperties</a></p></td>
 <td align="left"><p>tns:ArrayOfManagedPropertyInfo</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="propset-element-crawledpropertyinfo-complextypesps15xsdsearchset2.htm">Propset</a></p></td>
+<td align="left"><p><a href="propset-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md">Propset</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="samples-element-crawledpropertyinfo-complextypesps15xsdsearchset2.htm">Samples</a></p></td>
+<td align="left"><p><a href="samples-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md">Samples</a></p></td>
 <td align="left"><p>q12:ArrayOfstring</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="schemaid-element-crawledpropertyinfo-complextypesps15xsdsearchset2.htm">SchemaId</a></p></td>
+<td align="left"><p><a href="schemaid-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md">SchemaId</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>

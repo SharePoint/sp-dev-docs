@@ -152,7 +152,7 @@ ignores all other attributes of this element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldrefs-element-contenttype.htm">FieldRefs</a></p></td>
+<td align="left"><p><a href="fieldrefs-element-contenttype.md">FieldRefs</a></p></td>
 </tr>
 </tbody>
 </table>

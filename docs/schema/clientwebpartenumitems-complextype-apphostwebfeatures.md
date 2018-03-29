@@ -136,8 +136,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="enumitem-element-clientwebpartenumitems-complextypeapphostwebfeatures.htm">EnumItem</a></p></td>
-<td align="left"><p><a href="clientwebpartenumitem-complextype-apphostwebfeatures.htm">ClientWebPartEnumItem</a></p></td>
+<td align="left"><p><a href="enumitem-element-clientwebpartenumitems-complextypeapphostwebfeatures.md">EnumItem</a></p></td>
+<td align="left"><p><a href="clientwebpartenumitem-complextype-apphostwebfeatures.md">ClientWebPartEnumItem</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

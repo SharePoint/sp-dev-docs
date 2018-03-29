@@ -125,7 +125,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webpartconnection-element-site.htm">WebPartConnection</a></p></td>
+<td align="left"><p><a href="webpartconnection-element-site.md">WebPartConnection</a></p></td>
 </tr>
 </tbody>
 </table>

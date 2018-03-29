@@ -140,7 +140,7 @@ None
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="browsercondition-mobile-document-viewer.htm">BrowserCondition (Mobile Document Viewer)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="browsercondition-mobile-document-viewer.md">BrowserCondition (Mobile Document Viewer)</a></span></p></td>
 <td align="left"><p>Identifies a browser condition under which redirection to a page that hosts a viewer for a specified type of document is overridden because the browser can open documents of a specified type directly.</p></td>
 </tr>
 </tbody>

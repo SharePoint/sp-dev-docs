@@ -114,7 +114,7 @@ Defines a menu control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="menusection-element.htm">MenuSection</a></p></td>
+<td align="left"><p><a href="menusection-element.md">MenuSection</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -128,25 +128,25 @@ Defines a menu control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="combobox-element.htm">ComboBox</a></p></td>
+<td align="left"><p><a href="combobox-element.md">ComboBox</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="dropdown-element.htm">DropDown</a></p></td>
+<td align="left"><p><a href="dropdown-element.md">DropDown</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="flyoutanchor-element.htm">FlyoutAnchor</a></p></td>
+<td align="left"><p><a href="flyoutanchor-element.md">FlyoutAnchor</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="jewel-element.htm">Jewel</a></p></td>
+<td align="left"><p><a href="jewel-element.md">Jewel</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mrusplitbutton-element.htm">MRUSplitButton</a></p></td>
+<td align="left"><p><a href="mrusplitbutton-element.md">MRUSplitButton</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="splitbutton-element.htm">SplitButton</a></p></td>
+<td align="left"><p><a href="splitbutton-element.md">SplitButton</a></p></td>
 </tr>
 </tbody>
 </table>

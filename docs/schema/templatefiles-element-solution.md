@@ -111,7 +111,7 @@ Specifies the template files to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="templatefile-element-solution.htm">TemplateFile</a></p></td>
+<td align="left"><p><a href="templatefile-element-solution.md">TemplateFile</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ Specifies the template files to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="solution-element-solution.htm">Solution</a></p></td>
+<td align="left"><p><a href="solution-element-solution.md">Solution</a></p></td>
 </tr>
 </tbody>
 </table>

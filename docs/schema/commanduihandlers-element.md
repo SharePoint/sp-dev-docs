@@ -86,7 +86,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduihandler-element.htm">CommandUIHandler</a></p></td>
+<td align="left"><p><a href="commanduihandler-element.md">CommandUIHandler</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduiextension-element.htm">CommandUIExtension</a></p></td>
+<td align="left"><p><a href="commanduiextension-element.md">CommandUIExtension</a></p></td>
 </tr>
 </tbody>
 </table>

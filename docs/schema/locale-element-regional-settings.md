@@ -130,7 +130,7 @@ locale in the regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="locales-element-regional-settings.htm">Locales</a></p></td>
+<td align="left"><p><a href="locales-element-regional-settings.md">Locales</a></p></td>
 </tr>
 </tbody>
 </table>

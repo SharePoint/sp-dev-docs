@@ -132,7 +132,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="method-element-list.htm">Method</a></p></td>
+<td align="left"><p><a href="method-element-list.md">Method</a></p></td>
 </tr>
 </tbody>
 </table>

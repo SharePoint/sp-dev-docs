@@ -114,7 +114,7 @@ definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="configuration-element-site.htm">Configuration</a></p></td>
+<td align="left"><p><a href="configuration-element-site.md">Configuration</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,7 @@ definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="project-element-site.htm">Project</a></p></td>
+<td align="left"><p><a href="project-element-site.md">Project</a></p></td>
 </tr>
 </tbody>
 </table>

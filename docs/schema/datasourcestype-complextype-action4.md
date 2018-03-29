@@ -128,8 +128,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.htm">DataSource</a></p></td>
-<td align="left"><p><a href="datasourcetype-complextype-action4.htm">dataSourceType</a></p></td>
+<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource</a></p></td>
+<td align="left"><p><a href="datasourcetype-complextype-action4.md">dataSourceType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

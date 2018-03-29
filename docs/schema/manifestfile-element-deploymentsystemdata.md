@@ -138,7 +138,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="manifestfiles-element-deploymentsystemdata.htm">ManifestFiles Element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="manifestfiles-element-deploymentsystemdata.md">ManifestFiles Element (DeploymentSystemData)</a></span></p></td>
 </tr>
 </tbody>
 </table>

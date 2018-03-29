@@ -156,7 +156,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-action4.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-action4.md">WorkflowInfo</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>The root element of the Actions schema. This element must be included in any .ACTIONS file that is installed on the server.</p></td>
 </tr>
@@ -180,7 +180,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="flow-element-flows-elementworkflowinfo-elementaction4.htm">Flow</a></p></td>
+<td align="left"><p><a href="flow-element-flows-elementworkflowinfo-elementaction4.md">Flow</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Represents the activity underlying the <span class="ui">Go to a stage</span> action in the visual workflow designer.</p></td>
 </tr>

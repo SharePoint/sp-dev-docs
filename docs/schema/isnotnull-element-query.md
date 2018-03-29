@@ -112,7 +112,7 @@ class="keyword">Null</span>).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldref-element-query.htm">FieldRef</a>, <a href="value-element-query.htm">Value</a>, <a href="xml-element.htm">XML</a></p></td>
+<td align="left"><p><a href="fieldref-element-query.md">FieldRef</a>, <a href="value-element-query.md">Value</a>, <a href="xml-element.md">XML</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ class="keyword">Null</span>).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="and-element-query.htm">And</a>, <a href="or-element-query.htm">Or</a>, <a href="where-element-query.htm">Where</a></p></td>
+<td align="left"><p><a href="and-element-query.md">And</a>, <a href="or-element-query.md">Or</a>, <a href="where-element-query.md">Where</a></p></td>
 </tr>
 </tbody>
 </table>

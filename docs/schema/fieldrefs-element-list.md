@@ -113,7 +113,7 @@ specifiy field references for a field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldref-element-query.htm">FieldRef</a></p></td>
+<td align="left"><p><a href="fieldref-element-query.md">FieldRef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ specifiy field references for a field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-list.htm">Field</a></p></td>
+<td align="left"><p><a href="field-element-list.md">Field</a></p></td>
 </tr>
 </tbody>
 </table>

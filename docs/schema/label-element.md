@@ -137,7 +137,7 @@ Defines a label control.
 </tr>
 <tr class="odd">
 <td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.htm">ControlRef</a> element, an <a href="overflowarea-element.htm">OverflowArea</a> element, or an <a href="overflowsection-element.htm">OverflowSection</a> element in a <a href="grouptemplate-element.htm">GroupTemplate</a> element. The <span class="keyword">TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.</p></td>
+<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.md">ControlRef</a> element, an <a href="overflowarea-element.md">OverflowArea</a> element, or an <a href="overflowsection-element.md">OverflowSection</a> element in a <a href="grouptemplate-element.md">GroupTemplate</a> element. The <span class="keyword">TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**QueryCommand**</p></td>
@@ -164,10 +164,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="controls-element-group.htm">Controls</a></p></td>
+<td align="left"><p><a href="controls-element-group.md">Controls</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -110,7 +110,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-feature.htm">Parameters Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameters-element-feature.md">Parameters Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>

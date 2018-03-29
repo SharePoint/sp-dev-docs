@@ -170,7 +170,7 @@ Specifies default data with which to provision the given list type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="data-element-list-instance.htm">Data</a>, <span sdata="link"><a href="datasource-element-list-instance.htm">DataSource Element (List Instance)</a></span></p></td>
+<td align="left"><p><a href="data-element-list-instance.md">Data</a>, <span sdata="link"><a href="datasource-element-list-instance.md">DataSource Element (List Instance)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -184,7 +184,7 @@ Specifies default data with which to provision the given list type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-list-instance.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-list-instance.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -148,8 +148,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.htm">DataSource</a></p></td>
-<td align="left"><p><a href="datasourcetype-complextype-action4.htm">dataSourceType</a></p></td>
+<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource</a></p></td>
+<td align="left"><p><a href="datasourcetype-complextype-action4.md">dataSourceType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -172,12 +172,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="activitysource-element-evaluation-elementdatasourcetype-complextypeaction4.htm">ActivitySource</a></p></td>
+<td align="left"><p><a href="activitysource-element-evaluation-elementdatasourcetype-complextypeaction4.md">ActivitySource</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="hashtablesource-element-evaluation-elementdatasourcetype-complextypeaction4.htm">HashtableSource</a></p></td>
+<td align="left"><p><a href="hashtablesource-element-evaluation-elementdatasourcetype-complextypeaction4.md">HashtableSource</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

@@ -117,7 +117,7 @@ Administration and the site collection is not in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="autodeletebody-element-site-deletion.htm">AutoDeleteBody</a>, <a href="autodeletesubject-element-site-deletion.htm">AutoDeleteSubject</a></p></td>
+<td align="left"><p><a href="autodeletebody-element-site-deletion.md">AutoDeleteBody</a>, <a href="autodeletesubject-element-site-deletion.md">AutoDeleteSubject</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@ Administration and the site collection is not in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="email-element-site-deletion.htm">Email</a></p></td>
+<td align="left"><p><a href="email-element-site-deletion.md">Email</a></p></td>
 </tr>
 </tbody>
 </table>

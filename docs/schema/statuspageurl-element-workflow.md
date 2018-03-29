@@ -120,7 +120,7 @@ Specifies the URL of a custom workflow status page for the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="metadata-element-workflow.htm">MetaData Element (Workflow)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="metadata-element-workflow.md">MetaData Element (Workflow)</a></span></p></td>
 </tr>
 </tbody>
 </table>

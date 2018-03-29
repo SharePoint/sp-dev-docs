@@ -132,7 +132,7 @@ included.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-featuresitetemplateassociation.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-featuresitetemplateassociation.md">Property</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +146,7 @@ included.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-featuresitetemplateassociation.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-featuresitetemplateassociation.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

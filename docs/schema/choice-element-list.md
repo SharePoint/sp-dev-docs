@@ -131,7 +131,7 @@ Used to define a choice within a <span class="keyword">Choice
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="choices-element-list.htm">CHOICES</a></p></td>
+<td align="left"><p><a href="choices-element-list.md">CHOICES</a></p></td>
 </tr>
 </tbody>
 </table>

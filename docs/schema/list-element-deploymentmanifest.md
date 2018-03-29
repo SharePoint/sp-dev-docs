@@ -175,12 +175,12 @@ class="nolink">SPList</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**BaseTemplate**</p></td>
-<td align="left"><p><span sdata="link"><a href="splisttemplatetype-simple-type-deploymentmanifest.htm">SPListTemplateType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="splisttemplatetype-simple-type-deploymentmanifest.md">SPListTemplateType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Specifies a base type for instantiating list templates. Includes, but is not limited to, types enumerated in **SPListTemplateType**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**BaseType**</p></td>
-<td align="left"><p><span sdata="link"><a href="spbasetype-simple-type-deploymentmanifest.htm">SPBaseType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spbasetype-simple-type-deploymentmanifest.md">SPBaseType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies the base type for the list.</p></td>
 </tr>
 <tr class="even">
@@ -190,12 +190,12 @@ class="nolink">SPList</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DefaultContentApprovalWrokFlowId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the default content approval workflow that is associated with the list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DefaultItemOpen**</p></td>
-<td align="left"><p><span sdata="link"><a href="defaultitemopen-simple-type-deploymentmanifest.htm">DefaultItemOpen Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="defaultitemopen-simple-type-deploymentmanifest.md">DefaultItemOpen Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies whether to open list items in a client application or in the browser.</p></td>
 </tr>
 <tr class="odd">
@@ -210,12 +210,12 @@ class="nolink">SPList</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DocumentTemplateId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the document template.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DraftVersionVisibility**</p></td>
-<td align="left"><p><span sdata="link"><a href="draftvisibilitytype-simple-type-deploymentmanifest.htm">DraftVisibilityType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="draftvisibilitytype-simple-type-deploymentmanifest.md">DraftVisibilityType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies user types that can view minor versions of document drafts within the list.</p></td>
 </tr>
 <tr class="odd">
@@ -300,7 +300,7 @@ class="nolink">SPList</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier of the list in the database.</p></td>
 </tr>
 <tr class="even">
@@ -335,7 +335,7 @@ class="nolink">SPList</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier for the parent Web site for the list.</p></td>
 </tr>
 <tr class="odd">
@@ -355,7 +355,7 @@ class="nolink">SPList</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**RootFolderId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the folder that contains all of the files used in working with the list.</p></td>
 </tr>
 <tr class="odd">
@@ -380,7 +380,7 @@ class="nolink">SPList</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**TemplateFeatureId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of a template feature that is associated with the list.</p></td>
 </tr>
 <tr class="even">
@@ -410,22 +410,22 @@ class="nolink">SPList</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttypes-element-deploymentmanifest.htm">ContentTypes Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contenttypes-element-deploymentmanifest.md">ContentTypes Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="deletedfields-element-deploymentmanifest.htm">DeletedFields Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="deletedfields-element-deploymentmanifest.md">DeletedFields Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplist.htm">EventReceivers Element (DeploymentManifest - SPList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplist.md">EventReceivers Element (DeploymentManifest - SPList)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.htm">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.md">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="forms-element-deploymentmanifest.htm">Forms Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="forms-element-deploymentmanifest.md">Forms Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="views-element-deploymentmanifest.htm">Views Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="views-element-deploymentmanifest.md">Views Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -439,7 +439,7 @@ class="nolink">SPList</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

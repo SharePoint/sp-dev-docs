@@ -114,7 +114,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="schemasource-element-workflowactions.htm">SchemaSource</a></p></td>
+<td align="left"><p><a href="schemasource-element-workflowactions.md">SchemaSource</a></p></td>
 </tr>
 </tbody>
 </table>

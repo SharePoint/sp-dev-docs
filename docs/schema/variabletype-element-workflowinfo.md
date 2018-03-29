@@ -136,7 +136,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="variabletypes-element-workflowinfo.htm">VariableTypes</a></p></td>
+<td align="left"><p><a href="variabletypes-element-workflowinfo.md">VariableTypes</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -120,7 +120,7 @@ Used in batch processing to specify commands within the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-list.htm">Field</a>, <a href="setlist-element-view.htm">SetList</a>, <a href="setvar-element-view.htm">SetVar</a></p></td>
+<td align="left"><p><a href="field-element-list.md">Field</a>, <a href="setlist-element-view.md">SetList</a>, <a href="setvar-element-view.md">SetVar</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +134,7 @@ Used in batch processing to specify commands within the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="batch-element-view.htm">Batch</a></p></td>
+<td align="left"><p><a href="batch-element-view.md">Batch</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -119,7 +119,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.htm">UpgradeActions Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>

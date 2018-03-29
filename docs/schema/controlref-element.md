@@ -109,7 +109,7 @@ Represents a placeholder for a control in a
 </tr>
 <tr class="even">
 <td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that a control can reference in its own **TemplateAlias</span> attribute. The <span class="keyword">TemplateAlias</span> attribute is used to size and position controls in a group when a template is applied to the group. No two elements that are contained by the same <a href="grouptemplate-element.htm">GroupTemplate</a> element should have the same <span class="keyword">TemplateAlias** value.</p></td>
+<td align="left"><p>Optional. A string that a control can reference in its own **TemplateAlias</span> attribute. The <span class="keyword">TemplateAlias</span> attribute is used to size and position controls in a group when a template is applied to the group. No two elements that are contained by the same <a href="grouptemplate-element.md">GroupTemplate</a> element should have the same <span class="keyword">TemplateAlias** value.</p></td>
 </tr>
 </tbody>
 </table>
@@ -128,10 +128,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="row-element.htm">Row</a></p></td>
+<td align="left"><p><a href="row-element.md">Row</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="strip-element.htm">Strip</a></p></td>
+<td align="left"><p><a href="strip-element.md">Strip</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -180,7 +180,7 @@ table lists the modes that are supported by each type of control.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="button-element.htm">Button</a></p></td>
+<td align="left"><p><a href="button-element.md">Button</a></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
@@ -189,7 +189,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p>X</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="checkbox-element.htm">CheckBox</a></p></td>
+<td align="left"><p><a href="checkbox-element.md">CheckBox</a></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p></p></td>
@@ -198,7 +198,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="colorpicker-element.htm">ColorPicker</a></p></td>
+<td align="left"><p><a href="colorpicker-element.md">ColorPicker</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
@@ -207,7 +207,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="combobox-element.htm">ComboBox</a></p></td>
+<td align="left"><p><a href="combobox-element.md">ComboBox</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p></p></td>
@@ -216,7 +216,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="dropdown-element.htm">DropDown</a></p></td>
+<td align="left"><p><a href="dropdown-element.md">DropDown</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p></p></td>
@@ -225,7 +225,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="flyoutanchor-element.htm">FlyoutAnchor</a></p></td>
+<td align="left"><p><a href="flyoutanchor-element.md">FlyoutAnchor</a></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
@@ -234,7 +234,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p>X</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="gallerybutton-element-gallery.htm">GalleryButton</a></p></td>
+<td align="left"><p><a href="gallerybutton-element-gallery.md">GalleryButton</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>X</p></td>
@@ -243,7 +243,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="inserttable-element.htm">InsertTable</a></p></td>
+<td align="left"><p><a href="inserttable-element.md">InsertTable</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
@@ -252,7 +252,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="label-element.htm">Label</a></p></td>
+<td align="left"><p><a href="label-element.md">Label</a></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p></p></td>
@@ -261,7 +261,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="menusection-element.htm">MenuSection</a></p></td>
+<td align="left"><p><a href="menusection-element.md">MenuSection</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
@@ -270,7 +270,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p>X</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="mrusplitbutton-element.htm">MRUSplitButton</a></p></td>
+<td align="left"><p><a href="mrusplitbutton-element.md">MRUSplitButton</a></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
@@ -279,7 +279,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="spinner-element.htm">Spinner</a></p></td>
+<td align="left"><p><a href="spinner-element.md">Spinner</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p></p></td>
@@ -288,7 +288,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="splitbutton-element.htm">SplitButton</a></p></td>
+<td align="left"><p><a href="splitbutton-element.md">SplitButton</a></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
@@ -297,7 +297,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="textbox-element.htm">TextBox</a></p></td>
+<td align="left"><p><a href="textbox-element.md">TextBox</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p></p></td>
@@ -306,7 +306,7 @@ table lists the modes that are supported by each type of control.
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="togglebutton-element.htm">ToggleButton</a></p></td>
+<td align="left"><p><a href="togglebutton-element.md">ToggleButton</a></p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>
 <td align="left"><p>X</p></td>

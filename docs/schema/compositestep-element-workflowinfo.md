@@ -127,7 +127,7 @@ Specifies a step in a composite workflow activity.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasources-element-workflowinfo.htm">DataSources</a></p></td>
+<td align="left"><p><a href="datasources-element-workflowinfo.md">DataSources</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -141,7 +141,7 @@ Specifies a step in a composite workflow activity.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="compositesteps-element-workflowinfo.htm">CompositeSteps</a></p></td>
+<td align="left"><p><a href="compositesteps-element-workflowinfo.md">CompositeSteps</a></p></td>
 </tr>
 </tbody>
 </table>

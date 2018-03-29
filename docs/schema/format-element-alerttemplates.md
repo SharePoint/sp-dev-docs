@@ -96,10 +96,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="digest-element-alerttemplates.htm">Digest</a></p></td>
+<td align="left"><p><a href="digest-element-alerttemplates.md">Digest</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="immediate-element-alerttemplates.htm">Immediate</a></p></td>
+<td align="left"><p><a href="immediate-element-alerttemplates.md">Immediate</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -113,7 +113,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="alerttemplate-element-alerttemplates.htm">AlertTemplate</a></p></td>
+<td align="left"><p><a href="alerttemplate-element-alerttemplates.md">AlertTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

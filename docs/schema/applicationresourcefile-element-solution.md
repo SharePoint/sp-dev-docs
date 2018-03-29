@@ -123,7 +123,7 @@ Specifies an application resource file to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="applicationresourcefiles-element-solution.htm">ApplicationResourceFiles</a></p></td>
+<td align="left"><p><a href="applicationresourcefiles-element-solution.md">ApplicationResourceFiles</a></p></td>
 </tr>
 </tbody>
 </table>

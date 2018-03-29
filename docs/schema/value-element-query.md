@@ -116,7 +116,7 @@ compared.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="listproperty-element-query.htm">ListProperty</a>, <a href="month-element-query.htm">Month</a>, <a href="now-element-query.htm">Now</a>, <a href="today-element-query.htm">Today</a>, <a href="userid-element-query.htm">UserID</a>, <a href="xml-element.htm">XML</a></p></td>
+<td align="left"><p><a href="listproperty-element-query.md">ListProperty</a>, <a href="month-element-query.md">Month</a>, <a href="now-element-query.md">Now</a>, <a href="today-element-query.md">Today</a>, <a href="userid-element-query.md">UserID</a>, <a href="xml-element.md">XML</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -130,7 +130,7 @@ compared.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="beginswith-element-query.htm">BeginsWith</a>, <a href="contains-element-query.htm">Contains</a>, <a href="daterangesoverlap-element-query.htm">DateRangesOverlap</a>, <a href="eq-element-query.htm">Eq</a>, <a href="geq-element-query.htm">Geq</a>, <a href="gt-element-query.htm">Gt</a>, <a href="includes-element-query.htm">Includes</a>, <a href="isnotnull-element-query.htm">IsNotNull</a>, <a href="isnull-element-query.htm">IsNull</a>, <a href="leq-element-query.htm">Leq</a>, <a href="lt-element-query.htm">Lt</a>, <a href="neq-element-query.htm">Neq</a>, <a href="notincludes-element-query.htm">NotIncludes</a>, <a href="values-element-query.htm">Values</a></p></td>
+<td align="left"><p><a href="beginswith-element-query.md">BeginsWith</a>, <a href="contains-element-query.md">Contains</a>, <a href="daterangesoverlap-element-query.md">DateRangesOverlap</a>, <a href="eq-element-query.md">Eq</a>, <a href="geq-element-query.md">Geq</a>, <a href="gt-element-query.md">Gt</a>, <a href="includes-element-query.md">Includes</a>, <a href="isnotnull-element-query.md">IsNotNull</a>, <a href="isnull-element-query.md">IsNull</a>, <a href="leq-element-query.md">Leq</a>, <a href="lt-element-query.md">Lt</a>, <a href="neq-element-query.md">Neq</a>, <a href="notincludes-element-query.md">NotIncludes</a>, <a href="values-element-query.md">Values</a></p></td>
 </tr>
 </tbody>
 </table>

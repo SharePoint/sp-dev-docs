@@ -162,7 +162,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="conditions-element-workflowinfo-elementaction4.htm">Conditions</a></p></td>
+<td align="left"><p><a href="conditions-element-workflowinfo-elementaction4.md">Conditions</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -186,13 +186,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameters-element-condition-elementconditions-elementworkflowinfo-elementaction.htm">Parameters</a></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.htm">parametersType</a></p></td>
+<td align="left"><p><a href="parameters-element-condition-elementconditions-elementworkflowinfo-elementaction.md">Parameters</a></p></td>
+<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="ruledesigner-element-condition-elementconditions-elementworkflowinfo-elementacti.htm">RuleDesigner</a></p></td>
-<td align="left"><p><a href="ruledesignertype-complextype-action4.htm">ruleDesignerType</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-condition-elementconditions-elementworkflowinfo-elementacti.md">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesignertype-complextype-action4.md">ruleDesignerType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -220,7 +220,7 @@ class="keyword">choice</span>, see the definition section.
 <tbody>
 <tr class="odd">
 <td align="left"><p>AppliesTo</p></td>
-<td align="left"><p><a href="appliestotypes-simpletype-action4.htm">appliesToTypes</a></p></td>
+<td align="left"><p><a href="appliestotypes-simpletype-action4.md">appliesToTypes</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Specifies whether the conditional statement that is being evaluated is applied to a SharePoint list or document library. By changing the value, you can show or hide a specific condition statement in the workflow editor, depending on the type of SharePoint list that the workflow is associated with. Following are allowable values:</p>
 <ul>
@@ -240,7 +240,7 @@ class="keyword">choice</span>, see the definition section.
 <div class="code">
 <span codelanguage="other"></span>
  
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src="../icons/copycode.gif" title="Copy code" alt="Copy code" />Copy code</span>
+<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code>Assembly=&quot;Microsoft.SharePoint.WorkflowActions,
     Version=15.0.0.0,
     Culture=neutral,

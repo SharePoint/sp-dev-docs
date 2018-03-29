@@ -125,32 +125,32 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="anchoring-element-refinerconfiguration-complextypesps15xsdsearchset2.htm">Anchoring</a></p></td>
+<td align="left"><p><a href="anchoring-element-refinerconfiguration-complextypesps15xsdsearchset2.md">Anchoring</a></p></td>
 <td align="left"><p>tns:RefinerAnchoring</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="cutoffmaxbuckets-element-refinerconfiguration-complextypesps15xsdsearchset2.htm">CutoffMaxBuckets</a></p></td>
+<td align="left"><p><a href="cutoffmaxbuckets-element-refinerconfiguration-complextypesps15xsdsearchset2.md">CutoffMaxBuckets</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="divisor-element-refinerconfiguration-complextypesps15xsdsearchset2.htm">Divisor</a></p></td>
+<td align="left"><p><a href="divisor-element-refinerconfiguration-complextypesps15xsdsearchset2.md">Divisor</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="intervals-element-refinerconfiguration-complextypesps15xsdsearchset2.htm">Intervals</a></p></td>
+<td align="left"><p><a href="intervals-element-refinerconfiguration-complextypesps15xsdsearchset2.md">Intervals</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="resolution-element-refinerconfiguration-complextypesps15xsdsearchset2.htm">Resolution</a></p></td>
+<td align="left"><p><a href="resolution-element-refinerconfiguration-complextypesps15xsdsearchset2.md">Resolution</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="type-element-refinerconfiguration-complextypesps15xsdsearchset2.htm">Type</a></p></td>
+<td align="left"><p><a href="type-element-refinerconfiguration-complextypesps15xsdsearchset2.md">Type</a></p></td>
 <td align="left"><p>tns:RefinerType</p></td>
 <td align="left"><p></p></td>
 </tr>

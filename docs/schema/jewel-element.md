@@ -410,7 +410,7 @@ Defines the Microsoft Office button.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="menu-element.htm">Menu</a></p></td>
+<td align="left"><p><a href="menu-element.md">Menu</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -424,7 +424,7 @@ Defines the Microsoft Office button.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commandui-element.htm">CommandUI</a></p></td>
+<td align="left"><p><a href="commandui-element.md">CommandUI</a></p></td>
 </tr>
 </tbody>
 </table>

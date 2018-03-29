@@ -124,11 +124,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="converttype-element-in-interpretation-bdcmetadata-schema.htm">ConvertType Element in Interpretation (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="converttype-element-in-interpretation-bdcmetadata-schema.md">ConvertType Element in Interpretation (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A **ConvertType** element that specifies the conversion of a data type to another data type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="normalizedatetime-element-in-interpretation-bdcmetadata-schema.htm">NormalizeDateTime Element in Interpretation (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="normalizedatetime-element-in-interpretation-bdcmetadata-schema.md">NormalizeDateTime Element in Interpretation (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A **NormalizeDateTime** element that specifies the conversion of the date and time representation of a value obtained from an external system into another representation.</p></td>
 </tr>
 <tr class="odd">
@@ -157,7 +157,7 @@ None.
 <td align="left"><p>The **TypeDescriptor** element.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.htm">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

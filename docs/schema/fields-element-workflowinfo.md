@@ -93,7 +93,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-workflowinfo.htm">Field</a></p></td>
+<td align="left"><p><a href="field-element-workflowinfo.md">Field</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -107,7 +107,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="schemasource-element-workflowinfo.htm">SchemaSource</a></p></td>
+<td align="left"><p><a href="schemasource-element-workflowinfo.md">SchemaSource</a></p></td>
 </tr>
 </tbody>
 </table>

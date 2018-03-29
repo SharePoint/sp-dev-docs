@@ -125,8 +125,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ruledesigner-element-defaultelementtype-complextypeaction4.htm">RuleDesigner</a></p></td>
-<td align="left"><p><a href="ruledesignertype-complextype-action4.htm">ruleDesignerType</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-defaultelementtype-complextypeaction4.md">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesignertype-complextype-action4.md">ruleDesignerType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

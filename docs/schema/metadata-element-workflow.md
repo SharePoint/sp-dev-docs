@@ -121,7 +121,7 @@ the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflow-element-elements.htm">Workflow Element (Elements)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="workflow-element-elements.md">Workflow Element (Elements)</a></span></p></td>
 </tr>
 </tbody>
 </table>

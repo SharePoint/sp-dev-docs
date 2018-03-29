@@ -123,7 +123,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewform-element-deploymentviewformslist.htm">ViewForm Element (DeploymentViewFormsList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewform-element-deploymentviewformslist.md">ViewForm Element (DeploymentViewFormsList)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -128,7 +128,7 @@ Specifies a class resource to include in a solution's assembly.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="classresources-element-solution.htm">ClassResources</a></p></td>
+<td align="left"><p><a href="classresources-element-solution.md">ClassResources</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -105,7 +105,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="guidmap-element-site.htm">GUIDMap</a>, <a href="webpart-element-site.htm">WebPart</a></p></td>
+<td align="left"><p><a href="guidmap-element-site.md">GUIDMap</a>, <a href="webpart-element-site.md">WebPart</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -119,7 +119,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element.htm">File</a>, <a href="view-element-site.htm">View</a></p></td>
+<td align="left"><p><a href="file-element.md">File</a>, <a href="view-element-site.md">View</a></p></td>
 </tr>
 </tbody>
 </table>

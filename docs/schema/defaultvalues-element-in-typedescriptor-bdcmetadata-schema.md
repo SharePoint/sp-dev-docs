@@ -109,7 +109,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="defaultvalue-element-in-defaultvalues-bdcmetadata-schema.htm">DefaultValue Element in DefaultValues (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="defaultvalue-element-in-defaultvalues-bdcmetadata-schema.md">DefaultValue Element in DefaultValues (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The default value of a **TypeDescriptor</span> for a <span class="keyword">MethodInstance**.</p></td>
 </tr>
 </tbody>
@@ -134,7 +134,7 @@ None.
 <td align="left"><p>The **TypeDescriptor</span> that these <span class="keyword">DefaultValues** belong to.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.htm">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

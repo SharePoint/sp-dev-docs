@@ -87,7 +87,7 @@ SharePoint Server 2013
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="apppartconfigdefinition-complextype-apppartconfigdefinition.htm">AppPartConfigDefinition</a></p></td>
+<td align="left"><p><a href="apppartconfigdefinition-complextype-apppartconfigdefinition.md">AppPartConfigDefinition</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -141,8 +141,8 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="id-element-apppartconfigdefinition-complextypeapppartconfigdefinition.htm">Id</a></p></td>
-<td align="left"><p><a href="guid-simpletype-apppartconfigdefinition.htm">GUID</a></p></td>
+<td align="left"><p><a href="id-element-apppartconfigdefinition-complextypeapppartconfigdefinition.md">Id</a></p></td>
+<td align="left"><p><a href="guid-simpletype-apppartconfigdefinition.md">GUID</a></p></td>
 <td align="left"><p>The unique identifier of the app part.</p></td>
 </tr>
 </tbody>

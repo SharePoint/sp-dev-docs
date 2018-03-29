@@ -125,32 +125,32 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="aliases-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.htm">Aliases</a></p></td>
+<td align="left"><p><a href="aliases-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.md">Aliases</a></p></td>
 <td align="left"><p>q8:AliasInfoCollection</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="categoriesandcrawledproperties-element-searchschemaconfigurationsettings-complex.htm">CategoriesAndCrawledProperties</a></p></td>
+<td align="left"><p><a href="categoriesandcrawledproperties-element-searchschemaconfigurationsettings-complex.md">CategoriesAndCrawledProperties</a></p></td>
 <td align="left"><p>q9:ArrayOfKeyValueOfguidCrawledPropertyInfoCollectionaSYUqUE_P</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="crawledproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.htm">CrawledProperties</a></p></td>
+<td align="left"><p><a href="crawledproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.md">CrawledProperties</a></p></td>
 <td align="left"><p>q10:CrawledPropertyInfoCollection</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="managedproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.htm">ManagedProperties</a></p></td>
+<td align="left"><p><a href="managedproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.md">ManagedProperties</a></p></td>
 <td align="left"><p>q11:ManagedPropertyInfoCollection</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="mappings-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.htm">Mappings</a></p></td>
+<td align="left"><p><a href="mappings-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.md">Mappings</a></p></td>
 <td align="left"><p>q12:MappingInfoCollection</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="overrides-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset.htm">Overrides</a></p></td>
+<td align="left"><p><a href="overrides-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset.md">Overrides</a></p></td>
 <td align="left"><p>q13:OverrideInfoCollection</p></td>
 <td align="left"><p></p></td>
 </tr>

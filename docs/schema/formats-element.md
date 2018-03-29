@@ -113,7 +113,7 @@ Contains column and row formatting used in a Datasheet view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="format-element.htm">Format</a></p></td>
+<td align="left"><p><a href="format-element.md">Format</a></p></td>
 </tr>
 </tbody>
 </table>

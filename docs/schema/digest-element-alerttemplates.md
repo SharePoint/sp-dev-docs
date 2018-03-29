@@ -109,31 +109,31 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="footer-element-alerttemplates.htm">Footer</a></p></td>
+<td align="left"><p><a href="footer-element-alerttemplates.md">Footer</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="header-element-alerttemplates.htm">Header</a></p></td>
+<td align="left"><p><a href="header-element-alerttemplates.md">Header</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="headerfields-element-alerttemplates.htm">HeaderFields</a></p></td>
+<td align="left"><p><a href="headerfields-element-alerttemplates.md">HeaderFields</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="headerfieldsfooter-element-alerttempaltes.htm">HeaderFieldsFooter</a></p></td>
+<td align="left"><p><a href="headerfieldsfooter-element-alerttempaltes.md">HeaderFieldsFooter</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="headerfieldsheader-element-alerttempaltes.htm">HeaderFieldsHeader</a></p></td>
+<td align="left"><p><a href="headerfieldsheader-element-alerttempaltes.md">HeaderFieldsHeader</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="rowfields-element-alerttemplates.htm">RowFields</a></p></td>
+<td align="left"><p><a href="rowfields-element-alerttemplates.md">RowFields</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="rowfooter-element-alerttemplates.htm">RowFooter</a></p></td>
+<td align="left"><p><a href="rowfooter-element-alerttemplates.md">RowFooter</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="rowheader-element-alerttemplates.htm">RowHeader</a></p></td>
+<td align="left"><p><a href="rowheader-element-alerttemplates.md">RowHeader</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="subject-element-alerttemplates.htm">Subject</a></p></td>
+<td align="left"><p><a href="subject-element-alerttemplates.md">Subject</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -147,7 +147,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="format-element-alerttemplates.htm">Format</a></p></td>
+<td align="left"><p><a href="format-element-alerttemplates.md">Format</a></p></td>
 </tr>
 </tbody>
 </table>

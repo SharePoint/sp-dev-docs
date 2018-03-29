@@ -104,7 +104,7 @@ values is the union of the possible values.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Ref**</p></td>
-<td align="left"><p>Optional **text**. Specifies the internal name of the <a href="datasource-element-workflowactions.htm">DataSource</a> element from which to obtain a list of possible values.</p></td>
+<td align="left"><p>Optional **text**. Specifies the internal name of the <a href="datasource-element-workflowactions.md">DataSource</a> element from which to obtain a list of possible values.</p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldbind-element-workflowactions.htm">FieldBind</a></p></td>
+<td align="left"><p><a href="fieldbind-element-workflowactions.md">FieldBind</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -201,7 +201,7 @@ the data from the foreign table.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded (1 within <a href="limit-element-view.htm">Limit</a>)</p></td>
+<p>Maximum: Unbounded (1 within <a href="limit-element-view.md">Limit</a>)</p></td>
 </tr>
 </tbody>
 </table>

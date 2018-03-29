@@ -112,10 +112,10 @@ Specifies the application resource files to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="applicationresourcefile-element-solution.htm">ApplicationResourceFile</a></p></td>
+<td align="left"><p><a href="applicationresourcefile-element-solution.md">ApplicationResourceFile</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="app_globalresourcefile-element-solution.htm">App_GlobalResourceFile</a></p></td>
+<td align="left"><p><a href="app_globalresourcefile-element-solution.md">App_GlobalResourceFile</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +129,7 @@ Specifies the application resource files to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="solution-element-solution.htm">Solution</a></p></td>
+<td align="left"><p><a href="solution-element-solution.md">Solution</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -102,7 +102,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.htm">LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md">LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +120,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadataresource-schema.htm">LobSystem Element in LobSystems (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md">LobSystem Element in LobSystems (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

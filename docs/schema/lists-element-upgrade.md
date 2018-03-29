@@ -120,7 +120,7 @@ template by list template basis.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="list-element-upgrade.htm">List</a></p></td>
+<td align="left"><p><a href="list-element-upgrade.md">List</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +134,7 @@ template by list template basis.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webtemplate-element-upgrade.htm">WebTemplate</a></p></td>
+<td align="left"><p><a href="webtemplate-element-upgrade.md">WebTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

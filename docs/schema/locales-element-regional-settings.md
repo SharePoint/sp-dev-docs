@@ -114,7 +114,7 @@ collection of locales defined in regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="locale-element-regional-settings.htm">Locale</a></p></td>
+<td align="left"><p><a href="locale-element-regional-settings.md">Locale</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,7 @@ collection of locales defined in regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="regionalsettings-element-regional-settings.htm">RegionalSettings</a></p></td>
+<td align="left"><p><a href="regionalsettings-element-regional-settings.md">RegionalSettings</a></p></td>
 </tr>
 </tbody>
 </table>

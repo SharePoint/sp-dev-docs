@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="urlactiondefinition-complextype-apphostwebfeatures.htm">UrlActionDefinition</a></p></td>
+<td align="left"><p><a href="urlactiondefinition-complextype-apphostwebfeatures.md">UrlActionDefinition</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -132,13 +132,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.htm">CustomAction</a></p></td>
-<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.htm">CustomActionDefinition</a></p></td>
+<td align="left"><p><a href="customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.md">CustomAction</a></p></td>
+<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.md">CustomActionDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="customaction-element-customactiondefinitions-complextypeapphostwebfeatures.htm">CustomAction</a></p></td>
-<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.htm">CustomActionDefinition</a></p></td>
+<td align="left"><p><a href="customaction-element-customactiondefinitions-complextypeapphostwebfeatures.md">CustomAction</a></p></td>
+<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.md">CustomActionDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

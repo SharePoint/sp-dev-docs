@@ -138,7 +138,7 @@ Microsoft Office system installed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="htmltrinfo-element.htm">HtmlTrInfo</a></p></td>
+<td align="left"><p><a href="htmltrinfo-element.md">HtmlTrInfo</a></p></td>
 </tr>
 </tbody>
 </table>

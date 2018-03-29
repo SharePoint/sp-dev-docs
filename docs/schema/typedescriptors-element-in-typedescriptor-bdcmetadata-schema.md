@@ -110,7 +110,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.htm">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A **TypeDescriptor**.</p></td>
 </tr>
 </tbody>
@@ -131,7 +131,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.htm">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="even">

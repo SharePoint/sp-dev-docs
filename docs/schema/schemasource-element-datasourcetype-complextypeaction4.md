@@ -161,8 +161,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.htm">DataSource</a></p></td>
-<td align="left"><p><a href="datasourcetype-complextype-action4.htm">dataSourceType</a></p></td>
+<td align="left"><p><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource</a></p></td>
+<td align="left"><p><a href="datasourcetype-complextype-action4.md">dataSourceType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -185,22 +185,22 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttype-element-schemasource-elementdatasourcetype-complextypeaction4.htm">ContentType</a></p></td>
+<td align="left"><p><a href="contenttype-element-schemasource-elementdatasourcetype-complextypeaction4.md">ContentType</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="dictionary-element-schemasource-elementdatasourcetype-complextypeaction4.htm">Dictionary</a></p></td>
+<td align="left"><p><a href="dictionary-element-schemasource-elementdatasourcetype-complextypeaction4.md">Dictionary</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="fields-element-schemasource-elementdatasourcetype-complextypeaction4.htm">Fields</a></p></td>
+<td align="left"><p><a href="fields-element-schemasource-elementdatasourcetype-complextypeaction4.md">Fields</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nestedinitiationfieldnodes-element-schemasource-elementdatasourcetype-complextyp.htm">NestedInitiationFieldNodes</a></p></td>
+<td align="left"><p><a href="nestedinitiationfieldnodes-element-schemasource-elementdatasourcetype-complextyp.md">NestedInitiationFieldNodes</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

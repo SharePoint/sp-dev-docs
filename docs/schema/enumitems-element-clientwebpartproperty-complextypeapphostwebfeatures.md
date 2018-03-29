@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="clientwebpartenumitems-complextype-apphostwebfeatures.htm">ClientWebPartEnumItems</a></p></td>
+<td align="left"><p><a href="clientwebpartenumitems-complextype-apphostwebfeatures.md">ClientWebPartEnumItems</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -132,8 +132,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-clientwebpartproperties-complextypeapphostwebfeatures.htm">Property</a></p></td>
-<td align="left"><p><a href="clientwebpartproperty-complextype-apphostwebfeatures.htm">ClientWebPartProperty</a></p></td>
+<td align="left"><p><a href="property-element-clientwebpartproperties-complextypeapphostwebfeatures.md">Property</a></p></td>
+<td align="left"><p><a href="clientwebpartproperty-complextype-apphostwebfeatures.md">ClientWebPartProperty</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -156,8 +156,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="enumitem-element-clientwebpartenumitems-complextypeapphostwebfeatures.htm">EnumItem</a></p></td>
-<td align="left"><p><a href="clientwebpartenumitem-complextype-apphostwebfeatures.htm">ClientWebPartEnumItem</a></p></td>
+<td align="left"><p><a href="enumitem-element-clientwebpartenumitems-complextypeapphostwebfeatures.md">EnumItem</a></p></td>
+<td align="left"><p><a href="clientwebpartenumitem-complextype-apphostwebfeatures.md">ClientWebPartEnumItem</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

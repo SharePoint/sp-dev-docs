@@ -154,13 +154,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduiextension-element-customactiondefinition-complextypeapphostwebfeatures.htm">CommandUIExtension</a></p></td>
-<td align="left"><p><a href="commanduiextensiontype-complextype-apphostwebfeatures.htm">CommandUIExtensionType</a></p></td>
+<td align="left"><p><a href="commanduiextension-element-customactiondefinition-complextypeapphostwebfeatures.md">CommandUIExtension</a></p></td>
+<td align="left"><p><a href="commanduiextensiontype-complextype-apphostwebfeatures.md">CommandUIExtensionType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="urlaction-element-customactiondefinition-complextypeapphostwebfeatures.htm">UrlAction</a></p></td>
-<td align="left"><p><a href="urlactiondefinition-complextype-apphostwebfeatures.htm">UrlActionDefinition</a></p></td>
+<td align="left"><p><a href="urlaction-element-customactiondefinition-complextypeapphostwebfeatures.md">UrlAction</a></p></td>
+<td align="left"><p><a href="urlactiondefinition-complextype-apphostwebfeatures.md">UrlActionDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -237,7 +237,7 @@ class="keyword">choice</span>, see the definition section.
 </tr>
 <tr class="even">
 <td align="left"><p>Location</p></td>
-<td align="left"><p><a href="customactionlocations-simpletype-apphostwebfeatures.htm">CustomActionLocations</a></p></td>
+<td align="left"><p><a href="customactionlocations-simpletype-apphostwebfeatures.md">CustomActionLocations</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the CustomActionLocations type.</p></td>
@@ -251,7 +251,7 @@ class="keyword">choice</span>, see the definition section.
 </tr>
 <tr class="even">
 <td align="left"><p>RegistrationType</p></td>
-<td align="left"><p><a href="customactionregistrationtype-simpletype-apphostwebfeatures.htm">CustomActionRegistrationType</a></p></td>
+<td align="left"><p><a href="customactionregistrationtype-simpletype-apphostwebfeatures.md">CustomActionRegistrationType</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the CustomActionRegistrationType type.</p></td>
@@ -300,7 +300,7 @@ class="keyword">choice</span>, see the definition section.
 </tr>
 <tr class="odd">
 <td align="left"><p>UIVersion</p></td>
-<td align="left"><p><a href="uiversion-simpletype-apphostwebfeatures.htm">UIVersion</a></p></td>
+<td align="left"><p><a href="uiversion-simpletype-apphostwebfeatures.md">UIVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the UIVersion type.</p></td>

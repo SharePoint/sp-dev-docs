@@ -111,7 +111,7 @@ Specifies the code access security for the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="policyitem-element-solution.htm">PolicyItem</a></p></td>
+<td align="left"><p><a href="policyitem-element-solution.md">PolicyItem</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ Specifies the code access security for the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="solution-element-solution.htm">Solution</a></p></td>
+<td align="left"><p><a href="solution-element-solution.md">Solution</a></p></td>
 </tr>
 </tbody>
 </table>

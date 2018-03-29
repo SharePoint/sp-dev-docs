@@ -190,7 +190,7 @@ The introduction is required.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="binaryserializedwebpart-element-site.htm">BinarySerializedWebPart</a></p></td>
+<td align="left"><p><a href="binaryserializedwebpart-element-site.md">BinarySerializedWebPart</a></p></td>
 </tr>
 </tbody>
 </table>

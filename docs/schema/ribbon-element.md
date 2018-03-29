@@ -318,10 +318,10 @@ Contains elements that define the Server ribbon user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tabs-element.htm">Tabs</a></p></td>
+<td align="left"><p><a href="tabs-element.md">Tabs</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="contextualtabs-element.htm">ContextualTabs</a></p></td>
+<td align="left"><p><a href="contextualtabs-element.md">ContextualTabs</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -335,7 +335,7 @@ Contains elements that define the Server ribbon user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commandui-element.htm">CommandUI</a></p></td>
+<td align="left"><p><a href="commandui-element.md">CommandUI</a></p></td>
 </tr>
 </tbody>
 </table>

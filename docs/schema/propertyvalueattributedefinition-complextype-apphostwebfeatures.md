@@ -156,7 +156,7 @@ None.
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><a href="propertybagtype-simpletype-apphostwebfeatures.htm">PropertyBagType</a></p></td>
+<td align="left"><p><a href="propertybagtype-simpletype-apphostwebfeatures.md">PropertyBagType</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the PropertyBagType type.</p></td>

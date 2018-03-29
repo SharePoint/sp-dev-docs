@@ -123,7 +123,7 @@ Specifies a Feature to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="featuremanifests-element-solution.htm">FeatureManifests</a></p></td>
+<td align="left"><p><a href="featuremanifests-element-solution.md">FeatureManifests</a></p></td>
 </tr>
 </tbody>
 </table>

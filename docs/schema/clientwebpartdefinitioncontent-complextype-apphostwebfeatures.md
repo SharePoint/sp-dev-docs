@@ -151,7 +151,7 @@ None.
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><a href="clientwebpartdefinitioncontenttype-simpletype-apphostwebfeatures.htm">ClientWebPartDefinitionContentType</a></p></td>
+<td align="left"><p><a href="clientwebpartdefinitioncontenttype-simpletype-apphostwebfeatures.md">ClientWebPartDefinitionContentType</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the ClientWebPartDefinitionContentType type.</p></td>

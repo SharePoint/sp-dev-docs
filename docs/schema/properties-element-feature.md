@@ -104,7 +104,7 @@ Contains a list of the default values for Feature properties.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-feature.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-feature.md">Property</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -118,7 +118,7 @@ Contains a list of the default values for Feature properties.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-feature.htm">Feature</a></p></td>
+<td align="left"><p><a href="feature-element-feature.md">Feature</a></p></td>
 </tr>
 </tbody>
 </table>

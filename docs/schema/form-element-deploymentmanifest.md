@@ -112,7 +112,7 @@ class="nolink">SPForm</span></span>
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the form.</p></td>
 </tr>
 <tr class="even">
@@ -151,7 +151,7 @@ class="nolink">SPForm</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="forms-element-deploymentmanifest.htm">Forms Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="forms-element-deploymentmanifest.md">Forms Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

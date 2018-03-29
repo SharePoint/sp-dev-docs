@@ -135,7 +135,7 @@ module so that other pages can be linked to the page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element-module.htm">File</a></p></td>
+<td align="left"><p><a href="file-element-module.md">File</a></p></td>
 </tr>
 </tbody>
 </table>

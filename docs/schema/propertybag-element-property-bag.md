@@ -131,7 +131,7 @@ folder, or website.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-property-bag.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-property-bag.md">Property</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -145,7 +145,7 @@ folder, or website.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-property-bag.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-property-bag.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

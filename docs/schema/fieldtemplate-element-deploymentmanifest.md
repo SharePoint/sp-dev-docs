@@ -112,7 +112,7 @@ USAGE
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the field template.</p></td>
 </tr>
 <tr class="even">
@@ -122,7 +122,7 @@ USAGE
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Unique identifier of the parent Web site.</p>
 <p>Optional on export; required on import.</p></td>
 </tr>
@@ -154,7 +154,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="field-element-deploymentmanifestdeploymentfieldtemplate.htm">Field Element (DeploymentManifest - DeploymentFieldTemplate)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="field-element-deploymentmanifestdeploymentfieldtemplate.md">Field Element (DeploymentManifest - DeploymentFieldTemplate)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

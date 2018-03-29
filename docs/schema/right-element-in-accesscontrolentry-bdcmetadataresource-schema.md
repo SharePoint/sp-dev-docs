@@ -166,7 +166,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.htm">AccessControlEntry Element in AccessControlList (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md">AccessControlEntry Element in AccessControlList (BDCMetadataResource Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

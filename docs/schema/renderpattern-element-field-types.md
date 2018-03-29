@@ -68,7 +68,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Important note" alt="Important note" /><strong>Important</strong></th>
+<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -139,7 +139,7 @@ selected field type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p>None explicitly defined, but this element is a container of CAML markup from the <span sdata="link"><a href="view-schema.htm">View Schema</a></span></p></td>
+<td align="left"><p>None explicitly defined, but this element is a container of CAML markup from the <span sdata="link"><a href="view-schema.md">View Schema</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ selected field type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fieldtype-element-field-types.htm">FieldType Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldtype-element-field-types.md">FieldType Element (Field Types)</a></span></p></td>
 </tr>
 </tbody>
 </table>

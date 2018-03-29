@@ -124,7 +124,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="totalcount-element-managedpropertyinfocollection-complextypesps15xsdsearchset2.htm">TotalCount</a></p></td>
+<td align="left"><p><a href="totalcount-element-managedpropertyinfocollection-complextypesps15xsdsearchset2.md">TotalCount</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>

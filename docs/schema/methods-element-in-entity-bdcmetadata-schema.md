@@ -109,7 +109,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.htm">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies a method.</p></td>
 </tr>
 </tbody>
@@ -130,7 +130,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.htm">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The external content type that this list of methods belongs to.</p></td>
 </tr>
 </tbody>

@@ -124,7 +124,7 @@ MM/DD/YYYY (for example, 1/21/2001).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="value-element-query.htm">Value</a></p></td>
+<td align="left"><p><a href="value-element-query.md">Value</a></p></td>
 </tr>
 </tbody>
 </table>

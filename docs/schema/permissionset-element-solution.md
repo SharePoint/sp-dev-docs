@@ -125,7 +125,7 @@ Specifies the permissions for a solution's code access security policy.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ipermission-element-solution.htm">IPermission</a></p></td>
+<td align="left"><p><a href="ipermission-element-solution.md">IPermission</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -139,7 +139,7 @@ Specifies the permissions for a solution's code access security policy.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="policyitem-element-solution.htm">PolicyItem</a></p></td>
+<td align="left"><p><a href="policyitem-element-solution.md">PolicyItem</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -336,7 +336,7 @@ lists on the <span class="ui">Create Page</span>.
 <li><p>**1200**   Administrator tasks list</p></li>
 </ul>
 <p>For custom list templates this attribute should be set to a number above 10000 to ensure that it does not conflict with any present or future Microsoft supplied list types.</p>
-<p>This attribute corresponds to the **Type** attribute of the <a href="list-element-list.htm">List</a> element.</p></td>
+<p>This attribute corresponds to the **Type** attribute of the <a href="list-element-list.md">List</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Unique**</p></td>
@@ -393,7 +393,7 @@ lists on the <span class="ui">Create Page</span>.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="listtemplates-element-site.htm">ListTemplates</a></p></td>
+<td align="left"><p><a href="listtemplates-element-site.md">ListTemplates</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -109,7 +109,7 @@ Contains groups of tabs that are conditionally present.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contextualgroup-element.htm">ContextualGroup</a></p></td>
+<td align="left"><p><a href="contextualgroup-element.md">ContextualGroup</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,10 +123,10 @@ Contains groups of tabs that are conditionally present.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="ribbon-element.htm">Ribbon</a></p></td>
+<td align="left"><p><a href="ribbon-element.md">Ribbon</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -188,7 +188,7 @@ Returns the value of a specified column in the List of Lists table.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded (1 within <a href="expr1-element-view.htm">Expr1</a> and <a href="expr2-element-view.htm">Expr2</a>)</p></td>
+<p>Maximum: Unbounded (1 within <a href="expr1-element-view.md">Expr1</a> and <a href="expr2-element-view.md">Expr2</a>)</p></td>
 </tr>
 </tbody>
 </table>

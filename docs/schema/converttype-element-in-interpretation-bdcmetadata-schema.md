@@ -86,7 +86,7 @@ the date that is compatible with the external system.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
+<th align="left"><img src=".." title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -172,7 +172,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.htm">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The rules to apply to the data stored in the data structures that are represented by a **TypeDescriptor**.</p></td>
 </tr>
 </tbody>

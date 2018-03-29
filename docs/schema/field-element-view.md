@@ -173,7 +173,7 @@ Returns the formatted value of a field for use within a view definition.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded (1 within <a href="urlbasename-element-view.htm">UrlBaseName</a>)</p></td>
+<p>Maximum: Unbounded (1 within <a href="urlbasename-element-view.md">UrlBaseName</a>)</p></td>
 </tr>
 </tbody>
 </table>

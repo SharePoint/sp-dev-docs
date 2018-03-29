@@ -131,7 +131,7 @@ Specifies the transformer for the Web Part.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webpartconnection-element-module.htm">WebPartConnection Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webpartconnection-element-module.md">WebPartConnection Element (Module)</a></span></p></td>
 </tr>
 </tbody>
 </table>

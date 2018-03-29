@@ -128,7 +128,7 @@ new, respectively.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ifequal-element-view.htm">IfEqual</a>, <a href="ifhasrights-element-view.htm">IfHasRights</a>, <a href="ifnew-element-view.htm">IfNew</a>, <a href="ifsubstring-element-view.htm">IfSubString</a></p></td>
+<td align="left"><p><a href="ifequal-element-view.md">IfEqual</a>, <a href="ifhasrights-element-view.md">IfHasRights</a>, <a href="ifnew-element-view.md">IfNew</a>, <a href="ifsubstring-element-view.md">IfSubString</a></p></td>
 </tr>
 </tbody>
 </table>

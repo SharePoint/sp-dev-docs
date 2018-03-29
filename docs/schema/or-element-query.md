@@ -109,7 +109,7 @@ element to group filters in a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="and-element-query.htm">And</a>, <a href="beginswith-element-query.htm">BeginsWith</a>, <a href="contains-element-query.htm">Contains</a>, <a href="daterangesoverlap-element-query.htm">DateRangesOverlap</a>, <a href="eq-element-query.htm">Eq</a>, <a href="geq-element-query.htm">Geq</a>, <a href="gt-element-query.htm">Gt</a>, <a href="in-element-query.htm">In</a>, <a href="includes-element-query.htm">Includes</a>, <a href="isnotnull-element-query.htm">IsNotNull</a>, <a href="isnull-element-query.htm">IsNull</a>, <a href="leq-element-query.htm">Leq</a>, <a href="lt-element-query.htm">Lt</a>, <a href="membership-element-query.htm">Membership</a>, <a href="neq-element-query.htm">Neq</a>, <a href="notincludes-element-query.htm">NotIncludes</a>, <a href="or-element-query.htm">Or</a></p></td>
+<td align="left"><p><a href="and-element-query.md">And</a>, <a href="beginswith-element-query.md">BeginsWith</a>, <a href="contains-element-query.md">Contains</a>, <a href="daterangesoverlap-element-query.md">DateRangesOverlap</a>, <a href="eq-element-query.md">Eq</a>, <a href="geq-element-query.md">Geq</a>, <a href="gt-element-query.md">Gt</a>, <a href="in-element-query.md">In</a>, <a href="includes-element-query.md">Includes</a>, <a href="isnotnull-element-query.md">IsNotNull</a>, <a href="isnull-element-query.md">IsNull</a>, <a href="leq-element-query.md">Leq</a>, <a href="lt-element-query.md">Lt</a>, <a href="membership-element-query.md">Membership</a>, <a href="neq-element-query.md">Neq</a>, <a href="notincludes-element-query.md">NotIncludes</a>, <a href="or-element-query.md">Or</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ element to group filters in a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="and-element-query.htm">And</a>, <a href="or-element-query.htm">Or</a>, <a href="where-element-query.htm">Where</a></p></td>
+<td align="left"><p><a href="and-element-query.md">And</a>, <a href="or-element-query.md">Or</a>, <a href="where-element-query.md">Where</a></p></td>
 </tr>
 </tbody>
 </table>

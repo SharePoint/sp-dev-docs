@@ -108,7 +108,7 @@ needed for a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="join-element-view.htm">Join</a></p></td>
+<td align="left"><p><a href="join-element-view.md">Join</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +122,7 @@ needed for a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 </tr>
 </tbody>
 </table>

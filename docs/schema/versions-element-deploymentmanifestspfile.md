@@ -126,7 +126,7 @@ class="nolink">SPFileVersionCollection</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspfileversioncollection.htm">File Element (DeploymentManifest - SPFileVersionCollection)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspfileversioncollection.md">File Element (DeploymentManifest - SPFileVersionCollection)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -140,7 +140,7 @@ class="nolink">SPFileVersionCollection</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspgenericobject.htm">File Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspgenericobject.md">File Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
 </tr>
 </tbody>
 </table>

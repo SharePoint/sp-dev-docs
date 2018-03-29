@@ -119,7 +119,7 @@ class="nolink">SPRoleAssignment</span></span>)
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Operation**</p></td>
-<td align="left"><p><span sdata="link"><a href="securitymodificationtype-simple-type-deploymentmanifest.htm">SecurityModificationType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="securitymodificationtype-simple-type-deploymentmanifest.md">SecurityModificationType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Enumeration type that specifies which security role modifications are allowed.</p></td>
 </tr>
 <tr class="even">
@@ -208,7 +208,7 @@ class="nolink">SPRoleAssignment</span></span>)
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

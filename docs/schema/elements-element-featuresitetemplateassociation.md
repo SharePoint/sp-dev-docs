@@ -112,7 +112,7 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="featuresitetemplateassociation-element-featuresitetemplateassociation.htm">FeatureSiteTemplateAssociation</a></p></td>
+<td align="left"><p><a href="featuresitetemplateassociation-element-featuresitetemplateassociation.md">FeatureSiteTemplateAssociation</a></p></td>
 </tr>
 </tbody>
 </table>

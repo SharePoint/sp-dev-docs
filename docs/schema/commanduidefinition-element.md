@@ -105,94 +105,94 @@ Contains elements that define a user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="button-element.htm">Button</a></p></td>
+<td align="left"><p><a href="button-element.md">Button</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="checkbox-element.htm">CheckBox</a></p></td>
+<td align="left"><p><a href="checkbox-element.md">CheckBox</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="combobox-element.htm">ComboBox</a></p></td>
+<td align="left"><p><a href="combobox-element.md">ComboBox</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="colorpicker-element.htm">ColorPicker</a></p></td>
+<td align="left"><p><a href="colorpicker-element.md">ColorPicker</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="contextualgroup-element.htm">ContextualGroup</a></p></td>
+<td align="left"><p><a href="contextualgroup-element.md">ContextualGroup</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="contextualtabs-element.htm">ContextualTabs</a></p></td>
+<td align="left"><p><a href="contextualtabs-element.md">ContextualTabs</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="controls-element-commanduidefinition.htm">Controls</a></p></td>
+<td align="left"><p><a href="controls-element-commanduidefinition.md">Controls</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="dropdown-element.htm">DropDown</a></p></td>
+<td align="left"><p><a href="dropdown-element.md">DropDown</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="flyoutanchor-element.htm">FlyoutAnchor</a></p></td>
+<td align="left"><p><a href="flyoutanchor-element.md">FlyoutAnchor</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="gallery-element.htm">Gallery</a></p></td>
+<td align="left"><p><a href="gallery-element.md">Gallery</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="gallerybutton-element-group.htm">GalleryButton</a></p></td>
+<td align="left"><p><a href="gallerybutton-element-group.md">GalleryButton</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="grouptemplate-element.htm">GroupTemplate</a></p></td>
+<td align="left"><p><a href="grouptemplate-element.md">GroupTemplate</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="group-element-ribbon.htm">Group</a></p></td>
+<td align="left"><p><a href="group-element-ribbon.md">Group</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="groups-element.htm">Groups</a></p></td>
+<td align="left"><p><a href="groups-element.md">Groups</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="inserttable-element.htm">InsertTable</a></p></td>
+<td align="left"><p><a href="inserttable-element.md">InsertTable</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="label-element.htm">Label</a></p></td>
+<td align="left"><p><a href="label-element.md">Label</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="mrusplitbutton-element.htm">MRUSplitButton</a></p></td>
+<td align="left"><p><a href="mrusplitbutton-element.md">MRUSplitButton</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="maxsize-element.htm">MaxSize</a></p></td>
+<td align="left"><p><a href="maxsize-element.md">MaxSize</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="menu-element.htm">Menu</a></p></td>
+<td align="left"><p><a href="menu-element.md">Menu</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="menusection-element.htm">MenuSection</a></p></td>
+<td align="left"><p><a href="menusection-element.md">MenuSection</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="qat-element.htm">QAT</a></p></td>
+<td align="left"><p><a href="qat-element.md">QAT</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="ribbon-element.htm">Ribbon</a></p></td>
+<td align="left"><p><a href="ribbon-element.md">Ribbon</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="scale-element.htm">Scale</a></p></td>
+<td align="left"><p><a href="scale-element.md">Scale</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="scaling-element.htm">Scaling</a></p></td>
+<td align="left"><p><a href="scaling-element.md">Scaling</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="spinner-element.htm">Spinner</a></p></td>
+<td align="left"><p><a href="spinner-element.md">Spinner</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="splitbutton-element.htm">SplitButton</a></p></td>
+<td align="left"><p><a href="splitbutton-element.md">SplitButton</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="tab-element.htm">Tab</a></p></td>
+<td align="left"><p><a href="tab-element.md">Tab</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="tabs-element.htm">Tabs</a></p></td>
+<td align="left"><p><a href="tabs-element.md">Tabs</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="textbox-element.htm">TextBox</a></p></td>
+<td align="left"><p><a href="textbox-element.md">TextBox</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="togglebutton-element.htm">ToggleButton</a></p></td>
+<td align="left"><p><a href="togglebutton-element.md">ToggleButton</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -206,7 +206,7 @@ Contains elements that define a user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduiextension-element.htm">CommandUIExtension</a></p></td>
+<td align="left"><p><a href="commanduiextension-element.md">CommandUIExtension</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -128,7 +128,7 @@ Defines a hyperlink used in the top navigation area of a home page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="navbar-element-site.htm">NavBar</a></p></td>
+<td align="left"><p><a href="navbar-element-site.md">NavBar</a></p></td>
 </tr>
 </tbody>
 </table>

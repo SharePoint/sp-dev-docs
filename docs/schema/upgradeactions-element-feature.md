@@ -120,19 +120,19 @@ Specifies the upgrade actions for the Feature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="addcontenttypefield-element-feature.htm">AddContentTypeField Element (Feature)</a></span>,</p></td>
+<td align="left"><p><span sdata="link"><a href="addcontenttypefield-element-feature.md">AddContentTypeField Element (Feature)</a></span>,</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="applyelementmanifests-element-feature.htm">ApplyElementManifests Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="applyelementmanifests-element-feature.md">ApplyElementManifests Element (Feature)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customupgradeaction-element-feature.htm">CustomUpgradeAction Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="customupgradeaction-element-feature.md">CustomUpgradeAction Element (Feature)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="mapfile-element-feature.htm">MapFile Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="mapfile-element-feature.md">MapFile Element (Feature)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="versionrange-element-feature.htm">VersionRange Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="versionrange-element-feature.md">VersionRange Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +146,7 @@ Specifies the upgrade actions for the Feature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="feature-element-feature.htm">Feature Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="feature-element-feature.md">Feature Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -105,7 +105,7 @@ definitions for the Feature elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elementfile-element-feature.htm">ElementFile</a>, <a href="elementmanifest-element-feature.htm">ElementManifest</a></p></td>
+<td align="left"><p><a href="elementfile-element-feature.md">ElementFile</a>, <a href="elementmanifest-element-feature.md">ElementManifest</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -119,7 +119,7 @@ definitions for the Feature elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-feature.htm">Feature</a></p></td>
+<td align="left"><p><a href="feature-element-feature.md">Feature</a></p></td>
 </tr>
 </tbody>
 </table>

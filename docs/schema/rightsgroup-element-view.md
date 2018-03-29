@@ -254,7 +254,7 @@ to be displayed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rightschoices-element-view.htm">RightsChoices</a></p></td>
+<td align="left"><p><a href="rightschoices-element-view.md">RightsChoices</a></p></td>
 </tr>
 </tbody>
 </table>

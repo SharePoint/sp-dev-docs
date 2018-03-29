@@ -112,7 +112,7 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="timezone-element-regional-settings.htm">TimeZone</a></p></td>
+<td align="left"><p><a href="timezone-element-regional-settings.md">TimeZone</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="regionalsettings-element-regional-settings.htm">RegionalSettings</a></p></td>
+<td align="left"><p><a href="regionalsettings-element-regional-settings.md">RegionalSettings</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -127,22 +127,22 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="_authschemename-element-formsauthcredentials-complextypesps15xsdsearchset2.htm">_AuthSchemeName</a></p></td>
+<td align="left"><p><a href="_authschemename-element-formsauthcredentials-complextypesps15xsdsearchset2.md">_AuthSchemeName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="_authsubmissionmethod-element-formsauthcredentials-complextypesps15xsdsearchset2.htm">_AuthSubmissionMethod</a></p></td>
+<td align="left"><p><a href="_authsubmissionmethod-element-formsauthcredentials-complextypesps15xsdsearchset2.md">_AuthSubmissionMethod</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="_authsubmissionpath-element-formsauthcredentials-complextypesps15xsdsearchset2.htm">_AuthSubmissionPath</a></p></td>
+<td align="left"><p><a href="_authsubmissionpath-element-formsauthcredentials-complextypesps15xsdsearchset2.md">_AuthSubmissionPath</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="_errorpageurl-element-formsauthcredentials-complextypesps15xsdsearchset2.htm">_ErrorPageUrl</a></p></td>
+<td align="left"><p><a href="_errorpageurl-element-formsauthcredentials-complextypesps15xsdsearchset2.md">_ErrorPageUrl</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

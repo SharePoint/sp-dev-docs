@@ -124,7 +124,7 @@ system](http://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593(O
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rows-dsqueryresponse.htm">Rows</a></p></td>
+<td align="left"><p><a href="rows-dsqueryresponse.md">Rows</a></p></td>
 </tr>
 </tbody>
 </table>

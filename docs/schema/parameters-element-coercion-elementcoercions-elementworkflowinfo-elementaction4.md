@@ -91,7 +91,7 @@ code] "Copy code")Copy code</span>
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="coercionparameterstype-complextype-action4.htm">coercionParametersType</a></p></td>
+<td align="left"><p><a href="coercionparameterstype-complextype-action4.md">coercionParametersType</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -142,7 +142,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="coercion-element-coercions-elementworkflowinfo-elementaction4.htm">Coercion</a></p></td>
+<td align="left"><p><a href="coercion-element-coercions-elementworkflowinfo-elementaction4.md">Coercion</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -166,7 +166,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameter-element-coercionparameterstype-complextypeaction4.htm">Parameter</a></p></td>
+<td align="left"><p><a href="parameter-element-coercionparameterstype-complextypeaction4.md">Parameter</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

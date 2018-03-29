@@ -120,7 +120,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="resultitemtype-element-arrayofresultitemtype-complextypesps15xsdsearchset2.htm">ResultItemType</a></p></td>
+<td align="left"><p><a href="resultitemtype-element-arrayofresultitemtype-complextypesps15xsdsearchset2.md">ResultItemType</a></p></td>
 <td align="left"><p>tns:ResultItemType</p></td>
 <td align="left"><p></p></td>
 </tr>

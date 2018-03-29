@@ -128,27 +128,27 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="crawledpropertyname-element-mappinginfo-complextypesps15xsdsearchset2.htm">CrawledPropertyName</a></p></td>
+<td align="left"><p><a href="crawledpropertyname-element-mappinginfo-complextypesps15xsdsearchset2.md">CrawledPropertyName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="crawledpropset-element-mappinginfo-complextypesps15xsdsearchset2.htm">CrawledPropset</a></p></td>
+<td align="left"><p><a href="crawledpropset-element-mappinginfo-complextypesps15xsdsearchset2.md">CrawledPropset</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="managedpid-element-mappinginfo-complextypesps15xsdsearchset2.htm">ManagedPid</a></p></td>
+<td align="left"><p><a href="managedpid-element-mappinginfo-complextypesps15xsdsearchset2.md">ManagedPid</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mappingorder-element-mappinginfo-complextypesps15xsdsearchset2.htm">MappingOrder</a></p></td>
+<td align="left"><p><a href="mappingorder-element-mappinginfo-complextypesps15xsdsearchset2.md">MappingOrder</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="schemaid-element-mappinginfo-complextypesps15xsdsearchset2.htm">SchemaId</a></p></td>
+<td align="left"><p><a href="schemaid-element-mappinginfo-complextypesps15xsdsearchset2.md">SchemaId</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>

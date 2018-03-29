@@ -107,7 +107,7 @@ Specifies the activation dependencies for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="activationdependency-element-solution.htm">ActivationDependency Element (Solution)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="activationdependency-element-solution.md">ActivationDependency Element (Solution)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@ Specifies the activation dependencies for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="solution-element-solution.htm">Solution Element (Solution)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="solution-element-solution.md">Solution Element (Solution)</a></span></p></td>
 </tr>
 </tbody>
 </table>

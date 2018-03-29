@@ -165,7 +165,7 @@ Top-level element for a solution manifest file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="activationdependencies-element-solution.htm">ActivationDependencies Element (Solution)</a></span>, <a href="applicationresourcefiles-element-solution.htm">ApplicationResourceFiles</a>, <a href="assemblies-element-solutionassemblies.htm">Assemblies</a>, <a href="codeaccesssecurity-element-solution.htm">CodeAccessSecurity</a>, <a href="dwpfiles-element-solution.htm">DwpFiles</a>, <a href="featuremanifests-element-solution.htm">FeatureManifests</a>, <a href="resources-element-solution.htm">Resources</a>, <a href="sitedefinitionmanifests-element-solution.htm">SiteDefinitionManifests</a>, <a href="rootfiles-element-solution.htm">RootFiles</a>, <a href="templatefiles-element-solution.htm">TemplateFiles</a></p></td>
+<td align="left"><p><span sdata="link"><a href="activationdependencies-element-solution.md">ActivationDependencies Element (Solution)</a></span>, <a href="applicationresourcefiles-element-solution.md">ApplicationResourceFiles</a>, <a href="assemblies-element-solutionassemblies.md">Assemblies</a>, <a href="codeaccesssecurity-element-solution.md">CodeAccessSecurity</a>, <a href="dwpfiles-element-solution.md">DwpFiles</a>, <a href="featuremanifests-element-solution.md">FeatureManifests</a>, <a href="resources-element-solution.md">Resources</a>, <a href="sitedefinitionmanifests-element-solution.md">SiteDefinitionManifests</a>, <a href="rootfiles-element-solution.md">RootFiles</a>, <a href="templatefiles-element-solution.md">TemplateFiles</a></p></td>
 </tr>
 </tbody>
 </table>

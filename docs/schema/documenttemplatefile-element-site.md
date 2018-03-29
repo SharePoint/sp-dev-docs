@@ -133,7 +133,7 @@ Contains a reference to a file that is used within a document template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="documenttemplatefiles-element-site.htm">DocumentTemplateFiles</a></p></td>
+<td align="left"><p><a href="documenttemplatefiles-element-site.md">DocumentTemplateFiles</a></p></td>
 </tr>
 </tbody>
 </table>

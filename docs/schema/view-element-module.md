@@ -209,7 +209,7 @@ Describes a view within a module for a site definition.
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src="../icons/copycode.gif" title="Copy code" alt="Copy code" />Copy code</span>
+<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code>&lt;Switch&gt;
   &lt;Expr&gt;&lt;GetVar Name=&quot;ViewHasPrev&quot;/&gt;&lt;/Expr&gt;
   &lt;Case Value=&quot;TRUE&quot;&gt;
@@ -236,7 +236,7 @@ XML 
 <tr class="even">
 <td align="left"><p>**Threaded**</p></td>
 <td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to apply inner grouping in the view. A threaded view is constructed based on the built-in threading column (assumed to exist for the list). The view is sorted on this field as the secondary sort. If other columns in the view are specified as sorted or grouped, those are applied before the threading column sort order. As a result, all discussions grouped by a topic can be collected together, and the message threading can be displayed beneath the collection.</p>
-<p>When **TRUE</span>, the <a href="rowlimit-element-list.htm">RowLimit</a> element has a different meaning when used on a threaded discussion board list view. Instead of specifying the number of items to return, it specifies the number of discussion threads to return, where a thread could consist of one or more items. In addition to having the <span class="keyword">Threaded</span> attribute set to <span class="keyword">TRUE**, a threaded view must be sorted by the thread ID; otherwise, this row limit behavior does not take effect.</p></td>
+<p>When **TRUE</span>, the <a href="rowlimit-element-list.md">RowLimit</a> element has a different meaning when used on a threaded discussion board list view. Instead of specifying the number of items to return, it specifies the number of discussion threads to return, where a thread could consist of one or more items. In addition to having the <span class="keyword">Threaded</span> attribute set to <span class="keyword">TRUE**, a threaded view must be sorted by the thread ID; otherwise, this row limit behavior does not take effect.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
@@ -266,7 +266,7 @@ XML 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="binaryserializedwebpart-element-module.htm">BinarySerializedWebPart Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="binaryserializedwebpart-element-module.md">BinarySerializedWebPart Element (Module)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -280,7 +280,7 @@ XML 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element-module.htm">File</a></p></td>
+<td align="left"><p><a href="file-element-module.md">File</a></p></td>
 </tr>
 </tbody>
 </table>

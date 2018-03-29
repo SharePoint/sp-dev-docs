@@ -113,7 +113,7 @@ Specifies a reference to a Feature within a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="properties-element-site.htm">Properties</a></p></td>
+<td align="left"><p><a href="properties-element-site.md">Properties</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ Specifies a reference to a Feature within a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="sitefeatures-element-site.htm">SiteFeatures</a>, <a href="webfeatures-element-site.htm">WebFeatures</a></p></td>
+<td align="left"><p><a href="sitefeatures-element-site.md">SiteFeatures</a>, <a href="webfeatures-element-site.md">WebFeatures</a></p></td>
 </tr>
 </tbody>
 </table>

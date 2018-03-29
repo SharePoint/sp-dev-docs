@@ -125,7 +125,7 @@ currency format used for a locale.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="currencies-element-regional-settings.htm">Currencies</a></p></td>
+<td align="left"><p><a href="currencies-element-regional-settings.md">Currencies</a></p></td>
 </tr>
 </tbody>
 </table>

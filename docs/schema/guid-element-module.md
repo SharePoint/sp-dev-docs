@@ -131,7 +131,7 @@ Specifies the GUID of the GUIDMap.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="guidmap-element-module.htm">GUIDMap Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guidmap-element-module.md">GUIDMap Element (Module)</a></span></p></td>
 </tr>
 </tbody>
 </table>

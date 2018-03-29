@@ -97,10 +97,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fields-element-workflowinfo.htm">Fields</a></p>
-<p><a href="contenttype-element-workflowinfo.htm">ContentType</a></p>
-<p><a href="dictionary-element-workflowinfo.htm">Dictionary</a></p>
-<p><a href="nestedinitiationfieldnodes-element-workflowinfo.htm">NestedInitiationFieldNodes</a></p></td>
+<td align="left"><p><a href="fields-element-workflowinfo.md">Fields</a></p>
+<p><a href="contenttype-element-workflowinfo.md">ContentType</a></p>
+<p><a href="dictionary-element-workflowinfo.md">Dictionary</a></p>
+<p><a href="nestedinitiationfieldnodes-element-workflowinfo.md">NestedInitiationFieldNodes</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -114,7 +114,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasource-element-workflowinfo.htm">DataSource</a></p></td>
+<td align="left"><p><a href="datasource-element-workflowinfo.md">DataSource</a></p></td>
 </tr>
 </tbody>
 </table>

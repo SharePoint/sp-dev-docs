@@ -121,12 +121,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="dictionary-element-baseinfocollectionofcrawledpropertyinfotzwwwpjw-complextypesp.htm">dictionary</a></p></td>
+<td align="left"><p><a href="dictionary-element-baseinfocollectionofcrawledpropertyinfotzwwwpjw-complextypesp.md">dictionary</a></p></td>
 <td align="left"><p>q11:ArrayOfKeyValueOfstringCrawledPropertyInfoy6h3NzC8</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="lastitemname-element-baseinfocollectionofcrawledpropertyinfotzwwwpjw-complextype.htm">LastItemName</a></p></td>
+<td align="left"><p><a href="lastitemname-element-baseinfocollectionofcrawledpropertyinfotzwwwpjw-complextype.md">LastItemName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

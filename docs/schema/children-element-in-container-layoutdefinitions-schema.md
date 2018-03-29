@@ -107,7 +107,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.htm">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>An External Data Part.</p></td>
 </tr>
 </tbody>
@@ -128,7 +128,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.htm">Container Element (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.md">Container Element (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The layout for the External Data Parts.</p></td>
 </tr>
 </tbody>

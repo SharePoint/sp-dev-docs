@@ -148,7 +148,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="coercions-element-workflowinfo.htm">Coercions</a></p></td>
+<td align="left"><p><a href="coercions-element-workflowinfo.md">Coercions</a></p></td>
 </tr>
 </tbody>
 </table>

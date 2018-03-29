@@ -109,7 +109,7 @@ Renders the base name of a particular URL.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-view.htm">Field</a>, <a href="lookupcolumn-element-view.htm">LookupColumn</a></p></td>
+<td align="left"><p><a href="field-element-view.md">Field</a>, <a href="lookupcolumn-element-view.md">LookupColumn</a></p></td>
 </tr>
 </tbody>
 </table>

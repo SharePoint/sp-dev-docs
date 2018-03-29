@@ -106,7 +106,7 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="receivers-element-event.htm">Receivers</a></p></td>
+<td align="left"><p><a href="receivers-element-event.md">Receivers</a></p></td>
 </tr>
 </tbody>
 </table>

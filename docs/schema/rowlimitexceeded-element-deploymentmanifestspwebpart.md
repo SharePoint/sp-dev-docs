@@ -133,7 +133,7 @@ xs:string
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webpart-element-deploymentmanifest.htm">WebPart Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webpart-element-deploymentmanifest.md">WebPart Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

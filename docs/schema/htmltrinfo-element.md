@@ -114,7 +114,7 @@ computer does not have the 2007 Microsoft Office system installed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="mapping-element.htm">Mapping</a></p></td>
+<td align="left"><p><a href="mapping-element.md">Mapping</a></p></td>
 </tr>
 </tbody>
 </table>

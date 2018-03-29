@@ -147,7 +147,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewformslist-element-deploymentviewformslist.htm">ViewFormsList Element (DeploymentViewFormsList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewformslist-element-deploymentviewformslist.md">ViewFormsList Element (DeploymentViewFormsList)</a></span></p></td>
 </tr>
 </tbody>
 </table>

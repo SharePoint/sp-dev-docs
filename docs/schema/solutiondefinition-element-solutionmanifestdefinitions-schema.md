@@ -136,11 +136,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="solutionsettings-element-in-solutiondefinition-solutionmanifestdefinitions-schem.htm">SolutionSettings Element in SolutionDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="solutionsettings-element-in-solutiondefinition-solutionmanifestdefinitions-schem.md">SolutionSettings Element in SolutionDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>Defines the settings for this Business Connectivity Services solution such as the ID, display name, and description.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="contextdefinitiongroups-element-in-solutiondefinition-solutionmanifestdefinition.htm">ContextDefinitionGroups Element in SolutionDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contextdefinitiongroups-element-in-solutiondefinition-solutionmanifestdefinition.md">ContextDefinitionGroups Element in SolutionDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>Defines the context definitions that are part of this solution, grouped by the Outlook Item Type to which they refer. The manifest file can contain a context definition group containing a list of context definitions for each one of the Outlook Item Types such as Contact, Task, Post, or Calendar, or **EntityView** if showing related external data in a task pane.</p></td>
 </tr>
 </tbody>

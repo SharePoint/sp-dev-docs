@@ -108,7 +108,7 @@ Defines icons for documents according to their file name extensions.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="mapping-element.htm">Mapping</a></p></td>
+<td align="left"><p><a href="mapping-element.md">Mapping</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +122,7 @@ Defines icons for documents according to their file name extensions.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="docicons-element-document-icons.htm">DocIcons</a></p></td>
+<td align="left"><p><a href="docicons-element-document-icons.md">DocIcons</a></p></td>
 </tr>
 </tbody>
 </table>

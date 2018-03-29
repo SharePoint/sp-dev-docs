@@ -322,7 +322,7 @@ lists on the <span class="ui">Create</span> page.
 <tr class="even">
 <td align="left"><p>**Type**</p></td>
 <td align="left"><p>Optional **Integer</span>. Provides a unique identifier for the template. This identifier must be unique within the feature, but need not be unique across all feature definitions or site definitions. For a list of the default list template types, see <span sdata="cer" target="T:Microsoft.SharePoint.SPListTemplateType"><span class="nolink">SPListTemplateType</span>**.</p>
-<p>This attribute corresponds to the **Type** attribute of the <a href="list-element-list.htm">List</a> element.</p></td>
+<p>This attribute corresponds to the **Type** attribute of the <a href="list-element-list.md">List</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Unique**</p></td>
@@ -379,7 +379,7 @@ lists on the <span class="ui">Create</span> page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-list-template.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-list-template.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

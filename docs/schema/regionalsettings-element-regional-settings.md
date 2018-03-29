@@ -113,7 +113,7 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="currencies-element-regional-settings.htm">Currencies</a>, <a href="languages-element-regional-settings.htm">Languages</a>, <a href="locales-element-regional-settings.htm">Locales</a>, <a href="timezones-element-regional-settings.htm">TimeZones</a></p></td>
+<td align="left"><p><a href="currencies-element-regional-settings.md">Currencies</a>, <a href="languages-element-regional-settings.md">Languages</a>, <a href="locales-element-regional-settings.md">Locales</a>, <a href="timezones-element-regional-settings.md">TimeZones</a></p></td>
 </tr>
 </tbody>
 </table>

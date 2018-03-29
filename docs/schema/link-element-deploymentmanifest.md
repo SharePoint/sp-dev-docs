@@ -120,7 +120,7 @@ class="nolink">Microsoft.SharePoint.SPLink</span></span>
 <tbody>
 <tr class="odd">
 <td align="left"><p>**TargetId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Identifier of the link target.</p></td>
 </tr>
 <tr class="even">
@@ -135,7 +135,7 @@ class="nolink">Microsoft.SharePoint.SPLink</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**WebPartId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the Web Part in which the link is sited.</p></td>
 </tr>
 <tr class="odd">
@@ -199,7 +199,7 @@ class="nolink">Microsoft.SharePoint.SPLink</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="links-element-deploymentmanifestspfile.htm">Links Element (DeploymentManifest - SPFile)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="links-element-deploymentmanifestspfile.md">Links Element (DeploymentManifest - SPFile)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -121,7 +121,7 @@ Represents a characteristic of the field type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fieldtype-element-field-types.htm">FieldType Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldtype-element-field-types.md">FieldType Element (Field Types)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="even">
 <td align="left"><p>**FieldEditorUserControl**</p></td>
-<td align="left"><p>Optional **String</span>. Represents the relative path to a <em>field_type</em>FieldEditor.ascx file that defines a control that appears, in SharePoint Foundation, in the <span class="ui">Additional Column Settings</span> section on the <span class="ui">New Site Column </span>page. The control enables column creators to set, for a particular column, the variable properties of the field type. E.g. <span class="code">&quot;/_controltemplates/RegularExpressionFieldEditor.ascx&quot;</span>. If there is no &lt;Field Name=&quot;FieldEditorUserControl&quot;&gt; element, then the special properties of the field type are rendered by the <span sdata="link"><a href="propertyschema-element-field-types.htm">PropertySchema Element (Field Types)</a>** element.</p>
+<td align="left"><p>Optional **String</span>. Represents the relative path to a <em>field_type</em>FieldEditor.ascx file that defines a control that appears, in SharePoint Foundation, in the <span class="ui">Additional Column Settings</span> section on the <span class="ui">New Site Column </span>page. The control enables column creators to set, for a particular column, the variable properties of the field type. E.g. <span class="code">&quot;/_controltemplates/RegularExpressionFieldEditor.ascx&quot;</span>. If there is no &lt;Field Name=&quot;FieldEditorUserControl&quot;&gt; element, then the special properties of the field type are rendered by the <span sdata="link"><a href="propertyschema-element-field-types.md">PropertySchema Element (Field Types)</a>** element.</p>
 <p>**FieldEditorUserControl** should be a fixed, nonlocalizable string.</p></td>
 </tr>
 <tr class="odd">
@@ -186,7 +186,7 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentType**</p></td>
-<td align="left"><p>Required **String</span> (but can be an empty string). Represents the name of the type from which the field class is derived. The possible values are exactly the same as the possible values for the <span class="keyword">Type </span>attribute of the <span sdata="link"><a href="field-element-list.htm">Field Element (List)</a>** element. If the field type is not derived from another type, then the value is an empty string:</p>
+<td align="left"><p>Required **String</span> (but can be an empty string). Represents the name of the type from which the field class is derived. The possible values are exactly the same as the possible values for the <span class="keyword">Type </span>attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a>** element. If the field type is not derived from another type, then the value is an empty string:</p>
 <p>DOCS-LESSTHANField Name=&quot;ParentType&quot;DOCS-GREATERTHANDOCS-LESSTHAN/FieldDOCS-GREATERTHAN. <em>It must never be empty in your custom field types. All custom types inherit from another type.</em></p>
 <p>In the SharePoint Foundation object model **ParentType</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.BaseRenderingTypeName"><span class="nolink">BaseRenderingTypeName</span>**.</p></td>
 </tr>
@@ -251,7 +251,7 @@ The following example defines a custom field type.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Important note" alt="Important note" /><strong>Important</strong></th>
+<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
 </tr>
 </thead>
 <tbody>

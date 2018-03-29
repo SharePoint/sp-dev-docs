@@ -121,7 +121,7 @@ class="nolink">SPFolder</span></span>
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Unique identifier of the folder.</p>
 <p>Optional on export; required by import.</p></td>
 </tr>
@@ -139,13 +139,13 @@ class="nolink">SPFolder</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**ParentFolderId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Unique identifier of the folder's parent folder.</p>
 <p>Optional on export; required by import.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Unique identifier of the folder's parent Web site, where appropriate.</p>
 <p>Optional on export; required by import.</p></td>
 </tr>
@@ -156,7 +156,7 @@ class="nolink">SPFolder</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ContainingDocumentLibrary**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the document library the folder is part of, if it belongs to a document library.</p></td>
 </tr>
 <tr class="even">
@@ -206,7 +206,7 @@ class="nolink">SPFolder</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspfolder.htm">Properties Element (DeploymentManifest - SPFolder)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspfolder.md">Properties Element (DeploymentManifest - SPFolder)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ class="nolink">SPFolder</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

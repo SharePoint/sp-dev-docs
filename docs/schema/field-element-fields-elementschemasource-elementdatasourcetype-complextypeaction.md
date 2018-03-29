@@ -141,7 +141,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fields-element-schemasource-elementdatasourcetype-complextypeaction4.htm">Fields</a></p></td>
+<td align="left"><p><a href="fields-element-schemasource-elementdatasourcetype-complextypeaction4.md">Fields</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

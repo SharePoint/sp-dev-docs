@@ -123,7 +123,7 @@ new item of this content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttype-element-contenttype.htm">ContentType Element (ContentType)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contenttype-element-contenttype.md">ContentType Element (ContentType)</a></span></p></td>
 </tr>
 </tbody>
 </table>

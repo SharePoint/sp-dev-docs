@@ -117,7 +117,7 @@ attribute, respectively.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="column-element-view.htm">Column</a>, <a href="getvar-element-view.htm">GetVar</a></p></td>
+<td align="left"><p><a href="column-element-view.md">Column</a>, <a href="getvar-element-view.md">GetVar</a></p></td>
 </tr>
 </tbody>
 </table>

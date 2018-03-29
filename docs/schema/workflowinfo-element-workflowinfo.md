@@ -109,8 +109,8 @@ any .ACTIONS file that is installed on the server.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="conditions-element-workflowinfo.htm">Conditions</a></p>
-<p><a href="actions-element-workflowinfo.htm">Actions</a></p></td>
+<td align="left"><p><a href="conditions-element-workflowinfo.md">Conditions</a></p>
+<p><a href="actions-element-workflowinfo.md">Actions</a></p></td>
 </tr>
 </tbody>
 </table>

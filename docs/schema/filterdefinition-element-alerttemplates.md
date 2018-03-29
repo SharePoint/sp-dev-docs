@@ -107,13 +107,13 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="friendlyname-element-alerttemplates.htm">FriendlyName</a></p></td>
+<td align="left"><p><a href="friendlyname-element-alerttemplates.md">FriendlyName</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="shortname-element-alerttemplates.htm">ShortName</a></p></td>
+<td align="left"><p><a href="shortname-element-alerttemplates.md">ShortName</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="query-element-alerttemplates.htm">Query</a></p></td>
+<td align="left"><p><a href="query-element-alerttemplates.md">Query</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="filters-element-alerttemplates.htm">Filters</a></p></td>
+<td align="left"><p><a href="filters-element-alerttemplates.md">Filters</a></p></td>
 </tr>
 </tbody>
 </table>

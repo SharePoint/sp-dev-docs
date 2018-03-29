@@ -109,7 +109,7 @@ Contains elements that define tab controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tab-element.htm">Tab</a></p></td>
+<td align="left"><p><a href="tab-element.md">Tab</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ Contains elements that define tab controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ribbon-element.htm">Ribbon</a></p></td>
+<td align="left"><p><a href="ribbon-element.md">Ribbon</a></p></td>
 </tr>
 </tbody>
 </table>

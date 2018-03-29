@@ -111,7 +111,7 @@ SharePoint Foundation components.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="externalsecurityprovider-element-site.htm">ExternalSecurityProvider</a>, <a href="filedialogpostprocessor-element-site.htm">FileDialogPostProcessor</a></p></td>
+<td align="left"><p><a href="externalsecurityprovider-element-site.md">ExternalSecurityProvider</a>, <a href="filedialogpostprocessor-element-site.md">FileDialogPostProcessor</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ SharePoint Foundation components.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="project-element-site.htm">Project</a></p></td>
+<td align="left"><p><a href="project-element-site.md">Project</a></p></td>
 </tr>
 </tbody>
 </table>

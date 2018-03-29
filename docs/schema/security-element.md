@@ -108,7 +108,7 @@ the security for a list is configured.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="readsecurity-element.htm">ReadSecurity</a>, <a href="schemasecurity-element.htm">SchemaSecurity</a>, <a href="writesecurity-element.htm">WriteSecurity</a></p></td>
+<td align="left"><p><a href="readsecurity-element.md">ReadSecurity</a>, <a href="schemasecurity-element.md">SchemaSecurity</a>, <a href="writesecurity-element.md">WriteSecurity</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +122,7 @@ the security for a list is configured.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="list-element-list.htm">List</a></p></td>
+<td align="left"><p><a href="list-element-list.md">List</a></p></td>
 </tr>
 </tbody>
 </table>

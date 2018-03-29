@@ -168,7 +168,7 @@ the XSL that renders the view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameterbindings-element-list.htm">ParameterBindings</a></p></td>
+<td align="left"><p><a href="parameterbindings-element-list.md">ParameterBindings</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -106,13 +106,13 @@ Represents a single field type definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="field-element-field-types.htm">Field Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="field-element-field-types.md">Field Element (Field Types)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="renderpattern-element-field-types.htm">RenderPattern Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="renderpattern-element-field-types.md">RenderPattern Element (Field Types)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="propertyschema-element-field-types.htm">PropertySchema Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="propertyschema-element-field-types.md">PropertySchema Element (Field Types)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ Represents a single field type definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fieldtypes-element-field-types.htm">FieldTypes Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldtypes-element-field-types.md">FieldTypes Element (Field Types)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -150,7 +150,7 @@ been edited for clarity.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Important note" alt="Important note" /><strong>Important</strong></th>
+<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -171,7 +171,7 @@ been edited for clarity.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The possible values for the <span class="code">&lt;Field Name=&quot;ParentType&quot;&gt;</span> element are exactly the same as the possible values for the Type attribute of the <span sdata="link"><a href="field-element-list.htm">Field Element (List)</a></span> element.</p></td>
+<td align="left"><p>The possible values for the <span class="code">&lt;Field Name=&quot;ParentType&quot;&gt;</span> element are exactly the same as the possible values for the Type attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a></span> element.</p></td>
 </tr>
 </tbody>
 </table>

@@ -190,7 +190,7 @@ configuration or Web template configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="alluserswebpart-element-site.htm">AllUsersWebPart</a>, <a href="binaryserializedwebpart-element-site.htm">BinarySerializedWebPart</a>, <a href="navbarpage-element-sitemodule.htm">NavBarPage</a>, <a href="property-element-sitemodule.htm">Property</a>, <a href="view-element-site.htm">View</a>, <a href="webpartconnection-element-site.htm">WebPartConnection</a></p></td>
+<td align="left"><p><a href="alluserswebpart-element-site.md">AllUsersWebPart</a>, <a href="binaryserializedwebpart-element-site.md">BinarySerializedWebPart</a>, <a href="navbarpage-element-sitemodule.md">NavBarPage</a>, <a href="property-element-sitemodule.md">Property</a>, <a href="view-element-site.md">View</a>, <a href="webpartconnection-element-site.md">WebPartConnection</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -204,7 +204,7 @@ configuration or Web template configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="module-element-site.htm">Module</a></p></td>
+<td align="left"><p><a href="module-element-site.md">Module</a></p></td>
 </tr>
 </tbody>
 </table>

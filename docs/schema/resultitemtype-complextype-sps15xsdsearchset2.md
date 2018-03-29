@@ -132,67 +132,67 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="builtin-element-resultitemtype-complextypesps15xsdsearchset2.htm">BuiltIn</a></p></td>
+<td align="left"><p><a href="builtin-element-resultitemtype-complextypesps15xsdsearchset2.md">BuiltIn</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="displayproperties-element-resultitemtype-complextypesps15xsdsearchset2.htm">DisplayProperties</a></p></td>
+<td align="left"><p><a href="displayproperties-element-resultitemtype-complextypesps15xsdsearchset2.md">DisplayProperties</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="displaytemplateurl-element-resultitemtype-complextypesps15xsdsearchset2.htm">DisplayTemplateUrl</a></p></td>
+<td align="left"><p><a href="displaytemplateurl-element-resultitemtype-complextypesps15xsdsearchset2.md">DisplayTemplateUrl</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="id-element-resultitemtype-complextypesps15xsdsearchset2.htm">ID</a></p></td>
+<td align="left"><p><a href="id-element-resultitemtype-complextypesps15xsdsearchset2.md">ID</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="internalid-element-resultitemtype-complextypesps15xsdsearchset2.htm">InternalID</a></p></td>
+<td align="left"><p><a href="internalid-element-resultitemtype-complextypesps15xsdsearchset2.md">InternalID</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="isdeleted-element-resultitemtype-complextypesps15xsdsearchset2.htm">IsDeleted</a></p></td>
+<td align="left"><p><a href="isdeleted-element-resultitemtype-complextypesps15xsdsearchset2.md">IsDeleted</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="lastmodifieddate-element-resultitemtype-complextypesps15xsdsearchset2.htm">LastModifiedDate</a></p></td>
+<td align="left"><p><a href="lastmodifieddate-element-resultitemtype-complextypesps15xsdsearchset2.md">LastModifiedDate</a></p></td>
 <td align="left"><p>xs:dateTime</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="name-element-resultitemtype-complextypesps15xsdsearchset2.htm">Name</a></p></td>
+<td align="left"><p><a href="name-element-resultitemtype-complextypesps15xsdsearchset2.md">Name</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="optimizeforfrequentuse-element-resultitemtype-complextypesps15xsdsearchset2.htm">OptimizeForFrequentUse</a></p></td>
+<td align="left"><p><a href="optimizeforfrequentuse-element-resultitemtype-complextypesps15xsdsearchset2.md">OptimizeForFrequentUse</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="owner-element-resultitemtype-complextypesps15xsdsearchset2.htm">Owner</a></p></td>
+<td align="left"><p><a href="owner-element-resultitemtype-complextypesps15xsdsearchset2.md">Owner</a></p></td>
 <td align="left"><p>tns:SearchObjectOwner</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="rulepriority-element-resultitemtype-complextypesps15xsdsearchset2.htm">RulePriority</a></p></td>
+<td align="left"><p><a href="rulepriority-element-resultitemtype-complextypesps15xsdsearchset2.md">RulePriority</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="rules-element-resultitemtype-complextypesps15xsdsearchset2.htm">Rules</a></p></td>
+<td align="left"><p><a href="rules-element-resultitemtype-complextypesps15xsdsearchset2.md">Rules</a></p></td>
 <td align="left"><p>tns:PropertyRuleCollection</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="sourceid-element-resultitemtype-complextypesps15xsdsearchset2.htm">SourceID</a></p></td>
+<td align="left"><p><a href="sourceid-element-resultitemtype-complextypesps15xsdsearchset2.md">SourceID</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>

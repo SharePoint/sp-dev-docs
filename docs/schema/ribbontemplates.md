@@ -109,7 +109,7 @@ Contains elements that define group templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="grouptemplate-element.htm">GroupTemplate</a></p></td>
+<td align="left"><p><a href="grouptemplate-element.md">GroupTemplate</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ Contains elements that define group templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="templates-element.htm">Templates</a></p></td>
+<td align="left"><p><a href="templates-element.md">Templates</a></p></td>
 </tr>
 </tbody>
 </table>

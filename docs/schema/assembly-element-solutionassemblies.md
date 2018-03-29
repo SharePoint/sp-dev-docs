@@ -128,7 +128,7 @@ Specifies an assembly to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="bindingredirects-element-solution.htm">BindingRedirects Element (Solution)</a></span>, <a href="classresources-element-solution.htm">ClassResources</a>, <a href="safecontrols-element-solution.htm">SafeControls</a></p></td>
+<td align="left"><p><span sdata="link"><a href="bindingredirects-element-solution.md">BindingRedirects Element (Solution)</a></span>, <a href="classresources-element-solution.md">ClassResources</a>, <a href="safecontrols-element-solution.md">SafeControls</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Specifies an assembly to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assemblies-element-solutionassemblies.htm">Assemblies</a></p></td>
+<td align="left"><p><a href="assemblies-element-solutionassemblies.md">Assemblies</a></p></td>
 </tr>
 </tbody>
 </table>

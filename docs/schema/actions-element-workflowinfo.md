@@ -123,8 +123,8 @@ included in the default list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-workflowinfo.htm">Action</a></p>
-<p><a href="default-element-workflowinfo.htm">Default</a></p></td>
+<td align="left"><p><a href="action-element-workflowinfo.md">Action</a></p>
+<p><a href="default-element-workflowinfo.md">Default</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -138,7 +138,7 @@ included in the default list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-workflowinfo.htm">WorkFlowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-workflowinfo.md">WorkFlowInfo</a></p></td>
 </tr>
 </tbody>
 </table>

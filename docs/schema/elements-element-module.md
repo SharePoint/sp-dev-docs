@@ -106,7 +106,7 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="module-element-module.htm">Module</a></p></td>
+<td align="left"><p><a href="module-element-module.md">Module</a></p></td>
 </tr>
 </tbody>
 </table>

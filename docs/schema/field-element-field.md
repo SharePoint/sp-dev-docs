@@ -453,7 +453,7 @@ Defines a site column.
 <td align="left"><p>**List**</p></td>
 <td align="left"><p>Optional **Text</span>. Used to identify the list that is the target of a lookup field (<span class="code">Type=&quot;Lookup&quot;**).</p>
 <p>If the target list already exists, the value of the **List** attribute should be the string representation of the GUID (including braces) that identifies the target list. If the target is the same list as the one that the field belongs to, you can specify &quot;Self&quot;.</p>
-<p>If the target list does not yet exist, the value of the **List</span> attribute can be a web-relative URL such as &quot;Lists/My List&quot; but only if the target list is created in the same feature as the one that creates the lookup field. In this case, the value of the <span class="keyword">List</span> attribute on the <span class="keyword">Field</span> element must be identical to the value of the <span class="keyword">Url** attribute on the <a href="listinstance-element-list-instance.htm">ListInstance</a> element that creates the target list.</p></td>
+<p>If the target list does not yet exist, the value of the **List</span> attribute can be a web-relative URL such as &quot;Lists/My List&quot; but only if the target list is created in the same feature as the one that creates the lookup field. In this case, the value of the <span class="keyword">List</span> attribute on the <span class="keyword">Field</span> element must be identical to the value of the <span class="keyword">Url** attribute on the <a href="listinstance-element-list-instance.md">ListInstance</a> element that creates the target list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Max**</p></td>
@@ -661,7 +661,7 @@ Defines a site column.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Required **Text</span>. The data type of the field (unless the <span class="keyword">Field** element is a child of <a href="projectedfields-element-view.htm">ProjectedFields</a>).</p>
+<td align="left"><p>Required **Text</span>. The data type of the field (unless the <span class="keyword">Field** element is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>).</p>
 <div class="alert">
 <table>
 <colgroup>
@@ -674,7 +674,7 @@ Defines a site column.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value (&quot;Lookup&quot;) when it is a child of <a href="projectedfields-element-view.htm">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.htm">ProjectedFields Element (View)</a></span> for more information about this use of <span class="keyword">Type**.</p></td>
+<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value (&quot;Lookup&quot;) when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.md">ProjectedFields Element (View)</a></span> for more information about this use of <span class="keyword">Type**.</p></td>
 </tr>
 </tbody>
 </table>
@@ -770,31 +770,31 @@ Defines a site column.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="choices-element-list.htm">CHOICES</a></p></td>
+<td align="left"><p><a href="choices-element-list.md">CHOICES</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="default-element-listfield.htm">Default</a></p></td>
+<td align="left"><p><a href="default-element-listfield.md">Default</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="defaultformula-element-list.htm">DefaultFormula</a></p></td>
+<td align="left"><p><a href="defaultformula-element-list.md">DefaultFormula</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="displaybidipattern-element-list.htm">DisplayBidiPattern</a></p></td>
+<td align="left"><p><a href="displaybidipattern-element-list.md">DisplayBidiPattern</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="displaypattern-element-list.htm">DisplayPattern</a></p></td>
+<td align="left"><p><a href="displaypattern-element-list.md">DisplayPattern</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="fieldrefs-element-list.htm">FieldRefs</a></p></td>
+<td align="left"><p><a href="fieldrefs-element-list.md">FieldRefs</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="formula-element-list.htm">Formula</a></p></td>
+<td align="left"><p><a href="formula-element-list.md">Formula</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="formuladisplaynames-element-list.htm">FormulaDisplayNames</a></p></td>
+<td align="left"><p><a href="formuladisplaynames-element-list.md">FormulaDisplayNames</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="mappings-element-list.htm">MAPPINGS</a></p></td>
+<td align="left"><p><a href="mappings-element-list.md">MAPPINGS</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -808,7 +808,7 @@ Defines a site column.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-field.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-field.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -822,7 +822,7 @@ Defines a site column.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Important note" alt="Important note" /><strong>Important</strong></th>
+<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
 </tr>
 </thead>
 <tbody>

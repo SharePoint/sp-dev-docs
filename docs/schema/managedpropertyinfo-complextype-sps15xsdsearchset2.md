@@ -150,137 +150,137 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="aliases-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Aliases</a></p></td>
+<td align="left"><p><a href="aliases-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Aliases</a></p></td>
 <td align="left"><p>q13:ArrayOfstring</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="completematching-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">CompleteMatching</a></p></td>
+<td align="left"><p><a href="completematching-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">CompleteMatching</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="context-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Context</a></p></td>
+<td align="left"><p><a href="context-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Context</a></p></td>
 <td align="left"><p>xs:short</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="deletedisallowed-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">DeleteDisallowed</a></p></td>
+<td align="left"><p><a href="deletedisallowed-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">DeleteDisallowed</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="description-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Description</a></p></td>
+<td align="left"><p><a href="description-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Description</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="enabledforscoping-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">EnabledForScoping</a></p></td>
+<td align="left"><p><a href="enabledforscoping-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">EnabledForScoping</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="entityextractorbitmap-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">EntityExtractorBitMap</a></p></td>
+<td align="left"><p><a href="entityextractorbitmap-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">EntityExtractorBitMap</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="fulltextindex-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">FullTextIndex</a></p></td>
+<td align="left"><p><a href="fulltextindex-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">FullTextIndex</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="hasmultiplevalues-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">HasMultipleValues</a></p></td>
+<td align="left"><p><a href="hasmultiplevalues-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">HasMultipleValues</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="indexoptions-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">IndexOptions</a></p></td>
+<td align="left"><p><a href="indexoptions-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">IndexOptions</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="isreadonly-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">IsReadOnly</a></p></td>
+<td align="left"><p><a href="isreadonly-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">IsReadOnly</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="managedtype-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">ManagedType</a></p></td>
+<td align="left"><p><a href="managedtype-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">ManagedType</a></p></td>
 <td align="left"><p>tns:ManagedDataType</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="mappedcrawledproperties-element-managedpropertyinfo-complextypesps15xsdsearchset.htm">MappedCrawledProperties</a></p></td>
+<td align="left"><p><a href="mappedcrawledproperties-element-managedpropertyinfo-complextypesps15xsdsearchset.md">MappedCrawledProperties</a></p></td>
 <td align="left"><p>tns:ArrayOfCrawledPropertyInfo</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mappingdisallowed-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">MappingDisallowed</a></p></td>
+<td align="left"><p><a href="mappingdisallowed-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">MappingDisallowed</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pid-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Pid</a></p></td>
+<td align="left"><p><a href="pid-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Pid</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="queryable-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Queryable</a></p></td>
+<td align="left"><p><a href="queryable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Queryable</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="refinable-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Refinable</a></p></td>
+<td align="left"><p><a href="refinable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Refinable</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="refinerconfiguration-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">RefinerConfiguration</a></p></td>
+<td align="left"><p><a href="refinerconfiguration-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">RefinerConfiguration</a></p></td>
 <td align="left"><p>tns:RefinerConfiguration</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="removeduplicates-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">RemoveDuplicates</a></p></td>
+<td align="left"><p><a href="removeduplicates-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">RemoveDuplicates</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="respectpriority-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">RespectPriority</a></p></td>
+<td align="left"><p><a href="respectpriority-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">RespectPriority</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="retrievable-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Retrievable</a></p></td>
+<td align="left"><p><a href="retrievable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Retrievable</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="safeforanonymous-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">SafeForAnonymous</a></p></td>
+<td align="left"><p><a href="safeforanonymous-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">SafeForAnonymous</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="searchable-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Searchable</a></p></td>
+<td align="left"><p><a href="searchable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Searchable</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="sortable-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">Sortable</a></p></td>
+<td align="left"><p><a href="sortable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">Sortable</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="sortabletype-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">SortableType</a></p></td>
+<td align="left"><p><a href="sortabletype-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">SortableType</a></p></td>
 <td align="left"><p>tns:SortableType</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="tokennormalization-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">TokenNormalization</a></p></td>
+<td align="left"><p><a href="tokennormalization-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">TokenNormalization</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="updategroup-element-managedpropertyinfo-complextypesps15xsdsearchset2.htm">UpdateGroup</a></p></td>
+<td align="left"><p><a href="updategroup-element-managedpropertyinfo-complextypesps15xsdsearchset2.md">UpdateGroup</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

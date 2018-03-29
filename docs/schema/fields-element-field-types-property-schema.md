@@ -66,7 +66,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Important note" alt="Important note" /><strong>Important</strong></th>
+<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -123,7 +123,7 @@ within a **PropertySchema** element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="field-element-field-types-property-schema.htm">Field Element (Field Types Property Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="field-element-field-types-property-schema.md">Field Element (Field Types Property Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +137,7 @@ within a **PropertySchema** element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="propertyschema-element-field-types.htm">PropertySchema Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="propertyschema-element-field-types.md">PropertySchema Element (Field Types)</a></span></p></td>
 </tr>
 </tbody>
 </table>

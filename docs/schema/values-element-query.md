@@ -108,7 +108,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="value-element-query.htm">Value</a></p></td>
+<td align="left"><p><a href="value-element-query.md">Value</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +122,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="in-element-query.htm">In</a></p></td>
+<td align="left"><p><a href="in-element-query.md">In</a></p></td>
 </tr>
 </tbody>
 </table>

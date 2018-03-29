@@ -85,7 +85,7 @@ None
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webtemplate-element-web-template.htm">WebTemplate Element (Web Template)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a></span></p></td>
 <td align="left"><p>Provides configuration data for a web template.</p></td>
 </tr>
 </tbody>

@@ -84,7 +84,7 @@ code] "Copy code")Copy code</span>
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="propertiestype-complextype-action4.htm">propertiesType</a></p></td>
+<td align="left"><p><a href="propertiestype-complextype-action4.md">propertiesType</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -137,7 +137,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="blocks-element-workflowinfo-elementaction4.htm">Blocks</a></p></td>
+<td align="left"><p><a href="blocks-element-workflowinfo-elementaction4.md">Blocks</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -161,7 +161,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-propertiestype-complextypeaction4.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-propertiestype-complextypeaction4.md">Property</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

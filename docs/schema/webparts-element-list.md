@@ -113,7 +113,7 @@ list template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="alluserswebpart-element-list.htm">AllUsersWebPart</a></p></td>
+<td align="left"><p><a href="alluserswebpart-element-list.md">AllUsersWebPart</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ list template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="form-element-list.htm">Form</a></p></td>
+<td align="left"><p><a href="form-element-list.md">Form</a></p></td>
 </tr>
 </tbody>
 </table>

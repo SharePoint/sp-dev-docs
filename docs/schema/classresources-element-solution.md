@@ -114,7 +114,7 @@ solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="classresource-element-solution.htm">ClassResource</a></p></td>
+<td align="left"><p><a href="classresource-element-solution.md">ClassResource</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,7 @@ solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assembly-element-solutionassemblies.htm">Assembly</a></p></td>
+<td align="left"><p><a href="assembly-element-solutionassemblies.md">Assembly</a></p></td>
 </tr>
 </tbody>
 </table>

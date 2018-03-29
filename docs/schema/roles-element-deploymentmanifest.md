@@ -122,7 +122,7 @@ class="nolink">SPRoleCollection</span></span>)
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="role-element-deploymentmanifest.htm">Role Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="role-element-deploymentmanifest.md">Role Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -136,7 +136,7 @@ class="nolink">SPRoleCollection</span></span>)
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

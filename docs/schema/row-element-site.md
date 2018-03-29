@@ -110,7 +110,7 @@ instantiated during site provisioning.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-site.htm">Field</a></p></td>
+<td align="left"><p><a href="field-element-site.md">Field</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ instantiated during site provisioning.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rows-element-site.htm">Rows</a></p></td>
+<td align="left"><p><a href="rows-element-site.md">Rows</a></p></td>
 </tr>
 </tbody>
 </table>

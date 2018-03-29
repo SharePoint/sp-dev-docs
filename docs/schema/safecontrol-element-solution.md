@@ -144,7 +144,7 @@ solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="safecontrols-element-solution.htm">SafeControls</a></p></td>
+<td align="left"><p><a href="safecontrols-element-solution.md">SafeControls</a></p></td>
 </tr>
 </tbody>
 </table>

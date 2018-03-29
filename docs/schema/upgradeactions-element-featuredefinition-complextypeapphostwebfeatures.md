@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="upgradeactionsdefinition-complextype-apphostwebfeatures.htm">UpgradeActionsDefinition</a></p></td>
+<td align="left"><p><a href="upgradeactionsdefinition-complextype-apphostwebfeatures.md">UpgradeActionsDefinition</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -132,8 +132,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-apphostwebfeatures.htm">Feature</a></p></td>
-<td align="left"><p><a href="featuredefinition-complextype-apphostwebfeatures.htm">FeatureDefinition</a></p></td>
+<td align="left"><p><a href="feature-element-apphostwebfeatures.md">Feature</a></p></td>
+<td align="left"><p><a href="featuredefinition-complextype-apphostwebfeatures.md">FeatureDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -156,8 +156,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="versionrange-element-upgradeactionsdefinition-complextypeapphostwebfeatures.htm">VersionRange</a></p></td>
-<td align="left"><p><a href="versionrangedefinition-complextype-apphostwebfeatures.htm">VersionRangeDefinition</a></p></td>
+<td align="left"><p><a href="versionrange-element-upgradeactionsdefinition-complextypeapphostwebfeatures.md">VersionRange</a></p></td>
+<td align="left"><p><a href="versionrangedefinition-complextype-apphostwebfeatures.md">VersionRangeDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

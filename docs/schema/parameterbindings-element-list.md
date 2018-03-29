@@ -113,7 +113,7 @@ information available to the XSL that renders the view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameterbinding-element-list.htm">ParameterBinding</a></p></td>
+<td align="left"><p><a href="parameterbinding-element-list.md">ParameterBinding</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ information available to the XSL that renders the view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 </tr>
 </tbody>
 </table>

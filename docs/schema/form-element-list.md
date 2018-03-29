@@ -129,7 +129,7 @@ Describes the forms in a base list type.
 </tr>
 <tr class="even">
 <td align="left"><p>**UseDefaultListFormWebPart**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies whether a ListFormWebPart should be created when the form is provisioned. By default, a <span sdata="cer" target="T:Microsoft.SharePoint.WebPartPages.ListFormWebPart"><span class="nolink">ListFormWebPart</span></span> object is created unless this attribute is set to <span class="keyword">FALSE</span>. If this attribute equals <span class="keyword">FALSE**, use the <a href="webparts-element-list.htm">WebParts</a> child element to define your customized list form Web Part.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies whether a ListFormWebPart should be created when the form is provisioned. By default, a <span sdata="cer" target="T:Microsoft.SharePoint.WebPartPages.ListFormWebPart"><span class="nolink">ListFormWebPart</span></span> object is created unless this attribute is set to <span class="keyword">FALSE</span>. If this attribute equals <span class="keyword">FALSE**, use the <a href="webparts-element-list.md">WebParts</a> child element to define your customized list form Web Part.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**UseLegacyForm**</p></td>
@@ -151,7 +151,7 @@ Describes the forms in a base list type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="listformbody-element-list.htm">ListFormBody</a>, <a href="listformbuttons-element-list.htm">ListFormButtons</a>, <a href="listformclosing-element-list.htm">ListFormClosing</a>, <a href="listformopening-element-list.htm">ListFormOpening</a>, <a href="webparts-element-list.htm">WebParts</a></p></td>
+<td align="left"><p><a href="listformbody-element-list.md">ListFormBody</a>, <a href="listformbuttons-element-list.md">ListFormButtons</a>, <a href="listformclosing-element-list.md">ListFormClosing</a>, <a href="listformopening-element-list.md">ListFormOpening</a>, <a href="webparts-element-list.md">WebParts</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -165,7 +165,7 @@ Describes the forms in a base list type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="forms-element-list.htm">Forms</a></p></td>
+<td align="left"><p><a href="forms-element-list.md">Forms</a></p></td>
 </tr>
 </tbody>
 </table>

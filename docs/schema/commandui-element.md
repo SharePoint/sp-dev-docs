@@ -85,16 +85,16 @@ Contains elements that extend the user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ribbon-element.htm">Ribbon</a></p></td>
+<td align="left"><p><a href="ribbon-element.md">Ribbon</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="qat-element.htm">QAT</a></p></td>
+<td align="left"><p><a href="qat-element.md">QAT</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="jewel-element.htm">Jewel</a></p></td>
+<td align="left"><p><a href="jewel-element.md">Jewel</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="templates-element.htm">Templates</a></p></td>
+<td align="left"><p><a href="templates-element.md">Templates</a></p></td>
 </tr>
 </tbody>
 </table>

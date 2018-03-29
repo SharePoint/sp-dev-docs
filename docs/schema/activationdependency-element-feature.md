@@ -154,7 +154,7 @@ Represents a Feature on which activation of the current Feature depends.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="activationdependencies-element-feature.htm">ActivationDependencies</a></p></td>
+<td align="left"><p><a href="activationdependencies-element-feature.md">ActivationDependencies</a></p></td>
 </tr>
 </tbody>
 </table>

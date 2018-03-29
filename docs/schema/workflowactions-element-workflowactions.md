@@ -93,8 +93,8 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-workflowactions.htm">Action</a></p>
-<p><a href="default-element-workflowactions.htm">Default</a></p></td>
+<td align="left"><p><a href="action-element-workflowactions.md">Action</a></p>
+<p><a href="default-element-workflowactions.md">Default</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -158,15 +158,15 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.htm">LocalizedDisplayNames Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames Element in MetadataObject (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A list of localized display names for this query.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.htm">Properties Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties Element in MetadataObject (Subscription Schema)</a></span></p></td>
 <td align="left"><p>This is not used by Business Connectivity Services in this release.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-query-subscription-schema.htm">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A list of filter values for the **Finder</span> or the <span class="keyword">IDEnumerator** method instance.</p></td>
 </tr>
 </tbody>
@@ -187,7 +187,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.htm">Queries Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.md">Queries Element in Subscription (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The list of queries that contains this query.</p></td>
 </tr>
 </tbody>

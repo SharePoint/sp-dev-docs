@@ -87,7 +87,7 @@ SharePoint Server 2013
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="guid-simpletype-apppartconfigdefinition.htm">GUID</a></p></td>
+<td align="left"><p><a href="guid-simpletype-apppartconfigdefinition.md">GUID</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -137,8 +137,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="apppartconfig-element-apppartconfigdefinition.htm">AppPartConfig</a></p></td>
-<td align="left"><p><a href="apppartconfigdefinition-complextype-apppartconfigdefinition.htm">AppPartConfigDefinition</a></p></td>
+<td align="left"><p><a href="apppartconfig-element-apppartconfigdefinition.md">AppPartConfig</a></p></td>
+<td align="left"><p><a href="apppartconfigdefinition-complextype-apppartconfigdefinition.md">AppPartConfigDefinition</a></p></td>
 <td align="left"><p>The top level node of an app part configuration file.</p></td>
 </tr>
 </tbody>

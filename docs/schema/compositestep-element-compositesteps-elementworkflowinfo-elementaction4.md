@@ -148,7 +148,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="compositesteps-element-workflowinfo-elementaction4.htm">CompositeSteps</a></p></td>
+<td align="left"><p><a href="compositesteps-element-workflowinfo-elementaction4.md">CompositeSteps</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -172,8 +172,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasources-element-compositestep-elementcompositesteps-elementworkflowinfo-elem.htm">DataSources</a></p></td>
-<td align="left"><p><a href="datasourcestype-complextype-action4.htm">dataSourcesType</a></p></td>
+<td align="left"><p><a href="datasources-element-compositestep-elementcompositesteps-elementworkflowinfo-elem.md">DataSources</a></p></td>
+<td align="left"><p><a href="datasourcestype-complextype-action4.md">dataSourcesType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -201,7 +201,7 @@ class="keyword">choice</span>, see the definition section.
 <tbody>
 <tr class="odd">
 <td align="left"><p>AppliesTo</p></td>
-<td align="left"><p><a href="appliestotypes-simpletype-action4.htm">appliesToTypes</a></p></td>
+<td align="left"><p><a href="appliestotypes-simpletype-action4.md">appliesToTypes</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Indicates whether this step should be available for lists, document libraries, or both. Valid values include <strong>list</strong>, <strong>doclib</strong>, and <strong>all</strong>.</p></td>
 <td align="left"><p>Values of the appliesToTypes type.</p></td>

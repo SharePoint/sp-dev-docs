@@ -103,10 +103,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="groupby-element-query.htm">GroupBy</a></p></td>
+<td align="left"><p><a href="groupby-element-query.md">GroupBy</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="orderby-element-query.htm">OrderBy</a></p></td>
+<td align="left"><p><a href="orderby-element-query.md">OrderBy</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +120,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="filterdefinition-element-alerttemplates.htm">FilterDefinition</a></p></td>
+<td align="left"><p><a href="filterdefinition-element-alerttemplates.md">FilterDefinition</a></p></td>
 </tr>
 </tbody>
 </table>

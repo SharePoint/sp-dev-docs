@@ -90,7 +90,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="variabletype-element-workflowinfo.htm">VariableType</a></p></td>
+<td align="left"><p><a href="variabletype-element-workflowinfo.md">VariableType</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -104,7 +104,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-workflowinfo.htm">WorkFlowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-workflowinfo.md">WorkFlowInfo</a></p></td>
 </tr>
 </tbody>
 </table>

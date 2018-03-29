@@ -109,7 +109,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsysteminstance-element-in-lobsysteminstances-bdcmetadata-schema.htm">LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsysteminstance-element-in-lobsysteminstances-bdcmetadata-schema.md">LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An external system instance.</p></td>
 </tr>
 </tbody>
@@ -130,7 +130,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.htm">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An external system.</p></td>
 </tr>
 </tbody>

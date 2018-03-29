@@ -140,8 +140,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameters-element-coercion-elementcoercions-elementworkflowinfo-elementaction4.htm">Parameters</a></p></td>
-<td align="left"><p><a href="coercionparameterstype-complextype-action4.htm">coercionParametersType</a></p></td>
+<td align="left"><p><a href="parameters-element-coercion-elementcoercions-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
+<td align="left"><p><a href="coercionparameterstype-complextype-action4.md">coercionParametersType</a></p></td>
 <td align="left"><p>Container for **Parameter</span> elements that includes descriptions of the parameters in <span class="keyword">coercion** method signatures.</p></td>
 </tr>
 </tbody>
@@ -164,7 +164,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="activitybody-element-parameter-elementcoercionparameterstype-complextypeaction4.htm">ActivityBody</a></p></td>
+<td align="left"><p><a href="activitybody-element-parameter-elementcoercionparameterstype-complextypeaction4.md">ActivityBody</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Specifies the body of a custom action.</p></td>
 </tr>

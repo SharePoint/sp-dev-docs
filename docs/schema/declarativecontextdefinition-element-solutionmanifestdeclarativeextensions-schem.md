@@ -142,15 +142,15 @@ elements.
 <td align="left"><p>The **DOCS-LESSTHANOfficeItemCustomizationsDOCS-GREATERTHAN** element lists the Outlook user interface customizations that are defined for this context definition.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.htm">Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DOCS-LESSTHANLayoutsDOCS-GREATERTHAN** element lists the layouts that are defined for this context definition.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.htm">Actions Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Actions Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DOCS-LESSTHANActionsDOCS-GREATERTHAN** element displays the actions that are defined for this context.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contexteventhandlers-element-in-declarativecontextdefinition-solutionmanifestdec.htm">ContextEventHandlers Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contexteventhandlers-element-in-declarativecontextdefinition-solutionmanifestdec.md">ContextEventHandlers Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DOCS-LESSTHANContextEventHandlersDOCS-GREATERTHAN** element lists the actions to be executed when the context becomes active or when the context is deactivated.</p></td>
 </tr>
 </tbody>

@@ -129,7 +129,7 @@ class="nolink">SPListTemplate</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.htm">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies whether the list definition or list template is hidden from Web site users and is not available on the Create page.</p></td>
 </tr>
 <tr class="even">
@@ -198,7 +198,7 @@ class="nolink">SPListTemplate</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

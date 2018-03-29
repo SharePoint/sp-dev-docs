@@ -125,7 +125,7 @@ begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="date-element-regional-settings.htm">Date</a></p></td>
+<td align="left"><p><a href="date-element-regional-settings.md">Date</a></p></td>
 </tr>
 </tbody>
 </table>

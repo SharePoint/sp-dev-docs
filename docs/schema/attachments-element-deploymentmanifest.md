@@ -120,7 +120,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="attachment-element-deploymentmanifest.htm">Attachment Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="attachment-element-deploymentmanifest.md">Attachment Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +134,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.htm">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.md">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
 </tr>
 </tbody>
 </table>

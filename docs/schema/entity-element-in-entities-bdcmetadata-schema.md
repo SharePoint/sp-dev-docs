@@ -138,7 +138,7 @@ elements.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
+<th align="left"><img src=".." title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -249,31 +249,31 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.htm">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized display names of this external content type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.htm">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of this external content type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.htm">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The access control list (ACL) of this external content type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="identifiers-element-in-entity-bdcmetadata-schema.htm">Identifiers Element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="identifiers-element-in-entity-bdcmetadata-schema.md">Identifiers Element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The identifiers of the external content type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadata-schema.htm">Methods Element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadata-schema.md">Methods Element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The methods of the external content type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadata-schema.htm">AssociationGroups Element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadata-schema.md">AssociationGroups Element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The association groups of the external content type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.htm">Actions Element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions Element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The actions of the external content type.</p></td>
 </tr>
 </tbody>
@@ -294,7 +294,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadata-schema.htm">Entities Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadata-schema.md">Entities Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The list of external content types in this external system.</p></td>
 </tr>
 </tbody>

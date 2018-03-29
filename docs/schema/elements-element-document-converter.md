@@ -108,7 +108,7 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="documentconverter-element-document-converter.htm">DocumentConverter Element (Document Converter)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="documentconverter-element-document-converter.md">DocumentConverter Element (Document Converter)</a></span></p></td>
 </tr>
 </tbody>
 </table>

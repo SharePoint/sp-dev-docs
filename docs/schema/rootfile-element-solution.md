@@ -123,7 +123,7 @@ Specifies a root path to which solution files are copied.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rootfiles-element-solution.htm">RootFiles</a></p></td>
+<td align="left"><p><a href="rootfiles-element-solution.md">RootFiles</a></p></td>
 </tr>
 </tbody>
 </table>

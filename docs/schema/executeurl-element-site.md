@@ -127,7 +127,7 @@ instantiated.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="configuration-element-site.htm">Configuration</a></p></td>
+<td align="left"><p><a href="configuration-element-site.md">Configuration</a></p></td>
 </tr>
 </tbody>
 </table>

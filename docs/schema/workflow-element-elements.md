@@ -139,7 +139,7 @@ Defines a workflow.
 <div class="code">
 <span codelanguage="other"></span>
  
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src="../icons/copycode.gif" title="Copy code" alt="Copy code" />Copy code</span>
+<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code>AssociationURL = &quot;MyWkflAssociationPage.aspx&quot;</code></pre>
 </div>
 <div class="alert">
@@ -168,7 +168,7 @@ Defines a workflow.
 <div class="code">
 <span codelanguage="other"></span>
  
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src="../icons/copycode.gif" title="Copy code" alt="Copy code" />Copy code</span>
+<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code>InstantiationURL = &quot;MyWorkflowInitiationPage.aspx&quot;</code></pre>
 </div>
 <div class="alert">
@@ -220,13 +220,13 @@ Defines a workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationdata-element-workflow.htm">AssociationData Element (Workflow)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associationdata-element-workflow.md">AssociationData Element (Workflow)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="metadata-element-workflow.htm">MetaData Element (Workflow)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="metadata-element-workflow.md">MetaData Element (Workflow)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="categories-element-workflow.htm">Categories Element (Workflow)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="categories-element-workflow.md">Categories Element (Workflow)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -240,7 +240,7 @@ Defines a workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-workflow.htm">Elements Element (Workflow)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="elements-element-workflow.md">Elements Element (Workflow)</a></span></p></td>
 </tr>
 </tbody>
 </table>

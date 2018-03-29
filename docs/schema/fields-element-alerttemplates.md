@@ -122,7 +122,7 @@ elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="getvar-element-view.htm">GetVar</a></p></td>
+<td align="left"><p><a href="getvar-element-view.md">GetVar</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -136,7 +136,7 @@ elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="immediate-element-alerttemplates.htm">Immediate</a></p></td>
+<td align="left"><p><a href="immediate-element-alerttemplates.md">Immediate</a></p></td>
 </tr>
 </tbody>
 </table>

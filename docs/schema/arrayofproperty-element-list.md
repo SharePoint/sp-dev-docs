@@ -106,7 +106,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-list.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-list.md">Property</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +120,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="customization-element-list.htm">Customization</a></p></td>
+<td align="left"><p><a href="customization-element-list.md">Customization</a></p></td>
 </tr>
 </tbody>
 </table>

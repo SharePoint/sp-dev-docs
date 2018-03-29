@@ -117,7 +117,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttype-spmetal.htm">ContentType (SPMetal)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contenttype-spmetal.md">ContentType (SPMetal)</a></span></p></td>
 <td align="left"><p>Specifies that a content type should be included in code generation and modifies which columns in the content type are included in code generation.</p></td>
 </tr>
 </tbody>

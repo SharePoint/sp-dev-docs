@@ -117,7 +117,7 @@ class="nolink">SPContentType</span></span>
 <tbody>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the content type.</p></td>
 </tr>
 <tr class="even">
@@ -133,13 +133,13 @@ class="nolink">SPContentType</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Unique identifier of the parent Web site.</p>
 <p>Optional on export; required on import if the scope is set to Web level.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ListId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Unique identifier of the content type list. This attribute is relevent only if the **Scope** attribute is list-level.</p>
 <p>Optional on export; required on import.</p></td>
 </tr>
@@ -189,7 +189,7 @@ class="nolink">SPContentType</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -146,7 +146,7 @@ Specifies the Web Part connections for a module.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webparttransformer-element-module.htm">WebPartTransformer Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webparttransformer-element-module.md">WebPartTransformer Element (Module)</a></span></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -161,7 +161,7 @@ Specifies the Web Part connections for a module.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element-module.htm">File</a></p></td>
+<td align="left"><p><a href="file-element-module.md">File</a></p></td>
 </tr>
 </tbody>
 </table>

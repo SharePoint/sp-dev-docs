@@ -103,7 +103,7 @@ Describes an event receiver for handling list item events.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assembly-element-event.htm">Assembly</a>, <a href="class-element-event.htm">Class</a>, <a href="data-element-event.htm">Data</a>, <span sdata="link"><a href="filter-element-event.htm">Filter Element (Event)</a></span>, <a href="name-element-event.htm">Name</a>, <a href="sequencenumber-element-event.htm">SequenceNumber</a>, <span sdata="link"><a href="solutionid-element-event.htm">SolutionId Element (Event)</a></span>, <span sdata="link"><a href="synchronization-element-event.htm">Synchronization Element (Event)</a></span>, <a href="type-element-event.htm">Type</a>,</p></td>
+<td align="left"><p><a href="assembly-element-event.md">Assembly</a>, <a href="class-element-event.md">Class</a>, <a href="data-element-event.md">Data</a>, <span sdata="link"><a href="filter-element-event.md">Filter Element (Event)</a></span>, <a href="name-element-event.md">Name</a>, <a href="sequencenumber-element-event.md">SequenceNumber</a>, <span sdata="link"><a href="solutionid-element-event.md">SolutionId Element (Event)</a></span>, <span sdata="link"><a href="synchronization-element-event.md">Synchronization Element (Event)</a></span>, <a href="type-element-event.md">Type</a>,</p></td>
 </tr>
 </tbody>
 </table>
@@ -117,7 +117,7 @@ Describes an event receiver for handling list item events.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="receivers-element-event.htm">Receivers</a></p></td>
+<td align="left"><p><a href="receivers-element-event.md">Receivers</a></p></td>
 </tr>
 </tbody>
 </table>

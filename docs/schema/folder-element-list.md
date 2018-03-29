@@ -124,7 +124,7 @@ folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttyperef-element-list.htm">ContentTypeRef</a></p></td>
+<td align="left"><p><a href="contenttyperef-element-list.md">ContentTypeRef</a></p></td>
 </tr>
 </tbody>
 </table>

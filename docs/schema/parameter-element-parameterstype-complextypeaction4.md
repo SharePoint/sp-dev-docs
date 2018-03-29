@@ -148,18 +148,18 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameters-element-flow-elementflows-elementworkflowinfo-elementaction4.htm">Parameters</a></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.htm">parametersType</a></p></td>
+<td align="left"><p><a href="parameters-element-flow-elementflows-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
+<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="parameters-element-action-elementactions-elementworkflowinfo-elementaction4.htm">Parameters</a></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.htm">parametersType</a></p></td>
+<td align="left"><p><a href="parameters-element-action-elementactions-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
+<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="parameters-element-condition-elementconditions-elementworkflowinfo-elementaction.htm">Parameters</a></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.htm">parametersType</a></p></td>
+<td align="left"><p><a href="parameters-element-condition-elementconditions-elementworkflowinfo-elementaction.md">Parameters</a></p></td>
+<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

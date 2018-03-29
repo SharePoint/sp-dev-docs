@@ -120,7 +120,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="crawledpropertyinfo-element-arrayofcrawledpropertyinfo-complextypesps15xsdsearch.htm">CrawledPropertyInfo</a></p></td>
+<td align="left"><p><a href="crawledpropertyinfo-element-arrayofcrawledpropertyinfo-complextypesps15xsdsearch.md">CrawledPropertyInfo</a></p></td>
 <td align="left"><p>tns:CrawledPropertyInfo</p></td>
 <td align="left"><p></p></td>
 </tr>

@@ -111,7 +111,7 @@ Microsoft SharePoint Designer 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldbind-element-workflowinfo.htm">FieldBind</a></p></td>
+<td align="left"><p><a href="fieldbind-element-workflowinfo.md">FieldBind</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,9 +125,9 @@ Microsoft SharePoint Designer 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="default-element-workflowinfo.htm">Default</a></p>
-<p><a href="condition-element-workflowinfo.htm">Condition</a></p>
-<p><a href="action-element-workflowinfo.htm">Action</a></p></td>
+<td align="left"><p><a href="default-element-workflowinfo.md">Default</a></p>
+<p><a href="condition-element-workflowinfo.md">Condition</a></p>
+<p><a href="action-element-workflowinfo.md">Action</a></p></td>
 </tr>
 </tbody>
 </table>

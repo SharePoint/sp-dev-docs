@@ -105,7 +105,7 @@ feature depends.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="activationdependency-element-feature.htm">ActivationDependency</a></p></td>
+<td align="left"><p><a href="activationdependency-element-feature.md">ActivationDependency</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -119,7 +119,7 @@ feature depends.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-feature.htm">Feature</a></p></td>
+<td align="left"><p><a href="feature-element-feature.md">Feature</a></p></td>
 </tr>
 </tbody>
 </table>

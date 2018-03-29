@@ -123,7 +123,7 @@ Specifies a template file to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="templatefiles-element-solution.htm">TemplateFiles</a></p></td>
+<td align="left"><p><a href="templatefiles-element-solution.md">TemplateFiles</a></p></td>
 </tr>
 </tbody>
 </table>

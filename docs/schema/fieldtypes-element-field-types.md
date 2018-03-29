@@ -106,7 +106,7 @@ Represents the collection of field types.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fieldtype-element-field-types.htm">FieldType Element (Field Types)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldtype-element-field-types.md">FieldType Element (Field Types)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +144,7 @@ been edited for clarity.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Important note" alt="Important note" /><strong>Important</strong></th>
+<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -165,7 +165,7 @@ been edited for clarity.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The possible values for the <span class="code">&lt;Field Name=&quot;ParentType&quot;&gt;</span> element are exactly the same as the possible values for the Type attribute of the <span sdata="link"><a href="field-element-list.htm">Field Element (List)</a></span> element.</p></td>
+<td align="left"><p>The possible values for the <span class="code">&lt;Field Name=&quot;ParentType&quot;&gt;</span> element are exactly the same as the possible values for the Type attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a></span> element.</p></td>
 </tr>
 </tbody>
 </table>

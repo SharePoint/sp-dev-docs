@@ -108,7 +108,7 @@ number of cells.
 </tr>
 <tr class="even">
 <td align="left"><p>**Command**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.htm">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the <span class="keyword">Command** attribute of a corresponding <a href="commanduihandler-element.htm">CommandUIHandler</a> element.</p></td>
+<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.md">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the <span class="keyword">Command** attribute of a corresponding <a href="commanduihandler-element.md">CommandUIHandler</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**CommandType**</p></td>
@@ -160,10 +160,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="controls-element-menusection.htm">Controls</a> (MenuSection)</p></td>
+<td align="left"><p><a href="controls-element-menusection.md">Controls</a> (MenuSection)</p></td>
 </tr>
 </tbody>
 </table>

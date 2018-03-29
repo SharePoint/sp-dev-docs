@@ -118,7 +118,7 @@ Contains the Write security setting for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="security-element.htm">Security</a></p></td>
+<td align="left"><p><a href="security-element.md">Security</a></p></td>
 </tr>
 </tbody>
 </table>

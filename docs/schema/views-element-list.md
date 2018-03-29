@@ -108,7 +108,7 @@ Contains an enumeration of the views that are used in a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +122,7 @@ Contains an enumeration of the views that are used in a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="metadata-element-list.htm">MetaData (List)</a>, <a href="metadata-element-site.htm">MetaData (Site)</a></p></td>
+<td align="left"><p><a href="metadata-element-list.md">MetaData (List)</a>, <a href="metadata-element-site.md">MetaData (Site)</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -102,7 +102,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="filterdefinition-element-alerttemplates.htm">FilterDefinition</a></p></td>
+<td align="left"><p><a href="filterdefinition-element-alerttemplates.md">FilterDefinition</a></p></td>
 </tr>
 </tbody>
 </table>

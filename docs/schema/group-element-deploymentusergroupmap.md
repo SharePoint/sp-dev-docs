@@ -180,7 +180,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="member-element-deploymentusergroupmap.htm">Member Element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="member-element-deploymentusergroupmap.md">Member Element (DeploymentUserGroupMap)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -194,7 +194,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="groups-element-deploymentusergroupmap.htm">Groups Element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="groups-element-deploymentusergroupmap.md">Groups Element (DeploymentUserGroupMap)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -121,12 +121,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="dictionary-element-baseinfocollectionofoverrideinfotzwwwpjw-complextypesps15xsds.htm">dictionary</a></p></td>
+<td align="left"><p><a href="dictionary-element-baseinfocollectionofoverrideinfotzwwwpjw-complextypesps15xsds.md">dictionary</a></p></td>
 <td align="left"><p>q16:ArrayOfKeyValueOfstringOverrideInfoy6h3NzC8</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="lastitemname-element-baseinfocollectionofoverrideinfotzwwwpjw-complextypesps15xs.htm">LastItemName</a></p></td>
+<td align="left"><p><a href="lastitemname-element-baseinfocollectionofoverrideinfotzwwwpjw-complextypesps15xs.md">LastItemName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

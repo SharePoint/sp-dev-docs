@@ -151,7 +151,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldbind-element-ruledesignertype-complextypeaction4.htm">FieldBind</a></p></td>
+<td align="left"><p><a href="fieldbind-element-ruledesignertype-complextypeaction4.md">FieldBind</a></p></td>
 <td align="left"><p>ruleDesignerType</p></td>
 <td align="left"><p>Used to create a readable sentence in the workflow designer that describes a condition that needs to be evaluated or an activity that must be executed.</p></td>
 </tr>

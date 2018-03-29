@@ -264,12 +264,12 @@ then passed to Microsoft SharePoint Foundation 2010.
 <tr class="odd">
 <td align="left"><p>DataSourceFieldNames</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.htm">Action</a> or <a href="compositestep-element-workflowinfo.htm">CompositeStep</a> that has a <a href="datasource-element-workflowinfo.htm">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.htm">DataSourceRef</a> element. The result of selecting an element from this list should be the literal value chosen.</p></td>
+<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.md">Action</a> or <a href="compositestep-element-workflowinfo.md">CompositeStep</a> that has a <a href="datasource-element-workflowinfo.md">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.md">DataSourceRef</a> element. The result of selecting an element from this list should be the literal value chosen.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>DataSourceValues</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.htm">Action</a> or <a href="compositestep-element-workflowinfo.htm">CompositeStep</a> that has a <a href="datasource-element-workflowinfo.htm">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.htm">DataSourceRef</a> element. The result of selecting an element from this list should be the run-time value of the chosen field in the data source.</p></td>
+<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.md">Action</a> or <a href="compositestep-element-workflowinfo.md">CompositeStep</a> that has a <a href="datasource-element-workflowinfo.md">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.md">DataSourceRef</a> element. The result of selecting an element from this list should be the run-time value of the chosen field in the data source.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Date</p></td>
@@ -284,7 +284,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 <tr class="odd">
 <td align="left"><p>Dropdown</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>List that contains options specified as <a href="option-element-workflowinfo.htm">Option</a> elements of the **FieldBind** element.</p></td>
+<td align="left"><p>List that contains options specified as <a href="option-element-workflowinfo.md">Option</a> elements of the **FieldBind** element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Email</p></td>
@@ -319,7 +319,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 <tr class="even">
 <td align="left"><p>Operator</p></td>
 <td align="left"><p>Value</p></td>
-<td align="left"><p>List that contains operator options specified as <a href="option-element-workflowinfo.htm">Option</a> elements of the **FieldBind** element. The list of operators is filtered based on the type of the operand.</p></td>
+<td align="left"><p>List that contains operator options specified as <a href="option-element-workflowinfo.md">Option</a> elements of the **FieldBind** element. The list of operators is filtered based on the type of the operand.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ParameterNames</p></td>
@@ -393,7 +393,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="option-element-workflowinfo.htm">Option</a></p></td>
+<td align="left"><p><a href="option-element-workflowinfo.md">Option</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -407,7 +407,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ruledesigner-element-workflowinfo.htm">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-workflowinfo.md">RuleDesigner</a></p></td>
 </tr>
 </tbody>
 </table>

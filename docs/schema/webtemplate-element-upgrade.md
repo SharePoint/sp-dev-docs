@@ -123,7 +123,7 @@ Contains the site template upgrade definition.
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Required **Integer</span>. Specifies the identifier (ID) of the site definition to be upgraded. This value corresponds to the <span class="keyword">ID** attribute of the <a href="template-element-site.htm">Template</a> element.</p></td>
+<td align="left"><p>Required **Integer</span>. Specifies the identifier (ID) of the site definition to be upgraded. This value corresponds to the <span class="keyword">ID** attribute of the <a href="template-element-site.md">Template</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**LocaleId**</p></td>
@@ -149,7 +149,7 @@ Contains the site template upgrade definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="appliedsitefeatures-element-upgrade.htm">AppliedSiteFeatures</a>, <a href="appliedwebfeatures-element-upgrade.htm">AppliedWebFeatures</a>, <a href="files-element-upgrade.htm">Files</a>, <a href="lists-element-upgrade.htm">Lists</a></p></td>
+<td align="left"><p><a href="appliedsitefeatures-element-upgrade.md">AppliedSiteFeatures</a>, <a href="appliedwebfeatures-element-upgrade.md">AppliedWebFeatures</a>, <a href="files-element-upgrade.md">Files</a>, <a href="lists-element-upgrade.md">Lists</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Contains the site template upgrade definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="config-element-upgrade.htm">Config</a></p></td>
+<td align="left"><p><a href="config-element-upgrade.md">Config</a></p></td>
 </tr>
 </tbody>
 </table>

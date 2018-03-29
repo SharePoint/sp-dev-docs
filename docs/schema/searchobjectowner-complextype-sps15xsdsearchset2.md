@@ -125,32 +125,32 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="databaseid-element-searchobjectowner-complextypesps15xsdsearchset2.htm">DatabaseId</a></p></td>
+<td align="left"><p><a href="databaseid-element-searchobjectowner-complextypesps15xsdsearchset2.md">DatabaseId</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="disableinheritance-element-searchobjectowner-complextypesps15xsdsearchset2.htm">DisableInheritance</a></p></td>
+<td align="left"><p><a href="disableinheritance-element-searchobjectowner-complextypesps15xsdsearchset2.md">DisableInheritance</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="spfarmid-element-searchobjectowner-complextypesps15xsdsearchset2.htm">SPFarmId</a></p></td>
+<td align="left"><p><a href="spfarmid-element-searchobjectowner-complextypesps15xsdsearchset2.md">SPFarmId</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="spsiteid-element-searchobjectowner-complextypesps15xsdsearchset2.htm">SPSiteId</a></p></td>
+<td align="left"><p><a href="spsiteid-element-searchobjectowner-complextypesps15xsdsearchset2.md">SPSiteId</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="spsitesubscriptionid-element-searchobjectowner-complextypesps15xsdsearchset2.htm">SPSiteSubscriptionId</a></p></td>
+<td align="left"><p><a href="spsitesubscriptionid-element-searchobjectowner-complextypesps15xsdsearchset2.md">SPSiteSubscriptionId</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="spwebid-element-searchobjectowner-complextypesps15xsdsearchset2.htm">SPWebId</a></p></td>
+<td align="left"><p><a href="spwebid-element-searchobjectowner-complextypesps15xsdsearchset2.md">SPWebId</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>

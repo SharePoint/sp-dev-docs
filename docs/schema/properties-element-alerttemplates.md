@@ -102,22 +102,22 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="immediatenotificationexcludedfields-element-alerttemplates.htm">ImmediateNotificationExcludedFields</a></p></td>
+<td align="left"><p><a href="immediatenotificationexcludedfields-element-alerttemplates.md">ImmediateNotificationExcludedFields</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="digestnotificationexcludedfields-element-alerttemplates.htm">DigestNotificationExcludedFields</a></p></td>
+<td align="left"><p><a href="digestnotificationexcludedfields-element-alerttemplates.md">DigestNotificationExcludedFields</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="notificationhandlerassembly-element-alert-templates.htm">NotificationHandlerAssembly</a></p></td>
+<td align="left"><p><a href="notificationhandlerassembly-element-alert-templates.md">NotificationHandlerAssembly</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="notificationhandlerclassname-element-alerttemplates.htm">NotificationHandlerClassName</a></p></td>
+<td align="left"><p><a href="notificationhandlerclassname-element-alerttemplates.md">NotificationHandlerClassName</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="updatehandlerassembly-element-alerttemplates.htm">UpdateHandlerAssembly</a></p></td>
+<td align="left"><p><a href="updatehandlerassembly-element-alerttemplates.md">UpdateHandlerAssembly</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="updatehandlerclassname-element-alerttemplates.htm">UpdateHandlerClassName</a></p></td>
+<td align="left"><p><a href="updatehandlerclassname-element-alerttemplates.md">UpdateHandlerClassName</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="alerttemplate-element-alerttemplates.htm">AlertTemplate</a></p></td>
+<td align="left"><p><a href="alerttemplate-element-alerttemplates.md">AlertTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

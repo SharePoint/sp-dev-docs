@@ -152,7 +152,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.htm">AssociationGroup Element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup Element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **AssociationGroup</span> that this <span class="keyword">AssociationReference** belongs to.</p></td>
 </tr>
 </tbody>

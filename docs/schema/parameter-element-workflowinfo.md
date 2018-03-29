@@ -177,12 +177,12 @@ class="keyword">Conditions</span> method call.
 <tr class="odd">
 <td align="left"><p>DataSourceFieldNames</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.htm">Action</a> or <a href="compositestep-element-workflowinfo.htm">CompositeStep</a> element with a <a href="datasource-element-workflowinfo.htm">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.htm">DataSourceRef</a> element. The result of selecting an element from this list should be the literal value selected.</p></td>
+<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.md">Action</a> or <a href="compositestep-element-workflowinfo.md">CompositeStep</a> element with a <a href="datasource-element-workflowinfo.md">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.md">DataSourceRef</a> element. The result of selecting an element from this list should be the literal value selected.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>DataSourceValues</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.htm">Action</a> or <a href="compositestep-element-workflowinfo.htm">CompositeStep</a> element with a <a href="datasource-element-workflowinfo.htm">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.htm">DataSourceRef</a> element. The result of selecting an element from this list should be the run-time value of the selected field in the data source.</p></td>
+<td align="left"><p>List that contains options retrieved from the ancestor <a href="action-element-workflowinfo.md">Action</a> or <a href="compositestep-element-workflowinfo.md">CompositeStep</a> element with a <a href="datasource-element-workflowinfo.md">DataSource</a> element that matches the child <a href="datasourceref-element-workflowinfo.md">DataSourceRef</a> element. The result of selecting an element from this list should be the run-time value of the selected field in the data source.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Date</p></td>
@@ -192,7 +192,7 @@ class="keyword">Conditions</span> method call.
 <tr class="even">
 <td align="left"><p>Dropdown</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>List that contains options specified as <a href="option-element-workflowinfo.htm">Option</a> child elements of the <a href="fieldbind-element-workflowinfo.htm">FieldBind</a> element.</p></td>
+<td align="left"><p>List that contains options specified as <a href="option-element-workflowinfo.md">Option</a> child elements of the <a href="fieldbind-element-workflowinfo.md">FieldBind</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>FieldNames</p></td>
@@ -277,7 +277,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameters-element-workflowinfo.htm">Parameters</a></p></td>
+<td align="left"><p><a href="parameters-element-workflowinfo.md">Parameters</a></p></td>
 </tr>
 </tbody>
 </table>

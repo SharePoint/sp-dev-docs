@@ -109,7 +109,7 @@ through the site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-site.htm">Feature</a></p></td>
+<td align="left"><p><a href="feature-element-site.md">Feature</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ through the site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="configuration-element-site.htm">Configuration</a></p></td>
+<td align="left"><p><a href="configuration-element-site.md">Configuration</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -91,7 +91,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasource-element-workflowactions.htm">DataSource</a></p></td>
+<td align="left"><p><a href="datasource-element-workflowactions.md">DataSource</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +105,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-workflowactions.htm">Action</a></p></td>
+<td align="left"><p><a href="action-element-workflowactions.md">Action</a></p></td>
 </tr>
 </tbody>
 </table>

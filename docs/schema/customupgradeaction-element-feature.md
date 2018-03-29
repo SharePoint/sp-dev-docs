@@ -112,7 +112,7 @@ being upgraded is inside an SharePoint Add-in.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-feature.htm">Parameters Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameters-element-feature.md">Parameters Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ being upgraded is inside an SharePoint Add-in.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.htm">UpgradeActions Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>

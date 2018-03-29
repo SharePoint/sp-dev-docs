@@ -119,7 +119,7 @@ Specifies the page URL for an action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="customaction-element.htm">CustomAction</a></p></td>
+<td align="left"><p><a href="customaction-element.md">CustomAction</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -136,7 +136,7 @@ Specifies a custom property value to implement within the file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element.htm">File</a></p></td>
+<td align="left"><p><a href="file-element.md">File</a></p></td>
 </tr>
 </tbody>
 </table>

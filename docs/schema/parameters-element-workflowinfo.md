@@ -108,7 +108,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameter-element-workflowinfo.htm">Parameter</a></p></td>
+<td align="left"><p><a href="parameter-element-workflowinfo.md">Parameter</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,8 +122,8 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="condition-element-workflowinfo.htm">Condition</a></p>
-<p><a href="action-element-workflowinfo.htm">Action</a></p></td>
+<td align="left"><p><a href="condition-element-workflowinfo.md">Condition</a></p>
+<p><a href="action-element-workflowinfo.md">Action</a></p></td>
 </tr>
 </tbody>
 </table>

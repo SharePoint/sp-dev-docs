@@ -111,7 +111,7 @@ file of a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="basetype-element-site.htm">BaseType</a></p></td>
+<td align="left"><p><a href="basetype-element-site.md">BaseType</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ file of a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="project-element-site.htm">Project</a></p></td>
+<td align="left"><p><a href="project-element-site.md">Project</a></p></td>
 </tr>
 </tbody>
 </table>

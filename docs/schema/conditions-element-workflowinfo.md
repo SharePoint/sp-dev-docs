@@ -168,8 +168,8 @@ element for all **Condition** elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="default-element-workflowinfo.htm">Default</a></p>
-<p><a href="condition-element-workflowinfo.htm">Condition</a></p></td>
+<td align="left"><p><a href="default-element-workflowinfo.md">Default</a></p>
+<p><a href="condition-element-workflowinfo.md">Condition</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +183,7 @@ element for all **Condition** elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-workflowinfo.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-workflowinfo.md">WorkflowInfo</a></p></td>
 </tr>
 </tbody>
 </table>

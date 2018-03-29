@@ -78,7 +78,7 @@ Foundation, where each list can contain a number of views.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>SharePoint Foundation 2010 uses XSLT to define list views, and the <a href="view-schema.htm">View schema</a> is maintained for backward compatibility. For information about XSLT list views, see <a href="http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Office.15).aspx">List Views</a>.</p></td>
+<td align="left"><p>SharePoint Foundation 2010 uses XSLT to define list views, and the <a href="view-schema.md">View schema</a> is maintained for backward compatibility. For information about XSLT list views, see <a href="http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Office.15).aspx">List Views</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -283,7 +283,7 @@ Foundation, where each list can contain a number of views.
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src="../icons/copycode.gif" title="Copy code" alt="Copy code" />Copy code</span>
+<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code>&lt;Switch&gt;
   &lt;Expr&gt;&lt;GetVar Name=&quot;ViewHasPrev&quot;/&gt;&lt;/Expr&gt;
   &lt;Case Value=&quot;TRUE&quot;&gt;
@@ -326,7 +326,7 @@ XML 
 <tr class="even">
 <td align="left"><p>**Threaded**</p></td>
 <td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to apply inner grouping in the view. A threaded view is constructed based on the built-in threading column (assumed to exist for the list). The view is sorted on this field as the secondary sort. If other columns in the view are specified as sorted or grouped, those rules are applied before the threading column sort order. As a result, all discussions grouped by a topic can be collected together, and the message threading can be displayed beneath the collection.</p>
-<p>When **TRUE</span>, the <a href="rowlimit-element-list.htm">RowLimit</a> element has a different meaning when used on a threaded discussion board list view. Instead of specifying the number of items to return, it specifies the number of discussion threads to return, where a thread could consist of one or more items. In addition to having the <span class="keyword">Threaded</span> attribute set to <span class="keyword">TRUE**, a threaded view must be sorted by the thread ID; otherwise, this row limit behavior does not take effect.</p></td>
+<p>When **TRUE</span>, the <a href="rowlimit-element-list.md">RowLimit</a> element has a different meaning when used on a threaded discussion board list view. Instead of specifying the number of items to return, it specifies the number of discussion threads to return, where a thread could consist of one or more items. In addition to having the <span class="keyword">Threaded</span> attribute set to <span class="keyword">TRUE**, a threaded view must be sorted by the thread ID; otherwise, this row limit behavior does not take effect.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolbarTemplate**</p></td>
@@ -365,7 +365,7 @@ XML 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="aggregations-element-list.htm">Aggregations</a>, <a href="groupbyfooter-element-list.htm">GroupByFooter</a>, <a href="groupbyheader-element-list.htm">GroupByHeader</a>, <a href="joins-element-view.htm">Joins</a>, <a href="pagedclientcallbackrowset-element-list.htm">PagedClientCallbackRowset</a>, <a href="pagedrecurrencerowset-element-list.htm">PagedRecurrenceRowset</a>, <a href="pagedrowset-element-list.htm">PagedRowset</a>, <a href="parameterbindings-element-list.htm">ParameterBindings</a>, <a href="projectedfields-element-view.htm">ProjectedFields</a>, <a href="query-element-list.htm">Query</a>, <a href="rowlimit-element-list.htm">RowLimit</a>, <a href="rowlimitexceeded-element-list.htm">RowLimitExceeded</a>, <a href="http://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c(Office.15).aspx">Toolbar</a>, <a href="viewbidiheader-element-list.htm">ViewBidiHeader</a>, <a href="viewbody-element-list.htm">ViewBody</a>, <a href="viewdata-element-list.htm">ViewData</a>, <a href="viewempty-element-list.htm">ViewEmpty</a>, <a href="viewfields-element-list.htm">ViewFields</a>, <a href="viewfooter-element-list.htm">ViewFooter</a>, <a href="viewheader-element-list.htm">ViewHeader</a>, <a href="viewstyle-element-list.htm">ViewStyle</a>, <a href="xsllink-element-list.htm">XslLink</a></p></td>
+<td align="left"><p><a href="aggregations-element-list.md">Aggregations</a>, <a href="groupbyfooter-element-list.md">GroupByFooter</a>, <a href="groupbyheader-element-list.md">GroupByHeader</a>, <a href="joins-element-view.md">Joins</a>, <a href="pagedclientcallbackrowset-element-list.md">PagedClientCallbackRowset</a>, <a href="pagedrecurrencerowset-element-list.md">PagedRecurrenceRowset</a>, <a href="pagedrowset-element-list.md">PagedRowset</a>, <a href="parameterbindings-element-list.md">ParameterBindings</a>, <a href="projectedfields-element-view.md">ProjectedFields</a>, <a href="query-element-list.md">Query</a>, <a href="rowlimit-element-list.md">RowLimit</a>, <a href="rowlimitexceeded-element-list.md">RowLimitExceeded</a>, <a href="http://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c(Office.15).aspx">Toolbar</a>, <a href="viewbidiheader-element-list.md">ViewBidiHeader</a>, <a href="viewbody-element-list.md">ViewBody</a>, <a href="viewdata-element-list.md">ViewData</a>, <a href="viewempty-element-list.md">ViewEmpty</a>, <a href="viewfields-element-list.md">ViewFields</a>, <a href="viewfooter-element-list.md">ViewFooter</a>, <a href="viewheader-element-list.md">ViewHeader</a>, <a href="viewstyle-element-list.md">ViewStyle</a>, <a href="xsllink-element-list.md">XslLink</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -379,7 +379,7 @@ XML 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="views-element-list.htm">Views</a></p></td>
+<td align="left"><p><a href="views-element-list.md">Views</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -512,7 +512,7 @@ code] "Copy code")Copy code</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>If the view has a <a href="joins-element-view.htm">Joins</a> element, fields from the joined lists can be included in <a href="viewfields-element-list.htm">ViewFields</a>, provided that they are also itemized in a <a href="projectedfields-element-view.htm">ProjectedFields</a> element.</p></td>
+<td align="left"><p>If the view has a <a href="joins-element-view.md">Joins</a> element, fields from the joined lists can be included in <a href="viewfields-element-list.md">ViewFields</a>, provided that they are also itemized in a <a href="projectedfields-element-view.md">ProjectedFields</a> element.</p></td>
 </tr>
 </tbody>
 </table>

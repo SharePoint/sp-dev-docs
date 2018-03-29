@@ -122,7 +122,7 @@ display pattern to render a language name.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="column-element-view.htm">Column</a></p></td>
+<td align="left"><p><a href="column-element-view.md">Column</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -136,7 +136,7 @@ display pattern to render a language name.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="displaypattern-element-list.htm">DisplayPattern</a>, <a href="languages-element-regional-settings.htm">Languages</a></p></td>
+<td align="left"><p><a href="displaypattern-element-list.md">DisplayPattern</a>, <a href="languages-element-regional-settings.md">Languages</a></p></td>
 </tr>
 </tbody>
 </table>

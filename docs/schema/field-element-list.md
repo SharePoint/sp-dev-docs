@@ -658,7 +658,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Required **Text</span>. The data type of the field (unless the <span class="keyword">Field** element is a child of <a href="projectedfields-element-view.htm">ProjectedFields</a>).</p>
+<td align="left"><p>Required **Text</span>. The data type of the field (unless the <span class="keyword">Field** element is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>).</p>
 <div class="alert">
 <table>
 <colgroup>
@@ -671,7 +671,7 @@ that a user can add to a list.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value (&quot;Lookup&quot;) when it is a child of <a href="projectedfields-element-view.htm">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.htm">ProjectedFields Element (View)</a></span> for more information about this use of <span class="keyword">Type**.</p></td>
+<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value (&quot;Lookup&quot;) when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.md">ProjectedFields Element (View)</a></span> for more information about this use of <span class="keyword">Type**.</p></td>
 </tr>
 </tbody>
 </table>
@@ -775,7 +775,7 @@ that a user can add to a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="choices-element-list.htm">CHOICES</a>, <a href="customization-element-list.htm">Customization</a>, <a href="default-element-listfield.htm">Default</a>, <a href="defaultformula-element-list.htm">DefaultFormula</a>, <a href="displaybidipattern-element-list.htm">DisplayBidiPattern</a>, <a href="displaypattern-element-list.htm">DisplayPattern</a>, <a href="fieldrefs-element-list.htm">FieldRefs</a>, <a href="formula-element-list.htm">Formula</a>, <a href="formuladisplaynames-element-list.htm">FormulaDisplayNames</a>, <a href="mappings-element-list.htm">MAPPINGS</a>, <a href="validation-element-list.htm">Validation</a></p></td>
+<td align="left"><p><a href="choices-element-list.md">CHOICES</a>, <a href="customization-element-list.md">Customization</a>, <a href="default-element-listfield.md">Default</a>, <a href="defaultformula-element-list.md">DefaultFormula</a>, <a href="displaybidipattern-element-list.md">DisplayBidiPattern</a>, <a href="displaypattern-element-list.md">DisplayPattern</a>, <a href="fieldrefs-element-list.md">FieldRefs</a>, <a href="formula-element-list.md">Formula</a>, <a href="formuladisplaynames-element-list.md">FormulaDisplayNames</a>, <a href="mappings-element-list.md">MAPPINGS</a>, <a href="validation-element-list.md">Validation</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -789,7 +789,7 @@ that a user can add to a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fields-element-list.htm">Fields</a>, <a href="projectedfields-element-view.htm">ProjectedFields</a></p></td>
+<td align="left"><p><a href="fields-element-list.md">Fields</a>, <a href="projectedfields-element-view.md">ProjectedFields</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -804,7 +804,7 @@ that a user can add to a list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded when the parent is <a href="fields-element-view.htm">Fields</a>. When the parent is <a href="projectedfields-element-view.htm">ProjectedFields</a> the maximum is difference between the maximum number of allowed fields in the primary list that is being queried and the number of fields already in the list.</p></td>
+<p>Maximum: Unbounded when the parent is <a href="fields-element-view.md">Fields</a>. When the parent is <a href="projectedfields-element-view.md">ProjectedFields</a> the maximum is difference between the maximum number of allowed fields in the primary list that is being queried and the number of fields already in the list.</p></td>
 </tr>
 </tbody>
 </table>

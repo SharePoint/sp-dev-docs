@@ -106,8 +106,8 @@ initiation form, and the data fields on the initiation form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-workflowconfig.htm">Parameters Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="fields-element-workflowconfig.htm">Fields Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameters-element-workflowconfig.md">Parameters Element (WorkflowConfig)</a></span></p>
+<p><span sdata="link"><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@ initiation form, and the data fields on the initiation form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.htm">WorkflowConfig Element</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig Element</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -111,7 +111,7 @@ Specifies the resources to be deployed to an existing Feature folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="resource-element-solution.htm">Resource</a></p></td>
+<td align="left"><p><a href="resource-element-solution.md">Resource</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ Specifies the resources to be deployed to an existing Feature folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="solution-element-solution.htm">Solution</a></p></td>
+<td align="left"><p><a href="solution-element-solution.md">Solution</a></p></td>
 </tr>
 </tbody>
 </table>

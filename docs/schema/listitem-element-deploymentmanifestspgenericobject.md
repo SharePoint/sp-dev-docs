@@ -149,13 +149,13 @@ class="nolink">SPListItem</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**DocId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional; required by import.</p>
 <p>Unique identifier of the list item file.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DocType**</p></td>
-<td align="left"><p><span sdata="link"><a href="listitemdoctype-simple-type-deploymentmanifest.htm">ListItemDocType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listitemdoctype-simple-type-deploymentmanifest.md">ListItemDocType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Document type of the specified list item.</p></td>
 </tr>
 <tr class="even">
@@ -176,7 +176,7 @@ class="nolink">SPListItem</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional; required by import.</p>
 <p>Integer value that identifies the list item.</p></td>
 </tr>
@@ -192,7 +192,7 @@ class="nolink">SPListItem</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**ModerationStatus**</p></td>
-<td align="left"><p><span sdata="link"><a href="spmoderationstatustype-simple-type-deploymentmanifest.htm">SPModerationStatusType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spmoderationstatustype-simple-type-deploymentmanifest.md">SPModerationStatusType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies the moderation status of the list item (Approved, Denied, Pending, Draft, Scheduled).</p></td>
 </tr>
 <tr class="odd">
@@ -208,19 +208,19 @@ class="nolink">SPListItem</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentFolderId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional; required by import.</p>
 <p>Unique identifier of the list item's parent folder in the database.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ParentListId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional; required by import.</p>
 <p>Unique identifier of the list item's parent list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional; required by import.</p>
 <p>Unique identifier of the list item's parent Web site.</p></td>
 </tr>
@@ -261,19 +261,19 @@ class="nolink">SPListItem</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="attachments-element-deploymentmanifest.htm">Attachments Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="attachments-element-deploymentmanifest.md">Attachments Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplistitem.htm">EventReceivers Element (DeploymentManifest - SPListItem)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplistitem.md">EventReceivers Element (DeploymentManifest - SPListItem)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.htm">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.md">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="links-element-deploymentmanifestsplistitem.htm">Links Element (DeploymentManifest - SPListItem)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="links-element-deploymentmanifestsplistitem.md">Links Element (DeploymentManifest - SPListItem)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="versions-element-deploymentmanifestsplistitem.htm">Versions Element (DeploymentManifest - SPListItem)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="versions-element-deploymentmanifestsplistitem.md">Versions Element (DeploymentManifest - SPListItem)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -287,7 +287,7 @@ class="nolink">SPListItem</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.htm">SPObject Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -122,7 +122,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="source-element-arrayofsource-complextypesps15xsdsearchset1.htm">Source</a></p></td>
+<td align="left"><p><a href="source-element-arrayofsource-complextypesps15xsdsearchset1.md">Source</a></p></td>
 <td align="left"><p>tns:Source</p></td>
 <td align="left"><p></p></td>
 </tr>

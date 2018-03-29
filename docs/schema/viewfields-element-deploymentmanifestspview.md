@@ -122,7 +122,7 @@ class="nolink">SPFieldLinkCollection</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fieldref-element-deploymentmanifestspfieldlinkcollection.htm">FieldRef Element (DeploymentManifest - SPFieldLinkCollection)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldref-element-deploymentmanifestspfieldlinkcollection.md">FieldRef Element (DeploymentManifest - SPFieldLinkCollection)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -136,7 +136,7 @@ class="nolink">SPFieldLinkCollection</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="view-element-deploymentmanifest.htm">View Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="view-element-deploymentmanifest.md">View Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

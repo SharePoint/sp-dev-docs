@@ -119,7 +119,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="datasource-element-list-instance.htm">DataSource Element (List Instance)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="datasource-element-list-instance.md">DataSource Element (List Instance)</a></span></p></td>
 </tr>
 </tbody>
 </table>

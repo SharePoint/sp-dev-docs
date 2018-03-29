@@ -124,7 +124,7 @@ manifest.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="sitedefinitionmanifest-element-solution.htm">SiteDefinitionManifest</a></p></td>
+<td align="left"><p><a href="sitedefinitionmanifest-element-solution.md">SiteDefinitionManifest</a></p></td>
 </tr>
 </tbody>
 </table>

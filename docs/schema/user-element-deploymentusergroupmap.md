@@ -181,7 +181,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="users-element-deploymentusergroupmap.htm">Users Element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="users-element-deploymentusergroupmap.md">Users Element (DeploymentUserGroupMap)</a></span></p></td>
 </tr>
 </tbody>
 </table>

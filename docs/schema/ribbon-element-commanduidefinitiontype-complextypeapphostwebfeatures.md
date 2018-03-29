@@ -132,8 +132,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element-commanduidefinitionstype-complextypeapphostwebfeatur.htm">CommandUIDefinition</a></p></td>
-<td align="left"><p><a href="commanduidefinitiontype-complextype-apphostwebfeatures.htm">CommandUIDefinitionType</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element-commanduidefinitionstype-complextypeapphostwebfeatur.md">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinitiontype-complextype-apphostwebfeatures.md">CommandUIDefinitionType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

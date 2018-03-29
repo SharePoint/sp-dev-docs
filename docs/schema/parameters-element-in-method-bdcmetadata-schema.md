@@ -109,7 +109,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadata-schema.htm">Parameter Element in Parameters (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadata-schema.md">Parameter Element in Parameters (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A parameter.</p></td>
 </tr>
 </tbody>
@@ -130,7 +130,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.htm">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The method these parameters belong to.</p></td>
 </tr>
 </tbody>

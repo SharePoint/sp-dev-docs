@@ -172,7 +172,7 @@ class="nolink">SPRole</span></span>)
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="roles-element-deploymentmanifest.htm">Roles Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="roles-element-deploymentmanifest.md">Roles Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

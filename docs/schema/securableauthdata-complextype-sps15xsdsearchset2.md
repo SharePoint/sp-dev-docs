@@ -126,17 +126,17 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="_namevaluepairs-element-securableauthdata-complextypesps15xsdsearchset2.htm">_NameValuePairs</a></p></td>
+<td align="left"><p><a href="_namevaluepairs-element-securableauthdata-complextypesps15xsdsearchset2.md">_NameValuePairs</a></p></td>
 <td align="left"><p>q7:ArrayOfKeyValueOfstringstring</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="_securablenamevaluepairs-element-securableauthdata-complextypesps15xsdsearchset2.htm">_SecurableNameValuePairs</a></p></td>
+<td align="left"><p><a href="_securablenamevaluepairs-element-securableauthdata-complextypesps15xsdsearchset2.md">_SecurableNameValuePairs</a></p></td>
 <td align="left"><p>q8:ArrayOfKeyValueOfstringSecureStringX9wx7DhE</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="serializablesecurablenamevaluepairs-element-securableauthdata-complextypesps15xs.htm">SerializableSecurableNameValuePairs</a></p></td>
+<td align="left"><p><a href="serializablesecurablenamevaluepairs-element-securableauthdata-complextypesps15xs.md">SerializableSecurableNameValuePairs</a></p></td>
 <td align="left"><p>q9:ArrayOfKeyValueOfstringstring</p></td>
 <td align="left"><p></p></td>
 </tr>

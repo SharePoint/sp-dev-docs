@@ -85,7 +85,7 @@ Contains ribbon templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ribbontemplates.htm">RibbonTemplates</a></p></td>
+<td align="left"><p><a href="ribbontemplates.md">RibbonTemplates</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -99,7 +99,7 @@ Contains ribbon templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commandui-element.htm">CommandUI</a></p></td>
+<td align="left"><p><a href="commandui-element.md">CommandUI</a></p></td>
 </tr>
 </tbody>
 </table>

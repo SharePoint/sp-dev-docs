@@ -134,10 +134,10 @@ Represents a tab control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="scaling-element.htm">Scaling</a></p></td>
+<td align="left"><p><a href="scaling-element.md">Scaling</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="groups-element.htm">Groups</a></p></td>
+<td align="left"><p><a href="groups-element.md">Groups</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -151,10 +151,10 @@ Represents a tab control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contextualgroup-element.htm">ContextualGroup</a></p></td>
+<td align="left"><p><a href="contextualgroup-element.md">ContextualGroup</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="tabs-element.htm">Tabs</a></p></td>
+<td align="left"><p><a href="tabs-element.md">Tabs</a></p></td>
 </tr>
 </tbody>
 </table>

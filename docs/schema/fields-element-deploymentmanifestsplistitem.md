@@ -130,10 +130,10 @@ class="nolink">SPFieldCollection</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="field-element-deploymentmanifestspfieldcollection.htm">Field Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="field-element-deploymentmanifestspfieldcollection.md">Field Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="fieldref-element-deploymentmanifestspfieldcollection.htm">FieldRef Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldref-element-deploymentmanifestspfieldcollection.md">FieldRef Element (DeploymentManifest - SPFieldCollection)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -147,7 +147,7 @@ class="nolink">SPFieldCollection</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.htm">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.md">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
 </tr>
 </tbody>
 </table>

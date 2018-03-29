@@ -118,7 +118,7 @@ instantiating sites within the deployment.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="template-element-site.htm">Template</a></p></td>
+<td align="left"><p><a href="template-element-site.md">Template</a></p></td>
 </tr>
 </tbody>
 </table>

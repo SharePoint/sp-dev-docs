@@ -167,7 +167,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="defaultvalues-element-in-typedescriptor-bdcmetadata-schema.htm">DefaultValues Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md">DefaultValues Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

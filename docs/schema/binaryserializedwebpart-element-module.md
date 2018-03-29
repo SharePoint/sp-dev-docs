@@ -110,11 +110,11 @@ Specifies a Web Part that has been serialized into binary data.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="guidmap-element-module.htm">GUIDMap Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guidmap-element-module.md">GUIDMap Element (Module)</a></span></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="webpart-element-module.htm">WebPart Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webpart-element-module.md">WebPart Element (Module)</a></span></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -129,7 +129,7 @@ Specifies a Web Part that has been serialized into binary data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element-module.htm">File</a></p></td>
+<td align="left"><p><a href="file-element-module.md">File</a></p></td>
 </tr>
 </tbody>
 </table>

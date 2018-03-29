@@ -114,7 +114,7 @@ collection of languages for regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="language-element-regional-settings.htm">Language</a></p></td>
+<td align="left"><p><a href="language-element-regional-settings.md">Language</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,7 @@ collection of languages for regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="regionalsettings-element-regional-settings.htm">RegionalSettings</a></p></td>
+<td align="left"><p><a href="regionalsettings-element-regional-settings.md">RegionalSettings</a></p></td>
 </tr>
 </tbody>
 </table>

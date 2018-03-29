@@ -126,7 +126,7 @@ can be other conditionals.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldswitch-element-view.htm">FieldSwitch</a>, <a href="switch-element-view.htm">Switch</a></p></td>
+<td align="left"><p><a href="fieldswitch-element-view.md">FieldSwitch</a>, <a href="switch-element-view.md">Switch</a></p></td>
 </tr>
 </tbody>
 </table>

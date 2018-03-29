@@ -136,7 +136,7 @@ code] "Copy code")Copy code</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="variabletypes-element-workflowinfo-elementaction4.htm">VariableTypes</a></p></td>
+<td align="left"><p><a href="variabletypes-element-workflowinfo-elementaction4.md">VariableTypes</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

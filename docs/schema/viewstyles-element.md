@@ -104,7 +104,7 @@ Contains the collection of view styles within a ViewStyles.xml file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="viewstyle-element-list.htm">ViewStyle</a></p></td>
+<td align="left"><p><a href="viewstyle-element-list.md">ViewStyle</a></p></td>
 </tr>
 </tbody>
 </table>

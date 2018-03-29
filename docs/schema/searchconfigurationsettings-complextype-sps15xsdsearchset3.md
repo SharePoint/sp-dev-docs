@@ -122,17 +122,17 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="searchqueryconfigurationsettings-element-searchconfigurationsettings-complextype.htm">SearchQueryConfigurationSettings</a></p></td>
+<td align="left"><p><a href="searchqueryconfigurationsettings-element-searchconfigurationsettings-complextype.md">SearchQueryConfigurationSettings</a></p></td>
 <td align="left"><p>tns:ArrayOfSearchQueryConfigurationSettings</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="searchrankingmodelconfigurationsettings-element-searchconfigurationsettings-comp.htm">SearchRankingModelConfigurationSettings</a></p></td>
+<td align="left"><p><a href="searchrankingmodelconfigurationsettings-element-searchconfigurationsettings-comp.md">SearchRankingModelConfigurationSettings</a></p></td>
 <td align="left"><p>tns:SearchRankingModelConfigurationSettings</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="searchschemaconfigurationsettings-element-searchconfigurationsettings-complextyp.htm">SearchSchemaConfigurationSettings</a></p></td>
+<td align="left"><p><a href="searchschemaconfigurationsettings-element-searchconfigurationsettings-complextyp.md">SearchSchemaConfigurationSettings</a></p></td>
 <td align="left"><p>tns:SearchSchemaConfigurationSettings</p></td>
 <td align="left"><p></p></td>
 </tr>

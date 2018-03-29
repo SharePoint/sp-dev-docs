@@ -99,7 +99,7 @@ Defines how a group of controls on a tab are sized.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**GroupId**</p></td>
-<td align="left"><p>Required. A string that identifies the <a href="scaling-element.htm">Group</a> that this scale applies to.</p></td>
+<td align="left"><p>Required. A string that identifies the <a href="scaling-element.md">Group</a> that this scale applies to.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
@@ -111,11 +111,11 @@ Defines how a group of controls on a tab are sized.
 </tr>
 <tr class="even">
 <td align="left"><p>**Size**</p></td>
-<td align="left"><p>Required. A string that corresponds to the value of the **Title** attribute of a <a href="layout-element.htm">Layout</a> element that defines the size.</p></td>
+<td align="left"><p>Required. A string that corresponds to the value of the **Title** attribute of a <a href="layout-element.md">Layout</a> element that defines the size.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PopupSize**</p></td>
-<td align="left"><p>Optional. A string that corresponds to the value of the **Title** attribute of a <a href="layout-element.htm">Layout</a> element that defines the size.</p></td>
+<td align="left"><p>Optional. A string that corresponds to the value of the **Title** attribute of a <a href="layout-element.md">Layout</a> element that defines the size.</p></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +134,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="scaling-element.htm">Scaling</a></p></td>
+<td align="left"><p><a href="scaling-element.md">Scaling</a></p></td>
 </tr>
 </tbody>
 </table>

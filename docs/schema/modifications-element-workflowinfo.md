@@ -95,7 +95,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="modification-element-workflowinfo.htm">Modification</a></p></td>
+<td align="left"><p><a href="modification-element-workflowinfo.md">Modification</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +109,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-workflowinfo.htm">Action</a></p></td>
+<td align="left"><p><a href="action-element-workflowinfo.md">Action</a></p></td>
 </tr>
 </tbody>
 </table>

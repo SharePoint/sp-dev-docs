@@ -112,7 +112,7 @@ Specifies the root paths to which solution files are copied.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rootfile-element-solution.htm">RootFile</a></p></td>
+<td align="left"><p><a href="rootfile-element-solution.md">RootFile</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ Specifies the root paths to which solution files are copied.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="solution-element-solution.htm">Solution</a></p></td>
+<td align="left"><p><a href="solution-element-solution.md">Solution</a></p></td>
 </tr>
 </tbody>
 </table>

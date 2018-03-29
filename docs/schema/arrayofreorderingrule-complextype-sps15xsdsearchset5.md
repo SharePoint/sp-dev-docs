@@ -122,7 +122,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="reorderingrule-element-arrayofreorderingrule-complextypesps15xsdsearchset5.htm">ReorderingRule</a></p></td>
+<td align="left"><p><a href="reorderingrule-element-arrayofreorderingrule-complextypesps15xsdsearchset5.md">ReorderingRule</a></p></td>
 <td align="left"><p>tns:ReorderingRule</p></td>
 <td align="left"><p></p></td>
 </tr>

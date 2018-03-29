@@ -151,7 +151,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduihandlers-element.htm">CommandUIHandlers</a></p></td>
+<td align="left"><p><a href="commanduihandlers-element.md">CommandUIHandlers</a></p></td>
 </tr>
 </tbody>
 </table>

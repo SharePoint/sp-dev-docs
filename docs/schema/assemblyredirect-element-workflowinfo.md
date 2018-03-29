@@ -118,7 +118,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assemblyredirects-element-workflowinfo.htm">AssemblyRedirects</a></p></td>
+<td align="left"><p><a href="assemblyredirects-element-workflowinfo.md">AssemblyRedirects</a></p></td>
 </tr>
 </tbody>
 </table>

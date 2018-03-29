@@ -86,10 +86,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinitions-element.htm">CommandUIDefinitions</a></p></td>
+<td align="left"><p><a href="commanduidefinitions-element.md">CommandUIDefinitions</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="commanduihandlers-element.htm">CommandUIHandlers</a></p></td>
+<td align="left"><p><a href="commanduihandlers-element.md">CommandUIHandlers</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -103,7 +103,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="customaction-element.htm">CustomAction</a></p></td>
+<td align="left"><p><a href="customaction-element.md">CustomAction</a></p></td>
 </tr>
 </tbody>
 </table>

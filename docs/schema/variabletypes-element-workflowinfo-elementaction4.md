@@ -150,7 +150,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-action4.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-action4.md">WorkflowInfo</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -174,7 +174,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="variabletype-element-variabletypes-elementworkflowinfo-elementaction4.htm">VariableType</a></p></td>
+<td align="left"><p><a href="variabletype-element-variabletypes-elementworkflowinfo-elementaction4.md">VariableType</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

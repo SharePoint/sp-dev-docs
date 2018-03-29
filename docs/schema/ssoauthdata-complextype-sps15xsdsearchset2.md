@@ -125,12 +125,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="_namevaluepairs-element-ssoauthdata-complextypesps15xsdsearchset2.htm">_nameValuePairs</a></p></td>
+<td align="left"><p><a href="_namevaluepairs-element-ssoauthdata-complextypesps15xsdsearchset2.md">_nameValuePairs</a></p></td>
 <td align="left"><p>q5:ArrayOfKeyValueOfstringstring</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="_ssoappid-element-ssoauthdata-complextypesps15xsdsearchset2.htm">_SsoAppId</a></p></td>
+<td align="left"><p><a href="_ssoappid-element-ssoauthdata-complextypesps15xsdsearchset2.md">_SsoAppId</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

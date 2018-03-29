@@ -107,7 +107,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperty-element-in-arrayofcustomproperty-layoutdefinitions-schema.htm">CustomProperty Element in ArrayOfCustomProperty (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="customproperty-element-in-arrayofcustomproperty-layoutdefinitions-schema.md">CustomProperty Element in ArrayOfCustomProperty (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>A custom property of a Container or an Office External Part.</p></td>
 </tr>
 </tbody>
@@ -128,11 +128,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.htm">Container Element (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.md">Container Element (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The container that these custom properties belong to.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.htm">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The Office External Part that these custom properties belong to.</p></td>
 </tr>
 </tbody>

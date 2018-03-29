@@ -98,7 +98,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="properties-element-alerttemplates.htm">Properties</a></p></td>
+<td align="left"><p><a href="properties-element-alerttemplates.md">Properties</a></p></td>
 </tr>
 </tbody>
 </table>

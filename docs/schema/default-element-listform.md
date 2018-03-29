@@ -112,7 +112,7 @@ list definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="forms-element-list.htm">Forms</a></p></td>
+<td align="left"><p><a href="forms-element-list.md">Forms</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ list definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="metadata-element-list.htm">Metadata (List)</a>, <a href="metadata-element-site.htm">MetaData (Site)</a></p></td>
+<td align="left"><p><a href="metadata-element-list.md">Metadata (List)</a>, <a href="metadata-element-site.md">MetaData (Site)</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -119,7 +119,7 @@ Specifies the top-level containing element for the upgrade definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webtemplate-element-upgrade.htm">WebTemplate</a></p></td>
+<td align="left"><p><a href="webtemplate-element-upgrade.md">WebTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -125,7 +125,7 @@ class="nolink">SPLinkCollection</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="link-element-deploymentmanifest.htm">Link Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="link-element-deploymentmanifest.md">Link Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -139,7 +139,7 @@ class="nolink">SPLinkCollection</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspgenericobject.htm">File Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspgenericobject.md">File Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
 </tr>
 </tbody>
 </table>

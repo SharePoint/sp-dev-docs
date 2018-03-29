@@ -101,10 +101,10 @@ list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="template-element-workflowconfig.htm">Template Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="association-element-workflowconfig.htm">Association Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="contenttypes-element-workflowconfig.htm">ContentTypes Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="initiation-element-workflowconfig.htm">Initiation Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="template-element-workflowconfig.md">Template Element (WorkflowConfig)</a></span></p>
+<p><span sdata="link"><a href="association-element-workflowconfig.md">Association Element (WorkflowConfig)</a></span></p>
+<p><span sdata="link"><a href="contenttypes-element-workflowconfig.md">ContentTypes Element (WorkflowConfig)</a></span></p>
+<p><span sdata="link"><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>

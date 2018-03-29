@@ -121,7 +121,7 @@ Specifies a permission in a permission set.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="permissionset-element-solution.htm">PermissionSet</a></p></td>
+<td align="left"><p><a href="permissionset-element-solution.md">PermissionSet</a></p></td>
 </tr>
 </tbody>
 </table>

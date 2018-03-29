@@ -175,7 +175,7 @@ retrieves the raw value of the column in the local list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded (1 within <a href="expr1-element-view.htm">Expr1</a>, <a href="expr2-element-view.htm">Expr2</a>, and <a href="urlbasename-element-view.htm">UrlBaseName</a>)</p></td>
+<p>Maximum: Unbounded (1 within <a href="expr1-element-view.md">Expr1</a>, <a href="expr2-element-view.md">Expr2</a>, and <a href="urlbasename-element-view.md">UrlBaseName</a>)</p></td>
 </tr>
 </tbody>
 </table>

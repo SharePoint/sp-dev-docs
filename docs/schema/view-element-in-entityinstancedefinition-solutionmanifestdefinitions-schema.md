@@ -146,7 +146,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="promotedproperty-element-in-viewinstancedefinition-solutionmanifestdefinitions-s.htm">PromotedProperty Element in ViewInstanceDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="promotedproperty-element-in-viewinstancedefinition-solutionmanifestdefinitions-s.md">PromotedProperty Element in ViewInstanceDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>Creates a property mapping between properties of the external content type defined in the BDC model and the properties of the Outlook Item.</p></td>
 </tr>
 </tbody>
@@ -167,7 +167,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-solutionmanifestdefinitions-schema.htm">Entity Element in Entities (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-solutionmanifestdefinitions-schema.md">Entity Element in Entities (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The external content type this view this belongs to.</p></td>
 </tr>
 </tbody>

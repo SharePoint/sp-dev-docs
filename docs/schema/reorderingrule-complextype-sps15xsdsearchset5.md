@@ -124,17 +124,17 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="boost-element-reorderingrule-complextypesps15xsdsearchset5.htm">Boost</a></p></td>
+<td align="left"><p><a href="boost-element-reorderingrule-complextypesps15xsdsearchset5.md">Boost</a></p></td>
 <td align="left"><p>xs:int</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="matchtype-element-reorderingrule-complextypesps15xsdsearchset5.htm">MatchType</a></p></td>
+<td align="left"><p><a href="matchtype-element-reorderingrule-complextypesps15xsdsearchset5.md">MatchType</a></p></td>
 <td align="left"><p>tns:ReorderingRuleMatchType</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="matchvalue-element-reorderingrule-complextypesps15xsdsearchset5.htm">MatchValue</a></p></td>
+<td align="left"><p><a href="matchvalue-element-reorderingrule-complextypesps15xsdsearchset5.md">MatchValue</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

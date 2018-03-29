@@ -89,99 +89,99 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="batch-element-view.htm">Batch</a></p></td>
+<td align="left"><p><a href="batch-element-view.md">Batch</a></p></td>
 <td align="left"><p>Used for batch processing of commands within HTTP protocol.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="case-element-view.htm">Case</a></p></td>
+<td align="left"><p><a href="case-element-view.md">Case</a></p></td>
 <td align="left"><p>Used inside a **Switch</span> or <span class="keyword">FieldSwitch** statement to perform a comparison.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="default-element-view.htm">Default</a></p></td>
+<td align="left"><p><a href="default-element-view.md">Default</a></p></td>
 <td align="left"><p>Contains the default value of a field to which new item forms are initialized.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="expr-element-view.htm">Expr</a></p></td>
+<td align="left"><p><a href="expr-element-view.md">Expr</a></p></td>
 <td align="left"><p>Contains a CAML expression that is evaluated to determine the course of action for a **Switch</span> or <span class="keyword">FieldSwitch** statement.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="fieldswitch-element-view.htm">FieldSwitch</a></p></td>
+<td align="left"><p><a href="fieldswitch-element-view.md">FieldSwitch</a></p></td>
 <td align="left"><p>Provides conditional rendering based on the value of a CAML expression.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="foreach-element-view.htm">ForEach</a></p></td>
+<td align="left"><p><a href="foreach-element-view.md">ForEach</a></p></td>
 <td align="left"><p>Provides a basic mechanism for enumerating a collection of views or fields defined in the current list.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="getvar-element-view.htm">GetVar</a></p></td>
+<td align="left"><p><a href="getvar-element-view.md">GetVar</a></p></td>
 <td align="left"><p>Returns a variable in the context of rendering the page.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="htmlbase-element.htm">HTMLBase</a></p></td>
+<td align="left"><p><a href="htmlbase-element.md">HTMLBase</a></p></td>
 <td align="left"><p>Returns a string that sets the base element for the current page.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="httphost-element-view.htm">HttpHost</a></p></td>
+<td align="left"><p><a href="httphost-element-view.md">HttpHost</a></p></td>
 <td align="left"><p>Renders the URL of the virtual server containing the current Web site.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="httppath-element-view.htm">HttpPath</a></p></td>
+<td align="left"><p><a href="httppath-element-view.md">HttpPath</a></p></td>
 <td align="left"><p>Returns the path to the appropriate OWSSVR.DLL.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="httpvdir-element-view.htm">HttpVDir</a></p></td>
+<td align="left"><p><a href="httpvdir-element-view.md">HttpVDir</a></p></td>
 <td align="left"><p>Returns the root directory of the current site.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="ifequal-element-view.htm">IfEqual</a></p></td>
+<td align="left"><p><a href="ifequal-element-view.md">IfEqual</a></p></td>
 <td align="left"><p>Allows for conditional rendering based on the comparison of two CAML expressions.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="listproperty-element-view.htm">ListProperty</a></p></td>
+<td align="left"><p><a href="listproperty-element-view.md">ListProperty</a></p></td>
 <td align="left"><p>Returns the value of a specified column from the database.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="now-element-query.htm">Now</a></p></td>
+<td align="left"><p><a href="now-element-query.md">Now</a></p></td>
 <td align="left"><p>Renders the current time.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="project-element-site.htm">Project</a></p></td>
+<td align="left"><p><a href="project-element-site.md">Project</a></p></td>
 <td align="left"><p>The top-level element in <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="projectproperty-element-view.htm">ProjectProperty</a></p></td>
+<td align="left"><p><a href="projectproperty-element-view.md">ProjectProperty</a></p></td>
 <td align="left"><p>Returns a global property of the current team Web site.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="property-element-view.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-view.md">Property</a></p></td>
 <td align="left"><p>Returns the property from the current **ForEach** context.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="setlist-element-view.htm">SetList</a></p></td>
+<td align="left"><p><a href="setlist-element-view.md">SetList</a></p></td>
 <td align="left"><p>Designates the current list.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="setvar-element-view.htm">SetVar</a></p></td>
+<td align="left"><p><a href="setvar-element-view.md">SetVar</a></p></td>
 <td align="left"><p>Sets variables in the context of rendering the page.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="switch-element-view.htm">Switch</a></p></td>
+<td align="left"><p><a href="switch-element-view.md">Switch</a></p></td>
 <td align="left"><p>Allows for conditional rendering based on the value of a CAML expression.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="today-element-query.htm">Today</a></p></td>
+<td align="left"><p><a href="today-element-query.md">Today</a></p></td>
 <td align="left"><p>Renders today's date.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="url-element-view.htm">URL</a></p></td>
+<td align="left"><p><a href="url-element-view.md">URL</a></p></td>
 <td align="left"><p>Renders a URL.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 <td align="left"><p>Defines a view in Microsoft SharePoint Foundation.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="xml-element.htm">XML</a></p></td>
+<td align="left"><p><a href="xml-element.md">XML</a></p></td>
 <td align="left"><p>Used as an outer wrapper to denote a section of CAML.</p></td>
 </tr>
 </tbody>

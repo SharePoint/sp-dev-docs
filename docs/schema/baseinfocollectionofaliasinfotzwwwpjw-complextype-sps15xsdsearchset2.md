@@ -121,12 +121,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="dictionary-element-baseinfocollectionofaliasinfotzwwwpjw-complextypesps15xsdsear.htm">dictionary</a></p></td>
+<td align="left"><p><a href="dictionary-element-baseinfocollectionofaliasinfotzwwwpjw-complextypesps15xsdsear.md">dictionary</a></p></td>
 <td align="left"><p>q10:ArrayOfKeyValueOfstringAliasInfoy6h3NzC8</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="lastitemname-element-baseinfocollectionofaliasinfotzwwwpjw-complextypesps15xsdse.htm">LastItemName</a></p></td>
+<td align="left"><p><a href="lastitemname-element-baseinfocollectionofaliasinfotzwwwpjw-complextypesps15xsdse.md">LastItemName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

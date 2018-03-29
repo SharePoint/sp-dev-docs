@@ -144,7 +144,7 @@ code] "Copy code")Copy code</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-action4.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-action4.md">WorkflowInfo</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -168,7 +168,7 @@ code] "Copy code")Copy code</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assemblyredirect-element-assemblyredirects-elementworkflowinfo-elementaction4.htm">AssemblyRedirect</a></p></td>
+<td align="left"><p><a href="assemblyredirect-element-assemblyredirects-elementworkflowinfo-elementaction4.md">AssemblyRedirect</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

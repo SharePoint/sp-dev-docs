@@ -88,7 +88,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="property-element-list-instance.htm">Property Element (List Instance)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="property-element-list-instance.md">Property Element (List Instance)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -102,7 +102,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="listinstance-element-list-instance.htm">ListInstance Element (List Instance)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listinstance-element-list-instance.md">ListInstance Element (List Instance)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -111,7 +111,7 @@ Specifies a site definition manifest to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webtempfile-element-solution.htm">WebTempFile</a></p></td>
+<td align="left"><p><a href="webtempfile-element-solution.md">WebTempFile</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ Specifies a site definition manifest to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="sitedefinitionmanifests-element-solution.htm">SiteDefinitionManifests</a></p></td>
+<td align="left"><p><a href="sitedefinitionmanifests-element-solution.md">SiteDefinitionManifests</a></p></td>
 </tr>
 </tbody>
 </table>

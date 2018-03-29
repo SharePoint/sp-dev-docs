@@ -122,7 +122,7 @@ Allows additional properties to be set when a limit is applied to text.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="limit-element-view.htm">Limit</a></p></td>
+<td align="left"><p><a href="limit-element-view.md">Limit</a></p></td>
 </tr>
 </tbody>
 </table>

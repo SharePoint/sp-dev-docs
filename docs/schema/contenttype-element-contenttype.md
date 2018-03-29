@@ -126,7 +126,7 @@ Defines a single content type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DocumentTemplate**</p></td>
-<td align="left"><p>Obsolete. Use the <a href="documenttemplate-element-contenttype.htm">DocumentTemplate</a> element.</p></td>
+<td align="left"><p>Obsolete. Use the <a href="documenttemplate-element-contenttype.md">DocumentTemplate</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**FeatureId**</p></td>
@@ -178,7 +178,7 @@ Defines a single content type.
 </tr>
 <tr class="even">
 <td align="left"><p>**ResourceFolder**</p></td>
-<td align="left"><p>Obsolete. Use the <a href="folder-element-contenttype.htm">Folder</a> element.</p></td>
+<td align="left"><p>Obsolete. Use the <a href="folder-element-contenttype.md">Folder</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sealed**</p></td>
@@ -205,7 +205,7 @@ Defines a single content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="documenttemplate-element-contenttype.htm">DocumentTemplate</a>, <a href="fieldrefs-element-contenttype.htm">FieldRefs</a>, <a href="folder-element-contenttype.htm">Folder</a>, <a href="xmldocuments-element-contenttype.htm">XMLDocuments</a></p></td>
+<td align="left"><p><a href="documenttemplate-element-contenttype.md">DocumentTemplate</a>, <a href="fieldrefs-element-contenttype.md">FieldRefs</a>, <a href="folder-element-contenttype.md">Folder</a>, <a href="xmldocuments-element-contenttype.md">XMLDocuments</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -219,7 +219,7 @@ Defines a single content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttypes-element-list.htm">ContentTypes</a>, <a href="elements-element-contenttype.htm">Elements</a></p></td>
+<td align="left"><p><a href="contenttypes-element-list.md">ContentTypes</a>, <a href="elements-element-contenttype.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

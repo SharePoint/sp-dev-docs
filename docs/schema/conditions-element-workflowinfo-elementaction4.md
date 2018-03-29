@@ -177,7 +177,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-action4.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-action4.md">WorkflowInfo</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -201,12 +201,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="condition-element-conditions-elementworkflowinfo-elementaction4.htm">Condition</a></p></td>
+<td align="left"><p><a href="condition-element-conditions-elementworkflowinfo-elementaction4.md">Condition</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="default-element-conditions-elementworkflowinfo-elementaction4.htm">Default</a></p></td>
+<td align="left"><p><a href="default-element-conditions-elementworkflowinfo-elementaction4.md">Default</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

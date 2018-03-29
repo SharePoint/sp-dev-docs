@@ -183,27 +183,27 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.htm">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized names of the **LobSystem**.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.htm">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies the properties of an **LobSystem**.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.htm">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies the access control list (ACL) of an **LobSystem**.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="proxy-element-in-lobsystem-bdcmetadata-schema.htm">Proxy Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="proxy-element-in-lobsystem-bdcmetadata-schema.md">Proxy Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies a user-provided proxy that is identical to the one that would be generated if this element was not present.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.htm">LobSystemInstances Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md">LobSystemInstances Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies the external system instances for this external system.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadata-schema.htm">Entities Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadata-schema.md">Entities Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies the external content types in this external system.</p></td>
 </tr>
 </tbody>
@@ -224,7 +224,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystems-element-in-model-bdcmetadata-schema.htm">LobSystems Element in Model (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsystems-element-in-model-bdcmetadata-schema.md">LobSystems Element in Model (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies a list of external systems in this model.</p></td>
 </tr>
 </tbody>

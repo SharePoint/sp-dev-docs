@@ -173,7 +173,7 @@ configuration for a new Web site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="basetypes-element-site.htm">BaseTypes</a>, <a href="components-element-site.htm">Components</a>, <a href="configurations-element-site.htm">Configurations</a>, <a href="documenttemplates-element-site.htm">DocumentTemplates</a>, <a href="listtemplates-element-site.htm">ListTemplates</a>, <a href="modules-element-site.htm">Modules</a>, <a href="navbars-element-site.htm">NavBars</a>, <a href="serveremailfooter-element-site.htm">ServerEmailFooter</a></p></td>
+<td align="left"><p><a href="basetypes-element-site.md">BaseTypes</a>, <a href="components-element-site.md">Components</a>, <a href="configurations-element-site.md">Configurations</a>, <a href="documenttemplates-element-site.md">DocumentTemplates</a>, <a href="listtemplates-element-site.md">ListTemplates</a>, <a href="modules-element-site.md">Modules</a>, <a href="navbars-element-site.md">NavBars</a>, <a href="serveremailfooter-element-site.md">ServerEmailFooter</a></p></td>
 </tr>
 </tbody>
 </table>

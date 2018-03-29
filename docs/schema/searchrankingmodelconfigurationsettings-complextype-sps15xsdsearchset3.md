@@ -120,7 +120,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rankingmodels-element-searchrankingmodelconfigurationsettings-complextypesps15xs.htm">RankingModels</a></p></td>
+<td align="left"><p><a href="rankingmodels-element-searchrankingmodelconfigurationsettings-complextypesps15xs.md">RankingModels</a></p></td>
 <td align="left"><p>q7:ArrayOfstring</p></td>
 <td align="left"><p></p></td>
 </tr>

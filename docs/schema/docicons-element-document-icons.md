@@ -111,7 +111,7 @@ document library icons.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="byextension-element-document-icons.htm">ByExtension</a>, <a href="byprogid-element-document-icons.htm">ByProgID</a></p></td>
+<td align="left"><p><a href="byextension-element-document-icons.md">ByExtension</a>, <a href="byprogid-element-document-icons.md">ByProgID</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -214,7 +214,7 @@ class="nolink">WebPart</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ListId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the Web Part list.</p></td>
 </tr>
 <tr class="even">
@@ -229,7 +229,7 @@ class="nolink">WebPart</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier of the Web Part.</p></td>
 </tr>
 <tr class="odd">
@@ -279,7 +279,7 @@ class="nolink">WebPart</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**UserId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional.</p></td>
 </tr>
 <tr class="odd">
@@ -314,70 +314,70 @@ class="nolink">WebPart</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="script-element-deploymentmanifestspwebpart.htm">Script Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="script-element-deploymentmanifestspwebpart.md">Script Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="pagedrowset-element-deploymentmanifestspwebpart.htm">PagedRowset Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="pagedrowset-element-deploymentmanifestspwebpart.md">PagedRowset Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="pagedclientcallbackrowset-element-deploymentmanifestspwebpart.htm">PagedClientCallbackRowset Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="pagedclientcallbackrowset-element-deploymentmanifestspwebpart.md">PagedClientCallbackRowset Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="pagedrecurrencerowset-element-deploymentmanifestspwebpart.htm">PagedRecurrenceRowset Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="pagedrecurrencerowset-element-deploymentmanifestspwebpart.md">PagedRecurrenceRowset Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewfields-element-deploymentmanifestspwebpart.htm">ViewFields Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewfields-element-deploymentmanifestspwebpart.md">ViewFields Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="viewdata-element-deploymentmanifestspwebpart.htm">ViewData Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewdata-element-deploymentmanifestspwebpart.md">ViewData Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="query-element-deploymentmanifestspwebpart.htm">Query Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="query-element-deploymentmanifestspwebpart.md">Query Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="rowlimit-element-deploymentmanifestspwebpart.htm">RowLimit Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="rowlimit-element-deploymentmanifestspwebpart.md">RowLimit Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="rowlimitexceeded-element-deploymentmanifestspwebpart.htm">RowLimitExceeded Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="rowlimitexceeded-element-deploymentmanifestspwebpart.md">RowLimitExceeded Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="toolbar-element-deploymentmanifestspwebpart.htm">Toolbar Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="toolbar-element-deploymentmanifestspwebpart.md">Toolbar Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="formats-element-deploymentmanifestspwebpart.htm">Formats Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="formats-element-deploymentmanifestspwebpart.md">Formats Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="aggregations-element-deploymentmanifestspwebpart.htm">Aggregations Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="aggregations-element-deploymentmanifestspwebpart.md">Aggregations Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewstyle-element-deploymentmanifestspwebpart.htm">ViewStyle Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewstyle-element-deploymentmanifestspwebpart.md">ViewStyle Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="view-body-element-deploymentmanifestspwebpart.htm">View Body Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="view-body-element-deploymentmanifestspwebpart.md">View Body Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewempty-element-deploymentmanifestspwebpart.htm">ViewEmpty Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewempty-element-deploymentmanifestspwebpart.md">ViewEmpty Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="viewfooter-element-deploymentmanifestspwebpart.htm">ViewFooter Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewfooter-element-deploymentmanifestspwebpart.md">ViewFooter Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewheader-element-deploymentmanifestspwebpart.htm">ViewHeader Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewheader-element-deploymentmanifestspwebpart.md">ViewHeader Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="viewbidiheader-element-deploymentmanifestspwebpart.htm">ViewBidiHeader Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewbidiheader-element-deploymentmanifestspwebpart.md">ViewBidiHeader Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="groupbyfooter-element-deploymentmanifestspwebpart.htm">GroupByFooter Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="groupbyfooter-element-deploymentmanifestspwebpart.md">GroupByFooter Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="groupbyheader-deploymentmanifestspwebpart.htm">GroupByHeader (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="groupbyheader-deploymentmanifestspwebpart.md">GroupByHeader (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="calendarviewstyles-element-deploymentmanifestspwebpart.htm">CalendarViewStyles Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="calendarviewstyles-element-deploymentmanifestspwebpart.md">CalendarViewStyles Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="listformbody-element-deploymentmanifestspwebpart.htm">ListFormBody Element (DeploymentManifest - SPWebPart)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listformbody-element-deploymentmanifestspwebpart.md">ListFormBody Element (DeploymentManifest - SPWebPart)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -391,7 +391,7 @@ class="nolink">WebPart</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webparts-element-deploymentmanifest.htm">WebParts Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webparts-element-deploymentmanifest.md">WebParts Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

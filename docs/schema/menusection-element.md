@@ -139,10 +139,10 @@ Defines a section of a menu.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="controls-element-menusection.htm">Controls</a></p></td>
+<td align="left"><p><a href="controls-element-menusection.md">Controls</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="gallery-element.htm">Gallery</a></p></td>
+<td align="left"><p><a href="gallery-element.md">Gallery</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -172,7 +172,7 @@ Defines a section of a menu.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="menu-element.htm">Menu</a></p></td>
+<td align="left"><p><a href="menu-element.md">Menu</a></p></td>
 </tr>
 </tbody>
 </table>

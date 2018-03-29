@@ -107,7 +107,7 @@ lists of Web sites based on Microsoft SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="list-element-list.htm">List</a></p></td>
+<td align="left"><p><a href="list-element-list.md">List</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@ lists of Web sites based on Microsoft SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="site-element.htm">Site</a></p></td>
+<td align="left"><p><a href="site-element.md">Site</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -123,7 +123,7 @@ site, as defined in the UserInfo table of the content database.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="value-element-query.htm">Value</a></p></td>
+<td align="left"><p><a href="value-element-query.md">Value</a></p></td>
 </tr>
 </tbody>
 </table>

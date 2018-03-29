@@ -112,7 +112,7 @@ Specifies custom property values to implement within the Feature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-sitefeature.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-sitefeature.md">Property</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ Specifies custom property values to implement within the Feature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-site.htm">Feature</a></p></td>
+<td align="left"><p><a href="feature-element-site.md">Feature</a></p></td>
 </tr>
 </tbody>
 </table>

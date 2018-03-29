@@ -164,35 +164,35 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttype-spmetal.htm">ContentType</a></p></td>
+<td align="left"><p><a href="contenttype-spmetal.md">ContentType</a></p></td>
 <td align="left"><p>Includes a content type for code generation and modifies which fields (columns) in the content type are included in code generation.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="excludecontenttype-spmetal.htm">ExcludeContentType</a></p></td>
+<td align="left"><p><a href="excludecontenttype-spmetal.md">ExcludeContentType</a></p></td>
 <td align="left"><p>Excludes a content type from code generation.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="excludeothercontenttypes-spmetal.htm">ExcludeOtherContentTypes</a></p></td>
+<td align="left"><p><a href="excludeothercontenttypes-spmetal.md">ExcludeOtherContentTypes</a></p></td>
 <td align="left"><p>Excludes from code generation all content types not explicitly included in a ContentType element.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="includehiddencontenttypes-spmetal.htm">IncludeHiddenContentTypes</a></p></td>
+<td align="left"><p><a href="includehiddencontenttypes-spmetal.md">IncludeHiddenContentTypes</a></p></td>
 <td align="left"><p>Includes hidden content types in code generation.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="list-spmetal.htm">List</a></p></td>
+<td align="left"><p><a href="list-spmetal.md">List</a></p></td>
 <td align="left"><p>Includes a list for code generation and modifies which content types in the list are included in code generation.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="excludelist-spmetal.htm">ExcludeList</a></p></td>
+<td align="left"><p><a href="excludelist-spmetal.md">ExcludeList</a></p></td>
 <td align="left"><p>Excludes a list from code generation.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="excludeotherlists-spmetal.htm">ExcludeOtherLists</a></p></td>
+<td align="left"><p><a href="excludeotherlists-spmetal.md">ExcludeOtherLists</a></p></td>
 <td align="left"><p>Excludes from code generation all lists not explicitly included in a List element.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="includehiddenlists-spmetal.htm">IncludeHiddenLists</a></p></td>
+<td align="left"><p><a href="includehiddenlists-spmetal.md">IncludeHiddenLists</a></p></td>
 <td align="left"><p>Includes hidden lists in code generation.</p></td>
 </tr>
 </tbody>

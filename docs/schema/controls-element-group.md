@@ -149,40 +149,40 @@ Contains elements that define controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="button-element.htm">Button</a></p></td>
+<td align="left"><p><a href="button-element.md">Button</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="checkbox-element.htm">CheckBox</a></p></td>
+<td align="left"><p><a href="checkbox-element.md">CheckBox</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="combobox-element.htm">ComboBox</a></p></td>
+<td align="left"><p><a href="combobox-element.md">ComboBox</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="dropdown-element.htm">DropDown</a></p></td>
+<td align="left"><p><a href="dropdown-element.md">DropDown</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="flyoutanchor-element.htm">FlyoutAnchor</a></p></td>
+<td align="left"><p><a href="flyoutanchor-element.md">FlyoutAnchor</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="gallerybutton-element-group.htm">GalleryButton</a></p></td>
+<td align="left"><p><a href="gallerybutton-element-group.md">GalleryButton</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="label-element.htm">Label</a></p></td>
+<td align="left"><p><a href="label-element.md">Label</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="mrusplitbutton-element.htm">MRUSplitButton</a></p></td>
+<td align="left"><p><a href="mrusplitbutton-element.md">MRUSplitButton</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="spinner-element.htm">Spinner</a></p></td>
+<td align="left"><p><a href="spinner-element.md">Spinner</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="splitbutton-element.htm">SplitButton</a></p></td>
+<td align="left"><p><a href="splitbutton-element.md">SplitButton</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="textbox-element.htm">TextBox</a></p></td>
+<td align="left"><p><a href="textbox-element.md">TextBox</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="togglebutton-element.htm">ToggleButton</a></p></td>
+<td align="left"><p><a href="togglebutton-element.md">ToggleButton</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Contains elements that define controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="group-element-ribbon.htm">Group</a></p></td>
+<td align="left"><p><a href="group-element-ribbon.md">Group</a></p></td>
 </tr>
 </tbody>
 </table>

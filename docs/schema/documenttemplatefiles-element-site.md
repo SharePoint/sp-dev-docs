@@ -109,7 +109,7 @@ template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="documenttemplatefile-element-site.htm">DocumentTemplateFile</a></p></td>
+<td align="left"><p><a href="documenttemplatefile-element-site.md">DocumentTemplateFile</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="documenttemplate-element-site.htm">DocumentTemplate</a></p></td>
+<td align="left"><p><a href="documenttemplate-element-site.md">DocumentTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

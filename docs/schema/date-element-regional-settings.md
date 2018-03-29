@@ -118,7 +118,7 @@ on which standard time or daylight saving time begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="day-element-regional-settings.htm">Day</a>, <a href="dayofweek-element-regional-settings.htm">DayOfWeek</a>, <a href="hour-element-regional-settings.htm">Hour</a>, <a href="month-element-regional-settings.htm">Month</a></p></td>
+<td align="left"><p><a href="day-element-regional-settings.md">Day</a>, <a href="dayofweek-element-regional-settings.md">DayOfWeek</a>, <a href="hour-element-regional-settings.md">Hour</a>, <a href="month-element-regional-settings.md">Month</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -132,7 +132,7 @@ on which standard time or daylight saving time begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="daylighttime-element-regional-settings.htm">DaylightTime</a>, <a href="standardtime-element-regional-settings.htm">StandardTime</a></p></td>
+<td align="left"><p><a href="daylighttime-element-regional-settings.md">DaylightTime</a>, <a href="standardtime-element-regional-settings.md">StandardTime</a></p></td>
 </tr>
 </tbody>
 </table>

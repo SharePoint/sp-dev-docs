@@ -125,12 +125,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="_cookies-element-cookieauthdata-complextypesps15xsdsearchset2.htm">_Cookies</a></p></td>
+<td align="left"><p><a href="_cookies-element-cookieauthdata-complextypesps15xsdsearchset2.md">_Cookies</a></p></td>
 <td align="left"><p>q6:CookieCollection</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="_errorpageurl-element-cookieauthdata-complextypesps15xsdsearchset2.htm">_ErrorPageUrl</a></p></td>
+<td align="left"><p><a href="_errorpageurl-element-cookieauthdata-complextypesps15xsdsearchset2.md">_ErrorPageUrl</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

@@ -107,7 +107,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.htm">Association Element in Associations (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A subscription association.</p></td>
 </tr>
 </tbody>
@@ -128,7 +128,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.htm">Subscription Element (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.md">Subscription Element (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The subscription that contains this list of associations.</p></td>
 </tr>
 </tbody>

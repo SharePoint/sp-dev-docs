@@ -107,10 +107,10 @@ type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldref-element-contenttype.htm">FieldRef</a></p></td>
+<td align="left"><p><a href="fieldref-element-contenttype.md">FieldRef</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="removefieldref-element-contenttype.htm">RemoveFieldRef</a></p></td>
+<td align="left"><p><a href="removefieldref-element-contenttype.md">RemoveFieldRef</a></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="http://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx">DocumentTemplate</a></p></td>
@@ -127,7 +127,7 @@ type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttype-element-contenttype.htm">ContentType</a></p></td>
+<td align="left"><p><a href="contenttype-element-contenttype.md">ContentType</a></p></td>
 </tr>
 </tbody>
 </table>

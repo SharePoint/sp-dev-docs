@@ -118,7 +118,7 @@ values for 2006 and earlier will still be calculated correctly.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="bias-element-regional-settings.htm">Bias</a>, <a href="daylighttime-element-regional-settings.htm">DaylightTime</a>, <a href="standardtime-element-regional-settings.htm">StandardTime</a></p></td>
+<td align="left"><p><a href="bias-element-regional-settings.md">Bias</a>, <a href="daylighttime-element-regional-settings.md">DaylightTime</a>, <a href="standardtime-element-regional-settings.md">StandardTime</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -132,7 +132,7 @@ values for 2006 and earlier will still be calculated correctly.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="timezone-element-regional-settings.htm">TimeZone</a></p></td>
+<td align="left"><p><a href="timezone-element-regional-settings.md">TimeZone</a></p></td>
 </tr>
 </tbody>
 </table>

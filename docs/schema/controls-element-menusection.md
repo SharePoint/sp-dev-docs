@@ -109,19 +109,19 @@ Contains elements that define menu controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="togglebutton-element.htm">ToggleButton</a></p></td>
+<td align="left"><p><a href="togglebutton-element.md">ToggleButton</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="button-element.htm">Button</a></p></td>
+<td align="left"><p><a href="button-element.md">Button</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="colorpicker-element.htm">ColorPicker</a></p></td>
+<td align="left"><p><a href="colorpicker-element.md">ColorPicker</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="flyoutanchor-element.htm">FlyoutAnchor</a></p></td>
+<td align="left"><p><a href="flyoutanchor-element.md">FlyoutAnchor</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="inserttable-element.htm">InsertTable</a></p></td>
+<td align="left"><p><a href="inserttable-element.md">InsertTable</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -135,7 +135,7 @@ Contains elements that define menu controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="menusection-element.htm">MenuSection</a></p></td>
+<td align="left"><p><a href="menusection-element.md">MenuSection</a></p></td>
 </tr>
 </tbody>
 </table>

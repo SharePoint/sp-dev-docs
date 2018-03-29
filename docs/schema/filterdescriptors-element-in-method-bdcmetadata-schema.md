@@ -109,7 +109,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filterdescriptor-element-in-filterdescriptors-bdcmetadata-schema.htm">FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="filterdescriptor-element-in-filterdescriptors-bdcmetadata-schema.md">FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A filter descriptor.</p></td>
 </tr>
 </tbody>
@@ -130,7 +130,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.htm">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The method this list of filter descriptors belongs to.</p></td>
 </tr>
 </tbody>

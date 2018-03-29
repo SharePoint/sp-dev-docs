@@ -126,11 +126,11 @@ Defines a spinner control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Command**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.htm">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the <span class="keyword">Command** attribute of a corresponding <a href="commanduihandler-element.htm">CommandUIHandler</a> element.</p></td>
+<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.md">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the <span class="keyword">Command** attribute of a corresponding <a href="commanduihandler-element.md">CommandUIHandler</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DefaultUnit**</p></td>
-<td align="left"><p>Optional. The name or abbreviation for the default <a href="unit-element-spinner.htm">Unit</a>.</p></td>
+<td align="left"><p>Optional. The name or abbreviation for the default <a href="unit-element-spinner.md">Unit</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DefaultValue**</p></td>
@@ -158,7 +158,7 @@ Defines a spinner control.
 </tr>
 <tr class="even">
 <td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.htm">ControlRef</a> element, an <a href="overflowarea-element.htm">OverflowArea</a> element, or an <a href="overflowsection-element.htm">OverflowSection</a> element in a <a href="grouptemplate-element.htm">GroupTemplate</a> element. The <span class="keyword">TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group.</p></td>
+<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.md">ControlRef</a> element, an <a href="overflowarea-element.md">OverflowArea</a> element, or an <a href="overflowsection-element.md">OverflowSection</a> element in a <a href="grouptemplate-element.md">GroupTemplate</a> element. The <span class="keyword">TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
@@ -204,7 +204,7 @@ Defines a spinner control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="unit-element-spinner.htm">Unit</a></p></td>
+<td align="left"><p><a href="unit-element-spinner.md">Unit</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -218,10 +218,10 @@ Defines a spinner control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="controls-element-group.htm">Controls</a></p></td>
+<td align="left"><p><a href="controls-element-group.md">Controls</a></p></td>
 </tr>
 </tbody>
 </table>

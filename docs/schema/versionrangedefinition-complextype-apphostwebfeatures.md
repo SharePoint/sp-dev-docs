@@ -157,14 +157,14 @@ None.
 <tbody>
 <tr class="odd">
 <td align="left"><p>BeginVersion</p></td>
-<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.htm">FeatureVersion</a></p></td>
+<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.md">FeatureVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureVersion type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>EndVersion</p></td>
-<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.htm">FeatureVersion</a></p></td>
+<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.md">FeatureVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureVersion type.</p></td>

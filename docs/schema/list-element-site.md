@@ -112,7 +112,7 @@ definition configuration or Web template configuration.
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
-<td align="left"><p>Optional **Text**. Provides a description for the list. This attribute must be specified within a configuration in an <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file when you are adding a custom list definition to a site definition. The value of this attribute overrides the value contained with the <a href="defaultdescription-element-list.htm">DefaultDescription</a> element of a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file.</p></td>
+<td align="left"><p>Optional **Text**. Provides a description for the list. This attribute must be specified within a configuration in an <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file when you are adding a custom list definition to a site definition. The value of this attribute overrides the value contained with the <a href="defaultdescription-element-list.md">DefaultDescription</a> element of a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EmailAlias**</p></td>
@@ -193,7 +193,7 @@ definition configuration or Web template configuration.
 <li><p>**1200**   Administrator tasks list</p></li>
 </ul>
 <p></p>
-<p>This attribute corresponds to the **Type** attribute of the <a href="listtemplate-element-site.htm">ListTemplate</a> element.</p></td>
+<p>This attribute corresponds to the **Type** attribute of the <a href="listtemplate-element-site.md">ListTemplate</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
@@ -216,7 +216,7 @@ definition configuration or Web template configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="data-element-site.htm">Data</a></p></td>
+<td align="left"><p><a href="data-element-site.md">Data</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -230,7 +230,7 @@ definition configuration or Web template configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="globallists-element.htm">GlobalLists</a>, <a href="lists-element-site.htm">Lists</a></p></td>
+<td align="left"><p><a href="globallists-element.md">GlobalLists</a>, <a href="lists-element-site.md">Lists</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -126,7 +126,7 @@ in lists created through the specified list template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="receiver-element-event.htm">Receiver</a></p></td>
+<td align="left"><p><a href="receiver-element-event.md">Receiver</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -140,7 +140,7 @@ in lists created through the specified list template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-event.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-event.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

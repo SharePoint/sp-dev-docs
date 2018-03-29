@@ -121,12 +121,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="authenticationtype-element-authenticationinformation-complextypesps15xsdsearchse.htm">AuthenticationType</a></p></td>
+<td align="left"><p><a href="authenticationtype-element-authenticationinformation-complextypesps15xsdsearchse.md">AuthenticationType</a></p></td>
 <td align="left"><p>tns:FederationAuthType</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="data-element-authenticationinformation-complextypesps15xsdsearchset2.htm">Data</a></p></td>
+<td align="left"><p><a href="data-element-authenticationinformation-complextypesps15xsdsearchset2.md">Data</a></p></td>
 <td align="left"><p>tns:AuthenticationData</p></td>
 <td align="left"><p></p></td>
 </tr>

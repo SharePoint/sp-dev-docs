@@ -93,7 +93,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="row-dsqueryresponse.htm">Row</a></p></td>
+<td align="left"><p><a href="row-dsqueryresponse.md">Row</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -107,7 +107,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="dsqueryresponse.htm">dsQueryResponse</a></p></td>
+<td align="left"><p><a href="dsqueryresponse.md">dsQueryResponse</a></p></td>
 </tr>
 </tbody>
 </table>

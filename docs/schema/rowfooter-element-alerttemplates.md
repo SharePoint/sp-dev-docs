@@ -96,7 +96,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="digest-element-alerttemplates.htm">Digest</a></p></td>
+<td align="left"><p><a href="digest-element-alerttemplates.md">Digest</a></p></td>
 </tr>
 </tbody>
 </table>

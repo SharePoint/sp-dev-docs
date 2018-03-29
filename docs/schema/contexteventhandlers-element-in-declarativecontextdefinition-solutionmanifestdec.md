@@ -106,11 +106,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeexte.htm">ContextActivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contextactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeexte.md">ContextActivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The action to be executed when a context becomes active.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="contextdeactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeex.htm">ContextDeactivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contextdeactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeex.md">ContextDeactivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The action to be executed when a context is deactivated.</p></td>
 </tr>
 </tbody>
@@ -131,7 +131,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.htm">DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The context that these actions apply to.</p></td>
 </tr>
 </tbody>

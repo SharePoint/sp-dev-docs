@@ -254,24 +254,24 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.htm">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized names of the **TypeDescriptor**.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.htm">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the **TypeDescriptor**.</p>
 <p>When the TypeDescriptor is of type **System.String</span>, the <span class="keyword">Properties</span> element can contain a <span class="keyword">Property</span> of type <span class="keyword">System.Int32</span> with the <span class="keyword">Name</span> attribute set to <span class="keyword">Size</span>. The value of the <span class="keyword">Property</span> specifies the expected maximum string length of the value of the data structure described by this <span class="keyword">TypeDescriptor**.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.htm">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The rules for the data stored by the data structure represented by the **TypeDescriptor**.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="defaultvalues-element-in-typedescriptor-bdcmetadata-schema.htm">DefaultValues Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md">DefaultValues Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The default values of the **TypeDescriptor**.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptors-element-in-typedescriptor-bdcmetadata-schema.htm">TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md">TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The child **TypeDescriptors</span> of the <span class="keyword">TypeDescriptor**.</p></td>
 </tr>
 </tbody>
@@ -292,7 +292,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptors-element-in-typedescriptor-bdcmetadata-schema.htm">TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md">TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

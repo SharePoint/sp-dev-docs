@@ -90,7 +90,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="color-element.htm">Color</a></p></td>
+<td align="left"><p><a href="color-element.md">Color</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -104,7 +104,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="colorpicker-element.htm">ColorPicker</a></p></td>
+<td align="left"><p><a href="colorpicker-element.md">ColorPicker</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -107,7 +107,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="query-element-in-queries-subscription-schema.htm">Query Element in Queries (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="query-element-in-queries-subscription-schema.md">Query Element in Queries (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A query (**Finder</span> or <span class="keyword">IDEnumerator** method instance) that returns the external items to populate in the cache.</p></td>
 </tr>
 </tbody>
@@ -128,7 +128,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.htm">Subscription Element (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.md">Subscription Element (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The cache subscription that contains this list of queries.</p></td>
 </tr>
 </tbody>

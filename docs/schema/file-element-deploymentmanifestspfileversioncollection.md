@@ -140,7 +140,7 @@ class="nolink">SPFile</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the file.</p></td>
 </tr>
 <tr class="odd">
@@ -155,7 +155,7 @@ class="nolink">SPFile</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of parent Web site.</p></td>
 </tr>
 <tr class="even">
@@ -165,12 +165,12 @@ class="nolink">SPFile</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the parent folder for the file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ListId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the list in which the file exists. **ListId</span> values must match values for the <span class="keyword">Versions** attribute.</p></td>
 </tr>
 <tr class="odd">
@@ -245,22 +245,22 @@ class="nolink">SPFile</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspfile.htm">EventReceivers Element (DeploymentManifest - SPFile)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspfile.md">EventReceivers Element (DeploymentManifest - SPFile)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="links-element-deploymentmanifestspfile.htm">Links Element (DeploymentManifest - SPFile)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="links-element-deploymentmanifestspfile.md">Links Element (DeploymentManifest - SPFile)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="personalizations-element-deploymentmanifest.htm">Personalizations Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="personalizations-element-deploymentmanifest.md">Personalizations Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspfile.htm">Properties Element (DeploymentManifest - SPFile)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspfile.md">Properties Element (DeploymentManifest - SPFile)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="versions-element-deploymentmanifestspfile.htm">Versions Element (DeploymentManifest - SPFile)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="versions-element-deploymentmanifestspfile.md">Versions Element (DeploymentManifest - SPFile)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="webparts-element-deploymentmanifest.htm">WebParts Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webparts-element-deploymentmanifest.md">WebParts Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -274,7 +274,7 @@ class="nolink">SPFile</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="versions-element-deploymentmanifestspfile.htm">Versions Element (DeploymentManifest - SPFile)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="versions-element-deploymentmanifestspfile.md">Versions Element (DeploymentManifest - SPFile)</a></span></p></td>
 </tr>
 </tbody>
 </table>

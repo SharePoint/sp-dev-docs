@@ -110,7 +110,7 @@ files, it specifies a default set of data for a newly created list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rows-element-site.htm">Rows</a></p></td>
+<td align="left"><p><a href="rows-element-site.md">Rows</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ files, it specifies a default set of data for a newly created list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="list-element-site.htm">List (Site)</a></p></td>
+<td align="left"><p><a href="list-element-site.md">List (Site)</a></p></td>
 </tr>
 </tbody>
 </table>

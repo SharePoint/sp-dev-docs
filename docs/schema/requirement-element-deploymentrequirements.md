@@ -113,7 +113,7 @@ USAGE
 <tbody>
 <tr class="odd">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><span sdata="link"><a href="sprequirementobjecttype-simple-type-deploymentrequirements.htm">SPRequirementObjectType Simple Type (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="sprequirementobjecttype-simple-type-deploymentrequirements.md">SPRequirementObjectType Simple Type (DeploymentRequirements)</a></span></p></td>
 <td align="left"><p>Specifies the requirement object type as defined in the **SPRequirementObjectType</span> simple type: <span class="keyword">FeatureDefinition</span>, <span class="keyword">WebTemplate</span>, <span class="keyword">WebPart</span>, or <span class="keyword">Language**.</p></td>
 </tr>
 <tr class="even">
@@ -157,7 +157,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="requirements-element-deploymentrequirements.htm">Requirements Element (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="requirements-element-deploymentrequirements.md">Requirements Element (DeploymentRequirements)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -135,7 +135,7 @@ extensions\\15\\TEMPLATE directories.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="files-element-upgrade.htm">Files</a></p></td>
+<td align="left"><p><a href="files-element-upgrade.md">Files</a></p></td>
 </tr>
 </tbody>
 </table>

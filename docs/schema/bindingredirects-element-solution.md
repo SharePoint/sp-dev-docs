@@ -90,7 +90,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="bindingredirect-element-solution.htm">BindingRedirect Element (Solution)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="bindingredirect-element-solution.md">BindingRedirect Element (Solution)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -104,7 +104,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="assembly-element-solutionassemblies.htm">Assembly Element (Solution - Assemblies)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="assembly-element-solutionassemblies.md">Assembly Element (Solution - Assemblies)</a></span></p></td>
 </tr>
 </tbody>
 </table>

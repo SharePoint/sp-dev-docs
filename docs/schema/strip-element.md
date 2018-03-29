@@ -86,7 +86,7 @@ controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="controlref-element.htm">ControlRef</a></p></td>
+<td align="left"><p><a href="controlref-element.md">ControlRef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@ controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="row-element.htm">Row</a></p></td>
+<td align="left"><p><a href="row-element.md">Row</a></p></td>
 </tr>
 </tbody>
 </table>

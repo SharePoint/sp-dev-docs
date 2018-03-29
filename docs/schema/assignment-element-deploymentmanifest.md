@@ -143,7 +143,7 @@ USAGE SYNTAX
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="roleassignment-element-deploymentmanifest.htm">RoleAssignment Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="roleassignment-element-deploymentmanifest.md">RoleAssignment Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

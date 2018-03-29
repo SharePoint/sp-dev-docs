@@ -94,7 +94,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-list.htm">Field</a></p></td>
+<td align="left"><p><a href="field-element-list.md">Field</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -110,7 +110,7 @@ None
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>There is a maximum number of <a href="field-element-list.htm">Field</a> child elements. It is defined as the difference between the maximum number of allowed fields in the list and the number of fields that are already in the list.</p></td>
+<td align="left"><p>There is a maximum number of <a href="field-element-list.md">Field</a> child elements. It is defined as the difference between the maximum number of allowed fields in the list and the number of fields that are already in the list.</p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -143,7 +143,7 @@ None
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The <a href="view-element-list.htm">View</a> element cannot have a **ProjectedFields</span> element unless it has a <a href="joins-element-view.htm">Joins</a> element that has at least one <a href="join-element-view.htm">Join</a> child element. However, a <span class="keyword">ProjectedFields</span> element that forms the value of a <span sdata="cer" target="P:Microsoft.SharePoint.SPQuery.ProjectedFields"><span class="nolink">SPQuery.ProjectedFields</span></span> property, and therefore, is not a child of a <a href="view-element-list.htm">View</a> element, can be used to support an implicit join without a <a href="joins-element-view.htm">Joins</a> element. We do not recommend working without a <a href="joins-element-view.htm">Joins</a> element. You will maximize your solution's chances of being compatible with future releases of Microsoft SharePoint Foundation by always using an explicit <span class="keyword">Join</span> element. For more information about implicit joins with <span class="keyword">ProjectedFields** elements, see <a href="http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b(Office.15).aspx">List Joins and Projections</a>.</p></td>
+<td align="left"><p>The <a href="view-element-list.md">View</a> element cannot have a **ProjectedFields</span> element unless it has a <a href="joins-element-view.md">Joins</a> element that has at least one <a href="join-element-view.md">Join</a> child element. However, a <span class="keyword">ProjectedFields</span> element that forms the value of a <span sdata="cer" target="P:Microsoft.SharePoint.SPQuery.ProjectedFields"><span class="nolink">SPQuery.ProjectedFields</span></span> property, and therefore, is not a child of a <a href="view-element-list.md">View</a> element, can be used to support an implicit join without a <a href="joins-element-view.md">Joins</a> element. We do not recommend working without a <a href="joins-element-view.md">Joins</a> element. You will maximize your solution's chances of being compatible with future releases of Microsoft SharePoint Foundation by always using an explicit <span class="keyword">Join</span> element. For more information about implicit joins with <span class="keyword">ProjectedFields** elements, see <a href="http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b(Office.15).aspx">List Joins and Projections</a>.</p></td>
 </tr>
 </tbody>
 </table>

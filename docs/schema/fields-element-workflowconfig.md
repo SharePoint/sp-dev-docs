@@ -99,7 +99,7 @@ initiation form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="field-element-field.htm">Field Element (Field)</a></span> (see Remarks)</p></td>
+<td align="left"><p><span sdata="link"><a href="field-element-field.md">Field Element (Field)</a></span> (see Remarks)</p></td>
 </tr>
 </tbody>
 </table>
@@ -113,7 +113,7 @@ initiation form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="initiation-element-workflowconfig.htm">Initiation Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>

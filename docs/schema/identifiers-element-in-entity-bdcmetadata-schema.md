@@ -109,7 +109,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identifier-element-in-identifiers-bdcmetadata-schema.htm">Identifier Element in Identifiers (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="identifier-element-in-identifiers-bdcmetadata-schema.md">Identifier Element in Identifiers (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>Specifies an identifier.</p></td>
 </tr>
 </tbody>
@@ -130,7 +130,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.htm">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The external content type that contains this list of identifiers.</p></td>
 </tr>
 </tbody>

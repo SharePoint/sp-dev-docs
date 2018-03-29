@@ -102,7 +102,7 @@ Defines a gallery.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Command**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.htm">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the <span class="keyword">Command** attribute of a corresponding <a href="commanduihandler-element.htm">CommandUIHandler</a> element.</p></td>
+<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.md">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the <span class="keyword">Command** attribute of a corresponding <a href="commanduihandler-element.md">CommandUIHandler</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**CommandPreview**</p></td>
@@ -157,7 +157,7 @@ Defines a gallery.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="gallerybutton-element-gallery.htm">GalleryButton</a></p></td>
+<td align="left"><p><a href="gallerybutton-element-gallery.md">GalleryButton</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -171,10 +171,10 @@ Defines a gallery.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.htm">CommandUIDefinition</a></p></td>
+<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="menusection-element.htm">MenuSection</a></p></td>
+<td align="left"><p><a href="menusection-element.md">MenuSection</a></p></td>
 </tr>
 </tbody>
 </table>

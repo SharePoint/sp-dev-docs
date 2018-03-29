@@ -122,7 +122,7 @@ folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="contenttype-element-contenttype.htm">ContentType</a></p></td>
+<td align="left"><p><a href="contenttype-element-contenttype.md">ContentType</a></p></td>
 </tr>
 </tbody>
 </table>

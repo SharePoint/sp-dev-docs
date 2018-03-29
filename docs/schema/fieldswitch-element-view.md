@@ -115,7 +115,7 @@ property.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="case-element-view.htm">Case</a>, <a href="default-element-view.htm">Default</a>, <a href="expr-element-view.htm">Expr</a></p></td>
+<td align="left"><p><a href="case-element-view.md">Case</a>, <a href="default-element-view.md">Default</a>, <a href="expr-element-view.md">Expr</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -145,7 +145,7 @@ Represents a property that applies to a Web application.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="column-element-view.htm">Column</a></p></td>
+<td align="left"><p><a href="column-element-view.md">Column</a></p></td>
 </tr>
 </tbody>
 </table>

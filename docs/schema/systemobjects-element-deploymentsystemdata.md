@@ -124,7 +124,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="systemobject-element-deploymentsystemdata.htm">SystemObject Element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="systemobject-element-deploymentsystemdata.md">SystemObject Element (DeploymentSystemData)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -138,7 +138,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="systemdata-element-deploymentsystemdata.htm">SystemData Element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="systemdata-element-deploymentsystemdata.md">SystemData Element (DeploymentSystemData)</a></span></p></td>
 </tr>
 </tbody>
 </table>

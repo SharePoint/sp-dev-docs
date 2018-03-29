@@ -119,7 +119,7 @@ Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element-upgrade.htm">File</a></p></td>
+<td align="left"><p><a href="file-element-upgrade.md">File</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -133,7 +133,7 @@ Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webtemplate-element-upgrade.htm">WebTemplate</a></p></td>
+<td align="left"><p><a href="webtemplate-element-upgrade.md">WebTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -133,7 +133,7 @@ Specifies how an existing list should be upgraded.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="lists-element-upgrade.htm">Lists</a></p></td>
+<td align="left"><p><a href="lists-element-upgrade.md">Lists</a></p></td>
 </tr>
 </tbody>
 </table>

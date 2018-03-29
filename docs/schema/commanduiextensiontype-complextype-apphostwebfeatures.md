@@ -137,13 +137,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduidefinitions-element-commanduiextensiontype-complextypeapphostwebfeature.htm">CommandUIDefinitions</a></p></td>
-<td align="left"><p><a href="commanduidefinitionstype-complextype-apphostwebfeatures.htm">CommandUIDefinitionsType</a></p></td>
+<td align="left"><p><a href="commanduidefinitions-element-commanduiextensiontype-complextypeapphostwebfeature.md">CommandUIDefinitions</a></p></td>
+<td align="left"><p><a href="commanduidefinitionstype-complextype-apphostwebfeatures.md">CommandUIDefinitionsType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="commanduihandlers-element-commanduiextensiontype-complextypeapphostwebfeatures.htm">CommandUIHandlers</a></p></td>
-<td align="left"><p><a href="commanduihandlerstype-complextype-apphostwebfeatures.htm">CommandUIHandlersType</a></p></td>
+<td align="left"><p><a href="commanduihandlers-element-commanduiextensiontype-complextypeapphostwebfeatures.md">CommandUIHandlers</a></p></td>
+<td align="left"><p><a href="commanduihandlerstype-complextype-apphostwebfeatures.md">CommandUIHandlersType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

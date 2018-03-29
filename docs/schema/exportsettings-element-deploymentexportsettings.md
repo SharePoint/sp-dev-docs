@@ -127,7 +127,7 @@ class="nolink">SPExportSettings</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ExportMethod**</p></td>
-<td align="left"><p><span sdata="link"><a href="spexportmethodtype-simple-type-deploymentexportsettings.htm">SPExportMethodType Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spexportmethodtype-simple-type-deploymentexportsettings.md">SPExportMethodType Simple Type (DeploymentExportSettings)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration specifying whether the export operation is a full or incremental export, based on changes since the last export.</p></td>
 </tr>
 <tr class="even">
@@ -142,12 +142,12 @@ class="nolink">SPExportSettings</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**IncludeSecurity**</p></td>
-<td align="left"><p><span sdata="link"><a href="spincludesecurity-simple-type-deploymentexportsettings.htm">SPIncludeSecurity Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spincludesecurity-simple-type-deploymentexportsettings.md">SPIncludeSecurity Simple Type (DeploymentExportSettings)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration specifying which level of deployment security to apply to the export settings.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**IncludeVersions**</p></td>
-<td align="left"><p><span sdata="link"><a href="spincludeversions-simple-type-deploymentexportsettings.htm">SPIncludeVersions Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spincludeversions-simple-type-deploymentexportsettings.md">SPIncludeVersions Simple Type (DeploymentExportSettings)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration specifying which export version settings to provide for the content migration package.</p></td>
 </tr>
 <tr class="even">
@@ -167,7 +167,7 @@ class="nolink">SPExportSettings</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="exportobjects-element-deploymentexportsettings.htm">ExportObjects Element (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="exportobjects-element-deploymentexportsettings.md">ExportObjects Element (DeploymentExportSettings)</a></span></p></td>
 </tr>
 </tbody>
 </table>

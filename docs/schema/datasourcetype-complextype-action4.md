@@ -187,12 +187,12 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="evaluation-element-datasourcetype-complextypeaction4.htm">Evaluation</a></p></td>
+<td align="left"><p><a href="evaluation-element-datasourcetype-complextypeaction4.md">Evaluation</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Specifies whether values are retrieved from the data source fields of the parent action or composite step, or from a hash table.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="schemasource-element-datasourcetype-complextypeaction4.htm">SchemaSource</a></p></td>
+<td align="left"><p><a href="schemasource-element-datasourcetype-complextypeaction4.md">SchemaSource</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Specifies how data source fields are displayed.</p></td>
 </tr>

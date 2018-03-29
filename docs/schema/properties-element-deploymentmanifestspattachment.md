@@ -123,7 +123,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="property-element-deploymentmanifest.htm">Property Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="property-element-deploymentmanifest.md">Property Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +137,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="attachment-element-deploymentmanifest.htm">Attachment Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="attachment-element-deploymentmanifest.md">Attachment Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

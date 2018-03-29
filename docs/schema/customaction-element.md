@@ -143,8 +143,8 @@ toolbar or a link on a site settings page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**GroupId**</p></td>
-<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">&quot;SiteManagement&quot;</span>. If it is contained within a custom action group, the value of the <span class="keyword">GroupId** attribute must equal the group ID of the <a href="customactiongroup-element-custom-action.htm">CustomActionGroup</a> element.</p>
-<p>For a list of the default custom action group IDs that are used in Microsoft SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.htm">Default Custom Action Locations and IDs</a></span>.</p></td>
+<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">&quot;SiteManagement&quot;</span>. If it is contained within a custom action group, the value of the <span class="keyword">GroupId** attribute must equal the group ID of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
+<p>For a list of the default custom action group IDs that are used in Microsoft SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
@@ -159,8 +159,8 @@ toolbar or a link on a site settings page.
 <td align="left"><p>Optional **Text</span>. Specifies the location of this custom action, for example, <span class="code">&quot;Microsoft.SharePoint.SiteSettings&quot;**.</p>
 <p>If the **CustomAction</span> element contains a <span class="keyword">CommandUIExtension</span> child element, the <span class="keyword">Location** must start with &quot;CommandUI.Ribbon&quot;. For a list of default locations that are used with the Server ribbon, see <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a>.</p>
 <p>If the custom action is a menu item or toolbar button, the possible options include **EditControlBlock</span>, <span class="keyword">NewFormToolbar</span>, <span class="keyword">DisplayFormToolbar</span>, and <span class="keyword">EditFormToolbar**.</p>
-<p>If it is contained within a custom action group, the value of the **Location** attribute must equal the location of the <a href="customactiongroup-element-custom-action.htm">CustomActionGroup</a> element.</p>
-<p>For a list of the default custom action locations that are used in SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.htm">Default Custom Action Locations and IDs</a></span>.</p></td>
+<p>If it is contained within a custom action group, the value of the **Location** attribute must equal the location of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
+<p>For a list of the default custom action locations that are used in SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RegistrationId**</p></td>
@@ -234,10 +234,10 @@ toolbar or a link on a site settings page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduiextension-element.htm">CommandUIExtension</a></p></td>
+<td align="left"><p><a href="commanduiextension-element.md">CommandUIExtension</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="urlaction-element.htm">UrlAction</a></p></td>
+<td align="left"><p><a href="urlaction-element.md">UrlAction</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -251,7 +251,7 @@ toolbar or a link on a site settings page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-custom-action.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-custom-action.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

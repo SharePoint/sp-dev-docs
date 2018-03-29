@@ -154,7 +154,7 @@ Specifies the definition of a document converter.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-document-converter.htm">Elements Element (Document Converter)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="elements-element-document-converter.md">Elements Element (Document Converter)</a></span></p></td>
 </tr>
 </tbody>
 </table>

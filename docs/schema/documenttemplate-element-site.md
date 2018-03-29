@@ -139,7 +139,7 @@ a Web site based on Microsoft SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="documenttemplatefiles-element-site.htm">DocumentTemplateFiles</a></p></td>
+<td align="left"><p><a href="documenttemplatefiles-element-site.md">DocumentTemplateFiles</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ a Web site based on Microsoft SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="documenttemplates-element-site.htm">DocumentTemplates</a></p></td>
+<td align="left"><p><a href="documenttemplates-element-site.md">DocumentTemplates</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -167,7 +167,7 @@ elements in both site definitions and Web templates.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Required **Integer</span>. Specifies an ID for the site definition configuration that is unique within the site definition. A definition, such as STS or MPS, is defined by a <a href="template-element-site.htm">Template</a> element in a <span class="code">WebTemp*.xml</span> file and by a corresponding <span class="code">Onet.xml** file for the definition. See <strong>Parent Elements</strong> and <strong>Remarks</strong> below.</p></td>
+<td align="left"><p>Required **Integer</span>. Specifies an ID for the site definition configuration that is unique within the site definition. A definition, such as STS or MPS, is defined by a <a href="template-element-site.md">Template</a> element in a <span class="code">WebTemp*.xml</span> file and by a corresponding <span class="code">Onet.xml** file for the definition. See <strong>Parent Elements</strong> and <strong>Remarks</strong> below.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageUrl**</p></td>
@@ -232,7 +232,7 @@ elements in both site definitions and Web templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="executeurl-element-site.htm">ExecuteUrl</a>, <a href="lists-element-site.htm">Lists</a>, <a href="modules-element-site.htm">Modules</a>, <a href="sitefeatures-element-site.htm">SiteFeatures</a>, <a href="webfeatures-element-site.htm">WebFeatures</a></p></td>
+<td align="left"><p><a href="executeurl-element-site.md">ExecuteUrl</a>, <a href="lists-element-site.md">Lists</a>, <a href="modules-element-site.md">Modules</a>, <a href="sitefeatures-element-site.md">SiteFeatures</a>, <a href="webfeatures-element-site.md">WebFeatures</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -246,7 +246,7 @@ elements in both site definitions and Web templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="configurations-element-site.htm">Configurations</a>, <a href="template-element-site.htm">Template</a></p></td>
+<td align="left"><p><a href="configurations-element-site.md">Configurations</a>, <a href="template-element-site.md">Template</a></p></td>
 </tr>
 </tbody>
 </table>

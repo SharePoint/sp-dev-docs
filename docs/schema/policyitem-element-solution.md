@@ -118,7 +118,7 @@ Specifies a code access security policy for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assemblies-element-solutioncodeaccesssecurity.htm">Assemblies</a>, <a href="permissionset-element-solution.htm">PermissionSet</a></p></td>
+<td align="left"><p><a href="assemblies-element-solutioncodeaccesssecurity.md">Assemblies</a>, <a href="permissionset-element-solution.md">PermissionSet</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -132,7 +132,7 @@ Specifies a code access security policy for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="codeaccesssecurity-element-solution.htm">CodeAccessSecurity</a></p></td>
+<td align="left"><p><a href="codeaccesssecurity-element-solution.md">CodeAccessSecurity</a></p></td>
 </tr>
 </tbody>
 </table>

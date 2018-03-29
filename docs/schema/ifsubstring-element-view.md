@@ -114,7 +114,7 @@ a second expression ([Expr2](expr2-element-view.md)).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="else-element-view.htm">Else</a>, <a href="expr1-element-view.htm">Expr1</a>, <a href="expr2-element-view.htm">Expr2</a>, <a href="then-element-view.htm">Then</a></p></td>
+<td align="left"><p><a href="else-element-view.md">Else</a>, <a href="expr1-element-view.md">Expr1</a>, <a href="expr2-element-view.md">Expr2</a>, <a href="then-element-view.md">Then</a></p></td>
 </tr>
 </tbody>
 </table>

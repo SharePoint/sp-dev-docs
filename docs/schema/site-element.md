@@ -107,7 +107,7 @@ for tables in the content database.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="globallists-element.htm">GlobalLists</a></p></td>
+<td align="left"><p><a href="globallists-element.md">GlobalLists</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.htm">FeaturePropertyDefinitions</a></p></td>
+<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.md">FeaturePropertyDefinitions</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -132,8 +132,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-featuretemplatereferences-complextypeapphostwebfeatures.htm">Feature</a></p></td>
-<td align="left"><p><a href="featuretemplatereference-complextype-apphostwebfeatures.htm">FeatureTemplateReference</a></p></td>
+<td align="left"><p><a href="feature-element-featuretemplatereferences-complextypeapphostwebfeatures.md">Feature</a></p></td>
+<td align="left"><p><a href="featuretemplatereference-complextype-apphostwebfeatures.md">FeatureTemplateReference</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -156,8 +156,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-featurepropertydefinitions-complextypeapphostwebfeatures.htm">Property</a></p></td>
-<td align="left"><p><a href="featurepropertydefinition-complextype-apphostwebfeatures.htm">FeaturePropertyDefinition</a></p></td>
+<td align="left"><p><a href="property-element-featurepropertydefinitions-complextypeapphostwebfeatures.md">Property</a></p></td>
+<td align="left"><p><a href="featurepropertydefinition-complextype-apphostwebfeatures.md">FeaturePropertyDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

@@ -100,11 +100,11 @@ Contains the core definition for a grouping of custom actions.
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
 <td align="left"><p>Optional **Text**. Specifies a unique identifier for the element. The ID may be a GUID, or it may be a unique term, for example,</p>
-<p><span class="code">&quot;SiteManagement&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.htm">Default Custom Action Locations and IDs</a></span> for a list of the default custom action group IDs that are used in SharePoint Foundation.</p></td>
+<p><span class="code">&quot;SiteManagement&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span> for a list of the default custom action group IDs that are used in SharePoint Foundation.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies a value for where the action lives. This string is a name that is declared on the <span class="keyword">LinkSectionTable</span> control within a page. See <span sdata="link"><a href="default-custom-action-locations-and-ids.htm">Default Custom Action Locations and IDs</a>** for a list of the default custom action group locations that are used in SharePoint Foundation.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies a value for where the action lives. This string is a name that is declared on the <span class="keyword">LinkSectionTable</span> control within a page. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action group locations that are used in SharePoint Foundation.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequence**</p></td>
@@ -140,7 +140,7 @@ Contains the core definition for a grouping of custom actions.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-custom-action.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-custom-action.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

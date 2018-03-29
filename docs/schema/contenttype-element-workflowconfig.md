@@ -109,7 +109,7 @@ Defines a content type for a workflow task type used in the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-workflowconfig.htm">Fields Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ Defines a content type for a workflow task type used in the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttypes-element-workflowconfig.htm">ContentTypes Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contenttypes-element-workflowconfig.md">ContentTypes Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>

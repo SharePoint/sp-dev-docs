@@ -110,7 +110,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.htm">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A LobSystem element that specifies a external system.</p></td>
 </tr>
 </tbody>
@@ -131,7 +131,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadata-schema.htm">Model Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadata-schema.md">Model Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An application definition (BDC model).</p></td>
 </tr>
 </tbody>

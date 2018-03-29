@@ -120,7 +120,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="requirement-element-deploymentrequirements.htm">Requirement Element (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement Element (DeploymentRequirements)</a></span></p></td>
 </tr>
 </tbody>
 </table>

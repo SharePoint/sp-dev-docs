@@ -108,7 +108,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplayname-element-in-localizeddisplaynames-subscription-schema.htm">LocalizedDisplayName Element in LocalizedDisplayNames (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplayname-element-in-localizeddisplaynames-subscription-schema.md">LocalizedDisplayName Element in LocalizedDisplayNames (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A localized display name.</p></td>
 </tr>
 </tbody>
@@ -129,15 +129,15 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.htm">Subscription Element (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.md">Subscription Element (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A cache subscription.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="query-element-in-queries-subscription-schema.htm">Query Element in Queries (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="query-element-in-queries-subscription-schema.md">Query Element in Queries (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A query.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.htm">Association Element in Associations (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A subscription association.</p></td>
 </tr>
 </tbody>

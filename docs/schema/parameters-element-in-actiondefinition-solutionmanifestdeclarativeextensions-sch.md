@@ -103,11 +103,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.htm">ConstantParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.md">ConstantParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **ConstantParameter** element defines a constant parameter for an action.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="expressionparameter-element-in-actionparameterdefinitions-solutionmanifestdeclar.htm">ExpressionParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="expressionparameter-element-in-actionparameterdefinitions-solutionmanifestdeclar.md">ExpressionParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **ExpressionParameter** element defines a parameter for an action that can take a value from the context of the current item.</p></td>
 </tr>
 </tbody>
@@ -128,11 +128,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.htm">UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DOCS-LESSTHANUrlActionDOCS-GREATERTHAN** element is used to execute a URL-based action.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.htm">CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN** element is used to execute a custom code action or one of the predefined actions that are provided by Microsoft Business Connectivity Services (BCS).</p></td>
 </tr>
 </tbody>

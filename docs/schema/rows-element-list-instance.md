@@ -110,7 +110,7 @@ elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="row-element-list-instance.htm">Row</a></p></td>
+<td align="left"><p><a href="row-element-list-instance.md">Row</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="data-element-list-instance.htm">Data</a></p></td>
+<td align="left"><p><a href="data-element-list-instance.md">Data</a></p></td>
 </tr>
 </tbody>
 </table>

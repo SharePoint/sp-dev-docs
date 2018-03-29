@@ -136,8 +136,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-featurepropertydefinitions-complextypeapphostwebfeatures.htm">Property</a></p></td>
-<td align="left"><p><a href="featurepropertydefinition-complextype-apphostwebfeatures.htm">FeaturePropertyDefinition</a></p></td>
+<td align="left"><p><a href="property-element-featurepropertydefinitions-complextypeapphostwebfeatures.md">Property</a></p></td>
+<td align="left"><p><a href="featurepropertydefinition-complextype-apphostwebfeatures.md">FeaturePropertyDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

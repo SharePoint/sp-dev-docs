@@ -110,13 +110,13 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="customaction-element.htm">CustomAction</a></p></td>
+<td align="left"><p><a href="customaction-element.md">CustomAction</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="customactiongroup-element-custom-action.htm">CustomActionGroup</a></p></td>
+<td align="left"><p><a href="customactiongroup-element-custom-action.md">CustomActionGroup</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="hidecustomaction-element.htm">HideCustomAction</a></p></td>
+<td align="left"><p><a href="hidecustomaction-element.md">HideCustomAction</a></p></td>
 </tr>
 </tbody>
 </table>

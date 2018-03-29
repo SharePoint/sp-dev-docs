@@ -169,23 +169,23 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.htm">LocalizedDisplayNames Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames Element in MetadataObject (Subscription Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.htm">Properties Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties Element in MetadataObject (Subscription Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identities-element-in-subscription-subscription-schema.htm">Identities Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="identities-element-in-subscription-subscription-schema.md">Identities Element in Subscription (Subscription Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.htm">Queries Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.md">Queries Element in Subscription (Subscription Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.htm">Associations Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.md">Associations Element in Subscription (Subscription Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

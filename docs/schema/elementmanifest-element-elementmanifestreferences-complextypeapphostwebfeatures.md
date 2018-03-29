@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="elementmanifestreference-complextype-apphostwebfeatures.htm">ElementManifestReference</a></p></td>
+<td align="left"><p><a href="elementmanifestreference-complextype-apphostwebfeatures.md">ElementManifestReference</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -132,13 +132,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="applyelementmanifests-element-upgradeactionsgroup-groupapphostwebfeatures.htm">ApplyElementManifests</a></p></td>
-<td align="left"><p><a href="elementmanifestreferences-complextype-apphostwebfeatures.htm">ElementManifestReferences</a></p></td>
+<td align="left"><p><a href="applyelementmanifests-element-upgradeactionsgroup-groupapphostwebfeatures.md">ApplyElementManifests</a></p></td>
+<td align="left"><p><a href="elementmanifestreferences-complextype-apphostwebfeatures.md">ElementManifestReferences</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="elementmanifests-element-featuredefinition-complextypeapphostwebfeatures.htm">ElementManifests</a></p></td>
-<td align="left"><p><a href="elementmanifestreferences-complextype-apphostwebfeatures.htm">ElementManifestReferences</a></p></td>
+<td align="left"><p><a href="elementmanifests-element-featuredefinition-complextypeapphostwebfeatures.md">ElementManifests</a></p></td>
+<td align="left"><p><a href="elementmanifestreferences-complextype-apphostwebfeatures.md">ElementManifestReferences</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

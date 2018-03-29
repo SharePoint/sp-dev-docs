@@ -136,11 +136,11 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.htm">Entities Element in ContextDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md">Entities Element in ContextDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>Defines the external content type that this context definition is associated with. In the current release of the product, a context definition can be associated with only one external type, even though the schema supports more than one **Entity** element.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="officeitemcustomizations-element-in-contextdefinition-solutionmanifestdefinition.htm">OfficeItemCustomizations Element in ContextDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="officeitemcustomizations-element-in-contextdefinition-solutionmanifestdefinition.md">OfficeItemCustomizations Element in ContextDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>Lists the Outlook UI customizations defined in this context definition.</p></td>
 </tr>
 </tbody>
@@ -161,7 +161,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.htm">ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md">ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The context definition group that contains this context definition.</p></td>
 </tr>
 </tbody>

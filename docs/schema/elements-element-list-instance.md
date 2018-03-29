@@ -106,7 +106,7 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="listinstance-element-list-instance.htm">ListInstance</a></p></td>
+<td align="left"><p><a href="listinstance-element-list-instance.md">ListInstance</a></p></td>
 </tr>
 </tbody>
 </table>

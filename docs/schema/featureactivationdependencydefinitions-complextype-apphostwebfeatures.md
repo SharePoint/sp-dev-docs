@@ -136,8 +136,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="activationdependency-element-featureactivationdependencydefinitions-complextypea.htm">ActivationDependency</a></p></td>
-<td align="left"><p><a href="featureactivationdependencydefinition-complextype-apphostwebfeatures.htm">FeatureActivationDependencyDefinition</a></p></td>
+<td align="left"><p><a href="activationdependency-element-featureactivationdependencydefinitions-complextypea.md">ActivationDependency</a></p></td>
+<td align="left"><p><a href="featureactivationdependencydefinition-complextype-apphostwebfeatures.md">FeatureActivationDependencyDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

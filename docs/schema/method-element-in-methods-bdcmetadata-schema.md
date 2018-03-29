@@ -154,27 +154,27 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.htm">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized display names of the method.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.htm">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the method.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.htm">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The access control list (ACL) of this method.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="filterdescriptors-element-in-method-bdcmetadata-schema.htm">FilterDescriptors Element in Method (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="filterdescriptors-element-in-method-bdcmetadata-schema.md">FilterDescriptors Element in Method (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The filter descriptors of the method.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-method-bdcmetadata-schema.htm">Parameters Element in Method (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameters-element-in-method-bdcmetadata-schema.md">Parameters Element in Method (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The parameters of the method. A method cannot have more than one return parameter.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadata-schema.htm">MethodInstances Element in Method (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadata-schema.md">MethodInstances Element in Method (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The method instances of the method.</p></td>
 </tr>
 </tbody>
@@ -195,7 +195,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadata-schema.htm">Methods Element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadata-schema.md">Methods Element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A list of methods of an external content type.</p></td>
 </tr>
 </tbody>

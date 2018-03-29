@@ -111,7 +111,7 @@ data.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="guid-element.htm">GUID Element</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-element.md">GUID Element</a></span></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -126,7 +126,7 @@ data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="binaryserializedwebpart-element-module.htm">BinarySerializedWebPart Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="binaryserializedwebpart-element-module.md">BinarySerializedWebPart Element (Module)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -164,7 +164,7 @@ Truncates text to a specified size.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="column-element-view.htm">Column</a>, <a href="more-element-view.htm">More</a>, <a href="text-element-view.htm">Text</a></p></td>
+<td align="left"><p><a href="column-element-view.md">Column</a>, <a href="more-element-view.md">More</a>, <a href="text-element-view.md">Text</a></p></td>
 </tr>
 </tbody>
 </table>

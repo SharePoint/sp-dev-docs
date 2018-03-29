@@ -169,7 +169,7 @@ Defines a quick-access toolbar.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="controls-element-group.htm">Controls</a></p></td>
+<td align="left"><p><a href="controls-element-group.md">Controls</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +183,7 @@ Defines a quick-access toolbar.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commandui-element.htm">CommandUI</a></p></td>
+<td align="left"><p><a href="commandui-element.md">CommandUI</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -138,7 +138,7 @@ Contains the string to be displayed in a view when no items are present.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a>, <a href="viewstyle-element-list.htm">ViewStyle</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a>, <a href="viewstyle-element-list.md">ViewStyle</a></p></td>
 </tr>
 </tbody>
 </table>

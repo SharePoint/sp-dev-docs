@@ -120,7 +120,7 @@ Specifies a custom workflow status column value.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="extendedstatuscolumnvalues-element-workflow.htm">ExtendedStatusColumnValues Element (Workflow)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="extendedstatuscolumnvalues-element-workflow.md">ExtendedStatusColumnValues Element (Workflow)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -128,17 +128,17 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the field.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p><span sdata="link"><a href="spdictionaryentryvaluetype-simple-type-deploymentmanifest.htm">SPDictionaryEntryValueType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spdictionaryentryvaluetype-simple-type-deploymentmanifest.md">SPDictionaryEntryValueType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Data type of the field value. Must be a value type defined in the **SPDictionaryEntryValueType** simple type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Access**</p></td>
-<td align="left"><p><span sdata="link"><a href="spdictionaryentryaccess-simple-type-deploymentmanifest.htm">SPDictionaryEntryAccess Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spdictionaryentryaccess-simple-type-deploymentmanifest.md">SPDictionaryEntryAccess Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies the allowable access modes for the field value. Must be a value defined in the **SPDictionaryEntryAccess</span> simple type: <span class="keyword">ReadOnly</span> or <span class="keyword">ReadWrite**.</p></td>
 </tr>
 </tbody>
@@ -167,7 +167,7 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.htm">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.md">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
 </tr>
 </tbody>
 </table>

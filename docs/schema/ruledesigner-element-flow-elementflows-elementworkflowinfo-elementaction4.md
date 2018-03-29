@@ -90,7 +90,7 @@ code] "Copy code")Copy code</span>
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="ruledesignertype-complextype-action4.htm">ruleDesignerType</a></p></td>
+<td align="left"><p><a href="ruledesignertype-complextype-action4.md">ruleDesignerType</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -141,7 +141,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="flow-element-flows-elementworkflowinfo-elementaction4.htm">Flow</a></p></td>
+<td align="left"><p><a href="flow-element-flows-elementworkflowinfo-elementaction4.md">Flow</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -165,7 +165,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldbind-element-ruledesignertype-complextypeaction4.htm">FieldBind</a></p></td>
+<td align="left"><p><a href="fieldbind-element-ruledesignertype-complextypeaction4.md">FieldBind</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

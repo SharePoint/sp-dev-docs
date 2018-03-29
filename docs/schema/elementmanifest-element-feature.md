@@ -119,7 +119,7 @@ Specifies a file that contains a definition for a feature element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elementmanifests-element-feature.htm">ElementManifests</a></p></td>
+<td align="left"><p><a href="elementmanifests-element-feature.md">ElementManifests</a></p></td>
 </tr>
 </tbody>
 </table>

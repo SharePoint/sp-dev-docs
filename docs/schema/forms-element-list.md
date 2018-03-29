@@ -109,7 +109,7 @@ type of a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="form-element-list.htm">Form</a></p></td>
+<td align="left"><p><a href="form-element-list.md">Form</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ type of a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="default-element-listfield.htm">Default</a>, <a href="metadata-element-list.htm">MetaData (List)</a>, <a href="metadata-element-site.htm">MetaData (Site)</a></p></td>
+<td align="left"><p><a href="default-element-listfield.md">Default</a>, <a href="metadata-element-list.md">MetaData (List)</a>, <a href="metadata-element-site.md">MetaData (Site)</a></p></td>
 </tr>
 </tbody>
 </table>

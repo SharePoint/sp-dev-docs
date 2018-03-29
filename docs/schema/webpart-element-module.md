@@ -217,7 +217,7 @@ serialized to binary data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="binaryserializedwebpart-element-module.htm">BinarySerializedWebPart Element (Module)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="binaryserializedwebpart-element-module.md">BinarySerializedWebPart Element (Module)</a></span></p></td>
 </tr>
 </tbody>
 </table>

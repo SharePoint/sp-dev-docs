@@ -113,7 +113,7 @@ on whether the current user has the specified permission.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="else-element-view.htm">Else</a>, <a href="rightschoices-element-view.htm">RightsChoices</a>, <a href="then-element-view.htm">Then</a></p></td>
+<td align="left"><p><a href="else-element-view.md">Else</a>, <a href="rightschoices-element-view.md">RightsChoices</a>, <a href="then-element-view.md">Then</a></p></td>
 </tr>
 </tbody>
 </table>

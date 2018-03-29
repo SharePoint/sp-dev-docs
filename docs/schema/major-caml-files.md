@@ -81,7 +81,7 @@ extensions\\15\\.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_caution.gif" title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
+<th align="left"><img src=".." title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
 </tr>
 </thead>
 <tbody>

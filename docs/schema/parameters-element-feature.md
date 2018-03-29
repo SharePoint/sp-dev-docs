@@ -88,7 +88,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-feature.htm">Parameter Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameter-element-feature.md">Parameter Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -102,7 +102,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customupgradeaction-element-feature.htm">CustomUpgradeAction Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="customupgradeaction-element-feature.md">CustomUpgradeAction Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -96,7 +96,7 @@ Specifies the sources of data for an action.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**InternalName**</p></td>
-<td align="left"><p>Required **text**. Specifies the internal name for the data source for a reference from a <a href="datasourceref-element-workflowactions.htm">DataSourceRef</a> element.</p></td>
+<td align="left"><p>Required **text**. Specifies the internal name for the data source for a reference from a <a href="datasourceref-element-workflowactions.md">DataSourceRef</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
@@ -118,8 +118,8 @@ Specifies the sources of data for an action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="schemasource-element-workflowactions.htm">SchemaSource</a></p>
-<p><a href="evaluation-element-workflowactions.htm">Evaluation</a></p></td>
+<td align="left"><p><a href="schemasource-element-workflowactions.md">SchemaSource</a></p>
+<p><a href="evaluation-element-workflowactions.md">Evaluation</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -133,7 +133,7 @@ Specifies the sources of data for an action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-workflowactions.htm">Action</a></p></td>
+<td align="left"><p><a href="action-element-workflowactions.md">Action</a></p></td>
 </tr>
 </tbody>
 </table>

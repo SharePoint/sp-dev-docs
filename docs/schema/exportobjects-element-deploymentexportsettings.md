@@ -125,7 +125,7 @@ class="nolink">SPExportObjectCollection</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="deploymentobject-element-deploymentexportsettings.htm">DeploymentObject Element (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="deploymentobject-element-deploymentexportsettings.md">DeploymentObject Element (DeploymentExportSettings)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -139,7 +139,7 @@ class="nolink">SPExportObjectCollection</span></span> object.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="exportsettings-element-deploymentexportsettings.htm">ExportSettings Element (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="exportsettings-element-deploymentexportsettings.md">ExportSettings Element (DeploymentExportSettings)</a></span></p></td>
 </tr>
 </tbody>
 </table>

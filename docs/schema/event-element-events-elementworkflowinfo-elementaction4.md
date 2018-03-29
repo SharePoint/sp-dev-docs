@@ -140,7 +140,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="events-element-workflowinfo-elementaction4.htm">Events</a></p></td>
+<td align="left"><p><a href="events-element-workflowinfo-elementaction4.md">Events</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

@@ -128,7 +128,7 @@ collections created in Microsoft SharePoint Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="appliedsitefeatures-element-upgrade.htm">AppliedSiteFeatures</a>, <a href="appliedwebfeatures-element-upgrade.htm">AppliedWebFeatures</a></p></td>
+<td align="left"><p><a href="appliedsitefeatures-element-upgrade.md">AppliedSiteFeatures</a>, <a href="appliedwebfeatures-element-upgrade.md">AppliedWebFeatures</a></p></td>
 </tr>
 </tbody>
 </table>

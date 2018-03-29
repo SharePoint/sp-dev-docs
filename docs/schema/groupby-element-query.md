@@ -111,7 +111,7 @@ query in a list view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldref-element-query.htm">FieldRef</a></p></td>
+<td align="left"><p><a href="fieldref-element-query.md">FieldRef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ query in a list view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="expr1-element-view.htm">Expr1</a>, <a href="expr2-element-view.htm">Expr2</a>, <a href="query-element-list.htm">Query</a></p></td>
+<td align="left"><p><a href="expr1-element-view.md">Expr1</a>, <a href="expr2-element-view.md">Expr2</a>, <a href="query-element-list.md">Query</a></p></td>
 </tr>
 </tbody>
 </table>

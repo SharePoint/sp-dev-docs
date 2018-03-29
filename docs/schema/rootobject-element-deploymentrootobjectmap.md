@@ -113,17 +113,17 @@ USAGE
 <tbody>
 <tr class="odd">
 <td align="left"><p>Id</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentrootobjectmap.htm">Guid Simple Type (DeploymentRootObjectMap))</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentrootobjectmap.md">Guid Simple Type (DeploymentRootObjectMap))</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the root object.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentrootobjectmap.htm">SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentrootobjectmap.md">SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)</a></span></p></td>
 <td align="left"><p>Optional. Specifies the object type of the root object: **Site</span>, <span class="keyword">Web</span>, <span class="keyword">Folder</span>, <span class="keyword">List</span>, <span class="keyword">ListItem</span>, or <span class="keyword">File**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ParentId</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentrootobjectmap.htm">Guid Simple Type (DeploymentRootObjectMap))</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentrootobjectmap.md">Guid Simple Type (DeploymentRootObjectMap))</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the parent Web.</p></td>
 </tr>
 <tr class="even">
@@ -167,7 +167,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="rootobjects-element-deploymentrootobjectmap.htm">RootObjects Element (DeploymentRootObjectMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="rootobjects-element-deploymentrootobjectmap.md">RootObjects Element (DeploymentRootObjectMap)</a></span></p></td>
 </tr>
 </tbody>
 </table>

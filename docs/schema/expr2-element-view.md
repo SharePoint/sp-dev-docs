@@ -113,7 +113,7 @@ conditionals.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="beginswith-element-query.htm">BeginsWith</a>, <a href="column-element-view.htm">Column</a>, <a href="contains-element-query.htm">Contains</a>, <a href="eq-element-query.htm">Eq</a>, <a href="field-element-view.htm">Field</a>, <a href="getvar-element-view.htm">GetVar</a>, <a href="groupby-element-query.htm">GroupBy</a>, <a href="listproperty-element-view.htm">ListProperty</a>, <a href="lookupcolumn-element-view.htm">LookupColumn</a>, <a href="orderby-element-query.htm">OrderBy</a>, <a href="where-element-query.htm">Where</a></p></td>
+<td align="left"><p><a href="beginswith-element-query.md">BeginsWith</a>, <a href="column-element-view.md">Column</a>, <a href="contains-element-query.md">Contains</a>, <a href="eq-element-query.md">Eq</a>, <a href="field-element-view.md">Field</a>, <a href="getvar-element-view.md">GetVar</a>, <a href="groupby-element-query.md">GroupBy</a>, <a href="listproperty-element-view.md">ListProperty</a>, <a href="lookupcolumn-element-view.md">LookupColumn</a>, <a href="orderby-element-query.md">OrderBy</a>, <a href="where-element-query.md">Where</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ conditionals.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ifequal-element-view.htm">IfEqual</a>, <a href="ifneg-element-view.htm">IfNeg</a>, <a href="ifsubstring-element-view.htm">IfSubString</a></p></td>
+<td align="left"><p><a href="ifequal-element-view.md">IfEqual</a>, <a href="ifneg-element-view.md">IfNeg</a>, <a href="ifsubstring-element-view.md">IfSubString</a></p></td>
 </tr>
 </tbody>
 </table>

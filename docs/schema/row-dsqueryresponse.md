@@ -150,15 +150,15 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="even">
 <td align="left"><p>**HTML_x0020_File_x0020_Type.File_x0020_Type.mapall**</p></td>
-<td align="left"><p>Optional. The value that is returned by a call of the **MapToAll</span> function during the XSLT transformation. For more information, see <span sdata="link"><a href="maptoall-element-view.htm">MapToAll Element (View)</a>** and <a href="http://msdn.microsoft.com/en-us/library/dd583143(office.11).aspx">SharePoint Data View Web Part Extension Functions in the ddwrt Namespace</a>.</p></td>
+<td align="left"><p>Optional. The value that is returned by a call of the **MapToAll</span> function during the XSLT transformation. For more information, see <span sdata="link"><a href="maptoall-element-view.md">MapToAll Element (View)</a>** and <a href="http://msdn.microsoft.com/en-us/library/dd583143(office.11).aspx">SharePoint Data View Web Part Extension Functions in the ddwrt Namespace</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**HTML_x0020_File_x0020_Type.File_x0020_Type.mapcon**</p></td>
-<td align="left"><p>Optional. The value that is returned by a call of the **MapToControl</span> function during the XSLT transformation. For more information, see <span sdata="cer" target="M:Microsoft.SharePoint.Utilities.SPUtility.MapToControl(Microsoft.SharePoint.SPWeb,System.String,System.String)"><span class="nolink">MapToControl(SPWeb, String, String)</span></span>, <span sdata="link"><a href="maptocontrol-element-view.htm">MapToControl Element (View)</a>**, and <a href="http://msdn.microsoft.com/en-us/library/dd583143(office.11).aspx">SharePoint Data View Web Part Extension Functions in the ddwrt Namespace</a>.</p></td>
+<td align="left"><p>Optional. The value that is returned by a call of the **MapToControl</span> function during the XSLT transformation. For more information, see <span sdata="cer" target="M:Microsoft.SharePoint.Utilities.SPUtility.MapToControl(Microsoft.SharePoint.SPWeb,System.String,System.String)"><span class="nolink">MapToControl(SPWeb, String, String)</span></span>, <span sdata="link"><a href="maptocontrol-element-view.md">MapToControl Element (View)</a>**, and <a href="http://msdn.microsoft.com/en-us/library/dd583143(office.11).aspx">SharePoint Data View Web Part Extension Functions in the ddwrt Namespace</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HTML_x0020_File_x0020_Type.File_x0020_Type.mapico**</p></td>
-<td align="left"><p>Optional. The value that is returned by a call of the **MapToIcon</span> function during the XSLT transformation. For more information, see <span sdata="cer" target="Overload:Microsoft.SharePoint.Utilities.SPUtility.Icon"><strong>Icon()</strong></span>, <span sdata="link"><a href="maptoicon-element-view.htm">MapToIcon Element (View)</a>**, and <a href="http://msdn.microsoft.com/en-us/library/dd583143(office.11).aspx">SharePoint Data View Web Part Extension Functions in the ddwrt Namespace</a>.</p></td>
+<td align="left"><p>Optional. The value that is returned by a call of the **MapToIcon</span> function during the XSLT transformation. For more information, see <span sdata="cer" target="Overload:Microsoft.SharePoint.Utilities.SPUtility.Icon"><strong>Icon()</strong></span>, <span sdata="link"><a href="maptoicon-element-view.md">MapToIcon Element (View)</a>**, and <a href="http://msdn.microsoft.com/en-us/library/dd583143(office.11).aspx">SharePoint Data View Web Part Extension Functions in the ddwrt Namespace</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
@@ -218,7 +218,7 @@ attributes that present the field's value in a different format.
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src="../icons/copycode.gif" title="Copy code" alt="Copy code" />Copy code</span>
+<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code>&lt;span class=&quot;ms-imnSpan&quot;&gt;
 &lt;a href=&#39;javascript:;&#39;
   onclick=&#39;IMNImageOnClick(event);return false;&#39;
@@ -243,7 +243,7 @@ XML 
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src="../icons/copycode.gif" title="Copy code" alt="Copy code" />Copy code</span>
+<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code>&lt;nobr&gt;&lt;span&gt;
 &lt;a onclick=&quot;GoToLink(this);return false;&quot;
   href=&quot;/sites/Contoso/_layouts/userdisp.aspx?ID=1&quot;&gt;Michiyo Sato&lt;/a&gt;
@@ -283,7 +283,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rows-dsqueryresponse.htm">Rows</a></p></td>
+<td align="left"><p><a href="rows-dsqueryresponse.md">Rows</a></p></td>
 </tr>
 </tbody>
 </table>

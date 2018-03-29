@@ -119,7 +119,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lookuplist-element-deploymentlookuplistmap.htm">LookupList Element (DeploymentLookupListMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lookuplist-element-deploymentlookuplistmap.md">LookupList Element (DeploymentLookupListMap)</a></span></p></td>
 </tr>
 </tbody>
 </table>

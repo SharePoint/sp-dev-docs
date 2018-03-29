@@ -115,7 +115,7 @@ displayed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rightsgroup-element-view.htm">RightsGroup</a></p></td>
+<td align="left"><p><a href="rightsgroup-element-view.md">RightsGroup</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +129,7 @@ displayed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ifhasrights-element-view.htm">IfHasRights</a></p></td>
+<td align="left"><p><a href="ifhasrights-element-view.md">IfHasRights</a></p></td>
 </tr>
 </tbody>
 </table>

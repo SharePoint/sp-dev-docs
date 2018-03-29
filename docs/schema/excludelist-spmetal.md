@@ -133,7 +133,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="web-spmetal.htm">Web (SPMetal)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="web-spmetal.md">Web (SPMetal)</a></span></p></td>
 <td align="left"><p>Specifies the name and access level (public or internal) of the class (derived from <span sdata="cer" target="T:Microsoft.SharePoint.Linq.DataContext"><span class="nolink">DataContext</span></span>) that SPMetal generates.</p></td>
 </tr>
 </tbody>

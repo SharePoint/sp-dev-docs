@@ -113,7 +113,7 @@ USAGE
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentlookuplistmap.htm">Guid Simple Type (DeploymentLookupListMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentlookuplistmap.md">Guid Simple Type (DeploymentLookupListMap)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the lookup list.</p></td>
 </tr>
 <tr class="even">
@@ -138,7 +138,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lookupitems-element-deploymentlookuplistmap.htm">LookupItems Element (DeploymentLookupListMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lookupitems-element-deploymentlookuplistmap.md">LookupItems Element (DeploymentLookupListMap)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -152,7 +152,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lookuplists-element-deploymentlookuplistmap.htm">LookupLists Element (DeploymentLookupListMap)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lookuplists-element-deploymentlookuplistmap.md">LookupLists Element (DeploymentLookupListMap)</a></span></p></td>
 </tr>
 </tbody>
 </table>

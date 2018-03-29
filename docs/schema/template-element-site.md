@@ -120,7 +120,7 @@ definition that can be used to create Web sites within the deployment.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="configuration-element-site.htm">Configuration</a></p></td>
+<td align="left"><p><a href="configuration-element-site.md">Configuration</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +134,7 @@ definition that can be used to create Web sites within the deployment.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="templates-element-site.htm">Templates</a></p></td>
+<td align="left"><p><a href="templates-element-site.md">Templates</a></p></td>
 </tr>
 </tbody>
 </table>

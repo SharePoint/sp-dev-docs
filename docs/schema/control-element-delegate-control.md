@@ -125,7 +125,7 @@ Identifies the control to implement in a delegate control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-delegate-control.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-delegate-control.md">Property</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -139,7 +139,7 @@ Identifies the control to implement in a delegate control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elements-element-delegate-control.htm">Elements</a></p></td>
+<td align="left"><p><a href="elements-element-delegate-control.md">Elements</a></p></td>
 </tr>
 </tbody>
 </table>

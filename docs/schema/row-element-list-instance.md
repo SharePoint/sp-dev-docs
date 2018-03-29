@@ -106,7 +106,7 @@ list is instantiated during site provisioning.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-list-instance.htm">Field</a></p></td>
+<td align="left"><p><a href="field-element-list-instance.md">Field</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +120,7 @@ list is instantiated during site provisioning.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="rows-element-list-instance.htm">Rows</a></p></td>
+<td align="left"><p><a href="rows-element-list-instance.md">Rows</a></p></td>
 </tr>
 </tbody>
 </table>

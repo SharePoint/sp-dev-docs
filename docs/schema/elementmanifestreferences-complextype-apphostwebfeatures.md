@@ -137,13 +137,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elementfile-element-elementmanifestreferences-complextypeapphostwebfeatures.htm">ElementFile</a></p></td>
-<td align="left"><p><a href="elementmanifestreference-complextype-apphostwebfeatures.htm">ElementManifestReference</a></p></td>
+<td align="left"><p><a href="elementfile-element-elementmanifestreferences-complextypeapphostwebfeatures.md">ElementFile</a></p></td>
+<td align="left"><p><a href="elementmanifestreference-complextype-apphostwebfeatures.md">ElementManifestReference</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="elementmanifest-element-elementmanifestreferences-complextypeapphostwebfeatures.htm">ElementManifest</a></p></td>
-<td align="left"><p><a href="elementmanifestreference-complextype-apphostwebfeatures.htm">ElementManifestReference</a></p></td>
+<td align="left"><p><a href="elementmanifest-element-elementmanifestreferences-complextypeapphostwebfeatures.md">ElementManifest</a></p></td>
+<td align="left"><p><a href="elementmanifestreference-complextype-apphostwebfeatures.md">ElementManifestReference</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

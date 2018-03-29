@@ -132,7 +132,7 @@ Provides batch processing of commands within HTTP protocol.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="method-element-view.htm">Method</a></p></td>
+<td align="left"><p><a href="method-element-view.md">Method</a></p></td>
 </tr>
 </tbody>
 </table>

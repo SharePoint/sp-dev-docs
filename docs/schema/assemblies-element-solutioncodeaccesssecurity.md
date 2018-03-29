@@ -114,7 +114,7 @@ access security policy.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="assembly-element-solutioncodeaccesssecurity.htm">Assembly</a></p></td>
+<td align="left"><p><a href="assembly-element-solutioncodeaccesssecurity.md">Assembly</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,7 @@ access security policy.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="policyitem-element-solution.htm">PolicyItem</a></p></td>
+<td align="left"><p><a href="policyitem-element-solution.md">PolicyItem</a></p></td>
 </tr>
 </tbody>
 </table>

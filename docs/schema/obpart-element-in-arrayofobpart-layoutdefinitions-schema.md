@@ -220,15 +220,15 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.htm">CustomProperties Element in UIElement (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties Element in UIElement (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The list of the custom properties of the Container or Office External Part.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="titlebar-element-in-obpart-layoutdefinitions-schema.htm">TitleBar Element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="titlebar-element-in-obpart-layoutdefinitions-schema.md">TitleBar Element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The UI and behavior of the title bar of the Office External Part.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.htm">ActionNames Element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames Element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The actions that are exposed by this Office External Part.</p></td>
 </tr>
 </tbody>
@@ -249,7 +249,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.htm">Children Element in Container (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.md">Children Element in Container (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

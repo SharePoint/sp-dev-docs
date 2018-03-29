@@ -134,7 +134,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="colors-element.htm">Colors</a></p></td>
+<td align="left"><p><a href="colors-element.md">Colors</a></p></td>
 </tr>
 </tbody>
 </table>

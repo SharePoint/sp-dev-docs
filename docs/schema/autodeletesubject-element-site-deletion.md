@@ -126,7 +126,7 @@ automatic deletion is enabled and the site collection is not in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="autodeletewarning-element-site-deletion.htm">AutoDeleteWarning</a></p></td>
+<td align="left"><p><a href="autodeletewarning-element-site-deletion.md">AutoDeleteWarning</a></p></td>
 </tr>
 </tbody>
 </table>

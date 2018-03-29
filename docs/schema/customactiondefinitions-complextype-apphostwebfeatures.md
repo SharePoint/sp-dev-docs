@@ -136,8 +136,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="customaction-element-customactiondefinitions-complextypeapphostwebfeatures.htm">CustomAction</a></p></td>
-<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.htm">CustomActionDefinition</a></p></td>
+<td align="left"><p><a href="customaction-element-customactiondefinitions-complextypeapphostwebfeatures.md">CustomAction</a></p></td>
+<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.md">CustomActionDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

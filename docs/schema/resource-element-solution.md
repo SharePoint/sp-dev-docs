@@ -123,7 +123,7 @@ Specifies a binary resource to deploy to an existing Feature folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="resources-element-solution.htm">Resources</a></p></td>
+<td align="left"><p><a href="resources-element-solution.md">Resources</a></p></td>
 </tr>
 </tbody>
 </table>

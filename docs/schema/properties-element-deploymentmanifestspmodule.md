@@ -123,7 +123,7 @@ target="T:System.Collections.Generic.Dictionary">**Dictionary**</span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="property-element-deploymentmanifest.htm">Property Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="property-element-deploymentmanifest.md">Property Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +137,7 @@ target="T:System.Collections.Generic.Dictionary">**Dictionary**</span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="module-element-deploymentmanifest.htm">Module Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="module-element-deploymentmanifest.md">Module Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

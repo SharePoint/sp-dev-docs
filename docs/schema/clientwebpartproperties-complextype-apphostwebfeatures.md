@@ -136,8 +136,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="property-element-clientwebpartproperties-complextypeapphostwebfeatures.htm">Property</a></p></td>
-<td align="left"><p><a href="clientwebpartproperty-complextype-apphostwebfeatures.htm">ClientWebPartProperty</a></p></td>
+<td align="left"><p><a href="property-element-clientwebpartproperties-complextypeapphostwebfeatures.md">Property</a></p></td>
+<td align="left"><p><a href="clientwebpartproperty-complextype-apphostwebfeatures.md">ClientWebPartProperty</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

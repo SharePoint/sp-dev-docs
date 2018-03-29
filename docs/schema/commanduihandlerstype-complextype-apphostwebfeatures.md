@@ -136,8 +136,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="commanduihandler-element-commanduihandlerstype-complextypeapphostwebfeatures.htm">CommandUIHandler</a></p></td>
-<td align="left"><p><a href="commanduihandlertype-complextype-apphostwebfeatures.htm">CommandUIHandlerType</a></p></td>
+<td align="left"><p><a href="commanduihandler-element-commanduihandlerstype-complextypeapphostwebfeatures.md">CommandUIHandler</a></p></td>
+<td align="left"><p><a href="commanduihandlertype-complextype-apphostwebfeatures.md">CommandUIHandlerType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

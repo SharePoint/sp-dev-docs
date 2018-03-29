@@ -135,7 +135,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webparttransformer-element-site.htm">WebPartTransformer</a></p></td>
+<td align="left"><p><a href="webparttransformer-element-site.md">WebPartTransformer</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -149,7 +149,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="file-element.htm">File</a></p></td>
+<td align="left"><p><a href="file-element.md">File</a></p></td>
 </tr>
 </tbody>
 </table>

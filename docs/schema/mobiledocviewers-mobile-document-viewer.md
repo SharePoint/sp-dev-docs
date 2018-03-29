@@ -106,7 +106,7 @@ None
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="mobiledocviewer-mobile-document-viewer.htm">MobileDocViewer</a></p></td>
+<td align="left"><p><a href="mobiledocviewer-mobile-document-viewer.md">MobileDocViewer</a></p></td>
 <td align="left"><p>Configures redirection for a specific type of document.</p></td>
 </tr>
 </tbody>

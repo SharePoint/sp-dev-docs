@@ -115,7 +115,7 @@ Used to define several choices within a field for a drop-down list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="choice-element-list.htm">CHOICE</a></p></td>
+<td align="left"><p><a href="choice-element-list.md">CHOICE</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +129,7 @@ Used to define several choices within a field for a drop-down list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="field-element-list.htm">Field</a></p></td>
+<td align="left"><p><a href="field-element-list.md">Field</a></p></td>
 </tr>
 </tbody>
 </table>

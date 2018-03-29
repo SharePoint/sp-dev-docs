@@ -128,7 +128,7 @@ other elements and has no definable attributes.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ruledesigner-element-workflowinfo.htm">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-workflowinfo.md">RuleDesigner</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ other elements and has no definable attributes.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="930e0d1c-a01a-4557-a58b-209621f1632e.htm">Conditions</a></p></td>
+<td align="left"><p><a href="930e0d1c-a01a-4557-a58b-209621f1632e.md">Conditions</a></p></td>
 </tr>
 </tbody>
 </table>

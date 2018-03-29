@@ -119,7 +119,7 @@ Contains a property value for a delegate control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="control-element-delegate-control.htm">Control</a></p></td>
+<td align="left"><p><a href="control-element-delegate-control.md">Control</a></p></td>
 </tr>
 </tbody>
 </table>

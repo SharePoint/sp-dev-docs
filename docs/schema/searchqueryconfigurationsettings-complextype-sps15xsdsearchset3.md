@@ -129,52 +129,52 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="bestbets-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.htm">BestBets</a></p></td>
+<td align="left"><p><a href="bestbets-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.md">BestBets</a></p></td>
 <td align="left"><p>q1:ArrayOfBestBet</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="defaultsourceid-element-searchqueryconfigurationsettings-complextypesps15xsdsear.htm">DefaultSourceId</a></p></td>
+<td align="left"><p><a href="defaultsourceid-element-searchqueryconfigurationsettings-complextypesps15xsdsear.md">DefaultSourceId</a></p></td>
 <td align="left"><p>ser:guid</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="defaultsourceidset-element-searchqueryconfigurationsettings-complextypesps15xsds.htm">DefaultSourceIdSet</a></p></td>
+<td align="left"><p><a href="defaultsourceidset-element-searchqueryconfigurationsettings-complextypesps15xsds.md">DefaultSourceIdSet</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="deploytoparent-element-searchqueryconfigurationsettings-complextypesps15xsdsearc.htm">DeployToParent</a></p></td>
+<td align="left"><p><a href="deploytoparent-element-searchqueryconfigurationsettings-complextypesps15xsdsearc.md">DeployToParent</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="disableinheritanceonimport-element-searchqueryconfigurationsettings-complextypes.htm">DisableInheritanceOnImport</a></p></td>
+<td align="left"><p><a href="disableinheritanceonimport-element-searchqueryconfigurationsettings-complextypes.md">DisableInheritanceOnImport</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="queryrulegroups-element-searchqueryconfigurationsettings-complextypesps15xsdsear.htm">QueryRuleGroups</a></p></td>
+<td align="left"><p><a href="queryrulegroups-element-searchqueryconfigurationsettings-complextypesps15xsdsear.md">QueryRuleGroups</a></p></td>
 <td align="left"><p>q2:ArrayOfQueryRuleGroup</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="queryrules-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset.htm">QueryRules</a></p></td>
+<td align="left"><p><a href="queryrules-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset.md">QueryRules</a></p></td>
 <td align="left"><p>q3:ArrayOfQueryRule</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="resulttypes-element-searchqueryconfigurationsettings-complextypesps15xsdsearchse.htm">ResultTypes</a></p></td>
+<td align="left"><p><a href="resulttypes-element-searchqueryconfigurationsettings-complextypesps15xsdsearchse.md">ResultTypes</a></p></td>
 <td align="left"><p>q4:ArrayOfResultItemType</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="sources-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.htm">Sources</a></p></td>
+<td align="left"><p><a href="sources-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.md">Sources</a></p></td>
 <td align="left"><p>q5:ArrayOfSource</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="usersegments-element-searchqueryconfigurationsettings-complextypesps15xsdsearchs.htm">UserSegments</a></p></td>
+<td align="left"><p><a href="usersegments-element-searchqueryconfigurationsettings-complextypesps15xsdsearchs.md">UserSegments</a></p></td>
 <td align="left"><p>q6:ArrayOfUserSegment</p></td>
 <td align="left"><p></p></td>
 </tr>

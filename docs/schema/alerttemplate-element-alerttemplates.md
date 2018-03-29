@@ -129,7 +129,7 @@ Defines an alert message template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="eventtypes-element-alerttemplates.htm">EventTypes</a>, <a href="format-element-alerttemplates.htm">Format</a>, <a href="properties-element-alerttemplates.htm">Properties</a>, <a href="filters-element-alerttemplates.htm">Filters</a></p></td>
+<td align="left"><p><a href="eventtypes-element-alerttemplates.md">EventTypes</a>, <a href="format-element-alerttemplates.md">Format</a>, <a href="properties-element-alerttemplates.md">Properties</a>, <a href="filters-element-alerttemplates.md">Filters</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -143,7 +143,7 @@ Defines an alert message template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="alerttemplates-element-alerttemplates.htm">AlertTemplates</a></p></td>
+<td align="left"><p><a href="alerttemplates-element-alerttemplates.md">AlertTemplates</a></p></td>
 </tr>
 </tbody>
 </table>

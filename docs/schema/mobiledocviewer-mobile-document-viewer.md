@@ -139,7 +139,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="browsercondition-mobile-document-viewer.htm">BrowserCondition (Mobile Document Viewer)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="browsercondition-mobile-document-viewer.md">BrowserCondition (Mobile Document Viewer)</a></span></p></td>
 <td align="left"><p>Optional. Identifies a browser capability that means the browser can use an alternative viewer for the specified type of file.</p></td>
 </tr>
 </tbody>
@@ -160,7 +160,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="mobiledocviewers-mobile-document-viewer.htm">MobileDocViewers (Mobile Document Viewer)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="mobiledocviewers-mobile-document-viewer.md">MobileDocViewers (Mobile Document Viewer)</a></span></p></td>
 <td align="left"><p>Specifies the document viewing page for one or more types of documents.</p></td>
 </tr>
 </tbody>

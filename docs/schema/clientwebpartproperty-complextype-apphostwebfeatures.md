@@ -149,8 +149,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="enumitems-element-clientwebpartproperty-complextypeapphostwebfeatures.htm">EnumItems</a></p></td>
-<td align="left"><p><a href="clientwebpartenumitems-complextype-apphostwebfeatures.htm">ClientWebPartEnumItems</a></p></td>
+<td align="left"><p><a href="enumitems-element-clientwebpartproperty-complextypeapphostwebfeatures.md">EnumItems</a></p></td>
+<td align="left"><p><a href="clientwebpartenumitems-complextype-apphostwebfeatures.md">ClientWebPartEnumItems</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -220,7 +220,7 @@ class="keyword">choice</span>, see the definition section.
 </tr>
 <tr class="odd">
 <td align="left"><p>PersonalizationScope</p></td>
-<td align="left"><p><a href="webpartpersonalizationscope-simpletype-apphostwebfeatures.htm">WebPartPersonalizationScope</a></p></td>
+<td align="left"><p><a href="webpartpersonalizationscope-simpletype-apphostwebfeatures.md">WebPartPersonalizationScope</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the WebPartPersonalizationScope type.</p></td>
@@ -234,7 +234,7 @@ class="keyword">choice</span>, see the definition section.
 </tr>
 <tr class="odd">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><a href="clientwebpartpropertytype-simpletype-apphostwebfeatures.htm">ClientWebPartPropertyType</a></p></td>
+<td align="left"><p><a href="clientwebpartpropertytype-simpletype-apphostwebfeatures.md">ClientWebPartPropertyType</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the ClientWebPartPropertyType type.</p></td>

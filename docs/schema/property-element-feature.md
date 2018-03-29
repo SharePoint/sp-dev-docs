@@ -124,7 +124,7 @@ Defines the default value for a feature property.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="properties-element-feature.htm">Properties</a></p></td>
+<td align="left"><p><a href="properties-element-feature.md">Properties</a></p></td>
 </tr>
 </tbody>
 </table>

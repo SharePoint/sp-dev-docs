@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="featuretemplatereference-complextype-apphostwebfeatures.htm">FeatureTemplateReference</a></p></td>
+<td align="left"><p><a href="featuretemplatereference-complextype-apphostwebfeatures.md">FeatureTemplateReference</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -136,8 +136,8 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="properties-element-featuretemplatereference-complextypeapphostwebfeatures.htm">Properties</a></p></td>
-<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.htm">FeaturePropertyDefinitions</a></p></td>
+<td align="left"><p><a href="properties-element-featuretemplatereference-complextypeapphostwebfeatures.md">Properties</a></p></td>
+<td align="left"><p><a href="featurepropertydefinitions-complextype-apphostwebfeatures.md">FeaturePropertyDefinitions</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -179,7 +179,7 @@ None.
 </tr>
 <tr class="odd">
 <td align="left"><p>SourceVersion</p></td>
-<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.htm">FeatureVersion</a></p></td>
+<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.md">FeatureVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureVersion type.</p></td>

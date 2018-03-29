@@ -152,11 +152,11 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.htm">CustomProperties Element in UIElement (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties Element in UIElement (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The list of the custom properties.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.htm">Children Element in Container (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.md">Children Element in Container (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The list of the Office External Parts in this layout.</p></td>
 </tr>
 </tbody>

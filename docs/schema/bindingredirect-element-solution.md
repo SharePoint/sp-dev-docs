@@ -113,7 +113,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="bindingredirects-element-solution.htm">BindingRedirects Element (Solution)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="bindingredirects-element-solution.md">BindingRedirects Element (Solution)</a></span></p></td>
 </tr>
 </tbody>
 </table>

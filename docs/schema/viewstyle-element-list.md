@@ -139,7 +139,7 @@ Contains the definition of a view style for a list.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="groupbyfooter-element-list.htm">GroupByFooter</a>, <a href="groupbyheader-element-list.htm">GroupByHeader</a>, <a href="pagedclientcallbackrowset-element-list.htm">PagedClientCallbackRowset</a>, <a href="pagedrecurrencerowset-element-list.htm">PagedRecurrenceRowset</a>, <a href="pagedrowset-element-list.htm">PagedRowset</a>, <a href="script-element.htm">Script</a><a href="viewbidiheader-element-list.htm">ViewBidiHeader</a>, <a href="viewbody-element-list.htm">ViewBody</a>, <a href="viewempty-element-list.htm">ViewEmpty</a>, <a href="viewfields-element-list.htm">ViewFields</a>, <a href="viewfooter-element-list.htm">ViewFooter</a>, <a href="viewheader-element-list.htm">ViewHeader</a></p></td>
+<td align="left"><p><a href="groupbyfooter-element-list.md">GroupByFooter</a>, <a href="groupbyheader-element-list.md">GroupByHeader</a>, <a href="pagedclientcallbackrowset-element-list.md">PagedClientCallbackRowset</a>, <a href="pagedrecurrencerowset-element-list.md">PagedRecurrenceRowset</a>, <a href="pagedrowset-element-list.md">PagedRowset</a>, <a href="script-element.md">Script</a><a href="viewbidiheader-element-list.md">ViewBidiHeader</a>, <a href="viewbody-element-list.md">ViewBody</a>, <a href="viewempty-element-list.md">ViewEmpty</a>, <a href="viewfields-element-list.md">ViewFields</a>, <a href="viewfooter-element-list.md">ViewFooter</a>, <a href="viewheader-element-list.md">ViewHeader</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Contains the definition of a view style for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="view-element-list.htm">View Element (List)</a></span>, <a href="viewstyles-element.htm">ViewStyles</a></p></td>
+<td align="left"><p><span sdata="link"><a href="view-element-list.md">View Element (List)</a></span>, <a href="viewstyles-element.md">ViewStyles</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Contains the definition of a view style for a list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: 1 (Unbounded within <a href="viewstyles-element.htm">ViewStyles</a>)</p></td>
+<p>Maximum: 1 (Unbounded within <a href="viewstyles-element.md">ViewStyles</a>)</p></td>
 </tr>
 </tbody>
 </table>

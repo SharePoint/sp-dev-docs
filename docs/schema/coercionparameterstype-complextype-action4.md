@@ -137,7 +137,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameter-element-coercionparameterstype-complextypeaction4.htm">Parameter</a></p></td>
+<td align="left"><p><a href="parameter-element-coercionparameterstype-complextypeaction4.md">Parameter</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>

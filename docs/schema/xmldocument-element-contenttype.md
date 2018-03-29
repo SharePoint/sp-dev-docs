@@ -121,7 +121,7 @@ Defines a single XML document that is included in the content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="xmldocuments-element-contenttype.htm">XmlDocuments</a></p></td>
+<td align="left"><p><a href="xmldocuments-element-contenttype.md">XmlDocuments</a></p></td>
 </tr>
 </tbody>
 </table>

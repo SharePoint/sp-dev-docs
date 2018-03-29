@@ -128,7 +128,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="guidmap-element-site.htm">GUIDMap</a></p></td>
+<td align="left"><p><a href="guidmap-element-site.md">GUIDMap</a></p></td>
 </tr>
 </tbody>
 </table>

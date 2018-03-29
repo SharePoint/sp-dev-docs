@@ -148,7 +148,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="layout-element.htm">Layout</a></p></td>
+<td align="left"><p><a href="layout-element.md">Layout</a></p></td>
 </tr>
 </tbody>
 </table>

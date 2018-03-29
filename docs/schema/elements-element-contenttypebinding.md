@@ -108,7 +108,7 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttypebinding-element-contenttypebinding.htm">ContentTypeBinding Element (ContentTypeBinding)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contenttypebinding-element-contenttypebinding.md">ContentTypeBinding Element (ContentTypeBinding)</a></span></p></td>
 </tr>
 </tbody>
 </table>

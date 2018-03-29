@@ -115,7 +115,7 @@ announcements Feature in the new version.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-upgrade.htm">Feature</a></p></td>
+<td align="left"><p><a href="feature-element-upgrade.md">Feature</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +129,7 @@ announcements Feature in the new version.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webtemplate-element-upgrade.htm">WebTemplate</a></p></td>
+<td align="left"><p><a href="webtemplate-element-upgrade.md">WebTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

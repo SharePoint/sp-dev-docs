@@ -117,7 +117,7 @@ Specifies the type of event for which to register the event handler.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="receiver-element-event.htm">Receiver</a></p></td>
+<td align="left"><p><a href="receiver-element-event.md">Receiver</a></p></td>
 </tr>
 </tbody>
 </table>

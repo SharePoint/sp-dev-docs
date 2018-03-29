@@ -96,7 +96,7 @@ Defines the layout of controls in a template.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Title**</p></td>
-<td align="left"><p>Required. A string that identifies the element within its parent <a href="grouptemplate-element.htm">GroupTemplate</a> element. The element's ID in the Document Object Model (DOM) is formed on the pattern &quot;ParentId-Title&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element within its parent <a href="grouptemplate-element.md">GroupTemplate</a> element. The element's ID in the Document Object Model (DOM) is formed on the pattern &quot;ParentId-Title&quot;.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**LayoutTitle**</p></td>
@@ -114,10 +114,10 @@ Defines the layout of controls in a template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="section-element.htm">Section</a></p></td>
+<td align="left"><p><a href="section-element.md">Section</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="overflowsection-element.htm">OverflowSection</a></p></td>
+<td align="left"><p><a href="overflowsection-element.md">OverflowSection</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@ Defines the layout of controls in a template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="grouptemplate-element.htm">GroupTemplate</a></p></td>
+<td align="left"><p><a href="grouptemplate-element.md">GroupTemplate</a></p></td>
 </tr>
 </tbody>
 </table>

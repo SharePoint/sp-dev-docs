@@ -213,23 +213,23 @@ field being rendered.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="column-element-view.htm">Column</a></p></td>
+<td align="left"><p><a href="column-element-view.md">Column</a></p></td>
 <td align="left"><p>Returns the raw data value for a particular field.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="column2-element-view.htm">Column2</a></p></td>
+<td align="left"><p><a href="column2-element-view.md">Column2</a></p></td>
 <td align="left"><p>Used in rendering a Link field type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="escape-element.htm">Escape</a></p></td>
+<td align="left"><p><a href="escape-element.md">Escape</a></p></td>
 <td align="left"><p>Used to escape certain characters in strings.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="fieldfilteroptions-element.htm">FieldFilterOptions</a></p></td>
+<td align="left"><p><a href="fieldfilteroptions-element.md">FieldFilterOptions</a></p></td>
 <td align="left"><p>Used in the **HeaderPattern** sections of <a href="http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6(Office.15).aspx">FldTypes.xml</a> to display filter drop-down menus.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="fieldprefix-element-view.htm">FieldPrefix</a></p></td>
+<td align="left"><p><a href="fieldprefix-element-view.md">FieldPrefix</a></p></td>
 <td align="left"><p>Returns the Microsoft Office namespace, &quot;urn:schemas-microsoft-com:office:office#&quot;.</p></td>
 </tr>
 <tr class="even">
@@ -237,47 +237,47 @@ field being rendered.
 <td align="left"><p>Used in computed fields to refer to the constituent fields and in views to define what fields are present.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="fieldsortimageurl-element.htm">FieldSortImageURL</a></p></td>
+<td align="left"><p><a href="fieldsortimageurl-element.md">FieldSortImageURL</a></p></td>
 <td align="left"><p>Returns the URL to the image file used to indicate how a column is sorted.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="fieldsortparams-element-view.htm">FieldSortParams</a></p></td>
+<td align="left"><p><a href="fieldsortparams-element-view.md">FieldSortParams</a></p></td>
 <td align="left"><p>Returns the sort direction on a list, rendering **Asc</span> or <span class="keyword">Desc** based on whether the field has been sorted, and the current default sort direction for the field.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="ifequal-element-view.htm">IfEqual</a></p></td>
+<td align="left"><p><a href="ifequal-element-view.md">IfEqual</a></p></td>
 <td align="left"><p>Allows for conditional rendering based on the comparison of two CAML expressions.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="ifnew-element-view.htm">IfNew</a></p></td>
+<td align="left"><p><a href="ifnew-element-view.md">IfNew</a></p></td>
 <td align="left"><p>Returns **TRUE** if the item is considered new.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="imagespath-element.htm">ImagesPath</a></p></td>
+<td align="left"><p><a href="imagespath-element.md">ImagesPath</a></p></td>
 <td align="left"><p>Returns the HTTP path to the images directory for the project.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="limit-element-view.htm">Limit</a></p></td>
+<td align="left"><p><a href="limit-element-view.md">Limit</a></p></td>
 <td align="left"><p>Truncates text to a specified size.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="localeinfo-element.htm">LocaleInfo</a></p></td>
+<td align="left"><p><a href="localeinfo-element.md">LocaleInfo</a></p></td>
 <td align="left"><p>Transfers server locale information to the client in order to display and edit dates and numbers properly.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="pageurl-element-view.htm">PageUrl</a></p></td>
+<td align="left"><p><a href="pageurl-element-view.md">PageUrl</a></p></td>
 <td align="left"><p>Used anywhere to return the absolute, encoded URL of the current page.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="property-element-view.htm">Property</a></p></td>
+<td align="left"><p><a href="property-element-view.md">Property</a></p></td>
 <td align="left"><p>Returns the property from the current **ForEach** context.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="scriptquote-element-view.htm">ScriptQuote</a></p></td>
+<td align="left"><p><a href="scriptquote-element-view.md">ScriptQuote</a></p></td>
 <td align="left"><p>Used for rendering text from the server that must be interpreted as a quoted string.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="todayiso-element.htm">TodayISO</a></p></td>
+<td align="left"><p><a href="todayiso-element.md">TodayISO</a></p></td>
 <td align="left"><p>Renders today's date and time in ISO format.</p></td>
 </tr>
 </tbody>

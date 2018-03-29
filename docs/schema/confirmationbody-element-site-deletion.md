@@ -126,7 +126,7 @@ whether the site collection is still in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="confirmation-element-site-deletion.htm">Confirmation</a></p></td>
+<td align="left"><p><a href="confirmation-element-site-deletion.md">Confirmation</a></p></td>
 </tr>
 </tbody>
 </table>

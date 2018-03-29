@@ -124,7 +124,7 @@ for Web views in the file dialog boxes and forms of document libraries.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="components-element-site.htm">Components</a></p></td>
+<td align="left"><p><a href="components-element-site.md">Components</a></p></td>
 </tr>
 </tbody>
 </table>

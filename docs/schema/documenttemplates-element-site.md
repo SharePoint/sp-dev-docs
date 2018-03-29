@@ -111,7 +111,7 @@ class="ui">New Document Library</span> page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="documenttemplate-element-site.htm">DocumentTemplate</a></p></td>
+<td align="left"><p><a href="documenttemplate-element-site.md">DocumentTemplate</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ class="ui">New Document Library</span> page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="project-element-site.htm">Project</a></p></td>
+<td align="left"><p><a href="project-element-site.md">Project</a></p></td>
 </tr>
 </tbody>
 </table>

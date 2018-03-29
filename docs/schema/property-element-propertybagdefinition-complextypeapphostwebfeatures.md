@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="propertyvalueattributedefinition-complextype-apphostwebfeatures.htm">PropertyValueAttributeDefinition</a></p></td>
+<td align="left"><p><a href="propertyvalueattributedefinition-complextype-apphostwebfeatures.md">PropertyValueAttributeDefinition</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -152,7 +152,7 @@ None.
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><a href="propertybagtype-simpletype-apphostwebfeatures.htm">PropertyBagType</a></p></td>
+<td align="left"><p><a href="propertybagtype-simpletype-apphostwebfeatures.md">PropertyBagType</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the PropertyBagType type.</p></td>

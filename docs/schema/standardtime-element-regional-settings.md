@@ -116,7 +116,7 @@ Universal Time (UTC), and the date on which standard time begins.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="bias-element-regional-settings.htm">Bias</a>, <a href="date-element-regional-settings.htm">Date</a></p></td>
+<td align="left"><p><a href="bias-element-regional-settings.md">Bias</a>, <a href="date-element-regional-settings.md">Date</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -130,7 +130,7 @@ Universal Time (UTC), and the date on which standard time begins.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="history-element-regional-settings.htm">History</a>, <a href="timezone-element-regional-settings.htm">TimeZone</a></p></td>
+<td align="left"><p><a href="history-element-regional-settings.md">History</a>, <a href="timezone-element-regional-settings.md">TimeZone</a></p></td>
 </tr>
 </tbody>
 </table>

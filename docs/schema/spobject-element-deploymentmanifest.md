@@ -117,17 +117,17 @@ target="T:System.Object">[Object](http://msdn2.microsoft.com/EN-US/library/e5kfa
 <tbody>
 <tr class="odd">
 <td align="left"><p>**ObjectType**</p></td>
-<td align="left"><p><span sdata="link"><a href="spobjecttype-simple-type-deploymentmanifest.htm">SPObjectType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobjecttype-simple-type-deploymentmanifest.md">SPObjectType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration that provides values to specify the Windows SharePoint Services 3.0 top-level object type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the Windows SharePoint Services 3.0 object.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the parent deployment object.</p></td>
 </tr>
 <tr class="even">
@@ -142,7 +142,7 @@ target="T:System.Object">[Object](http://msdn2.microsoft.com/EN-US/library/e5kfa
 </tr>
 <tr class="even">
 <td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the parent Web site.</p></td>
 </tr>
 <tr class="odd">
@@ -172,67 +172,67 @@ target="T:System.Object">[Object](http://msdn2.microsoft.com/EN-US/library/e5kfa
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="site-element-deploymentmanifest.htm">Site Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="site-element-deploymentmanifest.md">Site Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="web-element-deploymentmanifest.htm">Web Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="web-element-deploymentmanifest.md">Web Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webtemplate-element-deploymentmanifest.htm">WebTemplate Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webtemplate-element-deploymentmanifest.md">WebTemplate Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="list-element-deploymentmanifest.htm">List Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="list-element-deploymentmanifest.md">List Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="documentlibrary-element-deploymentmanifest.htm">DocumentLibrary Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="documentlibrary-element-deploymentmanifest.md">DocumentLibrary Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="picturelibrary-element-deploymentmanifest.htm">PictureLibrary Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="picturelibrary-element-deploymentmanifest.md">PictureLibrary Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.htm">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.md">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="module-element-deploymentmanifest.htm">Module Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="module-element-deploymentmanifest.md">Module Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="documenttemplate-element-deploymentmanifest.htm">DocumentTemplate Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="documenttemplate-element-deploymentmanifest.md">DocumentTemplate Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="listtemplate-element-deploymentmanifest.htm">ListTemplate Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="listtemplate-element-deploymentmanifest.md">ListTemplate Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="folder-element-deploymentmanifest.htm">Folder Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="folder-element-deploymentmanifest.md">Folder Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspgenericobject.htm">File Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspgenericobject.md">File Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttype-element-deploymentmanifest.htm">ContentType Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contenttype-element-deploymentmanifest.md">ContentType Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="fieldtemplate-element-deploymentmanifest.htm">FieldTemplate Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="fieldtemplate-element-deploymentmanifest.md">FieldTemplate Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webstructure-element-deploymentmanifest.htm">WebStructure Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="webstructure-element-deploymentmanifest.md">WebStructure Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="userx-element-deploymentmanifest.htm">UserX Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="userx-element-deploymentmanifest.md">UserX Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="groupx-element-deploymentmanifest.htm">GroupX Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="groupx-element-deploymentmanifest.md">GroupX Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="roles-element-deploymentmanifest.htm">Roles Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="roles-element-deploymentmanifest.md">Roles Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="rolex-element-deploymentmanifest.htm">RoleX Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="rolex-element-deploymentmanifest.md">RoleX Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="roleassignments-element-deploymentmanifest.htm">RoleAssignments Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="roleassignments-element-deploymentmanifest.md">RoleAssignments Element (DeploymentManifest)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="feature-element-deploymentmanifest.htm">Feature Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="feature-element-deploymentmanifest.md">Feature Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -246,7 +246,7 @@ target="T:System.Object">[Object](http://msdn2.microsoft.com/EN-US/library/e5kfa
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobjects-element-deploymentmanifest.htm">SPObjects Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spobjects-element-deploymentmanifest.md">SPObjects Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

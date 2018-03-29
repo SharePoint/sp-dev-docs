@@ -99,16 +99,16 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fields-element-alerttemplates.htm">Fields</a></p></td>
+<td align="left"><p><a href="fields-element-alerttemplates.md">Fields</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="footer-element-alerttemplates.htm">Footer</a></p></td>
+<td align="left"><p><a href="footer-element-alerttemplates.md">Footer</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="header-element-alerttemplates.htm">Header</a></p></td>
+<td align="left"><p><a href="header-element-alerttemplates.md">Header</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="subject-element-alerttemplates.htm">Subject</a></p></td>
+<td align="left"><p><a href="subject-element-alerttemplates.md">Subject</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +122,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="format-element-alerttemplates.htm">Format</a></p></td>
+<td align="left"><p><a href="format-element-alerttemplates.md">Format</a></p></td>
 </tr>
 </tbody>
 </table>

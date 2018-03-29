@@ -136,8 +136,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="feature-element-featuretemplatereferences-complextypeapphostwebfeatures.htm">Feature</a></p></td>
-<td align="left"><p><a href="featuretemplatereference-complextype-apphostwebfeatures.htm">FeatureTemplateReference</a></p></td>
+<td align="left"><p><a href="feature-element-featuretemplatereferences-complextypeapphostwebfeatures.md">Feature</a></p></td>
+<td align="left"><p><a href="featuretemplatereference-complextype-apphostwebfeatures.md">FeatureTemplateReference</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="versionrangedefinition-complextype-apphostwebfeatures.htm">VersionRangeDefinition</a></p></td>
+<td align="left"><p><a href="versionrangedefinition-complextype-apphostwebfeatures.md">VersionRangeDefinition</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -132,8 +132,8 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="upgradeactions-element-featuredefinition-complextypeapphostwebfeatures.htm">UpgradeActions</a></p></td>
-<td align="left"><p><a href="upgradeactionsdefinition-complextype-apphostwebfeatures.htm">UpgradeActionsDefinition</a></p></td>
+<td align="left"><p><a href="upgradeactions-element-featuredefinition-complextypeapphostwebfeatures.md">UpgradeActions</a></p></td>
+<td align="left"><p><a href="upgradeactionsdefinition-complextype-apphostwebfeatures.md">UpgradeActionsDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -165,14 +165,14 @@ None.
 <tbody>
 <tr class="odd">
 <td align="left"><p>BeginVersion</p></td>
-<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.htm">FeatureVersion</a></p></td>
+<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.md">FeatureVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureVersion type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>EndVersion</p></td>
-<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.htm">FeatureVersion</a></p></td>
+<td align="left"><p><a href="featureversion-simpletype-apphostwebfeatures.md">FeatureVersion</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the FeatureVersion type.</p></td>

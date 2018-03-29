@@ -104,7 +104,7 @@ USAGE
 <tbody>
 <tr class="odd">
 <td align="left"><p>FieldId</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Unique identifier of the deleted field.</p></td>
 </tr>
 </tbody>
@@ -133,7 +133,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="deletedfields-element-deploymentmanifest.htm">DeletedFields Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="deletedfields-element-deploymentmanifest.md">DeletedFields Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

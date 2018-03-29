@@ -130,7 +130,7 @@ Contains a Web Part in a form definition for list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="webparts-element-list.htm">WebParts</a></p></td>
+<td align="left"><p><a href="webparts-element-list.md">WebParts</a></p></td>
 </tr>
 </tbody>
 </table>

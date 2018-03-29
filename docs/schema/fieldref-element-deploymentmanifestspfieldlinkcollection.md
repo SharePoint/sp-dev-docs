@@ -127,7 +127,7 @@ class="nolink">SPFieldLink</span></span>
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the field referenced.</p></td>
 </tr>
 <tr class="odd">
@@ -162,12 +162,12 @@ class="nolink">SPFieldLink</span></span>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.htm">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies that the field value is hidden in the user interface.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Required**</p></td>
-<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.htm">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Specifies that the field requires a value.</p></td>
 </tr>
 <tr class="odd">
@@ -221,7 +221,7 @@ class="nolink">SPFieldLink</span></span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewfields-element-deploymentmanifestspview.htm">ViewFields Element (DeploymentManifest - SPView)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="viewfields-element-deploymentmanifestspview.md">ViewFields Element (DeploymentManifest - SPView)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -204,7 +204,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="fieldbind-element-workflowactions.htm">FieldBind</a></p></td>
+<td align="left"><p><a href="fieldbind-element-workflowactions.md">FieldBind</a></p></td>
 </tr>
 </tbody>
 </table>

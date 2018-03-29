@@ -89,10 +89,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elementfile-element-feature.htm">ElementFile Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="elementfile-element-feature.md">ElementFile Element (Feature)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="elementmanifest-element-feature.htm">ElementManifest Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="elementmanifest-element-feature.md">ElementManifest Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -106,7 +106,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.htm">UpgradeActions Element (Feature)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></span></p></td>
 </tr>
 </tbody>
 </table>

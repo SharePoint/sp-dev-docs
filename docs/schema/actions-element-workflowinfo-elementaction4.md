@@ -232,7 +232,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-action4.htm">WorkflowInfo</a></p></td>
+<td align="left"><p><a href="workflowinfo-element-action4.md">WorkflowInfo</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -256,13 +256,13 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="action-element-actions-elementworkflowinfo-elementaction4.htm">Action</a></p></td>
+<td align="left"><p><a href="action-element-actions-elementworkflowinfo-elementaction4.md">Action</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="default-element-actions-elementworkflowinfo-elementaction4.htm">Default</a></p></td>
-<td align="left"><p><a href="defaultelementtype-complextype-action4.htm">defaultElementType</a></p></td>
+<td align="left"><p><a href="default-element-actions-elementworkflowinfo-elementaction4.md">Default</a></p></td>
+<td align="left"><p><a href="defaultelementtype-complextype-action4.md">defaultElementType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -292,14 +292,14 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>Parallel</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action</span> elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.htm">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a>** sentence.</p></td>
+<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action</span> elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a>** sentence.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Sequential</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action</span> elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.htm">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a>** sentence.</p></td>
+<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action</span> elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a>** sentence.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 </tbody>

@@ -115,7 +115,7 @@ Defines the scaling behavior for controls in a
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="layout-element.htm">Layout</a></p></td>
+<td align="left"><p><a href="layout-element.md">Layout</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +129,7 @@ Defines the scaling behavior for controls in a
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="ribbontemplates.htm">RibbonTemplates</a></p></td>
+<td align="left"><p><a href="ribbontemplates.md">RibbonTemplates</a></p></td>
 </tr>
 </tbody>
 </table>

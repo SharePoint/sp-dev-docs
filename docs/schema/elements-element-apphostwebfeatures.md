@@ -82,7 +82,7 @@ JavaScript
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="elementdefinitioncollection-complextype-apphostwebfeatures.htm">ElementDefinitionCollection</a></p></td>
+<td align="left"><p><a href="elementdefinitioncollection-complextype-apphostwebfeatures.md">ElementDefinitionCollection</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
@@ -136,13 +136,13 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="clientwebpart-element-elementdefinitioncollection-complextypeapphostwebfeatures.htm">ClientWebPart</a></p></td>
-<td align="left"><p><a href="clientwebpartdefinition-complextype-apphostwebfeatures.htm">ClientWebPartDefinition</a></p></td>
+<td align="left"><p><a href="clientwebpart-element-elementdefinitioncollection-complextypeapphostwebfeatures.md">ClientWebPart</a></p></td>
+<td align="left"><p><a href="clientwebpartdefinition-complextype-apphostwebfeatures.md">ClientWebPartDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.htm">CustomAction</a></p></td>
-<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.htm">CustomActionDefinition</a></p></td>
+<td align="left"><p><a href="customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.md">CustomAction</a></p></td>
+<td align="left"><p><a href="customactiondefinition-complextype-apphostwebfeatures.md">CustomActionDefinition</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

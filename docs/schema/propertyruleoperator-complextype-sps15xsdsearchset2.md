@@ -126,37 +126,37 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="descriptionlsid-element-propertyruleoperator-complextypesps15xsdsearchset2.htm">DescriptionLSID</a></p></td>
+<td align="left"><p><a href="descriptionlsid-element-propertyruleoperator-complextypesps15xsdsearchset2.md">DescriptionLSID</a></p></td>
 <td align="left"><p>q3:LocStringId</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="isfunction-element-propertyruleoperator-complextypesps15xsdsearchset2.htm">IsFunction</a></p></td>
+<td align="left"><p><a href="isfunction-element-propertyruleoperator-complextypesps15xsdsearchset2.md">IsFunction</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="isquoted-element-propertyruleoperator-complextypesps15xsdsearchset2.htm">IsQuoted</a></p></td>
+<td align="left"><p><a href="isquoted-element-propertyruleoperator-complextypesps15xsdsearchset2.md">IsQuoted</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="joinedbyor-element-propertyruleoperator-complextypesps15xsdsearchset2.htm">JoinedByOr</a></p></td>
+<td align="left"><p><a href="joinedbyor-element-propertyruleoperator-complextypesps15xsdsearchset2.md">JoinedByOr</a></p></td>
 <td align="left"><p>xs:boolean</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="name-element-propertyruleoperator-complextypesps15xsdsearchset2.htm">Name</a></p></td>
+<td align="left"><p><a href="name-element-propertyruleoperator-complextypesps15xsdsearchset2.md">Name</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="namelsid-element-propertyruleoperator-complextypesps15xsdsearchset2.htm">NameLSID</a></p></td>
+<td align="left"><p><a href="namelsid-element-propertyruleoperator-complextypesps15xsdsearchset2.md">NameLSID</a></p></td>
 <td align="left"><p>q4:LocStringId</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="representation-element-propertyruleoperator-complextypesps15xsdsearchset2.htm">Representation</a></p></td>
+<td align="left"><p><a href="representation-element-propertyruleoperator-complextypesps15xsdsearchset2.md">Representation</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

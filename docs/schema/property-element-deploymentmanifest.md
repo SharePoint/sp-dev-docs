@@ -126,18 +126,18 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 </tr>
 <tr class="even">
 <td align="left"><p>Id</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Unique identifier of the property.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><span sdata="link"><a href="spdictionaryentryvaluetype-simple-type-deploymentmanifest.htm">SPDictionaryEntryValueType Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spdictionaryentryvaluetype-simple-type-deploymentmanifest.md">SPDictionaryEntryValueType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration of property value types.</p>
 <p>The default type is **string**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Access</p></td>
-<td align="left"><p><span sdata="link"><a href="spdictionaryentryaccess-simple-type-deploymentmanifest.htm">SPDictionaryEntryAccess Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="spdictionaryentryaccess-simple-type-deploymentmanifest.md">SPDictionaryEntryAccess Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. An enumeration of two available access modes settings: **ReadOnly</span> and <span class="keyword">ReadWrite**.</p>
 <p>The default access mode is **ReadWrite**.</p></td>
 </tr>
@@ -167,7 +167,7 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspattachment.htm">Properties Element (DeploymentManifest - SPAttachment)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspattachment.md">Properties Element (DeploymentManifest - SPAttachment)</a></span></p></td>
 </tr>
 </tbody>
 </table>

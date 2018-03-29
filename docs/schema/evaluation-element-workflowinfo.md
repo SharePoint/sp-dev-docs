@@ -94,8 +94,8 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="activitysource-element-workflowinfo.htm">ActivitySource</a></p>
-<p><a href="hashtablesource-element-workflowinfo.htm">HashtableSource</a></p></td>
+<td align="left"><p><a href="activitysource-element-workflowinfo.md">ActivitySource</a></p>
+<p><a href="hashtablesource-element-workflowinfo.md">HashtableSource</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +109,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="datasource-element-workflowinfo.htm">DataSource</a></p></td>
+<td align="left"><p><a href="datasource-element-workflowinfo.md">DataSource</a></p></td>
 </tr>
 </tbody>
 </table>

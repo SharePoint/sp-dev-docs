@@ -85,13 +85,13 @@ Defines a row in a section of a layout.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="controlref-element.htm">ControlRef</a></p></td>
+<td align="left"><p><a href="controlref-element.md">ControlRef</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="strip-element.htm">Strip</a></p></td>
+<td align="left"><p><a href="strip-element.md">Strip</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="overflowarea-element.htm">OverflowArea</a></p></td>
+<td align="left"><p><a href="overflowarea-element.md">OverflowArea</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +105,7 @@ Defines a row in a section of a layout.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="section-element.htm">Section</a></p></td>
+<td align="left"><p><a href="section-element.md">Section</a></p></td>
 </tr>
 </tbody>
 </table>

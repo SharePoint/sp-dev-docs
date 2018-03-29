@@ -129,7 +129,7 @@ Defines a unit for use within the spinner control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="unitabbreviation-element.htm">UnitAbbreviation</a></p></td>
+<td align="left"><p><a href="unitabbreviation-element.md">UnitAbbreviation</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -143,7 +143,7 @@ Defines a unit for use within the spinner control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="spinner-element.htm">Spinner</a></p></td>
+<td align="left"><p><a href="spinner-element.md">Spinner</a></p></td>
 </tr>
 </tbody>
 </table>

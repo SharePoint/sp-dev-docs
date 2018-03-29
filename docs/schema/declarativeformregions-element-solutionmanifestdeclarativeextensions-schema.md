@@ -131,7 +131,7 @@ elements.
 <td align="left"><p>The form regions in which external data will be displayed in .</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.htm">DeclarativeFormRegion Element in DeclarativeFormRegions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.md">DeclarativeFormRegion Element in DeclarativeFormRegions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

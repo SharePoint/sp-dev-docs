@@ -133,11 +133,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="web-spmetal.htm">Web (SPMetal)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="web-spmetal.md">Web (SPMetal)</a></span></p></td>
 <td align="left"><p>Specifies the name and access level (public or internal) of the class (derived from <span sdata="cer" target="T:Microsoft.SharePoint.Linq.DataContext"><span class="nolink">DataContext</span></span>) that SPMetal generates.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="list-spmetal.htm">List (SPMetal)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="list-spmetal.md">List (SPMetal)</a></span></p></td>
 <td align="left"><p>Includes a list in code generation and modifies how code is generated for list-scoped content types.</p></td>
 </tr>
 </tbody>

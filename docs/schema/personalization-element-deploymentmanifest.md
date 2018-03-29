@@ -116,7 +116,7 @@ USAGE
 <tbody>
 <tr class="odd">
 <td align="left"><p>**WebPartId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.htm">Guid Simple Type (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Unique identifier of the Web Part for which the personalization is associated.</p></td>
 </tr>
 <tr class="even">
@@ -175,7 +175,7 @@ USAGE
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="personalizations-element-deploymentmanifest.htm">Personalizations Element (DeploymentManifest)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="personalizations-element-deploymentmanifest.md">Personalizations Element (DeploymentManifest)</a></span></p></td>
 </tr>
 </tbody>
 </table>

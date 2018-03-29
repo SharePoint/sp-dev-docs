@@ -110,7 +110,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="filter-element-list.htm">Filter</a></p></td>
+<td align="left"><p><a href="filter-element-list.md">Filter</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="view-element-list.htm">View</a></p></td>
+<td align="left"><p><a href="view-element-list.md">View</a></p></td>
 </tr>
 </tbody>
 </table>

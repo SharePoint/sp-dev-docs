@@ -185,7 +185,7 @@ Specifies a file to include within a module in a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="alluserswebpart-element-module.htm">AllUsersWebPart</a>, <span sdata="link"><a href="binaryserializedwebpart-element-module.htm">BinarySerializedWebPart Element (Module)</a></span>, <a href="navbarpage-element-module.htm">NavBarPage</a>, <a href="property-element-module.htm">Property</a>, <a href="view-element-module.htm">View</a>, <span sdata="link"><a href="webpartconnection-element-module.htm">WebPartConnection Element (Module)</a></span></p></td>
+<td align="left"><p><a href="alluserswebpart-element-module.md">AllUsersWebPart</a>, <span sdata="link"><a href="binaryserializedwebpart-element-module.md">BinarySerializedWebPart Element (Module)</a></span>, <a href="navbarpage-element-module.md">NavBarPage</a>, <a href="property-element-module.md">Property</a>, <a href="view-element-module.md">View</a>, <span sdata="link"><a href="webpartconnection-element-module.md">WebPartConnection Element (Module)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -199,7 +199,7 @@ Specifies a file to include within a module in a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="module-element-module.htm">Module</a></p></td>
+<td align="left"><p><a href="module-element-module.md">Module</a></p></td>
 </tr>
 </tbody>
 </table>
