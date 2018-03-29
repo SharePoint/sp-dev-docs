@@ -21,7 +21,7 @@ SharePoint Development Community (aka. SharePoint PnP community) is an open-sour
 
 ## Issues on SharePoint Development
 
-Found and issue with SharePoint development area around the APIs or other topics? Please let us know!
+Found and issue with SharePoint development area around the APIs, documentation or other topics? Are we missing something from the development documentation? Please let us know!
 
 * [SharePoint Dev Issue List](https://github.com/SharePoint/sp-dev-docs/issues)
 
