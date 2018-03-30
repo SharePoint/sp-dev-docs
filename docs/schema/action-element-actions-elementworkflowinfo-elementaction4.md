@@ -32,7 +32,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
     </Actions>
 ```
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

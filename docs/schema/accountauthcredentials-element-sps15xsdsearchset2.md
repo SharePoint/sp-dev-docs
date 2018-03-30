@@ -12,6 +12,8 @@ ms.assetid: 129a629d-9956-6516-c101-777230bb5461
 
 (SPS15XSDSearchSet2)
 
+## Element information
+
 <table>
 <colgroup>
 <col width="50%" />

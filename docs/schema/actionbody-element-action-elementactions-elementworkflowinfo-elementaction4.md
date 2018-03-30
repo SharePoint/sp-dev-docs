@@ -28,7 +28,7 @@ Specifies the body of a custom action.
     </Actions>
 ```
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

@@ -62,7 +62,7 @@ fields for displaying data from a parent data source.
 **Applies to**: SharePoint Server 2013
 
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Element information
 
 <table>
 <colgroup>

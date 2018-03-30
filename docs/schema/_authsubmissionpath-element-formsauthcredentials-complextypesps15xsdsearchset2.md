@@ -12,7 +12,7 @@ ms.assetid: fe8ddf47-db2b-022a-48ee-9a4526cb3344
 
 (FormsAuthCredentials complexType) (SPS15XSDSearchSet2)
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

@@ -12,7 +12,7 @@ ms.assetid: da20408a-ff9b-9f13-29e2-60520489c5d9
 
 (SecurableAuthData complexType) (SPS15XSDSearchSet2)
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

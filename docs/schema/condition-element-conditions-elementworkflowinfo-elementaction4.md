@@ -29,7 +29,7 @@ Represents a Condition statement, which is part of a rule sentence that can be d
     </WorkflowInfo>
 ```
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

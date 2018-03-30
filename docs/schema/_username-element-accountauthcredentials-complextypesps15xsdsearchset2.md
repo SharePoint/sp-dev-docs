@@ -12,7 +12,7 @@ ms.assetid: 33cd0df6-6ccf-b150-10b9-03dae7dde29c
 
 (AccountAuthCredentials complexType) (SPS15XSDSearchSet2)
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

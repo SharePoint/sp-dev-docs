@@ -27,7 +27,7 @@ The following is an example:
     <WebTemplate Id="{81dd4ae5-873b-4759-9838-4ad9c3dd2952}#MyNewSiteType" />
 ```
 
-## Element information
+## Type information
 
 <table>
 <colgroup>

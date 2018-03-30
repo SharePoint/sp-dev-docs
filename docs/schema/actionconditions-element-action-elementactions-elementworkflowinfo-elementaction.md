@@ -26,7 +26,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
     </Actions>
 ```
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

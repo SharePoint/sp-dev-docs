@@ -17,7 +17,7 @@ ms.assetid: 8c0bc6d9-6bb1-a493-4cb2-a2923f91636f
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-## Element information
+## Type information
 
 <table>
 <colgroup>

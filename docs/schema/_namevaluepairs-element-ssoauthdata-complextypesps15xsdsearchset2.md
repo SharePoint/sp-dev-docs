@@ -12,7 +12,7 @@ ms.assetid: 498f26ef-9ae6-8b80-c34f-2778e7958ba4
 
 (SsoAuthData complexType) (SPS15XSDSearchSet2)
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

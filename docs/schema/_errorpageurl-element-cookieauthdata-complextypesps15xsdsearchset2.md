@@ -12,7 +12,7 @@ ms.assetid: 777c3c72-e0ec-13e9-04dd-4b54adeaa6dd
 
 (CookieAuthData complexType) (SPS15XSDSearchSet2)
 
-<br/>
+## Element information
 
 <table>
 <colgroup>
