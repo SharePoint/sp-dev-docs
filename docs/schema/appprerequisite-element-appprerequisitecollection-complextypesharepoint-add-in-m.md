@@ -25,7 +25,7 @@ Identifies a SharePoint Feature or capability that the add-in depends on. The Sh
     <AppPrerequisite Type="type_name " ID="feature/capability_guid_or_autohosted_component_type" MinimumVersion="n.n.n.n" />
 ```
 
-<br/>
+## Element information
 
 <table>
 <colgroup>

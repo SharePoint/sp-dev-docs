@@ -57,27 +57,12 @@ The unique identifier of the app part.
 
 **Last modified:** September 16, 2015
 
-**Applies to**: apps for SharePoint | SharePoint Foundation 2013 |
-SharePoint Server 2013
+**Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>The string &quot;app&quot; appears as part, or all, of some element, attribute, and file names because SharePoint Add-ins were originally called &quot;apps for SharePoint&quot;. To ensure backward compatibility, the schemas have not been changed.</p></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE] 
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Element information
 
 <table>
 <colgroup>

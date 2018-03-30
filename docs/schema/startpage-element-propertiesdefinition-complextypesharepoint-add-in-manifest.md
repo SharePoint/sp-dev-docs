@@ -55,7 +55,7 @@ The token is automatically replaced by the actual protocol and domain (and port,
 
 If the add-in uses OAuth, the domain part of the StartPage value must exactly match the **Add-in Domain** specified when the SharePoint Add-in was registered with Microsoft Azure Access Control Service (ACS). For more information see [Register SharePoint Add-ins](../sp-add-ins/register-sharepoint-add-ins.md).
 
-<br/>
+## Element information
 
 <table>
 <colgroup>
