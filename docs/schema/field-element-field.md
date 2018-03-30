@@ -593,11 +593,7 @@ Defines a site column.
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
 <td align="left"><p>Required **Text**. The data type of the field (unless the **Field** element is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>).</p>
-<p>**Note**: In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type** attribute has a different meaning and only one possible value ("Lookup") when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. For more information about this use of **Type**, see <a href="projectedfields-element-view.md">ProjectedFields Element (View)</a>.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>**Note**: In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type** attribute has a different meaning and only one possible value ("Lookup") when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. For more information about this use of **Type**, see <a href="projectedfields-element-view.md">ProjectedFields Element (View)</a>.</p><br/>
 <p>SharePoint Foundation includes the following data types by default:</p>
 <ul>
 <li><p>**AllDayEvent**   Specifies an all day event. Corresponds to the **bit** SQL data type.</p></li>
@@ -621,8 +617,7 @@ Defines a site column.
 <li><p>**MultiChoice**   Specifies a **Choice** field that implements check boxes and allows the user to select multiple values. Corresponds to the **ntext** SQL data type and represented by the **SPFieldMultiChoice** class.</p></li>
 <li><p>**MultiColumn**   A **Note** field that emulates a field containing multiple values. For an example of a multicolumn field type, see <a href="http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205(Office.15).aspx">Custom Field Type Definition</a>. For information on multicolumn fields, see <a href="http://msdn.microsoft.com/library/62818d63-6473-42d0-b12f-251865887b33(Office.15).aspx">Custom Multicolumn Field Classes</a>. Parent type: **Note**.</p></li>
 <li><p>**Note**   Allows users to enter multiple lines of text. This field is not sortable or groupable. All text is defined to be straight ASCII characters without HTML markup. Anything that looks like HTML markup or a URL is simply quoted (for example, Server.HTMLEncode) to look like straight text. The control for editing this format is a simple TEXTAREA block. Use the **NumLines** attribute to specify the number of lines to display. Corresponds to the **ntext** SQL data type and represented by the **SPFieldMultiLineText** class.</p></li>
-<li><p>**Number**   Allows for a floating point number to be entered. This field is sortable and groupable. Numbers entered are parsed according to the current locale settings for decimal points and thousand separators. Negative numbers can be indicated by wrapping them in parentheses or by using a negative symbol. The following attributes can be used in conjunction with the **Number** attribute to specify number formatting: **Decimals**, **Div**, **Max**, **Min**, **Mult**, and **Percentage**.</p>
-<p>Corresponds to the **float** SQL data type and represented by the **SPFieldNumber** class.</p></li>
+<li><p>**Number**   Allows for a floating point number to be entered. This field is sortable and groupable. Numbers entered are parsed according to the current locale settings for decimal points and thousand separators. Negative numbers can be indicated by wrapping them in parentheses or by using a negative symbol. The following attributes can be used in conjunction with the **Number** attribute to specify number formatting: **Decimals**, **Div**, **Max**, **Min**, **Mult**, and **Percentage**. Corresponds to the **float** SQL data type and represented by the **SPFieldNumber** class.</p></li>
 <li><p>**PageSeparator**   Inserts a page break in a survey list. Represented by the **SPFieldPageSeparator** class.</p></li>
 <li><p>**Recurrence**   Used to edit and define the recurrence pattern for an item in an events list. Corresponds to the **bit** SQL data type.</p></li>
 <li><p>**Text**   A single line of text entered in an edit box. This field is sortable and groupable. Use the **MaxLength** attribute to set a maximum number of characters allowed. Corresponds to the **nvarchar** SQL data type and represented by the **SPFieldText** class.</p></li>
@@ -633,7 +628,8 @@ Defines a site column.
 <li><p>**UserMulti**   A **User** field that can contain more than one value. Parent type: **LookupMulti**.</p></li>
 <li><p>**WorkflowEventType**   Specifies a workflow event type as represented by the**SPWorkflowHistoryEventType** enumeration. Parent type: **Integer**.</p></li>
 <li><p>**WorkflowStatus**   Specifies workflow status as represented by the **SPWorkflowStatus** enumeration. Corresponds to the **nvarchar** SQL data type.</p></li>
-</ul></td>
+</ul>
+</td>
 </tr>
 <tr class="even">
 <td align="left"><p>**UniqueId**</p></td>
