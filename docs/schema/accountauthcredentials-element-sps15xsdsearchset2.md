@@ -35,11 +35,13 @@ ms.assetid: 129a629d-9956-6516-c101-777230bb5461
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="AccountAuthCredentials" type="tns:AccountAuthCredentials"></xs:element>
 ```
+
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

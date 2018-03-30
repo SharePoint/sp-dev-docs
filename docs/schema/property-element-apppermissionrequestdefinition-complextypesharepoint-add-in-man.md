@@ -42,7 +42,7 @@ Add-in Permission Property.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
         <xs:element name="Property"  type="AppPermissionPropertyDefinition"
@@ -52,15 +52,11 @@ Add-in Permission Property.
         </xs:element>
 ```        
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -93,8 +89,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

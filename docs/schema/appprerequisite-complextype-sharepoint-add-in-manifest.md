@@ -19,7 +19,7 @@ Identifies a SharePoint Feature or capability that the add-in depends on, or an 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-## Element information
+## Type information
 
 <table>
 <colgroup>
@@ -42,7 +42,7 @@ Identifies a SharePoint Feature or capability that the add-in depends on, or an 
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:complexType name="AppPrerequisite">
@@ -52,11 +52,9 @@ Identifies a SharePoint Feature or capability that the add-in depends on, or an 
     </xs:complexType>       
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-
-<br/>
 
 ### Child elements
 
@@ -65,8 +63,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

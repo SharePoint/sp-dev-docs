@@ -55,7 +55,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="Action" minOccurs="0" maxOccurs="unbounded">
@@ -116,7 +116,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
     </xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

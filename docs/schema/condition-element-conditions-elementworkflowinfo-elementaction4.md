@@ -52,7 +52,7 @@ Represents a Condition statement, which is part of a rule sentence that can be d
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:element name="Condition"      minOccurs="0"     maxOccurs="unbounded"    >
@@ -76,11 +76,9 @@ Represents a Condition statement, which is part of a rule sentence that can be d
       </xs:element>  
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-
-<br/>
 
 ### Parent elements
 

@@ -42,7 +42,7 @@ A list of prerequisites that a SharePoint Add-in depends on.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
    <xs:element name="AppPrerequisites"  type="AppPrerequisiteCollection"
@@ -52,13 +52,11 @@ A list of prerequisites that a SharePoint Add-in depends on.
    </xs:element>
 ```       
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -85,8 +83,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Child elements
-
-<br/>
 
 <table>
 <colgroup>

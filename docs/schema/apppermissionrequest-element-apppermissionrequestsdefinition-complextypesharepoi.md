@@ -42,7 +42,7 @@ The add-in permission requests.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
    <xs:element name="AppPermissionRequest"  type="AppPermissionRequestDefinition"
@@ -52,7 +52,7 @@ The add-in permission requests.
    </xs:element>
 ```        
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

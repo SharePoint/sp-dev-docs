@@ -19,7 +19,7 @@ Identifies a locale in [Internet Engineering Task Force (IETF)](http://tools.iet
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-## Element information
+## Type information
 
 <table>
 <colgroup>
@@ -42,7 +42,7 @@ Identifies a locale in [Internet Engineering Task Force (IETF)](http://tools.iet
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:complexType name="SupportedLocaleDefinition">
@@ -50,11 +50,9 @@ Identifies a locale in [Internet Engineering Task Force (IETF)](http://tools.iet
     </xs:complexType>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-
-<br/>
 
 ### Child elements
 
@@ -63,8 +61,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

@@ -40,14 +40,14 @@ The top level node of the manifest of a SharePoint Add-in.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="App" type="AppDefinition" >
     </xs:element>     
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

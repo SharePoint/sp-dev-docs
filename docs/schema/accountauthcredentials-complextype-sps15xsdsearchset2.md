@@ -12,6 +12,8 @@ ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
 
 (SPS15XSDSearchSet2)
 
+## Type information
+
 <table>
 <colgroup>
 <col width="50%" />
@@ -34,7 +36,7 @@ ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
 </table>
 
 
-<br/>
+## Definition
 
 ```XML 
     <xs:complexType name="AccountAuthCredentials">
@@ -48,6 +50,8 @@ ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
         </xs:complexContent>
     </xs:complexType>
 ```
+
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

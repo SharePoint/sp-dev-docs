@@ -42,7 +42,7 @@ ms.assetid: 7a57baca-5ac3-1ebd-80cf-3b29f398889e
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
         <xs:element name="RemoteEndpoints"  type="RemoteEndpointsDefinition"
@@ -52,15 +52,11 @@ ms.assetid: 7a57baca-5ac3-1ebd-80cf-3b29f398889e
         </xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -87,8 +83,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Child elements
-
-<br/>
 
 <table>
 <colgroup>

@@ -40,7 +40,7 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:complexType name="AppDefinition">     
@@ -103,11 +103,10 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
     </xs:complexType>
 ```          
 
-<br/>
+
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-
-<br/>
 
 ### Child elements
 

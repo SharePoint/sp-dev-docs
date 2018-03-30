@@ -42,7 +42,7 @@ A list of resources that a SharePoint Add-in needs access to.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
   <xs:element name="AppPermissionRequests"  type="AppPermissionRequestsDefinition"
@@ -52,7 +52,7 @@ A list of resources that a SharePoint Add-in needs access to.
   </xs:element>
 ```        
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

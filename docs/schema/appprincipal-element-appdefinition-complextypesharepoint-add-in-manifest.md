@@ -42,23 +42,18 @@ The add-in principal information.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="AppPrincipal" type="AppPrincipalDefinition" minOccurs="1" maxOccurs="1">
     </xs:element>     
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -85,8 +80,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Child elements
-
-<br/>
 
 <table>
 <colgroup>

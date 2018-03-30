@@ -35,13 +35,13 @@ ms.assetid: b9837b86-12c9-edbd-33d4-4be294fb917f
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="_NameValuePairs" type="q7:ArrayOfKeyValueOfstringstring" minOccurs="0"></xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

@@ -19,8 +19,6 @@ Identifies a SharePoint Feature or capability that the add-in depends on. The Sh
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-<br/>
-
 ```XML 
     <AppPrerequisite Type="type_name " ID="feature/capability_guid_or_autohosted_component_type" MinimumVersion="n.n.n.n" />
 ```
@@ -48,19 +46,17 @@ Identifies a SharePoint Feature or capability that the add-in depends on. The Sh
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="AppPrerequisite" type="AppPrerequisite" maxOccurs="500"></xs:element>     
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -93,8 +89,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

@@ -40,7 +40,7 @@ ms.assetid: 4bd0d112-c662-5713-ace1-8c19829c4323
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:complexType name="AppPermissionPropertyDefinition">
@@ -55,11 +55,9 @@ ms.assetid: 4bd0d112-c662-5713-ace1-8c19829c4323
     </xs:complexType>
 ```          
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-
-<br/>
 
 ### Child elements
 

@@ -35,13 +35,13 @@ ms.assetid: 13b2532b-740a-ceb8-5016-e735269e9d8d
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="_SsoAppId" type="xs:string" minOccurs="0"></xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

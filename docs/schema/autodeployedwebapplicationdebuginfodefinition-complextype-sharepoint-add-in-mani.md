@@ -19,7 +19,7 @@ The add-in principal information used for debugging purposes.
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-## Element information
+## Type information
 
 <table>
 <colgroup>
@@ -42,7 +42,7 @@ The add-in principal information used for debugging purposes.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:complexType name="AutoDeployedWebApplicationDebugInfoDefinition">
@@ -61,11 +61,9 @@ The add-in principal information used for debugging purposes.
     </xs:complexType>
 ```          
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-
-<br/>
 
 ### Child elements
 
@@ -74,8 +72,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

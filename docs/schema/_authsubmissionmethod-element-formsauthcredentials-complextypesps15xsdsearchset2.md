@@ -35,13 +35,13 @@ ms.assetid: 8dd91808-4eaf-e13a-70d4-8ff2638afcb0
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="_AuthSubmissionMethod" type="xs:string" minOccurs="0"></xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

@@ -42,7 +42,7 @@ Declares an individual remote endpoint that the SharePoint Add-in may access thr
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
    <xs:element name="RemoteEndpoint"  type="RemoteEndpointDefinition"
@@ -52,15 +52,11 @@ Declares an individual remote endpoint that the SharePoint Add-in may access thr
    </xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -93,8 +89,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

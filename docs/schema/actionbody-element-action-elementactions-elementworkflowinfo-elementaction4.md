@@ -51,7 +51,7 @@ Specifies the body of a custom action.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:element name="ActionBody"  minOccurs="0"  maxOccurs="1"  >
@@ -64,7 +64,7 @@ Specifies the body of a custom action.
     </xs:element>  
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

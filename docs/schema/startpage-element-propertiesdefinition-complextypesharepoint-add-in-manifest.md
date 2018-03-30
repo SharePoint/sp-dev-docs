@@ -78,22 +78,18 @@ If the add-in uses OAuth, the domain part of the StartPage value must exactly ma
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="StartPage" type="UrlElementDefinition" minOccurs="1" maxOccurs="1" >
          </xs:element>     
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>

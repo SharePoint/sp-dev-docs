@@ -102,16 +102,9 @@ code] "Copy code")Copy code</span>
 </tbody>
 </table>
 
+## Definition
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<span codelanguage="xmlLang"></span>
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <xs:element name="ActivityBody"   minOccurs="1"   maxOccurs="1" >
                <xs:complexType>
                <xs:sequence>
@@ -121,14 +114,11 @@ code] "Copy code")Copy code</span>
            </xs:sequence>
            </xs:complexType>
       </xs:element>  
+```
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-class="keyword">sequence</span>, **minOccurs**,
-**maxOccurs**, and <span
-class="keyword">choice</span>, see the definition section.
 
 ### Parent elements
 

@@ -42,22 +42,18 @@ The friendly title of the SharePoint Add-in. The value cannot exceed 256 charact
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="Title"  type="TitleDefinition"  minOccurs="1"  maxOccurs="1">
     </xs:element>     
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>

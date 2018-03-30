@@ -42,21 +42,17 @@ Please do not use this element. It has been deprecated in favor of the **Support
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="SupportedLanguages" type="SupportedLanguagesDefinition" minOccurs="0" maxOccurs="1"></xs:element>     
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>

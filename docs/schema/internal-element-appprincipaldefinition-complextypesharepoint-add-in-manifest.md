@@ -42,7 +42,7 @@ The presence of this element means that the add-in is SharePoint-hosted, rather 
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="Internal" >
@@ -57,15 +57,11 @@ The presence of this element means that the add-in is SharePoint-hosted, rather 
     </xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -98,8 +94,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

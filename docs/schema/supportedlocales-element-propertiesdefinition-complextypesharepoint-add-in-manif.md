@@ -42,21 +42,17 @@ Specifies the locales that the add-in supports. This element is required for add
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="SupportedLocales" type="SupportedLocalesDefinition" minOccurs="0" maxOccurs="1"></xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -83,8 +79,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Child elements
-
-<br/>
 
 <table>
 <colgroup>

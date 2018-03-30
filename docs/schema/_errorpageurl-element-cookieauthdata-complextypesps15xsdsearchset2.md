@@ -35,13 +35,13 @@ ms.assetid: 777c3c72-e0ec-13e9-04dd-4b54adeaa6dd
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="_ErrorPageUrl" type="xs:string" minOccurs="0"></xs:element>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

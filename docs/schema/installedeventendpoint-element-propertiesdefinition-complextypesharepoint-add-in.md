@@ -42,7 +42,7 @@ The Url of the installed event receiver endpoint.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
    <xs:element name="InstalledEventEndpoint"  type="UrlElementDefinition"
@@ -52,15 +52,11 @@ The Url of the installed event receiver endpoint.
    </xs:element>
 ```        
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>

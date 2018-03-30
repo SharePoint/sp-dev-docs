@@ -49,7 +49,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:element name="ActionConditions"  minOccurs="0"  maxOccurs="1"  >
@@ -62,7 +62,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
     </xs:element>  
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 

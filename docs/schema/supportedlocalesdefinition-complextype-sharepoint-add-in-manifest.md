@@ -19,7 +19,7 @@ Specifies the locales that an add-in supports.
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-## Element information
+## Type information
 
 <table>
 <colgroup>
@@ -42,7 +42,7 @@ Specifies the locales that an add-in supports.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:complexType name="SupportedLocalesDefinition">
@@ -52,15 +52,11 @@ Specifies the locales that an add-in supports.
     </xs:complexType>
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Child elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -83,6 +79,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
+
+<br/>
 
 ### Attributes
 

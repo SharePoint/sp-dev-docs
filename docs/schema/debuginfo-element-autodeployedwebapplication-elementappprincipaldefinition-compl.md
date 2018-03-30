@@ -42,21 +42,17 @@ For possible future use only.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="DebugInfo"  type="AutoDeployedWebApplicationDebugInfoDefinition" minOccurs="0"></xs:element>     
 ```
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -89,8 +85,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

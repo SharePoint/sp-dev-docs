@@ -42,7 +42,7 @@ Specifies a locale that the add-in supports. This element is required for add-in
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML 
     <xs:element name="SupportedLocale" type="SupportedLocaleDefinition" minOccurs="1" maxOccurs="256"></xs:element>
@@ -53,15 +53,11 @@ Specifies a locale that the add-in supports. This element is required for add-in
 > [!WARNING] 
 > Although the **maxOccurs** attribute in the XSD for the add-in manifest markup is set to 256, the Office Store may set a lower effective maximum. As of the release of SharePoint 2013, there is an effective maximum of 25 **SupportedLocale** elements in the parent **SupportedLocales** element.
 
-<br/>
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -94,8 +90,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>
