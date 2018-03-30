@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 099a9e03-4cb7-6ccb-83dd-756498aeeb1d
 ---
 
-# SupportedLocale element 
+# SupportedLocale element (SupportedLocalesDefinition complexType) 
 
-(SupportedLocalesDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -119,7 +119,8 @@ None.
 </tbody>
 </table>
 
-
+<br/>
+<br/>
 
 
 

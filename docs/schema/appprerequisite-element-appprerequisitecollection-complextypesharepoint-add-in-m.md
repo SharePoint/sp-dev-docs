@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 791be402-981f-519e-fcde-f24cc3cb4139
 ---
 
-# AppPrerequisite element 
+# AppPrerequisite element (AppPrerequisiteCollection complexType) 
 
-(AppPrerequisiteCollection complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 

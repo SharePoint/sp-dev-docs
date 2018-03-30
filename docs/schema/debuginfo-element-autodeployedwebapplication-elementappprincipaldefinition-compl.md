@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 0317f92e-a422-0431-2693-514aa9892c9e
 ---
 
-# DebugInfo element 
+# DebugInfo element (AutoDeployedWebApplication element) 
 
-(AutoDeployedWebApplication element) (AppPrincipalDefinition complexType) (SharePoint Add-in Manifest)
+(AppPrincipalDefinition complexType) (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -128,7 +128,8 @@ None.
 </tbody>
 </table>
 
-
+<br/>
+<br/>
 
 
 

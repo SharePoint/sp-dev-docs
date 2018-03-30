@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: c4ca4165-ed3a-7ded-d8e3-0a841955d109
 ---
 
-# Title element 
+# Title element (PropertiesDefinition complexType) 
 
-(PropertiesDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -89,7 +89,8 @@ None.
 
 None.
 
-
+<br/>
+<br/>
 
 
 

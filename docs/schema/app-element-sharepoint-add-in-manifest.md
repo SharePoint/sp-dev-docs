@@ -59,8 +59,6 @@ None.
 
 ### Child elements
 
-<br/>
-
 <table>
 <colgroup>
 <col width="25%" />
@@ -106,8 +104,6 @@ None.
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>
@@ -171,7 +167,7 @@ None.
 </tr>
 </tbody>
 </table>
-
+<br/><br/>
 
 
 

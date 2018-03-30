@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 4194e44b-f2af-1db4-aad5-9b7b511b4348
 ---
 
-# UninstallingEventEndpoint element 
+# UninstallingEventEndpoint element (PropertiesDefinition complexType) 
 
-(PropertiesDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -92,7 +92,8 @@ None.
 
 None.
 
-
+<br/>
+<br/>
 
 
 

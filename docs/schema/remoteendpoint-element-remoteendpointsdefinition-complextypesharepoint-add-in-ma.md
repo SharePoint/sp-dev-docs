@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 779c6b36-6789-43d9-b5ef-f6de23ed5543
 ---
 
-# RemoteEndpoint element 
+# RemoteEndpoint element (RemoteEndpointsDefinition complexType) 
 
-(RemoteEndpointsDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -118,7 +118,8 @@ None.
 </tbody>
 </table>
 
-
+<br/>
+<br/>
 
 
 

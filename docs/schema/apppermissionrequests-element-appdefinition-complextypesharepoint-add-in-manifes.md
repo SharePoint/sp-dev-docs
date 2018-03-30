@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 4e617622-78d3-3d23-677d-9957eb1fb107
 ---
 
-# AppPermissionRequests element 
+# AppPermissionRequests element (AppDefinition complexType) 
 
-(AppDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -58,8 +58,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Parent elements
 
-<br/>
-
 <table>
 <colgroup>
 <col width="33%" />
@@ -86,8 +84,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Child elements
 
-<br/>
-
 <table>
 <colgroup>
 <col width="33%" />
@@ -113,8 +109,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>

@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 62302903-e97a-a9a3-a64e-13176a7c4e1e
 ---
 
-# WebTemplate element 
+# WebTemplate element (PropertiesDefinition complexType) 
 
-(PropertiesDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -124,7 +124,8 @@ None.
 </tbody>
 </table>
 
-
+<br/>
+<br/>
 
 
 

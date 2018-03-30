@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: d6ae1710-208e-abc8-e029-21662990ad24
 ---
 
-# SettingsPage element 
+# SettingsPage element (PropertiesDefinition complexType) 
 
-(PropertiesDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -90,7 +90,8 @@ None.
 None.
 
 
-
+<br/>
+<br/>
 
 
 

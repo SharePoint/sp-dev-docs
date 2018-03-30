@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 69cd6425-593f-c412-cb30-5e59ed341330
 ---
 
-# Property element 
+# Property element (AppPermissionRequestDefinition complexType) 
 
-(AppPermissionRequestDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -125,7 +125,8 @@ None.
 </tbody>
 </table>
 
-
+<br/>
+<br/>
 
 
 

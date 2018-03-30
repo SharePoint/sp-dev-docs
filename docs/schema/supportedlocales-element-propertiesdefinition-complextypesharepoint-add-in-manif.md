@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 49bde91a-8d7a-be17-4c91-82c9c19f0f61
 ---
 
-# SupportedLocales element 
+# SupportedLocales element (PropertiesDefinition complexType) 
 
-(PropertiesDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -117,7 +117,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 None.
 
-
+<br/>
+<br/>
 
 
 

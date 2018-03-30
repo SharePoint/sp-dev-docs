@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 516ed600-9f2c-10b4-0110-a8237d4da382
 ---
 
-# RemoteWebApplication element 
+# RemoteWebApplication element (AppPrincipalDefinition complexType) 
 
-(AppPrincipalDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -116,7 +116,8 @@ None.
 </tbody>
 </table>
 
-
+<br/>
+<br/>
 
 
 

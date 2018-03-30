@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: d9694afe-e700-81a8-b76b-c42ebd1ff5f3
 ---
 
-# Internal element 
+# Internal element (AppPrincipalDefinition complexType) 
 
-(AppPrincipalDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -131,7 +131,8 @@ None.
 </table>
 
 
-
+<br/>
+<br/>
 
 
 

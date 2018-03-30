@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 09a93d44-d295-47bb-f91c-d243178b0f53
 ---
 
-# UpgradedEventEndpoint element 
+# UpgradedEventEndpoint element (PropertiesDefinition complexType) 
 
-(PropertiesDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -93,7 +93,8 @@ None.
 None.
 
 
-
+<br/>
+<br/>
 
 
 

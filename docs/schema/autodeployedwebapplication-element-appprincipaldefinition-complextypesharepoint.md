@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: fbdf0dec-58f9-e419-c543-7729f9ee7523
 ---
 
-# AutoDeployedWebApplication element 
+# AutoDeployedWebApplication element (AppPrincipalDefinition complexType) 
 
-(AppPrincipalDefinition complexType) (SharePoint Add-in Manifest)
+(SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -115,7 +115,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 None.
 
-
+<br/>
+<br/>
 
 
 
