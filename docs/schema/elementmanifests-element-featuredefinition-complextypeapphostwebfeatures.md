@@ -15,7 +15,7 @@ ms.assetid: 5f720156-326c-d29e-a8f6-5ba12842ce0e
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
 
-<br/> 
+## Element information
 
 <table>
 <colgroup>
@@ -38,17 +38,16 @@ ms.assetid: 5f720156-326c-d29e-a8f6-5ba12842ce0e
 </tbody>
 </table>
 
-<br/> 
+## Definition
 
 ```XML
     <xs:element name="ElementManifests" type="ElementManifestReferences" minOccurs="0" maxOccurs="1"></xs:element>
 ```
 
-<br/> 
+## Elements and attributes 
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-
-<br/> 
+ 
 
 ### Parent elements
 
@@ -110,7 +109,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
+<br/> 
+<br/> 
 
 
 
