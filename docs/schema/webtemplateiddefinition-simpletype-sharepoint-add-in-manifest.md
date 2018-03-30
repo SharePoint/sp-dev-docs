@@ -50,7 +50,7 @@ The following is an example:
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="WebTemplateIdDefinition">       

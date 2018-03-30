@@ -42,7 +42,7 @@ A Guid in the form of XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX. It may be surrounded by `
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="GUID">  

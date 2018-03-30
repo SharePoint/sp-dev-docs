@@ -42,7 +42,7 @@ The add-in principal identifier.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="AppPermissionAppPrincipalDefinition">     

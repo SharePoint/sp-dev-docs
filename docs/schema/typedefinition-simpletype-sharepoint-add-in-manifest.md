@@ -40,7 +40,7 @@ ms.assetid: f4d23160-091c-ca02-4997-0ea3dc33024f
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
       <xs:simpleType  name="TypeDefinition">          

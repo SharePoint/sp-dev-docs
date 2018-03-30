@@ -40,7 +40,7 @@ ms.assetid: 38cd6fd4-21f0-1ca0-9e87-fba903746f2c
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="RestrictedInt">          

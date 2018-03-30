@@ -42,7 +42,7 @@ The type for add-in URLs of an auto-deployed web application. If the add-in has 
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="AutoDeployedWebApplicationDebugInfoAppUrlDefinition">

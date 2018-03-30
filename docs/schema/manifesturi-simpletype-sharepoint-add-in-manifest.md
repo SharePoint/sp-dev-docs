@@ -40,7 +40,7 @@ ms.assetid: a6861f44-9d24-40f6-efc5-89033c101b4d
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="ManifestUri">          

@@ -42,7 +42,7 @@ Specifies the friendly name of the SharePoint Add-in that appears in the user in
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="TitleDefinition">

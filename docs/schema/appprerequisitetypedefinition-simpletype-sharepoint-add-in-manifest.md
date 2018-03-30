@@ -42,7 +42,7 @@ The type of a prerequisite for a SharePoint Add-in.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="AppPrerequisiteTypeDefinition">

@@ -42,7 +42,7 @@ A permission to be requested by the add-in.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="AppPermissionRightDefinition">  

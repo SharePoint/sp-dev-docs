@@ -42,7 +42,7 @@ The add-in principal type.
 </tbody>
 </table>
 
-<br/>
+## Definition
 
 ```XML
     <xs:simpleType  name="AppPrincipalTypeDefinition">
