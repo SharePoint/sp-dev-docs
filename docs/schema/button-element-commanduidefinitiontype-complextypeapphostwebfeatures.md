@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 36526b46-2384-3dfc-e5cf-68a5782f3fb0
 ---
 
-# Button element 
+# Button element (CommandUIDefinitionType complexType) 
 
-(CommandUIDefinitionType complexType) (AppHostWebFeatures)
+(AppHostWebFeatures)
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 

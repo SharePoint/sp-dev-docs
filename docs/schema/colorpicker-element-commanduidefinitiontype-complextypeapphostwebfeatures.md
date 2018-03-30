@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: a1eecc4c-e732-c2ed-2323-1828f69dccbf
 ---
 
-# ColorPicker element 
+# ColorPicker element (CommandUIDefinitionType complexType) 
 
-(CommandUIDefinitionType complexType) (AppHostWebFeatures)
+(AppHostWebFeatures)
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 

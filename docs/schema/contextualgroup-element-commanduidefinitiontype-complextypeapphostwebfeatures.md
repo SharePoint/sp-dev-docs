@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: a1098092-2383-d963-4fbd-8bd953a3c9b9
 ---
 
-# ContextualGroup element 
+# ContextualGroup element (CommandUIDefinitionType complexType) 
 
-(CommandUIDefinitionType complexType) (AppHostWebFeatures)
+(AppHostWebFeatures)
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 

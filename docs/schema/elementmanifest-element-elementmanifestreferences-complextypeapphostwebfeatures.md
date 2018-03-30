@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 1f090666-9cc5-cd07-bb45-4d68fe51367e
 ---
 
-# ElementManifest element 
+# ElementManifest element (ElementManifestReferences complexType) 
 
-(ElementManifestReferences complexType) (AppHostWebFeatures)
+(AppHostWebFeatures)
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 

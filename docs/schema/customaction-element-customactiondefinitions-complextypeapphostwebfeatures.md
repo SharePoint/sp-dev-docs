@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: cb7b6514-f038-eb1a-88a8-9515425b150e
 ---
 
-# CustomAction element 
+# CustomAction element (CustomActionDefinitions complexType) 
 
-(CustomActionDefinitions complexType) (AppHostWebFeatures)
+(AppHostWebFeatures)
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
