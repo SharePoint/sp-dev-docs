@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,53 +8,11 @@ localization_priority: Normal
 ms.assetid: 9ad6ac17-b255-4711-b2e1-a9cfeeea353f
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Field Element 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(DeploymentManifest - SPFieldCollection)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Field Element (DeploymentManifest - SPFieldCollection)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Represents an instance of a Windows SharePoint Services 3.0 Field object
 (<span sdata="cer" target="T:Microsoft.SharePoint.SPField"><span
@@ -71,47 +27,47 @@ collection.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Field&quot; 
-        type=&quot;SPField&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
+&lt;xs:element name="Field" 
+        type="SPField" 
+        minOccurs="0" maxOccurs="unbounded" 
 /&gt;
 
 USAGE
 &lt;Fields&gt;
         &lt;Field
-                ID=&quot;Guid&quot;
-                FieldId=&quot;Guid&quot;
-                Name=&quot;xs:string&quot;
-                Value=&quot;xs:string&quot;
-                DisplayName=&quot;xs:string&quot;
-                RowOrdinal=&quot;xs:int&quot;
-                RowOrdinal2=&quot;xs:int&quot;
-                Type=&quot;xs:string&quot;
-                ColName=&quot;xs:string&quot;
-                ColName2=&quot;xs:string&quot;
-                Title=&quot;xs:string&quot;
-                Description=&quot;xs:string&quot;
-                DefaultValue=&quot;xs:string&quot;
-                DefaultFormula=&quot;xs:string&quot;
-                FromBaseType=&quot;xs:string&quot;
-                Sealed=&quot;xs:string&quot;
-                CanToggleHidden=&quot;xs:string&quot;
-                DisplaySize=&quot;xs:string&quot;
-                Required=&quot;xs:string&quot;
-                ReadOnly=&quot;xs:string&quot;
-                Hidden=&quot;xs:string&quot;
-                Direction=&quot;xs:string&quot;
-                IMEMode=&quot;xs:string&quot;
-                SortableBySchema=&quot;xs:string&quot;
-                Sortable=&quot;xs:string&quot;
-                FilterableBySchema=&quot;xs:string&quot;
-                Filterable=&quot;xs:string&quot;
-                FilterableNoRecurrenceBySchema=&quot;xs:string&quot;
-                FilterableNoRecurrence=&quot;xs:string&quot;
-                Reorderable=&quot;xs:string&quot;
-                Format=&quot;xs:string&quot;
-                FillInChoice=&quot;xs:string&quot;
-                SchemaXml=&quot;xs:string&quot;
+                ID="Guid"
+                FieldId="Guid"
+                Name="xs:string"
+                Value="xs:string"
+                DisplayName="xs:string"
+                RowOrdinal="xs:int"
+                RowOrdinal2="xs:int"
+                Type="xs:string"
+                ColName="xs:string"
+                ColName2="xs:string"
+                Title="xs:string"
+                Description="xs:string"
+                DefaultValue="xs:string"
+                DefaultFormula="xs:string"
+                FromBaseType="xs:string"
+                Sealed="xs:string"
+                CanToggleHidden="xs:string"
+                DisplaySize="xs:string"
+                Required="xs:string"
+                ReadOnly="xs:string"
+                Hidden="xs:string"
+                Direction="xs:string"
+                IMEMode="xs:string"
+                SortableBySchema="xs:string"
+                Sortable="xs:string"
+                FilterableBySchema="xs:string"
+                Filterable="xs:string"
+                FilterableNoRecurrenceBySchema="xs:string"
+                FilterableNoRecurrence="xs:string"
+                Reorderable="xs:string"
+                Format="xs:string"
+                FillInChoice="xs:string"
+                SchemaXml="xs:string"
         /&gt;
 &lt;/Fields&gt;</code></pre></td>
 </tr>
@@ -214,7 +170,7 @@ class="nolink">SPField</span></span>
 <tr class="odd">
 <td align="left"><p>**FromBaseType**</p></td>
 <td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Indicates the base type from which the field derives. Base types are defined in <a href="http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6(Office.15).aspx">FldTypes.xml</a>.</p></td>
+<td align="left"><p>Optional. Indicates the base type from which the field derives. Base types are defined in <a href="https://msdn.microsoft.com/en-us/library/ms469928(v=office.14).aspx">FldTypes.xml</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sealed**</p></td>
@@ -337,22 +293,12 @@ class="nolink">SPField</span></span>
 </tbody>
 </table>
 
+<br/>
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## See also
 
-#### Reference
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPField"><span
-class="nolink">SPField</span></span>
-
-#### Concepts
-
-[DeploymentManifest
-Schema](deploymentmanifest-schema.md)</span>
-
-#### Other resources
-
-[FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6(Office.15).aspx)
 
 
 

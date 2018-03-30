@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,53 +10,9 @@ api_name:
 ms.assetid: c168e8bc-8aba-4b72-a9c4-a0ad7a4aff9a
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Field Element (Field Types)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Field Element (Field Types)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Represents a characteristic of the field type.
 
@@ -70,7 +24,7 @@ Represents a characteristic of the field type.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>&lt;Field
-  Name=&quot;Text&quot;&gt;
+  Name="Text"&gt;
 &lt;/Field&gt;</code></pre></td>
 </tr>
 </tbody>
@@ -169,11 +123,11 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="odd">
 <td align="left"><p>**FieldTypeClass**</p></td>
-<td align="left"><p>Optional **String</span>, <em>but required for all your custom field types</em>. Represents the strong name of the field type class library. **&quot;</span><span class="label">FieldTypeClass</span>**&quot;</span> includes the class name and assembly name with **Version</span>, **Culture</span>, and **PublicKeyToken**, for example, &lt;Field Name=&quot;FieldTypeClass&quot;&gt;CustomFieldTypes.RegularExpression.RegularExpressionField, CustomFieldTypes.RegularExpression, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57e55365ec0ce80a&lt;/Field&gt; (Only the fully qualified class name is included for field types built into SharePoint Foundation.)</p></td>
+<td align="left"><p>Optional **String</span>, <em>but required for all your custom field types</em>. Represents the strong name of the field type class library. **"</span><span class="label">FieldTypeClass</span>**"</span> includes the class name and assembly name with **Version</span>, **Culture</span>, and **PublicKeyToken**, for example, &lt;Field Name="FieldTypeClass"&gt;CustomFieldTypes.RegularExpression.RegularExpressionField, CustomFieldTypes.RegularExpression, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57e55365ec0ce80a&lt;/Field&gt; (Only the fully qualified class name is included for field types built into SharePoint Foundation.)</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**FieldEditorUserControl**</p></td>
-<td align="left"><p>Optional **String</span>. Represents the relative path to a <em>field_type</em>FieldEditor.ascx file that defines a control that appears, in SharePoint Foundation, in the <span class="ui">Additional Column Settings</span> section on the <span class="ui">New Site Column </span>page. The control enables column creators to set, for a particular column, the variable properties of the field type. E.g. <span class="code">&quot;/_controltemplates/RegularExpressionFieldEditor.ascx&quot;</span>. If there is no &lt;Field Name=&quot;FieldEditorUserControl&quot;&gt; element, then the special properties of the field type are rendered by the <span sdata="link"><a href="propertyschema-element-field-types.md">PropertySchema Element (Field Types)</a>** element.</p>
+<td align="left"><p>Optional **String</span>. Represents the relative path to a <em>field_type</em>FieldEditor.ascx file that defines a control that appears, in SharePoint Foundation, in the <span class="ui">Additional Column Settings</span> section on the <span class="ui">New Site Column </span>page. The control enables column creators to set, for a particular column, the variable properties of the field type. E.g. <span class="code">"/_controltemplates/RegularExpressionFieldEditor.ascx"</span>. If there is no &lt;Field Name="FieldEditorUserControl"&gt; element, then the special properties of the field type are rendered by the <span sdata="link"><a href="propertyschema-element-field-types.md">PropertySchema Element (Field Types)</a>** element.</p>
 <p>**FieldEditorUserControl** should be a fixed, nonlocalizable string.</p></td>
 </tr>
 <tr class="odd">
@@ -182,12 +136,12 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="even">
 <td align="left"><p>**InternalType**</p></td>
-<td align="left"><p>Optional **String**. Represents an internal base type. <em>Do not use a</em> &lt;Field Name=&quot;InternalType&quot;&gt;<em>element in your custom field type definitions.</em></p></td>
+<td align="left"><p>Optional **String**. Represents an internal base type. <em>Do not use a</em> &lt;Field Name="InternalType"&gt;<em>element in your custom field type definitions.</em></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentType**</p></td>
 <td align="left"><p>Required **String</span> (but can be an empty string). Represents the name of the type from which the field class is derived. The possible values are exactly the same as the possible values for the **Type </span>attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a>** element. If the field type is not derived from another type, then the value is an empty string:</p>
-<p>DOCS-LESSTHANField Name=&quot;ParentType&quot;DOCS-GREATERTHANDOCS-LESSTHAN/FieldDOCS-GREATERTHAN. <em>It must never be empty in your custom field types. All custom types inherit from another type.</em></p>
+<p>DOCS-LESSTHANField Name="ParentType"DOCS-GREATERTHANDOCS-LESSTHAN/FieldDOCS-GREATERTHAN. <em>It must never be empty in your custom field types. All custom types inherit from another type.</em></p>
 <p>In the SharePoint Foundation object model **ParentType</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.BaseRenderingTypeName"><span class="nolink">BaseRenderingTypeName</span>**.</p></td>
 </tr>
 <tr class="even">
@@ -212,7 +166,7 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="even">
 <td align="left"><p>**SQLType**</p></td>
-<td align="left"><p>Optional **String**. Represents the SQL data type that will be used to store the data in the content database. <em>Do not use a</em> &lt;Field Name=&quot;SQLType&quot;&gt;<em>element in your custom field type definitions.</em></p></td>
+<td align="left"><p>Optional **String**. Represents the SQL data type that will be used to store the data in the content database. <em>Do not use a</em> &lt;Field Name="SQLType"&gt;<em>element in your custom field type definitions.</em></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sortable**</p></td>
@@ -220,18 +174,18 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="even">
 <td align="left"><p>**TypeDisplayName**</p></td>
-<td align="left"><p>Required **String</span>. Represents the display name of the field type in the user interface (UI). In SharePoint Foundation, it appears in the <span class="ui">Type</span> column on the <span class="ui">Customize</span> [list] page (listedit.aspx). It is also used in place of **&quot;</span><span class="label">TypeShortDescription</span>**&quot;** if the latter is not present.</p>
-<p>**&quot;</span><span class="label">TypeDisplayName</span>**&quot;** should be a localizable string.</p></td>
+<td align="left"><p>Required **String</span>. Represents the display name of the field type in the user interface (UI). In SharePoint Foundation, it appears in the <span class="ui">Type</span> column on the <span class="ui">Customize</span> [list] page (listedit.aspx). It is also used in place of **"</span><span class="label">TypeShortDescription</span>**"** if the latter is not present.</p>
+<p>**"</span><span class="label">TypeDisplayName</span>**"** should be a localizable string.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**TypeName**</p></td>
 <td align="left"><p>Required **String**. Represents the name of the field type. This must be unique among all field type names on the SharePoint server farm.</p>
-<p>**&quot;TypeName&quot;** should be a fixed, nonlocalizable string.</p></td>
+<p>**"TypeName"** should be a fixed, nonlocalizable string.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**TypeShortDescription**</p></td>
-<td align="left"><p>Optional **String</span>. Represents the short description of the field type that is displayed in the UI. In SharePoint Foundation it appears with a radio button in the <span class="ui">Name and Type </span>section of the <span class="ui">New Site Column</span> and <span class="ui">Create Column</span> pages and in the <span class="ui">Type</span> column of the <span class="ui">Site Column Gallery</span>. If there is no &lt;Field Name=&quot;TypeShortDescription&quot;&gt; element, then **&quot;TypeDisplayName&quot;** is used.</p>
-<p>**&quot;</span><span class="label">TypeShortDescription</span>**&quot;** should be a localizable string.</p></td>
+<td align="left"><p>Optional **String</span>. Represents the short description of the field type that is displayed in the UI. In SharePoint Foundation it appears with a radio button in the <span class="ui">Name and Type </span>section of the <span class="ui">New Site Column</span> and <span class="ui">Create Column</span> pages and in the <span class="ui">Type</span> column of the <span class="ui">Site Column Gallery</span>. If there is no &lt;Field Name="TypeShortDescription"&gt; element, then **"TypeDisplayName"** is used.</p>
+<p>**"</span><span class="label">TypeShortDescription</span>**"** should be a localizable string.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**UserCreatable**</p></td>

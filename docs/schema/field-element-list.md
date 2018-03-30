@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,53 +12,9 @@ api_type:
 ms.assetid: 2d8b69c1-0e47-4f76-bb95-8d8a43fd6cfd
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Field Element (List)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Field Element (List)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Defines the internal data types used in the list infrastructure of a
 SharePoint Web site. A field is a column or attribute of information
@@ -74,106 +28,106 @@ that a user can add to a list.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>&lt;Field
-  Aggregation = &quot;sum&quot; | &quot;count&quot; | &quot;average&quot; | &quot;min&quot; | &quot;max&quot; | &quot;merge&quot; | &quot;plaintext&quot; | &quot;first&quot; | &quot;last&quot;
-  AllowDeletion = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AllowHyperlink = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AllowMultiVote = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AppendOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AuthoringInfo = &quot;Text&quot;
-  BaseType = &quot;Integer&quot; | &quot;Text&quot;
-  CalType = &quot;Integer&quot;
-  CanToggleHidden = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ClassInfo = &quot;Text&quot;
-  ColName = &quot;Text&quot;  ColName2 = &quot;Text&quot;
-  Commas = &quot;TRUE&quot; | &quot;FALSE&quot;  Customization = &quot;Text&quot;
-  Decimals = &quot;Integer&quot;
-  Description = &quot;Text&quot;
-  Dir = &quot;Text&quot;  Direction = &quot;Text&quot;
-  DisplaceOnUpgrade = &quot;TRUE&quot; | &quot;FALSE&quot;
-  DisplayImage = &quot;Text&quot;
-  DisplayName = &quot;Text&quot;
-  DisplayNameSrcField = &quot;Text&quot;  DisplaySize = &quot;Integer&quot;
-  Div = &quot;Number&quot;
-  EnableLookup = &quot;TRUE&quot; | &quot;FALSE&quot;  EnforceUniqueValues = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ExceptionImage = &quot;Text&quot;
-  FieldRef = &quot;Text&quot;
-  FillInChoice = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Filterable = &quot;TRUE&quot; | &quot;FALSE&quot;
-  FilterableNoRecurrence = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ForcedDisplay = &quot;Text&quot;  ForcePromoteDemote = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Format = &quot;Text&quot;
-  FromBaseType = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Group = &quot;Text&quot;
-  HeaderImage = &quot;Text&quot;
-  Height = &quot;Integer&quot;
-  Hidden = &quot;TRUE&quot; | &quot;FALSE&quot;
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ID = &quot;Text&quot;  Id = &quot;Text&quot;
-  IMEMode = &quot;inactive&quot;
-  Indexed = &quot;TRUE&quot; | &quot;FALSE&quot;
-  IsolateStyles = &quot;TRUE&quot; | &quot;FALSE&quot;  IsRelationship = &quot;TRUE&quot; | &quot;FALSE&quot;
-  JoinColName = &quot;Text&quot;
-  JoinRowOrdinal = &quot;Integer&quot;
-  JoinType = &quot;INNER&quot; | &quot;LEFT OUTER&quot; | &quot;RIGHT OUTER&quot;
-  LCID = &quot;Integer&quot;  LinkToItem = &quot;TRUE&quot; | &quot;FALSE&quot;  LinkToItemAllowed = &quot;Text&quot;
-  List = &quot;Text&quot;  ListItemMenu = &quot;TRUE&quot; | &quot;FALSE&quot;  ListItemMenuAllowed = &quot;Text
-  Max = &quot;Number&quot;
-  MaxLength = &quot;Integer&quot;
-  Min = &quot;Number&quot; 
-  Mult = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Name = &quot;Text&quot;
-  NegativeFormat = &quot;MinusSign&quot; | &quot;Parens&quot;
-  Node = &quot;Text&quot;
-  NoEditFormBreak = &quot;TRUE&quot; | &quot;FALSE&quot;
-  NumLines = &quot;Integer&quot;
-  Percentage = &quot;TRUE&quot; | &quot;FALSE&quot;
-  PIAttribute = &quot;Text&quot;
-  PITarget = &quot;Text&quot;
-  PrependId = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Presence = &quot;TRUE&quot; | &quot;FALSE&quot;
-  PrimaryKey = &quot;TRUE&quot; | &quot;FALSE&quot;
-  PrimaryPIAttribute = &quot;Text&quot;
-  PrimaryPITarget = &quot;Text&quot;
-  ReadOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ReadOnlyEnforced = &quot;TRUE&quot; | &quot;FALSE&quot;  RelationshipDeleteBehavior = &quot;Text&quot;
-  RenderXMLUsingPattern = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Required = &quot;TRUE&quot; | &quot;FALSE&quot;
-  RestrictedMode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ResultType = &quot;Text&quot;
-  RichText = &quot;TRUE&quot; | &quot;FALSE&quot;
-  RichTextMode = &quot;Text&quot;
-  RowOrdinal = &quot;Integer&quot;
-  Sealed = &quot;TRUE&quot; | &quot;FALSE&quot;
-  SeparateLine = &quot;TRUE&quot; | &quot;FALSE&quot;
-  SetAs = &quot;Text&quot;
-  ShowAddressBookButton = &quot;TRUE&quot; | &quot;FALSE&quot;  ShowAlways = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowField = &quot;Text&quot; | &quot;Choice&quot; | &quot;Counter&quot;
-  ShowInDisplayForm = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInEditForm = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInFileDlg = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInListSettings = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInNewForm = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInVersionHistory = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInViewForms = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Sortable = &quot;TRUE&quot; | &quot;FALSE&quot;
-  SourceID = &quot;Text&quot;
-  StaticName = &quot;Text&quot;
-  StorageTZ = &quot;UTC&quot; | &quot;Abstract&quot;
-  StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;
-  SuppressNameDisplay = &quot;TRUE&quot; | &quot;FALSE&quot;
-  TextOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Title = &quot;Text&quot; 
-  Type = &quot;Data_Type&quot;
-  UniqueId = &quot;Text&quot;
-  UnlimitedLengthInDocumentLibrary = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncodeAsUrl = &quot;TRUE&quot; | &quot;FALSE&quot;
-  UserSelectionMode = &quot;Text&quot;
-  UserSelectionScope = &quot;Integer&quot;  Version = &quot;Text&quot;
-  Viewable = &quot;TRUE&quot; | &quot;FALSE&quot;  WebId = &quot;Text&quot;
-  Width = &quot;Integer&quot;
-  WikiLinking = &quot;TRUE&quot; | &quot;FALSE&quot;
-  XName = &quot;Text&quot;&gt;
+  Aggregation = "sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
+  AllowDeletion = "TRUE" | "FALSE"
+  AllowHyperlink = "TRUE" | "FALSE"
+  AllowMultiVote = "TRUE" | "FALSE"
+  AppendOnly = "TRUE" | "FALSE"
+  AuthoringInfo = "Text"
+  BaseType = "Integer" | "Text"
+  CalType = "Integer"
+  CanToggleHidden = "TRUE" | "FALSE"
+  ClassInfo = "Text"
+  ColName = "Text"  ColName2 = "Text"
+  Commas = "TRUE" | "FALSE"  Customization = "Text"
+  Decimals = "Integer"
+  Description = "Text"
+  Dir = "Text"  Direction = "Text"
+  DisplaceOnUpgrade = "TRUE" | "FALSE"
+  DisplayImage = "Text"
+  DisplayName = "Text"
+  DisplayNameSrcField = "Text"  DisplaySize = "Integer"
+  Div = "Number"
+  EnableLookup = "TRUE" | "FALSE"  EnforceUniqueValues = "TRUE" | "FALSE"
+  ExceptionImage = "Text"
+  FieldRef = "Text"
+  FillInChoice = "TRUE" | "FALSE"
+  Filterable = "TRUE" | "FALSE"
+  FilterableNoRecurrence = "TRUE" | "FALSE"
+  ForcedDisplay = "Text"  ForcePromoteDemote = "TRUE" | "FALSE"
+  Format = "Text"
+  FromBaseType = "TRUE" | "FALSE"
+  Group = "Text"
+  HeaderImage = "Text"
+  Height = "Integer"
+  Hidden = "TRUE" | "FALSE"
+  HTMLEncode = "TRUE" | "FALSE"
+  ID = "Text"  Id = "Text"
+  IMEMode = "inactive"
+  Indexed = "TRUE" | "FALSE"
+  IsolateStyles = "TRUE" | "FALSE"  IsRelationship = "TRUE" | "FALSE"
+  JoinColName = "Text"
+  JoinRowOrdinal = "Integer"
+  JoinType = "INNER" | "LEFT OUTER" | "RIGHT OUTER"
+  LCID = "Integer"  LinkToItem = "TRUE" | "FALSE"  LinkToItemAllowed = "Text"
+  List = "Text"  ListItemMenu = "TRUE" | "FALSE"  ListItemMenuAllowed = "Text
+  Max = "Number"
+  MaxLength = "Integer"
+  Min = "Number" 
+  Mult = "TRUE" | "FALSE"
+  Name = "Text"
+  NegativeFormat = "MinusSign" | "Parens"
+  Node = "Text"
+  NoEditFormBreak = "TRUE" | "FALSE"
+  NumLines = "Integer"
+  Percentage = "TRUE" | "FALSE"
+  PIAttribute = "Text"
+  PITarget = "Text"
+  PrependId = "TRUE" | "FALSE"
+  Presence = "TRUE" | "FALSE"
+  PrimaryKey = "TRUE" | "FALSE"
+  PrimaryPIAttribute = "Text"
+  PrimaryPITarget = "Text"
+  ReadOnly = "TRUE" | "FALSE"
+  ReadOnlyEnforced = "TRUE" | "FALSE"  RelationshipDeleteBehavior = "Text"
+  RenderXMLUsingPattern = "TRUE" | "FALSE"
+  Required = "TRUE" | "FALSE"
+  RestrictedMode = "TRUE" | "FALSE"
+  ResultType = "Text"
+  RichText = "TRUE" | "FALSE"
+  RichTextMode = "Text"
+  RowOrdinal = "Integer"
+  Sealed = "TRUE" | "FALSE"
+  SeparateLine = "TRUE" | "FALSE"
+  SetAs = "Text"
+  ShowAddressBookButton = "TRUE" | "FALSE"  ShowAlways = "TRUE" | "FALSE"
+  ShowField = "Text" | "Choice" | "Counter"
+  ShowInDisplayForm = "TRUE" | "FALSE"
+  ShowInEditForm = "TRUE" | "FALSE"
+  ShowInFileDlg = "TRUE" | "FALSE"
+  ShowInListSettings = "TRUE" | "FALSE"
+  ShowInNewForm = "TRUE" | "FALSE"
+  ShowInVersionHistory = "TRUE" | "FALSE"
+  ShowInViewForms = "TRUE" | "FALSE"
+  Sortable = "TRUE" | "FALSE"
+  SourceID = "Text"
+  StaticName = "Text"
+  StorageTZ = "UTC" | "Abstract"
+  StripWS = "TRUE" | "FALSE"
+  SuppressNameDisplay = "TRUE" | "FALSE"
+  TextOnly = "TRUE" | "FALSE"
+  Title = "Text" 
+  Type = "Data_Type"
+  UniqueId = "Text"
+  UnlimitedLengthInDocumentLibrary = "TRUE" | "FALSE"
+  URLEncode = "TRUE" | "FALSE"
+  URLEncodeAsUrl = "TRUE" | "FALSE"
+  UserSelectionMode = "Text"
+  UserSelectionScope = "Integer"  Version = "Text"
+  Viewable = "TRUE" | "FALSE"  WebId = "Text"
+  Width = "Integer"
+  WikiLinking = "TRUE" | "FALSE"
+  XName = "Text"&gt;
 &lt;/Field&gt;</code></pre></td>
 </tr>
 </tbody>
@@ -229,7 +183,7 @@ that a user can add to a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**AuthoringInfo**</p></td>
-<td align="left"><p>Optional **Text</span>. A descriptive string that is displayed in the field editing pages to identify the field and its purpose; for example, the **LinkTitle** field has the authoring info &quot;(link to item)&quot;. This attribute is usually used if a field of the same name exists for another purpose.</p></td>
+<td align="left"><p>Optional **Text</span>. A descriptive string that is displayed in the field editing pages to identify the field and its purpose; for example, the **LinkTitle** field has the authoring info "(link to item)". This attribute is usually used if a field of the same name exists for another purpose.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**BaseType**</p></td>
@@ -367,7 +321,7 @@ that a user can add to a list.
 <li><p>**ISO8601Basic**   Use the abbreviated form of 8601 date/time formats: YYYYMMDDTHHMMSSZ. This is the format used for vCard/iCal.</p></li>
 </ul>
 <p>For Choice fields, this attribute can be set to **Dropdown</span> (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image</span>, which displays the URL as <span class="code">&lt;IMG SRC=&quot;URL&quot; ALT=&quot;Description&quot;&gt;**.</p></td>
+<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image</span>, which displays the URL as <span class="code">&lt;IMG SRC="URL" ALT="Description"&gt;**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FromBaseType**</p></td>
@@ -406,7 +360,7 @@ that a user can add to a list.
 <td align="left"><p>Optional **Text**. Specifies the Input Method Editor (IME) mode bias to use for the field. The IME allows for conversion of keystrokes between languages when one writing system has more characters than can be encoded for the given keyboard.</p>
 <p>Possible values include the following:</p>
 <ul>
-<li><p>**auto</span>   Not used. To specify this IME mode, set the **IMEMode** property value to an empty string (&quot;&quot;).</p></li>
+<li><p>**auto</span>   Not used. To specify this IME mode, set the **IMEMode** property value to an empty string ("").</p></li>
 <li><p>**active**   All characters are typed through the IME, but users can still deactivate the IME.</p></li>
 <li><p>**inactive**   Characters are typed without the IME, although users can still activate the IME.</p></li>
 </ul></td>
@@ -638,7 +592,7 @@ that a user can add to a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**StorageTZ**</p></td>
-<td align="left"><p>Specifies how date/time values are stored. When **StorageTZ</span> is set to **UTC</span>, the date/time is handled as Coordinated Universal Time (UTC). To denote that a date/time value refers to &quot;abstract&quot; time, meaning that the date/time is stored in the database as entered by the user without conversion or storage of the local time zone, omit the **StorageTZ** attribute.</p></td>
+<td align="left"><p>Specifies how date/time values are stored. When **StorageTZ</span> is set to **UTC</span>, the date/time is handled as Coordinated Universal Time (UTC). To denote that a date/time value refers to "abstract" time, meaning that the date/time is stored in the database as entered by the user without conversion or storage of the local time zone, omit the **StorageTZ** attribute.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**StripWS**</p></td>
@@ -671,7 +625,7 @@ that a user can add to a list.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value (&quot;Lookup&quot;) when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.md">ProjectedFields Element (View)</a></span> for more information about this use of **Type**.</p></td>
+<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value ("Lookup") when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.md">ProjectedFields Element (View)</a></span> for more information about this use of **Type**.</p></td>
 </tr>
 </tbody>
 </table>
@@ -688,7 +642,7 @@ that a user can add to a list.
 <li><p>**Counter</span>   Generally used only for the internal ID field. Its integer value is set automatically to be unique with respect to every other item in the current list. The **Counter</span> type is always read-only and cannot be set through a form post. This field is sortable but not groupable. Corresponds to the **int** SQL data type.</p></li>
 <li><p>**CrossProjectLink</span>   Used to connect an event in a SharePoint list with a Meeting Workspace site; refers specifically to the field type of the checkbox used in New and Edit Item forms to create a Meeting Workspace site for the item. Corresponds to the **bit</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCrossProjectLink"><span class="nolink">SPFieldCrossProjectLink</span>** class.</p></li>
 <li><p>**Currency</span>   Allows for a currency value to be entered. Each currency field is tied to a specific locale's currency. In all other respects, it is treated like the **Number</span> field type. Use the **LCID</span> attribute to indicate a currency of a specific locale. The **Decimals</span>, **Max</span>, and **Min</span> attributes can be used for currency types. This field is sortable and groupable. Corresponds to the **float</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCurrency"><span class="nolink">SPFieldCurrency</span>** class.</p></li>
-<li><p>**DateTime</span>   Allows for storage of a fully qualified date or time of day. Use the **Format</span> attribute to specify date formatting, and use the **StorageTZ</span> attribute to determine how date/time values are stored. This field is sortable and groupable. For Display mode, the order of date formatting derives from the regional settings (&quot;M/D/Y&quot; or &quot;D/M/Y&quot;). In Edit mode (or in New mode for **Default</span> element value), date/times are rendered in universal format: M/D/Y hh:mm am/pm. Corresponds to the **datetime</span> SQL data type and represented the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldDateTime"><span class="nolink">SPFieldDateTime</span>** class.</p></li>
+<li><p>**DateTime</span>   Allows for storage of a fully qualified date or time of day. Use the **Format</span> attribute to specify date formatting, and use the **StorageTZ</span> attribute to determine how date/time values are stored. This field is sortable and groupable. For Display mode, the order of date formatting derives from the regional settings ("M/D/Y" or "D/M/Y"). In Edit mode (or in New mode for **Default</span> element value), date/times are rendered in universal format: M/D/Y hh:mm am/pm. Corresponds to the **datetime</span> SQL data type and represented the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldDateTime"><span class="nolink">SPFieldDateTime</span>** class.</p></li>
 <li><p>**File</span>   Contains a file. Corresponds to the **uniqueidentifier** SQL data type.</p></li>
 <li><p>**GridChoice</span>   Contains a rating scale for surveys. Corresponds to the **ntext</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldRatingScale"><span class="nolink">SPFieldRatingScale</span>** class.</p></li>
 <li><p>**Guid</span>   Allows for globally unique identifiers (GUIDs). Corresponds to the **uniqueidentifier** SQL data type.</p></li>
@@ -706,7 +660,7 @@ that a user can add to a list.
 <li><p>**Text</span>   A single line of text entered in an edit box. This field is sortable and groupable. Use the **MaxLength</span> attribute to set a maximum number of characters allowed. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldText"><span class="nolink">SPFieldText</span>** class.</p></li>
 <li><p>**ThreadIndex</span>   Contains the ID that indicates the relative position of a message within a conversation thread. Corresponds to the **varbinary** SQL data type.</p></li>
 <li><p>**Threading</span>   The **Threading</span> field type is used in the creation and display of threaded discussion-like views. Any list can contain a threading column, but a special UI is generated when it is used. (It is never displayed as a standard editable field in a form nor as a normal column in a view.) If a sort is performed on a threading field, a pre-order traversal of all the records in a parent-child relationship is returned. This is accomplished by saving the concatenation of the creation date and ID number of all the parent records of a particular record. Corresponds to the **varchar** SQL data type.</p></li>
-<li><p>**URL</span>   Used to create a freeform hyperlink. A URL field is displayed as <span class="code">&lt;A HREF=&quot;URL&quot;&gt;</span><span class="placeholder">Description</span><span class="code">&lt;/A&gt;</span>. If no description is given, it is displayed as <span class="code">&lt;A HREF=&quot;</span><span class="placeholder">URL</span><span class="code">&quot;&gt;</span><span class="placeholder">URL</span><span class="code">&lt;/A&gt;</span>. The URL text is itself stored in the URLs (DocMd) table, which stores all the URLs in SharePoint databases on the server. This is done so that any URLs that are local on the server can be updated through link fixup when their destination moves. When a record with a URL field contained within it is deleted, the corresponding referenced record from the URL table is also deleted. This field is sortable and groupable. (The sort is defined according to the textual description rather than the contents of the URL; if no description is given, it sorts the same as blank.) When **Type</span> is **URL</span>, the **LinkType</span> attribute can be used to specify the type of link. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUrl"><span class="nolink">SPFieldUrl</span>** class.</p></li>
+<li><p>**URL</span>   Used to create a freeform hyperlink. A URL field is displayed as <span class="code">&lt;A HREF="URL"&gt;</span><span class="placeholder">Description</span><span class="code">&lt;/A&gt;</span>. If no description is given, it is displayed as <span class="code">&lt;A HREF="</span><span class="placeholder">URL</span><span class="code">"&gt;</span><span class="placeholder">URL</span><span class="code">&lt;/A&gt;</span>. The URL text is itself stored in the URLs (DocMd) table, which stores all the URLs in SharePoint databases on the server. This is done so that any URLs that are local on the server can be updated through link fixup when their destination moves. When a record with a URL field contained within it is deleted, the corresponding referenced record from the URL table is also deleted. This field is sortable and groupable. (The sort is defined according to the textual description rather than the contents of the URL; if no description is given, it sorts the same as blank.) When **Type</span> is **URL</span>, the **LinkType</span> attribute can be used to specify the type of link. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUrl"><span class="nolink">SPFieldUrl</span>** class.</p></li>
 <li><p>**User</span>   A **Lookup</span> field that references the UserInfo database table. Corresponds to the **int</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUser"><span class="nolink">SPFieldUser</span>** class.</p></li>
 <li><p>**UserMulti</span>   A **User</span> field that can contain more than one value. Parent type: **LookupMulti**.</p></li>
 <li><p>**WorkflowEventType</span>   Specifies a workflow event type as represented by the <span sdata="cer" target="T:Microsoft.SharePoint.Workflow.SPWorkflowHistoryEventType"><span class="nolink">SPWorkflowHistoryEventType</span></span> enumeration. Parent type: **Integer**.</p></li>
@@ -727,7 +681,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**UserSelectionMode**</p></td>

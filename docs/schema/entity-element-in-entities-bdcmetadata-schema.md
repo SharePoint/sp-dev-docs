@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,89 +10,33 @@ localization_priority: Normal
 ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Entity Element in Entities 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(BDCMetadata Schema)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Entity Element in Entities (BDCMetadata Schema)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Specifies an external content type.
 
-Namespace: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-Schema: BDCMetadata
+**Schema**: BDCMetadata
 
-<span codelanguage="xmlLang"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;Entity Namespace = &quot;String&quot; Version = &quot;String&quot; EstimatedInstanceCount = &quot;Integer&quot; DefaultOperationMode = &quot;String&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Entity&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<Entity Namespace = "String" Version = "String" EstimatedInstanceCount = "Integer" DefaultOperationMode = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Entity>
 
+```
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
 
-The following sections describe attributes, child elements, and parent
-elements.
+The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -108,46 +50,14 @@ elements.
 <td align="left"><p>Required.</p>
 <p>The namespace that this external content type belongs to.</p>
 <p>Attribute type: **String**</p>
-<div class="alert">
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>The namespace should not contain the special character &quot;**DOCS-ASTERISK**&quot;.</p></td>
-</tr>
-</tbody>
-</table>
-</div></td>
+<p>**Note**: The namespace should not contain the special character "**DOCS-ASTERISK**".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Version</p></td>
 <td align="left"><p>Required.</p>
 <p>The version number of this external content type.</p>
 <p>Attribute type: **String**</p>
-<div class="alert">
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src=".." title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder</span> or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.</p></td>
-</tr>
-</tbody>
-</table>
-</div></td>
+<p>**Warning**: When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder** or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>EstimatedInstanceCount</p></td>
@@ -200,19 +110,7 @@ elements.
 <td align="left"><p>Required.</p>
 <p>The name of the external content type.</p>
 <p>Attribute type: **String**</p>
-<div class="alert">
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>The name of an external content type should not contain the asterisk special character &quot;**DOCS-ASTERISK**&quot;.</p></td>
+<p>**Note**: The name of an external content type should not contain the asterisk special character "**DOCS-ASTERISK**".</p></td>
 </tr>
 </tbody>
 </table>
@@ -234,7 +132,9 @@ elements.
 </tbody>
 </table>
 
-#### Child elements
+<br/>
+
+### Child elements
 
 <table>
 <colgroup>
@@ -279,7 +179,9 @@ elements.
 </tbody>
 </table>
 
-#### Parent elements
+<br/>
+
+### Parent elements
 
 <table>
 <colgroup>
@@ -300,13 +202,11 @@ elements.
 </tbody>
 </table>
 
+<br/>
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## See also
 
-#### Other resources
-
-[What Are External Content
-Types?](http://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
+- [What Are External Content Types?](http://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
 
 
 

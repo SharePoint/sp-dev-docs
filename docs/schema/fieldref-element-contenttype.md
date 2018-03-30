@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,53 +10,9 @@ localization_priority: Normal
 ms.assetid: 1b4c2bfa-7a75-4143-bf7f-050509e4607d
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# FieldRef Element (ContentType)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># FieldRef Element (ContentType)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Specifies a column to reference in this content type.
 
@@ -70,35 +24,35 @@ Specifies a column to reference in this content type.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>&lt;FieldRef
-  Aggregation=&quot;sum&quot; | &quot;count&quot; | &quot;average&quot; | &quot;min&quot; | &quot;max&quot; | &quot;merge&quot; | &quot;plaintext&quot; | &quot;first&quot; | &quot;last&quot;
-  Customization=&quot;Text&quot;
-  DefaultValue=&quot;Text&quot;
-  Description=&quot;Text&quot;
-  DisplayName=&quot;Text&quot;
-  Format=&quot;Text&quot;
-  Filterable=&quot;TRUE&quot; | &quot;FALSE&quot;
-  FilterableNoRecurrence=&quot;TRUE&quot; | &quot;FALSE&quot;
-  FromBaseType=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Hidden=&quot;TRUE&quot; | &quot;FALSE&quot; | &quot;orResource&quot;
-  ID=&quot;Text&quot;
-  Locked=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Name=&quot;Text&quot;
-  Node=&quot;Text&quot;
-  NumLines=&quot;Integer&quot;
-  PIAttribute=&quot;Text&quot;
-  PITarget=&quot;Text&quot;
-  PrimaryPIAttribute=&quot;Text&quot;
-  PrimaryPITarge=&quot;Text&quot;
-  ReadOnly=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ReadOnlyClient=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Required=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Sealed=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInDisplayForm=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInEditForm=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInFileDlg=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInListSettings=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInNewForm=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Sortable=&quot;TRUE&quot; | &quot;FALSE&quot;&gt;
+  Aggregation="sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
+  Customization="Text"
+  DefaultValue="Text"
+  Description="Text"
+  DisplayName="Text"
+  Format="Text"
+  Filterable="TRUE" | "FALSE"
+  FilterableNoRecurrence="TRUE" | "FALSE"
+  FromBaseType="TRUE" | "FALSE"
+  Hidden="TRUE" | "FALSE" | "orResource"
+  ID="Text"
+  Locked="TRUE" | "FALSE"
+  Name="Text"
+  Node="Text"
+  NumLines="Integer"
+  PIAttribute="Text"
+  PITarget="Text"
+  PrimaryPIAttribute="Text"
+  PrimaryPITarge="Text"
+  ReadOnly="TRUE" | "FALSE"
+  ReadOnlyClient="TRUE" | "FALSE"
+  Required="TRUE" | "FALSE"
+  Sealed="TRUE" | "FALSE"
+  ShowInDisplayForm="TRUE" | "FALSE"
+  ShowInEditForm="TRUE" | "FALSE"
+  ShowInFileDlg="TRUE" | "FALSE"
+  ShowInListSettings="TRUE" | "FALSE"
+  ShowInNewForm="TRUE" | "FALSE"
+  Sortable="TRUE" | "FALSE"&gt;
 &lt;/FieldRef&gt;</code></pre></td>
 </tr>
 </tbody>
@@ -167,7 +121,7 @@ Specifies a column to reference in this content type.
 <p>This is the format used for vCard/iCal.</p></li>
 </ul>
 <p>For **Choice</span> fields, this attribute can be set to **Dropdown</span> (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image**, which displays the URL as &lt;IMG SRC=&quot;URL&quot; ALT=&quot;Description&quot;&gt;.</p></td>
+<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image**, which displays the URL as &lt;IMG SRC="URL" ALT="Description"&gt;.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Filterable**</p></td>
