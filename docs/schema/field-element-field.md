@@ -355,10 +355,6 @@ Defines a site column.
 <td align="left"><p>Optional **Boolean**. **TRUE** if the column is indexed for use in view filters.</p>
 <p>**Note**: Although you can index a Lookup column to improve performance, using an indexed Lookup column to prevent exceeding the list view threshold does not work. To avoid exceeding the list view threshold, use another type of column as the primary or secondary index.</p></td>
 </tr>
-</tbody>
-</table>
-</div></td>
-</tr>
 <tr class="even">
 <td align="left"><p>**IsolateStyles**</p></td>
 <td align="left"><p>Optional **Boolean**. For a **Text** field whose **RichText** attribute is **TRUE** and whose **RichTextMode** attribute is **FullHtml**, this attribute specifies that a server will rewrite the HTML of the field to ensure that it will not interfere with the rendering of the surrounding page.</p></td>
