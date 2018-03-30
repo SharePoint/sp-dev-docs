@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,96 +12,44 @@ api_type:
 ms.assetid: 3f9dd191-ab3a-4e6a-93c8-d477418cccb8
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# FlyoutAnchor Element
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># FlyoutAnchor Element</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Defines the anchor point for a flyout menu.
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;FlyoutAnchor
-     Alt=&quot;Text&quot;
-     CachMenuVersions=&quot;TRUE | FALSE&quot;
-     Command=&quot;Text&quot;
-     CommandType=&quot;General | OptionSelect | IgnoredByMenu&quot;
-     CommandMenuClose=&quot;Text&quot;
-     Id=&quot;Text&quot;
-     Image16by16=&quot;Url&quot;
-     Image16by16Class=&quot;CSS Class Selector&quot;
-     Image16by16Left=&quot;Negative Integer&quot;
-     Image16by16Top=&quot;Negative Integer&quot;
-     Image32by32=&quot;Url&quot;
-     Image32by32Class=&quot;CSS Class Selector&quot;
-     Image32by32Left=&quot;Negative Integer&quot;
-     Image32by32Top=&quot;Negative Integer&quot;
-     LabelText=&quot;Text&quot;
-     PopulateDynamically=&quot;TRUE | FALSE&quot;
-     PopulateQueryCommand=&quot;Text&quot;
-     PopulateOnlyOnce=&quot;TRUE | FALSE&quot;
-     Sequence=&quot;Integer&quot;
-     TemplateAlias=&quot;Text&quot;
-     ToolTipImage32by32=&quot;Url&quot;
-     ToolTipImage32by32Class=&quot;Text&quot;
-     ToolTipImage32by32Left=&quot;Negative Integer&quot;
-     ToolTipImage32by32Top=&quot;Negative Integer&quot;
-     ToolTipTitle=&quot;Text&quot;
-     ToolTipDescription=&quot;Text&quot;
-     ToolTipHelpKeyWord=&quot;Text&quot;
-     ToolTipShortcutKey=&quot;Text&quot;
-/&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
+```
+<FlyoutAnchor
+     Alt="Text"
+     CachMenuVersions="TRUE | FALSE"
+     Command="Text"
+     CommandType="General | OptionSelect | IgnoredByMenu"
+     CommandMenuClose="Text"
+     Id="Text"
+     Image16by16="Url"
+     Image16by16Class="CSS Class Selector"
+     Image16by16Left="Negative Integer"
+     Image16by16Top="Negative Integer"
+     Image32by32="Url"
+     Image32by32Class="CSS Class Selector"
+     Image32by32Left="Negative Integer"
+     Image32by32Top="Negative Integer"
+     LabelText="Text"
+     PopulateDynamically="TRUE | FALSE"
+     PopulateQueryCommand="Text"
+     PopulateOnlyOnce="TRUE | FALSE"
+     Sequence="Integer"
+     TemplateAlias="Text"
+     ToolTipImage32by32="Url"
+     ToolTipImage32by32Class="Text"
+     ToolTipImage32by32Left="Negative Integer"
+     ToolTipImage32by32Top="Negative Integer"
+     ToolTipTitle="Text"
+     ToolTipDescription="Text"
+     ToolTipHelpKeyWord="Text"
+     ToolTipShortcutKey="Text"
+/>
+```
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -147,11 +93,11 @@ Defines the anchor point for a flyout menu.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the control, such as &quot;Ribbon.WikiPageTab.Share.AlertMe&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the control, such as "Ribbon.WikiPageTab.Share.AlertMe".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image16by16**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as &quot;/_layouts/1033/images/formatmap16x16.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap16x16.png".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Image16by16Class**</p></td>
@@ -160,12 +106,12 @@ Defines the anchor point for a flyout menu.
 <tr class="odd">
 <td align="left"><p>**Image16by16Left**</p></td>
 <td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16** attribute points to an image file that contains images for many icons.</p>
-<p>The value of the **Image16by16Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img</span> tag. For example, setting the **Image16by16Left</span> attribute to &quot;-176&quot; and the **Image16by16Top** attribute to &quot;-48&quot; results in an inline style that is similar to the one in the following HTML markup:</p>
+<p>The value of the **Image16by16Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img</span> tag. For example, setting the **Image16by16Left</span> attribute to "-176" and the **Image16by16Top** attribute to "-48" results in an inline style that is similar to the one in the following HTML markup:</p>
 <div class="code">
 <span codelanguage="html"></span>
 HTML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code>&lt;img src=&quot;/_layouts/1033/images/formatmap16x16.png&quot; style=&quot;position: absolute;left: -176px;top: -48px;&quot; /&gt;</code></pre>
+<pre><code><img src="/_layouts/1033/images/formatmap16x16.png" style="position: absolute;left: -176px;top: -48px;" /></code></pre>
 </div></td>
 </tr>
 <tr class="even">
@@ -174,7 +120,7 @@ HTML 
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Image32by32Class**</p></td>
@@ -210,7 +156,7 @@ HTML 
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -238,7 +184,7 @@ HTML 
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is &quot;ALT + J&quot;. The tooltip will display the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 </tbody>
 </table>
