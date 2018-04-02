@@ -64,10 +64,10 @@ element is used to specify the actions to be executed when a context
 becomes active and the actions to be taken when a context is
 deactivated.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

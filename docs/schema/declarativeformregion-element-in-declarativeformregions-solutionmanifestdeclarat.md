@@ -63,10 +63,10 @@ class="keyword">DOCS-LESSTHANDeclarativeFormRegionDOCS-GREATERTHAN</span>
 element is used to describe the form region in which external data is
 displayed in Microsoft Outlook 2010.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

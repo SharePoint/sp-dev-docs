@@ -62,10 +62,10 @@ See [LobSystemInstances Element in LobSystem
 (BDCMetadata Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md)</span>
 for more information.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-Schema: BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="other"></span>
 <table>

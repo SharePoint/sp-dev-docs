@@ -63,10 +63,10 @@ LocalizedDisplayNames (BDCMetadata
 Schema)](localizeddisplayname-element-in-localizeddisplaynames-bdcmetadata-schema.md)</span> for more
 details.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-Schema: BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="other"></span>
 <table>

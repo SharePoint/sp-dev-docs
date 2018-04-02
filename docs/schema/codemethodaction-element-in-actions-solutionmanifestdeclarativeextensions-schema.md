@@ -64,10 +64,10 @@ element is used to execute a custom code action or to execute one of the
 predefined actions provided by Microsoft Business Connectivity Services
 (BCS).
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

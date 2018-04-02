@@ -62,10 +62,10 @@ The **DOCS-LESSTHANPictureDOCS-GREATERTHAN**
 element is used to describe the icon to use for a form region in
 Microsoft Outlook 2010.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

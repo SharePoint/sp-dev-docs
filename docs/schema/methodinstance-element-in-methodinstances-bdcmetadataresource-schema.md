@@ -63,10 +63,10 @@ combination, for an [MethodInstance Element in
 MethodInstances (BDCMetadata
 Schema)](methodinstance-element-in-methodinstances-bdcmetadata-schema.md)</span>.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-Schema: BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="other"></span>
 <table>

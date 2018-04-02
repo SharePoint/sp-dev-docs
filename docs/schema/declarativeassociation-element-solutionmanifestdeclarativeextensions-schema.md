@@ -69,10 +69,10 @@ set or get the Outlook property that maps to the entity instance
 reference of the association. If set, this is used by the External Item
 Picker functionality.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

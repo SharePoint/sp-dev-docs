@@ -62,10 +62,10 @@ The <span
 class="keyword">DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN</span>
 element is used to execute a URL-based action in Microsoft Outlook 2010.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

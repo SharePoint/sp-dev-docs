@@ -63,10 +63,10 @@ class="keyword">DOCS-LESSTHANExpressionParameterDOCS-GREATERTHAN</span>
 element defines a parameter for an action that can take a value from the
 context of the current item.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

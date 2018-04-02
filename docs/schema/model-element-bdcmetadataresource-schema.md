@@ -62,10 +62,10 @@ Specifies localized display names, properties, and permissions, in any
 combination, for a [Model Element (BDCMetadata
 Schema)](model-element-bdcmetadata-schema.md)</span>.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-Schema: BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="other"></span>
 <table>

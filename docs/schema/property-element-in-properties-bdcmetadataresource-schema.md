@@ -62,10 +62,10 @@ See [Property Element in Properties (BDCMetadata
 Schema)](property-element-in-properties-bdcmetadata-schema.md)</span> for more
 details.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-Schema: BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="other"></span>
 <table>

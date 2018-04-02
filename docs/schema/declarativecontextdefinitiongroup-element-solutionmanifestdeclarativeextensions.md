@@ -68,10 +68,10 @@ containins a list of context definitions for one of the Outlook Item
 Types, such as Contact, Task, Post, or Calendar, or if showing data in a
 taskpane, an **EntityView**.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

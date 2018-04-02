@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 The **ConstantParameter** element defines a
 constant parameter for an action.
 
-Namespace:
+**Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-Schema: SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="other"></span>
 <table>

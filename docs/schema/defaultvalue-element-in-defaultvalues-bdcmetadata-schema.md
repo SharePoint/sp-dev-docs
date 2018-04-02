@@ -79,9 +79,9 @@ MethodInstance object. At run-time, depending on which MethodInstance
 object the client executes, a parameter will be instantiated based on
 the corresponding default values.
 
-Namespace: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-Schema: BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="other"></span>
 <table>
