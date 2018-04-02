@@ -53,7 +53,7 @@ The add-in principal type.
     </xs:simpleType>
 ```
 
-<br/>
+## Enumeration values
 
 <table>
 <colgroup>
@@ -78,6 +78,9 @@ The add-in principal type.
 </tbody>
 </table>
 
+<br/>
+
+<br/>
 
 
 

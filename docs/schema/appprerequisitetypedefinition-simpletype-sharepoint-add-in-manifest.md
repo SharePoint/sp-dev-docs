@@ -54,7 +54,7 @@ The type of a prerequisite for a SharePoint Add-in.
     </xs:simpleType>
 ```
 
-<br/>
+## Enumeration values
 
 <table>
 <colgroup>
@@ -83,6 +83,9 @@ The type of a prerequisite for a SharePoint Add-in.
 </tbody>
 </table>
 
+<br/>
+
+<br/>
 
 
 
