@@ -48,7 +48,6 @@ ms.assetid: c25a5ef2-b9ef-926d-cf7b-9a91168c9f1f
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-
 ### Parent elements
 
 <table>

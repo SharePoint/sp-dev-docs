@@ -73,13 +73,9 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
-
 ### Child elements
 
 None.
-
-<br/> 
 
 ### Attributes
 
