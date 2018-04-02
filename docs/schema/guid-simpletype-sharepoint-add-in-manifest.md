@@ -8,9 +8,7 @@ localization_priority: Normal
 ms.assetid: 8bdba352-fd8f-6aac-7aaa-25e7031f514e
 ---
 
-# GUID simpleType 
-
-(SharePoint Add-in Manifest)
+# GUID simpleType (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
@@ -52,6 +50,9 @@ A Guid in the form of XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX. It may be surrounded by `
     </xs:simpleType>
 ```
 
+<br/>
+
+<br/>
 
 
 
