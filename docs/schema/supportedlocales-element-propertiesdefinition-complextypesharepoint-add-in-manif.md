@@ -76,8 +76,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
-
 ### Child elements
 
 <table>
@@ -106,22 +104,16 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
-
 > [!WARNING] 
 > Although the **maxOccurs** attribute for the **SupportedLocale** element in the XSD for the add-in manifest markup is set to 256, the Office Store may set a lower effective maximum. As of the release of SharePoint 2013, there is an effective maximum of 25 **SupportedLocale** elements in the parent **SupportedLocales** element.
-
-<br/>
 
 ### Attributes
 
 None.
 
 <br/>
+
 <br/>
-
-
-
 
 
 

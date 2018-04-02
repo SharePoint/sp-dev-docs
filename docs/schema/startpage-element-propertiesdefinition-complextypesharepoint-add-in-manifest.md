@@ -25,8 +25,6 @@ in the **StartPage** element must be of a file type that supports the POST verb 
 
 Common file types that are typically configured in web servers to support POST are aspx, php, and other types that support server-side code. Add-ins that have an Internal add-in principal do not use OAuth, and consequently, the start page of such add-ins can be a type that is not configured in the target web server to support POST. HTML files, for example, frequently do not support POST.
 
-<br/>
-
 ```XML 
     <StartPage>http://domain_of_remote_component/Home.aspx?{StandardTokens}</StartPage>
 ```
@@ -113,8 +111,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
-
 ### Child elements
 
 None.
@@ -124,6 +120,7 @@ None.
 None.
 
 <br/>
+
 <br/>
 
 
