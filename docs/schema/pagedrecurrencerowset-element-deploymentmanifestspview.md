@@ -70,12 +70,12 @@ class="nolink">SPView</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;PagedRecurrenceRowset&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="PagedRecurrenceRowset" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;View&gt;
-   &lt; PagedRecurrenceRowset /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+   < PagedRecurrenceRowset />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

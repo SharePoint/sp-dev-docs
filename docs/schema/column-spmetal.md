@@ -82,7 +82,7 @@ Specifies that a column (field) is included in code generation.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Column Name=&quot;Category&quot; Member=&quot;Cat&quot; Type=&quot;String&quot;/&gt;</code></pre></td>
+<td align="left"><pre><code><Column Name="Category" Member="Cat" Type="String"/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -119,7 +119,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>Type (optional)</p></td>
-<td align="left"><p>Used only for Choice and MultiChoice columns that do not allow 'Fill-in' choices. If present and set to &quot;String&quot;, forces SPMetal to generate a class of <span sdata="cer" target="T:System.String"><a href="http://msdn2.microsoft.com/EN-US/library/s1wwdcbf">String</a></span> constants to represent the possible choices rather than an enum class. For more information about how LINQ to SharePoint maps Choice and MultiChoice fields to .NET 3.5 data types, see <a href="http://msdn.microsoft.com/library/6a1dff92-d3cf-46ec-9e51-372e5b9ff7c4(Office.15).aspx">Type Mapping: From LINQ to SharePoint Provider to .NET</a>.</p></td>
+<td align="left"><p>Used only for Choice and MultiChoice columns that do not allow 'Fill-in' choices. If present and set to "String", forces SPMetal to generate a class of <span sdata="cer" target="T:System.String"><a href="http://msdn2.microsoft.com/EN-US/library/s1wwdcbf">String</a></span> constants to represent the possible choices rather than an enum class. For more information about how LINQ to SharePoint maps Choice and MultiChoice fields to .NET 3.5 data types, see <a href="http://msdn.microsoft.com/library/6a1dff92-d3cf-46ec-9e51-372e5b9ff7c4(Office.15).aspx">Type Mapping: From LINQ to SharePoint Provider to .NET</a>.</p></td>
 </tr>
 </tbody>
 </table>

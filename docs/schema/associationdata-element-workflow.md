@@ -71,8 +71,8 @@ parse the data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AssociationData&gt;
-&lt;/AssociationData&gt;</code></pre></td>
+<td align="left"><pre><code><AssociationData>
+</AssociationData></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -68,9 +68,9 @@ Renders a form for the particular list that is specified by a previous
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListForm
-  Type = &quot;DisplayForm&quot; | &quot;EditForm&quot; | &quot;NewForm&quot; | &quot;NewFormDialog&quot;&gt;
-&lt;/ListForm&gt;</code></pre></td>
+<td align="left"><pre><code><ListForm
+  Type = "DisplayForm" | "EditForm" | "NewForm" | "NewFormDialog">
+</ListForm></code></pre></td>
 </tr>
 </tbody>
 </table>

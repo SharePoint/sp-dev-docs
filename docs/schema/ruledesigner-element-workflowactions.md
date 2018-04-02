@@ -72,10 +72,10 @@ SharePoint Designer 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RuleDesigner&gt;
-  &lt;FieldBind&gt;
-    &lt;Option&gt;
-    &lt;DataSourceRef&gt;</code></pre></td>
+<td align="left"><pre><code><RuleDesigner>
+  <FieldBind>
+    <Option>
+    <DataSourceRef></code></pre></td>
 </tr>
 </tbody>
 </table>

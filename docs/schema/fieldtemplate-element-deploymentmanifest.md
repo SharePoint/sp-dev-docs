@@ -70,20 +70,20 @@ class="nolink">SPField</span></span>).
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;FieldTemplate&quot; type=&quot;DeploymentFieldTemplate&quot; /&gt;
+<xs:element name="FieldTemplate" type="DeploymentFieldTemplate" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;FieldTemplate&gt;
-                Id=&quot;Guid&quot;
-                Name=&quot;xs:string&quot;
-                ParentWebId=&quot;Guid&quot;
-                Scope=&quot;xs:string&quot;
-                Description=&quot;xs:string&quot;
-                Group=&quot;xs:string&quot;
-            &lt;Field /&gt;
-        &lt;/FieldTemplate&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <FieldTemplate>
+                Id="Guid"
+                Name="xs:string"
+                ParentWebId="Guid"
+                Scope="xs:string"
+                Description="xs:string"
+                Group="xs:string"
+            <Field />
+        </FieldTemplate>
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

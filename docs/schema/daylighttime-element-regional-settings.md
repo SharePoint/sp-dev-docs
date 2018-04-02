@@ -73,13 +73,13 @@ on which daylight saving time begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DaylightTime&gt;
-  &lt;Bias&gt;
-    &lt;/Bias&gt;
-  &lt;Date&gt;
+<td align="left"><pre><code><DaylightTime>
+  <Bias>
+    </Bias>
+  <Date>
   ...
-  &lt;/Date&gt;
-&lt;/DaylightTime&gt;</code></pre></td>
+  </Date>
+</DaylightTime></code></pre></td>
 </tr>
 </tbody>
 </table>

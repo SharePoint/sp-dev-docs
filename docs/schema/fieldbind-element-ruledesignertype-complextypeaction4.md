@@ -273,7 +273,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Represents a **Parameter</span> element that is used to build a workflow. The **Field</span> attribute maps directly to one or more **Parameter** elements when a parameter type and direction are defined.</p>
-<p>If you use more than one parameter for a given **Field</span> attribute, separate the parameter by using commas (for example, <span class="code">Field=&quot;Variable,ValueType&quot;**).</p></td>
+<p>If you use more than one parameter for a given **Field</span> attribute, separate the parameter by using commas (for example, <span class="code">Field="Variable,ValueType"**).</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">

@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a parameter of a method.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Parameter Direction = &quot;String&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Parameter&gt;</code></pre></td>
+<td align="left"><pre><code><Parameter Direction = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Parameter></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -132,7 +132,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>InOut</p></td>
-<td align="left"><p>The represented parameter is an input and output parameter. In C#, these correspond to &quot;**ref**&quot;.</p></td>
+<td align="left"><p>The represented parameter is an input and output parameter. In C#, these correspond to "**ref**".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Return</p></td>

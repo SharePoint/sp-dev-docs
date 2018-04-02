@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Describes how to display a field of an external content type in
 Microsoft Outlook 2010.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,8 +78,8 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OfficeItemProperty PropertyName = &quot;String&quot; PropertyType = &quot;PropertyType&quot; ReadOnly = &quot;Bolean&quot; OutlookDisplayFormat = &quot;String&quot; Name = &quot;String&quot; Description = 
-&quot;String&quot;&gt; &lt;/OfficeItemProperty&gt;</code></pre></td>
+<td align="left"><pre><code><OfficeItemProperty PropertyName = "String" PropertyType = "PropertyType" ReadOnly = "Bolean" OutlookDisplayFormat = "String" Name = "String" Description = 
+"String"> </OfficeItemProperty></code></pre></td>
 </tr>
 </tbody>
 </table>

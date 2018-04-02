@@ -71,9 +71,9 @@ Renders the base name of a particular URL.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UrlBaseName
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/UrlBaseName&gt;</code></pre></td>
+<td align="left"><pre><code><UrlBaseName
+  HTMLEncode = "TRUE" | "FALSE">
+</UrlBaseName></code></pre></td>
 </tr>
 </tbody>
 </table>

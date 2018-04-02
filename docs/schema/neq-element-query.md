@@ -71,11 +71,11 @@ Arithmetic operator that means "not equal to" and is used in queries.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Neq&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/Neq&gt;</code></pre></td>
+<td align="left"><pre><code><Neq>
+  <FieldRef Name = "Field_Name"/>
+  <Value Type = "Field_Type"/>
+  <XML />
+</Neq></code></pre></td>
 </tr>
 </tbody>
 </table>

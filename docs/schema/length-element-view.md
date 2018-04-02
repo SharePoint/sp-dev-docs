@@ -74,10 +74,10 @@ attribute, respectively.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Length
-  Div = &quot;Integer&quot;
-  Sub = &quot;Integer&quot;&gt;
-&lt;/Length&gt;</code></pre></td>
+<td align="left"><pre><code><Length
+  Div = "Integer"
+  Sub = "Integer">
+</Length></code></pre></td>
 </tr>
 </tbody>
 </table>

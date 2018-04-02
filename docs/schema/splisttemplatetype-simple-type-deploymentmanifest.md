@@ -67,9 +67,9 @@ Establishes a base for instantiating list templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPListTemplateType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot; /&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPListTemplateType">
+        <xs:restriction base="xs:string" />
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

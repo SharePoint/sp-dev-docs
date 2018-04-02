@@ -68,8 +68,8 @@ the receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Assembly&gt;
-&lt;/Assembly&gt;</code></pre></td>
+<td align="left"><pre><code><Assembly>
+</Assembly></code></pre></td>
 </tr>
 </tbody>
 </table>

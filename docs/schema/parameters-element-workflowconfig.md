@@ -70,8 +70,8 @@ form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Parameters&gt;
-&lt;/Parameters&gt;</code></pre></td>
+<td align="left"><pre><code><Parameters>
+</Parameters></code></pre></td>
 </tr>
 </tbody>
 </table>

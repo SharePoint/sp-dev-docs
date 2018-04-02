@@ -72,16 +72,16 @@ site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Module&gt;
-  HyperlinkBaseUrl = &quot;Text&quot;
-  IncludeFolders = &quot;Text&quot;
-  List = &quot;Integer&quot;
-  Name = &quot;Text&quot;
-  Path = &quot;Text&quot;
-  RootWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  SetupPath = &quot;Text&quot;
-  Url = &quot;Text&quot;
-&lt;/Module&gt;</code></pre></td>
+<td align="left"><pre><code><Module>
+  HyperlinkBaseUrl = "Text"
+  IncludeFolders = "Text"
+  List = "Integer"
+  Name = "Text"
+  Path = "Text"
+  RootWebOnly = "TRUE" | "FALSE"
+  SetupPath = "Text"
+  Url = "Text"
+</Module></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -155,7 +155,7 @@ site.
 <td align="left"><p>Optional **Text</span>. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path</span> is not specified, the value of **Url</span> is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.</p>
 <p>The **Url** attribute cannot contain the following characters:</p>
 <ul>
-<li><p>\&quot;</p></li>
+<li><p>\"</p></li>
 <li><p>#</p></li>
 <li><p>%</p></li>
 <li><p>&amp;</p></li>

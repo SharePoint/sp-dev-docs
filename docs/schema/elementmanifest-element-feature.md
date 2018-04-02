@@ -67,9 +67,9 @@ Specifies a file that contains a definition for a feature element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ElementManifest
-  Location = &quot;Text&quot;&gt;
-&lt;/ElementManifest&gt;</code></pre></td>
+<td align="left"><pre><code><ElementManifest
+  Location = "Text">
+</ElementManifest></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -91,7 +91,7 @@ Specifies a file that contains a definition for a feature element.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the relative file path to the root element manifest file, for example, <span class="code">&quot;controls\searcharea.xml&quot;**.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies the relative file path to the root element manifest file, for example, <span class="code">"controls\searcharea.xml"**.</p></td>
 </tr>
 </tbody>
 </table>

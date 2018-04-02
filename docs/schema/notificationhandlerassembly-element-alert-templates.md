@@ -71,8 +71,8 @@ Specifies assembly information for an alert notification handler.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NotificationHandlerAssembly&gt;
-&lt;/NotificationHandlerAssembly&gt;</code></pre></td>
+<td align="left"><pre><code><NotificationHandlerAssembly>
+</NotificationHandlerAssembly></code></pre></td>
 </tr>
 </tbody>
 </table>

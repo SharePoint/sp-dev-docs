@@ -71,12 +71,12 @@ class="nolink">SPView</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Toolbar&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="Toolbar" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;View&gt;
-        &lt;Toolbar /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+        <Toolbar />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

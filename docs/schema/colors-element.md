@@ -71,7 +71,7 @@ Contains elements that define colors.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Colors /&gt;</code></pre></td>
+<td align="left"><pre><code><Colors /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Defines the external content type that this context definition is
 associated with.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Entity EntityTypeName = &quot;String&quot; EntityTypeNamespace = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/Entity&gt;</code></pre></td>
+<td align="left"><pre><code><Entity EntityTypeName = "String" EntityTypeNamespace = "String" Name = "String" Description = "String"> </Entity></code></pre></td>
 </tr>
 </tbody>
 </table>

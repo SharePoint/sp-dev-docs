@@ -71,11 +71,11 @@ Specifies options for a drop-down list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SelectionOptions
-  BlankPattern = &quot;Text&quot;
-  Len = &quot;Integer&quot;
-  MoreText = &quot;Text&quot;&gt;
-&lt;/SelectionOptions&gt;</code></pre></td>
+<td align="left"><pre><code><SelectionOptions
+  BlankPattern = "Text"
+  Len = "Integer"
+  MoreText = "Text">
+</SelectionOptions></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -97,7 +97,7 @@ Specifies options for a drop-down list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**BlankPattern**</p></td>
-<td align="left"><p>Required **Text</span>. The **BlankPattern** attribute is used to generate a localized text pattern for displaying text values for lookup fields that are blank (empty string). In the United States, this is localized as &quot;(Item ^1)&quot;. ^1 is replaced with the item ID of the item being referenced.</p></td>
+<td align="left"><p>Required **Text</span>. The **BlankPattern** attribute is used to generate a localized text pattern for displaying text values for lookup fields that are blank (empty string). In the United States, this is localized as "(Item ^1)". ^1 is replaced with the item ID of the item being referenced.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Len**</p></td>
@@ -105,7 +105,7 @@ Specifies options for a drop-down list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**MoreText**</p></td>
-<td align="left"><p>Required **Text</span>. The **MoreText** attribute specifies what is displayed in order to indicate that the string has been truncated (typically an ellipsis, &quot;...&quot;).</p></td>
+<td align="left"><p>Required **Text</span>. The **MoreText** attribute specifies what is displayed in order to indicate that the string has been truncated (typically an ellipsis, "...").</p></td>
 </tr>
 </tbody>
 </table>

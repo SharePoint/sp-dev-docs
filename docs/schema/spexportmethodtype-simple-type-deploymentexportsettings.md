@@ -69,12 +69,12 @@ attribute on the [ExportSettings Element
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPExportMethodType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;ExportAll&quot; /&gt;
-                &lt;xs:enumeration value=&quot;ExportChanges&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPExportMethodType">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="ExportAll" />
+                <xs:enumeration value="ExportChanges" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -27,7 +27,7 @@ that a user can add to a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Field
+<td align="left"><pre><code><Field
   Aggregation = "sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
   AllowDeletion = "TRUE" | "FALSE"
   AllowHyperlink = "TRUE" | "FALSE"
@@ -127,8 +127,8 @@ that a user can add to a list.
   Viewable = "TRUE" | "FALSE"  WebId = "Text"
   Width = "Integer"
   WikiLinking = "TRUE" | "FALSE"
-  XName = "Text"&gt;
-&lt;/Field&gt;</code></pre></td>
+  XName = "Text">
+</Field></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -260,7 +260,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DisplayName**</p></td>
-<td align="left"><p>Optional **Text</span>. The displayed name for a field. There is no restriction on text size or use of spaces. The display name can be edited by the user and can change after initial field creation. This name is used as a column heading when the field is displayed in a table view and as a form label when the field is displayed in a form. The &lt;FieldName/&gt; tag returns the display name if given; otherwise, it defaults to the **Name** attribute.</p></td>
+<td align="left"><p>Optional **Text</span>. The displayed name for a field. There is no restriction on text size or use of spaces. The display name can be edited by the user and can change after initial field creation. This name is used as a column heading when the field is displayed in a table view and as a form label when the field is displayed in a form. The <FieldName/> tag returns the display name if given; otherwise, it defaults to the **Name** attribute.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DisplayNameSrcField**</p></td>
@@ -321,7 +321,7 @@ that a user can add to a list.
 <li><p>**ISO8601Basic**   Use the abbreviated form of 8601 date/time formats: YYYYMMDDTHHMMSSZ. This is the format used for vCard/iCal.</p></li>
 </ul>
 <p>For Choice fields, this attribute can be set to **Dropdown</span> (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image</span>, which displays the URL as <span class="code">&lt;IMG SRC="URL" ALT="Description"&gt;**.</p></td>
+<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal <A> tag, or to **Image</span>, which displays the URL as <span class="code"><IMG SRC="URL" ALT="Description">**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FromBaseType**</p></td>
@@ -508,7 +508,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Required**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field must not have an empty value assigned to it. If a nonempty field value is not given in a form post, either the standard required-field text or an explicitly specified message (that is, via &lt;ErrorText&gt; tags) is displayed in the error form. This validation is handled only by the client (the database always allows **NULL** for all user-defined fields).</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field must not have an empty value assigned to it. If a nonempty field value is not given in a form post, either the standard required-field text or an explicitly specified message (that is, via <ErrorText> tags) is displayed in the error form. This validation is handled only by the client (the database always allows **NULL** for all user-defined fields).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RestrictedMode**</p></td>
@@ -660,7 +660,7 @@ that a user can add to a list.
 <li><p>**Text</span>   A single line of text entered in an edit box. This field is sortable and groupable. Use the **MaxLength</span> attribute to set a maximum number of characters allowed. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldText"><span class="nolink">SPFieldText</span>** class.</p></li>
 <li><p>**ThreadIndex</span>   Contains the ID that indicates the relative position of a message within a conversation thread. Corresponds to the **varbinary** SQL data type.</p></li>
 <li><p>**Threading</span>   The **Threading</span> field type is used in the creation and display of threaded discussion-like views. Any list can contain a threading column, but a special UI is generated when it is used. (It is never displayed as a standard editable field in a form nor as a normal column in a view.) If a sort is performed on a threading field, a pre-order traversal of all the records in a parent-child relationship is returned. This is accomplished by saving the concatenation of the creation date and ID number of all the parent records of a particular record. Corresponds to the **varchar** SQL data type.</p></li>
-<li><p>**URL</span>   Used to create a freeform hyperlink. A URL field is displayed as <span class="code">&lt;A HREF="URL"&gt;</span><span class="placeholder">Description</span><span class="code">&lt;/A&gt;</span>. If no description is given, it is displayed as <span class="code">&lt;A HREF="</span><span class="placeholder">URL</span><span class="code">"&gt;</span><span class="placeholder">URL</span><span class="code">&lt;/A&gt;</span>. The URL text is itself stored in the URLs (DocMd) table, which stores all the URLs in SharePoint databases on the server. This is done so that any URLs that are local on the server can be updated through link fixup when their destination moves. When a record with a URL field contained within it is deleted, the corresponding referenced record from the URL table is also deleted. This field is sortable and groupable. (The sort is defined according to the textual description rather than the contents of the URL; if no description is given, it sorts the same as blank.) When **Type</span> is **URL</span>, the **LinkType</span> attribute can be used to specify the type of link. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUrl"><span class="nolink">SPFieldUrl</span>** class.</p></li>
+<li><p>**URL</span>   Used to create a freeform hyperlink. A URL field is displayed as <span class="code"><A HREF="URL"></span><span class="placeholder">Description</span><span class="code"></A></span>. If no description is given, it is displayed as <span class="code"><A HREF="</span><span class="placeholder">URL</span><span class="code">"></span><span class="placeholder">URL</span><span class="code"></A></span>. The URL text is itself stored in the URLs (DocMd) table, which stores all the URLs in SharePoint databases on the server. This is done so that any URLs that are local on the server can be updated through link fixup when their destination moves. When a record with a URL field contained within it is deleted, the corresponding referenced record from the URL table is also deleted. This field is sortable and groupable. (The sort is defined according to the textual description rather than the contents of the URL; if no description is given, it sorts the same as blank.) When **Type</span> is **URL</span>, the **LinkType</span> attribute can be used to specify the type of link. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUrl"><span class="nolink">SPFieldUrl</span>** class.</p></li>
 <li><p>**User</span>   A **Lookup</span> field that references the UserInfo database table. Corresponds to the **int</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUser"><span class="nolink">SPFieldUser</span>** class.</p></li>
 <li><p>**UserMulti</span>   A **User</span> field that can contain more than one value. Parent type: **LookupMulti**.</p></li>
 <li><p>**WorkflowEventType</span>   Specifies a workflow event type as represented by the <span sdata="cer" target="T:Microsoft.SharePoint.Workflow.SPWorkflowHistoryEventType"><span class="nolink">SPWorkflowHistoryEventType</span></span> enumeration. Parent type: **Integer**.</p></li>

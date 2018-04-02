@@ -81,7 +81,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Association  xsl:type=&quot;DeclarativeAssociation&quot; xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance&quot;  DisplayNameOfficeItemPropertyName = &quot;String&quot; AssociationName = &quot;String&quot; EntityTypeNamespace = &quot;String&quot; EntityTypeName = &quot;String&quot; ReferenceOfficeItemPropertyName = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/Association&gt;</code></pre></td>
+<td align="left"><pre><code><Association  xsl:type="DeclarativeAssociation" xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance"  DisplayNameOfficeItemPropertyName = "String" AssociationName = "String" EntityTypeNamespace = "String" EntityTypeName = "String" ReferenceOfficeItemPropertyName = "String" Name = "String" Description = "String"> </Association></code></pre></td>
 </tr>
 </tbody>
 </table>

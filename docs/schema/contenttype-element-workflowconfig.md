@@ -69,8 +69,8 @@ Defines a content type for a workflow task type used in the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContentType&gt;
-&lt;/ContentType&gt;</code></pre></td>
+<td align="left"><pre><code><ContentType>
+</ContentType></code></pre></td>
 </tr>
 </tbody>
 </table>

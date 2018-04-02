@@ -74,7 +74,7 @@ within a month.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DateRangesOverlap&gt;  &lt;FieldRef Name= &quot;EventDate&quot; /&gt;  &lt;FieldRef Name= &quot;EndDate&quot; /&gt;  &lt;FieldRef Name= &quot;RecurrenceID&quot; /&gt;  &lt;Value Type=\&quot;DateTime\&quot;&gt;    &lt;Month /&gt;  &lt;/Value&gt;&lt;/DateRangesOverlap&gt;</code></pre></td>
+<td align="left"><pre><code><DateRangesOverlap>  <FieldRef Name= "EventDate" />  <FieldRef Name= "EndDate" />  <FieldRef Name= "RecurrenceID" />  <Value Type=\"DateTime\">    <Month />  </Value></DateRangesOverlap></code></pre></td>
 </tr>
 </tbody>
 </table>

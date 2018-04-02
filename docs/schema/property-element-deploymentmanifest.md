@@ -69,19 +69,19 @@ Services 3.0 object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Property&quot; type=&quot;DictionaryEntry&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="Property" type="DictionaryEntry" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;Properties&gt;
-        &lt;Property
-                Name=&quot;xs:string&quot;
-                Value=&quot;xs:string&quot;
-                Value2=&quot;xs:string&quot;
-                Id=&quot;Guid&quot;
-                Type=&quot;SPDictionaryEntryValueType&quot;
-                Access=&quot;SPDictionaryEntryAccess&quot;
-        /&gt;
-&lt;/Properties&gt;</code></pre></td>
+<Properties>
+        <Property
+                Name="xs:string"
+                Value="xs:string"
+                Value2="xs:string"
+                Id="Guid"
+                Type="SPDictionaryEntryValueType"
+                Access="SPDictionaryEntryAccess"
+        />
+</Properties></code></pre></td>
 </tr>
 </tbody>
 </table>

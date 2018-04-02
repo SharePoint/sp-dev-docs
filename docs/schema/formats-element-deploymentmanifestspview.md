@@ -70,12 +70,12 @@ class="nolink">SPView</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Formats&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="Formats" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;View&gt;
-        &lt;Formats /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+        <Formats />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

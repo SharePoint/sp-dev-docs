@@ -71,28 +71,28 @@ Defines a spinner control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Spinner
-  AccelerationInterval=&quot;Integer&quot;
-  AltDownArrow=&quot;Text&quot;
-  AltUpArrow=&quot;Text&quot;
-  Command=&quot;Text&quot;
-  DefaultUnit=&quot;Text&quot;
-  DefaultValue=&quot;Decimal&quot;
-  Id=&quot;Text&quot;
-  ImeEnabled=&quot;TRUE | FALSE&quot;
-  MultiplierInterval=&quot;Integer&quot;
-  QueryCommand=&quot;Text&quot;
-  Sequence=&quot;Integer&quot;
-  TemplateAlias=&quot;Text&quot;
-  ToolTipImage32by32=&quot;Url&quot;
-  ToolTipImage32by32Class=&quot;CSS Class Selector&quot;
-  ToolTipImage32by32Left=&quot;Negative Integer&quot;
-  ToolTipImage32by32Top=&quot;Negative Integer&quot;
-  ToolTipTitle=&quot;Text&quot;
-  ToolTipDescription=&quot;Text&quot;
-  ToolTipHelpKeyWord=&quot;Text&quot;
-  ToolTipShortcutKey=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Spinner
+  AccelerationInterval="Integer"
+  AltDownArrow="Text"
+  AltUpArrow="Text"
+  Command="Text"
+  DefaultUnit="Text"
+  DefaultValue="Decimal"
+  Id="Text"
+  ImeEnabled="TRUE | FALSE"
+  MultiplierInterval="Integer"
+  QueryCommand="Text"
+  Sequence="Integer"
+  TemplateAlias="Text"
+  ToolTipImage32by32="Url"
+  ToolTipImage32by32Class="CSS Class Selector"
+  ToolTipImage32by32Left="Negative Integer"
+  ToolTipImage32by32Top="Negative Integer"
+  ToolTipTitle="Text"
+  ToolTipDescription="Text"
+  ToolTipHelpKeyWord="Text"
+  ToolTipShortcutKey="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -162,7 +162,7 @@ Defines a spinner control.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -190,7 +190,7 @@ Defines a spinner control.
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is &quot;ALT + J&quot;. The tooltip displays the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 </tbody>
 </table>

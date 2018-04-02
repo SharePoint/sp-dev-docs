@@ -75,7 +75,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FormRegion  xsl:type=&quot;DeclarativeFormRegion&quot; InternalName = &quot;String&quot; Type = &quot;String&quot; ShowInspectorComposeMode = &quot;Boolean&quot; ShowInspectorReadMode = &quot;Boolean&quot; Title = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/FormRegion&gt;</code></pre></td>
+<td align="left"><pre><code><FormRegion  xsl:type="DeclarativeFormRegion" InternalName = "String" Type = "String" ShowInspectorComposeMode = "Boolean" ShowInspectorReadMode = "Boolean" Title = "String" Name = "String" Description = "String"> </FormRegion></code></pre></td>
 </tr>
 </tbody>
 </table>

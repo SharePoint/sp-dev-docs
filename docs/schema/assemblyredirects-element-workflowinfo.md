@@ -71,9 +71,9 @@ information to load the desired binary file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AssemblyRedirects&gt;
-    &lt;AssemblyRedirect&gt;    &lt;/AssemblyRedirect&gt;
-&lt;/AssemblyRedirects&gt;</code></pre></td>
+<td align="left"><pre><code><AssemblyRedirects>
+    <AssemblyRedirect>    </AssemblyRedirect>
+</AssemblyRedirects></code></pre></td>
 </tr>
 </tbody>
 </table>

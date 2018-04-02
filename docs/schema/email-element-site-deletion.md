@@ -75,14 +75,14 @@ warn that the site will be automatically deleted.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Email&gt;
-  &lt;Confirmation&gt;
+<td align="left"><pre><code><Email>
+  <Confirmation>
   ...
-    &lt;/Confirmation&gt;
-  &lt;AutoDeleteWarning&gt;
+    </Confirmation>
+  <AutoDeleteWarning>
   ...
-    &lt;/AutoDeleteWarning&gt;
-&lt;/Email&gt;</code></pre></td>
+    </AutoDeleteWarning>
+</Email></code></pre></td>
 </tr>
 </tbody>
 </table>

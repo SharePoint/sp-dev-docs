@@ -214,7 +214,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>NameProperty</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Specifies how to differentiate the user interface (UI) elements defined in a <span sdata="link"><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource element (dataSourcesType complexType) (Action4)</a></span>. If the value begins with &quot;Parent.&quot;, the value is retrieved from the parent of the action or composite step that declares the **DataSource** element.</p></td>
+<td align="left"><p>Specifies how to differentiate the user interface (UI) elements defined in a <span sdata="link"><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource element (dataSourcesType complexType) (Action4)</a></span>. If the value begins with "Parent.", the value is retrieved from the parent of the action or composite step that declares the **DataSource** element.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 </tbody>

@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LobSystemInstances&gt;&lt;/LobSystemInstances&gt;</code></pre></td>
+<td align="left"><pre><code><LobSystemInstances></LobSystemInstances></code></pre></td>
 </tr>
 </tbody>
 </table>

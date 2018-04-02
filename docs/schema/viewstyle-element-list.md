@@ -71,14 +71,14 @@ Contains the definition of a view style for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewStyle
-  BaseType = &quot;Integer&quot; | &quot;Text&quot;
-  Description = &quot;Text&quot;
-  DisplayName = &quot;Text&quot;
-  ID = &quot;Counter&quot;
-  Preview = &quot;Text&quot;
-  Type = &quot;Integer&quot;&gt;
-&lt;/ViewStyle&gt;</code></pre></td>
+<td align="left"><pre><code><ViewStyle
+  BaseType = "Integer" | "Text"
+  Description = "Text"
+  DisplayName = "Text"
+  ID = "Counter"
+  Preview = "Text"
+  Type = "Integer">
+</ViewStyle></code></pre></td>
 </tr>
 </tbody>
 </table>

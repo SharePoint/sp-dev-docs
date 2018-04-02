@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Lists the custom properties of the Container or External Data Part.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CustomProperties&gt;&lt;/CustomProperties&gt;</code></pre></td>
+<td align="left"><pre><code><CustomProperties></CustomProperties></code></pre></td>
 </tr>
 </tbody>
 </table>

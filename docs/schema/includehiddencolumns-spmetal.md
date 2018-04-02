@@ -82,7 +82,7 @@ Specifies that hidden columns are included in code generation.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IncludeHiddenColumns /&gt;</code></pre></td>
+<td align="left"><pre><code><IncludeHiddenColumns /></code></pre></td>
 </tr>
 </tbody>
 </table>

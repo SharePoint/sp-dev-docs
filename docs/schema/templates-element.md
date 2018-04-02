@@ -71,7 +71,7 @@ Contains ribbon templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Templates /&gt;</code></pre></td>
+<td align="left"><pre><code><Templates /></code></pre></td>
 </tr>
 </tbody>
 </table>

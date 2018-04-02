@@ -71,8 +71,8 @@ Returns the current date and time.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Now&gt;
-&lt;/Now&gt;</code></pre></td>
+<td align="left"><pre><code><Now>
+</Now></code></pre></td>
 </tr>
 </tbody>
 </table>

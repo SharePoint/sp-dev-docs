@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a filter descriptor of a method.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FilterDescriptor Type = &quot;String&quot; FilterField = &quot;String&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/FilterDescriptor&gt;</code></pre></td>
+<td align="left"><pre><code><FilterDescriptor Type = "String" FilterField = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </FilterDescriptor></code></pre></td>
 </tr>
 </tbody>
 </table>

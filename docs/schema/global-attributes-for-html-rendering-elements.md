@@ -125,7 +125,7 @@ Universal attributes include the following:
     class="keyword">TRUE</span>, converts any embedded characters so
     that they are all displayed as text in the browser. This means that
     any characters that could be confused with HTML tags are converted
-    to entities such as "**&gt;**" instead of
+    to entities such as "**>**" instead of
     "**DOCS-GREATERTHAN**".
 
 -   **StripWS** — When <span

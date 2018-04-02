@@ -72,8 +72,8 @@ template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocumentTemplateFiles&gt;
-&lt;/DocumentTemplateFiles&gt;</code></pre></td>
+<td align="left"><pre><code><DocumentTemplateFiles>
+</DocumentTemplateFiles></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -74,13 +74,13 @@ Universal Time (UTC), and the date on which standard time begins.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;StandardTime&gt;
-  &lt;Bias&gt;
-  &lt;/Bias&gt;
-  &lt;Date&gt;
+<td align="left"><pre><code><StandardTime>
+  <Bias>
+  </Bias>
+  <Date>
   ...
-  &lt;/Date&gt;
-&lt;/StandardTime&gt;</code></pre></td>
+  </Date>
+</StandardTime></code></pre></td>
 </tr>
 </tbody>
 </table>

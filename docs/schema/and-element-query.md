@@ -72,8 +72,8 @@ element to group filters in a query for a view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;And&gt;
-&lt;/And&gt;</code></pre></td>
+<td align="left"><pre><code><And>
+</And></code></pre></td>
 </tr>
 </tbody>
 </table>

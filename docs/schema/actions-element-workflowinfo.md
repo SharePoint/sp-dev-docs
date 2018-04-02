@@ -76,12 +76,12 @@ included in the default list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WorkflowInfo&gt;
-    &lt;Conditions&gt;...&lt;/Conditions&gt;
-    &lt;Actions&gt;
-        &lt;Action&gt;...&lt;/Action&gt;
-    &lt;/Actions&gt;
-&lt;/WorkflowInfo&gt;</code></pre></td>
+<td align="left"><pre><code><WorkflowInfo>
+    <Conditions>...</Conditions>
+    <Actions>
+        <Action>...</Action>
+    </Actions>
+</WorkflowInfo></code></pre></td>
 </tr>
 </tbody>
 </table>

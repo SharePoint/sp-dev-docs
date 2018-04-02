@@ -71,19 +71,19 @@ Returns the value of a specified column in the List of Lists table.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListProperty
-  AutoHyperLink = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoHyperLinkNoEncoding = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoNewLine = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Default = &quot;Text&quot;
-  ExpandXML = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ForInstance = &quot;TRUE&quot; | &quot;FALSE&quot;
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Select = &quot;Text&quot;
-  StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncodeAsURL = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ListProperty&gt;</code></pre></td>
+<td align="left"><pre><code><ListProperty
+  AutoHyperLink = "TRUE" | "FALSE"
+  AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
+  AutoNewLine = "TRUE" | "FALSE"
+  Default = "Text"
+  ExpandXML = "TRUE" | "FALSE"
+  ForInstance = "TRUE" | "FALSE"
+  HTMLEncode = "TRUE" | "FALSE"
+  Select = "Text"
+  StripWS = "TRUE" | "FALSE"
+  URLEncode = "TRUE" | "FALSE"
+  URLEncodeAsURL = "TRUE" | "FALSE">
+</ListProperty></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +109,7 @@ Returns the value of a specified column in the List of Lists table.
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with <A> tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>

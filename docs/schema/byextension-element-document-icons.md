@@ -71,8 +71,8 @@ Defines icons for documents according to their file name extensions.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ByExtension&gt;
-&lt;/ByExtension&gt;</code></pre></td>
+<td align="left"><pre><code><ByExtension>
+</ByExtension></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,13 +71,13 @@ descriptions of the parameters in an action method signature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WorkflowActions&gt;
-  &lt;Action&gt;
-    &lt;Parameters&gt;
-      &lt;Parameter /&gt;
-    &lt;/Parameters&gt;
-  &lt;/Action&gt;
-&lt;/WorkflowActions&gt;</code></pre></td>
+<td align="left"><pre><code><WorkflowActions>
+  <Action>
+    <Parameters>
+      <Parameter />
+    </Parameters>
+  </Action>
+</WorkflowActions></code></pre></td>
 </tr>
 </tbody>
 </table>

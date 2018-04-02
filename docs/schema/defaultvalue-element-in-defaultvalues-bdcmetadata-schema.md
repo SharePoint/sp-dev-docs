@@ -90,7 +90,7 @@ Schema: BDCMetadata
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DefaultValue MethodInstanceName = &quot;String&quot; Type = &quot;String&quot;&gt; &lt;/DefaultValue&gt;</code></pre></td>
+<td align="left"><pre><code><DefaultValue MethodInstanceName = "String" Type = "String"> </DefaultValue></code></pre></td>
 </tr>
 </tbody>
 </table>

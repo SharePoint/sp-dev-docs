@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Model Name = &quot;String&quot;&gt; &lt;/Model&gt;</code></pre></td>
+<td align="left"><pre><code><Model Name = "String"> </Model></code></pre></td>
 </tr>
 </tbody>
 </table>

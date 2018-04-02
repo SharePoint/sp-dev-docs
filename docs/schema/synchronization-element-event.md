@@ -67,7 +67,7 @@ Specifies the synchronization of the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Synchronization&gt; Synchronous | Asynchronous &lt;/Synchronization&gt;</code></pre></td>
+<td align="left"><pre><code><Synchronization> Synchronous | Asynchronous </Synchronization></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Defines the settings for this Microsoft Business Connectivity Services
 (BCS) solution such as the ID, display name, and description.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="other"></span>
 <table>
@@ -73,7 +73,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SolutionSettings SolutionId = &quot;String&quot; SolutionDisplayName = &quot;String&quot; SolutionVersion = &quot;String&quot; AddInProgId = &quot;String&quot; LoadedOnDemand = &quot;Boolean&quot; Description = &quot;String&quot;&gt; &lt;/SolutionSettings&gt;</code></pre></td>
+<td align="left"><pre><code><SolutionSettings SolutionId = "String" SolutionDisplayName = "String" SolutionVersion = "String" AddInProgId = "String" LoadedOnDemand = "Boolean" Description = "String"> </SolutionSettings></code></pre></td>
 </tr>
 </tbody>
 </table>

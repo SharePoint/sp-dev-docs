@@ -73,12 +73,12 @@ about their Microsoft .NET data types.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RuleDesigner&gt;
-  &lt;FieldBind&gt;
-        &lt;Option /&gt;
-        &lt;DataSourceRef /&gt;
-  &lt;/FieldBind&gt;
-&lt;/RuleDesigner&gt;</code></pre></td>
+<td align="left"><pre><code><RuleDesigner>
+  <FieldBind>
+        <Option />
+        <DataSourceRef />
+  </FieldBind>
+</RuleDesigner></code></pre></td>
 </tr>
 </tbody>
 </table>

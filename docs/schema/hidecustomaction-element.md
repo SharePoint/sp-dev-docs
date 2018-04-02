@@ -69,12 +69,12 @@ custom action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;HideCustomAction
-  GroupId = &quot;Text&quot;
-  HideActionId = &quot;Text&quot;
-  Id = &quot;Text&quot;
-  Location = &quot;Text&quot;&gt;
-&lt;/HideCustomAction&gt;</code></pre></td>
+<td align="left"><pre><code><HideCustomAction
+  GroupId = "Text"
+  HideActionId = "Text"
+  Id = "Text"
+  Location = "Text">
+</HideCustomAction></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -96,19 +96,19 @@ custom action.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**GroupId**</p></td>
-<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">&quot;SiteAdministration&quot;**.</p></td>
+<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">"SiteAdministration"**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HideActionId**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the ID of the custom action to hide, for example, <span class="code">&quot;DeleteWeb&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action IDs that are used in SharePoint Foundation. For more information about hiding custom action IDs, see the Remarks section, below.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the ID of the custom action to hide, for example, <span class="code">"DeleteWeb"</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action IDs that are used in SharePoint Foundation. For more information about hiding custom action IDs, see the Remarks section, below.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Optional **Text</span>.Specifies the ID of this hide custom action element, for example, <span class="code">&quot;HideDeleteWeb&quot;**.</p></td>
+<td align="left"><p>Optional **Text</span>.Specifies the ID of this hide custom action element, for example, <span class="code">"HideDeleteWeb"**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the location of the custom action to hide, for example, <span class="code">&quot;Microsoft.SharePoint.SiteSettings&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action locations that are used in SharePoint Foundation.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the location of the custom action to hide, for example, <span class="code">"Microsoft.SharePoint.SiteSettings"</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action locations that are used in SharePoint Foundation.</p></td>
 </tr>
 </tbody>
 </table>

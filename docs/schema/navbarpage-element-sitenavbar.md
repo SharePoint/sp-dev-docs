@@ -69,10 +69,10 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NavBarPage
-  Name = &quot;Text&quot;
-  Url = &quot;Text&quot;&gt;
-&lt;/NavBarPage&gt;</code></pre></td>
+<td align="left"><pre><code><NavBarPage
+  Name = "Text"
+  Url = "Text">
+</NavBarPage></code></pre></td>
 </tr>
 </tbody>
 </table>

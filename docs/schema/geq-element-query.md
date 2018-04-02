@@ -73,11 +73,11 @@ element in a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Geq&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/Geq&gt;</code></pre></td>
+<td align="left"><pre><code><Geq>
+  <FieldRef Name = "Field_Name"/>
+  <Value Type = "Field_Type"/>
+  <XML />
+</Geq></code></pre></td>
 </tr>
 </tbody>
 </table>

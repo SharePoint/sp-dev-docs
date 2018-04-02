@@ -71,8 +71,8 @@ Contains the default value for a field that has a formula.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DefaultFormulaValue&gt;
-&lt;/DefaultFormulaValue&gt;</code></pre></td>
+<td align="left"><pre><code><DefaultFormulaValue>
+</DefaultFormulaValue></code></pre></td>
 </tr>
 </tbody>
 </table>

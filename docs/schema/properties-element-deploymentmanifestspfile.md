@@ -71,14 +71,14 @@ class="nolink">SPFile</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Properties&quot; type=&quot;Dictionary&quot; minOccurs=&quot;0&quot; /&gt;
+<xs:element name="Properties" type="Dictionary" minOccurs="0" />
 
 USAGE
-&lt;File&gt;
-        &lt;Properties
-                &lt;Property /&gt;
-        /&gt;
-&lt;/File&gt;</code></pre></td>
+<File>
+        <Properties
+                <Property />
+        />
+</File></code></pre></td>
 </tr>
 </tbody>
 </table>

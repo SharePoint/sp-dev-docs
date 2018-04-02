@@ -81,10 +81,10 @@ values is the union of the possible values.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldBind&gt;
-    &lt;DataSourceRef&gt;
-    &lt;/DataSourceRef&gt;
-&lt;/FieldBind&gt;</code></pre></td>
+<td align="left"><pre><code><FieldBind>
+    <DataSourceRef>
+    </DataSourceRef>
+</FieldBind></code></pre></td>
 </tr>
 </tbody>
 </table>

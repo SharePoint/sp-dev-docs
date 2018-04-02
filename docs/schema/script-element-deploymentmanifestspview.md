@@ -71,12 +71,12 @@ class="nolink">SPView</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Script&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="Script" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;View&gt;
-        &lt;Script /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+        <Script />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

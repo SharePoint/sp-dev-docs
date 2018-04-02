@@ -72,8 +72,8 @@ list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WorkflowConfig&gt;
-&lt;/WorkflowConfig&gt;</code></pre></td>
+<td align="left"><pre><code><WorkflowConfig>
+</WorkflowConfig></code></pre></td>
 </tr>
 </tbody>
 </table>

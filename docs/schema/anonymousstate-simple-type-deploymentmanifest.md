@@ -71,13 +71,13 @@ Element
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;AnonymousState&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;Disabled&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Enabled&quot; /&gt;
-                &lt;xs:enumeration value=&quot;On&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="AnonymousState">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="Disabled" />
+                <xs:enumeration value="Enabled" />
+                <xs:enumeration value="On" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

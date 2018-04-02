@@ -75,7 +75,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextActivated  ActionName = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ContextActivated&gt;</code></pre></td>
+<td align="left"><pre><code><ContextActivated  ActionName = "String" Description = "String"> </ContextActivated></code></pre></td>
 </tr>
 </tbody>
 </table>

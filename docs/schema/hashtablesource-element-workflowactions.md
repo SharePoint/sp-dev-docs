@@ -69,10 +69,10 @@ Specifies that the evaluation value is retrieved from a hash table.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Evaluation&gt;
-    &lt;HashtableSource&gt;
-    &lt;/HashtableSource&gt;
-&lt;/Evaluation&gt;</code></pre></td>
+<td align="left"><pre><code><Evaluation>
+    <HashtableSource>
+    </HashtableSource>
+</Evaluation></code></pre></td>
 </tr>
 </tbody>
 </table>

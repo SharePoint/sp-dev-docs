@@ -69,14 +69,14 @@ view.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DELCARATION SYNTAX
-&lt;xs:element name=&quot;Aggregations&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="Aggregations" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE SYNTAX
-&lt;Views&gt;
-        &lt;View&gt;
-                &lt;Aggregations /&gt;
-        &lt;/View&gt;
-&lt;/Views&gt;</code></pre></td>
+<Views>
+        <View>
+                <Aggregations />
+        </View>
+</Views></code></pre></td>
 </tr>
 </tbody>
 </table>

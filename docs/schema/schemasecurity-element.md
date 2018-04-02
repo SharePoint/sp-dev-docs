@@ -67,8 +67,8 @@ Contains the Schema security setting for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SchemaSecurity&gt;
-&lt;/SchemaSecurity&gt;</code></pre></td>
+<td align="left"><pre><code><SchemaSecurity>
+</SchemaSecurity></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -68,14 +68,14 @@ upgrade actions should apply.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;VersionRange 
+<td align="left"><pre><code><VersionRange 
   BeginVersion = string
-  EndVersion = string&gt;
-  &lt;AddContentTypeField /&gt;
-  &lt;ApplyElementManifests&gt; ... &lt;/ApplyElementManifests&gt;
-  &lt;CustomUpgradeActions&gt; ... &lt;/CustomUpgradeActions&gt;
-  &lt;MapFile /&gt;
-&lt;/VersionRange&gt;</code></pre></td>
+  EndVersion = string>
+  <AddContentTypeField />
+  <ApplyElementManifests> ... </ApplyElementManifests>
+  <CustomUpgradeActions> ... </CustomUpgradeActions>
+  <MapFile />
+</VersionRange></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -69,8 +69,8 @@ Represents the collection of field types.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldTypes&gt;
-&lt;/FieldTypes&gt;</code></pre></td>
+<td align="left"><pre><code><FieldTypes>
+</FieldTypes></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -165,7 +165,7 @@ been edited for clarity.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The possible values for the <span class="code">&lt;Field Name=&quot;ParentType&quot;&gt;</span> element are exactly the same as the possible values for the Type attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a></span> element.</p></td>
+<td align="left"><p>The possible values for the <span class="code"><Field Name="ParentType"></span> element are exactly the same as the possible values for the Type attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a></span> element.</p></td>
 </tr>
 </tbody>
 </table>

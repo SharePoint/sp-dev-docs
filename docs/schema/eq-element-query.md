@@ -71,8 +71,8 @@ Arithmetic operator that means "equal to" and is used within a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Eq&gt;
-&lt;/Eq&gt;</code></pre></td>
+<td align="left"><pre><code><Eq>
+</Eq></code></pre></td>
 </tr>
 </tbody>
 </table>

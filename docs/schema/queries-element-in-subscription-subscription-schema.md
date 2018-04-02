@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 A list of queries that this cache subscription contains.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Queries&gt;&lt;/Queries&gt;</code></pre></td>
+<td align="left"><pre><code><Queries></Queries></code></pre></td>
 </tr>
 </tbody>
 </table>

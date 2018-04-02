@@ -71,9 +71,9 @@ Specifies a binary resource to deploy to an existing Feature folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Resource
-  Location=&quot;Text&quot;&gt;
-&lt;/Resource&gt;</code></pre></td>
+<td align="left"><pre><code><Resource
+  Location="Text">
+</Resource></code></pre></td>
 </tr>
 </tbody>
 </table>

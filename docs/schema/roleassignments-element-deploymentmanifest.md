@@ -69,14 +69,14 @@ class="keyword">DeploymentRoleAssignments</span>) objects.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;RoleAssignments&quot; type=&quot;DeploymentRoleAssignments&quot; /&gt;
+<xs:element name="RoleAssignments" type="DeploymentRoleAssignments" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;RoleAssignments
-                &lt;RoleAssignment /&gt;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <RoleAssignments
+                <RoleAssignment />
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

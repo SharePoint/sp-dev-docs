@@ -67,9 +67,9 @@ Specifies the transformer for the Web Part.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebPartTransformer 
+<td align="left"><pre><code><WebPartTransformer 
    Assembly = string 
-   Namespace = string /&gt;</code></pre></td>
+   Namespace = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

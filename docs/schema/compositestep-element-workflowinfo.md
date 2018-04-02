@@ -69,9 +69,9 @@ Specifies a step in a composite workflow activity.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CompositeStep&gt;
-    &lt;DataSources&gt;    &lt;/DataSources&gt;
-&lt;/CompositeStep&gt;</code></pre></td>
+<td align="left"><pre><code><CompositeStep>
+    <DataSources>    </DataSources>
+</CompositeStep></code></pre></td>
 </tr>
 </tbody>
 </table>

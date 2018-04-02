@@ -70,28 +70,28 @@ class="nolink">SPFolder</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Folder&quot; type=&quot;SPFolder&quot; /&gt;
+<xs:element name="Folder" type="SPFolder" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;Folder
-                Id=&quot;Guid&quot;
-                Name=&quot;xs:string&quot;
-                Url=&quot;xs:string&quot;
-                ParentFolderId=&quot;Guid&quot;
-                ParentWebId=&quot;Guid&quot;
-                ParentWebUrl=&quot;xs:string&quot;
-                ContainingDocumentLibrary=&quot;Guid&quot;
-                WelcomePageUrl=&quot;xs:string&quot;
-                WelcomePageParameters=&quot;xs:string&quot;
-                ListItemIntId=&quot;xs:int&quot;
-                Author=&quot;xs:string&quot;
-                ModifiedBy=&quot;xs:string&quot;
-                TimeCreated=&quot;xs:dateTime&quot;
-                TimeLastModified=&quot;xs:dateTime&quot;
-                        &lt;Properties /&gt;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <Folder
+                Id="Guid"
+                Name="xs:string"
+                Url="xs:string"
+                ParentFolderId="Guid"
+                ParentWebId="Guid"
+                ParentWebUrl="xs:string"
+                ContainingDocumentLibrary="Guid"
+                WelcomePageUrl="xs:string"
+                WelcomePageParameters="xs:string"
+                ListItemIntId="xs:int"
+                Author="xs:string"
+                ModifiedBy="xs:string"
+                TimeCreated="xs:dateTime"
+                TimeLastModified="xs:dateTime"
+                        <Properties />
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

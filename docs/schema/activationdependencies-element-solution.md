@@ -71,7 +71,7 @@ Specifies the activation dependencies for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActivationDependencies /&gt;</code></pre></td>
+<td align="left"><pre><code><ActivationDependencies /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -69,14 +69,14 @@ class="keyword">SPWebPart</span>) object instances.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;WebParts&quot; type=&quot;SPWebPartCollection&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="WebParts" type="SPWebPartCollection" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;File&gt;
-   &lt;WebParts&gt;
-      &lt;WebPart /&gt;
-   &lt;/WebParts&gt;
-&lt;/File&gt;</code></pre></td>
+<File>
+   <WebParts>
+      <WebPart />
+   </WebParts>
+</File></code></pre></td>
 </tr>
 </tbody>
 </table>

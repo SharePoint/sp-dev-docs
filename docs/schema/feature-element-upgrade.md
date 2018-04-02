@@ -72,9 +72,9 @@ collections created in Microsoft SharePoint Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Feature
-  ID = &quot;GUID&quot;
-  Force = &quot;true&quot; | &quot;false&quot;/&gt;</code></pre></td>
+<td align="left"><pre><code><Feature
+  ID = "GUID"
+  Force = "true" | "false"/></code></pre></td>
 </tr>
 </tbody>
 </table>

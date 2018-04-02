@@ -72,19 +72,19 @@ template by list template basis.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Lists&gt;
-  &lt;List
-    FromTemplateId = &quot;Integer&quot;
-    ToFeatureId = &quot;GUID&quot;
-    v3Type = &quot;Integer&quot;&gt;
-  &lt;/List&gt;
-  &lt;List
-    FromTemplateId = &quot;Integer&quot;
-    ToFeatureId = &quot;GUID&quot;
-    v3Type = &quot;Integer&quot;&gt;
-  &lt;/List&gt;
+<td align="left"><pre><code><Lists>
+  <List
+    FromTemplateId = "Integer"
+    ToFeatureId = "GUID"
+    v3Type = "Integer">
+  </List>
+  <List
+    FromTemplateId = "Integer"
+    ToFeatureId = "GUID"
+    v3Type = "Integer">
+  </List>
   ...
-&lt;/Lists&gt;</code></pre></td>
+</Lists></code></pre></td>
 </tr>
 </tbody>
 </table>

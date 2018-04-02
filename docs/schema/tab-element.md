@@ -71,14 +71,14 @@ Represents a tab control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Tab
-  Command=&quot;Text&quot;
-  CssClass=&quot;Text&quot;
-  Description=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  Sequence=&quot;Text&quot;
-  Title=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Tab
+  Command="Text"
+  CssClass="Text"
+  Description="Text"
+  Id="Text"
+  Sequence="Text"
+  Title="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -104,7 +104,7 @@ Represents a tab control.
 </tr>
 <tr class="even">
 <td align="left"><p>**CssClass**</p></td>
-<td align="left"><p>Optional. The name of the CSS class (such as &quot;ms-browseTab&quot;) to apply when the tab is rendered.</p></td>
+<td align="left"><p>Optional. The name of the CSS class (such as "ms-browseTab") to apply when the tab is rendered.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Description**</p></td>
@@ -112,7 +112,7 @@ Represents a tab control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the control, such as &quot;Ribbon.CustomTabExample&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the control, such as "Ribbon.CustomTabExample".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sequence**</p></td>

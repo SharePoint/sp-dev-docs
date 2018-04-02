@@ -67,7 +67,7 @@ Specifies a Web Part that has been serialized into binary data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;BinarySerializedWebPart /&gt;</code></pre></td>
+<td align="left"><pre><code><BinarySerializedWebPart /></code></pre></td>
 </tr>
 </tbody>
 </table>

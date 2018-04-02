@@ -58,10 +58,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies an action for this External Data Part.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -75,7 +75,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActionName&gt;&lt;/ActionName&gt;</code></pre></td>
+<td align="left"><pre><code><ActionName></ActionName></code></pre></td>
 </tr>
 </tbody>
 </table>

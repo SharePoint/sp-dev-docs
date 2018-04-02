@@ -69,9 +69,9 @@ Defines a single XML document that is included in the content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;XmlDocument
-  NamespaceURI=&quot;Text&quot; &gt;
-&lt;/XmlDocument&gt;</code></pre></td>
+<td align="left"><pre><code><XmlDocument
+  NamespaceURI="Text" >
+</XmlDocument></code></pre></td>
 </tr>
 </tbody>
 </table>

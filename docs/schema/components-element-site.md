@@ -74,8 +74,8 @@ SharePoint Foundation components.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Components&gt;
-&lt;/Components&gt;</code></pre></td>
+<td align="left"><pre><code><Components>
+</Components></code></pre></td>
 </tr>
 </tbody>
 </table>

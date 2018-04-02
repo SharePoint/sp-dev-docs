@@ -68,10 +68,10 @@ Feature after the Feature is activated.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property
-    Key = &quot;Text&quot;
-  Value = &quot;Text&quot;&gt;
-&lt;/Property&gt;</code></pre></td>
+<td align="left"><pre><code><Property
+    Key = "Text"
+  Value = "Text">
+</Property></code></pre></td>
 </tr>
 </tbody>
 </table>

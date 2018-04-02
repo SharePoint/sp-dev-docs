@@ -79,7 +79,7 @@ Viewer)](override-mobile-document-viewer.md)</span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Override ... /&gt;</code></pre></td>
+<td align="left"><pre><code><Override ... /></code></pre></td>
 </tr>
 </tbody>
 </table>

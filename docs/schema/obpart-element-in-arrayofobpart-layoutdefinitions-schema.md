@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies an External Data Part.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OBPart PartType = &quot;String&quot; QualifiedTypeName = &quot;String&quot; DataSourceName = &quot;String&quot; DataSourceOrigin = &quot;String&quot; Description = &quot;String&quot; Text = &quot;String&quot; Expanded = &quot;Boolean&quot; FillParent = &quot;Boolean&quot;&gt; &lt;/OBPart&gt;</code></pre></td>
+<td align="left"><pre><code><OBPart PartType = "String" QualifiedTypeName = "String" DataSourceName = "String" DataSourceOrigin = "String" Description = "String" Text = "String" Expanded = "Boolean" FillParent = "Boolean"> </OBPart></code></pre></td>
 </tr>
 </tbody>
 </table>

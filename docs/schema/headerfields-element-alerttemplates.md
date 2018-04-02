@@ -71,8 +71,8 @@ Specifies header fields for the alert message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;HeaderFields&gt;
-&lt;/HeaderFields&gt;</code></pre></td>
+<td align="left"><pre><code><HeaderFields>
+</HeaderFields></code></pre></td>
 </tr>
 </tbody>
 </table>

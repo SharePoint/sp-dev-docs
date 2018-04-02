@@ -71,10 +71,10 @@ Specifies a class resource to include in a solution's assembly.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ClassResource
-  FileName = &quot;Text&quot;
-  Location = &quot;Text&quot;&gt;
-&lt;/ClassResource&gt;</code></pre></td>
+<td align="left"><pre><code><ClassResource
+  FileName = "Text"
+  Location = "Text">
+</ClassResource></code></pre></td>
 </tr>
 </tbody>
 </table>

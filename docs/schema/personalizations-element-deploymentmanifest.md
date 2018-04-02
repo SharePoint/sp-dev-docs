@@ -71,17 +71,17 @@ class="nolink">SPFile</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Personalizations&quot; 
-        type=&quot;SPPersonalizationCollection&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; 
-/&gt;
+<xs:element name="Personalizations" 
+        type="SPPersonalizationCollection" 
+        minOccurs="0" maxOccurs="1" 
+/>
 
 USAGE
-&lt;File&gt;
-        &lt;Personalizations
-                &lt;Personalization /&gt;
-        /&gt;
-&lt;/File&gt;</code></pre></td>
+<File>
+        <Personalizations
+                <Personalization />
+        />
+</File></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -62,10 +62,10 @@ Specifies localized display names and properties, in any combination,
 for a [TypeDescriptor Element (BDCMetadata
 Schema)](typedescriptor-element-bdcmetadata-schema.md)</span>.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-**Schema:** BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TypeDescriptor Name = &quot;String&quot;&gt; &lt;/TypeDescriptor&gt;</code></pre></td>
+<td align="left"><pre><code><TypeDescriptor Name = "String"> </TypeDescriptor></code></pre></td>
 </tr>
 </tbody>
 </table>

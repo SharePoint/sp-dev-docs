@@ -70,17 +70,17 @@ lookup references from list item to list item.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-        name=&quot;LookupItems&quot; type=&quot;SPLookupItems&quot;
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element 
+        name="LookupItems" type="SPLookupItems"
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;LookupList&gt;
-        &lt;LookupItems&gt;
-                &lt;LookupItem /&gt;
-        &lt;/LookupItems&gt;
-&lt;/LookupList&gt;</code></pre></td>
+<LookupList>
+        <LookupItems>
+                <LookupItem />
+        </LookupItems>
+</LookupList></code></pre></td>
 </tr>
 </tbody>
 </table>

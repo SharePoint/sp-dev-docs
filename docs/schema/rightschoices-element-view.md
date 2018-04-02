@@ -75,11 +75,11 @@ displayed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RightsChoices&gt;
-  &lt;RightsGroup
-        Permission = &quot;Required&quot;&gt;/&gt;
-  &lt;RightsGroup&gt;
-&lt;/RightsChoices&gt;</code></pre></td>
+<td align="left"><pre><code><RightsChoices>
+  <RightsGroup
+        Permission = "Required">/>
+  <RightsGroup>
+</RightsChoices></code></pre></td>
 </tr>
 </tbody>
 </table>

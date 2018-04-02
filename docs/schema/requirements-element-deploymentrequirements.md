@@ -68,15 +68,15 @@ Represents a collection of deployment export requirement objects.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;Requirements&quot; 
-    type=&quot;SPImportRequirements&quot; 
-/&gt;
+<xs:element 
+    name="Requirements" 
+    type="SPImportRequirements" 
+/>
 
 USAGE
-&lt;Requirements&gt;
-    &lt;Requirement /&gt;
-&lt;/Requirements&gt;</code></pre></td>
+<Requirements>
+    <Requirement />
+</Requirements></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,13 +72,13 @@ solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DwpFiles&gt;
-  &lt;DwpFile
-    FileName = &quot;Text&quot; 
-    Location = &quot;Text&quot;&gt;
-  &lt;/DwpFile&gt;
+<td align="left"><pre><code><DwpFiles>
+  <DwpFile
+    FileName = "Text" 
+    Location = "Text">
+  </DwpFile>
   ...
-&lt;/DwpFiles&gt;</code></pre></td>
+</DwpFiles></code></pre></td>
 </tr>
 </tbody>
 </table>

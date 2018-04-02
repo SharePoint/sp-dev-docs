@@ -69,14 +69,14 @@ value specifies the object type of the specified deployment requirement.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPRequirementObjectType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;FeatureDefinition&quot; /&gt;
-                &lt;xs:enumeration value=&quot;WebTemplate&quot; /&gt;
-                &lt;xs:enumeration value=&quot;WebPart&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Language&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPRequirementObjectType">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="FeatureDefinition" />
+                <xs:enumeration value="WebTemplate" />
+                <xs:enumeration value="WebPart" />
+                <xs:enumeration value="Language" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

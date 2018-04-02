@@ -67,7 +67,7 @@ Specifies the type of event for which to register the event handler.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Type /&gt;</code></pre></td>
+<td align="left"><pre><code><Type /></code></pre></td>
 </tr>
 </tbody>
 </table>

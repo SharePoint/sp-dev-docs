@@ -73,12 +73,12 @@ collection of languages for regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Languages&gt;
-  &lt;Language 
-        ID =&quot;Integer&quot;
-        Name=&quot;Text&quot;/&gt;
+<td align="left"><pre><code><Languages>
+  <Language 
+        ID ="Integer"
+        Name="Text"/>
   ...
-&lt;/Languages&gt;</code></pre></td>
+</Languages></code></pre></td>
 </tr>
 </tbody>
 </table>

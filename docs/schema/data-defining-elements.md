@@ -139,7 +139,7 @@ this file.
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
 <td align="left"><p>**Text**</p></td>
-<td align="left"><p>Contains the name of the internal data type as referenced in a Type attribute of the Field element: <span class="code">&lt;Field Type=&quot;Name&quot;/&gt;</span>. Examples are **Text</span>, **Note</span>, **Number**, etc.</p></td>
+<td align="left"><p>Contains the name of the internal data type as referenced in a Type attribute of the Field element: <span class="code"><Field Type="Name"/></span>. Examples are **Text</span>, **Note</span>, **Number**, etc.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**NewPattern**</p></td>
@@ -230,7 +230,7 @@ field being rendered.
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="fieldprefix-element-view.md">FieldPrefix</a></p></td>
-<td align="left"><p>Returns the Microsoft Office namespace, &quot;urn:schemas-microsoft-com:office:office#&quot;.</p></td>
+<td align="left"><p>Returns the Microsoft Office namespace, "urn:schemas-microsoft-com:office:office#".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="http://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7(Office.15).aspx">FieldRef</a></p></td>

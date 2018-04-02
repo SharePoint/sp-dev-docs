@@ -69,9 +69,9 @@ Container for the steps in a composite workflow activity.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CompositeSteps&gt;
-    &lt;CompositeStep&gt;    &lt;/CompositeStep&gt;
-&lt;/CompositeSteps&gt;</code></pre></td>
+<td align="left"><pre><code><CompositeSteps>
+    <CompositeStep>    </CompositeStep>
+</CompositeSteps></code></pre></td>
 </tr>
 </tbody>
 </table>

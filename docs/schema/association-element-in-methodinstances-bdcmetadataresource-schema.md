@@ -63,10 +63,10 @@ combination, for an [Association Element in
 MethodInstances (BDCMetadata
 Schema)](association-element-in-methodinstances-bdcmetadata-schema.md)</span>.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-**Schema:** BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -80,7 +80,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Association Name = &quot;String&quot;&gt; &lt;/Association&gt;</code></pre></td>
+<td align="left"><pre><code><Association Name = "String"> </Association></code></pre></td>
 </tr>
 </tbody>
 </table>

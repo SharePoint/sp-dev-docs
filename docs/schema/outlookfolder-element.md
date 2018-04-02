@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Describes the Microsoft Outlook 2010 folder that contains the external
 data.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,10 +78,10 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OutlookFolder FolderDisplayName = &quot;String&quot; NativeType = &quot;NativeFolderType&quot;
- SubscriptionName = &quot;String&quot; FolderName = &quot;String&quot; FolderGroup = &quot;String&quot; CanCreate = 
-&quot;Boolean&quot; CanUpdate = &quot;Boolean&quot; CanDelete = &quot;Boolean&quot; Name = &quot;String&quot;
- Description  = &quot;String&quot;&gt; &lt;/OutlookFolder&gt;</code></pre></td>
+<td align="left"><pre><code><OutlookFolder FolderDisplayName = "String" NativeType = "NativeFolderType"
+ SubscriptionName = "String" FolderName = "String" FolderGroup = "String" CanCreate = 
+"Boolean" CanUpdate = "Boolean" CanDelete = "Boolean" Name = "String"
+ Description  = "String"> </OutlookFolder></code></pre></td>
 </tr>
 </tbody>
 </table>

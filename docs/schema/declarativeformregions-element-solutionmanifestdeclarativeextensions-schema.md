@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Lists the form regions in which external data will be displayed in
 Microsoft Outlook 2010.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-**Schema:** SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/Declar
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FormRegions xsl:type=&quot;DeclarativeFormRegions&quot; xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance&quot;  AutoGenerate = &quot;Boolean&quot;&gt; &lt;/FormRegions&gt;</code></pre></td>
+<td align="left"><pre><code><FormRegions xsl:type="DeclarativeFormRegions" xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance"  AutoGenerate = "Boolean"> </FormRegions></code></pre></td>
 </tr>
 </tbody>
 </table>

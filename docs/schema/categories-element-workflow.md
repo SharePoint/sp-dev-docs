@@ -69,8 +69,8 @@ Reserved for future use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Categories/&gt;
-&lt;/Catagories&gt;</code></pre></td>
+<td align="left"><pre><code><Categories/>
+</Catagories></code></pre></td>
 </tr>
 </tbody>
 </table>

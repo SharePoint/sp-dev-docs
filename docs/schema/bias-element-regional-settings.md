@@ -75,8 +75,8 @@ extensions\\15\\CONFIG).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Bias&gt;
-&lt;/Bias&gt;</code></pre></td>
+<td align="left"><pre><code><Bias>
+</Bias></code></pre></td>
 </tr>
 </tbody>
 </table>

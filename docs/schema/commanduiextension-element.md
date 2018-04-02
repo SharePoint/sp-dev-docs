@@ -67,7 +67,7 @@ Contains elements that extend the user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CommandUIExtension /&gt;</code></pre></td>
+<td align="left"><pre><code><CommandUIExtension /></code></pre></td>
 </tr>
 </tbody>
 </table>

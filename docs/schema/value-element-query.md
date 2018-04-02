@@ -73,10 +73,10 @@ compared.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Value
-  Type = &quot;Text&quot;
-  IncludeTimeValue = &quot;TRUE&quot; | &quot;FALSE&gt;
-&lt;/Value&gt;</code></pre></td>
+<td align="left"><pre><code><Value
+  Type = "Text"
+  IncludeTimeValue = "TRUE" | "FALSE>
+</Value></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,9 +71,9 @@ Contains elements that define menu controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Controls
-     Id=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Controls
+     Id="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ Contains elements that define menu controls.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element such as &quot;Ribbon.Library.Share.NewMenuControls&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element such as "Ribbon.Library.Share.NewMenuControls".</p></td>
 </tr>
 </tbody>
 </table>

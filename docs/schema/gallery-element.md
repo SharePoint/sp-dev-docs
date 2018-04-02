@@ -71,16 +71,16 @@ Defines a gallery.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Gallery
-  Command=&quot;Text&quot;
-  CommandPreview=&quot;Text&quot;
-  CommandRevert=&quot;Text&quot;
-  ElementDimensions=&quot;Size16by16 | Size32by32 | Size48by48 | Size72by96 | Size96by72 | Size96by96 | Size128by128 | Size190by30 | Size190by40 | Size190by50 | Size190by60&quot;
-  Id=&quot;Text&quot;
-  QueryCommand=&quot;Text&quot;
-  Sequence=&quot;Integer&quot;
-  Width=&quot;Integer&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Gallery
+  Command="Text"
+  CommandPreview="Text"
+  CommandRevert="Text"
+  ElementDimensions="Size16by16 | Size32by32 | Size48by48 | Size72by96 | Size96by72 | Size96by96 | Size128by128 | Size190by30 | Size190by40 | Size190by50 | Size190by60"
+  Id="Text"
+  QueryCommand="Text"
+  Sequence="Integer"
+  Width="Integer"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -114,7 +114,7 @@ Defines a gallery.
 </tr>
 <tr class="even">
 <td align="left"><p>**ElementDimensions**</p></td>
-<td align="left"><p>Required. An enumeration value that specifies the dimensions of rectangular child elements. Dimensions are in pixels and are in the format &quot;width by height&quot;.</p>
+<td align="left"><p>Required. An enumeration value that specifies the dimensions of rectangular child elements. Dimensions are in pixels and are in the format "width by height".</p>
 <ul>
 <li><p>**Size16by16**</p></li>
 <li><p>**Size32by32**</p></li>
@@ -131,7 +131,7 @@ Defines a gallery.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;GadgetsGallery&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "GadgetsGallery".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**QueryCommand**</p></td>

@@ -77,8 +77,8 @@ new, respectively.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Then&gt;
-&lt;/Then&gt;</code></pre></td>
+<td align="left"><pre><code><Then>
+</Then></code></pre></td>
 </tr>
 </tbody>
 </table>

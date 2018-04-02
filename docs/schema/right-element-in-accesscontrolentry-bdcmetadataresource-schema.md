@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 See [Right Element in AccessControlEntry (BDCMetadata
 Schema)](right-element-in-accesscontrolentry-bdcmetadata-schema.md)</span> for details.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-**Schema:** BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Right BdcRight = &quot;String&quot;&gt; &lt;/Right&gt;</code></pre></td>
+<td align="left"><pre><code><Right BdcRight = "String"> </Right></code></pre></td>
 </tr>
 </tbody>
 </table>

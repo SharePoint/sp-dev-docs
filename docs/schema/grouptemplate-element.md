@@ -72,10 +72,10 @@ Defines the scaling behavior for controls in a
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GroupTemplate
-  Id=&quot;Text&quot;
-  ClassName=&quot;CSS Class Selector&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><GroupTemplate
+  Id="Text"
+  ClassName="CSS Class Selector"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -97,7 +97,7 @@ Defines the scaling behavior for controls in a
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that unambiguously identifies the element, such as &quot;Ribbon.Templates.CustomTemplateExample&quot;.</p></td>
+<td align="left"><p>Required. A string that unambiguously identifies the element, such as "Ribbon.Templates.CustomTemplateExample".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ClassName**</p></td>

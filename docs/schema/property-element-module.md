@@ -67,10 +67,10 @@ Specifies a custom property value to implement within the file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property
-  Name = &quot;Text&quot;
-  Value = &quot;Text&quot;&gt;
-  Type = integer | string | DateTime/&gt;</code></pre></td>
+<td align="left"><pre><code><Property
+  Name = "Text"
+  Value = "Text">
+  Type = integer | string | DateTime/></code></pre></td>
 </tr>
 </tbody>
 </table>

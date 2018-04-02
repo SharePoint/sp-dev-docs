@@ -68,8 +68,8 @@ intended to be used directly from your code.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Recurrence&gt;
-&lt;/Recurrence&gt;</code></pre></td>
+<td align="left"><pre><code><Recurrence>
+</Recurrence></code></pre></td>
 </tr>
 </tbody>
 </table>

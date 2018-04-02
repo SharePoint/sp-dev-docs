@@ -71,16 +71,16 @@ Specifies the assemblies to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Assemblies&gt;
-  &lt;Assembly
-    DeploymentTarget = &quot;GlobalAssemblyCache&quot; | &quot;WebApplication&quot;
-    Location = &quot;Text&quot;&gt;
-    &lt;SafeControls&gt;
+<td align="left"><pre><code><Assemblies>
+  <Assembly
+    DeploymentTarget = "GlobalAssemblyCache" | "WebApplication"
+    Location = "Text">
+    <SafeControls>
       ...
-    &lt;/SafeControls&gt;
-  &lt;/Assembly&gt;
+    </SafeControls>
+  </Assembly>
   ...
-&lt;/Assemblies&gt;</code></pre></td>
+</Assemblies></code></pre></td>
 </tr>
 </tbody>
 </table>

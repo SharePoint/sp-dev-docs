@@ -71,24 +71,24 @@ content migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element
-        name=&quot;DeploymentObject&quot; type=&quot;SPExportObject&quot;
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element
+        name="DeploymentObject" type="SPExportObject"
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;DeploymentObject
-        &lt;!-- SPDeploymentObject --&gt;
-        &lt;xs:attribute name=&quot;Id&quot; type=&quot;Guid&quot; /&gt;
-        &lt;xs:attribute name=&quot;Type&quot; type=&quot;SPDeploymentObjectType&quot; /&gt;
-        &lt;xs:attribute name=&quot;ParentId&quot; type=&quot;Guid&quot; /&gt;
+<DeploymentObject
+        <!-- SPDeploymentObject -->
+        <xs:attribute name="Id" type="Guid" />
+        <xs:attribute name="Type" type="SPDeploymentObjectType" />
+        <xs:attribute name="ParentId" type="Guid" />
 
-        &lt;!-- SPExportObject --&gt;
-        &lt;xs:attribute name=&quot;Url&quot; type=&quot;xs:string&quot; /&gt;
-        &lt;xs:attribute name=&quot;ExcludeChildren&quot; type=&quot;xs:boolean&quot; /&gt;
-        &lt;xs:attribute name=&quot;IncludeDescendants&quot; type=&quot;SPIncludeDescendants&quot; /&gt;
-        &lt;xs:attribute name=&quot;ExportChangeToken&quot; type=&quot;xs:string&quot; /&gt;
-/&gt;</code></pre></td>
+        <!-- SPExportObject -->
+        <xs:attribute name="Url" type="xs:string" />
+        <xs:attribute name="ExcludeChildren" type="xs:boolean" />
+        <xs:attribute name="IncludeDescendants" type="SPIncludeDescendants" />
+        <xs:attribute name="ExportChangeToken" type="xs:string" />
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

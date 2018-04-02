@@ -67,13 +67,13 @@ Specifies the document type of a specified list item.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;ListItemDocType&quot;&gt;
-   &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-      &lt;xs:enumeration value=&quot;File&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Folder&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Unknown&quot; /&gt;
-   &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="ListItemDocType">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="File" />
+      <xs:enumeration value="Folder" />
+      <xs:enumeration value="Unknown" />
+   </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

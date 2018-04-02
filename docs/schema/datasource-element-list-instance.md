@@ -67,9 +67,9 @@ Specifies the data source that is used to provision the list instance.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DataSource&gt;
-  &lt;Property /&gt;
-&lt;/DataSource&gt;</code></pre></td>
+<td align="left"><pre><code><DataSource>
+  <Property />
+</DataSource></code></pre></td>
 </tr>
 </tbody>
 </table>

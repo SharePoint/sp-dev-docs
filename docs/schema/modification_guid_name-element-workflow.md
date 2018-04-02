@@ -70,8 +70,8 @@ actual unique identifier assigned to the modification form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Modification_GUID_Name&gt;
-&lt;/Modification_GUID_Name&gt;</code></pre></td>
+<td align="left"><pre><code><Modification_GUID_Name>
+</Modification_GUID_Name></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,11 +71,11 @@ Specifies the resources to be deployed to an existing Feature folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Resources
-  &lt;Resource
-    Location=&quot;Text&quot;/&gt;
+<td align="left"><pre><code><Resources
+  <Resource
+    Location="Text"/>
     ...
-&lt;/Resources&gt;</code></pre></td>
+</Resources></code></pre></td>
 </tr>
 </tbody>
 </table>

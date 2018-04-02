@@ -71,9 +71,9 @@ Specifies a Feature to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FeatureManifest
-    Location=&quot;Text&quot;&gt;
-&lt;/FeatureManifest&gt;</code></pre></td>
+<td align="left"><pre><code><FeatureManifest
+    Location="Text">
+</FeatureManifest></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,11 +67,11 @@ Defines the handler for a command.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CommandUIHandler
-  Command = &quot;Text&quot;
-  CommandAction = &quot;Text&quot;
-  EnabledScript = &quot;Text&quot;
- /&gt;</code></pre></td>
+<td align="left"><pre><code><CommandUIHandler
+  Command = "Text"
+  CommandAction = "Text"
+  EnabledScript = "Text"
+ /></code></pre></td>
 </tr>
 </tbody>
 </table>

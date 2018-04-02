@@ -69,12 +69,12 @@ Represents a container, or collection, of Windows SharePoint Services
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ContentTypes&quot; type=&quot;SPContentTypeCollection&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="ContentTypes" type="SPContentTypeCollection" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;List&gt;
-   &lt;ContentTypes /&gt;
-&lt;/List&gt;</code></pre></td>
+<List>
+   <ContentTypes />
+</List></code></pre></td>
 </tr>
 </tbody>
 </table>

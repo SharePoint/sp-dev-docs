@@ -71,8 +71,8 @@ Specifies the subject of the alert message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Subject&gt;
-&lt;/Subject&gt;</code></pre></td>
+<td align="left"><pre><code><Subject>
+</Subject></code></pre></td>
 </tr>
 </tbody>
 </table>

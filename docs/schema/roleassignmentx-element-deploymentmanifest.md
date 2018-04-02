@@ -69,26 +69,26 @@ to the base object are being deployed.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;RoleAssignmentX&quot; type=&quot;DeploymentRoleAssignmentX&quot; /&gt;
+<xs:element name="RoleAssignmentX" type="DeploymentRoleAssignmentX" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;RoleAssignmentX
-                Operation=&quot;SecurityModificationType&quot;
-                OperationCode=&quot;xs:string&quot;
-                ScopeId=&quot;xs:string&quot;
-                RoleDefWebId=&quot;xs:string&quot;
-                RoleDefWebUrl=&quot;xs:string&quot;
-                ObjectId=&quot;xs:string&quot;
-                ObjectType=&quot;xs:string&quot;
-                ObjectUrl=&quot;xs:string&quot;
-                AnonymousPermMask=&quot;xs:string&quot;
-                RoleName=&quot;xs:string&quot;
-                RoleId=&quot;xs:string&quot;
-                GroupTitle=&quot;xs:string&quot;
-                UserLogin=&quot;xs:string&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <RoleAssignmentX
+                Operation="SecurityModificationType"
+                OperationCode="xs:string"
+                ScopeId="xs:string"
+                RoleDefWebId="xs:string"
+                RoleDefWebUrl="xs:string"
+                ObjectId="xs:string"
+                ObjectType="xs:string"
+                ObjectUrl="xs:string"
+                AnonymousPermMask="xs:string"
+                RoleName="xs:string"
+                RoleId="xs:string"
+                GroupTitle="xs:string"
+                UserLogin="xs:string"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,9 +71,9 @@ Contains elements that define tab controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Tabs
-  Id=&quot;IdType&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Tabs
+  Id="IdType"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ Contains elements that define tab controls.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon.Tabs&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon.Tabs".</p></td>
 </tr>
 </tbody>
 </table>

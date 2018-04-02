@@ -70,10 +70,10 @@ parent data source.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Evaluation&gt;
-    &lt;ActivitySource&gt;
-    &lt;/ActivitySource&gt;
-&lt;/Evaluation&gt;</code></pre></td>
+<td align="left"><pre><code><Evaluation>
+    <ActivitySource>
+    </ActivitySource>
+</Evaluation></code></pre></td>
 </tr>
 </tbody>
 </table>

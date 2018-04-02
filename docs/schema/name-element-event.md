@@ -67,8 +67,8 @@ Contains the name of the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Name&gt;
-&lt;/Name&gt;</code></pre></td>
+<td align="left"><pre><code><Name>
+</Name></code></pre></td>
 </tr>
 </tbody>
 </table>

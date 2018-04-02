@@ -72,10 +72,10 @@ Represents a placeholder for a control in a
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ControlRef
-  DisplayMode=&quot;Small | Medium | Large | Menu | Menu16 | Menu32&quot;
-  TemplateAlias=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><ControlRef
+  DisplayMode="Small | Medium | Large | Menu | Menu16 | Menu32"
+  TemplateAlias="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

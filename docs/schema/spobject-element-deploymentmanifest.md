@@ -69,25 +69,25 @@ object (**SPGenericObject**).
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;SPObject&quot; 
-        type=&quot;SPGenericObject&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="SPObject" 
+        type="SPGenericObject" 
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;SPObjects&gt;
-        &lt;SPObject
-                ObjectType=&quot;SPObjectType&quot;
-                Id=&quot;Guid&quot;
-                ParentId=&quot;Guid&quot;
-                Name=&quot;xs:string&quot;
-                IsDeleted=&quot;xs:boolean&quot;
-                ParentWebId=&quot;Guid&quot;
-                ParentWebUrl=&quot;xs:string&quot;
-                ContentTypeId=&quot;xs:string&quot;
-                Url=&quot;xs:string&quot;
-        /&gt;
-&lt;/SPObjects&gt;</code></pre></td>
+<SPObjects>
+        <SPObject
+                ObjectType="SPObjectType"
+                Id="Guid"
+                ParentId="Guid"
+                Name="xs:string"
+                IsDeleted="xs:boolean"
+                ParentWebId="Guid"
+                ParentWebUrl="xs:string"
+                ContentTypeId="xs:string"
+                Url="xs:string"
+        />
+</SPObjects></code></pre></td>
 </tr>
 </tbody>
 </table>

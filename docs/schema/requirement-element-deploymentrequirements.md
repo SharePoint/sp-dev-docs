@@ -70,21 +70,21 @@ migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;Requirement&quot; 
-    type=&quot;SPRequirement&quot; 
-    minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element 
+    name="Requirement" 
+    type="SPRequirement" 
+    minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;Requirements&gt;
-    &lt;Requirement
-        Type=&quot;SPRequirementObjectType&quot;
-        Id=&quot;xs:string&quot;
-        Name=&quot;xs:string&quot;
-        Data=&quot;xs:string&quot;
-    /&gt;
-&lt;/Requirements&gt;</code></pre></td>
+<Requirements>
+    <Requirement
+        Type="SPRequirementObjectType"
+        Id="xs:string"
+        Name="xs:string"
+        Data="xs:string"
+    />
+</Requirements></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,14 +71,14 @@ Defines a group of tabs that are presented when they are relevant.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextualGroup
-  Color=&quot;None | DarkBlue | LightBlue | Teal | Orange | Green | Magenta | Yellow | Purple&quot;
-  Command=&quot;Text&quot;
-  ContextualGroupId=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  Sequence=&quot;Integer&quot;
-  Title=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><ContextualGroup
+  Color="None | DarkBlue | LightBlue | Teal | Orange | Green | Magenta | Yellow | Purple"
+  Command="Text"
+  ContextualGroupId="Text"
+  Id="Text"
+  Sequence="Integer"
+  Title="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -108,11 +108,11 @@ Defines a group of tabs that are presented when they are relevant.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ContextualGroupId**</p></td>
-<td align="left"><p>Optional. A string that identifies the contextual group, such as &quot;EditingTools&quot;.</p></td>
+<td align="left"><p>Optional. A string that identifies the contextual group, such as "EditingTools".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon.EditingTools&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon.EditingTools".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sequence**</p></td>

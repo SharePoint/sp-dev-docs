@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Lists the external content type that is associated with this context
 definition.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Entities&gt;&lt;/Entities&gt;</code></pre></td>
+<td align="left"><pre><code><Entities></Entities></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -76,10 +76,10 @@ extensions\\15\\TEMPLATE directories.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;File
-  FromPath = &quot;String&quot;
-  ToPath = &quot;String&quot;&gt;
-&lt;/File&gt;</code></pre></td>
+<td align="left"><pre><code><File
+  FromPath = "String"
+  ToPath = "String">
+</File></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -102,12 +102,12 @@ extensions\\15\\TEMPLATE directories.
 <tr class="odd">
 <td align="left"><p>**FromPath**</p></td>
 <td align="left"><p>Required **String</span>. Specifies the setup path of the file to be upgraded relative to the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE directory. Use the token **{LocaleId}** to specify a locale identifier as part of the path. Example:</p>
-<p><span class="code">FromPath=&quot;{LocaleId}\STS\Lists\announce\EditForm.aspx&quot;</span></p></td>
+<p><span class="code">FromPath="{LocaleId}\STS\Lists\announce\EditForm.aspx"</span></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToPath**</p></td>
 <td align="left"><p>Required **String**. Specifies the location in the setup directory of the file to which the file of the old version is mapped relative to the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE directory. Example:</p>
-<p><span class="code">ToPath= &quot;Features\AnnouncementsList\announce\EditForm.aspx&quot;</span></p></td>
+<p><span class="code">ToPath= "Features\AnnouncementsList\announce\EditForm.aspx"</span></p></td>
 </tr>
 </tbody>
 </table>

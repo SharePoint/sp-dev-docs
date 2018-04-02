@@ -67,7 +67,7 @@ Specifies the Web Part connections for a module.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebPartConnection 
+<td align="left"><pre><code><WebPartConnection 
    ID = string 
    ConsumerID = string 
    ProviderID = string 
@@ -75,7 +75,7 @@ Specifies the Web Part connections for a module.
    ProviderConnectionPointID = string 
    TargetPageUrl = string 
    CrossPageConnectionID = string 
-   CrossPageSchema = string /&gt;</code></pre></td>
+   CrossPageSchema = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

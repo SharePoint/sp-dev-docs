@@ -76,7 +76,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CodeMethodAction  MethodType = &quot;String&quot; QualifiedTypeName = &quot;String&quot; MethodName = &quot;String&quot; Caption = &quot;String&quot; Tooltip = &quot;String&quot; Image = &quot;String&quot; DisplayLocations = &quot;String&quot; DisplayOrder = &quot;Int&quot; Scope = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/CodeMethodAction&gt;</code></pre></td>
+<td align="left"><pre><code><CodeMethodAction  MethodType = "String" QualifiedTypeName = "String" MethodName = "String" Caption = "String" Tooltip = "String" Image = "String" DisplayLocations = "String" DisplayOrder = "Int" Scope = "String" Name = "String" Description = "String"> </CodeMethodAction></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -170,7 +170,7 @@ elements.
 <tr class="even">
 <td align="left"><p>QualifiedTypeName</p></td>
 <td align="left"><p>The assembly-qualified name of the class that defines the code action, which includes the name of the assembly from which the class was loaded. For more information about how to specify this value, see <a href="http://msdn.microsoft.com/en-us/library/system.type.assemblyqualifiedname.aspx">Type.AssemblyQualifiedName Property</a>.</p>
-<p><span class="code">Example: QualifiedTypeName=&quot;CustomCodeActionNameSpace.CustomCodeActionCalssName, CustomCodeActionAssemblyName, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c6b236b1e85d97a&quot;</span></p>
+<p><span class="code">Example: QualifiedTypeName="CustomCodeActionNameSpace.CustomCodeActionCalssName, CustomCodeActionAssemblyName, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c6b236b1e85d97a"</span></p>
 <p>Optional.</p>
 <p>Attribute type: String</p></td>
 </tr>

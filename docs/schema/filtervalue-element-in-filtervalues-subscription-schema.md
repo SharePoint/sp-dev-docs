@@ -63,10 +63,10 @@ Specifies a filter value for a query or association.
 The FilterValue element can contain a mix of character data and child
 elements.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -80,7 +80,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FilterValue FilterDescriptorName = &quot;String&quot; Type = &quot;String&quot; FilterIndex = &quot;Integer&quot;&gt; &lt;/FilterValue&gt;</code></pre></td>
+<td align="left"><pre><code><FilterValue FilterDescriptorName = "String" Type = "String" FilterIndex = "Integer"> </FilterValue></code></pre></td>
 </tr>
 </tbody>
 </table>

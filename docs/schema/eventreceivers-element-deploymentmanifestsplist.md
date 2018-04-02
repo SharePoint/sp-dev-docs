@@ -74,17 +74,17 @@ class="nolink">SPList</span></span>) objects.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;EventReceivers&quot; 
-        type=&quot;SPEventReceiverDefinitionCollection&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; 
-/&gt;
+<xs:element name="EventReceivers" 
+        type="SPEventReceiverDefinitionCollection" 
+        minOccurs="0" maxOccurs="1" 
+/>
 
 USAGE
-&lt;List&gt;
-   &lt;EventReceivers&gt;
-      &lt;EventReceiver /&gt;
-   &lt;/EventReceivers&gt;
-&lt;/List&gt;</code></pre></td>
+<List>
+   <EventReceivers>
+      <EventReceiver />
+   </EventReceivers>
+</List></code></pre></td>
 </tr>
 </tbody>
 </table>

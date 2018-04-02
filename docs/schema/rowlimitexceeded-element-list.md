@@ -90,8 +90,8 @@ if the **Paged** attribute of the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RowLimitExceeded&gt;
-&lt;/RowLimitExceeded&gt;</code></pre></td>
+<td align="left"><pre><code><RowLimitExceeded>
+</RowLimitExceeded></code></pre></td>
 </tr>
 </tbody>
 </table>

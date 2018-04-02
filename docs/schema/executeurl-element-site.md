@@ -74,9 +74,9 @@ instantiated.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExecuteUrl
-  Url = &quot;Text&quot;&gt;
-&lt;/ExecuteUrl&gt;</code></pre></td>
+<td align="left"><pre><code><ExecuteUrl
+  Url = "Text">
+</ExecuteUrl></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -98,8 +98,8 @@ instantiated.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the URL of a page located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS to open after the site is instantiated. For example, <span class="code">&lt;ExecuteUrl Url=&quot;_layouts/[%=System.Threading**</p>
-<p><span class="code">.Thread.CurrentThread.CurrentUICulture.LCID%]/settings.aspx&quot;/&gt;</span></p></td>
+<td align="left"><p>Required **Text</span>. Specifies the URL of a page located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS to open after the site is instantiated. For example, <span class="code"><ExecuteUrl Url="_layouts/[%=System.Threading**</p>
+<p><span class="code">.Thread.CurrentThread.CurrentUICulture.LCID%]/settings.aspx"/></span></p></td>
 </tr>
 </tbody>
 </table>

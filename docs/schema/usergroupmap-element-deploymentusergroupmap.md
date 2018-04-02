@@ -71,16 +71,16 @@ migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;UserGroupMap&quot;
-    type=&quot;DeploymentUserGroupMap&quot; 
-/&gt;
+<xs:element 
+    name="UserGroupMap"
+    type="DeploymentUserGroupMap" 
+/>
 
 USAGE
-&lt;UserGroupMap&gt;
-    &lt;Users /&gt;
-    &lt;Groups /&gt;
-&lt;/UserGroupMap&gt;</code></pre></td>
+<UserGroupMap>
+    <Users />
+    <Groups />
+</UserGroupMap></code></pre></td>
 </tr>
 </tbody>
 </table>

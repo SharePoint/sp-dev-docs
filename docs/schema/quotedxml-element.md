@@ -71,8 +71,8 @@ a Microsoft JScript string literal.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;QuotedXML&gt;
-&lt;/QuotedXML&gt;</code></pre></td>
+<td align="left"><pre><code><QuotedXML>
+</QuotedXML></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -156,7 +156,7 @@ onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
 code] "Copy code")Copy code</span>
     <QuotedXML>
-      &lt;ListProperty Select=&quot;Title&quot;/&gt;
+      <ListProperty Select="Title"/>
     </QuotedXML>
 
 

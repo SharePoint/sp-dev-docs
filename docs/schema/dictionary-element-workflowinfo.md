@@ -70,10 +70,10 @@ fields.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SchemaSource&gt;
-    &lt;Dictionary&gt;
-    &lt;/Dictionary&gt;
-&lt;/SchemaSource&gt;</code></pre></td>
+<td align="left"><pre><code><SchemaSource>
+    <Dictionary>
+    </Dictionary>
+</SchemaSource></code></pre></td>
 </tr>
 </tbody>
 </table>

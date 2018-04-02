@@ -73,11 +73,11 @@ similarly to the [Eq](eq-element-query.md) and
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Gt&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/Gt&gt;</code></pre></td>
+<td align="left"><pre><code><Gt>
+  <FieldRef Name = "Field_Name"/>
+  <Value Type = "Field_Type"/>
+  <XML />
+</Gt></code></pre></td>
 </tr>
 </tbody>
 </table>

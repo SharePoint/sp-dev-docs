@@ -67,12 +67,12 @@ Indicates the type of access granted to the specified field value.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPDictionaryEntryAccess&quot;&gt;
-   &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-      &lt;xs:enumeration value=&quot;ReadOnly&quot; /&gt;
-      &lt;xs:enumeration value=&quot;ReadWrite&quot; /&gt;
-   &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPDictionaryEntryAccess">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="ReadOnly" />
+      <xs:enumeration value="ReadWrite" />
+   </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -83,27 +83,27 @@ elements in both site definitions and Web templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Configuration
-    AllowGlobalFeatureAssociations = &quot;TRUE&quot; | &quot;FALSE&quot;
-    CustomMasterUrl = &quot;Text&quot;
-    Description = &quot;Text&quot;
-    DisplayCategory = &quot;Text&quot;
-    FilterCategories = &quot;Text&quot;
-    Hidden = &quot;TRUE&quot; | &quot;FALSE&quot;
-    ID = &quot;Integer&quot;
-    ImageUrl = &quot;Text&quot;
-    MasterUrl = &quot;Text&quot;
-    Name = &quot;Text&quot;
-    ProvisionAssembly = &quot;Text&quot;
-    ProvisionClass = &quot;Text&quot;
-    ProvisionData = &quot;Text&quot;
-    RootWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-    SubWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-    SupportsMultilingualUI = &quot;TRUE&quot; | &quot;FALSE&quot;
-    Title = &quot;Text&quot;
-    Type = &quot;Text&quot;
-    VisibilityFeatureDependency = &quot;Text&quot;&gt;
-&lt;/Configuration&gt;</code></pre></td>
+<td align="left"><pre><code><Configuration
+    AllowGlobalFeatureAssociations = "TRUE" | "FALSE"
+    CustomMasterUrl = "Text"
+    Description = "Text"
+    DisplayCategory = "Text"
+    FilterCategories = "Text"
+    Hidden = "TRUE" | "FALSE"
+    ID = "Integer"
+    ImageUrl = "Text"
+    MasterUrl = "Text"
+    Name = "Text"
+    ProvisionAssembly = "Text"
+    ProvisionClass = "Text"
+    ProvisionData = "Text"
+    RootWebOnly = "TRUE" | "FALSE"
+    SubWebOnly = "TRUE" | "FALSE"
+    SupportsMultilingualUI = "TRUE" | "FALSE"
+    Title = "Text"
+    Type = "Text"
+    VisibilityFeatureDependency = "Text">
+</Configuration></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -184,17 +184,17 @@ elements in both site definitions and Web templates.
 <tr class="odd">
 <td align="left"><p>**ProvisionAssembly**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the name of the assembly that contains the provision class, if there is one. (See <strong>ProvisionClass</strong> below.) For example:</p>
-<p><span class="code">ProvisionAssembly=&quot;MyCompany.SharePoint.ProvisionHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=82f0cdf222f0530d&quot;</span></p></td>
+<p><span class="code">ProvisionAssembly="MyCompany.SharePoint.ProvisionHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=82f0cdf222f0530d"</span></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ProvisionClass**</p></td>
 <td align="left"><p>Optional **Text</span>. Specifies the fully qualified name of a class that provides provisioning functionality that will execute when the runtime finishes creating a site from the configuration. It is not required that there be such a class, but if you need one for a custom configuration, it must derive from <span sdata="cer" target="T:Microsoft.SharePoint.SPWebProvisioningProvider"><span class="nolink">SPWebProvisioningProvider</span>**. For example:</p>
-<p><span class="code">ProvisionClass=&quot;MyCompany.SharePoint. ProvisionHelper.MySiteProvisioningProvider&quot;</span></p></td>
+<p><span class="code">ProvisionClass="MyCompany.SharePoint. ProvisionHelper.MySiteProvisioningProvider"</span></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ProvisionData**</p></td>
 <td align="left"><p>Optional **Text</span>. Specifies data that will be used by the <span sdata="cer" target="M:Microsoft.SharePoint.SPWebProvisioningProvider.Provision(Microsoft.SharePoint.SPWebProvisioningProperties)"><span class="nolink">Provision(SPWebProvisioningProperties)</span>** method of the <strong>ProvisionClass</strong> (see above). This can be a path to file that contains structured data. For example:</p>
-<p><span class="code">ProvisionData=&quot;SiteTemplates\\MySiteManifest.xml&quot;</span></p></td>
+<p><span class="code">ProvisionData="SiteTemplates\\MySiteManifest.xml"</span></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>

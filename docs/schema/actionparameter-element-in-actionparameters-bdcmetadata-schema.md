@@ -18,9 +18,9 @@ ms.assetid: 1f5fa96a-1bff-f007-984d-a644cbbb2648
 
 Specifies the parameters of a URL-based action. Defines how to parameterize the URL of an action with EntityInstance-specific data.
 
-**Namespace:** http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 The URL attribute of a URL-based action can receive parameters by using the ActionParameter element.
 

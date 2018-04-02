@@ -75,11 +75,11 @@ announcements Feature in the new version.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AppliedSiteFeatures&gt;
-    &lt;Feature
-      ID = &quot;GUID&quot;
-      Force = &quot;true&quot; | &quot;false&quot; /&gt;
-&lt;/AppliedSiteFeatures&gt;</code></pre></td>
+<td align="left"><pre><code><AppliedSiteFeatures>
+    <Feature
+      ID = "GUID"
+      Force = "true" | "false" />
+</AppliedSiteFeatures></code></pre></td>
 </tr>
 </tbody>
 </table>

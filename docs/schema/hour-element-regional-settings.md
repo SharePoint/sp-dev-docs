@@ -74,8 +74,8 @@ begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Hour&gt;
-&lt;/Hour&gt;</code></pre></td>
+<td align="left"><pre><code><Hour>
+</Hour></code></pre></td>
 </tr>
 </tbody>
 </table>

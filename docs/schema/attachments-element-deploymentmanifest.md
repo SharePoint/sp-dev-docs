@@ -69,14 +69,14 @@ Represents a container, or collection, of Windows SharePoint Services
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DELCARATION
-&lt;xs:element name=&quot;Attachments&quot; type=&quot;SPAttachmentCollection&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="Attachments" type="SPAttachmentCollection" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;ListItem&gt;
-        &lt;Attachments&gt;
-                &lt;Attachement /&gt;
-        &lt;/Attachements&gt;
-&lt;/ListItem&gt;</code></pre></td>
+<ListItem>
+        <Attachments>
+                <Attachement />
+        </Attachements>
+</ListItem></code></pre></td>
 </tr>
 </tbody>
 </table>

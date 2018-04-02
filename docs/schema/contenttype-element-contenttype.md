@@ -67,27 +67,27 @@ Defines a single content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContentType
-  BaseType=&quot;Text&quot;
-  ID=&quot;Text&quot;
-  Name=&quot;Text&quot;
-  Description=&quot;Text&quot;
-  DocumentTemplate=&quot;Text&quot;
-  FeatureId=&quot;Text&quot;
-  Group=&quot;Text&quot;
-  Hidden=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Inherits=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ProgId=&quot;Text&quot;
-  NewDocumentControl=&quot;Text&quot;
-  Overwrite=&quot;TRUE&quot; | &quot;FALSE
-  PushDownChangedResourceFilesOnly=&quot;TRUE&quot; | &quot;FALSE
-  ReadOnly=&quot;TRUE&quot; | &quot;FALSE&quot;
-  RequireClientRenderingOnNew=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ResourceFolder=&quot;Text&quot;
-  Sealed=&quot;TRUE&quot; | &quot;FALSE&quot;
-  V2ListTemplateName=&quot;Text&quot;
-  Version=&quot;Integer&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><ContentType
+  BaseType="Text"
+  ID="Text"
+  Name="Text"
+  Description="Text"
+  DocumentTemplate="Text"
+  FeatureId="Text"
+  Group="Text"
+  Hidden="TRUE" | "FALSE"
+  Inherits="TRUE" | "FALSE"
+  ProgId="Text"
+  NewDocumentControl="Text"
+  Overwrite="TRUE" | "FALSE
+  PushDownChangedResourceFilesOnly="TRUE" | "FALSE
+  ReadOnly="TRUE" | "FALSE"
+  RequireClientRenderingOnNew="TRUE" | "FALSE"
+  ResourceFolder="Text"
+  Sealed="TRUE" | "FALSE"
+  V2ListTemplateName="Text"
+  Version="Integer"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -117,7 +117,7 @@ Defines a single content type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the content type name. The value can be a reference to a resource in the format <span class="code">$Resources:String</span>. For more information, see <a href="http://msdn.microsoft.com/en-us/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.The name itself cannot be longer than 128 characters and cannot contain the characters <span class="code">\ / : * ? &quot; # % &lt; &gt; { } | ~ &amp;</span>, two consecutive periods (<span class="code">..**), or special characters such as a tab.</p>
+<td align="left"><p>Required **Text</span>. Specifies the content type name. The value can be a reference to a resource in the format <span class="code">$Resources:String</span>. For more information, see <a href="http://msdn.microsoft.com/en-us/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.The name itself cannot be longer than 128 characters and cannot contain the characters <span class="code">\ / : * ? " # % < > { } | ~ &amp;</span>, two consecutive periods (<span class="code">..**), or special characters such as a tab.</p>
 <p>An error occurs if another content type with the same name exists in the collection where the content type is added.</p></td>
 </tr>
 <tr class="even">

@@ -28,9 +28,9 @@ Microsoft SharePoint Foundation field type in
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Field
-    Name = "Text"&gt;
-&lt;/Field&gt;</code></pre></td>
+<td align="left"><pre><code><Field
+    Name = "Text">
+</Field></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -74,7 +74,7 @@ Viewer)](mobiledocviewer-mobile-document-viewer.md)</span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>  &lt;MobileDocViewer ... &gt;  &lt;/ MobileDocViewer&gt;</code></pre></td>
+<td align="left"><pre><code>  <MobileDocViewer ... >  </ MobileDocViewer></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -115,11 +115,11 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**QueryId**</p></td>
-<td align="left"><p>The query ID key; for example, &quot;doc&quot;.</p></td>
+<td align="left"><p>The query ID key; for example, "doc".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AppendSourceUrl**</p></td>
-<td align="left"><p>True if a source query ID should be appended to the URL of page that hosts the viewer; otherwise, false. The source query value is the path to the folder that holds the document. In the special case where &quot;?mobile=1&quot; is part of the original URL, the source query value is the same as the source query value of the original URL.</p></td>
+<td align="left"><p>True if a source query ID should be appended to the URL of page that hosts the viewer; otherwise, false. The source query value is the path to the folder that holds the document. In the special case where "?mobile=1" is part of the original URL, the source query value is the same as the source query value of the original URL.</p></td>
 </tr>
 </tbody>
 </table>

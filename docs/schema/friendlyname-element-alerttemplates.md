@@ -77,8 +77,8 @@ Extensions\\14\\Resources</span>.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FriendlyName&gt;
-&lt;/FriendlyName&gt;</code></pre></td>
+<td align="left"><pre><code><FriendlyName>
+</FriendlyName></code></pre></td>
 </tr>
 </tbody>
 </table>

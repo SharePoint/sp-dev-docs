@@ -88,8 +88,8 @@ list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GroupByHeader&gt;
-&lt;/GroupByHeader&gt;</code></pre></td>
+<td align="left"><pre><code><GroupByHeader>
+</GroupByHeader></code></pre></td>
 </tr>
 </tbody>
 </table>

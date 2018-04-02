@@ -68,49 +68,49 @@ lists on the <span class="ui">Create</span> page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListTemplate
-  AllowDeletion = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AllowEveryoneViewItems = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AlwaysIncludeContent = &quot;TRUE&quot; | &quot;FALSE&quot;
-  BaseType = &quot;0&quot; | &quot;1&quot; | &quot;3&quot; |&quot;4&quot; | &quot;5&quot;
-  CacheSchema = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Catalog = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Category = &quot;Libraries&quot; | &quot;Communications&quot; | &quot;Tracking&quot; | 
-    &quot;Custom Lists&quot;
-  Default = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Description = &quot;Text&quot;
-  DisableAttachments = &quot;TRUE&quot; | &quot;FALSE&quot;
-  DisallowContentTypes = &quot;TRUE&quot; | &quot;FALSE&quot;
-  DisplayName = &quot;Text&quot;
-  DocumentAsEnclosure = &quot;TRUE&quot; | &quot;FALSE&quot;
-  DocumentTemplate = &quot;Integer&quot;
-  DontSaveInTemplate = &quot;TRUE&quot; | &quot;FALSE&quot;
-  EditPage = &quot;Text&quot;
-  EnableModeration = &quot;TRUE&quot; | &quot;FALSE&quot;
-  EnablePeopleSelector = &quot;TRUE&quot; | &quot;FALSE&quot;
-  EnableResourceSelector = &quot;TRUE&quot; | &quot;FALSE&quot;
-  FeatureId = &quot;Text&quot;
-  FolderCreation = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Hidden = &quot;TRUE&quot; | &quot;FALSE&quot;
-  HiddenList = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Image = &quot;URL&quot;
-  MultipleTypes = &quot;TRUE&quot; | &quot;FALSE&quot;
-  MustSaveRootFiles = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Name = &quot;Text&quot;
-  NewPage = &quot;Text&quot;
-  NoCrawl = &quot;TRUE&quot; | &quot;FALSE&quot;
-  OnQuickLaunch = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Path = &quot;Text&quot;
-  RootWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  SecurityBits = &quot;Text&quot;
-  Sequence = &quot;Integer&quot;
-  SetupPath = &quot;Text&quot;
-  SyncType = &quot;Text&quot;
-  Type = &quot;Integer&quot;
-  Unique = &quot;TRUE&quot; | &quot;FALSE&quot;
-  UseRootFolderForNavigation = &quot;TRUE&quot; | &quot;FALSE&quot;
-  VersioningEnabled = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ListTemplate&gt;</code></pre></td>
+<td align="left"><pre><code><ListTemplate
+  AllowDeletion = "TRUE" | "FALSE"
+  AllowEveryoneViewItems = "TRUE" | "FALSE"
+  AlwaysIncludeContent = "TRUE" | "FALSE"
+  BaseType = "0" | "1" | "3" |"4" | "5"
+  CacheSchema = "TRUE" | "FALSE"
+  Catalog = "TRUE" | "FALSE"
+  Category = "Libraries" | "Communications" | "Tracking" | 
+    "Custom Lists"
+  Default = "TRUE" | "FALSE"
+  Description = "Text"
+  DisableAttachments = "TRUE" | "FALSE"
+  DisallowContentTypes = "TRUE" | "FALSE"
+  DisplayName = "Text"
+  DocumentAsEnclosure = "TRUE" | "FALSE"
+  DocumentTemplate = "Integer"
+  DontSaveInTemplate = "TRUE" | "FALSE"
+  EditPage = "Text"
+  EnableModeration = "TRUE" | "FALSE"
+  EnablePeopleSelector = "TRUE" | "FALSE"
+  EnableResourceSelector = "TRUE" | "FALSE"
+  FeatureId = "Text"
+  FolderCreation = "TRUE" | "FALSE"
+  Hidden = "TRUE" | "FALSE"
+  HiddenList = "TRUE" | "FALSE"
+  Image = "URL"
+  MultipleTypes = "TRUE" | "FALSE"
+  MustSaveRootFiles = "TRUE" | "FALSE"
+  Name = "Text"
+  NewPage = "Text"
+  NoCrawl = "TRUE" | "FALSE"
+  OnQuickLaunch = "TRUE" | "FALSE"
+  Path = "Text"
+  RootWebOnly = "TRUE" | "FALSE"
+  SecurityBits = "Text"
+  Sequence = "Integer"
+  SetupPath = "Text"
+  SyncType = "Text"
+  Type = "Integer"
+  Unique = "TRUE" | "FALSE"
+  UseRootFolderForNavigation = "TRUE" | "FALSE"
+  VersioningEnabled = "TRUE" | "FALSE">
+</ListTemplate></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -241,7 +241,7 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**MultipleMtgDataList**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="code">MultipleMtgDataList=&quot;TRUE&quot;** is specified, the list within a Meeting Workspace site contains data for multiple meeting instances within the site.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If <span class="code">MultipleMtgDataList="TRUE"** is specified, the list within a Meeting Workspace site contains data for multiple meeting instances within the site.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**MultipleTypes**</p></td>

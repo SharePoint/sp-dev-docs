@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LobSystem Name = &quot;String&quot;&gt; &lt;/LobSystem&gt;</code></pre></td>
+<td align="left"><pre><code><LobSystem Name = "String"> </LobSystem></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,11 +72,11 @@ other words, for fields to which a function is applied.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Aggregations
-  Value = &quot;Text&quot;&gt;
-  &lt;FieldRef /&gt;
+<td align="left"><pre><code><Aggregations
+  Value = "Text">
+  <FieldRef />
   ...
-&lt;/Aggregations&gt;</code></pre></td>
+</Aggregations></code></pre></td>
 </tr>
 </tbody>
 </table>

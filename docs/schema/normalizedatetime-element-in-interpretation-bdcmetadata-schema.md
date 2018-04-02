@@ -65,10 +65,10 @@ value to another representation. For example, this rule can specify
 converting a value represented in Coordinated Universal Time (UTC) into
 a local time zone.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -82,7 +82,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NormalizeDateTime LobDateTimeMode = &quot;String&quot;&gt; &lt;/NormalizeDateTime&gt;</code></pre></td>
+<td align="left"><pre><code><NormalizeDateTime LobDateTimeMode = "String"> </NormalizeDateTime></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,8 +72,8 @@ site, as defined in the UserInfo table of the content database.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UserID&gt;
-&lt;/UserID&gt;</code></pre></td>
+<td align="left"><pre><code><UserID>
+</UserID></code></pre></td>
 </tr>
 </tbody>
 </table>

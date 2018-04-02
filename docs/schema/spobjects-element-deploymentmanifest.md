@@ -69,12 +69,12 @@ objects.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;SPObjects&quot; type=&quot;SPGenericObjectCollection&quot;&gt;
-&lt;/xs:element&gt;
+<xs:element name="SPObjects" type="SPGenericObjectCollection">
+</xs:element>
 USAGE
-&lt;SPObjects&gt;
-        &lt;SPObject /&gt;
-&lt;/SPObjects&gt;</code></pre></td>
+<SPObjects>
+        <SPObject />
+</SPObjects></code></pre></td>
 </tr>
 </tbody>
 </table>

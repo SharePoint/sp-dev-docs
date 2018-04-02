@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Describes Microsoft Outlook-specific customizations. Must be of type
 **OutlookItemCustomizations**.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OfficeItemCustomizations Description = &quot;String&quot;&gt; &lt;/OfficeItemCustomizations&gt;</code></pre></td>
+<td align="left"><pre><code><OfficeItemCustomizations Description = "String"> </OfficeItemCustomizations></code></pre></td>
 </tr>
 </tbody>
 </table>

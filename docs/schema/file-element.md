@@ -71,16 +71,16 @@ configuration or Web template configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;File
-  DocumentTemplateForList = &quot;Text&quot;  DoGUIDFixUp = &quot;TRUE&quot; | &quot;FALSE&quot;
-  IgnoreIfAlreadyExists = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Level = &quot;Text&quot;
-  Name = &quot;Text&quot;
-  NavBarHome = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Path = &quot;Text&quot;
-  Type = &quot;Text&quot;
-  Url = &quot;Text &gt;
-&lt;/File&gt;</code></pre></td>
+<td align="left"><pre><code><File
+  DocumentTemplateForList = "Text"  DoGUIDFixUp = "TRUE" | "FALSE"
+  IgnoreIfAlreadyExists = "TRUE" | "FALSE"
+  Level = "Text"
+  Name = "Text"
+  NavBarHome = "TRUE" | "FALSE"
+  Path = "Text"
+  Type = "Text"
+  Url = "Text >
+</File></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +120,7 @@ configuration or Web template configuration.
 <td align="left"><p>**Name**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the virtual path for the file. Cannot contain the following characters:</p>
 <ul>
-<li><p>\&quot;</p></li>
+<li><p>\"</p></li>
 <li><p>#</p></li>
 <li><p>%</p></li>
 <li><p>&amp;</p></li>
@@ -161,7 +161,7 @@ configuration or Web template configuration.
 <td align="left"><p>**Url**</p></td>
 <td align="left"><p>Required **Text</span>. Specifies the virtual path for the file. If the **Name</span> attribute is specified, its value is used for the virtual path. If **Path</span> is not specified, the value of **Url** is used for the physical path. Cannot contain the following characters:</p>
 <ul>
-<li><p>\&quot;</p></li>
+<li><p>\"</p></li>
 <li><p>#</p></li>
 <li><p>%</p></li>
 <li><p>&amp;</p></li>

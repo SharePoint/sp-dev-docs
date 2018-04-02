@@ -68,11 +68,11 @@ schema.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContentTypeBinding
-    ContentTypeId=&quot;Text&quot;
-    ListUrl=&quot;Text&quot; 
-    RootWebOnly=&quot;TRUE&quot; | &quot;FALSE&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><ContentTypeBinding
+    ContentTypeId="Text"
+    ListUrl="Text" 
+    RootWebOnly="TRUE" | "FALSE"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

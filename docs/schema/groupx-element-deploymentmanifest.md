@@ -69,25 +69,25 @@ deployment group object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;GroupX&quot; type=&quot;DeploymentGroupX&quot; /&gt;
+<xs:element name="GroupX" type="DeploymentGroupX" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;GroupX
-                Operation=&quot;SecurityModificationType&quot;
-                Id=&quot;xs:string&quot;
-                Name=&quot;xs:string&quot;
-                OwnerLogin=&quot;xs:string&quot;
-                OwnerIsUser=&quot;xs:boolean&quot;
-                Description=&quot;xs:string&quot;
-                UserId=&quot;xs:string&quot;
-                UserLogin=&quot;xs:string&quot;
-                RequestToJoinLeaveEmailSetting=&quot;xs:string&quot;
-                OnlyAllowMembersViewMembership=&quot;xs:boolean&quot;
-                AllowRequestToJoinLeave=&quot;xs:boolean&quot;
-                AutoAcceptRequestToJoinLeave=&quot;xs:boolean&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <GroupX
+                Operation="SecurityModificationType"
+                Id="xs:string"
+                Name="xs:string"
+                OwnerLogin="xs:string"
+                OwnerIsUser="xs:boolean"
+                Description="xs:string"
+                UserId="xs:string"
+                UserLogin="xs:string"
+                RequestToJoinLeaveEmailSetting="xs:string"
+                OnlyAllowMembersViewMembership="xs:boolean"
+                AllowRequestToJoinLeave="xs:boolean"
+                AutoAcceptRequestToJoinLeave="xs:boolean"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

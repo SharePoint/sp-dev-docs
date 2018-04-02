@@ -75,7 +75,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LocalizedDisplayName LCID = &quot;Integer&quot;&gt; &lt;/LocalizedDisplayName&gt;</code></pre></td>
+<td align="left"><pre><code><LocalizedDisplayName LCID = "Integer"> </LocalizedDisplayName></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,37 +72,37 @@ ignores all other attributes of this element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RemoveFieldRef
-  Aggregation=&quot;sum&quot; | &quot;count&quot; | &quot;average&quot; | &quot;min&quot; | &quot;max&quot; | &quot;merge&quot; | &quot;plaintext&quot; | &quot;first&quot; | &quot;last&quot;
-  Customization=&quot;Text&quot;
-  DefaultValue=&quot;Text&quot;
-  Description=&quot;Text&quot;
-  DisplayName=&quot;Text&quot;
-  Format=&quot;Text&quot;
-  Filterable=&quot;TRUE&quot; | &quot;FALSE&quot;
-  FilterableNoRecurrence=&quot;TRUE&quot; | &quot;FALSE&quot;
-  FromBaseType=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Hidden=&quot;TRUE&quot; | &quot;FALSE&quot; | &quot;orResource&quot;
-  ID=&quot;Text&quot;
-  Locked=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Name=&quot;Text&quot;
-  Node=&quot;Text&quot;
-  NumLines=&quot;Integer&quot;
-  PIAttribute=&quot;Text&quot;
-  PITarget=&quot;Text&quot;
-  PrimaryPIAttribute=&quot;Text&quot;
-  ReadOnly=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ReadOnlyClient=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Required=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Sealed=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInDisplayForm=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInEditForm=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInFileDlg=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInListSettings=&quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInNewForm=&quot;TRUE&quot; | &quot;FALSE&quot;
-  Sortable=&quot;TRUE&quot; | &quot;FALSE&quot; 
-  PrimaryPITarget=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><RemoveFieldRef
+  Aggregation="sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
+  Customization="Text"
+  DefaultValue="Text"
+  Description="Text"
+  DisplayName="Text"
+  Format="Text"
+  Filterable="TRUE" | "FALSE"
+  FilterableNoRecurrence="TRUE" | "FALSE"
+  FromBaseType="TRUE" | "FALSE"
+  Hidden="TRUE" | "FALSE" | "orResource"
+  ID="Text"
+  Locked="TRUE" | "FALSE"
+  Name="Text"
+  Node="Text"
+  NumLines="Integer"
+  PIAttribute="Text"
+  PITarget="Text"
+  PrimaryPIAttribute="Text"
+  ReadOnly="TRUE" | "FALSE"
+  ReadOnlyClient="TRUE" | "FALSE"
+  Required="TRUE" | "FALSE"
+  Sealed="TRUE" | "FALSE"
+  ShowInDisplayForm="TRUE" | "FALSE"
+  ShowInEditForm="TRUE" | "FALSE"
+  ShowInFileDlg="TRUE" | "FALSE"
+  ShowInListSettings="TRUE" | "FALSE"
+  ShowInNewForm="TRUE" | "FALSE"
+  Sortable="TRUE" | "FALSE" 
+  PrimaryPITarget="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -69,7 +69,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>  &lt;Validation    Message = &quot;Text&quot;    Script = &quot;Text&quot;&gt;  &lt;/Validation&gt;</code></pre></td>
+<td align="left"><pre><code>  <Validation    Message = "Text"    Script = "Text">  </Validation></code></pre></td>
 </tr>
 </tbody>
 </table>

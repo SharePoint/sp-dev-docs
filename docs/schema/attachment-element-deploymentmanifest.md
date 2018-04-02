@@ -69,31 +69,31 @@ object (**SPAttachment**).
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DELCARATION
-&lt;xs:element name=&quot;Attachment&quot; 
-      type=&quot;SPAttachment&quot; 
-      minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="Attachment" 
+      type="SPAttachment" 
+      minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;ListItem&gt;
-        &lt;Attachments&gt;
-                &lt;Attachment&gt;
-                        Name=&quot;xs:string&quot;
-                        DirName=&quot;xs:string&quot;
-                        Url=&quot;xs:string&quot;
-                        Id=&quot;Guid&quot;
-                        ParentWebId=&quot;Guid&quot;
-                        FileValue=&quot;xs:string&quot;
-                        MetaInfo=&quot;xs:string&quot;
-                        Author=&quot;xs:string&quot;
-                        ModifiedBy=&quot;xs:string&quot;
-                        TimeCreated=&quot;xs:dateTime&quot;
-                        TimeLastModified=&quot;xs:dateTime&quot;
-                        FailureMessage=&quot;xs:string&quot;
-                                &lt;Properties /&gt;
-                &lt;/Attachment&gt;
-        &lt;/Attachments&gt;
-&lt;/ListItem&gt;</code></pre></td>
+<ListItem>
+        <Attachments>
+                <Attachment>
+                        Name="xs:string"
+                        DirName="xs:string"
+                        Url="xs:string"
+                        Id="Guid"
+                        ParentWebId="Guid"
+                        FileValue="xs:string"
+                        MetaInfo="xs:string"
+                        Author="xs:string"
+                        ModifiedBy="xs:string"
+                        TimeCreated="xs:dateTime"
+                        TimeLastModified="xs:dateTime"
+                        FailureMessage="xs:string"
+                                <Properties />
+                </Attachment>
+        </Attachments>
+</ListItem></code></pre></td>
 </tr>
 </tbody>
 </table>

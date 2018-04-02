@@ -67,10 +67,10 @@ Specifies the content type field to add during a Feature upgrade.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AddContentTypeField 
+<td align="left"><pre><code><AddContentTypeField 
   ContentTypeId = string
   FieldId = string
-  PushDown = TRUE | FALSE /&gt;</code></pre></td>
+  PushDown = TRUE | FALSE /></code></pre></td>
 </tr>
 </tbody>
 </table>

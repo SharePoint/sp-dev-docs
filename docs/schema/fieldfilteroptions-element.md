@@ -69,12 +69,12 @@ file to display filtered drop-down menus.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldFilterOptions
-  AllItems = &quot;Text&quot;
-  BooleanFalse = &quot;Yes&quot; | &quot;No&quot;
-  BooleanTrue = &quot;Yes&quot; | &quot;No&quot;
-  NullString = &quot;Text&quot;&gt;
-&lt;/FieldFilterOptions&gt;</code></pre></td>
+<td align="left"><pre><code><FieldFilterOptions
+  AllItems = "Text"
+  BooleanFalse = "Yes" | "No"
+  BooleanTrue = "Yes" | "No"
+  NullString = "Text">
+</FieldFilterOptions></code></pre></td>
 </tr>
 </tbody>
 </table>

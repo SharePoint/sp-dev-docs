@@ -69,8 +69,8 @@ Specifies the URL of a custom workflow status page for the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;StatusPageUrl&gt;
-&lt;/StatusPageUrl&gt;</code></pre></td>
+<td align="left"><pre><code><StatusPageUrl>
+</StatusPageUrl></code></pre></td>
 </tr>
 </tbody>
 </table>

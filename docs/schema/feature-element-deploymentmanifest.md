@@ -70,17 +70,17 @@ class="nolink">SPFeature</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Feature&quot; type=&quot;SPFeature&quot; /&gt;
+<xs:element name="Feature" type="SPFeature" />
 
 USAGE
-&lt;SPObject&gt;
-  &lt;Feature&gt;
-      Id=&quot;Guid&quot;
-      WebId=&quot;Guid&quot;
-      Properties=&quot;xs:string&quot;
-      FeatureDefinitionName=&quot;xs:string&quot;
-  &lt;/Feature&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+  <Feature>
+      Id="Guid"
+      WebId="Guid"
+      Properties="xs:string"
+      FeatureDefinitionName="xs:string"
+  </Feature>
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

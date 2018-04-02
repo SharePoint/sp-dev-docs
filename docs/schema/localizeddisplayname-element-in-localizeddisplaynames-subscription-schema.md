@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a localized display name of a metadata object.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LocalizedDisplayName LCID = &quot;Integer&quot;&gt; &lt;/LocalizedDisplayName&gt;</code></pre></td>
+<td align="left"><pre><code><LocalizedDisplayName LCID = "Integer"> </LocalizedDisplayName></code></pre></td>
 </tr>
 </tbody>
 </table>

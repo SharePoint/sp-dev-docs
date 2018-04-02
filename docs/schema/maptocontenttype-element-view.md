@@ -69,9 +69,9 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DisplayPattern&gt;
-  &lt;MapToContentType&gt;    ...  &lt;/MapToContentType&gt;
-&lt;/DisplayPattern&gt;</code></pre></td>
+<td align="left"><pre><code><DisplayPattern>
+  <MapToContentType>    ...  </MapToContentType>
+</DisplayPattern></code></pre></td>
 </tr>
 </tbody>
 </table>

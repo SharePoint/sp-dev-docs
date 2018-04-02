@@ -71,15 +71,15 @@ Defines a color picker control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ColorPicker
-     Command=&quot;Text&quot;
-     CommandPreview=&quot;Text&quot;
-     CommandRevert=&quot;Text&quot;
-     Id=&quot;Text&quot;
-     QueryCommand=&quot;Text&quot;
-     Sequence=&quot;Integer&quot;
-     TemplateAlias=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><ColorPicker
+     Command="Text"
+     CommandPreview="Text"
+     CommandRevert="Text"
+     Id="Text"
+     QueryCommand="Text"
+     Sequence="Integer"
+     TemplateAlias="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -113,7 +113,7 @@ Defines a color picker control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. Identifies the control. The value can be a string representation of a GUID or a unique term such as &quot;Ribbon.Library.Share.NewRibbonColorPicker&quot;.</p></td>
+<td align="left"><p>Required. Identifies the control. The value can be a string representation of a GUID or a unique term such as "Ribbon.Library.Share.NewRibbonColorPicker".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**QueryCommand**</p></td>

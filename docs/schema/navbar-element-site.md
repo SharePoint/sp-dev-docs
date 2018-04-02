@@ -73,15 +73,15 @@ page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NavBar
-  Body = &quot;Text&quot;
-  ID = &quot;Integer&quot;
-  Name = &quot;Text&quot;
-  Prefix = &quot;Text&quot;
-  Separator = &quot;Text&quot;
-  Suffix = &quot;Text&quot;
-  Url = &quot;Text&quot;&gt;
-&lt;/NavBar&gt;</code></pre></td>
+<td align="left"><pre><code><NavBar
+  Body = "Text"
+  ID = "Integer"
+  Name = "Text"
+  Prefix = "Text"
+  Separator = "Text"
+  Suffix = "Text"
+  Url = "Text">
+</NavBar></code></pre></td>
 </tr>
 </tbody>
 </table>

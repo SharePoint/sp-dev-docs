@@ -72,8 +72,8 @@ Collaborative Application Markup Language (CAML) expressions.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IfEqual&gt;
-&lt;/IfEqual&gt;</code></pre></td>
+<td align="left"><pre><code><IfEqual>
+</IfEqual></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,9 +67,9 @@ Specifies the GUID of the GUIDMap.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GUID 
+<td align="left"><pre><code><GUID 
    Id = string 
-   ListUrl = string /&gt;</code></pre></td>
+   ListUrl = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

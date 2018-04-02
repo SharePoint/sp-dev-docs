@@ -80,7 +80,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextDefinitionGroup xsl:type=&quot;DeclarativeContextDefinitionGroup&quot; xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance&quot; RibbonFileName = &quot;String&quot; ItemType = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ContextDefinitionGroup&gt;</code></pre></td>
+<td align="left"><pre><code><ContextDefinitionGroup xsl:type="DeclarativeContextDefinitionGroup" xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance" RibbonFileName = "String" ItemType = "String" Description = "String"> </ContextDefinitionGroup></code></pre></td>
 </tr>
 </tbody>
 </table>

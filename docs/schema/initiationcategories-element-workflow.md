@@ -68,8 +68,8 @@ this workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;InitiationCategories/&gt;
-&lt;/InitiationCatagories&gt;</code></pre></td>
+<td align="left"><pre><code><InitiationCategories/>
+</InitiationCatagories></code></pre></td>
 </tr>
 </tbody>
 </table>

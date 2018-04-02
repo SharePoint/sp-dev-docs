@@ -74,8 +74,8 @@ saving time begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Day&gt;
-&lt;/Day&gt;</code></pre></td>
+<td align="left"><pre><code><Day>
+</Day></code></pre></td>
 </tr>
 </tbody>
 </table>

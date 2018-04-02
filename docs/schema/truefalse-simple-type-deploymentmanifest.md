@@ -67,14 +67,14 @@ Specifies Boolean values using specific typographical forms.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;TRUEFALSE&quot;&gt;
-   &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-      &lt;xs:enumeration value=&quot;TRUE&quot; /&gt;
-      &lt;xs:enumeration value=&quot;FALSE&quot; /&gt;
-      &lt;xs:enumeration value=&quot;true&quot; /&gt;
-      &lt;xs:enumeration value=&quot;false&quot; /&gt;
-   &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="TRUEFALSE">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="TRUE" />
+      <xs:enumeration value="FALSE" />
+      <xs:enumeration value="true" />
+      <xs:enumeration value="false" />
+   </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

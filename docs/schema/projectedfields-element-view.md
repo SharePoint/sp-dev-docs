@@ -72,10 +72,10 @@ when one or more other lists have been joined in a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ProjectedFields&gt;   
-  &lt;Field ... /&gt;  
-  &lt;Field ... /&gt;
-&lt;/ProjectedFields&gt;</code></pre></td>
+<td align="left"><pre><code><ProjectedFields>   
+  <Field ... />  
+  <Field ... />
+</ProjectedFields></code></pre></td>
 </tr>
 </tbody>
 </table>

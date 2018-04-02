@@ -68,11 +68,11 @@ the security for a list is configured.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Security&gt;
-  &lt;ReadSecurity&gt; 1 | 2 &lt;/ReadSecurity&gt;
-  &lt;SchemaSecurity&gt; 1 | 2 &lt;/SchemaSecurity&gt;
-  &lt;WriteSecurity&gt; 1 | 2 | 4 &lt;/WriteSecurity&gt;
-&lt;/Security&gt;</code></pre></td>
+<td align="left"><pre><code><Security>
+  <ReadSecurity> 1 | 2 </ReadSecurity>
+  <SchemaSecurity> 1 | 2 </SchemaSecurity>
+  <WriteSecurity> 1 | 2 | 4 </WriteSecurity>
+</Security></code></pre></td>
 </tr>
 </tbody>
 </table>

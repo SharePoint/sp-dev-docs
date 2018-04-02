@@ -68,8 +68,8 @@ permissions to manage attendees in a Meeting Workspace.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IsPrivilegedUser&gt;
-&lt;/IsPrivilegedUser&gt;</code></pre></td>
+<td align="left"><pre><code><IsPrivilegedUser>
+</IsPrivilegedUser></code></pre></td>
 </tr>
 </tbody>
 </table>

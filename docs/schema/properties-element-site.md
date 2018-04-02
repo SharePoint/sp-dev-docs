@@ -71,12 +71,12 @@ Specifies custom property values to implement within the Feature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Properties&gt;
-    &lt;Property
-      Key = &quot;Text&quot;
-      Value = &quot;Text&quot;&gt;
-    &lt;/Property&gt;
-&lt;/Properties&gt;</code></pre></td>
+<td align="left"><pre><code><Properties>
+    <Property
+      Key = "Text"
+      Value = "Text">
+    </Property>
+</Properties></code></pre></td>
 </tr>
 </tbody>
 </table>

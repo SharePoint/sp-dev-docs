@@ -67,8 +67,8 @@ Contains a Boolean value that specifies whether presence is enabled.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;PresenceEnabled&gt;
-&lt;/PresenceEnabled&gt;</code></pre></td>
+<td align="left"><pre><code><PresenceEnabled>
+</PresenceEnabled></code></pre></td>
 </tr>
 </tbody>
 </table>

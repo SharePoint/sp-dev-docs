@@ -78,8 +78,8 @@ it returns the current month.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Month&gt;
-&lt;/Month&gt;</code></pre></td>
+<td align="left"><pre><code><Month>
+</Month></code></pre></td>
 </tr>
 </tbody>
 </table>

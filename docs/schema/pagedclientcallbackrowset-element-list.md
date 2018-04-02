@@ -89,8 +89,8 @@ by the [RowLimit](rowlimit-element-list.md) element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;PagedClientCallbackRowset&gt;
-&lt;/PagedClientCallbackRowset&gt;</code></pre></td>
+<td align="left"><pre><code><PagedClientCallbackRowset>
+</PagedClientCallbackRowset></code></pre></td>
 </tr>
 </tbody>
 </table>

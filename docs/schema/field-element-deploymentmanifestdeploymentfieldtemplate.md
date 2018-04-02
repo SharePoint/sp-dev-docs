@@ -27,14 +27,14 @@ the specified template field.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name="Field" 
+<xs:element name="Field" 
         type="SPField" 
         minOccurs="1" maxOccurs="1" 
-/&gt;
+/>
 
 USAGE
-&lt;FieldTemplate&gt;
-        &lt;Field
+<FieldTemplate>
+        <Field
                 ID="Guid"
                 FieldId="Guid"
                 Name="xs:string"
@@ -68,8 +68,8 @@ USAGE
                 Format="xs:string"
                 FillInChoice="xs:string"
                 SchemaXml="xs:string"
-        /&gt;
-&lt;/FieldTemplate&gt;</code></pre></td>
+        />
+</FieldTemplate></code></pre></td>
 </tr>
 </tbody>
 </table>

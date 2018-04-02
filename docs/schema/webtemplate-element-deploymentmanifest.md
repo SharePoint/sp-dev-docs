@@ -73,21 +73,21 @@ derived.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;WebTemplate&quot; type=&quot;SPWebTemplate&quot; /&gt;
+<xs:element name="WebTemplate" type="SPWebTemplate" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;WebTemplate
-                Description=&quot;xs:string&quot;
-                Id=&quot;xs:string&quot;
-                ImageUrl=&quot;xs:string&quot;
-                IsCustomTemplate=&quot;xs:boolean&quot;
-                IsHidden=&quot;xs:boolean&quot;
-                IsUnique=&quot;xs:boolean&quot;
-                Name=&quot;xs:string&quot;
-                Title=&quot;xs:string&quot;
-        /&gt;
-&lt;/SPObject</code></pre></td>
+<SPObject>
+        <WebTemplate
+                Description="xs:string"
+                Id="xs:string"
+                ImageUrl="xs:string"
+                IsCustomTemplate="xs:boolean"
+                IsHidden="xs:boolean"
+                IsUnique="xs:boolean"
+                Name="xs:string"
+                Title="xs:string"
+        />
+</SPObject</code></pre></td>
 </tr>
 </tbody>
 </table>

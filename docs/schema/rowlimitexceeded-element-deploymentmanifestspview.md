@@ -71,12 +71,12 @@ class="nolink">SPView</span></span>) object is exceeded.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;RowLimitExceeded&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="RowLimitExceeded" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;View&gt;
-        &lt;RowLimitExceeded /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+        <RowLimitExceeded />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

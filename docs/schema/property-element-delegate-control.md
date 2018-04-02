@@ -67,9 +67,9 @@ Contains a property value for a delegate control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property
-  Name = &quot;Text&quot;&gt;
-&lt;/Property&gt;</code></pre></td>
+<td align="left"><pre><code><Property
+  Name = "Text">
+</Property></code></pre></td>
 </tr>
 </tbody>
 </table>

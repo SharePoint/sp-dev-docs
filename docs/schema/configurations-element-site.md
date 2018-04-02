@@ -74,11 +74,11 @@ definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Configurations&gt;
-  &lt;Configuration&gt;
-  &lt;/Configuration&gt;
+<td align="left"><pre><code><Configurations>
+  <Configuration>
+  </Configuration>
   ...
-&lt;/Configurations&gt;</code></pre></td>
+</Configurations></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -186,7 +186,7 @@ code] "Copy code")Copy code</span>
                 <Row>
                   <Field Name="Title">$Resources:onetid11;</Field>
                   <Field Name="Body">$Resources:onetid12;</Field>
-                  <Field Name="Expires">&lt;ows:TodayISO/&gt;</Field>
+                  <Field Name="Expires"><ows:TodayISO/></Field>
                 </Row>
               </Rows>
             </Data>
@@ -239,7 +239,7 @@ code] "Copy code")Copy code</span>
                 <Row>
                   <Field Name="Title">$Resources:onetid11;</Field>
                   <Field Name="Body">$Resources:onetid12;</Field>
-                  <Field Name="Expires">&lt;ows:TodayISO/&gt;</Field>
+                  <Field Name="Expires"><ows:TodayISO/></Field>
                 </Row>
               </Rows>
             </Data>

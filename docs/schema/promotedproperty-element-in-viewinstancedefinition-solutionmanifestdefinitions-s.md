@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies what data to get from the external system and keep to
 up-to-date with respect to the corresponding item in Microsoft Outlook.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;PromotedProperty ViewInstancePath = &quot;String&quot; OfficeItemPropertyName = &quot;String&quot; ReadOnly = &quot;Boolean&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/PromotedProperty&gt;</code></pre></td>
+<td align="left"><pre><code><PromotedProperty ViewInstancePath = "String" OfficeItemPropertyName = "String" ReadOnly = "Boolean" Name = "String" Description = "String"> </PromotedProperty></code></pre></td>
 </tr>
 </tbody>
 </table>

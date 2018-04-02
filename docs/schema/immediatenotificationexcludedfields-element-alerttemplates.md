@@ -72,9 +72,9 @@ message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ImmediateNotificationExcludedFields&gt;
+<td align="left"><pre><code><ImmediateNotificationExcludedFields>
   Field1; Field2; ... Fieldn
-&lt;/ImmediateNotificationExcludedFields&gt;</code></pre></td>
+</ImmediateNotificationExcludedFields></code></pre></td>
 </tr>
 </tbody>
 </table>

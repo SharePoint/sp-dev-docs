@@ -75,8 +75,8 @@ automatic deletion is enabled and the site collection is not in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AutoDeleteSubject&gt;
-&lt;/AutoDeleteSubject&gt;</code></pre></td>
+<td align="left"><pre><code><AutoDeleteSubject>
+</AutoDeleteSubject></code></pre></td>
 </tr>
 </tbody>
 </table>

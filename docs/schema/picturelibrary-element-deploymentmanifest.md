@@ -71,16 +71,16 @@ class="nolink">SPPictureLibrary</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;PictureLibrary&quot; type=&quot;SPPictureLibrary&quot; /&gt;
+<xs:element name="PictureLibrary" type="SPPictureLibrary" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;PictureLibrary
-                ThumbnailSize=&quot;xs:int&quot;
-                WebImageHeight=&quot;xs:int&quot;
-                WebImageWidth=&quot;xs:int&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <PictureLibrary
+                ThumbnailSize="xs:int"
+                WebImageHeight="xs:int"
+                WebImageWidth="xs:int"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

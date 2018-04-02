@@ -74,11 +74,11 @@ Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Currencies&gt;
-  &lt;Currency
-    ID = &quot;Text&quot; /&gt;
+<td align="left"><pre><code><Currencies>
+  <Currency
+    ID = "Text" />
   ...
-&lt;/Currencies&gt;</code></pre></td>
+</Currencies></code></pre></td>
 </tr>
 </tbody>
 </table>

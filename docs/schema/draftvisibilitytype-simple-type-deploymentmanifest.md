@@ -67,13 +67,13 @@ Specifies the type of user who can view a draft document.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;DraftVisibilityType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;Reader&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Author&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Approver&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="DraftVisibilityType">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="Reader" />
+                <xs:enumeration value="Author" />
+                <xs:enumeration value="Approver" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

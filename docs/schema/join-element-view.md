@@ -71,7 +71,7 @@ Used to join two lists for queries.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Join   Type= &quot;LEFT&quot; | &quot;INNER&quot;  ListAlias= &quot;TEXT&quot;&gt;&lt;/Join&gt;</code></pre></td>
+<td align="left"><pre><code><Join   Type= "LEFT" | "INNER"  ListAlias= "TEXT"></Join></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -93,7 +93,7 @@ Used to join two lists for queries.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Type</p></td>
-<td align="left"><p>Required. &quot;LEFT&quot; means a left outer join. &quot;INNER&quot; means an inner join.</p></td>
+<td align="left"><p>Required. "LEFT" means a left outer join. "INNER" means an inner join.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>ListAlias</p></td>

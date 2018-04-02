@@ -73,18 +73,18 @@ class="nolink">SPListItem</span></span> object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Fields&quot; 
-        type=&quot;SPFieldCollection&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; 
-/&gt;
+<xs:element name="Fields" 
+        type="SPFieldCollection" 
+        minOccurs="0" maxOccurs="1" 
+/>
 
 USAGE
-&lt;ListItem&gt;
-        &lt;Fields 
-                &lt;FieldRef /&gt;
-                &lt;Field /&gt;
-        /&gt;
-&lt;/ListItem&gt;</code></pre></td>
+<ListItem>
+        <Fields 
+                <FieldRef />
+                <Field />
+        />
+</ListItem></code></pre></td>
 </tr>
 </tbody>
 </table>

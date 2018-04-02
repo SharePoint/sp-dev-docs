@@ -82,7 +82,7 @@ Specifies that a column is not included in SPMetal code generation.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExcludeColumn Name=&quot;HomeTelephone&quot; /&gt;</code></pre></td>
+<td align="left"><pre><code><ExcludeColumn Name="HomeTelephone" /></code></pre></td>
 </tr>
 </tbody>
 </table>

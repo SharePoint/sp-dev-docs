@@ -71,9 +71,9 @@ Specifies an application resource file to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ApplicationResourceFile
-  Location=&quot;Text&quot;&gt;
-&lt;/ApplicationResourceFile&gt;</code></pre></td>
+<td align="left"><pre><code><ApplicationResourceFile
+  Location="Text">
+</ApplicationResourceFile></code></pre></td>
 </tr>
 </tbody>
 </table>

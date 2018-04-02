@@ -68,15 +68,15 @@ Services 3.0 list or document library version collection.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPModerationStatusType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;Approved&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Denied&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Pending&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Draft&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Scheduled&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPModerationStatusType">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="Approved" />
+                <xs:enumeration value="Denied" />
+                <xs:enumeration value="Pending" />
+                <xs:enumeration value="Draft" />
+                <xs:enumeration value="Scheduled" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,8 +67,8 @@ Contains a script fragment.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Script&gt;
-&lt;/Script&gt;</code></pre></td>
+<td align="left"><pre><code><Script>
+</Script></code></pre></td>
 </tr>
 </tbody>
 </table>

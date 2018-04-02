@@ -72,34 +72,34 @@ a list of the most-recently used items.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MRUSplitButton
-  Alt=&quot;Text&quot;
-  CacheMenuVersions=&quot;TRUE | FALSE&quot;
-  Command=&quot;Text&quot;
-  CommandMenuOpen=&quot;Text&quot;
-  CommandMenuClose=&quot;Text&quot;
-  CommandPreview=&quot;Text&quot;
-  CommandPreviewRevert=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  InitialItem=&quot;Text&quot;
-  MenuAlt=&quot;Text&quot;
-  MenuCommand=&quot;Text&quot;
-  PopulateDynamically=&quot; TRUE | FALSE &quot;
-  PopulateQueryCommand=&quot;Text&quot;
-  PopulateOnlyOnce=&quot; TRUE | FALSE &quot;
-  Sequence=&quot;Integer&quot;
-  QueryCommand=&quot;Text&quot;
-  TemplateAlias=&quot;Text&quot;
-  ToolTipImage32by32=&quot;Url&quot;
-  ToolTipImage32by32Class=&quot;Text&quot;
-  ToolTipImage32by32Left=&quot;Negative Integer&quot;
-  ToolTipImage32by32Top=&quot;Negative Integer&quot;
-  ToolTipTitle=&quot;Text&quot;
-  ToolTipDescription=&quot;Text&quot;
-  ToolTipHelpKeyWord=&quot;Text&quot;
-  ToolTipSelectedItemTitle=&quot;Text&quot;
-  ToolTipShortcutKey=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><MRUSplitButton
+  Alt="Text"
+  CacheMenuVersions="TRUE | FALSE"
+  Command="Text"
+  CommandMenuOpen="Text"
+  CommandMenuClose="Text"
+  CommandPreview="Text"
+  CommandPreviewRevert="Text"
+  Id="Text"
+  InitialItem="Text"
+  MenuAlt="Text"
+  MenuCommand="Text"
+  PopulateDynamically=" TRUE | FALSE "
+  PopulateQueryCommand="Text"
+  PopulateOnlyOnce=" TRUE | FALSE "
+  Sequence="Integer"
+  QueryCommand="Text"
+  TemplateAlias="Text"
+  ToolTipImage32by32="Url"
+  ToolTipImage32by32Class="Text"
+  ToolTipImage32by32Left="Negative Integer"
+  ToolTipImage32by32Top="Negative Integer"
+  ToolTipTitle="Text"
+  ToolTipDescription="Text"
+  ToolTipHelpKeyWord="Text"
+  ToolTipSelectedItemTitle="Text"
+  ToolTipShortcutKey="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -189,7 +189,7 @@ a list of the most-recently used items.
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -221,7 +221,7 @@ a list of the most-recently used items.
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is &quot;ALT + J&quot;. The tooltip will display the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 </tbody>
 </table>

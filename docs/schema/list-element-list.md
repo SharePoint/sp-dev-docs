@@ -71,36 +71,36 @@ Top-level element that contains the definition of a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;List
-  BaseType = &quot;Integer&quot; | &quot;Text&quot;
-  Default = &quot;TRUE&quot; | &quot;FALSE&quot;
-  DefaultItemOpen = &quot;Integer&quot;
-  Description = &quot;Text&quot;
-  Direction = &quot;Text&quot;
-  DisableAttachments = &quot;TRUE&quot; | &quot;FALSE&quot;
-  DraftVersionVisibility = &quot;Integer&quot;
-  EnableContentTypes = &quot;TRUE&quot; | &quot;FALSE&quot;  EnableMinorVersions = &quot;TRUE&quot; | &quot;FALSE&quot;  EnableThumbnails = &quot;TRUE&quot; | &quot;FALSE&quot;
-  EventSinkAssembly = &quot;Text&quot;
-  EventSinkClass = &quot;Text&quot;
-  EventSinkData = &quot;Text&quot;
-  FolderCreation = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Id = &quot;GUID&quot;
-  ModeratedList = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ModerationType = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Name = &quot;Text&quot;
-  OrderedList = &quot;TRUE&quot; | &quot;FALSE&quot;
-  PrivateList = &quot;TRUE&quot; | &quot;FALSE&quot;
-  QuickLaunchUrl = &quot;URL&quot;
-  RootWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ThumbnailSize = &quot;Integer&quot;
-  Title = &quot;Text&quot;
-  Type = &quot;Integer&quot;
-  Url = &quot;URL&quot;
-  URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  VersioningEnabled = &quot;TRUE&quot; | &quot;FALSE&quot; 
-  WebImageHeight = &quot;Integer&quot;
-  WebImageWidth = &quot;Integer&quot;&gt;
-&lt;/List&gt;</code></pre></td>
+<td align="left"><pre><code><List
+  BaseType = "Integer" | "Text"
+  Default = "TRUE" | "FALSE"
+  DefaultItemOpen = "Integer"
+  Description = "Text"
+  Direction = "Text"
+  DisableAttachments = "TRUE" | "FALSE"
+  DraftVersionVisibility = "Integer"
+  EnableContentTypes = "TRUE" | "FALSE"  EnableMinorVersions = "TRUE" | "FALSE"  EnableThumbnails = "TRUE" | "FALSE"
+  EventSinkAssembly = "Text"
+  EventSinkClass = "Text"
+  EventSinkData = "Text"
+  FolderCreation = "TRUE" | "FALSE"
+  Id = "GUID"
+  ModeratedList = "TRUE" | "FALSE"
+  ModerationType = "TRUE" | "FALSE"
+  Name = "Text"
+  OrderedList = "TRUE" | "FALSE"
+  PrivateList = "TRUE" | "FALSE"
+  QuickLaunchUrl = "URL"
+  RootWebOnly = "TRUE" | "FALSE"
+  ThumbnailSize = "Integer"
+  Title = "Text"
+  Type = "Integer"
+  Url = "URL"
+  URLEncode = "TRUE" | "FALSE"
+  VersioningEnabled = "TRUE" | "FALSE" 
+  WebImageHeight = "Integer"
+  WebImageWidth = "Integer">
+</List></code></pre></td>
 </tr>
 </tbody>
 </table>

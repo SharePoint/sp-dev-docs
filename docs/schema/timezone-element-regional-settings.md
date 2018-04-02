@@ -75,21 +75,21 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TimeZone
-  Hidden = &quot;TRUE&quot; | &quot;FALSE&quot;
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ID = &quot;Integer&quot;
-    Name = &quot;Text&quot;&gt;
-  &lt;StandardTime&gt;
+<td align="left"><pre><code><TimeZone
+  Hidden = "TRUE" | "FALSE"
+  HTMLEncode = "TRUE" | "FALSE"
+  ID = "Integer"
+    Name = "Text">
+  <StandardTime>
   ...
-    &lt;/StandardTime&gt;
-  &lt;DaylightTime&gt;
+    </StandardTime>
+  <DaylightTime>
   ...
-    &lt;/DaylightTime&gt;
-  &lt;History&gt;
+    </DaylightTime>
+  <History>
   ...
-    &lt;/History&gt;
-&lt;/TimeZone&gt;</code></pre></td>
+    </History>
+</TimeZone></code></pre></td>
 </tr>
 </tbody>
 </table>

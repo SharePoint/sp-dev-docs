@@ -71,15 +71,15 @@ Top-level element for a solution manifest file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Solution 
+<td align="left"><pre><code><Solution 
   Description = string 
-  DeploymentServerType = &quot;ApplicationServer&quot; | &quot;WebFrontEnd&quot;
-  ResetWebServer = &quot;TRUE&quot; | &quot;FALSE&quot; 
-  ResetWebServerModeOnUpgrade = &quot;Recycle&quot; | &quot;StartStop&quot; 
+  DeploymentServerType = "ApplicationServer" | "WebFrontEnd"
+  ResetWebServer = "TRUE" | "FALSE" 
+  ResetWebServerModeOnUpgrade = "Recycle" | "StartStop" 
   SharePointProductVersion = string
   SolutionId = string 
-  Title = string&gt;
-&lt;/Solution&gt;</code></pre></td>
+  Title = string>
+</Solution></code></pre></td>
 </tr>
 </tbody>
 </table>

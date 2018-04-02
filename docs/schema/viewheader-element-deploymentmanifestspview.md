@@ -71,12 +71,12 @@ class="nolink">SPView</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ViewHeader&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="ViewHeader" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;View&gt;
-        &lt;ViewHeader /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+        <ViewHeader />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -69,12 +69,12 @@ Specifies the sources of data for an action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DataSource&gt;
-    &lt;SchemaSource&gt;
-    &lt;/SchemaSource&gt;
-    &lt;Evaluation&gt;
-    &lt;/Evaluation&gt;
-&lt;/DataSource&gt;</code></pre></td>
+<td align="left"><pre><code><DataSource>
+    <SchemaSource>
+    </SchemaSource>
+    <Evaluation>
+    </Evaluation>
+</DataSource></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -104,7 +104,7 @@ Specifies the sources of data for an action.
 </tr>
 <tr class="odd">
 <td align="left"><p>**NameProperty**</p></td>
-<td align="left"><p>Required **text</span>. Specifies how to differentiate the user interface (UI) elements that are defined in a **DataSource</span> element. If the value begins with &quot;Parent.&quot;, the value is retrieved from the parent of the action or composite step that declares the **DataSource** element.</p></td>
+<td align="left"><p>Required **text</span>. Specifies how to differentiate the user interface (UI) elements that are defined in a **DataSource</span> element. If the value begins with "Parent.", the value is retrieved from the parent of the action or composite step that declares the **DataSource** element.</p></td>
 </tr>
 </tbody>
 </table>

@@ -71,19 +71,19 @@ Specifies an assembly to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Assembly
-  DeploymentTarget = &quot;GlobalAssemblyCache&quot; | &quot;WebApplication&quot;
-  Location = &quot;Text&quot;&gt;
-  &lt;BindingRedirects&gt;
+<td align="left"><pre><code><Assembly
+  DeploymentTarget = "GlobalAssemblyCache" | "WebApplication"
+  Location = "Text">
+  <BindingRedirects>
     ...
-  &lt;/BindingRedirects&gt;
-  &lt;SafeControls&gt;
+  </BindingRedirects>
+  <SafeControls>
     ...
-  &lt;/SafeControls&gt;
-  &lt;ClassResources&gt;
+  </SafeControls>
+  <ClassResources>
     ...
-  &lt;/ClassResources&gt;
-&lt;/Assembly&gt;</code></pre></td>
+  </ClassResources>
+</Assembly></code></pre></td>
 </tr>
 </tbody>
 </table>

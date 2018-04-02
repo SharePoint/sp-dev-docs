@@ -67,17 +67,17 @@ Contains column and row formatting used in a Datasheet view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Formats&gt;
-  &lt;Format
-    Name = &quot;Text&quot;&gt;
-      &lt;FormatDef
-        Type = &quot;Text&quot;
-        Value = &quot;Text&quot;&gt;
-            &lt;/FormatDef&gt;
+<td align="left"><pre><code><Formats>
+  <Format
+    Name = "Text">
+      <FormatDef
+        Type = "Text"
+        Value = "Text">
+            </FormatDef>
       ...
-  &lt;/Format&gt;
+  </Format>
   ...
-&lt;/Formats&gt;</code></pre></td>
+</Formats></code></pre></td>
 </tr>
 </tbody>
 </table>

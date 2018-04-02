@@ -67,13 +67,13 @@ Identifies the control to implement in a delegate control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Control
-  ControlAssembly = &quot;Text&quot;
-  ControlClass = &quot;Text&quot;
-  ControlSrc = &quot;Text&quot;
-  Id = &quot;Text&quot;
-  Sequence = &quot;Integer&quot;&gt;
-&lt;/Control&gt;</code></pre></td>
+<td align="left"><pre><code><Control
+  ControlAssembly = "Text"
+  ControlClass = "Text"
+  ControlSrc = "Text"
+  Id = "Text"
+  Sequence = "Integer">
+</Control></code></pre></td>
 </tr>
 </tbody>
 </table>

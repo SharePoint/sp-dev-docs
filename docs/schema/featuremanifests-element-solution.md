@@ -71,10 +71,10 @@ Specifies the Features to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FeatureManifests
-    &lt;FeatureManifest
-      Location=&quot;Text&quot;/&gt;
-&lt;/FeatureManifests&gt;</code></pre></td>
+<td align="left"><pre><code><FeatureManifests
+    <FeatureManifest
+      Location="Text"/>
+</FeatureManifests></code></pre></td>
 </tr>
 </tbody>
 </table>

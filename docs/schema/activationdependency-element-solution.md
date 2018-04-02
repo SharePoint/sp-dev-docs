@@ -71,11 +71,11 @@ Specifies the activation dependencies for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActivationDependency 
+<td align="left"><pre><code><ActivationDependency 
   SolutionId = string
   SolutionName = string 
   SolutionTitle = string 
-  SolutionUrl = string /&gt;</code></pre></td>
+  SolutionUrl = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

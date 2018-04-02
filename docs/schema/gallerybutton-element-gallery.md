@@ -71,33 +71,33 @@ Defines a gallery button.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GalleryButton
-  Alt=&quot;Text&quot;
-  Command=&quot;Text&quot;
-  CommandPreview=&quot;Text&quot;
-  CommandRevert=&quot;Text&quot;
-  CommandType=&quot;General | OptionSelect | IgnoredByMenu&quot;
-  CommandValueId=&quot;Text&quot;
-  ElementDimensions=&quot;Size16by16 | Size32by32 | Size48by48 | Size72by96 | Size96by72 | Size96by96 | Size128by128 | Size190by30 | Size190by40 | Size190by50 | Size190by60&quot;
-  Id=&quot;Text&quot;
-  Image=&quot;Url&quot;
-  ImageClass=&quot;CSS Selector&quot;
-  ImageLeft=&quot;Negative Integer&quot;
-  ImageTop=&quot;Negative Integer&quot;
-  InnerHTML=&quot;HTML&quot;
-  MenuItemId=&quot;Text&quot;
-  QueryCommand=&quot;Text&quot;
-  Sequence=&quot;Text&quot;
-  TemplateAlias=&quot;Text&quot;
-  ToolTipImage32by32=&quot;Url&quot;
-  ToolTipImage32by32Class=&quot;CSS Class Selector&quot;
-  ToolTipImage32by32Left=&quot;Negative Integer&quot;
-  ToolTipImage32by32Top=&quot;Negative Integer&quot;
-  ToolTipTitle=&quot;Text&quot;
-  ToolTipDescription=&quot;Text&quot;
-  ToolTipHelpKeyWord=&quot;Text&quot;
-  ToolTipShortcutKey=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><GalleryButton
+  Alt="Text"
+  Command="Text"
+  CommandPreview="Text"
+  CommandRevert="Text"
+  CommandType="General | OptionSelect | IgnoredByMenu"
+  CommandValueId="Text"
+  ElementDimensions="Size16by16 | Size32by32 | Size48by48 | Size72by96 | Size96by72 | Size96by96 | Size128by128 | Size190by30 | Size190by40 | Size190by50 | Size190by60"
+  Id="Text"
+  Image="Url"
+  ImageClass="CSS Selector"
+  ImageLeft="Negative Integer"
+  ImageTop="Negative Integer"
+  InnerHTML="HTML"
+  MenuItemId="Text"
+  QueryCommand="Text"
+  Sequence="Text"
+  TemplateAlias="Text"
+  ToolTipImage32by32="Url"
+  ToolTipImage32by32Class="CSS Class Selector"
+  ToolTipImage32by32Left="Negative Integer"
+  ToolTipImage32by32Top="Negative Integer"
+  ToolTipTitle="Text"
+  ToolTipDescription="Text"
+  ToolTipHelpKeyWord="Text"
+  ToolTipShortcutKey="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Defines a gallery button.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ElementDimensions**</p></td>
-<td align="left"><p>Required. An enumeration value that specifies the dimensions of the rectangle in which the button is rendered. Dimensions are in pixels and are in the format &quot;width by height&quot;.</p>
+<td align="left"><p>Required. An enumeration value that specifies the dimensions of the rectangle in which the button is rendered. Dimensions are in pixels and are in the format "width by height".</p>
 <ul>
 <li><p>**Size16by16**</p></li>
 <li><p>**Size32by32**</p></li>
@@ -165,7 +165,7 @@ Defines a gallery button.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;buttonStaticStyle1&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "buttonStaticStyle1".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image**</p></td>
@@ -207,7 +207,7 @@ Defines a gallery button.
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -235,7 +235,7 @@ Defines a gallery button.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is &quot;ALT + J&quot;. The tooltip will display the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 </tbody>
 </table>

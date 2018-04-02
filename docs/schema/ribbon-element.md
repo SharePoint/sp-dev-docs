@@ -71,54 +71,54 @@ Contains elements that define the Server ribbon user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Ribbon
-  Id=&quot;Text&quot;
-  Image32by32GroupPopupDefault=&quot;Url&quot;
-  Image32by32GroupPopupDefaultClass=&quot;CSS Selector&quot;
-  Image32by32GroupPopupDefaultLeft=&quot;Negative Integer&quot;
-  Image32by32GroupPopupDefaultTop=&quot;Negative Integer&quot;
-  ImageDownArrow=&quot;Url&quot;
-  ImageDownArrowClass=&quot;CSS Selector&quot;
-  ImageDownArrowLeft=&quot;Negative Integer&quot;
-  ImageDownArrowTop=&quot;Negative Integer&quot;
-  ImageSideArrow=&quot;Url&quot;
-  ImageSideArrowClass=&quot;CSS Selector&quot;
-  ImageSideArrowLeft=&quot;Negative Integer&quot;
-  ImageSideArrowTop=&quot;Negative Integer&quot;
-  ImageUpArrow=&quot;Url&quot;
-  ImageUpArrowClass=&quot;CSS Selector&quot;
-  ImageUpArrowLeft=&quot;Negative Integer&quot;
-  ImageUpArrowTop=&quot;Negative Integer&quot;
-  RootEventCommand=&quot;Text&quot;
-  TabSwitchCommand=&quot;Text&quot;
-  ScaleCommand=&quot;Text&quot;
-  TextDirection=&quot;Text&quot;
-  ToolTipFooterText=&quot;Text&quot;
-  ToolTipFooterImage16by16=&quot;Url&quot;
-  ToolTipFooterImage16by16Class=&quot;CSS Selector&quot;
-  ToolTipFooterImage16by16Left=&quot;Negative Integer&quot;
-  ToolTipFooterImage16by16Top=&quot;Negative Integer&quot;
-  ToolTipDisabledCommandImage16by16=&quot;Url&quot;
-  ToolTipDisabledCommandImage16by16Class=&quot;CSS Selector&quot;
-  ToolTipDisabledCommandImage16by16Left=&quot;Negative Integer&quot;
-  ToolTipDisabledCommandImage16by16Top=&quot;Negative Integer&quot;
-  ToolTipDisabledCommandDescription=&quot;Text&quot;
-  ToolTipDisabledCommandTitle=&quot;Text&quot;
-  ToolTipDisabledCommandHelpKey=&quot;Text&quot;
-  ToolTipHelpCommand=&quot;Text&quot;
-  ToolTipSelectedItemTitlePrefix=&quot;Text&quot;
-  ShortcutKeyJumpToRibbon_Ctrl=&quot;Text&quot;
-  ShortcutKeyJumpToRibbon_Alt=&quot;Text&quot;
-  ShortcutKeyJumpToRibbon_Shift=&quot;Text&quot;
-  ShortcutKeyJumpToRibbon_AccessKey=&quot;Text&quot;
-  ShortcutKeyJumpToFirstControl_Ctrl=&quot;Text&quot;
-  ShortcutKeyJumpToFirstControl_Alt=&quot;Text&quot;
-  ShortcutKeyJumpToFirstControl_Shift=&quot;Text&quot;
-  ShortcutKeyJumpToFirstControl_AccessKey=&quot;Text&quot;
-  ATContextualTabText=&quot;Text&quot;
-  ATTabPositionText=&quot;Text&quot;
-  NavigationHelpText=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Ribbon
+  Id="Text"
+  Image32by32GroupPopupDefault="Url"
+  Image32by32GroupPopupDefaultClass="CSS Selector"
+  Image32by32GroupPopupDefaultLeft="Negative Integer"
+  Image32by32GroupPopupDefaultTop="Negative Integer"
+  ImageDownArrow="Url"
+  ImageDownArrowClass="CSS Selector"
+  ImageDownArrowLeft="Negative Integer"
+  ImageDownArrowTop="Negative Integer"
+  ImageSideArrow="Url"
+  ImageSideArrowClass="CSS Selector"
+  ImageSideArrowLeft="Negative Integer"
+  ImageSideArrowTop="Negative Integer"
+  ImageUpArrow="Url"
+  ImageUpArrowClass="CSS Selector"
+  ImageUpArrowLeft="Negative Integer"
+  ImageUpArrowTop="Negative Integer"
+  RootEventCommand="Text"
+  TabSwitchCommand="Text"
+  ScaleCommand="Text"
+  TextDirection="Text"
+  ToolTipFooterText="Text"
+  ToolTipFooterImage16by16="Url"
+  ToolTipFooterImage16by16Class="CSS Selector"
+  ToolTipFooterImage16by16Left="Negative Integer"
+  ToolTipFooterImage16by16Top="Negative Integer"
+  ToolTipDisabledCommandImage16by16="Url"
+  ToolTipDisabledCommandImage16by16Class="CSS Selector"
+  ToolTipDisabledCommandImage16by16Left="Negative Integer"
+  ToolTipDisabledCommandImage16by16Top="Negative Integer"
+  ToolTipDisabledCommandDescription="Text"
+  ToolTipDisabledCommandTitle="Text"
+  ToolTipDisabledCommandHelpKey="Text"
+  ToolTipHelpCommand="Text"
+  ToolTipSelectedItemTitlePrefix="Text"
+  ShortcutKeyJumpToRibbon_Ctrl="Text"
+  ShortcutKeyJumpToRibbon_Alt="Text"
+  ShortcutKeyJumpToRibbon_Shift="Text"
+  ShortcutKeyJumpToRibbon_AccessKey="Text"
+  ShortcutKeyJumpToFirstControl_Ctrl="Text"
+  ShortcutKeyJumpToFirstControl_Alt="Text"
+  ShortcutKeyJumpToFirstControl_Shift="Text"
+  ShortcutKeyJumpToFirstControl_AccessKey="Text"
+  ATContextualTabText="Text"
+  ATTabPositionText="Text"
+  NavigationHelpText="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -140,11 +140,11 @@ Contains elements that define the Server ribbon user interface.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Image32by32GroupPopupDefault**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to use for the pop-up image, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to use for the pop-up image, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image32by32GroupPopupDefaultClass**</p></td>
@@ -160,7 +160,7 @@ Contains elements that define the Server ribbon user interface.
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageDownArrow**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the down arrow, such as &quot;/_layouts/1033/images/formatmap16x16.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the down arrow, such as "/_layouts/1033/images/formatmap16x16.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageDownArrowClass**</p></td>
@@ -204,7 +204,7 @@ Contains elements that define the Server ribbon user interface.
 </tr>
 <tr class="odd">
 <td align="left"><p>**TextDirection**</p></td>
-<td align="left"><p>Optional. A string that specifies the direction in which to draw text, such as &quot;ltr&quot;.</p></td>
+<td align="left"><p>Optional. A string that specifies the direction in which to draw text, such as "ltr".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipFooterText**</p></td>
@@ -212,7 +212,7 @@ Contains elements that define the Server ribbon user interface.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipFooterImage16by16**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the tooltip footer, such as &quot;/_layouts/1033/images/formatmap16x16.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the tooltip footer, such as "/_layouts/1033/images/formatmap16x16.png".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipFooterImage16by16Class**</p></td>
@@ -264,15 +264,15 @@ Contains elements that define the Server ribbon user interface.
 </tr>
 <tr class="even">
 <td align="left"><p>**ShortcutKeyJumpToRibbon_Ctrl**</p></td>
-<td align="left"><p>Optional. Either &quot;t&quot; or &quot;f&quot;, indicating whether the CTRL key should be pressed to set focus to the first ribbon tab.</p></td>
+<td align="left"><p>Optional. Either "t" or "f", indicating whether the CTRL key should be pressed to set focus to the first ribbon tab.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShortcutKeyJumpToRibbon_Alt**</p></td>
-<td align="left"><p>Optional. Either &quot;t&quot; or &quot;f&quot;, indicating whether the ALT key should be pressed to set focus to the first ribbon tab.</p></td>
+<td align="left"><p>Optional. Either "t" or "f", indicating whether the ALT key should be pressed to set focus to the first ribbon tab.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShortcutKeyJumpToRibbon_Shift**</p></td>
-<td align="left"><p>Optional. Either &quot;t&quot; or &quot;f&quot;, indicating whether the SHIFT key should be pressed to set focus to the first ribbon tab.</p></td>
+<td align="left"><p>Optional. Either "t" or "f", indicating whether the SHIFT key should be pressed to set focus to the first ribbon tab.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShortcutKeyJumpToRibbon_AccessKey**</p></td>
@@ -280,15 +280,15 @@ Contains elements that define the Server ribbon user interface.
 </tr>
 <tr class="even">
 <td align="left"><p>**ShortcutKeyJumpToFirstControl_Ctrl**</p></td>
-<td align="left"><p>Optional. Either &quot;t&quot; or &quot;f&quot;, indicating whether the CTRL key should be pressed to set focus on the first control.</p></td>
+<td align="left"><p>Optional. Either "t" or "f", indicating whether the CTRL key should be pressed to set focus on the first control.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShortcutKeyJumpToFirstControl_Alt**</p></td>
-<td align="left"><p>Optional. Either &quot;t&quot; or &quot;f&quot;, indicating whether the ALT key should be pressed to set focus on the first control.</p></td>
+<td align="left"><p>Optional. Either "t" or "f", indicating whether the ALT key should be pressed to set focus on the first control.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShortcutKeyJumpToFirstControl_Shift**</p></td>
-<td align="left"><p>Optional. Either &quot;t&quot; or &quot;f&quot;, indicating whether the SHIFT key should be pressed to set focus on the first control.</p></td>
+<td align="left"><p>Optional. Either "t" or "f", indicating whether the SHIFT key should be pressed to set focus on the first control.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShortcutKeyJumpToFirstControl_AccessKey**</p></td>
@@ -296,11 +296,11 @@ Contains elements that define the Server ribbon user interface.
 </tr>
 <tr class="even">
 <td align="left"><p>**ATContextualTabText**</p></td>
-<td align="left"><p>Optional. Hidden text to convey contextual tab information to screen readers, such as &quot; {0} group. Tab {1} of {2}.&quot;</p></td>
+<td align="left"><p>Optional. Hidden text to convey contextual tab information to screen readers, such as " {0} group. Tab {1} of {2}."</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ATTabPositionText**</p></td>
-<td align="left"><p>Optional. Hidden text to convey tab information to screen readers, such as &quot;Tab {0} of {1}.&quot;</p></td>
+<td align="left"><p>Optional. Hidden text to convey tab information to screen readers, such as "Tab {0} of {1}."</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**NavigationHelpText**</p></td>

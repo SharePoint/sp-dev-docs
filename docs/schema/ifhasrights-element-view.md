@@ -72,12 +72,12 @@ on whether the current user has the specified permission.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IfHasRights&gt;
-  &lt;RightsChoices&gt;
-    &lt;RightsGroup
-            Right = &quot;required&quot; /&gt;
-  &lt;/RightsChoices&gt;
-&lt;/IfHasRights&gt;</code></pre></td>
+<td align="left"><pre><code><IfHasRights>
+  <RightsChoices>
+    <RightsGroup
+            Right = "required" />
+  </RightsChoices>
+</IfHasRights></code></pre></td>
 </tr>
 </tbody>
 </table>

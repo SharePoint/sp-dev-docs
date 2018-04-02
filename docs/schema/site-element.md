@@ -70,8 +70,8 @@ for tables in the content database.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Site&gt;
-&lt;/Site&gt;</code></pre></td>
+<td align="left"><pre><code><Site>
+</Site></code></pre></td>
 </tr>
 </tbody>
 </table>

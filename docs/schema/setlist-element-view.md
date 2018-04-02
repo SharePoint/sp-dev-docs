@@ -71,11 +71,11 @@ Designates which list is current.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SetList
-  Name = &quot;Text&quot;
-  PreserveContext = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Scope = &quot;Request&quot;&gt;
-&lt;/SetList&gt;</code></pre></td>
+<td align="left"><pre><code><SetList
+  Name = "Text"
+  PreserveContext = "TRUE" | "FALSE"
+  Scope = "Request">
+</SetList></code></pre></td>
 </tr>
 </tbody>
 </table>

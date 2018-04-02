@@ -71,8 +71,8 @@ Returns the title of the list in the current context.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;List&gt;
-&lt;/List&gt;</code></pre></td>
+<td align="left"><pre><code><List>
+</List></code></pre></td>
 </tr>
 </tbody>
 </table>

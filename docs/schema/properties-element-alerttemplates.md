@@ -71,19 +71,19 @@ Excludes fields from the list that is displayed in the alert message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Properties&gt;
-  [&lt;ImmediateNotificationExcludedFields&gt;
+<td align="left"><pre><code><Properties>
+  [<ImmediateNotificationExcludedFields>
     ...
-  &lt;/ImmediateNotificationExcludedFields&gt;]  [&lt;DigestNotificationExcludedFields&gt;
+  </ImmediateNotificationExcludedFields>]  [<DigestNotificationExcludedFields>
     ...
-  &lt;/DigestNotificationExcludedFields&gt;]
-  [&lt;NotificationHandlerAssembly&gt;
-  &lt;/NotificationHandlerAssembly&gt;]  [&lt;NotificationHandlerClassName&gt;
-  &lt;/NotificationHandlerClassName&gt;]
-  [&lt;UpdateHandlerAssembly&gt;
-  &lt;/UpdateHandlerAssembly&gt;]  [&lt;UpdateHandlerClassName&gt;
-  &lt;/UpdateHandlerClassName&gt;]
-&lt;/Properties&gt;</code></pre></td>
+  </DigestNotificationExcludedFields>]
+  [<NotificationHandlerAssembly>
+  </NotificationHandlerAssembly>]  [<NotificationHandlerClassName>
+  </NotificationHandlerClassName>]
+  [<UpdateHandlerAssembly>
+  </UpdateHandlerAssembly>]  [<UpdateHandlerClassName>
+  </UpdateHandlerClassName>]
+</Properties></code></pre></td>
 </tr>
 </tbody>
 </table>

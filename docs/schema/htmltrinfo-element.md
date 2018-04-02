@@ -71,14 +71,14 @@ computer does not have the 2007 Microsoft Office system installed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;HtmlTrInfo&gt;
-  &lt;Mapping
-    AcceptHeader = &quot;Text&quot;
-    Extension = &quot;Text&quot;
-    HandlerUrl = &quot;Text&quot;
-    ProgId = &quot;Text&quot; /&gt;
+<td align="left"><pre><code><HtmlTrInfo>
+  <Mapping
+    AcceptHeader = "Text"
+    Extension = "Text"
+    HandlerUrl = "Text"
+    ProgId = "Text" />
   ...
-&lt;/HtmlTrInfo&gt;</code></pre></td>
+</HtmlTrInfo></code></pre></td>
 </tr>
 </tbody>
 </table>

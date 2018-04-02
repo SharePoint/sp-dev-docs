@@ -75,10 +75,10 @@ expression is rendered.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IfNeg&gt;
-   &lt;Expr1&gt;&lt;/Expr1&gt;
-   &lt;Expr2&gt;&lt;/Expr2&gt;   
-&lt;/IfNeg&gt;</code></pre></td>
+<td align="left"><pre><code><IfNeg>
+   <Expr1></Expr1>
+   <Expr2></Expr2>   
+</IfNeg></code></pre></td>
 </tr>
 </tbody>
 </table>

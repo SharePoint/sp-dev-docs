@@ -72,8 +72,8 @@ does not render anything by itself.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;XML&gt;
-&lt;/XML&gt;</code></pre></td>
+<td align="left"><pre><code><XML>
+</XML></code></pre></td>
 </tr>
 </tbody>
 </table>

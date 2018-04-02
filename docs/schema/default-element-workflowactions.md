@@ -70,14 +70,14 @@ attributes.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>    &lt;Default&gt;
-        &lt;RuleDesigner&gt;
-            &lt;FieldBind&gt;
-                &lt;Option&gt;…&lt;/Option&gt;
-                &lt;DataSourceRef&gt;…&lt;/DataSourceRef&gt;
-            &lt;/FieldBind&gt;
-        &lt;/RuleDesigner&gt;
-    &lt;/Default</code></pre></td>
+<td align="left"><pre><code>    <Default>
+        <RuleDesigner>
+            <FieldBind>
+                <Option>…</Option>
+                <DataSourceRef>…</DataSourceRef>
+            </FieldBind>
+        </RuleDesigner>
+    </Default</code></pre></td>
 </tr>
 </tbody>
 </table>

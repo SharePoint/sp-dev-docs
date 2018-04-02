@@ -71,8 +71,8 @@ Allows additional properties to be set when a limit is applied to text.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;More&gt;
-&lt;/More&gt;</code></pre></td>
+<td align="left"><pre><code><More>
+</More></code></pre></td>
 </tr>
 </tbody>
 </table>

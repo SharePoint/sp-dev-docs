@@ -70,39 +70,39 @@ class="nolink">SPFile</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;File&quot; type=&quot;SPFile&quot; /&gt;
+<xs:element name="File" type="SPFile" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;File
-                Name=&quot;xs:string&quot;
-                Id=&quot;Guid&quot;
-                Url=&quot;xs:string&quot;
-                ListItemIntId=&quot;xs:int&quot;
-                ParentWebId=&quot;Guid&quot;
-                ParentWebUrl=&quot;xs:string&quot;
-                ParentId=&quot;Guid&quot;
-                ListId=&quot;Guid&quot;
-                FileValue=&quot;xs:string&quot;
-                CheckinComment=&quot;xs:string&quot;
-                Version=&quot;xs:string&quot;
-                Author=&quot;xs:string&quot;
-                ModifiedBy=&quot;xs:string&quot;
-                TimeCreated=&quot;xs:dateTime&quot;
-                TimeLastModified=&quot;xs:dateTime&quot;
-                FailureMessage=&quot;xs:string&quot;
-                IsGhosted=&quot;xs:boolean&quot;
-                SetupPath=&quot;Guid&quot;
-                SetupPathUser=&quot;xs:string&quot;
-                SetupPathVersion=&quot;xs:byte&quot;
-            &lt;Properties /&gt;
-                        &lt;Versions /&gt;
-                        &lt;WebParts /&gt;
-                        &lt;Personalizations /&gt;
-                        &lt;Links /&gt;
-                        &lt;EventReceivers /&gt;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <File
+                Name="xs:string"
+                Id="Guid"
+                Url="xs:string"
+                ListItemIntId="xs:int"
+                ParentWebId="Guid"
+                ParentWebUrl="xs:string"
+                ParentId="Guid"
+                ListId="Guid"
+                FileValue="xs:string"
+                CheckinComment="xs:string"
+                Version="xs:string"
+                Author="xs:string"
+                ModifiedBy="xs:string"
+                TimeCreated="xs:dateTime"
+                TimeLastModified="xs:dateTime"
+                FailureMessage="xs:string"
+                IsGhosted="xs:boolean"
+                SetupPath="Guid"
+                SetupPathUser="xs:string"
+                SetupPathVersion="xs:byte"
+            <Properties />
+                        <Versions />
+                        <WebParts />
+                        <Personalizations />
+                        <Links />
+                        <EventReceivers />
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

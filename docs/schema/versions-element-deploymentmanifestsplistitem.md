@@ -72,16 +72,16 @@ versions of the list item.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Versions&quot; type=&quot;SPListItemVersionCollection&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="Versions" type="SPListItemVersionCollection" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;ListItem&gt;
-                &lt;Versions&gt;
-                        &lt;ListItem /&gt;
-                &lt;/Versions&gt;
-        &lt;/ListItem&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <ListItem>
+                <Versions>
+                        <ListItem />
+                </Versions>
+        </ListItem>
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

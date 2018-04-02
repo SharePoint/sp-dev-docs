@@ -67,8 +67,8 @@ Contains the e-mail address of the current user.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UserEmail&gt;
-&lt;/UserEmail&gt;</code></pre></td>
+<td align="left"><pre><code><UserEmail>
+</UserEmail></code></pre></td>
 </tr>
 </tbody>
 </table>

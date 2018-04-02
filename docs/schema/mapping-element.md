@@ -71,12 +71,12 @@ Microsoft Office system installed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Mapping
-  AcceptHeader = &quot;Text&quot;
-  Extension = &quot;Text&quot;
-  HandlerUrl = &quot;Text&quot;
-  ProgId = &quot;Text&quot;&gt;
-&lt;/Mapping&gt;</code></pre></td>
+<td align="left"><pre><code><Mapping
+  AcceptHeader = "Text"
+  Extension = "Text"
+  HandlerUrl = "Text"
+  ProgId = "Text">
+</Mapping></code></pre></td>
 </tr>
 </tbody>
 </table>

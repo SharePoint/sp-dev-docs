@@ -69,9 +69,9 @@ class="keyword">ProgID</span>.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MapToText&gt;
+<td align="left"><pre><code><MapToText>
     ProgID|File_Extension
-&lt;/MapToText&gt;</code></pre></td>
+</MapToText></code></pre></td>
 </tr>
 </tbody>
 </table>

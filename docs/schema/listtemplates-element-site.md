@@ -73,8 +73,8 @@ file for lists that can be created on a site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListTemplates&gt;
-&lt;/ListTemplates&gt;</code></pre></td>
+<td align="left"><pre><code><ListTemplates>
+</ListTemplates></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,8 +71,8 @@ Specifies a binding redirect for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;BindingRedirect 
-  OldVersion = string /&gt;</code></pre></td>
+<td align="left"><pre><code><BindingRedirect 
+  OldVersion = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

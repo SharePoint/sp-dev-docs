@@ -72,13 +72,13 @@ of controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OverflowSection
-  DisplayMode=&quot;Small | Medium | Large | Menu | Menu16 | Menu32&quot;
-  DividerAfter=&quot;TRUE | FALSE&quot;
-  DividerBefore=&quot;TRUE | FALSE&quot;
-  TemplateAlias=&quot;Text&quot;
-  Type=&quot;OneRow | TwoRow | ThreeRow&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><OverflowSection
+  DisplayMode="Small | Medium | Large | Menu | Menu16 | Menu32"
+  DividerAfter="TRUE | FALSE"
+  DividerBefore="TRUE | FALSE"
+  TemplateAlias="Text"
+  Type="OneRow | TwoRow | ThreeRow"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

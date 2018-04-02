@@ -69,18 +69,18 @@ object instance (**DeploymentAssignment**).
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DELCARATION SYNTAX
-&lt;xs:element name=&quot;Assignment&quot; 
-        type=&quot;DeploymentAssignment&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="Assignment" 
+        type="DeploymentAssignment" 
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE SYNTAX
-&lt;RoleAssignment&gt;
-        &lt;Assignment
-                RoleId=&quot;xs:string&quot;
-                PrincipalId=&quot;xs:string&quot;
-        /&gt;
-&lt;/RoleAssignment</code></pre></td>
+<RoleAssignment>
+        <Assignment
+                RoleId="xs:string"
+                PrincipalId="xs:string"
+        />
+</RoleAssignment</code></pre></td>
 </tr>
 </tbody>
 </table>

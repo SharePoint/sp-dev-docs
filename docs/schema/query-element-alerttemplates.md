@@ -77,14 +77,14 @@ class="keyword">Query</span> element in the Alerts schema contains no
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Query&gt;
-  &lt;GroupBy&gt;
+<td align="left"><pre><code><Query>
+  <GroupBy>
     ...
-    &lt;/GroupBy&gt;
-  &lt;OrderBy&gt;
+    </GroupBy>
+  <OrderBy>
     ...
-    &lt;/OrderBy&gt;
-&lt;/Query&gt;</code></pre></td>
+    </OrderBy>
+</Query></code></pre></td>
 </tr>
 </tbody>
 </table>

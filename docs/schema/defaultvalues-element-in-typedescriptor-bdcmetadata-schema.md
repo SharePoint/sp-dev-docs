@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a list of DefaultValues of a TypeDescriptor.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DefaultValues&gt;&lt;/DefaultValues&gt;</code></pre></td>
+<td align="left"><pre><code><DefaultValues></DefaultValues></code></pre></td>
 </tr>
 </tbody>
 </table>

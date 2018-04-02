@@ -74,8 +74,8 @@ specified.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Text&gt;
-&lt;/Text&gt;</code></pre></td>
+<td align="left"><pre><code><Text>
+</Text></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,7 +71,7 @@ Defines a row in a section of a layout.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Row /&gt;</code></pre></td>
+<td align="left"><pre><code><Row /></code></pre></td>
 </tr>
 </tbody>
 </table>

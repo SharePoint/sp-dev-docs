@@ -88,8 +88,8 @@ reading order.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewBidiHeader&gt;
-&lt;/ViewBidiHeader&gt;</code></pre></td>
+<td align="left"><pre><code><ViewBidiHeader>
+</ViewBidiHeader></code></pre></td>
 </tr>
 </tbody>
 </table>

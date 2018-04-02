@@ -87,8 +87,8 @@ Contains the string to be displayed in a view when no items are present.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewEmpty&gt;
-&lt;/ViewEmpty&gt;</code></pre></td>
+<td align="left"><pre><code><ViewEmpty>
+</ViewEmpty></code></pre></td>
 </tr>
 </tbody>
 </table>

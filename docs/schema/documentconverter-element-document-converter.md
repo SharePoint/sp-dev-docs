@@ -67,16 +67,16 @@ Specifies the definition of a document converter.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocumentConverter
-  Id=&quot;Text&quot;
-  Name=&quot;Text&quot;
-  App=&quot;Text&quot;
-  From=&quot;Text&quot;
-  To=&quot;Text&quot;
-  ConverterUIPage=&quot;Text&quot;
-  ConverterSpecificSettingsUI=&quot;Text&quot;
-  ConverterSettingsForContentType=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><DocumentConverter
+  Id="Text"
+  Name="Text"
+  App="Text"
+  From="Text"
+  To="Text"
+  ConverterUIPage="Text"
+  ConverterSpecificSettingsUI="Text"
+  ConverterSettingsForContentType="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

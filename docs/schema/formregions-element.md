@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Describes the properties of the form region used to display the external
 data.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FormRegions&gt; &lt;/FormRegions&gt;</code></pre></td>
+<td align="left"><pre><code><FormRegions> </FormRegions></code></pre></td>
 </tr>
 </tbody>
 </table>

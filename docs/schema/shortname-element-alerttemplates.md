@@ -78,8 +78,8 @@ Extensions\\14\\Resources</span>.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ShortName&gt;
-&lt;/ShortName&gt;</code></pre></td>
+<td align="left"><pre><code><ShortName>
+</ShortName></code></pre></td>
 </tr>
 </tbody>
 </table>

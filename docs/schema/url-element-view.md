@@ -71,10 +71,10 @@ Renders the URL of a particular form for a specified list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;URL
-  Cmd = &quot;Text&quot;
-  NoID = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/URL&gt;</code></pre></td>
+<td align="left"><pre><code><URL
+  Cmd = "Text"
+  NoID = "TRUE" | "FALSE">
+</URL></code></pre></td>
 </tr>
 </tbody>
 </table>

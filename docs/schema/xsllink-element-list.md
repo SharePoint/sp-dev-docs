@@ -77,7 +77,7 @@ the list view.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;XslLink  Default = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;  &lt;/XslLink&gt;</code></pre></td>
+<td align="left"><pre><code><XslLink  Default = "TRUE" | "FALSE">  </XslLink></code></pre></td>
 </tr>
 </tbody>
 </table>

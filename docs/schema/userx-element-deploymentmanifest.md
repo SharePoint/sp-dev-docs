@@ -71,22 +71,22 @@ incremental deployment.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;UserX&quot; type=&quot;DeploymentUserX&quot; /&gt;
+<xs:element name="UserX" type="DeploymentUserX" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;UserX
-                Operation=&quot;SecurityModificationType&quot;
-                Id=&quot;xs:string&quot;
-                Name=&quot;xs:string&quot;
-                Login=&quot;xs:string&quot;
-                Email=&quot;xs:string&quot;
-                SystemId=&quot;xs:string&quot;
-                IsDomainGroup=&quot;xs:boolean&quot;
-                IsSiteAdmin=&quot;xs:boolean&quot;
-                IsDeleted=&quot;xs:boolean&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <UserX
+                Operation="SecurityModificationType"
+                Id="xs:string"
+                Name="xs:string"
+                Login="xs:string"
+                Email="xs:string"
+                SystemId="xs:string"
+                IsDomainGroup="xs:boolean"
+                IsSiteAdmin="xs:boolean"
+                IsDeleted="xs:boolean"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

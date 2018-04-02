@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Describes how external data should appear in Microsoft Outlook 2010 and
 what other customizations you need in Outlook.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,8 +78,8 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OfficeItemCustomizations xsl:type=&quot;OutlookItemCustomizations&quot; ItemTypeDisplayName = &quot;String&quot; 
-MessageClass = String&quot; Description = &quot;String&quot;&gt; &lt;/OfficeItemCustomizations&gt;</code></pre></td>
+<td align="left"><pre><code><OfficeItemCustomizations xsl:type="OutlookItemCustomizations" ItemTypeDisplayName = "String" 
+MessageClass = String" Description = "String"> </OfficeItemCustomizations></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Describes the fields of an external content type.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OfficeItemProperties&gt; &lt;/OfficeItemProperties&gt;</code></pre></td>
+<td align="left"><pre><code><OfficeItemProperties> </OfficeItemProperties></code></pre></td>
 </tr>
 </tbody>
 </table>

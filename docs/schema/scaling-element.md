@@ -71,9 +71,9 @@ Defines tab scaling.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Scaling
-  Id=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Scaling
+  Id="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ Defines tab scaling.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon.Documents.Scaling&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon.Documents.Scaling".</p></td>
 </tr>
 </tbody>
 </table>

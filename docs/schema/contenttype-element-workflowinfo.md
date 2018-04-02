@@ -69,10 +69,10 @@ Specifies a content type from which to retrieve fields.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SchemaSource&gt;
-    &lt;ContentType&gt;
-    &lt;/ContentType&gt;
-&lt;/SchemaSource&gt;</code></pre></td>
+<td align="left"><pre><code><SchemaSource>
+    <ContentType>
+    </ContentType>
+</SchemaSource></code></pre></td>
 </tr>
 </tbody>
 </table>

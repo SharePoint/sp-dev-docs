@@ -71,10 +71,10 @@ Viewer)](mobiledocviewers-mobile-document-viewer.md)</span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MobileDocViewers&gt;
-  &lt;MobileDocViewer&gt;
-  &lt;/ MobileDocViewer&gt;
-&lt;/MobileDocViewers &gt;</code></pre></td>
+<td align="left"><pre><code><MobileDocViewers>
+  <MobileDocViewer>
+  </ MobileDocViewer>
+</MobileDocViewers ></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,7 +72,7 @@ controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Strip /&gt;</code></pre></td>
+<td align="left"><pre><code><Strip /></code></pre></td>
 </tr>
 </tbody>
 </table>

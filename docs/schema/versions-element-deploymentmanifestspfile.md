@@ -71,16 +71,16 @@ the versions of the file.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Versions&quot; type=&quot;SPFileVersionCollection&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="Versions" type="SPFileVersionCollection" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;File&gt;
-                &lt;Versions&gt;
-                        &lt;File /&gt;
-                &lt;/Versions&gt;
-        &lt;/File&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <File>
+                <Versions>
+                        <File />
+                </Versions>
+        </File>
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

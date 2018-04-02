@@ -70,28 +70,28 @@ map (UserGroup.xml) file exported to the content migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;Group&quot; 
-    type=&quot;DeploymentGroup&quot; 
-    minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element 
+    name="Group" 
+    type="DeploymentGroup" 
+    minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;Groups&gt;
-    &lt;Group&gt;
-           &lt;Member /&gt;
-        Id=&quot;xs:string&quot;
-        Name=&quot;xs:string&quot;
-        Owner=&quot;xs:string&quot;
-        OwnerIsUser=&quot;xs:boolean&quot;
-        Description=&quot;xs:string&quot;
-        OnlyAllowMembersViewMembership=&quot;xs:boolean&quot;
-        AllowMembersEditMembership=&quot;xs:boolean&quot;
-        AllowRequestToJoinLeave=&quot;xs:boolean&quot;
-        AutoAcceptRequestToJoinLeave=&quot;xs:boolean&quot;
-        RequestToJoinLeaveEmailSetting=&quot;xs:string&quot;
-    &lt;/Group&gt;
-&lt;/Groups&gt;</code></pre></td>
+<Groups>
+    <Group>
+           <Member />
+        Id="xs:string"
+        Name="xs:string"
+        Owner="xs:string"
+        OwnerIsUser="xs:boolean"
+        Description="xs:string"
+        OnlyAllowMembersViewMembership="xs:boolean"
+        AllowMembersEditMembership="xs:boolean"
+        AllowRequestToJoinLeave="xs:boolean"
+        AutoAcceptRequestToJoinLeave="xs:boolean"
+        RequestToJoinLeaveEmailSetting="xs:string"
+    </Group>
+</Groups></code></pre></td>
 </tr>
 </tbody>
 </table>

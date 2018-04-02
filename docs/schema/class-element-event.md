@@ -67,8 +67,8 @@ Contains the name of the class that implements the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Class&gt;
-&lt;/Class&gt;</code></pre></td>
+<td align="left"><pre><code><Class>
+</Class></code></pre></td>
 </tr>
 </tbody>
 </table>

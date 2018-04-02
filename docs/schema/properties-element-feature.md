@@ -67,8 +67,8 @@ Contains a list of the default values for Feature properties.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Properties&gt;
-&lt;/Properties&gt;</code></pre></td>
+<td align="left"><pre><code><Properties>
+</Properties></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,9 +67,9 @@ Specifies the parameter to be applied during a Feature upgrade.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Parameter 
-  Name = string&gt;
-&lt;/Parameter&gt;</code></pre></td>
+<td align="left"><pre><code><Parameter 
+  Name = string>
+</Parameter></code></pre></td>
 </tr>
 </tbody>
 </table>

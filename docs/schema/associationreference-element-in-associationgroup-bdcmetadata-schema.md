@@ -63,10 +63,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies an **AssociationReference** in an
 **AssociationGroup**.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -80,7 +80,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AssociationReference EntityNamespace = &quot;String&quot; EntityName = &quot;String&quot; AssociationName = &quot;String&quot; Reverse = &quot;Boolean&quot;&gt; &lt;/AssociationReference&gt;</code></pre></td>
+<td align="left"><pre><code><AssociationReference EntityNamespace = "String" EntityName = "String" AssociationName = "String" Reverse = "Boolean"> </AssociationReference></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ elements.
 <tr class="even">
 <td align="left"><p>Reverse</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies that the referenced **Association</span> has its source and destination reversed. This would indicate the **Association</span> is working in the opposite direction compared to other associations in the same **AssociationGroup</span>. For example, if the **AssociationGroup</span> references an **Association</span> &quot;GetOrdersForCustomer&quot;, returning Order items for the given Customer item, then the **AssociationGroup</span> is in the direction of Customer to Order. The other **AssociationReference**, referencing another association &quot;GetCustomerForOrder&quot;, must be marked as reverse, because this association is in the direction of Order to Customer.</p>
+<p>Specifies that the referenced **Association</span> has its source and destination reversed. This would indicate the **Association</span> is working in the opposite direction compared to other associations in the same **AssociationGroup</span>. For example, if the **AssociationGroup</span> references an **Association</span> "GetOrdersForCustomer", returning Order items for the given Customer item, then the **AssociationGroup</span> is in the direction of Customer to Order. The other **AssociationReference**, referencing another association "GetCustomerForOrder", must be marked as reverse, because this association is in the direction of Order to Customer.</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>

@@ -70,8 +70,8 @@ initiation form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Fields&gt;
-&lt;/Fields&gt;</code></pre></td>
+<td align="left"><pre><code><Fields>
+</Fields></code></pre></td>
 </tr>
 </tbody>
 </table>

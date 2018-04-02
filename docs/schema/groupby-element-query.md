@@ -72,10 +72,10 @@ query in a list view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GroupBy
-  Collapse = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-&lt;/GroupBy&gt;</code></pre></td>
+<td align="left"><pre><code><GroupBy
+  Collapse = "TRUE" | "FALSE">
+  <FieldRef Name = "Field_Name"/>
+</GroupBy></code></pre></td>
 </tr>
 </tbody>
 </table>

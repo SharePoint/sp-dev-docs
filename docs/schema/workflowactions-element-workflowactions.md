@@ -71,10 +71,10 @@ manifest file for sandboxed deployed custom actions.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WorkflowActions&gt;
-    &lt;Default&gt;...&lt;/Default&gt;
-    &lt;Action&gt;...&lt;/Action&gt;
-&lt;/WorkflowActions&gt;</code></pre></td>
+<td align="left"><pre><code><WorkflowActions>
+    <Default>...</Default>
+    <Action>...</Action>
+</WorkflowActions></code></pre></td>
 </tr>
 </tbody>
 </table>

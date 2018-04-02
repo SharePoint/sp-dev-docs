@@ -76,8 +76,8 @@ particular list item.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DisplayPattern&gt;
-&lt;/DisplayPattern&gt;</code></pre></td>
+<td align="left"><pre><code><DisplayPattern>
+</DisplayPattern></code></pre></td>
 </tr>
 </tbody>
 </table>

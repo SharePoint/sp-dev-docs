@@ -68,31 +68,31 @@ toolbar or a link on a site settings page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CustomAction
-  RequiredAdmin = &quot;Delegated | Farm | Machine&quot;
-  ControlAssembly = &quot;Text&quot;
-  ControlClass = &quot;Text&quot;
-  ControlSrc = &quot;Text&quot;
-  Description = &quot;Text&quot;
-  FeatureId = &quot;Text&quot;
-  GroupId = &quot;Text&quot;
-  Id = &quot;Text&quot;
-  ImageUrl = &quot;Text&quot;
-  Location = &quot;Text&quot;
-  RegistrationId = &quot;Text&quot;
-  RegistrationType = &quot;Text&quot;
-  RequireSiteAdministrator = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Rights = &quot;Text&quot;
-  RootWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ScriptSrc = &quot;Text&quot;
-  ScriptBlock = &quot;Text&quot;
-  Sequence = &quot;Integer&quot;
-  ShowInLists = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInReadOnlyContentTypes = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ShowInSealedContentTypes = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Title = &quot;Text&quot;
-  UIVersion = &quot;Integer&quot;&gt;
-&lt;/CustomAction&gt;</code></pre></td>
+<td align="left"><pre><code><CustomAction
+  RequiredAdmin = "Delegated | Farm | Machine"
+  ControlAssembly = "Text"
+  ControlClass = "Text"
+  ControlSrc = "Text"
+  Description = "Text"
+  FeatureId = "Text"
+  GroupId = "Text"
+  Id = "Text"
+  ImageUrl = "Text"
+  Location = "Text"
+  RegistrationId = "Text"
+  RegistrationType = "Text"
+  RequireSiteAdministrator = "TRUE" | "FALSE"
+  Rights = "Text"
+  RootWebOnly = "TRUE" | "FALSE"
+  ScriptSrc = "Text"
+  ScriptBlock = "Text"
+  Sequence = "Integer"
+  ShowInLists = "TRUE" | "FALSE"
+  ShowInReadOnlyContentTypes = "TRUE" | "FALSE"
+  ShowInSealedContentTypes = "TRUE" | "FALSE"
+  Title = "Text"
+  UIVersion = "Integer">
+</CustomAction></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@ toolbar or a link on a site settings page.
 </tr>
 <tr class="even">
 <td align="left"><p>**ControlSrc**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the relative URL of the .ascx file that serves as the source for the custom action, for example, <span class="code">&quot;~/_controltemplates/myCustomAction.ascx&quot;**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the relative URL of the .ascx file that serves as the source for the custom action, for example, <span class="code">"~/_controltemplates/myCustomAction.ascx"**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Description**</p></td>
@@ -143,12 +143,12 @@ toolbar or a link on a site settings page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**GroupId**</p></td>
-<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">&quot;SiteManagement&quot;</span>. If it is contained within a custom action group, the value of the **GroupId** attribute must equal the group ID of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
+<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">"SiteManagement"</span>. If it is contained within a custom action group, the value of the **GroupId** attribute must equal the group ID of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
 <p>For a list of the default custom action group IDs that are used in Microsoft SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies a unique identifier for the custom action. The ID may be a GUID, or it may be a unique term, for example, <span class="code">&quot;HtmlViewer&quot;**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies a unique identifier for the custom action. The ID may be a GUID, or it may be a unique term, for example, <span class="code">"HtmlViewer"**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageUrl**</p></td>
@@ -156,8 +156,8 @@ toolbar or a link on a site settings page.
 </tr>
 <tr class="even">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the location of this custom action, for example, <span class="code">&quot;Microsoft.SharePoint.SiteSettings&quot;**.</p>
-<p>If the **CustomAction</span> element contains a **CommandUIExtension</span> child element, the **Location** must start with &quot;CommandUI.Ribbon&quot;. For a list of default locations that are used with the Server ribbon, see <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a>.</p>
+<td align="left"><p>Optional **Text</span>. Specifies the location of this custom action, for example, <span class="code">"Microsoft.SharePoint.SiteSettings"**.</p>
+<p>If the **CustomAction</span> element contains a **CommandUIExtension</span> child element, the **Location** must start with "CommandUI.Ribbon". For a list of default locations that are used with the Server ribbon, see <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a>.</p>
 <p>If the custom action is a menu item or toolbar button, the possible options include **EditControlBlock</span>, **NewFormToolbar</span>, **DisplayFormToolbar</span>, and **EditFormToolbar**.</p>
 <p>If it is contained within a custom action group, the value of the **Location** attribute must equal the location of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
 <p>For a list of the default custom action locations that are used in SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span>.</p></td>
@@ -183,7 +183,7 @@ toolbar or a link on a site settings page.
 </tr>
 <tr class="even">
 <td align="left"><p>**Rights**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies a set of rights that the user must have for the link to be visible, for example, <span class="code">&quot;ViewListItems,ManageAlerts&quot;</span>. If it is not specified, the action always appears in the list of actions. To specify multiple rights, separate the values by using commas. The set of rights are grouped logically according to **AND</span> logic, which means that a user must have all the specified rights to see an action. For a list of possible values, see <span sdata="cer" target="T:Microsoft.SharePoint.SPBasePermissions"><span class="nolink">Microsoft.SharePoint.SPBasePermissions</span>**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies a set of rights that the user must have for the link to be visible, for example, <span class="code">"ViewListItems,ManageAlerts"</span>. If it is not specified, the action always appears in the list of actions. To specify multiple rights, separate the values by using commas. The set of rights are grouped logically according to **AND</span> logic, which means that a user must have all the specified rights to see an action. For a list of possible values, see <span sdata="cer" target="T:Microsoft.SharePoint.SPBasePermissions"><span class="nolink">Microsoft.SharePoint.SPBasePermissions</span>**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>

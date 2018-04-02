@@ -77,7 +77,7 @@ list template.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebParts&gt;  &lt;AllUsersWebPart    WebPartOrder = Integer    WebPartZoneID = &quot;Text&quot;&gt;      &lt;![CDATA[...]]&gt;  &lt;/AllUsersWebPart&gt;&lt;/WebParts&gt;</code></pre></td>
+<td align="left"><pre><code><WebParts>  <AllUsersWebPart    WebPartOrder = Integer    WebPartZoneID = "Text">      <![CDATA[...]]>  </AllUsersWebPart></WebParts></code></pre></td>
 </tr>
 </tbody>
 </table>

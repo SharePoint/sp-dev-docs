@@ -72,8 +72,8 @@ type of a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Forms&gt;  &lt;Form    Default = &quot;TRUE&quot; | &quot;FALSE&quot;    Path = &quot;Text&quot;    SetupPath = &quot;Text&quot;    Template = &quot;Text&quot;    Type = &quot;DisplayForm&quot; | &quot;EditForm&quot; | &quot;NewForm&quot;    Url = &quot;URL&quot;    UseDefaultListFormWebPart = &quot;TRUE&quot; | &quot;FALSE&quot;    UseLegacyForm = &quot;TRUE&quot; | &quot;FALSE&quot;    WebPartZoneID = &quot;Text&quot;&gt;    &lt;WebParts&gt;      &lt;AllUsersWebPart        WebPartOrder = Integer        WebPartZoneID = &quot;Text&quot;&gt;          &lt;![CDATA[...]]&gt;      &lt;/AllUsersWebPart&gt;    &lt;/WebParts&gt;  &lt;/Form&gt;
-&lt;/Forms&gt;</code></pre></td>
+<td align="left"><pre><code><Forms>  <Form    Default = "TRUE" | "FALSE"    Path = "Text"    SetupPath = "Text"    Template = "Text"    Type = "DisplayForm" | "EditForm" | "NewForm"    Url = "URL"    UseDefaultListFormWebPart = "TRUE" | "FALSE"    UseLegacyForm = "TRUE" | "FALSE"    WebPartZoneID = "Text">    <WebParts>      <AllUsersWebPart        WebPartOrder = Integer        WebPartZoneID = "Text">          <![CDATA[...]]>      </AllUsersWebPart>    </WebParts>  </Form>
+</Forms></code></pre></td>
 </tr>
 </tbody>
 </table>

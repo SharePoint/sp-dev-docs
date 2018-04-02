@@ -71,7 +71,7 @@ Specifies a global resource file for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;BindingRedirects /&gt;</code></pre></td>
+<td align="left"><pre><code><BindingRedirects /></code></pre></td>
 </tr>
 </tbody>
 </table>

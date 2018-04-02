@@ -80,7 +80,7 @@ Specifies that no class is generated for a content type.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExcludeContentType Name=&quot;Announcements&quot; /&gt;</code></pre></td>
+<td align="left"><pre><code><ExcludeContentType Name="Announcements" /></code></pre></td>
 </tr>
 </tbody>
 </table>

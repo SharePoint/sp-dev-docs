@@ -69,8 +69,8 @@ current time.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IfOld&gt;
-&lt;/IfOld&gt;</code></pre></td>
+<td align="left"><pre><code><IfOld>
+</IfOld></code></pre></td>
 </tr>
 </tbody>
 </table>

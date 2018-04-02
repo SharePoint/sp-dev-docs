@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,86 +8,27 @@ localization_priority: Normal
 ms.assetid: 082dcea0-3ac6-b534-08c2-3ab87f3348a8
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# ContextDefinition Element in ContextDefinitionGroup 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(SolutionManifestDefinitions Schema)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+Defines a context for an external content type of Outlook Item Type that this context definition group defines.
 
-**Last modified:** March 09, 2015
+**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Schema**: SolutionManifestDefinitions
 
-Defines a context for an external content type of Outlook Item Type that
-this context definition group defines.
+```XML
+<ContextDefinition ContentType = "String" Description = "String"> </ContextDefinition>
+```
 
-**Namespace:**
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+## Elements and attributes
 
-**Schema:** SolutionManifestDefinitions
+The following sections describe attributes, child elements, and parent elements.
 
-<span codelanguage="xmlLang"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;ContextDefinition ContentType = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ContextDefinition&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
-
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following sections describe attributes, child elements, and parent
-elements.
-
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
@@ -106,11 +45,10 @@ elements.
 <tr class="odd">
 <td align="left"><p>**ContentType**</p></td>
 <td align="left"><p>Required.</p>
-<p>The type name of this context in Microsoft Outlook 2010. This can be different from the name of the external content type in the model. The value you specify here affects the name of the Outlook Item Type as it will appear in the Outlook object model. In Outlook, the name will be appended to the Outlook Item Type and the full name of an external content type will be &quot;OutlookDOCS-LESSTHANOutlookItemTypeDOCS-GREATERTHANDOCS-LESSTHANContentTypeDOCS-GREATERTHAN&quot;. For example, a Customer external type could be &quot;OutlookContactCustomer&quot; in Outlook if it is visualized as an Outlook Contact. If the external content type is visualized in a task pane in Outlook, the content type has to be in the following format:</p>
-<p><span class="code">length_of_entity_namespace length_of_entity_name length_of_view_name entity_namespace entity_name view_name position_of_entity_namespace</span></p>
-<p>For example, &quot;12 12 24 AWWSExample OrderHeader GetSalesOrderHeaderById 9&quot;.</p>
+<p>The type name of this context in Microsoft Outlook 2010. This can be different from the name of the external content type in the model. The value you specify here affects the name of the Outlook Item Type as it will appear in the Outlook object model. In Outlook, the name will be appended to the Outlook Item Type and the full name of an external content type will be `OutlookDOCS-LESSTHANOutlookItemTypeDOCS-GREATERTHANDOCS-LESSTHANContentTypeDOCS-GREATERTHAN`. For example, a Customer external type could be "OutlookContactCustomer" in Outlook if it is visualized as an Outlook Contact. 
+<p>If the external content type is visualized in a task pane in Outlook, the content type has to be in the following format: `length_of_entity_namespace length_of_entity_name length_of_view_name entity_namespace entity_name view_name position_of_entity_namespace`. For example, `12 12 24 AWWSExample OrderHeader GetSalesOrderHeaderById 9`.</p>
 <p>If you use the object model to work on the Outlook items, this is the naming scheme you will use to identify your Outlook items.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
@@ -121,7 +59,9 @@ elements.
 </tbody>
 </table>
 
-#### Child elements
+<br/>
+
+### Child elements
 
 <table>
 <colgroup>
@@ -146,7 +86,9 @@ elements.
 </tbody>
 </table>
 
-#### Parent elements
+<br/>
+
+### Parent elements
 
 <table>
 <colgroup>
@@ -166,6 +108,10 @@ elements.
 </tr>
 </tbody>
 </table>
+
+<br/>
+
+<br/>
 
 
 

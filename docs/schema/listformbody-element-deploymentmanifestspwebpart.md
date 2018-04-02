@@ -69,12 +69,12 @@ Web Part.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ListFormBody&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="ListFormBody" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;WebPart&gt;
-        &lt;ListFormBody /&gt;
-&lt;/WebPart&gt;</code></pre></td>
+<WebPart>
+        <ListFormBody />
+</WebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

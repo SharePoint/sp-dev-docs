@@ -71,8 +71,8 @@ Contains the collection of lists for a configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Lists&gt;
-&lt;/Lists&gt;</code></pre></td>
+<td align="left"><pre><code><Lists>
+</Lists></code></pre></td>
 </tr>
 </tbody>
 </table>

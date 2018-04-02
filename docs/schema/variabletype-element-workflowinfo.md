@@ -69,9 +69,9 @@ Specifies a type that can be used for local variables in the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;VariableTypes&gt;
-    &lt;VariableType&gt;    &lt;/VariableType&gt;
-&lt;/VariableTypes&gt;</code></pre></td>
+<td align="left"><pre><code><VariableTypes>
+    <VariableType>    </VariableType>
+</VariableTypes></code></pre></td>
 </tr>
 </tbody>
 </table>

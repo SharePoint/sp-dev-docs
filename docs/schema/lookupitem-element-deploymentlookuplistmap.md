@@ -71,21 +71,21 @@ package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-        name=&quot;LookupItem&quot; 
-        type=&quot;SPLookupItem&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element 
+        name="LookupItem" 
+        type="SPLookupItem" 
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;LookupItems&gt;
-        &lt;LookupItem
-                Id=&quot;Guid&quot;
-                DocId=&quot;Guid&quot;
-                Url=&quot;xs:string&quot;
-                Included=&quot;xs:boolean&quot;
-        /&gt;
-&lt;/LookupItems&gt;</code></pre></td>
+<LookupItems>
+        <LookupItem
+                Id="Guid"
+                DocId="Guid"
+                Url="xs:string"
+                Included="xs:boolean"
+        />
+</LookupItems></code></pre></td>
 </tr>
 </tbody>
 </table>

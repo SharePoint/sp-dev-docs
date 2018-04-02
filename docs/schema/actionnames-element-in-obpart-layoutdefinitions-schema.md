@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Defines the actions exposed by the External Data Part.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActionNames&gt;&lt;/ActionNames&gt;</code></pre></td>
+<td align="left"><pre><code><ActionNames></ActionNames></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -77,8 +77,8 @@ Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922(O
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;PagedRowset&gt;
-&lt;/PagedRowset&gt;</code></pre></td>
+<td align="left"><pre><code><PagedRowset>
+</PagedRowset></code></pre></td>
 </tr>
 </tbody>
 </table>

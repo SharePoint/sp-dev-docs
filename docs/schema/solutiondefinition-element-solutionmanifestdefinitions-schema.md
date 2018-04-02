@@ -71,10 +71,10 @@ NewInstanceValues)</span>) should be called when the data in the item
 changes. There will always be at least one namespace declaration on the
 **SolutionDefinition** element, typically:
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 XML 
@@ -106,7 +106,7 @@ class="keyword">DOCS-LESSTHANSolutionDefinitionDOCS-GREATERTHAN</span>.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SolutionDefinition&gt;&lt;/SolutionDefinition&gt;</code></pre></td>
+<td align="left"><pre><code><SolutionDefinition></SolutionDefinition></code></pre></td>
 </tr>
 </tbody>
 </table>

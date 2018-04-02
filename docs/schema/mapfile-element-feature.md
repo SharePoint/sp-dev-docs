@@ -67,9 +67,9 @@ Specifies a mapping between files during a Feature upgrade.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MapFile 
+<td align="left"><pre><code><MapFile 
   FromPath = string
-  ToPath = string /&gt;</code></pre></td>
+  ToPath = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,15 +72,15 @@ SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Association
-  ListID=&quot;Text&quot;
-  TaskListID=&quot;Text&quot;
-  HistoryListID=&quot;Text&quot;
-  StartManually=&quot;true&quot; | &quot;false&quot;
-  StartOnCreate=&quot;true&quot; | &quot;false&quot;
-  StartOnChange=&quot;true&quot; | &quot;false&quot;
-&gt;
-&lt;/Association&gt;</code></pre></td>
+<td align="left"><pre><code><Association
+  ListID="Text"
+  TaskListID="Text"
+  HistoryListID="Text"
+  StartManually="true" | "false"
+  StartOnCreate="true" | "false"
+  StartOnChange="true" | "false"
+>
+</Association></code></pre></td>
 </tr>
 </tbody>
 </table>

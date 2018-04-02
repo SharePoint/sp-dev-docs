@@ -68,9 +68,9 @@ and edit dates and numbers properly.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LocaleInfo
-  LCTYPE=&quot;Integer&quot;&gt;
-&lt;/LocaleInfo&gt;</code></pre></td>
+<td align="left"><pre><code><LocaleInfo
+  LCTYPE="Integer">
+</LocaleInfo></code></pre></td>
 </tr>
 </tbody>
 </table>

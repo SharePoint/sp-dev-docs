@@ -63,10 +63,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies a list of **AssociationGroup**
 elements.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -80,7 +80,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AssociationGroups&gt;&lt;/AssociationGroups&gt;</code></pre></td>
+<td align="left"><pre><code><AssociationGroups></AssociationGroups></code></pre></td>
 </tr>
 </tbody>
 </table>

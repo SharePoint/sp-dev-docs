@@ -72,8 +72,8 @@ string.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CurrentRights&gt;
-&lt;/CurrentRights&gt;</code></pre></td>
+<td align="left"><pre><code><CurrentRights>
+</CurrentRights></code></pre></td>
 </tr>
 </tbody>
 </table>

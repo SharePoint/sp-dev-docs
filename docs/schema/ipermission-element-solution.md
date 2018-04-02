@@ -71,7 +71,7 @@ Specifies a permission in a permission set.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IPermission/&gt;</code></pre></td>
+<td align="left"><pre><code><IPermission/></code></pre></td>
 </tr>
 </tbody>
 </table>

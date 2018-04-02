@@ -71,13 +71,13 @@ Defines a color.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Color
-     Sequence=&quot;Integer&quot;
-     Title=&quot;Text&quot;
-     Style=&quot;CSS Selector&quot;
-     Color=&quot;Color string&quot;
-     DisplayColor=&quot;#hexdec&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Color
+     Sequence="Integer"
+     Title="Text"
+     Style="CSS Selector"
+     Color="Color string"
+     DisplayColor="#hexdec"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -115,7 +115,7 @@ Defines a color.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DisplayColor**</p></td>
-<td align="left"><p>Optional. A hexadecimal color code to use for the background color of the table cell, such as &quot;#FF0000&quot; (red).</p></td>
+<td align="left"><p>Optional. A hexadecimal color code to use for the background color of the table cell, such as "#FF0000" (red).</p></td>
 </tr>
 </tbody>
 </table>

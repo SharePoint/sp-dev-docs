@@ -87,9 +87,9 @@ Defines how the rows of data in a view are rendered.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewBody
-  ExpandXML = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ViewBody&gt;</code></pre></td>
+<td align="left"><pre><code><ViewBody
+  ExpandXML = "TRUE" | "FALSE">
+</ViewBody></code></pre></td>
 </tr>
 </tbody>
 </table>

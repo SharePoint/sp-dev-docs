@@ -73,8 +73,8 @@ definition within
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Modules&gt;
-&lt;/Modules&gt;</code></pre></td>
+<td align="left"><pre><code><Modules>
+</Modules></code></pre></td>
 </tr>
 </tbody>
 </table>

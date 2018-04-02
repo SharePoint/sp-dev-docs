@@ -24,8 +24,8 @@ identifier (GUID) as returned by the Microsoft Component Object Model
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GUID&gt;
-&lt;/GUID&gt;</code></pre></td>
+<td align="left"><pre><code><GUID>
+</GUID></code></pre></td>
 </tr>
 </tbody>
 </table>

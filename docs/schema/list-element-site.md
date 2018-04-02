@@ -72,21 +72,21 @@ definition configuration or Web template configuration.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;List
-  CustomSchema = &quot;Text&quot;
-  Description = &quot;Text&quot;
-  EmailAlias = &quot;Text&quot;
-  EnableContentTypes = &quot;TRUE&quot; | &quot;FALSE&quot;
-  EnableMinorVersions = &quot;TRUE&quot; | &quot;FALSE&quot;
-  FeatureId = &quot;GUID&quot;
-  ForceCheckout = &quot;TRUE&quot; | &quot;FALSE&quot;  HyperlinkBaseUrl = Text
+<td align="left"><pre><code><List
+  CustomSchema = "Text"
+  Description = "Text"
+  EmailAlias = "Text"
+  EnableContentTypes = "TRUE" | "FALSE"
+  EnableMinorVersions = "TRUE" | "FALSE"
+  FeatureId = "GUID"
+  ForceCheckout = "TRUE" | "FALSE"  HyperlinkBaseUrl = Text
   QuickLaunchUrl = Text
-  RootWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Title = &quot;Text&quot;
+  RootWebOnly = "TRUE" | "FALSE"
+  Title = "Text"
   Type = Integer
-  Url = &quot;Text&quot;
-  VersioningEnabled = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/List&gt;</code></pre></td>
+  Url = "Text"
+  VersioningEnabled = "TRUE" | "FALSE">
+</List></code></pre></td>
 </tr>
 </tbody>
 </table>

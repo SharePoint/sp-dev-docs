@@ -69,8 +69,8 @@ Specifies a custom workflow status column value.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;StatusColumnValue&gt;
-&lt;/StatusColumnValue&gt;</code></pre></td>
+<td align="left"><pre><code><StatusColumnValue>
+</StatusColumnValue></code></pre></td>
 </tr>
 </tbody>
 </table>

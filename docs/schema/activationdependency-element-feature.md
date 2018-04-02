@@ -67,7 +67,7 @@ Represents a Feature on which activation of the current Feature depends.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActivationDependency 
+<td align="left"><pre><code><ActivationDependency 
   FeatureDescription = string 
   FeatureId = Guid 
   FeatureTitle = string 
@@ -75,8 +75,8 @@ Represents a Feature on which activation of the current Feature depends.
   SolutionId = Guid 
   SolutionName = string 
   SolutionTitle = string 
-  SolutionUrl = string&gt;
-&lt;/ActivationDependency&gt;</code></pre></td>
+  SolutionUrl = string>
+</ActivationDependency></code></pre></td>
 </tr>
 </tbody>
 </table>

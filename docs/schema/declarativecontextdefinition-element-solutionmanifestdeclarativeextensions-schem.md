@@ -79,7 +79,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextDefinition xsl:type=&quot;DeclarativeContextDefinition&quot; xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance&quot;  ContentType = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ContextDefinition&gt;</code></pre></td>
+<td align="left"><pre><code><ContextDefinition xsl:type="DeclarativeContextDefinition" xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance"  ContentType = "String" Description = "String"> </ContextDefinition></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -70,12 +70,12 @@ the Web Part.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ViewEmpty&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="ViewEmpty" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;WebPart&gt;
-        &lt;ViewEmpty /&gt;
-&lt;/WebPart&gt;</code></pre></td>
+<WebPart>
+        <ViewEmpty />
+</WebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

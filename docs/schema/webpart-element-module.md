@@ -68,7 +68,7 @@ serialized to binary data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebPart 
+<td align="left"><pre><code><WebPart 
    AllUsers = string 
    Assembly = string 
    Cache = string 
@@ -76,7 +76,7 @@ serialized to binary data.
    DisplayName = string 
    Flags = string 
    FrameState = integer 
-   IsIncluded = &quot;TRUE&quot; | &quot;FALSE&quot; 
+   IsIncluded = "TRUE" | "FALSE" 
    List = string 
    PerUser = string 
    SolutionId = string 
@@ -87,7 +87,7 @@ serialized to binary data.
    View = string 
    WebId = string 
    WebPartIdProperty = string 
-   WPTypeId = string /&gt;</code></pre></td>
+   WPTypeId = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

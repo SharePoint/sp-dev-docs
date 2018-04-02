@@ -70,9 +70,9 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Elements
-  Id = &quot;Text&quot;&gt;
-&lt;/Elements&gt;</code></pre></td>
+<td align="left"><pre><code><Elements
+  Id = "Text">
+</Elements></code></pre></td>
 </tr>
 </tbody>
 </table>

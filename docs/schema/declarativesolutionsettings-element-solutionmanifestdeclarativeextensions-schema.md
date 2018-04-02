@@ -75,7 +75,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SolutionSettings xsl:type=&quot;DeclarativeSolutionSettings&quot; xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance&quot; CustomRibbonManager = &quot;String&quot; SolutionId = &quot;String&quot; SolutionDisplayName = &quot;String&quot; SolutionVersion = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/SolutionSettings&gt;</code></pre></td>
+<td align="left"><pre><code><SolutionSettings xsl:type="DeclarativeSolutionSettings" xmlns:xsl=http://www.w3.org/2001/XMLSchema-instance" CustomRibbonManager = "String" SolutionId = "String" SolutionDisplayName = "String" SolutionVersion = "String" Description = "String"> </SolutionSettings></code></pre></td>
 </tr>
 </tbody>
 </table>

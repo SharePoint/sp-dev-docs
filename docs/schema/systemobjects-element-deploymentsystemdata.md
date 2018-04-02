@@ -69,18 +69,18 @@ class="keyword">SPSystemObject</span>) instances.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;SystemObjects&quot; 
-    type=&quot;SPSystemObjects&quot; 
-    minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; 
-/&gt;
+<xs:element 
+    name="SystemObjects" 
+    type="SPSystemObjects" 
+    minOccurs="1" maxOccurs="1" 
+/>
 
 USAGE
-&lt;SystemData&gt;
-    &lt;SystemObjects&gt;
-        &lt;SystemObject /&gt;
-    &lt;/SystemObjects&gt;
-&lt;/SystemData&gt;</code></pre></td>
+<SystemData>
+    <SystemObjects>
+        <SystemObject />
+    </SystemObjects>
+</SystemData></code></pre></td>
 </tr>
 </tbody>
 </table>

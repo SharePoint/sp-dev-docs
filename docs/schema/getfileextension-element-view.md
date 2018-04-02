@@ -71,9 +71,9 @@ Returns the file extension for the specified file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GetFileExtension
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/GetFileExtension&gt;</code></pre></td>
+<td align="left"><pre><code><GetFileExtension
+  HTMLEncode = "TRUE" | "FALSE">
+</GetFileExtension></code></pre></td>
 </tr>
 </tbody>
 </table>

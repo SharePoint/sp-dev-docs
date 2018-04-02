@@ -73,10 +73,10 @@ locale in the regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Locale
-  ID = &quot;Integer&quot;
-  Name = &quot;Text&quot;&gt;
-&lt;/Locale&gt;</code></pre></td>
+<td align="left"><pre><code><Locale
+  ID = "Integer"
+  Name = "Text">
+</Locale></code></pre></td>
 </tr>
 </tbody>
 </table>

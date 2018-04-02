@@ -71,21 +71,21 @@ Defines an alert message template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AlertTemplate
-  Type=&quot;List&quot; | &quot;Item&quot; | &quot;Custom&quot;
-  Default=&quot;True&quot; | &quot;False&quot;
-  Name=&quot;Text&quot;&gt;
-    &lt;EventTypes IsVisible=&quot;True&quot; | &quot;False&quot;/&gt;
-    &lt;Format&gt;
+<td align="left"><pre><code><AlertTemplate
+  Type="List" | "Item" | "Custom"
+  Default="True" | "False"
+  Name="Text">
+    <EventTypes IsVisible="True" | "False"/>
+    <Format>
     ...
-    &lt;/Format&gt;
-    &lt;Properties&gt;
+    </Format>
+    <Properties>
     ...
-    &lt;/Properties&gt;
-    &lt;Filters&gt;
+    </Properties>
+    <Filters>
     ...
-    &lt;/Filters&gt;
-&lt;/AlertTemplate&gt;</code></pre></td>
+    </Filters>
+</AlertTemplate></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -107,7 +107,7 @@ Defines an alert message template.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Type</p></td>
-<td align="left"><p>Specifies the item type that is associated with the alert template; either &quot;List&quot;, &quot;Item&quot;, or &quot;Custom&quot;.</p></td>
+<td align="left"><p>Specifies the item type that is associated with the alert template; either "List", "Item", or "Custom".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Default</p></td>

@@ -71,19 +71,19 @@ Specifies the top-level containing element for the upgrade definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Config
-  xmlns = &quot;urn:Microsoft.SharePoint.Upgrade&quot;&gt;
-  &lt;WebTemplate 
-    BeginFromSchemaVersion = &quot;Integer&quot;
-    EndFromSchemaVersion = &quot;Integer&quot;
-    FromProductVersion = &quot;Integer&quot;
-    ID = &quot;Integer&quot;
-    LocaleId = &quot;Integer&quot;
-    RemoveSiteExternalSecurityProvider = &quot;true | &quot;false&quot;
-    ToSchemaVersion = &quot;Integer&quot;
+<td align="left"><pre><code><Config
+  xmlns = "urn:Microsoft.SharePoint.Upgrade">
+  <WebTemplate 
+    BeginFromSchemaVersion = "Integer"
+    EndFromSchemaVersion = "Integer"
+    FromProductVersion = "Integer"
+    ID = "Integer"
+    LocaleId = "Integer"
+    RemoveSiteExternalSecurityProvider = "true | "false"
+    ToSchemaVersion = "Integer"
     ...
-  &lt;/WebTemplate&gt;
-&lt;/Config&gt;</code></pre></td>
+  </WebTemplate>
+</Config></code></pre></td>
 </tr>
 </tbody>
 </table>

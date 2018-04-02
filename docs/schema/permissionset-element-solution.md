@@ -71,13 +71,13 @@ Specifies the permissions for a solution's code access security policy.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;PermissionSet
-  class = &quot;Text&quot;
-  Description = &quot;Text&quot;
-  Name = &quot;Text&quot;
-  version = &quot;Text&quot;&gt;
-  &lt;IPermission/&gt;
-&lt;/PermissionSet&gt;</code></pre></td>
+<td align="left"><pre><code><PermissionSet
+  class = "Text"
+  Description = "Text"
+  Name = "Text"
+  version = "Text">
+  <IPermission/>
+</PermissionSet></code></pre></td>
 </tr>
 </tbody>
 </table>

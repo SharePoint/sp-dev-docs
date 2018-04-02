@@ -71,25 +71,25 @@ Defines a text box control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TextBox
-  Command=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  ImeEnabled=&quot;TRUE | FALSE&quot;
-  MaxLength=&quot;Integer&quot;
-  QueryCommand=&quot;Text&quot;
-  Sequence=&quot;Integer&quot;
-  ShowAsLabel=&quot; TRUE | FALSE &quot;
-  TemplateAlias=&quot;Text&quot;
-  ToolTipImage32by32=&quot;Url&quot;
-  ToolTipImage32by32Class=&quot;CSS Class Selector&quot;
-  ToolTipImage32by32Left=&quot;Negative Integer&quot;
-  ToolTipImage32by32Top=&quot;Negative Integer&quot;
-  ToolTipTitle=&quot;Text&quot;
-  ToolTipDescription=&quot;Text&quot;
-  ToolTipHelpKeyWord=&quot;Text&quot;
-  ToolTipShortcutKey=&quot;Text&quot;
-  Width=&quot;Integer&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><TextBox
+  Command="Text"
+  Id="Text"
+  ImeEnabled="TRUE | FALSE"
+  MaxLength="Integer"
+  QueryCommand="Text"
+  Sequence="Integer"
+  ShowAsLabel=" TRUE | FALSE "
+  TemplateAlias="Text"
+  ToolTipImage32by32="Url"
+  ToolTipImage32by32Class="CSS Class Selector"
+  ToolTipImage32by32Left="Negative Integer"
+  ToolTipImage32by32Top="Negative Integer"
+  ToolTipTitle="Text"
+  ToolTipDescription="Text"
+  ToolTipHelpKeyWord="Text"
+  ToolTipShortcutKey="Text"
+  Width="Integer"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -115,7 +115,7 @@ Defines a text box control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the control, such as &quot;Ribbon.Image.Image.Properties.AltText&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the control, such as "Ribbon.Image.Image.Properties.AltText".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImeEnabled**</p></td>
@@ -143,7 +143,7 @@ Defines a text box control.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to use in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to use in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -171,7 +171,7 @@ Defines a text box control.
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is &quot;ALT + J&quot;. The tooltip displays the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Width**</p></td>

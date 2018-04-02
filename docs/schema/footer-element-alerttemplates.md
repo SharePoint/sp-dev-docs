@@ -71,8 +71,8 @@ Specifies footer information for the alert message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Footer&gt;
-&lt;/Footer&gt;</code></pre></td>
+<td align="left"><pre><code><Footer>
+</Footer></code></pre></td>
 </tr>
 </tbody>
 </table>

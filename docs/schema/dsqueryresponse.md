@@ -71,12 +71,12 @@ system](http://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593(O
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;dsQueryResponse 
-  ViewStyleID=&quot;Integer&quot; 
-  BaseViewID=&quot;Integer&quot; 
-  TemplateType=&quot;Integer&quot; 
-  RowLimit=&quot;Integer&quot;&gt;
-&lt;/dsQueryResponse&gt;</code></pre></td>
+<td align="left"><pre><code><dsQueryResponse 
+  ViewStyleID="Integer" 
+  BaseViewID="Integer" 
+  TemplateType="Integer" 
+  RowLimit="Integer">
+</dsQueryResponse></code></pre></td>
 </tr>
 </tbody>
 </table>

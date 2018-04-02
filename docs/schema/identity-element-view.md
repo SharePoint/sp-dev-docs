@@ -71,8 +71,8 @@ Used in a New or Edit form to render hidden fields used by the form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Identity&gt;
-&lt;/Identity&gt;</code></pre></td>
+<td align="left"><pre><code><Identity>
+</Identity></code></pre></td>
 </tr>
 </tbody>
 </table>

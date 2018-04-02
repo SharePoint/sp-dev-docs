@@ -73,8 +73,8 @@ view to render the ID of the current row in the list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ID&gt;
-&lt;/ID&gt;</code></pre></td>
+<td align="left"><pre><code><ID>
+</ID></code></pre></td>
 </tr>
 </tbody>
 </table>

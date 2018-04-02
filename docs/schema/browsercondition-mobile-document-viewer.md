@@ -78,8 +78,8 @@ Viewer)](browsercondition-mobile-document-viewer.md)</span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>  &lt;BrowserCondition ... &gt;
- &lt;/ BrowserCondition&gt;</code></pre></td>
+<td align="left"><pre><code>  <BrowserCondition ... >
+ </ BrowserCondition></code></pre></td>
 </tr>
 </tbody>
 </table>

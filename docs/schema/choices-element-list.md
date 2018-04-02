@@ -71,15 +71,15 @@ Used to define several choices within a field for a drop-down list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CHOICES&gt;
-  &lt;CHOICE
-    Value = &quot;Text&quot;&gt;
-  &lt;/CHOICE&gt;
-  &lt;CHOICE
-    Value = &quot;Text&quot;&gt;
-  &lt;/CHOICE&gt;
+<td align="left"><pre><code><CHOICES>
+  <CHOICE
+    Value = "Text">
+  </CHOICE>
+  <CHOICE
+    Value = "Text">
+  </CHOICE>
   ...
-&lt;/CHOICES&gt;</code></pre></td>
+</CHOICES></code></pre></td>
 </tr>
 </tbody>
 </table>

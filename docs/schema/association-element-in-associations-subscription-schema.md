@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Represents a subscription association.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Association RefreshIntervalInMinutes = &quot;Long&quot; MethodInstanceName = &quot;String&quot; LobSystemInstanceName = &quot;String&quot; TargetSubscriptionName = &quot;String&quot; TargetView = &quot;String&quot; Enabled = &quot;Boolean&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Association&gt;</code></pre></td>
+<td align="left"><pre><code><Association RefreshIntervalInMinutes = "Long" MethodInstanceName = "String" LobSystemInstanceName = "String" TargetSubscriptionName = "String" TargetView = "String" Enabled = "Boolean" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Association></code></pre></td>
 </tr>
 </tbody>
 </table>

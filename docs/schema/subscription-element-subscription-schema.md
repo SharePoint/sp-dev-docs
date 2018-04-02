@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 The top-level (root) element that defines a cache subscription.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Subscription EntityName = &quot;String&quot; EntityNamespace = &quot;String&quot; RefreshIntervalInMinutes = &quot;Long&quot; View = &quot;String&quot; Enabled = &quot;Boolean&quot; LobSystemInstanceName = &quot;String&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Subscription&gt;</code></pre></td>
+<td align="left"><pre><code><Subscription EntityName = "String" EntityNamespace = "String" RefreshIntervalInMinutes = "Long" View = "String" Enabled = "Boolean" LobSystemInstanceName = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Subscription></code></pre></td>
 </tr>
 </tbody>
 </table>

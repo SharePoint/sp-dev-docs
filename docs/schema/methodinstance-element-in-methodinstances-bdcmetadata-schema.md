@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a **MethodInstance**.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 The following two cases in a BDC model result in an
 [InvalidOperationException](http://msdn.microsoft.com/library/frlrfSystemInvalidOperationExceptionClassTopic.aspx)
@@ -91,7 +91,7 @@ at run time:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MethodInstance Type = &quot;String&quot; Default = &quot;Boolean&quot; ReturnParameterName = &quot;String&quot; ReturnTypeDescriptorName = &quot;String&quot; ReturnTypeDescriptorLevel = &quot;Integer&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/MethodInstance&gt;</code></pre></td>
+<td align="left"><pre><code><MethodInstance Type = "String" Default = "Boolean" ReturnParameterName = "String" ReturnTypeDescriptorName = "String" ReturnTypeDescriptorLevel = "Integer" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </MethodInstance></code></pre></td>
 </tr>
 </tbody>
 </table>

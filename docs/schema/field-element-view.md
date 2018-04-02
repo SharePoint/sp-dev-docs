@@ -25,7 +25,7 @@ Returns the formatted value of a field for use within a view definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Field
+<td align="left"><pre><code><Field
   AutoHyperLink = "TRUE" | "FALSE"
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
   AutoNewLine = "TRUE" | "FALSE"
@@ -33,8 +33,8 @@ Returns the formatted value of a field for use within a view definition.
   Name = "Text"
   StripWS = "TRUE" | "FALSE"
   URLEncode = "TRUE" | "FALSE"
-  URLEncodeAsURL = "TRUE" | "FALSE"&gt;
-&lt;/Field&gt;</code></pre></td>
+  URLEncodeAsURL = "TRUE" | "FALSE">
+</Field></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -56,15 +56,15 @@ Returns the formatted value of a field for use within a view definition.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AutoHyperLink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears to be a hyperlink (for example, www.microsoft.com).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with <A> tags if the text appears to be a hyperlink (for example, www.microsoft.com).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears to be a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with <A> tags if the text appears to be a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to insert &lt;BR&gt; tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to insert <BR> tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HTMLEncode**</p></td>
@@ -72,7 +72,7 @@ Returns the formatted value of a field for use within a view definition.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. Allows the **Field</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code">&lt;Field Name="</span><span class="placeholder">ID</span><span class="code">"/&gt;**).</p></td>
+<td align="left"><p>Optional **Text</span>. Allows the **Field</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code"><Field Name="</span><span class="placeholder">ID</span><span class="code">"/>**).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**StripWS**</p></td>

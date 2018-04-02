@@ -70,67 +70,67 @@ class="nolink">SPList</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;List&quot; type=&quot;SPList&quot; /&gt;
+<xs:element name="List" type="SPList" />
 
 USAGE
-&lt;SPObject
-        &lt;List
-                Id=&quot;Guid&quot;
-                Title=&quot;xs:string&quot;
-                RootFolderId=&quot;Guid&quot;
-                RootFolderUrl=&quot;xs:string&quot;
-                ParentWebId=&quot;Guid&quot;
-                ParentWebUrl=&quot;xs:string&quot;
-                BaseType=&quot;SPBaseType&quot;
-                BaseTemplate=&quot;SPListTemplateType&quot;
-                TemplateFeatureId=&quot;Guid&quot;
-                Description=&quot;xs:string&quot;
-                Direction=&quot;xs:string&quot;
-                DocumentTemplateId=&quot;Guid&quot;
-                EventSinkAssembly=&quot;xs:string&quot;
-                SendToLocationName=&quot;xs:string&quot;
-                SendToLocationUrl=&quot;xs:string&quot;
-                EventSinkClass=&quot;xs:string&quot;
-                EventSinkData=&quot;xs:string&quot;
-                ImageUrl=&quot;xs:string&quot;
-                AllowDeletion=&quot;xs:boolean&quot;
-                AllowMultiResponses=&quot;xs:boolean&quot;
-                EnableAttachments=&quot;xs:boolean&quot;
-                EnableModeration=&quot;xs:boolean&quot;
-                EnableVersioning=&quot;xs:boolean&quot;
-                EnableMinorVersions=&quot;xs:boolean&quot;
-                RequestAccessEnabled=&quot;xs:boolean&quot;
-                DraftVersionVisibility=&quot;DraftVisibilityType&quot;
-                ForceCheckout=&quot;xs:boolean&quot;
-                ExcludeFromTemplate=&quot;xs:boolean&quot;
-                Hidden=&quot;xs:boolean&quot;
-                MultipleDataList=&quot;xs:boolean&quot;
-                Ordered=&quot;xs:boolean&quot;
-                ShowUser=&quot;xs:boolean&quot;
-                Author=&quot;xs:string&quot;
-                Created=&quot;xs:dateTime&quot;
-                OnQuickLaunch=&quot;xs:boolean&quot;
-                ReadSecurity=&quot;xs:int&quot;
-                WriteSecurity=&quot;xs:int&quot;
-                Version=&quot;xs:int&quot;
-                MajorVersionLimit=&quot;xs:int&quot;
-                MajorWithMinorVersionsLimit=&quot;xs:int&quot;
-                EmailAlias=&quot;xs:string&quot;
-                EnableContentTypes=&quot;xs:boolean&quot;
-                EnableDeployWithDependentList=&quot;xs:boolean&quot;
-                EnableFolderCreation=&quot;xs:boolean&quot;
-                DefaultItemOpen=&quot;DefaultItemOpen&quot;
-                DefaultContentApprovalWorkflowId=&quot;Guid&quot;
-                EnableAssignToEmail=&quot;xs:boolean&quot;
-                EnableSyndication=&quot;xs:boolean&quot;
-                   &lt;Fields /&gt;
-           &lt;ContentTypes /&gt;
-           &lt;Views /&gt;
-           &lt;Forms /&gt;
-           &lt;EventReceivers /&gt;
-           &lt;DeleteFields /&gt;
-        /&gt;
-/&gt;</code></pre></td>
+<SPObject
+        <List
+                Id="Guid"
+                Title="xs:string"
+                RootFolderId="Guid"
+                RootFolderUrl="xs:string"
+                ParentWebId="Guid"
+                ParentWebUrl="xs:string"
+                BaseType="SPBaseType"
+                BaseTemplate="SPListTemplateType"
+                TemplateFeatureId="Guid"
+                Description="xs:string"
+                Direction="xs:string"
+                DocumentTemplateId="Guid"
+                EventSinkAssembly="xs:string"
+                SendToLocationName="xs:string"
+                SendToLocationUrl="xs:string"
+                EventSinkClass="xs:string"
+                EventSinkData="xs:string"
+                ImageUrl="xs:string"
+                AllowDeletion="xs:boolean"
+                AllowMultiResponses="xs:boolean"
+                EnableAttachments="xs:boolean"
+                EnableModeration="xs:boolean"
+                EnableVersioning="xs:boolean"
+                EnableMinorVersions="xs:boolean"
+                RequestAccessEnabled="xs:boolean"
+                DraftVersionVisibility="DraftVisibilityType"
+                ForceCheckout="xs:boolean"
+                ExcludeFromTemplate="xs:boolean"
+                Hidden="xs:boolean"
+                MultipleDataList="xs:boolean"
+                Ordered="xs:boolean"
+                ShowUser="xs:boolean"
+                Author="xs:string"
+                Created="xs:dateTime"
+                OnQuickLaunch="xs:boolean"
+                ReadSecurity="xs:int"
+                WriteSecurity="xs:int"
+                Version="xs:int"
+                MajorVersionLimit="xs:int"
+                MajorWithMinorVersionsLimit="xs:int"
+                EmailAlias="xs:string"
+                EnableContentTypes="xs:boolean"
+                EnableDeployWithDependentList="xs:boolean"
+                EnableFolderCreation="xs:boolean"
+                DefaultItemOpen="DefaultItemOpen"
+                DefaultContentApprovalWorkflowId="Guid"
+                EnableAssignToEmail="xs:boolean"
+                EnableSyndication="xs:boolean"
+                   <Fields />
+           <ContentTypes />
+           <Views />
+           <Forms />
+           <EventReceivers />
+           <DeleteFields />
+        />
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -206,7 +206,7 @@ class="nolink">SPList</span></span>
 <tr class="even">
 <td align="left"><p>**Direction**</p></td>
 <td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the direction of the reading order for the list. The string value &quot;**ltr</span>&quot; specifies left-to-right; the string &quot;**rtl**&quot; specifies either right-to-left, or that no reading order is specified.</p></td>
+<td align="left"><p>Optional. Specifies the direction of the reading order for the list. The string value "**ltr</span>" specifies left-to-right; the string "**rtl**" specifies either right-to-left, or that no reading order is specified.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DocumentTemplateId**</p></td>

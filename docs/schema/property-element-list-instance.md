@@ -67,10 +67,10 @@ Specifies a property for a list instance.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property 
+<td align="left"><pre><code><Property 
   Name = string
   Value = string
-  Type = int | string | DateTime /&gt;</code></pre></td>
+  Type = int | string | DateTime /></code></pre></td>
 </tr>
 </tbody>
 </table>

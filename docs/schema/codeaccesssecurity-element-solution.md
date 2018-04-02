@@ -71,11 +71,11 @@ Specifies the code access security for the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CodeAccessSecurity&gt;
-  &lt;PolicyItem&gt;
+<td align="left"><pre><code><CodeAccessSecurity>
+  <PolicyItem>
   ...
-  &lt;/PolicyItem&gt;
-&lt;/CodeAccessSecurity&gt;</code></pre></td>
+  </PolicyItem>
+</CodeAccessSecurity></code></pre></td>
 </tr>
 </tbody>
 </table>

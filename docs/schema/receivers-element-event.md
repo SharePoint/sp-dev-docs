@@ -68,13 +68,13 @@ in lists created through the specified list template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Receivers
-  ListTemplateId = &quot;Text&quot;
-  ListTemplateOwner = &quot;Text&quot;
+<td align="left"><pre><code><Receivers
+  ListTemplateId = "Text"
+  ListTemplateOwner = "Text"
   ListUrl = string
   RootWebOnly = TRUE | FALSE
-  Scope = Site | Web&gt;
-&lt;/Receivers&gt;</code></pre></td>
+  Scope = Site | Web>
+</Receivers></code></pre></td>
 </tr>
 </tbody>
 </table>

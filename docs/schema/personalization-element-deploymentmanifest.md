@@ -71,23 +71,23 @@ class="nolink">SPFile</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Personalization&quot; 
-        type=&quot;SPPersonalization&quot; 
-        minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="Personalization" 
+        type="SPPersonalization" 
+        minOccurs="1" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;Personalizations&gt;
-        &lt;Personalization
-                WebPartId=&quot;Guid&quot;
-                UserId=&quot;xs:int&quot;
-                WebPartOrder=&quot;xs:string&quot;
-                WebPartZoneId=&quot;xs:string&quot;
-                IsIncluded=&quot;xs:string&quot;
-                FrameState=&quot;xs:string&quot;
-                UserProperties=&quot;xs:string&quot;
-        /&gt;
-&lt;/Personalizations&gt;</code></pre></td>
+<Personalizations>
+        <Personalization
+                WebPartId="Guid"
+                UserId="xs:int"
+                WebPartOrder="xs:string"
+                WebPartZoneId="xs:string"
+                IsIncluded="xs:string"
+                FrameState="xs:string"
+                UserProperties="xs:string"
+        />
+</Personalizations></code></pre></td>
 </tr>
 </tbody>
 </table>

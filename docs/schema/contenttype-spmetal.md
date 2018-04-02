@@ -82,7 +82,7 @@ generation.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContentType Name=&quot;Contact&quot; Class=&quot;Contact&quot;&gt; ... &lt;/ContentType&gt;</code></pre></td>
+<td align="left"><pre><code><ContentType Name="Contact" Class="Contact"> ... </ContentType></code></pre></td>
 </tr>
 </tbody>
 </table>

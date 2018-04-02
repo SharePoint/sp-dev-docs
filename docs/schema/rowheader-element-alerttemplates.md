@@ -71,8 +71,8 @@ Specifies row header information for the alert message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RowHeader&gt;
-&lt;/RowHeader&gt;</code></pre></td>
+<td align="left"><pre><code><RowHeader>
+</RowHeader></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -78,7 +78,7 @@ Template)](webtemplate-element-web-template.md)</span>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebTemplate ... /&gt;</code></pre></td>
+<td align="left"><pre><code><WebTemplate ... /></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +120,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>**AlternateHeader**</p></td>
 <td align="left"><p>**string**</p></td>
-<td align="left"><p>Optional. Specifies the name of an ASPX page that is located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternative header for the top area in site pages of websites that are created from the web template. This attribute provides a way to replace the header region with the output of an ASPX page that defines a different header. For example, to specify <span class="code">myHeader.aspx</span> as the name of the file that provides an alternative header, add <span class="code">AlternateHeader=&quot;myHeader.aspx&quot;</span> to the **Project</span> element at the beginning of the <span class="code">Onet.xml** file.</p></td>
+<td align="left"><p>Optional. Specifies the name of an ASPX page that is located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternative header for the top area in site pages of websites that are created from the web template. This attribute provides a way to replace the header region with the output of an ASPX page that defines a different header. For example, to specify <span class="code">myHeader.aspx</span> as the name of the file that provides an alternative header, add <span class="code">AlternateHeader="myHeader.aspx"</span> to the **Project</span> element at the beginning of the <span class="code">Onet.xml** file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**BaseTemplateID**</p></td>
@@ -170,7 +170,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>**DisplayCategory**</p></td>
 <td align="left"><p>**string**</p></td>
-<td align="left"><p>Optional. Specifies the category in which the web template appears in the Microsoft SharePoint Foundation UI when users are selecting a type of website to create; for example, <span class="ui">Collaboration</span>, <span class="ui">Meetings</span>, or some other custom name. If it is not specified, the default is &quot;Custom&quot;.</p></td>
+<td align="left"><p>Optional. Specifies the category in which the web template appears in the Microsoft SharePoint Foundation UI when users are selecting a type of website to create; for example, <span class="ui">Collaboration</span>, <span class="ui">Meetings</span>, or some other custom name. If it is not specified, the default is "Custom".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ExcludeFromOfflineClient**</p></td>
@@ -250,7 +250,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>**TreeViewEnabled**</p></td>
 <td align="left"><p>**string**</p></td>
-<td align="left"><p>Optional. Specifies whether the tree view feature is enabled in the left navigational area of pages in websites that are created from the web template. Although this attribute is type **string**, the only meaningful values are &quot;TRUE&quot; and &quot;FALSE&quot;.</p></td>
+<td align="left"><p>Optional. Specifies whether the tree view feature is enabled in the left navigational area of pages in websites that are created from the web template. Although this attribute is type **string**, the only meaningful values are "TRUE" and "FALSE".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**UIVersionConfigurationEnabled**</p></td>

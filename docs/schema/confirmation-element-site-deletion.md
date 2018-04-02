@@ -75,12 +75,12 @@ confirm whether the site collection is still in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Confirmation&gt;
-   &lt;ConfirmationSubject&gt;
-   &lt;/ConfirmationSubject&gt;
-   &lt;ConfirmationBody&gt;
-   &lt;/ConfirmationBody&gt;
-&lt;/Confirmation&gt;</code></pre></td>
+<td align="left"><pre><code><Confirmation>
+   <ConfirmationSubject>
+   </ConfirmationSubject>
+   <ConfirmationBody>
+   </ConfirmationBody>
+</Confirmation></code></pre></td>
 </tr>
 </tbody>
 </table>

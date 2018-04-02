@@ -69,18 +69,18 @@ migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;ManifestFile&quot; 
-    type=&quot;SPManifestFile&quot; 
-    minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element 
+    name="ManifestFile" 
+    type="SPManifestFile" 
+    minOccurs="1" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;ManifestFiles&gt;
-    &lt;ManifestFile
-        Name=&quot;xs:string&quot;
-    /&gt;
-&lt;/ManifestFiles&gt;</code></pre></td>
+<ManifestFiles>
+    <ManifestFile
+        Name="xs:string"
+    />
+</ManifestFiles></code></pre></td>
 </tr>
 </tbody>
 </table>

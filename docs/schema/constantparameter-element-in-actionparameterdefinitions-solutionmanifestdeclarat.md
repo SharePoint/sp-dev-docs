@@ -73,7 +73,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ConstantParameter  ValueType = &quot;String&quot; Value = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ConstantParameter&gt;</code></pre></td>
+<td align="left"><pre><code><ConstantParameter  ValueType = "String" Value = "String" Name = "String" Description = "String"> </ConstantParameter></code></pre></td>
 </tr>
 </tbody>
 </table>

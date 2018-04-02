@@ -76,7 +76,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextEventHandlers &gt; &lt;/ContextEventHandlers&gt;</code></pre></td>
+<td align="left"><pre><code><ContextEventHandlers > </ContextEventHandlers></code></pre></td>
 </tr>
 </tbody>
 </table>

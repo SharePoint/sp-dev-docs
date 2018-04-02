@@ -69,8 +69,8 @@ Standardization (ISO) format: YYYY-MM-DDTHH:MM:SSZ (for example,
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TodayISO&gt;
-&lt;/TodayISO&gt;</code></pre></td>
+<td align="left"><pre><code><TodayISO>
+</TodayISO></code></pre></td>
 </tr>
 </tbody>
 </table>

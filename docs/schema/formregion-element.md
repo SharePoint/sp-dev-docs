@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Describes the form region in which external data will be displayed in
 Microsoft Outlook 2010.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FormRegion FormFileName = &quot;String&quot; ManifestFileName = &quot;String&quot; InternalName = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/FormRegion&gt;</code></pre></td>
+<td align="left"><pre><code><FormRegion FormFileName = "String" ManifestFileName = "String" InternalName = "String" Name = "String" Description = "String"> </FormRegion></code></pre></td>
 </tr>
 </tbody>
 </table>

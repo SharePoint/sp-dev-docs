@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies the name and type of a property of a metadata object.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property Name = &quot;String&quot; Type = &quot;String&quot;&gt; &lt;/Property&gt;</code></pre></td>
+<td align="left"><pre><code><Property Name = "String" Type = "String"> </Property></code></pre></td>
 </tr>
 </tbody>
 </table>

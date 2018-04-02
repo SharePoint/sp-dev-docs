@@ -71,15 +71,15 @@ content migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;ViewFormsList&quot; 
-    type=&quot;SPViewFormsList&quot; 
-/&gt;
+<xs:element 
+    name="ViewFormsList" 
+    type="SPViewFormsList" 
+/>
 
 USAGE
-&lt;ViewFormsList&gt;
-    &lt;ViewForm /&gt;
-&lt;/ViewFormsList&gt;</code></pre></td>
+<ViewFormsList>
+    <ViewForm />
+</ViewFormsList></code></pre></td>
 </tr>
 </tbody>
 </table>

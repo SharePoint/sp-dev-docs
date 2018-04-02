@@ -76,7 +76,7 @@ Contains a Web Part in a form definition for list.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AllUsersWebPart  WebPartOrder = Integer  WebPartZoneID = &quot;Text&quot;&gt;    &lt;![CDATA[...]]&gt;&lt;/AllUsersWebPart&gt;</code></pre></td>
+<td align="left"><pre><code><AllUsersWebPart  WebPartOrder = Integer  WebPartZoneID = "Text">    <![CDATA[...]]></AllUsersWebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

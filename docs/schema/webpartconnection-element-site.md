@@ -69,9 +69,9 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebPartConnection
-  ConsumerConnectionPointID = &quot;Text&quot;  ConsumerID = &quot;Text&quot;  CrossPageConnectionID = &quot;Text&quot;  CrossPageSchema = &quot;Text&quot;  ID = &quot;Text&quot;  ProviderConnectionPointID = &quot;Text&quot;  ProviderID = &quot;Text&quot;  TargetPageUrl = &quot;Text&quot;&gt;
-&lt;/WebPartConnection&gt;</code></pre></td>
+<td align="left"><pre><code><WebPartConnection
+  ConsumerConnectionPointID = "Text"  ConsumerID = "Text"  CrossPageConnectionID = "Text"  CrossPageSchema = "Text"  ID = "Text"  ProviderConnectionPointID = "Text"  ProviderID = "Text"  TargetPageUrl = "Text">
+</WebPartConnection></code></pre></td>
 </tr>
 </tbody>
 </table>

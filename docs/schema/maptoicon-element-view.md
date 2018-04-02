@@ -72,9 +72,9 @@ extension and **ProgID**.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MapToIcon&gt;
+<td align="left"><pre><code><MapToIcon>
     ProgID|File_Extension
-&lt;/MapToIcon&gt;</code></pre></td>
+</MapToIcon></code></pre></td>
 </tr>
 </tbody>
 </table>

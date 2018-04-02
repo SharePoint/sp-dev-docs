@@ -72,8 +72,8 @@ bidirectional reading order.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DisplayBidiPattern&gt;
-&lt;/DisplayBidiPattern&gt;</code></pre></td>
+<td align="left"><pre><code><DisplayBidiPattern>
+</DisplayBidiPattern></code></pre></td>
 </tr>
 </tbody>
 </table>

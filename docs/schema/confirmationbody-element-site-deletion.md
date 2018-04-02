@@ -75,8 +75,8 @@ whether the site collection is still in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ConfirmationBody&gt;
-&lt;/ConfirmationBody&gt;</code></pre></td>
+<td align="left"><pre><code><ConfirmationBody>
+</ConfirmationBody></code></pre></td>
 </tr>
 </tbody>
 </table>

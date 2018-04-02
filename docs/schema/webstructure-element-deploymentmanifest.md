@@ -72,16 +72,16 @@ migration.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;WebStructure&quot; type=&quot;DeploymentWebStructure&quot; /&gt;
+<xs:element name="WebStructure" type="DeploymentWebStructure" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;WebStructure
-                WebId=&quot;Guid&quot;
-                WebUrl=&quot;xs:string&quot;
-                UseSharedNavigation=&quot;xs:boolean&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <WebStructure
+                WebId="Guid"
+                WebUrl="xs:string"
+                UseSharedNavigation="xs:boolean"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

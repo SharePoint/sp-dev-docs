@@ -74,15 +74,15 @@ values for 2006 and earlier will still be calculated correctly.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;History
-  Year = &quot;Integer&quot;&gt;
-    &lt;StandardTime&gt;
+<td align="left"><pre><code><History
+  Year = "Integer">
+    <StandardTime>
       ...
-    &lt;/StandardTime&gt;
-  &lt;DaylightTime&gt;
+    </StandardTime>
+  <DaylightTime>
       ...
-    &lt;/DaylightTime&gt;
-&lt;/History&gt;</code></pre></td>
+    </DaylightTime>
+</History></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,7 +67,7 @@ Describes an event receiver for handling list item events.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Receiver /&gt;</code></pre></td>
+<td align="left"><pre><code><Receiver /></code></pre></td>
 </tr>
 </tbody>
 </table>

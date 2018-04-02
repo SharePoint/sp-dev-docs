@@ -71,21 +71,21 @@ Represents a reference to a field within a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldRef
-  Alias = &quot;Text&quot;
-  Ascending = &quot;TRUE&quot; | &quot;FALSE&quot;
-  CreateURL = &quot;Text&quot;
-  DisplayName = &quot;Text&quot;
-  Explicit = &quot;TRUE&quot; | &quot;FALSE&quot;    Format = &quot;Text&quot;
-  ID = &quot;Text&quot;
-  Key = &quot;Text&quot;  List = &quot;Text&quot;
-  LookupId = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Name = &quot;Text&quot;
-  RefType = &quot;Text&quot;
-  ShowField = &quot;Text&quot;
-  TextOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Type = &quot;Text&quot;&gt;
-&lt;/FieldRef&gt;</code></pre></td>
+<td align="left"><pre><code><FieldRef
+  Alias = "Text"
+  Ascending = "TRUE" | "FALSE"
+  CreateURL = "Text"
+  DisplayName = "Text"
+  Explicit = "TRUE" | "FALSE"    Format = "Text"
+  ID = "Text"
+  Key = "Text"  List = "Text"
+  LookupId = "TRUE" | "FALSE"
+  Name = "Text"
+  RefType = "Text"
+  ShowField = "Text"
+  TextOnly = "TRUE" | "FALSE"
+  Type = "Text">
+</FieldRef></code></pre></td>
 </tr>
 </tbody>
 </table>

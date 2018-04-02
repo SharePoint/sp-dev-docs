@@ -71,13 +71,13 @@ Defines a unit for use within the spinner control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Unit
-  Name=&quot;Text&quot;
-  MinimumValue=&quot;Decimal&quot;
-  MaximumValue=&quot;Decimal&quot;
-  DecimalDigits=&quot;Integer&quot;
-  Interval=&quot;Double&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Unit
+  Name="Text"
+  MinimumValue="Decimal"
+  MaximumValue="Decimal"
+  DecimalDigits="Integer"
+  Interval="Double"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -200,7 +200,7 @@ code] "Copy code")Copy code</span>
           Interval="0.1"
       >
         <UnitAbbreviation Value="in" />
-        <UnitAbbreviation Value="&quot;"/>
+        <UnitAbbreviation Value="""/>
       </Unit>
       <Unit
           Name="pixel"

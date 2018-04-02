@@ -70,54 +70,54 @@ class="nolink">SPView</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;View&quot; type=&quot;SPView&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="View" type="SPView" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;Views&gt;
-        &lt;View&gt;
-        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;25&quot;&gt;
-                &lt;xs:element name=&quot;Script&quot; /&gt;
-                &lt;xs:element name=&quot;PagedRowset&quot; /&gt;
-                &lt;xs:element name=&quot;PagedClientCallbackRowset&quot; /&gt;
-                &lt;xs:element name=&quot;PagedRecurrenceRowset&quot; /&gt;
-                &lt;xs:element name=&quot;ViewFields&quot; /&gt;
-                &lt;xs:element name=&quot;ViewData&quot; /&gt;
-                &lt;xs:element name=&quot;Query&quot; /&gt;
-                &lt;xs:element name=&quot;RowLimit&quot; /&gt;
-                &lt;xs:element name=&quot;RowLimitExceeded&quot; /&gt;
-                &lt;xs:element name=&quot;Toolbar&quot; /&gt;
-                &lt;xs:element name=&quot;Formats&quot; /&gt;
-                &lt;xs:element name=&quot;Aggregations&quot; /&gt;
-                &lt;xs:element name=&quot;ViewStyle&quot; /&gt;
-                &lt;xs:element name=&quot;ViewBody&quot; /&gt;
-                &lt;xs:element name=&quot;ViewEmpty&quot; /&gt;
-                &lt;xs:element name=&quot;ViewFooter&quot; /&gt;
-                &lt;xs:element name=&quot;ViewHeader&quot; /&gt;
-                &lt;xs:element name=&quot;ViewBidiHeader&quot; /&gt;
-                &lt;xs:element name=&quot;GroupByFooter&quot; /&gt;
-                &lt;xs:element name=&quot;GroupByHeader&quot; /&gt;
-                &lt;xs:element name=&quot;CalendarViewStyles&quot; /&gt;
-                &lt;xs:element name=&quot;ListFormBody&quot; /&gt;
-        &lt;/xs:choice&gt;
-        &lt;xs:attribute name=&quot;Name&quot; /&gt;
-        &lt;xs:attribute name=&quot;DefaultView&quot; /&gt;
-        &lt;xs:attribute name=&quot;Type&quot; /&gt;
-        &lt;xs:attribute name=&quot;Hidden&quot; /&gt;
-        &lt;xs:attribute name=&quot;Threaded&quot; /&gt;
-        &lt;xs:attribute name=&quot;FPModified&quot; /&gt;
-        &lt;xs:attribute name=&quot;ReadOnly&quot; /&gt;
-        &lt;xs:attribute name=&quot;Scope&quot; /&gt;
-        &lt;xs:attribute name=&quot;RecurrenceRowset&quot; /&gt;
-        &lt;xs:attribute name=&quot;ModerationType&quot; /&gt;
-        &lt;xs:attribute name=&quot;Personal&quot; /&gt;
-        &lt;xs:attribute name=&quot;OrderedView&quot; /&gt;
-        &lt;xs:attribute name=&quot;DisplayName&quot; /&gt;
-        &lt;xs:attribute name=&quot;ContentTypeId&quot; /&gt;
-        &lt;xs:attribute name=&quot;Url&quot; /&gt;
-        &lt;xs:attribute name=&quot;BaseViewID&quot; /&gt;
-        &lt;xs:attribute name=&quot;WebPartZoneID&quot; /&gt;
-        &lt;/View&gt;
-&lt;/Views&gt;</code></pre></td>
+<Views>
+        <View>
+        <xs:choice minOccurs="0" maxOccurs="25">
+                <xs:element name="Script" />
+                <xs:element name="PagedRowset" />
+                <xs:element name="PagedClientCallbackRowset" />
+                <xs:element name="PagedRecurrenceRowset" />
+                <xs:element name="ViewFields" />
+                <xs:element name="ViewData" />
+                <xs:element name="Query" />
+                <xs:element name="RowLimit" />
+                <xs:element name="RowLimitExceeded" />
+                <xs:element name="Toolbar" />
+                <xs:element name="Formats" />
+                <xs:element name="Aggregations" />
+                <xs:element name="ViewStyle" />
+                <xs:element name="ViewBody" />
+                <xs:element name="ViewEmpty" />
+                <xs:element name="ViewFooter" />
+                <xs:element name="ViewHeader" />
+                <xs:element name="ViewBidiHeader" />
+                <xs:element name="GroupByFooter" />
+                <xs:element name="GroupByHeader" />
+                <xs:element name="CalendarViewStyles" />
+                <xs:element name="ListFormBody" />
+        </xs:choice>
+        <xs:attribute name="Name" />
+        <xs:attribute name="DefaultView" />
+        <xs:attribute name="Type" />
+        <xs:attribute name="Hidden" />
+        <xs:attribute name="Threaded" />
+        <xs:attribute name="FPModified" />
+        <xs:attribute name="ReadOnly" />
+        <xs:attribute name="Scope" />
+        <xs:attribute name="RecurrenceRowset" />
+        <xs:attribute name="ModerationType" />
+        <xs:attribute name="Personal" />
+        <xs:attribute name="OrderedView" />
+        <xs:attribute name="DisplayName" />
+        <xs:attribute name="ContentTypeId" />
+        <xs:attribute name="Url" />
+        <xs:attribute name="BaseViewID" />
+        <xs:attribute name="WebPartZoneID" />
+        </View>
+</Views></code></pre></td>
 </tr>
 </tbody>
 </table>

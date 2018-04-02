@@ -69,9 +69,9 @@ Specifies a coercion for converting data from one form to another.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Coercions&gt;
-    &lt;Coercion&gt;    &lt;/Coercion&gt;
-&lt;/Coercions&gt;</code></pre></td>
+<td align="left"><pre><code><Coercions>
+    <Coercion>    </Coercion>
+</Coercions></code></pre></td>
 </tr>
 </tbody>
 </table>

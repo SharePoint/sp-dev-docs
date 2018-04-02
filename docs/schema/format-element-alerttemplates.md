@@ -72,12 +72,12 @@ formatting of the alert message by using embedded styles.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Format&gt;
-  &lt;Digest&gt;
+<td align="left"><pre><code><Format>
+  <Digest>
     ...
-  &lt;/Digest&gt;  &lt;Immediate&gt;
+  </Digest>  <Immediate>
     ...
-  &lt;/Immediate&gt;&lt;/Format&gt;</code></pre></td>
+  </Immediate></Format></code></pre></td>
 </tr>
 </tbody>
 </table>

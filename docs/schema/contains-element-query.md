@@ -73,11 +73,11 @@ type values.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Contains&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/Contains&gt;</code></pre></td>
+<td align="left"><pre><code><Contains>
+  <FieldRef Name = "Field_Name"/>
+  <Value Type = "Field_Type"/>
+  <XML />
+</Contains></code></pre></td>
 </tr>
 </tbody>
 </table>

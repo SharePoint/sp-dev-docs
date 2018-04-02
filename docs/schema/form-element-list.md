@@ -71,15 +71,15 @@ Describes the forms in a base list type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Form  Default = &quot;TRUE&quot; | &quot;FALSE&quot;  MobileUrl = &quot;Text&quot;
-  Path = &quot;Text&quot;
-  SetupPath = &quot;Text&quot;
-  Template = &quot;Text&quot;
-  Type = &quot;DisplayForm&quot; | &quot;EditForm&quot; | &quot;NewForm&quot;
-  Url = &quot;URL&quot;  UseDefaultListFormWebPart = &quot;TRUE&quot; | &quot;FALSE&quot;
-  UseLegacyForm = &quot;TRUE&quot; | &quot;FALSE&quot;
-  WebPartZoneID = &quot;Text&quot;&gt;  &lt;WebParts&gt;    &lt;AllUsersWebPart      WebPartOrder = Integer      WebPartZoneID = &quot;Text&quot;&gt;        &lt;![CDATA[...]]&gt;    &lt;/AllUsersWebPart&gt;  &lt;/WebParts&gt;
-&lt;/Form&gt;</code></pre></td>
+<td align="left"><pre><code><Form  Default = "TRUE" | "FALSE"  MobileUrl = "Text"
+  Path = "Text"
+  SetupPath = "Text"
+  Template = "Text"
+  Type = "DisplayForm" | "EditForm" | "NewForm"
+  Url = "URL"  UseDefaultListFormWebPart = "TRUE" | "FALSE"
+  UseLegacyForm = "TRUE" | "FALSE"
+  WebPartZoneID = "Text">  <WebParts>    <AllUsersWebPart      WebPartOrder = Integer      WebPartZoneID = "Text">        <![CDATA[...]]>    </AllUsersWebPart>  </WebParts>
+</Form></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -101,7 +101,7 @@ Describes the forms in a base list type.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies whether the form is the default form to use for the specified **Type</span>. For example, one can define multiple forms for which **Type</span> equals **DisplayForm</span>. If this is the case, then a default display form must be established so that a list can determine which display form to use. If multiple forms are defined that have the same **Type</span>, and a default form is not established by specifying **Default=&quot;TRUE&quot;</span>, then a default form will be chosen programmatically. If there is only one form that is defined for a specified **Type</span>, then **Default=&quot;TRUE&quot;** is enforced programmatically.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies whether the form is the default form to use for the specified **Type</span>. For example, one can define multiple forms for which **Type</span> equals **DisplayForm</span>. If this is the case, then a default display form must be established so that a list can determine which display form to use. If multiple forms are defined that have the same **Type</span>, and a default form is not established by specifying **Default="TRUE"</span>, then a default form will be chosen programmatically. If there is only one form that is defined for a specified **Type</span>, then **Default="TRUE"** is enforced programmatically.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**MobileUrl**</p></td>
@@ -109,7 +109,7 @@ Describes the forms in a base list type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Path**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the file system path, including the leaf name, of the file containing the template used for the list of document libraries that is rendered in a file dialog box. The value of this attribute is relative to the _layouts directory and does not start with a forward slash (&quot;/&quot;).</p></td>
+<td align="left"><p>Optional **Text**. Specifies the file system path, including the leaf name, of the file containing the template used for the list of document libraries that is rendered in a file dialog box. The value of this attribute is relative to the _layouts directory and does not start with a forward slash ("/").</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SetupPath**</p></td>

@@ -81,7 +81,7 @@ which content types in the list are included in code generation.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;List Name=&quot;Calendar&quot; Member=&quot;ScheduledEvents&quot;&gt; ... &lt;/List&gt;</code></pre></td>
+<td align="left"><pre><code><List Name="Calendar" Member="ScheduledEvents"> ... </List></code></pre></td>
 </tr>
 </tbody>
 </table>

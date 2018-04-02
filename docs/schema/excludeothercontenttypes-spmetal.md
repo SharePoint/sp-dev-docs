@@ -81,7 +81,7 @@ explicitly represented by ContentType elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExcludeOtherContentTypes /&gt;</code></pre></td>
+<td align="left"><pre><code><ExcludeOtherContentTypes /></code></pre></td>
 </tr>
 </tbody>
 </table>

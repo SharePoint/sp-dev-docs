@@ -70,8 +70,8 @@ choose a server data format by setting the locale.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DataFormatLCID&gt;
-&lt;/DataFormatLCID&gt;</code></pre></td>
+<td align="left"><pre><code><DataFormatLCID>
+</DataFormatLCID></code></pre></td>
 </tr>
 </tbody>
 </table>

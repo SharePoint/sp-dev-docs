@@ -72,7 +72,7 @@ visible in the new alert page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;EventTypes IsVisible = &quot;True&quot; | &quot;False&quot;/&gt;</code></pre></td>
+<td align="left"><pre><code><EventTypes IsVisible = "True" | "False"/></code></pre></td>
 </tr>
 </tbody>
 </table>

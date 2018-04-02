@@ -71,10 +71,10 @@ Defines a hyperlink used in the top navigation area of a home page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NavBarLink
-  Name = &quot;Text&quot;
-  Url = &quot;Text&quot;&gt;
-&lt;/NavBarLink&gt;</code></pre></td>
+<td align="left"><pre><code><NavBarLink
+  Name = "Text"
+  Url = "Text">
+</NavBarLink></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -68,8 +68,8 @@ handler is associated with the feature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SequenceNumber&gt;
-&lt;/SequenceNumber&gt;</code></pre></td>
+<td align="left"><pre><code><SequenceNumber>
+</SequenceNumber></code></pre></td>
 </tr>
 </tbody>
 </table>

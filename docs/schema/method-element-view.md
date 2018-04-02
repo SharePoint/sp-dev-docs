@@ -72,10 +72,10 @@ Used in batch processing to specify commands within the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Method ID=&quot;Text&quot;
-  Cmd = &quot;Text&quot;
-  ID = &quot;Text&quot;&gt;
-&lt;/Method&gt;</code></pre></td>
+<td align="left"><pre><code><Method ID="Text"
+  Cmd = "Text"
+  ID = "Text">
+</Method></code></pre></td>
 </tr>
 </tbody>
 </table>

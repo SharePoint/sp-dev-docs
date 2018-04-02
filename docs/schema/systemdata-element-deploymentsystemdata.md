@@ -70,17 +70,17 @@ data object collections. This is the schema root element.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;SystemData&quot; 
-    type=&quot;SPSystemData&quot; 
-/&gt;
+<xs:element 
+    name="SystemData" 
+    type="SPSystemData" 
+/>
 
 USAGE
-&lt;SystemData&gt;
-    &lt;SchemaVersion /&gt;
-    &lt;ManifestFiles /&gt;
-    &lt;SystemObjects /&gt;
-&lt;/SystemData&gt;</code></pre></td>
+<SystemData>
+    <SchemaVersion />
+    <ManifestFiles />
+    <SystemObjects />
+</SystemData></code></pre></td>
 </tr>
 </tbody>
 </table>

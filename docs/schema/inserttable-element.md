@@ -72,17 +72,17 @@ number of cells.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;InsertTable
-  Alt=&quot;Text&quot;
-  Command=&quot;Text&quot;
-  CommandType=&quot;General | OptionSelection | IgnoredByMenu&quot;
-  CommandPreview=&quot;Text&quot;
-  CommandRevert=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  MenuSectionInitialTitle=&quot;Text&quot;
-  MenuSectionTitle=&quot;Text&quot;
-  Sequence=&quot;Integer&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><InsertTable
+  Alt="Text"
+  Command="Text"
+  CommandType="General | OptionSelection | IgnoredByMenu"
+  CommandPreview="Text"
+  CommandRevert="Text"
+  Id="Text"
+  MenuSectionInitialTitle="Text"
+  MenuSectionTitle="Text"
+  Sequence="Integer"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -133,11 +133,11 @@ number of cells.
 </tr>
 <tr class="odd">
 <td align="left"><p>**MenuSectionInitialTitle**</p></td>
-<td align="left"><p>Optional. The title of the menu section before table cells are selected, such as &quot;Insert Table&quot;.</p></td>
+<td align="left"><p>Optional. The title of the menu section before table cells are selected, such as "Insert Table".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**MenuSectionTitle**</p></td>
-<td align="left"><p>Optional. The title of the menu section when table cells are selected. This could be a format string such as &quot;Insert a {0} by {1} Table&quot;.</p></td>
+<td align="left"><p>Optional. The title of the menu section when table cells are selected. This could be a format string such as "Insert a {0} by {1} Table".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sequence**</p></td>

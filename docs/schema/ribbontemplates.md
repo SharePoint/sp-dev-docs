@@ -71,9 +71,9 @@ Contains elements that define group templates.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RibbonTemplates
-  Id=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><RibbonTemplates
+  Id="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ Contains elements that define group templates.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that unambiguously identifies the element, such as &quot;Ribbon.Templates&quot;.</p></td>
+<td align="left"><p>Required. A string that unambiguously identifies the element, such as "Ribbon.Templates".</p></td>
 </tr>
 </tbody>
 </table>

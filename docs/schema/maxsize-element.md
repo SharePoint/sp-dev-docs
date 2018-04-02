@@ -71,12 +71,12 @@ Specifies the maximum size for a group of controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MaxSize
-  GroupId=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  Sequence=&quot;Text&quot;
-  Size=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><MaxSize
+  GroupId="Text"
+  Id="Text"
+  Sequence="Text"
+  Size="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -102,7 +102,7 @@ Specifies the maximum size for a group of controls.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon.Library.Scaling.ViewFormat.MaxSize&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon.Library.Scaling.ViewFormat.MaxSize".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sequence**</p></td>

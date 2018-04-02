@@ -67,22 +67,22 @@ Specifies default data with which to provision the given list type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListInstance 
+<td align="left"><pre><code><ListInstance 
   CustomSchema = string
-  Description = &quot;Text&quot;
+  Description = "Text"
   DocumentTemplate = integer
-  FeatureId = &quot;Text&quot;
-  Hidden = &quot;TRUE&quot; | &quot;FALSE&quot;
+  FeatureId = "Text"
+  Hidden = "TRUE" | "FALSE"
   HyperlinkBaseUrl = string
   Id = Text
-  OnQuickLaunch = &quot;TRUE&quot; | &quot;FALSE&quot;
-  QuickLaunchUrl = &quot;Text&quot;
-  RootWebOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
+  OnQuickLaunch = "TRUE" | "FALSE"
+  QuickLaunchUrl = "Text"
+  RootWebOnly = "TRUE" | "FALSE"
   TemplateType = Integer
-  Title = &quot;Text&quot;
-  Url = &quot;Text&quot;
-  VersioningEnabled = &quot;TRUE&quot; | &quot;FALSE&quot;
-&lt;/ListInstance&gt;</code></pre></td>
+  Title = "Text"
+  Url = "Text"
+  VersioningEnabled = "TRUE" | "FALSE"
+</ListInstance></code></pre></td>
 </tr>
 </tbody>
 </table>

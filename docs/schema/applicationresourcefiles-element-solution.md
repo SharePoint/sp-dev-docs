@@ -71,12 +71,12 @@ Specifies the application resource files to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ApplicationResourceFiles&gt;
-  &lt;ApplicationResourceFile 
-    Location=string/&gt;
-  &lt;App_GlobalResourceFile 
-    Location=string/&gt;
-&lt;/ApplicationResourceFiles&gt;</code></pre></td>
+<td align="left"><pre><code><ApplicationResourceFiles>
+  <ApplicationResourceFile 
+    Location=string/>
+  <App_GlobalResourceFile 
+    Location=string/>
+</ApplicationResourceFiles></code></pre></td>
 </tr>
 </tbody>
 </table>

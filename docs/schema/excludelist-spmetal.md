@@ -80,7 +80,7 @@ Specifies that a list should be excluded from code generation.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExcludeList Name=&quot;Calendar&quot; /&gt;</code></pre></td>
+<td align="left"><pre><code><ExcludeList Name="Calendar" /></code></pre></td>
 </tr>
 </tbody>
 </table>

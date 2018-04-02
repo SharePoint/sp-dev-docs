@@ -69,7 +69,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;BinarySerializedWebPart&gt;  &lt;GUIDMap&gt;    &lt;GUID      Id = &quot;Text&quot;      ListUrl = &quot;Text&quot;/&gt;  &lt;/GUIDMap&gt;&lt;/BinarySerializedWebPart&gt;</code></pre></td>
+<td align="left"><pre><code><BinarySerializedWebPart>  <GUIDMap>    <GUID      Id = "Text"      ListUrl = "Text"/>  </GUIDMap></BinarySerializedWebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

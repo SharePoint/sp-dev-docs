@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a **TypeDescriptor**.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TypeDescriptor TypeName = &quot;String&quot; LobName = &quot;String&quot; IdentifierEntityNamespace = &quot;String&quot; IdentifierEntityName = &quot;String&quot; IdentifierName = &quot;String&quot; ForeignIdentifierAssociationName = &quot;String&quot; ForeignIdentifierAssociationEntityName = &quot;String&quot; ForeignIdentifierAssociationEntityNamespace = &quot;String&quot; AssociatedFilter = &quot;String&quot; IsCollection = &quot;Boolean&quot; ReadOnly = &quot;Boolean&quot; CreatorField = &quot;Boolean&quot; UpdaterField = &quot;Boolean&quot; PreUpdaterField = &quot;Boolean&quot; Significant = &quot;Boolean&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/TypeDescriptor&gt;</code></pre></td>
+<td align="left"><pre><code><TypeDescriptor TypeName = "String" LobName = "String" IdentifierEntityNamespace = "String" IdentifierEntityName = "String" IdentifierName = "String" ForeignIdentifierAssociationName = "String" ForeignIdentifierAssociationEntityName = "String" ForeignIdentifierAssociationEntityNamespace = "String" AssociatedFilter = "String" IsCollection = "Boolean" ReadOnly = "Boolean" CreatorField = "Boolean" UpdaterField = "Boolean" PreUpdaterField = "Boolean" Significant = "Boolean" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </TypeDescriptor></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -113,7 +113,7 @@ elements.
 <tr class="even">
 <td align="left"><p>LobName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The data structure that is represented by the **TypeDescriptor</span>. The default value of this attribute is the name of the **TypeDescriptor</span>. For example, a line-of-business (LOB) system data structure named &quot;CN1A&quot; can be represented by a **TypeDescriptor</span> with **Name</span> attribute equal to &quot;Customer Name&quot;, if the **LobName</span> attribute of this **TypeDescriptor** is equal to &quot;CN1A&quot;.</p>
+<p>The data structure that is represented by the **TypeDescriptor</span>. The default value of this attribute is the name of the **TypeDescriptor</span>. For example, a line-of-business (LOB) system data structure named "CN1A" can be represented by a **TypeDescriptor</span> with **Name</span> attribute equal to "Customer Name", if the **LobName</span> attribute of this **TypeDescriptor** is equal to "CN1A".</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
@@ -168,7 +168,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>ReadOnly</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether the data stored by the data structure represented by the **TypeDescriptor</span> can be modified. This attribute must not be specified if the value of the **Direction</span> attribute of the **Parameter</span> that contains the **TypeDescriptor** is &quot;In&quot;.</p>
+<p>Specifies whether the data stored by the data structure represented by the **TypeDescriptor</span> can be modified. This attribute must not be specified if the value of the **Direction</span> attribute of the **Parameter</span> that contains the **TypeDescriptor** is "In".</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
@@ -217,7 +217,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The name of a **TypeDescriptor** should not contain the special characters for forward slash (&quot;/&quot;), period (&quot;.&quot;), or opening bracket (&quot;[&quot;).</p></td>
+<td align="left"><p>The name of a **TypeDescriptor** should not contain the special characters for forward slash ("/"), period ("."), or opening bracket ("[").</p></td>
 </tr>
 </tbody>
 </table>

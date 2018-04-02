@@ -74,7 +74,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Layout  DisposeOnContextDeactivation = &quot;Boolean&quot; LayoutFileName = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/Layout&gt;</code></pre></td>
+<td align="left"><pre><code><Layout  DisposeOnContextDeactivation = "Boolean" LayoutFileName = "String" Name = "String" Description = "String"> </Layout></code></pre></td>
 </tr>
 </tbody>
 </table>

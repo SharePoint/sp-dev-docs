@@ -75,8 +75,8 @@ can be other conditionals.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Expr&gt;
-&lt;/Expr&gt;</code></pre></td>
+<td align="left"><pre><code><Expr>
+</Expr></code></pre></td>
 </tr>
 </tbody>
 </table>

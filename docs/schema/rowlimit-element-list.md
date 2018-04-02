@@ -71,9 +71,9 @@ Sets the row limit for the number of items to display in a view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RowLimit
-  Paged = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/RowLimit&gt;</code></pre></td>
+<td align="left"><pre><code><RowLimit
+  Paged = "TRUE" | "FALSE">
+</RowLimit></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -70,8 +70,8 @@ type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldRefs&gt;
-&lt;/FieldRefs&gt;</code></pre></td>
+<td align="left"><pre><code><FieldRefs>
+</FieldRefs></code></pre></td>
 </tr>
 </tbody>
 </table>

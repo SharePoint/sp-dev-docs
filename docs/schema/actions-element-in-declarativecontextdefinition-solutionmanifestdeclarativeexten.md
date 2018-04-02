@@ -72,7 +72,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Actions &gt; &lt;/Actions&gt;</code></pre></td>
+<td align="left"><pre><code><Actions > </Actions></code></pre></td>
 </tr>
 </tbody>
 </table>

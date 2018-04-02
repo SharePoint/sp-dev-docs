@@ -75,7 +75,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExpressionParameter  EntityViewInstanceReference = &quot;String&quot; Expression = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ExpressionParameter&gt;</code></pre></td>
+<td align="left"><pre><code><ExpressionParameter  EntityViewInstanceReference = "String" Expression = "String" Name = "String" Description = "String"> </ExpressionParameter></code></pre></td>
 </tr>
 </tbody>
 </table>

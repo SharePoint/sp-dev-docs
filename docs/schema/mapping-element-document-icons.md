@@ -73,12 +73,12 @@ file to map particular document types to their respective icons.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Mapping
-  Key = &quot;Text&quot;
-  Value = &quot;Text&quot;&gt;
-  EditText = &quot;Text&quot;
-  OpenControl = &quot;Text&quot;
-&lt;/Mapping&gt;</code></pre></td>
+<td align="left"><pre><code><Mapping
+  Key = "Text"
+  Value = "Text">
+  EditText = "Text"
+  OpenControl = "Text"
+</Mapping></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -108,7 +108,7 @@ file to map particular document types to their respective icons.
 </tr>
 <tr class="odd">
 <td align="left"><p>**EditText**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies text that displays in drop-down menus as the editing item (&quot;Edit in <span class="placeholder">Application Name**&quot;) for a file that has been uploaded to a list.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies text that displays in drop-down menus as the editing item ("Edit in <span class="placeholder">Application Name**") for a file that has been uploaded to a list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**OpenControl**</p></td>

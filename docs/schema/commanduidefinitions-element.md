@@ -67,7 +67,7 @@ Contains elements that define commands for the user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CommandUIDefinitions /&gt;</code></pre></td>
+<td align="left"><pre><code><CommandUIDefinitions /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,8 +71,8 @@ Defines the opening section in a form for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListFormOpening&gt;
-&lt;/ListFormOpening&gt;</code></pre></td>
+<td align="left"><pre><code><ListFormOpening>
+</ListFormOpening></code></pre></td>
 </tr>
 </tbody>
 </table>

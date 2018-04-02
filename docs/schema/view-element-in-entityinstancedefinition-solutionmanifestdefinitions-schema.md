@@ -62,10 +62,10 @@ Specifies the **SpecificFinder** method
 instance of the external content type that should be run to get external
 data.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;View ViewName = &quot;String&quot; IsPrimary = &quot;Boolean&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/View&gt;</code></pre></td>
+<td align="left"><pre><code><View ViewName = "String" IsPrimary = "Boolean" Name = "String" Description = "String"> </View></code></pre></td>
 </tr>
 </tbody>
 </table>

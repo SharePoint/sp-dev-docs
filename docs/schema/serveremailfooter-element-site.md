@@ -72,9 +72,9 @@ and the text that is displayed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ServerEmailFooter
-    Name = &quot;Text&quot;&gt;
-&lt;/ ServerEmailFooter&gt;</code></pre></td>
+<td align="left"><pre><code><ServerEmailFooter
+    Name = "Text">
+</ ServerEmailFooter></code></pre></td>
 </tr>
 </tbody>
 </table>

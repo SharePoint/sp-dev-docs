@@ -70,10 +70,10 @@ any .ACTIONS file that is installed on the server.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WorkflowInfo&gt;
-  &lt;Conditions&gt;…&lt;/Conditions&gt;
-  &lt;Actions&gt;…&lt;/Actions&gt;
-&lt;/WorkflowInfo&gt;</code></pre></td>
+<td align="left"><pre><code><WorkflowInfo>
+  <Conditions>…</Conditions>
+  <Actions>…</Actions>
+</WorkflowInfo></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ any .ACTIONS file that is installed on the server.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Language**</p></td>
-<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example &quot;en-us&quot; is used to specify &quot;English-United States&quot; (see <a href="http://msdn.microsoft.com/en-us/library/ms776260.aspx">Locale Identifier Constants and Strings</a>).</p></td>
+<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States" (see <a href="http://msdn.microsoft.com/en-us/library/ms776260.aspx">Locale Identifier Constants and Strings</a>).</p></td>
 </tr>
 </tbody>
 </table>

@@ -72,8 +72,8 @@ Language (CAML) parser does not parse the tags.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;HTML&gt;
-&lt;/HTML&gt;</code></pre></td>
+<td align="left"><pre><code><HTML>
+</HTML></code></pre></td>
 </tr>
 </tbody>
 </table>

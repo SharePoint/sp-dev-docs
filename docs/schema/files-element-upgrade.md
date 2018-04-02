@@ -73,17 +73,17 @@ Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Files&gt;
-  &lt;File
-    FromPath = &quot;String&quot;
-    ToPath = &quot;String&quot;&gt;
-  &lt;/File&gt;
-  &lt;File
-    FromPath = &quot;String&quot;
-    ToPath = &quot;String&quot;&gt;
-  &lt;/File&gt;
+<td align="left"><pre><code><Files>
+  <File
+    FromPath = "String"
+    ToPath = "String">
+  </File>
+  <File
+    FromPath = "String"
+    ToPath = "String">
+  </File>
   ...
-&lt;/Files &gt;</code></pre></td>
+</Files ></code></pre></td>
 </tr>
 </tbody>
 </table>

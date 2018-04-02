@@ -74,8 +74,8 @@ class="ui">New Document Library</span> page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocumentTemplates&gt;
-&lt;/DocumentTemplates&gt;</code></pre></td>
+<td align="left"><pre><code><DocumentTemplates>
+</DocumentTemplates></code></pre></td>
 </tr>
 </tbody>
 </table>

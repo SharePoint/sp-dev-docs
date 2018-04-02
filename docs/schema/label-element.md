@@ -71,19 +71,19 @@ Defines a label control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Label
-  ForId=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  LabelText=&quot;Text&quot;
-  Image16by16=&quot;Url&quot;
-  Image16by16Class=&quot;CSS Class Selector&quot;
-  Image16by16Left=&quot;Negative Integer&quot;
-  Image16by16Top=&quot;Negative Integer&quot;
-  Sequence=&quot;Integer&quot;
-  TemplateAlias=&quot;Text&quot;
-  QueryCommand=&quot;Text&quot;
-  Command=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Label
+  ForId="Text"
+  Id="Text"
+  LabelText="Text"
+  Image16by16="Url"
+  Image16by16Class="CSS Class Selector"
+  Image16by16Left="Negative Integer"
+  Image16by16Top="Negative Integer"
+  Sequence="Integer"
+  TemplateAlias="Text"
+  QueryCommand="Text"
+  Command="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +109,7 @@ Defines a label control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the control, such as &quot;Ribbon.Image.Image.Size.HorizontalSizeLabel&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the control, such as "Ribbon.Image.Image.Size.HorizontalSizeLabel".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**LabelText**</p></td>
@@ -117,7 +117,7 @@ Defines a label control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Image16by16**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as &quot;/_layouts/1033/images/formatmap16x16.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap16x16.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image16by16Class**</p></td>

@@ -71,8 +71,8 @@ Specifies assembly information for an alert update handler.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UpdateHandlerAssembly&gt;
-&lt;/UpdateHandlerAssembly&gt;</code></pre></td>
+<td align="left"><pre><code><UpdateHandlerAssembly>
+</UpdateHandlerAssembly></code></pre></td>
 </tr>
 </tbody>
 </table>

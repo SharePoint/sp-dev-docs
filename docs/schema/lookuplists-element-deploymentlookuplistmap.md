@@ -70,12 +70,12 @@ migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;LookupLists&quot; type=&quot;SPLookupLists&quot; /&gt;
+<xs:element name="LookupLists" type="SPLookupLists" />
 
 USAGE
-&lt;LookupLists&gt;
-    &lt;LookupList /&gt;
-&lt;/LookupLists&gt;</code></pre></td>
+<LookupLists>
+    <LookupList />
+</LookupLists></code></pre></td>
 </tr>
 </tbody>
 </table>

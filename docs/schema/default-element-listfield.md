@@ -71,8 +71,8 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Default&gt;
-&lt;/Default&gt;</code></pre></td>
+<td align="left"><pre><code><Default>
+</Default></code></pre></td>
 </tr>
 </tbody>
 </table>

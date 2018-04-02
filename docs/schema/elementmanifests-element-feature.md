@@ -68,8 +68,8 @@ definitions for the Feature elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ElementManifests&gt;
-&lt;/ElementManifests&gt;</code></pre></td>
+<td align="left"><pre><code><ElementManifests>
+</ElementManifests></code></pre></td>
 </tr>
 </tbody>
 </table>

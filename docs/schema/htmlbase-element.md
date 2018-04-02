@@ -67,8 +67,8 @@ Returns a string that sets the base element for the current page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;HTMLBase&gt;
-&lt;/HTMLBase&gt;</code></pre></td>
+<td align="left"><pre><code><HTMLBase>
+</HTMLBase></code></pre></td>
 </tr>
 </tbody>
 </table>

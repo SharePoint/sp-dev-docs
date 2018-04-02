@@ -71,10 +71,10 @@ Defines an abbreviation for a unit within a spinner control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UnitAbbreviation
-  Sequence=&quot;Integer&quot;
-  Value=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><UnitAbbreviation
+  Sequence="Integer"
+  Value="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@ Defines an abbreviation for a unit within a spinner control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Value**</p></td>
-<td align="left"><p>Optional. The abbreviation, such as &quot;in&quot; and &quot;cm&quot;.</p></td>
+<td align="left"><p>Optional. The abbreviation, such as "in" and "cm".</p></td>
 </tr>
 </tbody>
 </table>

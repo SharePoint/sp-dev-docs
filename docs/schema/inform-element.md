@@ -69,8 +69,8 @@ items; otherwise, **FALSE**.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;InForm&gt;
-&lt;/InForm&gt;</code></pre></td>
+<td align="left"><pre><code><InForm>
+</InForm></code></pre></td>
 </tr>
 </tbody>
 </table>

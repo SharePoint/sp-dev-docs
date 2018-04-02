@@ -78,20 +78,20 @@ the data from the foreign table.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Column
-  AutoHyperLink = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoHyperLinkNoEncoding = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoNewLine = &quot;TRUE&quot; | &quot;FALSE&quot;
-    Default = &quot;Text&quot;
-  Format=&quot;DateTime&quot;
-    HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-    Name = &quot;Text&quot;
-    ShowField = &quot;Text&quot; 
-    StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;
+<td align="left"><pre><code><Column
+  AutoHyperLink = "TRUE" | "FALSE"
+  AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
+  AutoNewLine = "TRUE" | "FALSE"
+    Default = "Text"
+  Format="DateTime"
+    HTMLEncode = "TRUE" | "FALSE"
+    Name = "Text"
+    ShowField = "Text" 
+    StripWS = "TRUE" | "FALSE"
   SubColumnNumber = Integer
-    URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-    URLEncodeAsURL = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/Column&gt;</code></pre></td>
+    URLEncode = "TRUE" | "FALSE"
+    URLEncodeAsURL = "TRUE" | "FALSE">
+</Column></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -113,19 +113,19 @@ the data from the foreign table.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AutoHyperLink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears like a hyperlink (for example, www.microsoft.com).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with <A> tags if the text appears like a hyperlink (for example, www.microsoft.com).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with <A> tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to insert &lt;BR&gt; tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to insert <BR> tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string (&quot;&quot;).</p></td>
+<td align="left"><p>Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string ("").</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Format**</p></td>
@@ -137,7 +137,7 @@ the data from the foreign table.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. Allows the **Column</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code">&lt;Column Name=&quot;</span><span class="placeholder">ID</span><span class="code">&quot;/&gt;**).</p></td>
+<td align="left"><p>Optional **Text</span>. Allows the **Column</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code"><Column Name="</span><span class="placeholder">ID</span><span class="code">"/>**).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowField**</p></td>
@@ -158,7 +158,7 @@ the data from the foreign table.
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.</p></td>
 </tr>
 </tbody>
 </table>

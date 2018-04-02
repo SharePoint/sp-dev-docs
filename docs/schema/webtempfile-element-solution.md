@@ -72,9 +72,9 @@ manifest.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebTempFile
-  Location=&quot;Text&quot;&gt;
-&lt;/WebTempFile&gt;</code></pre></td>
+<td align="left"><pre><code><WebTempFile
+  Location="Text">
+</WebTempFile></code></pre></td>
 </tr>
 </tbody>
 </table>

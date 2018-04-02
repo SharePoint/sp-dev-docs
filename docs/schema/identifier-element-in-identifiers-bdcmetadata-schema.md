@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies an identifier of an external content type.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <table>
 <colgroup>
@@ -95,7 +95,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Identifier TypeName = &quot;String&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Identifier&gt;</code></pre></td>
+<td align="left"><pre><code><Identifier TypeName = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Identifier></code></pre></td>
 </tr>
 </tbody>
 </table>

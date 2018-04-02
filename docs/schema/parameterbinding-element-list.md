@@ -77,7 +77,7 @@ the XSL that renders the view.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ParameterBinding  Name = &quot;Text&quot;  Location = &quot;Text&quot; /&gt;</code></pre></td>
+<td align="left"><pre><code><ParameterBinding  Name = "Text"  Location = "Text" /></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -99,11 +99,11 @@ the XSL that renders the view.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies a name for the parameter. The XSL stylesheet defines a parameter of the same name -- <span class="code">&lt;xsl:param name=&quot;ParameterName&quot;/&gt;</span> -- and the resource becomes available anywhere in the stylesheet through an XPath expression -- <span class="code">&lt;xsl:value-of select=&quot;$ParameterName&quot; /&gt;**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies a name for the parameter. The XSL stylesheet defines a parameter of the same name -- <span class="code"><xsl:param name="ParameterName"/></span> -- and the resource becomes available anywhere in the stylesheet through an XPath expression -- <span class="code"><xsl:value-of select="$ParameterName" />**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the location of the resource. SharePoint Foundation uses a **Resource</span> function to define the value of **Location</span> in the format <span class="code">Location = &quot;Resource(ResourceFile, ResourceName)&quot;</span>, where <span class="parameter" sdata="paramReference">ResourceFile</span> specifies the base name of a resource file minus the file extension, and <span class="parameter" sdata="paramReference">ResourceName** specifies the name of the resource string.</p>
+<td align="left"><p>Optional **Text</span>. Specifies the location of the resource. SharePoint Foundation uses a **Resource</span> function to define the value of **Location</span> in the format <span class="code">Location = "Resource(ResourceFile, ResourceName)"</span>, where <span class="parameter" sdata="paramReference">ResourceFile</span> specifies the base name of a resource file minus the file extension, and <span class="parameter" sdata="paramReference">ResourceName** specifies the name of the resource string.</p>
 <p>In addition to specifying a localized resource in a .resx file, the **Location** attribute can be used to specify values indicated in the following table.</p>
 <div class="tableSection">
 <table>
@@ -120,23 +120,23 @@ the XSL that renders the view.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Query strings</p></td>
-<td align="left"><p><span class="code">&lt;ParameterBinding Name=&quot;SelectedID&quot; Location=&quot;QueryString(SelectedID)&quot;/&gt;</span>Corresponding code in XSL: <span class="code">&lt;xsl:param name=&quot;SelectedID&quot;/&gt;</span></p></td>
+<td align="left"><p><span class="code"><ParameterBinding Name="SelectedID" Location="QueryString(SelectedID)"/></span>Corresponding code in XSL: <span class="code"><xsl:param name="SelectedID"/></span></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Connection/Postback</p></td>
-<td align="left"><p><span class="code">&lt;ParameterBinding Name=&quot;dvt_firstrow&quot; Location=&quot;Postback;Connection&quot;/&gt;</span></p></td>
+<td align="left"><p><span class="code"><ParameterBinding Name="dvt_firstrow" Location="Postback;Connection"/></span></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Server variables</p></td>
-<td align="left"><p><span class="code">(Location=&quot;Form(variableName)&quot;)</span></p></td>
+<td align="left"><p><span class="code">(Location="Form(variableName)")</span></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Web Part Properties</p></td>
-<td align="left"><p><span class="code">(Location=&quot;WPProperty(PropertyValue&quot;)</span></p></td>
+<td align="left"><p><span class="code">(Location="WPProperty(PropertyValue")</span></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Control IDs</p></td>
-<td align="left"><p><span class="code">(Location=&quot;Control(ControlID)&quot;)</span></p></td>
+<td align="left"><p><span class="code">(Location="Control(ControlID)")</span></p></td>
 </tr>
 </tbody>
 </table>

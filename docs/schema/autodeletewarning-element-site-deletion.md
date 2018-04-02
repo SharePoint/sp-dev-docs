@@ -76,12 +76,12 @@ Administration and the site collection is not in use.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AutoDeleteWarning&gt;
-  &lt;AutoDeleteSubject&gt;
-  &lt;/AutoDeleteSubject&gt;
-  &lt;AutoDeleteBody&gt;
-  &lt;/AutoDeleteBody&gt;
-&lt;/AutoDeleteWarning&gt;</code></pre></td>
+<td align="left"><pre><code><AutoDeleteWarning>
+  <AutoDeleteSubject>
+  </AutoDeleteSubject>
+  <AutoDeleteBody>
+  </AutoDeleteBody>
+</AutoDeleteWarning></code></pre></td>
 </tr>
 </tbody>
 </table>

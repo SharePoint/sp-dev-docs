@@ -67,7 +67,7 @@ Specifies the filter for the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Filter /&gt;</code></pre></td>
+<td align="left"><pre><code><Filter /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,16 +71,16 @@ class="nolink">SPDocumentLibrary</span></span>).
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;DocumentLibrary&quot; type=&quot;SPDocumentLibrary&quot; /&gt;
+<xs:element name="DocumentLibrary" type="SPDocumentLibrary" />
 
 USAGE
-&lt;SPObject&gt;
-   &lt;DocumentLibrary
-      DocumentTemplateUrl=&quot;xs:string&quot;
-      EmailInsertsFolder=&quot;xs:string&quot;
-      IsCatalog=&quot;xs:boolean&quot;
-   /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+   <DocumentLibrary
+      DocumentTemplateUrl="xs:string"
+      EmailInsertsFolder="xs:string"
+      IsCatalog="xs:boolean"
+   />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

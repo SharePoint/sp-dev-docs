@@ -67,8 +67,8 @@ Contains the Write security setting for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WriteSecurity&gt;
-&lt;/WriteSecurity&gt;</code></pre></td>
+<td align="left"><pre><code><WriteSecurity>
+</WriteSecurity></code></pre></td>
 </tr>
 </tbody>
 </table>

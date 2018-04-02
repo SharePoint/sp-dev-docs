@@ -73,12 +73,12 @@ a second expression ([Expr2](expr2-element-view.md)).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IfSubString&gt;
-  &lt;Expr1&gt;&lt;/Expr1&gt;
-  &lt;Expr2&gt;&lt;/Expr2&gt;
-    &lt;Then&gt;&lt;/Then&gt;
-  &lt;Else&gt;&lt;/Else&gt;
-&lt;/IfSubString&gt;</code></pre></td>
+<td align="left"><pre><code><IfSubString>
+  <Expr1></Expr1>
+  <Expr2></Expr2>
+    <Then></Then>
+  <Else></Else>
+</IfSubString></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -69,20 +69,20 @@ role (**DeploymentRole**) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Role&quot; type=&quot;DeploymentRole&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="Role" type="DeploymentRole" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;Roles&gt;
-        &lt;Role
-                RoleId=&quot;xs:string&quot;
-                Title=&quot;xs:string&quot;
-                Description=&quot;xs:string&quot;
-                PermMask=&quot;xs:string&quot;
-                Hidden=&quot;xs:boolean&quot;
-                RoleOrder=&quot;xs:string&quot;
-                Type=&quot;xs:string&quot;
-        /&gt;
-&lt;/Roles&gt;</code></pre></td>
+<Roles>
+        <Role
+                RoleId="xs:string"
+                Title="xs:string"
+                Description="xs:string"
+                PermMask="xs:string"
+                Hidden="xs:boolean"
+                RoleOrder="xs:string"
+                Type="xs:string"
+        />
+</Roles></code></pre></td>
 </tr>
 </tbody>
 </table>

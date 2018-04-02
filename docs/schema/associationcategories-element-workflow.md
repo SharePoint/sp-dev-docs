@@ -70,8 +70,8 @@ associate this workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AssocationCategories/&gt;
-&lt;/AssociationCatagories&gt;</code></pre></td>
+<td align="left"><pre><code><AssocationCategories/>
+</AssociationCatagories></code></pre></td>
 </tr>
 </tbody>
 </table>

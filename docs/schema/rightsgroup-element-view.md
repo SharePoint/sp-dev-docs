@@ -74,9 +74,9 @@ to be displayed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RightsGroup
-    Permission = &quot;Required&quot;&gt;
-&lt;/RightsGroup&gt;</code></pre></td>
+<td align="left"><pre><code><RightsGroup
+    Permission = "Required">
+</RightsGroup></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -97,135 +97,135 @@ to be displayed.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**PermAddAndCustomizePages=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermAddAndCustomizePages="Required"**</p></td>
 <td align="left"><p>Add, change, or delete ASPX pages, HTML pages, or Web Part Pages, and edit the Web site using a SharePoint Foundation-compatible editor.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermAddDelPrivateWebParts=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermAddDelPrivateWebParts="Required"**</p></td>
 <td align="left"><p>Add or remove Web Parts on a personalized Web Part Page.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermAddListItems=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermAddListItems="Required"**</p></td>
 <td align="left"><p>Add items to lists, add documents to document libraries, and add Web discussion comments.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermApplyStyleSheets=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermApplyStyleSheets="Required"**</p></td>
 <td align="left"><p>Apply a style sheet (.CSS file) to the Web site.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermApplyThemeAndBorder=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermApplyThemeAndBorder="Required"**</p></td>
 <td align="left"><p>Apply a theme or borders to the entire Web site.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermApproveItems=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermApproveItems="Required"**</p></td>
 <td align="left"><p>Approve items.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermBrowseDirectories=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermBrowseDirectories="Required"**</p></td>
 <td align="left"><p>Browse directories in a Web site.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermBrowseUserInfo=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermBrowseUserInfo="Required"**</p></td>
 <td align="left"><p>View information about users. This right is not available through the user interface.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermCancelCheckout=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermCancelCheckout="Required"**</p></td>
 <td align="left"><p>Check in a document without saving the current changes.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermCreateAlerts=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermCreateAlerts="Required"**</p></td>
 <td align="left"><p>Create alerts.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermCreateGroups=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermCreateGroups="Required"**</p></td>
 <td align="left"><p>Create, change, and delete groups, including adding users to the groups and specifying which rights are assigned to a group.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermCreateSSCSite=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermCreateSSCSite="Required"**</p></td>
 <td align="left"><p>Create a Web site using Self-Service Site Creation.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermDeleteListItems=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermDeleteListItems="Required"**</p></td>
 <td align="left"><p>Delete items from a list, documents from a document library, and Web discussion comments in documents.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermDeleteVersions=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermDeleteVersions="Required"**</p></td>
 <td align="left"><p>Delete versions.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermEditListItems=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermEditListItems="Required"**</p></td>
 <td align="left"><p>Edit items in lists, edit documents in document libraries, edit Web discussion comments in documents, and customize Web Part Pages in document libraries.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermEditMyUserInfo=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermEditMyUserInfo="Required"**</p></td>
 <td align="left"><p>Edit personal user information.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermEnumeratePermissions=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermEnumeratePermissions="Required"**</p></td>
 <td align="left"><p>View permissions.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermFullMask=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermFullMask="Required"**</p></td>
 <td align="left"><p>Has all permissions on the Web site. Not available through the user interface.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermManageAlerts=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermManageAlerts="Required"**</p></td>
 <td align="left"><p>Manage alerts.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermManageLists=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermManageLists="Required"**</p></td>
 <td align="left"><p>Approve content in lists, add or remove columns in a list, and add or remove public views of a list.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermManagePermissions=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermManagePermissions="Required"**</p></td>
 <td align="left"><p>Manage permissions.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermManagePersonalViews=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermManagePersonalViews="Required"**</p></td>
 <td align="left"><p>Create, change, and delete personal views of lists.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermManageSubwebs=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermManageSubwebs="Required"**</p></td>
 <td align="left"><p>Manage or create subsites.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermManageWeb=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermManageWeb="Required"**</p></td>
 <td align="left"><p>Manage a site, including the ability to perform all administration tasks for the site and manage contents and permissions</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermOpen=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermOpen="Required"**</p></td>
 <td align="left"><p>Open documents.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermOpenItems=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermOpenItems="Required"**</p></td>
 <td align="left"><p>Open items.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermUpdatePersonalWebPar=&quot;Required&quot;ts**</p></td>
+<td align="left"><p>**PermUpdatePersonalWebPar="Required"ts**</p></td>
 <td align="left"><p>Update Web Parts to display personalized information.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermUseRemoteAPIs=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermUseRemoteAPIs="Required"**</p></td>
 <td align="left"><p>Use the APIs defined through remote applications.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermViewFormPages=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermViewFormPages="Required"**</p></td>
 <td align="left"><p>View list item form pages.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermViewListItems=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermViewListItems="Required"**</p></td>
 <td align="left"><p>View items in lists, documents in document libraries, view Web discussion comments, and set up e-mail alerts for lists.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermViewPages=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermViewPages="Required"**</p></td>
 <td align="left"><p>View pages in a Web site.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**PermViewUsageData=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermViewUsageData="Required"**</p></td>
 <td align="left"><p>View reports on Web site usage.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**PermViewVersions=&quot;Required&quot;**</p></td>
+<td align="left"><p>**PermViewVersions="Required"**</p></td>
 <td align="left"><p>View versions of items.</p></td>
 </tr>
 </tbody>

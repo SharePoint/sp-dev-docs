@@ -71,8 +71,8 @@ Contains a formula used in the definition of a field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Formula&gt;
-&lt;/Formula&gt;</code></pre></td>
+<td align="left"><pre><code><Formula>
+</Formula></code></pre></td>
 </tr>
 </tbody>
 </table>

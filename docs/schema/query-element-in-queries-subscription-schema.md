@@ -62,10 +62,10 @@ Specifies a **Finder** or <span
 class="keyword">IDEnumerator</span> method instance to execute to
 populate the cache.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Query RefreshIntervalInMinutes = &quot;Long&quot; MethodInstanceName = &quot;String&quot; Enabled = &quot;Boolean&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Query&gt;</code></pre></td>
+<td align="left"><pre><code><Query RefreshIntervalInMinutes = "Long" MethodInstanceName = "String" Enabled = "Boolean" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Query></code></pre></td>
 </tr>
 </tbody>
 </table>

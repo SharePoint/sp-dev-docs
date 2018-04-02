@@ -70,21 +70,21 @@ package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;SystemObject&quot; 
-    type=&quot;SPSystemObject&quot; 
-    minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element 
+    name="SystemObject" 
+    type="SPSystemObject" 
+    minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
 
-&lt;SystemObjects&gt;
-    &lt;SystemObject
-        Id=&quot;Guid&quot;
-        Type=&quot;SPDeploymentObjectType&quot;
-        Url=&quot;xs:string&quot;
-    /&gt;
-&lt;/SystemObjects&gt;</code></pre></td>
+<SystemObjects>
+    <SystemObject
+        Id="Guid"
+        Type="SPDeploymentObjectType"
+        Url="xs:string"
+    />
+</SystemObjects></code></pre></td>
 </tr>
 </tbody>
 </table>

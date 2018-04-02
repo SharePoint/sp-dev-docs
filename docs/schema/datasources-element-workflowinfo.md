@@ -69,10 +69,10 @@ Specifies the data sources for the action or composite step.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DataSources&gt;
-    &lt;DataSource&gt;
-    &lt;/DataSource&gt;
-&lt;/DataSources&gt;</code></pre></td>
+<td align="left"><pre><code><DataSources>
+    <DataSource>
+    </DataSource>
+</DataSources></code></pre></td>
 </tr>
 </tbody>
 </table>

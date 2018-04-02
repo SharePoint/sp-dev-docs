@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActionParameter Name = &quot;String&quot;&gt; &lt;/ActionParameter&gt;</code></pre></td>
+<td align="left"><pre><code><ActionParameter Name = "String"> </ActionParameter></code></pre></td>
 </tr>
 </tbody>
 </table>

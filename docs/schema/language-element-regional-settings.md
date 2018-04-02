@@ -74,11 +74,11 @@ display pattern to render a language name.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Language
-   HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot; 
-   ID = &quot;Integer&quot;
-   Name = &quot;Text&quot;&gt;
-&lt;/Language&gt;</code></pre></td>
+<td align="left"><pre><code><Language
+   HTMLEncode = "TRUE" | "FALSE" 
+   ID = "Integer"
+   Name = "Text">
+</Language></code></pre></td>
 </tr>
 </tbody>
 </table>

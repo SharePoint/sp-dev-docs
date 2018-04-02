@@ -23,7 +23,7 @@ Specifies a column to reference in this content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldRef
+<td align="left"><pre><code><FieldRef
   Aggregation="sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
   Customization="Text"
   DefaultValue="Text"
@@ -52,8 +52,8 @@ Specifies a column to reference in this content type.
   ShowInFileDlg="TRUE" | "FALSE"
   ShowInListSettings="TRUE" | "FALSE"
   ShowInNewForm="TRUE" | "FALSE"
-  Sortable="TRUE" | "FALSE"&gt;
-&lt;/FieldRef&gt;</code></pre></td>
+  Sortable="TRUE" | "FALSE">
+</FieldRef></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@ Specifies a column to reference in this content type.
 <p>This is the format used for vCard/iCal.</p></li>
 </ul>
 <p>For **Choice</span> fields, this attribute can be set to **Dropdown</span> (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image**, which displays the URL as &lt;IMG SRC="URL" ALT="Description"&gt;.</p></td>
+<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal <A> tag, or to **Image**, which displays the URL as <IMG SRC="URL" ALT="Description">.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Filterable**</p></td>
@@ -194,7 +194,7 @@ Specifies a column to reference in this content type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Required**</p></td>
-<td align="left"><p>Required **Boolean</span>. If **TRUE**, the field must have value assigned to it before an item that is created using this content type can be saved. If an empty field value is given in a form post, either the standard required-field text or an explicitly specified message (that is, via &lt;ErrorText&gt; tags) is displayed in the error form. This validation is handled by the client only (the database always allows NULL for all user-defined fields).</p></td>
+<td align="left"><p>Required **Boolean</span>. If **TRUE**, the field must have value assigned to it before an item that is created using this content type can be saved. If an empty field value is given in a form post, either the standard required-field text or an explicitly specified message (that is, via <ErrorText> tags) is displayed in the error form. This validation is handled by the client only (the database always allows NULL for all user-defined fields).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sealed**</p></td>

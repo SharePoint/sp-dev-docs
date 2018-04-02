@@ -60,10 +60,10 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 Specifies the rules to apply to the data stored in the data structures
 represented by a **TypeDescriptor**. These rules are typically specified
@@ -94,7 +94,7 @@ rule.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Interpretation&gt;&lt;/Interpretation&gt;</code></pre></td>
+<td align="left"><pre><code><Interpretation></Interpretation></code></pre></td>
 </tr>
 </tbody>
 </table>

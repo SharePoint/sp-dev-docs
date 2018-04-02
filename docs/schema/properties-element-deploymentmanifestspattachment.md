@@ -72,14 +72,14 @@ of attachements for a list item.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Properties&quot; type=&quot;Dictionary&quot; minOccurs=&quot;0&quot; /&gt;
+<xs:element name="Properties" type="Dictionary" minOccurs="0" />
 
 USAGE
-&lt;Attachment&gt;
-        &lt;Properties
-                &lt;Property /&gt;
-        /&gt;
-&lt;/Attachment&gt;</code></pre></td>
+<Attachment>
+        <Properties
+                <Property />
+        />
+</Attachment></code></pre></td>
 </tr>
 </tbody>
 </table>

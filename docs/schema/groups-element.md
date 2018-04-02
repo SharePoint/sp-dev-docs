@@ -71,9 +71,9 @@ Defines the groups of controls on a tab.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Groups
-  Id=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Groups
+  Id="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ Defines the groups of controls on a tab.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon.DocLibListForm.Edit.Groups&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon.DocLibListForm.Edit.Groups".</p></td>
 </tr>
 </tbody>
 </table>

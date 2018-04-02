@@ -70,8 +70,8 @@ initiation form, and the data fields on the initiation form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Initiation URL=&quot;Text&quot;
-&lt;/Initiation&gt;</code></pre></td>
+<td align="left"><pre><code><Initiation URL="Text"
+</Initiation></code></pre></td>
 </tr>
 </tbody>
 </table>

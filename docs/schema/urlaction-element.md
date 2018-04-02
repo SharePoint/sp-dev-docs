@@ -67,9 +67,9 @@ Specifies the page URL for an action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UrlAction
-  Url = &quot;Text&quot;&gt;
-&lt;/UrlAction&gt;</code></pre></td>
+<td align="left"><pre><code><UrlAction
+  Url = "Text">
+</UrlAction></code></pre></td>
 </tr>
 </tbody>
 </table>

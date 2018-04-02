@@ -73,8 +73,8 @@ to contain metadata for list base types.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MetaData&gt;
-&lt;/MetaData&gt;</code></pre></td>
+<td align="left"><pre><code><MetaData>
+</MetaData></code></pre></td>
 </tr>
 </tbody>
 </table>

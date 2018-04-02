@@ -67,8 +67,8 @@ Used to determine whether a specific user can vote in a survey.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OkToVote&gt;
-&lt;/OkToVote&gt;</code></pre></td>
+<td align="left"><pre><code><OkToVote>
+</OkToVote></code></pre></td>
 </tr>
 </tbody>
 </table>

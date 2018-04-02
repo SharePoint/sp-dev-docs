@@ -67,8 +67,8 @@ Contains information about the Web discussions for a document.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Discussions&gt;
-&lt;/Discussions&gt;</code></pre></td>
+<td align="left"><pre><code><Discussions>
+</Discussions></code></pre></td>
 </tr>
 </tbody>
 </table>

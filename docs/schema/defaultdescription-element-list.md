@@ -73,8 +73,8 @@ Microsoft SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DefaultDescription&gt;
-&lt;/DefaultDescription&gt;</code></pre></td>
+<td align="left"><pre><code><DefaultDescription>
+</DefaultDescription></code></pre></td>
 </tr>
 </tbody>
 </table>

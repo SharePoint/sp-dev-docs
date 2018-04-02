@@ -23,12 +23,12 @@ Specifies a field for displaying data from the parent data source.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SchemaSource&gt;
-    &lt;Fields&gt;
-        &lt;Field&gt;
-        &lt;/Field&gt;
-    &lt;/Fields&gt;
-&lt;/SchemaSource&gt;</code></pre></td>
+<td align="left"><pre><code><SchemaSource>
+    <Fields>
+        <Field>
+        </Field>
+    </Fields>
+</SchemaSource></code></pre></td>
 </tr>
 </tbody>
 </table>

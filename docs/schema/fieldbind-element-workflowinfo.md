@@ -94,11 +94,11 @@ then passed to Microsoft SharePoint Foundation 2010.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RuleDesigner&gt;
-    &lt;FieldBind&gt;
-        &lt;Option /&gt;
-    &lt;/FieldBind&gt;
-&lt;/RuleDesigner&gt;</code></pre></td>
+<td align="left"><pre><code><RuleDesigner>
+    <FieldBind>
+        <Option />
+    </FieldBind>
+</RuleDesigner></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -171,7 +171,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>If you use more than one parameter for a **Field</span> attribute, the parameter names should be separated by commas (for example, **Field</span>=&quot;**Variable</span>,**ValueType**&quot;).</p></td>
+<td align="left"><p>If you use more than one parameter for a **Field</span> attribute, the parameter names should be separated by commas (for example, **Field</span>="**Variable</span>,**ValueType**").</p></td>
 </tr>
 </tbody>
 </table>

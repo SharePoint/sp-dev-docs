@@ -73,19 +73,19 @@ page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GetVar
-  AutoHyperlink = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoHyperLinkNoEncoding = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoNewLine = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Default = &quot;TRUE&quot; | &quot;FALSE&quot;
-  ExpandXML = &quot;TRUE&quot; | &quot;FALSE&quot;
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Name = &quot;Text&quot;
-  Scope =&quot;Request&quot;
-    StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncodeAsURL = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/GetVar&gt;</code></pre></td>
+<td align="left"><pre><code><GetVar
+  AutoHyperlink = "TRUE" | "FALSE"
+  AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
+  AutoNewLine = "TRUE" | "FALSE"
+  Default = "TRUE" | "FALSE"
+  ExpandXML = "TRUE" | "FALSE"
+  HTMLEncode = "TRUE" | "FALSE"
+  Name = "Text"
+  Scope ="Request"
+    StripWS = "TRUE" | "FALSE"
+  URLEncode = "TRUE" | "FALSE"
+  URLEncodeAsURL = "TRUE" | "FALSE">
+</GetVar></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -147,7 +147,7 @@ page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncodeAsUrl**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.</p></td>
 </tr>
 </tbody>
 </table>

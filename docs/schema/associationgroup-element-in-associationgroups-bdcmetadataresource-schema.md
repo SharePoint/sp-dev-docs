@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AssociationGroup Name = &quot;String&quot;&gt; &lt;/AssociationGroup&gt;</code></pre></td>
+<td align="left"><pre><code><AssociationGroup Name = "String"> </AssociationGroup></code></pre></td>
 </tr>
 </tbody>
 </table>

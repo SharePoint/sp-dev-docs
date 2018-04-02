@@ -72,9 +72,9 @@ in a specific format (YYYYMMDDHHMMSS) for sorting purposes.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ThreadStamp
-  StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ThreadStamp&gt;</code></pre></td>
+<td align="left"><pre><code><ThreadStamp
+  StripWS = "TRUE" | "FALSE">
+</ThreadStamp></code></pre></td>
 </tr>
 </tbody>
 </table>

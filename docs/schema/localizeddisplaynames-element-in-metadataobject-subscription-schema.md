@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Lists the localized display names for a subscription, a query, or a
 subscription association.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LocalizedDisplayNames&gt;&lt;/LocalizedDisplayNames&gt;</code></pre></td>
+<td align="left"><pre><code><LocalizedDisplayNames></LocalizedDisplayNames></code></pre></td>
 </tr>
 </tbody>
 </table>

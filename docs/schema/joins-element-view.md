@@ -72,7 +72,7 @@ needed for a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Joins&gt;  &lt;Join ... &gt;  &lt;/Join&gt;    &lt;Join ... &gt;  &lt;/Join&gt;  ...&lt;/Joins&gt;</code></pre></td>
+<td align="left"><pre><code><Joins>  <Join ... >  </Join>    <Join ... >  </Join>  ...</Joins></code></pre></td>
 </tr>
 </tbody>
 </table>

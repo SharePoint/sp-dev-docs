@@ -66,10 +66,10 @@ performance by removing the proxy generation overhead. To specify custom
 business logic that connects to an external system, .NET Connectivity
 Assembly type external systems must be used.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -83,7 +83,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Proxy&gt;&lt;/Proxy&gt;</code></pre></td>
+<td align="left"><pre><code><Proxy></Proxy></code></pre></td>
 </tr>
 </tbody>
 </table>

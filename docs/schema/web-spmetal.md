@@ -86,7 +86,7 @@ Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436(Of
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Web Class=&quot;TeamSite&quot; AccessModifier=&quot;Internal&quot;&gt; ... &lt;/Web&gt;</code></pre></td>
+<td align="left"><pre><code><Web Class="TeamSite" AccessModifier="Internal"> ... </Web></code></pre></td>
 </tr>
 </tbody>
 </table>

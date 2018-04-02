@@ -75,9 +75,9 @@ registry setting for which the default value is 1.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IfNew
-  Name = &quot;Text&quot;&gt;
-&lt;/IfNew&gt;</code></pre></td>
+<td align="left"><pre><code><IfNew
+  Name = "Text">
+</IfNew></code></pre></td>
 </tr>
 </tbody>
 </table>

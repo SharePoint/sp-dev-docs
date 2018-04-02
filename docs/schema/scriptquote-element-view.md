@@ -72,9 +72,9 @@ render text from the server that must be interpreted as a quoted string.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ScriptQuote
-  NotAddingQuote = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ScriptQuote&gt;</code></pre></td>
+<td align="left"><pre><code><ScriptQuote
+  NotAddingQuote = "TRUE" | "FALSE">
+</ScriptQuote></code></pre></td>
 </tr>
 </tbody>
 </table>

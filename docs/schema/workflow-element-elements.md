@@ -21,21 +21,21 @@ Defines a workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Workflow
-  Title=&quot;Text&quot;
-  Name=&quot;Text&quot;
-  CodeBesideAssembly=&quot;Text&quot;
-  CodeBesideClass=&quot;Text&quot;
-  Description=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  EngineClass=&quot;Text&quot;
-  EngineAssembly=&quot;Text&quot;
-  AssociationUrl=&quot;Text&quot;
-  InstantiationUrl=&quot;Text&quot;
-  ModificationUrl=&quot;Text&quot;
-  StatusUrl=&quot;Text&quot;
-  TaskListContentTypeId=&quot;Text&quot; &gt;
-&lt;/Workflow&gt;</code></pre></td>
+<td align="left"><pre><code><Workflow
+  Title="Text"
+  Name="Text"
+  CodeBesideAssembly="Text"
+  CodeBesideClass="Text"
+  Description="Text"
+  Id="Text"
+  EngineClass="Text"
+  EngineAssembly="Text"
+  AssociationUrl="Text"
+  InstantiationUrl="Text"
+  ModificationUrl="Text"
+  StatusUrl="Text"
+  TaskListContentTypeId="Text" >
+</Workflow></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -94,7 +94,7 @@ Defines a workflow.
 <span codelanguage="other"></span>
  
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code>AssociationURL = &quot;MyWkflAssociationPage.aspx&quot;</code></pre>
+<pre><code>AssociationURL = "MyWkflAssociationPage.aspx"</code></pre>
 </div>
 <div class="alert">
 <table>
@@ -108,7 +108,7 @@ Defines a workflow.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>SharePoint Foundation supports absolute or server-relative paths in the workflow template definition. All form path URLs must be expressed in one of these formats. For example, an absolute path, such as &quot;<span class="code">http://site/library/page.aspx</span>&quot;; or a server-relative path, such as <span class="code">&quot;/layouts/page.aspx</span>&quot;. SharePoint Foundation does not support link fix-up in workflow template definitions.</p></td>
+<td align="left"><p>SharePoint Foundation supports absolute or server-relative paths in the workflow template definition. All form path URLs must be expressed in one of these formats. For example, an absolute path, such as "<span class="code">http://site/library/page.aspx</span>"; or a server-relative path, such as <span class="code">"/layouts/page.aspx</span>". SharePoint Foundation does not support link fix-up in workflow template definitions.</p></td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@ Defines a workflow.
 <span codelanguage="other"></span>
  
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code>InstantiationURL = &quot;MyWorkflowInitiationPage.aspx&quot;</code></pre>
+<pre><code>InstantiationURL = "MyWorkflowInitiationPage.aspx"</code></pre>
 </div>
 <div class="alert">
 <table>
@@ -137,7 +137,7 @@ Defines a workflow.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>SharePoint Foundation supports absolute or server-relative paths in the workflow template definition. All form path URLs must be expressed in one of these formats. For example, an absolute path, such as <span class="code">&quot;http://site/library/page.aspx</span>&quot;; or a server-relative path, such as <span class="code">&quot;/layouts/page.aspx&quot;</span>. SharePoint Foundation does not support link fix-up in workflow template definitions.</p></td>
+<td align="left"><p>SharePoint Foundation supports absolute or server-relative paths in the workflow template definition. All form path URLs must be expressed in one of these formats. For example, an absolute path, such as <span class="code">"http://site/library/page.aspx</span>"; or a server-relative path, such as <span class="code">"/layouts/page.aspx"</span>. SharePoint Foundation does not support link fix-up in workflow template definitions.</p></td>
 </tr>
 </tbody>
 </table>

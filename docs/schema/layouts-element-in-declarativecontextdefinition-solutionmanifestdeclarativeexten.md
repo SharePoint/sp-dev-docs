@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies the layouts for a context definition.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-**Schema:** SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/Declar
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Layouts &gt; &lt;/Layouts&gt;</code></pre></td>
+<td align="left"><pre><code><Layouts > </Layouts></code></pre></td>
 </tr>
 </tbody>
 </table>

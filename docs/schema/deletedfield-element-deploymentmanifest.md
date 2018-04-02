@@ -68,14 +68,14 @@ Represents a data field that was deleted from a SharePoint list.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;DeletedField&quot; type=&quot;DeletedField&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="DeletedField" type="DeletedField" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;DeletedFields&gt;
-   &lt;DeletedField
-      FieldId=&quot;Guid&quot;
-   /&gt;
-&lt;/DeletedFields&gt;</code></pre></td>
+<DeletedFields>
+   <DeletedField
+      FieldId="Guid"
+   />
+</DeletedFields></code></pre></td>
 </tr>
 </tbody>
 </table>

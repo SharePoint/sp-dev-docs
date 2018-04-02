@@ -71,18 +71,18 @@ Specifies a code access security policy for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;PolicyItem&gt;
-  &lt;PermissionSet
-    class = &quot;Text&quot;
-    Description = &quot;Text&quot;
-    Name = &quot;Text&quot;
-    version = &quot;Text&quot;&gt;
+<td align="left"><pre><code><PolicyItem>
+  <PermissionSet
+    class = "Text"
+    Description = "Text"
+    Name = "Text"
+    version = "Text">
         ...
-  &lt;/PermissionSet&gt;
-  &lt;Assemblies&gt;
+  </PermissionSet>
+  <Assemblies>
     ...
-    &lt;/Assemblies&gt;
-&lt;/PolicyItem&gt;</code></pre></td>
+    </Assemblies>
+</PolicyItem></code></pre></td>
 </tr>
 </tbody>
 </table>

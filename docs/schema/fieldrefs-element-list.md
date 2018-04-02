@@ -73,11 +73,11 @@ specifiy field references for a field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldRefs&gt;
-  &lt;FieldRef&gt;&lt;/FieldRef&gt;
-  &lt;FieldRef&gt;&lt;/FieldRef&gt;
+<td align="left"><pre><code><FieldRefs>
+  <FieldRef></FieldRef>
+  <FieldRef></FieldRef>
   ...
-&lt;/FieldRefs&gt;</code></pre></td>
+</FieldRefs></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,10 +71,10 @@ Specifies a custom property value to implement within the file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property
-  Name = &quot;Text&quot;
-  Value = &quot;Text&quot;&gt;
-&lt;/Property&gt;</code></pre></td>
+<td align="left"><pre><code><Property
+  Name = "Text"
+  Value = "Text">
+</Property></code></pre></td>
 </tr>
 </tbody>
 </table>

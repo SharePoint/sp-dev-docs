@@ -70,8 +70,8 @@ Contains a collection of
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;XmlDocuments&gt;
-&lt;/XmlDocuments&gt;</code></pre></td>
+<td align="left"><pre><code><XmlDocuments>
+</XmlDocuments></code></pre></td>
 </tr>
 </tbody>
 </table>

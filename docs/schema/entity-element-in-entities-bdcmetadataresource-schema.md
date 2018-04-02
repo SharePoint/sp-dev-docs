@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Entity Namespace = &quot;String&quot; Version = &quot;String&quot; Name = &quot;String&quot;&gt; &lt;/Entity&gt;</code></pre></td>
+<td align="left"><pre><code><Entity Namespace = "String" Version = "String" Name = "String"> </Entity></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Lists the explicit identities this cache subscription contains.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Identities&gt;&lt;/Identities&gt;</code></pre></td>
+<td align="left"><pre><code><Identities></Identities></code></pre></td>
 </tr>
 </tbody>
 </table>

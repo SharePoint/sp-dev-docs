@@ -79,14 +79,14 @@ retrieves the raw value of the column in the local list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LookupColumn
-    HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;    IncludeVersions = &quot;TRUE&quot; | &quot;FALSE&quot; 
-    Name = &quot;Text&quot;
-    ShowField = &quot;Text&quot;
-    StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;
-    URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-    URLEncodeAsURL = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/LookupColumn&gt;</code></pre></td>
+<td align="left"><pre><code><LookupColumn
+    HTMLEncode = "TRUE" | "FALSE"    IncludeVersions = "TRUE" | "FALSE" 
+    Name = "Text"
+    ShowField = "Text"
+    StripWS = "TRUE" | "FALSE"
+    URLEncode = "TRUE" | "FALSE"
+    URLEncodeAsURL = "TRUE" | "FALSE">
+</LookupColumn></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -132,7 +132,7 @@ retrieves the raw value of the column in the local list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL and not to encode the forward slash (&quot;/&quot;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL and not to encode the forward slash ("/").</p></td>
 </tr>
 </tbody>
 </table>

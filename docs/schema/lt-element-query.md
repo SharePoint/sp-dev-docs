@@ -74,11 +74,11 @@ views. This element is used similarly to the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Lt&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/Lt&gt;</code></pre></td>
+<td align="left"><pre><code><Lt>
+  <FieldRef Name = "Field_Name"/>
+  <Value Type = "Field_Type"/>
+  <XML />
+</Lt></code></pre></td>
 </tr>
 </tbody>
 </table>

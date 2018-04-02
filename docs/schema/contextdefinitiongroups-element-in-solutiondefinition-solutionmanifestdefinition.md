@@ -67,10 +67,10 @@ to show related external data in the context of a task pane, you can
 include an additional context definition group for a context named <span
 class="keyword">EntityView</span>.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -84,7 +84,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextDefinitionGroups&gt;&lt;/ContextDefinitionGroups&gt;</code></pre></td>
+<td align="left"><pre><code><ContextDefinitionGroups></ContextDefinitionGroups></code></pre></td>
 </tr>
 </tbody>
 </table>

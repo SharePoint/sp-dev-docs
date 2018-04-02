@@ -71,8 +71,8 @@ Contains the definition of the body for a list form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListFormBody&gt;
-&lt;/ListFormBody&gt;</code></pre></td>
+<td align="left"><pre><code><ListFormBody>
+</ListFormBody></code></pre></td>
 </tr>
 </tbody>
 </table>

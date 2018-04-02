@@ -71,9 +71,9 @@ new item of this content type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocumentTemplate
-  TargetName=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><DocumentTemplate
+  TargetName="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

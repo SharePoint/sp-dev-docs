@@ -69,13 +69,13 @@ attribute on the [ExportSettings Element
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPIncludeSecurity&quot;&gt;
-    &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-        &lt;xs:enumeration value=&quot;None&quot; /&gt;
-        &lt;xs:enumeration value=&quot;WssOnly&quot; /&gt;
-        &lt;xs:enumeration value=&quot;All&quot; /&gt;
-    &lt;/xs:restriction&gt;
-&lt;/xs:simpleType</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPIncludeSecurity">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="None" />
+        <xs:enumeration value="WssOnly" />
+        <xs:enumeration value="All" />
+    </xs:restriction>
+</xs:simpleType</code></pre></td>
 </tr>
 </tbody>
 </table>

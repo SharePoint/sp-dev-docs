@@ -68,8 +68,8 @@ feature depends.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActivationDependencies&gt;
-&lt;/ActivationDependencies&gt;</code></pre></td>
+<td align="left"><pre><code><ActivationDependencies>
+</ActivationDependencies></code></pre></td>
 </tr>
 </tbody>
 </table>

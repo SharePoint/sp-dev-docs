@@ -74,8 +74,8 @@ Combines the functionality of the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MapToAll&gt;
-&lt;/MapToAll&gt;</code></pre></td>
+<td align="left"><pre><code><MapToAll>
+</MapToAll></code></pre></td>
 </tr>
 </tbody>
 </table>

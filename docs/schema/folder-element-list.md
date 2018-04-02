@@ -72,9 +72,9 @@ folder.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Folder
-  TargetName=&quot;Text&quot;&gt;
-&lt;/Folder&gt;</code></pre></td>
+<td align="left"><pre><code><Folder
+  TargetName="Text">
+</Folder></code></pre></td>
 </tr>
 </tbody>
 </table>

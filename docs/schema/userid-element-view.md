@@ -72,9 +72,9 @@ site, as defined in the UserInfo table of the content database.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UserID
-  AllowAnonymous = &quot;TRUE | FALSE&quot;&gt;
-&lt;/UserID&gt;</code></pre></td>
+<td align="left"><pre><code><UserID
+  AllowAnonymous = "TRUE | FALSE">
+</UserID></code></pre></td>
 </tr>
 </tbody>
 </table>

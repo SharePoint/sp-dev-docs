@@ -71,21 +71,21 @@ Defines a quick-access toolbar.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;QAT
-  Id=&quot;Text&quot;
-  ImageDownArrow=&quot;Url&quot;
-  ImageDownArrowClass=&quot;CSS Class Selector&quot;
-  ImageDownArrowLeft=&quot;Negative Integer&quot;
-  ImageDownArrowTop=&quot;Negative Integer&quot;
-  ImageSideArrow=&quot;Url&quot;
-  ImageSideArrowClass=&quot;CSS Class Selector&quot;
-  ImageSideArrowLeft=&quot;Negative Integer&quot;
-  ImageSideArrowTop=&quot;Negative Integer&quot;
-  ImageUpArrow=&quot;Url&quot;
-  ImageUpArrowClass=&quot;CSS Class Selector&quot;
-  ImageUpArrowLeft=&quot;Negative Integer&quot;
-  ImageUpArrowTop=&quot;Negative Integer&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><QAT
+  Id="Text"
+  ImageDownArrow="Url"
+  ImageDownArrowClass="CSS Class Selector"
+  ImageDownArrowLeft="Negative Integer"
+  ImageDownArrowTop="Negative Integer"
+  ImageSideArrow="Url"
+  ImageSideArrowClass="CSS Class Selector"
+  ImageSideArrowLeft="Negative Integer"
+  ImageSideArrowTop="Negative Integer"
+  ImageUpArrow="Url"
+  ImageUpArrowClass="CSS Class Selector"
+  ImageUpArrowLeft="Negative Integer"
+  ImageUpArrowTop="Negative Integer"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -111,7 +111,7 @@ Defines a quick-access toolbar.
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageDownArrow**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the down arrow, such as &quot;/_layouts/1033/images/formatmap16x16.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the down arrow, such as "/_layouts/1033/images/formatmap16x16.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageDownArrowClass**</p></td>
@@ -143,7 +143,7 @@ Defines a quick-access toolbar.
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageUpArrow**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the up arrow, such as &quot;/_layouts/images/arwup.gif&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to use for the up arrow, such as "/_layouts/images/arwup.gif".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageUpArrowClass**</p></td>

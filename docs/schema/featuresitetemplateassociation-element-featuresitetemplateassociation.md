@@ -70,14 +70,14 @@ included.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FeatureSiteTemplateAssociation 
-    Id = &quot;Text&quot; 
-    TemplateName = &quot;Text&quot;&gt; 
-    &lt;Property 
-      Key= &quot;Text&quot; 
-      Value = &quot;Text&quot;&gt;
-    &lt;/Property&gt;
-&lt;/FeatureSiteTemplateAssociation&gt;</code></pre></td>
+<td align="left"><pre><code><FeatureSiteTemplateAssociation 
+    Id = "Text" 
+    TemplateName = "Text"> 
+    <Property 
+      Key= "Text" 
+      Value = "Text">
+    </Property>
+</FeatureSiteTemplateAssociation></code></pre></td>
 </tr>
 </tbody>
 </table>

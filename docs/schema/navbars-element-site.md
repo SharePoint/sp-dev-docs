@@ -72,8 +72,8 @@ navigation areas of a home page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NavBars&gt;
-&lt;/NavBars&gt;</code></pre></td>
+<td align="left"><pre><code><NavBars>
+</NavBars></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -74,7 +74,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Picture  IconFilePath = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/Picture&gt;</code></pre></td>
+<td align="left"><pre><code><Picture  IconFilePath = "String" Description = "String"> </Picture></code></pre></td>
 </tr>
 </tbody>
 </table>

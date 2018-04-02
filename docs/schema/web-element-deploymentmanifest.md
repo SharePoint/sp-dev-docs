@@ -71,68 +71,68 @@ top-level SharePoint Foundation objects.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Web&quot; type=&quot;SPWeb&quot; /&gt;
+<xs:element name="Web" type="SPWeb" />
 
 USAGE
-&lt;SPObject&gt;
-    &lt;Web&gt;
-                &lt;Properties /&gt;
-                &lt;EventReceivers /&gt;
-        &lt;xs:attribute name=&quot;Id&quot; /&gt;
-        &lt;xs:attribute name=&quot;ParentId&quot; /&gt;
-        &lt;xs:attribute name=&quot;Name&quot; /&gt;
-        &lt;xs:attribute name=&quot;Title&quot; /&gt;
-        &lt;xs:attribute name=&quot;Locale&quot; /&gt;
-        &lt;xs:attribute name=&quot;Language&quot; /&gt;
-        &lt;xs:attribute name=&quot;IsRootWeb&quot; /&gt;
-        &lt;xs:attribute name=&quot;ServerRelativeUrl&quot; /&gt;
-        &lt;xs:attribute name=&quot;CurrencyLocaleId&quot; /&gt;
-        &lt;xs:attribute name=&quot;RegionalSettingsLocaleId&quot; /&gt;
-        &lt;xs:attribute name=&quot;RequestAccessEmail&quot; /&gt;
-        &lt;xs:attribute name=&quot;TimeZoneId&quot; /&gt;
-        &lt;xs:attribute name=&quot;Time24&quot; /&gt;
-        &lt;xs:attribute name=&quot;CalendarType&quot; /&gt;
-        &lt;xs:attribute name=&quot;AdjustHijriDays&quot; /&gt;
-        &lt;xs:attribute name=&quot;Collation&quot; /&gt;
-        &lt;xs:attribute name=&quot;AlternateCalendarType&quot; /&gt;
-        &lt;xs:attribute name=&quot;ShowWeeks&quot; /&gt;
-        &lt;xs:attribute name=&quot;FirstWeekOfYear&quot; /&gt;
-        &lt;xs:attribute name=&quot;WorkDays&quot; /&gt;
-        &lt;xs:attribute name=&quot;WorkDayStartHour&quot; /&gt;
-        &lt;xs:attribute name=&quot;WorkDayEndHour&quot; /&gt;
-        &lt;xs:attribute name=&quot;FirstDayOfWeek&quot; /&gt;
-        &lt;xs:attribute name=&quot;Description&quot; /&gt;
-        &lt;xs:attribute name=&quot;AlternateHeader&quot; /&gt;
-        &lt;xs:attribute name=&quot;Author&quot; /&gt;
-        &lt;xs:attribute name=&quot;Configuration&quot; /&gt;
-        &lt;xs:attribute name=&quot;HasUniqueRoleAssignments&quot; /&gt;
-        &lt;xs:attribute name=&quot;HasUniqueRoleDefinitions&quot; /&gt;
-        &lt;xs:attribute name=&quot;Created&quot; /&gt;
-        &lt;xs:attribute name=&quot;ThemeComposite&quot; /&gt;
-        &lt;xs:attribute name=&quot;WebTemplate&quot; /&gt;
-        &lt;xs:attribute name=&quot;AnonymousState&quot; /&gt;
-        &lt;xs:attribute name=&quot;RootFolderId&quot; /&gt;
-        &lt;xs:attribute name=&quot;SystemCatalogsIncluded&quot; /&gt;
-        &lt;xs:attribute name=&quot;WelcomePageUrl&quot; /&gt;
-        &lt;xs:attribute name=&quot;AlternateCssUrl&quot; /&gt;
-        &lt;xs:attribute name=&quot;CustomizedCssFiles&quot; /&gt;
-        &lt;xs:attribute name=&quot;CustomJSUrl&quot; /&gt;
-        &lt;xs:attribute name=&quot;IncludeSupportingFolders&quot; /&gt;
-        &lt;xs:attribute name=&quot;SecurityProvider&quot; /&gt;
-        &lt;xs:attribute name=&quot;MasterUrl&quot; /&gt;
-        &lt;xs:attribute name=&quot;CustomMasterUrl&quot; /&gt;
-        &lt;xs:attribute name=&quot;SiteLogoUrl&quot; /&gt;
-        &lt;xs:attribute name=&quot;SiteLogoDescription&quot; /&gt;
-        &lt;xs:attribute name=&quot;UseSharedNavigation&quot; /&gt;
-&lt;!-- Flags --&gt;
-        &lt;xs:attribute name=&quot;PresenceEnabled&quot; /&gt;
-        &lt;xs:attribute name=&quot;SyndicationEnabled&quot; /&gt;
-        &lt;xs:attribute name=&quot;QuickLaunchEnabled&quot; /&gt;
-        &lt;xs:attribute name=&quot;TreeViewEnabled&quot; /&gt;
-        &lt;xs:attribute name=&quot;ParserEnabled&quot; /&gt;
-        &lt;xs:attribute name=&quot;Provisioned&quot; /&gt;
-    &lt;/Web&gt;
-&lt;/SPObject&gt;
+<SPObject>
+    <Web>
+                <Properties />
+                <EventReceivers />
+        <xs:attribute name="Id" />
+        <xs:attribute name="ParentId" />
+        <xs:attribute name="Name" />
+        <xs:attribute name="Title" />
+        <xs:attribute name="Locale" />
+        <xs:attribute name="Language" />
+        <xs:attribute name="IsRootWeb" />
+        <xs:attribute name="ServerRelativeUrl" />
+        <xs:attribute name="CurrencyLocaleId" />
+        <xs:attribute name="RegionalSettingsLocaleId" />
+        <xs:attribute name="RequestAccessEmail" />
+        <xs:attribute name="TimeZoneId" />
+        <xs:attribute name="Time24" />
+        <xs:attribute name="CalendarType" />
+        <xs:attribute name="AdjustHijriDays" />
+        <xs:attribute name="Collation" />
+        <xs:attribute name="AlternateCalendarType" />
+        <xs:attribute name="ShowWeeks" />
+        <xs:attribute name="FirstWeekOfYear" />
+        <xs:attribute name="WorkDays" />
+        <xs:attribute name="WorkDayStartHour" />
+        <xs:attribute name="WorkDayEndHour" />
+        <xs:attribute name="FirstDayOfWeek" />
+        <xs:attribute name="Description" />
+        <xs:attribute name="AlternateHeader" />
+        <xs:attribute name="Author" />
+        <xs:attribute name="Configuration" />
+        <xs:attribute name="HasUniqueRoleAssignments" />
+        <xs:attribute name="HasUniqueRoleDefinitions" />
+        <xs:attribute name="Created" />
+        <xs:attribute name="ThemeComposite" />
+        <xs:attribute name="WebTemplate" />
+        <xs:attribute name="AnonymousState" />
+        <xs:attribute name="RootFolderId" />
+        <xs:attribute name="SystemCatalogsIncluded" />
+        <xs:attribute name="WelcomePageUrl" />
+        <xs:attribute name="AlternateCssUrl" />
+        <xs:attribute name="CustomizedCssFiles" />
+        <xs:attribute name="CustomJSUrl" />
+        <xs:attribute name="IncludeSupportingFolders" />
+        <xs:attribute name="SecurityProvider" />
+        <xs:attribute name="MasterUrl" />
+        <xs:attribute name="CustomMasterUrl" />
+        <xs:attribute name="SiteLogoUrl" />
+        <xs:attribute name="SiteLogoDescription" />
+        <xs:attribute name="UseSharedNavigation" />
+<!-- Flags -->
+        <xs:attribute name="PresenceEnabled" />
+        <xs:attribute name="SyndicationEnabled" />
+        <xs:attribute name="QuickLaunchEnabled" />
+        <xs:attribute name="TreeViewEnabled" />
+        <xs:attribute name="ParserEnabled" />
+        <xs:attribute name="Provisioned" />
+    </Web>
+</SPObject>
 </code></pre></td>
 </tr>
 </tbody>

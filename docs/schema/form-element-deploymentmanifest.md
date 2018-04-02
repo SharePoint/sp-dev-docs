@@ -70,19 +70,19 @@ class="nolink">SPForm</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Form&quot; 
-        type=&quot;SPForm&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="Form" 
+        type="SPForm" 
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;Forms&gt;
-        &lt;Form
-                Name=&quot;Guid&quot;
-                Type=&quot;xs:string&quot;
-                Url=&quot;xs:string&quot;
-        /&gt;
-&lt;/Forms&gt;</code></pre></td>
+<Forms>
+        <Form
+                Name="Guid"
+                Type="xs:string"
+                Url="xs:string"
+        />
+</Forms></code></pre></td>
 </tr>
 </tbody>
 </table>

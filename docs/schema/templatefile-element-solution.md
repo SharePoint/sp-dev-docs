@@ -71,9 +71,9 @@ Specifies a template file to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TemplateFile
-  Location=&quot;Text&quot;&gt;
-&lt;/TemplateFile&gt;</code></pre></td>
+<td align="left"><pre><code><TemplateFile
+  Location="Text">
+</TemplateFile></code></pre></td>
 </tr>
 </tbody>
 </table>

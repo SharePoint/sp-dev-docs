@@ -69,10 +69,10 @@ Represents a single parameter for the workflow initiation form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Parameter 
-  Name=&quot;Text&quot; 
-  Type=&quot;Text&quot; 
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Parameter 
+  Name="Text" 
+  Type="Text" 
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

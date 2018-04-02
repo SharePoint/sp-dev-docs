@@ -64,10 +64,10 @@ Specifies the root element that represents an application definition.
 Models define external content types that are contained by external
 applications.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -81,7 +81,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Model Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Model&gt;</code></pre></td>
+<td align="left"><pre><code><Model Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Model></code></pre></td>
 </tr>
 </tbody>
 </table>

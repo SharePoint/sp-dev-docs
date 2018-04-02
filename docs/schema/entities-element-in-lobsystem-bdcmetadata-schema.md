@@ -62,10 +62,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a list of external content types in an external system.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Entities&gt;&lt;/Entities&gt;</code></pre></td>
+<td align="left"><pre><code><Entities></Entities></code></pre></td>
 </tr>
 </tbody>
 </table>

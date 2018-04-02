@@ -70,23 +70,23 @@ for exporting content to a content migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ExportSettings&quot; type=&quot;SPExportSettings&quot; /&gt;
+<xs:element name="ExportSettings" type="SPExportSettings" />
 
 USAGE
-&lt;ExportSettings&gt;
-        &lt;ExportObjects /&gt;
-&lt;!-- SPDeploymentSettings --&gt;
-        &lt;xs:attribute name=&quot;SiteUrl&quot; type=&quot;xs:string&quot; /&gt;
-        &lt;xs:attribute name=&quot;FileLocation&quot; type=&quot;xs:string&quot; /&gt;
-        &lt;xs:attribute name=&quot;BaseFileName&quot; type=&quot;xs:string&quot; /&gt;
-        &lt;xs:attribute name=&quot;IncludeSecurity&quot; type=&quot;SPIncludeSecurity&quot; /&gt;
+<ExportSettings>
+        <ExportObjects />
+<!-- SPDeploymentSettings -->
+        <xs:attribute name="SiteUrl" type="xs:string" />
+        <xs:attribute name="FileLocation" type="xs:string" />
+        <xs:attribute name="BaseFileName" type="xs:string" />
+        <xs:attribute name="IncludeSecurity" type="SPIncludeSecurity" />
 
-&lt;!-- SPExportSettings --&gt;
-        &lt;xs:attribute name=&quot;IncludeVersions&quot; type=&quot;SPIncludeVersions&quot; /&gt;
-        &lt;xs:attribute name=&quot;ExportMethod&quot; type=&quot;SPExportMethodType&quot; /&gt;
-        &lt;xs:attribute name=&quot;ExportChangeToken&quot; type=&quot;xs:string&quot; /&gt;
-        &lt;xs:attribute name=&quot;ExportPublicSchema&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; /&gt;
-&lt;/ExportSettings&gt;</code></pre></td>
+<!-- SPExportSettings -->
+        <xs:attribute name="IncludeVersions" type="SPIncludeVersions" />
+        <xs:attribute name="ExportMethod" type="SPExportMethodType" />
+        <xs:attribute name="ExportChangeToken" type="xs:string" />
+        <xs:attribute name="ExportPublicSchema" type="xs:boolean" default="true" />
+</ExportSettings></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,9 +71,9 @@ Specifies fields to exclude from a digest alert message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DigestNotificationExcludedFields&gt;
+<td align="left"><pre><code><DigestNotificationExcludedFields>
   Field1; Field2; ... Fieldn
-&lt;/DigestNotificationExcludedFields&gt;</code></pre></td>
+</DigestNotificationExcludedFields></code></pre></td>
 </tr>
 </tbody>
 </table>

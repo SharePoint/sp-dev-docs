@@ -67,13 +67,13 @@ Specifies column and row formatting used in a Datasheet view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Format&gt;
-  &lt;FormatDef
-    Type = &quot;Text&quot;
-    Value = &quot;Text&quot;&gt;
-  &lt;/FormatDef&gt;
+<td align="left"><pre><code><Format>
+  <FormatDef
+    Type = "Text"
+    Value = "Text">
+  </FormatDef>
   ...
-&lt;/Format&gt;</code></pre></td>
+</Format></code></pre></td>
 </tr>
 </tbody>
 </table>

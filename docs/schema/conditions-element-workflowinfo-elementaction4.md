@@ -255,7 +255,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Displayed in the rule designer sentence when two or more conditions are used in the same conditional branch, and when all conditions must be satisfied before workflow actions can be executed. The value is not case-sensitive.</p>
 <p>The default value is **and** (applies only to the English language version of SharePoint).</p>
-<p><span class="label">Example:</span><span class="code">&lt;Conditions And=&quot;and&quot;&gt;</span></p></td>
+<p><span class="label">Example:</span><span class="code"><Conditions And="and"></span></p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
@@ -264,7 +264,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch activity is added to the workflow. The value is not case-sensitive.</p>
 <p>The default value is **Else if** (applies only to the English language version of SharePoint).</p>
-<p><span class="label">Example:</span><span class="code">&lt;Conditions Else=&quot;Else if&quot;&gt;</span></p></td>
+<p><span class="label">Example:</span><span class="code"><Conditions Else="Else if"></span></p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
@@ -272,7 +272,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when there are two or more conditions in the same conditional branch and any value will satisfy the conditions, allowing the workflow actions to execute. The value is not case-sensitive. The default value is **not**.</p>
-<p><span class="label">Example:</span><span class="code">&lt;Conditions Not=&quot;not&quot;&gt;</span></p></td>
+<p><span class="label">Example:</span><span class="code"><Conditions Not="not"></span></p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
@@ -280,7 +280,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when there are two or more conditions in the same conditional branch and any value will satisfy the conditions, allowing the workflow actions to execute. The value is not case-sensitive. The default value is **or**.</p>
-<p><span class="label">Example:</span><span class="code">&lt;Conditions Or=&quot;or&quot;&gt;</span></p></td>
+<p><span class="label">Example:</span><span class="code"><Conditions Or="or"></span></p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
@@ -288,7 +288,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return **true</span> for the workflow actions to execute. The value is not case-sensitive. The default value is **If**.</p>
-<p><span class="label">Example:</span><span class="code">&lt;Conditions When=&quot;If&quot;&gt;</span></p></td>
+<p><span class="label">Example:</span><span class="code"><Conditions When="If"></span></p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 </tbody>

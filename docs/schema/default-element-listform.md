@@ -72,11 +72,11 @@ list definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Default&gt;
-  &lt;Forms&gt;
+<td align="left"><pre><code><Default>
+  <Forms>
     ...
-    &lt;/Forms&gt;
-&lt;/Default&gt;</code></pre></td>
+    </Forms>
+</Default></code></pre></td>
 </tr>
 </tbody>
 </table>

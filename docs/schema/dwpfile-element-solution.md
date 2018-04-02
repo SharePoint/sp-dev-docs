@@ -71,10 +71,10 @@ Specifies a Web Part file (.dwp or .webpart) to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>  &lt;DwpFile
-        FileName = &quot;Text&quot; 
-        Location = &quot;Text&quot;&gt;
-  &lt;/DwpFile&gt;</code></pre></td>
+<td align="left"><pre><code>  <DwpFile
+        FileName = "Text" 
+        Location = "Text">
+  </DwpFile></code></pre></td>
 </tr>
 </tbody>
 </table>

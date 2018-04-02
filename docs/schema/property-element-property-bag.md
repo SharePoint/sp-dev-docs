@@ -70,10 +70,10 @@ item, file, folder, or website.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property
-  Name = &quot;Text&quot;
-  Value = &quot;Text&quot;
-  Type = &quot;PropertyBagType&quot;/&gt;</code></pre></td>
+<td align="left"><pre><code><Property
+  Name = "Text"
+  Value = "Text"
+  Type = "PropertyBagType"/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -103,7 +103,7 @@ item, file, folder, or website.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **PropertyBagType</span> enumeration. Must be one of &quot;**int</span>&quot;, &quot;**string</span>&quot;, or &quot;**DateTime**&quot;. Specifies the type of property.</p></td>
+<td align="left"><p>Optional **PropertyBagType</span> enumeration. Must be one of "**int</span>", "**string</span>", or "**DateTime**". Specifies the type of property.</p></td>
 </tr>
 </tbody>
 </table>

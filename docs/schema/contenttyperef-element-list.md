@@ -72,9 +72,9 @@ created through the list definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContentTypeRef
-  ID = &quot;Text&quot;&gt;
-&lt;/ContentTypeRef&gt;</code></pre></td>
+<td align="left"><pre><code><ContentTypeRef
+  ID = "Text">
+</ContentTypeRef></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -74,8 +74,8 @@ file of a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;BaseTypes&gt;
-&lt;/BaseTypes&gt;</code></pre></td>
+<td align="left"><pre><code><BaseTypes>
+</BaseTypes></code></pre></td>
 </tr>
 </tbody>
 </table>

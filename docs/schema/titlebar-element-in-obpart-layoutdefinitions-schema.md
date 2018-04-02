@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies the user interface (UI) and behavior of the title bar of the
 Office External Part.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TitleBar Visible = &quot;Boolean&quot; ShowCollapseExpand = &quot;Boolean&quot;&gt; &lt;/TitleBar&gt;</code></pre></td>
+<td align="left"><pre><code><TitleBar Visible = "Boolean" ShowCollapseExpand = "Boolean"> </TitleBar></code></pre></td>
 </tr>
 </tbody>
 </table>

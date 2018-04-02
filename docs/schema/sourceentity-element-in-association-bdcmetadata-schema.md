@@ -63,10 +63,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies a source external content type of an <span
 class="keyword">Association</span>.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -80,7 +80,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SourceEntity Namespace = &quot;String&quot; Name = &quot;String&quot;&gt; &lt;/SourceEntity&gt;</code></pre></td>
+<td align="left"><pre><code><SourceEntity Namespace = "String" Name = "String"> </SourceEntity></code></pre></td>
 </tr>
 </tbody>
 </table>

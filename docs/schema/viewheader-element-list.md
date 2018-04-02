@@ -87,9 +87,9 @@ Defines how the headers, or prefixes, of view fields are rendered.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewHeader
-  ExpandXML = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ViewHeader&gt;</code></pre></td>
+<td align="left"><pre><code><ViewHeader
+  ExpandXML = "TRUE" | "FALSE">
+</ViewHeader></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -69,18 +69,18 @@ to the content migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;ManifestFiles&quot; 
-    type=&quot;SPManifestFiles&quot; 
-    minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; 
-/&gt;
+<xs:element 
+    name="ManifestFiles" 
+    type="SPManifestFiles" 
+    minOccurs="1" maxOccurs="1" 
+/>
 
 USAGE
-&lt;SystemData&gt;
-    &lt;ManifestFiles&gt;
-        &lt;ManifestFile /&gt;
-    &lt;/ManifestFiles&gt;
-&lt;/SystemData&gt;</code></pre></td>
+<SystemData>
+    <ManifestFiles>
+        <ManifestFile />
+    </ManifestFiles>
+</SystemData></code></pre></td>
 </tr>
 </tbody>
 </table>

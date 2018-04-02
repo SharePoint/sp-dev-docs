@@ -63,10 +63,10 @@ definitions for one of the Outlook Item Types such as Contact, Task,
 Post, or Calendar, or if showing data in a task pane, an <span
 class="keyword">EntityView</span>.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 
-**Schema:** SolutionManifestDefinitions
+**Schema**: SolutionManifestDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -80,7 +80,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextDefinitionGroup ItemType = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ContextDefinitionGroup&gt;</code></pre></td>
+<td align="left"><pre><code><ContextDefinitionGroup ItemType = "String" Description = "String"> </ContextDefinitionGroup></code></pre></td>
 </tr>
 </tbody>
 </table>

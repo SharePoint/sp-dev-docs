@@ -69,7 +69,7 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GUIDMap&gt;  &lt;GUID    Id = &quot;Text&quot;    ListUrl = &quot;Text&quot;/&gt;&lt;/GUIDMap&gt;</code></pre></td>
+<td align="left"><pre><code><GUIDMap>  <GUID    Id = "Text"    ListUrl = "Text"/></GUIDMap></code></pre></td>
 </tr>
 </tbody>
 </table>

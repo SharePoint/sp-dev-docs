@@ -74,11 +74,11 @@ by the [FieldRef](fieldref-element-query.md) element.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NotIncludes&gt;
-  &lt;FieldRef    Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value    Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/NotIncludes&gt;</code></pre></td>
+<td align="left"><pre><code><NotIncludes>
+  <FieldRef    Name = "Field_Name"/>
+  <Value    Type = "Field_Type"/>
+  <XML />
+</NotIncludes></code></pre></td>
 </tr>
 </tbody>
 </table>

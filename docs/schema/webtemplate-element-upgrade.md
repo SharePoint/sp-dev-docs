@@ -71,25 +71,25 @@ Contains the site template upgrade definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebTemplate 
-  BeginFromSchemaVersion = &quot;Integer&quot;
-  EndFromSchemaVersion = &quot;Integer&quot;
-  FromProductVersion = &quot;Integer&quot;
-  ID = &quot;Integer&quot;
-  LocaleId = &quot;Integer&quot;
-  RemoveSiteExternalSecurityProvider = &quot;true | &quot;false&quot;
-  ToSchemaVersion = &quot;Integer&quot;&gt;
+<td align="left"><pre><code><WebTemplate 
+  BeginFromSchemaVersion = "Integer"
+  EndFromSchemaVersion = "Integer"
+  FromProductVersion = "Integer"
+  ID = "Integer"
+  LocaleId = "Integer"
+  RemoveSiteExternalSecurityProvider = "true | "false"
+  ToSchemaVersion = "Integer">
     ...
-  &lt;Lists&gt;
+  <Lists>
     ...
-  &lt;/Lists&gt;
-  &lt;Files&gt;
+  </Lists>
+  <Files>
     ...
-  &lt;/Files&gt;
-  &lt;AppliedWebFeatures&gt;
+  </Files>
+  <AppliedWebFeatures>
     ...
-  &lt;/AppliedWebFeatures&gt;
-&lt;/WebTemplate&gt;</code></pre></td>
+  </AppliedWebFeatures>
+</WebTemplate></code></pre></td>
 </tr>
 </tbody>
 </table>

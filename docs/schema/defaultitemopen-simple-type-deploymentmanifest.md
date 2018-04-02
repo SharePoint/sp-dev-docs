@@ -67,12 +67,12 @@ Specifies the default environment for a SharePoint item upon opening.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;DefaultItemOpen&quot;&gt;
-   &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-      &lt;xs:enumeration value=&quot;Browser&quot; /&gt;
-      &lt;xs:enumeration value=&quot;PreferClient&quot; /&gt;
-   &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="DefaultItemOpen">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="Browser" />
+      <xs:enumeration value="PreferClient" />
+   </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

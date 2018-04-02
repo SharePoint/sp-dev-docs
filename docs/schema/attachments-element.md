@@ -67,8 +67,8 @@ Contains the URLs of attachments for a specified list item.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Attachments&gt;
-&lt;/Attachments&gt;</code></pre></td>
+<td align="left"><pre><code><Attachments>
+</Attachments></code></pre></td>
 </tr>
 </tbody>
 </table>

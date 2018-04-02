@@ -71,12 +71,12 @@ being upgraded is inside an SharePoint Add-in.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CustomUpgradeAction 
-  Name = string&gt;
-  &lt;Parameters&gt;
-    &lt;Parameter /&gt;
-  &lt;/Parameters&gt;
-&lt;/CustomUpgradeAction&gt;</code></pre></td>
+<td align="left"><pre><code><CustomUpgradeAction 
+  Name = string>
+  <Parameters>
+    <Parameter />
+  </Parameters>
+</CustomUpgradeAction></code></pre></td>
 </tr>
 </tbody>
 </table>

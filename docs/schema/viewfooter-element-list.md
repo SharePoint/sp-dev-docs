@@ -87,9 +87,9 @@ Defines the footer, or suffix, for a view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewFooter
-  ExpandXML = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ViewFooter&gt;</code></pre></td>
+<td align="left"><pre><code><ViewFooter
+  ExpandXML = "TRUE" | "FALSE">
+</ViewFooter></code></pre></td>
 </tr>
 </tbody>
 </table>

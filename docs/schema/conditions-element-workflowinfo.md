@@ -98,10 +98,10 @@ element for all **Condition** elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>   &lt;Conditions&gt;
-      &lt;Condition&gt;…&lt;/Condition&gt;
-      &lt;Default&gt;…&lt;/Default&gt;
-   &lt;/Conditions&gt;</code></pre></td>
+<td align="left"><pre><code>   <Conditions>
+      <Condition>…</Condition>
+      <Default>…</Default>
+   </Conditions></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -126,35 +126,35 @@ element for all **Condition** elements.
 <td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when two or more conditions are used in the same conditional branch, and when all conditions must be satisfied before workflow actions can be executed. The value is not case-sensitive.</p>
 <p>The default value is **and ** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>**Example:**</p>
-<p>DOCS-LESSTHANConditions And=&quot;and&quot;DOCS-GREATERTHAN</p></td>
+<p>DOCS-LESSTHANConditions And="and"DOCS-GREATERTHAN</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Else**</p></td>
 <td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch activity is added to the workflow. The value is not case-sensitive.</p>
 <p>The default value is **Else if** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>**Example:**</p>
-<p>DOCS-LESSTHANConditions Else=&quot;Else if&quot;DOCS-GREATERTHAN</p></td>
+<p>DOCS-LESSTHANConditions Else="Else if"DOCS-GREATERTHAN</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Not**</p></td>
 <td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when the condition must not contain a specified value or range of values. This value is not case-sensitive.</p>
 <p>The default value is **Not**.</p>
 <p>**Example**:</p>
-<p>DOCS-LESSTHANConditions Not=&quot;not&quot;DOCS-GREATERTHAN</p></td>
+<p>DOCS-LESSTHANConditions Not="not"DOCS-GREATERTHAN</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Or**</p></td>
 <td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when there are two or more conditions in the same conditional branch and any value will satisfy the conditions, allowing the workflow actions to execute. The value is not case-sensitive.</p>
 <p>The default value is **or** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>Example:</p>
-<p>DOCS-LESSTHANConditions Or=&quot;or&quot;DOCS-GREATERTHAN</p></td>
+<p>DOCS-LESSTHANConditions Or="or"DOCS-GREATERTHAN</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**When**</p></td>
 <td align="left"><p>Required **text</span>. The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return **true** for the workflow actions to execute. The value is not case-sensitive.</p>
 <p>The default value is **If** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>**Example:**</p>
-<p>DOCS-LESSTHANConditions When=&quot;If&quot;DOCS-GREATERTHAN</p></td>
+<p>DOCS-LESSTHANConditions When="If"DOCS-GREATERTHAN</p></td>
 </tr>
 </tbody>
 </table>

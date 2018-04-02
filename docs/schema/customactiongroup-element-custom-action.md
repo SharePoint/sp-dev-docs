@@ -67,13 +67,13 @@ Contains the core definition for a grouping of custom actions.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CustomActionGroup
-  Description = &quot;Text&quot;
-  Id = &quot;Text&quot;
-  Location = &quot;Text&quot;
-  Sequence = &quot;Integer&quot;
-  Title = &quot;Text&quot;&gt;
-&lt;/CustomActionGroup&gt;</code></pre></td>
+<td align="left"><pre><code><CustomActionGroup
+  Description = "Text"
+  Id = "Text"
+  Location = "Text"
+  Sequence = "Integer"
+  Title = "Text">
+</CustomActionGroup></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@ Contains the core definition for a grouping of custom actions.
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
 <td align="left"><p>Optional **Text**. Specifies a unique identifier for the element. The ID may be a GUID, or it may be a unique term, for example,</p>
-<p><span class="code">&quot;SiteManagement&quot;</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span> for a list of the default custom action group IDs that are used in SharePoint Foundation.</p></td>
+<p><span class="code">"SiteManagement"</span>. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span> for a list of the default custom action group IDs that are used in SharePoint Foundation.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Location**</p></td>

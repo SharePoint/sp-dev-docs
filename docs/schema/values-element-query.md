@@ -69,10 +69,10 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;In&gt;  &lt;Values&gt;    &lt;Value
-      Type = &quot;Text&quot;
-      IncludeTimeValue = &quot;TRUE&quot; | &quot;FALSE&gt;
-    &lt;/Value&gt;  &lt;/Values&gt;&lt;/In&gt;</code></pre></td>
+<td align="left"><pre><code><In>  <Values>    <Value
+      Type = "Text"
+      IncludeTimeValue = "TRUE" | "FALSE>
+    </Value>  </Values></In></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -70,27 +70,27 @@ class="nolink">SPLink</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Link&quot; 
-        type=&quot;SPLink&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="Link" 
+        type="SPLink" 
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;Links&gt;
-        &lt;Link
-                TargetId=&quot;Guid&quot;
-                TargetUrl=&quot;xs:string&quot;
-                IsDirty=&quot;xs:boolean&quot;
-                WebPartId=&quot;Guid&quot;
-                LinkNumber=&quot;xs:int&quot;
-                Type=&quot;xs:unsignedByte&quot;
-                Security=&quot;xs:unsignedByte&quot;
-                Dynamic=&quot;xs:unsignedByte&quot;
-                ServerRel=&quot;xs:boolean&quot;
-                Level=&quot;xs:unsignedByte&quot;
-                Search=&quot;xs:string&quot;
-        /&gt;
-&lt;/Links&gt;</code></pre></td>
+<Links>
+        <Link
+                TargetId="Guid"
+                TargetUrl="xs:string"
+                IsDirty="xs:boolean"
+                WebPartId="Guid"
+                LinkNumber="xs:int"
+                Type="xs:unsignedByte"
+                Security="xs:unsignedByte"
+                Dynamic="xs:unsignedByte"
+                ServerRel="xs:boolean"
+                Level="xs:unsignedByte"
+                Search="xs:string"
+        />
+</Links></code></pre></td>
 </tr>
 </tbody>
 </table>

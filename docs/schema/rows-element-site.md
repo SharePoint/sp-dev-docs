@@ -72,11 +72,11 @@ elements specifying default data for lists.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Rows&gt;
-  &lt;Row&gt;&lt;/Row&gt;
-  &lt;Row&gt;&lt;/Row&gt;
+<td align="left"><pre><code><Rows>
+  <Row></Row>
+  <Row></Row>
   ...
-&lt;/Rows&gt;</code></pre></td>
+</Rows></code></pre></td>
 </tr>
 </tbody>
 </table>

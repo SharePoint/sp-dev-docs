@@ -69,14 +69,14 @@ list.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;DeletedFields&quot; type=&quot;ListDeletedFields&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="DeletedFields" type="ListDeletedFields" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;List&gt;
-   &lt;DeletedFields&gt; 
-      &lt;DeletedField /&gt;
-   &lt;/DeletedFields&gt;&gt;
-&lt;/List&gt;</code></pre></td>
+<List>
+   <DeletedFields> 
+      <DeletedField />
+   </DeletedFields>>
+</List></code></pre></td>
 </tr>
 </tbody>
 </table>

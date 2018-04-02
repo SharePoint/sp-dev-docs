@@ -73,8 +73,8 @@ element are not **TRUE**.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Else&gt;
-&lt;/Else&gt;</code></pre></td>
+<td align="left"><pre><code><Else>
+</Else></code></pre></td>
 </tr>
 </tbody>
 </table>

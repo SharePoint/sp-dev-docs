@@ -76,8 +76,8 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RegionalSettings&gt;
-&lt;/RegionalSettings&gt;</code></pre></td>
+<td align="left"><pre><code><RegionalSettings>
+</RegionalSettings></code></pre></td>
 </tr>
 </tbody>
 </table>

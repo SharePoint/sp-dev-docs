@@ -71,14 +71,14 @@ class="nolink">SPModule</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Properties&quot; type=&quot;Dictionary&quot; /&gt;
+<xs:element name="Properties" type="Dictionary" />
 
 USAGE
-&lt;Module&gt;
-        &lt;Properties
-                &lt;Property /&gt;
-        /&gt;
-&lt;/Module&gt;</code></pre></td>
+<Module>
+        <Properties
+                <Property />
+        />
+</Module></code></pre></td>
 </tr>
 </tbody>
 </table>

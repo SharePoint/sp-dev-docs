@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LocalizedDisplayNames&gt;&lt;/LocalizedDisplayNames&gt;</code></pre></td>
+<td align="left"><pre><code><LocalizedDisplayNames></LocalizedDisplayNames></code></pre></td>
 </tr>
 </tbody>
 </table>

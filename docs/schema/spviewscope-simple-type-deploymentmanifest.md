@@ -68,14 +68,14 @@ into a document library.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPViewScope&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;Default&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Recursive&quot; /&gt;
-                &lt;xs:enumeration value=&quot;RecursiveAll&quot; /&gt;
-                &lt;xs:enumeration value=&quot;FilesOnly&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPViewScope">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="Default" />
+                <xs:enumeration value="Recursive" />
+                <xs:enumeration value="RecursiveAll" />
+                <xs:enumeration value="FilesOnly" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

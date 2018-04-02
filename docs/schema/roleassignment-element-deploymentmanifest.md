@@ -69,21 +69,21 @@ class="keyword">DeploymentRoleAssignment</span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;RoleAssignment&quot; type=&quot;DeploymentRoleAssignment&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="RoleAssignment" type="DeploymentRoleAssignment" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;RoleAssignments&gt;
-        &lt;RoleAssignment
-                        &lt;Assignment /&gt;
-                ScopeId=&quot;xs:string&quot;
-                RoleDefWebId=&quot;xs:string&quot;
-                RoleDefWebUrl=&quot;xs:string&quot;
-                ObjectId=&quot;xs:string&quot;
-                ObjectType=&quot;xs:string&quot;
-                ObjectUrl=&quot;xs:string&quot;
-                AnonymousPermMask=&quot;xs:string&quot;
-        /&gt;
-&lt;/RoleAssignments&gt;</code></pre></td>
+<RoleAssignments>
+        <RoleAssignment
+                        <Assignment />
+                ScopeId="xs:string"
+                RoleDefWebId="xs:string"
+                RoleDefWebUrl="xs:string"
+                ObjectId="xs:string"
+                ObjectType="xs:string"
+                ObjectUrl="xs:string"
+                AnonymousPermMask="xs:string"
+        />
+</RoleAssignments></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,13 +71,13 @@ Defines how a group of controls on a tab are sized.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Scale
-  GroupId=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  Sequence=&quot;Integer&quot;
-  Size=&quot;Text&quot;
-  PopupSize=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Scale
+  GroupId="Text"
+  Id="Text"
+  Sequence="Integer"
+  Size="Text"
+  PopupSize="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -103,7 +103,7 @@ Defines how a group of controls on a tab are sized.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon.WikiPageTab.Scaling.PageActions.MediumSmall&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon.WikiPageTab.Scaling.PageActions.MediumSmall".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sequence**</p></td>

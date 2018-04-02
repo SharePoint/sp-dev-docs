@@ -72,19 +72,19 @@ view or a form.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element
-    name=&quot;ViewForm&quot;
-    type=&quot;SPViewForm&quot;
-    minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;
-/&gt;
+<xs:element
+    name="ViewForm"
+    type="SPViewForm"
+    minOccurs="0" maxOccurs="unbounded"
+/>
 
 USAGE
-&lt;ViewFormsList&gt;
-    &lt;ViewForm
-       Id=&quot;xs:string&quot;
-       Type=&quot;xs:string&quot;
-    /&gt;
-&lt;/ViewFormsList&gt;</code></pre></td>
+<ViewFormsList>
+    <ViewForm
+       Id="xs:string"
+       Type="xs:string"
+    />
+</ViewFormsList></code></pre></td>
 </tr>
 </tbody>
 </table>

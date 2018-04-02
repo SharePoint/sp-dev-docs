@@ -71,10 +71,10 @@ Defines a section of a layout.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Section
-  Type=&quot;Divider | OneRow | TwoRow | ThreeRow&quot;
-  Alignment=&quot;Top | Middle&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Section
+  Type="Divider | OneRow | TwoRow | ThreeRow"
+  Alignment="Top | Middle"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

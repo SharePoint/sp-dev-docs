@@ -72,9 +72,9 @@ based on the file name extension and ProgID.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MapToControl&gt;
+<td align="left"><pre><code><MapToControl>
       ProgID|File_Extension
-&lt;/MapToControl&gt;</code></pre></td>
+</MapToControl></code></pre></td>
 </tr>
 </tbody>
 </table>

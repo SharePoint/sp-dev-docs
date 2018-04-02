@@ -76,13 +76,13 @@ Top-level element for an alert templates file.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AlertTemplates
-  &lt;AlertTemplate&gt;
+<td align="left"><pre><code><AlertTemplates
+  <AlertTemplate>
     ...
-  &lt;/AlertTemplate&gt;  [&lt;AlertTemplate&gt;
+  </AlertTemplate>  [<AlertTemplate>
     ...
-  &lt;/AlertTemplate&gt;]
-&lt;/AlertTemplates&gt;</code></pre></td>
+  </AlertTemplate>]
+</AlertTemplates></code></pre></td>
 </tr>
 </tbody>
 </table>

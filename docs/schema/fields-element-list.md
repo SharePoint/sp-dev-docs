@@ -75,8 +75,8 @@ file, specifying the fields that are implemented in a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Fields  Revision = &quot;Integer&quot;&gt;  ...
-&lt;/Fields&gt;</code></pre></td>
+<td align="left"><pre><code><Fields  Revision = "Integer">  ...
+</Fields></code></pre></td>
 </tr>
 </tbody>
 </table>

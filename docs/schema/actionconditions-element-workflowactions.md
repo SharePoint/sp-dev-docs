@@ -23,16 +23,16 @@ Specifies conditional logic for the action.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Actions&gt;
-    &lt;Action&gt;
-        &lt;ActionVariables&gt;
-        &lt;/ActionVariables&gt;
-        &lt;ActionBody&gt;
-        &lt;/ActionBody&gt;
-        &lt;ActionConditions&gt;
-        &lt;/ActionConditions&gt;
-    &lt;/Action&gt;
-&lt;/Actions&gt;</code></pre></td>
+<td align="left"><pre><code><Actions>
+    <Action>
+        <ActionVariables>
+        </ActionVariables>
+        <ActionBody>
+        </ActionBody>
+        <ActionConditions>
+        </ActionConditions>
+    </Action>
+</Actions></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,17 +67,17 @@ Specifies the base type for a SharePoint list item.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPBaseType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;UnspecifiedBaseType&quot; /&gt;
-                &lt;xs:enumeration value=&quot;GenericList&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DocumentLibrary&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Unused&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DiscussionBoard&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Survey&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Issue&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPBaseType">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="UnspecifiedBaseType" />
+                <xs:enumeration value="GenericList" />
+                <xs:enumeration value="DocumentLibrary" />
+                <xs:enumeration value="Unused" />
+                <xs:enumeration value="DiscussionBoard" />
+                <xs:enumeration value="Survey" />
+                <xs:enumeration value="Issue" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

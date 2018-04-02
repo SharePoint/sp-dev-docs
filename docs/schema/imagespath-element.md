@@ -68,8 +68,8 @@ the trailing forward slash.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ImagesPath&gt;
-&lt;/ImagesPath&gt;</code></pre></td>
+<td align="left"><pre><code><ImagesPath>
+</ImagesPath></code></pre></td>
 </tr>
 </tbody>
 </table>

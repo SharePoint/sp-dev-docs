@@ -71,14 +71,14 @@ Defines a section of a menu.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MenuSection
-  Id=&quot;Text&quot;
-  Title=&quot;Text&quot;
-  Scrollable=&quot;TRUE | FALSE&quot;
-  Sequence=&quot;Integer&quot;
-  MaxHeight=&quot;Integer&quot;
-  DisplayMode=&quot;Menu | Menu16 | Menu32&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><MenuSection
+  Id="Text"
+  Title="Text"
+  Scrollable="TRUE | FALSE"
+  Sequence="Integer"
+  MaxHeight="Integer"
+  DisplayMode="Menu | Menu16 | Menu32"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>

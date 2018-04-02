@@ -71,8 +71,8 @@ Contains the display names of formulas used within a list field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FormulaDisplayNames&gt;
-&lt;/FormulaDisplayNames&gt;</code></pre></td>
+<td align="left"><pre><code><FormulaDisplayNames>
+</FormulaDisplayNames></code></pre></td>
 </tr>
 </tbody>
 </table>

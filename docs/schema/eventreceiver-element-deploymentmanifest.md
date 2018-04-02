@@ -81,29 +81,29 @@ class="nolink">SPWeb</span></span> objects.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;EventReceiver&quot; 
-        type=&quot;SPEventReceiverDefinition&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="EventReceiver" 
+        type="SPEventReceiverDefinition" 
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;EventReceivers&gt;
-        &lt;EventReceiver
-                Id=&quot;Guid&quot;
-                Name=&quot;xs:string&quot;
-                WebId=&quot;Guid&quot;
-                HostId=&quot;Guid&quot;
-                HostType=&quot;SPEventHostType&quot;
-                Type=&quot;SPEventReceiverType&quot;
-                SequenceNumber=&quot;xs:int&quot;
-                Assembly=&quot;xs:string&quot;
-                Class=&quot;xs:string&quot;
-                Data=&quot;xs:string&quot;
-                Filter=&quot;xs:string&quot;
-                Credential=&quot;xs:int&quot;
-                ItemId=&quot;xs:int&quot;
-        /&gt;
-&lt;/EventReceivers&gt;</code></pre></td>
+<EventReceivers>
+        <EventReceiver
+                Id="Guid"
+                Name="xs:string"
+                WebId="Guid"
+                HostId="Guid"
+                HostType="SPEventHostType"
+                Type="SPEventReceiverType"
+                SequenceNumber="xs:int"
+                Assembly="xs:string"
+                Class="xs:string"
+                Data="xs:string"
+                Filter="xs:string"
+                Credential="xs:int"
+                ItemId="xs:int"
+        />
+</EventReceivers></code></pre></td>
 </tr>
 </tbody>
 </table>

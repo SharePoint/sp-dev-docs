@@ -75,8 +75,8 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TimeZones&gt;
-&lt;/TimeZones&gt;</code></pre></td>
+<td align="left"><pre><code><TimeZones>
+</TimeZones></code></pre></td>
 </tr>
 </tbody>
 </table>

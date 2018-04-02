@@ -68,10 +68,10 @@ class="keyword">GetCustomerForOrder</span>, and <span
 class="keyword">AssociateCustomerToOrder</span> are all association
 methods that work on the same relationship between Customer and Order.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Schema:** BDCMetadata
+**Schema**: BDCMetadata
 
 **AssociationGroup** must be defined on the
 Entity element that is the Destination of the <span
@@ -91,7 +91,7 @@ class="keyword">AssociationReferences</span> that are marked as Reverse.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AssociationGroup Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/AssociationGroup&gt;</code></pre></td>
+<td align="left"><pre><code><AssociationGroup Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </AssociationGroup></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -80,7 +80,7 @@ Specifies that SPMetal generates classes for hidden content types.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IncludeHiddenContentTypes /&gt;</code></pre></td>
+<td align="left"><pre><code><IncludeHiddenContentTypes /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -73,14 +73,14 @@ class="nolink">SPFile</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Links&quot; type=&quot;SPLinkCollection&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="Links" type="SPLinkCollection" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;File&gt;
-        &lt;Links 
-                &lt;Link /&gt;
-        /&gt;
-&lt;/File&gt;</code></pre></td>
+<File>
+        <Links 
+                <Link />
+        />
+</File></code></pre></td>
 </tr>
 </tbody>
 </table>

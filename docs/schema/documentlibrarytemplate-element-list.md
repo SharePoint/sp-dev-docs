@@ -73,8 +73,8 @@ serves as the template document for a document library.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocumentLibraryTemplate&gt;
-&lt;/DocumentLibraryTemplate&gt;</code></pre></td>
+<td align="left"><pre><code><DocumentLibraryTemplate>
+</DocumentLibraryTemplate></code></pre></td>
 </tr>
 </tbody>
 </table>

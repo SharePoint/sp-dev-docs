@@ -71,8 +71,8 @@ Renders the URL of the list relative to the containing Web site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListUrl&gt;
-&lt;/ListUrl&gt;</code></pre></td>
+<td align="left"><pre><code><ListUrl>
+</ListUrl></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,8 +71,8 @@ Used within the context of a query to specify a filter.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Where&gt;
-&lt;/Where&gt;</code></pre></td>
+<td align="left"><pre><code><Where>
+</Where></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ActionParameters&gt;&lt;/ActionParameters&gt;</code></pre></td>
+<td align="left"><pre><code><ActionParameters></ActionParameters></code></pre></td>
 </tr>
 </tbody>
 </table>

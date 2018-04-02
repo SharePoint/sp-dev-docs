@@ -72,24 +72,24 @@ class="nolink">SPList</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ListTemplate&quot; type=&quot;SPListTemplate&quot; /&gt;
+<xs:element name="ListTemplate" type="SPListTemplate" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;ListTemplate
-                BaseType=&quot;xs:string&quot;
-                Description=&quot;xs:string&quot;
-                Hidden=&quot;xs:string&quot;
-                ImageUrl=&quot;xs:string&quot;
-                InternalName=&quot;xs:string&quot;
-                IsCustomTemplate=&quot;xs:boolean&quot;
-                Name=&quot;xs:string&quot;
-                OnQuickLaunch=&quot;xs:string&quot;
-                SchemaXml=&quot;xs:string&quot;
-                Type=&quot;xs:string&quot;
-                Unique=&quot;xs:boolean&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <ListTemplate
+                BaseType="xs:string"
+                Description="xs:string"
+                Hidden="xs:string"
+                ImageUrl="xs:string"
+                InternalName="xs:string"
+                IsCustomTemplate="xs:boolean"
+                Name="xs:string"
+                OnQuickLaunch="xs:string"
+                SchemaXml="xs:string"
+                Type="xs:string"
+                Unique="xs:boolean"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

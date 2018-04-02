@@ -71,8 +71,8 @@ Defines icons for documents according to their programmatic identifiers.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ByProgID&gt;
-&lt;/ByProgID&gt;</code></pre></td>
+<td align="left"><pre><code><ByProgID>
+</ByProgID></code></pre></td>
 </tr>
 </tbody>
 </table>

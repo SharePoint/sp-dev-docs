@@ -76,19 +76,19 @@ Language (CAML).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FilterDefinition&gt;
-  &lt;FriendlyName&gt;
-  &lt;/FriendlyName&gt;  &lt;ShortName&gt;
-  &lt;/ShortName&gt;
-  &lt;Query&gt;
-    &lt;GroupBy&gt;
+<td align="left"><pre><code><FilterDefinition>
+  <FriendlyName>
+  </FriendlyName>  <ShortName>
+  </ShortName>
+  <Query>
+    <GroupBy>
       ...
-    &lt;/GroupBy&gt;
-    &lt;OrderBy&gt;
+    </GroupBy>
+    <OrderBy>
       ...
-    &lt;/OrderBy&gt;
-  &lt;/Query&gt;
-&lt;/FilterDefinition&gt;</code></pre></td>
+    </OrderBy>
+  </Query>
+</FilterDefinition></code></pre></td>
 </tr>
 </tbody>
 </table>

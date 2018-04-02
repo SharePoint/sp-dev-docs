@@ -71,9 +71,9 @@ Defines a filter based on the type of membership for the user.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Membership
-  Type = &quot;Text&quot;&gt;
-&lt;/ Membership&gt;</code></pre></td>
+<td align="left"><pre><code><Membership
+  Type = "Text">
+</ Membership></code></pre></td>
 </tr>
 </tbody>
 </table>

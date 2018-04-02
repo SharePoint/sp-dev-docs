@@ -69,8 +69,8 @@ list is instantiated during site provisioning.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Row&gt;
-&lt;/Row&gt;</code></pre></td>
+<td align="left"><pre><code><Row>
+</Row></code></pre></td>
 </tr>
 </tbody>
 </table>

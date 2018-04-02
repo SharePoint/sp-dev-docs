@@ -73,9 +73,9 @@ statement to perform a comparison.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Case
-  Value = &quot;Text&quot;&gt;
-&lt;/Case&gt;</code></pre></td>
+<td align="left"><pre><code><Case
+  Value = "Text">
+</Case></code></pre></td>
 </tr>
 </tbody>
 </table>

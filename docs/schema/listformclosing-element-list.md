@@ -71,8 +71,8 @@ Defines the closing section in a form for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListFormClosing&gt;
-&lt;/ListFormClosing&gt;</code></pre></td>
+<td align="left"><pre><code><ListFormClosing>
+</ListFormClosing></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -324,7 +324,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>UsesCurrentItem</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies whether a given workflow action can be used in a &quot;site&quot; workflow. Setting this to <strong>true</strong> means that the action cannot be used and is not available for site workflows. The copy/paste function on actions is also blocked. If this attribute value is not set, <strong>false</strong> is implied.</p></td>
+<td align="left"><p>Specifies whether a given workflow action can be used in a "site" workflow. Setting this to <strong>true</strong> means that the action cannot be used and is not available for site workflows. The copy/paste function on actions is also blocked. If this attribute value is not set, <strong>false</strong> is implied.</p></td>
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 </tbody>

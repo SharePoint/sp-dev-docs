@@ -71,14 +71,14 @@ class="nolink">SPWeb</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Properties&quot; type=&quot;Dictionary&quot; /&gt;
+<xs:element name="Properties" type="Dictionary" />
 
 USAGE
-&lt;Web&gt;
-        &lt;Properties
-                &lt;Property /&gt;
-        /&gt;
-&lt;/Web&gt;</code></pre></td>
+<Web>
+        <Properties
+                <Property />
+        />
+</Web></code></pre></td>
 </tr>
 </tbody>
 </table>

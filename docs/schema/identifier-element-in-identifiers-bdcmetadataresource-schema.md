@@ -62,10 +62,10 @@ Specifies localized display names and properties, in any combination,
 for an [Identifier Element in Identifiers
 (BDCMetadata Schema)](identifier-element-in-identifiers-bdcmetadata-schema.md)</span>.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
-**Schema:** BDCMetadataResource
+**Schema**: BDCMetadataResource
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Identifier Name = &quot;String&quot;&gt; &lt;/Identifier&gt;</code></pre></td>
+<td align="left"><pre><code><Identifier Name = "String"> </Identifier></code></pre></td>
 </tr>
 </tbody>
 </table>

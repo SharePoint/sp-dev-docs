@@ -74,11 +74,11 @@ an announcements list template of the previous version must be mapped
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AppliedWebFeatures&gt;
-    &lt;Feature
-      ID = &quot;GUID&quot;
-      Force = &quot;true&quot; | &quot;false&quot; /&gt;
-&lt;/AppliedWebFeatures&gt;</code></pre></td>
+<td align="left"><pre><code><AppliedWebFeatures>
+    <Feature
+      ID = "GUID"
+      Force = "true" | "false" />
+</AppliedWebFeatures></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -68,12 +68,12 @@ Represents an object specifying the style of a SharePoint calendar view.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;CalendarViewStyles&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; /&gt;
+<xs:element name="CalendarViewStyles" minOccurs="0" maxOccurs="1" />
 
 USAGE
-&lt;View&gt;
-   &lt;CalendarViewStyles /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+   <CalendarViewStyles />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

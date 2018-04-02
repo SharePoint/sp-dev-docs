@@ -71,9 +71,9 @@ and other elements of the DeploymentLookupListMap Schema.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;Guid&quot;&gt;
-    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="Guid">
+    <xs:restriction base="xs:string"></xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

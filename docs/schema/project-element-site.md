@@ -74,16 +74,16 @@ configuration for a new Web site.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Project
-  AlternateCSS = &quot;Text&quot;
-  AlternateHeader = &quot;Text&quot;  AlternateUrl = &quot;Text&quot;
-  CustomJSUrl = &quot;Text&quot;
-  DisableWebDesignFeatures = &quot;Text&quot;
-  ListDir = &quot;Text&quot;
-  Revision = &quot;Integer&quot;
-  SiteLogoUrl = &quot;Text&quot;  SiteLogoDescription = &quot;Text&quot;
-  Title = &quot;Text&quot;  UIVersion = &quot;Integer&quot;&gt;
-&lt;/Project&gt;</code></pre></td>
+<td align="left"><pre><code><Project
+  AlternateCSS = "Text"
+  AlternateHeader = "Text"  AlternateUrl = "Text"
+  CustomJSUrl = "Text"
+  DisableWebDesignFeatures = "Text"
+  ListDir = "Text"
+  Revision = "Integer"
+  SiteLogoUrl = "Text"  SiteLogoDescription = "Text"
+  Title = "Text"  UIVersion = "Integer">
+</Project></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +109,7 @@ configuration for a new Web site.
 </tr>
 <tr class="even">
 <td align="left"><p>**AlternateHeader**</p></td>
-<td align="left"><p>Optional **Text</span>. Used to specify the name of an ASPX page located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternate header for the top area in site pages. This attribute provides a means to replace the header region of a page with the output of an ASPX page that defines a different header. For example, add <span class="code">AlternateHeader=&quot;myHeader.aspx&quot;</span> to the **Project</span> element to specify <span class="code">myHeader.aspx** as the name of the file that provides an alternate header.</p></td>
+<td align="left"><p>Optional **Text</span>. Used to specify the name of an ASPX page located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternate header for the top area in site pages. This attribute provides a means to replace the header region of a page with the output of an ASPX page that defines a different header. For example, add <span class="code">AlternateHeader="myHeader.aspx"</span> to the **Project</span> element to specify <span class="code">myHeader.aspx** as the name of the file that provides an alternate header.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AlternateUrl**</p></td>

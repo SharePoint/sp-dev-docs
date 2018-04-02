@@ -69,16 +69,16 @@ Specifies how data source fields are displayed.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SchemaSource&gt;
-    &lt;Fields&gt;
-    &lt;/Fields&gt;
-    &lt;ContentType&gt;
-    &lt;/ContentType&gt;
-    &lt;Dictionary&gt;
-    &lt;/Dictionary&gt;
-    &lt;NestedInitiationFieldNodes&gt;
-    &lt;/NestedInitiationFieldNodes&gt;
-&lt;/SchemaSource&gt;</code></pre></td>
+<td align="left"><pre><code><SchemaSource>
+    <Fields>
+    </Fields>
+    <ContentType>
+    </ContentType>
+    <Dictionary>
+    </Dictionary>
+    <NestedInitiationFieldNodes>
+    </NestedInitiationFieldNodes>
+</SchemaSource></code></pre></td>
 </tr>
 </tbody>
 </table>

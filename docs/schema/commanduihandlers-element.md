@@ -67,7 +67,7 @@ Contains elements that define handlers for user interface events.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CommandUIHandlers /&gt;</code></pre></td>
+<td align="left"><pre><code><CommandUIHandlers /></code></pre></td>
 </tr>
 </tbody>
 </table>

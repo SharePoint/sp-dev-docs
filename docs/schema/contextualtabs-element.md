@@ -71,9 +71,9 @@ Contains groups of tabs that are conditionally present.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextualTabs
-  Id=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><ContextualTabs
+  Id="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ Contains groups of tabs that are conditionally present.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that unambiguously identifies the element, such as &quot;Ribbon.ContextualTabs&quot;.</p></td>
+<td align="left"><p>Required. A string that unambiguously identifies the element, such as "Ribbon.ContextualTabs".</p></td>
 </tr>
 </tbody>
 </table>

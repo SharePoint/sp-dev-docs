@@ -69,12 +69,12 @@ of a Windows SharePoint Services 3.0 view object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ViewStyle&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="ViewStyle" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;View&gt;
-        &lt; ViewStyle /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+        < ViewStyle />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

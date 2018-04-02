@@ -73,17 +73,17 @@ to generate a workflow template in SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Template
-  BaseID=&quot;Text&quot;
-  DocLibID=&quot;Text&quot;
-  XomlID=&quot;Text&quot; | &quot;Integer&quot;
-  XomlHref=&quot;Text&quot;
-  XomlVersion=&quot;Text&quot;
-  RulesID=&quot;Text&quot; | &quot;Integer&quot;
-  RulesHref=&quot;Text&quot;
-  RulesVersion=&quot;Text&quot;
-&gt;
-&lt;/Template&gt;</code></pre></td>
+<td align="left"><pre><code><Template
+  BaseID="Text"
+  DocLibID="Text"
+  XomlID="Text" | "Integer"
+  XomlHref="Text"
+  XomlVersion="Text"
+  RulesID="Text" | "Integer"
+  RulesHref="Text"
+  RulesVersion="Text"
+>
+</Template></code></pre></td>
 </tr>
 </tbody>
 </table>

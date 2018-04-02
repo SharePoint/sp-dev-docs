@@ -71,8 +71,8 @@ Specifies row fields for the alert message.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RowFields&gt;
-&lt;/RowFields&gt;</code></pre></td>
+<td align="left"><pre><code><RowFields>
+</RowFields></code></pre></td>
 </tr>
 </tbody>
 </table>

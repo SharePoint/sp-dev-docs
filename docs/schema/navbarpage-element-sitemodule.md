@@ -72,11 +72,11 @@ module so that other pages can be linked to the page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NavBarPage
-  ID = &quot;Integer&quot;
-  Name = &quot;Text&quot;
-  Position = &quot;Text&quot;&gt;
-&lt;/NavBarPage&gt;</code></pre></td>
+<td align="left"><pre><code><NavBarPage
+  ID = "Integer"
+  Name = "Text"
+  Position = "Text">
+</NavBarPage></code></pre></td>
 </tr>
 </tbody>
 </table>

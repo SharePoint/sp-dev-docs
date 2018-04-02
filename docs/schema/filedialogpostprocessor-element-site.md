@@ -72,9 +72,9 @@ for Web views in the file dialog boxes and forms of document libraries.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FileDialogPostProcessor
-  ID = &quot;Text&quot;&gt;
-&lt;/FileDialogPostProcessor&gt;</code></pre></td>
+<td align="left"><pre><code><FileDialogPostProcessor
+  ID = "Text">
+</FileDialogPostProcessor></code></pre></td>
 </tr>
 </tbody>
 </table>

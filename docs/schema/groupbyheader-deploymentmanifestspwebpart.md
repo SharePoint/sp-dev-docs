@@ -70,12 +70,12 @@ class="nolink">GroupByHeader</span></span>) used in a Web Part.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;GroupByHeader&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="GroupByHeader" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;WebPart&gt;
-        &lt;GroupByHeader /&gt;
-&lt;/WebPart&gt;</code></pre></td>
+<WebPart>
+        <GroupByHeader />
+</WebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

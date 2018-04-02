@@ -69,14 +69,14 @@ Specifies a workflow modification.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Actions&gt;
-    &lt;Action&gt;
-        &lt;Modifications&gt;
-            &lt;Modification&gt;
-            &lt;/Modification&gt;
-        &lt;/Modifications &gt;
-    &lt;/Action&gt;
-&lt;/Actions&gt;</code></pre></td>
+<td align="left"><pre><code><Actions>
+    <Action>
+        <Modifications>
+            <Modification>
+            </Modification>
+        </Modifications >
+    </Action>
+</Actions></code></pre></td>
 </tr>
 </tbody>
 </table>

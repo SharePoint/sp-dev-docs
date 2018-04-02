@@ -73,12 +73,12 @@ class="keyword">OrderBy</span> element contains a group of
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;OrderBy  Override = &quot;TRUE&quot; | &quot;FALSE&quot;  UseIndexForOrderBy = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-  &lt;FieldRef
-    Ascending = &quot;TRUE&quot; | &quot;FALSE&quot;
-    Name = &quot;Text&quot; /&gt;
+<td align="left"><pre><code><OrderBy  Override = "TRUE" | "FALSE"  UseIndexForOrderBy = "TRUE" | "FALSE">
+  <FieldRef
+    Ascending = "TRUE" | "FALSE"
+    Name = "Text" />
     ...
-&lt;/OrderBy&gt;</code></pre></td>
+</OrderBy></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,12 +72,12 @@ locally to the current level of XML or globally to the page.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SetVar
-  ID = &quot;Text&quot;
-  Name = &quot;Text&quot;
-  Scope = &quot;Request&quot;
-  Value = &quot;Text&quot;&gt;
-&lt;/SetVar&gt;</code></pre></td>
+<td align="left"><pre><code><SetVar
+  ID = "Text"
+  Name = "Text"
+  Scope = "Request"
+  Value = "Text">
+</SetVar></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,9 +71,9 @@ Contains elements that define controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Controls
-     Id=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Controls
+     Id="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +95,7 @@ Contains elements that define controls.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. Identifies the element. The value can be a string representation of a GUID or a unique term such as &quot;Ribbon.Library.Share.NewRibbonCheckBox&quot;.</p></td>
+<td align="left"><p>Required. Identifies the element. The value can be a string representation of a GUID or a unique term such as "Ribbon.Library.Share.NewRibbonCheckBox".</p></td>
 </tr>
 </tbody>
 </table>

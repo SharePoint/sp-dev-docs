@@ -67,32 +67,32 @@ Provides values for all top-level serialized SharePoint object types.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPObjectType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;SPSite&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPWeb&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPList&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPDocumentLibrary&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPPictureLibrary&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPListItem&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPFolder&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPFile&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPContentType&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPWebTemplate&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPModule&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPDocumentTemplate&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPListTemplate&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentWebStructure&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentUserX&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentGroupX&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentRoles&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentRoleX&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentRoleAssignments&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentRoleAssignmentX&quot; /&gt;
-                &lt;xs:enumeration value=&quot;DeploymentFieldTemplate&quot; /&gt;
-                &lt;xs:enumeration value=&quot;SPFeature&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPObjectType">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="SPSite" />
+                <xs:enumeration value="SPWeb" />
+                <xs:enumeration value="SPList" />
+                <xs:enumeration value="SPDocumentLibrary" />
+                <xs:enumeration value="SPPictureLibrary" />
+                <xs:enumeration value="SPListItem" />
+                <xs:enumeration value="SPFolder" />
+                <xs:enumeration value="SPFile" />
+                <xs:enumeration value="SPContentType" />
+                <xs:enumeration value="SPWebTemplate" />
+                <xs:enumeration value="SPModule" />
+                <xs:enumeration value="SPDocumentTemplate" />
+                <xs:enumeration value="SPListTemplate" />
+                <xs:enumeration value="DeploymentWebStructure" />
+                <xs:enumeration value="DeploymentUserX" />
+                <xs:enumeration value="DeploymentGroupX" />
+                <xs:enumeration value="DeploymentRoles" />
+                <xs:enumeration value="DeploymentRoleX" />
+                <xs:enumeration value="DeploymentRoleAssignments" />
+                <xs:enumeration value="DeploymentRoleAssignmentX" />
+                <xs:enumeration value="DeploymentFieldTemplate" />
+                <xs:enumeration value="SPFeature" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

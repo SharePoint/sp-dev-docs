@@ -71,40 +71,40 @@ Defines a control that combines a button and a drop-down menu.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SplitButton
-  Alt=&quot;Text&quot;
-  CacheMenuVersions=&quot;TRUE | FALSE&quot;
-  Command=&quot;Text&quot;
-  CommandMenuOpen=&quot;Text&quot;
-  CommandMenuClose=&quot;Text&quot;
-  CommandType=&quot;General | OptionSelection | IgnoredByMenu&quot;
-  Id=&quot;Text&quot;
-  Image32by32=&quot;Url&quot;
-  Image32by32Class=&quot;CSS Class Selector&quot;
-  Image32by32Left=&quot;Negative Integer&quot;
-  Image32by32Top=&quot;Negative Integer&quot;
-  Image16by16=&quot;Url&quot;
-  Image16by16Class=&quot;CSS Class Selector&quot;
-  Image16by16Left=&quot;Negative Integer&quot;
-  Image16by16Top=&quot;Negative Integer&quot;
-  LabelText=&quot;Text&quot;
-  MenuAlt=&quot;Text&quot;
-  MenuCommand=&quot;Text&quot;
-  PopulateDynamically=&quot; TRUE | FALSE &quot;
-  PopulateQueryCommand=&quot;Text&quot;
-  PopulateOnlyOnce=&quot; TRUE | FALSE &quot;
-  Sequence=&quot;Integer&quot;
-  TemplateAlias=&quot;Text&quot;
-  ToolTipImage32by32=&quot;Url&quot;
-  ToolTipImage32by32Class=&quot;CSS Class Selector&quot;
-  ToolTipImage32by32Left=&quot;Negative Integer&quot;
-  ToolTipImage32by32Top=&quot;Negative Integer&quot;
-  ToolTipTitle=&quot;Text&quot;
-  ToolTipDescription=&quot;Text&quot;
-  ToolTipHelpKeyWord=&quot;Text&quot;
-  ToolTipSelectedItemTitle=&quot;Text&quot;
-  ToolTipShortcutKey=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><SplitButton
+  Alt="Text"
+  CacheMenuVersions="TRUE | FALSE"
+  Command="Text"
+  CommandMenuOpen="Text"
+  CommandMenuClose="Text"
+  CommandType="General | OptionSelection | IgnoredByMenu"
+  Id="Text"
+  Image32by32="Url"
+  Image32by32Class="CSS Class Selector"
+  Image32by32Left="Negative Integer"
+  Image32by32Top="Negative Integer"
+  Image16by16="Url"
+  Image16by16Class="CSS Class Selector"
+  Image16by16Left="Negative Integer"
+  Image16by16Top="Negative Integer"
+  LabelText="Text"
+  MenuAlt="Text"
+  MenuCommand="Text"
+  PopulateDynamically=" TRUE | FALSE "
+  PopulateQueryCommand="Text"
+  PopulateOnlyOnce=" TRUE | FALSE "
+  Sequence="Integer"
+  TemplateAlias="Text"
+  ToolTipImage32by32="Url"
+  ToolTipImage32by32Class="CSS Class Selector"
+  ToolTipImage32by32Left="Negative Integer"
+  ToolTipImage32by32Top="Negative Integer"
+  ToolTipTitle="Text"
+  ToolTipDescription="Text"
+  ToolTipHelpKeyWord="Text"
+  ToolTipSelectedItemTitle="Text"
+  ToolTipShortcutKey="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ Defines a control that combines a button and a drop-down menu.
 </tr>
 <tr class="even">
 <td align="left"><p>**Image32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image32by32Class**</p></td>
@@ -168,12 +168,12 @@ Defines a control that combines a button and a drop-down menu.
 <tr class="even">
 <td align="left"><p>**Image32by32Left**</p></td>
 <td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains images for many icons.</p>
-<p>The value of the **Image32by32Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img</span> tag. For example, setting the **Image32by32Left</span> attribute to &quot;<span class="input">-160</span>&quot; and the **Image32by32Top</span> attribute to &quot;<span class="input">-448**&quot; results in an inline style that is similar to the one in the following HTML markup:</p>
+<p>The value of the **Image32by32Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img</span> tag. For example, setting the **Image32by32Left</span> attribute to "<span class="input">-160</span>" and the **Image32by32Top</span> attribute to "<span class="input">-448**" results in an inline style that is similar to the one in the following HTML markup:</p>
 <div class="code">
 <span codelanguage="html"></span>
 HTML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code>&lt;img src=&quot;/_layouts/1033/images/formatmap32x32.png&quot; style=&quot;position: absolute;left: -160px;top: -448px;&quot; /&gt;</code></pre>
+<pre><code><img src="/_layouts/1033/images/formatmap32x32.png" style="position: absolute;left: -160px;top: -448px;" /></code></pre>
 </div></td>
 </tr>
 <tr class="odd">
@@ -182,7 +182,7 @@ HTML 
 </tr>
 <tr class="even">
 <td align="left"><p>**Image16by16**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as &quot;/_layouts/1033/images/formatmap16x16.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap16x16.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image16by16Class**</p></td>
@@ -230,7 +230,7 @@ HTML 
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -262,7 +262,7 @@ HTML 
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is &quot;ALT + J&quot;. The tooltip displays the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 </tbody>
 </table>

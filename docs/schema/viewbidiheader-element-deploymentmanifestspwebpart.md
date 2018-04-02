@@ -70,12 +70,12 @@ SharePoint Services 3.0 view object that supports bidirectional printer
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ViewBidiHeader&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="ViewBidiHeader" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;WebPart&gt;
-        &lt;ViewBidiHeader /&gt;
-&lt;/WebPart&gt;</code></pre></td>
+<WebPart>
+        <ViewBidiHeader />
+</WebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

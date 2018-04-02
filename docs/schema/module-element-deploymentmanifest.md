@@ -71,18 +71,18 @@ files and views that are used in a site template.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Module&quot; type=&quot;SPModule&quot; /&gt;
+<xs:element name="Module" type="SPModule" />
 
 USAGE
-&lt;SPObject&gt;
-   &lt;Module
-      &lt;Properties /&gt;
-         Enabled=&quot;xs:boolean&quot;
-         Name=&quot;xs:string&quot;
-         ParentWeb=&quot;xs:string&quot;
-         Url=&quot;xs:string&quot;
-   /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+   <Module
+      <Properties />
+         Enabled="xs:boolean"
+         Name="xs:string"
+         ParentWeb="xs:string"
+         Url="xs:string"
+   />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

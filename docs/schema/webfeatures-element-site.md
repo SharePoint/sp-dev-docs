@@ -72,8 +72,8 @@ through the site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebFeatures&gt;
-&lt;/WebFeatures&gt;</code></pre></td>
+<td align="left"><pre><code><WebFeatures>
+</WebFeatures></code></pre></td>
 </tr>
 </tbody>
 </table>

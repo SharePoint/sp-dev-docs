@@ -74,15 +74,15 @@ instantiating sites within the deployment.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Templates&gt;
-    &lt;Template
-      ID = &quot;Text&quot;
-     Name = &quot;Text&quot;&gt;
-    &lt;Configuration/&gt;
+<td align="left"><pre><code><Templates>
+    <Template
+      ID = "Text"
+     Name = "Text">
+    <Configuration/>
     ...
-    &lt;/Template&gt;
+    </Template>
   ...
-&lt;/Templates&gt;</code></pre></td>
+</Templates></code></pre></td>
 </tr>
 </tbody>
 </table>

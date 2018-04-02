@@ -73,11 +73,11 @@ whether they overlap.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DateRangesOverlap&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/DateRangesOverlap&gt;</code></pre></td>
+<td align="left"><pre><code><DateRangesOverlap>
+  <FieldRef Name = "Field_Name"/>
+  <Value Type = "Field_Type"/>
+  <XML />
+</DateRangesOverlap></code></pre></td>
 </tr>
 </tbody>
 </table>

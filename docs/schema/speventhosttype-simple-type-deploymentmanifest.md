@@ -67,16 +67,16 @@ Specifies the object type for event hosts.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPEventHostType&quot; &gt;
-   &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-      &lt;xs:enumeration value=&quot;Site&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Web&quot; /&gt;
-      &lt;xs:enumeration value=&quot;List&quot; /&gt;
-      &lt;xs:enumeration value=&quot;ListItem&quot; /&gt;
-      &lt;xs:enumeration value=&quot;ContentType&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Feature&quot; /&gt;
-   &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPEventHostType" >
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="Site" />
+      <xs:enumeration value="Web" />
+      <xs:enumeration value="List" />
+      <xs:enumeration value="ListItem" />
+      <xs:enumeration value="ContentType" />
+      <xs:enumeration value="Feature" />
+   </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

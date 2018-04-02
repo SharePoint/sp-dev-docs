@@ -70,8 +70,8 @@ lists of Web sites based on Microsoft SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GlobalLists&gt;
-&lt;/GlobalLists&gt;</code></pre></td>
+<td align="left"><pre><code><GlobalLists>
+</GlobalLists></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,10 +72,10 @@ is rendered above the view header.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Toolbar
-  Position = &quot;After&quot;
-  Type = &quot;Standard&quot; | &quot;FreeForm&quot;&gt;
-&lt;/Toolbar&gt;</code></pre></td>
+<td align="left"><pre><code><Toolbar
+  Position = "After"
+  Type = "Standard" | "FreeForm">
+</Toolbar></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -97,7 +97,7 @@ is rendered above the view header.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Position**</p></td>
-<td align="left"><p>Optional **Text</span>. If **Position = &quot;After&quot;** is specified, the toolbar will appear below the view body. If not specified, the toolbar will appear above the view body.</p></td>
+<td align="left"><p>Optional **Text</span>. If **Position = "After"** is specified, the toolbar will appear below the view body. If not specified, the toolbar will appear above the view body.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Type**</p></td>

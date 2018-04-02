@@ -74,11 +74,11 @@ class="code">http://myserver/myweb/</span>.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;HttpVDir
-  CurrentWeb = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncodeAsURL = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/HttpVDir&gt;</code></pre></td>
+<td align="left"><pre><code><HttpVDir
+  CurrentWeb = "TRUE" | "FALSE"
+  URLEncode = "TRUE" | "FALSE"
+  URLEncodeAsURL = "TRUE" | "FALSE">
+</HttpVDir></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -108,7 +108,7 @@ class="code">http://myserver/myweb/</span>.
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.</p></td>
 </tr>
 </tbody>
 </table>

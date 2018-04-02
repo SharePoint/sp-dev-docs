@@ -69,14 +69,14 @@ attribute on the [ExportSettings Element
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPIncludeVersions&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;LastMajor&quot; /&gt;
-                &lt;xs:enumeration value=&quot;CurrentVersion&quot; /&gt;
-                &lt;xs:enumeration value=&quot;LastMajorAndMinor&quot; /&gt;
-                &lt;xs:enumeration value=&quot;All&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPIncludeVersions">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="LastMajor" />
+                <xs:enumeration value="CurrentVersion" />
+                <xs:enumeration value="LastMajorAndMinor" />
+                <xs:enumeration value="All" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

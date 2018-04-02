@@ -69,8 +69,8 @@ Contains a collection of custom workflow status column values.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExtendedStatusColumnValues/&gt;
-&lt;/ExtendedStatusColumnValues&gt;</code></pre></td>
+<td align="left"><pre><code><ExtendedStatusColumnValues/>
+</ExtendedStatusColumnValues></code></pre></td>
 </tr>
 </tbody>
 </table>

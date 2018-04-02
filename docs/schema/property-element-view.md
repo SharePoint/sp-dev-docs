@@ -74,20 +74,20 @@ be used to retrieve a specific attribute value from it.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Property
-  AutoHyperLink = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoHyperLinkNoEncoding = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoNewLine = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Default = &quot;Text&quot;
-..ExpandXML = &quot;TRUE&quot; | &quot;FALSE&quot;
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Name = &quot;Text&quot;
-  OuterLookupField = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Select = &quot;Text&quot;
-  StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncodeAsURL = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/Property&gt;</code></pre></td>
+<td align="left"><pre><code><Property
+  AutoHyperLink = "TRUE" | "FALSE"
+  AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
+  AutoNewLine = "TRUE" | "FALSE"
+  Default = "Text"
+..ExpandXML = "TRUE" | "FALSE"
+  HTMLEncode = "TRUE" | "FALSE"
+  Name = "Text"
+  OuterLookupField = "TRUE" | "FALSE"
+  Select = "Text"
+  StripWS = "TRUE" | "FALSE"
+  URLEncode = "TRUE" | "FALSE"
+  URLEncodeAsURL = "TRUE" | "FALSE">
+</Property></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -109,19 +109,19 @@ be used to retrieve a specific attribute value from it.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AutoHyperLink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears like a hyperlink (for example, www.microsoft.com).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with <A> tags if the text appears like a hyperlink (for example, www.microsoft.com).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with <A> tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to insert &lt;BR&gt; tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to insert <BR> tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string (&quot;&quot;).</p></td>
+<td align="left"><p>Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string ("").</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ExpandXML**</p></td>
@@ -153,7 +153,7 @@ be used to retrieve a specific attribute value from it.
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.</p></td>
 </tr>
 </tbody>
 </table>

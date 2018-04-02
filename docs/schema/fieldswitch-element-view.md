@@ -72,14 +72,14 @@ property.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldSwitch
-   StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-       &lt;Expr&gt;&lt;/Expr&gt;
-       &lt;Case Value=&quot;Value_1&quot;&gt;&lt;/Case&gt;
-       &lt;Case Value=&quot;Value_2&quot;&gt;&lt;/Case&gt;
+<td align="left"><pre><code><FieldSwitch
+   StripWS = "TRUE" | "FALSE">
+       <Expr></Expr>
+       <Case Value="Value_1"></Case>
+       <Case Value="Value_2"></Case>
        ...
-       &lt;Default&gt;&lt;/Default&gt;
-&lt;/FieldSwitch&gt;</code></pre></td>
+       <Default></Default>
+</FieldSwitch></code></pre></td>
 </tr>
 </tbody>
 </table>

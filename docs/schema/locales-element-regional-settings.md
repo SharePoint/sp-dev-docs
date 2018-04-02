@@ -73,12 +73,12 @@ collection of locales defined in regional settings.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Locales&gt;
-  &lt;Locale
-    ID = &quot;Integer&quot;
-    Name = &quot;Text&quot; /&gt;
+<td align="left"><pre><code><Locales>
+  <Locale
+    ID = "Integer"
+    Name = "Text" />
   ...
-&lt;/Locales&gt;</code></pre></td>
+</Locales></code></pre></td>
 </tr>
 </tbody>
 </table>

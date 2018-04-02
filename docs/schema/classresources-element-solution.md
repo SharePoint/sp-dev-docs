@@ -72,13 +72,13 @@ solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ClassResources&gt;
-    &lt;ClassResource
-      FileName = &quot;Text&quot;
-     Location = &quot;Text&quot;&gt;
-    &lt;/ClassResource&gt;
+<td align="left"><pre><code><ClassResources>
+    <ClassResource
+      FileName = "Text"
+     Location = "Text">
+    </ClassResource>
   ...
-&lt;/ClassResources&gt;</code></pre></td>
+</ClassResources></code></pre></td>
 </tr>
 </tbody>
 </table>

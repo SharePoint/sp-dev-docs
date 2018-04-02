@@ -72,8 +72,8 @@ Provides an enumeration of the fields in a view through a listing of the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewFields&gt;
-&lt;/ViewFields&gt;</code></pre></td>
+<td align="left"><pre><code><ViewFields>
+</ViewFields></code></pre></td>
 </tr>
 </tbody>
 </table>

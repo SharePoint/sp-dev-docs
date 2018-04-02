@@ -69,25 +69,25 @@ SharePoint Services 3.0 object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-        name=&quot;ContentType&quot; 
-        type=&quot;SPContentType&quot; 
-/&gt;
+<xs:element 
+        name="ContentType" 
+        type="SPContentType" 
+/>
 
 USAGE
-&lt;SPObject&gt;
-        &lt;ContentType
-                ID=&quot;Guid&quot;
-                Name=&quot;xs:string&quot;
-                Scope=&quot;xs:string&quot;
-                ParentWebId=&quot;Guid&quot;
-                ListId=&quot;Guid&quot;
-                Description=&quot;xs:string&quot;
-                Group=&quot;xs:string&quot;
-                PushDownChanges=&quot;xs:boolean&quot;
-                RequireClientRenderingOnNew=&quot;xs:string&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <ContentType
+                ID="Guid"
+                Name="xs:string"
+                Scope="xs:string"
+                ParentWebId="Guid"
+                ListId="Guid"
+                Description="xs:string"
+                Group="xs:string"
+                PushDownChanges="xs:boolean"
+                RequireClientRenderingOnNew="xs:string"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

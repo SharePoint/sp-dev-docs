@@ -70,14 +70,14 @@ class="nolink">SPSite</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Site&quot; type=&quot;SPSite&quot; /&gt;
+<xs:element name="Site" type="SPSite" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;Site
-                Id=&quot;Guid&quot;
-        /&gt;
-&lt;/SPObject</code></pre></td>
+<SPObject>
+        <Site
+                Id="Guid"
+        />
+</SPObject</code></pre></td>
 </tr>
 </tbody>
 </table>

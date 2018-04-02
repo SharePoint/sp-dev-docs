@@ -77,7 +77,7 @@ information available to the XSL that renders the view.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ParameterBindings&gt;  &lt;ParameterBinding    Name = &quot;Text&quot;    Location = &quot;Text&quot; /&gt;&lt;/ParameterBindings&gt;</code></pre></td>
+<td align="left"><pre><code><ParameterBindings>  <ParameterBinding    Name = "Text"    Location = "Text" /></ParameterBindings></code></pre></td>
 </tr>
 </tbody>
 </table>

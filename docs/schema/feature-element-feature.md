@@ -67,26 +67,26 @@ Defines a Feature to activate or deactivate at a specified scope.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Feature
-  ActivateOnDefault = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AlwaysForceInstall = &quot;TRUE&quot; | &quot;FALSE&quot;
-  AutoActivateInCentralAdmin = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Creator = &quot;Text&quot; 
-  DefaultResourceFile =  &quot;Text&quot;
-  Description = &quot;Text&quot; 
-  Hidden = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Id = &quot;Text&quot;
-  ImageUrl = &quot;Text&quot;
-  ImageUrlAltText = &quot;Text&quot;
-  ReceiverAssembly = &quot;Text&quot;
-  ReceiverClass = &quot;Text&quot;
-  RequireResources = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Scope = &quot;Text&quot;
-  SolutionId = &quot;Text&quot;
-  Title = &quot;Text&quot;
-  UIVersion = &quot;Text&quot;
-  Version = &quot;Text&quot; &gt;
-&lt;/Feature&gt;</code></pre></td>
+<td align="left"><pre><code><Feature
+  ActivateOnDefault = "TRUE" | "FALSE"
+  AlwaysForceInstall = "TRUE" | "FALSE"
+  AutoActivateInCentralAdmin = "TRUE" | "FALSE"
+  Creator = "Text" 
+  DefaultResourceFile =  "Text"
+  Description = "Text" 
+  Hidden = "TRUE" | "FALSE"
+  Id = "Text"
+  ImageUrl = "Text"
+  ImageUrlAltText = "Text"
+  ReceiverAssembly = "Text"
+  ReceiverClass = "Text"
+  RequireResources = "TRUE" | "FALSE"
+  Scope = "Text"
+  SolutionId = "Text"
+  Title = "Text"
+  UIVersion = "Text"
+  Version = "Text" >
+</Feature></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ Defines a Feature to activate or deactivate at a specified scope.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DefaultResourceFile**</p></td>
-<td align="left"><p>Optional** Text</span>. Indicates a common resource file for retrieving Feature XML resources. If you do not specify a resource in the file, SharePoint Foundation looks by default in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATES\FEATURES\<span class="placeholder">FeatureName</span>\Resources\Resources. <span class="placeholder">Culture</span>.resx. However, if you want to provide a shared core resource file for all the Features in your application, you can specify an alternate file through which to access resources by using **DefaultResourceFile</span>. For example, if you set **DefaultResourceFile=&quot;</span><span class="placeholder">MyFile</span>**&quot;</span>, SharePoint Foundation looks in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources\<span class="placeholder">MyFile</span>. <span class="placeholder">Culture**.resx to retrieve localized resources for your Feature.</p></td>
+<td align="left"><p>Optional** Text</span>. Indicates a common resource file for retrieving Feature XML resources. If you do not specify a resource in the file, SharePoint Foundation looks by default in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATES\FEATURES\<span class="placeholder">FeatureName</span>\Resources\Resources. <span class="placeholder">Culture</span>.resx. However, if you want to provide a shared core resource file for all the Features in your application, you can specify an alternate file through which to access resources by using **DefaultResourceFile</span>. For example, if you set **DefaultResourceFile="</span><span class="placeholder">MyFile</span>**"</span>, SharePoint Foundation looks in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources\<span class="placeholder">MyFile</span>. <span class="placeholder">Culture**.resx to retrieve localized resources for your Feature.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
@@ -157,7 +157,7 @@ Defines a Feature to activate or deactivate at a specified scope.
 </tr>
 <tr class="odd">
 <td align="left"><p>**RequireResources**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that SharePoint Foundation check whether resources exist for the Feature by verifying that the standard &quot;sentinel&quot; resource for the Feature is present for a particular culture.</p>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that SharePoint Foundation check whether resources exist for the Feature by verifying that the standard "sentinel" resource for the Feature is present for a particular culture.</p>
 <p>The resource file is named according to the format <span class="placeholder">DOCS-LESSTHANFeature DirectoryDOCS-GREATERTHAN</span>\Resources\Resources. <span class="placeholder">DOCS-LESSTHANCulture NameDOCS-GREATERTHAN</span>.resx, where <span class="placeholder">DOCS-LESSTHANCulture NameDOCS-GREATERTHAN</span> is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
 <p><span class="placeholder">ll-CC</span></p>
 <p><span class="placeholder">ll-Ssss-CC</span></p>
@@ -219,10 +219,10 @@ Defines a Feature to activate or deactivate at a specified scope.
 <td align="left"><p>Optional **Text**. Specifies the user interface (UI) version for this Feature. UIVersion is specified in multiple ways.</p>
 <ul>
 <li><p>=<span class="placeholder">#</span> - the site's UIVersion must be equal to <span class="placeholder">#</span>.</p></li>
-<li><p>&lt;<span class="placeholder">#</span> - the site's UIVersion must be less than <span class="placeholder">#</span>.</p></li>
-<li><p>&gt;<span class="placeholder">#</span> - the site's UIVersion must be greater than <span class="placeholder">#</span>.</p></li>
-<li><p>&lt;=<span class="placeholder">#</span> - the site's UIVersion must be less than or equal to <span class="placeholder">#</span>.</p></li>
-<li><p>&gt;=<span class="placeholder">#</span> - the site's UIVersion must be greater than or equal to <span class="placeholder">#</span>.</p></li>
+<li><p><<span class="placeholder">#</span> - the site's UIVersion must be less than <span class="placeholder">#</span>.</p></li>
+<li><p>><span class="placeholder">#</span> - the site's UIVersion must be greater than <span class="placeholder">#</span>.</p></li>
+<li><p><=<span class="placeholder">#</span> - the site's UIVersion must be less than or equal to <span class="placeholder">#</span>.</p></li>
+<li><p>>=<span class="placeholder">#</span> - the site's UIVersion must be greater than or equal to <span class="placeholder">#</span>.</p></li>
 <li><p><span class="placeholder">#;#</span> - the site's UIVersion must be in the semicolon-delimited list of numbers.</p></li>
 </ul></td>
 </tr>

@@ -67,20 +67,20 @@ Specifies the upgrade actions for the Feature.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UpgradeActions 
+<td align="left"><pre><code><UpgradeActions 
   ReceiverAssembly = string
-  ReceiverClass = string&gt;
-  &lt;AddContentTypeField /&gt;
-  &lt;ApplyElementManifests&gt;
+  ReceiverClass = string>
+  <AddContentTypeField />
+  <ApplyElementManifests>
     ...
-  &lt;CustomUpgradeActions&gt;
+  <CustomUpgradeActions>
     ...
-  &lt;/CustomUpgradeActions&gt;
-  &lt;MapFile /&gt;
-  &lt;VersionRange&gt;
+  </CustomUpgradeActions>
+  <MapFile />
+  <VersionRange>
     ...
-  &lt;/VersionRange&gt;
-&lt;/UpgradeActions&gt;</code></pre></td>
+  </VersionRange>
+</UpgradeActions></code></pre></td>
 </tr>
 </tbody>
 </table>

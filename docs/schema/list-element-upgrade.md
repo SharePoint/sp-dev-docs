@@ -71,11 +71,11 @@ Specifies how an existing list should be upgraded.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;List
-  FromTemplateId = &quot;Integer&quot;
-  ToFeatureId = &quot;GUID&quot;
-  v3Type = &quot;Integer&quot;&gt;
-&lt;/List&gt;</code></pre></td>
+<td align="left"><pre><code><List
+  FromTemplateId = "Integer"
+  ToFeatureId = "GUID"
+  v3Type = "Integer">
+</List></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +105,7 @@ Specifies how an existing list should be upgraded.
 </tr>
 <tr class="odd">
 <td align="left"><p>**v3Type**</p></td>
-<td align="left"><p>Required **Integer</span>. Specifies the content type ID to which the old list definition is upgraded. Example: <span class="code">v3Type=&quot;0x0104**</p></td>
+<td align="left"><p>Required **Integer</span>. Specifies the content type ID to which the old list definition is upgraded. Example: <span class="code">v3Type="0x0104**</p></td>
 </tr>
 </tbody>
 </table>

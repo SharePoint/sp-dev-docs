@@ -71,8 +71,8 @@ Specifies a class name for an alert update handler.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UpdateHandlerClassName&gt;
-&lt;/UpdateHandlerClassName&gt;</code></pre></td>
+<td align="left"><pre><code><UpdateHandlerClassName>
+</UpdateHandlerClassName></code></pre></td>
 </tr>
 </tbody>
 </table>

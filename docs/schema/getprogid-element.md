@@ -72,8 +72,8 @@ worksheet saved as HTML, etc.).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GetProgID&gt;
-&lt;/GetProgID&gt;</code></pre></td>
+<td align="left"><pre><code><GetProgID>
+</GetProgID></code></pre></td>
 </tr>
 </tbody>
 </table>

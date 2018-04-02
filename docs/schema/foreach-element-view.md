@@ -72,9 +72,9 @@ fields defined in the current list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ForEach
-  Select = &quot;Text&quot;&gt;
-&lt;/ForEach&gt;</code></pre></td>
+<td align="left"><pre><code><ForEach
+  Select = "Text">
+</ForEach></code></pre></td>
 </tr>
 </tbody>
 </table>

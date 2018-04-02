@@ -74,7 +74,7 @@ SharePoint Online | SharePoint Server 2013
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Filter  Name = &quot;Text&quot;   Type = &quot;Text&quot;   Value = &quot;Text&quot; &gt;&lt;/Filter&gt; </code></pre></td>
+<td align="left"><pre><code><Filter  Name = "Text"   Type = "Text"   Value = "Text" ></Filter> </code></pre></td>
 </tr>
 </tbody>
 </table>

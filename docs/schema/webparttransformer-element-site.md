@@ -69,9 +69,9 @@ SharePoint Online | SharePoint Server 2013
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebPartTransformer
-  Assembly = &quot;Text&quot;  Namespace = &quot;Text&quot;&gt;
-&lt;/WebPartTransformer&gt;</code></pre></td>
+<td align="left"><pre><code><WebPartTransformer
+  Assembly = "Text"  Namespace = "Text">
+</WebPartTransformer></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -73,34 +73,34 @@ attributes that present the field's value in a different format.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Row
-  Attachments=&quot;Integer&quot;
-  ContentTypeId=&quot;GUID&quot;
-  File_x0020_Type=&quot;String&quot;
-  FileLeafRef=&quot;String&quot;
-  FileLeafRef.Name=&quot;String&quot;
-  FileLeafRef.Suffix=&quot;String&quot;
-  FSObjType=&quot;Integer&quot;
-  HTML_x0020_File_x0020_Type.File_x0020_Type.mapall=&quot;String&quot;
-  HTML_x0020_File_x0020_Type.File_x0020_Type.mapcon=&quot;String&quot;
-  HTML_x0020_File_x0020_Type.File_x0020_Type.mapico=&quot;String&quot;
-  ID=&quot;Integer&quot;
-  PermMask=&quot;Hex&quot;
-  some_field=&quot;type appropriate to the field&quot;
-  some_booleanField.Value=&quot;Integer&quot;
-  some_date_time_field.ifnew=&quot;Integer&quot;
-  some_date_time_field.=&quot;unlocalized DateTime&quot;
-  some_date_time_field.DateOnly=&quot;date&quot;
-  some_date_time_field.TimeOnly=&quot;time&quot;
-  some_date_time_field.ISO8601=&quot;ISO8601 compliant DateTime&quot;
-  some_date_time_field.MonthDayOnly=&quot;month and day&quot;
-  some_date_time_field.MonthYearOnly=&quot;month and year&quot;
-  some_user_field=&quot;String&quot;
-  some_user_field.id=&quot;Integer&quot;
-  some_user_field.title=&quot;String&quot;
-  some_user_field.span=&quot;String&quot;
-  some_url_field.desc=&quot;String&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Row
+  Attachments="Integer"
+  ContentTypeId="GUID"
+  File_x0020_Type="String"
+  FileLeafRef="String"
+  FileLeafRef.Name="String"
+  FileLeafRef.Suffix="String"
+  FSObjType="Integer"
+  HTML_x0020_File_x0020_Type.File_x0020_Type.mapall="String"
+  HTML_x0020_File_x0020_Type.File_x0020_Type.mapcon="String"
+  HTML_x0020_File_x0020_Type.File_x0020_Type.mapico="String"
+  ID="Integer"
+  PermMask="Hex"
+  some_field="type appropriate to the field"
+  some_booleanField.Value="Integer"
+  some_date_time_field.ifnew="Integer"
+  some_date_time_field.="unlocalized DateTime"
+  some_date_time_field.DateOnly="date"
+  some_date_time_field.TimeOnly="time"
+  some_date_time_field.ISO8601="ISO8601 compliant DateTime"
+  some_date_time_field.MonthDayOnly="month and day"
+  some_date_time_field.MonthYearOnly="month and year"
+  some_user_field="String"
+  some_user_field.id="Integer"
+  some_user_field.title="String"
+  some_user_field.span="String"
+  some_url_field.desc="String"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +134,7 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="even">
 <td align="left"><p>**FileLeafRef**</p></td>
-<td align="left"><p>Required, but ignored if the list is not a document library. The server-relative URL of the document. This is the folder name, followed by &quot;_.&quot;, followed by the file name. An example is QuarterlySummaries_.Quarter1.docx. This attribute value is the concatenation of the values of the **FileLeafRef.Name</span> attribute and the **FileLeafRef.Suffix** attribute with a &quot;.&quot; separator character.</p></td>
+<td align="left"><p>Required, but ignored if the list is not a document library. The server-relative URL of the document. This is the folder name, followed by "_.", followed by the file name. An example is QuarterlySummaries_.Quarter1.docx. This attribute value is the concatenation of the values of the **FileLeafRef.Name</span> attribute and the **FileLeafRef.Suffix** attribute with a "." separator character.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FileLeafRef.Name**</p></td>
@@ -174,19 +174,19 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="even">
 <td align="left"><p><span class="placeholder">some_field</span>.</p></td>
-<td align="left"><p>Optional. The currency, number, and lookup field types in SharePoint Foundation may have a low-level formatting even before any HTML formatting is applied. For example, a negative currency value is enclosed in parentheses. The attribute of each such field is immediately followed by another attribute that has the same name, to which a &quot;.&quot; character is appended. This attribute provides the field value as raw unformatted data. For example, a negative currency value is proceeded by a minus sign (&quot;-&quot;) and is not in parentheses.</p></td>
+<td align="left"><p>Optional. The currency, number, and lookup field types in SharePoint Foundation may have a low-level formatting even before any HTML formatting is applied. For example, a negative currency value is enclosed in parentheses. The attribute of each such field is immediately followed by another attribute that has the same name, to which a "." character is appended. This attribute provides the field value as raw unformatted data. For example, a negative currency value is proceeded by a minus sign ("-") and is not in parentheses.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span class="placeholder">some_booleanField</span>**.Value**</p></td>
-<td align="left"><p>Optional. Every **Boolean</span> attribute in the list item is followed by another attribute that has the same name, to which &quot;.Value&quot; is appended. This attribute gives the raw unlocalized form of the field value (1 or 0), whereas the main attribute for the **Boolean** field gives the value relativized to the website's locale.</p></td>
+<td align="left"><p>Optional. Every **Boolean</span> attribute in the list item is followed by another attribute that has the same name, to which ".Value" is appended. This attribute gives the raw unlocalized form of the field value (1 or 0), whereas the main attribute for the **Boolean** field gives the value relativized to the website's locale.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="placeholder">some_date_time_field</span>**.ifnew**</p></td>
-<td align="left"><p>Optional. **1</span> if the date time value is recent enough to define the list item as new; otherwise, **0</span>. This attribute appears only if the <span class="placeholder">some_date_time_field** is &quot;Created_x0020_Date&quot;.</p></td>
+<td align="left"><p>Optional. **1</span> if the date time value is recent enough to define the list item as new; otherwise, **0</span>. This attribute appears only if the <span class="placeholder">some_date_time_field** is "Created_x0020_Date".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span class="placeholder">some_date_time_field</span>.</p></td>
-<td align="left"><p>Optional. If there is an attribute for a datetime field whose value is localized, there is also an attribute that has the same name, to which a &quot;.&quot; character is appended. This attribute provides the raw value of a datetime field as stored in the content database in ISO8601 format.</p></td>
+<td align="left"><p>Optional. If there is an attribute for a datetime field whose value is localized, there is also an attribute that has the same name, to which a "." character is appended. This attribute provides the raw value of a datetime field as stored in the content database in ISO8601 format.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="placeholder">some_date_time_field</span>**.DateOnly**</p></td>
@@ -210,61 +210,61 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="odd">
 <td align="left"><p><span class="placeholder">some_user_field</span>**.id**</p></td>
-<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which &quot;.id&quot; is appended. This is the site-relative ID number of the user.</p></td>
+<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which ".id" is appended. This is the site-relative ID number of the user.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="placeholder">some_user_field</span>**.title**</p></td>
-<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which &quot;.title&quot; is appended. This is the name of the user, for example &quot;Michiyo Sato&quot;. Note that the value of the main attribute, <span class="placeholder">some_user_field</span>, is the HTML **span</span> markup for the user, including, for example, presence information. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is not set; otherwise the value of the <span class="placeholder">some_user_field</span>**.span** attribute is used.</p>
+<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which ".title" is appended. This is the name of the user, for example "Michiyo Sato". Note that the value of the main attribute, <span class="placeholder">some_user_field</span>, is the HTML **span</span> markup for the user, including, for example, presence information. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is not set; otherwise the value of the <span class="placeholder">some_user_field</span>**.span** attribute is used.</p>
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code>&lt;span class=&quot;ms-imnSpan&quot;&gt;
-&lt;a href=&#39;javascript:;&#39;
+<pre><code><span class="ms-imnSpan">
+<a href=&#39;javascript:;&#39;
   onclick=&#39;IMNImageOnClick(event);return false;&#39;
-  class=&#39;ms-imnlink&#39;&gt;
-&lt;img name=&#39;imnmark&#39; 
+  class=&#39;ms-imnlink&#39;>
+<img name=&#39;imnmark&#39; 
   class=&#39;ms-imnImg&#39; title=&#39;&#39; border=&#39;0&#39;
   height=&#39;12&#39; width=&#39;12&#39;
   src=&#39;/_layouts/images/blank.gif&#39; 
   alt=&#39;No presence information&#39; 
   sip=&#39;MichiyoS@Contoso.com&#39; 
-  id=&#39;imn_1,type=smtp&#39;/&gt;
-&lt;/a&gt;
-&lt;a onclick=&quot;GoToLink(this);return false;&quot;
-  href=&quot;/sites/Contoso/_layouts/userdisp.aspx?ID=1&quot;&gt;Michiyo Sato&lt;/a&gt;
-&lt;/span&gt;</code></pre>
+  id=&#39;imn_1,type=smtp&#39;/>
+</a>
+<a onclick="GoToLink(this);return false;"
+  href="/sites/Contoso/_layouts/userdisp.aspx?ID=1">Michiyo Sato</a>
+</span></code></pre>
 </div>
 <p></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span class="placeholder">some_user_field</span>**.span**</p></td>
-<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which &quot;.span&quot; is appended. This is a plainer version of the HTML markup for the user. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is set; otherwise the value of the <span class="placeholder">some_user_field</span>**.title** attribute is used.</p>
+<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which ".span" is appended. This is a plainer version of the HTML markup for the user. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is set; otherwise the value of the <span class="placeholder">some_user_field</span>**.title** attribute is used.</p>
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code>&lt;nobr&gt;&lt;span&gt;
-&lt;a onclick=&quot;GoToLink(this);return false;&quot;
-  href=&quot;/sites/Contoso/_layouts/userdisp.aspx?ID=1&quot;&gt;Michiyo Sato&lt;/a&gt;
-&lt;img border=&quot;0&quot; height=&quot;1&quot; width=&quot;3&quot;
-  src=&quot;/_layouts/images/blank.gif&quot;/&gt;
-&lt;a href=&#39;javascript:;&#39;
+<pre><code><nobr><span>
+<a onclick="GoToLink(this);return false;"
+  href="/sites/Contoso/_layouts/userdisp.aspx?ID=1">Michiyo Sato</a>
+<img border="0" height="1" width="3"
+  src="/_layouts/images/blank.gif"/>
+<a href=&#39;javascript:;&#39;
   onclick=&#39;IMNImageOnClick(event);return false;&#39;
-  class=&#39;ms-imnlink&#39;&gt;
-&lt;img name=&#39;imnmark&#39; class=&#39;ms-imnImg&#39;
+  class=&#39;ms-imnlink&#39;>
+<img name=&#39;imnmark&#39; class=&#39;ms-imnImg&#39;
   title=&#39;&#39; border=&#39;0&#39; 
   height=&#39;12&#39; width=&#39;12&#39; 
   src=&#39;/_layouts/images/blank.gif&#39; 
   alt=&#39;No presence information&#39; 
   sip=&#39;MichiyoS@Contoso.com&#39; 
-  id=&#39;imn_2,type=smtp&#39;/&gt;&lt;/a&gt;
-&lt;/span&gt;&lt;/nobr&gt;</code></pre>
+  id=&#39;imn_2,type=smtp&#39;/></a>
+</span></nobr></code></pre>
 </div></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="placeholder">some_url_field</span>**.desc**</p></td>
-<td align="left"><p>Optional. If any attribute represents a URL field, there is another attribute that has the same name, to which &quot;.desc&quot; is appended. This provides a description of the URL.</p></td>
+<td align="left"><p>Optional. If any attribute represents a URL field, there is another attribute that has the same name, to which ".desc" is appended. This provides a description of the URL.</p></td>
 </tr>
 </tbody>
 </table>

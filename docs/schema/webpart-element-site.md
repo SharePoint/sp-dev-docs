@@ -76,7 +76,7 @@ The introduction is required.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebPart  AllUsers = &quot;Text&quot;  Assembly = &quot;Text&quot;  Cache = &quot;Text&quot;  Class = &quot;Text&quot;  DisplayName = &quot;Text&quot;  Flags = &quot;Text&quot;  FrameState = &quot;Integer&quot;  IsIncluded = &quot;TRUE&quot; | &quot;FALSE&quot;  List = &quot;Text&quot;  PerUser = &quot;Text&quot;  SolutionId = &quot;Text&quot;  Src = &quot;Text&quot;  Type = &quot;Integer&quot;  Url = &quot;Text&quot;  Version = &quot;Text&quot;  WebPartIdProperty = &quot;Text&quot;  WPTypeId = &quot;Text&quot;&gt;&lt;/WebPart&gt;</code></pre></td>
+<td align="left"><pre><code><WebPart  AllUsers = "Text"  Assembly = "Text"  Cache = "Text"  Class = "Text"  DisplayName = "Text"  Flags = "Text"  FrameState = "Integer"  IsIncluded = "TRUE" | "FALSE"  List = "Text"  PerUser = "Text"  SolutionId = "Text"  Src = "Text"  Type = "Integer"  Url = "Text"  Version = "Text"  WebPartIdProperty = "Text"  WPTypeId = "Text"></WebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,8 +67,8 @@ Returns the current week.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Week&gt;
-&lt;/Week&gt;</code></pre></td>
+<td align="left"><pre><code><Week>
+</Week></code></pre></td>
 </tr>
 </tbody>
 </table>

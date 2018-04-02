@@ -68,8 +68,8 @@ intended to be used directly from your code.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CrossProjectLink&gt;
-&lt;/CrossProjectLink&gt;</code></pre></td>
+<td align="left"><pre><code><CrossProjectLink>
+</CrossProjectLink></code></pre></td>
 </tr>
 </tbody>
 </table>

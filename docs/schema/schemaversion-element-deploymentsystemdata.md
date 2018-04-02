@@ -69,21 +69,21 @@ lists versioning data for the content migration manifest schema.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;SchemaVersion&quot; 
-    type=&quot;SPSchemaVersion&quot; 
-    minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; 
-/&gt;
+<xs:element 
+    name="SchemaVersion" 
+    type="SPSchemaVersion" 
+    minOccurs="1" maxOccurs="1" 
+/>
 
 USAGE
-&lt;SystemData&gt;
-    &lt;SchemaVersion
-        Version=&quot;xs:string&quot;
-        Build=&quot;xs:string&quot;
-        DatabaseVersion=&quot;xs:string&quot;
-        SiteVersion=&quot;xs:string&quot;
-    /&gt;
-&lt;/SystemData&gt;</code></pre></td>
+<SystemData>
+    <SchemaVersion
+        Version="xs:string"
+        Build="xs:string"
+        DatabaseVersion="xs:string"
+        SiteVersion="xs:string"
+    />
+</SystemData></code></pre></td>
 </tr>
 </tbody>
 </table>

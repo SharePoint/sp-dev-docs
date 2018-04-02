@@ -67,9 +67,9 @@ Specifies the list of parameters to be applied during a Feature upgrade.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Parameters&gt; 
-  &lt;Parameter&gt; &lt;/Parameter&gt;
-&lt;/Parameters&gt;</code></pre></td>
+<td align="left"><pre><code><Parameters> 
+  <Parameter> </Parameter>
+</Parameters></code></pre></td>
 </tr>
 </tbody>
 </table>

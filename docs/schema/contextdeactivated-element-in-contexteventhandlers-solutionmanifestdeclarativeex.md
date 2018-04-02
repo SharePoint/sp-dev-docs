@@ -62,10 +62,10 @@ Enables you to execute a specified action when a context is deactivated.
 For example, this can be used to execute a custom action to do cleanup
 when a context is deactivated.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
-**Schema:** SolutionManifestDeclarativeExtensions
+**Schema**: SolutionManifestDeclarativeExtensions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -79,7 +79,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/Declar
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContextDeactivated  ActionName = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/ContextDeactivated&gt;</code></pre></td>
+<td align="left"><pre><code><ContextDeactivated  ActionName = "String" Description = "String"> </ContextDeactivated></code></pre></td>
 </tr>
 </tbody>
 </table>

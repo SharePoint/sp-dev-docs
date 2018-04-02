@@ -71,16 +71,16 @@ Represents a property that applies to a Web application.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ServerProperty
-  Default = &quot;Text&quot;
-  HTMLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Name = &quot;Text&quot;
-  Select = &quot;Text&quot;
-  ShowField = &quot;TRUE&quot; | &quot;FALSE&quot;
-  StripWS = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncode = &quot;TRUE&quot; | &quot;FALSE&quot;
-  URLEncodeAsURL = &quot;TRUE&quot; | &quot;FALSE&quot;&gt;
-&lt;/ServerProperty&gt;</code></pre></td>
+<td align="left"><pre><code><ServerProperty
+  Default = "Text"
+  HTMLEncode = "TRUE" | "FALSE"
+  Name = "Text"
+  Select = "Text"
+  ShowField = "TRUE" | "FALSE"
+  StripWS = "TRUE" | "FALSE"
+  URLEncode = "TRUE" | "FALSE"
+  URLEncodeAsURL = "TRUE" | "FALSE">
+</ServerProperty></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -102,7 +102,7 @@ Represents a property that applies to a Web application.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string (&quot;&quot;).</p></td>
+<td align="left"><p>Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string ("").</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HTMLEncode**</p></td>
@@ -131,7 +131,7 @@ Represents a property that applies to a Web application.
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.</p></td>
 </tr>
 </tbody>
 </table>

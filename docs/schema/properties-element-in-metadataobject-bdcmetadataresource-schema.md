@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Properties&gt;&lt;/Properties&gt;</code></pre></td>
+<td align="left"><pre><code><Properties></Properties></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -73,8 +73,8 @@ field name for Office compatibility.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldPrefix&gt;
-&lt;/FieldPrefix&gt;</code></pre></td>
+<td align="left"><pre><code><FieldPrefix>
+</FieldPrefix></code></pre></td>
 </tr>
 </tbody>
 </table>

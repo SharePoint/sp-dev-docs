@@ -67,8 +67,8 @@ Contains the Read security setting for a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ReadSecurity&gt;
-&lt;/ReadSecurity&gt;</code></pre></td>
+<td align="left"><pre><code><ReadSecurity>
+</ReadSecurity></code></pre></td>
 </tr>
 </tbody>
 </table>

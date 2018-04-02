@@ -73,8 +73,8 @@ file) to separate list metadata from data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MetaData&gt;
-&lt;/MetaData&gt;</code></pre></td>
+<td align="left"><pre><code><MetaData>
+</MetaData></code></pre></td>
 </tr>
 </tbody>
 </table>

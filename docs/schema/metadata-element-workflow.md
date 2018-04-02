@@ -70,8 +70,8 @@ the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MetaData&gt;
-&lt;/Metadata&gt;</code></pre></td>
+<td align="left"><pre><code><MetaData>
+</Metadata></code></pre></td>
 </tr>
 </tbody>
 </table>

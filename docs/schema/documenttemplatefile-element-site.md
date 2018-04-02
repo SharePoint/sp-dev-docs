@@ -71,11 +71,11 @@ Contains a reference to a file that is used within a document template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocumentTemplateFile
-  Default = &quot;TRUE&quot; | &quot;FALSE&quot;
-    Name=&quot;Text&quot;
-  TargetName=&quot;Text&quot;&gt;
-&lt;/DocumentTemplateFile&gt;</code></pre></td>
+<td align="left"><pre><code><DocumentTemplateFile
+  Default = "TRUE" | "FALSE"
+    Name="Text"
+  TargetName="Text">
+</DocumentTemplateFile></code></pre></td>
 </tr>
 </tbody>
 </table>

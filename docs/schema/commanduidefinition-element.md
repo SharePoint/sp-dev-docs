@@ -67,9 +67,9 @@ Contains elements that define a user interface.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CommandUIDefinition
-  Location = &quot;Text&quot;
- /&gt;</code></pre></td>
+<td align="left"><pre><code><CommandUIDefinition
+  Location = "Text"
+ /></code></pre></td>
 </tr>
 </tbody>
 </table>

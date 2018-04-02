@@ -71,8 +71,8 @@ Specifies a class name for an alert notification handler.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;NotificationHandlerClassName&gt;
-&lt;/NotificationHandlerClassName&gt;</code></pre></td>
+<td align="left"><pre><code><NotificationHandlerClassName>
+</NotificationHandlerClassName></code></pre></td>
 </tr>
 </tbody>
 </table>

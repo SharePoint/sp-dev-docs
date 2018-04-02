@@ -67,34 +67,34 @@ Describes a view within a module for a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;View
-  AggregateView = &quot;TRUE&quot; | &quot;FALSE&quot;
-  BaseViewID = &quot;Integer&quot;
+<td align="left"><pre><code><View
+  AggregateView = "TRUE" | "FALSE"
+  BaseViewID = "Integer"
   ContentTypeId = string
-  DefaultView = &quot;TRUE&quot; | &quot;FALSE&quot;
-  DisplayName = &quot;Text&quot;
-  FailIfEmpty = &quot;TRUE&quot; | &quot;FALSE&quot;
-  FileDialog = &quot;TRUE&quot; | &quot;FALSE&quot;
-  FPModified = &quot;TRUE&quot; | &quot;FALSE&quot;
-  FreeForm = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Hidden = &quot;TRUE&quot; | &quot;FALSE&quot;
+  DefaultView = "TRUE" | "FALSE"
+  DisplayName = "Text"
+  FailIfEmpty = "TRUE" | "FALSE"
+  FileDialog = "TRUE" | "FALSE"
+  FPModified = "TRUE" | "FALSE"
+  FreeForm = "TRUE" | "FALSE"
+  Hidden = "TRUE" | "FALSE"
   ID = string
-  List = &quot;Integer&quot; | &quot;Text&quot;
-  Name = &quot;Text&quot;
-  OrderedView = &quot;TRUE&quot; | &quot;FALSE&quot;
-  PageType = &quot;Text&quot;
-  Path = &quot;Text&quot;
-  ReadOnly = &quot;TRUE&quot; | &quot;FALSE&quot;
-  RecurrenceRowset = &quot;TRUE&quot; | &quot;FALSE&quot;
-  RowLimit = &quot;Integer&quot;
-  Scope = &quot;Text&quot;
-  ShowHeaderUI = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Threaded = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Type = &quot;HTML&quot; | &quot;Chart&quot; | &quot;Pivot&quot;
-  Url = &quot;URL&quot;
+  List = "Integer" | "Text"
+  Name = "Text"
+  OrderedView = "TRUE" | "FALSE"
+  PageType = "Text"
+  Path = "Text"
+  ReadOnly = "TRUE" | "FALSE"
+  RecurrenceRowset = "TRUE" | "FALSE"
+  RowLimit = "Integer"
+  Scope = "Text"
+  ShowHeaderUI = "TRUE" | "FALSE"
+  Threaded = "TRUE" | "FALSE"
+  Type = "HTML" | "Chart" | "Pivot"
+  Url = "URL"
   WebPartOrder = integer
-  WebPartZoneID = string&gt;
-&lt;/View&gt;</code></pre></td>
+  WebPartZoneID = string>
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -204,18 +204,18 @@ Describes a view within a module for a site definition.
 <tr class="odd">
 <td align="left"><p>**RowLimit**</p></td>
 <td align="left"><p>Optional **Integer**. Applies to the HTML view type only. Specifies the maximum number of rows to render on any one page. When the row limit is exceeded, the next and previous buttons on the page allow for viewing other parts of the returned recordset.</p>
-<p>If **RowLimit** is not specified, the default number of Rows returned is 50. If &quot;None&quot; is specified for the view type, all the rows of the recordset are returned in one view.</p>
+<p>If **RowLimit** is not specified, the default number of Rows returned is 50. If "None" is specified for the view type, all the rows of the recordset are returned in one view.</p>
 <p>When a view is rendered, the render variables **ViewHasNext</span> and **ViewHasPrev</span> are set to **TRUE</span> or **FALSE</span>, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render **Next</span> and **Previous** buttons on the page, as in the following example:</p>
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code>&lt;Switch&gt;
-  &lt;Expr&gt;&lt;GetVar Name=&quot;ViewHasPrev&quot;/&gt;&lt;/Expr&gt;
-  &lt;Case Value=&quot;TRUE&quot;&gt;
-    &lt;![CDATA[...Previous button defined here... ]]&gt;
-  &lt;/Case&gt;
-&lt;/Switch&gt;</code></pre>
+<pre><code><Switch>
+  <Expr><GetVar Name="ViewHasPrev"/></Expr>
+  <Case Value="TRUE">
+    <![CDATA[...Previous button defined here... ]]>
+  </Case>
+</Switch></code></pre>
 </div>
 <p>The variables **NextPageURL</span> and **PrevPageURL</span> are also set to nonblank values when there is forward or backward paging content from the current display. These variables can be used by constructing the **Next</span> and **Previous** buttons to have the correct URL for accessing the next page of content.</p></td>
 </tr>

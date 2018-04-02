@@ -24,22 +24,22 @@ Represents field values for the specified type instance.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name="Field" 
+<xs:element name="Field" 
         type="DictionaryEntry" 
         minOccurs="0" maxOccurs="unbounded" 
-/&gt;
+/>
 
 USAGE
-&lt;Fields&gt;
-        &lt;Field
+<Fields>
+        <Field
       Name="xs:string"
       Value="xs:string"
       Value2="xs:string"
       Id="Guid"
       Type="SPDictionaryEntryValueType"
       Access="SPDictionaryEntryAccess"
-        /&gt;
-&lt;/Fields&gt;</code></pre></td>
+        />
+</Fields></code></pre></td>
 </tr>
 </tbody>
 </table>

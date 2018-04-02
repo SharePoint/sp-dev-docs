@@ -71,14 +71,14 @@ Specifies the site definitions to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SiteDefinitionManifests
-  &lt;SiteDefinitionManifest
-    Location=&quot;Text&quot;&gt;
-    &lt;WebTempFile
-      Location=&quot;Text&quot;&gt;
-  &lt;/SiteDefinitionManifest&gt;
+<td align="left"><pre><code><SiteDefinitionManifests
+  <SiteDefinitionManifest
+    Location="Text">
+    <WebTempFile
+      Location="Text">
+  </SiteDefinitionManifest>
   ...
-&lt;/SiteDefinitionManifests&gt;</code></pre></td>
+</SiteDefinitionManifests></code></pre></td>
 </tr>
 </tbody>
 </table>

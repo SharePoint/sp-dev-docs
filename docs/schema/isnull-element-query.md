@@ -72,11 +72,11 @@ class="keyword">Null</span>).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IsNull&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;XML /&gt;
-&lt;/IsNull&gt;</code></pre></td>
+<td align="left"><pre><code><IsNull>
+  <FieldRef Name = "Field_Name"/>
+  <Value Type = "Field_Type"/>
+  <XML />
+</IsNull></code></pre></td>
 </tr>
 </tbody>
 </table>

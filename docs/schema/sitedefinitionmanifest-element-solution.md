@@ -71,11 +71,11 @@ Specifies a site definition manifest to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SiteDefinitionManifest
-  Location=&quot;Text&quot;&gt;
-  &lt;WebTempFile
-    Location=&quot;Text&quot;&gt;
-&lt;/SiteDefinitionManifest&gt;</code></pre></td>
+<td align="left"><pre><code><SiteDefinitionManifest
+  Location="Text">
+  <WebTempFile
+    Location="Text">
+</SiteDefinitionManifest></code></pre></td>
 </tr>
 </tbody>
 </table>

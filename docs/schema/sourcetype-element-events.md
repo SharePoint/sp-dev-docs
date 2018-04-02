@@ -67,7 +67,7 @@ Specifies the type of the source for the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SourceType&gt;&lt;/SourceType&gt;</code></pre></td>
+<td align="left"><pre><code><SourceType></SourceType></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -74,11 +74,11 @@ equal to one of the values specified by the
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;In&gt;
-  &lt;FieldRef Name = &quot;Field_Name&quot;/&gt;
-  &lt;Values&gt;    &lt;Value Type = &quot;Field_Type&quot;/&gt;
-  &lt;/Values&gt;  &lt;XML /&gt;
-&lt;/In&gt;</code></pre></td>
+<td align="left"><pre><code><In>
+  <FieldRef Name = "Field_Name"/>
+  <Values>    <Value Type = "Field_Type"/>
+  </Values>  <XML />
+</In></code></pre></td>
 </tr>
 </tbody>
 </table>

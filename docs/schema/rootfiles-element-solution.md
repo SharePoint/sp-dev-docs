@@ -71,12 +71,12 @@ Specifies the root paths to which solution files are copied.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RootFiles&gt;
-    &lt;RootFile
-      Location = &quot;Text&quot;&gt;
-    &lt;/RootFile&gt;
+<td align="left"><pre><code><RootFiles>
+    <RootFile
+      Location = "Text">
+    </RootFile>
   ...
-&lt;/RootFiles&gt;</code></pre></td>
+</RootFiles></code></pre></td>
 </tr>
 </tbody>
 </table>

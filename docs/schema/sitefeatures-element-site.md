@@ -72,8 +72,8 @@ are created through the site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SiteFeatures&gt;
-&lt;/SiteFeatures&gt;</code></pre></td>
+<td align="left"><pre><code><SiteFeatures>
+</SiteFeatures></code></pre></td>
 </tr>
 </tbody>
 </table>

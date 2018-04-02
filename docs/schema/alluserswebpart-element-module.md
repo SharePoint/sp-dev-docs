@@ -67,11 +67,11 @@ Contains a Web Part in a module of a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;AllUsersWebPart 
+<td align="left"><pre><code><AllUsersWebPart 
    ID = string 
    WebPartOrder = integer 
-   WebPartZoneID = string&gt;
-&lt;/AllUsersWebPart&gt;</code></pre></td>
+   WebPartZoneID = string>
+</AllUsersWebPart></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,11 +71,11 @@ Specifies the template files to include in the solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;TemplateFiles
-  &lt;TemplateFile
-    Location=&quot;Text&quot;/&gt;
+<td align="left"><pre><code><TemplateFiles
+  <TemplateFile
+    Location="Text"/>
     ...
-&lt;/TemplateFiles&gt;</code></pre></td>
+</TemplateFiles></code></pre></td>
 </tr>
 </tbody>
 </table>

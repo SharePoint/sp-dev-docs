@@ -70,32 +70,32 @@ class="nolink">SPList</span></span>).
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;FieldRef&quot; 
-        type=&quot;SPFieldLink&quot; 
-        minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element name="FieldRef" 
+        type="SPFieldLink" 
+        minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;Fields&gt;
-        &lt;FieldRef&gt;
-                &lt;Field /&gt;
-                        Name=&quot;xs:string&quot;
-                        ID=&quot;Guid&quot;
-                        Customization=&quot;xs:string&quot;
-                        Default=&quot;xs:string&quot;
-                        ColName=&quot;xs:string&quot;
-                        ColName2=&quot;xs:string&quot;
-                        RowOrdinal=&quot;xs:int&quot;
-                        RowOrdinal2=&quot;xs:int&quot;
-                        Hidden=&quot;TRUEFALSE&quot;
-                        Required=&quot;TRUEFALSE&quot;
-                        Explicit=&quot;xs:string&quot;
-                        ShowInNewForm=&quot;xs:string&quot;
-                        ShowInEditForm=&quot;xs:string&quot;
-                        DisplayName=&quot;xs:string&quot;
-                        Node=&quot;xs:string&quot;
-        &lt;FieldRef /&gt;
-&lt;/Fields&gt;</code></pre></td>
+<Fields>
+        <FieldRef>
+                <Field />
+                        Name="xs:string"
+                        ID="Guid"
+                        Customization="xs:string"
+                        Default="xs:string"
+                        ColName="xs:string"
+                        ColName2="xs:string"
+                        RowOrdinal="xs:int"
+                        RowOrdinal2="xs:int"
+                        Hidden="TRUEFALSE"
+                        Required="TRUEFALSE"
+                        Explicit="xs:string"
+                        ShowInNewForm="xs:string"
+                        ShowInEditForm="xs:string"
+                        DisplayName="xs:string"
+                        Node="xs:string"
+        <FieldRef />
+</Fields></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -68,15 +68,15 @@ element declarations.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Elements
-  Id = &quot;Text&quot;&gt;
-    &lt;FeatureSiteTemplateAssociation
-      Id = &quot;Text&quot;
-      TemplateName = &quot;Text&quot;&gt;
+<td align="left"><pre><code><Elements
+  Id = "Text">
+    <FeatureSiteTemplateAssociation
+      Id = "Text"
+      TemplateName = "Text">
     ...
-    &lt;/FeatureSiteTemplateAssociation&gt;
+    </FeatureSiteTemplateAssociation>
   ...
-&lt;/Elements&gt;</code></pre></td>
+</Elements></code></pre></td>
 </tr>
 </tbody>
 </table>

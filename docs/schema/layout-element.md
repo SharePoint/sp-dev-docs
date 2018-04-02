@@ -71,10 +71,10 @@ Defines the layout of controls in a template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Layout
-  Title=&quot;Text&quot;
-  LayoutTitle=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Layout
+  Title="Text"
+  LayoutTitle="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -96,11 +96,11 @@ Defines the layout of controls in a template.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Title**</p></td>
-<td align="left"><p>Required. A string that identifies the element within its parent <a href="grouptemplate-element.md">GroupTemplate</a> element. The element's ID in the Document Object Model (DOM) is formed on the pattern &quot;ParentId-Title&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element within its parent <a href="grouptemplate-element.md">GroupTemplate</a> element. The element's ID in the Document Object Model (DOM) is formed on the pattern "ParentId-Title".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**LayoutTitle**</p></td>
-<td align="left"><p>Optional. An alternative identifier for the element. Use this attribute to provide a title when the value of the **Title** attribute is &quot;Popup&quot;.</p></td>
+<td align="left"><p>Optional. An alternative identifier for the element. Use this attribute to provide a title when the value of the **Title** attribute is "Popup".</p></td>
 </tr>
 </tbody>
 </table>

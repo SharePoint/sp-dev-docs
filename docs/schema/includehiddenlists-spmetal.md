@@ -80,7 +80,7 @@ Specifies that code is generated for all hidden lists.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;IncludeHiddenLists /&gt;</code></pre></td>
+<td align="left"><pre><code><IncludeHiddenLists /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -61,10 +61,10 @@ SharePoint Online | SharePoint Server 2013
 This element is not used by Microsoft Business Connectivity Services
 (BCS) in the current release.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema:** Subscription
+**Schema**: Subscription
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -78,7 +78,7 @@ http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Properties&gt;&lt;/Properties&gt;</code></pre></td>
+<td align="left"><pre><code><Properties></Properties></code></pre></td>
 </tr>
 </tbody>
 </table>

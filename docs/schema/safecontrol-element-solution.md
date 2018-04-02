@@ -72,13 +72,13 @@ solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SafeControl
-  Assembly = &quot;Text&quot;
-  Namespace = &quot;Text&quot;
-  Safe = &quot;TRUE&quot; | &quot;FALSE&quot;
-  SafeAgainstScript = &quot;TRUE&quot; | &quot;FALSE&quot;
-  TypeName = &quot;Text&quot;&gt;
-&lt;/SafeControl&gt;</code></pre></td>
+<td align="left"><pre><code><SafeControl
+  Assembly = "Text"
+  Namespace = "Text"
+  Safe = "TRUE" | "FALSE"
+  SafeAgainstScript = "TRUE" | "FALSE"
+  TypeName = "Text">
+</SafeControl></code></pre></td>
 </tr>
 </tbody>
 </table>

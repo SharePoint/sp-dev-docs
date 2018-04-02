@@ -71,8 +71,8 @@ Specifies a global resource file for a solution.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;App_GlobalSourceFile 
-  Location = string /&gt;</code></pre></td>
+<td align="left"><pre><code><App_GlobalSourceFile 
+  Location = string /></code></pre></td>
 </tr>
 </tbody>
 </table>

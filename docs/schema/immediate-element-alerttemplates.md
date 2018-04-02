@@ -71,16 +71,16 @@ Specifies format information for immediate notification alert messages.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Immediate&gt;
-  &lt;Subject&gt;
-  &lt;/Subject&gt;
-  &lt;Header&gt;
-  &lt;/Header&gt;
-  &lt;Fields&gt;
-  &lt;/Fields&gt;
-  &lt;Footer&gt;
-  &lt;/Footer&gt;
-&lt;/Immediate&gt;</code></pre></td>
+<td align="left"><pre><code><Immediate>
+  <Subject>
+  </Subject>
+  <Header>
+  </Header>
+  <Fields>
+  </Fields>
+  <Footer>
+  </Footer>
+</Immediate></code></pre></td>
 </tr>
 </tbody>
 </table>

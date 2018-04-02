@@ -70,10 +70,10 @@ begin the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SchemaSource&gt;
-    &lt;NestedInitiationFieldNodes&gt;
-    &lt;/NestedInitiationFieldNodes&gt;
-&lt;/SchemaSource&gt;</code></pre></td>
+<td align="left"><pre><code><SchemaSource>
+    <NestedInitiationFieldNodes>
+    </NestedInitiationFieldNodes>
+</SchemaSource></code></pre></td>
 </tr>
 </tbody>
 </table>

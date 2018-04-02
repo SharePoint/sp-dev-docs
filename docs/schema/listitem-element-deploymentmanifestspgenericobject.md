@@ -70,40 +70,40 @@ class="nolink">SPListItem</span></span>) object.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;ListItem&quot; type=&quot;SPListItem&quot; /&gt;
+<xs:element name="ListItem" type="SPListItem" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;ListItem
-                      Name=&quot;xs:string&quot;
-                      DirName=&quot;xs:string&quot;
-                      FileUrl=&quot;xs:string&quot;
-                      Version=&quot;xs:string&quot;
-                      Id=&quot;Guid&quot;
-                      IntId=&quot;xs:int&quot;
-                      DocId=&quot;Guid&quot;
-                      Author=&quot;xs:string&quot;
-                      ModifiedBy=&quot;xs:string&quot;
-                      TimeCreated=&quot;xs:dateTime&quot;
-                      TimeLastModified=&quot;xs:dateTime&quot;
-                      ParentWebId=&quot;Guid&quot;
-                      ParentListId=&quot;Guid&quot;
-                      ParentFolderId=&quot;Guid&quot;
-                      ModerationStatus=&quot;SPModerationStatusType&quot;
-                      ModerationComment=&quot;xs:string&quot;
-                      ContentTypeId=&quot;xs:string&quot;
-                      ThreadIndex=&quot;xs:string&quot;
-                      DocType=&quot;ListItemDocType&quot;
-                      UserLoginName=&quot;xs:string&quot;
-                      GroupName=&quot;xs:string&quot;
-                      FailureMessage=&quot;xs:string&quot;
-       &lt;Fields /&gt;
-              &lt;Versions /&gt;
-              &lt;Attachments /&gt;
-              &lt;Links /&gt;
-              &lt;EventReceivers /&gt;
-        /&gt;
-&lt;/SPObject</code></pre></td>
+<SPObject>
+        <ListItem
+                      Name="xs:string"
+                      DirName="xs:string"
+                      FileUrl="xs:string"
+                      Version="xs:string"
+                      Id="Guid"
+                      IntId="xs:int"
+                      DocId="Guid"
+                      Author="xs:string"
+                      ModifiedBy="xs:string"
+                      TimeCreated="xs:dateTime"
+                      TimeLastModified="xs:dateTime"
+                      ParentWebId="Guid"
+                      ParentListId="Guid"
+                      ParentFolderId="Guid"
+                      ModerationStatus="SPModerationStatusType"
+                      ModerationComment="xs:string"
+                      ContentTypeId="xs:string"
+                      ThreadIndex="xs:string"
+                      DocType="ListItemDocType"
+                      UserLoginName="xs:string"
+                      GroupName="xs:string"
+                      FailureMessage="xs:string"
+       <Fields />
+              <Versions />
+              <Attachments />
+              <Links />
+              <EventReceivers />
+        />
+</SPObject</code></pre></td>
 </tr>
 </tbody>
 </table>

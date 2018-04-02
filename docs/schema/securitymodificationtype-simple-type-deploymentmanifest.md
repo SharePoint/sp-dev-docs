@@ -68,20 +68,20 @@ user group, role, or role assignment.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SecurityModificationType&quot;&gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-                &lt;xs:enumeration value=&quot;Add&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Delete&quot; /&gt;
-                &lt;xs:enumeration value=&quot;Update&quot; /&gt;
-                &lt;xs:enumeration value=&quot;MemberAdd&quot; /&gt;
-                &lt;xs:enumeration value=&quot;MemberDelete&quot; /&gt;
-                &lt;xs:enumeration value=&quot;RoleAdd&quot; /&gt;
-                &lt;xs:enumeration value=&quot;RoleDelete&quot; /&gt;
-                &lt;xs:enumeration value=&quot;RoleUpdate&quot; /&gt;
-                &lt;xs:enumeration value=&quot;RoleAssignmentAdd&quot; /&gt;
-                &lt;xs:enumeration value=&quot;RoleAssignmentDelete&quot; /&gt;
-        &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SecurityModificationType">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="Add" />
+                <xs:enumeration value="Delete" />
+                <xs:enumeration value="Update" />
+                <xs:enumeration value="MemberAdd" />
+                <xs:enumeration value="MemberDelete" />
+                <xs:enumeration value="RoleAdd" />
+                <xs:enumeration value="RoleDelete" />
+                <xs:enumeration value="RoleUpdate" />
+                <xs:enumeration value="RoleAssignmentAdd" />
+                <xs:enumeration value="RoleAssignmentDelete" />
+        </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

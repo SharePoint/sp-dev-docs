@@ -78,13 +78,13 @@ filter by using [Collaborative Application Markup Language
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Filters&gt;
-  &lt;FilterDefinition&gt;
+<td align="left"><pre><code><Filters>
+  <FilterDefinition>
     ...
-  &lt;/FilterDefinition&gt;  [&lt;FilterDefinition&gt;
+  </FilterDefinition>  [<FilterDefinition>
     ...
-  &lt;/FilterDefinition&gt;]
-&lt;/Filters&gt;</code></pre></td>
+  </FilterDefinition>]
+</Filters></code></pre></td>
 </tr>
 </tbody>
 </table>

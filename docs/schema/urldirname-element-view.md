@@ -72,8 +72,8 @@ document.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UrlDirName&gt;
-&lt;/UrlDirName&gt;</code></pre></td>
+<td align="left"><pre><code><UrlDirName>
+</UrlDirName></code></pre></td>
 </tr>
 </tbody>
 </table>

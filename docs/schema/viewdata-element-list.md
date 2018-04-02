@@ -71,10 +71,10 @@ Specifies data for use within a view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewData&gt;
-  &lt;FieldRef Name = &quot;Text&quot; Type = &quot;Text&quot;/&gt;
+<td align="left"><pre><code><ViewData>
+  <FieldRef Name = "Text" Type = "Text"/>
   ...
-&lt;/ViewData&gt;</code></pre></td>
+</ViewData></code></pre></td>
 </tr>
 </tbody>
 </table>

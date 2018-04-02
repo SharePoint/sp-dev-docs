@@ -73,11 +73,11 @@ site inherits its schema from a base type.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;BaseType
-  Image = &quot;Text&quot;
-  Title = &quot;Text&quot;
-  Type = &quot;Text&quot;&gt;
-&lt;/BaseType&gt;</code></pre></td>
+<td align="left"><pre><code><BaseType
+  Image = "Text"
+  Title = "Text"
+  Type = "Text">
+</BaseType></code></pre></td>
 </tr>
 </tbody>
 </table>

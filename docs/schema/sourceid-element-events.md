@@ -67,7 +67,7 @@ Specifies the unique identifier of the source for the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SourceId&gt;&lt;/SourceId&gt;</code></pre></td>
+<td align="left"><pre><code><SourceId></SourceId></code></pre></td>
 </tr>
 </tbody>
 </table>

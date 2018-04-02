@@ -67,8 +67,8 @@ Contains the collection of view styles within a ViewStyles.xml file.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ViewStyles&gt;
-&lt;/ViewStyles&gt;</code></pre></td>
+<td align="left"><pre><code><ViewStyles>
+</ViewStyles></code></pre></td>
 </tr>
 </tbody>
 </table>

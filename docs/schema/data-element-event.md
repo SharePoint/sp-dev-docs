@@ -67,8 +67,8 @@ Contains a string that is used to pass parameters to the receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Data&gt;
-&lt;/Data&gt;</code></pre></td>
+<td align="left"><pre><code><Data>
+</Data></code></pre></td>
 </tr>
 </tbody>
 </table>

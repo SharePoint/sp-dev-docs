@@ -69,8 +69,8 @@ sorting URL that is sent in the request to the server.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldSortImageURL&gt;
-&lt;/FieldSortImageURL&gt;</code></pre></td>
+<td align="left"><pre><code><FieldSortImageURL>
+</FieldSortImageURL></code></pre></td>
 </tr>
 </tbody>
 </table>

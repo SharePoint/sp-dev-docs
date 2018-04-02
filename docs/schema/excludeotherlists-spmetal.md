@@ -81,7 +81,7 @@ represented by List elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExcludeOtherLists /&gt;</code></pre></td>
+<td align="left"><pre><code><ExcludeOtherLists /></code></pre></td>
 </tr>
 </tbody>
 </table>

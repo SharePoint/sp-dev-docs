@@ -78,8 +78,8 @@ Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922(O
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;PagedRecurrenceRowset&gt;
-&lt;/PagedRecurrenceRowset&gt;</code></pre></td>
+<td align="left"><pre><code><PagedRecurrenceRowset>
+</PagedRecurrenceRowset></code></pre></td>
 </tr>
 </tbody>
 </table>

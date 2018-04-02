@@ -70,7 +70,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;LobSystems&gt;&lt;/LobSystems&gt;</code></pre></td>
+<td align="left"><pre><code><LobSystems></LobSystems></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -67,7 +67,7 @@ Specifies the unique ID of the solution for the event receiver.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;SolutionId /&gt;</code></pre></td>
+<td align="left"><pre><code><SolutionId /></code></pre></td>
 </tr>
 </tbody>
 </table>

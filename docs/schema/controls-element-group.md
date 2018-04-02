@@ -71,17 +71,17 @@ Contains elements that define controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Controls
-     Id=&quot;Text&quot;
-     ToolTipImage32by32=&quot;Url&quot;
-     ToolTipImage32by32Class=&quot;CSS Class Selector&quot;
-     ToolTipImage32by32Left=&quot;Negative Integer&quot;
-     ToolTipImage32by32Top=&quot;Negative Integer&quot;
-     ToolTipTitle=&quot;Text&quot;
-     ToolTipDescription=&quot;Text&quot;
-     ToolTipHelpKeyWord=&quot;Text&quot;
-     ToolTipShortcutKey=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Controls
+     Id="Text"
+     ToolTipImage32by32="Url"
+     ToolTipImage32by32Class="CSS Class Selector"
+     ToolTipImage32by32Left="Negative Integer"
+     ToolTipImage32by32Top="Negative Integer"
+     ToolTipTitle="Text"
+     ToolTipDescription="Text"
+     ToolTipHelpKeyWord="Text"
+     ToolTipShortcutKey="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -103,11 +103,11 @@ Contains elements that define controls.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. Identifies the control. The value can be a string representation of a GUID or a unique term such as &quot;Ribbon.Library.Share.NewRibbonCheckBox&quot;.</p></td>
+<td align="left"><p>Required. Identifies the control. The value can be a string representation of a GUID or a unique term such as "Ribbon.Library.Share.NewRibbonCheckBox".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -135,7 +135,7 @@ Contains elements that define controls.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, then the value for this attribute is &quot;ALT + J&quot;. The tooltip will display the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, then the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 </tbody>
 </table>

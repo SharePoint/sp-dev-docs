@@ -69,14 +69,14 @@ Web Part.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DELCARATION SYNTAX
-&lt;xs:element name=&quot;Aggregations&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="Aggregations" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE SYNTAX
-&lt;WebParts&gt;
-  &lt;WebPart&gt;
-    &lt;Aggregations /&gt;
-  &lt;/WebPart&gt;
-&lt;/WebParts&gt;</code></pre></td>
+<WebParts>
+  <WebPart>
+    <Aggregations />
+  </WebPart>
+</WebParts></code></pre></td>
 </tr>
 </tbody>
 </table>

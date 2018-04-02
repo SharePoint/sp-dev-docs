@@ -67,10 +67,10 @@ Specifies the element manifests to apply during the Feature upgrade.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ApplyElementManifests&gt;
-  &lt;ElementFile /&gt;
-  &lt;ElementManifest /&gt;
-&lt;/ApplyElementManifests&gt;</code></pre></td>
+<td align="left"><pre><code><ApplyElementManifests>
+  <ElementFile />
+  <ElementManifest />
+</ApplyElementManifests></code></pre></td>
 </tr>
 </tbody>
 </table>

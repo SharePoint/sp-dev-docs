@@ -70,8 +70,8 @@ intended to be used directly from your code.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CategoryBot&gt;
-&lt;/CategoryBot&gt;</code></pre></td>
+<td align="left"><pre><code><CategoryBot>
+</CategoryBot></code></pre></td>
 </tr>
 </tbody>
 </table>

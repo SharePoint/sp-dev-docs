@@ -71,33 +71,33 @@ Defines a gallery button.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GalleryButton
-  Alt=&quot;Text&quot;
-  Command=&quot;Text&quot;
-  CommandPreview=&quot;Text&quot;
-  CommandRevert=&quot;Text&quot;
-  CommandType=&quot;General | OptionSelect | IgnoredByMenu&quot;
-  CommandValueId=&quot;Text&quot;
-  ElementDimensions=&quot;Size16by16 | Size32by32 | Size48by48 | Size72by96 | Size96by72 | Size96by96 | Size128by128 | Size190by30 | Size190by40 | Size190by50 | Size190by60&quot;
-  Id=&quot;Text&quot;
-  Image=&quot;Url&quot;
-  ImageClass=&quot;CSS Selector&quot;
-  ImageLeft=&quot;Negative Integer&quot;
-  ImageTop=&quot;Negative Integer&quot;
-  InnerHTML=&quot;HTML&quot;
-  MenuItemId=&quot;Text&quot;
-  QueryCommand=&quot;Text&quot;
-  Sequence=&quot;Integer&quot;
-  TemplateAlias=&quot;Text&quot;
-  ToolTipImage32by32=&quot;Url&quot;
-  ToolTipImage32by32Class=&quot;CSS Selector&quot;
-  ToolTipImage32by32Left=&quot;Negative Integer&quot;
-  ToolTipImage32by32Top=&quot;Negative Integer&quot;
-  ToolTipTitle=&quot;Text&quot;
-  ToolTipDescription=&quot;Text&quot;
-  ToolTipHelpKeyWord=&quot;Text&quot;
-  ToolTipShortcutKey=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><GalleryButton
+  Alt="Text"
+  Command="Text"
+  CommandPreview="Text"
+  CommandRevert="Text"
+  CommandType="General | OptionSelect | IgnoredByMenu"
+  CommandValueId="Text"
+  ElementDimensions="Size16by16 | Size32by32 | Size48by48 | Size72by96 | Size96by72 | Size96by96 | Size128by128 | Size190by30 | Size190by40 | Size190by50 | Size190by60"
+  Id="Text"
+  Image="Url"
+  ImageClass="CSS Selector"
+  ImageLeft="Negative Integer"
+  ImageTop="Negative Integer"
+  InnerHTML="HTML"
+  MenuItemId="Text"
+  QueryCommand="Text"
+  Sequence="Integer"
+  TemplateAlias="Text"
+  ToolTipImage32by32="Url"
+  ToolTipImage32by32Class="CSS Selector"
+  ToolTipImage32by32Left="Negative Integer"
+  ToolTipImage32by32Top="Negative Integer"
+  ToolTipTitle="Text"
+  ToolTipDescription="Text"
+  ToolTipHelpKeyWord="Text"
+  ToolTipShortcutKey="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Defines a gallery button.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ElementDimensions**</p></td>
-<td align="left"><p>Required. An enumeration value that specifies the dimensions of the rectangle in which the button is rendered. Dimensions are in pixels and are in the format &quot;width by height&quot;.</p>
+<td align="left"><p>Required. An enumeration value that specifies the dimensions of the rectangle in which the button is rendered. Dimensions are in pixels and are in the format "width by height".</p>
 <ul>
 <li><p>**Size16by16**</p></li>
 <li><p>**Size32by32**</p></li>
@@ -165,7 +165,7 @@ Defines a gallery button.
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;buttonStaticStyle1&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "buttonStaticStyle1".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image**</p></td>
@@ -207,7 +207,7 @@ Defines a gallery button.
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32Class**</p></td>
@@ -235,7 +235,7 @@ Defines a gallery button.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is &quot;ALT + J&quot;. The tooltip will display the text for the shortcut key in parentheses after the tooltip title: &quot;(ALT + J)&quot;.</p></td>
+<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
 </tr>
 </tbody>
 </table>
@@ -300,7 +300,7 @@ code] "Copy code")Copy code</span>
                 Id="buttonStaticStyle1"
                 Command="ApplyStyle"
                 QueryCommand="QueryStyle"
-                InnerHTML="&lt;DIV class=&quot;PreviewStyleContainer&quot;&gt;&lt;P class=&quot;PreviewStaticStyle1&quot; id=&quot;labelPreviewContent0&quot;&gt;&lt;/P&gt;&lt;P class=&quot;PreviewStyleLabel&quot; id=&quot;labelPreviewStyle0&quot;&gt;&lt;/P&gt;&lt;/DIV&gt;"
+                InnerHTML="<DIV class="PreviewStyleContainer"><P class="PreviewStaticStyle1" id="labelPreviewContent0"></P><P class="PreviewStyleLabel" id="labelPreviewStyle0"></P></DIV>"
                 ElementDimensions="Size64by48"
                 LabelText="Heading1"
                 Alt="Heading1"
@@ -309,7 +309,7 @@ code] "Copy code")Copy code</span>
                 Id="buttonStaticStyle2"
                 Command="ApplyStyle"
                 QueryCommand="QueryStyle"
-                InnerHTML="&lt;DIV class=&quot;PreviewStyleContainer&quot;&gt;&lt;P class=&quot;PreviewStaticStyle2&quot; id=&quot;labelPreviewContent1&quot;&gt;&lt;/P&gt;&lt;P class=&quot;PreviewStyleLabel&quot; id=&quot;labelPreviewStyle1&quot;&gt;&lt;/P&gt;&lt;/DIV&gt;"
+                InnerHTML="<DIV class="PreviewStyleContainer"><P class="PreviewStaticStyle2" id="labelPreviewContent1"></P><P class="PreviewStyleLabel" id="labelPreviewStyle1"></P></DIV>"
                 ElementDimensions="Size64by48"
                 LabelText="Heading2"
                 Alt="Heading2"
@@ -318,7 +318,7 @@ code] "Copy code")Copy code</span>
                 Id="buttonStaticStyle3"
                 QueryCommand="QueryStyle"
                 Command="ApplyStyle"
-                InnerHTML="&lt;DIV class=&quot;PreviewStyleContainer&quot;&gt;&lt;P class=&quot;PreviewStaticStyle3&quot; id=&quot;labelPreviewContent2&quot;&gt;&lt;/P&gt;&lt;P class=&quot;PreviewStyleLabel&quot; id=&quot;labelPreviewStyle2&quot;&gt;&lt;/P&gt;&lt;/DIV&gt;"
+                InnerHTML="<DIV class="PreviewStyleContainer"><P class="PreviewStaticStyle3" id="labelPreviewContent2"></P><P class="PreviewStyleLabel" id="labelPreviewStyle2"></P></DIV>"
                 ElementDimensions="Size64by48"
                 LabelText="Heading3"
                 Alt="Heading3"
@@ -327,7 +327,7 @@ code] "Copy code")Copy code</span>
                 Id="buttonStaticStyle4"
                 Command="ApplyStyle"
                 QueryCommand="QueryStyle"
-                InnerHTML="&lt;DIV class=&quot;PreviewStyleContainer&quot;&gt;&lt;P class=&quot;PreviewStaticStyle4&quot; id=&quot;labelPreviewContent3&quot;&gt;&lt;/P&gt;&lt;P class=&quot;PreviewStyleLabel&quot; id=&quot;labelPreviewStyle3&quot;&gt;&lt;/P&gt;&lt;/DIV&gt;"
+                InnerHTML="<DIV class="PreviewStyleContainer"><P class="PreviewStaticStyle4" id="labelPreviewContent3"></P><P class="PreviewStyleLabel" id="labelPreviewStyle3"></P></DIV>"
                 ElementDimensions="Size64by48"
                 LabelText="Quote"
                 Alt="Quote"
@@ -336,7 +336,7 @@ code] "Copy code")Copy code</span>
                 Id="buttonStaticStyle5"
                 Command="ApplyStyle"
                 QueryCommand="QueryStyle"
-                InnerHTML="&lt;DIV class=&quot;PreviewStyleContainer&quot;&gt;&lt;P class=&quot;PreviewStaticStyle5&quot; id=&quot;labelPreviewContent4&quot;&gt;&lt;/P&gt;&lt;P class=&quot;PreviewStyleLabel&quot; id=&quot;labelPreviewStyle4&quot;&gt;&lt;/P&gt;&lt;/DIV&gt;"
+                InnerHTML="<DIV class="PreviewStyleContainer"><P class="PreviewStaticStyle5" id="labelPreviewContent4"></P><P class="PreviewStyleLabel" id="labelPreviewStyle4"></P></DIV>"
                 ElementDimensions="Size64by48"
                 LabelText="Citation"
                 Alt="Citation"

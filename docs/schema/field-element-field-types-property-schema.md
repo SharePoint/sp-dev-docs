@@ -26,13 +26,13 @@ Represents a variable property of a custom field type that is set when a column 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Field
+<td align="left"><pre><code><Field
   Name="Text" 
   DisplayName="Text" 
   MaxLength="Integer" 
   DisplaySize="Integer" 
-  Type="Text"&gt;
-&lt;/Field&gt;</code></pre></td>
+  Type="Text">
+</Field></code></pre></td>
 </tr>
 </tbody>
 </table>

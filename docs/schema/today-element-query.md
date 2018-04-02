@@ -73,8 +73,8 @@ MM/DD/YYYY (for example, 1/21/2001).
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Today  Offset = &quot;Integer&quot;&gt;
-&lt;/Today&gt;</code></pre></td>
+<td align="left"><pre><code><Today  Offset = "Integer">
+</Today></code></pre></td>
 </tr>
 </tbody>
 </table>

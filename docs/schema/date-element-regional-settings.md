@@ -73,16 +73,16 @@ on which standard time or daylight saving time begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Date&gt;
-  &lt;Day&gt;
-  &lt;/Day&gt;
-  &lt;DayOfWeek&gt;
-  &lt;/DayOfWeek&gt;
-  &lt;Hour&gt;
-    &lt;/Hour&gt;
-  &lt;Month&gt;
-    &lt;/Month&gt;
-&lt;/Date&gt;</code></pre></td>
+<td align="left"><pre><code><Date>
+  <Day>
+  </Day>
+  <DayOfWeek>
+  </DayOfWeek>
+  <Hour>
+    </Hour>
+  <Month>
+    </Month>
+</Date></code></pre></td>
 </tr>
 </tbody>
 </table>

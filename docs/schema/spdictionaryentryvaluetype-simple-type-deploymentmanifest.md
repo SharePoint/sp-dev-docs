@@ -67,20 +67,20 @@ Indicates the data type of the specified field value.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPDictionaryEntryValueType&quot;&gt;
-   &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-      &lt;xs:enumeration value=&quot;String&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Integer&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Time&quot; /&gt;
-      &lt;xs:enumeration value=&quot;StringVector&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Boolean&quot; /&gt;
-      &lt;xs:enumeration value=&quot;FileSystemTime&quot; /&gt;
-      &lt;xs:enumeration value=&quot;IntVector&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Double&quot; /&gt;
-      &lt;xs:enumeration value=&quot;LongText&quot; /&gt;
-      &lt;xs:enumeration value=&quot;Empty&quot; /&gt;
-   &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPDictionaryEntryValueType">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Integer" />
+      <xs:enumeration value="Time" />
+      <xs:enumeration value="StringVector" />
+      <xs:enumeration value="Boolean" />
+      <xs:enumeration value="FileSystemTime" />
+      <xs:enumeration value="IntVector" />
+      <xs:enumeration value="Double" />
+      <xs:enumeration value="LongText" />
+      <xs:enumeration value="Empty" />
+   </xs:restriction>
+</xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -71,20 +71,20 @@ class="keyword">Conditions</span> method call.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Conditions&gt;
-  &lt;Condition&gt;
-        &lt;Parameters&gt;
-      &lt;Parameter /&gt;
-        &lt;/Parameter&gt;
-  &lt;/Condition&gt;
-&lt;/Conditions&gt;
-&lt;Actions&gt;
-  &lt;Action&gt;
-    &lt;Parameters&gt;
-      &lt;Parameter /&gt;
-    &lt;/Parameters
-  &lt;/Action&gt;
-&lt;/Actions&gt;</code></pre></td>
+<td align="left"><pre><code><Conditions>
+  <Condition>
+        <Parameters>
+      <Parameter />
+        </Parameter>
+  </Condition>
+</Conditions>
+<Actions>
+  <Action>
+    <Parameters>
+      <Parameter />
+    </Parameters
+  </Action>
+</Actions></code></pre></td>
 </tr>
 </tbody>
 </table>

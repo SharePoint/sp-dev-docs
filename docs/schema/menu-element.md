@@ -71,10 +71,10 @@ Defines a menu control.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Menu
-  Id=&quot;Text&quot;
-  MaxWidth=&quot;Integer&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Menu
+  Id="Text"
+  MaxWidth="Integer"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -96,7 +96,7 @@ Defines a menu control.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the element, such as &quot;Ribbon.WikiPageTab.EditAndCheckout.SaveEdit.Menu&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the element, such as "Ribbon.WikiPageTab.EditAndCheckout.SaveEdit.Menu".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**MaxWidth**</p></td>

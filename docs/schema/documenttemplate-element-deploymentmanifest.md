@@ -72,18 +72,18 @@ library.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;DocumentTemplate&quot; type=&quot;SPDocTemplate&quot; /&gt;
+<xs:element name="DocumentTemplate" type="SPDocTemplate" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;DocumentTemplate
-                DefaultTemplate=&quot;xs:string&quot;
-                Description=&quot;xs:string&quot;
-                Name=&quot;xs:string&quot;
-                SchemaXml=&quot;xs:string&quot;
-                Type=&quot;xs:int&quot;
-        /&gt;
-&lt;/SPObject</code></pre></td>
+<SPObject>
+        <DocumentTemplate
+                DefaultTemplate="xs:string"
+                Description="xs:string"
+                Name="xs:string"
+                SchemaXml="xs:string"
+                Type="xs:int"
+        />
+</SPObject</code></pre></td>
 </tr>
 </tbody>
 </table>

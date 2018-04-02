@@ -74,7 +74,7 @@ Schema: BDCMetadataResource
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FilterDescriptor Name = &quot;String&quot;&gt; &lt;/FilterDescriptor&gt;</code></pre></td>
+<td align="left"><pre><code><FilterDescriptor Name = "String"> </FilterDescriptor></code></pre></td>
 </tr>
 </tbody>
 </table>

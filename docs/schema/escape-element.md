@@ -69,10 +69,10 @@ occurrence of a character in the string.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Escape
-  EscapeChar = &quot;Text&quot;
-  EscapeChars = &quot;Text&quot;&gt;
-&lt;/Escape&gt;</code></pre></td>
+<td align="left"><pre><code><Escape
+  EscapeChar = "Text"
+  EscapeChars = "Text">
+</Escape></code></pre></td>
 </tr>
 </tbody>
 </table>

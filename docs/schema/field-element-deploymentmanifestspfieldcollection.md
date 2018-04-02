@@ -27,14 +27,14 @@ collection.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name="Field" 
+<xs:element name="Field" 
         type="SPField" 
         minOccurs="0" maxOccurs="unbounded" 
-/&gt;
+/>
 
 USAGE
-&lt;Fields&gt;
-        &lt;Field
+<Fields>
+        <Field
                 ID="Guid"
                 FieldId="Guid"
                 Name="xs:string"
@@ -68,8 +68,8 @@ USAGE
                 Format="xs:string"
                 FillInChoice="xs:string"
                 SchemaXml="xs:string"
-        /&gt;
-&lt;/Fields&gt;</code></pre></td>
+        />
+</Fields></code></pre></td>
 </tr>
 </tbody>
 </table>

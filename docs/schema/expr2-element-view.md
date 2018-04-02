@@ -76,8 +76,8 @@ conditionals.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Expr2&gt;
-&lt;/Expr2&gt;</code></pre></td>
+<td align="left"><pre><code><Expr2>
+</Expr2></code></pre></td>
 </tr>
 </tbody>
 </table>

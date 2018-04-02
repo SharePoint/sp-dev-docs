@@ -69,12 +69,12 @@ class="keyword">SPRootObject</span>) instances.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;RootObjects&quot; type=&quot;SPRootObjects&quot; /&gt;
+<xs:element name="RootObjects" type="SPRootObjects" />
 
 USAGE
-&lt;RootObjects&gt;
-    &lt;RootObject /&gt;
-&lt;/RootObjects&gt;</code></pre></td>
+<RootObjects>
+    <RootObject />
+</RootObjects></code></pre></td>
 </tr>
 </tbody>
 </table>

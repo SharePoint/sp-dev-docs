@@ -69,14 +69,14 @@ role (**DeploymentRole**) objects.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;Roles&quot; type=&quot;DeploymentRoles&quot; /&gt;
+<xs:element name="Roles" type="DeploymentRoles" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;Roles
-                &lt;Role /&gt;
-        /&gt;
-&lt;SPObject&gt;</code></pre></td>
+<SPObject>
+        <Roles
+                <Role />
+        />
+<SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,13 +72,13 @@ access security policy.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Assemblies&gt;
-  &lt;Assembly
-      Name = &quot;Text&quot;
-      PublicKeyBlob = &quot;Text&quot;
-      Version = &quot;Text&quot;&gt;
-  &lt;/Assembly&gt;
-&lt;/Assemblies&gt;</code></pre></td>
+<td align="left"><pre><code><Assemblies>
+  <Assembly
+      Name = "Text"
+      PublicKeyBlob = "Text"
+      Version = "Text">
+  </Assembly>
+</Assemblies></code></pre></td>
 </tr>
 </tbody>
 </table>

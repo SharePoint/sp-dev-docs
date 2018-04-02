@@ -69,26 +69,26 @@ base object are being deployed.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;RoleX&quot; type=&quot;DeploymentRoleX&quot; /&gt;
+<xs:element name="RoleX" type="DeploymentRoleX" />
 
 USAGE
-&lt;SPObject&gt;
-        &lt;RoleX
-                Operation=&quot;SecurityModificationType&quot;
-                OperationCode=&quot;xs:string&quot;
-                WebId=&quot;xs:string&quot;
-                WebUrl=&quot;xs:string&quot;
-                RoleId=&quot;xs:string&quot;
-                Title=&quot;xs:string&quot;
-                Description=&quot;xs:string&quot;
-                PermMask=&quot;xs:string&quot;
-                Hidden=&quot;xs:boolean&quot;
-                RoleOrder=&quot;xs:string&quot;
-                Type=&quot;xs:string&quot;
-                UserId=&quot;xs:string&quot;
-                UserLogin=&quot;xs:string&quot;
-        /&gt;
-&lt;/SPObject&gt;</code></pre></td>
+<SPObject>
+        <RoleX
+                Operation="SecurityModificationType"
+                OperationCode="xs:string"
+                WebId="xs:string"
+                WebUrl="xs:string"
+                RoleId="xs:string"
+                Title="xs:string"
+                Description="xs:string"
+                PermMask="xs:string"
+                Hidden="xs:boolean"
+                RoleOrder="xs:string"
+                Type="xs:string"
+                UserId="xs:string"
+                UserLogin="xs:string"
+        />
+</SPObject></code></pre></td>
 </tr>
 </tbody>
 </table>

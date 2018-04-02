@@ -74,7 +74,7 @@ Schema: SolutionManifestDefinitions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Association AssociationName = &quot;String&quot; EntityTypeNamespace = &quot;String&quot; EntityTypeName = &quot;String&quot; ReferenceOfficeItemPropertyName = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/Association&gt;</code></pre></td>
+<td align="left"><pre><code><Association AssociationName = "String" EntityTypeNamespace = "String" EntityTypeName = "String" ReferenceOfficeItemPropertyName = "String" Name = "String" Description = "String"> </Association></code></pre></td>
 </tr>
 </tbody>
 </table>

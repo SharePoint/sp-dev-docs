@@ -71,18 +71,18 @@ Defines a group of controls.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Group
-  Command=&quot;Text&quot;
-  Description=&quot;Text&quot;
-  Id=&quot;Text&quot;
-  Image32by32Popup=&quot;Url&quot;
-  Image32by32PopupClass=&quot;CSS Class Selector&quot;
-  Image32by32PopupLeft=&quot;Negative Integer&quot;
-  Image32by32PopupTop=&quot;Negative Integer&quot;
-  Sequence=&quot;Integer&quot;
-  Template=&quot;Text&quot;
-  Title=&quot;Text&quot;
-/&gt;</code></pre></td>
+<td align="left"><pre><code><Group
+  Command="Text"
+  Description="Text"
+  Id="Text"
+  Image32by32Popup="Url"
+  Image32by32PopupClass="CSS Class Selector"
+  Image32by32PopupLeft="Negative Integer"
+  Image32by32PopupTop="Negative Integer"
+  Sequence="Integer"
+  Template="Text"
+  Title="Text"
+/></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -112,11 +112,11 @@ Defines a group of controls.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the group, such as &quot;Ribbon.DocLibListForm.Edit.Clipboard&quot;.</p></td>
+<td align="left"><p>Required. A string that identifies the group, such as "Ribbon.DocLibListForm.Edit.Clipboard".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Image32by32Popup**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used to represent the group, such as &quot;/_layouts/1033/images/formatmap32x32.png&quot;.</p></td>
+<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used to represent the group, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image32by32PopupClass**</p></td>

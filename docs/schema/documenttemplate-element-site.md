@@ -72,14 +72,14 @@ a Web site based on Microsoft SharePoint Foundation.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocumentTemplate
-  Default = &quot;TRUE&quot; | &quot;FALSE&quot;
-    Description = &quot;Text&quot;
-  DisplayName = &quot;Text&quot;
-  Name = &quot;Text&quot;
-  Path = &quot;Text&quot;
-  Type = &quot;Number&quot;&gt;
-&lt;/DocumentTemplate&gt;</code></pre></td>
+<td align="left"><pre><code><DocumentTemplate
+  Default = "TRUE" | "FALSE"
+    Description = "Text"
+  DisplayName = "Text"
+  Name = "Text"
+  Path = "Text"
+  Type = "Number">
+</DocumentTemplate></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -70,12 +70,12 @@ class="nolink">GroupByFooter</span></span>) used in a view.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element name=&quot;GroupByFooter&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+<xs:element name="GroupByFooter" minOccurs="0" maxOccurs="unbounded" />
 
 USAGE
-&lt;View&gt;
-        &lt;GroupByFooter /&gt;
-&lt;/View&gt;</code></pre></td>
+<View>
+        <GroupByFooter />
+</View></code></pre></td>
 </tr>
 </tbody>
 </table>

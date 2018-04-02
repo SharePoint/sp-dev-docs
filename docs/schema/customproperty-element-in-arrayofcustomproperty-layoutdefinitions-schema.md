@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Defines a custom property of a Container or an Office External Part.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;CustomProperty Name = &quot;String&quot; Value = &quot;String&quot;&gt; &lt;/CustomProperty&gt;</code></pre></td>
+<td align="left"><pre><code><CustomProperty Name = "String" Value = "String"> </CustomProperty></code></pre></td>
 </tr>
 </tbody>
 </table>

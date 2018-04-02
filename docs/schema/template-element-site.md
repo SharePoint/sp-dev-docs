@@ -72,11 +72,11 @@ definition that can be used to create Web sites within the deployment.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Template
-  ID = &quot;Text&quot;
-  Name = &quot;Text&quot;
-  SetupPath = &quot;Text&quot;&gt;
-&lt;/Template&gt;</code></pre></td>
+<td align="left"><pre><code><Template
+  ID = "Text"
+  Name = "Text"
+  SetupPath = "Text">
+</Template></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -106,7 +106,7 @@ definition that can be used to create Web sites within the deployment.
 </tr>
 <tr class="odd">
 <td align="left"><p>**SetupPath**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the relative path in the setup directory that contains files used in the site definition, for example, <span class="code">SetupPath=&quot;global&quot;**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the relative path in the setup directory that contains files used in the site definition, for example, <span class="code">SetupPath="global"**.</p></td>
 </tr>
 </tbody>
 </table>

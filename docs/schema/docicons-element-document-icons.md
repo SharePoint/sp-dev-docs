@@ -74,8 +74,8 @@ document library icons.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DocIcons&gt;
-&lt;/DocIcons&gt;</code></pre></td>
+<td align="left"><pre><code><DocIcons>
+</DocIcons></code></pre></td>
 </tr>
 </tbody>
 </table>

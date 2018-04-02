@@ -71,10 +71,10 @@ Returns a reference to a field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;FieldRef
-  Name = &quot;Text&quot;
-  Type = &quot;Text&quot;&gt;
-&lt;/FieldRef&gt;</code></pre></td>
+<td align="left"><pre><code><FieldRef
+  Name = "Text"
+  Type = "Text">
+</FieldRef></code></pre></td>
 </tr>
 </tbody>
 </table>

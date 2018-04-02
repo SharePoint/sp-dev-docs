@@ -73,9 +73,9 @@ currency format used for a locale.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Currency
-  ID = &quot;Integer&quot;&gt;
-&lt;/Currency&gt;</code></pre></td>
+<td align="left"><pre><code><Currency
+  ID = "Integer">
+</Currency></code></pre></td>
 </tr>
 </tbody>
 </table>

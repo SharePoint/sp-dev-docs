@@ -71,9 +71,9 @@ Specifies a reference to a Feature within a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Feature
-  Id = &quot;Text&quot;  SourceVersion = &quot;Text&quot;&gt;
-&lt;/Feature&gt;</code></pre></td>
+<td align="left"><pre><code><Feature
+  Id = "Text"  SourceVersion = "Text">
+</Feature></code></pre></td>
 </tr>
 </tbody>
 </table>

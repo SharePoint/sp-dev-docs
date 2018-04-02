@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies the layout for the External Data Parts.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Container ContainerType = &quot;String&quot; FillParent = &quot;Boolean&quot;&gt; &lt;/Container&gt;</code></pre></td>
+<td align="left"><pre><code><Container ContainerType = "String" FillParent = "Boolean"> </Container></code></pre></td>
 </tr>
 </tbody>
 </table>

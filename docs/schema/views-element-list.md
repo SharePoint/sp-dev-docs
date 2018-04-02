@@ -71,8 +71,8 @@ Contains an enumeration of the views that are used in a list.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Views&gt;
-&lt;/Views&gt;</code></pre></td>
+<td align="left"><pre><code><Views>
+</Views></code></pre></td>
 </tr>
 </tbody>
 </table>

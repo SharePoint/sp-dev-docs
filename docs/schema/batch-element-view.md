@@ -71,16 +71,16 @@ Provides batch processing of commands within HTTP protocol.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Batch
-  OnError = &quot;Return&quot; | &quot;Continue&quot;
-  ListVersion = &quot;&quot;
-  Version = &quot;&quot;
-  ViewName = &quot;&quot;&gt;
-  &lt;Method&gt;
+<td align="left"><pre><code><Batch
+  OnError = "Return" | "Continue"
+  ListVersion = ""
+  Version = ""
+  ViewName = "">
+  <Method>
   ...
-  &lt;/Method&gt;
+  </Method>
   ...
-&lt;/Batch&gt;</code></pre></td>
+</Batch></code></pre></td>
 </tr>
 </tbody>
 </table>

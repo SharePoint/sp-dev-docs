@@ -71,9 +71,9 @@ Specifies a root path to which solution files are copied.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;RootFile
-  Location = &quot;Text&quot;&gt;
-&lt;/RootFile&gt;</code></pre></td>
+<td align="left"><pre><code><RootFile
+  Location = "Text">
+</RootFile></code></pre></td>
 </tr>
 </tbody>
 </table>

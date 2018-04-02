@@ -68,7 +68,7 @@ data.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;GUIDMap /&gt;</code></pre></td>
+<td align="left"><pre><code><GUIDMap /></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -72,9 +72,9 @@ class="keyword">Choice</span> field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;MAPPING
-  Value = &quot;Text&quot;&gt;
-&lt;/MAPPING&gt;</code></pre></td>
+<td align="left"><pre><code><MAPPING
+  Value = "Text">
+</MAPPING></code></pre></td>
 </tr>
 </tbody>
 </table>

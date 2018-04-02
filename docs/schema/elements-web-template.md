@@ -29,7 +29,7 @@ Provides a parent for the **WebTemplate** element in an elements.xml file in a w
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Elements xmlns=&quot;http://schemas.microsoft.com/sharepoint/&quot;&gt;</code></pre></td>
+<td align="left"><pre><code><Elements xmlns="http://schemas.microsoft.com/sharepoint/"></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -41,7 +41,7 @@ Provides a parent for the **WebTemplate** element in an elements.xml file in a w
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>  &lt;WebTemplate ...&gt;</code></pre></td>
+<td align="left"><pre><code>  <WebTemplate ...></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -53,7 +53,7 @@ Provides a parent for the **WebTemplate** element in an elements.xml file in a w
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;/Elements&gt;</code></pre></td>
+<td align="left"><pre><code></Elements></code></pre></td>
 </tr>
 </tbody>
 </table>

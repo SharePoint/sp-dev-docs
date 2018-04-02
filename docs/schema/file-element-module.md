@@ -67,23 +67,23 @@ Specifies a file to include within a module in a site definition.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;File
+<td align="left"><pre><code><File
   DocumentTemplateForList = string
-  DoGUIDFixUp = &quot;TRUE&quot; | &quot;FALSE&quot;
-  IgnoreIfAlreadyExists = &quot;TRUE&quot; | &quot;FALSE&quot;
+  DoGUIDFixUp = "TRUE" | "FALSE"
+  IgnoreIfAlreadyExists = "TRUE" | "FALSE"
   Level = Draft
   Name = string
-  NavBarHome = &quot;TRUE&quot; | &quot;FALSE&quot;
-  Path = string  ReplaceContent = &quot;TRUE&quot; | &quot;FALSE&quot; 
-  Type = &quot;Ghostable&quot; | &quot;GhostableInLibrary&quot;
-  Url = string&gt;
-  &lt;AllUsersWebPart /&gt;
-  &lt;BinarySerializedWebPart /&gt;
-  &lt;NavBarPage /&gt;
-  &lt;Property /&gt;
-  &lt;View /&gt;
-  &lt;WebPartConnection /&gt;
-&lt;/File&gt;</code></pre></td>
+  NavBarHome = "TRUE" | "FALSE"
+  Path = string  ReplaceContent = "TRUE" | "FALSE" 
+  Type = "Ghostable" | "GhostableInLibrary"
+  Url = string>
+  <AllUsersWebPart />
+  <BinarySerializedWebPart />
+  <NavBarPage />
+  <Property />
+  <View />
+  <WebPartConnection />
+</File></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -111,7 +111,7 @@ Specifies a file to include within a module in a site definition.
 <td align="left"><p>**Name**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the virtual path for the file. Cannot contain the following characters:</p>
 <ul>
-<li><p>\&quot;</p></li>
+<li><p>\"</p></li>
 <li><p>#</p></li>
 <li><p>%</p></li>
 <li><p>&amp;</p></li>
@@ -156,7 +156,7 @@ Specifies a file to include within a module in a site definition.
 <td align="left"><p>**Url**</p></td>
 <td align="left"><p>Required **Text</span>. Specifies the virtual path for the file. If the **Name</span> attribute is specified, its value is used for the virtual path. If **Path</span> is not specified, the value of **Url** is used for the physical path. Cannot contain the following characters:</p>
 <ul>
-<li><p>\&quot;</p></li>
+<li><p>\"</p></li>
 <li><p>#</p></li>
 <li><p>%</p></li>
 <li><p>&amp;</p></li>

@@ -74,7 +74,7 @@ Schema: SolutionManifestDeclarativeExtensions
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;UrlAction  Url = &quot;String&quot; Caption = &quot;String&quot; Tooltip = &quot;String&quot; Image = &quot;String&quot; DisplayLocations = &quot;String&quot; DisplayOrder = &quot;Int&quot; Scope = &quot;String&quot; Name = &quot;String&quot; Description = &quot;String&quot;&gt; &lt;/UrlAction&gt;</code></pre></td>
+<td align="left"><pre><code><UrlAction  Url = "String" Caption = "String" Tooltip = "String" Image = "String" DisplayLocations = "String" DisplayOrder = "Int" Scope = "String" Name = "String" Description = "String"> </UrlAction></code></pre></td>
 </tr>
 </tbody>
 </table>

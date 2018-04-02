@@ -71,8 +71,8 @@ Contains the definition of a toolbar for a list form.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ListFormButtons&gt;
-&lt;/ListFormButtons&gt;</code></pre></td>
+<td align="left"><pre><code><ListFormButtons>
+</ListFormButtons></code></pre></td>
 </tr>
 </tbody>
 </table>

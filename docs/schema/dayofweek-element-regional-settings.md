@@ -74,8 +74,8 @@ time begins for a time zone.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;DayOfWeek&gt;
-&lt;/DayOfWeek&gt;</code></pre></td>
+<td align="left"><pre><code><DayOfWeek>
+</DayOfWeek></code></pre></td>
 </tr>
 </tbody>
 </table>

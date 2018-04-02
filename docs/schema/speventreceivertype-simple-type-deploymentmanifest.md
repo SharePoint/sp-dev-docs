@@ -67,44 +67,44 @@ Specifies the available event receivers.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;xs:simpleType name=&quot;SPEventReceiverType&quot; &gt;
-        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
-            &lt;xs:enumeration value=&quot;ItemAdding&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemUpdating&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemDeleting&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemCheckingIn&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemCheckingOut&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemUncheckingOut&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemAttachmentAdding&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemAttachmentDeleting&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemFileMoving&quot; /&gt;
-            &lt;xs:enumeration value=&quot;FieldAdding&quot; /&gt;
-            &lt;xs:enumeration value=&quot;FieldUpdating&quot; /&gt;
-            &lt;xs:enumeration value=&quot;FieldDeleting&quot; /&gt;
-            &lt;xs:enumeration value=&quot;SiteDeleting&quot; /&gt;
-            &lt;xs:enumeration value=&quot;WebDeleting&quot; /&gt;
-            &lt;xs:enumeration value=&quot;WebMoving&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemAdded&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemUpdated&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemDeleted&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemCheckedIn&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemCheckedOut&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemUncheckedOut&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemAttachmentAdded&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemAttachmentDeleted&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemFileMoved&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ItemFileTransformed&quot; /&gt;
-            &lt;xs:enumeration value=&quot;FieldAdded&quot; /&gt;
-            &lt;xs:enumeration value=&quot;FieldUpdated&quot; /&gt;
-            &lt;xs:enumeration value=&quot;FieldDeleted&quot; /&gt;
-            &lt;xs:enumeration value=&quot;SiteDeleted&quot; /&gt;
-            &lt;xs:enumeration value=&quot;WebDeleted&quot; /&gt;
-            &lt;xs:enumeration value=&quot;WebMoved&quot; /&gt;
-            &lt;xs:enumeration value=&quot;EmailReceived&quot; /&gt;
-            &lt;xs:enumeration value=&quot;ContextEvent&quot; /&gt;
-            &lt;xs:enumeration value=&quot;InvalidReceiver&quot; /&gt;
-        &lt;/xs:restriction&gt;
-    &lt;/xs:simpleType&gt;</code></pre></td>
+<td align="left"><pre><code><xs:simpleType name="SPEventReceiverType" >
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ItemAdding" />
+            <xs:enumeration value="ItemUpdating" />
+            <xs:enumeration value="ItemDeleting" />
+            <xs:enumeration value="ItemCheckingIn" />
+            <xs:enumeration value="ItemCheckingOut" />
+            <xs:enumeration value="ItemUncheckingOut" />
+            <xs:enumeration value="ItemAttachmentAdding" />
+            <xs:enumeration value="ItemAttachmentDeleting" />
+            <xs:enumeration value="ItemFileMoving" />
+            <xs:enumeration value="FieldAdding" />
+            <xs:enumeration value="FieldUpdating" />
+            <xs:enumeration value="FieldDeleting" />
+            <xs:enumeration value="SiteDeleting" />
+            <xs:enumeration value="WebDeleting" />
+            <xs:enumeration value="WebMoving" />
+            <xs:enumeration value="ItemAdded" />
+            <xs:enumeration value="ItemUpdated" />
+            <xs:enumeration value="ItemDeleted" />
+            <xs:enumeration value="ItemCheckedIn" />
+            <xs:enumeration value="ItemCheckedOut" />
+            <xs:enumeration value="ItemUncheckedOut" />
+            <xs:enumeration value="ItemAttachmentAdded" />
+            <xs:enumeration value="ItemAttachmentDeleted" />
+            <xs:enumeration value="ItemFileMoved" />
+            <xs:enumeration value="ItemFileTransformed" />
+            <xs:enumeration value="FieldAdded" />
+            <xs:enumeration value="FieldUpdated" />
+            <xs:enumeration value="FieldDeleted" />
+            <xs:enumeration value="SiteDeleted" />
+            <xs:enumeration value="WebDeleted" />
+            <xs:enumeration value="WebMoved" />
+            <xs:enumeration value="EmailReceived" />
+            <xs:enumeration value="ContextEvent" />
+            <xs:enumeration value="InvalidReceiver" />
+        </xs:restriction>
+    </xs:simpleType></code></pre></td>
 </tr>
 </tbody>
 </table>

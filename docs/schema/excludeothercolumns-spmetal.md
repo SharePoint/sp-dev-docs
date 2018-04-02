@@ -83,7 +83,7 @@ explicitly represented by Column elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ExcludeOtherColumns /&gt;</code></pre></td>
+<td align="left"><pre><code><ExcludeOtherColumns /></code></pre></td>
 </tr>
 </tbody>
 </table>

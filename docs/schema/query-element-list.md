@@ -71,15 +71,15 @@ Defines the query for a view.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Query&gt;  &lt;Where&gt;
+<td align="left"><pre><code><Query>  <Where>
     ...
-    &lt;/Where&gt;  &lt;GroupBy&gt;
+    </Where>  <GroupBy>
     ...
-    &lt;/GroupBy&gt;
-  &lt;OrderBy&gt;
+    </GroupBy>
+  <OrderBy>
     ...
-    &lt;/OrderBy&gt;
-&lt;/Query&gt;</code></pre></td>
+    </OrderBy>
+</Query></code></pre></td>
 </tr>
 </tbody>
 </table>

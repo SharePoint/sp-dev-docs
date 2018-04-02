@@ -74,8 +74,8 @@ processing Web queries in extracting data from views.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;WebQueryInfo&gt;
-&lt;/WebQueryInfo&gt;</code></pre></td>
+<td align="left"><pre><code><WebQueryInfo>
+</WebQueryInfo></code></pre></td>
 </tr>
 </tbody>
 </table>

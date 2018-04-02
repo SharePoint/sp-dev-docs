@@ -69,22 +69,22 @@ the content migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element
-    name=&quot;RootObject&quot; type=&quot;SPRootObject&quot;
-    minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element
+    name="RootObject" type="SPRootObject"
+    minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;RootObjects&gt;
-    &lt;RootObject
-        Id=&quot;Guid&quot;
-        Type=&quot;SPDeploymentObjectType&quot;
-        ParentId=&quot;Guid&quot;
-        WebUrl=&quot;xs:string&quot;
-        Url=&quot;xs:string&quot;
-        IsDependency=&quot;xs:boolean&quot;
-    /&gt;
-&lt;/RootObjects&gt;</code></pre></td>
+<RootObjects>
+    <RootObject
+        Id="Guid"
+        Type="SPDeploymentObjectType"
+        ParentId="Guid"
+        WebUrl="xs:string"
+        Url="xs:string"
+        IsDependency="xs:boolean"
+    />
+</RootObjects></code></pre></td>
 </tr>
 </tbody>
 </table>

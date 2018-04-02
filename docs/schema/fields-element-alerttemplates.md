@@ -83,10 +83,10 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Fields&gt;
-  &lt;GetVar&gt;
-  &lt;/GetVar&gt;
-&lt;/Fields&gt;</code></pre></td>
+<td align="left"><pre><code><Fields>
+  <GetVar>
+  </GetVar>
+</Fields></code></pre></td>
 </tr>
 </tbody>
 </table>

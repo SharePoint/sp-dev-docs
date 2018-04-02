@@ -72,8 +72,8 @@ element to group filters in a query.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Or&gt;
-&lt;/Or&gt;</code></pre></td>
+<td align="left"><pre><code><Or>
+</Or></code></pre></td>
 </tr>
 </tbody>
 </table>

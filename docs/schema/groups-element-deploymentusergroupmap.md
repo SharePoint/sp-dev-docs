@@ -69,18 +69,18 @@ class="keyword">DeploymentGroup</span>) object instances.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;Groups&quot; 
-    type=&quot;DeploymentGroups&quot; 
-    minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot; 
-/&gt;
+<xs:element 
+    name="Groups" 
+    type="DeploymentGroups" 
+    minOccurs="0" maxOccurs="1" 
+/>
 
 USAGE
-&lt;UserGroupMap&gt;
-    &lt;Groups&gt;
-        &lt;Group /&gt;
-    &lt;/Group&gt;
-&lt;/UserGroupMap&gt;</code></pre></td>
+<UserGroupMap>
+    <Groups>
+        <Group />
+    </Group>
+</UserGroupMap></code></pre></td>
 </tr>
 </tbody>
 </table>

@@ -60,10 +60,10 @@ SharePoint Online | SharePoint Server 2013
 
 Lists the External Data Parts in this layout.
 
-**Namespace:**
+**Namespace**:
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 
-**Schema:** LayoutDefinitions
+**Schema**: LayoutDefinitions
 
 <span codelanguage="xmlLang"></span>
 <table>
@@ -77,7 +77,7 @@ http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Children&gt;&lt;/Children&gt;</code></pre></td>
+<td align="left"><pre><code><Children></Children></code></pre></td>
 </tr>
 </tbody>
 </table>

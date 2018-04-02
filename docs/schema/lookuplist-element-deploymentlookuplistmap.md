@@ -70,21 +70,21 @@ migration package.
 <tbody>
 <tr class="odd">
 <td align="left"><pre><code>DECLARATION
-&lt;xs:element 
-    name=&quot;LookupList&quot; 
-    type=&quot;SPLookupList&quot; 
-    minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; 
-/&gt;
+<xs:element 
+    name="LookupList" 
+    type="SPLookupList" 
+    minOccurs="0" maxOccurs="unbounded" 
+/>
 
 USAGE
-&lt;LookupLists&gt;
-    &lt;LookupList
-          &lt;LookupItems /&gt;
-        Id=&quot;Guid&quot;
-        Url=&quot;xs:string&quot;
-        Included=&quot;xs:boolean&quot;
-    /&gt;
-&lt;LookupLists&gt;</code></pre></td>
+<LookupLists>
+    <LookupList
+          <LookupItems />
+        Id="Guid"
+        Url="xs:string"
+        Included="xs:boolean"
+    />
+<LookupLists></code></pre></td>
 </tr>
 </tbody>
 </table>

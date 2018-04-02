@@ -71,26 +71,26 @@ Specifies format information for alert messages in digest format.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Digest&gt;
-  &lt;Subject&gt;
-  &lt;/Subject&gt;
-  &lt;Header&gt;
-  &lt;/Header&gt;
-  &lt;HeaderFieldsHeader&gt;
-  &lt;/HeaderFieldsHeader&gt;
-  &lt;HeaderFields&gt;
-  &lt;/HeaderFields&gt;
-  &lt;HeaderFieldsFooter&gt;
-  &lt;/HeaderFieldsFooter&gt;
-  &lt;RowHeader&gt;
-  &lt;/RowHeader&gt;
-  &lt;RowFields&gt;
-  &lt;/RowFields&gt;
-  &lt;RowFooter&gt;
-  &lt;/RowFooter&gt;
-  &lt;Footer&gt;
-  &lt;/Footer&gt;
-&lt;/Digest&gt;</code></pre></td>
+<td align="left"><pre><code><Digest>
+  <Subject>
+  </Subject>
+  <Header>
+  </Header>
+  <HeaderFieldsHeader>
+  </HeaderFieldsHeader>
+  <HeaderFields>
+  </HeaderFields>
+  <HeaderFieldsFooter>
+  </HeaderFieldsFooter>
+  <RowHeader>
+  </RowHeader>
+  <RowFields>
+  </RowFields>
+  <RowFooter>
+  </RowFooter>
+  <Footer>
+  </Footer>
+</Digest></code></pre></td>
 </tr>
 </tbody>
 </table>

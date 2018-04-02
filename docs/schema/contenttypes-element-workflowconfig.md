@@ -70,8 +70,8 @@ in the workflow.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;ContentTypes&gt;
-&lt;/ContentTypes&gt;</code></pre></td>
+<td align="left"><pre><code><ContentTypes>
+</ContentTypes></code></pre></td>
 </tr>
 </tbody>
 </table>

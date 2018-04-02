@@ -21,9 +21,9 @@ Defines a reference to a field.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><pre><code>&lt;Field
-  Name = "Text"&gt;
-&lt;/Field&gt;</code></pre></td>
+<td align="left"><pre><code><Field
+  Name = "Text">
+</Field></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -45,7 +45,7 @@ Defines a reference to a field.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. Allows the **Field</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code">&lt;Field Name="</span><span class="placeholder">ID</span><span class="code">"/&gt;**).</p></td>
+<td align="left"><p>Optional **Text</span>. Allows the **Field</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code"><Field Name="</span><span class="placeholder">ID</span><span class="code">"/>**).</p></td>
 </tr>
 </tbody>
 </table>
