@@ -198,7 +198,7 @@ elements.
 <td align="left"><p>Optional.</p>
 <p>Specifies whether values stored by the data structure represented by this **TypeDescriptor</span> are included in calculating a hash code or comparing values stored in the data structures. For example, a **TypeDescriptor</span> representing a customer's last name is taken into account when determining whether a record has been modified, and so it is significant, whereas the **TypeDescriptor** representing the date on which the customer record is last modified typically is not taken into account to determine whether a record has been modified, and so it is not significant.</p>
 <p>Default value: **true**</p>
-<p>Attribute type: Boolean</p></td>
+<p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Name</p></td>

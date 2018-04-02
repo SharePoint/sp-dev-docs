@@ -20,29 +20,20 @@ Lists the actions associated with the context definition.
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><Actions > </Actions></code></pre></td>
-</tr>
-</tbody>
-</table>
 
+```
+<Actions > </Actions>
+```
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Elements and attributes
 
-The following sections describe attributes, child elements, and parent
-elements.
+The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 None.
 
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
@@ -67,7 +58,7 @@ None.
 </tbody>
 </table>
 
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>
@@ -88,6 +79,9 @@ None.
 </tbody>
 </table>
 
+<br/>
+
+<br/>
 
 
 

@@ -118,7 +118,7 @@ elements.
 <td align="left"><p>**LobSystemInstanceName**</p></td>
 <td align="left"><p>Required.</p>
 <p>The external system name of the **Association** method instance.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**TargetSubscriptionName**</p></td>

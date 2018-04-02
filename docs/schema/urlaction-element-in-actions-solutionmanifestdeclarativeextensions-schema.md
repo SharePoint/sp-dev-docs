@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,87 +8,33 @@ localization_priority: Normal
 ms.assetid: 83b560be-7aef-fb36-616d-16217334cf92
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# UrlAction Element in Actions 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(SolutionManifestDeclarativeExtensions Schema)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-The <span
-class="keyword">DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN</span>
-element is used to execute a URL-based action in Microsoft Outlook 2010.
+The **DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN** element is used to execute a URL-based action in Microsoft Outlook 2010.
 
 **Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><UrlAction  Url = "String" Caption = "String" Tooltip = "String" Image = "String" DisplayLocations = "String" DisplayOrder = "Int" Scope = "String" Name = "String" Description = "String"> </UrlAction></code></pre></td>
-</tr>
-</tbody>
-</table>
+```
+<UrlAction  Url = "String" Caption = "String" Tooltip = "String" Image = "String" DisplayLocations = "String" DisplayOrder = "Int" Scope = "String" Name = "String" Description = "String"> </UrlAction>
+```
 
+## Elements and attributes
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
 
-The following sections describe attributes, child elements, and parent
-elements.
-
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -100,52 +44,52 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Url</p></td>
-<td align="left"><p>The full URL of the page that the user browses to when he or she clicks the action. A command can include parameters that will be populated with the contents of one or more fields in the external content type. In the URL that you type in this field, you can include placeholders for each parameter to use. Placeholders should be numbered with integers starting at zero (0, 1, 2, and so on) and should be of the form {number}. For example, the following sample URL provides two parameters, **p0</span> and **p1**:</p>
-<p><span class="code">http://www.adventure-works.com/sample.aspx?p0={0}&amp;p1={1}</span></p>
+<td align="left"><p>**Url**</p></td>
+<td align="left"><p>The full URL of the page that the user browses to when he or she clicks the action. A command can include parameters that will be populated with the contents of one or more fields in the external content type. In the URL that you type in this field, you can include placeholders for each parameter to use. Placeholders should be numbered with integers starting at zero (0, 1, 2, and so on) and should be of the form {number}. For example, the following sample URL provides two parameters, **p0** and **p1**:</p>
+<p>`http://www.adventure-works.com/sample.aspx?p0={0}&amp;p1={1}`</p>
 <p>Required.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Caption</p></td>
+<td align="left"><p>**Caption**</p></td>
 <td align="left"><p>The caption for the action. This is displayed as a caption for the action in the Outlook user interface.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Tooltip</p></td>
+<td align="left"><p>**Tooltip**</p></td>
 <td align="left"><p>The tooltip for the action. This is displayed as a tooltip for the action in the Outlook user interface.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Image</p></td>
+<td align="left"><p>**Image**</p></td>
 <td align="left"><p>The path to an icon file. The icon is displayed for the action in the Outlook user interface. The path should be relative to the location of the solution manifest.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>DisplayLocations</p></td>
-<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0</span> (none, action is not displayed anywhere), **1</span> (action is displayed on the external data parts menu), **2</span> (action is displayed on the item context menu), **4** (action is displayed on the ribbon).</p>
+<td align="left"><p>**DisplayLocations**</p></td>
+<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0** (none, action is not displayed anywhere), **1** (action is displayed on the external data parts menu), **2** (action is displayed on the item context menu), **4** (action is displayed on the ribbon).</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>DisplayOrder</p></td>
+<td align="left"><p>**DisplayOrder**</p></td>
 <td align="left"><p>Used if the action is surfaced in a List External Data Part. Specifies the suggested position of this action among the other actions of this external content type in the menu.</p>
 <p>Optional.</p>
 <p>Attribute type: Int</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Scope</p></td>
+<td align="left"><p>**Scope**</p></td>
 <td align="left"><p>Used if the action is surfaced in a List External Data Part. Specifies whether this action needs an item to be selected in a List External Data Part.</p>
 <p>Optional.</p>
 <p>The following table lists the possible values for this attribute.</p>
 <div class="tableSection">
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="40%" />
+<col width="60%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -167,21 +111,21 @@ elements.
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>A name for this action.</p>
 <p>Required.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Description</p></td>
+<td align="left"><p>**Description**</p></td>
 <td align="left"><p>A description for this action.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 </tbody>
 </table>
 
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
@@ -202,7 +146,7 @@ elements.
 </tbody>
 </table>
 
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>
@@ -222,6 +166,10 @@ elements.
 </tr>
 </tbody>
 </table>
+
+<br/>
+
+<br/>
 
 
 

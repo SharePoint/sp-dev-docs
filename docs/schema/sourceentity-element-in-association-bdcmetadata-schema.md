@@ -109,7 +109,7 @@ elements.
 <td align="left"><p>Namespace</p></td>
 <td align="left"><p>Required.</p>
 <p>The namespace of the external content type that is the source of the **Association** that contains this element.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Name</p></td>

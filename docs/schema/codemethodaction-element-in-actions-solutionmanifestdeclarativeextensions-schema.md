@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,89 +8,32 @@ localization_priority: Normal
 ms.assetid: dcb85c58-1ed8-4bb9-430e-f2a5c395c785
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# CodeMethodAction Element in Actions 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(SolutionManifestDeclarativeExtensions Schema)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+The **DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN** element is used to execute a custom code action or to execute one of the predefined actions provided by Microsoft Business Connectivity Services (BCS).
 
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-The <span
-class="keyword">DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN</span>
-element is used to execute a custom code action or to execute one of the
-predefined actions provided by Microsoft Business Connectivity Services
-(BCS).
-
-**Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><CodeMethodAction  MethodType = "String" QualifiedTypeName = "String" MethodName = "String" Caption = "String" Tooltip = "String" Image = "String" DisplayLocations = "String" DisplayOrder = "Int" Scope = "String" Name = "String" Description = "String"> </CodeMethodAction></code></pre></td>
-</tr>
-</tbody>
-</table>
+```
+<CodeMethodAction  MethodType = "String" QualifiedTypeName = "String" MethodName = "String" Caption = "String" Tooltip = "String" Image = "String" DisplayLocations = "String" DisplayOrder = "Int" Scope = "String" Name = "String" Description = "String"> </CodeMethodAction>
+```
 
+## Elements and attributes
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
 
-The following sections describe attributes, child elements, and parent
-elements.
-
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -102,15 +43,15 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>MethodType</p></td>
+<td align="left"><p>**MethodType**</p></td>
 <td align="left"><p>The type of the action to execute.</p>
 <p>Required.</p>
 <p>The following table lists the possible values for this attribute.</p>
 <div class="tableSection">
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="40%" />
+<col width="60%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -168,58 +109,58 @@ elements.
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p>QualifiedTypeName</p></td>
+<td align="left"><p>**QualifiedTypeName**</p></td>
 <td align="left"><p>The assembly-qualified name of the class that defines the code action, which includes the name of the assembly from which the class was loaded. For more information about how to specify this value, see <a href="http://msdn.microsoft.com/en-us/library/system.type.assemblyqualifiedname.aspx">Type.AssemblyQualifiedName Property</a>.</p>
 <p><span class="code">Example: QualifiedTypeName="CustomCodeActionNameSpace.CustomCodeActionCalssName, CustomCodeActionAssemblyName, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c6b236b1e85d97a"</span></p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>MethodName</p></td>
+<td align="left"><p>**MethodName**</p></td>
 <td align="left"><p>The name of the method to execute in the class.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Caption</p></td>
+<td align="left"><p>**Caption**</p></td>
 <td align="left"><p>The caption for the action. This is displayed as a caption for the action in the Outlook user interface.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Tooltip</p></td>
+<td align="left"><p>**Tooltip**</p></td>
 <td align="left"><p>The tooltip for the action. This is displayed as a tooltip for the action in the Outlook user interface.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Image</p></td>
+<td align="left"><p>**Image**</p></td>
 <td align="left"><p>The path to an icon file. The icon is displayed for the action in the Outlook user interface. The path should be relative to the location of the solution manifest.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>DisplayLocations</p></td>
-<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0</span> (none, action is not displayed anywhere), **1</span> (action is displayed on the external data parts menu), **2** (action is displayed on the item context menu), 4 (action is displayed on the ribbon).</p>
+<td align="left"><p>**DisplayLocations**</p></td>
+<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0** (none, action is not displayed anywhere), **1** (action is displayed on the external data parts menu), **2** (action is displayed on the item context menu), **4** (action is displayed on the ribbon).</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>DisplayOrder</p></td>
+<td align="left"><p>**DisplayOrder**</p></td>
 <td align="left"><p>Used if the action is surfaced in a List External Data Part. Specifies the suggested position of this action among the other actions of this external content type in the menu.</p>
 <p>Optional.</p>
-<p>Attribute type: Int</p></td>
+<p>Attribute type: **Int**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Scope</p></td>
+<td align="left"><p>**Scope**</p></td>
 <td align="left"><p>Used if the action is surfaced in a List External Data Part. Specifies whether this action needs an item to be selected in a List External Data Part.</p>
 <p>Optional.</p>
 <p>The following table lists the possible values for this attribute.</p>
 <div class="tableSection">
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="40%" />
+<col width="60%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -241,21 +182,21 @@ elements.
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>A name for this action.</p>
 <p>Required.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Description</p></td>
+<td align="left"><p>**Description**</p></td>
 <td align="left"><p>A description for this action.</p>
 <p>Optional.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 </tbody>
 </table>
 
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
@@ -276,7 +217,7 @@ elements.
 </tbody>
 </table>
 
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>
@@ -297,8 +238,10 @@ elements.
 </tbody>
 </table>
 
+<br/>
 
 
+<br/>
 
 
 

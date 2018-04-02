@@ -119,7 +119,7 @@ elements.
 <td align="left"><p>MethodInstanceName</p></td>
 <td align="left"><p>Required.</p>
 <p>The name of the MethodInstance to which this DefaultValue applies.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
@@ -143,7 +143,7 @@ elements.
 <li><p>System.DateTime</p></li>
 <li><p>Any other serializable type (such as where Type.IsSerializable == true)</p></li>
 </ul>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 </tbody>
 </table>

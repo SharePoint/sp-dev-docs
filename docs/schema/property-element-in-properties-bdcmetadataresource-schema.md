@@ -102,12 +102,12 @@ elements.
 <tr class="odd">
 <td align="left"><p>Name</p></td>
 <td align="left"><p>Required.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
 <td align="left"><p>Required.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 </tbody>
 </table>
