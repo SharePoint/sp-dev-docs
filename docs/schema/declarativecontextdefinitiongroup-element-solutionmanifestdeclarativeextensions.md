@@ -57,8 +57,8 @@ The following sections describe attributes, child elements, and parent elements.
 <div class="tableSection">
 <table>
 <colgroup>
-<col width="40%" />
-<col width="60%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">

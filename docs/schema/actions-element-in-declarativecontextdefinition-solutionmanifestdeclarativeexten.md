@@ -20,7 +20,6 @@ Lists the actions associated with the context definition.
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
-
 ```
 <Actions > </Actions>
 ```
