@@ -110,7 +110,7 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>Required. Name of the property.</p></td>
 </tr>
@@ -130,7 +130,7 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 <td align="left"><p>Optional. Unique identifier of the property.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><span sdata="link"><a href="spdictionaryentryvaluetype-simple-type-deploymentmanifest.md">SPDictionaryEntryValueType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Optional. Enumeration of property value types.</p>
 <p>The default type is **string**.</p></td>

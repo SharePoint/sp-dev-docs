@@ -24,17 +24,15 @@ Specifies localized display names and properties, in any combination, for an [Ac
 <Action Name = "String"> </Action>
 ```
 
-<br/>
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 None.
 
-<br/>
-
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
@@ -60,7 +58,7 @@ None.
 
 <br/>
 
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>

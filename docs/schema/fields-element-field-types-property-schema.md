@@ -75,7 +75,7 @@ Represents the container of **Field** elements within a **PropertySchema** eleme
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [PropertySchema Element (Field
+For more information, see [PropertySchema Element (Field
 Types)](propertyschema-element-field-types.md)</span> for a detailed
 description and example of this element in context.
 

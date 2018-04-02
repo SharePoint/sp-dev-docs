@@ -183,7 +183,7 @@ code] "Copy code")Copy code</span>
         <Mapping Key="Word.Document" Value="ichtmdoc.gif"/>
     </ByProgID>
 
-See [DocIcons Element (Document
+For more information, see [DocIcons Element (Document
 Icons)](docicons-element-document-icons.md)</span> for an extended
 example that shows how to use the **ByProgID**
 element.

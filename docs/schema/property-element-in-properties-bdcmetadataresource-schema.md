@@ -58,7 +58,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See [Property Element in Properties (BDCMetadata
+For more information, see [Property Element in Properties (BDCMetadata
 Schema)](property-element-in-properties-bdcmetadata-schema.md)</span> for more
 details.
 
@@ -100,12 +100,12 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>Required.</p>
 <p>Attribute type: **String**</p></td>
 </tr>

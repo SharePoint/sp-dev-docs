@@ -203,7 +203,7 @@ None.
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Specifies the variable data type.</p></td>

@@ -193,7 +193,7 @@ None.
 <td align="left"><p>Values of the VersionDefinition type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><a href="appprerequisitetypedefinition-simpletype-sharepoint-add-in-manifest.md">AppPrerequisiteTypeDefinition</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The type of add-in prerequisite.</p></td>

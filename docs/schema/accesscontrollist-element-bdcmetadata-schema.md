@@ -28,17 +28,15 @@ To learn about Business Connectivity Services and security, see [Business Connec
 <AccessControlList></AccessControlList>
 ```
 
-<br/>
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 None.
 
-<br/>
-
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
@@ -59,9 +57,7 @@ None.
 </tbody>
 </table>
 
-<br/>
-
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>

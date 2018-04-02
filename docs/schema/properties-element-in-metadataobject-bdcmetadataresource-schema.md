@@ -58,7 +58,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See [Properties Element in MetadataObject
+For more information, see [Properties Element in MetadataObject
 (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md)</span>
 for more details.
 

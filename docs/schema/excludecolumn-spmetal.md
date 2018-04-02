@@ -110,7 +110,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>The name of a column in the content type that is excluded from code generation.</p></td>
 </tr>
 </tbody>

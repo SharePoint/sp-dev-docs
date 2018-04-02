@@ -106,7 +106,7 @@ Defines an alert message template.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>Specifies the item type that is associated with the alert template; either "List", "Item", or "Custom".</p></td>
 </tr>
 <tr class="even">
@@ -114,7 +114,7 @@ Defines an alert message template.
 <td align="left"><p>Specifies whether the template is the default alert template.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Specifies the template name.</p></td>
 </tr>
 </tbody>

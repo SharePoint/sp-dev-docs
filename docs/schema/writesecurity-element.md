@@ -150,7 +150,7 @@ following values:
 
 4 — Write no items (read-only list).
 
-See [Security
+For more information, see [Security
 Element](security-element.md)</span> for an example
 that shows how to use the **WriteSecurity**
 element.

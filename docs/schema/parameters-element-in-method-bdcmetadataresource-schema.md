@@ -58,7 +58,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See [Parameters Element in Method (BDCMetadata
+For more information, see [Parameters Element in Method (BDCMetadata
 Schema)](parameters-element-in-method-bdcmetadata-schema.md)</span> for more
 details.
 

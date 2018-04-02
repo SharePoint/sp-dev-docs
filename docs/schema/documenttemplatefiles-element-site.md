@@ -146,7 +146,7 @@ template.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [DocumentTemplates](documenttemplates-element-site.md) for an
+For more information, see [DocumentTemplates](documenttemplates-element-site.md) for an
 example that shows how to use the <span
 class="keyword">DocumentTemplateFiles</span> element.
 

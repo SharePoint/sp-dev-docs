@@ -24,16 +24,16 @@ For detailed information about this element, see [AccessControlEntry Element in 
 <AccessControlEntry Principal = "String"> </AccessControlEntry>
 ```
 
-<br/>
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="30%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -50,14 +50,12 @@ The following sections describe attributes, child elements, and parent elements.
 </tbody>
 </table>
 
-<br/>
-
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="30%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -73,14 +71,12 @@ The following sections describe attributes, child elements, and parent elements.
 </tbody>
 </table>
 
-<br/>
-
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="30%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">

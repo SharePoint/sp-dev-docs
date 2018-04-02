@@ -300,7 +300,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Represents the descriptive name of the workflow action that is displayed to the workflow editor.</p></td>

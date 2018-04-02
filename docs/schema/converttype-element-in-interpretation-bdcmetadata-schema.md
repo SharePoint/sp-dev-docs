@@ -22,7 +22,9 @@ Specifies the rule to convert the data type of a data value into another data ty
 
 **Schema**: BDCMetadata
 
-The Convert element specifies the rule to convert the data type of a data value into another data type. When the rules are applied in order, this rule specifies the data type of the data value to be converted to the data type specified by the BDCType attribute. When the rules are applied in reverse order, this rule specifies the data type of the data value to be converted to the data type specified by the **LOBType** attribute. For example, this rule can specify converting a date value obtained from an external system, into a culture and locale sensitive string which will eventually be displayed to the user, and converting the updated value for that string back into the date that is compatible with the external system.
+The Convert element specifies the rule to convert the data type of a data value into another data type. When the rules are applied in order, this rule specifies the data type of the data value to be converted to the data type specified by the BDCType attribute. When the rules are applied in reverse order, this rule specifies the data type of the data value to be converted to the data type specified by the **LOBType** attribute. 
+
+For example, this rule can specify converting a date value obtained from an external system, into a culture and locale sensitive string which will eventually be displayed to the user, and converting the updated value for that string back into the date that is compatible with the external system.
 
 > [!WARNING] 
 > **ConvertType** does not support non-Gregorian calendars for conversions between **System.String** and **System.DateTime**.
@@ -31,7 +33,7 @@ The Convert element specifies the rule to convert the data type of a data value 
 <ConvertType LOBType = "String" BDCType = "String"> </ConvertType>
 ```
 
-<br/>
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
@@ -50,19 +52,19 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>LOBType</p></td>
+<td align="left"><p>**LOBType**</p></td>
 <td align="left"><p>Required.</p>
 <p>The data type to convert the data value into when the rules are applied in reverse order.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>BDCType</p></td>
+<td align="left"><p>**BDCType**</p></td>
 <td align="left"><p>Required.</p>
 <p>The data type to convert the data value into when the rules are applied in order.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>LOBLocale</p></td>
+<td align="left"><p>**LOBLocale**</p></td>
 <td align="left"><p>Optional.</p>
 <p>The locale of the data that is received from the external system.</p></td>
 </tr>

@@ -107,19 +107,19 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>The name of the **Model**.</p>
 <p>Required.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>DefaultDisplayName</p></td>
+<td align="left"><p>**DefaultDisplayName**</p></td>
 <td align="left"><p>The default display name of the **Model**.</p>
 <p>Optional.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>IsCached</p></td>
+<td align="left"><p>**IsCached**</p></td>
 <td align="left"><p>Specifies whether the **Model</span> is used frequently. If this is set to **true</span>, then the **Model** is cached by the Business Data Connectivity (BDC) service.</p>
 <p>Optional.</p>
 <p>Default value: **true**</p>

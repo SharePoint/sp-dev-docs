@@ -92,7 +92,7 @@ Used to join two lists for queries.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>Required. "LEFT" means a left outer join. "INNER" means an inner join.</p></td>
 </tr>
 <tr class="even">

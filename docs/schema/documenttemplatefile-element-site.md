@@ -156,7 +156,7 @@ Contains a reference to a file that is used within a document template.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [DocumentTemplates](documenttemplates-element-site.md) for an
+For more information, see [DocumentTemplates](documenttemplates-element-site.md) for an
 example that shows how to use the <span
 class="keyword">DocumentTemplateFile</span> element.
 

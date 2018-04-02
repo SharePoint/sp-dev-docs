@@ -150,7 +150,7 @@ Specifies column and row formatting used in a Datasheet view.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [Format
+For more information, see [Format
 Element](format-element.md)</span> for an example
 that uses the **FormatDef** element.
 

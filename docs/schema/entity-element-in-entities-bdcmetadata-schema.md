@@ -27,7 +27,7 @@ Specifies an external content type.
 
 ```
 
-<br/>
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
@@ -46,28 +46,28 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Namespace</p></td>
+<td align="left"><p>**Namespace**</p></td>
 <td align="left"><p>Required.</p>
 <p>The namespace that this external content type belongs to.</p>
 <p>Attribute type: **String**</p>
 <p>**Note**: The namespace should not contain the special character "**DOCS-ASTERISK**".</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Version</p></td>
+<td align="left"><p>**Version**</p></td>
 <td align="left"><p>Required.</p>
 <p>The version number of this external content type.</p>
 <p>Attribute type: **String**</p>
 <p>**Warning**: When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder** or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>EstimatedInstanceCount</p></td>
+<td align="left"><p>**EstimatedInstanceCount**</p></td>
 <td align="left"><p>Optional.</p>
 <p>The estimated number of external items contained by the external system.</p>
 <p>Default value: 10000</p>
 <p>Attribute type: **Integer**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>DefaultOperationMode</p></td>
+<td align="left"><p>**DefaultOperationMode**</p></td>
 <td align="left"><p>Optional.</p>
 <p>Specifies the default behavior when interacting with the external system while creating, deleting, updating, or reading external items.</p>
 <p>Default value: Default</p>
@@ -75,8 +75,8 @@ The following sections describe attributes, child elements, and parent elements.
 <div class="tableSection">
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -106,26 +106,22 @@ The following sections describe attributes, child elements, and parent elements.
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required.</p>
 <p>The name of the external content type.</p>
 <p>Attribute type: **String**</p>
 <p>**Note**: The name of an external content type should not contain the asterisk special character "**DOCS-ASTERISK**".</p></td>
 </tr>
-</tbody>
-</table>
-</div></td>
-</tr>
 <tr class="even">
-<td align="left"><p>DefaultDisplayName</p></td>
+<td align="left"><p>**DefaultDisplayName**</p></td>
 <td align="left"><p>Optional.</p>
 <p>The default display name of the external content type.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>IsCached</p></td>
+<td align="left"><p>**IsCached**</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether this external content type will be frequently used. If set to true, Business Data Connectivity (BDC) service will cache this external content type in memory.</p>
+<p>Specifies whether this external content type will be frequently used. If set to **true**, the Business Data Connectivity (BDC) service will cache this external content type in memory.</p>
 <p>Default value: **true**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>

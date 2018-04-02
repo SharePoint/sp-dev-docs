@@ -213,7 +213,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Specifies the string that identifies the action in the visual designer user interface. In this case, the name is <span class="ui">Go to a stage</span>.</p></td>

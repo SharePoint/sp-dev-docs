@@ -138,14 +138,14 @@ None.
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies the internal name of the field.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies the data type of the field.</p></td>

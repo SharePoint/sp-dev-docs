@@ -81,14 +81,14 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>Values of the xs:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><a href="propertybagtype-simpletype-apphostwebfeatures.md">PropertyBagType</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>

@@ -117,7 +117,7 @@ USAGE
 <td align="left"><p>Optional. Unique identifier of the system object.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentsystemdata.md">SPDeploymentObjectType Simple Type (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Optional. Specification of the object type: **Site</span>, **Web</span>, **Folder</span>, **List</span>, **ListItem</span>, or **File**.</p></td>
 </tr>

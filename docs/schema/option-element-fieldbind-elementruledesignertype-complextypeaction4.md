@@ -178,7 +178,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The value displayed in the drop-down list box control.</p></td>

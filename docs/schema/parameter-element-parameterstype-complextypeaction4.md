@@ -238,7 +238,7 @@ None.
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Used to associate the **FieldBind** element with the parameter. Values are not case-sensitive.</p></td>
@@ -252,7 +252,7 @@ None.
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Partially qualified Microsoft .NET data type. Values are not case-sensitive. For example: System.Object, mscorlib</p></td>

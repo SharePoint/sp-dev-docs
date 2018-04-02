@@ -117,7 +117,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>Required.</p>
 <p>Specifies the type of the **MethodInstance**.</p>
 <p>The following table lists the possible values for this attribute.</p>
@@ -225,19 +225,19 @@ elements.
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required.</p>
 <p>Specifies the name of the **MethodInstance**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>DefaultDisplayName</p></td>
+<td align="left"><p>**DefaultDisplayName**</p></td>
 <td align="left"><p>Optional.</p>
 <p>Specifies the default display name for the **MethodInstance**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>IsCached</p></td>
+<td align="left"><p>**IsCached**</p></td>
 <td align="left"><p>Optional.</p>
 <p>Specifies whether the **MethodInstance** is used frequently.</p>
 <p>Default value: **true**</p>

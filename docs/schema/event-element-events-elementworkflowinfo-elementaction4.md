@@ -193,7 +193,7 @@ None.
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The programmatic name of the event; for example, **ItemAdded</span>, **ItemUpdated**. This value originates in the list of events supported by SharePoint Foundation and Project Server 2013.</p></td>

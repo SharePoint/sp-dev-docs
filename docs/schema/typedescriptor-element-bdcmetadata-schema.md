@@ -201,7 +201,7 @@ elements.
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required.</p>
 <p>The name of the **TypeDescriptor**.</p>
 <p>Attribute type: **String**</p>
@@ -224,13 +224,13 @@ elements.
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>DefaultDisplayName</p></td>
+<td align="left"><p>**DefaultDisplayName**</p></td>
 <td align="left"><p>Optional.</p>
 <p>The display name of the **TypeDescriptor**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>IsCached</p></td>
+<td align="left"><p>**IsCached**</p></td>
 <td align="left"><p>Optional.</p>
 <p>Specifies whether the **TypeDescriptor** is used frequently.</p>
 <p>Default value: **true**</p>

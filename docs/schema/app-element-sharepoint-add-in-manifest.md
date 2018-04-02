@@ -124,7 +124,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p><a href="namedefinition-simpletype-sharepoint-add-in-manifest.md">NameDefinition</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The internal name of the SharePoint Add-in. This value is not localized, and is used in URLs that address add-in artifacts. It must contain only ASCII characters with no spaces and cannot exceed 64 characters. See the **NameDefinition** type specification for more information about the restrictions.</p></td>
@@ -152,7 +152,7 @@ None.
 <td align="left"><p>Values of the VersionDefinition type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><a href="typedefinition-simpletype-sharepoint-add-in-manifest.md">TypeDefinition</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The type of the SharePoint Add-in.</p></td>

@@ -58,7 +58,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See [MethodInstances Element in Method (BDCMetadata
+For more information, see [MethodInstances Element in Method (BDCMetadata
 Schema)](methodinstances-element-in-method-bdcmetadata-schema.md)</span> for more
 details.
 

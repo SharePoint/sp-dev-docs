@@ -58,7 +58,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See [Right Element in AccessControlEntry (BDCMetadata
+For more information, see [Right Element in AccessControlEntry (BDCMetadata
 Schema)](right-element-in-accesscontrolentry-bdcmetadata-schema.md)</span> for details.
 
 **Namespace**:

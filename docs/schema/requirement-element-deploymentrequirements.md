@@ -112,7 +112,7 @@ USAGE
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><span sdata="link"><a href="sprequirementobjecttype-simple-type-deploymentrequirements.md">SPRequirementObjectType Simple Type (DeploymentRequirements)</a></span></p></td>
 <td align="left"><p>Specifies the requirement object type as defined in the **SPRequirementObjectType</span> simple type: **FeatureDefinition</span>, **WebTemplate</span>, **WebPart</span>, or **Language**.</p></td>
 </tr>
@@ -122,7 +122,7 @@ USAGE
 <td align="left"><p>ID of the requirement instance.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>Name of the requirement instance.</p></td>
 </tr>

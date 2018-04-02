@@ -108,7 +108,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>The name of the list that is excluded.</p></td>
 </tr>
 </tbody>

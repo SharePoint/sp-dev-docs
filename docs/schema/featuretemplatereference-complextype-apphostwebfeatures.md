@@ -109,7 +109,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the UniqueIdentifier type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p></p></td>

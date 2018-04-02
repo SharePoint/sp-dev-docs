@@ -323,7 +323,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tr>
 <tr class="odd">
 <td align="left"><p>ParameterNames</p></td>
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>List that contains the names of variables that are defined in the current workflow.</p></td>
 </tr>
 <tr class="even">

@@ -227,7 +227,7 @@ configuration or Web template configuration.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [Module Element
+For more information, see [Module Element
 (Site)](module-element-site.md)</span> for an example
 that uses the **File** element.
 

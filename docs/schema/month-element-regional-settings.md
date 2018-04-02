@@ -152,7 +152,7 @@ it returns the current month.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [StandardTime Element (Regional
+For more information, see [StandardTime Element (Regional
 Settings)](standardtime-element-regional-settings.md)</span> for an
 example that shows how to use the **Month**
 element.

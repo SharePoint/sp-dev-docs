@@ -138,7 +138,7 @@ class="nolink">SPEventReceiverDefinition</span></span>
 <td align="left"><p>Required. Unique identifier of the event receiver definition.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>Required. Name of the event receiver.</p></td>
 </tr>
@@ -158,7 +158,7 @@ class="nolink">SPEventReceiverDefinition</span></span>
 <td align="left"><p>Required. Type of object that is hosting the event. The host type must be an enumeration value defined in the **SPEventHostType**simple type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><span sdata="link"><a href="speventreceivertype-simple-type-deploymentmanifest.md">SPEventReceiverType Simple Type (DeploymentManifest)</a></span></p></td>
 <td align="left"><p>Required. Type of event for the event receiver. The event receiver type must be an enumeration value defined in the **SPEventReceiverType** simple type.</p></td>
 </tr>

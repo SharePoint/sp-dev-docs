@@ -121,7 +121,7 @@ USAGE
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>Required. Attachment file name.</p></td>
 </tr>

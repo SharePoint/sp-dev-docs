@@ -88,7 +88,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The property name.</p></td>

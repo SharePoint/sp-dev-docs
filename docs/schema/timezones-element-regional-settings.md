@@ -149,7 +149,7 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [RegionalSettings Element (Regional
+For more information, see [RegionalSettings Element (Regional
 Settings)](regionalsettings-element-regional-settings.md)</span> for an
 example that uses the **TimeZones** element.
 

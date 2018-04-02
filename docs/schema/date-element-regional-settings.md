@@ -155,7 +155,7 @@ on which standard time or daylight saving time begins for a time zone.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See [StandardTime Element (Regional
+For more information, see [StandardTime Element (Regional
 Settings)](standardtime-element-regional-settings.md)</span> for an
 example that shows how to use the **Date**
 element.

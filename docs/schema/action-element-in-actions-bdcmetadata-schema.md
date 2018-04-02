@@ -32,16 +32,16 @@ Actions travel with an external content type. That is, after you define an actio
 <Action Position = "Integer" IsOpenedInNewWindow = "Boolean" Url = "String" ImageUrl = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"></Action>
 ```
 
-<br/>
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -99,7 +99,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 <br/>
 
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
@@ -130,7 +130,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 <br/>
 
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>

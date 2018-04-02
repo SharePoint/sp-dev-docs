@@ -154,7 +154,7 @@ If you want the document library feature to support a new file
 extension, add the extension to a <span
 class="keyword">ByExtension</span> section and then restart the server.
 
-See [DocIcons Element (Document
+For more information, see [DocIcons Element (Document
 Icons)](docicons-element-document-icons.md)</span> for an example
 that shows how to use the **ByExtension**
 element.

@@ -118,19 +118,19 @@ elements.
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required.</p>
 <p>The name of this method.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>DefaultDisplayName</p></td>
+<td align="left"><p>**DefaultDisplayName**</p></td>
 <td align="left"><p>Optional.</p>
 <p>The default display name of the method.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>IsCached</p></td>
+<td align="left"><p>**IsCached**</p></td>
 <td align="left"><p>Optional.</p>
 <p>Specifies whether this method is used frequently. If set to **true**, Business Data Connectivity (BDC) service caches this method in memory.</p>
 <p>Default value: **true**</p>

@@ -159,7 +159,7 @@ target="T:Microsoft.SharePoint.IExternalSecurityWeb"><span
 class="nolink">Microsoft.SharePoint.IExternalSecurityWeb</span></span>
 interface.
 
-See [Components Element
+For more information, see [Components Element
 (Site)](components-element-site.md)</span> for an example
 that uses the **ExternalSecurityProvider**
 element.

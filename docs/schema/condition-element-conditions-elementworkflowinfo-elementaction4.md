@@ -209,7 +209,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Specifies a localized name of the condition.</p></td>
@@ -223,7 +223,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies whether the **Condition** element is **Custom** or **Advanced**.</p>

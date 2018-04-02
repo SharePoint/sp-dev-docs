@@ -148,7 +148,7 @@ following values:
 
 2 — Only the list owner can modify the schema.
 
-See [Security
+For more information, see [Security
 Element](security-element.md)</span> for an example
 that shows how to use the **SchemaSecurity**
 element.

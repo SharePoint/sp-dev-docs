@@ -150,7 +150,7 @@ following values:
 -   **2** — Users have Read access only to
     items that they create.
 
-See [Security
+For more information, see [Security
 Element](security-element.md)</span> for an example
 that shows how to use the **ReadSecurity**
 element.

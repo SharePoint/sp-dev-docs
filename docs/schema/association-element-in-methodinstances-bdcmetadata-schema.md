@@ -84,6 +84,8 @@ The Association element accepts the following property.
 
 The following sections describe attributes, child elements, and parent elements.
 
+## Elements and attributes
+
 ### Attributes
 
 <table>
@@ -99,15 +101,15 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p>Required.</p>
 <p>The MethodInstanceType that specifies the type of the Association.</p>
 <p>The following table lists the possible values for this attribute.</p>
 <div class="tableSection">
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -141,53 +143,53 @@ The following sections describe attributes, child elements, and parent elements.
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Default</p></td>
+<td align="left"><p>**Default**</p></td>
 <td align="left"><p>Optional.</p>
 <p>Specifies whether the Association is the default among all Associations sharing its type within the containing external content type. If set to true, the Association is the default among all Associations sharing its type within the containing external content type. If set to false, the Association is not the default among all Associations sharing its type within the containing external content type.</p>
-<p>Default value: false</p>
+<p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>ReturnParameterName</p></td>
+<td align="left"><p>**ReturnParameterName**</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the parameter that contains the ReturnTypeDescriptor of the Association. The Direction attribute of the parameter must contain a value of either "Out", "InOut", or "Return".</p>
+<p>The name of the parameter that contains the ReturnTypeDescriptor of the Association. The Direction attribute of the parameter must contain a value of either **Out**, **InOut**, or **Return**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>ReturnTypeDescriptorName</p></td>
+<td align="left"><p>**ReturnTypeDescriptorName**</p></td>
 <td align="left"><p>Optional.</p>
 <p>This has been deprecated. Use the ReturnTypeDescriptorPath instead.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>ReturnTypeDescriptorLevel</p></td>
+<td align="left"><p>**ReturnTypeDescriptorLevel**</p></td>
 <td align="left"><p>Optional.</p>
 <p>This has been deprecated. Use the ReturnTypeDescriptorPath instead.</p>
-<p>Attribute type: Integer</p></td>
+<p>Attribute type: **Integer**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>ReturnTypeDescriptorPath</p></td>
+<td align="left"><p>**ReturnTypeDescriptorPath**</p></td>
 <td align="left"><p>Optional.</p>
 <p>The dotted path of the TypeDescriptor of the Association.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required.</p>
 <p>The name of the Association.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>DefaultDisplayName</p></td>
+<td align="left"><p>**DefaultDisplayName**</p></td>
 <td align="left"><p>Optional.</p>
 <p>The default display name for the Association.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>IsCached</p></td>
+<td align="left"><p>**IsCached**</p></td>
 <td align="left"><p>Optional.</p>
 <p>Specifies whether this Association is frequently used.</p>
-<p>Default value: true</p>
+<p>Default value: **true**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 </tbody>

@@ -140,7 +140,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the xs:boolean type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p></p></td>
@@ -168,7 +168,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the xs:boolean type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Type</p></td>
+<td align="left"><p>**Type**</p></td>
 <td align="left"><p><a href="clientwebpartpropertytype-simpletype-apphostwebfeatures.md">ClientWebPartPropertyType</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p></p></td>

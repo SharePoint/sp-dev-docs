@@ -169,7 +169,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Internal name of the property for referencing in code.</p></td>
