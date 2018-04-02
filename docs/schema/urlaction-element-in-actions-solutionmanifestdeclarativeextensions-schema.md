@@ -78,7 +78,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>**DisplayOrder**</p></td>
 <td align="left"><p>Used if the action is surfaced in a List External Data Part. Specifies the suggested position of this action among the other actions of this external content type in the menu.</p>
 <p>Optional.</p>
-<p>Attribute type: Int</p></td>
+<p>Attribute type: **Int**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Scope**</p></td>
