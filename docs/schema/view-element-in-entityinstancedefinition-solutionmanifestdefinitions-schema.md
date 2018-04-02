@@ -55,7 +55,7 @@ The following sections describe attributes, child elements, and parent elements.
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Name</p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required.</p>
 <p>The name of the view within the scope of this context definition.</p>
 <p>Attribute type: **String**</p></td>

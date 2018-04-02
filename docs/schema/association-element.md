@@ -18,7 +18,8 @@ The `DOCS-LESSTHANAssociationDOCS-GREATERTHAN` element is used to describe an as
 
 **Schema**: SolutionManifestDefinitions
 
-```<Association AssociationName = "String" EntityTypeNamespace = "String" EntityTypeName = "String" ReferenceOfficeItemPropertyName = "String" Name = "String" Description = "String"> </Association>
+```
+<Association AssociationName = "String" EntityTypeNamespace = "String" EntityTypeName = "String" ReferenceOfficeItemPropertyName = "String" Name = "String" Description = "String"> </Association>
 ```
 
 ## Elements and attributes

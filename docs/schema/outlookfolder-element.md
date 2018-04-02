@@ -101,7 +101,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>**Name**</p></td>
 <td align="left"><p>The name of the folder.</p>
 <p>Required.</p>
-<p>Attribute type: String</p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
