@@ -177,7 +177,7 @@ if the current list equals the list that is looked up. Initially, the
 current list is temporarily assigned to a variable, <span
 class="code">Old</span>, and then reinstated as the current list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

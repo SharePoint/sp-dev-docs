@@ -203,7 +203,7 @@ The following example uses the **LookupColumn**
 element to return a value that is used in creating a complete URL for a
 page on the server.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

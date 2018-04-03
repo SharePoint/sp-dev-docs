@@ -180,7 +180,7 @@ page.
 
 The following example defines the top navigation area of a home page.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

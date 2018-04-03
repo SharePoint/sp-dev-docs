@@ -153,7 +153,7 @@ The following example shows a SOAP response for the <span sdata="cer"
 target="M:websvcLists.Lists.GetAttachmentCollection(System.String,System.String)">**GetAttachmentCollection(String,
 String)**</span> method.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

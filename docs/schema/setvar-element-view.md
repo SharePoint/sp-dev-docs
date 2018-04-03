@@ -230,7 +230,7 @@ The following example illustrates using the <span
 class="keyword">SetVar</span> element to set global scope for a
 variable. The second line returns the value set in the first line.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -249,7 +249,7 @@ class="keyword">GetVar</span> element returns "Value\_1", because the
 applies only to children of the "Sample" element. "Value\_2" goes out of
 scope after the closing "Sample" tag.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -269,7 +269,7 @@ required fields in New or Edit forms and sets the <span
 class="keyword">HasRequired</span> variable to <span
 class="keyword">TRUE</span>.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

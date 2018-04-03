@@ -70,7 +70,7 @@ Specifies that a column (field) is included in code generation.
 (SPMetal)](contenttype-spmetal.md)</span>  
     [Column
 (SPMetal)](column-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -189,7 +189,7 @@ set of <span sdata="cer"
 target="T:System.String">[String](http://msdn2.microsoft.com/EN-US/library/s1wwdcbf)</span>
 constants to represent the possible choices rather than an enum.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

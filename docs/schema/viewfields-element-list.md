@@ -165,7 +165,7 @@ in a foreign list, if there is a join defined by a
 The following example enumerates the collection of fields used in a
 view.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

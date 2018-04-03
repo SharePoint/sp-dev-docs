@@ -132,7 +132,7 @@ extensions\\15\\Config on all front-end web servers.
 
 The following example shows this element in use.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

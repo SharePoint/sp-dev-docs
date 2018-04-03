@@ -275,7 +275,7 @@ Template)](elements-web-template.md)</span>
 The following includes an example of a <span
 class="keyword">WebTemplate</span> element.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -151,7 +151,7 @@ class="keyword">Actions</span> element so that parent and child <span
 class="keyword">Action</span> elements appear correctly in the workflow
 designer.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

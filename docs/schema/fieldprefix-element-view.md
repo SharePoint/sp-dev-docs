@@ -153,7 +153,7 @@ file uses the **FieldPrefix** element to return
 the Microsoft Office namespace in defining the rendering pattern for new
 items of the **Threading** field type.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

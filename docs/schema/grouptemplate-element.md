@@ -154,7 +154,7 @@ Defines the scaling behavior for controls in a
 
 The following example defines a custom group template.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

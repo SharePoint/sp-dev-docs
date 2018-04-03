@@ -158,7 +158,7 @@ file for announcements lists defines how to display items when the
 number of items exceeds the value specified by the
 [RowLimit](rowlimit-element-list.md) element.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

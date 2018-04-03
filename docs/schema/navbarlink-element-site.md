@@ -154,7 +154,7 @@ Defines a hyperlink used in the top navigation area of a home page.
 The following example specifies the links for the top navigation area of
 a home page.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

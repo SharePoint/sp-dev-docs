@@ -155,7 +155,7 @@ class="code">\_layouts/WrkStat.aspx</span>.
 The following example specifies a custom workflow status page for the
 workflow.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -148,7 +148,7 @@ to reflect the direction of a sort. The <span
 class="keyword">FieldSortImageURL</span> element returns the URL to the
 image.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

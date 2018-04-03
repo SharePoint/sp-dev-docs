@@ -126,7 +126,7 @@ controls.
 The following example defines a strip with three controls for paging
 forward and backward.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

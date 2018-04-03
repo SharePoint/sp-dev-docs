@@ -176,7 +176,7 @@ The following example specifies that the workflow can be associated with
 lists of list type 1300, which is defined in feature <span
 class="ui">29d85c25-170c-4df9-a641-12db0b9d4130</span>.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

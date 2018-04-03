@@ -146,7 +146,7 @@ using a converter program on the server.
 The following example shows the instructions used in the
 HtmlTransInfo.xml file.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

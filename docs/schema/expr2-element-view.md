@@ -154,7 +154,7 @@ The following example evaluates two expressions, and if they are equal,
 it conveys a holiday greeting, but if not, it conveys a different
 message.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

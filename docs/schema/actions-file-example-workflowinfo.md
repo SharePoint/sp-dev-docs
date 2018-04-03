@@ -72,7 +72,7 @@ The following XML is an example of how an .ACTIONS file could be
 constructed to add **Conditions** or <span
 class="keyword">Actions</span> elements to the default list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

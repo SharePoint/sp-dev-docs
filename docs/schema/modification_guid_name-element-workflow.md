@@ -164,7 +164,7 @@ The following example specifies a modification name of <span
 class="ui">Add a New Reviewer</span>. This link text is displayed for
 this modification on the workflow status page.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

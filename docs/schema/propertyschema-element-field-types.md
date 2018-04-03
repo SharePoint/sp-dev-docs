@@ -222,7 +222,7 @@ class="code">\<Default\>^(\\d{3})\\d{3}-\\d{4}$\</Default\></span>.
 
 Note: The following code example has been edited for clarity.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

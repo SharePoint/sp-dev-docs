@@ -166,7 +166,7 @@ The following example is the document converter definition file for a
 custom document converter that converts files of File Type A format to
 File Type B format.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

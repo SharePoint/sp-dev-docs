@@ -164,7 +164,7 @@ Defines the footer, or suffix, for a view.
 
 The following example defines the view footer for a document library.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

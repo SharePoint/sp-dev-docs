@@ -195,7 +195,7 @@ return a global property of the current SharePoint site.
 The following line of code returns the <span
 class="keyword">Title</span> property from the current Web site.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

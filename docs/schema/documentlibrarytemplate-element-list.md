@@ -151,7 +151,7 @@ The following example indicates that the document library whose schema
 is currently being retrieved has MyDocLib/Forms/template.htm as its
 template:
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

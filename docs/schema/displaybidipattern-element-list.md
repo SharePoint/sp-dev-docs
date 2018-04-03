@@ -157,7 +157,7 @@ The following example defines a display pattern for a <span
 class="keyword">Title</span> column whose reading order is
 bidirectional.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

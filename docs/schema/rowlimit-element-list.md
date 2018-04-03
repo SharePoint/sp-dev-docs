@@ -170,7 +170,7 @@ link to the next set of items.
 The following line sets 100 as the row limit and specifies that a link
 be provided to see items that exceed the limit.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

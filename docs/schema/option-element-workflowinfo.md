@@ -215,7 +215,7 @@ The following XML demonstrates how to construct an <span
 class="keyword">Option</span> element so that it is visible to the
 workflow designer.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

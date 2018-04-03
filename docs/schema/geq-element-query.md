@@ -161,7 +161,7 @@ The following example queries for cases where the <span
 class="keyword">Expires</span> field value either equals an empty string
 or is greater than or equal to the current date:
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

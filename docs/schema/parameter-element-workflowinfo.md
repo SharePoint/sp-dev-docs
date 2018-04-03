@@ -289,7 +289,7 @@ The following example demonstrates how to construct a <span
 class="keyword">Parameter</span> element so that the workflow engine can
 interact with the assembly code.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

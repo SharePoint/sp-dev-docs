@@ -114,7 +114,7 @@ class="keyword">WebTemplate</span> child element.
 The following is an example of an **Elements**
 element.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

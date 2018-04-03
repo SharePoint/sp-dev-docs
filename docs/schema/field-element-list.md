@@ -782,7 +782,7 @@ formatted field value for display within a view, and use the [Column
 raw data value of the field. The syntax for referencing a field is as
 follows:
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -886,7 +886,7 @@ used with the **Field** element.
 The following example uses the **Field**
 element to specify options for a list named Area list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

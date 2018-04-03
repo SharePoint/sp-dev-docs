@@ -167,7 +167,7 @@ if the **Paged** attribute of the
 The following example provides a link to more items if the row limit is
 exceeded.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -201,7 +201,7 @@ References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199b
 The following example shows the field references collection for the
 Document content type.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

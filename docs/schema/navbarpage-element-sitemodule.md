@@ -165,7 +165,7 @@ module so that other pages can be linked to the page.
 The following example uses the **NavBarPage**
 element to specify information about the home page in a module.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

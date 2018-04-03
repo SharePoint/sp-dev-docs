@@ -179,7 +179,7 @@ a Web site based on Microsoft SharePoint Foundation.
 The following example defines a Microsoft Office Excel 2007 document
 library template.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

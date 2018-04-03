@@ -167,7 +167,7 @@ The following example sorts the fields first in ascending order by the
 Newcomers field, then in descending order by Years, and finally in
 ascending order by Location.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

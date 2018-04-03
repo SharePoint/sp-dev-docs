@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,30 +8,23 @@ localization_priority: Normal
 ms.assetid: 1cdd2292-2168-9cb9-a47b-b0917606a343
 ---
 
-# Field element (Fields element) 
+# Field element 
 
-(SchemaSource element) (dataSourceType complexType) (Action4)
-
-Specifies a field in which to display data obtained from the parent data
-source.
+(Fields element) (SchemaSource element) (dataSourceType complexType) (Action4)
 
 **Applies to**: SharePoint Server 2013
 
+Specifies a field in which to display data obtained from the parent data source.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Usage
 
-<span codelanguage="xmlLang"></span>
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <SchemaSource>
         <Fields>
             <Field />
         </Fields>
     </SchemaSource>
+```
 
 ## Element information
 
@@ -58,29 +49,19 @@ code] "Copy code")Copy code</span>
 </tbody>
 </table>
 
+## Definition
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<span codelanguage="xmlLang"></span>
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <xs:element name="Field" minOccurs="1" maxOccurs="unbounded">
          <xs:attribute name="Name" type="s:string" />
          <xs:attribute name="DisplayName" type="s:string" />
          <xs:attribute name="Type" type="s:string" />
     </xs:element>  
+```
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-class="keyword">sequence</span>, **minOccurs**,
-**maxOccurs**, and <span
-class="keyword">choice</span>, see the definition section.
 
 ### Parent elements
 
@@ -114,11 +95,11 @@ None.
 
 <table>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="30%" />
+<col width="25%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -131,7 +112,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>DisplayName</p></td>
+<td align="left"><p>**DisplayName**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies the localizable display name of the field.</p></td>

@@ -151,7 +151,7 @@ The **MapToControl** element uses the following
 syntax, separating the ProgID from the file name extension with a pipe
 symbol ("|"):
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -166,7 +166,7 @@ code] "Copy code")Copy code</span>
 The following example uses the **MapToControl**
 element to assign the name of the application to an Editor variable.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

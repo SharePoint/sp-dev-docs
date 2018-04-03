@@ -165,7 +165,7 @@ element is used in a
 [ViewHeader](viewheader-element-list.md) element to
 provide an ID for a table that contains a view.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -158,7 +158,7 @@ returning the results according to a descending sort on the Modified
 field. The **Where** element contains an <span
 class="keyword">Or</span> element to group the filters.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

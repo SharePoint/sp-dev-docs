@@ -179,7 +179,7 @@ Contains the definition of a view style for a list.
 The following example outlines the sections contained within the Boxed
 view style of a ViewStyles.xml file.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

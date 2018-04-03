@@ -108,7 +108,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>IDFrom</p></td>
+<td align="left"><p>**IDFrom**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies the identifier for the content type.</p></td>

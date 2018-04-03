@@ -216,7 +216,7 @@ attributes that present the field's value in a different format.
 <td align="left"><p><span class="placeholder">some_user_field</span>**.title**</p></td>
 <td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which ".title" is appended. This is the name of the user, for example "Michiyo Sato". Note that the value of the main attribute, <span class="placeholder">some_user_field</span>, is the HTML **span</span> markup for the user, including, for example, presence information. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is not set; otherwise the value of the <span class="placeholder">some_user_field</span>**.span** attribute is used.</p>
 <div class="code">
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code><span class="ms-imnSpan">
@@ -241,7 +241,7 @@ XML 
 <td align="left"><p><span class="placeholder">some_user_field</span>**.span**</p></td>
 <td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which ".span" is appended. This is a plainer version of the HTML markup for the user. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is set; otherwise the value of the <span class="placeholder">some_user_field</span>**.title** attribute is used.</p>
 <div class="code">
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code><nobr><span>

@@ -185,7 +185,7 @@ Suppliers and from Suppliers to Cities. In the case of the last join, a
 different alias, say 'supplierCities', would be assigned to the Cities
 list from the one that is used for the Customer to Cities join.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

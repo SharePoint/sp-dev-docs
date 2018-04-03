@@ -152,7 +152,7 @@ extensions\\15\\CONFIG).
 The following example from the file TIMEZONE.XML uses the <span
 class="keyword">Bias</span> element to define a time zone.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

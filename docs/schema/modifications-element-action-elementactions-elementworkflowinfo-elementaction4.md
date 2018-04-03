@@ -64,7 +64,7 @@ class="keyword">action</span>.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -106,7 +106,7 @@ code] "Copy code")Copy code</span>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -131,7 +131,7 @@ code] "Copy code")Copy code</span>
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-class="keyword">sequence</span>, **minOccurs**,
+## Elements and attributes class="keyword">sequence</span>, **minOccurs**,
 **maxOccurs**, and <span
 class="keyword">choice</span>, see the definition section.
 

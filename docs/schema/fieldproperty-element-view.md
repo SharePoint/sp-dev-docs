@@ -202,7 +202,7 @@ whether the body of a field has rich text formatting. If rich text is
 applied, then hyperlinks are automatically generated without encoding;
 otherwise, hyperlinks are encoded.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

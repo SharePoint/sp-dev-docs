@@ -169,7 +169,7 @@ filter in the query, returning cases where the date and time value in
 the **Expires** field is greater than today's
 date and time.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

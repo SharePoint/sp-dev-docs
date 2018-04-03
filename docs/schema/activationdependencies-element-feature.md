@@ -155,7 +155,7 @@ If included within a [Feature](feature-element-feature.md)
 element, the following code example prevents the current Feature from
 being activated unless the Feature with the specified ID is activated.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

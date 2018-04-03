@@ -230,7 +230,7 @@ Defines a single content type.
 The following example is the content type definition of the <span
 class="keyword">Document</span> content type.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

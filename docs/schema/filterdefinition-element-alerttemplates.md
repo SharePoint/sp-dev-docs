@@ -138,7 +138,7 @@ None
 The following query creates an alert event if the event date, end date,
 or location changes.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -216,7 +216,7 @@ The following example uses the **GetVar**
 element to return current filtering information for determining what
 text to display in the toolbar above the list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

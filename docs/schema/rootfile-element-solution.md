@@ -137,7 +137,7 @@ several features. Shared localization resources are located in the
 extensions\\15\\Resources folder. For example, the following XML deploys
 three shared localization resource files.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -161,7 +161,7 @@ Files\\Microsoft Shared\\web server
 extensions\\15\\Config\\AdminResources folder. The following XML deploys
 localization resource files to that folder.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -178,7 +178,7 @@ The following example returns "User Zero" if the <span
 class="keyword">UserID</span> value equals 0 (zero); otherwise, the
 example returns "Not User Zero."
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

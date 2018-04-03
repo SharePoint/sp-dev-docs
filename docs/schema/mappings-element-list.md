@@ -154,7 +154,7 @@ The following excerpt shows how to implement the <span
 class="keyword">MAPPINGS</span> element in a <span
 class="keyword">Choice</span> field.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

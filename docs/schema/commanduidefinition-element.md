@@ -232,7 +232,7 @@ Contains elements that define a user interface.
 The following example adds a new <span class="ui">My Custom Tab</span>
 tab with a group and three buttons on a document library.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -180,7 +180,7 @@ post more than one command to the server at a time.
 The following code example, if contained within HTTP protocol, would
 return a list named "Documents" from the server.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

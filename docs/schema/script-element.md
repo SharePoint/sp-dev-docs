@@ -145,7 +145,7 @@ The following example uses the **Script**
 element to contain a script fragment that executes within a view of a
 list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

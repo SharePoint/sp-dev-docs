@@ -151,7 +151,7 @@ new item of this content type.
 The following example specifies a document template for a content type.
 In this case, the path specified is relative to the server base URL.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

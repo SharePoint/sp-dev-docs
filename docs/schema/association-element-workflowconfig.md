@@ -210,7 +210,7 @@ which the workflow is associated, the task list the workflow uses, that
 the workflow can be started manually, and that the workflow starts
 automatically when a new item is created on the list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

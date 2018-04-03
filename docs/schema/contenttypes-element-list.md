@@ -141,7 +141,7 @@ created through the list definition.
 The following example shows a partial definition for a list that uses
 three content types.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

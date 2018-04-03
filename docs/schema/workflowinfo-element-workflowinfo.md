@@ -127,7 +127,7 @@ class="keyword">WorkflowInfo</span> element so that all custom actions
 or conditions that it contains are correctly displayed in the workflow
 editor.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -161,7 +161,7 @@ file installed in the %ProgramFiles%\\Common Files\\Microsoft
 Shared\\web server extensions\\15\\TEMPLATE\\1033 folder of SharePoint
 Foundation.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

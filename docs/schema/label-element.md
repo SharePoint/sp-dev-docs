@@ -194,7 +194,7 @@ The following example is an XML fragment that shows a <span
 class="keyword">Controls</span> element that contains two text box
 controls and two labels for them.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

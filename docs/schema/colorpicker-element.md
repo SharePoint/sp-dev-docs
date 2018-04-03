@@ -182,7 +182,7 @@ Defines a color picker control.
 The following example defines a color picker control as part of a flyout
 menu.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

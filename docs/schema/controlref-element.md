@@ -338,7 +338,7 @@ class="keyword">Button</span> element to the <span
 class="keyword">TemplateAlias</span> attribute of a <span
 class="keyword">ControlRef</span> element.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

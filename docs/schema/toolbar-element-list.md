@@ -158,7 +158,7 @@ file for custom lists defines the <span class="ui">New</span> command of
 the toolbar, displaying the option to create items only to users with
 permission to add list items.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

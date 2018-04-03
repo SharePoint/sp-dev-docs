@@ -149,7 +149,7 @@ If the Status column equals Completed or is empty, the query in the
 following example returns rows from the Modified column in descending
 order.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

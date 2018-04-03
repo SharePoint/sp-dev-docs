@@ -218,7 +218,7 @@ None
 The following example is an XML fragment that defines a group of
 controls that includes a **CheckBox** element.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

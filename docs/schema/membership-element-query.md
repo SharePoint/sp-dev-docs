@@ -157,7 +157,7 @@ The following example defines a filter for cases where the user is
 either assigned a task based on membership in a group or assigned a task
 directly.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

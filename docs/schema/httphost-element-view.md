@@ -159,7 +159,7 @@ http://someservername.com</span>.
 The following example constructs an opening \<A\> tag, using the <span
 class="keyword">HttpHost</span> element to return the server path.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

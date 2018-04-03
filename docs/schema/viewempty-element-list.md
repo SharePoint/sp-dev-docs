@@ -164,7 +164,7 @@ Contains the string to be displayed in a view when no items are present.
 If the view is empty, the following example returns a message indicating
 that the view has no items.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

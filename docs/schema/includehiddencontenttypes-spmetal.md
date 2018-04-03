@@ -132,7 +132,7 @@ an IncludeHiddenContentTypes element.
 The following is an example of a IncludeHiddenContentTypes element in
 use.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -196,7 +196,7 @@ the sort direction, which is assigned to the <span
 class="keyword">SORTINGFIELDS</span> attribute in the resulting \<A\>
 tag.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

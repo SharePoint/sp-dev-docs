@@ -161,7 +161,7 @@ class="keyword">Lt</span> element name.
 The following example queries for cases where the Deadline field value
 either equals an empty string or is less than the current date.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

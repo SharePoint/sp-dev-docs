@@ -178,7 +178,7 @@ class="code">\\\\Program Files\\Common Files\\Microsoft Shared\\web
 server extensions\\12\\TEMPLATE\\LAYOUTS\\</span><span
 class="placeholder">LCID</span><span class="code">\\STYLES</span>).
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -154,7 +154,7 @@ only a sort order (in order of modification date), but also a filter
 (only show items whose **Expires** property is
 greater than or equal to today's date).
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

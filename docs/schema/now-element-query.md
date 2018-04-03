@@ -148,7 +148,7 @@ Returns the current date and time.
 The following example queries for cases where a recurring event overlaps
 with the current date and time.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

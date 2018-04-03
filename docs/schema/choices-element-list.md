@@ -166,7 +166,7 @@ elements are in all capital letters.
 This example defines a **Choice** field with
 three choices.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

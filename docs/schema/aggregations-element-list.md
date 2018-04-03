@@ -156,7 +156,7 @@ function is applied to the **Title** column;
 the second reference specifies that the Sum function is applied to the
 **Number** column.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

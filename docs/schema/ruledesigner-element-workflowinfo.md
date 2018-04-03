@@ -139,7 +139,7 @@ The following XML demonstrates how to construct a <span
 class="keyword">RuleDesigner</span> element so that it can be displayed
 in a code-free workflow editor.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

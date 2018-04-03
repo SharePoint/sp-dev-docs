@@ -313,7 +313,7 @@ reference.
 The following example shows two **FieldRef**
 elements specifying columns to include in a content type.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

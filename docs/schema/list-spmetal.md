@@ -69,7 +69,7 @@ which content types in the list are included in code generation.
 (SPMetal)](web-spmetal.md)</span>  
   [List
 (SPMetal)](list-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -184,7 +184,7 @@ code generation. The example also contains a ContentType element that
 ensures that the content type class for the list content type is named
 "TeamMember" instead of the default "TeamMembersItem".
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

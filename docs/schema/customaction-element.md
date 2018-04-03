@@ -286,7 +286,7 @@ you cannot add Web Parts or arbitrary controls.
 The following example is part of a Feature that replaces a button on the
 Server ribbon.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

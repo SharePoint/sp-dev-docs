@@ -174,7 +174,7 @@ class="code">\</OPTION\></span>.
 The following example constructs a drop-down list box and uses the <span
 class="keyword">SelectOptions</span> element to delineate the options.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

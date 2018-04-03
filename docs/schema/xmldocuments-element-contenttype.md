@@ -175,7 +175,7 @@ For more information on the actual information contained in the <span
 class="keyword">XmlDocument</span> element, see [FormTemplates Schema
 Overview](http://msdn.microsoft.com/library/88de244c-8d40-4f4d-953d-c7bbbc1dac24(Office.15).aspx).
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

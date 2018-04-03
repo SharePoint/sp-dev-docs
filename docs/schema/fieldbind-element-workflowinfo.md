@@ -420,7 +420,7 @@ class="keyword">FieldBind</span> element within the <span
 class="keyword">RuleDesigner</span> parent element so that it displays
 correctly in the workflow designer.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

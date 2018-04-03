@@ -149,7 +149,7 @@ MM/DD/YYYY (for example, 1/21/2001).
 
 The following example queries for cases where the due date is today.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

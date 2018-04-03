@@ -160,7 +160,7 @@ None
 The following example defines a section of a menu that includes a color
 picker control with several **Color** elements.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

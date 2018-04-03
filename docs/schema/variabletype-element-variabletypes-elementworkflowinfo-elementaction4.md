@@ -62,7 +62,7 @@ Specifies a type that can be used for local variables in the workflow.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -100,7 +100,7 @@ code] "Copy code")Copy code</span>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

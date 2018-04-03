@@ -153,7 +153,7 @@ whether they overlap.
 The following example compares the event date and end date of a
 recurring event with the current date and time.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

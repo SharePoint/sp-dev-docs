@@ -137,7 +137,7 @@ of the element ensures that code generated for the Contact content type
 class has properties for only the three columns explicitly represented
 by Column elements.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

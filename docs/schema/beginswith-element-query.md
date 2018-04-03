@@ -156,7 +156,7 @@ target="P:Microsoft.SharePoint.SPQuery.Query"><span
 class="nolink">Query</span></span> property to return the titles of
 items within a list where a Journal column begins with "City".
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

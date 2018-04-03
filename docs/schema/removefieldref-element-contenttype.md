@@ -187,7 +187,7 @@ Foundation disregards the element.
 The following example shows **RemoveFieldRef **
 elements specifying several columns to remove from a content type.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

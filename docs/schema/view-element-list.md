@@ -281,7 +281,7 @@ Foundation, where each list can contain a number of views.
 <p>If **RowLimit** is not specified, the default number of Rows returned is 50. If "None" is specified for the view type, all the rows of the recordset are returned in one view.</p>
 <p>When a view is rendered, the render variables <span class="code">ViewHasNext</span> and <span class="code">ViewHasPrev</span> are set to **TRUE</span> or **FALSE</span>, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render **Next</span> and **Previous** buttons on the page, as in the following example:</p>
 <div class="code">
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code><Switch>
@@ -448,7 +448,7 @@ The following example illustrates the use of a fields enumeration within
 a view body, laying out a basic table for displaying a list in the
 browser.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -489,7 +489,7 @@ In the following section of the example a
 included within the **View** element in order
 to specify which fields will be enumerated in the view.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -523,7 +523,7 @@ specify a result set that meets certain criteria, as in the following
 example, which returns a list of all the documents in a library that are
 written by Mary or John.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -559,7 +559,7 @@ order of modification date), but also a filter (only show items whose
 **Expires** property is greater than or equal
 to today's date).
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

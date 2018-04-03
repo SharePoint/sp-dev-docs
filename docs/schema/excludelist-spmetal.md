@@ -68,7 +68,7 @@ Specifies that a list should be excluded from code generation.
 (SPMetal)](web-spmetal.md)</span>  
   [ExcludeList
 (SPMetal)](excludelist-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -150,7 +150,7 @@ that name the same list.
 
 The following is an example of an ExcludeList element in use.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

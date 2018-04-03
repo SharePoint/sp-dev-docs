@@ -147,7 +147,7 @@ Following is an example of the <span
 class="keyword">ContentTypeBinding</span> element specifying the content
 type to bind to the specified list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

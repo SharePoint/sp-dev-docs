@@ -154,7 +154,7 @@ class="keyword">DateTime</span> field type and inserts the current date
 in ISO format if the value is "[today]". Otherwise, the code inserts the
 raw value contained in the field.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

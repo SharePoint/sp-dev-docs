@@ -69,7 +69,7 @@ represented by List elements.
 (SPMetal)](web-spmetal.md)</span>  
   [ExcludeOtherLists
 (SPMetal)](excludeotherlists-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -134,7 +134,7 @@ The following is an example of an ExcludeOtherLists element in use. In
 this case, it ensures that the "Team Members" list is the only one for
 which SPMetal generates a property declaration.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

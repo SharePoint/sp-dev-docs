@@ -154,7 +154,7 @@ The following example specifies three custom workflow status column
 values: <span class="ui">Canceled</span>, <span
 class="ui">Approved</span>, and <span class="ui">Rejected</span>.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

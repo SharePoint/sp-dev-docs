@@ -132,7 +132,7 @@ None
 The following example defines a custom action that adds a button to the
 Server ribbon.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

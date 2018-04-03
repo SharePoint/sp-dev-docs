@@ -202,7 +202,7 @@ items exceeds the limit set for the page through the
 example uses the **ListProperty** element to
 return the URL for the default view.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

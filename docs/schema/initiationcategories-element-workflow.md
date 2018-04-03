@@ -167,7 +167,7 @@ Valid values include the following:
 The following example specifies that the workflow can only be initiated
 through the SharePoint Foundation Web interface.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

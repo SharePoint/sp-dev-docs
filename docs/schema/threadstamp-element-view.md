@@ -164,7 +164,7 @@ is an empty string), followed by the value rendered by the <span
 class="keyword">ThreadStamp</span> element, which represents the current
 time.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

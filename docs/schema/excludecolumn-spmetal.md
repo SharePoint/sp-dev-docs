@@ -70,7 +70,7 @@ Specifies that a column is not included in SPMetal code generation.
 (SPMetal)](contenttype-spmetal.md)</span>  
     [ExcludeColumn
 (SPMetal)](excludecolumn-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -154,7 +154,7 @@ ContentType element that has an IncludeHiddenColumns element.
 
 The following shows the ExcludeColumn element in use.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

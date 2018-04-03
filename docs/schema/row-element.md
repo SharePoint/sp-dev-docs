@@ -131,7 +131,7 @@ Defines a row in a section of a layout.
 The following example is a fragment from the default Server ribbon
 definition.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

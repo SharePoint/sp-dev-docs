@@ -148,7 +148,7 @@ a Microsoft JScript string literal.
 In the following example, the **QuotedXML**
 element contains content that will be executed as CAML.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

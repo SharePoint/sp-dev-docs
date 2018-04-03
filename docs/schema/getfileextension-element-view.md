@@ -153,7 +153,7 @@ would return "xls".
 The following example returns file extensions from the Lookup column,
 except in cases where extension equals "htm".
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

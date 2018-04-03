@@ -70,7 +70,7 @@ generation.
 (SPMetal)](web-spmetal.md)</span>  
   [ContentType
 (SPMetal)](contenttype-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -228,7 +228,7 @@ ensures that the class is named "Contract" instead of the default name
 class that represents the content type of the list is named "TeamMember"
 instead of "TeamMembersItem".
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

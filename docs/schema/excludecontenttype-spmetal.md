@@ -68,7 +68,7 @@ Specifies that no class is generated for a content type.
 (SPMetal)](web-spmetal.md)</span>  
   [ExcludeContentType
 (SPMetal)](excludecontenttype-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -159,7 +159,7 @@ element.
 
 The following is an example of a ExcludeContentType element in use.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

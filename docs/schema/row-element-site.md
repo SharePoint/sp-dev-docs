@@ -149,7 +149,7 @@ instantiated during site provisioning.
 
 The following example defines one row of fields for the welcome page.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

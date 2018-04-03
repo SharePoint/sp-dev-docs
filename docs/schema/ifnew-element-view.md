@@ -153,7 +153,7 @@ registry setting for which the default value is 1.
 The following example displays a particular logo if the display pattern
 of the field is new.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

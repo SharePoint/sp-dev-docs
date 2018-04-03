@@ -153,7 +153,7 @@ by preventing the need to make multiple requests to the server for data.
 
 Using this element is the same as using the following:
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

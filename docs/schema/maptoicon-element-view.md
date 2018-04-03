@@ -199,7 +199,7 @@ construct the URL of the icon based on the file extension of the
 document and the **ProgID** of the application
 associated with the document.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

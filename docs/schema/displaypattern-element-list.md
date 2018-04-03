@@ -174,7 +174,7 @@ class="keyword">Title</span> and **ID** fields
 to form links such as <span class="code">\<a href="form.htm?ID=7"\>This
 is the title\</a\></span>.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

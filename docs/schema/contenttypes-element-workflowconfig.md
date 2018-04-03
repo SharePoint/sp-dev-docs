@@ -143,7 +143,7 @@ The following example shows a **ContentTypes**
 element that contains a single content type for the tasks created in the
 workflow.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

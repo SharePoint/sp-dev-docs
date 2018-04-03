@@ -157,7 +157,7 @@ attribute, respectively.
 The following line of code sets a variable named <span
 class="keyword">TextLength</span>.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
@@ -170,7 +170,7 @@ code] "Copy code")Copy code</span>
 The next block of code divides the value of the <span
 class="keyword">TextLength</span> variable by 5, to render the number 9.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -70,7 +70,7 @@ Specifies that hidden columns are included in code generation.
 (SPMetal)](contenttype-spmetal.md)</span>  
     [IncludeHiddenColumns
 (SPMetal)](includehiddencolumns-spmetal.md)</span>  
-<span codelanguage="xmlLang"></span>
+## Definition
 <table>
 <colgroup>
 <col width="100%" />
@@ -136,7 +136,7 @@ presence of the element ensures that the code that is generated for the
 Contact content type class will have properties for the content type's
 hidden columns.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

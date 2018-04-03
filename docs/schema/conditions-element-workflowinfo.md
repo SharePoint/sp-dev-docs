@@ -202,7 +202,7 @@ class="keyword">Conditions</span> element so that the individual <span
 class="keyword">Condition</span> elements that it contains are displayed
 in the workflow editor.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

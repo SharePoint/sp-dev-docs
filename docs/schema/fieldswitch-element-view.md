@@ -191,7 +191,7 @@ file defines two different rendering patterns for a <span
 class="keyword">Note</span> field, depending on whether the field has
 rich text formatting.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

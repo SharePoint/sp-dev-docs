@@ -190,7 +190,7 @@ variable.
 The following example uses the **ForEach**
 element to construct a drop-down list box.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

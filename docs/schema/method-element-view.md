@@ -187,7 +187,7 @@ element to post the remote procedure call (RPC)
 [ExportList](http://msdn.microsoft.com/library/0e3b38ed-34de-4a16-a178-66a750de92c8(Office.15).aspx)
 command and return the schema of a specified list.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

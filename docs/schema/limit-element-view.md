@@ -212,7 +212,7 @@ The following example limits the text of the <span
 class="keyword">Body</span> field to 250 characters and puts an ellipsis
 ("**...**") after the string if it is cut off.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

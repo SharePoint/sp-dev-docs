@@ -153,7 +153,7 @@ The following query returns cases where the field base type is 1, the ID
 column equals the Project column, and the Template column is empty.
 Results are returned in ascending order by Title and then by ID.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

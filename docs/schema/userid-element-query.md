@@ -152,7 +152,7 @@ class="keyword">UserID</span> element, and it returns the results in
 ascending order with the **Title** field first,
 and then the FirstName field.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

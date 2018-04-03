@@ -152,7 +152,7 @@ For an article that shows the steps for creating and deploying an app
 part, see [Create add-in parts to install with your SharePoint
 Add-in](http://msdn.microsoft.com/library/a2664289-6c56-4cb1-987a-22367fad55eb(Office.15).aspx).
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -161,7 +161,7 @@ and edit dates and numbers properly.
 The following example constructs a SCRIPT block in which the date
 separator is set according to the client's locale.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

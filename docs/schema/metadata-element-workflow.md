@@ -164,7 +164,7 @@ element containing information on how the workflow can be initiated, the
 name of a workflow modification contained in the workflow, and custom
 status column values.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

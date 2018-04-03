@@ -161,7 +161,7 @@ The following example checks the value of a <span
 class="keyword">UserID</span> field and returns "User Zero" if the value
 is 0 (zero). Otherwise, it sets a default value: "Not User Zero".
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

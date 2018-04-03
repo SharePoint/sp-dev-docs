@@ -167,7 +167,7 @@ of items to display on a page. The example uses the <span
 class="keyword">HttpVDir</span> element to construct the full path for
 an image file.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

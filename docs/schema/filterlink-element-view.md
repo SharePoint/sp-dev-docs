@@ -211,7 +211,7 @@ The following example uses the **FilterLink**
 element to construct a hyperlink for the filter icon, so that clicking
 the icon posts the URL for applying filter options in the list view.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

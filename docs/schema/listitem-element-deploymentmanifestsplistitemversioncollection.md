@@ -293,7 +293,7 @@ class="nolink">SPListItem</span></span>
 This element has a recursive structure, as shown in the following code
 example.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

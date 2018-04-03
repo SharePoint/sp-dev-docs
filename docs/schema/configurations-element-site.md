@@ -167,7 +167,7 @@ The following example from
 specifies the lists and modules used in the <span
 class="keyword">STS</span> site definition.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

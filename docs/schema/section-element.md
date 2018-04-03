@@ -165,7 +165,7 @@ Defines a section of a layout.
 The following example defines a layout with two sections of different
 types.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

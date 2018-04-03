@@ -191,7 +191,7 @@ The following table summarizes possible values that subelements of the
 The following example outlines how to use the <span
 class="keyword">Security</span> element.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -158,7 +158,7 @@ The following example maps the **ProgID** and
 file extension for the Template lookup column, separated by a pipe
 symbol ("|"), to an icon.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

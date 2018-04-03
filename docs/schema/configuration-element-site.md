@@ -315,7 +315,7 @@ The following example from
 specifies the three configurations for the <span
 class="keyword">STS</span> Web site definition.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

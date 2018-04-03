@@ -196,7 +196,7 @@ Defines a group of controls.
 
 The following XML fragment defines a group that contains two buttons.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

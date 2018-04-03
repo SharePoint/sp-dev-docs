@@ -169,7 +169,7 @@ Defines a unit for use within the spinner control.
 The following XML example defines a spinner control that contains
 several units.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

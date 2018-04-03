@@ -157,7 +157,7 @@ Defines the layout of controls in a template.
 The following example is an XML fragment that defines a group template
 that has several **Layout** elements.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

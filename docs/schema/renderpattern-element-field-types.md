@@ -274,7 +274,7 @@ city name and it is followed by a comma and a space. The third subcolumn
 stores the state and, following a space, the last subcolumn stores the
 postal code.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

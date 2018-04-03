@@ -152,7 +152,7 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 
 The following example outlines the structure of the file TIMEZONE.XML.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

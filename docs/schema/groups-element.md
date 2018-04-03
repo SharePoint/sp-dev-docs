@@ -152,7 +152,7 @@ Defines the groups of controls on a tab.
 The following XML fragment defines a tab that contains zero groups of
 controls.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

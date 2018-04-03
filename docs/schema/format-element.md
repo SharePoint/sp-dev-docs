@@ -151,7 +151,7 @@ Datasheet view.
 The following example shows the definitions of column and row formatting
 used in a Datasheet view.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

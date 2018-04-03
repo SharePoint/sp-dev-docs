@@ -175,7 +175,7 @@ The following example specifies that the workflow can be initiated
 manually, and is initiated automatically when a user creates an item,
 updates an item, or checks in a major version of an item.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

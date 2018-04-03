@@ -207,7 +207,7 @@ Describes a view within a module for a site definition.
 <p>If **RowLimit** is not specified, the default number of Rows returned is 50. If "None" is specified for the view type, all the rows of the recordset are returned in one view.</p>
 <p>When a view is rendered, the render variables **ViewHasNext</span> and **ViewHasPrev</span> are set to **TRUE</span> or **FALSE</span>, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render **Next</span> and **Previous** buttons on the page, as in the following example:</p>
 <div class="code">
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
 <pre><code><Switch>

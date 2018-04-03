@@ -225,7 +225,7 @@ Select="Default"/\></span> will also search for a subelement called
 The following line of code returns the **Name**
 property from the current field or view.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

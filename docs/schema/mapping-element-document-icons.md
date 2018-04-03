@@ -177,7 +177,7 @@ name extensions as follows:
 -   If neither of the above causes a match, it provides a default value,
     icgen.gif, for the mapping.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

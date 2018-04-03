@@ -182,7 +182,7 @@ class="keyword">TimeZone</span> element to return the current time zone.
 
 The following example from the file TIMEZONE.XML defines a time zone.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

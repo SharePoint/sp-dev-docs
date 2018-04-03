@@ -159,7 +159,7 @@ whether the contents of the
 [Expr1](expr1-element-view.md) and
 [Expr2](expr2-element-view.md) elements are equal.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

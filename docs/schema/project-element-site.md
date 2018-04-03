@@ -215,7 +215,7 @@ The following example shows the opening line of the
 file for the standard SharePoint Foundation site definition (<span
 class="keyword">STS</span>).
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

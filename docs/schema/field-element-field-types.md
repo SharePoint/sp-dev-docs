@@ -192,7 +192,7 @@ The following example defines a custom field type.
 > [!IMPORTANT] 
 > The **RenderPattern** is obsolete. It is shown here solely to assist in the debugging of custom fields that were originally developed against earlier versions of SharePoint Foundation.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

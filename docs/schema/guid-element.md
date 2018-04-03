@@ -108,7 +108,7 @@ The following example evaluates a GUID variable and, if it is an empty
 string, assigns the current GUID to the variable. If it is not an empty
 string, the value of the GUID variable is returned by default.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

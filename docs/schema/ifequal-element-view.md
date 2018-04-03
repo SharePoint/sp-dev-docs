@@ -137,7 +137,7 @@ class="keyword">Checked Out To</span> column. If the user ID equals
 null, nothing is displayed. If the user ID does not equal null, a link
 is provided to a display form with information about the user.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

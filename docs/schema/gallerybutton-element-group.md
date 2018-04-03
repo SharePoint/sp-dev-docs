@@ -283,7 +283,7 @@ None
 The following example is an XML fragment that defines a group of gallery
 button controls that are used for applying a formatting style.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

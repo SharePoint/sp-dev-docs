@@ -148,7 +148,7 @@ Contains a formula used in the definition of a field.
 The following example defines a calculated field containing a formula
 that multiplies the value of another field by 100.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

@@ -155,7 +155,7 @@ The following example queries for cases where the Expires field value
 either equals an empty string or is less than or equal to the current
 date.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

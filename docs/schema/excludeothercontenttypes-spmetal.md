@@ -134,7 +134,7 @@ The following is an example of a ExcludeOtherContentTypes element in
 use. In this example, it ensures that a class is generated for only the
 Contact content type.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

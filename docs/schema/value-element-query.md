@@ -158,7 +158,7 @@ class="keyword">BaseType</span> field equals 1, and the Project field
 equals the ID of the current project property. Results are returned in
 ascending order, first by Title and then by ID.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"

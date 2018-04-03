@@ -195,7 +195,7 @@ The following example uses the **PageUrl**
 element to return the URL of the current page and surrounds the column
 title with a link for filtering.
 
-<span codelanguage="xmlLang"></span>
+## Definition
 XML 
 <span class="copyCode" onclick="CopyCode(this)"
 onkeypress="CopyCode_CheckKey(this, event)"
