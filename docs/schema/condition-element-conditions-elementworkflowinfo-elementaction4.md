@@ -8,13 +8,15 @@ localization_priority: Normal
 ms.assetid: 20f7d2de-a99d-fde6-c8e3-e401bb42d2f4
 ---
 
-# Condition element (Conditions element) 
+# Condition element 
 
-(WorkflowInfo element) (Action4)
+(Conditions element) (WorkflowInfo element) (Action4)
 
 **Applies to**: SharePoint Server 2013
 
 Represents a Condition statement, which is part of a rule sentence that can be displayed in a declarative, rules-based, code-free workflow editor. The Condition statement (with values and arguments) is used to evaluate workflow state and make branching decisions.
+
+## Usage
 
 ```XML 
     <WorkflowInfo>
@@ -141,10 +143,10 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 <table>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="35%" />
 <col width="20%" />
 </colgroup>
 <thead>
@@ -158,7 +160,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>AppliesTo</p></td>
+<td align="left"><p>**AppliesTo**</p></td>
 <td align="left"><p><a href="appliestotypes-simpletype-action4.md">appliesToTypes</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Specifies whether the conditional statement that is being evaluated is applied to a SharePoint list or document library. By changing the value, you can show or hide a specific condition statement in the workflow editor, depending on the type of SharePoint list that the workflow is associated with. Following are allowable values:</p>
@@ -171,7 +173,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the appliesToTypes type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Assembly</p></td>
+<td align="left"><p>**Assembly**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies the .NET assembly that contains the implementation code for the **Condition** element.</p>
@@ -184,25 +186,25 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>ClassName</p></td>
+<td align="left"><p>**ClassName**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Contains the fully qualified class name in which the **Condition** element code is implemented.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>FunctionName</p></td>
+<td align="left"><p>**FunctionName**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Name of the **Boolean** method in the class that implements the **Condition** code.</p>
 <p><span class="label">Example method:</span></p>
-<p><span class="code">Bool myCondition(WorkflowContext context, string ListGUIDorName, int ItemWorkflowAttachedTo)</span></p>
+<p><span class="code">`Bool myCondition(WorkflowContext context, string ListGUIDorName, int ItemWorkflowAttachedTo)`</span></p>
 <p><span class="label">XML:</span></p>
-<p><span class="code">FunctionName="myCondition"</span></p></td>
+<p><span class="code">`FunctionName="myCondition"`</span></p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>ItemKeyType</p></td>
+<td align="left"><p>**ItemKeyType**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The implementation-specific identifier for the default object type.</p></td>
@@ -216,7 +218,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>ShapeImageUrl</p></td>
+<td align="left"><p>**ShapeImageUrl**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The URL to the image file representing the condition-related shape that is represented in the visual designer.</p></td>
@@ -234,7 +236,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>UsesCurrentItem</p></td>
+<td align="left"><p>**UsesCurrentItem**</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies whether the item currently selected is associated with the workflow. If set to **true**, the workflow binds to the SharePoint list item or document library item that started the workflow instance. When using a declarative workflow editor or designer surface, this value always returns **true** and cannot be changed.</p></td>

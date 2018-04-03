@@ -14,7 +14,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 
 **Applies to**: SharePoint Server 2013
 
-<br/>
+## Usage
 
 ```XML 
     <Actions>
@@ -66,11 +66,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -93,8 +89,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-<br/>
 
 ### Child elements
 

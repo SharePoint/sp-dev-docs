@@ -16,7 +16,7 @@ ms.assetid: c9996ac3-be53-440c-8810-55b91031869b
 
 Specifies the body of a custom action.
 
-<br/>
+## Usage
 
 ```XML
     <Actions>
@@ -68,11 +68,7 @@ Specifies the body of a custom action.
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
-<br/>
-
 ### Parent elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -95,8 +91,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-<br/>
 
 ### Child elements
 
