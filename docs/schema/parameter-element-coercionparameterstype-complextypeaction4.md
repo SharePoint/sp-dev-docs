@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,58 +8,13 @@ localization_priority: Normal
 ms.assetid: f1952ebe-19b3-1bcf-9880-0ef3013e101b
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Parameter element 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Parameter element (coercionParametersType complexType) (Action4)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-Used to describe hidden input parameters for an activity that is used as
-the coercion. Also defines additional input values to be always added
-internally when an activity used as a coercion is inserted into the
-workflow. The Parameter element is of type
-[coercionParametersType](coercionparameterstype-complextype-action4.md).
-
-**Last modified:** March 09, 2015
+(coercionParametersType complexType) (Action4)
 
 **Applies to**: SharePoint Server 2013
+
+Used to describe hidden input parameters for an activity that is used as the coercion. Also defines additional input values to be always added internally when an activity used as a coercion is inserted into the workflow. The Parameter element is of type [coercionParametersType](coercionparameterstype-complextype-action4.md).
 
 ## Element information
 
@@ -86,16 +39,9 @@ workflow. The Parameter element is of type
 </tbody>
 </table>
 
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+
+```XML
     <xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded">
        <xs:complexType>
           <xs:all>
@@ -113,22 +59,19 @@ code] "Copy code")Copy code</span>
          <xs:attribute name="Value" type="s:string" />
        </xs:complexType>
     </xs:element>  
+```
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-## Elements and attributes class="keyword">sequence</span>, **minOccurs**,
-**maxOccurs**, and <span
-class="keyword">choice</span>, see the definition section.
 
 ### Parent elements
 
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="25%" />
+<col width="25%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -141,7 +84,7 @@ class="keyword">choice</span>, see the definition section.
 <tr class="odd">
 <td align="left"><p><a href="parameters-element-coercion-elementcoercions-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
 <td align="left"><p><a href="coercionparameterstype-complextype-action4.md">coercionParametersType</a></p></td>
-<td align="left"><p>Container for **Parameter</span> elements that includes descriptions of the parameters in **coercion** method signatures.</p></td>
+<td align="left"><p>Container for **Parameter** elements that includes descriptions of the parameters in **coercion** method signatures.</p></td>
 </tr>
 </tbody>
 </table>
@@ -150,9 +93,9 @@ class="keyword">choice</span>, see the definition section.
 
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="25%" />
+<col width="25%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -174,11 +117,11 @@ class="keyword">choice</span>, see the definition section.
 
 <table>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="30%" />
+<col width="25%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -205,7 +148,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>Value</p></td>
+<td align="left"><p>**Value**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The value to be set for the activity parameter.</p></td>
