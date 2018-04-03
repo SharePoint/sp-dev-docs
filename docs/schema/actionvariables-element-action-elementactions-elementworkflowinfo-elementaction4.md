@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 69d4c465-600d-9d78-6ed9-1e024ec8ad1d
 ---
 
-# ActionVariables element 
+# ActionVariables element (Action element) 
 
-(Action element) (Actions element) (WorkflowInfo element) (Action4)
+(Actions element) (WorkflowInfo element) (Action4)
 
 **Applies to**: SharePoint Server 2013
 

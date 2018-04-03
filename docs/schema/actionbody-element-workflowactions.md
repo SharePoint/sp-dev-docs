@@ -8,22 +8,16 @@ localization_priority: Normal
 ms.assetid: eb6327ce-b6d1-4913-8a67-f01c62d32ce3
 ---
 
-# ActionBody Element 
-
-(WorkflowActions)
+# ActionBody Element (WorkflowActions)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Specifies the body of a custom action.
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><Actions>
+## Definition
+
+```
+<Actions>
     <Action>
         <ActionVariables>
         </ActionVariables>
@@ -32,15 +26,22 @@ Specifies the body of a custom action.
         <ActionConditions>
         </ActionConditions>
     </Action>
-</Actions></code></pre></td>
-</tr>
-</tbody>
-</table>
+</Actions>
+```
 
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
 
+### Child elements
+
 None
+
+### Parent elements
 
 <table>
 <colgroup>

@@ -22,6 +22,8 @@ Each **Condition** element also corresponds to a **Boolean** method inside a spe
 
 A **Condition** element contains information about the Microsoft .NET assembly where the **Condition** code is implemented, and also the parameters that are required to make the function call. It also contains information about how the **Condition** statement should be displayed to the workflow editor.
 
+## Definition
+
 ```
 <WorkflowInfo>
       <Conditions>
@@ -35,7 +37,9 @@ A **Condition** element contains information about the Microsoft .NET assembly w
 </WorkflowInfo>
 ```
 
-<br/>
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
@@ -119,7 +123,7 @@ A **Condition** element contains information about the Microsoft .NET assembly w
 </tbody>
 </table>
 
-<br/>
+### Child elements
 
 <table>
 <colgroup>
@@ -133,7 +137,7 @@ A **Condition** element contains information about the Microsoft .NET assembly w
 </tbody>
 </table>
 
-<br/>
+### Parent elements
 
 <table>
 <colgroup>

@@ -8,22 +8,16 @@ localization_priority: Normal
 ms.assetid: 362dbafb-a064-45b2-9b9f-9c32af929e27
 ---
 
-# ActionConditions Element 
-
-(WorkflowInfo)
+# ActionConditions Element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Specifies conditional logic for the action.
 
+## Definition
+
 ```
-    <table>
-    <colgroup>
-    <col width="100%" />
-    </colgroup>
-    <tbody>
-    <tr class="odd">
-    <td align="left"><pre><code><Actions>
+    <Actions>
         <Action>
             <ActionVariables>
             </ActionVariables>
@@ -32,15 +26,22 @@ Specifies conditional logic for the action.
             <ActionConditions>
             </ActionConditions>
         </Action>
-    </Actions></code></pre></td>
-    </tr>
-    </tbody>
-    </table>
+    </Actions>
 ```
 
-None
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
+
+### Child elements
+
+None
+
+### Parent elements
 
 <table>
 <colgroup>

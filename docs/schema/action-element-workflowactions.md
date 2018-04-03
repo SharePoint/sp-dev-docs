@@ -10,13 +10,13 @@ localization_priority: Normal
 ms.assetid: 41ebbda6-cfba-4abc-8474-7f2003eb94bf
 ---
 
-# Action Element 
-
-(WorkflowActions)
+# Action Element (WorkflowActions)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Contains the information that is needed for the workflow engine to process a workflow activity, which is called an **action** in Microsoft SharePoint Foundation 2010. A workflow **Action** element represents a workflow activity, such as sending email notifications, updating SharePoint Foundation 2010 list items, creating and assigning tasks, and many other activities.
+
+## Definition
 
 ```XML
 <WorkflowActions>
@@ -41,12 +41,17 @@ Contains the information that is needed for the workflow engine to process a wor
 </WorkflowActions>
 ```
 
-<br/>
+
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -114,7 +119,7 @@ Contains the information that is needed for the workflow engine to process a wor
 </tbody>
 </table>
 
-<br/>
+### Child elements
 
 <table>
 <colgroup>
@@ -134,7 +139,7 @@ Contains the information that is needed for the workflow engine to process a wor
 </table>
 
 
-<br/>
+### Parent elements
 
 <table>
 <colgroup>
@@ -146,9 +151,6 @@ Contains the information that is needed for the workflow engine to process a wor
 </tr>
 </tbody>
 </table>
-
-
-<br/>
 
 ## See also
 

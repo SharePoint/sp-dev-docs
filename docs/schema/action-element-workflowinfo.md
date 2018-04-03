@@ -10,9 +10,7 @@ localization_priority: Normal
 ms.assetid: cd9ce74a-ac5a-4ebc-8e4c-3b16bcad828e
 ---
 
-# Action Element 
-
-(WorkflowInfo)
+# Action Element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -20,6 +18,8 @@ Contains the information that is needed for the workflow engine to process a wor
 workflow activity, such as sending email notifications, updating SharePoint Foundation 2010 list items, creating and assigning tasks, and many other activities.
 
 By default, SharePoint Foundation 2010 provides 23 built-in workflow actions. These are defined in the WSS.ACTIONS file.
+
+## Definition
 
 ```XML
 <Actions>
@@ -44,7 +44,11 @@ By default, SharePoint Foundation 2010 provides 23 built-in workflow actions. Th
 </Actions>
 ```
 
-<br/>
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
@@ -117,7 +121,7 @@ By default, SharePoint Foundation 2010 provides 23 built-in workflow actions. Th
 </tbody>
 </table>
 
-<br/>
+### Child elements
 
 <table>
 <colgroup>
@@ -136,7 +140,7 @@ By default, SharePoint Foundation 2010 provides 23 built-in workflow actions. Th
 </tbody>
 </table>
 
-<br/>
+### Parent elements
 
 <table>
 <colgroup>
@@ -149,7 +153,7 @@ By default, SharePoint Foundation 2010 provides 23 built-in workflow actions. Th
 </tbody>
 </table>
 
-<br/>
+## Example
 
 The following code example demonstrates how to construct an **Action** element so that it is displayed in the workflow editor. Note that this XML has been modified for readability.
 

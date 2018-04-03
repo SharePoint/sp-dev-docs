@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 1cea3d40-3662-8b7d-f450-637a28927fe0
 ---
 
-# ActivitySource element 
+# ActivitySource element (Evaluation element) 
 
-(Evaluation element) (dataSourceType complexType) (Action4)
+(dataSourceType complexType) (Action4)
 
 **Applies to**: SharePoint Server 2013
 

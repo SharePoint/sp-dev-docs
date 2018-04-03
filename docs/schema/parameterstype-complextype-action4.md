@@ -10,9 +10,9 @@ ms.assetid: 35bb99bb-066d-0876-f257-4abeed4f4e04
 
 # parametersType complexType (Action4)
 
-(Base type … xxxxxxxxxx)
-
 **Applies to**: SharePoint Server 2013
+
+Base type … xxxxxxxxxx.
 
 ## Type information
 

@@ -1,6 +1,4 @@
 ---
-
-
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,87 +10,33 @@ localization_priority: Normal
 ms.assetid: fcbb11a2-eb91-40ae-914b-cf3678a072db
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Actions Element (WorkflowInfo)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Actions Element (WorkflowInfo)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+Microsoft SharePoint Foundation 2010 provides a number of default actions to a declarative, code-free workflow editor, such as Microsoft SharePoint Designer 2010, that can be used to build workflows that address common business needs. However, complex business rules can sometimes require customized actions. You can use the **Actions** element to add custom workflow activities and expand the workflow actions available to you beyond those that are included in the default list.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+## Definition
 
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Microsoft SharePoint Foundation 2010 provides a number of default
-actions to a declarative, code-free workflow editor, such as Microsoft
-SharePoint Designer 2010, that can be used to build workflows that
-address common business needs. However, complex business rules can
-sometimes require customized actions. You can use the <span
-class="keyword">Actions</span> element to add custom workflow activities
-and expand the workflow actions available to you beyond those that are
-included in the default list.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><WorkflowInfo>
+```
+<WorkflowInfo>
     <Conditions>...</Conditions>
     <Actions>
         <Action>...</Action>
     </Actions>
-</WorkflowInfo></code></pre></td>
-</tr>
-</tbody>
-</table>
+</WorkflowInfo>
+```
 
+## Elements and attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -103,19 +47,18 @@ included in the default list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Parallel**</p></td>
-<td align="left"><p>Required **text</span>. If the user who is creating the workflow indicates that all workflow actions should be executed in parallel, the string that is defined in this attribute is used to join the **Actions</span> elements in the **RuleDesigner** sentence.</p>
+<td align="left"><p>Required **text**. If the user who is creating the workflow indicates that all workflow actions should be executed in parallel, the string that is defined in this attribute is used to join the **Actions** elements in the **RuleDesigner** sentence.</p>
 <p>The default value for this attribute is **and** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequential**</p></td>
-<td align="left"><p>Required **text</span>. If the user who is creating the workflow indicates that all workflow actions should be executed in sequence, the string that is defined in this attribute is used to join the **Actions</span> elements in the **RuleDesigner** sentence.</p>
+<td align="left"><p>Required **text**. If the user who is creating the workflow indicates that all workflow actions should be executed in sequence, the string that is defined in this attribute is used to join the **Actions** elements in the **RuleDesigner** sentence.</p>
 <p>The default value is **then** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file.</p></td>
 </tr>
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 <table>
 <colgroup>
@@ -129,8 +72,7 @@ included in the default list.
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -143,21 +85,11 @@ included in the default list.
 </tbody>
 </table>
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following example demonstrates how to construct the **Actions** element so that parent and child **Action** elements appear correctly in the workflow designer.
 
-The following example demonstrates how to construct the <span
-class="keyword">Actions</span> element so that parent and child <span
-class="keyword">Action</span> elements appear correctly in the workflow
-designer.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <WorkflowInfo>
       <Conditions>…</Conditions>
       <Actions Sequential="then" Parallel="and">
@@ -189,27 +121,15 @@ code] "Copy code")Copy code</span>
         </Action>
       </Actions>
     </WorkflowInfo>
+```
 
+## See also
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#### Tasks
-
-[.ACTIONS File Example](actions-file-example-workflowinfo.md)
-
-#### Concepts
-
-[Default Workflow Actions](default-workflow-actions-workflowinfo.md)
-
-[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
-
-#### Other resources
-
-[Creating Declarative, No-Code Workflow
-Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
-
-[Workflow Actions Schema
-Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
+- [.ACTIONS File Example](actions-file-example-workflowinfo.md)
+- [Default Workflow Actions](default-workflow-actions-workflowinfo.md)
+- [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
+- [Creating Declarative, No-Code Workflow Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
+- [Workflow Actions Schema Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
 
 
 

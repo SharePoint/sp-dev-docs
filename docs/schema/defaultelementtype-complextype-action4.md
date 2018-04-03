@@ -10,9 +10,9 @@ ms.assetid: 8649a351-d45c-94d3-cc1e-9fc4e418c45c
 
 # defaultElementType complexType (Action4)
 
-(Base type … xxxxx)
-
 **Applies to**: SharePoint Server 2013
+
+Base type … xxxxx.
 
 ## Type information
 
