@@ -20,7 +20,8 @@ For more information, see [LocalizedDisplayName Element in LocalizedDisplayNames
 
 **Schema**: BDCMetadataResource
 
-```<LocalizedDisplayName LCID = "Integer"> </LocalizedDisplayName>
+```
+<LocalizedDisplayName LCID = "Integer"> </LocalizedDisplayName>
 ```
 
 ## Elements and attributes

@@ -18,7 +18,8 @@ ms.assetid: e26b7780-1968-f70f-1b9f-53dc30f90ea6
 
 **Schema**: BDCMetadataResource
 
-```<LobSystems></LobSystems>
+```
+<LobSystems></LobSystems>
 ```
 
 ## Elements and attributes

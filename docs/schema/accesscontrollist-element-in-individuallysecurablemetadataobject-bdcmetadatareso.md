@@ -14,7 +14,7 @@ ms.assetid: 8ca87912-2533-1c7d-3550-c5c3af047e73
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-For more details, see [AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md).
+For more information, see [AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
@@ -24,17 +24,15 @@ For more details, see [AccessControlList Element (BDCMetadata Schema)](accesscon
 <AccessControlList></AccessControlList>
 ```
 
-<br/>
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 None.
 
-<br/>
-
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
@@ -52,9 +50,7 @@ None.
 </tbody>
 </table>
 
-<br/>
-
-#### Parent elements
+### Parent elements
 
 <table>
 <colgroup>

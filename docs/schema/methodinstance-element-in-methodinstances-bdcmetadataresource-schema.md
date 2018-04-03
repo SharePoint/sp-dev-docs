@@ -58,11 +58,22 @@ None.
 
 ### Parent elements
 
-Element
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><p>Element</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadataresource-schema.md">MethodInstances Element in Method (BDCMetadataResource Schema)</a></span></p></td>
+</tr>
+</tbody>
+</table>
 
-[MethodInstances Element in Method
-(BDCMetadataResource
-Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.md)</span>
 
 
 
