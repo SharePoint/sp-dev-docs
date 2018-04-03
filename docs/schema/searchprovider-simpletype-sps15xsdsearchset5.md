@@ -115,7 +115,7 @@ code] "Copy code")Copy code</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Default</p></td>
+<td align="left"><p>**Default**</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">

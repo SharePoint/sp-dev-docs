@@ -98,7 +98,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Perform <strong>Create</strong>, <strong>Read</strong>, <strong>Update</strong>, and <strong>Delete</strong> operations against only the cached external items.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Default</p></td>
+<td align="left"><p>**Default**</p></td>
 <td align="left"><p>Use the System default behavior. This uses Cached mode if the environment supports caching external items.</p></td>
 </tr>
 </tbody>

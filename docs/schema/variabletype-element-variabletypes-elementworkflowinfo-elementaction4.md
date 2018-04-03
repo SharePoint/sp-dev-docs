@@ -175,7 +175,7 @@ None.
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Default</p></td>
+<td align="left"><p>**Default**</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Set to **true</span> to use this type as the default variable type; otherwise, **false**.</p></td>
