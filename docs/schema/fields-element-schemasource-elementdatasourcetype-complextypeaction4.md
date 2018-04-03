@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,57 +8,13 @@ localization_priority: Normal
 ms.assetid: e50544d6-34c0-3cf8-a749-d129b7d6aa27
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Fields element 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Fields element (SchemaSource element) (dataSourceType complexType) (Action4)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-Container for instances of the [Field element
-(Action4)](field-element-fields-elementschemasource-elementdatasourcetype-complextypeaction.md), which specify the
-fields for displaying data from a parent data source.
-
-**Last modified:** March 09, 2015
+(SchemaSource element) (dataSourceType complexType) (Action4)
 
 **Applies to**: SharePoint Server 2013
 
+Container for instances of the [Field element (Action4)](field-element-fields-elementschemasource-elementdatasourcetype-complextypeaction.md), which specify the fields for displaying data from a parent data source.
 
 ## Element information
 
@@ -85,16 +39,9 @@ fields for displaying data from a parent data source.
 </tbody>
 </table>
 
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+
+```XML
     <xs:element name="Fields" minOccurs="0" maxOccurs="1">
         <xs:complexType>
             <xs:sequence>
@@ -106,14 +53,11 @@ code] "Copy code")Copy code</span>
             </xs:sequence>
         </xs:complexType>
     </xs:element>  
+```
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-## Elements and attributes class="keyword">sequence</span>, **minOccurs**,
-**maxOccurs**, and <span
-class="keyword">choice</span>, see the definition section.
 
 ### Parent elements
 
