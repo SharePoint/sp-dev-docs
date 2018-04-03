@@ -2305,13 +2305,13 @@
           href: schema/datasource-element-datasourcestype-complextypeaction4.md
         - name: DataSourceRef element
           href: schema/datasourceref-element-fieldbind-elementruledesignertype-complextypeaction4.md
-        - name: DataSources element (Action element) (Actions element) (WorkflowInfo element)
+        - name: DataSources element (Action element)
           href: schema/datasources-element-action-elementactions-elementworkflowinfo-elementaction4.md
-        - name: DataSources element (CompositeStep element) (CompositeSteps element) (WorkflowInfo element)
+        - name: DataSources element (CompositeStep element)
           href: schema/datasources-element-compositestep-elementcompositesteps-elementworkflowinfo-elem.md
-        - name: Default element (Conditions element) (WorkflowInfo element)
+        - name: Default element (Conditions element)
           href: schema/default-element-conditions-elementworkflowinfo-elementaction4.md
-        - name: Default element (Actions element) (WorkflowInfo element)
+        - name: Default element (Actions element)
           href: schema/default-element-actions-elementworkflowinfo-elementaction4.md
         - name: Dictionary element
           href: schema/dictionary-element-schemasource-elementdatasourcetype-complextypeaction4.md
@@ -2345,23 +2345,23 @@
           href: schema/parameter-element-parameterstype-complextypeaction4.md
         - name: Parameter element (coercionParametersType complexType)
           href: schema/parameter-element-coercionparameterstype-complextypeaction4.md
-        - name: Parameters element (Condition element) (Conditions element) (WorkflowInfo element)
+        - name: Parameters element (Condition element)
           href: schema/parameters-element-condition-elementconditions-elementworkflowinfo-elementaction.md
-        - name: Parameters element (Action element) (Actions element) (WorkflowInfo element)
+        - name: Parameters element (Action element)
           href: schema/parameters-element-action-elementactions-elementworkflowinfo-elementaction4.md
-        - name: Parameters element (Coercion element) (Coercions element) (WorkflowInfo element)
+        - name: Parameters element (Coercion element)
           href: schema/parameters-element-coercion-elementcoercions-elementworkflowinfo-elementaction4.md
-        - name: Parameters element (Flow element) (Flows element) (WorkflowInfo element)
+        - name: Parameters element (Flow element)
           href: schema/parameters-element-flow-elementflows-elementworkflowinfo-elementaction4.md
         - name: Property element
           href: schema/property-element-propertiestype-complextypeaction4.md
-        - name: RuleDesigner element (Default element) (Conditions element) (WorkflowInfo element)
+        - name: RuleDesigner element (Default element)
           href: schema/ruledesigner-element-default-elementconditions-elementworkflowinfo-elementaction.md
-        - name: RuleDesigner element (Condition element) (Conditions element) (WorkflowInfo element)
+        - name: RuleDesigner element (Condition element)
           href: schema/ruledesigner-element-condition-elementconditions-elementworkflowinfo-elementacti.md
-        - name: RuleDesigner element (Action element) (Actions element) (WorkflowInfo element)
+        - name: RuleDesigner element (Action element)
           href: schema/ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md
-        - name: RuleDesigner element (Flow element) (Flows element) (WorkflowInfo element)
+        - name: RuleDesigner element (Flow element)
           href: schema/ruledesigner-element-flow-elementflows-elementworkflowinfo-elementaction4.md
         - name: RuleDesigner element (defaultElementType complexType)
           href: schema/ruledesigner-element-defaultelementtype-complextypeaction4.md
