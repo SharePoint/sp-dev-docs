@@ -34,11 +34,13 @@ The following sections describe attributes, child elements, and parent elements.
 <col width="20%" />
 <col width="80%" />
 </colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Attribute</p></td>
-<td align="left"><p>Description</p></td>
+<thead>
+<tr class="header">
+<th align="left"><p>Attribute</p></th>
+<th align="left"><p>Description</p></th>
 </tr>
+</thead>
+<tbody>
 <tr class="even">
 <td align="left"><p>**URL**</p></td>
 <td align="left"><p>Required **Text**. Specifies the path to the workflow initiation form for the workflow.</p>

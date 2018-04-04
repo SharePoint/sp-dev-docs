@@ -37,10 +37,12 @@ The following sections describe attributes, child elements, and parent elements.
 <col width="80%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td align="left"><p>Attribute</p></td>
-<td align="left"><p>Description</p></td>
+<thead>
+<tr class="header">
+<th align="left"><p>Attribute</p></th>
+<th align="left"><p>Description</p></th>
 </tr>
+</thead>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required **Text**. Specifies the name of the parameter. The Name attribute value must be the same as the Name attribute of the corresponding **Field** element.</p>
