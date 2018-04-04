@@ -14,7 +14,7 @@ ms.assetid: 0cb3c1b0-96c7-0f7c-5451-3c60c5b5aca7
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The **DOCS-LESSTHANDeclarativeFormRegionDOCS-GREATERTHAN** element is used to describe the form region in which external data is displayed in Microsoft Outlook 2010.
+The **DeclarativeFormRegion** element is used to describe the form region in which external data is displayed in Microsoft Outlook 2010.
 
 **Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
@@ -136,7 +136,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md">Picture Element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **DOCS-LESSTHANPictureDOCS-GREATERTHAN** element is used to describe the icon to use in Outlook 2010 for the form region.</p></td>
+<td align="left"><p>The **Picture** element is used to describe the icon to use in Outlook 2010 for the form region.</p></td>
 </tr>
 </tbody>
 </table>

@@ -438,8 +438,7 @@ referred to individually by name within a
 [Field](field-element-list.md) element.
 
 Each view has an internal name that is typically represented by a GUID.
-The view can be rendered on a page by using the
-DOCS-LESSTHANView/DOCS-GREATERTHAN tag.
+The view can be rendered on a page by using the `<View/>` tag.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

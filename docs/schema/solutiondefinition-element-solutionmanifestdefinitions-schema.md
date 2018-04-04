@@ -26,7 +26,7 @@ For example, in the manifest file, a solution developer would be able to indicat
     xmlns="http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest"
 ```
 
-This is necessary to identify the contents of the XML file as a Business Connectivity Services solution manifest file. The URI part must be written exactly as shown. You can also use a prefix such as `DOCS-LESSTHANDOCS-LESSTHANsolmDOCS-GREATERTHANDOCS-GREATERTHAN` but if you do that, you would have to name the elements `DOCS-LESSTHANsolm:SolutionDefinitionDOCS-GREATERTHAN` instead of `DOCS-LESSTHANSolutionDefinitionDOCS-GREATERTHAN`.
+This is necessary to identify the contents of the XML file as a Business Connectivity Services solution manifest file. The URI part must be written exactly as shown. You can also use a prefix such as `<<solm>>` but if you do that, you would have to name the elements `<solm:SolutionDefinition>` instead of `<SolutionDefinition>`.
 
 ```XML
 <SolutionDefinition></SolutionDefinition>

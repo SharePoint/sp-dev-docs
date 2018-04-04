@@ -116,7 +116,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**OueryID**</p></td>
-<td align="left"><p>An alternative query for the one that is specified in the parent DOCS-LESSTHANMobileDocViewerDOCS-GREATERTHAN element.</p></td>
+<td align="left"><p>An alternative query for the one that is specified in the parent **MobileDocViewer** element.</p></td>
 </tr>
 </tbody>
 </table>

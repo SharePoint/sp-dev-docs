@@ -14,7 +14,7 @@ ms.assetid: 8b341a8d-7046-e1e9-c63f-5f33347861b8
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The **DOCS-LESSTHANContextActivatedDOCS-GREATERTHAN** element enables you to execute a specified action when a context becomes active.
+The **ContextActivated** element enables you to execute a specified action when a context becomes active.
 
 **Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
 

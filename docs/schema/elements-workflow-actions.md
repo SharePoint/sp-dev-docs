@@ -12,7 +12,7 @@ ms.assetid: e0d3603e-9513-37bc-f13b-1a7223f0ea2b
 
 **Applies to**: SharePoint Server 2013
 
-This topic lists the elements in the **DOCS-LESSTHANDOCS-LESSTHANschema nameDOCS-GREATERTHANDOCS-GREATERTHAN** XML schema.
+This topic lists the elements in the **schema name** XML schema.
 
 - [Action element](action-element-actions-elementworkflowinfo-elementaction4.md)
 

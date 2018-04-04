@@ -12,7 +12,7 @@ ms.assetid: 25eeee29-60ba-b21e-f170-5400a81b72bf
 
 **Applies to**: SharePoint Server 2013
 
-This topic lists the elements in the **DOCS-LESSTHANDOCS-LESSTHANschema nameDOCS-GREATERTHANDOCS-GREATERTHAN** XML schema.
+This topic lists the elements in the **schema name** XML schema.
 
 - [BoundVariableOrigin element](boundvariableorigin-element-sps15xsdsearchset4.md)
 

@@ -12,7 +12,7 @@ ms.assetid: d7e60875-b06d-9475-d823-08079b376ef3
 
 **Applies to**: SharePoint Server 2013
 
-This topic shows the schema definition for **DOCS-LESSTHANDOCS-LESSTHANSchema file nameDOCS-GREATERTHANDOCS-GREATERTHAN**.
+This topic shows the schema definition for **Schema file name**.
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>

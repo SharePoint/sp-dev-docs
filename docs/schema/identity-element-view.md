@@ -145,18 +145,13 @@ Used in a New or Edit form to render hidden fields used by the form.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The **Identity** element renders a set of
-hidden **DOCS-LESSTHANINPUTDOCS-GREATERTHAN**
-tags that allow the server to identify which item is being edited when a
-form is submitted, the version of the item, and the time that the item
-was last modified (in the case of a document library) for multiuser
-conflict detection.
+The **Identity** element renders a set of hidden **<INPUT>** tags that allow the server to identify which item is being edited when a form is submitted, the version of the item, and the time that the item was last modified (in the case of a document library) for multiuser conflict detection.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **Identity** element renders the following
-**DOCS-LESSTHANINPUTDOCS-GREATERTHAN** tags for
+**<INPUT>** tags for
 the Edit form of the first announcement in the built-in announcements
 list. These values are posted back to the server when a form is
 submitted so that the server knows the list, as well as the row, to

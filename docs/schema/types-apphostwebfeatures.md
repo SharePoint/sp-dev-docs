@@ -10,7 +10,7 @@ ms.assetid: 471b53e5-90ca-2ca4-d89a-9d814b2c5dae
 
 # Types (AppHostWebFeatures)
 
-This topic lists the types in the **DOCS-LESSTHANDOCS-LESSTHANschema nameDOCS-GREATERTHANDOCS-GREATERTHAN** XML schema.
+This topic lists the types in the **schema name** XML schema.
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.

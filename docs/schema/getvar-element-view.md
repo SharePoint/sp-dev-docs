@@ -107,15 +107,15 @@ page.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AutoHyperlink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to surround text with **DOCS-LESSTHANADOCS-GREATERTHAN** tags if the text appears like a hyperlink, for example, www.microsoft.com.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink, for example, www.microsoft.com.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to surround text with **DOCS-LESSTHANADOCS-GREATERTHAN** tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to surround text with `<A>` tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to insert **DOCS-LESSTHANBRDOCS-GREATERTHAN</span> tags into the text stream and to replace multiple spaces with a non-breaking space (**&amp;nbsp;**).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to insert `<BR>` tags into the text stream and to replace multiple spaces with a non-breaking space (**&amp;nbsp;**).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Default**</p></td>

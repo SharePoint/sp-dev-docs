@@ -703,7 +703,7 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
 </tr>
 <tr class="even">
 <td align="left"><p>**WikiLinking**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that wiki links, which appear in the form of double brackets (**[[…]]</span>), become translated into HTML links, which use the **DOCS-LESSTHANaDOCS-GREATERTHAN** tag.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that wiki links, which appear in the form of double brackets (**[[…]]</span>), become translated into HTML links, which use the `<a>` tag.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**XName**</p></td>

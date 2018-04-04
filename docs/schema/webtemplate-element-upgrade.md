@@ -127,7 +127,7 @@ Contains the site template upgrade definition.
 </tr>
 <tr class="odd">
 <td align="left"><p>**LocaleId**</p></td>
-<td align="left"><p>Optional **Integer</span>. Specifies the locales to which the site upgrade definition applies. Set to **DOCS-ASTERISK</span> to imply that the definition applies to all site definition upgrades. Microsoft SharePoint Foundation implements only one upgrade definition per locale. If **DOCS-ASTERISK** is specified and a locale-specific upgrade definition exists, SharePoint Foundation uses the locale-specific upgrade definition. If the locale-specific definition does not exist, SharePoint Foundation falls back to the * upgrade definition.</p></td>
+<td align="left"><p>Optional **Integer</span>. Specifies the locales to which the site upgrade definition applies. Set to `*` to imply that the definition applies to all site definition upgrades. Microsoft SharePoint Foundation implements only one upgrade definition per locale. If `*` is specified and a locale-specific upgrade definition exists, SharePoint Foundation uses the locale-specific upgrade definition. If the locale-specific definition does not exist, SharePoint Foundation falls back to the * upgrade definition.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RemoveSiteExternalSecurityProvider**</p></td>

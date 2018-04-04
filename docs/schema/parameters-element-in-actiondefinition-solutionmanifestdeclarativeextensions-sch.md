@@ -74,11 +74,11 @@ None.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **DOCS-LESSTHANUrlActionDOCS-GREATERTHAN** element is used to execute a URL-based action.</p></td>
+<td align="left"><p>The **UrlAction** element is used to execute a URL-based action.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span sdata="link"><a href="codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN** element is used to execute a custom code action or one of the predefined actions that are provided by Microsoft Business Connectivity Services (BCS).</p></td>
+<td align="left"><p>The **CodeMethodAction** element is used to execute a custom code action or one of the predefined actions that are provided by Microsoft Business Connectivity Services (BCS).</p></td>
 </tr>
 </tbody>
 </table>

@@ -156,8 +156,7 @@ local time.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The following example uses CAML to render a hidden <span
-class="keyword">DOCS-LESSTHANINPUTDOCS-GREATERTHAN</span> element in an
+The following example uses CAML to render a hidden **<INPUT>** element in an
 HTML form. The value of this element is the first 504 characters of the
 concatenation of the Threading variable (if present; if not, the value
 is an empty string), followed by the value rendered by the <span

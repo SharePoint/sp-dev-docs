@@ -23,157 +23,157 @@ For example, you can assign CAML query strings to the **Query** property of seve
 The [Query](query-element-list.md) element of the [List schema](list-schema.md) contains elements of the Query schema.
 
 
-- [DOCS-LESSTHANWhereDOCS-GREATERTHAN](where-element-query.md)
+- [Where](where-element-query.md)
 
 ## Logical Joins
 
-[DOCS-LESSTHANAndDOCS-GREATERTHAN](and-element-query.md)
+[And](and-element-query.md)
 
 - [Logical Joins]
 
 - [Comparison Operators]
 
-- [DOCS-LESSTHANMembershipDOCS-GREATERTHAN](membership-element-query.md)
+- [Membership](membership-element-query.md)
 
-[DOCS-LESSTHANOrDOCS-GREATERTHAN](or-element-query.md)
+[Or](or-element-query.md)
 
 - [Logical Joins]
 
 - [Comparison Operators]
 
-- [DOCS-LESSTHANMembershipDOCS-GREATERTHAN](membership-element-query.md)
+- [Membership](membership-element-query.md)
 
 ## Comparison Operators
 
-[DOCS-LESSTHANBeginsWithDOCS-GREATERTHAN](beginswith-element-query.md)
+[BeginsWith](beginswith-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANContainsDOCS-GREATERTHAN](contains-element-query.md)
+[Contains](contains-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANDateRangesOverlapDOCS-GREATERTHAN](daterangesoverlap-element-query.md)
+[DateRangesOverlap](daterangesoverlap-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-[DOCS-LESSTHANEqDOCS-GREATERTHAN](eq-element-query.md)
+[Eq](eq-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANGeqDOCS-GREATERTHAN](geq-element-query.md)
+[Geq](geq-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANGtDOCS-GREATERTHAN](gt-element-query.md)
+[Gt](gt-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANInDOCS-GREATERTHAN](in-element-query.md)
+[In](in-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValuesDOCS-GREATERTHAN](values-element-query.md)
+- [Values](values-element-query.md)
             
-[DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+[Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANIncludesDOCS-GREATERTHAN](includes-element-query.md)
+[Includes](includes-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANIsNotNullDOCS-GREATERTHAN](isnotnull-element-query.md)
+[IsNotNull](isnotnull-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-[DOCS-LESSTHANIsNullDOCS-GREATERTHAN](isnull-element-query.md)
+[IsNull](isnull-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-[DOCS-LESSTHANLeqDOCS-GREATERTHAN](leq-element-query.md)
+[Leq](leq-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANLtDOCS-GREATERTHAN](lt-element-query.md)
+[Lt](lt-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANMembershipDOCS-GREATERTHAN](membership-element-query.md)
+[Membership](membership-element-query.md)
 
-[DOCS-LESSTHANNeqDOCS-GREATERTHAN](neq-element-query.md)
+[Neq](neq-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
-[DOCS-LESSTHANNotIncludesDOCS-GREATERTHAN](notincludes-element-query.md)
+[NotIncludes](notincludes-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANValueDOCS-GREATERTHAN](value-element-query.md)
+- [Value](value-element-query.md)
 
-- [DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+- [XML](xml-element.md)
 
 ## Group/Order Operators
 
-[DOCS-LESSTHANGroupByDOCS-GREATERTHAN](groupby-element-query.md)
+[GroupBy](groupby-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-[DOCS-LESSTHANOrderByDOCS-GREATERTHAN](orderby-element-query.md)
+[OrderBy](orderby-element-query.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
 ## Value Child Elements
 
-[DOCS-LESSTHANListPropertyDOCS-GREATERTHAN](listproperty-element-query.md)
+[ListProperty](listproperty-element-query.md)
 
-[DOCS-LESSTHANMonthDOCS-GREATERTHAN](month-element-query.md)
+[Month](month-element-query.md)
 
-[DOCS-LESSTHANNowDOCS-GREATERTHAN](now-element-query.md)
+[Now](now-element-query.md)
 
-[DOCS-LESSTHANTodayDOCS-GREATERTHAN](today-element-query.md)
+[Today](today-element-query.md)
 
-[DOCS-LESSTHANUserIDDOCS-GREATERTHAN](userid-element-query.md)
+[UserID](userid-element-query.md)
 
-[DOCS-LESSTHANXMLDOCS-GREATERTHAN](xml-element.md)
+[XML](xml-element.md)
 
 ## See also
 

@@ -25,128 +25,128 @@ Sites can be created or modified programmatically through the object model (for 
 
 ## Onet.xml
 
-[DOCS-LESSTHANProjectDOCS-GREATERTHAN](project-element-site.md)
+[Project](project-element-site.md)
 
-- [DOCS-LESSTHANNavBarsDOCS-GREATERTHAN](navbars-element-site.md)
+- [NavBars](navbars-element-site.md)
 
-- [DOCS-LESSTHANNavBarDOCS-GREATERTHAN](navbar-element-site.md)
+- [NavBar](navbar-element-site.md)
 
-- [DOCS-LESSTHANNavBarLinkDOCS-GREATERTHAN](navbarlink-element-site.md)
+- [NavBarLink](navbarlink-element-site.md)
 
-- [DOCS-LESSTHANNavBarPageDOCS-GREATERTHAN](navbarpage-element-sitemodule.md)
+- [NavBarPage](navbarpage-element-sitemodule.md)
 
-[DOCS-LESSTHANListTemplatesDOCS-GREATERTHAN](listtemplates-element-site.md)
+[ListTemplates](listtemplates-element-site.md)
 
-- [DOCS-LESSTHANListTemplateDOCS-GREATERTHAN](listtemplate-element-site.md)
+- [ListTemplate](listtemplate-element-site.md)
 
-[DOCS-LESSTHANDocumentTemplatesDOCS-GREATERTHAN](documenttemplates-element-site.md)
+[DocumentTemplates](documenttemplates-element-site.md)
 
-- [DOCS-LESSTHANDocumentTemplateDOCS-GREATERTHAN](documenttemplate-element-site.md)
+- [DocumentTemplate](documenttemplate-element-site.md)
 
-- [DOCS-LESSTHANDocumentTemplateFilesDOCS-GREATERTHAN](documenttemplatefiles-element-site.md)
+- [DocumentTemplateFiles](documenttemplatefiles-element-site.md)
 
-- [DOCS-LESSTHANDocumentTemplateFileDOCS-GREATERTHAN](documenttemplatefile-element-site.md)
+- [DocumentTemplateFile](documenttemplatefile-element-site.md)
 
-[DOCS-LESSTHANBaseTypesDOCS-GREATERTHAN](basetypes-element-site.md)
+[BaseTypes](basetypes-element-site.md)
 
-- [DOCS-LESSTHANBaseTypeDOCS-GREATERTHAN](basetype-element-site.md)
+- [BaseType](basetype-element-site.md)
 
-- [DOCS-LESSTHANMetaDataDOCS-GREATERTHAN](metadata-element-site.md)
+- [MetaData](metadata-element-site.md)
 
-[DOCS-LESSTHANConfigurationsDOCS-GREATERTHAN](configurations-element-site.md)
+[Configurations](configurations-element-site.md)
 
-- [DOCS-LESSTHANConfigurationDOCS-GREATERTHAN](configuration-element-site.md)
+- [Configuration](configuration-element-site.md)
 
-- [DOCS-LESSTHANExecuteUrlDOCS-GREATERTHAN](executeurl-element-site.md)
+- [ExecuteUrl](executeurl-element-site.md)
 
-- [DOCS-LESSTHANListsDOCS-GREATERTHAN](lists-element-site.md)
+- [Lists](lists-element-site.md)
 
-- [DOCS-LESSTHANListDOCS-GREATERTHAN](list-element-site.md)
+- [List](list-element-site.md)
 
-- [DOCS-LESSTHANDataDOCS-GREATERTHAN](data-element-site.md)
+- [Data](data-element-site.md)
 
-- [DOCS-LESSTHANRowsDOCS-GREATERTHAN](rows-element-site.md)
+- [Rows](rows-element-site.md)
 
-- [DOCS-LESSTHANRowDOCS-GREATERTHAN](row-element-site.md)
+- [Row](row-element-site.md)
 
-- [DOCS-LESSTHANFieldDOCS-GREATERTHAN](field-element-site.md)
+- [Field](field-element-site.md)
 
-[DOCS-LESSTHANModulesDOCS-GREATERTHAN](modules-element-site.md)
-
-  [See Module Schema](#module-schema)
-
-- [DOCS-LESSTHANWebFeaturesDOCS-GREATERTHAN](webfeatures-element-site.md)
-
-- [DOCS-LESSTHANFeatureDOCS-GREATERTHAN](feature-element-site.md)
-
-- [DOCS-LESSTHANPropertiesDOCS-GREATERTHAN](properties-element-site.md)
-
-- [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitefeature.md)
-
-- [DOCS-LESSTHANSiteFeaturesDOCS-GREATERTHAN](sitefeatures-element-site.md)
-
-- [DOCS-LESSTHANFeatureDOCS-GREATERTHAN](feature-element-site.md)
-
-- [DOCS-LESSTHANPropertiesDOCS-GREATERTHAN](properties-element-site.md)
-
-- [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitefeature.md)
-
-[DOCS-LESSTHANModulesDOCS-GREATERTHAN](modules-element-site.md)
+[Modules](modules-element-site.md)
 
   [See Module Schema](#module-schema)
 
-[DOCS-LESSTHANComponentsDOCS-GREATERTHAN](components-element-site.md)
+- [WebFeatures](webfeatures-element-site.md)
 
-- [DOCS-LESSTHANExternalSecurityProviderDOCS-GREATERTHAN](externalsecurityprovider-element-site.md)
+- [Feature](feature-element-site.md)
 
-- [DOCS-LESSTHANFileDialogPostProcessorDOCS-GREATERTHAN](filedialogpostprocessor-element-site.md)
+- [Properties](properties-element-site.md)
 
-[DOCS-LESSTHANServerEmailFooterDOCS-GREATERTHAN](serveremailfooter-element-site.md)
+- [Property](property-element-sitefeature.md)
+
+- [SiteFeatures](sitefeatures-element-site.md)
+
+- [Feature](feature-element-site.md)
+
+- [Properties](properties-element-site.md)
+
+- [Property](property-element-sitefeature.md)
+
+[Modules](modules-element-site.md)
+
+  [See Module Schema](#module-schema)
+
+[Components](components-element-site.md)
+
+- [ExternalSecurityProvider](externalsecurityprovider-element-site.md)
+
+- [FileDialogPostProcessor](filedialogpostprocessor-element-site.md)
+
+[ServerEmailFooter](serveremailfooter-element-site.md)
 
 ## Module Schema
 
-[DOCS-LESSTHANModuleDOCS-GREATERTHAN](module-element-site.md)
+[Module](module-element-site.md)
 
-- [DOCS-LESSTHANFileDOCS-GREATERTHAN](file-element.md)
+- [File](file-element.md)
 
-- [DOCS-LESSTHANAllUsersWebPartDOCS-GREATERTHAN](alluserswebpart-element-site.md)
+- [AllUsersWebPart](alluserswebpart-element-site.md)
 
-- [DOCS-LESSTHANBinarySerializedWebPartDOCS-GREATERTHAN](binaryserializedwebpart-element-site.md)
+- [BinarySerializedWebPart](binaryserializedwebpart-element-site.md)
 
           
-[DOCS-LESSTHANGUIDMapDOCS-GREATERTHAN](guidmap-element-site.md)
+[GUIDMap](guidmap-element-site.md)
 
-- [DOCS-LESSTHANGUIDDOCS-GREATERTHAN](guid-element-site.md)
+- [GUID](guid-element-site.md)
 
-- [DOCS-LESSTHANWebPartDOCS-GREATERTHAN](webpart-element-site.md)
+- [WebPart](webpart-element-site.md)
 
-- [DOCS-LESSTHANNavBarPageDOCS-GREATERTHAN](navbarpage-element-sitemodule.md)
+- [NavBarPage](navbarpage-element-sitemodule.md)
 
-- [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitemodule.md)
+- [Property](property-element-sitemodule.md)
 
-- [DOCS-LESSTHANViewDOCS-GREATERTHAN](view-element-site.md)
+- [View](view-element-site.md)
 
 
-[DOCS-LESSTHANBinarySerializedWebPartDOCS-GREATERTHAN](binaryserializedwebpart-element-site.md)
+[BinarySerializedWebPart](binaryserializedwebpart-element-site.md)
 
-- [DOCS-LESSTHANGUIDMapDOCS-GREATERTHAN](guidmap-element-site.md)
+- [GUIDMap](guidmap-element-site.md)
 
-- [DOCS-LESSTHANGUIDDOCS-GREATERTHAN](guid-element-site.md)
+- [GUID](guid-element-site.md)
 
-- [DOCS-LESSTHANWebPartDOCS-GREATERTHAN](webpart-element-site.md)
+- [WebPart](webpart-element-site.md)
 
        
-[DOCS-LESSTHANWebPartConnectionDOCS-GREATERTHAN](webpartconnection-element-site.md)
+[WebPartConnection](webpartconnection-element-site.md)
 
-- [DOCS-LESSTHANWebPartTransformerDOCS-GREATERTHAN](webparttransformer-element-site.md)
+- [WebPartTransformer](webparttransformer-element-site.md)
 
 ## WebTempDOCS-ASTERISK.xml
 
-[DOCS-LESSTHANTemplatesDOCS-GREATERTHAN](templates-element-site.md)
+[Templates](templates-element-site.md)
 
-- [DOCS-LESSTHANTemplateDOCS-GREATERTHAN](template-element-site.md)
+- [Template](template-element-site.md)
 
-- [DOCS-LESSTHANConfigurationDOCS-GREATERTHAN](configuration-element-site.md)
+- [Configuration](configuration-element-site.md)
 
 
 

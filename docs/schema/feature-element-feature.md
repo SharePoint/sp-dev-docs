@@ -158,7 +158,7 @@ Defines a Feature to activate or deactivate at a specified scope.
 <tr class="odd">
 <td align="left"><p>**RequireResources**</p></td>
 <td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that SharePoint Foundation check whether resources exist for the Feature by verifying that the standard "sentinel" resource for the Feature is present for a particular culture.</p>
-<p>The resource file is named according to the format <span class="placeholder">DOCS-LESSTHANFeature DirectoryDOCS-GREATERTHAN</span>\Resources\Resources. <span class="placeholder">DOCS-LESSTHANCulture NameDOCS-GREATERTHAN</span>.resx, where <span class="placeholder">DOCS-LESSTHANCulture NameDOCS-GREATERTHAN</span> is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
+<p>The resource file is named according to the format <span class="placeholder"><Feature Directory></span>\Resources\Resources. <span class="placeholder"><Culture Name></span>.resx, where <span class="placeholder"><Culture Name></span> is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
 <p><span class="placeholder">ll-CC</span></p>
 <p><span class="placeholder">ll-Ssss-CC</span></p>
 <p>Culture name examples:</p>

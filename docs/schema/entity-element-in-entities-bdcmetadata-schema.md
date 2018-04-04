@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Required.</p>
 <p>The namespace that this external content type belongs to.</p>
 <p>Attribute type: **String**</p>
-<p>**Note**: The namespace should not contain the special character "**DOCS-ASTERISK**".</p></td>
+<p>**Note**: The namespace should not contain the special character `*`.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Version**</p></td>
@@ -110,7 +110,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Required.</p>
 <p>The name of the external content type.</p>
 <p>Attribute type: **String**</p>
-<p>**Note**: The name of an external content type should not contain the asterisk special character "**DOCS-ASTERISK**".</p></td>
+<p>**Note**: The name of an external content type should not contain the asterisk special character `*`.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DefaultDisplayName**</p></td>

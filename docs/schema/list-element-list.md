@@ -362,7 +362,7 @@ In a list schema, the
 [MetaData](http://msdn.microsoft.com/library/649bbdbd-7de2-4921-bbce-13bdd7509205(Office.15).aspx)
 element contains the different parts of the list definition. Use an
 empty **List** element (<span
-class="keyword">DOCS-LESSTHANList /DOCS-GREATERTHAN</span>) to return
+class="keyword"><List /></span>) to return
 the title of the current list.
 
 In a site definition

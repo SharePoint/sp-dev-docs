@@ -12,7 +12,7 @@ ms.assetid: 0a4f3b7e-b3c7-4ffd-be1d-d97333f2df8e
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The `DOCS-LESSTHANAssociationDOCS-GREATERTHAN` element is used to describe an association.
+The **Association** element is used to describe an association.
 
 **Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
 

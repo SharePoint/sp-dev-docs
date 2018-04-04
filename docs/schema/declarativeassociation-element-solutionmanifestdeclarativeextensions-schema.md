@@ -14,7 +14,7 @@ ms.assetid: a5458eec-878b-4b20-715f-245660d09069
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The **DOCS-LESSTHANDeclarativeAssociationDOCS-GREATERTHAN** element derives from the **DOCS-LESSTHANAssociationDOCS-GREATERTHAN** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to describe an association of the external content type that the Outlook folder contains. Specifically, this element is used to set or get the Outlook property that maps to the entity instance reference of the association. If set, this is used by the External Item Picker functionality.
+The **DeclarativeAssociation** element derives from the **Association** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to describe an association of the external content type that the Outlook folder contains. Specifically, this element is used to set or get the Outlook property that maps to the entity instance reference of the association. If set, this is used by the External Item Picker functionality.
 
 **Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions

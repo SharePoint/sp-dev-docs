@@ -131,7 +131,7 @@ property names match the value of the corresponding Name attribute.
 <tr class="odd">
 <td align="left"><p>**ParentType**</p></td>
 <td align="left"><p>Required **String</span> (but can be an empty string). Represents the name of the type from which the field class is derived. The possible values are exactly the same as the possible values for the **Type </span>attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a>** element. If the field type is not derived from another type, then the value is an empty string:</p>
-<p>DOCS-LESSTHANField Name="ParentType"DOCS-GREATERTHANDOCS-LESSTHAN/FieldDOCS-GREATERTHAN. <em>It must never be empty in your custom field types. All custom types inherit from another type.</em></p>
+<p><Field Name="ParentType"></Field>. <em>It must never be empty in your custom field types. All custom types inherit from another type.</em></p>
 <p>In the SharePoint Foundation object model **ParentType</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.BaseRenderingTypeName"><span class="nolink">BaseRenderingTypeName</span>**.</p></td>
 </tr>
 <tr class="even">

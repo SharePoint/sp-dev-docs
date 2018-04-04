@@ -49,7 +49,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**MessageClass**</p></td>
-<td align="left"><p>Used to identify the form used to display the item. It follows the format: IPM.DOCS-LESSTHANOutlookItemTypeDOCS-GREATERTHAN.DOCS-LESSTHANContentTypeNameDOCS-GREATERTHAN.</p>
+<td align="left"><p>Used to identify the form used to display the item. It follows the format: `IPM.<OutlookItemType>.<ContentTypeName>`.</p>
 <p>Example: IPM.Contact.Customer</p>
 <p>Required.</p>
 <p>Attribute type: **String**</p></td>

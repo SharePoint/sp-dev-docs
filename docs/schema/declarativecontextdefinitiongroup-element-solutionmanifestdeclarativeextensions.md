@@ -14,7 +14,7 @@ ms.assetid: 427da5ae-bc81-34ae-84ad-b4d723650b9f
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The **DOCS-LESSTHANDeclarativeContextDefinitionGroupDOCS-GREATERTHAN** element derives from the **DOCS-LESSTHANContextDefinitionGroupDOCS-GREATERTHAN** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to define a context definition group that contains a list of context definitions for one of the Outlook Item Types, such as Contact, Task, Post, or Calendar, or if showing data in a taskpane, an EntityView.
+The **DeclarativeContextDefinitionGroup** element derives from the **ContextDefinitionGroup** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to define a context definition group that contains a list of context definitions for one of the Outlook Item Types, such as Contact, Task, Post, or Calendar, or if showing data in a taskpane, an EntityView.
 
 **Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
@@ -116,7 +116,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="http://msdn.microsoft.com/library/8b647f38-f31c-747a-5637-339140cbcba3.aspx">ContextDefinition</a></p></td>
-<td align="left"><p>The **DOCS-LESSTHANContextDefinitionDOCS-GREATERTHAN** element is used to define a context for an external content type that is of this Outlook Item Type.</p></td>
+<td align="left"><p>The **ContextDefinition** element is used to define a context for an external content type that is of this Outlook Item Type.</p></td>
 </tr>
 </tbody>
 </table>

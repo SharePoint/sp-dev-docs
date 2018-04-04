@@ -23,95 +23,95 @@ The definition for a list is contained in a [Schema.xml](https://msdn.microsoft.
 You can create or modify lists programmatically through the object model (for example, members of the **SPList** class and the **SPListCollection** class), through the Lists web service (methods of the **Lists** class), and through the Remote Procedure Call (RPC) protocol (see [SharePoint Foundation Methods](https://msdn.microsoft.com/library/fb791985-a9e4-4c94-b94a-1b3c7f00457a(Office.15).aspx)).
 
 
-- [DOCS-LESSTHANListDOCS-GREATERTHAN](list-element-list.md)
+- [List](list-element-list.md)
 
-- [DOCS-LESSTHANMetaDataDOCS-GREATERTHAN](metadata-element-list.md)
+- [MetaData](metadata-element-list.md)
 
-- [DOCS-LESSTHANDefaultDOCS-GREATERTHAN](default-element-listform.md)
+- [Default](default-element-listform.md)
 
-- [DOCS-LESSTHANFormsDOCS-GREATERTHAN](forms-element-list.md)
+- [Forms](forms-element-list.md)
 
-- [DOCS-LESSTHANFormDOCS-GREATERTHAN](form-element-list.md)
+- [Form](form-element-list.md)
 
-- [DOCS-LESSTHANListFormOpeningDOCS-GREATERTHAN](listformopening-element-list.md)
+- [ListFormOpening](listformopening-element-list.md)
 
-- [DOCS-LESSTHANListFormButtonsDOCS-GREATERTHAN](listformbuttons-element-list.md)
+- [ListFormButtons](listformbuttons-element-list.md)
 
-- [DOCS-LESSTHANListFormBodyDOCS-GREATERTHAN](listformbody-element-list.md)
+- [ListFormBody](listformbody-element-list.md)
 
-- [DOCS-LESSTHANListFormClosingDOCS-GREATERTHAN](listformclosing-element-list.md)
+- [ListFormClosing](listformclosing-element-list.md)
 
-- [DOCS-LESSTHANContentTypesDOCS-GREATERTHAN](contenttypes-element-list.md)
+- [ContentTypes](contenttypes-element-list.md)
 
-- [DOCS-LESSTHANContentTypeRefDOCS-GREATERTHAN](contenttyperef-element-list.md)
+- [ContentTypeRef](contenttyperef-element-list.md)
 
-- [DOCS-LESSTHANFolderDOCS-GREATERTHAN](folder-element-list.md)
+- [Folder](folder-element-list.md)
 
-- [DOCS-LESSTHANContentTypeDOCS-GREATERTHAN](contenttype-element-contenttype.md)
+- [ContentType](contenttype-element-contenttype.md)
 
-- [DOCS-LESSTHANFieldsDOCS-GREATERTHAN](fields-element-list.md)
+- [Fields](fields-element-list.md)
 
-- [DOCS-LESSTHANFieldDOCS-GREATERTHAN](field-element-list.md)
+- [Field](field-element-list.md)
 
-- [DOCS-LESSTHANFieldRefsDOCS-GREATERTHAN](fieldrefs-element-list.md)
+- [FieldRefs](fieldrefs-element-list.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-query.md)
+- [FieldRef](fieldref-element-query.md)
 
-- [DOCS-LESSTHANDisplayPatternDOCS-GREATERTHAN](displaypattern-element-list.md)
+- [DisplayPattern](displaypattern-element-list.md)
 
-- [DOCS-LESSTHANDisplayBidiPatternDOCS-GREATERTHAN](displaybidipattern-element-list.md)
+- [DisplayBidiPattern](displaybidipattern-element-list.md)
 
-- [DOCS-LESSTHANCHOICESDOCS-GREATERTHAN](choices-element-list.md)
+- [CHOICES](choices-element-list.md)
 
-- [DOCS-LESSTHANCHOICEDOCS-GREATERTHAN](choice-element-list.md)
+- [CHOICE](choice-element-list.md)
 
-- [DOCS-LESSTHANMAPPINGSDOCS-GREATERTHAN](mappings-element-list.md)
+- [MAPPINGS](mappings-element-list.md)
 
-- [DOCS-LESSTHANMAPPINGDOCS-GREATERTHAN](mapping-element-list.md)
+- [MAPPING](mapping-element-list.md)
 
-- [DOCS-LESSTHANDefaultDOCS-GREATERTHAN](default-element-listfield.md)
+- [Default](default-element-listfield.md)
 
-- [DOCS-LESSTHANFormulaDOCS-GREATERTHAN](formula-element-list.md)
+- [Formula](formula-element-list.md)
 
-- [DOCS-LESSTHANFormulaDisplayNamesDOCS-GREATERTHAN](formuladisplaynames-element-list.md)
+- [FormulaDisplayNames](formuladisplaynames-element-list.md)
 
-- [DOCS-LESSTHANDefaultFormulaDOCS-GREATERTHAN](defaultformula-element-list.md)
+- [DefaultFormula](defaultformula-element-list.md)
 
-- [DOCS-LESSTHANDefaultFormulaValueDOCS-GREATERTHAN](defaultformulavalue-element-list.md)
+- [DefaultFormulaValue](defaultformulavalue-element-list.md)
 
-- [DOCS-LESSTHANCustomizationDOCS-GREATERTHAN](customization-element-list.md)
+- [Customization](customization-element-list.md)
 
-- [DOCS-LESSTHANArrayOfPropertyDOCS-GREATERTHAN](arrayofproperty-element-list.md)
+- [ArrayOfProperty](arrayofproperty-element-list.md)
 
-- [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-list.md)
+- [Property](property-element-list.md)
 
-- [DOCS-LESSTHANValidationDOCS-GREATERTHAN](validation-element-list.md)
+- [Validation](validation-element-list.md)
 
-- [DOCS-LESSTHANFormsDOCS-GREATERTHAN](forms-element-list.md)
+- [Forms](forms-element-list.md)
 
-- [DOCS-LESSTHANFormDOCS-GREATERTHAN](form-element-list.md)
+- [Form](form-element-list.md)
 
-- [DOCS-LESSTHANListFormOpeningDOCS-GREATERTHAN](listformopening-element-list.md)
+- [ListFormOpening](listformopening-element-list.md)
 
-- [DOCS-LESSTHANListFormButtonsDOCS-GREATERTHAN](listformbuttons-element-list.md)
+- [ListFormButtons](listformbuttons-element-list.md)
 
-- [DOCS-LESSTHANListFormBodyDOCS-GREATERTHAN](listformbody-element-list.md)
+- [ListFormBody](listformbody-element-list.md)
 
-- [DOCS-LESSTHANListFormClosingDOCS-GREATERTHAN](listformclosing-element-list.md)
+- [ListFormClosing](listformclosing-element-list.md)
 
-- [DOCS-LESSTHANWebPartsDOCS-GREATERTHAN](webparts-element-list.md)
+- [WebParts](webparts-element-list.md)
 
-- [DOCS-LESSTHANAllUsersWebPartDOCS-GREATERTHAN](alluserswebpart-element-list.md)
+- [AllUsersWebPart](alluserswebpart-element-list.md)
 
-- [DOCS-LESSTHANDefaultDescriptionDOCS-GREATERTHAN](defaultdescription-element-list.md)
+- [DefaultDescription](defaultdescription-element-list.md)
 
-- [DOCS-LESSTHANToolbarDOCS-GREATERTHAN](toolbar-element-list.md)
+- [Toolbar](toolbar-element-list.md)
 
-- [DOCS-LESSTHANDocumentLibraryTemplateDOCS-GREATERTHAN](documentlibrarytemplate-element-list.md)
+- [DocumentLibraryTemplate](documentlibrarytemplate-element-list.md)
 
-- [DOCS-LESSTHANViewsDOCS-GREATERTHAN](views-element-list.md)
+- [Views](views-element-list.md)
 
-- [DOCS-LESSTHANViewDOCS-GREATERTHAN](view-element-list.md)
+- [View](view-element-list.md)
 
 <br/>
 
@@ -120,57 +120,57 @@ You can create or modify lists programmatically through the object model (for ex
 
 <br/>
 
-- [DOCS-LESSTHANAggregationsDOCS-GREATERTHAN](aggregations-element-list.md)
+- [Aggregations](aggregations-element-list.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-list.md)
+- [FieldRef](fieldref-element-list.md)
 
-- [DOCS-LESSTHANGroupByFooterDOCS-GREATERTHAN](groupbyfooter-element-list.md)
+- [GroupByFooter](groupbyfooter-element-list.md)
 
-- [DOCS-LESSTHANGroupByHeaderDOCS-GREATERTHAN](groupbyheader-element-list.md)
+- [GroupByHeader](groupbyheader-element-list.md)
 
-- [DOCS-LESSTHANMethodDOCS-GREATERTHAN](method-element-list.md)
+- [Method](method-element-list.md)
 
-- [DOCS-LESSTHANFilterDOCS-GREATERTHAN](filter-element-list.md)
+- [Filter](filter-element-list.md)
 
-- [DOCS-LESSTHANPagedClientCallbackRowsetDOCS-GREATERTHAN](pagedclientcallbackrowset-element-list.md)
+- [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md)
 
-- [DOCS-LESSTHANPagedRecurrenceRowsetDOCS-GREATERTHAN](pagedrecurrencerowset-element-list.md)
+- [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md)
 
-- [DOCS-LESSTHANPagedRowsetDOCS-GREATERTHAN](pagedrowset-element-list.md)
+- [PagedRowset](pagedrowset-element-list.md)
 
-- [DOCS-LESSTHANParameterBindingsDOCS-GREATERTHAN](parameterbindings-element-list.md)
+- [ParameterBindings](parameterbindings-element-list.md)
 
-- [DOCS-LESSTHANParameterBindingDOCS-GREATERTHAN](parameterbinding-element-list.md)
+- [ParameterBinding](parameterbinding-element-list.md)
 
-- [DOCS-LESSTHANQueryDOCS-GREATERTHAN](query-element-list.md)
+- [Query](query-element-list.md)
 
-- [DOCS-LESSTHANRowLimitDOCS-GREATERTHAN](rowlimit-element-list.md)
+- [RowLimit](rowlimit-element-list.md)
 
-- [DOCS-LESSTHANRowLimitExceededDOCS-GREATERTHAN](rowlimitexceeded-element-list.md)
+- [RowLimitExceeded](rowlimitexceeded-element-list.md)
 
-- [DOCS-LESSTHANToolbarDOCS-GREATERTHAN](https://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c(Office.15).aspx)
+- [Toolbar](https://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c(Office.15).aspx)
 
-- [DOCS-LESSTHANViewBidiHeaderDOCS-GREATERTHAN](viewbidiheader-element-list.md)
+- [ViewBidiHeader](viewbidiheader-element-list.md)
 
-- [DOCS-LESSTHANViewBodyDOCS-GREATERTHAN](viewbody-element-list.md)
+- [ViewBody](viewbody-element-list.md)
 
-- [DOCS-LESSTHANViewDataDOCS-GREATERTHAN](viewdata-element-list.md)
+- [ViewData](viewdata-element-list.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](https://msdn.microsoft.com/en-us/library/ms436424.aspx)
+- [FieldRef](https://msdn.microsoft.com/en-us/library/ms436424.aspx)
 
-- [DOCS-LESSTHANViewEmptyDOCS-GREATERTHAN](viewempty-element-list.md)
+- [ViewEmpty](viewempty-element-list.md)
 
-- [DOCS-LESSTHANViewFieldsDOCS-GREATERTHAN](viewfields-element-list.md)
+- [ViewFields](viewfields-element-list.md)
 
-- [DOCS-LESSTHANFieldRefDOCS-GREATERTHAN](fieldref-element-list.md)
+- [FieldRef](fieldref-element-list.md)
 
-- [DOCS-LESSTHANViewFooterDOCS-GREATERTHAN](viewfooter-element-list.md)
+- [ViewFooter](viewfooter-element-list.md)
 
-- [DOCS-LESSTHANViewHeaderDOCS-GREATERTHAN](viewheader-element-list.md)
+- [ViewHeader](viewheader-element-list.md)
 
-- [DOCS-LESSTHANViewStyleDOCS-GREATERTHAN](viewstyle-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
 
-- [DOCS-LESSTHANXslLinkDOCS-GREATERTHAN](xsllink-element-list.md)
+- [XslLink](xsllink-element-list.md)
 
 
 <br/>

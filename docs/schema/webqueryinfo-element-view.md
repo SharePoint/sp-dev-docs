@@ -62,8 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Used inside a <span
-class="keyword">DOCS-LESSTHANTABLEDOCS-GREATERTHAN</span> tag
+Used inside a **<TABLE></span> tag
 surrounding a view to add attributes that assist the agents that are
 processing Web queries in extracting data from views.
 
@@ -149,7 +148,7 @@ processing Web queries in extracting data from views.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **WebQueryInfo** element renders an ID on
-the **DOCS-LESSTHANTABLEDOCS-GREATERTHAN** tag,
+the **<TABLE>** tag,
 a **Summary** attribute set to the name of the
 list, and a **WebQuerySourceHref** attribute in
 the **o:** namespace that links to the XMLDATA

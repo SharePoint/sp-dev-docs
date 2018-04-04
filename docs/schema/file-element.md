@@ -124,10 +124,10 @@ configuration or Web template configuration.
 <li><p>#</p></li>
 <li><p>%</p></li>
 <li><p>&amp;</p></li>
-<li><p>DOCS-ASTERISK</p></li>
+<li><p>*</p></li>
 <li><p>:</p></li>
-<li><p>DOCS-LESSTHAN</p></li>
-<li><p>DOCS-GREATERTHAN</p></li>
+<li><p><</p></li>
+<li><p>></p></li>
 <li><p>?</p></li>
 <li><p>\\</p></li>
 <li><p>{</p></li>
@@ -165,10 +165,10 @@ configuration or Web template configuration.
 <li><p>#</p></li>
 <li><p>%</p></li>
 <li><p>&amp;</p></li>
-<li><p>DOCS-ASTERISK</p></li>
+<li><p>*</p></li>
 <li><p>:</p></li>
-<li><p>DOCS-LESSTHAN</p></li>
-<li><p>DOCS-GREATERTHAN</p></li>
+<li><p><</p></li>
+<li><p>></p></li>
 <li><p>?</p></li>
 <li><p>\\</p></li>
 <li><p>{</p></li>

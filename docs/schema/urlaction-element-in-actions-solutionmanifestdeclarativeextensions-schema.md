@@ -14,7 +14,7 @@ ms.assetid: 83b560be-7aef-fb36-616d-16217334cf92
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The **DOCS-LESSTHANCodeMethodActionDOCS-GREATERTHAN** element is used to execute a URL-based action in Microsoft Outlook 2010.
+The **CodeMethodAction** element is used to execute a URL-based action in Microsoft Outlook 2010.
 
 **Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions

@@ -12,7 +12,7 @@ ms.assetid: f747c9b3-7443-4fee-4546-41b5c7cc3751
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-This topic lists the types in the **DOCS-LESSTHANDOCS-LESSTHANschema nameDOCS-GREATERTHANDOCS-GREATERTHAN** XML schema.
+This topic lists the types in the **schema name** XML schema.
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.

@@ -14,7 +14,7 @@ ms.assetid: 55db90e4-b32d-1e97-5909-7afa7152276f
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The **DOCS-LESSTHANSolutionSettingsDOCS-GREATERTHAN** element is used to define the settings for the declarative solution, such as the ID, display name, description, and so on.
+The **SolutionSettings** element is used to define the settings for the declarative solution, such as the ID, display name, description, and so on.
 
 **Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions

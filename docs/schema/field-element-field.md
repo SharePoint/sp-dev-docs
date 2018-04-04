@@ -667,7 +667,7 @@ Defines a site column.
 </tr>
 <tr class="even">
 <td align="left"><p>**WikiLinking**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** to specify that wiki links, which appear in the form of double brackets (**[[…]]**), become translated into HTML links, which use the **DOCS-LESSTHANaDOCS-GREATERTHAN** tag.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** to specify that wiki links, which appear in the form of double brackets (**[[…]]**), become translated into HTML links, which use the `<a>` tag.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**XName**</p></td>

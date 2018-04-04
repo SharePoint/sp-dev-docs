@@ -108,25 +108,18 @@ Universal attributes include the following:
     class="keyword">AutoNewLine</span> is set to <span
     class="keyword">TRUE</span>.
 
--   **Default** — If the spanned text is
-    nothing, render this text instead. For example,
-    DOCS-LESSTHANows:XMLDOCS-GREATERTHANDOCS-LESSTHANListProperty
-    Select="Description" Default="This list has no
-    description"/DOCS-GREATERTHANDOCS-LESSTHAN/ows:XMLDOCS-GREATERTHAN
-    The previous example renders the default text if there is no
-    description for the list in question.
+- **Default** — If the spanned text is nothing, render this text instead. For example, `<ows:XML><ListProperty Select="Description" Default="This list has no
+description"/></ows:XML>`. The previous example renders the default text if there is no description for the list in question.
 
 -   **ExpandXML** — When <span
     class="keyword">TRUE</span>, reviews the rendered content and sends
     it on another pass through the CAML interpreter. This allows CAML to
     render CAML.
 
--   **HTMLEncode** — When <span
-    class="keyword">TRUE</span>, converts any embedded characters so
+-   **HTMLEncode** — When **TRUE**, converts any embedded characters so
     that they are all displayed as text in the browser. This means that
     any characters that could be confused with HTML tags are converted
-    to entities such as "**>**" instead of
-    "**DOCS-GREATERTHAN**".
+    to entities such as `&gt;` instead of `>`.
 
 -   **StripWS** — When <span
     class="keyword">TRUE</span>, strips whitespace from the beginning

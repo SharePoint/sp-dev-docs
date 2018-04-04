@@ -165,7 +165,7 @@ by ProgID.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>A ProgId is a registry entry that associates the program identifier (ProgID) of a COM object with its class identifier (CLSID). For example, the registry key <span class="code">HKLM\Software\Classes\Word.Document</span> has a subkey named <span class="code">CLSID</span> with a value of <span class="code">{F4754C9B-64F5-4B40-8AF4-679732AC0607}</span>. In this case, the key name <span class="code">Word.Document</span> is a ProgId, a shorthand way of saying <span class="code">{F4754C9B-64F5-4B40-8AF4-679732AC0607}</span>. For more information, see <a href="http://msdn.microsoft.com/library/f9ef2934-0815-4a6f-9283-8f748eee083b(Office.15).aspx">DOCS-LESSTHANProgIdDOCS-GREATERTHAN Key (COM)</a>.</p></td>
+<td align="left"><p>A ProgId is a registry entry that associates the program identifier (ProgID) of a COM object with its class identifier (CLSID). For example, the registry key <span class="code">HKLM\Software\Classes\Word.Document</span> has a subkey named <span class="code">CLSID</span> with a value of <span class="code">{F4754C9B-64F5-4B40-8AF4-679732AC0607}</span>. In this case, the key name <span class="code">Word.Document</span> is a ProgId, a shorthand way of saying <span class="code">{F4754C9B-64F5-4B40-8AF4-679732AC0607}</span>. For more information, see <a href="http://msdn.microsoft.com/library/f9ef2934-0815-4a6f-9283-8f748eee083b(Office.15).aspx">ProgId Key (COM)</a>.</p></td>
 </tr>
 </tbody>
 </table>

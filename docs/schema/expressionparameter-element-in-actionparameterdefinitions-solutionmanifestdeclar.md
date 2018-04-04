@@ -14,7 +14,7 @@ ms.assetid: 696dbdc0-f11d-5cab-1ff0-8d5512018d42
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The **DOCS-LESSTHANExpressionParameterDOCS-GREATERTHAN** element defines a parameter for an action that can take a value from the context of the current item.
+The **ExpressionParameter** element defines a parameter for an action that can take a value from the context of the current item.
 
 **Namespace**: 
 http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions

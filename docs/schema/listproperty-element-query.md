@@ -104,7 +104,7 @@ Returns the value of a specified column in the List of Lists table.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AutoHyperLink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to surround text with **DOCS-LESSTHANADOCS-GREATERTHAN** tags if the text appears like a hyperlink, for example, www.microsoft.com.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to surround text with `<->` tags if the text appears like a hyperlink, for example, www.microsoft.com.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
@@ -112,7 +112,7 @@ Returns the value of a specified column in the List of Lists table.
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to insert **DOCS-LESSTHANBRDOCS-GREATERTHAN** tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to insert `<->` tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Default**</p></td>
