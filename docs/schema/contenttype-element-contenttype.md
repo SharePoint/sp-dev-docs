@@ -73,7 +73,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
-<td align="left"><p>Optional **Text**. Provides a description for the content type, to display in the SharePoint Foundation user interface. The value can be a reference to a resource in the format <span class="code">$Resources:String**.</p></td>
+<td align="left"><p>Optional **Text**. Provides a description for the content type, to display in the SharePoint Foundation user interface. The value can be a reference to a resource in the format `$Resources:String`.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DocumentTemplate**</p></td>

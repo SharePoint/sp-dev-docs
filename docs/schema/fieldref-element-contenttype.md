@@ -118,7 +118,7 @@ The following sections describe attributes, child elements, and parent elements.
 <p>This is the format used for vCard/iCal.</p></li>
 </ul>
 <p>For **Choice** fields, this attribute can be set to **Dropdown** (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink** (default), which displays the URL as a normal <A> tag, or to **Image**, which displays the URL as <IMG SRC="URL" ALT="Description">.</p></td>
+<p>For URL fields, this attribute can be set to **Hyperlink** (default), which displays the URL as a normal `<A>` tag, or to **Image**, which displays the URL as `<IMG SRC="URL" ALT="Description">`.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Filterable**</p></td>
@@ -140,7 +140,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
 <td align="left"><p>Required **Text**. Specifies the field ID of the column that this **FieldRef** element references. The field ID is the string representation of a GUID, including braces. The value is case sensitive.</p>
-<p>You can find the IDs for built-in fields in the file `fieldswss.xml` located on the following path: %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES\fields.</p></td>
+<p>You can find the IDs for built-in fields in the file `fieldswss.xml` located on the following path:<br/> `%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES\fields`</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Locked**</p></td>

@@ -45,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**TargetName**</p></td>
-<td align="left"><p>Optional Text. Specifies the path to the document template. This path can be absolute, relative to the server base URL, or relative to the content type's resource folder.</p></td>
+<td align="left"><p>Optional **Text**. Specifies the path to the document template. This path can be absolute, relative to the server base URL, or relative to the content type's resource folder.</p></td>
 </tr>
 </tbody>
 </table>
