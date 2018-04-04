@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="odd">
 <td align="left"><p>**DesignerType**</p></td>
 <td align="left"><p>Optional **text**. Specifies the type of control or user input that is presented to the workflow creator when building sentences in the workflow editor.</p>
-<p>**Note**: If you do not specify a **DesignerType**, the default **DesignerType** attribute is used. The default **DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p></td>
+<p>**Note**: If you do not specify a **DesignerType**, the default **DesignerType** attribute is used. The default **DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p>
 <p>**Note**: A code-free workflow editor should treat the values returned to it from the server as case-insensitive.</p></td>
 </tr>
 <tr class="even">
