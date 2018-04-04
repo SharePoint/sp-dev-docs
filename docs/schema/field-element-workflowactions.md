@@ -16,30 +16,27 @@ ms.assetid: eab704a4-43e2-418f-89e0-c16eae7aab7b
 
 Specifies a field for displaying data from the parent data source.
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><SchemaSource>
+## Definition
+
+```XML
+<SchemaSource>
     <Fields>
         <Field>
         </Field>
     </Fields>
-</SchemaSource></code></pre></td>
-</tr>
-</tbody>
-</table>
+</SchemaSource>
+```
 
+## Elements and attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -63,13 +60,11 @@ Specifies a field for displaying data from the parent data source.
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 None
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -83,15 +78,12 @@ None
 </table>
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## See also
 
-#### Other resources
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
 
-[Creating Declarative, No-Code Workflow
-Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 
-[Workflow Actions Schema
-Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
 
 
 

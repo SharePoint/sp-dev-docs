@@ -1,6 +1,4 @@
 ---
-
-
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,105 +10,36 @@ localization_priority: Normal
 ms.assetid: 21669885-4372-4501-b00b-439de30ce0e3
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# FieldBind Element (WorkflowActions)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># FieldBind Element (WorkflowActions)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+The **FieldBind** element is a child of the **RuleDesigner** element. These elements are used together to create a readable sentence that describes a condition that needs to be evaluated or an activity that must be executed. When constructed correctly, these elements can also be used to insert variables (such as hyperlinks) within the sentence, so that the code-free workflow editor can substitute dynamic values into the workflow while it is running. The **FieldBind** element maps the inputs from the workflow creator to parameters that are then passed to Microsoft SharePoint Foundation 2010.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE] 
+> Using custom designer types or custom field types is not supported when creating workflows using SharePoint Designer unless they are a subtype of an existing supported type, or if otherwise compatible with supported designer or parameter types.
 
-**Last modified:** March 09, 2015
+## Definition
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-The **FieldBind** element is a child of the
-**RuleDesigner** element. These elements are
-used together to create a readable sentence that describes a condition
-that needs to be evaluated or an activity that must be executed. When
-constructed correctly, these elements can also be used to insert
-variables (such as hyperlinks) within the sentence, so that the
-code-free workflow editor can substitute dynamic values into the
-workflow while it is running. The **FieldBind**
-element maps the inputs from the workflow creator to parameters that are
-then passed to Microsoft SharePoint Foundation 2010.
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Using custom designer types or custom field types is not supported when creating workflows using SharePoint Designer unless they are a subtype of an existing supported type, or if otherwise compatible with supported designer or parameter types.</p></td>
-</tr>
-</tbody>
-</table>
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><RuleDesigner>
+```XML
+<RuleDesigner>
     <FieldBind>
         <Option />
         <DataSourceRef>
     </FieldBind>
-</RuleDesigner></code></pre></td>
-</tr>
-</tbody>
-</table>
+</RuleDesigner>
+```
 
+## Elements and attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -122,73 +51,25 @@ then passed to Microsoft SharePoint Foundation 2010.
 <tr class="odd">
 <td align="left"><p>**DesignerType**</p></td>
 <td align="left"><p>Optional **text**. Specifies the type of control or user input that is presented to the workflow creator when building sentences in the workflow editor.</p>
-<div class="alert">
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>If you do not specify a **DesignerType</span> attribute, the default **DesignerType</span> attribute is used. The default **DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="alert">
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>A code-free workflow editor should treat the values that are returned to it from the server as case-insensitive.</p></td>
-</tr>
-</tbody>
-</table>
-</div></td>
+<p>**Note**: If you do not specify a **DesignerType** attribute, the default **DesignerType** attribute is used. The default **DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p>
+<p>**Note**: A code-free workflow editor should treat the values that are returned to it from the server as case-insensitive.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Field**</p></td>
-<td align="left"><p>Required **text</span>. Represents a **Parameter</span> element that is used to build workflows. The **Field</span> attribute maps directly to one or more **Parameter** elements when a parameter type and direction are defined.</p>
-<div class="alert">
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>If you use more than one parameter for a **Field</span> attribute, the parameter names should be separated by commas (for example, **Field</span>="**Variable</span>,**ValueType**").</p></td>
-</tr>
-</tbody>
-</table>
-</div></td>
+<td align="left"><p>Required **text**. Represents a **Parameter** element that is used to build workflows. The **Field** attribute maps directly to one or more **Parameter** elements when a parameter type and direction are defined.</p>
+<p>**Note**: If you use more than one parameter for a **Field** attribute, the parameter names should be separated by commas (for example, **Field**="**Variable**,**ValueType**").</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Function**</p></td>
-<td align="left"><p>Optional **Boolean</span>. When set to **true</span>, this attribute inserts the name of the **Action** method into the sentence.</p></td>
+<td align="left"><p>Optional **Boolean**. When set to **true**, this attribute inserts the name of the **Action** method into the sentence.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required **Integer</span> (non-negative). **Id</span> is used as the relational key between a **FieldBind</span> element and the **Sentence</span> property of the parent **RuleDesigner** element, much like a primary key is used in a database.</p></td>
+<td align="left"><p>Required **Integer** (non-negative). **Id** is used as the relational key between a **FieldBind** element and the **Sentence** property of the parent **RuleDesigner** element, much like a primary key is used in a database.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**OperatorTypeFrom**</p></td>
-<td align="left"><p>Required **text</span>. Used only when the **DesignerType</span> attribute is set to **Operator</span>. This attribute determines the types of operators that are available to the user, based on the Microsoft .NET data type listed in the corresponding **Parameter</span> element. The parameter that is specified for the **OperatorTypeFrom</span> attribute can be different from the parameter that is listed in the **Field** attribute.</p></td>
+<td align="left"><p>Required **text**. Used only when the **DesignerType** attribute is set to **Operator**. This attribute determines the types of operators that are available to the user, based on the Microsoft .NET data type listed in the corresponding **Parameter** element. The parameter that is specified for the **OperatorTypeFrom** attribute can be different from the parameter that is listed in the **Field** attribute.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Text**</p></td>
@@ -196,7 +77,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tr>
 <tr class="odd">
 <td align="left"><p>**TypeFrom**</p></td>
-<td align="left"><p>Optional **text</span>. Specifies the .NET data types that are valid for use with an instance of the **FieldBind</span> element. The **TypeFrom</span> attribute is associated with a **Parameter** element that contains the type definition.</p></td>
+<td align="left"><p>Optional **text**. Specifies the .NET data types that are valid for use with an instance of the **FieldBind** element. The **TypeFrom** attribute is associated with a **Parameter** element that contains the type definition.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Value**</p></td>
@@ -205,14 +86,13 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tbody>
 </table>
 
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#### DesignerType attribute
 
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="30%" />
+<col width="30%" />
+<col width="40%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -293,7 +173,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 <tr class="even">
 <td align="left"><p>Dependent</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>The user interface element shown depends on values of the <span class="parameter" sdata="paramReference">TypeFrom</span> attribute and the <span class="parameter" sdata="paramReference">OperatorTypeFrom</span> attribute.</p></td>
+<td align="left"><p>The user interface element shown depends on values of the **TypeFrom** attribute and the **OperatorTypeFrom** attribute.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Dropdown</p></td>
@@ -340,7 +220,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tr>
 <tr class="odd">
 <td align="left"><p>ParameterNames</p></td>
-<td align="left"><p>**Name**</p></td>
+<td align="left"><p>Name</p></td>
 <td align="left"><p>List that contains the names of variables that are defined in the current workflow.</p></td>
 </tr>
 <tr class="even">
@@ -406,8 +286,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 <table>
 <colgroup>
@@ -421,8 +300,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -435,21 +313,11 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tbody>
 </table>
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following example demonstrates how to construct the **FieldBind** element within the **RuleDesigner** parent element so that it displays correctly in the workflow designer.
 
-The following example demonstrates how to construct the <span
-class="keyword">FieldBind</span> element within the <span
-class="keyword">RuleDesigner</span> parent element so that it displays
-correctly in the workflow designer.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <RuleDesigner Sentence="%1">
        <FieldBind Field="MyParameter1" 
                   Text="text" Id="1"       
@@ -458,17 +326,12 @@ code] "Copy code")Copy code</span>
           <Option Name="Display Name" Value="Display Value"/>
        </FieldBind>
     </RuleDesigner>
+```
 
+## See also
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#### Other resources
-
-[Creating Declarative, No-Code Workflow
-Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
-
-[Workflow Actions Schema
-Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
 
 
 
