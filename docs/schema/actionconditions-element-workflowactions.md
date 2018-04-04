@@ -16,7 +16,7 @@ Specifies conditional logic for the action.
 
 ## Definition
 
-```
+```XML
 <Actions>
     <Action>
         <ActionVariables>

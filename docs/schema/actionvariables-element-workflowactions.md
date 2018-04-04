@@ -18,7 +18,7 @@ Specifies local variables for the action.
 
 ## Definition
 
-```
+```XML
 <Actions>
     <Action>
         <ActionVariables>

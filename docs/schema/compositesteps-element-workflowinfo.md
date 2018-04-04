@@ -18,7 +18,7 @@ Container for the steps in a composite workflow activity.
 
 ## Definition
 
-```
+```XML
 <CompositeSteps>
     <CompositeStep>    </CompositeStep>
 </CompositeSteps>

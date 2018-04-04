@@ -18,7 +18,7 @@ Specifies a coercion for converting data from one form to another.
 
 ## Definition
 
-```
+``XML
 <Coercions>
     <Coercion>    </Coercion>
 </Coercions>

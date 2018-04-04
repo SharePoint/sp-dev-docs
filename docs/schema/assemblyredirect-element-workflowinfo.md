@@ -18,7 +18,7 @@ Specifies a transformation from one binary file to another binary file in a vers
 
 ## Definition
 
-```
+```XML
 <AssemblyRedirects>
     <AssemblyRedirect>    </AssemblyRedirect>
 </AssemblyRedirects>

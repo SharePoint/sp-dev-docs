@@ -227,8 +227,8 @@ Next, upload the files so that your Azure Function can use the module.
 
 Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_AppSecret```. To set those variables, go to the main Function App page in the Azure Portal, select **Application Settings**, and add two new application settings:
 
-1. ```SPO_AppId``` - Set the value to the Client ID you copied in the first step when you created your app on your tenant.
-2. ```SPO_AppSecret``` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
+1. `SPO_AppId` - Set the value to the Client ID you copied in the first step when you created your app on your tenant.
+2. `SPO_AppSecret` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
 
 ## Create the site design
 

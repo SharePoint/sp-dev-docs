@@ -16,7 +16,7 @@ Specifies the body of a custom action.
 
 ## Definition
 
-```
+```XML
 <Actions>
     <Action>
         <ActionVariables>

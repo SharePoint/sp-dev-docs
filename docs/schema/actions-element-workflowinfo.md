@@ -18,7 +18,7 @@ Microsoft SharePoint Foundation 2010 provides a number of default actions to a d
 
 ## Definition
 
-```
+```XML
 <WorkflowInfo>
     <Conditions>...</Conditions>
     <Actions>

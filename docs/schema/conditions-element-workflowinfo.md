@@ -25,11 +25,11 @@ The **Conditions** element is the parent element for all **Condition** elements.
 
 ## Definition
 
-```
+```XML
 <Conditions>
       <Condition>…</Condition>
       <Default>…</Default>
-   </Conditions>
+</Conditions>
 ```
 
 ## Elements and attributes

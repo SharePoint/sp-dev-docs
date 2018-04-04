@@ -18,7 +18,7 @@ Specifies a content type from which to retrieve fields.
 
 ## Definition
 
-```
+```XML
 <SchemaSource>
     <ContentType>
     </ContentType>

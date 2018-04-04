@@ -18,7 +18,7 @@ Specifies a step in a composite workflow activity.
 
 ## Definition
 
-```
+```XML
 <CompositeStep>
     <DataSources>    </DataSources>
 </CompositeStep>

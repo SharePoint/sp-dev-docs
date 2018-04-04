@@ -24,7 +24,7 @@ A **Condition** element contains information about the Microsoft .NET assembly w
 
 ## Definition
 
-```
+```XML
 <WorkflowInfo>
       <Conditions>
             <Condition>

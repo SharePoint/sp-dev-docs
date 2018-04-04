@@ -82,7 +82,6 @@ JavaScript
 </table>
 
 
-## Definition
 
 ## Definition
 XML 
