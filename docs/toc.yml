@@ -2395,159 +2395,159 @@
     - name: WorkflowActions3 schema reference
       href: schema/workflowactions3-schema-reference.md
       items:
-      - name: Action Element (WorkflowActions)
+      - name: Action Element
         href: schema/action-element-workflowactions.md
-      - name: ActionBody Element (WorkflowActions)
+      - name: ActionBody Element
         href: schema/actionbody-element-workflowactions.md
-      - name: ActionConditions Element (WorkflowActions)
+      - name: ActionConditions Element
         href: schema/actionconditions-element-workflowactions.md
-      - name: ActionVariables Element (WorkflowActions)
+      - name: ActionVariables Element
         href: schema/actionvariables-element-workflowactions.md
-      - name: ActivitySource Element (WorkflowActions)
+      - name: ActivitySource Element
         href: schema/activitysource-element-workflowactions.md
-      - name: ContentType Element (WorkflowActions)
+      - name: ContentType Element
         href: schema/contenttype-element-workflowactions.md
-      - name: DataSources Element (WorkflowActions)
+      - name: DataSources Element
         href: schema/datasources-element-workflowactions.md
-      - name: DataSource Element (WorkflowActions)
+      - name: DataSource Element
         href: schema/datasource-element-workflowactions.md
-      - name: DataSourceRef Element (WorkflowActions)
+      - name: DataSourceRef Element
         href: schema/datasourceref-element-workflowactions.md
-      - name: Default Element (WorkflowActions)
+      - name: Default Element
         href: schema/default-element-workflowactions.md
-      - name: Dictionary Element (WorkflowActions)
+      - name: Dictionary Element
         href: schema/dictionary-element-workflowactions.md
-      - name: Evaluation Element (WorkflowActions)
+      - name: Evaluation Element
         href: schema/evaluation-element-workflowactions.md
-      - name: Field Element (WorkflowActions)
+      - name: Field Element
         href: schema/field-element-workflowactions.md
-      - name: FieldBind Element (WorkflowActions)
+      - name: FieldBind Element
         href: schema/fieldbind-element-workflowactions.md
-      - name: Fields Element (WorkflowActions)
+      - name: Fields Element
         href: schema/fields-element-workflowactions.md
-      - name: HashtableSource Element (WorkflowActions)
+      - name: HashtableSource Element
         href: schema/hashtablesource-element-workflowactions.md
-      - name: Modifications Element (WorkflowActions)
+      - name: Modifications Element
         href: schema/modifications-element-workflowactions.md
-      - name: Modification Element (WorkflowActions)
+      - name: Modification Element
         href: schema/modification-element-workflowactions.md
-      - name: NestedInitiationFieldNodes Element (WorkflowActions)
+      - name: NestedInitiationFieldNodes Element
         href: schema/nestedinitiationfieldnodes-element-workflowactions.md
-      - name: Option Element (WorkflowActions)
+      - name: Option Element
         href: schema/option-element-workflowactions.md
-      - name: Parameter Element (WorkflowActions)
+      - name: Parameter Element
         href: schema/parameter-element-workflowactions.md
-      - name: Parameters Element (WorkflowActions)
+      - name: Parameters Element
         href: schema/parameters-element-workflowactions.md
-      - name: RuleDesigner Element (WorkflowActions)
+      - name: RuleDesigner Element
         href: schema/ruledesigner-element-workflowactions.md
-      - name: SchemaSource Element (WorkflowActions)
+      - name: SchemaSource Element
         href: schema/schemasource-element-workflowactions.md
-      - name: WorkflowActions Element (WorkflowActions)
+      - name: WorkflowActions Element
         href: schema/workflowactions-element-workflowactions.md
     - name: Workflow configuration schema reference
       href: schema/workflow-configuration-schema-reference.md
       items:
       - name: WorkflowConfig Element
         href: schema/workflowconfig-element.md
-      - name: Template Element (WorkflowConfig)
+      - name: Template Element
         href: schema/template-element-workflowconfig.md
-      - name: Association Element (WorkflowConfig)
+      - name: Association Element
         href: schema/association-element-workflowconfig.md
-      - name: ContentTypes Element (WorkflowConfig)
+      - name: ContentTypes Element
         href: schema/contenttypes-element-workflowconfig.md
-      - name: ContentType Element (WorkflowConfig)
+      - name: ContentType Element
         href: schema/contenttype-element-workflowconfig.md
-      - name: Initiation Element (WorkflowConfig)
+      - name: Initiation Element
         href: schema/initiation-element-workflowconfig.md
-      - name: Fields Element (WorkflowConfig)
+      - name: Fields Element
         href: schema/fields-element-workflowconfig.md
-      - name: Parameters Element (WorkflowConfig)
+      - name: Parameters Element
         href: schema/parameters-element-workflowconfig.md
-      - name: Parameter Element (WorkflowConfig)
+      - name: Parameter Element
         href: schema/parameter-element-workflowconfig.md
     - name: WorkflowInfo schema reference
       href: schema/workflowinfo-schema-reference.md
       items:
-      - name: .ACTIONS File Example (WorkflowInfo)
+      - name: .ACTIONS File Example
         href: schema/actions-file-example-workflowinfo.md
-      - name: Action Element (WorkflowInfo)
+      - name: Action Element
         href: schema/action-element-workflowinfo.md
-      - name: ActionBody Element (WorkflowInfo)
+      - name: ActionBody Element
         href: schema/actionbody-element-workflowinfo.md
-      - name: ActionConditions Element (WorkflowInfo)
+      - name: ActionConditions Element
         href: schema/actionconditions-element-workflowinfo.md
-      - name: ActionVariables Element (WorkflowInfo)
+      - name: ActionVariables Element
         href: schema/actionvariables-element-workflowinfo.md
-      - name: Actions Element (WorkflowInfo)
+      - name: Actions Element
         href: schema/actions-element-workflowinfo.md
-      - name: Actions Schema Reference (WorkflowInfo)
+      - name: Actions Schema Reference
         href: schema/actions-schema-reference-workflowinfo.md
-      - name: ActivitySource Element (WorkflowInfo)
+      - name: ActivitySource Element
         href: schema/activitysource-element-workflowinfo.md
-      - name: AssemblyRedirect Element (WorkflowInfo)
+      - name: AssemblyRedirect Element
         href: schema/assemblyredirect-element-workflowinfo.md
-      - name: AssemblyRedirects Element (WorkflowInfo)
+      - name: AssemblyRedirects Element
         href: schema/assemblyredirects-element-workflowinfo.md
-      - name: Coercion Element (WorkflowInfo)
+      - name: Coercion Element
         href: schema/coercion-element-workflowinfo.md
-      - name: Coercions Element (WorkflowInfo)
+      - name: Coercions Element
         href: schema/coercions-element-workflowinfo.md
-      - name: Condition Element (WorkflowInfo)
+      - name: Condition Element
         href: schema/condition-element-workflowinfo.md
-      - name: Conditions Element (WorkflowInfo)
+      - name: Conditions Element
         href: schema/conditions-element-workflowinfo.md
-      - name: CompositeSteps Element (WorkflowInfo)
+      - name: CompositeSteps Element
         href: schema/compositesteps-element-workflowinfo.md
-      - name: CompositeStep Element (WorkflowInfo)
+      - name: CompositeStep Element
         href: schema/compositestep-element-workflowinfo.md
-      - name: ContentType Element (WorkflowInfo)
+      - name: ContentType Element
         href: schema/contenttype-element-workflowinfo.md
-      - name: DataSource Element (WorkflowInfo)
+      - name: DataSource Element
         href: schema/datasource-element-workflowinfo.md
-      - name: DataSourceRef Element (WorkflowInfo)
+      - name: DataSourceRef Element
         href: schema/datasourceref-element-workflowinfo.md
-      - name: DataSources Element (WorkflowInfo)
+      - name: DataSources Element
         href: schema/datasources-element-workflowinfo.md
-      - name: Default Element (WorkflowInfo)
+      - name: Default Element
         href: schema/default-element-workflowinfo.md
-      - name: Default Workflow Actions (WorkflowInfo)
+      - name: Default Workflow Actions
         href: schema/default-workflow-actions-workflowinfo.md
-      - name: Default Workflow Conditions (WorkflowInfo)
+      - name: Default Workflow Conditions
         href: schema/default-workflow-conditions-workflowinfo.md
-      - name: Dictionary Element (WorkflowInfo)
+      - name: Dictionary Element
         href: schema/dictionary-element-workflowinfo.md
-      - name: Evaluation Element (WorkflowInfo)
+      - name: Evaluation Element
         href: schema/evaluation-element-workflowinfo.md
-      - name: Field Element (WorkflowInfo)
+      - name: Field Element
         href: schema/field-element-workflowinfo.md
-      - name: FieldBind Element (WorkflowInfo)
+      - name: FieldBind Element
         href: schema/fieldbind-element-workflowinfo.md
-      - name: Fields Element (WorkflowInfo)
+      - name: Fields Element
         href: schema/fields-element-workflowinfo.md
-      - name: HashtableSource Element (WorkflowInfo)
+      - name: HashtableSource Element
         href: schema/hashtablesource-element-workflowinfo.md
-      - name: Modification Element (WorkflowInfo)
+      - name: Modification Element
         href: schema/modification-element-workflowinfo.md
-      - name: Modifications Element (WorkflowInfo)
+      - name: Modifications Element
         href: schema/modifications-element-workflowinfo.md
-      - name: NestedInitiationFieldNodes Element (WorkflowInfo)
+      - name: NestedInitiationFieldNodes Element
         href: schema/nestedinitiationfieldnodes-element-workflowinfo.md
-      - name: Option Element (WorkflowInfo)
+      - name: Option Element
         href: schema/option-element-workflowinfo.md
-      - name: Parameter Element (WorkflowInfo)
+      - name: Parameter Element
         href: schema/parameter-element-workflowinfo.md
-      - name: Parameters Element (WorkflowInfo)
+      - name: Parameters Element
         href: schema/parameters-element-workflowinfo.md
-      - name: RuleDesigner Element (WorkflowInfo)
+      - name: RuleDesigner Element
         href: schema/ruledesigner-element-workflowinfo.md
-      - name: SchemaSource Element (WorkflowInfo)
+      - name: SchemaSource Element
         href: schema/schemasource-element-workflowinfo.md
-      - name: VariableType Element (WorkflowInfo)
+      - name: VariableType Element
         href: schema/variabletype-element-workflowinfo.md
-      - name: VariableTypes Element (WorkflowInfo)
+      - name: VariableTypes Element
         href: schema/variabletypes-element-workflowinfo.md
-      - name: WorkflowInfo Element (WorkflowInfo)
+      - name: WorkflowInfo Element
         href: schema/workflowinfo-element-workflowinfo.md
   - name: SharePoint Features schemas
     href: schema/sharepoint-features-schemas.md
