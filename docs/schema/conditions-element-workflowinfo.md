@@ -53,7 +53,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="odd">
 <td align="left"><p>**And**</p></td>
 <td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when two or more conditions are used in the same conditional branch, and when all conditions must be satisfied before workflow actions can be executed. The value is not case-sensitive.</p>
-<p>The default value is **and ** (applies only to the English language version of SharePoint Foundation 2010).</p>
+<p>The default value is **and** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>**Example:**</p>
 <p>`<Conditions And="and">`</p></td>
 </tr>
@@ -75,12 +75,12 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>**Or**</p></td>
 <td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when there are two or more conditions in the same conditional branch and any value will satisfy the conditions, allowing the workflow actions to execute. The value is not case-sensitive.</p>
 <p>The default value is **or** (applies only to the English language version of SharePoint Foundation 2010).</p>
-<p>Example:</p>
+<p>**Example:**</p>
 <p>`<Conditions Or="or">`</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**When**</p></td>
-<td align="left"><p>Required **text</span>. The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return **true** for the workflow actions to execute. The value is not case-sensitive.</p>
+<td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return **true** for the workflow actions to execute. The value is not case-sensitive.</p>
 <p>The default value is **If** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>**Example:**</p>
 <p>`<Conditions When="If">`</p></td>
