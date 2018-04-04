@@ -18,7 +18,7 @@ Represents a single parameter for the workflow initiation form.
 
 ## Definition
 
-```
+```XML
 <Parameter 
   Name="Text" 
   Type="Text" 

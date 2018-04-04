@@ -18,7 +18,7 @@ Represents a collection of the data fields included on the workflow initiation f
 
 ## Definition
 
-```
+```XML
 <Fields>
 </Fields>
 ```

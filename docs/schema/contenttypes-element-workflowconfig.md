@@ -18,7 +18,7 @@ Contains the content type definitions for any workflow task types used in the wo
 
 ## Definition
 
-```
+```XML
 <ContentTypes>
 </ContentTypes>
 ```

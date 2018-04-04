@@ -20,7 +20,7 @@ Contains the information necessary for a declarative rules-based, code-free work
 
 ## Definition
 
-```
+```XML
 <Template
   BaseID="Text"
   DocLibID="Text"

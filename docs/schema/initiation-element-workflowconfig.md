@@ -18,7 +18,7 @@ Contains workflow initiation information, such as the workflow initiation form a
 
 ## Definition
 
-```
+```XML
 <Initiation URL="Text"
 </Initiation>
 ```

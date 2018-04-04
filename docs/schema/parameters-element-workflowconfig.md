@@ -18,7 +18,7 @@ Represents a collection of the parameters for the workflow initiation form.
 
 ## Definition
 
-```
+```XML
 <Parameters>
 </Parameters>
 ```

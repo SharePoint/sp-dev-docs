@@ -18,7 +18,7 @@ Defines a content type for a workflow task type used in the workflow.
 
 ## Definition
 
-```
+```XML
 <ContentType>
 </ContentType>
 ```

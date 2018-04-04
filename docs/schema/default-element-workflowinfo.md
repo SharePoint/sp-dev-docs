@@ -19,7 +19,9 @@ The **Default** element is a container for other elements and has no definable a
 > [!NOTE] 
 > The **Default** element is only read from the default WSS.ACTIONS file and cannot be overridden with a custom .ACTIONS file.
 
-```
+## Definition
+
+```XML
 <Default>
         <RuleDesigner>
             <FieldBind>
@@ -29,14 +31,16 @@ The **Default** element is a container for other elements and has no definable a
 </Default>
 ```
 
-<br/>
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -52,7 +56,7 @@ The **Default** element is a container for other elements and has no definable a
 </tbody>
 </table>
 
-<br/>
+### Child elements
 
 <table>
 <colgroup>
@@ -65,7 +69,7 @@ The **Default** element is a container for other elements and has no definable a
 </tbody>
 </table>
 
-<br/>
+### Parent elements
 
 <table>
 <colgroup>
@@ -78,7 +82,7 @@ The **Default** element is a container for other elements and has no definable a
 </tbody>
 </table>
 
-<br/>
+### Remarks
 
 When you create workflows by using a declarative, code-free workflow editor, such as Microsoft SharePoint Designer 2010, the .ACTIONS file that is installed on the server is combined into a single list of items and displayed to the workflow editor. Microsoft SharePoint Foundation 2010 then searches for existing workflow conditions. If SharePoint Foundation 2010 finds a condition that is not represented by an entry in an .ACTIONS file, the **Default** element sentence is displayed for that condition.
 
@@ -115,8 +119,8 @@ The following XML demonstrates how to construct a **Default** element to make it
 
 ## See also
 
-- [Workflow Actions Schema Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-- [Creating Declarative, No-Code Workflow Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
 
 
 

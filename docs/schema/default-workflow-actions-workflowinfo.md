@@ -1,6 +1,4 @@
 ---
-
-
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,107 +10,33 @@ localization_priority: Normal
 ms.assetid: 2c77a8ea-5cbf-4539-a9e3-b7f41f13e496
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Default Workflow Actions (WorkflowInfo)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Default Workflow Actions (WorkflowInfo)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+Actions represent the Microsoft SharePoint Foundation 2010 implementation of Windows Workflow Foundation activities. Actions are the most basic unit of work in a workflow. They define workflow activities, such as sending an email notification when an item has been added to a document library, or updating a status on a list item when a task that is associated with the item has been completed. SharePoint Foundation 2010 includes default, or predefined, workflow actions that you can use to create workflows that address common business scenarios.
+
+## Location of default workflow actions
+
+Default workflow actions are contained in the WSS.ACTIONS file, which is an XML file that lists all default conditions and actions that are available to the workflow editor. (For information about the default workflow conditions that are included in the WSS.ACTIONS file, see
+[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md).) 
+
+By default, the
+WSS.ACTIONS file is installed in the following location in SharePoint Foundation 2010:
+
+```%WSSRoot%\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\14\\TEMPLATE\\1033\\Workflow```
+
+> [!NOTE] 
+> Direct modification of the WSS.ACTIONS file is not recommended or supported. However, you can expand the actions that are available to your code-free workflow editor by creating and adding additional custom .ACTIONS files to the same directory. SharePoint Foundation parses all files that have the .ACTIONS file name extension and creates a combined list that it then presents to the declarative, code-free workflow editor.
+
+### Default workflow actions
+
+The following table lists the default workflow actions that are included with SharePoint Foundation. It also includes an example of how a rule sentence might be displayed in a code-free workflow editor. Each default action in the table also shows how to write XML to display the rule sentence.
 
 <table>
 <colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Actions represent the Microsoft SharePoint Foundation 2010
-implementation of Windows Workflow Foundation activities. Actions are
-the most basic unit of work in a workflow. They define workflow
-activities, such as sending an email notification when an item has been
-added to a document library, or updating a status on a list item when a
-task that is associated with the item has been completed. SharePoint
-Foundation 2010 includes default, or predefined, workflow actions that
-you can use to create workflows that address common business scenarios.
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Default workflow actions are contained in the WSS.ACTIONS file, which is
-an XML file that lists all default conditions and actions that are
-available to the workflow editor. (For information about the default
-workflow conditions that are included in the WSS.ACTIONS file, see
-[Default Workflow
-Conditions](default-workflow-conditions-workflowinfo.md).) By default, the
-WSS.ACTIONS file is installed in the following location in SharePoint
-Foundation 2010:
-
-<span class="code">%WSSRoot%\\Program Files\\Common Files\\Microsoft
-Shared\\web server extensions\\14\\TEMPLATE\\1033\\Workflow</span>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Direct modification of the WSS.ACTIONS file is not recommended or supported. However, you can expand the actions that are available to your code-free workflow editor by creating and adding additional custom .ACTIONS files to the same directory. SharePoint Foundation parses all files that have the .ACTIONS file name extension and creates a combined list that it then presents to the declarative, code-free workflow editor.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following table lists the default workflow actions that are included
-with SharePoint Foundation. It also includes an example of how a rule
-sentence might be displayed in a code-free workflow editor. Each default
-action in the table also shows how to write XML to display the rule
-sentence.
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="30%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -243,7 +167,7 @@ sentence.
 </tr>
 <tr class="even">
 <td align="left"><p>**Send an Email**</p></td>
-<td align="left"><p>Sends an email message to a specified user or group. The email message can contain <span class="ui">To</span>, <span class="ui">CC</span>, <span class="ui">Subject</span>, and <span class="ui">Body</span> fields. The <span class="ui">Body</span> field can contain both static text and text that is dynamically generated from a lookup table.</p>
+<td align="left"><p>Sends an email message to a specified user or group. The email message can contain **To**, **CC**, **Subject**, and **Body** fields. The **Body** field can contain both static text and text that is dynamically generated from a lookup table.</p>
 <p>**Rule sentence:**</p>
 <p>Email this message</p>
 <p>**XML:**</p>
@@ -251,7 +175,7 @@ sentence.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Set Content Approval Status**</p></td>
-<td align="left"><p>Sets the content approval status of an item to <span class="ui">Approved</span>, <span class="ui">Rejected</span>, or <span class="ui">Pending</span>. This action also adds comments.</p>
+<td align="left"><p>Sets the content approval status of an item to **Approved**, **Rejected**, or **Pending**. This action also adds comments.</p>
 <p>**Rule sentence:**</p>
 <p>Set content approval status to this status with Comments: comments</p>
 <p>**XML:**</p>
@@ -308,24 +232,12 @@ sentence.
 </tbody>
 </table>
 
+## See also
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#### Tasks
-
-[.ACTIONS File Example](actions-file-example-workflowinfo.md)
-
-#### Concepts
-
-[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
-
-#### Other resources
-
-[Creating Declarative, No-Code Workflow
-Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
-
-[Workflow Actions Schema
-Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
+- [.ACTIONS File Example](actions-file-example-workflowinfo.md)
+- [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
 
 
 

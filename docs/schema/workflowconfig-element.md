@@ -18,7 +18,7 @@ Contains the information necessary for declarative, rules-based, code-free workf
 
 ## Definition
 
-```
+```XML
 <WorkflowConfig>
 </WorkflowConfig>
 ```
