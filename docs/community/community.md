@@ -12,7 +12,7 @@ SharePoint Development Community (aka. SharePoint PnP community) is an open-sour
 ## Blog posts, videos and social media
 
 * [SharePoint Developer Blog](http://dev.office.com/blogs) - Latest developer news around SharePoint and Office 365
-* [SharePoint Developer Videos](http://aka.ms) - Latest guidance videos, training videos and also community call recordings
+* [SharePoint Developer Videos](http://aka.ms/spdev-videos) - Latest guidance videos, training videos and also community call recordings
 * [OfficeDev Twitter](https://twitter.com/officedev) - Official communication channel also for SharePoint and Office 365 developer topics
 * [OfficeDevPnP Twitter](https://twitter.com/officedevpnp) - Community account for SharePoint and Office 365 developer topics
 * [OfficeDev Facebook](https://www.facebook.com/OfficeDev/) - Official communication channel also for SharePoint and Office 365 developer topics
