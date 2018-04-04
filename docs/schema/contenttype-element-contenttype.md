@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,64 +8,16 @@ localization_priority: Normal
 ms.assetid: ce8f6c58-a488-4eb0-a5fb-941e97b2bd92
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# ContentType Element (ContentType)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># ContentType Element (ContentType)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Defines a single content type.
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><ContentType
+## Definition
+
+```XML
+<ContentType
   BaseType="Text"
   ID="Text"
   Name="Text"
@@ -87,18 +37,19 @@ Defines a single content type.
   Sealed="TRUE" | "FALSE"
   V2ListTemplateName="Text"
   Version="Integer"
-/></code></pre></td>
-</tr>
-</tbody>
-</table>
+/>
+```
 
+## Elements and attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -113,16 +64,16 @@ Defines a single content type.
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the content type ID of the content type. A content type ID has a very specific format. If the value that you assign the **ID** attribute is not in the correct format, you will get an error when the Feature activates. For more information, see <a href="http://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx">Content Type IDs</a>.</p></td>
+<td align="left"><p>Required **Text**. Specifies the content type ID of the content type. A content type ID has a very specific format. If the value that you assign the **ID** attribute is not in the correct format, you will get an error when the Feature activates. For more information, see <a href="http://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx">Content Type IDs</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the content type name. The value can be a reference to a resource in the format <span class="code">$Resources:String</span>. For more information, see <a href="http://msdn.microsoft.com/en-us/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.The name itself cannot be longer than 128 characters and cannot contain the characters <span class="code">\ / : * ? " # % < > { } | ~ &amp;</span>, two consecutive periods (<span class="code">..**), or special characters such as a tab.</p>
+<td align="left"><p>Required **Text**. Specifies the content type name. The value can be a reference to a resource in the format `$Resources:String`. For more information, see <a href="http://msdn.microsoft.com/en-us/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.</p><p>The name itself cannot be longer than 128 characters and cannot contain the characters `\ / : * ? " # % < > { } | ~ &amp;`, two consecutive periods (`..`), or special characters such as a tab.</p>
 <p>An error occurs if another content type with the same name exists in the collection where the content type is added.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
-<td align="left"><p>Optional **Text</span>. Provides a description for the content type, to display in the SharePoint Foundation user interface. The value can be a reference to a resource in the format <span class="code">$Resources:String**.</p></td>
+<td align="left"><p>Optional **Text**. Provides a description for the content type, to display in the SharePoint Foundation user interface. The value can be a reference to a resource in the format <span class="code">$Resources:String**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DocumentTemplate**</p></td>
@@ -134,19 +85,19 @@ Defines a single content type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Group**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the content type group to which the content type is assigned. Content type groups are user-defined groups that help you organize content types into logical categories. The value can be a reference to a resource in the format <span class="code">$Resources:String**.</p></td>
+<td align="left"><p>Optional **Text**. Specifies the content type group to which the content type is assigned. Content type groups are user-defined groups that help you organize content types into logical categories. The value can be a reference to a resource in the format `$Resources:String`.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to define the content type as hidden. If you define a content type as hidden, SharePoint Foundation does not display that content type on the <span class="ui">New** button in list views.</p>
+<td align="left"><p>Optional **Boolean**. **TRUE** to define the content type as hidden. If you define a content type as hidden, SharePoint Foundation does not display that content type on the **New** button in list views.</p>
 <p>If you do not include this attribute, SharePoint Foundation treats the content type as if the attribute was set to **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Inherits**</p></td>
 <td align="left"><p>Optional **Boolean**. The value of this attribute determines whether the content type inherits fields from its parent content type when it is created.</p>
-<p>If **Inherits</span> is **TRUE**, the child content type inherits all fields that are in the parent, including fields that users have added.</p>
-<p>If **Inherits</span> is **FALSE** or absent and the parent content type is a built-in type, the child content type inherits only the fields that were in the parent content type when SharePoint Foundation was installed. The child content type does not have any fields that users have added to the parent content type.</p>
-<p>If **Inherits</span> is **FALSE** or absent and the parent content type was provisioned by a sandboxed solution, the child does not inherit any fields from the parent.</p></td>
+<p>If **Inherits** is **TRUE**, the child content type inherits all fields that are in the parent, including fields that users have added.</p>
+<p>If **Inherits** is **FALSE** or absent and the parent content type is a built-in type, the child content type inherits only the fields that were in the parent content type when SharePoint Foundation was installed. The child content type does not have any fields that users have added to the parent content type.</p>
+<p>If **Inherits** is **FALSE** or absent and the parent content type was provisioned by a sandboxed solution, the child does not inherit any fields from the parent.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**NewDocumentControl**</p></td>
@@ -154,7 +105,7 @@ Defines a single content type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Overwrite**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to overwrite an existing content type with the same ID.</p>
+<td align="left"><p>Optional **Boolean**. **TRUE** to overwrite an existing content type with the same ID.</p>
 <p>The default is **FALSE**.</p></td>
 </tr>
 <tr class="even">
@@ -163,17 +114,17 @@ Defines a single content type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**PushDownChangedResourceFilesOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to copy only changed resource files to derived content types during a push down operation.</p>
+<td align="left"><p>Optional **Boolean**. **TRUE** to copy only changed resource files to derived content types during a push down operation.</p>
 <p>The default is **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ReadOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the content type cannot be edited without explicitly removing the read-only setting. This can be done either in the user interface or in code. For more information, see <a href="http://msdn.microsoft.com/library/203da792-bd6e-41b9-8f42-ffe397d0cbdd(Office.15).aspx">Content Type Change Control</a>.</p>
+<td align="left"><p>Optional **Boolean**. **TRUE** to specify that the content type cannot be edited without explicitly removing the read-only setting. This can be done either in the user interface or in code. For more information, see <a href="http://msdn.microsoft.com/library/203da792-bd6e-41b9-8f42-ffe397d0cbdd(Office.15).aspx">Content Type Change Control</a>.</p>
 <p>If you do not include this attribute, SharePoint Foundation treats the content type as if the attribute was set to **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RequireClientRenderingOnNew**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to require the browser to use the application specified by the **ProgId** attribute for creating a new item.</p>
+<td align="left"><p>Optional **Boolean**. **TRUE** to require the browser to use the application specified by the **ProgId** attribute for creating a new item.</p>
 <p>The default is **TRUE**.</p></td>
 </tr>
 <tr class="even">
@@ -182,7 +133,7 @@ Defines a single content type.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sealed**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to prevent changes to this content type. You cannot change the value of this attribute through the user interface, but you can change it in code if you have sufficient rights. You must have site collection administrator rights to unseal a content type.</p>
+<td align="left"><p>Optional **Boolean**. **TRUE** to prevent changes to this content type. You cannot change the value of this attribute through the user interface, but you can change it in code if you have sufficient rights. You must have site collection administrator rights to unseal a content type.</p>
 <p>If you do not include this attribute, SharePoint Foundation treats the content type as if the attribute was set to **FALSE**.</p></td>
 </tr>
 <tr class="even">
@@ -196,8 +147,7 @@ Defines a single content type.
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 <table>
 <colgroup>
@@ -210,8 +160,7 @@ Defines a single content type.
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -224,19 +173,11 @@ Defines a single content type.
 </tbody>
 </table>
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following example is the content type definition of the **Document** content type.
 
-The following example is the content type definition of the <span
-class="keyword">Document</span> content type.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <ContentType ID="0x0101"
       Name="$Resources:Document"
       Group="$Resources:Document_Content_Types"
@@ -281,28 +222,15 @@ code] "Copy code")Copy code</span>
         </XmlDocument>
       </XmlDocuments>
     </ContentType>
+```
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## See also
 
-#### Concepts
-
-[Content Type
-Definitions](content-type-definitions.md)</span>
-
-#### Other resources
-
-[Content
-Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-
-[How to: Add a Content Type to a
-Site](http://msdn.microsoft.com/library/8c448bfb-4036-451c-ac7d-2eccf13ccd5e(Office.15).aspx)
-
-[How to: Add a Content Type to a
-List](http://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666(Office.15).aspx)
-
-
-
+- [Content Type Definitions](content-type-definitions.md)
+- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [How to: Add a Content Type to a Site](https://msdn.microsoft.com/library/8c448bfb-4036-451c-ac7d-2eccf13ccd5e(Office.15).aspx)
+- [How to: Add a Content Type to a SharePoint List](https://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666(Office.15).aspx)
 
 
 

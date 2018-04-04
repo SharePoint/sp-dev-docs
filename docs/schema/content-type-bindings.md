@@ -22,7 +22,7 @@ Following is a list of the elements in the Content Type Binding Definition Schem
 
 - [Elements Element (ContentTypeBinding)](elements-element-contenttypebinding.md)
 
-<br/>
+## Content Type Binding Definition schema example
 
 The following example specifies a content type to bind to the specified list type.
 
@@ -40,6 +40,7 @@ The following example specifies a content type to bind to the specified list typ
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
+
 
 
 

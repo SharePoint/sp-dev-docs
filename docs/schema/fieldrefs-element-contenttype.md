@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,77 +10,29 @@ localization_priority: Normal
 ms.assetid: e7a61a08-dd2a-4ce8-8e1b-d4fbbdc4749d
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# FieldRefs Element (ContentType)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># FieldRefs Element (ContentType)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+Represents a collection of column references included in the content type.
+
+## Definition
+
+```XML
+<FieldRefs>
+</FieldRefs>
+```
+
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents a collection of column references included in the content
-type.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><FieldRefs>
-</FieldRefs></code></pre></td>
-</tr>
-</tbody>
-</table>
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -98,8 +48,7 @@ type.
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 <table>
 <colgroup>
@@ -118,8 +67,7 @@ type.
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -132,8 +80,7 @@ type.
 </tbody>
 </table>
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Occurrences
 
 <table>
 <colgroup>
@@ -149,65 +96,33 @@ type.
 </tbody>
 </table>
 
+### Remarks
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The **FieldRefs** element contains a collection of [FieldRef](fieldref-element-contenttype.md) elements. The **FieldRef** element is a reference to a column defined elsewhere, either at the site or list level. In the field reference, you can override a subset of the column properties, such as the following:
 
-The **FieldRefs** element contains a collection
-of [FieldRef](fieldref-element-contenttype.md) elements. The
-**FieldRef** element is a reference to a column
-defined elsewhere, either at the site or list level. In the field
-reference, you can override a subset of the column properties, such as
-the following:
+- Display name
 
--   Display name
+- XML promotion and demotion attributes
 
--   XML promotion and demotion attributes
+- Whether the field is read-only, required, or hidden
 
--   Whether the field is read-only, required, or hidden
+Changing these properties in the field reference only changes them as they apply to the specific content type that contains the field reference.
 
-Changing these properties in the field reference only changes them as
-they apply to the specific content type that contains the field
-reference.
+> [!NOTE] 
+> The order in which **FieldRef** elements are listed determines the order of fields shown on NewForm.aspx.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>The order in which **FieldRef** elements are listed determines the order of fields shown on NewForm.aspx.</p></td>
-</tr>
-</tbody>
-</table>
+The [DocumentTemplate](http://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx)
+child element is obsolete. Instead use the [DocumentTemplate](documenttemplate-element-contenttype.md) element
+that is a child of the [ContentType](contenttype-element-contenttype.md) element.
 
-The
-[DocumentTemplate](http://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx)
-child element is obsolete. Instead use the
-[DocumentTemplate](documenttemplate-element-contenttype.md) element
-that is a child of the
-[ContentType](contenttype-element-contenttype.md) element.
-
-For more information about field references, see [Fields and Field
-References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx).
+For more information about field references, see [Fields and Field References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx).
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Example
 
-The following example shows the field references collection for the
-Document content type.
+The following example shows the field references collection for the Document content type.
 
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <ContentType ID="0x0101"
         Name="$Resources:Document"
         Group="$Resources:Document_Content_Types"
@@ -239,22 +154,13 @@ code] "Copy code")Copy code</span>
             </XmlDocument>
         </XmlDocuments>
     </ContentType>
+```
 
+## See also
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- [Content Type Definitions](content-type-definitions.md)
+- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 
-#### Concepts
-
-[Content Type
-Definitions](content-type-definitions.md)</span>
-
-#### Other resources
-
-[Content
-Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-
-[Fields and Field
-References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
 
 
 

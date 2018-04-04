@@ -14,7 +14,11 @@ ms.assetid: edb7c69f-736d-4808-b137-48b6861b4caa
 
 The Content Type Definition Schema defines the structure of the XML that creates a content type in the element manifest file of a Feature.
 
+## XML Schema Definition
+
 An element manifest that defines a content type must validate with the schema in the file wss.xsd. This file is located on the following path: `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML`.
+
+## Elements
 
 The following list maps the relationships between elements in the schema definition.
 
@@ -36,7 +40,7 @@ The following list maps the relationships between elements in the schema definit
 
 - [DocumentTemplate Element (ContentType)](documenttemplate-element-contenttype.md)
 
-<br/>
+## Example
 
 The following example shows an element manifest for a Feature that provisions two files to use as document templates, creates four custom site columns, and creates three site content types. 
 
@@ -145,12 +149,11 @@ Note that the first new content type, Financial Document, is derived from the bu
     </Elements>
 ```
 
-<br/>
 
 ## See also
 
 - [Introduction to Content Types](https://msdn.microsoft.com/library/a345a6c5-7031-46ab-a2c2-37bedc3012f4(Office.15).aspx)
-- [Deploying Content Types](https://msdn.microsoft.com/library/f680072c-3759-4141-b027-165ac0795a72(Office.15).aspx).aspx)
+- [Deploying Content Types](https://msdn.microsoft.com/library/f680072c-3759-4141-b027-165ac0795a72(Office.15).aspx)
 - [How to: Add a Content Type to a Site](https://msdn.microsoft.com/library/8c448bfb-4036-451c-ac7d-2eccf13ccd5e(Office.15).aspx)
 - [How to: Add a Content Type to a SharePoint List](https://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666(Office.15).aspx)
 
