@@ -20,7 +20,7 @@ Following is a list of the elements in the Document Converter Definition Schema.
 
 - [Elements Element (Document Converter)](elements-element-document-converter.md)
 
-<br/>
+## Document converter definition schema example
 
 The following example is the document converter definition file for a custom document converter that converts files of "File Type A" format to "File Type B" format.
 

@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,64 +8,16 @@ localization_priority: Normal
 ms.assetid: bfe1e739-6936-41dc-849a-ac4a7b9e664d
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# DocumentConverter Element (Document Converter)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># DocumentConverter Element (Document Converter)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Specifies the definition of a document converter.
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><DocumentConverter
+## Definition
+
+```XML
+<DocumentConverter
   Id="Text"
   Name="Text"
   App="Text"
@@ -76,18 +26,19 @@ Specifies the definition of a document converter.
   ConverterUIPage="Text"
   ConverterSpecificSettingsUI="Text"
   ConverterSettingsForContentType="Text"
-/></code></pre></td>
-</tr>
-</tbody>
-</table>
+/>
+```
 
+## Elements and attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -131,8 +82,7 @@ Specifies the definition of a document converter.
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 <table>
 <colgroup>
@@ -145,8 +95,7 @@ Specifies the definition of a document converter.
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -159,20 +108,11 @@ Specifies the definition of a document converter.
 </tbody>
 </table>
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following example is the document converter definition file for a custom document converter that converts files of File Type A format to File Type B format.
 
-The following example is the document converter definition file for a
-custom document converter that converts files of File Type A format to
-File Type B format.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <?xml version="1.0" encoding="utf-8" ?>
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
       <DocumentConverter ID="{3f8ae156-93dc-46de-bcb3-0a89416a20b3}"
@@ -185,14 +125,11 @@ code] "Copy code")Copy code</span>
         ConverterSettingsForContentType="FTA2FTBConfig.ascx"
       />
     </Elements>
+```
 
+## See also
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#### Other resources
-
-[Working with
-Features](http://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx)
+- [Working with Features](http://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx)
 
 
 
