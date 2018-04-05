@@ -40,11 +40,9 @@ The [Receivers](receivers-element-event.md) element specifies an event handler f
 
 - [Type](type-element-event.md)
 
-<br/>
+## Example
 
 To register an event handler for list events, create a folder in `\\Template\\Features` to contain a [Feature.xml](feature-xml-files.md) file that specifies the scope and ID of the Feature, and an elements manifest file that the former file references.
-
-<br/>
 
 The Feature.xml file that registers an event handler might look like the following.
 
@@ -83,8 +81,6 @@ The elements manifest file registers the event handler assembly and associates i
 <br/>
 
 The .cs file for the event handler can use the SharePoint Foundation object model to respond to events. For information about using the object model to create custom event handlers, see [Events in SharePoint Foundation 2010](https://msdn.microsoft.com/library/4a20751f-877a-48ca-9d37-c3d4e6df9f30(Office.15).aspx).
-
-<br/>
 
 The following example defines the content of an error message to display when users attempt to modify items in a list.
 
