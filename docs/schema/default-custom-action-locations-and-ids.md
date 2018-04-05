@@ -414,8 +414,8 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 <colgroup>
 <col width="20%" />
 <col width="20%" />
-<col width="30%" />
-<col width="30%" />
+<col width="20%" />
+<col width="40%" />
 </colgroup>
 <thead>
 <tr class="header">

@@ -20,7 +20,7 @@ Delegate controls provide a means to specify candidate controls for a particular
 
 - [Property](property-element-delegate-control.md)
 
-<br/>
+## Example
 
 The following example specifies a control and tool tips to implement for the input box of the search area in SharePoint pages.
 
@@ -41,7 +41,6 @@ The following example specifies a control and tool tips to implement for the inp
 
 ## See also
 
-- DelegateControl
 - [Delegate Control (Control Templatization)](https://msdn.microsoft.com/library/e979328d-4985-4ed6-9085-7ff32a998dfc(Office.15).aspx)
 - [How to: Customize a Delegate Control](https://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
 

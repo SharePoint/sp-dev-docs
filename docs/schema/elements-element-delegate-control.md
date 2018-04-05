@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,78 +8,30 @@ localization_priority: Normal
 ms.assetid: 5d808d27-b023-4a74-a8e4-01a0b790d1a0
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Elements Element (Delegate Control)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Elements Element (Delegate Control)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+Top-level element in a Feature manifest file that contains Feature element declarations.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+## Definition
 
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Top-level element in a Feature manifest file that contains Feature
-element declarations.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><Elements
+```XML
+<Elements
   Id = "Text">
-</Elements></code></pre></td>
-</tr>
-</tbody>
-</table>
+</Elements>
+```
 
+## Elements and attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -97,8 +47,7 @@ element declarations.
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 <table>
 <colgroup>
@@ -111,8 +60,7 @@ element declarations.
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -125,20 +73,14 @@ element declarations.
 </tbody>
 </table>
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-For an example of how this element is used, see <span
-sdata="link">[Delegate
-Controls](delegate-controls.md)</span>.
+For an example of how this element is used, see [Delegate Controls](delegate-controls.md).
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## See also
 
-#### Other resources
-
-[How to: Customize a Delegate
-Control](http://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
+- [How to: Customize a Delegate Control](http://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
 
 
 
