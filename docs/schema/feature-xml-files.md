@@ -62,7 +62,7 @@ For information about where to create and how to implement Feature.xml files, se
 
 For information about how to upgrade a Feature, see [Upgrading Features](https://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990(Office.15).aspx).
 
-<br/>
+## Example
 
 The following example shows how to use a Feature.xml file to specify activation dependencies, special fields, and relative paths to element definition files.
 
@@ -95,8 +95,11 @@ The following example shows how to use a Feature.xml file to specify activation 
     </Feature>
 ```
 
+<br/>
 
+## See also
 
+- [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318.aspx)
 
 
 
