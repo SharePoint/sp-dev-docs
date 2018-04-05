@@ -64,7 +64,7 @@ None
 
 The **Class** element contains the fully qualified name of the class in the following format:
 
-```MS.MyNameSpace.MyEventHandlerClass```
+`MS.MyNameSpace.MyEventHandlerClass`
 
 ## Example
 

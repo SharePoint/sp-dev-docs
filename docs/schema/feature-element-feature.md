@@ -76,8 +76,8 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DefaultResourceFile**</p></td>
-<td align="left"><p>Optional **Text**. Indicates a common resource file for retrieving Feature XML resources. If you do not specify a resource in the file, SharePoint Foundation looks by default in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATES\FEATURES\_FeatureName_\Resources\Resources._Culture_.resx.</p>
-<p>However, if you want to provide a shared core resource file for all the Features in your application, you can specify an alternate file through which to access resources by using **DefaultResourceFile**. For example, if you set **DefaultResourceFile**="_MyFile_", SharePoint Foundation looks in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources\_MyFile_._Culture_.resx to retrieve localized resources for your Feature.</p></td>
+<td align="left"><p>Optional **Text**. Indicates a common resource file for retrieving Feature XML resources. If you do not specify a resource in the file, SharePoint Foundation looks by default in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATES\FEATURES\*FeatureName*\Resources\Resources._Culture_.resx.</p>
+<p>However, if you want to provide a shared core resource file for all the Features in your application, you can specify an alternate file through which to access resources by using **DefaultResourceFile**. For example, if you set **DefaultResourceFile**="_MyFile_", SharePoint Foundation looks in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources\*MyFile*._Culture_.resx to retrieve localized resources for your Feature.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
@@ -93,7 +93,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageUrl**</p></td>
-<td align="left"><p>Optional **Text**. Contains a URL relative to the /_layouts/IMAGES directory for an image to use to represent the Feature in the user interface (UI).</p></td>
+<td align="left"><p>Optional **Text**. Contains a URL relative to the \_layouts/IMAGES directory for an image to use to represent the Feature in the user interface (UI).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageUrlAltText**</p></td>
@@ -110,9 +110,9 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="odd">
 <td align="left"><p>**RequireResources**</p></td>
 <td align="left"><p>Optional **Boolean**. **TRUE** to specify that SharePoint Foundation check whether resources exist for the Feature by verifying that the standard "sentinel" resource for the Feature is present for a particular culture.</p>
-<p>The resource file is named according to the format _<Feature Directory>_\Resources\Resources._<Culture Name>_.resx, where _<Culture Name>_ is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
-<p>_ll-CC_</p>
-<p>_ll-Ssss-CC_</p><br/>
+<p>The resource file is named according to the format `<Feature Directory>\Resources\Resources.<Culture Name>.resx`, where `<Culture Name>` is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
+<p>`ll-CC`</p>
+<p>`ll-Ssss-CC`</p><br/>
 <p>**Culture name examples:**</p>
 <p>**en-US** English (United States)</p>
 <p>**de-DE** German (Germany)f</p>
@@ -132,7 +132,7 @@ The following sections describe attributes, child elements, and parent elements.
 <ul>
 <li><p>The Feature will be hidden from the user interface for activation of Features in the Web site or site collection if the corresponding resources for the language are not available.</p>
 <p>Keep in mind that the **RequireResources** attribute is enforced in the user interface only. A Feature without resources for a particular language can still be activated for a Web site through command line operations with stsadm.exe or through the object model.</p>
-<p>SharePoint Foundation does not enforce **RequireResources** for Features that are part of a larger site definition. If you supply, for example, a Thai version of a site definition by putting a webtempThai.xml in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1054\XML, you must verify that each Feature contained in the folder has the appropriate resources.</p></li>
+<p>SharePoint Foundation does not enforce **RequireResources** for Features that are part of a larger site definition. If you supply, for example, a Thai version of a site definition by putting a webtempThai.xml in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1054\XML, you must verify that each Feature contained in the folder has the appropriate resources.</p></li><br/>
 <li><p>In general, SharePoint Foundation ensures that user interface extension components of the Feature do not show up in Web sites that do not have resources, but there are exceptions. Even if you do a careful job of setting **RequireResources** and not deploying site definitions unless all Features have resources in them, Features can still show up in sites where resources are not available.</p>
 <p>As an example scenario, assume that you have a custom Feature with resources for two languages that provides custom toolbar buttons and site settings links, and that you have provisioned a new site collection with a root Web site in one of the languages. Then, after downloading and installing the language pack for a third language, you provision a new subsite in this third language under the original root Web site. If **RequireResources** is not set to **TRUE**, the custom Feature will attempt to fall back and use fallback resources (in other words, those defined as `Resources\Resources.resx`, with no culture.)  If there are no fallback resources, SharePoint Foundation will render empty strings. However, if **RequireResources** is set to **TRUE**, user interface extension components of the Feature (for example, those defined through a <a href="customaction-element.md">CustomAction</a>, <a href="listtemplate-element-list-template.md">ListTemplate</a>, or <a href="featuresitetemplateassociation-element-featuresitetemplateassociation.md">FeatureSiteTemplateAssociation</a> element) will not show up in subsites if no resources are available, so that the custom links and site settings will be automatically hidden.</p></li>
 </ul>
