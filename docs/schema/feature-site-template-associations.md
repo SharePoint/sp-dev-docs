@@ -20,7 +20,7 @@ Feature/site template associations allow you to include a specific Feature as pa
 
 - [Property](property-element-featuresitetemplateassociation.md)
 
-<br/>
+## Example
 
 The following example associates one Feature with two different site definition configurations, and another Feature and properties with a third configuration.
 
@@ -37,6 +37,7 @@ The following example associates one Feature with two different site definition 
     </Elements>
 ```
 
+<br/>
 
 
 
