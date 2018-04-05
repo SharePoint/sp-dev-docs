@@ -14,7 +14,9 @@ ms.assetid: 5f0342fb-3643-4d63-8b6a-a2688538e8e3
 
 Defines a site column.
 
-```
+## Definition
+
+```XML
 <Field
   Aggregation="sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
   AllowDeletion="TRUE" | "FALSE"
@@ -128,7 +130,9 @@ Defines a site column.
 </Field>
 ```
 
-<br/>
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 

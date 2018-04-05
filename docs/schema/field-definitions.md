@@ -20,9 +20,11 @@ For example, suppose you define a site column named **Customer**. Users can add 
 
 For more information about site and list columns, see [Introduction to Columns](https://msdn.microsoft.com/en-us/library/ms450825(v=office.14).aspx).
 
+## XML schema definition
+
 An element manifest that defines site columns must validate with the schema in the file wss.xsd. This file is located on the following path: `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML`.
 
-<br/>
+## Example
 
 The following example shows an element manifest for a Feature that creates four site columns.
 
