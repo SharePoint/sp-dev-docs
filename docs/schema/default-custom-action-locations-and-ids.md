@@ -27,8 +27,8 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 <colgroup>
 <col width="25%" />
 <col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="20%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -42,10 +42,8 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 <tr class="odd">
 <td align="left"><p>**DisplayFormToolbar**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><ul>
-<li><p>**ExportEventToolbarButton** (calendars)</p></li>
-<li><p>**ExportContactToolbarButton** (contacts)</p></li>
-</ul></td>
+<td align="left"><p>**ExportEventToolbarButton** (calendars)</p>
+<p>**ExportContactToolbarButton** (contacts)</p></td>
 <td align="left"><p>**Location** corresponds to the display form toolbar of lists.</p></td>
 </tr>
 <tr class="even">
@@ -99,14 +97,16 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 </tbody>
 </table>
 
+<br/>
+
 ## Page custom action locations and group IDs
 
 <table>
 <colgroup>
+<col width="20%" />
+<col width="15%" />
 <col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="40%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -120,41 +120,25 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeSettings**</p></td>
 <td align="left"><p>**Fields**</p></td>
-<td align="left"><ul>
-<li><p>**AddField**</p></li>
-<li><p>**ReorderFields**</p></li>
-</ul></td>
+<td align="left"><p>**AddField**</p><p>**ReorderFields**</p></td>
 <td align="left"><p>**Columns** section on site collection **Content Type** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeSettings**</p></td>
 <td align="left"><p>**General**</p></td>
-<td align="left"><ul>
-<li><p>**ChangeNameDescription**</p></li>
-<li><p>**ChangeOptionalSettings**</p></li>
-<li><p>**ChangeWorkflowSettings**</p></li>
-<li><p>**RemoveContentType**</p></li>
-</ul></td>
+<td align="left"><p>**ChangeNameDescription**</p><p>**ChangeOptionalSettings**</p><p>**ChangeWorkflowSettings**</p><p>**RemoveContentType**</p></td>
 <td align="left"><p>**Settings** section on site collection **Content Type** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeTemplateSettings**</p></td>
 <td align="left"><p>**Fields**</p></td>
-<td align="left"><ul>
-<li><p>**AddField**</p></li>
-<li><p>**ReorderFields**</p></li>
-</ul></td>
+<td align="left"><p>**AddField**</p><p>**ReorderFields**</p></td>
 <td align="left"><p>**Columns** section on List **Content Type** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeTemplateSettings**</p></td>
 <td align="left"><p>**General**</p></td>
-<td align="left"><ul>
-<li><p>**ChangeNameDescriptionGroup**</p></li>
-<li><p>**ChangeOptionalSettings**</p></li>
-<li><p>**ChangeWorkflowSettings**</p></li>
-<li><p>**RemoveContentType**</p></li>
-</ul></td>
+<td align="left"><p>**ChangeNameDescriptionGroup**</p><p>**ChangeOptionalSettings**</p><p>**ChangeWorkflowSettings**</p><p>**RemoveContentType**</p></td>
 <td align="left"><p>**Settings** section on List **Content Type** page.</p></td>
 </tr>
 <tr class="odd">
@@ -220,80 +204,82 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
 <td align="left"><p>**Customization**</p></td>
-<td align="left"><ul>
-<li><p>**ProjectSettings**</p></li>
-<li><p>**NavOptions**</p></li>
-<li><p>**Theme**</p></li>
-<li><p>**TopNav**</p></li>
-<li><p>**QuickLaunch**</p></li>
-<li><p>**SaveAsTemplate**</p></li>
-<li><p>**ReGhost**</p></li>
-</ul></td>
+<td align="left">
+<p>**ProjectSettings**</p>
+<p>**NavOptions**</p>
+<p>**Theme**</p>
+<p>**TopNav**</p>
+<p>**QuickLaunch**</p>
+<p>**SaveAsTemplate**</p>
+<p>**ReGhost**</p>
+</td>
 <td align="left"><p>**Look and Feel** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
 <td align="left"><p>**Galleries**</p></td>
-<td align="left"><ul>
-<li><p>**MasterPageCatalog**</p></li>
-<li><p>**ManageCType**</p></li>
-<li><p>**ManageField**</p></li>
-<li><p>**SiteTemplates**</p></li>
-<li><p>**ListTemplates**</p></li>
-<li><p>**WebParts**</p></li>
-<li><p>**Workflows**</p></li>
-</ul></td>
+<td align="left">
+<p>**MasterPageCatalog**</p>
+<p>**ManageCType**</p>
+<p>**ManageField**</p>
+<p>**SiteTemplates**</p>
+<p>**ListTemplates**</p>
+<p>**WebParts**</p>
+<p>**Workflows**</p>
+</td>
 <td align="left"><p>**Galleries** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
 <td align="left"><p>**SiteAdministration**</p></td>
-<td align="left"><ul>
-<li><p>**RegionalSettings**</p></li>
-<li><p>**LibrariesAndLists**</p></li>
-<li><p>**WebUsage**</p></li>
-<li><p>**UserAlerts**</p></li>
-<li><p>**RSS**</p></li>
-<li><p>**SrchVis**</p></li>
-<li><p>**ManageSubWebs**</p></li>
-<li><p>**ManageSiteFeatures**</p></li>
-<li><p>**DeleteWeb**</p></li>
-</ul></td>
+<td align="left">
+<p>**RegionalSettings**</p>
+<p>**LibrariesAndLists**</p>
+<p>**WebUsage**</p>
+<p>**UserAlerts**</p>
+<p>**RSS**</p>
+<p>**SrchVis**</p>
+<p>**ManageSubWebs**</p>
+<p>**ManageSiteFeatures**</p>
+<p>**DeleteWeb**</p>
+</td>
 <td align="left"><p>**Site Administration** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
 <td align="left"><p>**SiteCollectionAdmin**</p></td>
-<td align="left"><ul>
-<li><p>**DeletedItems**</p></li>
-<li><p>**SiteCollectionUsage**</p></li>
-<li><p>**Storage**</p></li>
-<li><p>**ManageSiteCollectionFeatures**</p></li>
-<li><p>**Hierarchy**</p></li>
-<li><p>**Portal**</p></li>
-</ul></td>
+<td align="left">
+<p>**DeletedItems**</p>
+<p>**SiteCollectionUsage**</p>
+<p>**Storage**</p>
+<p>**ManageSiteCollectionFeatures**</p>
+<p>**Hierarchy**</p>
+<p>**Portal**</p>
+</td>
 <td align="left"><p>**Site Collection Administration** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
 <td align="left"><p>**UsersAndPermissions**</p></td>
-<td align="left"><ul>
-<li><p>**PeopleAndGroups**</p></li>
-<li><p>**SiteCollectionAdministrators**</p></li>
-<li><p>**User**</p></li>
-</ul></td>
+<td align="left">
+<p>**PeopleAndGroups**</p>
+<p>**SiteCollectionAdministrators**</p>
+<p>**User**</p>
+</td>
 <td align="left"><p>**Users and Permissions** section on **Site Settings** page.</p></td>
 </tr>
 </tbody>
 </table>
 
+<br/>
+
 ## Central administration custom action locations and group IDs
 
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="30%" />
+<col width="25%" />
+<col width="45%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -420,14 +406,16 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 </tbody>
 </table>
 
+<br/>
+
 ## Server ribbon custom action locations and group IDs
 
 <table>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="20%" />
+<col width="20%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -471,6 +459,7 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 </tbody>
 </table>
 
+<br/>
 
 ## See also 
 
@@ -478,6 +467,8 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 - [How to: Add Actions to the User Interface](http://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)
 - [Schema reference for SharePoint 2013](schema-reference-for-sharepoint-2013.md)
 
+
+<br/>
 
 
 
