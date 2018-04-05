@@ -8,13 +8,13 @@ localization_priority: Normal
 ms.assetid: 8924f546-44db-4308-90f9-8b5d9b2ffa4f
 ---
 
-# Client Web Part Definition Schema</td>
+# Client Web Part Definition Schema
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Client Web Part is the backing structure of app parts. App parts are defined in XML documents and deployed as part of a Feature.
 
-## XML Schema Definition
+## XML schema definition
 
 An XML document that defines Client Web Parts must validate with the schema defined in the file wss.xsd. This file is located on the following path: 
 

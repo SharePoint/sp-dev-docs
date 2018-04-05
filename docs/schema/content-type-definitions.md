@@ -14,7 +14,7 @@ ms.assetid: edb7c69f-736d-4808-b137-48b6861b4caa
 
 The Content Type Definition Schema defines the structure of the XML that creates a content type in the element manifest file of a Feature.
 
-## XML Schema Definition
+## XML schema definition
 
 An element manifest that defines a content type must validate with the schema in the file wss.xsd. This file is located on the following path: `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML`.
 

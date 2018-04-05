@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,79 +10,18 @@ localization_priority: Normal
 ms.assetid: 6889686e-f6e6-4da0-bfd4-099878614980
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Default Custom Action Locations and IDs
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Default Custom Action Locations and IDs</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+The following table shows the locations, custom action group IDs, and custom action IDs that are used in the [CustomAction](customaction-element.md) element and the [CustomActionGroup](customactiongroup-element-custom-action.md) element of custom actions that are installed by default in Microsoft SharePoint Foundation.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+In the table, each location value corresponds to the **Location** attribute of the [CustomAction](customaction-element.md) element. Each group ID corresponds to the **GroupId** attribute of the [CustomAction](customaction-element.md) element or to
+the **Id** attribute of the [CustomActionGroup](customactiongroup-element-custom-action.md) element. Each custom action ID corresponds to the **Id** attribute of the [CustomAction](customaction-element.md) element.
 
-**Last modified:** March 09, 2015
+You can create a Feature that implements the [HideCustomAction](hidecustomaction-element.md) element to hide any default custom action that is identified in the table.
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-The following table shows the locations, custom action group IDs, and
-custom action IDs that are used in the
-[CustomAction](customaction-element.md) element and the
-[CustomActionGroup](customactiongroup-element-custom-action.md) element of
-custom actions that are installed by default in Microsoft SharePoint
-Foundation.
-
-In the table, each location value corresponds to the <span
-class="keyword">Location</span> attribute of the
-[CustomAction](customaction-element.md) element. Each
-group ID corresponds to the **GroupId**
-attribute of the
-[CustomAction](customaction-element.md) element or to
-the **Id** attribute of the
-[CustomActionGroup](customactiongroup-element-custom-action.md) element.
-Each custom action ID corresponds to the **Id**
-attribute of the
-[CustomAction](customaction-element.md) element.
-
-You can create a Feature that implements the
-[HideCustomAction](hidecustomaction-element.md) element to
-hide any default custom action that is identified in the table.
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Menu custom action locations and group IDs
 
 <table>
 <colgroup>
@@ -139,31 +76,30 @@ hide any default custom action that is identified in the table.
 <td align="left"><p>**Microsoft.SharePoint.StandardMenu**</p></td>
 <td align="left"><p>**ActionsMenu**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Actions </span>menu in list and document library views.</p></td>
+<td align="left"><p>**Actions** menu in list and document library views.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.StandardMenu**</p></td>
 <td align="left"><p>**ActionsMenuForSurvey**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Site Actions</span> menu for surveys.</p></td>
+<td align="left"><p>**Site Actions** menu for surveys.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.StandardMenu**</p></td>
 <td align="left"><p>**SettingsMenuForSurvey**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Site Settings</span> links for surveys.</p></td>
+<td align="left"><p>**Site Settings** links for surveys.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.StandardMenu**</p></td>
 <td align="left"><p>**SiteActions**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Site Actions</span> menu.</p></td>
+<td align="left"><p>**Site Actions** menu.</p></td>
 </tr>
 </tbody>
 </table>
 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Page custom action locations and group IDs
 
 <table>
 <colgroup>
@@ -188,7 +124,7 @@ hide any default custom action that is identified in the table.
 <li><p>**AddField**</p></li>
 <li><p>**ReorderFields**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Columns</span> section on site collection <span class="ui">Content Type</span> page.</p></td>
+<td align="left"><p>**Columns** section on site collection **Content Type** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeSettings**</p></td>
@@ -199,7 +135,7 @@ hide any default custom action that is identified in the table.
 <li><p>**ChangeWorkflowSettings**</p></li>
 <li><p>**RemoveContentType**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Settings</span> section on site collection <span class="ui">Content Type</span> page.</p></td>
+<td align="left"><p>**Settings** section on site collection **Content Type** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeTemplateSettings**</p></td>
@@ -208,7 +144,7 @@ hide any default custom action that is identified in the table.
 <li><p>**AddField**</p></li>
 <li><p>**ReorderFields**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Columns</span> section on List <span class="ui">Content Type</span> page.</p></td>
+<td align="left"><p>**Columns** section on List **Content Type** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeTemplateSettings**</p></td>
@@ -219,67 +155,67 @@ hide any default custom action that is identified in the table.
 <li><p>**ChangeWorkflowSettings**</p></li>
 <li><p>**RemoveContentType**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Settings</span> section on List <span class="ui">Content Type</span> page.</p></td>
+<td align="left"><p>**Settings** section on List **Content Type** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Create**</p></td>
 <td align="left"><p>**WebPages**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Web Pages</span> section on <span class="ui">Create</span> page.</p></td>
+<td align="left"><p>**Web Pages** section on **Create** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.GroupsPage**</p></td>
 <td align="left"><p>**NewMenu**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">New</span> menu on site collection <span class="ui">People and Groups</span> page.</p></td>
+<td align="left"><p>**New** menu on site collection **People and Groups** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.GroupsPage**</p></td>
 <td align="left"><p>**SettingsMenu**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Settings</span> menu on site collection <span class="ui">People and Groups</span> page.</p></td>
+<td align="left"><p>**Settings** menu on site collection **People and Groups** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ListEdit**</p></td>
 <td align="left"><p>**Communications**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Communications</span> section on <span class="ui">Customize</span> page for list or document library.</p></td>
+<td align="left"><p>**Communications** section on **Customize** page for list or document library.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.ListEdit**</p></td>
 <td align="left"><p>**GeneralSettings**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">General Settings</span> section on <span class="ui">Customize</span> page for list.</p></td>
+<td align="left"><p>**General Settings** section on **Customize** page for list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ListEdit**</p></td>
 <td align="left"><p>**Permissions**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Permissions and Management</span> section on <span class="ui">Customize</span> page for list or document library.</p></td>
+<td align="left"><p>**Permissions and Management** section on **Customize** page for list or document library.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.ListEdit.DocumentLibrary**</p></td>
 <td align="left"><p>**GeneralSettings**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">General Settings</span> section on <span class="ui">Customize</span> page for document library.</p></td>
+<td align="left"><p>**General Settings** section on **Customize** page for document library.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.PeoplePage**</p></td>
 <td align="left"><p>**ActionsMenu**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Actions</span> menu on site collection <span class="ui">People and Groups</span> page.</p></td>
+<td align="left"><p>**Actions** menu on site collection **People and Groups** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.PeoplePage**</p></td>
 <td align="left"><p>**NewMenu**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">New</span> menu on site collection <span class="ui">People and Groups</span> page.</p></td>
+<td align="left"><p>**New** menu on site collection **People and Groups** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.PeoplePage**</p></td>
 <td align="left"><p>**SettingsMenu**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p><span class="ui">Settings</span> menu on site collection <span class="ui">People and Groups</span> page.</p></td>
+<td align="left"><p>**Settings** menu on site collection **People and Groups** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
@@ -293,7 +229,7 @@ hide any default custom action that is identified in the table.
 <li><p>**SaveAsTemplate**</p></li>
 <li><p>**ReGhost**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Look and Feel</span> section on <span class="ui">Site Settings</span> page.</p></td>
+<td align="left"><p>**Look and Feel** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
@@ -307,7 +243,7 @@ hide any default custom action that is identified in the table.
 <li><p>**WebParts**</p></li>
 <li><p>**Workflows**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Galleries</span> section on <span class="ui">Site Settings</span> page.</p></td>
+<td align="left"><p>**Galleries** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
@@ -323,7 +259,7 @@ hide any default custom action that is identified in the table.
 <li><p>**ManageSiteFeatures**</p></li>
 <li><p>**DeleteWeb**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Site Administration</span> section on <span class="ui">Site Settings</span> page.</p></td>
+<td align="left"><p>**Site Administration** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
@@ -336,7 +272,7 @@ hide any default custom action that is identified in the table.
 <li><p>**Hierarchy**</p></li>
 <li><p>**Portal**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Site Collection Administration</span> section on <span class="ui">Site Settings</span> page.</p></td>
+<td align="left"><p>**Site Collection Administration** section on **Site Settings** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.SiteSettings**</p></td>
@@ -346,13 +282,12 @@ hide any default custom action that is identified in the table.
 <li><p>**SiteCollectionAdministrators**</p></li>
 <li><p>**User**</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Users and Permissions</span> section on <span class="ui">Site Settings</span> page.</p></td>
+<td align="left"><p>**Users and Permissions** section on **Site Settings** page.</p></td>
 </tr>
 </tbody>
 </table>
 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Central administration custom action locations and group IDs
 
 <table>
 <colgroup>
@@ -371,37 +306,37 @@ hide any default custom action that is identified in the table.
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Administration.Applications**</p></td>
 <td align="left"><p>Databases</p></td>
-<td align="left"><p><span class="ui">Databases</span> section under <span class="ui">Application Management</span> in Central Administration</p></td>
+<td align="left"><p>**Databases** section under **Application Management** in Central Administration</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p>ServiceApplications</p></td>
-<td align="left"><p><span class="ui">Service Applications</span> section under <span class="ui">Application Management</span> in Central Administration</p></td>
+<td align="left"><p>**Service Applications** section under **Application Management** in Central Administration</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p></p></td>
 <td align="left"><p>SiteCollections</p></td>
-<td align="left"><p><span class="ui">Site Collections</span> section under <span class="ui">Application Management</span> in Central Administration</p></td>
+<td align="left"><p>**Site Collections** section under **Application Management** in Central Administration</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p>WebApplications</p></td>
-<td align="left"><p><span class="ui">Web Applications</span> section under <span class="ui">Application Management</span> in Central Administration</p></td>
+<td align="left"><p>**Web Applications** section under **Application Management** in Central Administration</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Administration.Backups**</p></td>
 <td align="left"><p>FarmBackup</p></td>
-<td align="left"><p><span class="ui">Farm Backup and Restore</span> section under <span class="ui">Backup and Restore</span> in Central Administration</p></td>
+<td align="left"><p>**Farm Backup and Restore** section under **Backup and Restore** in Central Administration</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p>GranularBackup</p></td>
-<td align="left"><p><span class="ui">Granular Backup</span> section under <span class="ui">Backup and Restore</span> in Central Administration</p></td>
+<td align="left"><p>**Granular Backup** section under **Backup and Restore** in Central Administration</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Administration.ConfigurationWizards**</p></td>
 <td align="left"><p>FarmConfiguration</p></td>
-<td align="left"><p><span class="ui">Farm Configuration</span> section under <span class="ui">Configuration Wizards</span> in Central Administration</p></td>
+<td align="left"><p>**Farm Configuration** section under **Configuration Wizards** in Central Administration</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.Administration.Default**</p></td>
@@ -415,78 +350,77 @@ hide any default custom action that is identified in the table.
 <li><p>CA_SystemSettings</p></li>
 <li><p>CA_UpgradeAndMigration</p></li>
 </ul></td>
-<td align="left"><p><span class="ui">Default</span> page in Central Administration</p></td>
+<td align="left"><p>**Default** page in Central Administration</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Administration.GeneralApplicationSettings**</p></td>
 <td align="left"><p>ExternalServiceConnections</p></td>
-<td align="left"><p><span class="ui">External Service Connections</span> section under <span class="ui">General Application Settings</span> in Central Administration.</p></td>
+<td align="left"><p>**External Service Connections** section under **General Application Settings** in Central Administration.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p>SiteDirectory</p></td>
-<td align="left"><p><span class="ui">Site Directory</span> section under <span class="ui">General Application Settings</span> in Central Administration.</p></td>
+<td align="left"><p>**Site Directory** section under **General Application Settings** in Central Administration.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p></p></td>
 <td align="left"><p>SPD</p></td>
-<td align="left"><p><span class="ui">SharePoint Designer</span> section under <span class="ui">General Application Settings</span> in Central Administration.</p></td>
+<td align="left"><p>**SharePoint Designer** section under **General Application Settings** in Central Administration.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.Administration.Monitoring**</p></td>
 <td align="left"><p>HealthStatus</p></td>
-<td align="left"><p><span class="ui">Health Analyzer</span> section under <span class="ui">Monitoring</span> in Central Administration</p></td>
+<td align="left"><p>**Health Analyzer** section under **Monitoring** in Central Administration</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p></p></td>
 <td align="left"><p>Reporting</p></td>
-<td align="left"><p><span class="ui">Reporting</span> section under <span class="ui">Monitoring</span> in Central Administration</p></td>
+<td align="left"><p>**Reporting** section under **Monitoring** in Central Administration</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p>TimerJobs</p></td>
-<td align="left"><p><span class="ui">Timer Jobs</span> section under <span class="ui">Monitoring</span> in Central Administration</p></td>
+<td align="left"><p>**Timer Jobs** section under **Monitoring** in Central Administration</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Administration.Security**</p></td>
 <td align="left"><p>GeneralSecurity</p></td>
-<td align="left"><p><span class="ui">General Security</span> Section under <span class="ui">Security</span> in Central Administration.</p></td>
+<td align="left"><p>**General Security** Section under **Security** in Central Administration.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p>InformationPolicy</p></td>
-<td align="left"><p><span class="ui">Information Policy</span> Section under <span class="ui">Security</span> in Central Administration.</p></td>
+<td align="left"><p>**Information Policy** Section under **Security** in Central Administration.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p></p></td>
 <td align="left"><p>Users</p></td>
-<td align="left"><p><span class="ui">Users</span> Section under <span class="ui">Security</span> in Central Administration.</p></td>
+<td align="left"><p>**Users** Section under **Security** in Central Administration.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.Administration.SystemSettings**</p></td>
 <td align="left"><p>Email</p></td>
-<td align="left"><p><span class="ui">E-Mail and Text Messages (SMS)</span> section under <span class="ui">System Settings</span> in Central Administration.</p></td>
+<td align="left"><p>**E-Mail and Text Messages (SMS)** section under **System Settings** in Central Administration.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p></p></td>
 <td align="left"><p>Farm Management</p></td>
-<td align="left"><p><span class="ui">Farm Management</span> section under <span class="ui">System Settings</span> in Central Administration.</p></td>
+<td align="left"><p>**Farm Management** section under **System Settings** in Central Administration.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p>Servers</p></td>
-<td align="left"><p><span class="ui">Servers</span> section under <span class="ui">System Settings</span> in Central Administration.</p></td>
+<td align="left"><p>**Servers** section under **System Settings** in Central Administration.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Administration.UpgradeAndMigration**</p></td>
 <td align="left"><p>Patch</p></td>
-<td align="left"><p><span class="ui">Upgrade and Patch Management</span> section under <span class="ui">Upgrade and Migration</span> in Central Administration.</p></td>
+<td align="left"><p>**Upgrade and Patch Management** section under **Upgrade and Migration** in Central Administration.</p></td>
 </tr>
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Server ribbon custom action locations and group IDs
 
 <table>
 <colgroup>
@@ -538,20 +472,11 @@ hide any default custom action that is identified in the table.
 </table>
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## See also 
 
-#### Concepts
-
-[Custom Action Definition
-Schema](custom-action-definition-schema.md)</span>
-
-#### Other resources
-
-[How to: Add Actions to the User
-Interface](http://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)
-
-[Schema reference for SharePoint
-2013](schema-reference-for-sharepoint-2013.md)</span>
+- [Custom Action Definition Schema](custom-action-definition-schema.md)
+- [How to: Add Actions to the User Interface](http://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)
+- [Schema reference for SharePoint 2013](schema-reference-for-sharepoint-2013.md)
 
 
 

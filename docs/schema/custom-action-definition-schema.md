@@ -14,7 +14,11 @@ ms.assetid: 6e8dc354-7a26-412c-816f-b6dc4d2fe55c
 
 Custom actions are defined in XML documents and deployed as part of a Feature.
 
+## XML schema definition
+
 An XML document that defines custom actions must validate with the schema defined in the file wss.xsd. This file is located on the following path: `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML`.
+
+## Elements
 
 - [Elements](elements-element-custom-action.md)
 
@@ -24,11 +28,15 @@ An XML document that defines custom actions must validate with the schema define
 
 - [HideCustomAction](hidecustomaction-element.md)
 
+### Remarks
+
 The [CustomActionGroup](customactiongroup-element-custom-action.md) element contains the core definition for a grouping of custom actions.
 
 The [UrlAction](urlaction-element.md) element must be used to specify the URL for a custom action. If no action is specified (an error condition), the link is displayed but it is not linked to anything.
 
 Use the [HideCustomAction](hidecustomaction-element.md) element to hide an existing action that is implemented by default within the infrastructure of Microsoft SharePoint Foundation Features, or within another custom action. For a list of the default custom action IDs, see [Default Custom Action Locations and IDs](default-custom-action-locations-and-ids.md).
+
+## Example
 
 The following example shows an XML file whose contents replace default actions in a SharePoint Foundation page with new actions. For a programming task that shows the steps for defining and registering custom actions, see [How to: Modify the User Interface Using Custom Actions](https://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx).
 
