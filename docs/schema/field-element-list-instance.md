@@ -14,27 +14,24 @@ ms.assetid: d9c472d5-0eb5-4502-aec5-347a9f289055
 
 Defines a reference to a field.
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><Field
+## Definition
+
+```XML
+<Field
   Name = "Text">
-</Field></code></pre></td>
-</tr>
-</tbody>
-</table>
+</Field>
+```
 
+## Elements and attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -45,27 +42,16 @@ Defines a reference to a field.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. Allows the **Field</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code"><Field Name="</span><span class="placeholder">ID</span><span class="code">"/>**).</p></td>
+<td align="left"><p>Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example, `<Field Name="ID"/>`).</p></td>
 </tr>
 </tbody>
 </table>
 
+### Child elements
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+None
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -78,8 +64,7 @@ Defines a reference to a field.
 </tbody>
 </table>
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Occurrences
 
 <table>
 <colgroup>
@@ -93,12 +78,11 @@ Defines a reference to a field.
 </tbody>
 </table>
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For an example of how this element is used, see [List Instances](list-instances.md).
 
-For an example of how this element is used, see [List
-Instances](list-instances.md)</span>.
-
+<br/>
 
 
 

@@ -47,7 +47,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**Value**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the value that is associated with *Key*.</p></td>
+<td align="left"><p>Required **Text**. Specifies the value that is associated with *Key*.</p></td>
 </tr>
 </tbody>
 </table>

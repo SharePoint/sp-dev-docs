@@ -31,7 +31,7 @@ The [ListInstance](listinstance-element-list-instance.md) element specifies defa
 
 - [Field](field-element-list-instance.md)
 
-<br/>
+## Example
 
 The following example shows the contents of an XML file in which the [ListInstance](listinstance-element-list-instance.md) element is used to specify default data for a list instance.
 
@@ -58,7 +58,9 @@ The following example shows the contents of an XML file in which the [ListInstan
     </Elements>
 ```
 
+## See also
 
+- [List Instance](https://msdn.microsoft.com/en-us/library/office/ms469947.aspx)
 
 
 
