@@ -41,7 +41,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p<a href="metadata-element-workflow.md">MetaData Element (Workflow)</a></p></td>
+<td align="left"><p><a href="metadata-element-workflow.md">MetaData Element (Workflow)</a></p></td>
 </tr>
 </tbody>
 </table>

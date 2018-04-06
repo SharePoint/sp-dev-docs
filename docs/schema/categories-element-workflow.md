@@ -20,7 +20,7 @@ Reserved for future use.
 
 ```XML
 <Categories/>
-</Catagories>
+</Categories>
 ```
 
 ## Elements and attributes

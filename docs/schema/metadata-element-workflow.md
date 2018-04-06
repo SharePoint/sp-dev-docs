@@ -20,7 +20,7 @@ Contains any additional, custom metadata elements that are valid XML for the wor
 
 ```XML
 <MetaData>
-</Metadata>
+</MetaData>
 ```
 
 ## Elements and attributes
