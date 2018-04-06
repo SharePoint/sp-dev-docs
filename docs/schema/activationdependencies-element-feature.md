@@ -69,7 +69,7 @@ None
 </tbody>
 </table>
 
-## Remarks
+### Remarks
 
 If the Feature on which the current Feature depends is hidden and inactive, it is activated automatically. Such a hidden Feature is deactivated when the last Feature depending on it is deactivated. If the Feature is visible, it is not activated automatically. A hidden Feature cannot have any activation dependencies.
 

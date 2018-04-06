@@ -114,7 +114,7 @@ None
 </table>
 
 
-## Remarks
+### Remarks
 
 Microsoft SharePoint Foundation does not support a cross-scope activation dependency if the current Feature depends upon another Feature at a more restrictive scope, or if the current Feature depends on a hidden Feature.
 

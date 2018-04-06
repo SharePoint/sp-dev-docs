@@ -1,7 +1,5 @@
 ---
 title: "ContentTypes Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # ContentTypes Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a container, or collection, of Windows SharePoint Services 3.0 content type specifications for list items.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="ContentTypes" type="SPContentTypeCollection" minOccurs="0" maxOccurs="1" />
+
 USAGE
 <List>
    <ContentTypes />
@@ -33,39 +32,30 @@ USAGE
 
 [SPContentTypeCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentTypeCollection.aspx)
   
-## Attributes
+## Elements and attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
+[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
    
-## Remarks
+### Remarks
 
 The collections represented by the **ContentTypes** element are of object instances represented by the [ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md) element. 
   
 ## See also
 
-
-
-[SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx)
-  
-[SPContentTypeCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentTypeCollection.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
-
-
-[ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md)
+- [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) 
+- [SPContentTypeCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentTypeCollection.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md)
 
