@@ -156,7 +156,7 @@ class="keyword">Schema</span> and therefore has no parent element.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Concepts
+
 
 [DeploymentUserGroupMap
 Schema](deploymentusergroupmap-schema.md)</span>

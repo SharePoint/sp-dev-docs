@@ -118,7 +118,7 @@ value specifies the object type of the specified deployment requirement.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Concepts
+
 
 [DeploymentRequirements
 Schema](deploymentrequirements-schema.md)</span>

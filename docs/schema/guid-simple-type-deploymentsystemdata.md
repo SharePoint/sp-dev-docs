@@ -31,7 +31,7 @@ Supports the use of a unique identifier (GUID) as a <span class="keyword">Guid</
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Concepts
+
 
 [DeploymentSystemData
 Schema](deploymentsystemdata-schema.md)</span>

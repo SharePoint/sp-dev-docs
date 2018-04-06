@@ -130,7 +130,7 @@ object version to include in the content migration package.
 target="T:Microsoft.SharePoint.Deployment.SPIncludeVersions"><span
 class="nolink">SPIncludeVersions</span></span>
 
-#### Concepts
+
 
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>

@@ -122,7 +122,7 @@ migration package).
 target="T:Microsoft.SharePoint.Deployment.SPExportMethodType"><span
 class="nolink">SPExportMethodType</span></span>
 
-#### Concepts
+
 
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>

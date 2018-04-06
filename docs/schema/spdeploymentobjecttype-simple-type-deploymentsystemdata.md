@@ -128,7 +128,7 @@ The value specifies the system object type.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Concepts
+
 
 [DeploymentSystemData
 Schema](deploymentsystemdata-schema.md)</span>

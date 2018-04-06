@@ -153,7 +153,7 @@ class="nolink">SPExportObjectCollection</span></span> object.
 target="T:Microsoft.SharePoint.Deployment.SPExportObjectCollection"><span
 class="nolink">SPExportObjectCollection</span></span>
 
-#### Concepts
+
 
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>

@@ -1,4 +1,5 @@
 ---
+title: "Form Element (DeploymentManifest)"
 
 
 manager: soliver
@@ -8,73 +9,23 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 865e48d3-f44f-4df6-be5c-7ecb035b29cf
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Form Element (DeploymentManifest)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Form Element (DeploymentManifest)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents an instance of a Windows SharePoint Services 3.0 form (<span
-sdata="cer" target="T:Microsoft.SharePoint.SPForm"><span
-class="nolink">SPForm</span></span>) object.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>DECLARATION
+ 
+  
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+  
+Represents an instance of a Windows SharePoint Services 3.0 form ([SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx) ) object. 
+  
+```
+DECLARATION
 <xs:element name="Form" 
         type="SPForm" 
         minOccurs="0" maxOccurs="unbounded" 
 />
-
 USAGE
 <Forms>
         <Form
@@ -82,100 +33,42 @@ USAGE
                 Type="xs:string"
                 Url="xs:string"
         />
-</Forms></code></pre></td>
-</tr>
-</tbody>
-</table>
+</Forms>
 
+```
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Type
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPForm"><span
-class="nolink">SPForm</span></span>
+[SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx)
+  
+## Attributes
 
+|**Attribute**|**Type**|**Description**|
+|:-----|:-----|:-----|
+|**Name** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the form.  <br/> |
+|**Type** <br/> |xs:string  <br/> |Optional. Specifies the page type of the form as specified in the [PAGETYPE](https://msdn.microsoft.com/library/Microsoft.SharePoint.PAGETYPE.aspx) enumeration.  <br/> |
+|**Url** <br/> |xs:string  <br/> |Optional. URL to the form.  <br/> |
+   
+## Child Elements
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|None |
+   
+## Parent Elements
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Unique identifier of the form.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Type**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the page type of the form as specified in the <span sdata="cer" target="T:Microsoft.SharePoint.PAGETYPE"><span class="nolink">PAGETYPE</span></span> enumeration.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Url**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. URL to the form.</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="forms-element-deploymentmanifest.md">Forms Element (DeploymentManifest)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md)|
+   
+## See also
 
 #### Reference
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPForm"><span
-class="nolink">SPForm</span></span>
-
-<span sdata="cer" target="T:Microsoft.SharePoint.PAGETYPE"><span
-class="nolink">PAGETYPE</span></span>
-
-#### Concepts
-
-[DeploymentManifest
-Schema](deploymentmanifest-schema.md)</span>
+[SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx)
+  
+[PAGETYPE](https://msdn.microsoft.com/library/Microsoft.SharePoint.PAGETYPE.aspx)
 
 
-
-
-
-
-
+[DeploymentManifest Schema](deploymentmanifest-schema.md)
 

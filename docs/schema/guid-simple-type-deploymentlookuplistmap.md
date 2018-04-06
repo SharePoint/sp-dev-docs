@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -81,7 +79,7 @@ and other elements of the DeploymentLookupListMap Schema.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Concepts
+
 
 [DeploymentLookupListMap
 Schema](deploymentlookuplistmap-schema.md)</span>

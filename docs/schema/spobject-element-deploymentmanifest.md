@@ -1,4 +1,5 @@
 ---
+title: "SPObject Element (DeploymentManifest)"
 
 
 manager: soliver
@@ -8,72 +9,23 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 1bdc823e-d556-4273-a091-92d41d9d9ace
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# SPObject Element (DeploymentManifest)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># SPObject Element (DeploymentManifest)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents an instance of a top-level Windows SharePoint Services 3.0
-object (**SPGenericObject**).
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>DECLARATION
+ 
+  
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+  
+Represents an instance of a top-level Windows SharePoint Services 3.0 object ( **SPGenericObject**).
+  
+```
+DECLARATION
 <xs:element name="SPObject" 
         type="SPGenericObject" 
         minOccurs="0" maxOccurs="unbounded" 
 />
-
 USAGE
 <SPObjects>
         <SPObject
@@ -87,191 +39,68 @@ USAGE
                 ContentTypeId="xs:string"
                 Url="xs:string"
         />
-</SPObjects></code></pre></td>
-</tr>
-</tbody>
-</table>
+</SPObjects>
 
+```
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Type
 
-**SPGenericObject** (<span sdata="cer"
-target="T:System.Object">[Object](http://msdn2.microsoft.com/EN-US/library/e5kfa45b)</span>)
+ **SPGenericObject** ( [Object](https://msdn.microsoft.com/library/System.Object.aspx) ) 
+  
+## Attributes
 
+|**Attribute**|**Type**|**Description**|
+|:-----|:-----|:-----|
+|**ObjectType** <br/> |[SPObjectType Simple Type (DeploymentManifest)](spobjecttype-simple-type-deploymentmanifest.md) <br/> |Optional. Enumeration that provides values to specify the Windows SharePoint Services 3.0 top-level object type.  <br/> |
+|**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the Windows SharePoint Services 3.0 object.  <br/> |
+|**ParentId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the parent deployment object.  <br/> |
+|**Name** <br/> |xs:string  <br/> |Optional. Name of the object.  <br/> |
+|**IsDeleted** <br/> |xs:boolean  <br/> |Optional. Specifies whether the object has been deleted.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the parent Web site.  <br/> |
+|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL to the parent Web site.  <br/> |
+|**ContenTypeId** <br/> |xs:string  <br/> |Optional. Specifies the object content type.  <br/> |
+|**Url** <br/> |xs:string  <br/> |Optional. URL to the object.  <br/> |
+   
+## Child Elements
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[Site Element (DeploymentManifest)](site-element-deploymentmanifest.md) <br/> |
+|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md) <br/> |
+|[WebTemplate Element (DeploymentManifest)](webtemplate-element-deploymentmanifest.md) <br/> |
+|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md) <br/> |
+|[DocumentLibrary Element (DeploymentManifest)](documentlibrary-element-deploymentmanifest.md) <br/> |
+|[PictureLibrary Element (DeploymentManifest)](picturelibrary-element-deploymentmanifest.md) <br/> |
+|[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md) <br/> |
+|[Module Element (DeploymentManifest)](module-element-deploymentmanifest.md) <br/> |
+|[DocumentTemplate Element (DeploymentManifest)](documenttemplate-element-deploymentmanifest.md) <br/> |
+|[ListTemplate Element (DeploymentManifest)](listtemplate-element-deploymentmanifest.md) <br/> |
+|[Folder Element (DeploymentManifest)](folder-element-deploymentmanifest.md) <br/> |
+|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md) <br/> |
+|[ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md) <br/> |
+|[FieldTemplate Element (DeploymentManifest)](fieldtemplate-element-deploymentmanifest.md) <br/> |
+|[WebStructure Element (DeploymentManifest)](webstructure-element-deploymentmanifest.md) <br/> |
+|[UserX Element (DeploymentManifest)](userx-element-deploymentmanifest.md) <br/> |
+|[GroupX Element (DeploymentManifest)](groupx-element-deploymentmanifest.md) <br/> |
+|[Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md) <br/> |
+|[RoleX Element (DeploymentManifest)](rolex-element-deploymentmanifest.md) <br/> |
+|[RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md) <br/> |
+|[Feature Element (DeploymentManifest)](feature-element-deploymentmanifest.md) <br/> |
+   
+## Parent Elements
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**ObjectType**</p></td>
-<td align="left"><p><span sdata="link"><a href="spobjecttype-simple-type-deploymentmanifest.md">SPObjectType Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Enumeration that provides values to specify the Windows SharePoint Services 3.0 top-level object type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Unique identifier of the Windows SharePoint Services 3.0 object.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ParentId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Unique identifier of the parent deployment object.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Name of the object.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**IsDeleted**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the object has been deleted.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Unique identifier of the parent Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ParentWebUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. URL to the parent Web site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ContenTypeId**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the object content type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Url**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. URL to the object.</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="site-element-deploymentmanifest.md">Site Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="web-element-deploymentmanifest.md">Web Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webtemplate-element-deploymentmanifest.md">WebTemplate Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="list-element-deploymentmanifest.md">List Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="documentlibrary-element-deploymentmanifest.md">DocumentLibrary Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="picturelibrary-element-deploymentmanifest.md">PictureLibrary Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="listitem-element-deploymentmanifestspgenericobject.md">ListItem Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="module-element-deploymentmanifest.md">Module Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="documenttemplate-element-deploymentmanifest.md">DocumentTemplate Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="listtemplate-element-deploymentmanifest.md">ListTemplate Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="folder-element-deploymentmanifest.md">Folder Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="file-element-deploymentmanifestspgenericobject.md">File Element (DeploymentManifest - SPGenericObject)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttype-element-deploymentmanifest.md">ContentType Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="fieldtemplate-element-deploymentmanifest.md">FieldTemplate Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webstructure-element-deploymentmanifest.md">WebStructure Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="userx-element-deploymentmanifest.md">UserX Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="groupx-element-deploymentmanifest.md">GroupX Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="roles-element-deploymentmanifest.md">Roles Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="rolex-element-deploymentmanifest.md">RoleX Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="roleassignments-element-deploymentmanifest.md">RoleAssignments Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="feature-element-deploymentmanifest.md">Feature Element (DeploymentManifest)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobjects-element-deploymentmanifest.md">SPObjects Element (DeploymentManifest)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[SPObjects Element (DeploymentManifest)](spobjects-element-deploymentmanifest.md)|
+   
+## See also
 
 #### Reference
 
-<span sdata="cer"
-target="T:Microsoft.SharePoint.Deployment.SPDeploymentObject"><span
-class="nolink">SPDeploymentObject</span></span>
-
-<span sdata="cer"
-target="T:System.Object">[Object](http://msdn2.microsoft.com/EN-US/library/e5kfa45b)</span>
-
-#### Concepts
-
-[DeploymentManifest
-Schema](deploymentmanifest-schema.md)</span>
+[SPDeploymentObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPDeploymentObject.aspx)
+  
+[Object](https://msdn.microsoft.com/library/System.Object.aspx)
 
 
-
-
-
-
-
+[DeploymentManifest Schema](deploymentmanifest-schema.md)
 

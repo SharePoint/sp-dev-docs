@@ -1,4 +1,5 @@
 ---
+title: "ListTemplate Element (DeploymentManifest)"
 
 
 manager: soliver
@@ -8,72 +9,20 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 40b7918d-5678-4be8-bb97-6ac22bd0265f
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# ListTemplate Element (DeploymentManifest)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># ListTemplate Element (DeploymentManifest)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents a list definition or instance of a list template (<span
-sdata="cer" target="T:Microsoft.SharePoint.SPListTemplate"><span
-class="nolink">SPListTemplate</span></span>) object on a SharePoint list
-(<span sdata="cer" target="T:Microsoft.SharePoint.SPList"><span
-class="nolink">SPList</span></span>) object.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>DECLARATION
+ 
+  
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+  
+Represents a list definition or instance of a list template ([SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx) ) object on a SharePoint list ( [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) ) object. 
+  
+```
+DECLARATION
 <xs:element name="ListTemplate" type="SPListTemplate" />
-
 USAGE
 <SPObject>
         <ListTemplate
@@ -89,141 +38,49 @@ USAGE
                 Type="xs:string"
                 Unique="xs:boolean"
         />
-</SPObject></code></pre></td>
-</tr>
-</tbody>
-</table>
+</SPObject>
+```
 
+## Type
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)
+  
+## Attributes
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPListTemplate"><span
-class="nolink">SPListTemplate</span></span>
+|**Attribute**|**Type**|**Description**|
+|:-----|:-----|:-----|
+|**BaseType** <br/> |xs:string  <br/> |Optional. Specifies the base type for the list definition or list template.  <br/> |
+|**Description** <br/> |xs:string  <br/> |Optional. Provides a description of the list definition or list template.  <br/> |
+|**Hidden** <br/> |[TRUEFALSE Simple Type (DeploymentManifest)](truefalse-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies whether the list definition or list template is hidden from Web site users and is not available on the Create page.  <br/> |
+|**ImageUrl** <br/> |xs:string  <br/> |Optional. Server-relative path to the location of the image used to represent the list definition or list template.  <br/> |
+|**InternalName** <br/> |xs:string  <br/> |Optional. Represents the name used internally for the list definition or list template.  <br/> |
+|**IsCustomTemplate** <br/> |xs:boolean  <br/> |Optional. Specifies whether the template object instance represents a list template; that is, a template contained in an .stp file. Users create custom templates when they save a list as a template.  <br/> |
+|**Name** <br/> |xs:string  <br/> |Optional. Display name for the list definition or list template  <br/> |
+|**OnQuickLaunch** <br/> |xs:string  <br/> |Optional. Specifies whether any list created with the list definition or list template is displayed on the Quick Launch bar.  <br/> |
+|**SchemaXml** <br/> |xs:string  <br/> |Optional. Represents the schema that describes the list definition.  <br/> |
+|**Type** <br/> |xs:string  <br/> |Optional. Specifies the list definition type as a [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx) value.  <br/> |
+|**Unique** <br/> |xs:boolean  <br/> |Optional. Specifies whether only one instance of the list type can be created by using the template, and that the template cannot be used to create a list by using the object model or user interface.  <br/> |
+   
+## Child Elements
 
+||
+|:-----|
+|None |
+   
+## Parent Elements
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**BaseType**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the base type for the list definition or list template.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Description**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Provides a description of the list definition or list template.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Hidden**</p></td>
-<td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Specifies whether the list definition or list template is hidden from Web site users and is not available on the Create page.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ImageUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Server-relative path to the location of the image used to represent the list definition or list template.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**InternalName**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Represents the name used internally for the list definition or list template.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**IsCustomTemplate**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the template object instance represents a list template; that is, a template contained in an .stp file. Users create custom templates when they save a list as a template.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Display name for the list definition or list template</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**OnQuickLaunch**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies whether any list created with the list definition or list template is displayed on the Quick Launch bar.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**SchemaXml**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Represents the schema that describes the list definition.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Type**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the list definition type as a <span sdata="cer" target="T:Microsoft.SharePoint.SPListTemplateType"><span class="nolink">SPListTemplateType</span></span> value.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Unique**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether only one instance of the list type can be created by using the template, and that the template cannot be used to create a list by using the object model or user interface.</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+   
+## See also
 
 #### Reference
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPListTemplate"><span
-class="nolink">SPListTemplate</span></span>
-
-<span sdata="cer"
-target="T:Microsoft.SharePoint.SPListTemplateType"><span
-class="nolink">SPListTemplateType</span></span>
-
-#### Concepts
-
-[DeploymentManifest
-Schema](deploymentmanifest-schema.md)</span>
+[SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)
+  
+[SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx)
 
 
-
-
-
-
-
+[DeploymentManifest Schema](deploymentmanifest-schema.md)
 

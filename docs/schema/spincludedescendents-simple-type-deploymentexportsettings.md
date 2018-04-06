@@ -126,7 +126,7 @@ migration package.
 target="T:Microsoft.SharePoint.Deployment.SPIncludeDescendants"><span
 class="nolink">SPIncludeDescendants</span></span>
 
-#### Concepts
+
 
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>

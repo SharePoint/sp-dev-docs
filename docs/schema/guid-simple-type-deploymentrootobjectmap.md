@@ -80,7 +80,7 @@ DeploymentLRootObjectMap Schema.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Concepts
+
 
 [DeploymentRootObjectMap
 Schema](deploymentrootobjectmap-schema.md)</span>

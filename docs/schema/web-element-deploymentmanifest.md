@@ -1,4 +1,5 @@
 ---
+title: "Web Element (DeploymentManifest)"
 
 
 manager: soliver
@@ -8,71 +9,20 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 85e854c0-c567-48a9-9031-f709a4e7a785
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Web Element (DeploymentManifest)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Web Element (DeploymentManifest)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents an instance of a SharePoint Foundation Web site (<span
-sdata="cer" target="T:Microsoft.SharePoint.SPWeb"><span
-class="nolink">SPWeb</span></span>) object. A Web site is one of the
-top-level SharePoint Foundation objects.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>DECLARATION
+ 
+  
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+  
+Represents an instance of a SharePoint Foundation Web site ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) ) object. A Web site is one of the top-level SharePoint Foundation objects. 
+  
+```
+DECLARATION
 <xs:element name="Web" type="SPWeb" />
-
 USAGE
 <SPObject>
     <Web>
@@ -133,349 +83,91 @@ USAGE
         <xs:attribute name="Provisioned" />
     </Web>
 </SPObject>
-</code></pre></td>
-</tr>
-</tbody>
-</table>
 
+```
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Type
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPWeb"><span
-class="nolink">SPWeb</span></span>
+[SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
+  
+## Attributes
 
+|**Attribute**|**Type**|**Description**|
+|:-----|:-----|:-----|
+|**AdjustHijriDays** <br/> |xs:int  <br/> |Optional. Specifies the number of days to extend or reduce the current month in Hijri calendars.  <br/> |
+|**AlternateCalendarType** <br/> |xs:short  <br/> |Optional. Specifies an integer representing an alternative calendar type. For a table of calendar type values, see [CalendarType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.CalendarType.aspx) .  <br/> |
+|**AlternateCssUrl** <br/> |xs:string  <br/> |Optional. Specifies the URL for an alternative cascading style sheet (CSS) to use for the Web site.  <br/> |
+|**AlternateHeader** <br/> |xs:string  <br/> |Optional. Specifies the URL for an alternative .aspx page to use for rendering the top navigation area on SharePoint pages.  <br/> |
+|**AnonymousState** <br/> |[AnonymousState Simple Type (DeploymentManifest)](anonymousstate-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies the level of access available to anonymous users on the Web site.  <br/> |
+|**Author** <br/> |xs:string  <br/> |Optional. Represents the user who created the Web site.  <br/> |
+|**CalendarType** <br/> |xs:int  <br/> |Optional. Specifies an integer representing the default calendar type.  <br/> |
+|**Collation** <br/> |xs:int  <br/> |Optional. Integer value specifying the collation used on the site. For more information, see [Collation](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.Collation.aspx) .  <br/> |
+|**Configuration** <br/> |xs:int  <br/> |Optional. Specifies the ID of the configuration in the site definition that was used to create the site; or, specifies the ID of the configuration in the site definition from which the site template used to create the site was derived.  <br/> |
+|**Created** <br/> |xs:dateTime  <br/> |Optional. Specifies the date and time that the site was created.  <br/> |
+|**CurrencyLocaleId** <br/> |xs:int  <br/> |Optional. Specifies the locale ID (LCID) used to represent currency values in the Web site.  <br/> |
+|**CustomizedCssFiles** <br/> |xs:string  <br/> |Optional.Specifies custom cascading style sheet (.css) files.  <br/> |
+|**CustomJSUrl** <br/> |xs:string  <br/> |Optional. Specifies the URL to custom JScript files.  <br/> |
+|**CustomMasterUrl** <br/> |xs:string  <br/> |Optional. Specifies the URL for the custom master page file to apply to the Web site.  <br/> |
+|**Description** <br/> |xs:string  <br/> |Optional. Provides the description for the site.  <br/> |
+|**FirstDayOfWeek** <br/> |xs:long  <br/> |Optional. Integer that specifies the first day of the week used in the calendars on the server.  <br/> |
+|**FirstWeekOfYear** <br/> |xs:short  <br/> |Optional. Integer that specifies the first week of the year used in the calendars on the server.  <br/> |
+|**HasUniqueRoleAssignments** <br/> |xs:boolean  <br/> |Optional. Specifies whether the role assignments are uniquely defined for the Web site, or inherited from a parent Web site. The value is **true** if the Web site has unique role assignments.  <br/> |
+|**HasUniqueRoleDefinitions** <br/> |xs:boolean  <br/> |Optional. Specifies whether the role definitions are uniquely defined for this Web site, or inherited from a parent Web site. The value is **true** if the Web site has unique role definitions.  <br/> |
+|**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier for the site.  <br/> |
+|**IncludeSupportingFolders** <br/> |xs:boolean  <br/> |Optional. Specifies whether supporting folders are included in enumerations of files or folders. The value is **true** if supporting files are included.  <br/> |
+|**IsRootWeb** <br/> |xs:boolean  <br/> |Required. Specifies whether the site is the top-level Web site of the site collection. The value is **true** if the site is the top-level site.  <br/> |
+|**Language** <br/> |xs:long  <br/> |Required. Specifies the LCID for the language used on the site. For a table of LCID values, see [Language](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Language.aspx) .  <br/> |
+|**Locale** <br/> |xs:string  <br/> |Required. Specifies the locale for the Web site.  <br/> |
+|**MasterUrl** <br/> |xs:string  <br/> |Optional. Specifies the URL of the master page used for the Web site.  <br/> |
+|**Name** <br/> |xs:string  <br/> |Required. Specifies the name of the Web site.  <br/> |
+|**ParentId** <br/> |xs:string  <br/> |Required. Specifies the ID of the parent Web site for the site.  <br/> |
+|**ParserEnabled** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether parsing is enabled for the Web site. The value is **true** if parsing is enabled.  <br/> |
+|**PresenceEnabled** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether inline presence information is enabled on the Web site. The value is **true** if inline presence is enabled.  <br/> |
+|**Provisioned** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether the Web site has been provisioned. The value is **true** if the Web site has been provisioned.  <br/> |
+|**QuickLaunchEnabled** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether the Quick Launch area is enabled on the Web site. The value is **true** if Quick Launch is enabled.  <br/> |
+|**RegionalSettingsLocaleId** <br/> |xs:long  <br/> |Optional. Provides an integer value specifying regional locale.  <br/> |
+|**RequestAccessEmail** <br/> |xs:string  <br/> |Optional. Specifies the e-mail address to which requests for access to the Web site are sent.  <br/> |
+|**RootFolderId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the root folder for the Web site.  <br/> |
+|**SecurityProvider** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional.  <br/> |
+|**ServerRelativeUrl** <br/> |xs:string  <br/> |Required. Specifies the server-relative URL for the Web site.  <br/> |
+|**ShowWeeks** <br/> |xs:boolean  <br/> |Optional. Specifies whether to show weeks on the calendar on the Web site. The value is **true** if the weeks are shown.  <br/> |
+|**SiteLogoDescription** <br/> |xs:string  <br/> |Optional. Provides a description of the Web site logo.  <br/> |
+|**SiteLogoUrl** <br/> |xs:string  <br/> |Optional. Specifies the server-relative URL of the Web site logo.  <br/> |
+|**SyndicationEnabled** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether syndication is enabled in the Web site. The value is **true** if syndication is enabled.  <br/> |
+|**SystemCatalogsIncluded** <br/> |xs:boolean  <br/> |Optional. Specifies whether system catalog files are included in the export package. The value is **true** if the system catalogs are included.  <br/> |
+|**ThemeComposite** <br/> |xs:string  <br/> |Optional. Provides the name of the theme and the URL to the CSS that is applied to the Web site.  <br/> |
+|**Time24** <br/> |xs:boolean  <br/> |Optional. Specifies whether to use a 24-hour time format to represent the hours of the day.  <br/> |
+|**TimeZoneId** <br/> |xs:int  <br/> |Optional. Specifies the identifier of the time zone that is used on the server. For more information, see [SPTimeZone](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPTimeZone.aspx) .  <br/> |
+|**Title** <br/> |xs:string  <br/> |Required. Specifies the title for the Web site.  <br/> |
+|**TreeViewEnabled** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether the SharePoint TreeView feature is enabled in the left navigational area of the Web site pages. The value is **true** if TreeView is enabled.  <br/> |
+|**UseSharedNavigation** <br/> |xs:boolean  <br/> |Optional.  <br/> |
+|**WebTemplate** <br/> |xs:string  <br/> |Optional. Specifies the name of the site definition that was used to create the site, or the name of the site definition from which the site template that was used to create the site was derived.  <br/> |
+|**WelcomePageUrl** <br/> |xs:string  <br/> |Optional. URL of the Web site welcome page.  <br/> |
+|**WorkDayEndHour** <br/> |xs:short  <br/> |Optional. Specifies the default hour at which the work day ends on the calendar in use on the server.  <br/> |
+|**WorkDays** <br/> |xs:short  <br/> |Optional. Specifies the default work days on the calendar in use on the server.  <br/> |
+|**WorkDayStartHour** <br/> |xs:short  <br/> |Optional. Specifies the default hour at which the work day starts on the calendar in use on the server.  <br/> |
+   
+## Child Elements
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[Properties Element (DeploymentManifest - SPWeb)](properties-element-deploymentmanifestspweb.md) <br/> |
+|[EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md) <br/> |
+   
+## Parent Elements
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**AdjustHijriDays**</p></td>
-<td align="left"><p>xs:int</p></td>
-<td align="left"><p>Optional. Specifies the number of days to extend or reduce the current month in Hijri calendars.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**AlternateCalendarType**</p></td>
-<td align="left"><p>xs:short</p></td>
-<td align="left"><p>Optional. Specifies an integer representing an alternative calendar type. For a table of calendar type values, see <span sdata="cer" target="P:Microsoft.SharePoint.SPRegionalSettings.CalendarType"><span class="nolink">CalendarType</span></span>.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**AlternateCssUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the URL for an alternative cascading style sheet (CSS) to use for the Web site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**AlternateHeader**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the URL for an alternative .aspx page to use for rendering the top navigation area on SharePoint pages.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**AnonymousState**</p></td>
-<td align="left"><p><span sdata="link"><a href="anonymousstate-simple-type-deploymentmanifest.md">AnonymousState Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Specifies the level of access available to anonymous users on the Web site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Author**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Represents the user who created the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**CalendarType**</p></td>
-<td align="left"><p>xs:int</p></td>
-<td align="left"><p>Optional. Specifies an integer representing the default calendar type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Collation**</p></td>
-<td align="left"><p>xs:int</p></td>
-<td align="left"><p>Optional. Integer value specifying the collation used on the site. For more information, see <span sdata="cer" target="P:Microsoft.SharePoint.SPRegionalSettings.Collation"><span class="nolink">Collation</span></span>.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Configuration**</p></td>
-<td align="left"><p>xs:int</p></td>
-<td align="left"><p>Optional. Specifies the ID of the configuration in the site definition that was used to create the site; or, specifies the ID of the configuration in the site definition from which the site template used to create the site was derived.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Created**</p></td>
-<td align="left"><p>xs:dateTime</p></td>
-<td align="left"><p>Optional. Specifies the date and time that the site was created.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**CurrencyLocaleId**</p></td>
-<td align="left"><p>xs:int</p></td>
-<td align="left"><p>Optional. Specifies the locale ID (LCID) used to represent currency values in the Web site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**CustomizedCssFiles**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional.Specifies custom cascading style sheet (.css) files.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**CustomJSUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the URL to custom JScript files.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**CustomMasterUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the URL for the custom master page file to apply to the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Description**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Provides the description for the site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**FirstDayOfWeek**</p></td>
-<td align="left"><p>xs:long</p></td>
-<td align="left"><p>Optional. Integer that specifies the first day of the week used in the calendars on the server.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**FirstWeekOfYear**</p></td>
-<td align="left"><p>xs:short</p></td>
-<td align="left"><p>Optional. Integer that specifies the first week of the year used in the calendars on the server.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**HasUniqueRoleAssignments**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the role assignments are uniquely defined for the Web site, or inherited from a parent Web site. The value is **true** if the Web site has unique role assignments.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**HasUniqueRoleDefinitions**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the role definitions are uniquely defined for this Web site, or inherited from a parent Web site. The value is **true** if the Web site has unique role definitions.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Required. Unique identifier for the site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**IncludeSupportingFolders**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether supporting folders are included in enumerations of files or folders. The value is **true** if supporting files are included.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**IsRootWeb**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Required. Specifies whether the site is the top-level Web site of the site collection. The value is **true** if the site is the top-level site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Language**</p></td>
-<td align="left"><p>xs:long</p></td>
-<td align="left"><p>Required. Specifies the LCID for the language used on the site. For a table of LCID values, see <span sdata="cer" target="P:Microsoft.SharePoint.SPWeb.Language"><span class="nolink">Language</span></span>.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Locale**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Required. Specifies the locale for the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**MasterUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the URL of the master page used for the Web site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Required. Specifies the name of the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ParentId**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Required. Specifies the ID of the parent Web site for the site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ParserEnabled**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Flag specifying whether parsing is enabled for the Web site. The value is **true** if parsing is enabled.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**PresenceEnabled**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Flag specifying whether inline presence information is enabled on the Web site. The value is **true** if inline presence is enabled.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Provisioned**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Flag specifying whether the Web site has been provisioned. The value is **true** if the Web site has been provisioned.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**QuickLaunchEnabled**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Flag specifying whether the Quick Launch area is enabled on the Web site. The value is **true** if Quick Launch is enabled.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**RegionalSettingsLocaleId**</p></td>
-<td align="left"><p>xs:long</p></td>
-<td align="left"><p>Optional. Provides an integer value specifying regional locale.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**RequestAccessEmail**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the e-mail address to which requests for access to the Web site are sent.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**RootFolderId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Unique identifier of the root folder for the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**SecurityProvider**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ServerRelativeUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Required. Specifies the server-relative URL for the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ShowWeeks**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether to show weeks on the calendar on the Web site. The value is **true** if the weeks are shown.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**SiteLogoDescription**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Provides a description of the Web site logo.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**SiteLogoUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the server-relative URL of the Web site logo.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**SyndicationEnabled**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Flag specifying whether syndication is enabled in the Web site. The value is **true** if syndication is enabled.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**SystemCatalogsIncluded**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether system catalog files are included in the export package. The value is **true** if the system catalogs are included.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ThemeComposite**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Provides the name of the theme and the URL to the CSS that is applied to the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Time24**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether to use a 24-hour time format to represent the hours of the day.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**TimeZoneId**</p></td>
-<td align="left"><p>xs:int</p></td>
-<td align="left"><p>Optional. Specifies the identifier of the time zone that is used on the server. For more information, see <span sdata="cer" target="T:Microsoft.SharePoint.SPTimeZone"><span class="nolink">SPTimeZone</span></span>.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Title**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Required. Specifies the title for the Web site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**TreeViewEnabled**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Flag specifying whether the SharePoint TreeView feature is enabled in the left navigational area of the Web site pages. The value is **true** if TreeView is enabled.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**UseSharedNavigation**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**WebTemplate**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the name of the site definition that was used to create the site, or the name of the site definition from which the site template that was used to create the site was derived.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**WelcomePageUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. URL of the Web site welcome page.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**WorkDayEndHour**</p></td>
-<td align="left"><p>xs:short</p></td>
-<td align="left"><p>Optional. Specifies the default hour at which the work day ends on the calendar in use on the server.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**WorkDays**</p></td>
-<td align="left"><p>xs:short</p></td>
-<td align="left"><p>Optional. Specifies the default work days on the calendar in use on the server.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**WorkDayStartHour**</p></td>
-<td align="left"><p>xs:short</p></td>
-<td align="left"><p>Optional. Specifies the default hour at which the work day starts on the calendar in use on the server.</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="properties-element-deploymentmanifestspweb.md">Properties Element (DeploymentManifest - SPWeb)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestspweb.md">EventReceivers Element (DeploymentManifest - SPWeb)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+   
+## See also
 
 #### Reference
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPWeb"><span
-class="nolink">SPWeb</span></span>
-
-<span sdata="cer"
-target="T:Microsoft.SharePoint.SPRegionalSettings"><span
-class="nolink">SPRegionalSettings</span></span>
-
-#### Concepts
-
-[DeploymentManifest
-Schema](deploymentmanifest-schema.md)</span>
+[SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
+  
+[SPRegionalSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.aspx)
 
 
-
-
-
-
-
+[DeploymentManifest Schema](deploymentmanifest-schema.md)
 

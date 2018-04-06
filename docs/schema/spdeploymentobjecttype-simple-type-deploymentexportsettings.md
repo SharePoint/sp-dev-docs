@@ -141,7 +141,7 @@ top-level objects marked for export to the content migration package.
 target="T:Microsoft.SharePoint.Deployment.SPDeploymentObjectType"><span
 class="nolink">SPDeploymentObjectType</span></span>
 
-#### Concepts
+
 
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>

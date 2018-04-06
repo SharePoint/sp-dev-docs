@@ -1,4 +1,5 @@
 ---
+title: "ListItem Element (DeploymentManifest - SPGenericObject)"
 
 
 manager: soliver
@@ -8,70 +9,20 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 79ab2638-2487-4b1d-99d5-cbc151d35785
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# ListItem Element (DeploymentManifest - SPGenericObject)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># ListItem Element (DeploymentManifest - SPGenericObject)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents an instance of a SharePoint list item (<span sdata="cer"
-target="T:Microsoft.SharePoint.SPListItem"><span
-class="nolink">SPListItem</span></span>) object.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>DECLARATION
+ 
+  
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+  
+Represents an instance of a SharePoint list item ([SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx) ) object. 
+  
+```
+DECLARATION
 <xs:element name="ListItem" type="SPListItem" />
-
 USAGE
 <SPObject>
         <ListItem
@@ -103,212 +54,63 @@ USAGE
               <Links />
               <EventReceivers />
         />
-</SPObject</code></pre></td>
-</tr>
-</tbody>
-</table>
+</SPObject
 
+```
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Type
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPListItem"><span
-class="nolink">SPListItem</span></span>
+[SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
+  
+## Attributes
 
+|**Attribute**|**Type**|**Description**|
+|:-----|:-----|:-----|
+|**Author** <br/> |xs:string  <br/> |Optional. The user who created the list item.  <br/> |
+|**ContentTypeId** <br/> |xs:string  <br/> |Optional.The content type associated with the item.  <br/> |
+|**DirName** <br/> |xs:string  <br/> |Optional; required by import.  <br/> Name of the directory in which the item is stored.  <br/> |
+|**DocId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional; required by import.  <br/> Unique identifier of the list item file.  <br/> |
+|**DocType** <br/> |[ListItemDocType Simple Type (DeploymentManifest)](listitemdoctype-simple-type-deploymentmanifest.md) <br/> |Optional. Document type of the specified list item.  <br/> |
+|**FailureMessage** <br/> |xs:string  <br/> |Optional. Message provided on export or import failure.  <br/> |
+|**FileUrl** <br/> |xs:string  <br/> |Optional; required by import.  <br/> URL to the document item file.  <br/> |
+|**GroupName** <br/> |xs:string  <br/> |Optional.  <br/> |
+|**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional; required by import.  <br/> Integer value that identifies the list item.  <br/> |
+|**IntId** <br/> |xs:int  <br/> |Optional; required by import.  <br/> |
+|**ModerationComment** <br/> |xs:string  <br/> |Optional. Represents Content Approval comments about the list tiem.  <br/> |
+|**ModerationStatus** <br/> |[SPModerationStatusType Simple Type (DeploymentManifest)](spmoderationstatustype-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies the moderation status of the list item (Approved, Denied, Pending, Draft, Scheduled).  <br/> |
+|**ModifiedBy** <br/> |xs:string  <br/> |Optional. Name of the user who last modified the file.  <br/> |
+|**Name** <br/> |xs:string  <br/> |Optional; required by import.  <br/> Name of the person who created the file.  <br/> |
+|**ParentFolderId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional; required by import.  <br/> Unique identifier of the list item's parent folder in the database.  <br/> |
+|**ParentListId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional; required by import.  <br/> Unique identifier of the list item's parent list.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional; required by import.  <br/> Unique identifier of the list item's parent Web site.  <br/> |
+|**ThreadIndex** <br/> |xs:string  <br/> |Optional.  <br/> |
+|**TimeCreated** <br/> |xs:dateTime  <br/> |Optional. Time and date that the file was created.  <br/> |
+|**TimeLastModified** <br/> |xs:dateTime  <br/> |Optional. Time and date that the file was last modified.  <br/> |
+|**UserLoginName** <br/> |xs:string  <br/> |Optional.  <br/> |
+|**Version** <br/> |xs:string  <br/> |Optional. Represents the version of the list item.  <br/> |
+   
+## Child Elements
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md) <br/> |
+|[EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md) <br/> |
+|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) <br/> |
+|[Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md) <br/> |
+|[Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md) <br/> |
+   
+## Parent Elements
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Author**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. The user who created the list item.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ContentTypeId**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional.The content type associated with the item.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**DirName**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>Name of the directory in which the item is stored.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**DocId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>Unique identifier of the list item file.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**DocType**</p></td>
-<td align="left"><p><span sdata="link"><a href="listitemdoctype-simple-type-deploymentmanifest.md">ListItemDocType Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Document type of the specified list item.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**FailureMessage**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Message provided on export or import failure.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**FileUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>URL to the document item file.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**GroupName**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Id**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>Integer value that identifies the list item.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**IntId**</p></td>
-<td align="left"><p>xs:int</p></td>
-<td align="left"><p>Optional; required by import.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ModerationComment**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Represents Content Approval comments about the list tiem.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ModerationStatus**</p></td>
-<td align="left"><p><span sdata="link"><a href="spmoderationstatustype-simple-type-deploymentmanifest.md">SPModerationStatusType Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Specifies the moderation status of the list item (Approved, Denied, Pending, Draft, Scheduled).</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ModifiedBy**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Name of the user who last modified the file.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>Name of the person who created the file.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ParentFolderId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>Unique identifier of the list item's parent folder in the database.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ParentListId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>Unique identifier of the list item's parent list.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ParentWebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional; required by import.</p>
-<p>Unique identifier of the list item's parent Web site.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ThreadIndex**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**TimeCreated**</p></td>
-<td align="left"><p>xs:dateTime</p></td>
-<td align="left"><p>Optional. Time and date that the file was created.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**TimeLastModified**</p></td>
-<td align="left"><p>xs:dateTime</p></td>
-<td align="left"><p>Optional. Time and date that the file was last modified.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**UserLoginName**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Version**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Represents the version of the list item.</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="attachments-element-deploymentmanifest.md">Attachments Element (DeploymentManifest)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="eventreceivers-element-deploymentmanifestsplistitem.md">EventReceivers Element (DeploymentManifest - SPListItem)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-deploymentmanifestsplist.md">Fields Element (DeploymentManifest - SPList)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="links-element-deploymentmanifestsplistitem.md">Links Element (DeploymentManifest - SPListItem)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="versions-element-deploymentmanifestsplistitem.md">Versions Element (DeploymentManifest - SPListItem)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+   
+## See also
 
 #### Reference
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPListItem"><span
-class="nolink">SPListItem</span></span>
-
-#### Concepts
-
-[DeploymentManifest
-Schema](deploymentmanifest-schema.md)</span>
+[SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
 
 
-
-
-
-
-
+[DeploymentManifest Schema](deploymentmanifest-schema.md)
 

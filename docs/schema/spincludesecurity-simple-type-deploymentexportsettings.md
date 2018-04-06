@@ -125,7 +125,7 @@ during an export operation.
 target="T:Microsoft.SharePoint.Deployment.SPIncludeSecurity"><span
 class="nolink">SPIncludeSecurity</span></span>
 
-#### Concepts
+
 
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>

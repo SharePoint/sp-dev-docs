@@ -1,4 +1,5 @@
 ---
+title: "WebStructure Element (DeploymentManifest)"
 
 
 manager: soliver
@@ -8,72 +9,20 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 574ed628-f2bf-44d7-8c76-7c4dc07f9c4e
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# WebStructure Element (DeploymentManifest)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># WebStructure Element (DeploymentManifest)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents a specification of an instance of a Web site structure object
-type (<span sdata="cer"
-target="T:Microsoft.SharePoint.SPObjectType"><span
-class="nolink">SPObjectType</span></span>) for implementation on content
-migration.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>DECLARATION
+ 
+  
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+  
+Represents a specification of an instance of a Web site structure object type ([SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx) ) for implementation on content migration. 
+  
+```
+DECLARATION
 <xs:element name="WebStructure" type="DeploymentWebStructure" />
-
 USAGE
 <SPObject>
         <WebStructure
@@ -81,98 +30,40 @@ USAGE
                 WebUrl="xs:string"
                 UseSharedNavigation="xs:boolean"
         />
-</SPObject></code></pre></td>
-</tr>
-</tbody>
-</table>
+</SPObject>
 
+```
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Type
 
-**DeploymentWebStructure** (based on <span
-sdata="cer" target="T:Microsoft.SharePoint.SPObjectType"><span
-class="nolink">SPObjectType</span></span>)
+ **DeploymentWebStructure** (based on [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx) ) 
+  
+## Attributes
 
+|**Attribute**|**Type**|**Description**|
+|:-----|:-----|:-----|
+|**WebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the Web site for which the structure is provided.  <br/> |
+|**WebUrl** <br/> |xs:string  <br/> |Optional. URL to the Web site.  <br/> |
+|**UserSharedNavigation** <br/> |xs:boolean  <br/> |Optional.  <br/> |
+   
+## Child Elements
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|None |
+   
+## Parent Elements
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**WebId**</p></td>
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Unique identifier of the Web site for which the structure is provided.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**WebUrl**</p></td>
-<td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. URL to the Web site.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**UserSharedNavigation**</p></td>
-<td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional.</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spobject-element-deploymentmanifest.md">SPObject Element (DeploymentManifest)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+   
+## See also
 
 #### Reference
 
-<span sdata="cer" target="T:Microsoft.SharePoint.SPObjectType"><span
-class="nolink">SPObjectType</span></span>
-
-#### Concepts
-
-[DeploymentManifest
-Schema](deploymentmanifest-schema.md)</span>
+[SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)
 
 
-
-
-
-
-
+[DeploymentManifest Schema](deploymentmanifest-schema.md)
 

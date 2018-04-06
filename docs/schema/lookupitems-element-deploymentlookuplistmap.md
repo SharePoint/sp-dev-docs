@@ -152,7 +152,7 @@ For more information, see [LookupItem Element
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Concepts
+
 
 [DeploymentLookupListMap
 Schema](deploymentlookuplistmap-schema.md)</span>

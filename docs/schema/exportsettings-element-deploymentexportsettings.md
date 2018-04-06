@@ -195,7 +195,7 @@ class="nolink">SPExportSettings</span></span>
 target="T:Microsoft.SharePoint.Deployment.SPExportSettings"><span
 class="nolink">SPExportSettings</span></span>
 
-#### Concepts
+
 
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>
