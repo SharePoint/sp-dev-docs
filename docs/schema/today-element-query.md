@@ -173,11 +173,11 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 [TodayISO](todayiso-element.md)
 
-#### Other resources
+
 
 [Month](month-element-regional-settings.md)
 

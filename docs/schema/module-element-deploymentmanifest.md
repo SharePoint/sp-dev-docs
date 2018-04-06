@@ -49,21 +49,21 @@ USAGE
 |**ParentWeb** <br/> |xs:string  <br/> |Optional. Specifies the parent Web site.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. Specifies the server-relative URL for the module.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Properties Element (DeploymentManifest - SPModule)](properties-element-deploymentmanifestspmodule.md)|
+|[Properties Element (DeploymentManifest - SPModule)](properties-element-deploymentmanifestspmodule.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPModule](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPModule.aspx)
 

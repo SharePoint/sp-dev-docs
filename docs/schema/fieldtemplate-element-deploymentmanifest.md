@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents a template for a Windows SharePoint Services 3.0 field object ( **SPField**).
+Represents a template for a Windows SharePoint Services 3.0 field object (**SPField**).
   
 ```
 DECLARATION
@@ -53,17 +53,17 @@ USAGE
 |**Description** <br/> |xs:string  <br/> |Optional. Description of the field template.  <br/> |
 |**Group** <br/> |xs:string  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Field Element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)|
+|[Field Element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 

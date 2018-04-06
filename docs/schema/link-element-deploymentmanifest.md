@@ -65,21 +65,21 @@ USAGE
 |**Level** <br/> |xs:unsignedByte  <br/> |Optional.  <br/> |
 |**Search** <br/> |xs:string  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Links Element (DeploymentManifest - SPFile)](links-element-deploymentmanifestspfile.md)|
+|[Links Element (DeploymentManifest - SPFile)](links-element-deploymentmanifestspfile.md)
    
 ## See also
 
-#### Reference
+
 
 [SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)
 

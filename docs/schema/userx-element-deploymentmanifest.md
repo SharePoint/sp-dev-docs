@@ -58,21 +58,21 @@ USAGE
 |**Operation** <br/> |[SecurityModificationType Simple Type (DeploymentManifest)](securitymodificationtype-simple-type-deploymentmanifest.md) <br/> |Required. Enumeration type that provides values to specify which security modifications are allowed.  <br/> |
 |**SystemId** <br/> |xs:string  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx)
 

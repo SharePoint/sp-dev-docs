@@ -123,7 +123,7 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [UpdateHandlerAssembly](updatehandlerassembly-element-alerttemplates.md)
 

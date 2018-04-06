@@ -45,17 +45,17 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[EventReceiver Element (DeploymentManifest)](eventreceiver-element-deploymentmanifest.md)|
+|[EventReceiver Element (DeploymentManifest)](eventreceiver-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)|
+|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -71,7 +71,7 @@ This element is one of four EventReceivers elements; each derives from a differe
     
 ## See also
 
-#### Reference
+
 
 [SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)
 

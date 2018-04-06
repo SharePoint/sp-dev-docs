@@ -120,7 +120,7 @@ migration package.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 <span sdata="cer"
 target="T:Microsoft.SharePoint.Deployment.SPIncludeDescendants"><span
@@ -131,7 +131,7 @@ class="nolink">SPIncludeDescendants</span></span>
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>
 
-#### Other resources
+
 
 [DeploymentObject Element
 (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)</span>

@@ -156,7 +156,7 @@ Bindings](http://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [XSLT Parameter
 Bindings](http://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d(Office.15).aspx)

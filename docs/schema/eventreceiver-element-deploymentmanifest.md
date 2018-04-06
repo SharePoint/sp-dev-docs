@@ -69,13 +69,13 @@ USAGE
 |Credential  <br/> |xs:int  <br/> |Optional.  <br/> |
 |ItemId  <br/> |xs:int  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -86,7 +86,7 @@ USAGE
    
 ## See also
 
-#### Reference
+
 
 [SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)
 

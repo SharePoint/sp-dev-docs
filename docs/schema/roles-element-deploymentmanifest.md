@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents a collection of Windows SharePoint Services 3.0 deployment role ( **DeploymentRole**) objects.
+Represents a collection of Windows SharePoint Services 3.0 deployment role (**DeploymentRole**) objects.
   
 ```
 DECLARATION
@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Role Element (DeploymentManifest)](role-element-deploymentmanifest.md)|
+|[Role Element (DeploymentManifest)](role-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPRoleCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleCollection.aspx)
 

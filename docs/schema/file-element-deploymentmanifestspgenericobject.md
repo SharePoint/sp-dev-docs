@@ -85,7 +85,7 @@ USAGE
 |**SetupPathUser** <br/> |xs:string  <br/> |Optional. Person who initially created the list in the document library.  <br/> |
 |**SetupPathVersion** <br/> |xs:byte  <br/> |Optional. Specifies the Windows Microsoft SharePoint Foundation Services version. The value **2** specifies Windows SharePoint Services 2.0; the value **3** specifies Windows SharePoint Services 3.0.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -96,15 +96,15 @@ USAGE
 |[Versions Element (DeploymentManifest - SPFile)](versions-element-deploymentmanifestspfile.md) <br/> |
 |[WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
 

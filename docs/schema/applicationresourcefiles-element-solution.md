@@ -150,7 +150,7 @@ class="code">App\_GlobalResources</span>.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [ApplicationResourceFile Element
 (Solution)](applicationresourcefile-element-solution.md)</span>

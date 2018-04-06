@@ -135,7 +135,7 @@ top-level objects marked for export to the content migration package.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 <span sdata="cer"
 target="T:Microsoft.SharePoint.Deployment.SPDeploymentObjectType"><span
@@ -146,7 +146,7 @@ class="nolink">SPDeploymentObjectType</span></span>
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>
 
-#### Other resources
+
 
 [DeploymentObject Element
 (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)</span>

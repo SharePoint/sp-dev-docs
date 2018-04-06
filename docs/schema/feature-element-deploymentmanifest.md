@@ -48,21 +48,21 @@ USAGE
 |**Properties** <br/> |xs:string  <br/> |Optional. Represents the collection of properties for the Feature.  <br/> |
 |**FeatureDefinitionName** <br/> |xs:string  <br/> |Required. Name of the Feature definition.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFeature](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFeature.aspx)
 

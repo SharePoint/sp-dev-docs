@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)|
+|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)|
+|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
 

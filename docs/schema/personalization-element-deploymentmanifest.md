@@ -56,21 +56,21 @@ USAGE
 |**FrameState** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**UserProperties** <br/> |xs:string  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md)|
+|[Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
 

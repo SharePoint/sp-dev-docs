@@ -92,7 +92,7 @@ USAGE
 |**UserLoginName** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Version** <br/> |xs:string  <br/> |Optional. Represents the version of the list item.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -102,11 +102,11 @@ USAGE
 |[Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md) <br/> |
 |[Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md)|
+|[Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md)
    
 ## Remarks
 
@@ -126,7 +126,7 @@ This element has a recursive structure, as shown in the following code example.
 
 ## See also
 
-#### Reference
+
 
 [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
 

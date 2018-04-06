@@ -133,7 +133,7 @@ The value specifies the system object type.
 [DeploymentSystemData
 Schema](deploymentsystemdata-schema.md)</span>
 
-#### Other resources
+
 
 [SystemObject Element
 (DeploymentSystemData)](systemobject-element-deploymentsystemdata.md)</span>

@@ -61,21 +61,21 @@ USAGE
 |**Type** <br/> |xs:string  <br/> |Optional. Specifies the list definition type as a [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx) value.  <br/> |
 |**Unique** <br/> |xs:boolean  <br/> |Optional. Specifies whether only one instance of the list type can be created by using the template, and that the template cannot be used to create a list by using the object model or user interface.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)
   

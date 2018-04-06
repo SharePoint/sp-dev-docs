@@ -39,17 +39,17 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)|
+|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -57,7 +57,7 @@ The collections represented by the **ContentTypes** element are of object instan
   
 ## See also
 
-#### Reference
+
 
 [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx)
   
@@ -65,7 +65,7 @@ The collections represented by the **ContentTypes** element are of object instan
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md)
 

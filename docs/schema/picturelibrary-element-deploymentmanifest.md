@@ -46,17 +46,17 @@ USAGE
 |**WebImageHeight** <br/> |xs:int  <br/> |Optional. Specifies the height, in pixels, used to display images in the picture library.  <br/> |
 |**WebImageWidth** <br/> |xs:int  <br/> |Optional. Specifies the width, in pixels, used to display images in the picture library.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -66,7 +66,7 @@ For attributes of the **SPDocumentLibrary** type, see [DocumentLibrary Element (
   
 ## See also
 
-#### Reference
+
 
 [SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx)
   

@@ -178,12 +178,12 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 [HTMLBase
 Element](htmlbase-element.md)</span>
 
-#### Other resources
+
 
 [HttpVDir Element
 (View)](httpvdir-element-view.md)</span>

@@ -61,27 +61,27 @@ USAGE
 |**PushDownChanges** <br/> |xs:boolean  <br/> |Optional.  <br/> |
 |**RequireClinetRenderingOnNew** <br/> |xs:string  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx)
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [ContentTypes Element (DeploymentManifest)](contenttypes-element-deploymentmanifest.md)
 

@@ -84,7 +84,7 @@ and other elements of the DeploymentLookupListMap Schema.
 [DeploymentLookupListMap
 Schema](deploymentlookuplistmap-schema.md)</span>
 
-#### Other resources
+
 
 [LookupItem Element
 (DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.md)</span>

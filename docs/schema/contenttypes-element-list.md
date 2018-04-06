@@ -169,7 +169,7 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [How to: Add a Content Type to a
 List](http://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666(Office.15).aspx)

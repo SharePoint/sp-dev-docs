@@ -109,27 +109,27 @@ USAGE
 |**FillInChoice** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**SchemaXml** <br/> |xs:string  <br/> |Optional. Specifies the XML schema that defines the field.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)|
+|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
    
 ## See also
 
-#### Reference
+
 
 [SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx)
 

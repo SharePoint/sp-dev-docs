@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Global unique identifier of the Windows SharePoint Services 3.0 site object.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPSite](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPSite.aspx)
 

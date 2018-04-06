@@ -73,21 +73,21 @@ USAGE
 |**DisplayName** <br/> |xs:string  <br/> |Optional. Name shown in the user interface for the field referenced.  <br/> |
 |**Node** <br/> |xs:string  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[ViewFields Element (DeploymentManifest - SPView)](viewfields-element-deploymentmanifestspview.md)|
+|[ViewFields Element (DeploymentManifest - SPView)](viewfields-element-deploymentmanifestspview.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
 

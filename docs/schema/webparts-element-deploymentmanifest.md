@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents a collection of SharePoint Foundation Web Part ( **SPWebPart**) object instances.
+Represents a collection of SharePoint Foundation Web Part (**SPWebPart**) object instances.
   
 ```
 DECLARATION
@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)|
+|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)|
+|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-#### Reference
+
 
 [SPWebPartCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebPartCollection.aspx)
 

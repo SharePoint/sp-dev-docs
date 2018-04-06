@@ -41,24 +41,24 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[DeletedField Element (DeploymentManifest)](deletedfield-element-deploymentmanifest.md)|
+|[DeletedField Element (DeploymentManifest)](deletedfield-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)|
+|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
    
 ## See also
 
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [DeletedField Element (DeploymentManifest)](deletedfield-element-deploymentmanifest.md)
 

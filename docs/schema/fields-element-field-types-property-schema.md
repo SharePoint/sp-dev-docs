@@ -82,7 +82,7 @@ description and example of this element in context.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [Custom Field
 Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13(Office.15).aspx)

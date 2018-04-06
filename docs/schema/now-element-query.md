@@ -171,12 +171,12 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 [TodayISO
 Element](todayiso-element.md)</span>
 
-#### Other resources
+
 
 [Month Element (Regional
 Settings)](month-element-regional-settings.md)</span>

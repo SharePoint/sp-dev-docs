@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[FieldRef Element (DeploymentManifest - SPFieldLinkCollection)](fieldref-element-deploymentmanifestspfieldlinkcollection.md)|
+|[FieldRef Element (DeploymentManifest - SPFieldLinkCollection)](fieldref-element-deploymentmanifestspfieldlinkcollection.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)|
+|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)
   

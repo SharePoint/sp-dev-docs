@@ -49,21 +49,21 @@ USAGE
 |**Type** <br/> |xs:string  <br/> |Optional. Specifies the page type of the form as specified in the [PAGETYPE](https://msdn.microsoft.com/library/Microsoft.SharePoint.PAGETYPE.aspx) enumeration.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. URL to the form.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md)|
+|[Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx)
   

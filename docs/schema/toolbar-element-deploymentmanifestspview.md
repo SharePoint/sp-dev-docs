@@ -40,21 +40,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)|
+|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [Toolbar](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.Toolbar.aspx)
   

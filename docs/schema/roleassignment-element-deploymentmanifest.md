@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents an instance of a deployment role assignment ( **DeploymentRoleAssignment**) object.
+Represents an instance of a deployment role assignment (**DeploymentRoleAssignment**) object.
   
 ```
 DECLARATION
@@ -55,21 +55,21 @@ USAGE
 |**ObjectUrl** <br/> |xs:string  <br/> |Required. URL to the role assignment object.  <br/> |
 |**AnonymousPermMask** <br/> |xs:string  <br/> |Optional. Permission mask for anonymous users.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Assignment Element (DeploymentManifest)](assignment-element-deploymentmanifest.md)|
+|[Assignment Element (DeploymentManifest)](assignment-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md)|
+|[RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)
 

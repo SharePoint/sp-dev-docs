@@ -123,7 +123,7 @@ value specifies the object type of the specified deployment requirement.
 [DeploymentRequirements
 Schema](deploymentrequirements-schema.md)</span>
 
-#### Other resources
+
 
 [Requirement Element
 (DeploymentRequirements)](requirement-element-deploymentrequirements.md)</span>

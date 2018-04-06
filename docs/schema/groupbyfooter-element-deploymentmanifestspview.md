@@ -40,21 +40,21 @@ xs:string
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)|
+|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [GroupByFooter](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByFooter.aspx)
 

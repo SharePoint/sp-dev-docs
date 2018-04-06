@@ -1,7 +1,5 @@
 ---
 title: "Aggregations Element (DeploymentManifest - SPWebPart)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Aggregations Element (DeploymentManifest - SPWebPart)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents one or more aggregate, or total, columns used in a specified Web Part.
-  
-```
-DELCARATION SYNTAX
+
+## Definition
+
+```XML
+DECLARATION SYNTAX
 <xs:element name="Aggregations" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE SYNTAX
 <WebParts>
   <WebPart>
@@ -31,30 +30,24 @@ USAGE SYNTAX
 </WebParts>
 ```
 
-## Attributes
+## Elements and attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
+None
    
-## Child Elements
+### Child elements
 
-||
-|:-----|
-|None |
+None
    
-## Parent Elements
+### Parent elements
 
-||
-|:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)|
+[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
-
-[Aggregations Element (Deployment Manifest - SPView)](aggregations-element-deployment-manifestspview.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [Aggregations Element (Deployment Manifest - SPView)](aggregations-element-deployment-manifestspview.md)
 

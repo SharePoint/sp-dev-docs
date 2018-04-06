@@ -46,13 +46,13 @@ USAGE
 |**WebUrl** <br/> |xs:string  <br/> |Optional. URL to the Web site.  <br/> |
 |**UserSharedNavigation** <br/> |xs:boolean  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -60,7 +60,7 @@ USAGE
    
 ## See also
 
-#### Reference
+
 
 [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)
 

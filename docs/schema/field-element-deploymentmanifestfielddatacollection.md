@@ -55,21 +55,21 @@ USAGE
 |**Type** <br/> |[SPDictionaryEntryValueType Simple Type (DeploymentManifest)](spdictionaryentryvaluetype-simple-type-deploymentmanifest.md) <br/> |Optional. Data type of the field value. Must be a value type defined in the **SPDictionaryEntryValueType** simple type.  <br/> |
 |**Access** <br/> |[SPDictionaryEntryAccess Simple Type (DeploymentManifest)](spdictionaryentryaccess-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies the allowable access modes for the field value. Must be a value defined in the **SPDictionaryEntryAccess** simple type: **ReadOnly** or **ReadWrite**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)|
+|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
    
 ## See also
 
-#### Reference
+
 
 [DictionaryEntry](https://msdn.microsoft.com/library/System.Collections.DictionaryEntry.aspx)
 

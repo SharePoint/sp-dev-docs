@@ -85,7 +85,7 @@ DeploymentLRootObjectMap Schema.
 [DeploymentRootObjectMap
 Schema](deploymentrootobjectmap-schema.md)</span>
 
-#### Other resources
+
 
 [RootObject Element
 (DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)</span>

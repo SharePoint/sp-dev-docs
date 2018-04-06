@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)|
+|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Folder Element (DeploymentManifest)](folder-element-deploymentmanifest.md)|
+|[Folder Element (DeploymentManifest)](folder-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
   

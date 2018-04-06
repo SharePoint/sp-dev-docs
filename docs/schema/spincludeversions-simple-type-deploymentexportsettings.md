@@ -124,7 +124,7 @@ object version to include in the content migration package.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 <span sdata="cer"
 target="T:Microsoft.SharePoint.Deployment.SPIncludeVersions"><span
@@ -135,7 +135,7 @@ class="nolink">SPIncludeVersions</span></span>
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>
 
-#### Other resources
+
 
 [ExportSettings Element
 (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)</span>

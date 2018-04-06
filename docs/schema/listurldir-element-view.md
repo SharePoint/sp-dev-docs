@@ -161,7 +161,7 @@ Renders the absolute URL of the list's home directory.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [ListTemplate Element
 (Site)](listtemplate-element-site.md)</span>

@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)|
+|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)|
+|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
   

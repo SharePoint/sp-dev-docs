@@ -105,13 +105,13 @@ USAGE
 |**Direction** <br/> |xs:string  <br/> |Optional. Specifies the direction of the reading order for the list. The string value " **ltr**" specifies left-to-right; the string " **rtl**" specifies either right-to-left, or that no reading order is specified.  <br/> |
 |**DocumentTemplateId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the document template.  <br/> |
 |**DraftVersionVisibility** <br/> |[DraftVisibilityType Simple Type (DeploymentManifest)](draftvisibilitytype-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies user types that can view minor versions of document drafts within the list.  <br/> |
-|**EmailAlias** <br/> |xs:string  <br/> |Optional. When e-mail notification is enabled ( **EnableAssignToEmail=true**), specifies the e-mail address to use to notify the owner of an item when the item has been updated or the assignment has changed.  <br/> |
+|**EmailAlias** <br/> |xs:string  <br/> |Optional. When e-mail notification is enabled (**EnableAssignToEmail=true**), specifies the e-mail address to use to notify the owner of an item when the item has been updated or the assignment has changed.  <br/> |
 |**EnableAssignToEmail** <br/> |xs:boolean  <br/> |Optional. Specifies whether e-mail notification is enabled for the list.  <br/> |
 |**EnableAttachments** <br/> |xs:boolean  <br/> |Optional. Specifies whether attachments can be added to items in the list; **true** if attachments can be added, otherwise **false**.  <br/> |
 |**EnableContentTypes** <br/> |xs:boolean  <br/> |Optional.  <br/> |
 |**EnableDeployWithDependentList** <br/> |xs:boolean  <br/> |Optional. Specifies whether the list can be deployed with a dependent list; **true** if the list can be deployed with a dependent list, otherwise **false**.  <br/> |
 |**EnableFolderCreation** <br/> |xs:boolean  <br/> |Optional. Specifies whether folders can be created in the list; **true** if folders can be created, otherwise **false**.  <br/> |
-|**EnableMinorVersions** <br/> |xs:boolean  <br/> |Optional. When versioning is enabled for a document library ( **EnableVersioning=true**), specifies whether the minor versions are enabled.  <br/> |
+|**EnableMinorVersions** <br/> |xs:boolean  <br/> |Optional. When versioning is enabled for a document library (**EnableVersioning=true**), specifies whether the minor versions are enabled.  <br/> |
 |**EnableModeration** <br/> |xs:boolean  <br/> |Optional. Specifies whether the Content Approval feature is enabled for the list; **true** if approval feature is enabled, otherwise **false**.  <br/> |
 |**EnableSyndication** <br/> |xs:boolean  <br/> |Optional. Specifies whether RSS syndication is enabled for the list.  <br/> |
 |**EnableVersioning** <br/> |xs:boolean  <br/> |Optional. Specifies whether versioning is enabled for the document library; **true** if versioning is enabled, otherwise **false**.  <br/> |
@@ -142,7 +142,7 @@ USAGE
 |**Version** <br/> |xs:int  <br/> |Optional. Version number of the list.  <br/> |
 |**WriteSecurity** <br/> |xs:int  <br/> |Optional. Specifies the Write security setting for the list.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -153,15 +153,15 @@ USAGE
 |[Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md) <br/> |
 |[Views Element (DeploymentManifest)](views-element-deploymentmanifest.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
   

@@ -46,17 +46,17 @@ USAGE
 |EmailInsertsFolder  <br/> |xs:string  <br/> |Optional. The path for the public folder that contains the e-mail items inserted in the document library.  <br/> |
 |IsCatalog  <br/> |xs:boolean  <br/> |Optional. Indicates whether the document library is a gallery, such as for site templates, list templates, Web Parts, or master pages.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -64,7 +64,7 @@ The **SPDocumentLibrary** type extends the [SPList](https://msdn.microsoft.com/l
   
 ## See also
 
-#### Reference
+
 
 [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
   
@@ -72,7 +72,7 @@ The **SPDocumentLibrary** type extends the [SPList](https://msdn.microsoft.com/l
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
 

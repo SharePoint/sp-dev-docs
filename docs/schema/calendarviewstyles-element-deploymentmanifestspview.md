@@ -1,7 +1,5 @@
 ---
 title: "CalendarViewStyles Element (DeploymentManifest - SPView)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # CalendarViewStyles Element (DeploymentManifest - SPView)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents an object specifying the style of a SharePoint calendar view.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="CalendarViewStyles" minOccurs="0" maxOccurs="1" />
+
 USAGE
 <View>
    <CalendarViewStyles />
@@ -34,32 +33,25 @@ USAGE
 
 xs:string
   
-## Attributes
+## Elements and attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
+None
    
-## Child Elements
+### Child elements
 
-||
-|:-----|
-|None |
+None
    
-## Parent Elements
+### Parent elements
 
-||
-|:-----|
-|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)|
+[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
-
-[SPCalendarViewStyle](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPCalendarViewStyle.aspx)
-  
-[SPCalendarViewStyleCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPCalendarViewStyleCollection.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPCalendarViewStyle](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPCalendarViewStyle.aspx) 
+- [SPCalendarViewStyleCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPCalendarViewStyleCollection.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

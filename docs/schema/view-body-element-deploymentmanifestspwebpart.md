@@ -40,17 +40,17 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)|
+|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -58,7 +58,7 @@ Web Parts can derive from either of two base classes - an ASP.NET Web Part ([Web
   
 ## See also
 
-#### Reference
+
 
 [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)
   

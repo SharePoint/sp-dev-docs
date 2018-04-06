@@ -116,7 +116,7 @@ migration package).
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 <span sdata="cer"
 target="T:Microsoft.SharePoint.Deployment.SPExportMethodType"><span
@@ -127,7 +127,7 @@ class="nolink">SPExportMethodType</span></span>
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>
 
-#### Other resources
+
 
 [ExportSettings Element
 (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)</span>

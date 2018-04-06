@@ -147,7 +147,7 @@ Renders a form for the particular list that is specified by a previous
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [SetList Element
 (View)](setlist-element-view.md)</span>

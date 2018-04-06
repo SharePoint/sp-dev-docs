@@ -192,12 +192,12 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 [HTMLBase
 Element](htmlbase-element.md)</span>
 
-#### Other resources
+
 
 [HttpPath Element
 (View)](httppath-element-view.md)</span>

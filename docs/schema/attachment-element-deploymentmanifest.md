@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents an instance of a Windows SharePoint Services 3.0 attachment object ( **SPAttachment**).
+Represents an instance of a Windows SharePoint Services 3.0 attachment object (**SPAttachment**).
 
 ## Definition
 
@@ -48,9 +48,13 @@ USAGE
 
 ## Type
 
- **SPAttachement**
+**SPAttachement**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -67,17 +71,13 @@ USAGE
 |TimeLastModified  <br/> |xs:dateTime  <br/> |Optional. Time the file was last modified.  <br/> |
 |FailureMessage  <br/> |xs:string  <br/> |Optional. Export failure message.  <br/> |
    
-## Child Elements
+### Child elements
 
-||
-|:-----|
-|[Properties Element (DeploymentManifest - SPAttachment)](properties-element-deploymentmanifestspattachment.md)|
+[Properties Element (DeploymentManifest - SPAttachment)](properties-element-deploymentmanifestspattachment.md)
    
-## Parent Elements
+### Parent elements
 
-||
-|:-----|
-|[Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md)|
+[Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -85,10 +85,5 @@ Attachments are available for any list items that are not part of a document lib
   
 ## See also
 
-#### Reference
-
- **SPAttachmentCollection**
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

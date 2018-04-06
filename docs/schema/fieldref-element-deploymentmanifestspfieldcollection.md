@@ -74,18 +74,18 @@ USAGE
 |**DisplayName** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Node** <br/> |xs:string  <br/> |Optional.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md) <br/> |
 |[FieldRef Element (DeploymentManifest - SPFieldCollection)](fieldref-element-deploymentmanifestspfieldcollection.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)|
+|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
    
 ## Remarks
 
@@ -93,7 +93,7 @@ This element can contain instances of itself, and can therefore be either a pare
   
 ## See also
 
-#### Reference
+
 
 [SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
 

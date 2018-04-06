@@ -301,7 +301,7 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [Walkthrough: Creating a Custom Field
 Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f(Office.15).aspx)

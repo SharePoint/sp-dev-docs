@@ -98,7 +98,7 @@ USAGE
 |**Url** <br/> |xs:string  <br/> |Optional. Represents the site-relative URL of the page that contains the view.  <br/> |
 |**WebPartZoneID** <br/> |xs:string  <br/> |Optional. Identifier of the Web Part zone in which the view is sited.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -125,15 +125,15 @@ USAGE
 |[CalendarViewStyles Element (DeploymentManifest - SPView)](calendarviewstyles-element-deploymentmanifestspview.md) <br/> |
 |[ListFormBody Element (DeploymentManifest - SPView)](listformbody-element-deploymentmanifestspview.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Views Element (DeploymentManifest)](views-element-deploymentmanifest.md)|
+|[Views Element (DeploymentManifest)](views-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)
 

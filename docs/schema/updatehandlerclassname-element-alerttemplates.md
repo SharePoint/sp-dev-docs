@@ -104,7 +104,7 @@ None
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [NotificationHandlerClassName](notificationhandlerclassname-element-alerttemplates.md)
 

@@ -177,12 +177,12 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 [FieldFilterImageURL
 Element](fieldfilterimageurl-element.md)</span>
 
-#### Other resources
+
 
 [FieldSortParams Element
 (View)](fieldsortparams-element-view.md)</span>

@@ -64,17 +64,17 @@ USAGE
 |**AllowRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether users can request to join or leave the deployment group; **true** if users can request to join or leave the group..  <br/> |
 |**AutoAcceptRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether requests to join or leave the deployment group are automatically accepted; **true** if requests are automatically accepted.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 

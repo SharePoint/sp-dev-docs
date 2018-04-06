@@ -42,21 +42,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Form Element (DeploymentManifest)](form-element-deploymentmanifest.md)|
+|[Form Element (DeploymentManifest)](form-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)|
+|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFormCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFormCollection.aspx)
 

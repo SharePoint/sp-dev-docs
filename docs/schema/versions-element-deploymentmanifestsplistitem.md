@@ -44,21 +44,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[ListItem Element (DeploymentManifest - SPListItemVersionCollection)](listitem-element-deploymentmanifestsplistitemversioncollection.md)|
+|[ListItem Element (DeploymentManifest - SPListItemVersionCollection)](listitem-element-deploymentmanifestsplistitemversioncollection.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)|
+|[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-#### Reference
+
 
 [SPListItemVersionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItemVersionCollection.aspx)
 

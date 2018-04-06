@@ -185,7 +185,7 @@ class="keyword">URL </span>element on an Announcements list:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [UrlBaseName Element
 (View)](urlbasename-element-view.md)</span>

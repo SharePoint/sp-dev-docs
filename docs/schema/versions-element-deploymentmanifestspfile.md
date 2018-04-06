@@ -44,21 +44,21 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[File Element (DeploymentManifest - SPFileVersionCollection)](file-element-deploymentmanifestspfileversioncollection.md)|
+|[File Element (DeploymentManifest - SPFileVersionCollection)](file-element-deploymentmanifestspfileversioncollection.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)|
+|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFileVersionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFileVersionCollection.aspx)
 

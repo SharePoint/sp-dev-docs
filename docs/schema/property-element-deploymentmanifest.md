@@ -52,21 +52,21 @@ USAGE
 |Type  <br/> |[SPDictionaryEntryValueType Simple Type (DeploymentManifest)](spdictionaryentryvaluetype-simple-type-deploymentmanifest.md) <br/> |Optional. Enumeration of property value types.  <br/> The default type is **string**.  <br/> |
 |Access  <br/> |[SPDictionaryEntryAccess Simple Type (DeploymentManifest)](spdictionaryentryaccess-simple-type-deploymentmanifest.md) <br/> |Optional. An enumeration of two available access modes settings: **ReadOnly** and **ReadWrite**.  <br/> The default access mode is **ReadWrite**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Properties Element (DeploymentManifest - SPAttachment)](properties-element-deploymentmanifestspattachment.md)|
+|[Properties Element (DeploymentManifest - SPAttachment)](properties-element-deploymentmanifestspattachment.md)
    
 ## See also
 
-#### Reference
+
 
 [DictionaryEntry](https://msdn.microsoft.com/library/System.Collections.DictionaryEntry.aspx)
 

@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents an instance of a top-level Windows SharePoint Services 3.0 object ( **SPGenericObject**).
+Represents an instance of a top-level Windows SharePoint Services 3.0 object (**SPGenericObject**).
   
 ```
 DECLARATION
@@ -61,7 +61,7 @@ USAGE
 |**ContenTypeId** <br/> |xs:string  <br/> |Optional. Specifies the object content type.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. URL to the object.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -87,15 +87,15 @@ USAGE
 |[RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md) <br/> |
 |[Feature Element (DeploymentManifest)](feature-element-deploymentmanifest.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObjects Element (DeploymentManifest)](spobjects-element-deploymentmanifest.md)|
+|[SPObjects Element (DeploymentManifest)](spobjects-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPDeploymentObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPDeploymentObject.aspx)
   

@@ -171,7 +171,7 @@ extensions\\15\\.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [How to: Create a Custom Site Definition and
 Configuration](http://msdn.microsoft.com/library/62b0552d-b7a7-4856-b906-c7bcb3155792(Office.15).aspx)

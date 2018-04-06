@@ -42,17 +42,17 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)|
+|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)|
+|[Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
    
 ## See also
 

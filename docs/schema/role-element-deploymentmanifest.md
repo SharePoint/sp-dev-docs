@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents an instance of a Windows SharePoint Services 3.0 deployment role ( **DeploymentRole**) object.
+Represents an instance of a Windows SharePoint Services 3.0 deployment role (**DeploymentRole**) object.
   
 ```
 DECLARATION
@@ -54,17 +54,17 @@ USAGE
 |**RoleOrder** <br/> |xs:string  <br/> |Optional. Specifies the order in which permission levels are displayed on the **Permission Levels** page of a site collection.  <br/> |
 |**Type** <br/> |xs:string  <br/> |Optional. Specifies the role type, as listed in the [Microsoft.SharePoint.SPRoleType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleType.aspx) enumeration.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md)|
+|[Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -72,7 +72,7 @@ The value of the **RoleID** property corresponds to the unique member ID for the
   
 ## See also
 
-#### Reference
+
 
 [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)
   

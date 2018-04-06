@@ -50,27 +50,27 @@ USAGE
 |**SchemaXml** <br/> |xs:string  <br/> |Optional. The XML schema that defines the document template. Represents the document template definition contained in the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file for the specified site template.  <br/> |
 |**Type** <br/> |xs:int  <br/> |Optional. The type of the document template. The integer value corresponds with the **Type** attribute specified for the document template in the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file for the specified template.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPDocTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocTemplate.aspx)
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx)
 

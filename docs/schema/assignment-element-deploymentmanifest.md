@@ -1,7 +1,5 @@
 ---
 title: "Assignment Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,14 +12,14 @@ description: "Last modified: March 09, 2015"
 
 # Assignment Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a Windows SharePoint Services 3.0 deployment assignment object instance ( **DeploymentAssignment**).
-  
-```
-DELCARATION SYNTAX
+Represents a Windows SharePoint Services 3.0 deployment assignment object instance (**DeploymentAssignment**).
+
+## Definition
+
+```XML
+DECLARATION SYNTAX
 <xs:element name="Assignment" 
         type="DeploymentAssignment" 
         minOccurs="0" maxOccurs="unbounded" 
@@ -38,37 +36,31 @@ USAGE SYNTAX
 
 ## Type
 
- **DeploymentAssignment**
+**DeploymentAssignment**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |**RoleID** <br/> |xs:string  <br/> |Identifier of the role associated with a specified assignment.  <br/> |
 |**PrincipalID** <br/> |xs:string  <br/> |An integer value representing either a user ID ([ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.ID.aspx) ), or a group ID ( [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPGroup.ID.aspx) ).  <br/> |
    
-## Child Elements
+### Child elements
 
-||
-|:-----|
-|None |
+None
    
-## Parent Elements
+### Parent elements
 
-||
-|:-----|
-|[RoleAssignment Element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)|
+[RoleAssignment Element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
-
-[SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)
-  
-[SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)
-  
-[SPRoleDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleDefinition.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx) 
+- [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)
+- [SPRoleDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleDefinition.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "Attachments Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,14 +12,14 @@ description: "Last modified: March 09, 2015"
 
 # Attachments Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a container, or collection, of Windows SharePoint Services 3.0 **Attachment** object instances. 
-  
-```
-DELCARATION
+
+## Definition
+
+```XML
+DECLARATION
 <xs:element name="Attachments" type="SPAttachmentCollection" minOccurs="0" maxOccurs="1" />
 USAGE
 <ListItem>
@@ -34,35 +32,26 @@ USAGE
 
 ## Type
 
- **SPAttachmentCollection**
+**SPAttachmentCollection**
   
-## Attributes
+## Elements and attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
+None
    
-## Child Elements
+### Child elements
 
-||
-|:-----|
-|[Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)|
+[Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
    
-## Parent Elements
+### Parent elements
 
-||
-|:-----|
-|[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)|
+[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-#### Reference
-
- **SPAttachmentCollection**
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
-
-[Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
 

@@ -913,12 +913,12 @@ code] "Copy code")Copy code</span>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 [Field Element
 (Field)](field-element-field.md)</span>
 
-#### Other resources
+
 
 [Column Element
 (View)](column-element-view.md)</span>

@@ -147,22 +147,22 @@ USAGE
 |**WorkDays** <br/> |xs:short  <br/> |Optional. Specifies the default work days on the calendar in use on the server.  <br/> |
 |**WorkDayStartHour** <br/> |xs:short  <br/> |Optional. Specifies the default hour at which the work day starts on the calendar in use on the server.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Properties Element (DeploymentManifest - SPWeb)](properties-element-deploymentmanifestspweb.md) <br/> |
 |[EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
   

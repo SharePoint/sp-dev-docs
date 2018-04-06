@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents an instance of a SharePoint Foundation top-level Web Part object ( **SPWebPart**).
+Represents an instance of a SharePoint Foundation top-level Web Part object (**SPWebPart**).
   
 ```
 DECLARATION
@@ -125,7 +125,7 @@ USAGE
 |**WebPartTypeId** <br/> |xs:string  <br/> |Optional. Specifies the identifier of the Web Part type.  <br/> |
 |**WebPartZoneID** <br/> |xs:string  <br/> |Optional. Specifies the identifier of the Web Part zone.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -152,7 +152,7 @@ USAGE
 |[CalendarViewStyles Element (DeploymentManifest - SPWebPart)](calendarviewstyles-element-deploymentmanifestspwebpart.md) <br/> |
 |[ListFormBody Element (DeploymentManifest - SPWebPart)](listformbody-element-deploymentmanifestspwebpart.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -164,7 +164,7 @@ Web Parts can derive from either of two base classes - an ASP.NET Web Part ([Web
   
 ## See also
 
-#### Reference
+
 
 [WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)
   

@@ -358,7 +358,7 @@ Contains elements that define the Server ribbon user interface.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Other resources
+
 
 [Customizing the Server
 Ribbon](http://msdn.microsoft.com/library/dedfad80-0f32-44cd-9080-1507be3288e7(Office.15).aspx)

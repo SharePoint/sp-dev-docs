@@ -69,21 +69,21 @@ USAGE
 |**TimeCreated** <br/> |xs:dateTime  <br/> |Optional. Date/time value specifying the time the folder was created.  <br/> |
 |**TimeLastModified** <br/> |xs:dateTime  <br/> |Optional. Date-time value specifying the time the folder was last modified.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
-|[Properties Element (DeploymentManifest - SPFolder)](properties-element-deploymentmanifestspfolder.md)|
+|[Properties Element (DeploymentManifest - SPFolder)](properties-element-deploymentmanifestspfolder.md)
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
 

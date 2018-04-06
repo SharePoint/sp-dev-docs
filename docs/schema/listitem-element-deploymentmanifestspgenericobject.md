@@ -89,7 +89,7 @@ USAGE
 |**UserLoginName** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Version** <br/> |xs:string  <br/> |Optional. Represents the version of the list item.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -99,15 +99,15 @@ USAGE
 |[Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md) <br/> |
 |[Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
 

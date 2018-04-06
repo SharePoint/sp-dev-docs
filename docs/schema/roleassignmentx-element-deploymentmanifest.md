@@ -66,27 +66,27 @@ USAGE
 |**GroupTitle** <br/> |xs:string  <br/> |Optional. Display name of the security group that is associated with the role.  <br/> |
 |**UserLogin** <br/> |xs:string  <br/> |Optional. Logon credential for users associated with the role.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [RoleAssignment Element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)
 

@@ -66,27 +66,27 @@ USAGE
 |**UserId** <br/> |xs:string  <br/> |Optional. Identifier of users that belong to the role.  <br/> |
 |**UserLogin** <br/> |xs:string  <br/> |Optional. Logon credential for user.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)
 
 
 [DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
+
 
 [Role Element (DeploymentManifest)](role-element-deploymentmanifest.md)
 

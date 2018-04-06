@@ -119,7 +119,7 @@ during an export operation.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Reference
+
 
 <span sdata="cer"
 target="T:Microsoft.SharePoint.Deployment.SPIncludeSecurity"><span
@@ -130,7 +130,7 @@ class="nolink">SPIncludeSecurity</span></span>
 [DeploymentExportSettings
 Schema](deploymentexportsettings-schema.md)</span>
 
-#### Other resources
+
 
 [ExportSettings Element
 (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)</span>

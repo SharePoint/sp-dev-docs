@@ -36,12 +36,12 @@ Specifies the object type for event hosts.
 
 |**Value**|**Description**|
 |:-----|:-----|
-|**Site** <br/> |SharePoint Site object ( **SPSite**).  <br/> |
-|**Web** <br/> |SharePoint Web object ( **SPWeb**).  <br/> |
-|**List** <br/> |SharePoint List object ( **SPList**).  <br/> |
-|**ListItem** <br/> |SharePoint ListItem object ( **SPListItem**).  <br/> |
-|**ContentType** <br/> |SharePoint ContentType object ( **SPContentType**).  <br/> |
-|**Feature** <br/> |SharePoint Feature object ( **SPFeature**).  <br/> |
+|**Site** <br/> |SharePoint Site object (**SPSite**).  <br/> |
+|**Web** <br/> |SharePoint Web object (**SPWeb**).  <br/> |
+|**List** <br/> |SharePoint List object (**SPList**).  <br/> |
+|**ListItem** <br/> |SharePoint ListItem object (**SPListItem**).  <br/> |
+|**ContentType** <br/> |SharePoint ContentType object (**SPContentType**).  <br/> |
+|**Feature** <br/> |SharePoint Feature object (**SPFeature**).  <br/> |
    
 ## See also
 

@@ -40,21 +40,21 @@ xs:string
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)|
+|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
  **RowLimitExceeded**
 

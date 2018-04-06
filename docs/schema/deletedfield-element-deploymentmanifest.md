@@ -42,17 +42,17 @@ USAGE
 |:-----|:-----|:-----|
 |FieldId  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the deleted field.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[DeletedFields Element (DeploymentManifest)](deletedfields-element-deploymentmanifest.md)|
+|[DeletedFields Element (DeploymentManifest)](deletedfields-element-deploymentmanifest.md)
    
 ## Remarks
 

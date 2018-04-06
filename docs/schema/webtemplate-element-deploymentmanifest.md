@@ -56,13 +56,13 @@ USAGE
 |**Name** <br/> |xs:string  <br/> |Optional. Represents the name of the site definition or site template.  <br/> |
 |**Title** <br/> |xs:string  <br/> |Optional. Represents the display name of the site definition or site template.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -70,7 +70,7 @@ USAGE
    
 ## See also
 
-#### Reference
+
 
 [SPWebTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebTemplate.aspx)
 

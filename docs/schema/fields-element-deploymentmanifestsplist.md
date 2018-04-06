@@ -46,22 +46,22 @@ USAGE
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md) <br/> |
 |[FieldRef Element (DeploymentManifest - SPFieldCollection)](fieldref-element-deploymentmanifestspfieldcollection.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
-|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)|
+|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
    
 ## See also
 
-#### Reference
+
 
 [SPFieldCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldCollection.aspx)
 
