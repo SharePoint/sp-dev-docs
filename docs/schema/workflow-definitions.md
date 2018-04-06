@@ -47,7 +47,6 @@ The structure of the workflow definition schema is as follows.
 - [StatusColumnValue Element (Workflow)](statuscolumnvalue-element-workflow.md)
 
 
-<br/>
 
 ## See also
 
