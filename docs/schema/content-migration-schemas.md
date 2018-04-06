@@ -18,6 +18,8 @@ SharePoint Foundation content migration is supported by APIs that are provided i
 
 The SharePoint Foundation content migration architecture provides a public schema to support the migration of export packages. You can create a package to import content into SharePoint.
 
+## Deployment schema files
+
 The SharePoint Foundation provides eight schema (.xsd) files to support content migration, as described in the following table.
 
 <br/>

@@ -14,6 +14,8 @@ ms.assetid: 03e692c1-b27c-465b-8714-d169cf1fc10c
 
 The DeploymentViewFormsList Schema provides validation for the ViewFormsList.xml file exported into the content migration package. The ViewFormsList.xml file maintains a list of Web Parts and tracks whether each is a view or form.
 
+## DeploymentViewFormsList schema elements
+
 The following table lists elements in the schema file DeploymentViewFormsList.xsd file.
 
 <br/>

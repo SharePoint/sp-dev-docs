@@ -14,6 +14,8 @@ ms.assetid: 5b098a6e-37ea-4155-b234-1649edd2495a
 
 The DeploymentSystemData Schema provides validation for the SystemData.xml file exported into the content migration package. The SystemData file collects a variety of low-level system data. It records the number and names of Manifest.xml files (in cases where the migration uses multiple manifests), and it also supports schema versioning. Additionally, it holds a list of system files that are required by SharePoint Foundation.
 
+## DeploymentSystemData schema elements and types
+
 The following table lists elements in the schema file DeploymentSystemData.xsd file.
 
 <br/>

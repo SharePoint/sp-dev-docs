@@ -18,6 +18,8 @@ In addition to cataloging export settings, the ExportSettings.xml file also ensu
 
 The ExportSettings.xml file also maintains a catalog of all objects exported to the migration package.
 
+## DeploymentExportSettings schema elements
+
 The following table lists elements in the DeploymentExportSettings.xsd schema file.
 
 <br/>
@@ -35,15 +37,15 @@ The following table lists elements in the DeploymentExportSettings.xsd schema fi
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="exportsettings-element-deploymentexportsettings.md">ExportSettings Element (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="exportsettings-element-deploymentexportsettings.md">ExportSettings Element (DeploymentExportSettings)</a></p></td>
 <td align="left"><p>Root element, which provides an XML wrapper for the deployment export settings container object and a means for specifying security, versioning, and how to export.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="deploymentobject-element-deploymentexportsettings.md">DeploymentObject Element (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="deploymentobject-element-deploymentexportsettings.md">DeploymentObject Element (DeploymentExportSettings)</a></p></td>
 <td align="left"><p>Represents instances of deployment objects (<span sdata="cer" target="T:Microsoft.SharePoint.Deployment.SPExportObject"><span class="nolink">SPExportObject</span></span>) marked for export to the content migration package.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="exportobjects-element-deploymentexportsettings.md">ExportObjects Element (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="exportobjects-element-deploymentexportsettings.md">ExportObjects Element (DeploymentExportSettings)</a></p></td>
 <td align="left"><p>Represents a collection of deployment export object instances for inclusion in the content migration package.</p></td>
 </tr>
 </tbody>
@@ -66,22 +68,22 @@ The following table lists simple types that are defined in the schema but are no
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spincludesecurity-simple-type-deploymentexportsettings.md">SPIncludeSecurity Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="spincludesecurity-simple-type-deploymentexportsettings.md">SPIncludeSecurity Simple Type (DeploymentExportSettings)</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="spincludesecurity-simple-type-deploymentexportsettings.md">SPIncludeSecurity Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="spincludesecurity-simple-type-deploymentexportsettings.md">SPIncludeSecurity Simple Type (DeploymentExportSettings)</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spexportmethodtype-simple-type-deploymentexportsettings.md">SPExportMethodType Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="spexportmethodtype-simple-type-deploymentexportsettings.md">SPExportMethodType Simple Type (DeploymentExportSettings)</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentexportsettings.md">Guid Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="guid-simple-type-deploymentexportsettings.md">Guid Simple Type (DeploymentExportSettings)</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentexportsettings.md">SPDeploymentObjectType Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="spdeploymentobjecttype-simple-type-deploymentexportsettings.md">SPDeploymentObjectType Simple Type (DeploymentExportSettings)</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="spincludedescendents-simple-type-deploymentexportsettings.md">SPIncludeDescendents Simple Type (DeploymentExportSettings)</a></span></p></td>
+<td align="left"><p><a href="spincludedescendents-simple-type-deploymentexportsettings.md">SPIncludeDescendents Simple Type (DeploymentExportSettings)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -90,9 +92,6 @@ The following table lists simple types that are defined in the schema but are no
 
 ## See also
 
-- SPExportSettings
-- SPExportObject
-- SPExportObjectCollection
 - [Content migration schemas](content-migration-schemas.md)
 
 

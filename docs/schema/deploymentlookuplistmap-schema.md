@@ -14,6 +14,8 @@ ms.assetid: 14383af3-0e57-443a-97eb-3e0a714d9639
 
 The DeploymentLookupListMap Schema provides validation for the LookupListMap.xml file that is exported to the content migration package. The LookupListMap.xml file maintains a simple lookup list that records SharePoint Foundation list item references (that is, list item to list item references). This list provides a performance enhancement by relieving the need for SharePoint Foundation to repeatedly loop recursively over list item structures.
 
+## DeploymentLookupListMap schema elements and types
+
 The following table lists elements in the DeploymentLookupListMap.xsd schema file.
 
 <br/>

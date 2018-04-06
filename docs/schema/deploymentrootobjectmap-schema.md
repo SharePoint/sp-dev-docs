@@ -14,6 +14,8 @@ ms.assetid: b754baf8-6db5-4f40-a1b3-67fb925d0319
 
 The DeploymentRootObjectMap Schema provides validation for the RootObjectMap.xml file exported into the content migration package. The RootObjectMap.xml file maintains a list of mappings of secondary, or dependent objects, to the root objects that are exported to the migration package. This allows the import phase of the migration operation to correctly place the dependent objects in mappings relative to the locations of the root objects.
 
+## DeploymentRootObjectMap schema elements and types
+
 The following table lists elements in the DeploymentRootObjectMap.xsd schema file.
 
 <br/>

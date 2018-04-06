@@ -14,6 +14,8 @@ ms.assetid: 903d18c8-eb4e-46a4-8350-480e5906eebf
 
 The DeploymentUserGroupMap Schema provides validation for the UserGroup.xml file exported into the content migration package. The UserGroup.xml file maintains a list of users and user security groups with respect to access security and permissions.
 
+## DeploymentUserGroupMap schema elements
+
 The following table lists elements in the DeploymentUserGroupMap.xsd schema file.
 
 <br/>

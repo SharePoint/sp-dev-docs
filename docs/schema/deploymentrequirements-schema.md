@@ -14,6 +14,8 @@ ms.assetid: f07210c3-2c1a-4c4d-b9b8-d9d30c57d8c8
 
 The DeploymentRequirements Schema provides validation for the Requirements.xml file exported to the content migration package. The Requirements.xml file maintains a list of deployment requirements in the form of installation requirements on the migration target, such as Feature definitions, template versions, Web Part assemblies, language packs, and so forth.
 
+## DeploymentRequirements schema elements and types
+
 The following table lists elements in the DeploymentRequirements.xsd schema file.
 
 <br/>
