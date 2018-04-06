@@ -23,7 +23,7 @@ For a specified feature, SharePoint Foundation checks the Features directory for
 
 - [ListTemplate](listtemplate-element-list-template.md)
 
-<br/>
+## Example
 
 The following example shows the contents of an XML file in a list definition that defines a list template, which means that the list type is displayed on the Create Page.
 
