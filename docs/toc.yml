@@ -209,6 +209,11 @@
       href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
   - name: Debugging
     href: spfx/debug-in-vscode.md
+    items:
+    - name: Debug in Visual Studio Code
+      href: spfx/debug-in-vscode.md
+    - name: Debug on modern pages
+      href: spfx/debug-modern-pages.md
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ
