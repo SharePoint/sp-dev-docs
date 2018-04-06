@@ -1,7 +1,5 @@
 ---
 title: "DocumentLibrary Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # DocumentLibrary Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents an instance of a Windows SharePoint Services 3.0 document library object ([SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx) ). 
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="DocumentLibrary" type="SPDocumentLibrary" />
+
 USAGE
 <SPObject>
    <DocumentLibrary
@@ -36,9 +35,13 @@ USAGE
 
 ## Type
 
- **SPDocumentLibrary**
+**SPDocumentLibrary**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -48,31 +51,20 @@ USAGE
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
-## Remarks
+### Remarks
 
 The **SPDocumentLibrary** type extends the [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) type. For more information, see [List Element (DeploymentManifest)](list-element-deploymentmanifest.md).
   
 ## See also
 
-
-
-[SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
-  
-[SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
-
-
-[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
+- [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
+- [SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
 

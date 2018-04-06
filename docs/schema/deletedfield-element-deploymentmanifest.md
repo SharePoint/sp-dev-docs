@@ -1,7 +1,5 @@
 ---
 title: "DeletedField Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # DeletedField Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a data field that was deleted from a SharePoint list.
+
+## Definition
   
-```
+```XML
 DECLARATION
 <xs:element name="DeletedField" type="DeletedField" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <DeletedFields>
    <DeletedField
@@ -34,9 +33,13 @@ USAGE
 
 ## Type
 
- **DeletedField**
+**DeletedField**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -44,23 +47,17 @@ USAGE
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[DeletedFields Element (DeploymentManifest)](deletedfields-element-deploymentmanifest.md)
+[DeletedFields Element (DeploymentManifest)](deletedfields-element-deploymentmanifest.md)
    
-## Remarks
+### Remarks
 
 This element represents a change event as is typically used for event logging.
   
 ## See also
 
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

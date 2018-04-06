@@ -21,6 +21,7 @@ Represents a container, or collection, of Windows SharePoint Services 3.0 **Atta
 ```XML
 DECLARATION
 <xs:element name="Attachments" type="SPAttachmentCollection" minOccurs="0" maxOccurs="1" />
+
 USAGE
 <ListItem>
         <Attachments>
