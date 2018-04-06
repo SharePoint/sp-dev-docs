@@ -22,7 +22,7 @@ The following is a list of the elements in the Property Bag schema.
 
 - [Property](property-element-property-bag.md)
 
-<br/>
+## Examples
 
 The following example shows how to add a Location property and its value to the property bag of a website that represents a field office.
 

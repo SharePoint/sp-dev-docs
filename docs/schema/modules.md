@@ -52,7 +52,7 @@ The following schema is used within an Onet.xml file:
 
 - [Property](property-element-sitemodule.md)
 
-## Example
+## Examples
 
 The following example registers a Web Part Feature that specifies custom properties.
 

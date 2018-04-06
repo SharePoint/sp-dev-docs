@@ -62,21 +62,21 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>**Name**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the virtual path for the file. Cannot contain the following characters:</p>
 <ul>
-<li><p>\"</p></li>
-<li><p>#</p></li>
-<li><p>%</p></li>
-<li><p>&amp;</p></li>
-<li><p>*</p></li>
-<li><p>:</p></li>
-<li><p><</p></li>
-<li><p>></p></li>
-<li><p>?</p></li>
-<li><p>\\</p></li>
-<li><p>{</p></li>
-<li><p>}</p></li>
-<li><p>|</p></li>
-<li><p>~</p></li>
-<li><p>\x7f</p></li>
+<li><p>`"`</p></li>
+<li><p>`#`</p></li>
+<li><p>`%`</p></li>
+<li><p>`&`</p></li>
+<li><p>`*`</p></li>
+<li><p>`:`</p></li>
+<li><p>`<`</p></li>
+<li><p>`>`</p></li>
+<li><p>`?`</p></li>
+<li><p>`\`</p></li>
+<li><p>`{`</p></li>
+<li><p>`}`</p></li>
+<li><p>`|`</p></li>
+<li><p>`~`</p></li>
+<li><p>`\x7f`</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -88,9 +88,9 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Optional **Text**. Specifies the physical path to the file relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\Features\*Feature*. Can only contain the following characters:</p>
 <ul>
 <li><p>alphanumeric</p></li>
-<li><p>hyphen (**-**)</p></li>
-<li><p>underscore (**_**)</p></li>
-<li><p>period (**.**)</p></li>
+<li><p>hyphen (`-`)</p></li>
+<li><p>underscore (`_`)</p></li>
+<li><p>period (`.`)</p></li>
 <li><p>space ( )</p></li>
 </ul></td>
 </tr>

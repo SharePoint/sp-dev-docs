@@ -64,20 +64,20 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Required **Text**. Contains the name of the file set. Can only contain the following characters:</p>
 <ul>
 <li><p>alphanumeric</p></li>
-<li><p>hyphen (**-**)</p></li>
-<li><p>underscore (**_**)</p></li>
-<li><p>period (**.**)</p></li>
+<li><p>hyphen (`-`)</p></li>
+<li><p>underscore (`_`)</p></li>
+<li><p>period (`.`)</p></li>
 <li><p>space ( )</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Path**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\Features\*Feature*. Can only contain the following characters:</p>
+<td align="left"><p>Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\Features\Feature. Can only contain the following characters:</p>
 <ul>
 <li><p>alphanumeric</p></li>
-<li><p>hyphen (**-**)</p></li>
-<li><p>underscore (**_**)</p></li>
-<li><p>period (**.**)</p></li>
+<li><p>hyphen (`-`)</p></li>
+<li><p>underscore (`_`)</p></li>
+<li><p>period (`.`)</p></li>
 <li><p>space ( )</p></li>
 </ul></td>
 </tr>
@@ -90,9 +90,9 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Optional **Text**. Specifies the physical path to a folder in the SharePoint Foundation setup directory %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE) that contains a file to include in the module. Can only contain the following characters:</p>
 <ul>
 <li><p>alphanumeric</p></li>
-<li><p>hyphen (**-**)</p></li>
-<li><p>underscore (**_**)</p></li>
-<li><p>period (**.**)</p></li>
+<li><p>hyphen (`-`)</p></li>
+<li><p>underscore (`_`)</p></li>
+<li><p>period (`.`)</p></li>
 <li><p>space ( )</p></li>
 </ul></td>
 </tr>
