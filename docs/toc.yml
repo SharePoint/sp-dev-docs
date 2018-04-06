@@ -2557,30 +2557,30 @@
     - name: Content Type Bindings
       href: schema/content-type-bindings.md
       items:
-      - name: ContentTypeBinding Element (ContentTypeBinding)
+      - name: ContentTypeBinding Element
         href: schema/contenttypebinding-element-contenttypebinding.md
-      - name: Elements Element (ContentTypeBinding)
+      - name: Elements Element
         href: schema/elements-element-contenttypebinding.md
     - name: Content Type Definitions
       href: schema/content-type-definitions.md
       items:
-      - name: ContentType Element (ContentType)
+      - name: ContentType Element
         href: schema/contenttype-element-contenttype.md
-      - name: DocumentTemplate Element (ContentType)
+      - name: DocumentTemplate Element
         href: schema/documenttemplate-element-contenttype.md
-      - name: Elements Element (ContentType)
+      - name: Elements Element 
         href: schema/elements-element-contenttype.md
-      - name: FieldRef Element (ContentType)
+      - name: FieldRef Element 
         href: schema/fieldref-element-contenttype.md
-      - name: FieldRefs Element (ContentType)
+      - name: FieldRefs Element 
         href: schema/fieldrefs-element-contenttype.md
-      - name: Folder Element (ContentType)
+      - name: Folder Element 
         href: schema/folder-element-contenttype.md
-      - name: RemoveFieldRef Element (ContentType)
+      - name: RemoveFieldRef Element 
         href: schema/removefieldref-element-contenttype.md
-      - name: XmlDocument Element (ContentType)
+      - name: XmlDocument Element 
         href: schema/xmldocument-element-contenttype.md
-      - name: XmlDocuments Element (ContentType)
+      - name: XmlDocuments Element 
         href: schema/xmldocuments-element-contenttype.md
     - name: Custom Action Definition Schema
       href: schema/custom-action-definition-schema.md
@@ -2619,9 +2619,9 @@
     - name: Document Converter
       href: schema/document-converter.md
       items:
-      - name: DocumentConverter Element (Document Converter)
+      - name: DocumentConverter Element
         href: schema/documentconverter-element-document-converter.md
-      - name: Elements Element (Document Converter)
+      - name: Elements Element
         href: schema/elements-element-document-converter.md
     - name: Event Registrations
       href: schema/event-registrations.md
@@ -2701,9 +2701,9 @@
     - name: Field Definitions
       href: schema/field-definitions.md
       items:
-      - name: Elements Element (Field)
+      - name: Elements Element
         href: schema/elements-element-field.md
-      - name: Field Element (Field)
+      - name: Field Element
         href: schema/field-element-field.md
     - name: List Instances
       href: schema/list-instances.md
@@ -2765,45 +2765,45 @@
     - name: Property Bag Schema
       href: schema/property-bag-schema.md
       items:
-      - name: Elements Element (Property Bag)
+      - name: Elements Element
         href: schema/elements-element-property-bag.md
-      - name: PropertyBag Element (Property Bag)
+      - name: PropertyBag Element
         href: schema/propertybag-element-property-bag.md
-      - name: Property Element (Property Bag)
+      - name: Property Element
         href: schema/property-element-property-bag.md
     - name: Site Definition (Onet.xml) Files
       href: schema/site-definition-onet-xml-files.md
     - name: Web Template XML
       href: schema/web-template-xml.md
       items:
-      - name: WebTemplate Element (Web Template)
+      - name: WebTemplate Element
         href: schema/webtemplate-element-web-template.md
-      - name: Elements (Web Template)
+      - name: Elements
         href: schema/elements-web-template.md    
     - name: Workflow Definitions
       href: schema/workflow-definitions.md
       items:
-      - name: AssociationCategories Element (Workflow)
+      - name: AssociationCategories Element 
         href: schema/associationcategories-element-workflow.md
-      - name: AssociationData Element (Workflow)
+      - name: AssociationData Element 
         href: schema/associationdata-element-workflow.md
-      - name: Categories Element (Workflow)
+      - name: Categories Element 
         href: schema/categories-element-workflow.md
-      - name: Elements Element (Workflow)
+      - name: Elements Element 
         href: schema/elements-element-workflow.md
-      - name: ExtendedStatusColumnValues Element (Workflow)
+      - name: ExtendedStatusColumnValues Element 
         href: schema/extendedstatuscolumnvalues-element-workflow.md
-      - name: InitiationCategories Element (Workflow)
+      - name: InitiationCategories Element 
         href: schema/initiationcategories-element-workflow.md
-      - name: InitiationType Element (Workflow)
+      - name: InitiationType Element 
         href: schema/initiationtype-element-workflow.md
-      - name: MetaData Element (Workflow)
+      - name: MetaData Element 
         href: schema/metadata-element-workflow.md
-      - name: Modification_GUID_Name Element (Workflow)
+      - name: Modification_GUID_Name Element 
         href: schema/modification_guid_name-element-workflow.md
-      - name: StatusColumnValue Element (Workflow)
+      - name: StatusColumnValue Element 
         href: schema/statuscolumnvalue-element-workflow.md
-      - name: StatusPageUrl Element (Workflow)
+      - name: StatusPageUrl Element 
         href: schema/statuspageurl-element-workflow.md
       - name: Workflow Element (Elements)
         href: schema/workflow-element-elements.md
