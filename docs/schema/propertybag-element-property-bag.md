@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,65 +10,16 @@ api_name:
 ms.assetid: f249df32-1c9a-4d60-96e7-a97f0dd8f5f4
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# PropertyBag Element (Property Bag)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># PropertyBag Element (Property Bag)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+Specifies the properties in the property bag for the list item, file, folder, or website.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+## Definition
 
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Specifies the properties in the property bag for the list item, file,
-folder, or website.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><PropertyBag
+```XML
+<PropertyBag
   HyperlinkBaseUrl = "Text"
   ItemIndex = "Text"
   ParentType = "PropertyBagParentTypeDefinition"
@@ -78,19 +27,19 @@ folder, or website.
   Url = "Text">
 
   <Property  ... />
+</ PropertyBag >
+```
 
-</ PropertyBag ></code></pre></td>
-</tr>
-</tbody>
-</table>
+## Elements and attributes
 
+The following sections describe attributes, child elements, and parent elements.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -105,25 +54,24 @@ folder, or website.
 </tr>
 <tr class="even">
 <td align="left"><p>**ItemIndex**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the ID of the list item. This attribute is used only when **ParentType** is "ListItem".</p></td>
+<td align="left"><p>Optional **Text**. Specifies the ID of the list item. This attribute is used only when **ParentType** is "ListItem".</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentType**</p></td>
-<td align="left"><p>Required **PropertyBagParentTypeDefinition</span> enumeration. Must be one of **File</span>, **Folder</span>, **ListItem</span>, or **Web**. Specifies the kind of object to which the property bag belongs.</p></td>
+<td align="left"><p>Required **PropertyBagParentTypeDefinition** enumeration. Must be one of **File**, **Folder**, **ListItem**, or **Web**. Specifies the kind of object to which the property bag belongs.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **TRUE/FALSE</span>. Indicates whether the parent object must be the site collection's top-level site when the **ParentType</span> attribute is "Web". This attribute is not used with any other **ParentType** value.</p></td>
+<td align="left"><p>Optional **TRUE/FALSE**. Indicates whether the parent object must be the site collection's top-level site when the **ParentType** attribute is "Web". This attribute is not used with any other **ParentType** value.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
-<td align="left"><p>Optional **Text</span>. The site-relative URL of the parent object to which the property bag belongs, except when **ParentType** is "ListItem". In that case, this attribute specifies the site-relative URL of the list, not the list item.</p></td>
+<td align="left"><p>Optional **Text**. The site-relative URL of the parent object to which the property bag belongs, except when **ParentType** is "ListItem". In that case, this attribute specifies the site-relative URL of the list, not the list item.</p></td>
 </tr>
 </tbody>
 </table>
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Child elements
 
 <table>
 <colgroup>
@@ -136,8 +84,7 @@ folder, or website.
 </tbody>
 </table>
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Parent elements
 
 <table>
 <colgroup>
@@ -150,8 +97,7 @@ folder, or website.
 </tbody>
 </table>
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Occurrences
 
 <table>
 <colgroup>
@@ -165,12 +111,9 @@ folder, or website.
 </tbody>
 </table>
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-For an example of how this element is used, see <span
-sdata="link">[Property Bag
-Schema](property-bag-schema.md)</span>.
+For an example of how this element is used, see [Property Bag Schema](property-bag-schema.md).
 
 
 
