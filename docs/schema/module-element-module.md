@@ -101,21 +101,21 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the Feature.</p>
 <p>The **Url** attribute cannot contain the following characters:</p>
 <ul>
-<li><p>\"</p></li>
-<li><p>#</p></li>
-<li><p>%</p></li>
-<li><p>&amp;</p></li>
-<li><p>*</p></li>
-<li><p>:</p></li>
-<li><p><</p></li>
-<li><p>></p></li>
-<li><p>?</p></li>
-<li><p>\\</p></li>
-<li><p>{</p></li>
-<li><p>}</p></li>
-<li><p>|</p></li>
-<li><p>~</p></li>
-<li><p>\x7f</p></li>
+<li><p>`"`</p></li>
+<li><p>`#`</p></li>
+<li><p>`%`</p></li>
+<li><p>`&`</p></li>
+<li><p>`*`</p></li>
+<li><p>`:`</p></li>
+<li><p>`<`</p></li>
+<li><p>`>`</p></li>
+<li><p>`?`</p></li>
+<li><p>`\`</p></li>
+<li><p>`{`</p></li>
+<li><p>`}`</p></li>
+<li><p>`|`</p></li>
+<li><p>`~`</p></li>
+<li><p>`\x7f`</p></li>
 </ul></td>
 </tr>
 </tbody>

@@ -156,16 +156,15 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>**RowLimit**</p></td>
 <td align="left"><p>Optional **Integer**. Applies to the HTML view type only. Specifies the maximum number of rows to render on any one page. When the row limit is exceeded, the next and previous buttons on the page allow for viewing other parts of the returned recordset.</p>
 <p>If **RowLimit** is not specified, the default number of Rows returned is 50. If "None" is specified for the view type, all the rows of the recordset are returned in one view.</p>
-<p>When a view is rendered, the render variables **ViewHasNext** and **ViewHasPrev** are set to **TRUE** or **FALSE**, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render **Next** and **Previous** buttons on the page, as in the following example:</p>
+<p>When a view is rendered, the render variables **ViewHasNext** and **ViewHasPrev** are set to **TRUE** or **FALSE**, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render **Next** and **Previous** buttons on the page, as in the following XML example:</p>
 <p>
-```XML 
-  <Switch>
-    <Expr><GetVar Name="ViewHasPrev"/></Expr>
-    <Case Value="TRUE">
-      <![CDATA[...Previous button defined here... ]]>
-    </Case>
-  </Switch>
-```
+  `<Switch>
+      <Expr><GetVar Name="ViewHasPrev"/></Expr>
+      <Case Value="TRUE">
+        <![CDATA[...Previous button defined here... ]]>
+      </Case>
+    </Switch>
+  `
 </p>
 <p>The variables **NextPageURL** and **PrevPageURL** are also set to nonblank values when there is forward or backward paging content from the current display. These variables can be used by constructing the **Next** and **Previous** buttons to have the correct URL for accessing the next page of content.</p></td>
 </tr>

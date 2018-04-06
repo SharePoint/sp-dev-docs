@@ -85,7 +85,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**Path**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the physical path to the file relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\Features\*Feature*. Can only contain the following characters:</p>
+<td align="left"><p>Optional **Text**. Specifies the physical path to the file relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\Features\Feature. Can only contain the following characters:</p>
 <ul>
 <li><p>alphanumeric</p></li>
 <li><p>hyphen (`-`)</p></li>
@@ -107,21 +107,21 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>**Url**</p></td>
 <td align="left"><p>Required **Text**. Specifies the virtual path for the file. If the **Name** attribute is specified, its value is used for the virtual path. If **Path** is not specified, the value of **Url** is used for the physical path. Cannot contain the following characters:</p>
 <ul>
-<li><p>\"</p></li>
-<li><p>#</p></li>
-<li><p>%</p></li>
-<li><p>&amp;</p></li>
-<li><p>*</p></li>
-<li><p>:</p></li>
-<li><p><</p></li>
-<li><p>></p></li>
-<li><p>?</p></li>
-<li><p>\\</p></li>
-<li><p>{</p></li>
-<li><p>}</p></li>
-<li><p>|</p></li>
-<li><p>~</p></li>
-<li><p>\x7f</p></li>
+<li><p>`"`</p></li>
+<li><p>`#`</p></li>
+<li><p>`%`</p></li>
+<li><p>`&`</p></li>
+<li><p>`*`</p></li>
+<li><p>`:`</p></li>
+<li><p>`<`</p></li>
+<li><p>`>`</p></li>
+<li><p>`?`</p></li>
+<li><p>`\`</p></li>
+<li><p>`{`</p></li>
+<li><p>`}`</p></li>
+<li><p>`|`</p></li>
+<li><p>`~`</p></li>
+<li><p>`\x7f`</p></li>
 </ul></td>
 </tr>
 </tbody>
