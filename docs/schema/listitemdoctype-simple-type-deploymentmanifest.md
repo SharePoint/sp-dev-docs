@@ -1,7 +1,5 @@
 ---
 title: "ListItemDocType Simple Type (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # ListItemDocType Simple Type (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Specifies the document type of a specified list item.
-  
-```
+
+## Definition
+
+```XML
 <xs:simpleType name="ListItemDocType">
    <xs:restriction base="xs:string">
       <xs:enumeration value="File" />
@@ -45,10 +43,6 @@ Objects of type **Unknown** are typically Web object types. This enumeration pro
   
 ## See also
 
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
-#### Other resources
-
-[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
 
