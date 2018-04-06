@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,90 +12,33 @@ api_type:
 ms.assetid: ff4ba91a-cc5f-47ff-9101-a7651f452185
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# WebTemplate Element (Web Template)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># WebTemplate Element (Web Template)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+Configures several aspects of a custom web template and the websites that are created from it. This element is in an elements.xml file that is inside the .wsp file that packages a web template.
+
+- [Elements (Web Template)](elements-web-template.md)
+  
+- [WebTemplate Element (Web Template)](webtemplate-element-web-template.md) 
+
+## Definition
+
+```XML
+<WebTemplate ... />
+```
+
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 <table>
 <colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Configures several aspects of a custom web template and the websites
-that are created from it. This element is in an <span
-class="code">elements.xml</span> file that is inside the .wsp file that
-packages a web template.
-
-[Elements (Web
-Template)](elements-web-template.md)</span>  
-  [WebTemplate Element (Web
-Template)](webtemplate-element-web-template.md)</span>  
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><WebTemplate ... /></code></pre></td>
-</tr>
-</tbody>
-</table>
-
-**Complex**
-
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following sections describe attributes, child elements, and parent
-elements.
-
-#### Attributes
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="20%" />
+<col width="10%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -120,22 +61,23 @@ elements.
 <tr class="odd">
 <td align="left"><p>**AlternateHeader**</p></td>
 <td align="left"><p>**string**</p></td>
-<td align="left"><p>Optional. Specifies the name of an ASPX page that is located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternative header for the top area in site pages of websites that are created from the web template. This attribute provides a way to replace the header region with the output of an ASPX page that defines a different header. For example, to specify <span class="code">myHeader.aspx</span> as the name of the file that provides an alternative header, add <span class="code">AlternateHeader="myHeader.aspx"</span> to the **Project</span> element at the beginning of the <span class="code">Onet.xml** file.</p></td>
+<td align="left"><p>Optional. Specifies the name of an ASPX page that is located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternative header for the top area in site pages of websites that are created from the web template. This attribute provides a way to replace the header region with the output of an ASPX page that defines a different header.</p>
+<p>For example, to specify `myHeader.aspx` as the name of the file that provides an alternative header, add `AlternateHeader="myHeader.aspx"` to the **Project** element at the beginning of the `Onet.xml` file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**BaseTemplateID**</p></td>
 <td align="left"><p>**int**</p></td>
-<td align="left"><p>Required. The ID of the site definition on which the web template ultimately derives. This is the value of the **ID</span> attribute of the **Template</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
+<td align="left"><p>Required. The ID of the site definition on which the web template ultimately derives. This is the value of the **ID** attribute of the **Template** element in a `WebTemp*.xml` file.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**BaseTemplateName**</p></td>
 <td align="left"><p>**string**</p></td>
-<td align="left"><p>Required. The internal name of the site definition on which the web template ultimately derives. This is the value of the **Name</span> attribute of the **Template</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
+<td align="left"><p>Required. The internal name of the site definition on which the web template ultimately derives. This is the value of the **Name** attribute of the **Template** element in a `WebTemp*.xml` file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**BaseConfigurationID**</p></td>
 <td align="left"><p>**int**</p></td>
-<td align="left"><p>Required. The ID of the site definition configuration on which the web template ultimately derives. This is the value of the **ID</span> attribute of a **Configuration</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
+<td align="left"><p>Required. The ID of the site definition configuration on which the web template ultimately derives. This is the value of the **ID** attribute of a **Configuration** element in a `WebTemp*.xml` file.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**CalendarType**</p></td>
@@ -150,7 +92,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>**ContainsDefaultLists**</p></td>
 <td align="left"><p>**boolean**</p></td>
-<td align="left"><p>Optional. Specifies whether the site definition from which the web template is ultimately derived contained lists that are defined in the global <span class="code">Onet.xml</span> file. This is significant because if the original site definition did contain such lists, those lists are <em>not</em> included in websites that are created from the web template.</p></td>
+<td align="left"><p>Optional. Specifies whether the site definition from which the web template is ultimately derived contained lists that are defined in the global `Onet.xml` file. This is significant because if the original site definition did contain such lists, those lists are *not* included in websites that are created from the web template.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**CustomizedCssFiles**</p></td>
@@ -170,7 +112,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>**DisplayCategory**</p></td>
 <td align="left"><p>**string**</p></td>
-<td align="left"><p>Optional. Specifies the category in which the web template appears in the Microsoft SharePoint Foundation UI when users are selecting a type of website to create; for example, <span class="ui">Collaboration</span>, <span class="ui">Meetings</span>, or some other custom name. If it is not specified, the default is "Custom".</p></td>
+<td align="left"><p>Optional. Specifies the category in which the web template appears in the Microsoft SharePoint Foundation UI when users are selecting a type of website to create; for example, **Collaboration**, **Meetings**, or some other custom name. If it is not specified, the default is "Custom".</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ExcludeFromOfflineClient**</p></td>
@@ -260,28 +202,19 @@ elements.
 </tbody>
 </table>
 
-#### Child elements
+### Child elements
 
 None
 
-#### Parent elements
+### Parent elements
 
-[Elements (Web
-Template)](elements-web-template.md)</span>
+[Elements (Web Template)](elements-web-template.md)
 
+## Example
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following includes an example of a **WebTemplate** element.
 
-The following includes an example of a <span
-class="keyword">WebTemplate</span> element.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
       <WebTemplate 
         AdjustHijriDays="0" 
@@ -313,14 +246,11 @@ code] "Copy code")Copy code</span>
         TreeViewEnabled="FALSE" 
         UIVersionConfigurationEnabled="FALSE" />
     </Elements>
+```
 
+## See also
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#### Other resources
-
-[Working with Site Templates and
-Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
+- [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
 
 
 

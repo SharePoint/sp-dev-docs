@@ -22,60 +22,38 @@ Provides a parent for the **WebTemplate** element in an elements.xml file in a w
 
 - [WebTemplate Element (Web Template)](webtemplate-element-web-template.md)
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><Elements xmlns="http://schemas.microsoft.com/sharepoint/"></code></pre></td>
-</tr>
-</tbody>
-</table>
+## Definition
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>  <WebTemplate ...></code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+```
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code></Elements></code></pre></td>
-</tr>
-</tbody>
-</table>
+<br/>
 
-**Complex**
+```XML
+<WebTemplate ...>
+```
 
+<br/>
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```XML
+</Elements>
+```
 
-The following sections describe attributes, child elements, and parent
-elements.
+## Elements and attributes
 
-#### Attributes
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
 
-#### Child elements
+### Child elements
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="40%" />
+<col width="60%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -85,42 +63,25 @@ None
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a></span></p></td>
+<td align="left"><p><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a></p></td>
 <td align="left"><p>Provides configuration data for a web template.</p></td>
 </tr>
 </tbody>
 </table>
 
-#### Parent elements
+### Parent elements
 
 None
 
+### Remarks
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The elements.xml file is itself referenced in the **ElementManifests** section of a feature.xml file that is also part of the WSP file. When the feature is activated for a site collection, the web template becomes available for creating new websites within the collection. The **ElementManifests** section also identifies an Onet.xml file that contains additional details of the web template that are not specified in the **WebTemplate** child element.
 
-The <span class="code">elements.xml</span> file is itself referenced in
-the **ElementManifests** section of a <span
-class="code">feature.xml</span> file that is also part of the WSP file.
-When the feature is activated for a site collection, the web template
-becomes available for creating new websites within the collection. The
-**ElementManifests** section also identifies an
-<span class="code">Onet.xml</span> file that contains additional details
-of the web template that are not specified in the <span
-class="keyword">WebTemplate</span> child element.
+## Example
 
+The following is an example of an **Elements** element.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following is an example of an **Elements**
-element.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+```XML
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
       <WebTemplate 
         AdjustHijriDays="0" 
@@ -152,14 +113,11 @@ code] "Copy code")Copy code</span>
         TreeViewEnabled="FALSE" 
         UIVersionConfigurationEnabled="FALSE" />
     </Elements>
+```
 
+## See also
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#### Other resources
-
-[Working with Site Templates and
-Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
+- [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
 
 
 
