@@ -1,7 +1,5 @@
 ---
 title: "LookupLists Element (DeploymentLookupListMap)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # LookupLists Element (DeploymentLookupListMap)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a collection of deployment lookup list ( **SPLookupList**) objects exported to the content migration package.
-  
-```
+Represents a collection of deployment lookup list (**SPLookupList**) objects exported to the content migration package.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="LookupLists" type="SPLookupLists" />
 USAGE
@@ -32,7 +30,7 @@ USAGE
 
 ## Type
 
- **SPLookupLists**
+**SPLookupLists**
   
 ## Elements and attributes
 
@@ -40,29 +38,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[LookupList Element (DeploymentLookupListMap)](lookuplist-element-deploymentlookuplistmap.md)|
+[LookupList Element (DeploymentLookupListMap)](lookuplist-element-deploymentlookuplistmap.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None. |
+None
    
 ### Remarks
 
-The **LookupLists** element is the root element in the **DeploymentLookupListMap** Schema, and therefore has no parent element. 
+The **LookupLists** element is the root element in the **DeploymentLookupListMap** schema, and therefore has no parent element. 
   
 ## See also
 
-
-
-[DeploymentLookupListMap Schema](deploymentlookuplistmap-schema.md)
+- [DeploymentLookupListMap Schema](deploymentlookuplistmap-schema.md)
 

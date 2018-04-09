@@ -1,7 +1,5 @@
 ---
 title: "LookupItem Element (DeploymentLookupListMap)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # LookupItem Element (DeploymentLookupListMap)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a reference object ( **SPLookupItem**) that holds references from list item to list item when the items are exported to a content migration package.
-  
-```
+Represents a reference object (**SPLookupItem**) that holds references from list item to list item when the items are exported to a content migration package.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
         name="LookupItem" 
@@ -41,7 +39,7 @@ USAGE
 
 ## Type
 
- **SPLookupItem**
+**SPLookupItem**
   
 ## Elements and attributes
 
@@ -58,19 +56,13 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[LookupItems Element (DeploymentLookupListMap)](lookupitems-element-deploymentlookuplistmap.md)|
+[LookupItems Element (DeploymentLookupListMap)](lookupitems-element-deploymentlookuplistmap.md)
    
 ## See also
 
-
-
-[DeploymentLookupListMap Schema](deploymentlookuplistmap-schema.md)
+- [DeploymentLookupListMap Schema](deploymentlookuplistmap-schema.md)
 

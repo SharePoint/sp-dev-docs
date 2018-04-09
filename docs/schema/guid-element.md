@@ -1,7 +1,5 @@
 ---
 title: "GUID Element"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # GUID Element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 An internal ID number used in the database. The **GUID** element generates a globally unique identifier (GUID) as returned by the Microsoft Component Object Model (COM) function **CoCreateGuid**.
-  
-```
+
+## Definition
+
+```XML
 <GUID>
 </GUID>
 ```
@@ -31,27 +29,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded
    
 ### Remarks
 
@@ -75,4 +66,5 @@ The following example evaluates a GUID variable and, if it is an empty string, a
 </Switch>
 ```
 
+<br/>
 
