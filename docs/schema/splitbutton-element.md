@@ -1,6 +1,7 @@
 ---
-
-
+title: "SplitButton Element"
+ms.author: ricardol
+author: ricardol
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,66 +13,20 @@ api_name:
 api_type:
 - schema
 ms.assetid: 56fa2683-f70c-40e6-9b98-7ba4611f17fa
+
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# SplitButton Element
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># SplitButton Element</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
 Defines a control that combines a button and a drop-down menu.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><SplitButton
+  
+```
+<SplitButton
   Alt="Text"
   CacheMenuVersions="TRUE | FALSE"
   Command="Text"
@@ -104,219 +59,63 @@ Defines a control that combines a button and a drop-down menu.
   ToolTipHelpKeyWord="Text"
   ToolTipSelectedItemTitle="Text"
   ToolTipShortcutKey="Text"
-/></code></pre></td>
-</tr>
-</tbody>
-</table>
+/>
+```
 
+## Attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|**Attribute**|**Description**|
+|:-----|:-----|
+|**Alt** <br/> |Optional. Alternative text that is used for the control.  <br/> |
+|**CacheMenuVersions** <br/> |Optional. **TRUE** to store previously constructed versions of a dynamic menu. The default is **FALSE**.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](../../sharepoint-features-schemas/custom-action-definition-schema/commanduihandler-element.md) element.  <br/> |
+|**CommandMenuOpen** <br/> |Optional. The name of the command to execute when the menu opens.  <br/> |
+|**CommandMenuClose** <br/> |Optional. The name of the command to execute when the menu closes.  <br/> |
+|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.  <br/> **General**. Not a specific type of command.  <br/> **OptionSelection**. A command that is generated when a user selects one option in an option group.  <br/> **IgnoredByMenu**. A command that is used for controls that should not close the menu when they are clicked.  <br/> |
+|**Id** <br/> |Required. A string that identifies the control.  <br/> |
+|**Image32by32** <br/> |Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".  <br/> |
+|**Image32by32Class** <br/> |Optional. The name of a CSS class selector to be applied to the image.  <br/> |
+|**Image32by32Left** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains images for many icons.  <br/> The value of the **Image32by32Left** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag. For example, setting the **Image32by32Left** attribute to " -160" and the **Image32by32Top** attribute to " -448" results in an inline style that is similar to the one in the following HTML markup:  <br/> ```HTML<img src="/_layouts/1033/images/formatmap32x32.png" style="position: absolute;left: -160px;top: -448px;" />```|
+|**Image32by32Top** <br/> |Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains the images for many icons. The value of the **Image32by32Top** attribute is used to set the CSS **top** attribute for the inline style of an HTML **img** tag.  <br/> |
+|**Image16by16** <br/> |Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap16x16.png".  <br/> |
+|**Image16by16Class** <br/> |Optional. The name of a CSS class selector to be applied to the image.  <br/> |
+|**Image16by16Left** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16** attribute points to an image file that contains images for many icons. The value of the **Image16by16Left** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag.  <br/> |
+|**Image16by16Top** <br/> |Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16** attribute points to an image file that contains images for many icons. The value of the **Image16by16Top** attribute is used to set the CSS **top** attribute for the inline style of an HTML **img** tag.  <br/> |
+|**LabelText** <br/> |Optional. Text to label the control.  <br/> |
+|**MenuAlt** <br/> |Optional. Alternative text to represent the menu.  <br/> |
+|**MenuCommand** <br/> |Optional. The name of the command to execute when the menu is clicked.  <br/> |
+|**PopulateDynamically** <br/> |Optional. **TRUE** to create the menu dynamically. The default is **FALSE**.  <br/> |
+|**PopulateQueryCommand** <br/> |Optional. The name of the command to execute when creating a dynamic menu.  <br/> |
+|**PopulateOnlyOnce** <br/> |Optional. **TRUE** to populate a dynamic menu only the first time that it is accessed.  <br/> |
+|**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
+|**TemplateAlias** <br/> |Optional. A string that matches the value of the **TemplateAlias** attribute for a [ControlRef](controlref-element.md) element, an [OverflowArea](overflowarea-element.md) element, or an [OverflowSection](overflowsection-element.md) element in a [GroupTemplate](grouptemplate-element.md) element. The **TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group.  <br/> |
+|**ToolTipImage32by32** <br/> |Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".  <br/> |
+|**ToolTipImage32by32Class** <br/> |Optional. The name of a CSS selector to be applied to the tooltip image.  <br/> |
+|**ToolTipImage32by32Left** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ToolTipImage32by32** attribute points to an image file that contains the images for many icons. The value of the **ToolTipImage32by32Left** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag when the page is created.  <br/> |
+|**ToolTipImage32by32Top** <br/> |Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ToolTipImage32by32** attribute points to an image file that contains the images for many icons. The value of the **ToolTipImage32by32Top** attribute is used to set the CSS **top** attribute for the inline style of an HTML **img** tag when the page is created.  <br/> |
+|**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
+|**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
+|**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
+|**ToolTipSelectedItemTitle** <br/> |Optional. The title of the tooltip that appears for the selected item.  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+   
+## Child Elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Alt**</p></td>
-<td align="left"><p>Optional. Alternative text that is used for the control.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**CacheMenuVersions**</p></td>
-<td align="left"><p>Optional. **TRUE</span> to store previously constructed versions of a dynamic menu. The default is **FALSE**.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Command**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.md">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the **Command** attribute of a corresponding <a href="commanduihandler-element.md">CommandUIHandler</a> element.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**CommandMenuOpen**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the menu opens.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**CommandMenuClose**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the menu closes.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**CommandType**</p></td>
-<td align="left"><p>Optional. An enumeration value that specifies the type of command.</p>
-<ul>
-<li><p>**General**. Not a specific type of command.</p></li>
-<li><p>**OptionSelection**. A command that is generated when a user selects one option in an option group.</p></li>
-<li><p>**IgnoredByMenu**. A command that is used for controls that should not close the menu when they are clicked.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required. A string that identifies the control.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Image32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Image32by32Class**</p></td>
-<td align="left"><p>Optional. The name of a CSS class selector to be applied to the image.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Image32by32Left**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains images for many icons.</p>
-<p>The value of the **Image32by32Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img</span> tag. For example, setting the **Image32by32Left</span> attribute to "<span class="input">-160</span>" and the **Image32by32Top</span> attribute to "<span class="input">-448**" results in an inline style that is similar to the one in the following HTML markup:</p>
-<div class="code">
-<span codelanguage="html"></span>
-HTML 
-<span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img src=".." title="Copy code" alt="Copy code" />Copy code</span>
-<pre><code><img src="/_layouts/1033/images/formatmap32x32.png" style="position: absolute;left: -160px;top: -448px;" /></code></pre>
-</div></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Image32by32Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image32by32</span> attribute points to an image file that contains the images for many icons. The value of the **Image32by32Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Image16by16**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap16x16.png".</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Image16by16Class**</p></td>
-<td align="left"><p>Optional. The name of a CSS class selector to be applied to the image.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Image16by16Left**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Image16by16Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**LabelText**</p></td>
-<td align="left"><p>Optional. Text to label the control.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**MenuAlt**</p></td>
-<td align="left"><p>Optional. Alternative text to represent the menu.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**MenuCommand**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the menu is clicked.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**PopulateDynamically**</p></td>
-<td align="left"><p>Optional. **TRUE</span> to create the menu dynamically. The default is **FALSE**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**PopulateQueryCommand**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when creating a dynamic menu.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**PopulateOnlyOnce**</p></td>
-<td align="left"><p>Optional. **TRUE** to populate a dynamic menu only the first time that it is accessed.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Sequence**</p></td>
-<td align="left"><p>Optional. An integer that specifies the order of placement among sibling XML nodes.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.md">ControlRef</a> element, an <a href="overflowarea-element.md">OverflowArea</a> element, or an <a href="overflowsection-element.md">OverflowSection</a> element in a <a href="grouptemplate-element.md">GroupTemplate</a> element. The **TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ToolTipImage32by32**</p></td>
-<td align="left"><p>Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used in the tooltip, such as "/_layouts/1033/images/formatmap32x32.png".</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ToolTipImage32by32Class**</p></td>
-<td align="left"><p>Optional. The name of a CSS selector to be applied to the tooltip image.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ToolTipImage32by32Left**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ToolTipImage32by32</span> attribute points to an image file that contains the images for many icons. The value of the **ToolTipImage32by32Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ToolTipImage32by32Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ToolTipImage32by32</span> attribute points to an image file that contains the images for many icons. The value of the **ToolTipImage32by32Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ToolTipTitle**</p></td>
-<td align="left"><p>Optional. The text that appears as the title of the tooltip.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ToolTipDescription**</p></td>
-<td align="left"><p>Optional. The text that appears in the body of the tooltip.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ToolTipHelpKeyWord**</p></td>
-<td align="left"><p>Optional. The keyword that is used by context-sensitive Help.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ToolTipSelectedItemTitle**</p></td>
-<td align="left"><p>Optional. The title of the tooltip that appears for the selected item.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ToolTipShortcutKey**</p></td>
-<td align="left"><p>Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".</p></td>
-</tr>
-</tbody>
-</table>
+||
+|:-----|
+|[Menu](menu-element.md)|
+   
+## Parent Elements
 
+||
+|:-----|
+|[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
+|[Controls](controls-element-group.md) <br/> |
+   
+## Occurrences
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="menu-element.md">Menu</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="commanduidefinition-element.md">CommandUIDefinition</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="controls-element-group.md">Controls</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: unbounded</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+   
 

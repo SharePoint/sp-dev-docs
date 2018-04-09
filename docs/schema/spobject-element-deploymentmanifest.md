@@ -43,7 +43,7 @@ USAGE
 
 ## Type
 
-**SPGenericObject** ( [Object](https://msdn.microsoft.com/library/System.Object.aspx)) 
+**SPGenericObject** ([Object](https://msdn.microsoft.com/library/System.Object.aspx)) 
   
 ## Elements and attributes
 

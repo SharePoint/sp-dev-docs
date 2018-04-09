@@ -83,9 +83,9 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Parent elements
 
-[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
+- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
    
-## Remarks
+### Remarks
 
 This element can contain instances of itself, and can therefore be either a parent or child of itself.
   

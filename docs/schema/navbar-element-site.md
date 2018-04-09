@@ -1,6 +1,7 @@
 ---
-
-
+title: "NavBar Element (Site)"
+ms.author: rickki
+author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,68 +13,19 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0f997d7b-d1c1-4405-9d83-26e20cd37767
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# NavBar Element (Site)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># NavBar Element (Site)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Contains the definition of the navigation area for either the top links
-of all pages within a site or for the Quick Launch area of the home
-page.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><NavBar
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Contains the definition of the navigation area for either the top links of all pages within a site or for the Quick Launch area of the home page.
+  
+```
+<NavBar
   Body = "Text"
   ID = "Integer"
   Name = "Text"
@@ -81,132 +33,59 @@ page.
   Separator = "Text"
   Suffix = "Text"
   Url = "Text">
-</NavBar></code></pre></td>
-</tr>
-</tbody>
-</table>
+</NavBar>
+```
 
+## Attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|**Attribute**|**Description**|
+|:-----|:-----|
+|**Body** <br/> |Required **Text**. Contains the body of the definition for the navigation bar.  <br/> |
+|**ID** <br/> |Required **Integer**. Specifies the ID of the navigation bar.  <br/> |
+|**Name** <br/> |Required **Text**. Contains the name of the navigation bar.  <br/> |
+|**Prefix** <br/> |Optional **Text**. Contains the opening tag for the table that contains the navigation bar.  <br/> |
+|**Separator** <br/> |Optional **Text**. Specifies the separator to use between items in the navigation bar.  <br/> |
+|**Suffix** <br/> |Optional **Text**. Contains the closing tag for the table that contains the navigation bar.  <br/> |
+|**Url** <br/> |Optional **Text**.  <br/> |
+   
+## Child Elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Body**</p></td>
-<td align="left"><p>Required **Text**. Contains the body of the definition for the navigation bar.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ID**</p></td>
-<td align="left"><p>Required **Integer**. Specifies the ID of the navigation bar.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text**. Contains the name of the navigation bar.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Prefix**</p></td>
-<td align="left"><p>Optional **Text**. Contains the opening tag for the table that contains the navigation bar.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Separator**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the separator to use between items in the navigation bar.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Suffix**</p></td>
-<td align="left"><p>Optional **Text**. Contains the closing tag for the table that contains the navigation bar.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Url**</p></td>
-<td align="left"><p>Optional **Text**.</p></td>
-</tr>
-</tbody>
-</table>
+||
+|:-----|
+|[NavBarLink](navbarlink-element-site.md), [NavBarPage](navbarpage-element-sitemodule.md)|
+   
+## Parent Elements
 
+||
+|:-----|
+|[NavBars](navbars-element-site.md)|
+   
+## Occurrences
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="navbarlink-element-site.md">NavBarLink</a>, <a href="navbarpage-element-sitemodule.md">NavBarPage</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="navbars-element-site.md">NavBars</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded</p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+   
+## Example
 
 The following example defines the top navigation area of a home page.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
-    <NavBar Name="SharePoint Top Navbar" Separator="&nbsp;&nbsp;&nbsp;" 
-       Body="<a ID='onettopnavbar#LABEL_ID#' href='#URL#' 
-          accesskey='J'>#LABEL#</a>" ID="1002">
-       <NavBarLink Name="Documents and Lists" 
-          Url="_layouts/[%=System.Threading.Thread.CurrentThread.
-          CurrentUICulture.LCID%]/viewlsts.aspx" />
-       <NavBarLink Name="Create" 
-          Url="_layouts/[%=System.Threading.Thread.CurrentThread.
-             CurrentUICulture.LCID%]/create.aspx" />
-       <NavBarLink Name="Site Settings" 
-          Url="_layouts/[%=System.Threading.Thread.CurrentThread.
-             CurrentUICulture.LCID%]/settings.aspx" />
-       <NavBarLink Name="Help" 
-          Url="javascript:HelpWindowKey("helphome")" />
-    </NavBar>
-
-
-
-
-
-
+  
+```XML
+<NavBar Name="SharePoint Top Navbar" Separator="&amp;nbsp;&amp;nbsp;&amp;nbsp;" 
+   Body="<a ID='onettopnavbar#LABEL_ID#' href='#URL#' 
+      accesskey='J'>#LABEL#</a>" ID="1002">
+   <NavBarLink Name="Documents and Lists" 
+      Url="_layouts/[%=System.Threading.Thread.CurrentThread.
+      CurrentUICulture.LCID%]/viewlsts.aspx" />
+   <NavBarLink Name="Create" 
+      Url="_layouts/[%=System.Threading.Thread.CurrentThread.
+         CurrentUICulture.LCID%]/create.aspx" />
+   <NavBarLink Name="Site Settings" 
+      Url="_layouts/[%=System.Threading.Thread.CurrentThread.
+         CurrentUICulture.LCID%]/settings.aspx" />
+   <NavBarLink Name="Help" 
+      Url="javascript:HelpWindowKey("helphome")" />
+</NavBar>
+```
 
 

@@ -1,6 +1,7 @@
 ---
-
-
+title: "OrderBy Element (Query)"
+ms.author: rickki
+author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,178 +13,65 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7a659d08-9060-41d1-9a1c-e5a61376f3ba
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# OrderBy Element (Query)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># OrderBy Element (Query)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Determines the sort order for a query. The <span
-class="keyword">OrderBy</span> element contains a group of
-[FieldRef](fieldref-element-query.md) elements.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><OrderBy  Override = "TRUE" | "FALSE"  UseIndexForOrderBy = "TRUE" | "FALSE">
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Determines the sort order for a query. The **OrderBy** element contains a group of [FieldRef](fieldref-element-query.md) elements. 
+  
+```
+<OrderBy  Override = "TRUE" | "FALSE"  UseIndexForOrderBy = "TRUE" | "FALSE">
   <FieldRef
     Ascending = "TRUE" | "FALSE"
     Name = "Text" />
     ...
-</OrderBy></code></pre></td>
-</tr>
-</tbody>
-</table>
+</OrderBy>
+```
 
+## Attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|**Attribute**|**Description**|
+|:-----|:-----|
+|**Override** <br/> |Optional **Boolean**.  <br/> |
+|**UseIndexForOrderBy** <br/> |Optional **Boolean**.  <br/> |
+   
+## Child Elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Override**</p></td>
-<td align="left"><p>Optional **Boolean**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**UseIndexForOrderBy**</p></td>
-<td align="left"><p>Optional **Boolean**.</p></td>
-</tr>
-</tbody>
-</table>
+||
+|:-----|
+|[FieldRef](fieldref-element-query.md)|
+   
+## Parent Elements
 
+||
+|:-----|
+|[Expr1](../../collaborative-application-markup-language-caml-schemas/view-schema/expr1-element-view.md), [Expr2](../../collaborative-application-markup-language-caml-schemas/view-schema/expr2-element-view.md), [Query](../../collaborative-application-markup-language-caml-schemas/list-schema/query-element-list.md)|
+   
+## Occurrences
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: 1  <br/> |
+   
+## Remarks
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="fieldref-element-query.md">FieldRef</a></p></td>
-</tr>
-</tbody>
-</table>
+The order in which the fields appear is the order in which the fields are sorted. The value of the **Ascending** attribute in the [FieldRef](../../collaborative-application-markup-language-caml-schemas/list-schema/fieldref-element-list.md) element determines whether to sort in ascending order. 
+  
+## Example
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="expr1-element-view.md">Expr1</a>, <a href="expr2-element-view.md">Expr2</a>, <a href="query-element-list.md">Query</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The order in which the fields appear is the order in which the fields
-are sorted. The value of the **Ascending**
-attribute in the [FieldRef](fieldref-element-list.md)
-element determines whether to sort in ascending order.
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following example sorts the fields first in ascending order by the
-Newcomers field, then in descending order by Years, and finally in
-ascending order by Location.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
-    <OrderBy>
-      <FieldRef Name="Newcomers"/>
-      <FieldRef Name="Years" Ascending="FALSE"/>
-      <FieldRef Name="Location"/>
-    </OrderBy>
-
-
-
-
-
-
+The following example sorts the fields first in ascending order by the Newcomers field, then in descending order by Years, and finally in ascending order by Location.
+  
+```XML
+<OrderBy>
+  <FieldRef Name="Newcomers"/>
+  <FieldRef Name="Years" Ascending="FALSE"/>
+  <FieldRef Name="Location"/>
+</OrderBy>
+```
 
 

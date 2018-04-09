@@ -33,7 +33,7 @@ USAGE
 
 ## Type
 
-**DeploymentRoles** (based on [SPRoleCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleCollection.aspx) ) 
+**DeploymentRoles** (based on [SPRoleCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleCollection.aspx)) 
   
 ## Elements and attributes
 

@@ -21,6 +21,7 @@ Represents a collection of Windows SharePoint Services 3.0 form ([SPFormCollecti
 ```XML
 DECLARATION
 <xs:element name="Forms" type="SPFormCollection" minOccurs="0" maxOccurs="1" />
+
 USAGE
 <List>
         <Forms>

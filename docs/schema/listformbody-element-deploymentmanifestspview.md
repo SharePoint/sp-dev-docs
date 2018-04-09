@@ -21,6 +21,7 @@ Represents the body of a SharePoint list form on an instance of a view ([SPView]
 ```XML
 DECLARATION
 <xs:element name="ListFormBody" minOccurs="0" maxOccurs="1" />
+
 USAGE
 <View>
         <ListFormBody />

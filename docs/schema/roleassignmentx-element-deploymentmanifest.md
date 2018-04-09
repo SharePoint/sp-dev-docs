@@ -45,7 +45,7 @@ USAGE
 
 ## Type
 
-**DeploymentRoleAssignmentX** (based on [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx) ) 
+**DeploymentRoleAssignmentX** (based on [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)) 
   
 ## Elements and attributes
 

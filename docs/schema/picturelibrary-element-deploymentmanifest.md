@@ -35,7 +35,7 @@ USAGE
 
 ## Type
 
-[SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx) object. 
+[SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx) object 
   
 ## Elements and attributes
 

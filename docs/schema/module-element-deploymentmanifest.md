@@ -21,6 +21,7 @@ Represents an instance of a SharePoint module ([SPModule](https://msdn.microsoft
 ```XML
 DECLARATION
 <xs:element name="Module" type="SPModule" />
+
 USAGE
 <SPObject>
    <Module

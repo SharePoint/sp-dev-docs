@@ -1,6 +1,7 @@
 ---
-
-
+title: "ProjectedFields Element (View)"
+ms.author: rickki
+author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,235 +13,92 @@ api_name:
 api_type:
 - schema
 ms.assetid: 40188d7d-3206-4162-b2c5-58cd9ef97e1d
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# ProjectedFields Element (View)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># ProjectedFields Element (View)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Specifies the fields in joined lists that can be included in the view
-when one or more other lists have been joined in a query.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><ProjectedFields>   
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Specifies the fields in joined lists that can be included in the view when one or more other lists have been joined in a query.
+  
+```
+<ProjectedFields>   
   <Field ... />  
   <Field ... />
-</ProjectedFields></code></pre></td>
-</tr>
-</tbody>
-</table>
+</ProjectedFields>
+```
 
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Attributes
 
 None
+  
+## Child Elements
 
+||
+|:-----|
+|[Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md)|
+   
+> [!NOTE]
+> There is a maximum number of [Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md) child elements. It is defined as the difference between the maximum number of allowed fields in the list and the number of fields that are already in the list. 
+  
+## Parent Elements
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|[View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md)|
+   
+## Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="field-element-list.md">Field</a></p></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]
+> The [View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md) element cannot have a **ProjectedFields** element unless it has a [Joins](joins-element-view.md) element that has at least one [Join](join-element-view.md) child element. However, a **ProjectedFields** element that forms the value of a **SPQuery.ProjectedFields** property, and therefore, is not a child of a [View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md) element, can be used to support an implicit join without a [Joins](joins-element-view.md) element. We do not recommend working without a [Joins](joins-element-view.md) element. You will maximize your solution's chances of being compatible with future releases of Microsoft SharePoint Foundation by always using an explicit **Join** element. For more information about implicit joins with **ProjectedFields** elements, see [List Joins and Projections](http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b%28Office.15%29.aspx). 
+  
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: 1  <br/> |
+   
+## Remarks
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>There is a maximum number of <a href="field-element-list.md">Field</a> child elements. It is defined as the difference between the maximum number of allowed fields in the list and the number of fields that are already in the list.</p></td>
-</tr>
-</tbody>
-</table>
+If a field from a joined list is not represented in **ProjectedFields**, it cannot be included in the [ViewFields](../../collaborative-application-markup-language-caml-schemas/list-schema/viewfields-element-list.md) element. 
+  
+## Example
 
+The following example shows how to add another field to the results that are returned by the query. The value of the **List** attribute is an alias to the foreign list. The alias is defined in a [Join Element (View)](join-element-view.md). The **ShowField** attribute must be set to the internal name of the foreign field. 
+  
+The **Type** attribute does not indicate the data type of the field as it usually does in a [Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md) element. When a [Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md) element is a child of a **ProjectedFields** element, **Type** simply indicates whether the [Join](join-element-view.md) element (in the [Joins](joins-element-view.md) element on which the **ProjectedFields** element depends) is based on an existing lookup relation between the lists. As of SharePoint Foundation 2010, all joins must be based on an existing lookup relation, so **Type** always has the value "Lookup". The actual data type of the field is not indicated when it is a child of the **ProjectedFields** element. However, the field's data type does matter because only the following types of fields can be included in a **ProjectedFields** element: 
+  
+- Calculated (treated as plain text)
+    
+- ContentTypeId
+    
+- Counter
+    
+- Currency
+    
+- DateTime
+    
+- Guid
+    
+- Integer
+    
+- Note (one-line only)
+    
+- Number
+    
+- Text
+    
+```XML
+<ProjectedFields>
+  <Field
+    Name='CustomerCity'
+    Type='Lookup'
+    List='customerCities'
+    ShowField='Title' />
+</ProjectedFields>
+```
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="view-element-list.md">View</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>The <a href="view-element-list.md">View</a> element cannot have a **ProjectedFields</span> element unless it has a <a href="joins-element-view.md">Joins</a> element that has at least one <a href="join-element-view.md">Join</a> child element. However, a **ProjectedFields</span> element that forms the value of a <span sdata="cer" target="P:Microsoft.SharePoint.SPQuery.ProjectedFields"><span class="nolink">SPQuery.ProjectedFields</span></span> property, and therefore, is not a child of a <a href="view-element-list.md">View</a> element, can be used to support an implicit join without a <a href="joins-element-view.md">Joins</a> element. We do not recommend working without a <a href="joins-element-view.md">Joins</a> element. You will maximize your solution's chances of being compatible with future releases of Microsoft SharePoint Foundation by always using an explicit **Join</span> element. For more information about implicit joins with **ProjectedFields** elements, see <a href="http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b(Office.15).aspx">List Joins and Projections</a>.</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-If a field from a joined list is not represented in <span
-class="keyword">ProjectedFields</span>, it cannot be included in the
-[ViewFields](viewfields-element-list.md) element.
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following example shows how to add another field to the results that
-are returned by the query. The value of the <span
-class="keyword">List</span> attribute is an alias to the foreign list.
-The alias is defined in a [Join Element
-(View)](join-element-view.md)</span>. The <span
-class="keyword">ShowField</span> attribute must be set to the internal
-name of the foreign field.
-
-The **Type** attribute does not indicate the
-data type of the field as it usually does in a
-[Field](field-element-list.md) element. When a
-[Field](field-element-list.md) element is a child of
-a **ProjectedFields** element, <span
-class="keyword">Type</span> simply indicates whether the
-[Join](join-element-view.md) element (in the
-[Joins](joins-element-view.md) element on which the
-**ProjectedFields** element depends) is based
-on an existing lookup relation between the lists. As of SharePoint
-Foundation 2010, all joins must be based on an existing lookup relation,
-so **Type** always has the value "Lookup". The
-actual data type of the field is not indicated when it is a child of the
-**ProjectedFields** element. However, the
-field's data type does matter because only the following types of fields
-can be included in a **ProjectedFields**
-element:
-
--   Calculated (treated as plain text)
-
--   ContentTypeId
-
--   Counter
-
--   Currency
-
--   DateTime
-
--   Guid
-
--   Integer
-
--   Note (one-line only)
-
--   Number
-
--   Text
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
-    <ProjectedFields>
-      <Field
-        Name='CustomerCity'
-        Type='Lookup'
-        List='customerCities'
-        ShowField='Title' />
-    </ProjectedFields>
-
-For an example of a **ProjectedFields** element
-whose child **Field** element has a <span
-class="keyword">FieldRef</span> attribute instead of a <span
-class="keyword">List</span> attribute, see [List Joins and
-Projections](http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b(Office.15).aspx).
-
-
-
-
-
-
-
+For an example of a **ProjectedFields** element whose child **Field** element has a **FieldRef** attribute instead of a **List** attribute, see [List Joins and Projections](http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b%28Office.15%29.aspx).
+  
 

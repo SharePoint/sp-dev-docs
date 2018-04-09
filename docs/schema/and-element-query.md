@@ -1,6 +1,7 @@
 ---
-
-
+title: "And Element (Query)"
+ms.author: rickki
+author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,248 +13,119 @@ api_name:
 api_type:
 - schema
 ms.assetid: d71502b2-7f7d-4bd9-9a94-70848d85b24a
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# And Element (Query)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Used within the [Where](where-element-query.md) element to group filters in a query for a view. 
+  
+```
+<And>
+</And>
+```
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># And Element (Query)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+## Attributes
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+|**Attribute**|**Description**|
+|:-----|:-----|
+|None  <br/> |N/A  <br/> |
+   
+## Child Elements
 
-**Last modified:** March 09, 2015
+||
+|:-----|
+|[And](and-element-query.md), [BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [Geq](geq-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Membership](membership-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [Or](or-element-query.md)|
+   
+## Parent Elements
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+||
+|:-----|
+|[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
+   
+## Occurrences
 
-Used within the [Where](where-element-query.md)
-element to group filters in a query for a view.
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+   
+## Remarks
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><And>
-</And></code></pre></td>
-</tr>
-</tbody>
-</table>
+This element can be nested inside other **And** and [Or](or-element-query.md) elements. The server supports unlimited complicated queries. However, any given **And** element can have only two conjuncts; that is, only two child elements. If you need to conjoin three or more conditions, you must nest the **And** elements, as demonstrated by the third example in the following section. 
+  
+## Example
 
+The following example conveys criteria for a query on the ProductID field: (ProductID = J1539 AND ProductID = J9862) AND (ProductID = J0394 OR ProductID = J4589).
+  
+```
+<And>
+  <And>
+    <Eq>
+      <FieldRef Name="ProductID"/>
+      <Value Type="Text">J1539</Value>
+    </Eq>
+    <Eq>
+      <FieldRef Name="ProductID"/>
+      <Value Type="Text">J9862</Value>
+    </Eq>
+  </And>
+  <Or>
+    <Eq>
+      <FieldRef Name="ProductID"/>
+      <Value Type="Text">J0394</Value>
+    </Eq>
+    <Eq>
+      <FieldRef Name="ProductID"/>
+      <Value Type="Text">J4589</Value>
+    </Eq>
+  </Or>
+</And>
+```
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None</p></td>
-<td align="left"><p>N/A</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="and-element-query.md">And</a>, <a href="beginswith-element-query.md">BeginsWith</a>, <a href="contains-element-query.md">Contains</a>, <a href="daterangesoverlap-element-query.md">DateRangesOverlap</a>, <a href="eq-element-query.md">Eq</a>, <a href="geq-element-query.md">Geq</a>, <a href="gt-element-query.md">Gt</a>, <a href="in-element-query.md">In</a>, <a href="includes-element-query.md">Includes</a>, <a href="isnotnull-element-query.md">IsNotNull</a>, <a href="isnull-element-query.md">IsNull</a>, <a href="leq-element-query.md">Leq</a>, <a href="lt-element-query.md">Lt</a>, <a href="membership-element-query.md">Membership</a>, <a href="neq-element-query.md">Neq</a>, <a href="notincludes-element-query.md">NotIncludes</a>, <a href="or-element-query.md">Or</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="and-element-query.md">And</a>, <a href="or-element-query.md">Or</a>, <a href="where-element-query.md">Where</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-This element can be nested inside other **And**
-and [Or](or-element-query.md) elements. The server
-supports unlimited complicated queries. However, any given <span
-class="keyword">And</span> element can have only two conjuncts; that is,
-only two child elements. If you need to conjoin three or more
-conditions, you must nest the **And** elements,
-as demonstrated by the third example in the following section.
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following example conveys criteria for a query on the ProductID
-field: (ProductID = J1539 AND ProductID = J9862) AND (ProductID = J0394
-OR ProductID = J4589).
-
-<span codelanguage="caml"></span>
-CAML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
+The following example performs a query for cases in which values of the **Status** field do not equal Completed and values of the **Sent** field are **null**. The records returned are sorted in descending order according to values of the **Modified** field. 
+  
+```
+<Query>
+  <OrderBy>
+    <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+  </OrderBy>
+  <Where>
     <And>
-      <And>
-        <Eq>
-          <FieldRef Name="ProductID"/>
-          <Value Type="Text">J1539</Value>
-        </Eq>
-        <Eq>
-          <FieldRef Name="ProductID"/>
-          <Value Type="Text">J9862</Value>
-        </Eq>
-      </And>
-      <Or>
-        <Eq>
-          <FieldRef Name="ProductID"/>
-          <Value Type="Text">J0394</Value>
-        </Eq>
-        <Eq>
-          <FieldRef Name="ProductID"/>
-          <Value Type="Text">J4589</Value>
-        </Eq>
-      </Or>
+      <Neq>
+        <FieldRef Name="Status"></FieldRef>
+        <Value Type="Text">Completed</Value>
+      </Neq>
+      <IsNull>
+        <FieldRef Name="Sent"></FieldRef>
+      </IsNull>
     </And>
+  </Where>
+</Query>
+```
 
-The following example performs a query for cases in which values of the
-**Status** field do not equal Completed and
-values of the **Sent** field are <span
-class="keyword">null</span>. The records returned are sorted in
-descending order according to values of the <span
-class="keyword">Modified</span> field.
+The following example shows how to conjoin three conditions. Note that the first pair of conditions are within their own **And** element, which is itself a condition of an outer **And** element. 
+  
+```
+<Where>
+  <And>
+    <And>
+      <Eq><FieldRef Name="LastName" />
+        <Value Type="Text">Bagel</Value>
+      </Eq>
+      <Eq><FieldRef Name="FirstName" />
+        <Value Type="Text">Jean</Value>
+      </Eq>
+    </And>
+    <Includes>
+      <FieldRef Name="Title" /><Value Type="Text">President</Value>
+    </Includes>
+  </And>
+</Where>
 
-<span codelanguage="caml"></span>
-CAML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
-    <Query>
-      <OrderBy>
-        <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
-      </OrderBy>
-      <Where>
-        <And>
-          <Neq>
-            <FieldRef Name="Status"></FieldRef>
-            <Value Type="Text">Completed</Value>
-          </Neq>
-          <IsNull>
-            <FieldRef Name="Sent"></FieldRef>
-          </IsNull>
-        </And>
-      </Where>
-    </Query>
-
-The following example shows how to conjoin three conditions. Note that
-the first pair of conditions are within their own <span
-class="keyword">And</span> element, which is itself a condition of an
-outer **And** element.
-
-<span codelanguage="caml"></span>
-CAML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
-    <Where>
-      <And>
-        <And>
-          <Eq><FieldRef Name="LastName" />
-            <Value Type="Text">Bagel</Value>
-          </Eq>
-          <Eq><FieldRef Name="FirstName" />
-            <Value Type="Text">Jean</Value>
-          </Eq>
-        </And>
-        <Includes>
-          <FieldRef Name="Title" /><Value Type="Text">President</Value>
-        </Includes>
-      </And>
-    </Where>
-
-
-
-
-
-
+```
 
 

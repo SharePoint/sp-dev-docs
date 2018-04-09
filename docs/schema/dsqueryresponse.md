@@ -1,4 +1,7 @@
 ---
+title: "dsQueryResponse"
+ms.author: rickki
+author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -8,16 +11,17 @@ localization_priority: Normal
 api_name:
 - dsQueryResponse XML
 ms.assetid: 4c8c17dc-af06-4ef1-a1ad-831a1ea19e06
+description: "Last modified: March 09, 2015"
 ---
 
 # dsQueryResponse
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-
-Top-level element that contains the list data that is rendered by [the XSLT list view rendering system](http://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593(Office.15).aspx).
-
-## Definition
-
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Top-level element that contains the list data that is rendered by [the XSLT list view rendering system](http://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593%28Office.15%29.aspx).
+  
 ```
 <dsQueryResponse 
   ViewStyleID="Integer" 
@@ -27,84 +31,33 @@ Top-level element that contains the list data that is rendered by [the XSLT list
 </dsQueryResponse>
 ```
 
-## Elements and attributes
+## Attributes
 
-The following sections describe attributes, child elements, and parent elements.
+|**Attribute**|**Description**|
+|:-----|:-----|
+|**ViewStyleID** <br/> |The ID of the view style of the view.  <br/> |
+|**BaseViewID** <br/> |The ID of the base view of the list. This is the same value as [BaseViewID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.BaseViewID.aspx) .  <br/> |
+|**TemplateType** <br/> |The ID of the type of the list template. Must be the numerical version of one of the [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx) enumeration values. This is the same value as [BaseTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.BaseTemplate.aspx) .  <br/> |
+|**RowLimit** <br/> |The maximum number of rows to be displayed on a single list view page.  <br/> |
+   
+## Child Elements
 
-### Attributes
-
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**ViewStyleID**</p></td>
-<td align="left"><p>The ID of the view style of the view.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**BaseViewID**</p></td>
-<td align="left"><p>The ID of the base view of the list. This is the same value as **BaseViewID**.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**TemplateType**</p></td>
-<td align="left"><p>The ID of the type of the list template. Must be the numerical version of one of the **SPListTemplateType** enumeration values. This is the same value as **BaseTemplate**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**RowLimit**</p></td>
-<td align="left"><p>The maximum number of rows to be displayed on a single list view page.</p></td>
-</tr>
-</tbody>
-</table>
-
-### Child elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="rows-dsqueryresponse.md">Rows</a></p></td>
-</tr>
-</tbody>
-</table>
-
-### Parent elements
+||
+|:-----|
+|[Rows](rows-dsqueryresponse.md)|
+   
+## Parent Elements
 
 None
+  
+## Occurrences
 
+||
+|:-----|
+|Minimum: 1  <br/> Maximum: 1  <br/> |
+   
+## Example
 
-### Occurrences
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 1</p>
-<p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
-
-
-### Example
-
-For an example, see [Examples of Input and Result Node Trees in XSLT Transformations](http://msdn.microsoft.com/library/cbe88144-25ac-4cd2-8f2a-50e8c271c6ae(Office.15).aspx).
-
-
-
-
-
-
-
+For an example, see [Examples of Input and Result Node Trees in XSLT Transformations](http://msdn.microsoft.com/library/cbe88144-25ac-4cd2-8f2a-50e8c271c6ae%28Office.15%29.aspx).
+  
 

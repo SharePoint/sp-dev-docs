@@ -1,6 +1,7 @@
 ---
-
-
+title: "ControlRef Element"
+ms.author: ricardol
+author: ricardol
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,394 +13,124 @@ api_name:
 api_type:
 - schema
 ms.assetid: f0fe56cb-8773-498c-954b-4485647441a8
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# ControlRef Element
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># ControlRef Element</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Represents a placeholder for a control in a
-[GroupTemplate](grouptemplate-element.md) element.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><ControlRef
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Represents a placeholder for a control in a [GroupTemplate](grouptemplate-element.md) element. 
+  
+```
+<ControlRef
   DisplayMode="Small | Medium | Large | Menu | Menu16 | Menu32"
   TemplateAlias="Text"
-/></code></pre></td>
-</tr>
-</tbody>
-</table>
+/>
+```
 
+## Attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**DisplayMode**</p></td>
-<td align="left"><p>Optional. An enumeration value that determines how a control is rendered.</p>
-<ul>
-<li><p>**Small**. Renders as a small icon without label text.</p></li>
-<li><p>**Medium**. Renders as a 16-by-16-pixel icon with label text.</p></li>
-<li><p>**Large**. Renders as a 32-by-32-pixel icon with label text.</p></li>
-<li><p>**Menu**. Renders as a text-only menu item.</p></li>
-<li><p>**Menu16**. Renders as a menu item with a 16-by-16-pixel icon.</p></li>
-<li><p>**Menu32**. Renders as a menu item with a 32-by-32-pixel icon.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that a control can reference in its own **TemplateAlias</span> attribute. The **TemplateAlias</span> attribute is used to size and position controls in a group when a template is applied to the group. No two elements that are contained by the same <a href="grouptemplate-element.md">GroupTemplate</a> element should have the same **TemplateAlias** value.</p></td>
-</tr>
-</tbody>
-</table>
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|**Attribute**|**Description**|
+|:-----|:-----|
+|**DisplayMode** <br/> | Optional. An enumeration value that determines how a control is rendered.  <br/> **Small**. Renders as a small icon without label text.  <br/> **Medium**. Renders as a 16-by-16-pixel icon with label text.  <br/> **Large**. Renders as a 32-by-32-pixel icon with label text.  <br/> **Menu**. Renders as a text-only menu item.  <br/> **Menu16**. Renders as a menu item with a 16-by-16-pixel icon.  <br/> **Menu32**. Renders as a menu item with a 32-by-32-pixel icon.  <br/> |
+|**TemplateAlias** <br/> |Optional. A string that a control can reference in its own **TemplateAlias** attribute. The **TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group. No two elements that are contained by the same [GroupTemplate](grouptemplate-element.md) element should have the same **TemplateAlias** value.  <br/> |
+   
+## Child Elements
 
 None
+  
+## Parent Elements
 
+||
+|:-----|
+|[Row](row-element.md) <br/> |
+|[Strip](strip-element.md) <br/> |
+   
+## Occurrences
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+   
+## Remarks
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="row-element.md">Row</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="strip-element.md">Strip</a></p></td>
-</tr>
-</tbody>
-</table>
+Controls do not necessarily support all display modes. The following table lists the modes that are supported by each type of control.
+  
+||**Small**|**Medium**|**Large**|**Menu**|**Menu16**|**Menu32**|
+|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
+|[Button](button-element.md) <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |
+|[CheckBox](checkbox-element.md) <br/> |X  <br/> |X  <br/> |||||
+|[ColorPicker](colorpicker-element.md) <br/> ||||X  <br/> |||
+|[ComboBox](combobox-element.md) <br/> ||X  <br/> |||||
+|[DropDown](dropdown-element.md) <br/> ||X  <br/> |||||
+|[FlyoutAnchor](flyoutanchor-element.md) <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |
+|[GalleryButton](gallerybutton-element-gallery.md) <br/> |||X  <br/> |X  <br/> |||
+|[InsertTable](inserttable-element.md) <br/> ||||X  <br/> |||
+|[Label](label-element.md) <br/> |X  <br/> |X  <br/> |||||
+|[MenuSection](menusection-element.md) <br/> |||||X  <br/> |X  <br/> |
+|[MRUSplitButton](mrusplitbutton-element.md) <br/> |X  <br/> |X  <br/> |X  <br/> ||||
+|[Spinner](spinner-element.md) <br/> ||X  <br/> |||||
+|[SplitButton](splitbutton-element.md) <br/> |X  <br/> |X  <br/> |X  <br/> ||||
+|[TextBox](textbox-element.md) <br/> ||X  <br/> |||||
+|[ToggleButton](togglebutton-element.md) <br/> |X  <br/> |X  <br/> |X  <br/> ||||
+   
+## Example
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: unbounded</p></td>
-</tr>
-</tbody>
-</table>
-
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Controls do not necessarily support all display modes. The following
-table lists the modes that are supported by each type of control.
-
-<table>
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p></p></th>
-<th align="left"><p>Small</p></th>
-<th align="left"><p>Medium</p></th>
-<th align="left"><p>Large</p></th>
-<th align="left"><p>Menu</p></th>
-<th align="left"><p>Menu16</p></th>
-<th align="left"><p>Menu32</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="button-element.md">Button</a></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="checkbox-element.md">CheckBox</a></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="colorpicker-element.md">ColorPicker</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="combobox-element.md">ComboBox</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="dropdown-element.md">DropDown</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="flyoutanchor-element.md">FlyoutAnchor</a></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="gallerybutton-element-gallery.md">GalleryButton</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="inserttable-element.md">InsertTable</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="label-element.md">Label</a></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="menusection-element.md">MenuSection</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="mrusplitbutton-element.md">MRUSplitButton</a></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="spinner-element.md">Spinner</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="splitbutton-element.md">SplitButton</a></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="textbox-element.md">TextBox</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="togglebutton-element.md">ToggleButton</a></p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p>X</p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following example is an XML fragment that shows the relationship
-between the **TemplateAlias** attribute for
-controls in a [Group](group-element-ribbon.md) element
-and the same attribute for **ControlRef**
-elements in a [GroupTemplate](grouptemplate-element.md)
-element. Notice that the **Group** element
-contains three [Button](button-element.md)
-elements, each with a **TemplateAlias**
-attribute set to a value of "row1", "row2", or "row3". The <span
-class="keyword">GroupTemplate</span> element also contains three <span
-class="keyword">ControlRef</span> elements that have attributes set to a
-value of "row1", "row2", or "row3". When the template is applied to the
-group, the layout of the controls in the group is determined by matching
-the **TemplateAlias** attribute of a <span
-class="keyword">Button</span> element to the <span
-class="keyword">TemplateAlias</span> attribute of a <span
-class="keyword">ControlRef</span> element.
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
-    <Group
-      Id="Ribbon.CustomTabExample.CustomGroupExample"
-      Description="This is a custom group."
-      Title="Custom Group"
-      Sequence="52"
-      Template="Ribbon.Templates.CustomTemplateExample">
-      <Controls Id="Ribbon.CustomTabExample.CustomGroupExample.Controls">
-        <Button
-          Id="Ribbon.CustomTabExample.CustomGroupExample.HelloWorld"
-          Command="CustomTabExample.HelloWorldCommand"
-          Sequence="15"
-          Description="Says hello to the World!"
-          LabelText="Hello!"
-          TemplateAlias="row1"/>
-        <Button
-          Id="Ribbon.CustomTabExample.CustomGroupExample.GoodbyeWorld"
-          Command="CustomTabExample.GoodbyeWorldCommand"
-          Sequence="17"
-          Description="Says goodbye to the World!"
-          LabelText="Goodbye!"
-          TemplateAlias="row2"/>
-        <Button
-          Id="Ribbon.CustomTabExample.CustomGroupExample.LaterWorld"
-          Command="CustomTabExample.LaterWorldCommand"
-          Sequence="19"
-          Description="Says I will see you later to the World!"
-          LabelText="Later!"
-          TemplateAlias="row3"/>
-      </Controls>
-    </Group>
-
-    <GroupTemplate Id="Ribbon.Templates.CustomTemplateExample">
-      <Layout
-        Title="OneLargeTwoMedium"
-        LayoutTitle="OneLargeTwoMedium">
-        <Section Alignment="Top" Type="OneRow">
-          <Row>
-            <ControlRef DisplayMode="Large" TemplateAlias="row1" />
-          </Row>
-        </Section>
-        <Section Alignment="Top" Type="TwoRow">
-          <Row>
-            <ControlRef DisplayMode="Medium" TemplateAlias="row2" />
-          </Row>
-          <Row>
-            <ControlRef DisplayMode="Medium" TemplateAlias="row3" />
-          </Row>
-        </Section>
-      </Layout>
-    </GroupTemplate>
-
-
-
-
-
-
+The following example is an XML fragment that shows the relationship between the **TemplateAlias** attribute for controls in a [Group](group-element-ribbon.md) element and the same attribute for **ControlRef** elements in a [GroupTemplate](grouptemplate-element.md) element. Notice that the **Group** element contains three [Button](button-element.md) elements, each with a **TemplateAlias** attribute set to a value of "row1", "row2", or "row3". The **GroupTemplate** element also contains three **ControlRef** elements that have attributes set to a value of "row1", "row2", or "row3". When the template is applied to the group, the layout of the controls in the group is determined by matching the **TemplateAlias** attribute of a **Button** element to the **TemplateAlias** attribute of a **ControlRef** element. 
+  
+```XML
+<Group
+  Id="Ribbon.CustomTabExample.CustomGroupExample"
+  Description="This is a custom group."
+  Title="Custom Group"
+  Sequence="52"
+  Template="Ribbon.Templates.CustomTemplateExample">
+  <Controls Id="Ribbon.CustomTabExample.CustomGroupExample.Controls">
+    <Button
+      Id="Ribbon.CustomTabExample.CustomGroupExample.HelloWorld"
+      Command="CustomTabExample.HelloWorldCommand"
+      Sequence="15"
+      Description="Says hello to the World!"
+      LabelText="Hello!"
+      TemplateAlias="row1"/>
+    <Button
+      Id="Ribbon.CustomTabExample.CustomGroupExample.GoodbyeWorld"
+      Command="CustomTabExample.GoodbyeWorldCommand"
+      Sequence="17"
+      Description="Says goodbye to the World!"
+      LabelText="Goodbye!"
+      TemplateAlias="row2"/>
+    <Button
+      Id="Ribbon.CustomTabExample.CustomGroupExample.LaterWorld"
+      Command="CustomTabExample.LaterWorldCommand"
+      Sequence="19"
+      Description="Says I will see you later to the World!"
+      LabelText="Later!"
+      TemplateAlias="row3"/>
+  </Controls>
+</Group>
+<GroupTemplate Id="Ribbon.Templates.CustomTemplateExample">
+  <Layout
+    Title="OneLargeTwoMedium"
+    LayoutTitle="OneLargeTwoMedium">
+    <Section Alignment="Top" Type="OneRow">
+      <Row>
+        <ControlRef DisplayMode="Large" TemplateAlias="row1" />
+      </Row>
+    </Section>
+    <Section Alignment="Top" Type="TwoRow">
+      <Row>
+        <ControlRef DisplayMode="Medium" TemplateAlias="row2" />
+      </Row>
+      <Row>
+        <ControlRef DisplayMode="Medium" TemplateAlias="row3" />
+      </Row>
+    </Section>
+  </Layout>
+</GroupTemplate>
+```
 
 

@@ -53,7 +53,7 @@ None
 
 [File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)
    
-## Remarks
+### Remarks
 
 This element is one of four **EventReceivers** elements; each derives from a different element hierarchy as follows: 
   

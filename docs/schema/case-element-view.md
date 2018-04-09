@@ -1,6 +1,7 @@
 ---
-
-
+title: "Case Element (View)"
+ms.author: rickki
+author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,172 +13,61 @@ api_name:
 api_type:
 - schema
 ms.assetid: 5100d92b-a09f-430d-ab79-5cb770c1bd61
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Case Element (View)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Case Element (View)</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#exampleToggle">Example</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Used inside a [Switch](switch-element-view.md)
-statement or [FieldSwitch](fieldswitch-element-view.md)
-statement to perform a comparison.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><Case
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Used inside a [Switch](switch-element-view.md) statement or [FieldSwitch](fieldswitch-element-view.md) statement to perform a comparison. 
+  
+```
+<Case
   Value = "Text">
-</Case></code></pre></td>
-</tr>
-</tbody>
-</table>
+</Case>
+```
 
+## Attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|**Attribute**|**Description**|
+|:-----|:-----|
+|**Value** <br/> |Optional **Text**. The value to check for in a comparison.  <br/> |
+   
+## Child Elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Value**</p></td>
-<td align="left"><p>Optional **Text**. The value to check for in a comparison.</p></td>
-</tr>
-</tbody>
-</table>
+||
+|:-----|
+|Numerous |
+   
+## Parent Elements
 
+||
+|:-----|
+|[FieldSwitch](fieldswitch-element-view.md), [Switch](switch-element-view.md)|
+   
+## Occurrences
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+   
+## Remarks
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Numerous</p></td>
-</tr>
-</tbody>
-</table>
+Within a [Switch](switch-element-view.md) statement, the **Case** element is often used in conjunction with the [Default](default-element-view.md) element. If the criteria set by the **Case** value proves false, then the default value is implemented. 
+  
+## Example
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="fieldswitch-element-view.md">FieldSwitch</a>, <a href="switch-element-view.md">Switch</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded</p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Within a [Switch](switch-element-view.md) statement,
-the **Case** element is often used in
-conjunction with the [Default](default-element-view.md)
-element. If the criteria set by the **Case**
-value proves false, then the default value is implemented.
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The following example checks the value of a <span
-class="keyword">UserID</span> field and returns "User Zero" if the value
-is 0 (zero). Otherwise, it sets a default value: "Not User Zero".
-
-## Definition
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code] "Copy code")Copy code</span>
-    <Switch>
-      <Expr><UserID/></Expr>
-      <Case Value="0">User Zero</Case>
-      <Default>Not User Zero</Default>
-    </Switch>
-
-
-
-
-
-
+The following example checks the value of a **UserID** field and returns "User Zero" if the value is 0 (zero). Otherwise, it sets a default value: "Not User Zero". 
+  
+```XML
+<Switch>
+  <Expr><UserID/></Expr>
+  <Case Value="0">User Zero</Case>
+  <Default>Not User Zero</Default>
+</Switch>
+```
 
 

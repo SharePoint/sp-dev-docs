@@ -1,6 +1,7 @@
 ---
-
-
+title: "List Element (Site)"
+ms.author: rickki
+author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,67 +13,19 @@ api_name:
 api_type:
 - schema
 ms.assetid: 8aeb55e1-2661-400d-a2d8-036c08fe9f30
+description: "Last modified: March 09, 2015"
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# List Element (Site)
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># List Element (Site)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Specifies a list instance to include in sites created through a site
-definition configuration or Web template configuration.
-
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code><List
+ **Last modified:** March 09, 2015 
+  
+ * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+  
+Specifies a list instance to include in sites created through a site definition configuration or Web template configuration.
+  
+```
+<List
   CustomSchema = "Text"
   Description = "Text"
   EmailAlias = "Text"
@@ -86,174 +39,44 @@ definition configuration or Web template configuration.
   Type = Integer
   Url = "Text"
   VersioningEnabled = "TRUE" | "FALSE">
-</List></code></pre></td>
-</tr>
-</tbody>
-</table>
+</List>
+```
 
+## Attributes
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|**Attribute**|**Description**|
+|:-----|:-----|
+|**CustomSchema** <br/> |Optional **Text**.  <br/> |
+|**Description** <br/> |Optional **Text**. Provides a description for the list. This attribute must be specified within a configuration in an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file when you are adding a custom list definition to a site definition. The value of this attribute overrides the value contained with the [DefaultDescription](../../collaborative-application-markup-language-caml-schemas/list-schema/defaultdescription-element-list.md) element of a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file.  <br/> |
+|**EmailAlias** <br/> |Optional **Text**. If e-mail notification is enabled, specifies the e-mail address to use to notify to the owner of an item when an assignment has changed or the item has been updated.  <br/> |
+|**EnableContentTypes** <br/> |Optional **Boolean**. **TRUE** to enable management of content types in lists created through the list definition.  <br/> |
+|**EnableMinorVersions** <br/> |Optional **Boolean**. **TRUE** to enable minor versions for items in the list.  <br/> |
+|**FeatureId** <br/> |Optional **GUID**. Specifies the GUID of a Feature to associate with the list.  <br/> |
+|**ForceCheckout** <br/> |Optional **Boolean**. **TRUE** to require that documents be checked out from the document library in order to be edited.  <br/> |
+|**HyperlinkBaseUrl** <br/> |Optional **Text**.  <br/> |
+|**QuickLaunchUrl** <br/> |Optional **Text**. Specifies the URL of the view page to open for the list through Quick Launch navigation.  <br/> |
+|**RootWebOnly** <br/> |Optional **Boolean**. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.  <br/> |
+|**Title** <br/> |Required **Text**. The generic display name of the list.  <br/> |
+|**Type** <br/> | Optional **Integer**. Specifies the list template type of the list. The following values are the default list template types.  <br/> **100** Generic list  <br/> **101** Document library  <br/> **102** Survey  <br/> **103** Links list  <br/> **104** Announcements list  <br/> **105** Contacts list  <br/> **106** Events list  <br/> **107** Tasks list  <br/> **108** Discussion board  <br/> **109** Picture library  <br/> **110** Data sources  <br/> **111** Site template gallery  <br/> **112** User Information list  <br/> **113** Web Part gallery  <br/> **114** List template gallery  <br/> **115** XML Form library  <br/> **116** Master pages gallery  <br/> **117** No-Code Workflows  <br/> **118** Custom Workflow Process  <br/> **119** Wiki Page library  <br/> **120** Custom grid for a list  <br/> **130** Data Connection library  <br/> **140** Workflow History  <br/> **150** Gantt Tasks list  <br/> **200** Meeting Series list  <br/> **201** Meeting Agenda list  <br/> **202** Meeting Attendees list  <br/> **204** Meeting Decisions list  <br/> **207** Meeting Objectives list  <br/> **210** Meeting text box  <br/> **211** Meeting Things To Bring list  <br/> **212** Meeting Workspace Pages list  <br/> **301** Blog Posts list  <br/> **302** Blog Comments list  <br/> **303** Blog Categories list  <br/> **1100** Issue tracking  <br/> **1200** Administrator tasks list  <br/>  This attribute corresponds to the **Type** attribute of the [ListTemplate](listtemplate-element-site.md) element.  <br/> |
+|**Url** <br/> |Optional **Text**.  <br/> Specifies the path to the root of the directory that contains the ASPX files to which the list definition applies, relative to the root URL of the Web site.  <br/> |
+|**VersioningEnabled** <br/> |Optional **Boolean**. **TRUE** to specify within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that versioning is enabled by default for document libraries that are created through the list definition. Setting this attribute has no effect on existing document libraries. If **TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.  <br/> |
+   
+## Child Elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**CustomSchema**</p></td>
-<td align="left"><p>Optional **Text**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Description**</p></td>
-<td align="left"><p>Optional **Text**. Provides a description for the list. This attribute must be specified within a configuration in an <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file when you are adding a custom list definition to a site definition. The value of this attribute overrides the value contained with the <a href="defaultdescription-element-list.md">DefaultDescription</a> element of a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**EmailAlias**</p></td>
-<td align="left"><p>Optional **Text**. If e-mail notification is enabled, specifies the e-mail address to use to notify to the owner of an item when an assignment has changed or the item has been updated.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**EnableContentTypes**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to enable management of content types in lists created through the list definition.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**EnableMinorVersions**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to enable minor versions for items in the list.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**FeatureId**</p></td>
-<td align="left"><p>Optional **GUID**. Specifies the GUID of a Feature to associate with the list.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ForceCheckout**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to require that documents be checked out from the document library in order to be edited.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**HyperlinkBaseUrl**</p></td>
-<td align="left"><p>Optional **Text**.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**QuickLaunchUrl**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the URL of the view page to open for the list through Quick Launch navigation.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root website of a site collection.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Title**</p></td>
-<td align="left"><p>Required **Text**. The generic display name of the list.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **Integer**. Specifies the list template type of the list. The following values are the default list template types.</p>
-<ul>
-<li><p>**100**   Generic list</p></li>
-<li><p>**101**   Document library</p></li>
-<li><p>**102**   Survey</p></li>
-<li><p>**103**   Links list</p></li>
-<li><p>**104**   Announcements list</p></li>
-<li><p>**105**   Contacts list</p></li>
-<li><p>**106**   Events list</p></li>
-<li><p>**107**   Tasks list</p></li>
-<li><p>**108**   Discussion board</p></li>
-<li><p>**109**   Picture library</p></li>
-<li><p>**110**   Data sources</p></li>
-<li><p>**111**   Site template gallery</p></li>
-<li><p>**112**   User Information list</p></li>
-<li><p>**113**   Web Part gallery</p></li>
-<li><p>**114**   List template gallery</p></li>
-<li><p>**115**   XML Form library</p></li>
-<li><p>**116**   Master pages gallery</p></li>
-<li><p>**117**   No-Code Workflows</p></li>
-<li><p>**118**   Custom Workflow Process</p></li>
-<li><p>**119**   Wiki Page library</p></li>
-<li><p>**120**   Custom grid for a list</p></li>
-<li><p>**130**   Data Connection library</p></li>
-<li><p>**140**   Workflow History</p></li>
-<li><p>**150**   Gantt Tasks list</p></li>
-<li><p>**200**   Meeting Series list</p></li>
-<li><p>**201**   Meeting Agenda list</p></li>
-<li><p>**202**   Meeting Attendees list</p></li>
-<li><p>**204**   Meeting Decisions list</p></li>
-<li><p>**207**   Meeting Objectives list</p></li>
-<li><p>**210**   Meeting text box</p></li>
-<li><p>**211**   Meeting Things To Bring list</p></li>
-<li><p>**212**   Meeting Workspace Pages list</p></li>
-<li><p>**301**   Blog Posts list</p></li>
-<li><p>**302**   Blog Comments list</p></li>
-<li><p>**303**   Blog Categories list</p></li>
-<li><p>**1100**   Issue tracking</p></li>
-<li><p>**1200**   Administrator tasks list</p></li>
-</ul>
-<p></p>
-<p>This attribute corresponds to the **Type** attribute of the <a href="listtemplate-element-site.md">ListTemplate</a> element.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Url**</p></td>
-<td align="left"><p>Optional **Text**.</p>
-<p>Specifies the path to the root of the directory that contains the ASPX files to which the list definition applies, relative to the root URL of the website.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**VersioningEnabled**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify within a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file that versioning is enabled by default for document libraries that are created through the list definition. Setting this attribute has no effect on existing document libraries. If **TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.</p></td>
-</tr>
-</tbody>
-</table>
+||
+|:-----|
+|[Data](data-element-site.md)|
+   
+## Parent Elements
 
+||
+|:-----|
+|[GlobalLists](../../collaborative-application-markup-language-caml-schemas/general-schema/globallists-element.md), [Lists](lists-element-site.md)|
+   
+## Occurrences
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="data-element-site.md">Data</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="globallists-element.md">GlobalLists</a>, <a href="lists-element-site.md">Lists</a></p></td>
-</tr>
-</tbody>
-</table>
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
+||
+|:-----|
+|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+   
 
