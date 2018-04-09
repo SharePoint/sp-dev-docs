@@ -39,7 +39,11 @@ USAGE
 
 [SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|

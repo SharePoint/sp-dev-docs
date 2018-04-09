@@ -43,7 +43,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|FieldId  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the deleted field.  <br/> |
+|**FieldId**  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the deleted field.  <br/> |
    
 ### Child elements
 

@@ -38,7 +38,11 @@ USAGE
 
 [SPFileVersionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFileVersionCollection.aspx) object. 
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|

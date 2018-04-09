@@ -50,7 +50,11 @@ USAGE
 
 [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|

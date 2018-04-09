@@ -1,7 +1,5 @@
 ---
 title: "EventReceiver Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # EventReceiver Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a SharePoint event receiver object instance ([SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx) ). Depending on the event receiver collection specified, the event receiver can listen for events on [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx) , [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) , [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx) , or [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) objects. 
-  
-```
+Represents a SharePoint event receiver object instance ([SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx) ). Depending on the event receiver collection specified, the event receiver can listen for events on [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx), [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx), [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx), or [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) objects. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="EventReceiver" 
         type="SPEventReceiverDefinition" 
@@ -51,7 +49,11 @@ USAGE
 
 [SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|

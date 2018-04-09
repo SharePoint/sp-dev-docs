@@ -90,7 +90,11 @@ USAGE
 
 [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|

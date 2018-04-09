@@ -45,9 +45,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|DocumentTemplateUrl  <br/> |xs:string  <br/> |Optional. URL to the location of the template on which the document library is based.  <br/> |
-|EmailInsertsFolder  <br/> |xs:string  <br/> |Optional. The path for the public folder that contains the e-mail items inserted in the document library.  <br/> |
-|IsCatalog  <br/> |xs:boolean  <br/> |Optional. Indicates whether the document library is a gallery, such as for site templates, list templates, Web Parts, or master pages.  <br/> |
+|**DocumentTemplateUrl**  <br/> |xs:string  <br/> |Optional. URL to the location of the template on which the document library is based.  <br/> |
+|**EmailInsertsFolder**  <br/> |xs:string  <br/> |Optional. The path for the public folder that contains the e-mail items inserted in the document library.  <br/> |
+|**IsCatalog**  <br/> |xs:boolean  <br/> |Optional. Indicates whether the document library is a gallery, such as for site templates, list templates, Web Parts, or master pages.  <br/> |
    
 ### Child elements
 

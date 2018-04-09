@@ -49,7 +49,11 @@ USAGE
 
 [Microsoft.SharePoint.SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|

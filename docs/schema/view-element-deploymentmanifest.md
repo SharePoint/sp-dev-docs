@@ -76,7 +76,11 @@ USAGE
 
 [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) object. 
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
