@@ -1,7 +1,5 @@
 ---
 title: "ListTemplate Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # ListTemplate Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a list definition or instance of a list template ([SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx) ) object on a SharePoint list ( [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) ) object. 
-  
-```
+Represents a list definition or instance of a list template ([SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)) object on a SharePoint list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="ListTemplate" type="SPListTemplate" />
+
 USAGE
 <SPObject>
         <ListTemplate
@@ -67,24 +66,15 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)
-  
-[SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)
+- [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

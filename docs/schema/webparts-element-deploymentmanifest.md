@@ -1,7 +1,5 @@
 ---
 title: "WebParts Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # WebParts Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a collection of SharePoint Foundation Web Part (**SPWebPart**) object instances.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="WebParts" type="SPWebPartCollection" minOccurs="0" maxOccurs="1" />
+
 USAGE
 <File>
    <WebParts>
@@ -42,28 +41,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)
+[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-
-
-[SPWebPartCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebPartCollection.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPWebPartCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebPartCollection.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

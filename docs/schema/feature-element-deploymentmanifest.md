@@ -1,7 +1,5 @@
 ---
 title: "Feature Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Feature Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 Feature ([SPFeature](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFeature.aspx) ) object. 
-  
-```
+Represents an instance of a Windows SharePoint Services 3.0 Feature ([SPFeature](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFeature.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Feature" type="SPFeature" />
+
 USAGE
 <SPObject>
   <Feature>
@@ -54,22 +53,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPFeature](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFeature.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPFeature](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFeature.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

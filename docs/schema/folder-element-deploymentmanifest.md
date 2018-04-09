@@ -1,7 +1,5 @@
 ---
 title: "Folder Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Folder Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 folder ([SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx) ) object. 
-  
-```
+Represents an instance of a Windows SharePoint Services 3.0 folder ([SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Folder" type="SPFolder" />
+
 USAGE
 <SPObject>
         <Folder
@@ -75,22 +74,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Properties Element (DeploymentManifest - SPFolder)](properties-element-deploymentmanifestspfolder.md)
+[Properties Element (DeploymentManifest - SPFolder)](properties-element-deploymentmanifestspfolder.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

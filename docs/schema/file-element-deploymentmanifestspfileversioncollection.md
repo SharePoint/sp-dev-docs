@@ -1,7 +1,5 @@
 ---
 title: "File Element (DeploymentManifest - SPFileVersionCollection)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # File Element (DeploymentManifest - SPFileVersionCollection)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a versioned instance of a SharePoint Foundation 2010 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx) ) object. 
-  
-```
+Represents a versioned instance of a SharePoint Foundation 2010 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="File" 
         type="SPFile" 
@@ -94,27 +92,19 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[EventReceivers Element (DeploymentManifest - SPFile)](eventreceivers-element-deploymentmanifestspfile.md) <br/> |
-|[Links Element (DeploymentManifest - SPFile)](links-element-deploymentmanifestspfile.md) <br/> |
-|[Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md) <br/> |
-|[Properties Element (DeploymentManifest - SPFile)](properties-element-deploymentmanifestspfile.md) <br/> |
-|[Versions Element (DeploymentManifest - SPFile)](versions-element-deploymentmanifestspfile.md) <br/> |
-|[WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md) <br/> |
+- [EventReceivers Element (DeploymentManifest - SPFile)](eventreceivers-element-deploymentmanifestspfile.md) 
+- [Links Element (DeploymentManifest - SPFile)](links-element-deploymentmanifestspfile.md)
+- [Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md) 
+- [Properties Element (DeploymentManifest - SPFile)](properties-element-deploymentmanifestspfile.md) 
+- [Versions Element (DeploymentManifest - SPFile)](versions-element-deploymentmanifestspfile.md) 
+- [WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[Versions Element (DeploymentManifest - SPFile)](versions-element-deploymentmanifestspfile.md)
+- [Versions Element (DeploymentManifest - SPFile)](versions-element-deploymentmanifestspfile.md)
    
 ## See also
 
-
-
-[SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

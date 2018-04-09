@@ -1,7 +1,5 @@
 ---
 title: "Personalization Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Personalization Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents personalization data pertaining to an instance of a Windows SharePoint Services 3.0 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx) ) object. 
-  
-```
+Represents personalization data pertaining to an instance of a Windows SharePoint Services 3.0 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Personalization" 
         type="SPPersonalization" 
@@ -42,7 +40,7 @@ USAGE
 
 ## Type
 
- **SPPersonalization**
+**SPPersonalization**
   
 ## Elements and attributes
 
@@ -62,22 +60,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md)
+[Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

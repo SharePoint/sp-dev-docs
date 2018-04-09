@@ -1,7 +1,5 @@
 ---
 title: "SPObjects Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,16 +12,17 @@ description: "Last modified: March 09, 2015"
 
 # SPObjects Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a collection of top-level Windows SharePoint Services 3.0 objects.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="SPObjects" type="SPGenericObjectCollection">
 </xs:element>
+
 USAGE
 <SPObjects>
         <SPObject />
@@ -33,7 +32,7 @@ USAGE
 
 ## Type
 
- **SPGenericObjectCollection**
+**SPGenericObjectCollection**
   
 ## Elements and attributes
 
@@ -41,29 +40,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
-## Remarks
+### Remarks
 
 The **SPObjects** element is the root element of the DeploymentManifest.xsd schema and therefore has no parent element. 
   
 ## See also
 
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

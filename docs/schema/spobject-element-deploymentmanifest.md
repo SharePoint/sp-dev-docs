@@ -1,7 +1,5 @@
 ---
 title: "SPObject Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SPObject Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents an instance of a top-level Windows SharePoint Services 3.0 object (**SPGenericObject**).
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="SPObject" 
         type="SPGenericObject" 
@@ -45,7 +43,7 @@ USAGE
 
 ## Type
 
- **SPGenericObject** ( [Object](https://msdn.microsoft.com/library/System.Object.aspx) ) 
+**SPGenericObject** ( [Object](https://msdn.microsoft.com/library/System.Object.aspx)) 
   
 ## Elements and attributes
 
@@ -67,44 +65,35 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Site Element (DeploymentManifest)](site-element-deploymentmanifest.md) <br/> |
-|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md) <br/> |
-|[WebTemplate Element (DeploymentManifest)](webtemplate-element-deploymentmanifest.md) <br/> |
-|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md) <br/> |
-|[DocumentLibrary Element (DeploymentManifest)](documentlibrary-element-deploymentmanifest.md) <br/> |
-|[PictureLibrary Element (DeploymentManifest)](picturelibrary-element-deploymentmanifest.md) <br/> |
-|[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md) <br/> |
-|[Module Element (DeploymentManifest)](module-element-deploymentmanifest.md) <br/> |
-|[DocumentTemplate Element (DeploymentManifest)](documenttemplate-element-deploymentmanifest.md) <br/> |
-|[ListTemplate Element (DeploymentManifest)](listtemplate-element-deploymentmanifest.md) <br/> |
-|[Folder Element (DeploymentManifest)](folder-element-deploymentmanifest.md) <br/> |
-|[File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md) <br/> |
-|[ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md) <br/> |
-|[FieldTemplate Element (DeploymentManifest)](fieldtemplate-element-deploymentmanifest.md) <br/> |
-|[WebStructure Element (DeploymentManifest)](webstructure-element-deploymentmanifest.md) <br/> |
-|[UserX Element (DeploymentManifest)](userx-element-deploymentmanifest.md) <br/> |
-|[GroupX Element (DeploymentManifest)](groupx-element-deploymentmanifest.md) <br/> |
-|[Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md) <br/> |
-|[RoleX Element (DeploymentManifest)](rolex-element-deploymentmanifest.md) <br/> |
-|[RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md) <br/> |
-|[Feature Element (DeploymentManifest)](feature-element-deploymentmanifest.md) <br/> |
+- [Site Element (DeploymentManifest)](site-element-deploymentmanifest.md)
+- [Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
+- [WebTemplate Element (DeploymentManifest)](webtemplate-element-deploymentmanifest.md)
+- [List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
+- [DocumentLibrary Element (DeploymentManifest)](documentlibrary-element-deploymentmanifest.md)
+- [PictureLibrary Element (DeploymentManifest)](picturelibrary-element-deploymentmanifest.md)
+- [ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
+- [Module Element (DeploymentManifest)](module-element-deploymentmanifest.md)
+- [DocumentTemplate Element (DeploymentManifest)](documenttemplate-element-deploymentmanifest.md)
+- [ListTemplate Element (DeploymentManifest)](listtemplate-element-deploymentmanifest.md)
+- [Folder Element (DeploymentManifest)](folder-element-deploymentmanifest.md)
+- [File Element (DeploymentManifest - SPGenericObject)](file-element-deploymentmanifestspgenericobject.md)
+- [ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md)
+- [FieldTemplate Element (DeploymentManifest)](fieldtemplate-element-deploymentmanifest.md)
+- [WebStructure Element (DeploymentManifest)](webstructure-element-deploymentmanifest.md)
+- [UserX Element (DeploymentManifest)](userx-element-deploymentmanifest.md)
+- [GroupX Element (DeploymentManifest)](groupx-element-deploymentmanifest.md)
+- [Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md)
+- [RoleX Element (DeploymentManifest)](rolex-element-deploymentmanifest.md)
+- [RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md)
+- [Feature Element (DeploymentManifest)](feature-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObjects Element (DeploymentManifest)](spobjects-element-deploymentmanifest.md)
+- [SPObjects Element (DeploymentManifest)](spobjects-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPDeploymentObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPDeploymentObject.aspx)
-  
-[Object](https://msdn.microsoft.com/library/System.Object.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPDeploymentObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPDeploymentObject.aspx)
+- [Object](https://msdn.microsoft.com/library/System.Object.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

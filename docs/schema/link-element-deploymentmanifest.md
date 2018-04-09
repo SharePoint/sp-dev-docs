@@ -1,7 +1,5 @@
 ---
 title: "Link Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Link Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint Foundation link ([SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx) ) object. 
-  
-```
+Represents an instance of a SharePoint Foundation link ([SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Link" 
         type="SPLink" 
@@ -71,22 +69,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Links Element (DeploymentManifest - SPFile)](links-element-deploymentmanifestspfile.md)
+[Links Element (DeploymentManifest - SPFile)](links-element-deploymentmanifestspfile.md)
    
 ## See also
 
-
-
-[SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "ListFormBody Element (DeploymentManifest - SPWebPart)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # ListFormBody Element (DeploymentManifest - SPWebPart)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents the body of a Windows SharePoint Services 3.0 list form in a Web Part.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="ListFormBody" minOccurs="0" maxOccurs="1" />
 USAGE
@@ -40,25 +38,17 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

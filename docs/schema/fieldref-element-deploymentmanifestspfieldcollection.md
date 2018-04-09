@@ -1,7 +1,5 @@
 ---
 title: "FieldRef Element (DeploymentManifest - SPFieldCollection)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # FieldRef Element (DeploymentManifest - SPFieldCollection)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents field data to display in a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) ). 
-  
-```
+Represents field data to display in a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)). 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="FieldRef" 
         type="SPFieldLink" 
@@ -80,16 +78,12 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md) <br/> |
-|[FieldRef Element (DeploymentManifest - SPFieldCollection)](fieldref-element-deploymentmanifestspfieldcollection.md) <br/> |
+- [Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)
+- [FieldRef Element (DeploymentManifest - SPFieldCollection)](fieldref-element-deploymentmanifestspfieldcollection.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
+[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
    
 ## Remarks
 
@@ -97,10 +91,6 @@ This element can contain instances of itself, and can therefore be either a pare
   
 ## See also
 
-
-
-[SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

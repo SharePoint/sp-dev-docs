@@ -1,7 +1,5 @@
 ---
 title: "UserX Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # UserX Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents incremental changes to an [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx) object defintion during an incremental deployment. 
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="UserX" type="DeploymentUserX" />
+
 USAGE
 <SPObject>
         <UserX
@@ -42,7 +41,7 @@ USAGE
 
 ## Type
 
- **DeploymentUserX** (based on [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx) ) 
+**DeploymentUserX** (based on [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx)) 
   
 ## Elements and attributes
 
@@ -64,22 +63,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

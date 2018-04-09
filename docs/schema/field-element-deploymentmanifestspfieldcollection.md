@@ -1,7 +1,5 @@
 ---
 title: "Field Element (DeploymentManifest - SPFieldCollection)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Field Element (DeploymentManifest - SPFieldCollection)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 Field object ([SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx) ) for the specified field collection. 
-  
-```
+Represents an instance of a Windows SharePoint Services 3.0 Field object ([SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)) for the specified field collection. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Field" 
         type="SPField" 
@@ -107,7 +105,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**FilterableBySchema** <br/> |xs:string  <br/> |Optional. Specifies whether the field can be filtered with respect to the schema definition.  <br/> |
 |**Filterable** <br/> |xs:string  <br/> |Optional. Specifies whether the field can be filtered on field values.  <br/> |
 |**FilterableNoRecurrenceBySchema** <br/> |xs:string  <br/> |Optional. Specifies whether the field can be filtered with respect to the schema definition file, but in such a way that the view does not expand recurring events.  <br/> |
-|**FilterableNoRecurrence** <br/> |xs:string  <br/> |Optional. Specifies whether a filter can be created on a field in a view that does not expand recurring events. For more information, see [FilterableNoRecurrence](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.FilterableNoRecurrence.aspx) .  <br/> |
+|**FilterableNoRecurrence** <br/> |xs:string  <br/> |Optional. Specifies whether a filter can be created on a field in a view that does not expand recurring events. For more information, see [FilterableNoRecurrence](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.FilterableNoRecurrence.aspx).  <br/> |
 |**Reorderable** <br/> |xs:string  <br/> |Optional. Specifies whether values in the field can be reordered.  <br/> |
 |**Format** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**FillInChoice** <br/> |xs:string  <br/> |Optional.  <br/> |
@@ -115,25 +113,15 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
+[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
    
 ## See also
 
-
-
-[SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
-
-
-[FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx)
+- [SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx)
 

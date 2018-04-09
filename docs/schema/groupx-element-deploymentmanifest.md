@@ -1,7 +1,5 @@
 ---
 title: "GroupX Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # GroupX Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents an instance of a top-level Windows SharePoint Services 3.0 deployment group object.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="GroupX" type="DeploymentGroupX" />
+
 USAGE
 <SPObject>
         <GroupX
@@ -45,7 +44,7 @@ USAGE
 
 ## Type
 
- **DeploymentGroupX**
+**DeploymentGroupX**
   
 ## Elements and attributes
 
@@ -70,19 +69,13 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

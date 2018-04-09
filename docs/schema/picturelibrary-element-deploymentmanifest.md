@@ -1,7 +1,5 @@
 ---
 title: "PictureLibrary Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # PictureLibrary Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 picture library ([SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx) ) object. 
-  
-```
+Represents an instance of a Windows SharePoint Services 3.0 picture library ([SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="PictureLibrary" type="SPPictureLibrary" />
+
 USAGE
 <SPObject>
         <PictureLibrary
@@ -52,32 +51,22 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## Remarks
 
-The base type [Microsoft.SharePoint.SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx) extends another base type, [Microsoft.SharePoint.SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx) . That type, in turn, extends the [Microsoft.SharePoint.SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) type. 
+The base type [Microsoft.SharePoint.SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx) extends another base type, [Microsoft.SharePoint.SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx). That type, in turn, extends the [Microsoft.SharePoint.SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) type. 
   
 For attributes of the **SPDocumentLibrary** type, see [DocumentLibrary Element (DeploymentManifest)](documentlibrary-element-deploymentmanifest.md). For attributes of the **SPList** type, see [List Element (DeploymentManifest)](list-element-deploymentmanifest.md).
   
 ## See also
 
-
-
-[SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx)
-  
-[SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx)
-  
-[SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx)
+- [SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx) 
+- [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

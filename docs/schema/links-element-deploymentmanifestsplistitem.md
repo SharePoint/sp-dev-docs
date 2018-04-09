@@ -1,7 +1,5 @@
 ---
 title: "Links Element (DeploymentManifest - SPListItem)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Links Element (DeploymentManifest - SPListItem)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a collection of Windows SharePoint Services 3.0 link ([SPLinkCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLinkCollection.aspx) ) object instances on a SharePoint [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx) object. 
-  
-```
+Represents a collection of Windows SharePoint Services 3.0 link ([SPLinkCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLinkCollection.aspx)) object instances on a SharePoint [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Links" 
         type="SPLinkCollection" 
@@ -37,7 +35,7 @@ USAGE
 
 ## Type
 
- **SPLinkCollection**
+**SPLinkCollection**
   
 ## Elements and attributes
 
@@ -45,28 +43,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Link Element (DeploymentManifest)](link-element-deploymentmanifest.md)
+[Link Element (DeploymentManifest)](link-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
+[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-
-
-[SPLinkCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLinkCollection.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPLinkCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLinkCollection.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

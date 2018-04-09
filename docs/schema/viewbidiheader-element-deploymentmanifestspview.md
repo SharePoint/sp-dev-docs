@@ -1,7 +1,5 @@
 ---
 title: "ViewBidiHeader Element (DeploymentManifest - SPView)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # ViewBidiHeader Element (DeploymentManifest - SPView)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a parameter that permits a view of a header on a Windows SharePoint Services 3.0 view object that supports bidirectional printer (bidi) communication.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="ViewBidiHeader" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <View>
         <ViewBidiHeader />
@@ -32,7 +31,7 @@ USAGE
 
 ## Type
 
- **xs:string**
+**xs:string**
   
 ## Elements and attributes
 
@@ -40,25 +39,17 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "Field Element (DeploymentManifest - FieldDataCollection)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Field Element (DeploymentManifest - FieldDataCollection)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents field values for the specified type instance.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Field" 
         type="DictionaryEntry" 
@@ -61,22 +59,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
+[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
    
 ## See also
 
-
-
-[DictionaryEntry](https://msdn.microsoft.com/library/System.Collections.DictionaryEntry.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DictionaryEntry](https://msdn.microsoft.com/library/System.Collections.DictionaryEntry.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

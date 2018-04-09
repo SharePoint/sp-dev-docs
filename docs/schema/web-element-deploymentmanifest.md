@@ -1,7 +1,5 @@
 ---
 title: "Web Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Web Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint Foundation Web site ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) ) object. A Web site is one of the top-level SharePoint Foundation objects. 
-  
-```
+Represents an instance of a SharePoint Foundation Web site ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)) object. A Web site is one of the top-level SharePoint Foundation objects. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Web" type="SPWeb" />
+
 USAGE
 <SPObject>
     <Web>
@@ -99,13 +98,13 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |**AdjustHijriDays** <br/> |xs:int  <br/> |Optional. Specifies the number of days to extend or reduce the current month in Hijri calendars.  <br/> |
-|**AlternateCalendarType** <br/> |xs:short  <br/> |Optional. Specifies an integer representing an alternative calendar type. For a table of calendar type values, see [CalendarType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.CalendarType.aspx) .  <br/> |
+|**AlternateCalendarType** <br/> |xs:short  <br/> |Optional. Specifies an integer representing an alternative calendar type. For a table of calendar type values, see [CalendarType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.CalendarType.aspx).  <br/> |
 |**AlternateCssUrl** <br/> |xs:string  <br/> |Optional. Specifies the URL for an alternative cascading style sheet (CSS) to use for the Web site.  <br/> |
 |**AlternateHeader** <br/> |xs:string  <br/> |Optional. Specifies the URL for an alternative .aspx page to use for rendering the top navigation area on SharePoint pages.  <br/> |
 |**AnonymousState** <br/> |[AnonymousState Simple Type (DeploymentManifest)](anonymousstate-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies the level of access available to anonymous users on the Web site.  <br/> |
 |**Author** <br/> |xs:string  <br/> |Optional. Represents the user who created the Web site.  <br/> |
 |**CalendarType** <br/> |xs:int  <br/> |Optional. Specifies an integer representing the default calendar type.  <br/> |
-|**Collation** <br/> |xs:int  <br/> |Optional. Integer value specifying the collation used on the site. For more information, see [Collation](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.Collation.aspx) .  <br/> |
+|**Collation** <br/> |xs:int  <br/> |Optional. Integer value specifying the collation used on the site. For more information, see [Collation](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.Collation.aspx).  <br/> |
 |**Configuration** <br/> |xs:int  <br/> |Optional. Specifies the ID of the configuration in the site definition that was used to create the site; or, specifies the ID of the configuration in the site definition from which the site template used to create the site was derived.  <br/> |
 |**Created** <br/> |xs:dateTime  <br/> |Optional. Specifies the date and time that the site was created.  <br/> |
 |**CurrencyLocaleId** <br/> |xs:int  <br/> |Optional. Specifies the locale ID (LCID) used to represent currency values in the Web site.  <br/> |
@@ -120,7 +119,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier for the site.  <br/> |
 |**IncludeSupportingFolders** <br/> |xs:boolean  <br/> |Optional. Specifies whether supporting folders are included in enumerations of files or folders. The value is **true** if supporting files are included.  <br/> |
 |**IsRootWeb** <br/> |xs:boolean  <br/> |Required. Specifies whether the site is the top-level Web site of the site collection. The value is **true** if the site is the top-level site.  <br/> |
-|**Language** <br/> |xs:long  <br/> |Required. Specifies the LCID for the language used on the site. For a table of LCID values, see [Language](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Language.aspx) .  <br/> |
+|**Language** <br/> |xs:long  <br/> |Required. Specifies the LCID for the language used on the site. For a table of LCID values, see [Language](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Language.aspx).  <br/> |
 |**Locale** <br/> |xs:string  <br/> |Required. Specifies the locale for the Web site.  <br/> |
 |**MasterUrl** <br/> |xs:string  <br/> |Optional. Specifies the URL of the master page used for the Web site.  <br/> |
 |**Name** <br/> |xs:string  <br/> |Required. Specifies the name of the Web site.  <br/> |
@@ -141,7 +140,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**SystemCatalogsIncluded** <br/> |xs:boolean  <br/> |Optional. Specifies whether system catalog files are included in the export package. The value is **true** if the system catalogs are included.  <br/> |
 |**ThemeComposite** <br/> |xs:string  <br/> |Optional. Provides the name of the theme and the URL to the CSS that is applied to the Web site.  <br/> |
 |**Time24** <br/> |xs:boolean  <br/> |Optional. Specifies whether to use a 24-hour time format to represent the hours of the day.  <br/> |
-|**TimeZoneId** <br/> |xs:int  <br/> |Optional. Specifies the identifier of the time zone that is used on the server. For more information, see [SPTimeZone](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPTimeZone.aspx) .  <br/> |
+|**TimeZoneId** <br/> |xs:int  <br/> |Optional. Specifies the identifier of the time zone that is used on the server. For more information, see [SPTimeZone](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPTimeZone.aspx).  <br/> |
 |**Title** <br/> |xs:string  <br/> |Required. Specifies the title for the Web site.  <br/> |
 |**TreeViewEnabled** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether the SharePoint TreeView feature is enabled in the left navigational area of the Web site pages. The value is **true** if TreeView is enabled.  <br/> |
 |**UseSharedNavigation** <br/> |xs:boolean  <br/> |Optional.  <br/> |
@@ -153,25 +152,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Properties Element (DeploymentManifest - SPWeb)](properties-element-deploymentmanifestspweb.md) <br/> |
-|[EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md) <br/> |
+- [Properties Element (DeploymentManifest - SPWeb)](properties-element-deploymentmanifestspweb.md)
+- [EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+- [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
-  
-[SPRegionalSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
+- [SPRegionalSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

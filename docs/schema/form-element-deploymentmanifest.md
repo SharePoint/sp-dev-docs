@@ -1,7 +1,5 @@
 ---
 title: "Form Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Form Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 form ([SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx) ) object. 
-  
-```
+Represents an instance of a Windows SharePoint Services 3.0 form ([SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Form" 
         type="SPForm" 
@@ -55,24 +53,15 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md)
+[Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx)
-  
-[PAGETYPE](https://msdn.microsoft.com/library/Microsoft.SharePoint.PAGETYPE.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPForm.aspx)
+- [PAGETYPE](https://msdn.microsoft.com/library/Microsoft.SharePoint.PAGETYPE.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

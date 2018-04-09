@@ -1,7 +1,5 @@
 ---
 title: "RoleAssignments Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # RoleAssignments Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a collection of deployment role assignment (**DeploymentRoleAssignments**) objects.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="RoleAssignments" type="DeploymentRoleAssignments" />
+
 USAGE
 <SPObject>
         <RoleAssignments
@@ -34,7 +33,7 @@ USAGE
 
 ## Type
 
- **DeploymentRoleAssignments** (based on [SPRoleAssignmentCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignmentCollection.aspx) ) 
+**DeploymentRoleAssignments** (based on [SPRoleAssignmentCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignmentCollection.aspx)) 
   
 ## Elements and attributes
 
@@ -42,28 +41,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[RoleAssignment Element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)
+[RoleAssignment Element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPRoleAssignmentCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignmentCollection.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPRoleAssignmentCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignmentCollection.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

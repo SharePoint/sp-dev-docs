@@ -1,7 +1,5 @@
 ---
 title: "Role Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Role Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents an instance of a Windows SharePoint Services 3.0 deployment role (**DeploymentRole**) object.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Role" type="DeploymentRole" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <Roles>
         <Role
@@ -40,7 +39,7 @@ USAGE
 
 ## Type
 
- **DeploymentRole** (based on [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx) ) 
+**DeploymentRole** (based on [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)) 
   
 ## Elements and attributes
 
@@ -60,15 +59,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md)
+[Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -76,16 +71,9 @@ The value of the **RoleID** property corresponds to the unique member ID for the
   
 ## See also
 
-
-
-[SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)
-  
-[SPMember](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.aspx)
-  
-[ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx)
-  
-[SPRoleType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleType.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)
+- [SPMember](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.aspx)
+- [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx)
+- [SPRoleType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleType.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

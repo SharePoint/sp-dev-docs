@@ -57,41 +57,33 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|ID  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the event receiver definition.  <br/> |
-|Name  <br/> |xs:string  <br/> |Required. Name of the event receiver.  <br/> |
-|WebId  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the site in which the event receiver is registered.  <br/> |
-|HostId  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the object that is hosting the event.  <br/> |
-|HostType  <br/> |[SPEventHostType Simple Type (DeploymentManifest)](speventhosttype-simple-type-deploymentmanifest.md) <br/> |Required. Type of object that is hosting the event. The host type must be an enumeration value defined in the **SPEventHostType**simple type.  <br/> |
-|Type  <br/> |[SPEventReceiverType Simple Type (DeploymentManifest)](speventreceivertype-simple-type-deploymentmanifest.md) <br/> |Required. Type of event for the event receiver. The event receiver type must be an enumeration value defined in the **SPEventReceiverType** simple type.  <br/> |
-|SequenceNumber  <br/> |xs:int  <br/> |Required. Integer representing the relative order in a sequence of events.  <br/> |
-|Assembly  <br/> |xs:string  <br/> |Required. Strong name representing the assembly that is the event receiver.  <br/> |
-|Class  <br/> |xs:string  <br/> |Required. The class that is the event receiver.  <br/> |
-|Data  <br/> |xs:string  <br/> |Optional. Data that is associated with the event receiver.  <br/> |
-|Filter  <br/> |xs:string  <br/> |Optional.  <br/> |
-|Credential  <br/> |xs:int  <br/> |Optional.  <br/> |
-|ItemId  <br/> |xs:int  <br/> |Optional.  <br/> |
+|**ID**  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the event receiver definition.  <br/> |
+|**Name**  <br/> |xs:string  <br/> |Required. Name of the event receiver.  <br/> |
+|**WebId**  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the site in which the event receiver is registered.  <br/> |
+|**HostId**  <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the object that is hosting the event.  <br/> |
+|**HostType**  <br/> |[SPEventHostType Simple Type (DeploymentManifest)](speventhosttype-simple-type-deploymentmanifest.md) <br/> |Required. Type of object that is hosting the event. The host type must be an enumeration value defined in the **SPEventHostType** simple type.  <br/> |
+|**Type**  <br/> |[SPEventReceiverType Simple Type (DeploymentManifest)](speventreceivertype-simple-type-deploymentmanifest.md) <br/> |Required. Type of event for the event receiver. The event receiver type must be an enumeration value defined in the **SPEventReceiverType** simple type.  <br/> |
+|**SequenceNumber**  <br/> |xs:int  <br/> |Required. Integer representing the relative order in a sequence of events.  <br/> |
+|**Assembly**  <br/> |xs:string  <br/> |Required. Strong name representing the assembly that is the event receiver.  <br/> |
+|**Class**  <br/> |xs:string  <br/> |Required. The class that is the event receiver.  <br/> |
+|**Data**  <br/> |xs:string  <br/> |Optional. Data that is associated with the event receiver.  <br/> |
+|**Filter**  <br/> |xs:string  <br/> |Optional.  <br/> |
+|**Credential**  <br/> |xs:int  <br/> |Optional.  <br/> |
+|**ItemId**  <br/> |xs:int  <br/> |Optional.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None 
    
 ### Parent elements
 
-||
-|:-----|
-|[EventReceivers Element (DeploymentManifest - SPFile)](eventreceivers-element-deploymentmanifestspfile.md) <br/> |
-|[EventReceivers Element (DeploymentManifest - SPList)](eventreceivers-element-deploymentmanifestsplist.md) <br/> |
-|[EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md) <br/> |
-|[EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md) <br/> |
+- [EventReceivers Element (DeploymentManifest - SPFile)](eventreceivers-element-deploymentmanifestspfile.md)
+- [EventReceivers Element (DeploymentManifest - SPList)](eventreceivers-element-deploymentmanifestsplist.md)
+- [EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md)
+- [EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md)
    
 ## See also
 
-
-
-[SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

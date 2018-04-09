@@ -1,7 +1,5 @@
 ---
 title: "EventReceivers Element (DeploymentManifest - SPList)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # EventReceivers Element (DeploymentManifest - SPList)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a SharePoint event receiver object container, or collection ([SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx) ), for implementing event handling on SharePoint list ( [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) ) objects. 
-  
-```
+Represents a SharePoint event receiver object container or collection ([SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)) for implementing event handling on SharePoint list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)) objects. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="EventReceivers" 
         type="SPEventReceiverDefinitionCollection" 
@@ -45,21 +43,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[EventReceiver Element (DeploymentManifest)](eventreceiver-element-deploymentmanifest.md)
+[EventReceiver Element (DeploymentManifest)](eventreceiver-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
+[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
    
 ## Remarks
 
@@ -75,10 +67,6 @@ This element is one of four **EventReceivers** elements; each derives from a dif
     
 ## See also
 
-
-
-[SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

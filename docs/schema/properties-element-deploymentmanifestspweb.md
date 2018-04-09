@@ -1,7 +1,5 @@
 ---
 title: "Properties Element (DeploymentManifest - SPWeb)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Properties Element (DeploymentManifest - SPWeb)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a collection of properties on an instance of a Windows SharePoint Services 3.0 Web ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) ) object. 
-  
-```
+Represents a collection of properties on an instance of a Windows SharePoint Services 3.0 Web ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Properties" type="Dictionary" />
+
 USAGE
 <Web>
         <Properties
@@ -42,30 +41,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)
+[Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
+[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
-  
-[Dictionary](https://msdn.microsoft.com/library/System.Collections.Generic.Dictionary.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
+- [Dictionary](https://msdn.microsoft.com/library/System.Collections.Generic.Dictionary.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

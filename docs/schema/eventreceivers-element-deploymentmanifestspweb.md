@@ -1,7 +1,5 @@
 ---
 title: "EventReceivers Element (DeploymentManifest - SPWeb)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # EventReceivers Element (DeploymentManifest - SPWeb)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a SharePoint event receiver object container, or collection ([SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx) ), for implementing event handling on SharePoint Web ( [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) ) objects. 
-  
-```
+Represents a SharePoint event receiver object container or collection ([SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)) for implementing event handling on SharePoint Web ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)) objects. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="EventReceivers" 
         type="SPEventReceiverDefinitionCollection" 
@@ -45,25 +43,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[EventReceiver Element (DeploymentManifest)](eventreceiver-element-deploymentmanifest.md)
+[EventReceiver Element (DeploymentManifest)](eventreceiver-element-deploymentmanifest.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
+[Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
    
 ## Remarks
 
-This element is one of four EventReceivers elements; each derives from a different element hierarchy, as follows:
+This element is one of four **EventReceivers** elements; each derives from a different element hierarchy, as follows:
   
 - [EventReceivers Element (DeploymentManifest - SPFile)](eventreceivers-element-deploymentmanifestspfile.md)
     
@@ -75,10 +67,6 @@ This element is one of four EventReceivers elements; each derives from a differe
     
 ## See also
 
-
-
-[SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPEventReceiverDefinitionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinitionCollection.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

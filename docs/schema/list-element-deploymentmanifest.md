@@ -1,7 +1,5 @@
 ---
 title: "List Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # List Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) ) object. 
-  
-```
+Represents an instance of a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="List" type="SPList" />
+
 USAGE
 <SPObject
         <List
@@ -106,7 +105,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**DefaultContentApprovalWrokFlowId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the default content approval workflow that is associated with the list.  <br/> |
 |**DefaultItemOpen** <br/> |[DefaultItemOpen Simple Type (DeploymentManifest)](defaultitemopen-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies whether to open list items in a client application or in the browser.  <br/> |
 |**Description** <br/> |xs:string  <br/> |Optional. Provides a description for the list.  <br/> |
-|**Direction** <br/> |xs:string  <br/> |Optional. Specifies the direction of the reading order for the list. The string value " **ltr**" specifies left-to-right; the string " **rtl**" specifies either right-to-left, or that no reading order is specified.  <br/> |
+|**Direction** <br/> |xs:string  <br/> |Optional. Specifies the direction of the reading order for the list. The string value "**ltr**" specifies left-to-right; the string "**rtl**" specifies either right-to-left, or that no reading order is specified.  <br/> |
 |**DocumentTemplateId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the document template.  <br/> |
 |**DraftVersionVisibility** <br/> |[DraftVisibilityType Simple Type (DeploymentManifest)](draftvisibilitytype-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies user types that can view minor versions of document drafts within the list.  <br/> |
 |**EmailAlias** <br/> |xs:string  <br/> |Optional. When e-mail notification is enabled (**EnableAssignToEmail=true**), specifies the e-mail address to use to notify the owner of an item when the item has been updated or the assignment has changed.  <br/> |
@@ -148,29 +147,20 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[ContentTypes Element (DeploymentManifest)](contenttypes-element-deploymentmanifest.md) <br/> |
-|[DeletedFields Element (DeploymentManifest)](deletedfields-element-deploymentmanifest.md) <br/> |
-|[EventReceivers Element (DeploymentManifest - SPList)](eventreceivers-element-deploymentmanifestsplist.md) <br/> |
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) <br/> |
-|[Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md) <br/> |
-|[Views Element (DeploymentManifest)](views-element-deploymentmanifest.md) <br/> |
+- [ContentTypes Element (DeploymentManifest)](contenttypes-element-deploymentmanifest.md)
+- [DeletedFields Element (DeploymentManifest)](deletedfields-element-deploymentmanifest.md)
+- [EventReceivers Element (DeploymentManifest - SPList)](eventreceivers-element-deploymentmanifestsplist.md) 
+- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) 
+- [Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md) 
+- [Views Element (DeploymentManifest)](views-element-deploymentmanifest.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+- [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
-  
-[SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
+- [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "Query Element (DeploymentManifest - SPView)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Query Element (DeploymentManifest - SPView)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a query on an instance of a Windows SharePoint Services 3.0 view ([SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) ) object. 
-  
-```
+Represents a query on an instance of a Windows SharePoint Services 3.0 view ([SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Query" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <View>
         <Query />
@@ -40,28 +39,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPQuery](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPQuery.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPQuery](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPQuery.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

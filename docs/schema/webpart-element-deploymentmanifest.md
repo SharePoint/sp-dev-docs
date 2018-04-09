@@ -1,7 +1,5 @@
 ---
 title: "WebPart Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # WebPart Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents an instance of a SharePoint Foundation top-level Web Part object (**SPWebPart**).
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="WebPart" 
         type="SPWebPart" 
@@ -131,49 +129,41 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Script Element (DeploymentManifest - SPWebPart)](script-element-deploymentmanifestspwebpart.md) <br/> |
-|[PagedRowset Element (DeploymentManifest - SPWebPart)](pagedrowset-element-deploymentmanifestspwebpart.md) <br/> |
-|[PagedClientCallbackRowset Element (DeploymentManifest - SPWebPart)](pagedclientcallbackrowset-element-deploymentmanifestspwebpart.md) <br/> |
-|[PagedRecurrenceRowset Element (DeploymentManifest - SPWebPart)](pagedrecurrencerowset-element-deploymentmanifestspwebpart.md) <br/> |
-|[ViewFields Element (DeploymentManifest - SPWebPart)](viewfields-element-deploymentmanifestspwebpart.md) <br/> |
-|[ViewData Element (DeploymentManifest - SPWebPart)](viewdata-element-deploymentmanifestspwebpart.md) <br/> |
-|[Query Element (DeploymentManifest - SPWebPart)](query-element-deploymentmanifestspwebpart.md) <br/> |
-|[RowLimit Element (DeploymentManifest - SPWebPart)](rowlimit-element-deploymentmanifestspwebpart.md) <br/> |
-|[RowLimitExceeded Element (DeploymentManifest - SPWebPart)](rowlimitexceeded-element-deploymentmanifestspwebpart.md) <br/> |
-|[Toolbar Element (DeploymentManifest - SPWebPart)](toolbar-element-deploymentmanifestspwebpart.md) <br/> |
-|[Formats Element (DeploymentManifest - SPWebPart)](formats-element-deploymentmanifestspwebpart.md) <br/> |
-|[Aggregations Element (DeploymentManifest - SPWebPart)](aggregations-element-deploymentmanifestspwebpart.md) <br/> |
-|[ViewStyle Element (DeploymentManifest - SPWebPart)](viewstyle-element-deploymentmanifestspwebpart.md) <br/> |
-|[View Body Element (DeploymentManifest - SPWebPart)](view-body-element-deploymentmanifestspwebpart.md) <br/> |
-|[ViewEmpty Element (DeploymentManifest - SPWebPart)](viewempty-element-deploymentmanifestspwebpart.md) <br/> |
-|[ViewFooter Element (DeploymentManifest - SPWebPart)](viewfooter-element-deploymentmanifestspwebpart.md) <br/> |
-|[ViewHeader Element (DeploymentManifest - SPWebPart)](viewheader-element-deploymentmanifestspwebpart.md) <br/> |
-|[ViewBidiHeader Element (DeploymentManifest - SPWebPart)](viewbidiheader-element-deploymentmanifestspwebpart.md) <br/> |
-|[GroupByFooter Element (DeploymentManifest - SPWebPart)](groupbyfooter-element-deploymentmanifestspwebpart.md) <br/> |
-|[GroupByHeader (DeploymentManifest - SPWebPart)](groupbyheader-deploymentmanifestspwebpart.md) <br/> |
-|[CalendarViewStyles Element (DeploymentManifest - SPWebPart)](calendarviewstyles-element-deploymentmanifestspwebpart.md) <br/> |
-|[ListFormBody Element (DeploymentManifest - SPWebPart)](listformbody-element-deploymentmanifestspwebpart.md) <br/> |
+
+- [Script Element (DeploymentManifest - SPWebPart)](script-element-deploymentmanifestspwebpart.md)
+- [PagedRowset Element (DeploymentManifest - SPWebPart)](pagedrowset-element-deploymentmanifestspwebpart.md)
+- [PagedClientCallbackRowset Element (DeploymentManifest - SPWebPart)](pagedclientcallbackrowset-element-deploymentmanifestspwebpart.md)
+- [PagedRecurrenceRowset Element (DeploymentManifest - SPWebPart)](pagedrecurrencerowset-element-deploymentmanifestspwebpart.md)
+- [ViewFields Element (DeploymentManifest - SPWebPart)](viewfields-element-deploymentmanifestspwebpart.md)
+- [ViewData Element (DeploymentManifest - SPWebPart)](viewdata-element-deploymentmanifestspwebpart.md)
+- [Query Element (DeploymentManifest - SPWebPart)](query-element-deploymentmanifestspwebpart.md)
+- [RowLimit Element (DeploymentManifest - SPWebPart)](rowlimit-element-deploymentmanifestspwebpart.md)
+- [RowLimitExceeded Element (DeploymentManifest - SPWebPart)](rowlimitexceeded-element-deploymentmanifestspwebpart.md)
+- [Toolbar Element (DeploymentManifest - SPWebPart)](toolbar-element-deploymentmanifestspwebpart.md)
+- [Formats Element (DeploymentManifest - SPWebPart)](formats-element-deploymentmanifestspwebpart.md)
+- [Aggregations Element (DeploymentManifest - SPWebPart)](aggregations-element-deploymentmanifestspwebpart.md)
+- [ViewStyle Element (DeploymentManifest - SPWebPart)](viewstyle-element-deploymentmanifestspwebpart.md)
+- [View Body Element (DeploymentManifest - SPWebPart)](view-body-element-deploymentmanifestspwebpart.md)
+- [ViewEmpty Element (DeploymentManifest - SPWebPart)](viewempty-element-deploymentmanifestspwebpart.md)
+- [ViewFooter Element (DeploymentManifest - SPWebPart)](viewfooter-element-deploymentmanifestspwebpart.md)
+- [ViewHeader Element (DeploymentManifest - SPWebPart)](viewheader-element-deploymentmanifestspwebpart.md)
+- [ViewBidiHeader Element (DeploymentManifest - SPWebPart)](viewbidiheader-element-deploymentmanifestspwebpart.md)
+- [GroupByFooter Element (DeploymentManifest - SPWebPart)](groupbyfooter-element-deploymentmanifestspwebpart.md)
+- [GroupByHeader (DeploymentManifest - SPWebPart)](groupbyheader-deploymentmanifestspwebpart.md)
+- [CalendarViewStyles Element (DeploymentManifest - SPWebPart)](calendarviewstyles-element-deploymentmanifestspwebpart.md)
+- [ListFormBody Element (DeploymentManifest - SPWebPart)](listformbody-element-deploymentmanifestspwebpart.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md)|
+- [WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md)|
    
-## Remarks
+### Remarks
 
-Web Parts can derive from either of two base classes - an ASP.NET Web Part ([WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx) ), or a SharePoint Foundation Web Part ( [WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx) ). 
+Web Parts can derive from either of two base classes - an ASP.NET Web Part ([WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)), or a SharePoint Foundation Web Part ([WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)). 
   
 ## See also
 
-
-
-[WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)
-  
-[WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)
+- [WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

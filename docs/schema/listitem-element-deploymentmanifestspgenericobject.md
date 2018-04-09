@@ -1,7 +1,5 @@
 ---
 title: "ListItem Element (DeploymentManifest - SPGenericObject)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # ListItem Element (DeploymentManifest - SPGenericObject)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint list item ([SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx) ) object. 
-  
-```
+Represents an instance of a SharePoint list item ([SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="ListItem" type="SPListItem" />
+
 USAGE
 <SPObject>
         <ListItem
@@ -95,26 +94,18 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md) <br/> |
-|[EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md) <br/> |
-|[Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) <br/> |
-|[Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md) <br/> |
-|[Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md) <br/> |
+- [Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md)
+- [EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md) 
+- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) 
+- [Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md) 
+- [Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
+- [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

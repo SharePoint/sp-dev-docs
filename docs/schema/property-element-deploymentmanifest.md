@@ -1,7 +1,5 @@
 ---
 title: "Property Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Property Element (DeploymentManifest)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a property value on an instance of a Windows SharePoint Services 3.0 object.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Property" type="DictionaryEntry" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <Properties>
         <Property
@@ -54,22 +53,14 @@ USAGE
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Properties Element (DeploymentManifest - SPAttachment)](properties-element-deploymentmanifestspattachment.md)
+[Properties Element (DeploymentManifest - SPAttachment)](properties-element-deploymentmanifestspattachment.md)
    
 ## See also
 
-
-
-[DictionaryEntry](https://msdn.microsoft.com/library/System.Collections.DictionaryEntry.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DictionaryEntry](https://msdn.microsoft.com/library/System.Collections.DictionaryEntry.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

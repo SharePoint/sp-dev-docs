@@ -1,7 +1,5 @@
 ---
 title: "View Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # View Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 view ([SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) ) object. 
-  
-```
+Represents an instance of a Windows SharePoint Services 3.0 view ([SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="View" type="SPView" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <Views>
         <View>
@@ -74,7 +73,7 @@ USAGE
 
 ## Type
 
-[SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) object. 
+[SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) object 
   
 ## Elements and attributes
 
@@ -104,43 +103,35 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Script Element (DeploymentManifest - SPView)](script-element-deploymentmanifestspview.md) <br/> |
-|[PagedRowset Element (DeploymentManifest - SPView)](pagedrowset-element-deploymentmanifestspview.md) <br/> |
-|[PagedClientCallbackRowset Element (DeploymentManifest - SPView)](pagedclientcallbackrowset-element-deploymentmanifestspview.md) <br/> |
-|[PagedRecurrenceRowset Element (DeploymentManifest - SPView)](pagedrecurrencerowset-element-deploymentmanifestspview.md) <br/> |
-|[ViewFields Element (DeploymentManifest - SPView)](viewfields-element-deploymentmanifestspview.md) <br/> |
-|[ViewData Element (DeploymentManifest - SPView)](viewdata-element-deploymentmanifestspview.md) <br/> |
-|[Query Element (DeploymentManifest - SPView)](query-element-deploymentmanifestspview.md) <br/> |
-|[RowLimit Element (DeploymentManifest - SPView)](rowlimit-element-deploymentmanifestspview.md) <br/> |
-|[RowLimitExceeded Element (DeploymentManifest - SPView)](rowlimitexceeded-element-deploymentmanifestspview.md) <br/> |
-|[Toolbar Element (DeploymentManifest - SPView)](toolbar-element-deploymentmanifestspview.md) <br/> |
-|[Formats Element (DeploymentManifest - SPView)](formats-element-deploymentmanifestspview.md) <br/> |
-|[Aggregations Element (Deployment Manifest - SPView)](aggregations-element-deployment-manifestspview.md) <br/> |
-|[ViewStyle Element (DeploymentManifest - SPView)](viewstyle-element-deploymentmanifestspview.md) <br/> |
-|[View Body Element (DeploymentManifest - SPView)](view-body-element-deploymentmanifestspview.md) <br/> |
-|[ViewEmpty Element (DeploymentManifest - SPView)](viewempty-element-deploymentmanifestspview.md) <br/> |
-|[ViewFooter Element (DeploymentManifest - SPView)](viewfooter-element-deploymentmanifestspview.md) <br/> |
-|[ViewHeader Element (DeploymentManifest - SPView)](viewheader-element-deploymentmanifestspview.md) <br/> |
-|[ViewBidiHeader Element (DeploymentManifest - SPView)](viewbidiheader-element-deploymentmanifestspview.md) <br/> |
-|[GroupByFooter Element (DeploymentManifest - SPView)](groupbyfooter-element-deploymentmanifestspview.md) <br/> |
-|[GroupByHeader (DeploymentManifest - SPView)](groupbyheader-deploymentmanifestspview.md) <br/> |
-|[CalendarViewStyles Element (DeploymentManifest - SPView)](calendarviewstyles-element-deploymentmanifestspview.md) <br/> |
-|[ListFormBody Element (DeploymentManifest - SPView)](listformbody-element-deploymentmanifestspview.md) <br/> |
+- [Script Element (DeploymentManifest - SPView)](script-element-deploymentmanifestspview.md)
+- [PagedRowset Element (DeploymentManifest - SPView)](pagedrowset-element-deploymentmanifestspview.md)
+- [PagedClientCallbackRowset Element (DeploymentManifest - SPView)](pagedclientcallbackrowset-element-deploymentmanifestspview.md)
+- [PagedRecurrenceRowset Element (DeploymentManifest - SPView)](pagedrecurrencerowset-element-deploymentmanifestspview.md)
+- [ViewFields Element (DeploymentManifest - SPView)](viewfields-element-deploymentmanifestspview.md)
+- [ViewData Element (DeploymentManifest - SPView)](viewdata-element-deploymentmanifestspview.md)
+- [Query Element (DeploymentManifest - SPView)](query-element-deploymentmanifestspview.md)
+- [RowLimit Element (DeploymentManifest - SPView)](rowlimit-element-deploymentmanifestspview.md)
+- [RowLimitExceeded Element (DeploymentManifest - SPView)](rowlimitexceeded-element-deploymentmanifestspview.md)
+- [Toolbar Element (DeploymentManifest - SPView)](toolbar-element-deploymentmanifestspview.md)
+- [Formats Element (DeploymentManifest - SPView)](formats-element-deploymentmanifestspview.md)
+- [Aggregations Element (Deployment Manifest - SPView)](aggregations-element-deployment-manifestspview.md)
+- [ViewStyle Element (DeploymentManifest - SPView)](viewstyle-element-deploymentmanifestspview.md)
+- [View Body Element (DeploymentManifest - SPView)](view-body-element-deploymentmanifestspview.md)
+- [ViewEmpty Element (DeploymentManifest - SPView)](viewempty-element-deploymentmanifestspview.md)
+- [ViewFooter Element (DeploymentManifest - SPView)](viewfooter-element-deploymentmanifestspview.md)
+- [ViewHeader Element (DeploymentManifest - SPView)](viewheader-element-deploymentmanifestspview.md)
+- [ViewBidiHeader Element (DeploymentManifest - SPView)](viewbidiheader-element-deploymentmanifestspview.md)
+- [GroupByFooter Element (DeploymentManifest - SPView)](groupbyfooter-element-deploymentmanifestspview.md)
+- [GroupByHeader (DeploymentManifest - SPView)](groupbyheader-deploymentmanifestspview.md)
+- [CalendarViewStyles Element (DeploymentManifest - SPView)](calendarviewstyles-element-deploymentmanifestspview.md)
+- [ListFormBody Element (DeploymentManifest - SPView)](listformbody-element-deploymentmanifestspview.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Views Element (DeploymentManifest)](views-element-deploymentmanifest.md)
+- [Views Element (DeploymentManifest)](views-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

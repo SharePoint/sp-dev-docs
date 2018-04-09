@@ -1,7 +1,5 @@
 ---
 title: "Script Element (DeploymentManifest - SPWebPart)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # Script Element (DeploymentManifest - SPWebPart)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents script to execute on deployment of an instance of a Web Part ([WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx) ) object. 
-  
-```
+Represents script to execute on deployment of an instance of a Web Part ([WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)) object. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="Script" minOccurs="0" maxOccurs="1" />
+
 USAGE
 <WebPart>
         <Script />
@@ -40,32 +39,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## Remarks
 
-Web Parts can derive from either of two base classes - an ASP.NET Web Part ([WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx) ), or a SharePoint Foundation Web Part ( [WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx) ) 
+Web Parts can derive from either of two base classes - an ASP.NET Web Part ([WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)), or a SharePoint Foundation Web Part ([WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)). 
   
 ## See also
 
-
-
-[WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

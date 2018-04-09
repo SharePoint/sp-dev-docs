@@ -1,7 +1,5 @@
 ---
 title: "ViewEmpty Element (DeploymentManifest - SPView)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # ViewEmpty Element (DeploymentManifest - SPView)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents a parameter that determines what is displayed in a Windows SharePoint Services 3.0 view when a query returns no list data for the view.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="ViewEmpty" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <View>
         <ViewEmpty />
@@ -40,30 +39,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)
-  
-[ViewEmpty](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.ViewEmpty.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) 
+- [ViewEmpty](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.ViewEmpty.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

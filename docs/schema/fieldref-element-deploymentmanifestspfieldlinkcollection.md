@@ -1,7 +1,5 @@
 ---
 title: "FieldRef Element (DeploymentManifest - SPFieldLinkCollection)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # FieldRef Element (DeploymentManifest - SPFieldLinkCollection)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
 Represents field data to display in a view.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="FieldRef" 
         type="SPFieldLink" 
@@ -79,22 +77,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ViewFields Element (DeploymentManifest - SPView)](viewfields-element-deploymentmanifestspview.md)
+[ViewFields Element (DeploymentManifest - SPView)](viewfields-element-deploymentmanifestspview.md)
    
 ## See also
 
-
-
-[SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

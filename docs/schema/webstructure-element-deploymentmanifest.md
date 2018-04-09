@@ -1,7 +1,5 @@
 ---
 title: "WebStructure Element (DeploymentManifest)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # WebStructure Element (DeploymentManifest)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a specification of an instance of a Web site structure object type ([SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx) ) for implementation on content migration. 
-  
-```
+Represents a specification of an instance of a Web site structure object type ([SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)) for implementation on content migration. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="WebStructure" type="DeploymentWebStructure" />
+
 USAGE
 <SPObject>
         <WebStructure
@@ -36,7 +35,7 @@ USAGE
 
 ## Type
 
- **DeploymentWebStructure** (based on [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx) ) 
+**DeploymentWebStructure** (based on [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)) 
   
 ## Elements and attributes
 
@@ -52,22 +51,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
+[SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
    
 ## See also
 
-
-
-[SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "GroupByHeader (DeploymentManifest - SPView)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,15 +12,16 @@ description: "Last modified: March 09, 2015"
 
 # GroupByHeader (DeploymentManifest - SPView)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents the definition of a Group By header parameter ([GroupByHeader](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByHeader.aspx) ) in a view. 
-  
-```
+Represents the definition of a Group By header parameter ([GroupByHeader](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByHeader.aspx)) in a view. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="GroupByHeader" minOccurs="0" maxOccurs="unbounded" />
+
 USAGE
 <View>
         <GroupByHeader />
@@ -40,28 +39,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 
-
-
-[GroupByHeader](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByHeader.aspx)
-
-
-[DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [GroupByHeader](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByHeader.aspx)
+- [DeploymentManifest Schema](deploymentmanifest-schema.md)
 
