@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies, in a <span class="code">WebTemp\*.xml</span> file, a site
-definition that can be used to create Web sites within the deployment.
+definition that can be used to create websites within the deployment.
 
 <span codelanguage="other"></span>
 <table>

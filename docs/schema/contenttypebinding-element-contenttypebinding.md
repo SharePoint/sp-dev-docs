@@ -52,7 +52,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** to associate this binding only on the root Web site in a site collection.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** to associate this binding only on the root website in a site collection.</p></td>
 </tr>
 </tbody>
 </table>

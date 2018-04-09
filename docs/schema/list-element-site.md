@@ -144,7 +144,7 @@ definition configuration or Web template configuration.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root website of a site collection.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Title**</p></td>
@@ -198,7 +198,7 @@ definition configuration or Web template configuration.
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
 <td align="left"><p>Optional **Text**.</p>
-<p>Specifies the path to the root of the directory that contains the ASPX files to which the list definition applies, relative to the root URL of the Web site.</p></td>
+<p>Specifies the path to the root of the directory that contains the ASPX files to which the list definition applies, relative to the root URL of the website.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**VersioningEnabled**</p></td>

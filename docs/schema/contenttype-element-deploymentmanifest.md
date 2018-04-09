@@ -56,7 +56,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ID** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the content type.  <br/> |
 |**Name** <br/> |xs:string  <br/> |Optional. Name of the content type.  <br/> |
 |**Scope** <br/> |xs:string  <br/> |Specifies whether the content type is Web-level or list-level. If Web-level, then scope includes all lists.  <br/> Optional on export; required on import if the scope is set to list level.  <br/> |
-|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the parent Web site.  <br/> Optional on export; required on import if the scope is set to Web level.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the parent website.  <br/> Optional on export; required on import if the scope is set to Web level.  <br/> |
 |**ListId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the content type list. This attribute is relevent only if the **Scope** attribute is list-level.  <br/> Optional on export; required on import.  <br/> |
 |**Description** <br/> |xs:string  <br/> |Optional. Description of the content type.  <br/> |
 |**Group** <br/> |xs:string  <br/> |Optional.  <br/> |

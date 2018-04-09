@@ -16,7 +16,7 @@ ms.assetid: 2d8b69c1-0e47-4f76-bb95-8d8a43fd6cfd
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Defines the internal data types used in the list infrastructure of a SharePoint Web site. A field is a column or attribute of information that a user can add to a list.
+Defines the internal data types used in the list infrastructure of a SharePoint website. A field is a column or attribute of information that a user can add to a list.
 
 ```
 <Field
@@ -763,7 +763,7 @@ on a default SharePoint Foundation field type, use the <span
 class="keyword">Field (List - Definition)</span> element within a
 [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx)
 file. To create a custom field definition as a pluggable Feature that is
-based on a default field type and that can be reused across Web sites
+based on a default field type and that can be reused across websites
 and lists within a site collection, use the [Field
 (Field)](field-element-field.md) element to define a
 custom [site

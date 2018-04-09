@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|:-----|
 |**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the field template.  <br/> |
 |**Name** <br/> |xs:string  <br/> |Optional. Name of the field template.  <br/> |
-|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the parent Web site.  <br/> Optional on export; required on import.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the parent website.  <br/> Optional on export; required on import.  <br/> |
 |**Scope** <br/> |xs:string  <br/> |Specifies the scope for which the field template applies.  <br/> Optional on export; required on import.  <br/> |
 |**Description** <br/> |xs:string  <br/> |Optional. Description of the field template.  <br/> |
 |**Group** <br/> |xs:string  <br/> |Optional.  <br/> |

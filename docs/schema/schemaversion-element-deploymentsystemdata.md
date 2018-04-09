@@ -128,7 +128,7 @@ USAGE
 <tr class="even">
 <td align="left"><p>**SiteVersion**</p></td>
 <td align="left"><p>xs:string</p></td>
-<td align="left"><p>Verison of the parent Web site.</p></td>
+<td align="left"><p>Verison of the parent website.</p></td>
 </tr>
 </tbody>
 </table>

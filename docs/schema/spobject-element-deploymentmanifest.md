@@ -58,8 +58,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**ParentId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the parent deployment object.  <br/> |
 |**Name** <br/> |xs:string  <br/> |Optional. Name of the object.  <br/> |
 |**IsDeleted** <br/> |xs:boolean  <br/> |Optional. Specifies whether the object has been deleted.  <br/> |
-|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the parent Web site.  <br/> |
-|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL to the parent Web site.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the parent website.  <br/> |
+|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL to the parent website.  <br/> |
 |**ContenTypeId** <br/> |xs:string  <br/> |Optional. Specifies the object content type.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. URL to the object.  <br/> |
    

@@ -61,7 +61,7 @@ SharePoint Online | SharePoint Server 2013
 Top-level element used in the file BASE.XML (<span
 class="code">\\\\Program Files\\Common Files\\Microsoft Shared\\web
 server extensions\\12\\TEMPLATE\\XML</span>) to define the built-in
-lists of Web sites based on Microsoft SharePoint Foundation.
+lists of websites based on Microsoft SharePoint Foundation.
 
 <span codelanguage="other"></span>
 <table>

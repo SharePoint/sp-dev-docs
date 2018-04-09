@@ -62,7 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Renders the URL of the list relative to the containing Web site.
+Renders the URL of the list relative to the containing website.
 
 <span codelanguage="other"></span>
 <table>

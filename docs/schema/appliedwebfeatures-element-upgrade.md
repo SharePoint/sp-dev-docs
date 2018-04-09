@@ -62,8 +62,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Supplies a list of Web site Features to be marked as "provisioned" for
-Web sites created in Microsoft SharePoint Foundation 2010. For example,
+Supplies a list of website Features to be marked as "provisioned" for
+websites created in Microsoft SharePoint Foundation 2010. For example,
 an announcements list template of the previous version must be mapped
 (related) to its equivalent announcements Feature in the new version.
 
@@ -139,7 +139,7 @@ an announcements list template of the previous version must be mapped
 The **AppliedWebFeatures** element activates
 each feature, including running a [Feature activating event
 handler](http://msdn.microsoft.com/library/8d61e0ce-9f47-4320-aa19-7043e5dccedb(Office.15).aspx),
-when the Web site is upgraded. This allows you to run custom code during
+when the website is upgraded. This allows you to run custom code during
 upgrade, and implement custom features solely for the purpose of doing
 custom site transformation.
 

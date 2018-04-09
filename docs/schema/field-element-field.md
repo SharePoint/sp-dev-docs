@@ -408,7 +408,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text**. The internal name of the field. The name must be unique with respect to the set of fields in a list or Web site. SharePoint Foundation will amend the value if necessary to guarantee its uniqueness; otherwise it does not change for the lifetime of the field definition.</p></td>
+<td align="left"><p>Required **Text**. The internal name of the field. The name must be unique with respect to the set of fields in a list or website. SharePoint Foundation will amend the value if necessary to guarantee its uniqueness; otherwise it does not change for the lifetime of the field definition.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**NegativeFormat**</p></td>

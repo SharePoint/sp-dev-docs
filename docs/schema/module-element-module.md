@@ -12,7 +12,7 @@ ms.assetid: 1e7fd643-5029-4158-910e-2ab5396efcb4
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies files with which to provision SharePoint Web sites within an element manifest.
+Specifies files with which to provision SharePoint websites within an element manifest.
 
 ## Definition
 
@@ -83,7 +83,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level Web site of the site collection.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level website of the site collection.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SetupPath**</p></td>

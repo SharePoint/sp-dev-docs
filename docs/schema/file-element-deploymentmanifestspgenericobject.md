@@ -69,10 +69,10 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|:-----|
 |**Name** <br/> |xs:string  <br/> |Optional. Name of the file.  <br/> |
 |**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the file.  <br/> Optional on export; required by import.  <br/> |
-|**Url** <br/> |xs:string  <br/> |The Web site-relative URL of the file.  <br/> Optional on export; required by import.  <br/> |
+|**Url** <br/> |xs:string  <br/> |The website-relative URL of the file.  <br/> Optional on export; required by import.  <br/> |
 |**ListItemIntId** <br/> |xs:int  <br/> |Optional. Integer identifier specifying the list item relative to position in a document library.  <br/> |
-|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of parent Web site.  <br/> Optional on export; required by import.  <br/> |
-|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL of the parent Web site.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of parent website.  <br/> Optional on export; required by import.  <br/> |
+|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL of the parent website.  <br/> |
 |**ParentId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the parent folder for the file.  <br/> Optional on export; required by import.  <br/> |
 |**ListId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the list in which the file exists. **ListId** values must match values for the **Versions** attribute.  <br/> |
 |**FileValue** <br/> |xs:string  <br/> |Specifies the location of the file on disk.  <br/> Optional on export; required by import for customized (unghosted) files and for document library items.  <br/> |

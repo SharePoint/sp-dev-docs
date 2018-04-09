@@ -71,7 +71,7 @@ Shared\\web server extensions\\12\\TEMPLATES\\XML</span>.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 A field is a column or an attribute containing information that a user
-can add to a list. Each list on a Web site based on Microsoft SharePoint
+can add to a list. Each list on a website based on Microsoft SharePoint
 Foundation has metadata stored in the database. The format of the schema
 is an XML structure, such as the following:
 

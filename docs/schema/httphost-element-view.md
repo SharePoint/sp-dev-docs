@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Renders the URL to the Web application containing the current SharePoint
-Web site, such as <span class="code">http://server</span>.
+website, such as <span class="code">http://server</span>.
 
 <span codelanguage="other"></span>
 <table>

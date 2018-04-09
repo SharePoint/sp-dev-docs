@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|:-----|
 |**BaseType** <br/> |xs:string  <br/> |Optional. Specifies the base type for the list definition or list template.  <br/> |
 |**Description** <br/> |xs:string  <br/> |Optional. Provides a description of the list definition or list template.  <br/> |
-|**Hidden** <br/> |[TRUEFALSE Simple Type (DeploymentManifest)](truefalse-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies whether the list definition or list template is hidden from Web site users and is not available on the Create page.  <br/> |
+|**Hidden** <br/> |[TRUEFALSE Simple Type (DeploymentManifest)](truefalse-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies whether the list definition or list template is hidden from website users and is not available on the Create page.  <br/> |
 |**ImageUrl** <br/> |xs:string  <br/> |Optional. Server-relative path to the location of the image used to represent the list definition or list template.  <br/> |
 |**InternalName** <br/> |xs:string  <br/> |Optional. Represents the name used internally for the list definition or list template.  <br/> |
 |**IsCustomTemplate** <br/> |xs:boolean  <br/> |Optional. Specifies whether the template object instance represents a list template; that is, a template contained in an .stp file. Users create custom templates when they save a list as a template.  <br/> |

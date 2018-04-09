@@ -87,7 +87,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Name** <br/> |xs:string  <br/> |Optional. Name of the person who created the file.  <br/> |
 |**ParentFolderId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the list item's parent folder in the database.  <br/> |
 |**ParentListId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the list item's parent list.  <br/> |
-|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the list item's parent Web site.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the list item's parent website.  <br/> |
 |**ThreadIndex** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**TimeCreated** <br/> |xs:dateTime  <br/> |Optional. Time and date that the file was created.  <br/> |
 |**TimeLastModified** <br/> |xs:dateTime  <br/> |Optional. Time and date that the file was last modified.  <br/> |

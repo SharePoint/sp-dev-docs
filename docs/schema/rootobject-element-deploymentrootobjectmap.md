@@ -129,7 +129,7 @@ USAGE
 <tr class="even">
 <td align="left"><p>WebUrl</p></td>
 <td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. URL to the parent Web site.</p></td>
+<td align="left"><p>Optional. URL to the parent website.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Url</p></td>

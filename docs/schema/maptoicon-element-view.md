@@ -183,7 +183,7 @@ system administrator. They can be edited in DocIcon.xml, and then the
 image files can be included in the <span
 class="code">\\TEMPLATES\\1033</span> directory. After such a
 modification, Microsoft Internet Information Services (IIS) needs to be
-restarted. Subsequently, any new Web sites based on Microsoft SharePoint
+restarted. Subsequently, any new websites based on Microsoft SharePoint
 Foundation will support the new file types and display the correct
 icons. The number of icons and **ProgIDs** that
 can be supported is limited only by system resources (memory and disk

@@ -223,7 +223,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection. [Same as previous version, but deprecated.]</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** to specify that the list created from the definition exists only in the root website of a site collection. [Same as previous version, but deprecated.]</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SecurityBits**</p></td>

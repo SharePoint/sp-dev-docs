@@ -163,7 +163,7 @@ File upgrades can be applied to any sort of uncustomized file, usually
 upgrade definition it is best to list all previously installed
 uncustomized (also known as "ghosted") files, including ones that were
 provisioned as part of a list, or files located only in the top-level
-Web site, such as .dwp files for Web Parts.
+website, such as .dwp files for Web Parts.
 
 SharePoint Foundation supports a **{LocaleId}**
 token, which specifies the locale identifier to be included as part of

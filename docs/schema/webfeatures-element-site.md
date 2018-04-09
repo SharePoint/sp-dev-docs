@@ -62,7 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Specifies Web site Features to activate in sites that are created
+Specifies website Features to activate in sites that are created
 through the site definition.
 
 <span codelanguage="other"></span>

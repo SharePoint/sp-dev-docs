@@ -138,7 +138,7 @@ Specifies the application resource files to include in the solution.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Use this element to deploy binary resources to an Internet Information
-Services (IIS) Web site used by a SharePoint Foundation Web Application.
+Services (IIS) website used by a SharePoint Foundation Web Application.
 Files specified by
 [ApplicationResourceFile](applicationresourcefile-element-solution.md)
 child elements are deployed to a virtual directory named <span

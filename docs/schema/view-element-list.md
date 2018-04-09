@@ -64,7 +64,7 @@ SharePoint Online | SharePoint Server 2013
 
 In a list definition
 ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx)),
-defines a view for a list in a Web site based on Microsoft SharePoint
+defines a view for a list in a website based on Microsoft SharePoint
 Foundation, where each list can contain a number of views.
 
 <table>

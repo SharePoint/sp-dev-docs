@@ -98,7 +98,7 @@ to be displayed.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**PermAddAndCustomizePages="Required"**</p></td>
-<td align="left"><p>Add, change, or delete ASPX pages, HTML pages, or Web Part Pages, and edit the Web site using a SharePoint Foundation-compatible editor.</p></td>
+<td align="left"><p>Add, change, or delete ASPX pages, HTML pages, or Web Part Pages, and edit the website using a SharePoint Foundation-compatible editor.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PermAddDelPrivateWebParts="Required"**</p></td>
@@ -110,11 +110,11 @@ to be displayed.
 </tr>
 <tr class="even">
 <td align="left"><p>**PermApplyStyleSheets="Required"**</p></td>
-<td align="left"><p>Apply a style sheet (.CSS file) to the Web site.</p></td>
+<td align="left"><p>Apply a style sheet (.CSS file) to the website.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PermApplyThemeAndBorder="Required"**</p></td>
-<td align="left"><p>Apply a theme or borders to the entire Web site.</p></td>
+<td align="left"><p>Apply a theme or borders to the entire website.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PermApproveItems="Required"**</p></td>
@@ -122,7 +122,7 @@ to be displayed.
 </tr>
 <tr class="odd">
 <td align="left"><p>**PermBrowseDirectories="Required"**</p></td>
-<td align="left"><p>Browse directories in a Web site.</p></td>
+<td align="left"><p>Browse directories in a website.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PermBrowseUserInfo="Required"**</p></td>
@@ -142,7 +142,7 @@ to be displayed.
 </tr>
 <tr class="even">
 <td align="left"><p>**PermCreateSSCSite="Required"**</p></td>
-<td align="left"><p>Create a Web site using Self-Service Site Creation.</p></td>
+<td align="left"><p>Create a website using Self-Service Site Creation.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PermDeleteListItems="Required"**</p></td>
@@ -166,7 +166,7 @@ to be displayed.
 </tr>
 <tr class="even">
 <td align="left"><p>**PermFullMask="Required"**</p></td>
-<td align="left"><p>Has all permissions on the Web site. Not available through the user interface.</p></td>
+<td align="left"><p>Has all permissions on the website. Not available through the user interface.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PermManageAlerts="Required"**</p></td>
@@ -218,11 +218,11 @@ to be displayed.
 </tr>
 <tr class="odd">
 <td align="left"><p>**PermViewPages="Required"**</p></td>
-<td align="left"><p>View pages in a Web site.</p></td>
+<td align="left"><p>View pages in a website.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PermViewUsageData="Required"**</p></td>
-<td align="left"><p>View reports on Web site usage.</p></td>
+<td align="left"><p>View reports on website usage.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PermViewVersions="Required"**</p></td>

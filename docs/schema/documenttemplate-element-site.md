@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Defines a document library template for the New Document Library page in
-a Web site based on Microsoft SharePoint Foundation.
+a website based on Microsoft SharePoint Foundation.
 
 <span codelanguage="other"></span>
 <table>

@@ -65,7 +65,7 @@ SharePoint Online | SharePoint Server 2013
 Serves as the top-level element in an
 [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
 file that contains a site definition configuration or Web template
-configuration for a new Web site.
+configuration for a new website.
 
 <span codelanguage="other"></span>
 <table>
@@ -123,17 +123,17 @@ configuration for a new Web site.
 <td align="left"><p>**DisableWebDesignFeatures**</p></td>
 <td align="left"><p>Optional **Text**. Blocks specific editing features that are used in SharePoint Designer. Possible values include the following, which can be delimited using semicolons:</p>
 <ul>
-<li><p>**wdfbackup**   Disable Web site backup.</p></li>
-<li><p>**wdfrestore**   Disable Web site restore.</p></li>
-<li><p>**wdfpackageimport**   Disable Web site package import.</p></li>
-<li><p>**wdfpackageexport**   Disable Web site package export.</p></li>
-<li><p>**wdfthemeweb**   Disable theme support for the Web site.</p></li>
+<li><p>**wdfbackup**   Disable website backup.</p></li>
+<li><p>**wdfrestore**   Disable website restore.</p></li>
+<li><p>**wdfpackageimport**   Disable website package import.</p></li>
+<li><p>**wdfpackageexport**   Disable website package export.</p></li>
+<li><p>**wdfthemeweb**   Disable theme support for the website.</p></li>
 <li><p>**wdfthemepage**   Disable theme support for individual pages.</p></li>
 <li><p>**wdfnavigationbars**   Disable support for navigation bars.</p></li>
-<li><p>**wdfnavigationview**   Disable the Navigation view for the Web site.</p></li>
-<li><p>**wdfpublishview**   Disable the Remote Web site view for the Web site.</p></li>
+<li><p>**wdfnavigationview**   Disable the Navigation view for the website.</p></li>
+<li><p>**wdfpublishview**   Disable the Remote website view for the website.</p></li>
 <li><p>**wdfpublishselectedfile**   Do not allow the selected file to be published.</p></li>
-<li><p>**wdfopensite**   Disable access to the entire Web site.</p></li>
+<li><p>**wdfopensite**   Disable access to the entire website.</p></li>
 <li><p>**wdfnewsubsite**   Do not allow the creation of a new subsite.</p></li>
 </ul></td>
 </tr>
@@ -155,7 +155,7 @@ configuration for a new Web site.
 </tr>
 <tr class="even">
 <td align="left"><p>**Title**</p></td>
-<td align="left"><p>Required **Text**. Specifies a default name for Web sites that are created from the site definition.</p></td>
+<td align="left"><p>Required **Text**. Specifies a default name for websites that are created from the site definition.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**UIVersion**</p></td>

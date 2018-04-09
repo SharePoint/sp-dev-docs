@@ -104,7 +104,7 @@ The value specifies the system object type.
 </tr>
 <tr class="even">
 <td align="left"><p>**Web**</p></td>
-<td align="left"><p>Specifies that the system object type is a SharePoint Foundation Web site (**SPWeb**).</p></td>
+<td align="left"><p>Specifies that the system object type is a SharePoint Foundation website (**SPWeb**).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Folder**</p></td>

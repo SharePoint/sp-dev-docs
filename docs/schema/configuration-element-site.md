@@ -65,7 +65,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies the lists and modules used in creating a SharePoint Foundation
-Web site that is based on the [site definition
+website that is based on the [site definition
 configuration](http://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3(Office.15).aspx)
 represented by the **Configuration** element.
 These elements also represent configurations in [Web
@@ -129,7 +129,7 @@ elements in both site definitions and Web templates.
 </tr>
 <tr class="even">
 <td align="left"><p>**CustomMasterUrl**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the URL for an alternate .master page that can be used on pages, in Web sites that are created through the site definition configuration, without customizing those pages.</p>
+<td align="left"><p>Optional **Text**. Specifies the URL for an alternate .master page that can be used on pages, in websites that are created through the site definition configuration, without customizing those pages.</p>
 <div class="alert">
 <table>
 <colgroup>
@@ -175,7 +175,7 @@ elements in both site definitions and Web templates.
 </tr>
 <tr class="odd">
 <td align="left"><p>**MasterUrl**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the default master page to use for Web sites created through the site definition configuration.</p></td>
+<td align="left"><p>Optional **Text**. Specifies the default master page to use for websites created through the site definition configuration.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
@@ -198,7 +198,7 @@ elements in both site definitions and Web templates.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the site created from the configuration exists only as the root Web site in a site collection. This attribute is not enforced in <a href="http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30(Office.15).aspx">Web templates</a>, which are stored in Solution (<span class="code">.wsp** files).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the site created from the configuration exists only as the root website in a site collection. This attribute is not enforced in <a href="http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30(Office.15).aspx">Web templates</a>, which are stored in Solution (<span class="code">.wsp** files).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SubWebOnly**</p></td>
@@ -313,7 +313,7 @@ of the Web template.
 The following example from
 [WebTemp.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8(Office.15).aspx)
 specifies the three configurations for the <span
-class="keyword">STS</span> Web site definition.
+class="keyword">STS</span> website definition.
 
 ## Definition
 XML 

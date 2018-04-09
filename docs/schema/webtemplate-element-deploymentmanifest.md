@@ -55,7 +55,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ImageUrl** <br/> |xs:string  <br/> |Optional. Represents the URL to the image that is used to represent the site definition or site template in the user interface.  <br/> |
 |**IsCustomTemplate** <br/> |xs:boolean  <br/> |Optional. Specifies whether the **SPWebTemplate** object is a site template; that is, a template contained within a .wsp file. The value is **true** if the **SPWebTemplate** object is a custom template.  <br/> |
 |**IsHidden** <br/> |xs:boolean  <br/> |Optional. Specifies whether the site definition or site template is displayed as an option in the user interface. The value is **true** if the site template is hidden.  <br/> |
-|**IsUnique** <br/> |xs:boolean  <br/> |Optional. Specifies whether the site created using the site definition or site template inherits from its parent Web site. The value is **true** if the site does not inherit from its parent Web site.  <br/> |
+|**IsUnique** <br/> |xs:boolean  <br/> |Optional. Specifies whether the site created using the site definition or site template inherits from its parent website. The value is **true** if the site does not inherit from its parent website.  <br/> |
 |**Name** <br/> |xs:string  <br/> |Optional. Represents the name of the site definition or site template.  <br/> |
 |**Title** <br/> |xs:string  <br/> |Optional. Represents the display name of the site definition or site template.  <br/> |
    

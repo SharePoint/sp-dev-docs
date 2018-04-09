@@ -51,8 +51,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |**ScopeId** <br/> |xs:string  <br/> |Required. Specifies whether the scope of the role is list level or Web level.  <br/> |
-|**RoleDefWebId** <br/> |xs:string  <br/> |Required. Identifier of the Web site whose role definition applies to the role.  <br/> |
-|**RoleDefWebUrl** <br/> |xs:string  <br/> |Required. URL of the Web site whose role definition applies to the role.  <br/> |
+|**RoleDefWebId** <br/> |xs:string  <br/> |Required. Identifier of the website whose role definition applies to the role.  <br/> |
+|**RoleDefWebUrl** <br/> |xs:string  <br/> |Required. URL of the website whose role definition applies to the role.  <br/> |
 |**ObjectId** <br/> |xs:string  <br/> |Required. Identifier of the role assignment object.  <br/> |
 |**ObjectType** <br/> |xs:string  <br/> |Required. Type of the role assignment object.  <br/> |
 |**ObjectUrl** <br/> |xs:string  <br/> |Required. URL to the role assignment object.  <br/> |

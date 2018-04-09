@@ -61,8 +61,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**Name** <br/> |xs:string  <br/> |Name of the folder.  <br/> Optional on export; required by import.  <br/> |
 |**Url** <br/> |xs:string  <br/> |URL path to the folder.  <br/> Optional on export; required by import.  <br/> |
 |**ParentFolderId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the folder's parent folder.  <br/> Optional on export; required by import.  <br/> |
-|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the folder's parent Web site, where appropriate.  <br/> Optional on export; required by import.  <br/> |
-|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL to the parent Web site.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Unique identifier of the folder's parent website, where appropriate.  <br/> Optional on export; required by import.  <br/> |
+|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL to the parent website.  <br/> |
 |**ContainingDocumentLibrary** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the document library the folder is part of, if it belongs to a document library.  <br/> |
 |**WelcomePageUrl** <br/> |xs:string  <br/> |Optional. URL to the site's Welcome page.  <br/> |
 |**WelcomePageParameters** <br/> |xs:string  <br/> |Optional. URL parameters available for augmenting the Welcome page URL.  <br/> |

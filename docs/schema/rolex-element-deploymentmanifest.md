@@ -57,8 +57,8 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|:-----|
 |**Operation** <br/> |[SecurityModificationType Simple Type (DeploymentManifest)](securitymodificationtype-simple-type-deploymentmanifest.md) <br/> |Required. Enumeration type that specifies which security role modifications are allowed.  <br/> |
 |**OperationCode** <br/> |xs:string  <br/> |Required.  <br/> |
-|**WebId** <br/> |xs:string  <br/> |Required. Identifier of the Web site to which changes are deployed.  <br/> |
-|**WebUrl** <br/> |xs:string  <br/> |Required. URL of the Web site to which changes are deployed.  <br/> |
+|**WebId** <br/> |xs:string  <br/> |Required. Identifier of the website to which changes are deployed.  <br/> |
+|**WebUrl** <br/> |xs:string  <br/> |Required. URL of the website to which changes are deployed.  <br/> |
 |**RoleId** <br/> |xs:string  <br/> |Optional. Identifier of the security role for objects that are deployed.  <br/> |
 |**Title** <br/> |xs:string  <br/> |Optional. Display name of the role.  <br/> |
 |**Description** <br/> |xs:string  <br/> |Optional. Description of the role.  <br/> |

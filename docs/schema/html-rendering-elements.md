@@ -122,7 +122,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="httphost-element-view.md">HttpHost</a></p></td>
-<td align="left"><p>Renders the URL of the virtual server containing the current Web site.</p></td>
+<td align="left"><p>Renders the URL of the virtual server containing the current website.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="httppath-element-view.md">HttpPath</a></p></td>
@@ -150,7 +150,7 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p><a href="projectproperty-element-view.md">ProjectProperty</a></p></td>
-<td align="left"><p>Returns a global property of the current team Web site.</p></td>
+<td align="left"><p>Returns a global property of the current team website.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="property-element-view.md">Property</a></p></td>

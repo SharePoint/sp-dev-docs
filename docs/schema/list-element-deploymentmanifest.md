@@ -131,8 +131,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**MultipleDataList** <br/> |xs:boolean  <br/> |Optional. Specifies whether the list in a Meeting Workspace site contains data for multiple meeting instances within the site.  <br/> |
 |**OnQuickLaunch** <br/> |xs:boolean  <br/> |Optional. Specifies whether the list provides Quick Launch on the home page; **true** if Quick Launch is enabled, otherwise **false**.  <br/> |
 |**Ordered** <br/> |xs:boolean  <br/> |Optional. Specifies whether the option to allow users to reorder items in the list is available on the Edit View page for the list; **true** if ordering is enabled, otherwise **false**.  <br/> |
-|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier for the parent Web site for the list.  <br/> |
-|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. The URL of the parent Web site for the list.  <br/> |
+|**ParentWebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier for the parent website for the list.  <br/> |
+|**ParentWebUrl** <br/> |xs:string  <br/> |Optional. The URL of the parent website for the list.  <br/> |
 |**ReadSecurity** <br/> |xs:int  <br/> |Optional. Specifies the Read security setting for the list.  <br/> |
 |**RequestAccessEnabled** <br/> |xs:boolean  <br/> |Optional. Specifies whether the option to allow users to request access to the list is available; **true** if requesting access is enabled, otherwise **false**.  <br/> |
 |**RootFolderId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the folder that contains all of the files used in working with the list.  <br/> |

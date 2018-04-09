@@ -47,7 +47,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |**Id** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the Feature object.  <br/> |
-|**WebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the Web site to which the Feature is associated.  <br/> |
+|**WebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the website to which the Feature is associated.  <br/> |
 |**Properties** <br/> |xs:string  <br/> |Optional. Represents the collection of properties for the Feature.  <br/> |
 |**FeatureDefinitionName** <br/> |xs:string  <br/> |Required. Name of the Feature definition.  <br/> |
    

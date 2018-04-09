@@ -34,7 +34,7 @@ Specifies a value representing the current state of the **AnonymousState** attri
 |:-----|:-----|
 |**Disabled** <br/> |Disables the attribute to prevent anonymous users from gaining access to the site.  <br/> |
 |**Enabled** <br/> |Enables the attribute, but does not set it to on. Anonymous users can access lists and libraries.  <br/> |
-|**On** <br/> |Enables the attribute and sets it to on. Anonymous users can access the entire Web site.  <br/> |
+|**On** <br/> |Enables the attribute and sets it to on. Anonymous users can access the entire website.  <br/> |
    
 ## See also
 

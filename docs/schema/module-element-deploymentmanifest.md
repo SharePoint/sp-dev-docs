@@ -44,7 +44,7 @@ USAGE
 |:-----|:-----|:-----|
 |**Enabled** <br/> |xs:boolean  <br/> |Optional. Specifies whether the module is enabled for the site. <br/> |
 |**Name** <br/> |xs:string  <br/> |Optional. Represents the name of the module.  <br/> |
-|**ParentWeb** <br/> |xs:string  <br/> |Optional. Specifies the parent Web site.  <br/> |
+|**ParentWeb** <br/> |xs:string  <br/> |Optional. Specifies the parent website.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. Specifies the server-relative URL for the module.  <br/> |
    
 ### Child elements

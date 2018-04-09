@@ -137,7 +137,7 @@ site.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** if the files specified in the module are installed only in the top-level Web site of the site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the files specified in the module are installed only in the top-level website of the site collection.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SetupPath**</p></td>

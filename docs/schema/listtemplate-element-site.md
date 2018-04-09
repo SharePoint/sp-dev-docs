@@ -267,7 +267,7 @@ lists on the <span class="ui">Create Page</span>.
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection. This attribute has been deprecated in SharePoint Foundation.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root website of a site collection. This attribute has been deprecated in SharePoint Foundation.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SecurityBits**</p></td>
