@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # Field Element (Field Types)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a characteristic of the field type.
   
@@ -28,25 +28,29 @@ Represents a characteristic of the field type.
 </Field>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> |Required **Text**. A string that represents the name of the specific aspect of the field type that the **Field** element represents. The value must be one of the strings listed in the table below.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[FieldType Element (Field Types)](fieldtype-element-field-types.md)|
    
-## Remarks
+### Remarks
 
 Field element children of **FieldType** elements are configured in fldtypes*.xml files in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML. 
   
@@ -99,7 +103,7 @@ The following example defines a custom field type.
 
 ## See also
 
-#### Other resources
+
 
 [Custom Field Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)
   

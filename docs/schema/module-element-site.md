@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Module Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies files and "all user" Web Parts with which to provision a Web site.
   
@@ -37,7 +37,11 @@ Specifies files and "all user" Web Parts with which to provision a Web site.
 </Module>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -50,25 +54,25 @@ Specifies files and "all user" Web Parts with which to provision a Web site.
 |**SetupPath** <br/> | Optional **Text**. Specifies the physical path to a folder in the SharePoint Foundation setup directory %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE) that contains a file to include in the module. Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen ( **-**)  <br/>  underscore ( **_**)  <br/>  period ( **.**)  <br/>  space ( )  <br/> |
 |**Url** <br/> | Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.  <br/>  The **Url** attribute cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[File](file-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Modules](modules-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 A detailed **Module** element appears in a **Modules** element directly under the **Project** element of an  `Onet.xml` file. Each such module is referenced by at least one other **Module** element that is in a **Configuration** element of the same file. 
   
@@ -102,7 +106,7 @@ The following example from [Onet.xml](http://msdn.microsoft.com/library/b99d6657
 
 ## See also
 
-#### Other resources
+
 
 [How to: Provision a File](http://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6%28Office.15%29.aspx)
 

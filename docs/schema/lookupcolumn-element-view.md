@@ -1,7 +1,7 @@
 ---
 title: "LookupColumn Element (View)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # LookupColumn Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Functions similarly to the [Column](column-element-view.md) element but only valid when referring to a **Lookup** field. The only distinction between the **Column** and **LookupColumn** elements for **Lookup** fields is that **LookupColumn** retrieves the raw value of the column from the foreign list, while **Column** retrieves the raw value of the column in the local list. 
   
@@ -35,7 +35,11 @@ Functions similarly to the [Column](column-element-view.md) element but only val
 </LookupColumn>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -47,25 +51,25 @@ Functions similarly to the [Column](column-element-view.md) element but only val
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL and not to encode the forward slash ("/").  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded (1 within [Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), and [UrlBaseName](urlbasename-element-view.md))  <br/> |
    
-## Remarks
+### Remarks
 
 In the case of a **Lookup** field called LookupTitle that points to the title of item 1 in an announcements list,  `<LookupColumn Name="LookupTitle"/>` would render "Get Started with SharePoint Foundation!" while  `<Column Name="LookupTitle"/>` would render "1". Consequently, in most situations involving **Lookup** fields, use the **LookupColumn** element instead of the [Column](column-element-view.md) element. The only time to use the **Column** element is when you need a raw reference to the ID of the item in the target list, perhaps for constructing your own link to the target item. 
   
@@ -82,7 +86,7 @@ The following example uses the **LookupColumn** element to return a value that i
 
 ## See also
 
-#### Other resources
+
 
 [Column Element (View)](column-element-view.md)
 

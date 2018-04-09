@@ -1,7 +1,7 @@
 ---
 title: "Document Icons Schema"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -22,7 +22,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The Document Icons Schema is used in the DocIcon.xml file to map file name extensions and ProgIDs to associated icons and display text, and to specify controls for activating each file type. DocIcon.xml is located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML.
   
@@ -42,7 +42,7 @@ For a programming task that describes how to customize this file, see [How to: A
   
 ## See also
 
-#### Other resources
+
 
 [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx)
 

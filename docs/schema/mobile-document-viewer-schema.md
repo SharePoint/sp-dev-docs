@@ -16,7 +16,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Most mobile devices have browsers that can render pages only in the browser's rendering format. But document libraries can contain documents in other formats. The mobile document viewer XML is used to redirect requests from mobile devices for a specific document to a page that hosts a viewer that is capable of displaying documents of that type. The markup also allows browsers that contain their own viewer for the specified type of document to override the redirection and open the document directly. 
   

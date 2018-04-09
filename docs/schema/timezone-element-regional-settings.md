@@ -1,7 +1,7 @@
 ---
 title: "TimeZone Element (Regional Settings)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # TimeZone Element (Regional Settings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a time zone for regional settings in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG). or specifies a time zone in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML).
   
@@ -42,7 +42,11 @@ Defines a time zone for regional settings in TIMEZONE.XML (%ProgramFiles%\Common
 </TimeZone>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -51,25 +55,25 @@ Defines a time zone for regional settings in TIMEZONE.XML (%ProgramFiles%\Common
 |**ID** <br/> |Required **Integer**. Specifies the ID for the time zone.  <br/> |
 |**Name** <br/> |Required **Text**. Specifies the name of the time zone.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Bias](bias-element-regional-settings.md), [DaylightTime](daylighttime-element-regional-settings.md), [History](history-element-regional-settings.md), [StandardTime](standardtime-element-regional-settings.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[TimeZones](timezones-element-regional-settings.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Outside the context of RGNLSTNG.XML or TIMEZONE.XML, use an empty **TimeZone** element to return the current time zone. 
   

@@ -1,7 +1,7 @@
 ---
 title: "WebTemplate Element (Upgrade)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # WebTemplate Element (Upgrade)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the site template upgrade definition.
   
@@ -46,7 +46,11 @@ Contains the site template upgrade definition.
 </WebTemplate>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -58,25 +62,25 @@ Contains the site template upgrade definition.
 |**RemoveSiteExternalSecurityProvider** <br/> |Optional **Boolean**. **true** to exclude any external security provider from the upgrade; otherwise, **false**.  <br/> |
 |**ToSchemaVersion** <br/> |Optional **Integer**. Specifies the product version to which the site definition is upgraded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[AppliedSiteFeatures](appliedsitefeatures-element-upgrade.md), [AppliedWebFeatures](appliedwebfeatures-element-upgrade.md), [Files](files-element-upgrade.md), [Lists](lists-element-upgrade.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Config](config-element-upgrade.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 1  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 For an example of how this element is used, see [Upgrade Definition schema](upgrade-definition-schema.md).
   

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Property Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the property from the context of the current [ForEach](foreach-element-view.md) loop. When a view or field is selected, the **Property** element can be used to retrieve a specific attribute value from it. 
   
@@ -41,7 +41,11 @@ Returns the property from the context of the current [ForEach](foreach-element-v
 </Property>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -58,25 +62,25 @@ Returns the property from the context of the current [ForEach](foreach-element-v
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The line  `<Property Select="."/>` returns the body of the element in the schema that is being enumerated. For example, within a **ForEach** statement such as  `<ForEach Select="CHOICES/CHOICE">`, specifying  `<Property Select="."/>` would return the text of one of the conditionals. 
   
@@ -92,7 +96,7 @@ The following line of code returns the **Name** property from the current field 
 
 ## See also
 
-#### Other resources
+
 
 [ListProperty Element (View)](listproperty-element-view.md)
   

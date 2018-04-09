@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DocIcons Element (Document Icons)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file that defines the mapping between file types and their corresponding document library icons. 
   
@@ -29,31 +29,35 @@ Top-level element in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad
 </DocIcons>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ByExtension](byextension-element-document-icons.md), [ByProgID](byprogid-element-document-icons.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |None |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 In general, there are two ways that mapping can be performed: by extension (for example, the [ByExtension](byextension-element-document-icons.md) element can be used to map .xls to the appropriate icon for a Microsoft Excel file) and by ProgID. 
   

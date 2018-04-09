@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Feature Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a reference to a Feature within a site definition. 
   
@@ -30,20 +30,24 @@ Specifies a reference to a Feature within a site definition.
 </Feature>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Id** <br/> |Required **Text**. Specifies a unique identifier for the feature.  <br/> |
 |**SourceVersion** <br/> |Optional **Text**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Properties](properties-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

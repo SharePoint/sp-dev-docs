@@ -1,7 +1,7 @@
 ---
 title: "Rows Element (Site)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Rows Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of [Row](row-element-site.md) elements specifying default data for lists. 
   
@@ -32,31 +32,35 @@ Contains a collection of [Row](row-element-site.md) elements specifying default 
 </Rows>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Row](row-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Data](data-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **Rows** element is used within the [Data](data-element-site.md) element of a list definition to provide a set of default data when a list is instantiated during site provisioning. 
   

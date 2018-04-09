@@ -18,7 +18,7 @@ This topic lists the types in the **schema_Microsoft.Office.Server.Search.Query.
   
  **Last modified:** February 19, 2014 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 - [BoundVariableOrigin simpleType](boundvariableorigin-simpletype-sps15xsdsearchset4.md)
     

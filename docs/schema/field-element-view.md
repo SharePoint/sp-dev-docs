@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Field Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the formatted value of a field for use within a view definition. 
   
@@ -37,7 +37,11 @@ Returns the formatted value of a field for use within a view definition.
 </Field>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -50,25 +54,25 @@ Returns the formatted value of a field for use within a view definition.
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded (1 within [UrlBaseName](urlbasename-element-view.md))  <br/> |
    
-## Remarks
+### Remarks
 
 Use the **Field (View)** element to return a formatted field value for display within a view, and use the [Column](column-element-view.md) element to return the raw data value of the field. The **Field** element does not specify attributes when it is used within [UrlBaseName](urlbasename-element-view.md), and only **Name** is specified when it is used within [Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), or [Row](../../collaborative-application-markup-language-caml-schemas/site-schema/row-element-site.md).
   

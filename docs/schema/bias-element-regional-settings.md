@@ -1,7 +1,7 @@
 ---
 title: "Bias Element (Regional Settings)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Bias Element (Regional Settings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the bias, in minutes, that a time zone differs from Coordinated Universal Time (UTC), or the bias, in minutes, that standard time or daylight saving time for a time zone differs from UTC. Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG).
   
@@ -29,19 +29,23 @@ Contains the bias, in minutes, that a time zone differs from Coordinated Univers
 </Bias>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # PageUrl Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the absolute, encoded URL of the current page. 
   
@@ -39,7 +39,11 @@ Returns the absolute, encoded URL of the current page.
 </PageUrl>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -54,13 +58,13 @@ Returns the absolute, encoded URL of the current page.
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
 |**WebRel** <br/> |Optional **Boolean**. **TRUE** to specify that the URL is a site-relative URL.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

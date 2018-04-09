@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Then Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains what is rendered in an [IfEqual](ifequal-element-view.md) or [IfNew](ifnew-element-view.md) element, based on whether the contents of the [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md) elements are equal or new, respectively. 
   
@@ -29,19 +29,23 @@ Contains what is rendered in an [IfEqual](ifequal-element-view.md) or [IfNew](if
 </Then>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -68,7 +72,7 @@ The following example uses the **IfEqual** element to render either the [Then](t
 
 ## See also
 
-#### Other resources
+
 
 [Else Element (View)](else-element-view.md)
   

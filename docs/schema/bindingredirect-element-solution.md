@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # BindingRedirect Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a binding redirect for a solution.
   
@@ -29,17 +29,21 @@ Specifies a binding redirect for a solution.
   OldVersion = string />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**OldVersion** <br/> |Optional **string**. Specifies the old version of the assembly for the binding redirect.  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

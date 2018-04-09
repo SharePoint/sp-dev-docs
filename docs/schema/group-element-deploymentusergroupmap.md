@@ -1,7 +1,7 @@
 ---
 title: "Group Element (DeploymentUserGroupMap)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Group Element (DeploymentUserGroupMap)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents an instance of a deployment group ( **DeploymentGroup**) object for generating the group map (UserGroup.xml) file exported to the content migration package.
   
@@ -50,7 +50,11 @@ USAGE
 
  **DeploymentGroup**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -65,13 +69,13 @@ USAGE
 |**AutoAcceptRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether the deployment group automatically accepts requests to join or leave the deployment group; **true** if the group automatically accepts such requests.  <br/> |
 |**RequestToJoinLeaveEmailSetting** <br/> |xs:string  <br/> |Optional. Provides the e-mail address to which users can send requests to join or leave the deployment group.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Member Element (DeploymentUserGroupMap)](member-element-deploymentusergroupmap.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -79,7 +83,7 @@ USAGE
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
 

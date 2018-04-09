@@ -1,7 +1,7 @@
 ---
 title: "Language Element (Regional Settings)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Language Element (Regional Settings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) to specify a natural language in the regional settings, or used within a field display pattern to render a language name.
   
@@ -32,7 +32,11 @@ Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server ex
 </Language>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,25 +44,25 @@ Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server ex
 |**ID** <br/> |Optional **Integer**. Specifies the locale identifier (LCID) for the language. Used in RGNLSTNG.XML.  <br/> |
 |**Name** <br/> |Optional **Text**. Specifies the name of the language. Used in RGNLSTNG.XML.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Column](../../collaborative-application-markup-language-caml-schemas/view-schema/column-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[DisplayPattern](../../collaborative-application-markup-language-caml-schemas/list-schema/displaypattern-element-list.md), [Languages](languages-element-regional-settings.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **Language** element contains no [Column](../../collaborative-application-markup-language-caml-schemas/view-schema/column-element-view.md) subelement when used within the [Languages](languages-element-regional-settings.md) collection of the RGNLSTNG.XML file. 
   

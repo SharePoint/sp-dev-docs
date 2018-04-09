@@ -1,7 +1,7 @@
 ---
 title: "ListForm Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # ListForm Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders a form for the particular list that is specified by a previous [SetList](../../collaborative-application-markup-language-caml-schemas/view-schema/setlist-element-view.md) element. 
   
@@ -26,19 +26,23 @@ Renders a form for the particular list that is specified by a previous [SetList]
 </ListForm>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Type** <br/> |Required. Specifies the type of form that is defined. Can be one of the following values:  <br/> **DisplayForm** — The form used to display an item in a list.  <br/> **EditForm** — The form used to edit an existing item.  <br/> **NewForm** — The form used to create a new item.  <br/> **NewFormDialog** — Used only for document libraries, specifying the form that is used as the property dialog box in client-side applications when a file is saved to a document library.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -52,7 +56,7 @@ Renders a form for the particular list that is specified by a previous [SetList]
    
 ## See also
 
-#### Other resources
+
 
 [SetList Element (View)](../../collaborative-application-markup-language-caml-schemas/view-schema/setlist-element-view.md)
 

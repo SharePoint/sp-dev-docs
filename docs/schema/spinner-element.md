@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Spinner Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a spinner control.
   
@@ -49,7 +49,11 @@ Defines a spinner control.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -74,13 +78,13 @@ Defines a spinner control.
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Unit](unit-element-spinner.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

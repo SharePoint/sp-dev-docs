@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # Rows (dsQueryResponse)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of **Row** elements that specify the data from the list. 
   
@@ -30,17 +30,21 @@ Contains a collection of **Row** elements that specify the data from the list.
 </Rows>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Row](row-dsqueryresponse.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

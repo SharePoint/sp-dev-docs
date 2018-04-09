@@ -1,7 +1,7 @@
 ---
 title: "History Element (Regional Settings)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # History Element (Regional Settings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to preserve former time zone definitions, so that, after the new 2007 time zones take effect, time values for 2006 and earlier will still be calculated correctly.
   
@@ -36,31 +36,35 @@ Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server ex
 </History>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Year** <br/> |Required **Integer**. Specifies the final year for which to preserve a time zone definition.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Bias](bias-element-regional-settings.md), [DaylightTime](daylighttime-element-regional-settings.md), [StandardTime](standardtime-element-regional-settings.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[TimeZone](timezone-element-regional-settings.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **History** element can apply to any time zone for any year indicated. 
   

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ExcludeColumn (SPMetal)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies that a column is not included in SPMetal code generation.
   
@@ -35,27 +35,27 @@ Specifies that a column is not included in SPMetal code generation.
 ```
 
  **Complex**
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |Name  <br/> |The name of a column in the content type that is excluded from code generation.  <br/> |
    
-#### Child elements
+### Child elements
 
 None.
   
-#### Parent elements
+### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[ContentType (SPMetal)](contenttype-spmetal.md) <br/> |Specifies that a content type should be included in code generation and modifies which columns in the content type are included in code generation.  <br/> |
    
-## Remarks
+### Remarks
 
 A ContentType element cannot have both a Column element and an ExcludeColumn element that name the same column. An ExcludeColumn element that names a hidden column may not be present in the same ContentType element that has an IncludeHiddenColumns element.
   
@@ -82,7 +82,7 @@ The following shows the ExcludeColumn element in use.
 
 ## See also
 
-#### Other resources
+
 
 [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
   

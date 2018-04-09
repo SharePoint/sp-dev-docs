@@ -1,7 +1,7 @@
 ---
 title: "Guid Simple Type (DeploymentLookupListMap)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -16,7 +16,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Supports the use of a globally unique identifier (GUID) as a **Guid** attribute field value in the [LookupItem Element (DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.md) and other elements of the DeploymentLookupListMap Schema. 
   
@@ -29,10 +29,10 @@ Supports the use of a globally unique identifier (GUID) as a **Guid** attribute 
 
 ## See also
 
-#### Concepts
+
 
 [DeploymentLookupListMap Schema](deploymentlookuplistmap-schema.md)
-#### Other resources
+
 
 [LookupItem Element (DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.md)
 

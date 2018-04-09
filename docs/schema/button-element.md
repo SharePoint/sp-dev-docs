@@ -19,9 +19,9 @@ description: "Last modified: March 09, 2015"
 
 # Button Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a push button control.
   
@@ -57,7 +57,11 @@ Defines a push button control.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -89,11 +93,11 @@ Defines a push button control.
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -145,7 +149,7 @@ The following example shows how to add a button control to the Server ribbon. Th
 
 ## See also
 
-#### Other resources
+
 
 [Walkthrough: Adding a Button to the Server Ribbon](http://msdn.microsoft.com/library/82d7078a-696d-4c93-99bf-d40cfb4db305%28Office.15%29.aspx)
 

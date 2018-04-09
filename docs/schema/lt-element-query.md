@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Lt Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Arithmetic operator that means "less than" and is used in queries in views. This element is used similarly to the [Eq](eq-element-query.md) and [Gt](gt-element-query.md) elements. 
   
@@ -32,31 +32,35 @@ Arithmetic operator that means "less than" and is used in queries in views. This
 </Lt>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md), [Value](value-element-query.md), [XML](xml-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Remember that Collaborative Application Markup Language (CAML) is case-sensitive; note the lowercase "t" in the **Lt** element name. 
   
@@ -87,7 +91,7 @@ The following example queries for cases where the Deadline field value either eq
 
 ## See also
 
-#### Other resources
+
 
 [Eq Element (Query)](eq-element-query.md)
   

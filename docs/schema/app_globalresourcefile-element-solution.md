@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # App_GlobalResourceFile Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a global resource file for a solution.
   
@@ -29,17 +29,21 @@ Specifies a global resource file for a solution.
   Location = string />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Location** <br/> |Required **string**. Specifies the location of the resource file.  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

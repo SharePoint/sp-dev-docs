@@ -1,7 +1,7 @@
 ---
 title: "GetProgID Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # GetProgID Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the **ProgID** for the given URL of a particular document. This is an internal element that returns the **ProgID** for any HTML file, which identifies the application that the HTML file was created in (whether it was a Microsoft Word document that was saved as HTML or a Microsoft Excel worksheet saved as HTML, etc.). 
   
@@ -25,31 +25,35 @@ Returns the **ProgID** for the given URL of a particular document. This is an in
 </GetProgID>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 This element can be used within a view only if the **HackLockWeb** attribute of the [View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md) element is set to **TRUE**.
   

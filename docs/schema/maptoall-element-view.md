@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # MapToAll Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Combines the functionality of the [MapToIcon](maptoicon-element-view.md), [MapToText](../../collaborative-application-markup-language-caml-schemas/general-schema/maptotext-element.md), and [MapToControl](maptocontrol-element-view.md) elements. 
   
@@ -29,31 +29,35 @@ Combines the functionality of the [MapToIcon](maptoicon-element-view.md), [MapTo
 </MapToAll>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **MapToAll** element improves performance by preventing the need to make multiple requests to the server for data. 
   

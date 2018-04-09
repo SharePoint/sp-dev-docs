@@ -1,7 +1,7 @@
 ---
 title: "Requirement Element (DeploymentRequirements)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Requirement Element (DeploymentRequirements)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents specific deployment export requirement ( **SPRequirement**) objects provided to the content migration package.
   
@@ -43,7 +43,11 @@ USAGE
 
  **SPRequirement**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -52,13 +56,13 @@ USAGE
 |Name  <br/> |xs:string  <br/> |Name of the requirement instance.  <br/> |
 |Data  <br/> |xs:string  <br/> |Information about the requirement.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -66,7 +70,7 @@ USAGE
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentRequirements Schema](deploymentrequirements-schema.md)
 

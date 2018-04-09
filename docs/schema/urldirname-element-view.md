@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # UrlDirName Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the site-relative URL for the directory that contains a document.
   
@@ -29,19 +29,23 @@ Specifies the site-relative URL for the directory that contains a document.
 </UrlDirName>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -82,7 +86,7 @@ If the image file has a .jpg extension and is contained in a picture library on 
   
 ## See also
 
-#### Other resources
+
 
 [URL](url-element-view.md)
   

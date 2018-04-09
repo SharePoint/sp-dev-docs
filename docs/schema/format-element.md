@@ -1,7 +1,7 @@
 ---
 title: "Format Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Format Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains definitions of column and row formatting that are used in a Datasheet view.
   
@@ -31,19 +31,23 @@ Contains definitions of column and row formatting that are used in a Datasheet v
 </Format>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> |Required **Text**. Contains the name of the field to which the format applies.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FormatDef](formatdef-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

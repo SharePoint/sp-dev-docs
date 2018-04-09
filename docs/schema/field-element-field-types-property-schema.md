@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # Field Element (Field Types Property Schema)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 > [!IMPORTANT]
 > This topic describes markup that was used in an obsolete method of rendering custom field type properties. It is provided solely to assist with the debugging of custom field type properties developed against earlier versions of SharePoint Foundation. For information about the recommended method, [Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx). 
@@ -35,7 +35,11 @@ Represents a variable property of a custom field type that is set when a column 
 </Field>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -45,25 +49,25 @@ Represents a variable property of a custom field type that is set when a column 
 |**DisplaySize** <br/> |Required **Text**. The length, in characters, of the control that holds the property value in the UI.  <br/> |
 |**Type** <br/> |Required **Text**. The underlying data type of the property's value.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Default Element (Field Types Property Schema)](default-element-field-types-property-schema.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Fields Element (Field Types Property Schema)](fields-element-field-types-property-schema.md)|
    
-## Remarks
+### Remarks
 
 See [PropertySchema Element (Field Types)](propertyschema-element-field-types.md) for a detailed description and example of this element in context. 
   
 ## See also
 
-#### Other resources
+
 
 [Custom Field Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)
   

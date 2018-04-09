@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Unit Element (Spinner)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a unit for use within the spinner control.
   
@@ -34,7 +34,11 @@ Defines a unit for use within the spinner control.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -44,13 +48,13 @@ Defines a unit for use within the spinner control.
 |**DecimalDigits** <br/> |Optional. The number of decimal digits to display.  <br/> |
 |**Interval** <br/> |Optional. The amount by which the value should be incremented or decremented.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[UnitAbbreviation](unitabbreviation-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

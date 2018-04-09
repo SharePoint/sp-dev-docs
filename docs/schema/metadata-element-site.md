@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # MetaData Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the global [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) to contain metadata for list base types. 
   
@@ -29,19 +29,23 @@ Used in the global [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-41
 </MetaData>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ContentTypes](../../collaborative-application-markup-language-caml-schemas/list-schema/contenttypes-element-list.md), [Default](../../collaborative-application-markup-language-caml-schemas/list-schema/default-element-listform.md), [DefaultDescription](../../collaborative-application-markup-language-caml-schemas/list-schema/defaultdescription-element-list.md), [Fields](../../collaborative-application-markup-language-caml-schemas/list-schema/fields-element-list.md), [Forms](../../collaborative-application-markup-language-caml-schemas/list-schema/forms-element-list.md), [Toolbar](../../collaborative-application-markup-language-caml-schemas/list-schema/toolbar-element-list.md), [Validation](../../collaborative-application-markup-language-caml-schemas/list-schema/validation-element-list.md), [Views](../../collaborative-application-markup-language-caml-schemas/list-schema/views-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

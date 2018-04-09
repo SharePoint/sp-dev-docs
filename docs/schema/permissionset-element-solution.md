@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # PermissionSet Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the permissions for a solution's code access security policy.
   
@@ -34,7 +34,11 @@ Specifies the permissions for a solution's code access security policy.
 </PermissionSet>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -43,13 +47,13 @@ Specifies the permissions for a solution's code access security policy.
 |**Name** <br/> |Optional **Text**. The name of the permission set.  <br/> |
 |**version** <br/> |Required **Text**. The version of the permission set.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[IPermission](ipermission-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

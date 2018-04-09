@@ -1,7 +1,7 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentExportSettings)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # SPDeploymentObjectType Simple Type (DeploymentExportSettings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **Type** attribute on the [DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md). 
   
@@ -34,7 +34,7 @@ Provides values for the **Type** attribute on the [DeploymentObject Element (Dep
 
 ```
 
-## Enumeration Values
+## Enumeration values
 
 |**Value**|**Description**|
 |:-----|:-----|
@@ -45,19 +45,19 @@ Provides values for the **Type** attribute on the [DeploymentObject Element (Dep
 |**ListItem** <br/> |Specifies a list item ( **SPListItem**) object type.  <br/> |
 |**File** <br/> |Specifies a file ( **SPFile**) object type.  <br/> |
    
-## Remarks
+### Remarks
 
 The **SPDeploymentObjectType** simple type values specify the object type for Windows SharePoint Services 3.0 top-level objects marked for export to the content migration package. 
   
 ## See also
 
-#### Reference
+
 
  **SPDeploymentObjectType**
-#### Concepts
+
 
 [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-#### Other resources
+
 
 [DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)
 

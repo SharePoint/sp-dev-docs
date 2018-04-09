@@ -1,7 +1,7 @@
 ---
 title: "List Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # List Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element that contains the definition of a list.
   
@@ -57,7 +57,11 @@ Top-level element that contains the definition of a list.
 </List>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -92,25 +96,25 @@ Top-level element that contains the definition of a list.
 |**WebImageHeight** <br/> |Optional **Integer**. Specifies the height, in pixels, of an image in a picture library.  <br/> |
 |**WebImageWidth** <br/> |Optional **Integer**. Specifies the width, in pixels, of an image in a picture library.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[MetaData](metadata-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |None |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 When used as the root element in the schema file for a list, the **List** element must contain the Microsoft SharePoint Foundation **ows:** namespace declaration. The following lines show the opening of a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for document libraries: 
   

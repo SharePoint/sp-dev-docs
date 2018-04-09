@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # UrlBaseName Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the base name of a particular URL.
   
@@ -29,32 +29,36 @@ Renders the base name of a particular URL.
   HTMLEncode = "TRUE" | "FALSE">
 </UrlBaseName>
 ```
+## Elements and attributes
 
-## Attributes
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Field](field-element-view.md), [LookupColumn](lookupcolumn-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 This element is particularly useful in document library views.
   
@@ -89,7 +93,7 @@ If the image file has a .jpg extension and is contained in a picture library on 
   
 ## See also
 
-#### Other resources
+
 
 [URL](url-element-view.md)
   

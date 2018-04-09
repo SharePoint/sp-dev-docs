@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # MRUSplitButton Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a control that combines a button and a drop-down menu to display a list of the most-recently used items.
   
@@ -55,7 +55,11 @@ Defines a control that combines a button and a drop-down menu to display a list 
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -86,13 +90,13 @@ Defines a control that combines a button and a drop-down menu to display a list 
 |**ToolTipSelectedItemTitle** <br/> |Optional. The title of the tooltip that appears for the selected item.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Menu](menu-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

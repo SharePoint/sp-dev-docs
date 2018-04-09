@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # AlertTemplates Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element for an alert templates file. 
   
@@ -34,13 +34,17 @@ Top-level element for an alert templates file.
 </AlertTemplates>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 [AlertTemplate](alerttemplate-element-alerttemplates.md)
   

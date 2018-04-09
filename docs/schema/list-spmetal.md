@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # List (SPMetal)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies that a list should be included in code generation and modifies which content types in the list are included in code generation.
   
@@ -33,11 +33,11 @@ Specifies that a list should be included in code generation and modifies which c
 ```
 
  **Complex**
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -45,20 +45,20 @@ The following sections describe attributes, child elements, and parent elements.
 |Member (optional)  <br/> |The name SPMetal gives to the property that it generates to represent the list.  <br/> |
 |Type (optional)  <br/> |Specifies the return type of the property.  <br/> |
    
-#### Child elements
+### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[ContentType](contenttype-spmetal.md) <br/> |Includes a content type for code generation and modifies which fields (columns) in the content type are included in code generation.  <br/> |
 |[ExcludeContentType](excludecontenttype-spmetal.md) <br/> |Excludes a content type from code generation.  <br/> |
    
-#### Parent elements
+### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[Web (SPMetal)](web-spmetal.md) <br/> |Specifies the name and access level (public or internal) of the class (derived from **DataContext**) that SPMetal generates.  <br/> |
    
-## Remarks
+### Remarks
 
 A List element cannot have both a ContentType element and an ExcludeContentType element that name the same content type. 
   
@@ -85,7 +85,7 @@ The following is an example of a List element in use. If this is a hidden list, 
 
 ## See also
 
-#### Other resources
+
 
 [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
   

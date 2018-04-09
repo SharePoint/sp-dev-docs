@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # FieldPrefix Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Obsolete. Returns the Microsoft Office namespace "urn:schemas-microsoft-com:office:office#", which is added to every field name for Office compatibility.
   
@@ -29,19 +29,23 @@ Obsolete. Returns the Microsoft Office namespace "urn:schemas-microsoft-com:offi
 </FieldPrefix>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

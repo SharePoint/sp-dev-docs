@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Controls Element (MenuSection)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define menu controls. 
   
@@ -30,13 +30,17 @@ Contains elements that define menu controls.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Id** <br/> |Required. A string that identifies the element such as "Ribbon.Library.Share.NewMenuControls".  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -46,7 +50,7 @@ Contains elements that define menu controls.
 |[FlyoutAnchor](flyoutanchor-element.md) <br/> |
 |[InsertTable](inserttable-element.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

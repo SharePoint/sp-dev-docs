@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DropDown Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a control that enables a user to select from a drop-down list.
   
@@ -55,7 +55,11 @@ Defines a control that enables a user to select from a drop-down list.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -86,13 +90,13 @@ Defines a control that enables a user to select from a drop-down list.
 |**ToolTipSelectedItemTitle** <br/> |Optional. The title of the tooltip that displays for the selected item.  <br/> |
 |**Width** <br/> |Optional. The width in pixels of the list that is part of this drop-down list.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Menu](menu-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

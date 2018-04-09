@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Tab Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a tab control.
   
@@ -35,7 +35,11 @@ Represents a tab control.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -46,14 +50,14 @@ Represents a tab control.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among other tab controls.  <br/> |
 |**Title** <br/> |Optional. The title to display on the tab.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Scaling](scaling-element.md) <br/> |
 |[Groups](groups-element.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -68,7 +72,7 @@ Represents a tab control.
    
 ## See also
 
-#### Other resources
+
 
 [Walkthrough: Adding a Tab to the Server Ribbon](http://msdn.microsoft.com/library/3d1fb8b6-4c9b-4801-9bba-6d2f5caee0d9%28Office.15%29.aspx)
 

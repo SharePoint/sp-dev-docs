@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # NavBars Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the collection of links that appear in the top and left navigation areas of a home page.
   
@@ -29,19 +29,23 @@ Contains the collection of links that appear in the top and left navigation area
 </NavBars>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[NavBar](navbar-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

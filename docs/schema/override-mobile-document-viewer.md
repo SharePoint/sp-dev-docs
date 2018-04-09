@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # Override (Mobile Document Viewer)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies an alternative URL to which a mobile device is redirected when it can use an alternative viewer to open the files of the specified type.
   
@@ -35,11 +35,11 @@ Specifies an alternative URL to which a mobile device is redirected when it can 
 ```
 
  **Complex**
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -47,11 +47,11 @@ The following sections describe attributes, child elements, and parent elements.
 |**AppendSourceUrl** <br/> |True, if a source query ID should be appended to the URL of the handler; otherwise, false. The source query value is the path to the document.  <br/> |
 |**OueryID** <br/> |An alternative query for the one that is specified in the parent \<MobileDocViewer\> element.  <br/> |
    
-#### Child elements
+### Child elements
 
 None
   
-#### Parent elements
+### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
@@ -74,7 +74,7 @@ The following example shows this element in use.
 
 ## See also
 
-#### Other resources
+
 
 [Developing Mobile Document Viewers](http://msdn.microsoft.com/library/acd5386d-7808-4fd8-843f-0a4ac9ddd6b0%28Office.15%29.aspx)
 

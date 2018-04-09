@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Ribbon Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define the Server ribbon user interface.
   
@@ -75,7 +75,11 @@ Contains elements that define the Server ribbon user interface.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -122,14 +126,14 @@ Contains elements that define the Server ribbon user interface.
 |**ATTabPositionText** <br/> |Optional. Hidden text to convey tab information to screen readers, such as "Tab {0} of {1}."  <br/> |
 |**NavigationHelpText** <br/> |Optional. The text of a message that describes how to navigate the ribbon using the keyboard, which is displayed as hidden text for a screen reader.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Tabs](tabs-element.md) <br/> |
 |[ContextualTabs](contextualtabs-element.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -143,7 +147,7 @@ Contains elements that define the Server ribbon user interface.
    
 ## See also
 
-#### Other resources
+
 
 [Customizing the Server Ribbon](http://msdn.microsoft.com/library/dedfad80-0f32-44cd-9080-1507be3288e7%28Office.15%29.aspx)
 

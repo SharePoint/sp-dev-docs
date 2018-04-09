@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # AllUsersWebPart Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a Web Part in a module of a site definition.
   
@@ -31,7 +31,11 @@ Contains a Web Part in a module of a site definition.
 </AllUsersWebPart>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -39,31 +43,31 @@ Contains a Web Part in a module of a site definition.
 |**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
    
-## Child Elements
+### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[File](file-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 See [Module Element (Site)](module-element-site.md) for an example that uses the **AllUsersWebPart** element. 
   
 ## See also
 
-#### Other resources
+
 
 [Module Element (Site)](module-element-site.md)
 

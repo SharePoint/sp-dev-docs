@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # SetVar Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Allows variables to be set in the context of rendering the page—either locally to the current level of XML or globally to the page.
   
@@ -33,7 +33,11 @@ Allows variables to be set in the context of rendering the page—either locally
 </SetVar>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -42,25 +46,25 @@ Allows variables to be set in the context of rendering the page—either locally
 |**Scope** <br/> |If set to **Request**, the variable is global.  <br/> |
 |**Value** <br/> |Optional **Text**. Can be used to assign a value to the variable when this is an empty element.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **SetVar** element has both a spanning and a non-spanning form, so that  `<SetVar Name="MyVar">Announcements</SetVar>` would be the same as  `<SetVar Name="MyVar" Value="Announcements/>`.
   
@@ -117,7 +121,7 @@ The following example evaluates whether a field is required and, if it is requir
 
 ## See also
 
-#### Other resources
+
 
 [GetVar Element (View)](getvar-element-view.md)
 

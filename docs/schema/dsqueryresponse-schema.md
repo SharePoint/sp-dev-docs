@@ -16,7 +16,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The **dsQueryResponse** XML is used by the XSLT list view rendering system of Microsoft SharePoint Foundation to represent the data of a list. The markup is not persisted. It is created when a list is rendered and passed as a parameter to the XSLT templates that render the list. 
   

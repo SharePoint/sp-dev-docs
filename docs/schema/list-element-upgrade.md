@@ -1,7 +1,7 @@
 ---
 title: "List Element (Upgrade)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # List Element (Upgrade)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies how an existing list should be upgraded.
   
@@ -32,7 +32,11 @@ Specifies how an existing list should be upgraded.
 </List>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,13 +44,13 @@ Specifies how an existing list should be upgraded.
 |**ToFeatureId** <br/> |Required **GUID**. Specifies the identifier (ID) of the content type feature to which the old list definition is upgraded.  <br/> |
 |**v3Type** <br/> |Required **Integer**. Specifies the content type ID to which the old list definition is upgraded. Example:  `v3Type="0x0104` <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

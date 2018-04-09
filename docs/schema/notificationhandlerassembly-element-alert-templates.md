@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # NotificationHandlerAssembly Element (Alert Templates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies assembly information for an alert notification handler.
   
@@ -29,11 +29,15 @@ Specifies assembly information for an alert notification handler.
 </NotificationHandlerAssembly>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 None
   
@@ -58,7 +62,7 @@ None
 
 ## See also
 
-#### Other resources
+
 
 [UpdateHandlerAssembly](updatehandlerassembly-element-alerttemplates.md)
 

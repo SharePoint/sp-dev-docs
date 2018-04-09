@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RightsGroup Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a permission that the current user must have to permit the contents of the [Then](then-element-view.md) clause within an [IfHasRight](ifhasrights-element-view.md) element to be displayed. 
   
@@ -29,8 +29,12 @@ Specifies a permission that the current user must have to permit the contents of
     Permission = "Required">
 </RightsGroup>
 ```
+## Elements and attributes
 
-## Attributes
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -68,13 +72,13 @@ Specifies a permission that the current user must have to permit the contents of
 |**PermViewUsageData="Required"** <br/> |View reports on Web site usage.  <br/> |
 |**PermViewVersions="Required"** <br/> |View versions of items.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

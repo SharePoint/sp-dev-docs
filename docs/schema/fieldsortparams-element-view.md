@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # FieldSortParams Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the sort direction on a list, rendering **Asc** or **Desc** based on whether the field has been sorted and on the current default sort direction for the field. Rendering of this field is conditional and depends on the current sorting URL sent in the request to the server. 
   
@@ -38,7 +38,11 @@ Returns the sort direction on a list, rendering **Asc** or **Desc** based on whe
 </FieldSortParams>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -52,13 +56,13 @@ Returns the sort direction on a list, rendering **Asc** or **Desc** based on whe
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -115,7 +119,7 @@ The following example creates a default URL for a sort on a list. The **FieldSor
 
 ## See also
 
-#### Reference
+
 
 [FieldFilterImageURL Element](../../collaborative-application-markup-language-caml-schemas/general-schema/fieldfilterimageurl-element.md)
   

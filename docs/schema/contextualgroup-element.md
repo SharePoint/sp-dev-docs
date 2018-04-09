@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ContextualGroup Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a group of tabs that are presented when they are relevant. 
   
@@ -35,7 +35,11 @@ Defines a group of tabs that are presented when they are relevant.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -46,13 +50,13 @@ Defines a group of tabs that are presented when they are relevant.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**Title** <br/> |Optional. The title that appears above the group of tabs when the tabs are visible.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Tab](tab-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

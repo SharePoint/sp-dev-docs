@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Month Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the [DateRangesOverlap](daterangesoverlap-element-query.md) element to retrieve from a calendar all instances of a recurring event that occur within a month. 
   
@@ -28,19 +28,23 @@ Used in the [DateRangesOverlap](daterangesoverlap-element-query.md) element to r
 <DateRangesOverlap>  <FieldRef Name= "EventDate" />  <FieldRef Name= "EndDate" />  <FieldRef Name= "RecurrenceID" />  <Value Type=\"DateTime\">    <Month />  </Value></DateRangesOverlap>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -54,7 +58,7 @@ Used in the [DateRangesOverlap](daterangesoverlap-element-query.md) element to r
    
 ## See also
 
-#### Other resources
+
 
 [Now Element (Query)](now-element-query.md)
   

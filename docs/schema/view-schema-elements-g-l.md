@@ -20,7 +20,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [GetFileExtension](getfileextension-element-view.md)
   

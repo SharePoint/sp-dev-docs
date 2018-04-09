@@ -1,7 +1,7 @@
 ---
 title: "GetVar Element (View)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # GetVar Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns a variable in the context of rendering the page. Variables can be set either locally to the current level of XML or globally to the page.
   
@@ -40,7 +40,11 @@ Returns a variable in the context of rendering the page. Variables can be set ei
 </GetVar>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -56,25 +60,25 @@ Returns a variable in the context of rendering the page. Variables can be set ei
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.  <br/> |
 |**URLEncodeAsUrl** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **GetVar** element is often used within an [Expr](expr-element-view.md) element in a [Switch](switch-element-view.md) or [IfEqual](ifequal-element-view.md) element. 
   
@@ -112,7 +116,7 @@ If filter choices are open on the list and the Filter variable contains 1, "Hide
   
 ## See also
 
-#### Other resources
+
 
 [SetVar Element (View)](setvar-element-view.md)
 

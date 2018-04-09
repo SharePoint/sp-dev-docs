@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DateRangesOverlap Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in queries to compare the dates in a recurring event with a specified **DateTime** value, to determine whether they overlap. 
   
@@ -32,19 +32,23 @@ Used in queries to compare the dates in a recurring event with a specified **Dat
 </DateRangesOverlap>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md), [Value](value-element-query.md), [XML](xml-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RibbonTemplates
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define group templates.
   
@@ -30,19 +30,23 @@ Contains elements that define group templates.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Id** <br/> |Required. A string that unambiguously identifies the element, such as "Ribbon.Templates".  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[GroupTemplate](grouptemplate-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -1,7 +1,7 @@
 ---
 title: "ViewForm Element (DeploymentViewFormsList)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # ViewForm Element (DeploymentViewFormsList)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents the specific Web Part object ( **SPViewForm**) instances that are listed in the ViewFormsList.xml file, which is exported to the content migration package. The ViewFormsList.xml file specifies whether each instance is a view or a form.
   
@@ -41,20 +41,24 @@ USAGE
 
  **SPViewForm**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |**Id** <br/> |xs:string  <br/> |Optional. Unique identifier that identifies each specific Web Part.  <br/> |
 |**Type** <br/> |xs:string  <br/> |Specifies whether the Web Part is a view or a form. Allowable values are **View**, **Form**, and **File**. However, the **File** value is not functional and is reserved for future use.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -62,7 +66,7 @@ USAGE
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentViewFormsList Schema](deploymentviewformslist-schema.md)
 

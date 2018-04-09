@@ -1,7 +1,7 @@
 ---
 title: "Formats Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Formats Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains column and row formatting used in a Datasheet view.
   
@@ -34,31 +34,35 @@ Contains column and row formatting used in a Datasheet view.
 </Formats>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Format](format-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |None |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 See [Format Element](format-element.md) for an example that uses the **Formats** element. 
   

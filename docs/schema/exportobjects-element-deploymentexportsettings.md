@@ -1,7 +1,7 @@
 ---
 title: "ExportObjects Element (DeploymentExportSettings)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # ExportObjects Element (DeploymentExportSettings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a collection of deployment export object instances for inclusion in the content migration package.
   
@@ -39,19 +39,23 @@ USAGE
 
 [SPExportObjectCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObjectCollection.aspx) object. 
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -59,10 +63,10 @@ USAGE
    
 ## See also
 
-#### Reference
+
 
 [SPExportObjectCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObjectCollection.aspx)
-#### Concepts
+
 
 [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
 

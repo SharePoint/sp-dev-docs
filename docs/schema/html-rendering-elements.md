@@ -1,7 +1,7 @@
 ---
 title: "HTML-Rendering Elements"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # HTML-Rendering Elements
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Collaborative Application Markup Language (CAML) has two major kinds of elements: those for field rendering and schema definition, and those for page (HTML) rendering. The page-rendering CAML elements are designed for use in rendering pages, such as when you need to extract the property of a specific field and render it on a page.
   
@@ -55,7 +55,7 @@ The following table describes some of the prominent CAML HTML-rendering elements
    
 ## See also
 
-#### Reference
+
 
 [Data-Defining Elements](data-defining-elements.md)
 

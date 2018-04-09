@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Today Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the current date in the format that is relative to the server's local time zone. For servers in the United States, the format is MM/DD/YYYY (for example, 1/21/2001).
   
@@ -29,19 +29,23 @@ Renders the current date in the format that is relative to the server's local ti
 </Today>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Offset** <br/> |Optional **Integer**. Adds or subtracts the number of days that are specified by the positive or negative integer value.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -75,10 +79,10 @@ The following example queries for cases where the due date is today.
 
 ## See also
 
-#### Reference
+
 
 [TodayISO](../../collaborative-application-markup-language-caml-schemas/general-schema/todayiso-element.md)
-#### Other resources
+
 
 [Month](../../collaborative-application-markup-language-caml-schemas/regional-settings-schema/month-element-regional-settings.md)
   

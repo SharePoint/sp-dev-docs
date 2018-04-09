@@ -1,7 +1,7 @@
 ---
 title: "Attachments Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Attachments Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the URLs of attachments for a specified list item.
   
@@ -25,19 +25,23 @@ Contains the URLs of attachments for a specified list item.
 </Attachments>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

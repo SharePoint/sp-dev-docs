@@ -1,7 +1,7 @@
 ---
 title: "SPRequirementObjectType Simple Type (DeploymentRequirements)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # SPRequirementObjectType Simple Type (DeploymentRequirements)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **Type** attribute on the [Requirement Element](requirement-element-deploymentrequirements.md). The value specifies the object type of the specified deployment requirement.
   
@@ -32,7 +32,7 @@ Provides values for the **Type** attribute on the [Requirement Element](requirem
 
 ```
 
-## Enumeration Values
+## Enumeration values
 
 |**Value**|**Description**|
 |:-----|:-----|
@@ -43,10 +43,10 @@ Provides values for the **Type** attribute on the [Requirement Element](requirem
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentRequirements Schema](deploymentrequirements-schema.md)
-#### Other resources
+
 
 [Requirement Element (DeploymentRequirements)](requirement-element-deploymentrequirements.md)
 

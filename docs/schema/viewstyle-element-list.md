@@ -1,7 +1,7 @@
 ---
 title: "ViewStyle Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ViewStyle Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the definition of a view style for a list.
   
@@ -35,7 +35,11 @@ Contains the definition of a view style for a list.
 </ViewStyle>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -46,13 +50,13 @@ Contains the definition of a view style for a list.
 |**Preview** <br/> |Optional **Text**. Specifies the site-relative path to a preview image for the view style. For example,  `_layouts/images/prvpicl.gif`.  <br/> |
 |**Type** <br/> |Optional **Integer**. Specifies the list definition type.  <br/> |
    
-## Child Elements
+### Child elements
 
 |**Element**|
 |:-----|
 |[GroupByFooter](groupbyfooter-element-list.md), [GroupByHeader](groupbyheader-element-list.md), [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md), [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md), [PagedRowset](pagedrowset-element-list.md), [Script](../../collaborative-application-markup-language-caml-schemas/general-schema/script-element.md)[ViewBidiHeader](viewbidiheader-element-list.md), [ViewBody](viewbody-element-list.md), [ViewEmpty](viewempty-element-list.md), [ViewFields](viewfields-element-list.md), [ViewFooter](viewfooter-element-list.md), [ViewHeader](viewheader-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -105,7 +109,7 @@ The following example outlines the sections contained within the Boxed view styl
 
 ## See also
 
-#### Other resources
+
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

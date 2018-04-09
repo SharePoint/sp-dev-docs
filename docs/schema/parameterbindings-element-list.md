@@ -1,7 +1,7 @@
 ---
 title: "ParameterBindings Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ParameterBindings Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of stylesheet parameter bindings to make information available to the XSL that renders the view.
   
@@ -28,37 +28,41 @@ Contains a collection of stylesheet parameter bindings to make information avail
 <ParameterBindings>  <ParameterBinding    Name = "Text"    Location = "Text" /></ParameterBindings>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ParameterBinding](parameterbinding-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[View](view-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 For information about how to use this element, see [XSLT Parameter Bindings](http://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d%28Office.15%29.aspx).
   
 ## See also
 
-#### Other resources
+
 
 [XSLT Parameter Bindings](http://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d%28Office.15%29.aspx)
   

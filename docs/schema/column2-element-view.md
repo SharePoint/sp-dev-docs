@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Column2 Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in rendering a hyperlink. In Microsoft SharePoint Foundation, hyperlinks are stored as two separate values. The actual URL value is stored as one value, and the descriptive text is stored as the other. In a **Link** field,  `<Column/>` returns the value of the URL, and  `<Column2/>` returns the descriptive text of the hyperlink. 
   
@@ -40,7 +40,11 @@ Used in rendering a hyperlink. In Microsoft SharePoint Foundation, hyperlinks ar
 </Column2>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -56,13 +60,13 @@ Used in rendering a hyperlink. In Microsoft SharePoint Foundation, hyperlinks ar
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -94,7 +98,7 @@ The following [Switch](switch-element-view.md) statement evaluates the **Column2
 
 ## See also
 
-#### Other resources
+
 
 [Column Element (View)](column-element-view.md)
 

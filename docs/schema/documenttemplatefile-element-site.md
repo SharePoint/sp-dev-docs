@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DocumentTemplateFile Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a reference to a file that is used within a document template. 
   
@@ -32,7 +32,11 @@ Contains a reference to a file that is used within a document template.
 </DocumentTemplateFile>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,25 +44,25 @@ Contains a reference to a file that is used within a document template.
 |**Name** <br/> |Required **Text**. The full path to the template file.  <br/> |
 |**TargetName** <br/> |Required **Text**. The full path to the target  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[DocumentTemplateFiles](documenttemplatefiles-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 See [DocumentTemplates](documenttemplates-element-site.md) for an example that shows how to use the **DocumentTemplateFile** element. 
   

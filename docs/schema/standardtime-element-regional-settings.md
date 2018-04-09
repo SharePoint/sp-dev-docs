@@ -1,7 +1,7 @@
 ---
 title: "StandardTime Element (Regional Settings)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # StandardTime Element (Regional Settings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain both the bias in minutes that standard time for a time zone differs from Coordinated Universal Time (UTC), and the date on which standard time begins.
   
@@ -34,19 +34,23 @@ Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server ex
 </StandardTime>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Bias](bias-element-regional-settings.md), [Date](date-element-regional-settings.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

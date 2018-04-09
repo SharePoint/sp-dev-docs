@@ -19,9 +19,9 @@ description: "Last modified: March 09, 2015"
 
 # Solution Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element for a solution manifest file.
   
@@ -37,7 +37,11 @@ Top-level element for a solution manifest file.
 </Solution>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -55,13 +59,13 @@ Top-level element for a solution manifest file.
 |**SolutionId** <br/> |Optional **string**. Contains the GUID for the solution.  <br/> |
 |**Title** <br/> |Optional **string**. Specifies the title of the solution.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ActivationDependencies Element (Solution)](activationdependencies-element-solution.md), [ApplicationResourceFiles](applicationresourcefiles-element-solution.md), [Assemblies](assemblies-element-solutionassemblies.md), [CodeAccessSecurity](codeaccesssecurity-element-solution.md), [DwpFiles](dwpfiles-element-solution.md), [FeatureManifests](featuremanifests-element-solution.md), [Resources](resources-element-solution.md), [SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md), [RootFiles](rootfiles-element-solution.md), [TemplateFiles](templatefiles-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # BindingRedirects Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a global resource file for a solution.
   
@@ -28,17 +28,21 @@ Specifies a global resource file for a solution.
 <BindingRedirects />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[BindingRedirect Element (Solution)](bindingredirect-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

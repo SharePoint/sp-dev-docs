@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # AlertTemplate Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines an alert message template.
   
@@ -42,7 +42,11 @@ Defines an alert message template.
 </AlertTemplate>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -50,13 +54,13 @@ Defines an alert message template.
 |Default  <br/> |Specifies whether the template is the default alert template.  <br/> |
 |Name  <br/> |Specifies the template name.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[EventTypes](eventtypes-element-alerttemplates.md), [Format](format-element-alerttemplates.md), [Properties](properties-element-alerttemplates.md), [Filters](filters-element-alerttemplates.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Batch Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides batch processing of commands within HTTP protocol.
   
@@ -37,7 +37,11 @@ Provides batch processing of commands within HTTP protocol.
 </Batch>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -46,25 +50,25 @@ Provides batch processing of commands within HTTP protocol.
 |**Version** <br/> |Optional **String**. Specifies the version number of Microsoft SharePoint Foundation that is running on the server. A version number consists of four integers in the format  _N.N.N.NNNN_, which represent the major, minor, phase, and incremental versions of the product.  <br/> |
 |**ViewName** <br/> |Optional **Guid**. Specifies the GUID for the view.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Method](method-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |None |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **Batch** element must contain at least one [Method](method-element-view.md) element. The **Batch** element allows the client application to post more than one command to the server at a time. 
   

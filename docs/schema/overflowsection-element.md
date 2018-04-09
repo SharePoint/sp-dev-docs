@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # OverflowSection Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a section that can be created dynamically with a variable number of controls.
   
@@ -34,7 +34,11 @@ Defines a section that can be created dynamically with a variable number of cont
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -44,11 +48,11 @@ Defines a section that can be created dynamically with a variable number of cont
 |**TemplateAlias** <br/> |Optional. A string that a control can reference in its own **TemplateAlias** attribute. The **TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.  <br/> |
 |**Type** <br/> | Optional. An enumeration value that specifies the type of section.  <br/> **OneRow**. The section renders with one row of controls.  <br/> **TwoRow**. The section renders with two rows of controls.  <br/> **ThreeRow**. The section renders with three rows of controls.  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

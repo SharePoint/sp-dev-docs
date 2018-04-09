@@ -1,7 +1,7 @@
 ---
 title: "List Schema Elements L-Z"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -20,7 +20,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [List](list-element-list.md)
   

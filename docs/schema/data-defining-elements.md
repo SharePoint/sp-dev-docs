@@ -1,7 +1,7 @@
 ---
 title: "Data-Defining Elements"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Data-Defining Elements
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Collaborative Application Markup Language (CAML) has two major kinds of elements: those for page rendering, and those for field rendering and schema definition. The CAML field rendering elements are designed for use when rendering individual field values. These can appear in field type definitions or, more commonly, in [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) at  `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATES\XML`.
   
@@ -78,7 +78,7 @@ For each display mode there is a display pattern, or CAML-rendering expression. 
    
 ## See also
 
-#### Reference
+
 
 [HTML-Rendering Elements](html-rendering-elements.md)
 

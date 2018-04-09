@@ -1,7 +1,7 @@
 ---
 title: "DocumentLibraryTemplate Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DocumentLibraryTemplate Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the wire protocol that the server uses to export list metadata to the SharePoint Designer client. This element specifies which file serves as the template document for a document library. 
   
@@ -29,19 +29,23 @@ Used in the wire protocol that the server uses to export list metadata to the Sh
 </DocumentLibraryTemplate>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -70,7 +74,7 @@ The following example indicates that the document library whose schema is curren
 
 ## See also
 
-#### Other resources
+
 
 [DocumentTemplate Element (Site)](../../collaborative-application-markup-language-caml-schemas/site-schema/documenttemplate-element-site.md)
   

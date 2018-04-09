@@ -1,7 +1,7 @@
 ---
 title: "ListUrlDir Element (View)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ListUrlDir Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the absolute URL of the list's home directory. 
   
@@ -33,7 +33,11 @@ Renders the absolute URL of the list's home directory.
 </ListUrlDir>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -42,13 +46,13 @@ Renders the absolute URL of the list's home directory.
 |**ServerRel** <br/> |Optional **Boolean**. **TRUE** to specify that the URL is relative instead of absolute.  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -62,7 +66,7 @@ Renders the absolute URL of the list's home directory.
    
 ## See also
 
-#### Other resources
+
 
 [ListTemplate Element (Site)](../../collaborative-application-markup-language-caml-schemas/site-schema/listtemplate-element-site.md)
 

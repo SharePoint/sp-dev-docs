@@ -22,7 +22,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The Site schema of [Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) is used to define metadata for creating Web sites, including the root site of site collections. A site definition specifies the navigation bars, list templates, document templates, list base types, configurations, modules, components, and server email footer for creating sites. The site definition is specified through an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates, and through a [WebTemp\*.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML. 
   

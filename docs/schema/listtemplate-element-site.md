@@ -19,9 +19,9 @@ description: "Last modified: March 09, 2015"
 
 # ListTemplate Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a list definition that is available as an option for creating lists on the **Create Page**.
   
@@ -68,7 +68,11 @@ Specifies a list definition that is available as an option for creating lists on
 </ListTemplate>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -114,25 +118,25 @@ Specifies a list definition that is available as an option for creating lists on
 |**UseRootFolderForNavigation** <br/> |Optional **Boolean**. **TRUE** to specify that a link to the list that is displayed in **Quick Launch** points to the root folder so that users go to a custom welcome page, instead of to the default list view page.  <br/> > [!NOTE]> If a custom welcome URL is not set for the list, rendering a link to the root folder is functionally equivalent to linking to the default list view.           |
 |**VersioningEnabled** <br/> |Optional **Boolean**. **TRUE** to specify that versioning is enabled by default in lists created through the list definition; otherwise, **FALSE**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[ListTemplates](listtemplates-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 In SharePoint Foundation the list template for a standard SharePoint list is usually defined within the element manifest file of the Feature that contains the list definition. For more information about list template Features, see [List Template Files](../../sharepoint-features-schemas/list-template-files/list-template-files.md).
   

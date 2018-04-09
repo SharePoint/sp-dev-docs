@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Row Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a row in a section of a layout.
   
@@ -28,7 +28,7 @@ Defines a row in a section of a layout.
 <Row />
 ```
 
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -36,7 +36,7 @@ Defines a row in a section of a layout.
 |[Strip](strip-element.md) <br/> |
 |[OverflowArea](overflowarea-element.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

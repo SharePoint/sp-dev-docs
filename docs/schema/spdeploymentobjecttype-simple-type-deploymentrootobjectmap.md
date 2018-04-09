@@ -1,7 +1,7 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **Type** attribute on the [RootObject Element (DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md). 
   
@@ -34,7 +34,7 @@ Provides values for the **Type** attribute on the [RootObject Element (Deploymen
 
 ```
 
-## Enumeration Values
+## Enumeration values
 
 |**Value**|**Description**|
 |:-----|:-----|
@@ -45,16 +45,16 @@ Provides values for the **Type** attribute on the [RootObject Element (Deploymen
 |**ListItem** <br/> |Specifies that the root object type is a SharePoint Foundation list item ( **SPListItem**).  <br/> |
 |**File** <br/> |Specifies that the root object type is a SharePoint Foundation file ( **SPFile**).  <br/> |
    
-## Remarks
+### Remarks
 
 The **SPDeploymentObjectType** simple type value specifies the object type of the root object specified in the root object map. 
   
 ## See also
 
-#### Concepts
+
 
 [DeploymentRootObjectMap Schema](deploymentrootobjectmap-schema.md)
-#### Other resources
+
 
 [RootObject Element (DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)
 

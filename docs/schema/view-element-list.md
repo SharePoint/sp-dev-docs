@@ -1,7 +1,7 @@
 ---
 title: "View Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -19,9 +19,9 @@ description: "Last modified: March 09, 2015"
 
 # View Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 In a list definition ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), defines a view for a list in a Web site based on Microsoft SharePoint Foundation, where each list can contain a number of views.
   
@@ -70,7 +70,11 @@ In a list definition ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80
 </View>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -116,25 +120,25 @@ In a list definition ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80
 |**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
    
-## Child Elements
+### Child elements
 
 |**Element**|
 |:-----|
 |[Aggregations](aggregations-element-list.md), [GroupByFooter](groupbyfooter-element-list.md), [GroupByHeader](groupbyheader-element-list.md), [Joins](../../collaborative-application-markup-language-caml-schemas/view-schema/joins-element-view.md), [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md), [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md), [PagedRowset](pagedrowset-element-list.md), [ParameterBindings](parameterbindings-element-list.md), [ProjectedFields](../../collaborative-application-markup-language-caml-schemas/view-schema/projectedfields-element-view.md), [Query](query-element-list.md), [RowLimit](rowlimit-element-list.md), [RowLimitExceeded](rowlimitexceeded-element-list.md), [Toolbar](http://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c%28Office.15%29.aspx), [ViewBidiHeader](viewbidiheader-element-list.md), [ViewBody](viewbody-element-list.md), [ViewData](viewdata-element-list.md), [ViewEmpty](viewempty-element-list.md), [ViewFields](viewfields-element-list.md), [ViewFooter](viewfooter-element-list.md), [ViewHeader](viewheader-element-list.md), [ViewStyle](viewstyle-element-list.md), [XslLink](xsllink-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Views](views-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The principal view type for list and document summary information is the HTML view. An HTML view is generally a columnar view that displays information from one or more lists. The data to be displayed is described by the fields that are shown in the view. For information about how views work in Microsoft SharePoint Foundation 2010, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx).
   
@@ -260,7 +264,7 @@ The next view example displays a sequence of paragraphs. The **Query** element s
 
 ## See also
 
-#### Other resources
+
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

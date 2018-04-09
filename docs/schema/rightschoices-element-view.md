@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RightsChoices Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains specification of the permissions that current users must have in order for the contents of the [Then](then-element-view.md) clause within an [IfHasRight](ifhasrights-element-view.md) element to be displayed. 
   
@@ -32,19 +32,23 @@ Contains specification of the permissions that current users must have in order 
 </RightsChoices>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[RightsGroup](rightsgroup-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

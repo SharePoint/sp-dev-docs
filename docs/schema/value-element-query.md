@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Value Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the value against which the value returned by the [FieldRef](fieldref-element-query.md) element is compared. 
   
@@ -31,20 +31,24 @@ Contains the value against which the value returned by the [FieldRef](fieldref-e
 </Value>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Type** <br/> |Required **Text**. Specifies the data type for the value contained by this element.  <br/> |
 |**IncludeTimeValue** <br/> |Optional **Boolean**. Specifies to build **DateTime** queries based on time as well as date. If you do not set this attribute, the time portion of queries that involve date and time are ignored.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ListProperty](listproperty-element-query.md), [Month](month-element-query.md), [Now](now-element-query.md), [Today](today-element-query.md), [UserID](userid-element-query.md), [XML](xml-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

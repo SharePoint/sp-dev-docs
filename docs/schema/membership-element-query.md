@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Membership Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a filter based on the type of membership for the user.
   
@@ -30,31 +30,35 @@ Defines a filter based on the type of membership for the user.
 </ Membership>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Type** <br/> | Required **Text**. Specifies the type of membership for the user. Possible values include the following:  <br/> **SPWeb.AllUsers** <br/> **SPGroup** <br/> **SPWeb.Groups** <br/> **CurrentUserGroups** <br/> **SPWeb.Users** <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The following example defines a filter for cases where the user is either assigned a task based on membership in a group or assigned a task directly.
   

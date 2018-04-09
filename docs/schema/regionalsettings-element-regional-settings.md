@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RegionalSettings Element (Regional Settings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the regional settings for currency, language, locale, and time zone that are used in the deployment of Microsoft SharePoint Foundation. Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG). and RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML).
   
@@ -29,19 +29,23 @@ Contains the regional settings for currency, language, locale, and time zone tha
 </RegionalSettings>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Currencies](currencies-element-regional-settings.md), [Languages](languages-element-regional-settings.md), [Locales](locales-element-regional-settings.md), [TimeZones](timezones-element-regional-settings.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

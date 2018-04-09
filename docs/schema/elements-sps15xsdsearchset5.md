@@ -18,7 +18,7 @@ This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Que
   
  **Last modified:** February 19, 2014 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 - [AlertChangeType element](alertchangetype-element-sps15xsdsearchset5.md)
     

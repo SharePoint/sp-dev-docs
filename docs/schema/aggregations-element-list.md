@@ -1,7 +1,7 @@
 ---
 title: "Aggregations Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Aggregations Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains field references for totals columns or calculated columns — in other words, for fields to which a function is applied.
   
@@ -32,19 +32,23 @@ Contains field references for totals columns or calculated columns — in other 
 </Aggregations>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Value** <br/> |Optional **Text**. Set **On** to specify that total rows are enabled for the datasheet view; otherwise, do not specify this attribute.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

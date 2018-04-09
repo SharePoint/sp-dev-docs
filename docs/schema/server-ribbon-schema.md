@@ -20,7 +20,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The Server ribbon schema defines the structure of XML documents that customize the Server ribbon.
   
@@ -232,10 +232,10 @@ The following list maps relationships between elements in the Server ribbon sche
   
 ## See also
 
-#### Reference
+
 
 [CommandUIDefinition Element](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md)
-#### Other resources
+
 
 [Building Block: Server Ribbon](http://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8%28Office.15%29.aspx)
 

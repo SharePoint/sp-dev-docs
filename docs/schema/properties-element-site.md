@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Properties Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies custom property values to implement within the Feature. 
   
@@ -33,19 +33,23 @@ Specifies custom property values to implement within the Feature.
 </Properties>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Property](property-element-sitefeature.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

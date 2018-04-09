@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Expr2 Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used as part of a comparison with the value contained in an [Expr1](expr1-element-view.md) element. The **Expr2** element contains the CAML expression that is evaluated to determine the course of action. The expressions can be any set of CAML elements that render text, or they can be other conditionals. 
   
@@ -29,19 +29,23 @@ Used as part of a comparison with the value contained in an [Expr1](expr1-elemen
 </Expr2>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[BeginsWith](../../collaborative-application-markup-language-caml-schemas/query-schema/beginswith-element-query.md), [Column](column-element-view.md), [Contains](../../collaborative-application-markup-language-caml-schemas/query-schema/contains-element-query.md), [Eq](../../collaborative-application-markup-language-caml-schemas/query-schema/eq-element-query.md), [Field](field-element-view.md), [GetVar](getvar-element-view.md), [GroupBy](../../collaborative-application-markup-language-caml-schemas/query-schema/groupby-element-query.md), [ListProperty](listproperty-element-view.md), [LookupColumn](lookupcolumn-element-view.md), [OrderBy](../../collaborative-application-markup-language-caml-schemas/query-schema/orderby-element-query.md), [Where](../../collaborative-application-markup-language-caml-schemas/query-schema/where-element-query.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -68,7 +72,7 @@ The following example evaluates two expressions, and if they are equal, it conve
 
 ## See also
 
-#### Other resources
+
 
 [Expr Element (View)](expr-element-view.md)
   

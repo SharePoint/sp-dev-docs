@@ -1,7 +1,7 @@
 ---
 title: "Toolbar Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Toolbar Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the toolbar of a list view, which is the section of a view that is rendered above the view header.
   
@@ -31,20 +31,24 @@ Defines the toolbar of a list view, which is the section of a view that is rende
 </Toolbar>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Position** <br/> |Optional **Text**. If **Position = "After"** is specified, the toolbar will appear below the view body. If not specified, the toolbar will appear above the view body.  <br/> |
 |**Type** <br/> |Required **Text**. Specifies the kind of toolbar; this can be set to either **Standard** or **FreeForm**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -77,7 +81,7 @@ The following excerpt from the [Schema.xml](http://msdn.microsoft.com/library/c2
 
 ## See also
 
-#### Other resources
+
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

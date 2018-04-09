@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Strip Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a horizontally scrolling strip that contains one or more controls.
   
@@ -28,13 +28,13 @@ Defines a horizontally scrolling strip that contains one or more controls.
 <Strip />
 ```
 
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ControlRef](controlref-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Controls Element (CommandUIDefinition)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define controls. 
   
@@ -30,13 +30,17 @@ Contains elements that define controls.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Id** <br/> |Required. Identifies the element. The value can be a string representation of a GUID or a unique term such as "Ribbon.Library.Share.NewRibbonCheckBox".  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -53,7 +57,7 @@ Contains elements that define controls.
 |[TextBox](textbox-element.md) <br/> |
 |[ToggleButton](togglebutton-element.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -16,7 +16,7 @@ description: "Last modified: February 19, 2014"
 
  **Last modified:** February 19, 2014 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 The **SPS15XSDSearchSet3** schema specifies XML that represents settings which include query rules, result sources, managed properties, crawled properties, and ranking models. You can include the schema in your Visual Studio solution, if you are working on custom solutions to create or validate search configurations. 
   

@@ -1,7 +1,7 @@
 ---
 title: "Groups Element (DeploymentUserGroupMap)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Groups Element (DeploymentUserGroupMap)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a collection of deployment group ( **DeploymentGroup**) object instances.
   
@@ -40,19 +40,23 @@ USAGE
 
  **DeploymentGroups**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Group Element (DeploymentUserGroupMap)](group-element-deploymentusergroupmap.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -60,7 +64,7 @@ USAGE
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
 

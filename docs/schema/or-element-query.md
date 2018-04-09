@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Or Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within the [Where](where-element-query.md) element to group filters in a query. 
   
@@ -29,31 +29,35 @@ Used within the [Where](where-element-query.md) element to group filters in a qu
 </Or>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[And](and-element-query.md), [BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [Geq](geq-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Membership](membership-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [Or](or-element-query.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 This element can be nested inside other **Or** and [And](and-element-query.md) elements. The server supports unlimited complicated queries. However, any given **Or** element can have only two disjuncts; that is, only two child elements. If you need to disjoin three or more conditions, you must nest the **Or** elements, as demonstrated by the second example in the following section. 
   

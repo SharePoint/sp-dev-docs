@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Gallery Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a gallery.
   
@@ -37,7 +37,11 @@ Defines a gallery.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -50,26 +54,26 @@ Defines a gallery.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**Width** <br/> |Required. The width of the gallery in pixels.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[GalleryButton](gallerybutton-element-gallery.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
 |[MenuSection](menusection-element.md) <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 1  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 A gallery is a graphically rich list box. The items in a gallery are usually mutually exclusive choices, and the result of a choice is visually previewed either by an image or by a rendered HTML fragment. 
   

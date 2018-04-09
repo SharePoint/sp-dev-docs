@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # FilterDefinition Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines an alert template filter. To modify existing filters or create additional filters, modify the **FilterDefinition** element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using Collaborative Application Markup Language (CAML). 
   
@@ -40,11 +40,15 @@ Defines an alert template filter. To modify existing filters or create additiona
 </FilterDefinition>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -52,7 +56,7 @@ None
 |[ShortName](shortname-element-alerttemplates.md) <br/> |
 |[Query](query-element-alerttemplates.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

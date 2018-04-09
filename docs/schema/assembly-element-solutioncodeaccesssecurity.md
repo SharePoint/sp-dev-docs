@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Assembly Element (Solution - CodeAccessSecurity)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies an assembly in a solution's code access security policy.
   
@@ -32,7 +32,11 @@ Specifies an assembly in a solution's code access security policy.
 </Assembly>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,13 +44,13 @@ Specifies an assembly in a solution's code access security policy.
 |**PublicKeyBlob** <br/> |Optional **Text**. The assembly's public key, in binary format.  <br/> |
 |**Version** <br/> |Optional **Text**. The version of the assembly.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

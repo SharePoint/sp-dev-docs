@@ -1,7 +1,7 @@
 ---
 title: "IfEqual Element (View)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # IfEqual Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Allows for conditional rendering based on the comparison of two Collaborative Application Markup Language (CAML) expressions.
   
@@ -29,19 +29,23 @@ Allows for conditional rendering based on the comparison of two Collaborative Ap
 </IfEqual>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Else](else-element-view.md), [Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Then](then-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -77,7 +81,7 @@ The following example uses the **IfEqual** element to define the display pattern
 
 ## See also
 
-#### Other resources
+
 
 [IfNew Element (View)](ifnew-element-view.md)
 

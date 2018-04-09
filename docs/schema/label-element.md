@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Label Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a label control.
   
@@ -40,7 +40,11 @@ Defines a label control.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -56,11 +60,11 @@ Defines a label control.
 |**QueryCommand** <br/> |Optional. The name of the command to execute when polling for state information.  <br/> |
 |**Command** <br/> |Optional. The name of the command to execute when the label receives focus.  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

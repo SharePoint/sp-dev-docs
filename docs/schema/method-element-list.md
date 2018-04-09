@@ -1,7 +1,7 @@
 ---
 title: "Method Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,27 +18,31 @@ description: "Last modified: March 09, 2015"
 
 # Method Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 ```VB.net
 <Method  Name = "Text">  <Filter    Name = "Text"     Type = "Text"     Value = "Text" /> </Method>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> |Optional **Text**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Filter](filter-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

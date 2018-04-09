@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RootFile Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a root path to which solution files are copied.
   
@@ -30,25 +30,29 @@ Specifies a root path to which solution files are copied.
 </RootFile>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Location** <br/> |Required **Text**. A path that is relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[RootFiles](rootfiles-element-solution.md)|
    
-## Remarks
+### Remarks
 
 Use this element to deploy a localization resource that is shared by several features. Shared localization resources are located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources folder. For example, the following XML deploys three shared localization resource files.
   

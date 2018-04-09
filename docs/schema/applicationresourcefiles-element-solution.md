@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ApplicationResourceFiles Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the application resource files to include in the solution.
   
@@ -33,32 +33,36 @@ Specifies the application resource files to include in the solution.
 </ApplicationResourceFiles>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ApplicationResourceFile](applicationresourcefile-element-solution.md) <br/> |
 |[App_GlobalResourceFile](app_globalresourcefile-element-solution.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Solution](solution-element-solution.md)|
    
-## Remarks
+### Remarks
 
 Use this element to deploy binary resources to an Internet Information Services (IIS) Web site used by a SharePoint Foundation Web Application. Files specified by [ApplicationResourceFile](applicationresourcefile-element-solution.md) child elements are deployed to a virtual directory named  `wpresources`. Files specified by [App_GlobalResourceFile](app_globalresourcefile-element-solution.md) child elements are deployed to a virtual directory named  `App_GlobalResources`.
   
 ## See also
 
-#### Other resources
+
 
 [ApplicationResourceFile Element (Solution)](applicationresourcefile-element-solution.md)
   

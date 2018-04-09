@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ScriptQuote Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Encodes a string to fit within JavaScript code. This element is used to render text from the server that must be interpreted as a quoted string.
   
@@ -30,31 +30,35 @@ Encodes a string to fit within JavaScript code. This element is used to render t
 </ScriptQuote>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**NotAddingQuote** <br/> |Optional **Boolean**. **TRUE** to eliminate quotation marks for enclosing a string. The default value is **FALSE**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **ScriptQuote** element performs the following conversions on its body text: 
   

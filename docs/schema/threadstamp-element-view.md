@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ThreadStamp Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Obsolete. Renders, in discussion boards, the current server's local time in a specific format (YYYYMMDDHHMMSS) for sorting purposes.
   
@@ -30,31 +30,35 @@ Obsolete. Renders, in discussion boards, the current server's local time in a sp
 </ThreadStamp>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Each discussion board has a special threading field that consists of a concatenation of timestamps. The threading value of a discussion item is the threading value of its parent followed by the **ThreadStamp** value corresponding to the current local time. 
   

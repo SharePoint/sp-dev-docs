@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Now Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the current date and time.
   
@@ -29,19 +29,23 @@ Returns the current date and time.
 </Now>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -74,10 +78,10 @@ The following example queries for cases where a recurring event overlaps with th
 
 ## See also
 
-#### Reference
+
 
 [TodayISO Element](../../collaborative-application-markup-language-caml-schemas/general-schema/todayiso-element.md)
-#### Other resources
+
 
 [Month Element (Regional Settings)](../../collaborative-application-markup-language-caml-schemas/regional-settings-schema/month-element-regional-settings.md)
   

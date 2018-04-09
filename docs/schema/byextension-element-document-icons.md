@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ByExtension Element (Document Icons)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines icons for documents according to their file name extensions. 
   
@@ -29,31 +29,35 @@ Defines icons for documents according to their file name extensions.
 </ByExtension>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Mapping](../../collaborative-application-markup-language-caml-schemas/general-schema/mapping-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[DocIcons](docicons-element-document-icons.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 This element is used in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to drive mapping between file extensions and their corresponding document library icons. 
   

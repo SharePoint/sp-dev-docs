@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # dsQueryResponse
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element that contains the list data that is rendered by [the XSLT list view rendering system](http://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593%28Office.15%29.aspx).
   
@@ -31,7 +31,11 @@ Top-level element that contains the list data that is rendered by [the XSLT list
 </dsQueryResponse>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,13 +44,13 @@ Top-level element that contains the list data that is rendered by [the XSLT list
 |**TemplateType** <br/> |The ID of the type of the list template. Must be the numerical version of one of the [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx) enumeration values. This is the same value as [BaseTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.BaseTemplate.aspx) .  <br/> |
 |**RowLimit** <br/> |The maximum number of rows to be displayed on a single list view page.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Rows](rows-dsqueryresponse.md)|
    
-## Parent Elements
+### Parent elements
 
 None
   

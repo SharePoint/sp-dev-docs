@@ -1,7 +1,7 @@
 ---
 title: "AllUsersWebPart Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # AllUsersWebPart Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a Web Part in a form definition for list.
   
@@ -28,32 +28,36 @@ Contains a Web Part in a form definition for list.
 <AllUsersWebPart  WebPartOrder = Integer  WebPartZoneID = "Text">    <![CDATA[...]]></AllUsersWebPart>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**WebPartOrder** <br/> |Required **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
 |**WebPartZoneID** <br/> |Required **Text**. Specifies the zone for the Web Part.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |CDATA |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[WebParts](webparts-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 For an example of how to use this element, see [Form](form-element-list.md).
   

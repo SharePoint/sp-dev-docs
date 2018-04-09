@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # MobileDocViewers (Mobile Document Viewer)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the document-viewing page for one or more types of documents. 
   
@@ -32,25 +32,25 @@ Specifies the document-viewing page for one or more types of documents.
 ```
 
  **Complex**
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 None
   
-#### Child elements
+### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[MobileDocViewer](mobiledocviewer-mobile-document-viewer.md) <br/> |Configures redirection for a specific type of document.  <br/> |
    
-#### Parent elements
+### Parent elements
 
 None
   
-## Remarks
+### Remarks
 
 The **MobileDocViewers** element persists in a file named mdocview_*.xml, where the asterisk (*) is some string of valid file name characters. We recommend using your company name or some other string that is not likely to duplicate the name that is used by other document viewer providers. The page is deployed to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Config on all front-end web servers. 
   
@@ -71,7 +71,7 @@ The following example shows this element in use.
 
 ## See also
 
-#### Other resources
+
 
 [Developing Mobile Document Viewers](http://msdn.microsoft.com/library/acd5386d-7808-4fd8-843f-0a4ac9ddd6b0%28Office.15%29.aspx)
 

@@ -1,7 +1,7 @@
 ---
 title: "QuotedXML Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # QuotedXML Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used to HTML-decode and execute the Collaborative Application Markup Language (CAML) that the element contains. This can be useful if you want to put CAML somewhere that is intolerant of the concatenation characters ("&amp;"), for example, inside a hyperlink, an HTML attribute, or a Microsoft JScript string literal.
   
@@ -25,19 +25,23 @@ Used to HTML-decode and execute the Collaborative Application Markup Language (C
 </QuotedXML>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

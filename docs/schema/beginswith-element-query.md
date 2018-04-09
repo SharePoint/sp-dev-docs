@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # BeginsWith Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Searches for a string at the start of a column that holds **Text** or **Note** field type values. 
   
@@ -32,19 +32,23 @@ Searches for a string at the start of a column that holds **Text** or **Note** f
 </BeginsWith>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md), [Value](value-element-query.md), [XML](xml-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -75,7 +79,7 @@ foreach (SPListItem item in myItems)
 
 ## See also
 
-#### Other resources
+
 
 [Contains Element (Query)](contains-element-query.md)
 

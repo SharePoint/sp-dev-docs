@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Switch Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Allows for conditional rendering based on the value of a Collaborative Application Markup Language (CAML) expression.
   
@@ -35,31 +35,35 @@ Allows for conditional rendering based on the value of a Collaborative Applicati
 </Switch>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Case](case-element-view.md), [Default](default-element-view.md), [Expr](expr-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### emarks
 
 A **Switch** element contains an [Expr](expr-element-view.md) element, any number of [Case](case-element-view.md) elements, and a [Default](default-element-view.md) element. The value of the **Expr** element is compared against the **Value** attribute of each **Case** element. When a match is found, the **Switch** element returns the value of the matching **Case** element. If no match is found, and if a **Default** element is given, the **Switch** element returns the value of the **Default** element. If no **Default** element is specified and none of the **Case** values match the **Expr** value, the **Switch** element returns an empty string. 
   
@@ -79,7 +83,7 @@ The following example returns "User Zero" if the **UserID** value equals 0 (zero
 
 ## See also
 
-#### Other resources
+
 
 [FieldSwitch Element (View)](fieldswitch-element-view.md)
 

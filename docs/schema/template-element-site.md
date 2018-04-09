@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Template Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies, in a  `WebTemp*.xml` file, a site definition that can be used to create Web sites within the deployment. 
   
@@ -32,7 +32,11 @@ Specifies, in a  `WebTemp*.xml` file, a site definition that can be used to crea
 </Template>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,13 +44,13 @@ Specifies, in a  `WebTemp*.xml` file, a site definition that can be used to crea
 |**Name** <br/> |Required **Text**. Contains the name of the site type, such as STS.  <br/> |
 |**SetupPath** <br/> |Optional **Text**. Specifies the relative path in the setup directory that contains files used in the site definition, for example,  `SetupPath="global"`.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Configuration](configuration-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

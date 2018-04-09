@@ -1,7 +1,7 @@
 ---
 title: "Mapping Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Mapping Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in an HtmlTransInfo.xml file ( `\Program Files\Common Files\Microsoft Shared\web server extensions\12TEMPLATE\XML`) to direct requests to the URL for handling the requests when the client computer does not have the 2007 Microsoft Office system installed.
   
@@ -29,7 +29,11 @@ Used in an HtmlTransInfo.xml file ( `\Program Files\Common Files\Microsoft Share
 </Mapping>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attribute
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -38,13 +42,13 @@ Used in an HtmlTransInfo.xml file ( `\Program Files\Common Files\Microsoft Share
 |**HandlerUrl** <br/> |Optional **Text**. Specifies the URL of a converter program used by the server to handle a request when the client computer does not have Microsoft Office system installed.  <br/> |
 |**ProgId** <br/> |Optional **Text**. Specifies the name of the ActiveX control used to open the type of document.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

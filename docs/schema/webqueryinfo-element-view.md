@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # WebQueryInfo Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used inside a **\<TABLE\>** tag surrounding a view to add attributes that assist the agents that are processing Web queries in extracting data from views. 
   
@@ -29,31 +29,35 @@ Used inside a **\<TABLE\>** tag surrounding a view to add attributes that assist
 </WebQueryInfo>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **WebQueryInfo** element renders an ID on the **\<TABLE\>** tag, a **Summary** attribute set to the name of the list, and a **WebQuerySourceHref** attribute in the **o:** namespace that links to the XMLDATA representation of the view. Consequently, agents that understand these attributes can import a structured data view of lists rather than being required to perform a "screenscrape" for the data. 
   

@@ -1,7 +1,7 @@
 ---
 title: "HtmlTrInfo Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # HtmlTrInfo Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in HtmlTransInfo.xml file ( `\Program Files\Common Files\Microsoft Shared\web server extensions\12TEMPLATE\XML`) to contain mapping instructions for directing a request to the URL for handling a request when the client computer does not have the 2007 Microsoft Office system installed.
   
@@ -31,25 +31,29 @@ Used in HtmlTransInfo.xml file ( `\Program Files\Common Files\Microsoft Shared\w
 </HtmlTrInfo>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Mapping](mapping-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |None |
    
-## Remarks
+### Remarks
 
 When the client computer does not have the Office application installed, Microsoft SharePoint Foundation creates an HTML rendition of the page by using a converter program on the server.
   

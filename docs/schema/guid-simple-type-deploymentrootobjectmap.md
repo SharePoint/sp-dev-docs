@@ -1,7 +1,7 @@
 ---
 title: "Guid Simple Type (DeploymentRootObjectMap))"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -16,7 +16,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Supports the use of a unique identifier (GUID) as a **Guid** attribute field value in the [RootObject element](rootobject-element-deploymentrootobjectmap.md) of the DeploymentLRootObjectMap Schema. 
   
@@ -29,10 +29,10 @@ Supports the use of a unique identifier (GUID) as a **Guid** attribute field val
 
 ## See also
 
-#### Concepts
+
 
 [DeploymentRootObjectMap Schema](deploymentrootobjectmap-schema.md)
-#### Other resources
+
 
 [RootObject Element (DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)
 

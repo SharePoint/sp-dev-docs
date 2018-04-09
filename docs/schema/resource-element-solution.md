@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Resource Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a binary resource to deploy to an existing Feature folder.
   
@@ -30,25 +30,29 @@ Specifies a binary resource to deploy to an existing Feature folder.
 </Resource>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |Location  <br/> |Required **Text**. Specifies a location relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Resources](resources-element-solution.md)|
    
-## Remarks
+### Remarks
 
 Use this element to deploy a binary resource to an existing Feature folder.
   

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ProjectProperty Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The **ProjectProperty** element can be used to return a global property of the current SharePoint site. 
   
@@ -39,7 +39,11 @@ The **ProjectProperty** element can be used to return a global property of the c
 </ProjectProperty>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -54,13 +58,13 @@ The **ProjectProperty** element can be used to return a global property of the c
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -82,7 +86,7 @@ The following line of code returns the **Title** property from the current Web s
 
 ## See also
 
-#### Other resources
+
 
 [ListProperty Element (View)](listproperty-element-view.md)
   

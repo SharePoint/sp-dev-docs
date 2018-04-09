@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # FieldSwitch Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Obsolete. Allows for conditional rendering based on the value of a field property. 
   
@@ -35,31 +35,35 @@ Obsolete. Allows for conditional rendering based on the value of a field propert
 </FieldSwitch>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Case](case-element-view.md), [Default](default-element-view.md), [Expr](expr-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **FieldSwitch** element and the [Switch](switch-element-view.md) element use identical syntax, but a **FieldSwitch** element is evaluated only once per request for each view in which it applies to a view body or for each field in which it applies to a display pattern. The **FieldSwitch** element substantially optimizes performance in cases where different Collaborative Application Markup Language (CAML) code paths are required, depending on a field property (for example, whether rich text formatting is enabled) whose value does not change during the rendering process. 
   
@@ -90,7 +94,7 @@ The following example from the [FldTypes.xml](http://msdn.microsoft.com/library/
 
 ## See also
 
-#### Other resources
+
 
 [Switch Element (View)](switch-element-view.md)
 

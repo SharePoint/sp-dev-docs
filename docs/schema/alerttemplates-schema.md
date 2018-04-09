@@ -20,7 +20,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Microsoft SharePoint Foundation includes a set of predefined alert templates. These alert templates are stored in the  `Alerttemplates.xml` file, which is located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML folder.  `Alerttemplates.xml` defines the format, contents, filters, event types and properties used to create alert messages from each list type. A developer can customize alerts by modifying a copy of the  `Alerttemplates.xml` file and then loading the customized alert templates by using the command  `stsadm -o updatealerttemplates`.
   
@@ -112,13 +112,13 @@ The following example shows the basic elements in an alert templates schema.
 
 ## See also
 
-#### Reference
+
 
  **IAlertNotifyHandler**
-#### Concepts
+
 
 [Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)
-#### Other resources
+
 
 [Alerts in Windows SharePoint Services](http://msdn.microsoft.com/library/cb9586d9-84e1-43c9-93c9-8a7496f2f41d%28Office.15%29.aspx)
 

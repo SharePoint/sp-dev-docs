@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # NavBar Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the definition of the navigation area for either the top links of all pages within a site or for the Quick Launch area of the home page.
   
@@ -36,7 +36,11 @@ Contains the definition of the navigation area for either the top links of all p
 </NavBar>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -48,13 +52,13 @@ Contains the definition of the navigation area for either the top links of all p
 |**Suffix** <br/> |Optional **Text**. Contains the closing tag for the table that contains the navigation bar.  <br/> |
 |**Url** <br/> |Optional **Text**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[NavBarLink](navbarlink-element-site.md), [NavBarPage](navbarpage-element-sitemodule.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -1,7 +1,7 @@
 ---
 title: "ContentTypes Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ContentTypes Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains references to content types to associate with lists that are created through the list definition.
   
@@ -29,19 +29,23 @@ Contains references to content types to associate with lists that are created th
 </ContentTypes>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 ||
 |:-----|
 |None. |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ContentType](../../sharepoint-features-schemas/content-type-definitions/contenttype-element-contenttype.md), [ContentTypeRef](contenttyperef-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -79,7 +83,7 @@ The following example shows a partial definition for a list that uses three cont
 
 ## See also
 
-#### Other resources
+
 
 [How to: Add a Content Type to a List](http://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666%28Office.15%29.aspx)
 

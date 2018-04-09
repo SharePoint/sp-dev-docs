@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # FieldType Element (Field Types)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a single field type definition.
   
@@ -27,13 +27,17 @@ Represents a single field type definition.
 </FieldType>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**None** <br/> ||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -41,13 +45,13 @@ Represents a single field type definition.
 |[RenderPattern Element (Field Types)](renderpattern-element-field-types.md) <br/> |
 |[PropertySchema Element (Field Types)](propertyschema-element-field-types.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[FieldTypes Element (Field Types)](fieldtypes-element-field-types.md)|
    
-## Remarks
+### Remarks
 
 FieldType elements are configured in fldtypes\*.xml files in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML. 
   
@@ -90,7 +94,7 @@ The following example defines two custom field types. The example has been edite
 
 ## See also
 
-#### Other resources
+
 
 [Custom Field Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)
   

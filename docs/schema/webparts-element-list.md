@@ -1,7 +1,7 @@
 ---
 title: "WebParts Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # WebParts Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of Web Parts in a form for a list definition or a list template.
   
@@ -28,31 +28,35 @@ Contains a collection of Web Parts in a form for a list definition or a list tem
 <WebParts>  <AllUsersWebPart    WebPartOrder = Integer    WebPartZoneID = "Text">      <![CDATA[...]]>  </AllUsersWebPart></WebParts>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[AllUsersWebPart](alluserswebpart-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Form](form-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 For an example of how to use this element, see [Creating Custom Form Templates](http://msdn.microsoft.com/library/b77ec86e-9568-4325-b949-13ee2fdcaabf%28Office.15%29.aspx).
   

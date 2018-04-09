@@ -1,7 +1,7 @@
 ---
 title: "SystemObject Element (DeploymentSystemData)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # SystemObject Element (DeploymentSystemData)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a SharePoint Foundation system object instance ( **SPSystemObject**) exported to the content migration package.
   
@@ -42,7 +42,11 @@ USAGE
 
  **SPSystemObject**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -50,13 +54,13 @@ USAGE
 |Type  <br/> |[SPDeploymentObjectType Simple Type (DeploymentSystemData)](spdeploymentobjecttype-simple-type-deploymentsystemdata.md) <br/> |Optional. Specification of the object type: **Site**, **Web**, **Folder**, **List**, **ListItem**, or **File**.  <br/> |
 |Url  <br/> |xs:string  <br/> |Optional. URL to the system object.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -64,7 +68,7 @@ USAGE
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentSystemData Schema](deploymentsystemdata-schema.md)
 

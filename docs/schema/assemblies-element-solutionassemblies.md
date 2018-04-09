@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Assemblies Element (Solution - Assemblies)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the assemblies to include in the solution.
   
@@ -43,13 +43,13 @@ Specifies the assemblies to include in the solution.
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Assembly](assembly-element-solutionassemblies.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

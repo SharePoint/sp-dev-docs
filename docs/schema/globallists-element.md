@@ -1,7 +1,7 @@
 ---
 title: "GlobalLists Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # GlobalLists Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element used in the file BASE.XML ( `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\XML`) to define the built-in lists of Web sites based on Microsoft SharePoint Foundation.
   
@@ -25,31 +25,35 @@ Top-level element used in the file BASE.XML ( `\\Program Files\Common Files\Micr
 </GlobalLists>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[List](../../collaborative-application-markup-language-caml-schemas/list-schema/list-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Site](site-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **GlobalLists** element contains the section in the Base.xml file that defines the schema for database lists that are global to the entire Web application that is running SharePoint Foundation. 
   

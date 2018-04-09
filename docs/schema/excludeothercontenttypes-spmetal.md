@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ExcludeOtherContentTypes (SPMetal)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies that classes are generated only for content types that are explicitly represented by ContentType elements.
   
@@ -32,25 +32,25 @@ Specifies that classes are generated only for content types that are explicitly 
 <ExcludeOtherContentTypes />
 ```
 
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 None.
   
-#### Child elements
+### Child elements
 
 None.
   
-#### Parent elements
+### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[Web (SPMetal)](web-spmetal.md) <br/> |Specifies the name and access level (public or internal) of the class (derived from **DataContext**) that SPMetal generates.  <br/> |
    
-## Remarks
+### Remarks
 
 A Web element cannot have both an ExcludeOtherContentTypes element and an IncludeHiddenContentTypes element.
   
@@ -76,7 +76,7 @@ The following is an example of a ExcludeOtherContentTypes element in use. In thi
 
 ## See also
 
-#### Other resources
+
 
 [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
   

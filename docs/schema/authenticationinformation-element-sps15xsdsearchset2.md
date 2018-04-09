@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 # AuthenticationInformation element (SPS15XSDSearchSet2)
 
- **Last modified:** March 09, 2015 
+ 
   
 ## Element information
 

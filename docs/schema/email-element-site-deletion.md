@@ -1,7 +1,7 @@
 ---
 title: "Email Element (Site Deletion)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Email Element (Site Deletion)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in DEADWEB.XML ( `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\1033\XML`) to contain the e-mail message that is sent to the owner of a site to confirm site usage or to warn that the site will be automatically deleted.
   
@@ -35,19 +35,23 @@ Used in DEADWEB.XML ( `\\Program Files\Common Files\Microsoft Shared\web server 
 </Email>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[AutoDeleteWarning](autodeletewarning-element-site-deletion.md), [Confirmation](confirmation-element-site-deletion.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

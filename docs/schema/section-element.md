@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Section Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a section of a layout.
   
@@ -31,20 +31,24 @@ Defines a section of a layout.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Type** <br/> | Optional. An enumeration value that specifies the type of section.  <br/> **Divider**. The section cannot contain child [Row](row-element.md) elements.  <br/> **OneRow**. The section can contain one child **Row** element.  <br/> **TwoRow**. The section can contain two child **Row** elements.  <br/> **ThreeRow**. The section can contain three child **Row** elements.  <br/> |
 |**Alignment** <br/> | Optional. An enumeration value that specifies the vertical alignment of controls within the section.  <br/> **Top**. Control icons are aligned to the top edge of their row.  <br/> **Middle**. Control icons are aligned in the middle of their row.  <br/>  The default alignment is **Top**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Row](row-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

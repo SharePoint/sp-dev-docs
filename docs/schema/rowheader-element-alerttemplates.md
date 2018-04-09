@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RowHeader Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies row header information for the alert message.
   
@@ -29,11 +29,15 @@ Specifies row header information for the alert message.
 </RowHeader>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 None
   

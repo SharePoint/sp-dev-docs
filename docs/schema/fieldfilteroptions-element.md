@@ -1,7 +1,7 @@
 ---
 title: "FieldFilterOptions Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # FieldFilterOptions Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the HeaderPattern sections of the [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file to display filtered drop-down menus. 
   
@@ -29,7 +29,11 @@ Used in the HeaderPattern sections of the [FldTypes.xml](http://msdn.microsoft.c
 </FieldFilterOptions>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -38,13 +42,13 @@ Used in the HeaderPattern sections of the [FldTypes.xml](http://msdn.microsoft.c
 |**BooleanTrue** <br/> |Required **Text**. Specifies the string that is displayed if the user wants to select rows based on the trueness of a Boolean field.  <br/> |
 |**NullString** <br/> |Required **Text**. Specifies the text that is displayed to represent an empty item.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -1,7 +1,7 @@
 ---
 title: "Major CAML Files"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # Major CAML Files
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Many critical files in Microsoft SharePoint Foundation use [Collaborative Application Markup Language (CAML) schemas](collaborative-application-markup-language-caml-schemas.md) to define how data is displayed and how HTML is rendered. 
   
@@ -46,7 +46,7 @@ The following table describes the major schema files that use [Collaborative App
    
 ## See also
 
-#### Other resources
+
 
 [How to: Create a Custom Site Definition and Configuration](http://msdn.microsoft.com/library/62b0552d-b7a7-4856-b906-c7bcb3155792%28Office.15%29.aspx)
   

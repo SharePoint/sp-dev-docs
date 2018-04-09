@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # SafeControls Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the safe controls of an assembly that are included in a solution.
   
@@ -35,19 +35,23 @@ Specifies the safe controls of an assembly that are included in a solution.
 </SafeControls>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[SafeControl](safecontrol-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -1,7 +1,7 @@
 ---
 title: "CHOICE Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # CHOICE Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used to define a choice within a **Choice** field. 
   
@@ -36,31 +36,35 @@ Used to define a choice within a **Choice** field.
 </CHOICES>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Value** <br/> |Optional **Text**. Specifies the display text for the choice.  <br/> The value can be a reference to a resource in the format  `$Resources:String`. However, choice values are not supported by the multilingual user interface (MUI). Choice values are initialized in the default language of the web site and do not change when a user switches to an alternate language supported by the site.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[CHOICES](choices-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Remember that CAML is case-sensitive; the **CHOICE** and **CHOICES** elements are in all capital letters. 
   

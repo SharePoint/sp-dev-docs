@@ -1,7 +1,7 @@
 ---
 title: "MetaData Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # MetaData Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in list definitions ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file) to separate list metadata from data. 
   
@@ -29,19 +29,23 @@ Used in list definitions ([Schema.xml](http://msdn.microsoft.com/library/c2f0106
 </MetaData>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ContentTypes](contenttypes-element-list.md), [Default](default-element-listform.md), [DefaultDescription](defaultdescription-element-list.md), [DocumentLibraryTemplate](documentlibrarytemplate-element-list.md), [Fields](fields-element-list.md), [Forms](forms-element-list.md), [Toolbar](toolbar-element-list.md), [Validation](validation-element-list.md), [Views](views-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -81,7 +85,7 @@ The following sample illustrates the skeletal structure of a list with **MetaDat
 
 ## See also
 
-#### Other resources
+
 
 [Data](../../collaborative-application-markup-language-caml-schemas/site-schema/data-element-site.md)
 

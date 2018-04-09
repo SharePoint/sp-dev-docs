@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Mapping Element (Document Icons)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to map particular document types to their respective icons. 
   
@@ -32,8 +32,11 @@ Used in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-b
   OpenControl = "Text"
 </Mapping>
 ```
+## Elements and attributes
 
-## Attributes
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -42,13 +45,13 @@ Used in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-b
 |**EditText** <br/> |Optional **Text**. Specifies text that displays in drop-down menus as the editing item ("Edit in  _Application Name_") for a file that has been uploaded to a list.  <br/> |
 |**OpenControl** <br/> |Optional **Text**. Specifies the name of the ActiveX control used to open the type of document.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

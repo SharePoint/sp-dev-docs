@@ -1,7 +1,7 @@
 ---
 title: "HttpHost Element (View)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # HttpHost Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the URL to the Web application containing the current SharePoint Web site, such as  `http://server`.
   
@@ -31,20 +31,24 @@ Renders the URL to the Web application containing the current SharePoint Web sit
 </HttpHost>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -75,10 +79,10 @@ The following example constructs an opening <A> tag, using the **HttpHost** elem
 
 ## See also
 
-#### Reference
+
 
 [HTMLBase Element](../../collaborative-application-markup-language-caml-schemas/general-schema/htmlbase-element.md)
-#### Other resources
+
 
 [HttpVDir Element (View)](httpvdir-element-view.md)
 

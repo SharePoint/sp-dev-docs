@@ -1,7 +1,7 @@
 ---
 title: "SPIncludeSecurity Simple Type (DeploymentExportSettings)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # SPIncludeSecurity Simple Type (DeploymentExportSettings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **IncludeSecurity** attribute on the [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md). 
   
@@ -31,7 +31,7 @@ Provides values for the **IncludeSecurity** attribute on the [ExportSettings Ele
 
 ```
 
-## Enumeration Values
+## Enumeration values
 
 |**Value**|**Description**|
 |:-----|:-----|
@@ -39,19 +39,19 @@ Provides values for the **IncludeSecurity** attribute on the [ExportSettings Ele
 |**WssOnly** <br/> |Applies only Windows SharePoint Services 3.0 security settings. Includes user memberships and role assignments such as default roles, for example, Web Designer or any custom roles that extend from the default roles. The access control list (ACL) for each object is migrated. No user information defined in the DAP or LDAP servers is included.  <br/> |
 |**All** <br/> |Applies all available Windows SharePoint Services 3.0 security settings. Includes user memberships and role assignments such as default roles, for example, Web Designer or any custom roles that extend from the default roles. The ACL for each object is migrated. In addition, user information defined in the DAP or LDAP servers is included.  <br/> |
    
-## Remarks
+### Remarks
 
 The values specify the user and group information that is included during an export operation.
   
 ## See also
 
-#### Reference
+
 
  **SPIncludeSecurity**
-#### Concepts
+
 
 [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-#### Other resources
+
 
 [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)
 

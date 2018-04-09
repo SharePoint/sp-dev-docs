@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Case Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used inside a [Switch](switch-element-view.md) statement or [FieldSwitch](fieldswitch-element-view.md) statement to perform a comparison. 
   
@@ -30,31 +30,35 @@ Used inside a [Switch](switch-element-view.md) statement or [FieldSwitch](fields
 </Case>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Value** <br/> |Optional **Text**. The value to check for in a comparison.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[FieldSwitch](fieldswitch-element-view.md), [Switch](switch-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Within a [Switch](switch-element-view.md) statement, the **Case** element is often used in conjunction with the [Default](default-element-view.md) element. If the criteria set by the **Case** value proves false, then the default value is implemented. 
   

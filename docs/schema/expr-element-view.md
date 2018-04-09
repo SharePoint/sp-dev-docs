@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Expr Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a CAML expression that is evaluated to determine the course of action for a [Switch](switch-element-view.md) or [FieldSwitch](fieldswitch-element-view.md) statement. The expressions can be any set of CAML elements that render text, or they can be other conditionals. 
   
@@ -29,19 +29,23 @@ Contains a CAML expression that is evaluated to determine the course of action f
 </Expr>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -67,7 +71,7 @@ The following example checks the value of a **UserID** field and returns "User Z
 
 ## See also
 
-#### Other resources
+
 
 [Expr1 Element (View)](expr1-element-view.md)
   

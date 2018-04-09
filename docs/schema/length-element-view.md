@@ -1,7 +1,7 @@
 ---
 title: "Length Element (View)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Length Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the length of the string within the element. The value returned can be divided by, or subtracted from, the value of the **Div** or **Sub** attribute, respectively. 
   
@@ -31,32 +31,36 @@ Returns the length of the string within the element. The value returned can be d
 </Length>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Div** <br/> |Optional **Integer**. Specifies how much to divide the resulting value by.  <br/> |
 |**Sub** <br/> |Optional **Integer**. Specifies how much to subtract from the resulting value.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Column](column-element-view.md), [GetVar](getvar-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The following line of code sets a variable named **TextLength**.
   

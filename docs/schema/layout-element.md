@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Layout Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the layout of controls in a template.
   
@@ -31,21 +31,25 @@ Defines the layout of controls in a template.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Title** <br/> |Required. A string that identifies the element within its parent [GroupTemplate](grouptemplate-element.md) element. The element's ID in the Document Object Model (DOM) is formed on the pattern "ParentId-Title".  <br/> |
 |**LayoutTitle** <br/> |Optional. An alternative identifier for the element. Use this attribute to provide a title when the value of the **Title** attribute is "Popup".  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Section](section-element.md) <br/> |
 |[OverflowSection](overflowsection-element.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

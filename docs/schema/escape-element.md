@@ -1,7 +1,7 @@
 ---
 title: "Escape Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Escape Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 In vCard support, escapes certain characters in strings. The **Escape** element can be used to replace every occurrence of a character in the string. 
   
@@ -27,20 +27,24 @@ In vCard support, escapes certain characters in strings. The **Escape** element 
 </Escape>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**EscapeChar** <br/> |Required **String**. The character used to escape a particular character in the string.  <br/> |
 |**EscapeChars** <br/> |Required **String**. The character in the string that is to be escaped.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

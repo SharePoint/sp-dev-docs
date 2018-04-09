@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Group Element (Ribbon)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a group of controls.
   
@@ -39,7 +39,11 @@ Defines a group of controls.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -54,13 +58,13 @@ Defines a group of controls.
 |**Template** <br/> |Optional. A string that corresponds to the **Id** attribute of a [GroupTemplate](grouptemplate-element.md) element.  <br/> |
 |**Title** <br/> |Optional. The text that is displayed as the group's title on the ribbon and in the tooltip.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Controls](controls-element-group.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -108,7 +112,7 @@ The following XML fragment defines a group that contains two buttons.
 
 ## See also
 
-#### Other resources
+
 
 [Walkthrough: Adding a Group to the Server Ribbon](http://msdn.microsoft.com/library/0696705f-e805-49e7-90c5-0e9e5f894d6a%28Office.15%29.aspx)
 

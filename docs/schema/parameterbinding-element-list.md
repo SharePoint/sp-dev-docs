@@ -1,7 +1,7 @@
 ---
 title: "ParameterBinding Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -19,9 +19,9 @@ description: "Last modified: March 09, 2015"
 
 # ParameterBinding Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a stylesheet parameter binding to make a resource available to the XSL that renders the view. 
   
@@ -29,7 +29,11 @@ Specifies a stylesheet parameter binding to make a resource available to the XSL
 <ParameterBinding  Name = "Text"  Location = "Text" />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -44,13 +48,13 @@ Specifies a stylesheet parameter binding to make a resource available to the XSL
    
 |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -64,7 +68,7 @@ Specifies a stylesheet parameter binding to make a resource available to the XSL
    
 ## See also
 
-#### Other resources
+
 
 [XSLT Parameter Bindings](http://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d%28Office.15%29.aspx)
   

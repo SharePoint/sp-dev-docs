@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # List Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a list instance to include in sites created through a site definition configuration or Web template configuration.
   
@@ -42,7 +42,11 @@ Specifies a list instance to include in sites created through a site definition 
 </List>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -61,13 +65,13 @@ Specifies a list instance to include in sites created through a site definition 
 |**Url** <br/> |Optional **Text**.  <br/> Specifies the path to the root of the directory that contains the ASPX files to which the list definition applies, relative to the root URL of the Web site.  <br/> |
 |**VersioningEnabled** <br/> |Optional **Boolean**. **TRUE** to specify within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that versioning is enabled by default for document libraries that are created through the list definition. Setting this attribute has no effect on existing document libraries. If **TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Data](data-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

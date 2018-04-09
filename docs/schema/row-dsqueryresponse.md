@@ -17,9 +17,9 @@ description: "Last modified: March 09, 2015"
 
 # Row (dsQueryResponse)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a row of data from the list. The fields and metadata properties of the list item that the row contains are represented by attributes of the **Row** element. Some fields, depending on their data type, may be represented by additional attributes that present the field's value in a different format. 
   
@@ -54,7 +54,11 @@ Represents a row of data from the list. The fields and metadata properties of th
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -85,11 +89,11 @@ Represents a row of data from the list. The fields and metadata properties of th
 | _some_user_field_ **.span** <br/> |Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which ".span" is appended. This is a plainer version of the HTML markup for the user. The following is an example. This markup is used to render the field when the [FreeForm](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPViewFlags.FreeForm.aspx) flag of the [ListViewWebPart.ViewFlags](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags.aspx) property is set; otherwise the value of the  _some_user_field_ **.title** attribute is used.  <br/> ```XML<nobr><span><a onclick="GoToLink(this);return false;"  href="/sites/Contoso/_layouts/userdisp.aspx?ID=1">Michiyo Sato</a><img border="0" height="1" width="3"  src="/_layouts/images/blank.gif"/><a href='javascript:;'  onclick='IMNImageOnClick(event);return false;'  class='ms-imnlink'><img name='imnmark' class='ms-imnImg'  title='' border='0'   height='12' width='12'   src='/_layouts/images/blank.gif'   alt='No presence information'   sip='MichiyoS@Contoso.com'   id='imn_2,type=smtp'/></a></span></nobr>```|
 | _some_url_field_ **.desc** <br/> |Optional. If any attribute represents a URL field, there is another attribute that has the same name, to which ".desc" is appended. This provides a description of the URL.  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

@@ -18,7 +18,7 @@ This topic lists the types in the **schema_Microsoft.Office.Server.Search.Admini
   
  **Last modified:** February 19, 2014 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 - [ArrayOfSource complexType](arrayofsource-complextype-sps15xsdsearchset1.md)
     

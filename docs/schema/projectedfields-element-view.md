@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ProjectedFields Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the fields in joined lists that can be included in the view when one or more other lists have been joined in a query.
   
@@ -31,11 +31,15 @@ Specifies the fields in joined lists that can be included in the view when one o
 </ProjectedFields>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -44,13 +48,13 @@ None
 > [!NOTE]
 > There is a maximum number of [Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md) child elements. It is defined as the difference between the maximum number of allowed fields in the list and the number of fields that are already in the list. 
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 > [!NOTE]
 > The [View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md) element cannot have a **ProjectedFields** element unless it has a [Joins](joins-element-view.md) element that has at least one [Join](join-element-view.md) child element. However, a **ProjectedFields** element that forms the value of a **SPQuery.ProjectedFields** property, and therefore, is not a child of a [View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md) element, can be used to support an implicit join without a [Joins](joins-element-view.md) element. We do not recommend working without a [Joins](joins-element-view.md) element. You will maximize your solution's chances of being compatible with future releases of Microsoft SharePoint Foundation by always using an explicit **Join** element. For more information about implicit joins with **ProjectedFields** elements, see [List Joins and Projections](http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b%28Office.15%29.aspx). 
@@ -59,7 +63,7 @@ None
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 If a field from a joined list is not represented in **ProjectedFields**, it cannot be included in the [ViewFields](../../collaborative-application-markup-language-caml-schemas/list-schema/viewfields-element-list.md) element. 
   

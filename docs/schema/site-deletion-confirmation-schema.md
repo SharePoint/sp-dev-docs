@@ -1,7 +1,7 @@
 ---
 title: "Site Deletion Confirmation Schema"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -22,7 +22,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The Site Deletion Confirmation schema specifies the text that is sent in email messages to site owners to confirm site usage or to warn that the site will be automatically deleted. This schema is defined in DEADWEB.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML)).
   

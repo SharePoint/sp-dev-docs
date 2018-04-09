@@ -16,7 +16,7 @@ description: "Last modified: February 19, 2014"
 
  **Last modified:** February 19, 2014 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 The **SPS15XSDSearchSet5** schema specifies XML that represents enumerations like ResultType which are used in other schemas. You can include the schema in your Visual Studio solution, if you are working on custom solutions to create or validate search configurations. 
   

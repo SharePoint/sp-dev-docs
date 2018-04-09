@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Text Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within the [Limit](limit-element-view.md) element to demarcate the text that is truncated when the [More](more-element-view.md) element is also specified. 
   
@@ -29,19 +29,23 @@ Used within the [Limit](limit-element-view.md) element to demarcate the text tha
 </Text>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

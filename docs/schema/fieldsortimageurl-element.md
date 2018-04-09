@@ -1,7 +1,7 @@
 ---
 title: "FieldSortImageURL Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # FieldSortImageURL Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the URL to the image file that is used to indicate how a column is sorted. Rendering of this field is conditional, based on the current sorting URL that is sent in the request to the server.
   
@@ -25,19 +25,23 @@ Returns the URL to the image file that is used to indicate how a column is sorte
 </FieldSortImageURL>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -76,10 +80,10 @@ The following example creates an <IMG> tag for the icon that is used to reflect 
 
 ## See also
 
-#### Reference
+
 
 [FieldFilterImageURL Element](fieldfilterimageurl-element.md)
-#### Other resources
+
 
 [FieldSortParams Element (View)](../../collaborative-application-markup-language-caml-schemas/view-schema/fieldsortparams-element-view.md)
 

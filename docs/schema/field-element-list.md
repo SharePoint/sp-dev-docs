@@ -1,7 +1,7 @@
 ---
 title: "Field Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -19,9 +19,9 @@ description: "Last modified: March 09, 2015"
 
 # Field Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the internal data types used in the list infrastructure of a SharePoint Web site. A field is a column or attribute of information that a user can add to a list.
   
@@ -130,7 +130,11 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
 </Field>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -250,25 +254,25 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
 |**WikiLinking** <br/> |Optional **Boolean**. **TRUE** to specify that wiki links, which appear in the form of double brackets ( **[[…]]**), become translated into HTML links, which use the **\<a\>** tag.  <br/> |
 |**XName** <br/> |Optional **Text**. Used internally in XML forms to identify fields that have been added, deleted, or modified. This attribute is not intended for public use.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[CHOICES](choices-element-list.md), [Customization](customization-element-list.md), [Default](default-element-listfield.md), [DefaultFormula](defaultformula-element-list.md), [DisplayBidiPattern](displaybidipattern-element-list.md), [DisplayPattern](displaypattern-element-list.md), [FieldRefs](fieldrefs-element-list.md), [Formula](formula-element-list.md), [FormulaDisplayNames](formuladisplaynames-element-list.md), [MAPPINGS](mappings-element-list.md), [Validation](validation-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Fields](fields-element-list.md), [ProjectedFields](../../collaborative-application-markup-language-caml-schemas/view-schema/projectedfields-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded when the parent is [Fields](../../collaborative-application-markup-language-caml-schemas/view-schema/fields-element-view.md). When the parent is [ProjectedFields](../../collaborative-application-markup-language-caml-schemas/view-schema/projectedfields-element-view.md) the maximum is difference between the maximum number of allowed fields in the primary list that is being queried and the number of fields already in the list.  <br/> |
    
-## Remarks
+### Remarks
 
 To create a custom field definition for a list definition that is based on a default SharePoint Foundation field type, use the **Field (List - Definition)** element within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file. To create a custom field definition as a pluggable Feature that is based on a default field type and that can be reused across Web sites and lists within a site collection, use the [Field (Field)](../../sharepoint-features-schemas/field-definitions/field-element-field.md) element to define a custom [site column](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx). To create a [custom field type](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](../../other-sharepoint-schemas/field-types-schema/field-element-field-types.md) element. 
   
@@ -327,10 +331,10 @@ The following example uses the **Field** element to specify options for a list n
 
 ## See also
 
-#### Reference
+
 
 [Field Element (Field)](../../sharepoint-features-schemas/field-definitions/field-element-field.md)
-#### Other resources
+
 
 [Column Element (View)](../../collaborative-application-markup-language-caml-schemas/view-schema/column-element-view.md)
   

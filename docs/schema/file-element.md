@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # file element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** Lync 2013 | Lync Server 2013 | SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** Lync 2013 | Lync Server 2013 | SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a file to include within a module in a site definition configuration or Web template configuration. 
   
@@ -37,7 +37,11 @@ Specifies a file to include within a module in a site definition configuration o
 </File>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -51,25 +55,25 @@ Specifies a file to include within a module in a site definition configuration o
 |**Type** <br/> |Optional **Text**. Specifies that the file be cached in memory on the front-end server. Possible values include **Ghostable** and **GhostableInLibrary**. Both values specify that the file will be cached, but **GhostableInLibrary** specifies that the file will be cached as part of a list whose base type is **Document** **Library**.  <br/> For example, when changes are made to a home page through the user interface (UI), only the differences between the original page definition and the new page are stored in the database. The default.aspx is cached in memory, in addition to the schema files. The HTML page that is displayed in the browser is constructed through the combined page definition that results from the original page definition that is cached in memory and from changes that are stored in the database.  <br/> |
 |**Url** <br/> | Required **Text**. Specifies the virtual path for the file. If the **Name** attribute is specified, its value is used for the virtual path. If **Path** is not specified, the value of **Url** is used for the physical path. Cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[AllUsersWebPart](alluserswebpart-element-site.md), [BinarySerializedWebPart](binaryserializedwebpart-element-site.md), [NavBarPage](navbarpage-element-sitemodule.md), [Property](property-element-sitemodule.md), [View](view-element-site.md), [WebPartConnection](webpartconnection-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Module](module-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 See [Module Element (Site)](module-element-site.md) for an example that uses the **File** element. 
   

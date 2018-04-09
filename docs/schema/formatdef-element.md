@@ -1,7 +1,7 @@
 ---
 title: "FormatDef Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # FormatDef Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies column and row formatting used in a Datasheet view.
   
@@ -30,32 +30,36 @@ Specifies column and row formatting used in a Datasheet view.
 </Format>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Type** <br/> |Required **Text**. Specifies the property to which the formatting applies.  <br/> |
 |**Value** <br/> |Required **Text**. Specifies the value to apply to a property for column or row formatting.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Format](http://msdn.microsoft.com/library/55dae1d8-d415-445c-8c6c-5d9a1b140b6%28Office.15%29.aspx)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 See [Format Element](format-element.md) for an example that uses the **FormatDef** element. 
   

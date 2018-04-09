@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ActivationDependency Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the activation dependencies for a solution.
   
@@ -32,7 +32,11 @@ Specifies the activation dependencies for a solution.
   SolutionUrl = string />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -41,13 +45,13 @@ Specifies the activation dependencies for a solution.
 |**SolutionTitle** <br/> |Optional **string**. Specifies the title of the solution dependency.  <br/> |
 |**SolutionUrl** <br/> |Optional **string**. Specifies the URL of the solution dependency.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

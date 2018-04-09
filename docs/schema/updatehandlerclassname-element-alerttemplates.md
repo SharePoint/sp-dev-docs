@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # UpdateHandlerClassName Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a class name for an alert update handler.
   
@@ -29,11 +29,15 @@ Specifies a class name for an alert update handler.
 </UpdateHandlerClassName>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 None
   
@@ -45,7 +49,7 @@ None
    
 ## See also
 
-#### Other resources
+
 
 [NotificationHandlerClassName](notificationhandlerclassname-element-alerttemplates.md)
 

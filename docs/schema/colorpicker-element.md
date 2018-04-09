@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ColorPicker Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a color picker control. 
   
@@ -36,7 +36,11 @@ Defines a color picker control.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -48,13 +52,13 @@ Defines a color picker control.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**TemplateAlias** <br/> |Optional. A string that matches the value of the **TemplateAlias** attribute for a [ControlRef](controlref-element.md) element, an [OverflowArea](overflowarea-element.md) element, or an [OverflowSection](overflowsection-element.md) element in a [GroupTemplate](grouptemplate-element.md) element. The **TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Colors](colors-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

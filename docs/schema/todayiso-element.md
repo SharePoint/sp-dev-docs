@@ -1,7 +1,7 @@
 ---
 title: "TodayISO Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # TodayISO Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the current date and time in International Organization for Standardization (ISO) format: YYYY-MM-DDTHH:MM:SSZ (for example, 2001-01-21T22:54:47Z).
   
@@ -25,31 +25,35 @@ Renders the current date and time in International Organization for Standardizat
 </TodayISO>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Note that the date and time returned are relative to the server's local time zone.
   
@@ -77,7 +81,7 @@ The following example evaluates the default value for a **DateTime** field type 
 
 ## See also
 
-#### Other resources
+
 
 [Month](../../collaborative-application-markup-language-caml-schemas/regional-settings-schema/month-element-regional-settings.md)
   

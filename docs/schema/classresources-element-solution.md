@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ClassResources Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the class resources of an assembly that is included in a solution.
   
@@ -34,19 +34,23 @@ Specifies the class resources of an assembly that is included in a solution.
 </ClassResources>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ClassResource](classresource-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

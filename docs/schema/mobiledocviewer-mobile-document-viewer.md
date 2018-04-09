@@ -16,9 +16,9 @@ description: "Last modified: March 09, 2015"
 
 # MobileDocViewer (Mobile Document Viewer)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies how a request for a document for a specific type is redirected to a page that hosts a viewer that can open documents of that type.
   
@@ -31,11 +31,11 @@ Specifies how a request for a document for a specific type is redirected to a pa
 ```
 
  **Complex**
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -45,13 +45,13 @@ The following sections describe attributes, child elements, and parent elements.
 |**QueryId** <br/> |The query ID key; for example, "doc".  <br/> |
 |**AppendSourceUrl** <br/> |True if a source query ID should be appended to the URL of page that hosts the viewer; otherwise, false. The source query value is the path to the folder that holds the document. In the special case where "?mobile=1" is part of the original URL, the source query value is the same as the source query value of the original URL.  <br/> |
    
-#### Child elements
+### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[BrowserCondition (Mobile Document Viewer)](browsercondition-mobile-document-viewer.md) <br/> |Optional. Identifies a browser capability that means the browser can use an alternative viewer for the specified type of file.  <br/> |
    
-#### Parent elements
+### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
@@ -74,7 +74,7 @@ The following example shows this element in use.
 
 ## See also
 
-#### Other resources
+
 
 [Developing Mobile Document Viewers](http://msdn.microsoft.com/library/acd5386d-7808-4fd8-843f-0a4ac9ddd6b0%28Office.15%29.aspx)
 

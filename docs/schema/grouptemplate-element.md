@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # GroupTemplate Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the scaling behavior for controls in a [Group](group-element-ribbon.md) element. 
   
@@ -31,20 +31,24 @@ Defines the scaling behavior for controls in a [Group](group-element-ribbon.md) 
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Id** <br/> |Required. A string that unambiguously identifies the element, such as "Ribbon.Templates.CustomTemplateExample".  <br/> |
 |**ClassName** <br/> |Optional. The name of a CSS class selector to apply to the group.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Layout](layout-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

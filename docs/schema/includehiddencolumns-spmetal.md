@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # IncludeHiddenColumns (SPMetal)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies that hidden columns are included in code generation.
   
@@ -34,25 +34,25 @@ Specifies that hidden columns are included in code generation.
 <IncludeHiddenColumns />
 ```
 
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 None.
   
-#### Child elements
+### Child elements
 
 None.
   
-#### Parent elements
+### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[ContentType (SPMetal)](contenttype-spmetal.md) <br/> |Specifies that a content type should be included in code generation and modifies which columns in the content type are included in code generation.  <br/> |
    
-## Remarks
+### Remarks
 
 A ContentType element cannot have both an ExcludeOtherColumns element and an IncludeHiddenColumns element.
   
@@ -79,7 +79,7 @@ The following shows the IncludeHiddenColumns element in use. The presence of the
 
 ## See also
 
-#### Other resources
+
 
 [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
   

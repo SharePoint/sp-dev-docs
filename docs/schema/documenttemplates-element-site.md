@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DocumentTemplates Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the collection of document library templates that are available for creating document libraries. This collection is listed in the **Template Type** drop-down list box on the **New Document Library** page. 
   
@@ -29,19 +29,23 @@ Contains the collection of document library templates that are available for cre
 </DocumentTemplates>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[DocumentTemplate](documenttemplate-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

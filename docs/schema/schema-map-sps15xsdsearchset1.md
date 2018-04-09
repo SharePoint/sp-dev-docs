@@ -18,7 +18,7 @@ This topic shows the schema definition for **schema_Microsoft.Office.Server.Sear
   
  **Last modified:** January 13, 2014 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 ```XML
 <xs:schema ser="http://schemas.microsoft.com/2003/10/Serialization/" tns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query" xmlns:xs="http://www.w3.org/2001/XMLSchema">

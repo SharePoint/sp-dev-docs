@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Leq Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Arithmetic operator that means "less than or equal to." The **Leq** element is used in view queries similarly to the [Eq](eq-element-query.md) and [Geq](geq-element-query.md) elements. 
   
@@ -32,19 +32,23 @@ Arithmetic operator that means "less than or equal to." The **Leq** element is u
 </Leq>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md), [Value](value-element-query.md), [XML](xml-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -83,7 +87,7 @@ The following example queries for cases where the Expires field value either equ
 
 ## See also
 
-#### Other resources
+
 
 [Geq Element (Query)](geq-element-query.md)
   

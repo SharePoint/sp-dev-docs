@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Templates Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains ribbon templates.
   
@@ -28,13 +28,13 @@ Contains ribbon templates.
 <Templates />
 ```
 
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[RibbonTemplates](ribbontemplates.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

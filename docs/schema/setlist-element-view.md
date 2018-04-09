@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # SetList Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Designates which list is current.
   
@@ -32,7 +32,11 @@ Designates which list is current.
 </SetList>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,25 +44,25 @@ Designates which list is current.
 |**PreserveContext** <br/> |Optional **Boolean**. If **FALSE**, implementing the **SetList** element reruns the database query that is necessary to fetch the data for a form that displays a single list item. This functionality is useful when a view and a form are on the same page. The default value is **TRUE**.  <br/> |
 |**Scope** <br/> |When set to **Request**, this attribute makes the list globally available to the page.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Method](method-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 When you use the **SetList** element, you need to use the internal name, which has no spaces and is invariant. 
   
@@ -93,7 +97,7 @@ The following example returns the value of the **Title** field from the Lists ta
 
 ## See also
 
-#### Other resources
+
 
 [List Element (List)](../../collaborative-application-markup-language-caml-schemas/list-schema/list-element-list.md)
 

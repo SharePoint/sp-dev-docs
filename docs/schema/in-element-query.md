@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # In Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies whether the value of a list item for the field specified by the [FieldRef](fieldref-element-query.md) element is equal to one of the values specified by the [Values](values-element-query.md) element. 
   
@@ -32,31 +32,35 @@ Specifies whether the value of a list item for the field specified by the [Field
 </In>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md), [Values](values-element-query.md), [XML](xml-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **In** element does not support the use of negation operators such as [Neq](neq-element-query.md) or [NotIncludes](notincludes-element-query.md).
   

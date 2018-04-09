@@ -20,9 +20,9 @@ description: "Last modified: March 09, 2015"
 
 # Configurations Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the configurations of lists and modules that make up a site definition.
   
@@ -34,31 +34,35 @@ Contains the configurations of lists and modules that make up a site definition.
 </Configurations>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Configuration](configuration-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Project](project-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **Configurations** element is used within the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file to specify configurations of site types that belong to a particular site definition. See the [Configuration](configuration-element-site.md) element for more information. 
   

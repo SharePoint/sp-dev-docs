@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Color Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a color.
   
@@ -34,7 +34,11 @@ Defines a color.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -44,11 +48,11 @@ Defines a color.
 |**Color** <br/> |Optional. A color string to be passed with the command event when the color is selected.  <br/> |
 |**DisplayColor** <br/> |Optional. A hexadecimal color code to use for the background color of the table cell, such as "#FF0000" (red).  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

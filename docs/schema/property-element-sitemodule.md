@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Property Element (Site - Module)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a custom property value to implement within the file. 
   
@@ -31,20 +31,24 @@ Specifies a custom property value to implement within the file.
 </Property>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> |Required **Text**. Specifies the name of the property.  <br/> |
 |**Value** <br/> |Required **Text**. Specifies the value to which the property is set.  <br/> |
    
-## Child Elements
+### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

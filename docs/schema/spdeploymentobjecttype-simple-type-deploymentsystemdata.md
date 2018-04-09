@@ -1,7 +1,7 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentSystemData)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # SPDeploymentObjectType Simple Type (DeploymentSystemData)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **Type** attribute on the [SystemObject element](systemobject-element-deploymentsystemdata.md). The value specifies the system object type.
   
@@ -34,7 +34,7 @@ Provides values for the **Type** attribute on the [SystemObject element](systemo
 
 ```
 
-## Enumeration Values
+## Enumeration values
 
 |**Value**|**Description**|
 |:-----|:-----|
@@ -47,10 +47,10 @@ Provides values for the **Type** attribute on the [SystemObject element](systemo
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentSystemData Schema](deploymentsystemdata-schema.md)
-#### Other resources
+
 
 [SystemObject Element (DeploymentSystemData)](systemobject-element-deploymentsystemdata.md)
 

@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 # Name element (BaseInfo complexType) (SPS15XSDSearchSet2)
 
- **Last modified:** March 09, 2015 
+ 
   
 ## Element information
 

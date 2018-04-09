@@ -1,7 +1,7 @@
 ---
 title: "File Element (Upgrade)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # File Element (Upgrade)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Describes the relationship between an existing provisioned file to its equivalent file for upgrading to Microsoft SharePoint Foundation 2010, specifying how setup paths of files in the previous version map (relate) to setup paths in the new version relative to their %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE directories.
   
@@ -30,33 +30,37 @@ Describes the relationship between an existing provisioned file to its equivalen
   ToPath = "String">
 </File>
 ```
+## Elements and attributes
 
-## Attributes
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**FromPath** <br/> |Required **String**. Specifies the setup path of the file to be upgraded relative to the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE directory. Use the token **{LocaleId}** to specify a locale identifier as part of the path. Example:  <br/>  `FromPath="{LocaleId}\STS\Lists\announce\EditForm.aspx"` <br/> |
 |**ToPath** <br/> |Required **String**. Specifies the location in the setup directory of the file to which the file of the old version is mapped relative to the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE directory. Example:  <br/>  `ToPath= "Features\AnnouncementsList\announce\EditForm.aspx"` <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Files](files-element-upgrade.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 File upgrades can be applied to any sort of uncustomized file, usually .aspx pages, but also to entities such as document templates. In the upgrade definition it is best to list all previously installed uncustomized (also known as "ghosted") files, including ones that were provisioned as part of a list, or files located only in the top-level Web site, such as .dwp files for Web Parts.
   

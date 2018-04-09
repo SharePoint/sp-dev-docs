@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Properties Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Excludes fields from the list that is displayed in the alert message.
   
@@ -44,7 +44,7 @@ Excludes fields from the list that is displayed in the alert message.
 
 None
   
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -55,7 +55,7 @@ None
 |[UpdateHandlerAssembly](updatehandlerassembly-element-alerttemplates.md) <br/> |
 |[UpdateHandlerClassName](updatehandlerclassname-element-alerttemplates.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

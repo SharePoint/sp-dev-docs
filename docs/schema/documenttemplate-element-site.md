@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DocumentTemplate Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a document library template for the New Document Library page in a Web site based on Microsoft SharePoint Foundation.
   
@@ -35,7 +35,11 @@ Defines a document library template for the New Document Library page in a Web s
 </DocumentTemplate>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -47,13 +51,13 @@ Defines a document library template for the New Document Library page in a Web s
 |**Type** <br/> |Required **Integer**. A unique ID for the template.  <br/> |
 |**XMLForm** <br/> |Optional **Boolean**. **TRUE** if the document template applies to a form library.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[DocumentTemplateFiles](documenttemplatefiles-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

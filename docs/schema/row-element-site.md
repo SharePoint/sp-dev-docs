@@ -1,7 +1,7 @@
 ---
 title: "Row Element (Site)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Row Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within the [Data](data-element-site.md) element in a list definition to provide a set of default data when a list is instantiated during site provisioning. 
   
@@ -29,19 +29,23 @@ Used within the [Data](data-element-site.md) element in a list definition to pro
 </Row>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Field](field-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

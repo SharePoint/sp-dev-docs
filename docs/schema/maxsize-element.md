@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # MaxSize Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the maximum size for a group of controls.
   
@@ -33,7 +33,11 @@ Specifies the maximum size for a group of controls.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -42,11 +46,11 @@ Specifies the maximum size for a group of controls.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**Size** <br/> |Required. A string that corresponds to the value of the **Title** attribute of a [Layout](layout-element.md) element that defines the size.  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -60,7 +64,7 @@ None
    
 ## See also
 
-#### Other resources
+
 
 [Server Ribbon XML](http://msdn.microsoft.com/library/5eeb45be-4af7-4a38-8ba0-3aafc62aed4b%28Office.15%29.aspx)
 

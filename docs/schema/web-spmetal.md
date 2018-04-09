@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Web (SPMetal)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the name and access level (public or internal) of the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx) ) that SPMetal generates. 
   
@@ -33,11 +33,11 @@ For information about the default behavior of SPMetal when an optional element o
 ```
 
  **Complex**
-## Attributes and elements
+## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
-  
-#### Attributes
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |Internal  <br/> |The class will be **internal** ( **Friend** in Visual Basic).  <br/> |
 |Public  <br/> |DEFAULT: The class will be **public** ( **Public** in Visual Basic).  <br/> |
    
-#### Child elements
+### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
@@ -64,13 +64,13 @@ The following sections describe attributes, child elements, and parent elements.
 |[ExcludeOtherLists](excludeotherlists-spmetal.md) <br/> |Excludes from code generation all lists not explicitly included in a List element.  <br/> |
 |[IncludeHiddenLists](includehiddenlists-spmetal.md) <br/> |Includes hidden lists in code generation.  <br/> |
    
-#### Parent elements
+### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |None ||
    
-## Remarks
+### Remarks
 
 A Web element cannot have both a ContentType element and an ExcludeContentType element that name the same content type. An ExcludeContentType element that names a hidden content type may not be present in the same Web element that has an IncludeHiddenContentTypes element. Finally, a Web element cannot have both an ExcludeOtherContentTypes element and an IncludeHiddenContentTypes element.
   
@@ -97,7 +97,7 @@ The following is an example of a Web element.
 
 ## See also
 
-#### Other resources
+
 
 [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
   

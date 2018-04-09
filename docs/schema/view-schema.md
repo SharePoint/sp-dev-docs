@@ -22,7 +22,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The View schema of [Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) is used to define how the contents of a list view are rendered in Microsoft SharePoint Foundation. 
   
@@ -201,12 +201,12 @@ The following standard rendering elements are used to render HTML within the var
   
 ## See also
 
-#### Concepts
+
 
 [Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)
   
 [List Schema](../../collaborative-application-markup-language-caml-schemas/list-schema/list-schema.md)
-#### Other resources
+
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
   

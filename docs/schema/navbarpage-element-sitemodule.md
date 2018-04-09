@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # NavBarPage Element (Site - Module)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides information about the file specified as the home page in a module so that other pages can be linked to the page.
   
@@ -32,7 +32,11 @@ Provides information about the file specified as the home page in a module so th
 </NavBarPage>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,13 +44,13 @@ Provides information about the file specified as the home page in a module so th
 |**Name** <br/> |Required **Text**. Specifies the text that appears in the navigation area of other pages that link to the page.  <br/> |
 |**Position** <br/> | Optional **Text**. Specifies the position of the UI element represented by the **NavBarPage** element with respect to the top navigational area on a page. Possible values include the following:  <br/> **Start** — add the node at the start (left/top in English) of the top navigational area.  <br/> **End** — add the node to the end (right/bottom in English) of the top navigational area. Default.  <br/> **Number between 1001 and 2000** — add the node after (right/below in English) another **NavBarPage** element whose ID matches the specified value.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -85,7 +89,7 @@ The following example uses the **NavBarPage** element to specify information abo
 
 ## See also
 
-#### Other resources
+
 
 [Module](module-element-site.md)
 

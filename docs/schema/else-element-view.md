@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Else Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The instructions within this element are executed if the expressions contained in the [IfEqual](ifequal-element-view.md) element are not **TRUE**.
   
@@ -29,19 +29,23 @@ The instructions within this element are executed if the expressions contained i
 </Else>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -68,7 +72,7 @@ The following example evaluates two expressions, and if they are equal, it conve
 
 ## See also
 
-#### Other resources
+
 
 [Expr Element (View)](expr-element-view.md)
   

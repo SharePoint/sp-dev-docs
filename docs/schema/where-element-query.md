@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Where Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within the context of a query to specify a filter.
   
@@ -29,31 +29,35 @@ Used within the context of a query to specify a filter.
 </Where>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[And](and-element-query.md), [BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [Geq](geq-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Membership](membership-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [Or](or-element-query.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Expr1](../../collaborative-application-markup-language-caml-schemas/view-schema/expr1-element-view.md), [Expr2](../../collaborative-application-markup-language-caml-schemas/view-schema/expr2-element-view.md), [Query](../../collaborative-application-markup-language-caml-schemas/list-schema/query-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **Where** clause translates into the SQL **SELECT** statement. The format of the **Where** clause is a structured XML tree with a mixture of comparison operators, simple arithmetic operators, field (column) references, constant values, and predefined Collaborative Application Markup Language (CAML) constants. 
   

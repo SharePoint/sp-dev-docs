@@ -22,7 +22,7 @@ description: "Last modified: December 07, 2015"
 
  **Last modified:** December 07, 2015 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The list schema of [Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) is used to define the metadata for creating lists. The list schema includes field definitions ( [Field](field-element-list.md) element), view definitions, and a toolbar definition, in addition to specifying content types, forms, and a default description for lists that are created. The definition for a list is contained in a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that is located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES or is included in sandboxed solutions. 
   
@@ -179,7 +179,7 @@ You can create or modify lists programmatically through the object model (for ex
   
 ## See also
 
-#### Concepts
+
 
 [Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)
   

@@ -1,7 +1,7 @@
 ---
 title: "UserGroupMap Element (DeploymentUserGroupMap)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # UserGroupMap Element (DeploymentUserGroupMap)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents an object ( **DeploymentUserGroupMap**) that holds mappings for the users and deployment groups that are exported to the content migration package.
   
@@ -38,32 +38,36 @@ USAGE
 
  **DeploymentUserGroupMap**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Users Element (DeploymentUserGroupMap)](users-element-deploymentusergroupmap.md) <br/> |
 |[Groups Element (DeploymentUserGroupMap)](groups-element-deploymentusergroupmap.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |None |
    
-## Remarks
+### Remarks
 
 The **UserGroupMap** element is the root element of the DeploymentUserGroupMap **Schema** and therefore has no parent element. 
   
 ## See also
 
-#### Concepts
+
 
 [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
 

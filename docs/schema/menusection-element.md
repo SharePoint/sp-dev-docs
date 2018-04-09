@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # MenuSection Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a section of a menu.
   
@@ -35,7 +35,11 @@ Defines a section of a menu.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -46,7 +50,7 @@ Defines a section of a menu.
 |**MaxHeight** <br/> |Optional. Specifies the maximum height of the section in pixels.  <br/> |
 |**DisplayMode** <br/> | Optional. An enumeration value that determines how controls in this section of the menu are rendered.  <br/> **Menu**. Renders as a text-only menu item.  <br/> **Menu16**. Renders as a menu item with a 16-by-16-pixel icon.  <br/> **Menu32**. Renders as a menu item with a 32-by-32-pixel icon.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -56,7 +60,7 @@ Defines a section of a menu.
 > [!NOTE]
 > A **MenuSection** element must contain either a **Controls** element or a **Gallery** element. 
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

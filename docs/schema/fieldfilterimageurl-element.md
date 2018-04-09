@@ -1,7 +1,7 @@
 ---
 title: "FieldFilterImageURL Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # FieldFilterImageURL Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the URL to the icon that is used to indicate filtering on a list.
   
@@ -25,31 +25,35 @@ Returns the URL to the icon that is used to indicate filtering on a list.
 </FieldFilterImageURL>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 This element is used in the [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file in the HeaderPattern sections. 
   
@@ -67,10 +71,10 @@ The following excerpt uses the **FieldFilterImageURL** element to assemble the <
 
 ## See also
 
-#### Reference
+
 
 [FieldSortImageURL Element](fieldsortimageurl-element.md)
-#### Other resources
+
 
 [FieldSortParams Element (View)](../../collaborative-application-markup-language-caml-schemas/view-schema/fieldsortparams-element-view.md)
 

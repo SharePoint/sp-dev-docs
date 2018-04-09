@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # QueryActionEnableOnClickThroughOptions element (SPS15XSDSearchSet4)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 ## Element information
 

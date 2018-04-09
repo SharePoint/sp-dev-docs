@@ -1,7 +1,7 @@
 ---
 title: "Global Attributes for HTML-Rendering Elements"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -20,7 +20,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The View schema of [Introduction to Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) provides several universal attributes that can be used to describe any CAML rendering element. These attributes can be implemented in standard and specialized elements in the [View Schema](view-schema.md).
   

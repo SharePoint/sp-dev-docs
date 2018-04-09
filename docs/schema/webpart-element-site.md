@@ -1,7 +1,7 @@
 ---
 title: "WebPart Element (Site)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # WebPart Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The introduction is required.
   
@@ -28,7 +28,11 @@ The introduction is required.
 <WebPart  AllUsers = "Text"  Assembly = "Text"  Cache = "Text"  Class = "Text"  DisplayName = "Text"  Flags = "Text"  FrameState = "Integer"  IsIncluded = "TRUE" | "FALSE"  List = "Text"  PerUser = "Text"  SolutionId = "Text"  Src = "Text"  Type = "Integer"  Url = "Text"  Version = "Text"  WebPartIdProperty = "Text"  WPTypeId = "Text"></WebPart>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -50,13 +54,13 @@ The introduction is required.
 |**WebPartIdProperty** <br/> |Optional **Text**.  <br/> |
 |**WPTypeId** <br/> |Optional **Text**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

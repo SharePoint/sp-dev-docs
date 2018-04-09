@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Components Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file of a site definition to provide information about Microsoft SharePoint Foundation components. 
   
@@ -29,31 +29,35 @@ Used in the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c
 </Components>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ExternalSecurityProvider](externalsecurityprovider-element-site.md), [FileDialogPostProcessor](filedialogpostprocessor-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Project](project-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 Both child elements of the **Components** element are optional, and neither element can appear more than once. 
   

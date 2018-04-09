@@ -1,7 +1,7 @@
 ---
 title: "PagedRowset Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # PagedRowset Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders Collaborative Application Markup Language (CAML) within a view, executing if more items are returned in the view than the specified row limit for the view.
   
@@ -31,31 +31,35 @@ Most standard Microsoft SharePoint Foundation 2010 list views ignore this elemen
 </PagedRowset>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 This element provides a section of the view that is rendered if there is more than one page of data. Within a **PagedRowset** element, the following variables can be implemented: 
   
@@ -111,7 +115,7 @@ The following example uses the **PagedRowset** element to display the string "(I
 
 ## See also
 
-#### Other resources
+
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
   

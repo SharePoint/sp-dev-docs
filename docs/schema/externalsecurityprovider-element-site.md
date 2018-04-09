@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ExternalSecurityProvider Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents an interface that returns custom information about the security used in Microsoft SharePoint Foundation for indexing by a search crawler on a portal.
   
@@ -31,32 +31,36 @@ Represents an interface that returns custom information about the security used 
 </ExternalSecurityProvider>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**ID** <br/> |Required **Text**. Specifies the GUID of the component.  <br/> |
 |**Type** <br/> |Optional **Text**. If **Type="View"** is specified, the counter returns a number that increases each time a view is created for the list. This counter can be used, for example, to give unique names to elements on a page depending on the view.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Components](components-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **ExternalSecurityProvider** element corresponds to the **Microsoft.SharePoint.IExternalSecurityWeb** interface. 
   

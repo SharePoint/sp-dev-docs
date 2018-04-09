@@ -1,7 +1,7 @@
 ---
 title: "RowLimit Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RowLimit Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Sets the row limit for the number of items to display in a view.
   
@@ -30,31 +30,35 @@ Sets the row limit for the number of items to display in a view.
 </RowLimit>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Paged** <br/> |Optional **Boolean**. **TRUE** to specify that the list supports displaying more items page by page. If **FALSE** or unspecified, the row limit is absolute and there is no link to see more items.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 When **Paged** is set to **TRUE**, a [PagedRowset](pagedrowset-element-list.md) element must be implemented. Otherwise, the server provides a generic implementation of a paged rowset that is defined in the STDVIEW.XML file. 
   
@@ -72,7 +76,7 @@ The following line sets 100 as the row limit and specifies that a link be provid
 
 ## See also
 
-#### Other resources
+
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Fields Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within a view to render the list for the browser by iterating over the view fields. When used outside a view, the **Fields** element iterates over all the nonhidden fields in the list. 
   
@@ -29,19 +29,23 @@ Used within a view to render the list for the browser by iterating over the view
 </Fields>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**FormAggregation** <br/> |**TRUE** to enable Merge Forms within a form library.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |Numerous |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -53,7 +57,7 @@ Used within a view to render the list for the browser by iterating over the view
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Use of the  `<Fields>` tag is synonymous with specifying  `<ForEach Select="Fields/Field">`.
   

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # SelectionOptions Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies options for a drop-down list.
   
@@ -32,7 +32,11 @@ Specifies options for a drop-down list.
 </SelectionOptions>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,25 +44,25 @@ Specifies options for a drop-down list.
 |**Len** <br/> |Required **Integer**. The **Len** attribute causes the members of the drop-down list to be truncated to the specified number of Unicode characters if they exceed the value of  _Len_. This prevents the drop-down menu from being excessively wide.  <br/> |
 |**MoreText** <br/> |Required **Text**. The **MoreText** attribute specifies what is displayed in order to indicate that the string has been truncated (typically an ellipsis, "...").  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 Conditional rendering is based on the display mode. New items use the default value of the field, while items in Edit mode use the current value of the field to set the value of the HTML **Selected** attribute, with **Selected=True** added for the default or current value of the item. 
   

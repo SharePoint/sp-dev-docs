@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # QAT Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a quick-access toolbar.
   
@@ -42,7 +42,11 @@ Defines a quick-access toolbar.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -60,13 +64,13 @@ Defines a quick-access toolbar.
 |**ImageUpArrowLeft** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageUpArrow** attribute points to an image file that contains the images for many icons. The value of the **ImageUpArrowLeft** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag when the page is created.  <br/> |
 |**ImageUpArrowTop** <br/> |Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageUpArrow** attribute points to an image file that contains the images for many icons. The value of the **ImageUpArrowTop** attribute is used to set the CSS **top** attribute for the inline style of an HTML **img** tag when the page is created.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Controls](controls-element-group.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

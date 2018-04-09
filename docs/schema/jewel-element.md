@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Jewel Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the Microsoft Office button.
   
@@ -91,7 +91,11 @@ Defines the Microsoft Office button.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -157,13 +161,13 @@ Defines the Microsoft Office button.
 |**PopulateDynamically** <br/> |Optional. **TRUE** to create the menu dynamically. The default is **FALSE**.  <br/> |
 |**PopulateOnlyOnce** <br/> |Optional. **TRUE** to populate a dynamic menu only the first time that it is accessed.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Menu](menu-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

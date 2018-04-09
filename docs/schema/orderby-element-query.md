@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # OrderBy Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Determines the sort order for a query. The **OrderBy** element contains a group of [FieldRef](fieldref-element-query.md) elements. 
   
@@ -33,32 +33,36 @@ Determines the sort order for a query. The **OrderBy** element contains a group 
 </OrderBy>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Override** <br/> |Optional **Boolean**.  <br/> |
 |**UseIndexForOrderBy** <br/> |Optional **Boolean**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Expr1](../../collaborative-application-markup-language-caml-schemas/view-schema/expr1-element-view.md), [Expr2](../../collaborative-application-markup-language-caml-schemas/view-schema/expr2-element-view.md), [Query](../../collaborative-application-markup-language-caml-schemas/list-schema/query-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The order in which the fields appear is the order in which the fields are sorted. The value of the **Ascending** attribute in the [FieldRef](../../collaborative-application-markup-language-caml-schemas/list-schema/fieldref-element-list.md) element determines whether to sort in ascending order. 
   

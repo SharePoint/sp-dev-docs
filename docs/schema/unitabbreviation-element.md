@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # UnitAbbreviation Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines an abbreviation for a unit within a spinner control.
   
@@ -31,18 +31,22 @@ Defines an abbreviation for a unit within a spinner control.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**Value** <br/> |Optional. The abbreviation, such as "in" and "cm".  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

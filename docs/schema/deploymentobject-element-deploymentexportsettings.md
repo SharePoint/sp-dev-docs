@@ -1,7 +1,7 @@
 ---
 title: "DeploymentObject Element (DeploymentExportSettings)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # DeploymentObject Element (DeploymentExportSettings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a deployment object or objects ([SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx) ) marked for export to the content migration package. 
   
@@ -45,7 +45,11 @@ USAGE
 
 [SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -57,13 +61,13 @@ USAGE
 |**IncludeDescendants** <br/> |[SPIncludeDescendents Simple Type (DeploymentExportSettings)](spincludedescendents-simple-type-deploymentexportsettings.md) <br/> |Optional. Enumeration providing values to specify which descendents, if any, to include in the content migration package.  <br/> |
 |**ExportChangeToken** <br/> |xs:string  <br/> |Optional. Specifies the change token to use when exporting incremental changes based on changes since the last export.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -71,10 +75,10 @@ USAGE
    
 ## See also
 
-#### Reference
+
 
 [SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)
-#### Concepts
+
 
 [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
 

@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 # RankingModels element (SearchRankingModelConfigurationSettings complexType) (SPS15XSDSearchSet3)
 
- **Last modified:** March 09, 2015 
+ 
   
 ## Element information
 

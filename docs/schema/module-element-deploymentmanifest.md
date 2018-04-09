@@ -39,7 +39,11 @@ USAGE
 
 [SPModule](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPModule.aspx) object. 
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Templates Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element in a [WebTemp\*.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file that specifies the collection of site definitions available for instantiating sites within the deployment. 
   
@@ -36,19 +36,23 @@ Top-level element in a [WebTemp\*.xml](http://msdn.microsoft.com/library/199bbb6
 </Templates>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Template](template-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

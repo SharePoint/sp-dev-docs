@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ShortName Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a short name for the alert template filter. The name can be specified as a string that contains a Resource variable. Resource variables that are listed in AlertTemplates.xml, such as $Resources:Alerts_anything_filter_shortname, can be found in core.resx, which is located in  _local_drive_ `\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\Resources`.
   
@@ -29,11 +29,15 @@ Specifies a short name for the alert template filter. The name can be specified 
 </ShortName>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 ||
 |:-----|

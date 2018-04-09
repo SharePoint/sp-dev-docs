@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # BaseType Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the default schema (for example, the fields) that all lists derived from the base type must contain. Every list in a SharePoint Web site inherits its schema from a base type.
   
@@ -32,7 +32,11 @@ Defines the default schema (for example, the fields) that all lists derived from
 </BaseType>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -40,25 +44,25 @@ Defines the default schema (for example, the fields) that all lists derived from
 |**Title** <br/> |Required **Text**. The name of the base type.  <br/> |
 |**Type** <br/> |Required **Text**. Unique ID for the base type. The following values are possible for built-in base types:  <br/> 0 — Custom List  <br/> 1 — Document Library  <br/> 2 — **Not** used  <br/> 3 — Obsolete. Use 0 for discussion boards.  <br/> 4 — Surveys  <br/> 5 — Issues List  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[MetaData](metadata-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[BaseTypes](basetypes-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The fields defined in a base type may not be deleted from a derived list without breaking the list (for example, a document library will not function without the file name column), although fields may be added to the list.
   

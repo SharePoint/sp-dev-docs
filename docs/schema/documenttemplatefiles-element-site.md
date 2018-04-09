@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # DocumentTemplateFiles Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of files that are part of a multifile document template.
   
@@ -29,31 +29,35 @@ Contains a collection of files that are part of a multifile document template.
 </DocumentTemplateFiles>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[DocumentTemplateFile](documenttemplatefile-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[DocumentTemplate](documenttemplate-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 See [DocumentTemplates](documenttemplates-element-site.md) for an example that shows how to use the **DocumentTemplateFiles** element. 
   

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Joins Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains [Join elements](join-element-view.md) needed for a query. 
   
@@ -28,19 +28,23 @@ Contains [Join elements](join-element-view.md) needed for a query.
 <Joins>  <Join ... >  </Join>    <Join ... >  </Join>  ...</Joins>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Join](join-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

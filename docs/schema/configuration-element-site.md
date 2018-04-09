@@ -21,9 +21,9 @@ description: "Last modified: March 09, 2015"
 
 # Configuration Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the lists and modules used in creating a SharePoint Foundation Web site that is based on the [site definition configuration](http://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3%28Office.15%29.aspx) represented by the **Configuration** element. These elements also represent configurations in [Web Templates](http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30%28Office.15%29.aspx). For simplicity, the phrase 'site definition configuration' is used throughout this topic although the topic applies to Web template configurations as well. Except where specified otherwise, the attribute descriptions below apply to **Configuration** elements in both site definitions and Web templates. 
   
@@ -51,7 +51,11 @@ Specifies the lists and modules used in creating a SharePoint Foundation Web sit
 </Configuration>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -75,25 +79,25 @@ Specifies the lists and modules used in creating a SharePoint Foundation Web sit
 |**Type** <br/> |Optional **Text**. Identifies the site definition, such as STS or MPS.  <br/> |
 |**VisibilityFeatureDependency** <br/> |Optional **Text**. Used in a  `WebTemp*.xml` file to hide the site definition configuration based on the activation state of the specified Feature. When a configuration contains Features that depend upon another Feature, setting this attribute prevents the configuration from appearing as an option in the UI of SharePoint Foundation if the specified Feature is not installed or activated. This attribute is not supported for Features with Web application scope.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ExecuteUrl](executeurl-element-site.md), [Lists](lists-element-site.md), [Modules](modules-element-site.md), [SiteFeatures](sitefeatures-element-site.md), [WebFeatures](webfeatures-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Configurations](configurations-element-site.md), [Template](template-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 A **Configuration** element is used in  `WebTemp*.xml` files (see [WebTemp.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx)) to identify an available site definition configuration within a site definition. It is used in [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) files to define a configuration of lists, modules, and features that are used to create a site from the site definition configuration. In a  `WebTemp*.xml` file, this element is contained within a [Template](template-element-site.md) element that specifies the site definition. In  `Onet.xml`, this element is contained within a [Configurations](configurations-element-site.md) element that specifies the configurations whose lists are defined within the  `Onet.xml`. 
   
@@ -117,7 +121,7 @@ The following example from [WebTemp.xml](http://msdn.microsoft.com/library/199bb
 
 ## See also
 
-#### Other resources
+
 
 [Custom Site Templates](http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30%28Office.15%29.aspx)
   

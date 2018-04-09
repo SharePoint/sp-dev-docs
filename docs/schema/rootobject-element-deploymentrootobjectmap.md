@@ -1,7 +1,7 @@
 ---
 title: "RootObject Element (DeploymentRootObjectMap)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # RootObject Element (DeploymentRootObjectMap)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents an instance of a root object in a root object map exported to the content migration package.
   
@@ -44,7 +44,11 @@ USAGE
 
  **SPRootObject**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -55,13 +59,13 @@ USAGE
 |Url  <br/> |xs:string  <br/> |Optional. URL to the root object.  <br/> |
 |IsDependency  <br/> |xs:boolean  <br/> |Optional. Specifies whether the object is a dependent object. The value is **true** if the object is dependent; otherwise, **false**.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -69,7 +73,7 @@ USAGE
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentRootObjectMap Schema](deploymentrootobjectmap-schema.md)
 

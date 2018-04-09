@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # ApplicationResourceFile Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies an application resource file to include in the solution.
   
@@ -30,19 +30,23 @@ Specifies an application resource file to include in the solution.
 </ApplicationResourceFile>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |Location  <br/> |Required **Text**. Specifies a relative location within the solution that contains the application resource file.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

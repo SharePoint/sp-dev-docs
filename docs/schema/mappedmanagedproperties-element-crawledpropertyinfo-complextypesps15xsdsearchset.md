@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 # MappedManagedProperties element (CrawledPropertyInfo complexType) (SPS15XSDSearchSet2)
 
- **Last modified:** March 09, 2015 
+ 
   
 ## Element information
 

@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Method Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in batch processing to specify commands within the [Batch](batch-element-view.md) element. 
   
@@ -31,32 +31,36 @@ Used in batch processing to specify commands within the [Batch](batch-element-vi
 </Method>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Cmd** <br/> | Optional **Text**. Used in Web services to specify the command to post to the server for updating list items. Possible values include the following:  <br/> **Delete** — Delete the specified item.  <br/> **New** — Create the specified item.  <br/> **Update** — Modify the specified item.  <br/> |
 |**ID** <br/> |Required **Text**. A freeform identification string that is not actually used by the server but that is returned to the client.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md), [SetList](setlist-element-view.md), [SetVar](setvar-element-view.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[Batch](batch-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 1  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 The **Method** element is required for the **Batch** element, which is embedded within HTTP protocol and allows the client application to post more than one command at a time to the server. 
   

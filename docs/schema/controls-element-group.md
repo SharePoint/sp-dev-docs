@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Controls Element (Group)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define controls.
   
@@ -38,7 +38,11 @@ Contains elements that define controls.
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -52,7 +56,7 @@ Contains elements that define controls.
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, then the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
@@ -69,7 +73,7 @@ Contains elements that define controls.
 |[TextBox](textbox-element.md) <br/> |
 |[ToggleButton](togglebutton-element.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

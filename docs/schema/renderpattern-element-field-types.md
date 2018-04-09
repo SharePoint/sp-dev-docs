@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RenderPattern Element (Field Types)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 > [!IMPORTANT]
 > This topic describes markup that was used in a now obsolete method of rendering custom fields types on list views and on the Display, Edit, and New forms. It is provided solely to assist persons who are debugging a custom field type that was originally developed against an earlier version of SharePoint Foundation. For information about the recommended methods, see [Field Rendering Templates](http://msdn.microsoft.com/library/812772eb-03d0-4a78-b212-0ba2875857df%28Office.15%29.aspx) and [Patterns of Custom Field Rendering](http://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f%28Office.15%29.aspx). > Custom fields whose rendering is defined with **RenderPattern** markup still render properly on forms. However, SharePoint Foundation, by default, uses XSLT stylesheets to render fields on list views, even for legacy custom fields whose list view rendering is defined with a **RenderPattern**. To enable the rendering of such a field, a  `<Field Name="CAMLRendering">TRUE</Field>` element must be added to the containing **FieldTypes** element in the field type definition file (  `fldtype*.xml`). 
@@ -32,25 +32,29 @@ description: "Last modified: March 09, 2015"
 </RenderPattern>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> | Required **String**. Represents the name of the render pattern you are defining in this **RenderPattern** element.  <br/>  Valid values are  <br/> **HeaderPattern**. Defines rendering for the column header on list view pages when CAML rendering is turned on (by including  `<Field Name="CAMLRendering">TRUE</Field>` in the containing **FieldTypes** element of the  `fldtypes*.xml` file).  <br/> **DisplayPattern**. Defines rendering of the field for the Display (list item) form. When CAML rendering is turned on (by including  `<Field Name="CAMLRendering">TRUE</Field>` in the containing **FieldTypes** element of the  `fldtypes*.xml` file), then the **DisplayPattern** also defines rendering of the field on list view pages.  <br/> **EditPattern**. Defines rendering of the field for the Edit (list item) form.  <br/> **NewPattern**. Defines rendering of the field for the New (list item) form.  <br/> **PreviewDisplayPattern**. Defines, for use in a WYSIWYG ("what you see is what you get") site designer such as SharePoint Designer, a preview of how the field will look in Display mode using fictitious data.  <br/> **PreviewEditPattern**. Defines, for use in a WYSIWYG site designer such as SharePoint Designer, a preview of how the field will look in Edit mode using fictitious data.  <br/> **PreviewNewPattern**. Defines, for use in a WYSIWYG site designer such as SharePoint Designer, a preview of how the field will look in New mode using fictitious data.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None explicitly defined, but this element is a container of CAML markup from the [View Schema](../../collaborative-application-markup-language-caml-schemas/view-schema/view-schema.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[FieldType Element (Field Types)](fieldtype-element-field-types.md)|
    
-## Remarks
+### Remarks
 
 ### Inheritance of RenderPatterns
 
@@ -104,7 +108,7 @@ The following example defines a display rendering pattern for a custom field typ
 
 ## See also
 
-#### Other resources
+
 
 [Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx)
   

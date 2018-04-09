@@ -1,7 +1,7 @@
 ---
 title: "Form Element (List)"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Form Element (List)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Describes the forms in a base list type.
   
@@ -36,7 +36,11 @@ Describes the forms in a base list type.
 </Form>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -51,13 +55,13 @@ Describes the forms in a base list type.
 |**UseLegacyForm** <br/> |Optional **Boolean**. Used during upgrade to specify that Microsoft SharePoint Foundation use Collaborative Application Markup Language (CAML), as in previous versions of the technology, instead of Web controls, to define the view of an item within a form.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ListFormBody](listformbody-element-list.md), [ListFormButtons](listformbuttons-element-list.md), [ListFormClosing](listformclosing-element-list.md), [ListFormOpening](listformopening-element-list.md), [WebParts](webparts-element-list.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

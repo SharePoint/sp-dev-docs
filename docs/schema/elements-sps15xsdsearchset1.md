@@ -18,7 +18,7 @@ This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Adm
   
  **Last modified:** February 19, 2014 
   
- * **Applies to:** SharePoint Server 2013 * 
+ **Applies to:** SharePoint Server 2013
   
 - [Active element](active-element-source-complextypesps15xsdsearchset1.md)
     

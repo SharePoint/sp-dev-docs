@@ -1,7 +1,7 @@
 ---
 title: "Requirements Element (DeploymentRequirements)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Requirements Element (DeploymentRequirements)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a collection of deployment export requirement objects.
   
@@ -37,31 +37,35 @@ USAGE
 
  **SPImportRequirements**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |None  <br/> |||
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Requirement Element (DeploymentRequirements)](requirement-element-deploymentrequirements.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |None |
    
-## Remarks
+### Remarks
 
 The **Requirements** element is the root element in the DeploymentRequirements Schema, and therefore has no parent element. 
   
 ## See also
 
-#### Concepts
+
 
 [DeploymentRequirements Schema](deploymentrequirements-schema.md)
 

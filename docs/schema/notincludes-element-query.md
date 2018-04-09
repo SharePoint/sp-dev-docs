@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # NotIncludes Element (Query)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 If the specified field is a Lookup field that allows multiple values, specifies that the [Value](values-element-query.md) element is excluded from the list item for the field that is specified by the [FieldRef](fieldref-element-query.md) element. 
   
@@ -32,19 +32,23 @@ If the specified field is a Lookup field that allows multiple values, specifies 
 </NotIncludes>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[FieldRef](fieldref-element-query.md), [Values](values-element-query.md), [XML](xml-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

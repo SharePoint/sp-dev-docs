@@ -1,7 +1,7 @@
 ---
 title: "SPIncludeDescendents Simple Type (DeploymentExportSettings)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # SPIncludeDescendents Simple Type (DeploymentExportSettings)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **IncludeDescendants** attribute on the [DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md). 
   
@@ -31,7 +31,7 @@ Provides values for the **IncludeDescendants** attribute on the [DeploymentObjec
 
 ```
 
-## Enumeration Values
+## Enumeration values
 
 |**Value**|**Description**|
 |:-----|:-----|
@@ -39,19 +39,19 @@ Provides values for the **IncludeDescendants** attribute on the [DeploymentObjec
 |**Content** <br/> |Specifies that only content-type descendants are included in the content migration package.  <br/> |
 |**All** <br/> |Specifies that both content and content-type descendants are included in the content migration package.  <br/> |
    
-## Remarks
+### Remarks
 
 The SPIncludeDescendents simple type values specify whether to include export object descendants (and if so, which ones) in the content migration package.
   
 ## See also
 
-#### Reference
+
 
  **SPIncludeDescendants**
-#### Concepts
+
 
 [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-#### Other resources
+
 
 [DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)
 

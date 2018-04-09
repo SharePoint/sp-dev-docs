@@ -19,9 +19,9 @@ description: "Last modified: March 09, 2015"
 
 # View Element (Site)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within a site definition to specify a list view for a page within a module.
   
@@ -54,7 +54,11 @@ Used within a site definition to specify a list view for a page within a module.
 </View>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -83,25 +87,25 @@ Used within a site definition to specify a list view for a page within a module.
 |**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
    
-## Child Elements
+### Child elements
 
 |**Element**|
 |:-----|
 |[BinarySerializedWebPart](binaryserializedwebpart-element-site.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[File](file-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 See [Module Element (Site)](module-element-site.md) for an example that uses the **View** element. 
   

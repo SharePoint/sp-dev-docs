@@ -1,7 +1,7 @@
 ---
 title: "User Element (DeploymentUserGroupMap)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # User Element (DeploymentUserGroupMap)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents an instance of a deployment user ( **DeploymentUser**) object included in the user group map (UserGroup.xml) file for export to the content migration package.
   
@@ -47,7 +47,11 @@ USAGE
 
  **DeploymentUser**
   
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
@@ -60,13 +64,13 @@ USAGE
 |**SystemId** <br/> |xs:string  <br/> |Optional. Represents the value of the Active Directory SID, which is converted to a base64 data type by using the [ToBase64String](frlrfSystemConvertClassToBase64StringTopic) method. Note that functionality provided by the **SPExport** type does not validate the data that is passed through the **SystemId** attribute.  <br/> |
 |**IsDeleted** <br/> |xs:boolean  <br/> |Optional. Specifies whether the user has been deleted; **true** if the user has been deleted.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
@@ -74,7 +78,7 @@ USAGE
    
 ## See also
 
-#### Concepts
+
 
 [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
 

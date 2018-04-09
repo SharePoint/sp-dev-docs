@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # SiteDefinitionManifests Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the site definitions to include in the solution.
   
@@ -35,19 +35,23 @@ Specifies the site definitions to include in the solution.
 </SiteDefinitionManifests>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

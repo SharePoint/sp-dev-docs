@@ -1,7 +1,7 @@
 ---
 title: "Security Element"
-ms.author: NormSohl
-author: NormSohl
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +14,9 @@ description: "Last modified: March 09, 2015"
 
 # Security Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the Read, Schema, and Write security settings that specify how the security for a list is configured.
   
@@ -28,31 +28,35 @@ Contains the Read, Schema, and Write security settings that specify how the secu
 </Security>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[ReadSecurity](readsecurity-element.md), [SchemaSecurity](schemasecurity-element.md), [WriteSecurity](writesecurity-element.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |[List](../../collaborative-application-markup-language-caml-schemas/list-schema/list-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The following table summarizes possible values that subelements of the **Security** element can contain. 
   

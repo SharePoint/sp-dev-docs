@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # URL Element (View)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the URL of a particular form for a specified list.
   
@@ -31,32 +31,36 @@ Renders the URL of a particular form for a specified list.
 </URL>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Cmd** <br/> |Optional **Text**. Specifies the display mode appropriate for the form. Can be one of the following values for **DisplayMode**: **Display**, **DisplayHead**, **Edit**, **New**, **PreviewDisplay**, **PreviewEdit**, **PreviewNew**. This attribute can also be set to **LookUp**, which is used during field rendering to return the display form in the foreign list for a lookup field.  <br/> |
 |**NoID** <br/> |Optional **Boolean**. **TRUE** to return the URL of the item form without including the item ID as part of the URL.  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |None |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|
 |Numerous |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
 |Minimum: 0  <br/> Maximum: Unbounded  <br/> |
    
-## Remarks
+### Remarks
 
 Because links returned by this element are absolute URLs and already encoded, there is no need to use the **URLEncodeAsURL** attribute to encode the URL (see [Global Attributes for HTML-Rendering Elements](global-attributes-for-html-rendering-elements.md)).
   
@@ -70,7 +74,7 @@ The following examples show the URLs returned by using the **URL** element on an
     
 ## See also
 
-#### Other resources
+
 
 [UrlBaseName Element (View)](urlbasename-element-view.md)
   

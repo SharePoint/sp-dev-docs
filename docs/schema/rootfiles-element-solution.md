@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # RootFiles Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the root paths to which solution files are copied.
   
@@ -33,19 +33,23 @@ Specifies the root paths to which solution files are copied.
 </RootFiles>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[RootFile](rootfile-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

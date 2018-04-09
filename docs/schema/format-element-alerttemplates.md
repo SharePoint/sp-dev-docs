@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # Format Element (AlertTemplates)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Modifies the appearance of an alert message. You can also customize the formatting of the alert message by using embedded styles.
   
@@ -33,18 +33,22 @@ Modifies the appearance of an alert message. You can also customize the formatti
   </Immediate></Format>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
   
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Digest](digest-element-alerttemplates.md) <br/> |
 |[Immediate](immediate-element-alerttemplates.md) <br/> |
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

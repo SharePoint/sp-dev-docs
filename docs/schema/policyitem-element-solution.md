@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # PolicyItem Element (Solution)
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a code access security policy for a solution.
   
@@ -39,19 +39,23 @@ Specifies a code access security policy for a solution.
 </PolicyItem>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
 |None  <br/> |N/A  <br/> |
    
-## Child Elements
+### Child elements
 
 ||
 |:-----|
 |[Assemblies](assemblies-element-solutioncodeaccesssecurity.md), [PermissionSet](permissionset-element-solution.md)|
    
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

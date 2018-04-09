@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Collaborative Application Markup Language (CAML)"
-ms.author: nicg
-author: nicg
+
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -18,7 +18,7 @@ description: "Last modified: July 15, 2011"
 
  **Last modified:** July 15, 2011 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Collaborative Application Markup Language (CAML) is an XML-based language that is used in Microsoft SharePoint Foundation to define the fields and views that are used in sites and lists.
   
@@ -77,7 +77,7 @@ The following programming tasks and overview topics illustrate various ways in w
     
 ## See also
 
-#### Other resources
+
 
 [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx)
   

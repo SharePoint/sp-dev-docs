@@ -18,9 +18,9 @@ description: "Last modified: March 09, 2015"
 
 # InsertTable Element
 
- **Last modified:** March 09, 2015 
+ 
   
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+ **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a menu control for inserting a table that contains a variable number of cells.
   
@@ -38,7 +38,11 @@ Defines a menu control for inserting a table that contains a variable number of 
 />
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -52,11 +56,11 @@ Defines a menu control for inserting a table that contains a variable number of 
 |**MenuSectionTitle** <br/> |Optional. The title of the menu section when table cells are selected. This could be a format string such as "Insert a {0} by {1} Table".  <br/> |
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
    
-## Child Elements
+### Child elements
 
 None
   
-## Parent Elements
+### Parent elements
 
 ||
 |:-----|

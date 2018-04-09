@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 # ArrayOfSearchQueryConfigurationSettings element (SPS15XSDSearchSet3)
 
- **Last modified:** March 09, 2015 
+ 
   
 ## Element information
 

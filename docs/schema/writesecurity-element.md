@@ -1,7 +1,5 @@
 ---
 title: "WriteSecurity Element"
-ms.author: NormSohl
-author: NormSohl
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,34 +12,32 @@ description: "Last modified: March 09, 2015"
 
 # WriteSecurity Element
 
- **Last modified:** March 09, 2015 
-  
- * **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 * 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the Write security setting for a list.
-  
-```
+
+## Definition
+
+```XML
 <WriteSecurity>
 </WriteSecurity>
 ```
 
-## Attributes
+## Elements and attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
+None
    
-## Child Elements
+### Child elements
 
-||
-|:-----|
-|None |
+None
    
-## Parent Elements
+### Parent elements
 
-||
-|:-----|
-|[Security](security-element.md)|
+[Security](security-element.md)
    
 ## Occurrences
 
@@ -49,7 +45,7 @@ Contains the Write security setting for a list.
 |:-----|
 |Minimum: 0  <br/> Maximum: 1  <br/> |
    
-## Remarks
+### Remarks
 
 The **WriteSecurity** element can contain the following values: 
   
@@ -59,13 +55,10 @@ The **WriteSecurity** element can contain the following values:
   
 4 — Write no items (read-only list).
   
-See [Security Element](security-element.md) for an example that shows how to use the **WriteSecurity** element. 
+For an example that shows how to use the **WriteSecurity** element, see [Security Element](security-element.md). 
   
 ## See also
 
-#### Reference
-
-[ReadSecurity Element](readsecurity-element.md)
-  
-[SchemaSecurity Element](schemasecurity-element.md)
+- [ReadSecurity Element](readsecurity-element.md)
+- [SchemaSecurity Element](schemasecurity-element.md)
 
