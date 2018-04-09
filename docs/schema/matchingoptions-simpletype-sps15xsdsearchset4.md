@@ -1,7 +1,7 @@
 ---
 title: "MatchingOptions simpleType (SPS15XSDSearchSet4)"
-ms.author: kpalaraj
-author: kpalaraj
+
+
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,7 +1,7 @@
 ---
 title: "dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
-ms.author: kpalaraj
-author: kpalaraj
+
+
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro

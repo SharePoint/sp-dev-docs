@@ -1,7 +1,5 @@
 ---
 title: "ActivationDependencies Element (Solution)"
-ms.author: rickki
-author: rickki
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,13 +16,13 @@ description: "Last modified: March 09, 2015"
 
 # ActivationDependencies Element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the activation dependencies for a solution.
-  
-```
+
+## Definition
+
+```XML
 <ActivationDependencies />
 ```
 
@@ -34,21 +32,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[ActivationDependency Element (Solution)](activationdependency-element-solution.md)|
+[ActivationDependency Element (Solution)](activationdependency-element-solution.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Solution Element (Solution)](solution-element-solution.md)|
+[Solution Element (Solution)](solution-element-solution.md)
    
 ## Example
 

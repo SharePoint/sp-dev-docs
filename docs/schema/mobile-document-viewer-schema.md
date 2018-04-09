@@ -1,7 +1,7 @@
 ---
 title: "Mobile Document Viewer schema"
-ms.author: rickki
-author: rickki
+ms.
+
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

@@ -1,7 +1,7 @@
 ---
 title: "IndexOffset element (Source complexType) (SPS15XSDSearchSet1)"
-ms.author: kpalaraj
-author: kpalaraj
+
+
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer

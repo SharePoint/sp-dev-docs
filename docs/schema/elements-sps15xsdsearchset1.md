@@ -1,7 +1,7 @@
 ---
 title: "Elements (SPS15XSDSearchSet1)"
-ms.author: kpalaraj
-author: kpalaraj
+
+
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer

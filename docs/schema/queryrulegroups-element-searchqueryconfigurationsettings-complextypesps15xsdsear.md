@@ -1,7 +1,7 @@
 ---
 title: "QueryRuleGroups element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)"
-ms.author: kpalaraj
-author: kpalaraj
+
+
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro

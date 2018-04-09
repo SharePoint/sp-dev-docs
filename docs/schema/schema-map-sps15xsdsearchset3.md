@@ -1,7 +1,7 @@
 ---
 title: "Schema map (SPS15XSDSearchSet3)"
-ms.author: kpalaraj
-author: kpalaraj
+
+
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: ITPro
