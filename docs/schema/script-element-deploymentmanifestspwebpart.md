@@ -49,7 +49,7 @@ None
 
 [WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
-## Remarks
+### Remarks
 
 Web Parts can derive from either of two base classes - an ASP.NET Web Part ([WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)), or a SharePoint Foundation Web Part ([WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)). 
   

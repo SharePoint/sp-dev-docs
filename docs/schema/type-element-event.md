@@ -59,7 +59,7 @@ None
 </tbody>
 </table>
 
-## Remarks
+### Remarks
 
 The **Type** element contains an integer corresponding to one of the <span sdata="cer" target="T:Microsoft.SharePoint.SPEventReceiverType"><span class="nolink">Microsoft.SharePoint.SPEventReceiverType</span></span> values.
 

@@ -74,7 +74,7 @@ None
 </tbody>
 </table>
 
-## Remarks
+### Remarks
 
 The **Rows** element is used within the [Data](data-element-site.md) element of a list instance definition to provide a set of default data when a list is instantiated during site provisioning.
 

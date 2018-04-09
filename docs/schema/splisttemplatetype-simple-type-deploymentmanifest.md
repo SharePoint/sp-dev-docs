@@ -29,7 +29,7 @@ Establishes a base for instantiating list templates.
 
 xs:string
   
-## Remarks
+### Remarks
 
 This type represents the [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx). However, it is not structured in the schema as an enumeration because it is an extensible type and can accommodate list types other than those enumerated in **SPListTemplateType**.
   

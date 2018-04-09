@@ -26,7 +26,7 @@ An XML document that defines Client Web Parts must validate with the schema defi
 
   [ClientWebPart](customactiongroup-element-custom-action.md)
 
-## Remarks
+### Remarks
 
 The [ClientWebPart](customactiongroup-element-custom-action.md) element contains the core definition for a Client Web Part. A Client Web Part is an UI extensibility mechanism that lets apps show information in the host web. You can render the HTML contents of a page in an **IFrame** embedded in a SharePoint page.
 

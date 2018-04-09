@@ -70,7 +70,7 @@ None
 </tbody>
 </table>
 
-## Remarks
+### Remarks
 
 The **DataSource** element must have at least one child **Property** element whose **Name** parameter is set to "Service". If some middle tier service, other than Microsoft's Business Data Connectivity (BDC) service, is being used to bring external data to a SharePoint external list, the documentation of that other service must provide you with the name of the service (the value of the **Value** parameter of the **Property** element) and information on what other **Property** elements may be allowed or required as children of the **DataSource** element. If BDC is being used, use "Business Data Catalog" as the value of the **Value** parameter.
 

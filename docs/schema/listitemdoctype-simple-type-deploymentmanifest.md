@@ -37,7 +37,7 @@ Specifies the document type of a specified list item.
 |**Folder** <br/> |Specifies a list item object of type folder.  <br/> |
 |**Unknown** <br/> |Indicates that a list item object is of unknown type.  <br/> |
    
-## Remarks
+### Remarks
 
 Objects of type **Unknown** are typically Web object types. This enumeration provides values for the **DocType** attribute on the [ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md).
   

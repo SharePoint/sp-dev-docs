@@ -41,7 +41,7 @@ Specifies the document status for a list item in a Windows SharePoint Services 3
 |**Draft** <br/> |Indicates that a specified list item is a draft. The item minor version is being edited and is not ready for approval.  <br/> |
 |**Scheduled** <br/> |Indicates that a specified list item is scheduled. The decision about displaying the item in public views of list or document library is pending and will be processed by a timer service.  <br/> |
    
-## Remarks
+### Remarks
 
 This type is relevant only if the list has the **Moderation** property enabled. 
   

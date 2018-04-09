@@ -79,7 +79,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 [Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md)
    
-## Remarks
+### Remarks
 
 Attachments are available for any list items that are not part of a document library.
   

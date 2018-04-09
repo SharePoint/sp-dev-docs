@@ -87,7 +87,7 @@ None
 </tbody>
 </table>
 
-## Remarks
+### Remarks
 
 See the Remarks section of the topic [DataSource Element (List Instance)](datasource-element-list-instance.md) for information about the use of this element.
 

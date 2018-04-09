@@ -106,7 +106,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 - [Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md)
    
-## Remarks
+### Remarks
 
 This element has a recursive structure, as shown in the following code example.
   

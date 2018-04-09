@@ -57,7 +57,7 @@ None
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
    
-## Remarks
+### Remarks
 
 The base type [Microsoft.SharePoint.SPPictureLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPPictureLibrary.aspx) extends another base type, [Microsoft.SharePoint.SPDocumentLibrary](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPDocumentLibrary.aspx). That type, in turn, extends the [Microsoft.SharePoint.SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) type. 
   

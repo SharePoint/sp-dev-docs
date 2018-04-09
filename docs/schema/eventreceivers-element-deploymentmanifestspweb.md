@@ -53,7 +53,7 @@ None
 
 [Web Element (DeploymentManifest)](web-element-deploymentmanifest.md)
    
-## Remarks
+### Remarks
 
 This element is one of four **EventReceivers** elements; each derives from a different element hierarchy, as follows:
   

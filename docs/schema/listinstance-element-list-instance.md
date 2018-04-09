@@ -152,7 +152,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tbody>
 </table>
 
-## Remarks
+### Remarks
 
 The **ListInstance** Feature element maps to the [List](list-element-list.md) element as used in SharePoint Foundation within the [Configuration](configuration-element-site.md) element in Onet.xml.
 
