@@ -21,6 +21,7 @@ Represents a collection of deployment lookup list (**SPLookupList**) objects exp
 ```XML
 DECLARATION
 <xs:element name="LookupLists" type="SPLookupLists" />
+
 USAGE
 <LookupLists>
     <LookupList />
