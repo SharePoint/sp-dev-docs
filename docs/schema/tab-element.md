@@ -64,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
 |[ContextualGroup](contextualgroup-element.md) <br/> |
 |[Tabs](tabs-element.md) <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

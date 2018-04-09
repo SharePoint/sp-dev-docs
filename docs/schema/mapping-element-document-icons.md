@@ -57,7 +57,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[ByExtension](byextension-element-document-icons.md), [ByProgID](byprogid-element-document-icons.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

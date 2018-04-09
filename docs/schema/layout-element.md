@@ -55,7 +55,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[GroupTemplate](grouptemplate-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

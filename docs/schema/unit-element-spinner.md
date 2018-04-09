@@ -60,7 +60,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Spinner](spinner-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

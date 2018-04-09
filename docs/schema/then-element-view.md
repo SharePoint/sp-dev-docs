@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[IfEqual](ifequal-element-view.md), [IfHasRights](ifhasrights-element-view.md), [IfNew](ifnew-element-view.md), [IfSubString](ifsubstring-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

@@ -99,7 +99,7 @@ None
 |:-----|
 |[Rows](rows-dsqueryresponse.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

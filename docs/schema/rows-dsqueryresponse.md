@@ -50,7 +50,7 @@ None
 |:-----|
 |[dsQueryResponse](dsqueryresponse.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

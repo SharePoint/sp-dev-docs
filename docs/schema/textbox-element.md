@@ -83,7 +83,7 @@ None
 |[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
 |[Controls](controls-element-group.md) <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

@@ -62,7 +62,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[View Element (List)](view-element-list.md), [ViewStyles](../../collaborative-application-markup-language-caml-schemas/general-schema/viewstyles-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

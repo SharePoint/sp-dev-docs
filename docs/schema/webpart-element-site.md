@@ -66,7 +66,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[BinarySerializedWebPart](binaryserializedwebpart-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

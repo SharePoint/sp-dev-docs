@@ -53,7 +53,7 @@ The following sections describe attributes, child elements, and parent elements.
 > [!NOTE]
 > When a **Joins** element is used as part of a dynamic query instead of as part of the definition of a list view; that is, when it is the value of the [SPQuery.Joins](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPQuery.Joins.aspx) property rather than the [Joins](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.Joins.aspx) property, then it does not really have a parent element. 
   
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

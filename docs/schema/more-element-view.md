@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Limit](limit-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

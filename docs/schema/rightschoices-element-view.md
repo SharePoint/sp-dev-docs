@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[IfHasRights](ifhasrights-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

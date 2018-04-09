@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Properties](properties-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[WebPartConnection](webpartconnection-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

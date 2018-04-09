@@ -77,7 +77,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[GlobalLists](../../collaborative-application-markup-language-caml-schemas/general-schema/globallists-element.md), [Lists](lists-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

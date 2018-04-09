@@ -60,7 +60,7 @@ The following sections describe attributes, child elements, and parent elements.
 |[MRUSplitButton](mrusplitbutton-element.md) <br/> |
 |[SplitButton](splitbutton-element.md) <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

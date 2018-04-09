@@ -40,7 +40,7 @@ Contains ribbon templates.
 |:-----|
 |[CommandUI](commandui-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

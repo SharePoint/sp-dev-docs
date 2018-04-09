@@ -62,7 +62,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[WebTemplate](webtemplate-element-upgrade.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

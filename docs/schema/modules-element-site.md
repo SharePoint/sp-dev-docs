@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Configuration](configuration-element-site.md), [Project](project-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

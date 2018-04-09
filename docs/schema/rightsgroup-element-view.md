@@ -84,7 +84,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[RightsChoices](rightschoices-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

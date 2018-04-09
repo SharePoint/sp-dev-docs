@@ -139,7 +139,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[CommandUI](commandui-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

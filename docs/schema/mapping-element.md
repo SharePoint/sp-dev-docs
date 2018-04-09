@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[HtmlTrInfo](htmltrinfo-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

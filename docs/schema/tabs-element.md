@@ -52,7 +52,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Ribbon](ribbon-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

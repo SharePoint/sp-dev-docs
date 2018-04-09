@@ -56,7 +56,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[History](history-element-regional-settings.md), [TimeZone](timezone-element-regional-settings.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

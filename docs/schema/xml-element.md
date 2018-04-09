@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [Geq](geq-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [Value](value-element-query.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

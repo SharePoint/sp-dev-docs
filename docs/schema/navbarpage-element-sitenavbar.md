@@ -52,7 +52,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[NavBar](navbar-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Value](value-element-query.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

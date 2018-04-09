@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[BaseType](basetype-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
