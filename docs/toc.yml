@@ -39,7 +39,9 @@
       - name: Configure custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
       - name: Configure web part icon
-        href: spfx/web-parts/basics/configure-web-part-icon.md                
+        href: spfx/web-parts/basics/configure-web-part-icon.md         
+      - name: Using full-width column
+        href: spfx/web-parts/basics/use-web-parts-full-width-column.md        
       - name: Preconfigure web parts
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
