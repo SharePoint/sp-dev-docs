@@ -128,7 +128,7 @@ When used as the root element in the schema file for a list, the **List** elemen
   BaseType="1">
 ```
 
-In a list schema, the [MetaData](http://msdn.microsoft.com/library/649bbdbd-7de2-4921-bbce-13bdd7509205%28Office.15%29.aspx) element contains the different parts of the list definition. Use an empty **List** element ( **\<List /\>**) to return the title of the current list.
+In a list schema, the [MetaData](http://msdn.microsoft.com/library/649bbdbd-7de2-4921-bbce-13bdd7509205%28Office.15%29.aspx) element contains the different parts of the list definition. Use an empty **List** element (**\<List /\>**) to return the title of the current list.
   
 In a site definition ([Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx)), the **List** element does not contain a [MetaData](http://msdn.microsoft.com/library/649bbdbd-7de2-4921-bbce-13bdd7509205%28Office.15%29.aspx) section, but it can contain a [Data](../../collaborative-application-markup-language-caml-schemas/site-schema/data-element-site.md) section through which to specify default column values for the given list type. 
   

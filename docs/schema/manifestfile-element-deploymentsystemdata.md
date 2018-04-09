@@ -1,7 +1,5 @@
 ---
 title: "ManifestFile Element (DeploymentSystemData)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # ManifestFile Element (DeploymentSystemData)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a system data file (SystemData.xml) exported to the content migration package.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="ManifestFile" 
@@ -38,7 +36,7 @@ USAGE
 
 ## Type
 
- **SPManifestFile**
+**SPManifestFile**
   
 ## Elements and attributes
 
@@ -52,19 +50,13 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ManifestFiles Element (DeploymentSystemData)](manifestfiles-element-deploymentsystemdata.md)|
+[ManifestFiles Element (DeploymentSystemData)](manifestfiles-element-deploymentsystemdata.md)
    
 ## See also
 
-
-
-[DeploymentSystemData Schema](deploymentsystemdata-schema.md)
+- [DeploymentSystemData Schema](deploymentsystemdata-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentSystemData)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SPDeploymentObjectType Simple Type (DeploymentSystemData)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **Type** attribute on the [SystemObject element](systemobject-element-deploymentsystemdata.md). The value specifies the system object type.
-  
-```
+
+## Definition
+
+```XML
 <xs:simpleType name="SPDeploymentObjectType">
         <xs:restriction base="xs:string">
                 <xs:enumeration value="Site" />
@@ -38,19 +36,15 @@ Provides values for the **Type** attribute on the [SystemObject element](systemo
 
 |**Value**|**Description**|
 |:-----|:-----|
-|**Site** <br/> |Specifies that the system object type is a SharePoint Foundation site ( **SPSite**).  <br/> |
-|**Web** <br/> |Specifies that the system object type is a SharePoint Foundation Web site ( **SPWeb**).  <br/> |
-|**Folder** <br/> |Specifies that the system object type is a SharePoint Foundation folder ( **SPFolder**).  <br/> |
-|**List** <br/> |Specifies that the system object type is a SharePoint Foundation list ( **SPList**).  <br/> |
-|**ListItem** <br/> |Specifies that the system object type is a SharePoint Foundation list item ( **SPListItem**).  <br/> |
-|**File** <br/> |Specifies that the system object type is a SharePoint Foundation file ( **SPFile**).  <br/> |
+|**Site** <br/> |Specifies that the system object type is a SharePoint Foundation site (**SPSite**).  <br/> |
+|**Web** <br/> |Specifies that the system object type is a SharePoint Foundation Web site (**SPWeb**).  <br/> |
+|**Folder** <br/> |Specifies that the system object type is a SharePoint Foundation folder (**SPFolder**).  <br/> |
+|**List** <br/> |Specifies that the system object type is a SharePoint Foundation list (**SPList**).  <br/> |
+|**ListItem** <br/> |Specifies that the system object type is a SharePoint Foundation list item (**SPListItem**).  <br/> |
+|**File** <br/> |Specifies that the system object type is a SharePoint Foundation file (**SPFile**).  <br/> |
    
 ## See also
 
-
-
-[DeploymentSystemData Schema](deploymentsystemdata-schema.md)
-
-
-[SystemObject Element (DeploymentSystemData)](systemobject-element-deploymentsystemdata.md)
+- [DeploymentSystemData Schema](deploymentsystemdata-schema.md)
+- [SystemObject Element (DeploymentSystemData)](systemobject-element-deploymentsystemdata.md)
 

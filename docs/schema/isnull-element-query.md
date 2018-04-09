@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Used within a query to return items that are empty ( **Null**).
+Used within a query to return items that are empty (**Null**).
   
 ```
 <IsNull>

@@ -1,7 +1,5 @@
 ---
 title: "SchemaVersion Element (DeploymentSystemData)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SchemaVersion Element (DeploymentSystemData)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents an object ( **SPSchemaVersion**) that lists versioning data for the content migration manifest schema.
-  
-```
+Represents an object (**SPSchemaVersion**) that lists versioning data for the content migration manifest schema.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="SchemaVersion" 
@@ -41,7 +39,7 @@ USAGE
 
 ## Type
 
- **SPSchemaVersion**
+**SPSchemaVersion**
   
 ## Elements and attributes
 
@@ -58,19 +56,13 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SystemData Element (DeploymentSystemData)](systemdata-element-deploymentsystemdata.md)|
+[SystemData Element (DeploymentSystemData)](systemdata-element-deploymentsystemdata.md)
    
 ## See also
 
-
-
-[DeploymentSystemData Schema](deploymentsystemdata-schema.md)
+- [DeploymentSystemData Schema](deploymentsystemdata-schema.md)
 

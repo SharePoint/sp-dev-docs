@@ -1,7 +1,5 @@
 ---
 title: "Groups Element (DeploymentUserGroupMap)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Groups Element (DeploymentUserGroupMap)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a collection of deployment group ( **DeploymentGroup**) object instances.
-  
-```
+Represents a collection of deployment group (**DeploymentGroup**) object instances.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="Groups" 
@@ -38,7 +36,7 @@ USAGE
 
 ## Type
 
- **DeploymentGroups**
+**DeploymentGroups**
   
 ## Elements and attributes
 
@@ -46,25 +44,17 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Group Element (DeploymentUserGroupMap)](group-element-deploymentusergroupmap.md)|
+[Group Element (DeploymentUserGroupMap)](group-element-deploymentusergroupmap.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[UserGroupMap Element (DeploymentUserGroupMap)](usergroupmap-element-deploymentusergroupmap.md)|
+[UserGroupMap Element (DeploymentUserGroupMap)](usergroupmap-element-deploymentusergroupmap.md)
    
 ## See also
 
-
-
-[DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
+- [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
 

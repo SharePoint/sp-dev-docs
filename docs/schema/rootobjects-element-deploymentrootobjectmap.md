@@ -1,7 +1,5 @@
 ---
 title: "RootObjects Element (DeploymentRootObjectMap)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # RootObjects Element (DeploymentRootObjectMap)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a collection of listed root object ( **SPRootObject**) instances.
-  
-```
+Represents a collection of listed root object (**SPRootObject**) instances.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="RootObjects" type="SPRootObjects" />
 USAGE
@@ -40,21 +38,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[RootObject Element (DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)|
+[RootObject Element (DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Remarks
 
@@ -62,7 +54,5 @@ The **RootObjects** element is the root element of the DeploymentRootObjectMap s
   
 ## See also
 
-
-
-[DeploymentRootObjectMap Schema](deploymentrootobjectmap-schema.md)
+- [DeploymentRootObjectMap Schema](deploymentrootobjectmap-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "SystemData Element (DeploymentSystemData)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SystemData Element (DeploymentSystemData)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a system data wrapper object ( **SPSystemData**) that contains the deployment system data object collections. This is the schema root element. 
-  
-```
+Represents a system data wrapper object (**SPSystemData**) that contains the deployment system data object collections. This is the schema root element. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="SystemData" 
@@ -37,7 +35,7 @@ USAGE
 
 ## Type
 
- **SPSystemData**
+**SPSystemData**
   
 ## Elements and attributes
 
@@ -45,23 +43,17 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[SchemaVersion Element (DeploymentSystemData)](schemaversion-element-deploymentsystemdata.md) <br/> |
-|[ManifestFiles Element (DeploymentSystemData)](manifestfiles-element-deploymentsystemdata.md) <br/> |
-|[SystemObjects Element (DeploymentSystemData)](systemobjects-element-deploymentsystemdata.md) <br/> |
+- [SchemaVersion Element (DeploymentSystemData)](schemaversion-element-deploymentsystemdata.md) 
+- [ManifestFiles Element (DeploymentSystemData)](manifestfiles-element-deploymentsystemdata.md)
+- [SystemObjects Element (DeploymentSystemData)](systemobjects-element-deploymentsystemdata.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Remarks
 
@@ -69,7 +61,5 @@ The **SystemData** element is the schema root element and therefore has no paren
   
 ## See also
 
-
-
-[DeploymentSystemData Schema](deploymentsystemdata-schema.md)
+- [DeploymentSystemData Schema](deploymentsystemdata-schema.md)
 

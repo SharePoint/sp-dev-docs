@@ -1,7 +1,5 @@
 ---
 title: "Requirements Element (DeploymentRequirements)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Requirements Element (DeploymentRequirements)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a collection of deployment export requirement objects.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="Requirements" 
@@ -35,7 +33,7 @@ USAGE
 
 ## Type
 
- **SPImportRequirements**
+**SPImportRequirements**
   
 ## Elements and attributes
 
@@ -43,21 +41,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Requirement Element (DeploymentRequirements)](requirement-element-deploymentrequirements.md)|
+[Requirement Element (DeploymentRequirements)](requirement-element-deploymentrequirements.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Remarks
 
@@ -65,7 +57,5 @@ The **Requirements** element is the root element in the DeploymentRequirements S
   
 ## See also
 
-
-
-[DeploymentRequirements Schema](deploymentrequirements-schema.md)
+- [DeploymentRequirements Schema](deploymentrequirements-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "ViewForm Element (DeploymentViewFormsList)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # ViewForm Element (DeploymentViewFormsList)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents the specific Web Part object ( **SPViewForm**) instances that are listed in the ViewFormsList.xml file, which is exported to the content migration package. The ViewFormsList.xml file specifies whether each instance is a view or a form.
-  
-```
+Represents the specific Web Part object (**SPViewForm**) instances that are listed in the ViewFormsList.xml file, which is exported to the content migration package. The ViewFormsList.xml file specifies whether each instance is a view or a form.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element
     name="ViewForm"
@@ -39,7 +37,7 @@ USAGE
 
 ## Type
 
- **SPViewForm**
+**SPViewForm**
   
 ## Elements and attributes
 
@@ -54,19 +52,13 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ViewFormsList Element (DeploymentViewFormsList)](viewformslist-element-deploymentviewformslist.md)|
+[ViewFormsList Element (DeploymentViewFormsList)](viewformslist-element-deploymentviewformslist.md)
    
 ## See also
 
-
-
-[DeploymentViewFormsList Schema](deploymentviewformslist-schema.md)
+- [DeploymentViewFormsList Schema](deploymentviewformslist-schema.md)
 

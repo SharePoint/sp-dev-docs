@@ -1,7 +1,5 @@
 ---
 title: "SystemObjects Element (DeploymentSystemData)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SystemObjects Element (DeploymentSystemData)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a collection of SharePoint Foundation system object ( **SPSystemObject**) instances.
-  
-```
+Represents a collection of SharePoint Foundation system object (**SPSystemObject**) instances.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="SystemObjects" 
@@ -38,7 +36,7 @@ USAGE
 
 ## Type
 
- **SPSystemObject**
+**SPSystemObject**
   
 ## Elements and attributes
 
@@ -46,25 +44,17 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[SystemObject Element (DeploymentSystemData)](systemobject-element-deploymentsystemdata.md)|
+[SystemObject Element (DeploymentSystemData)](systemobject-element-deploymentsystemdata.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[SystemData Element (DeploymentSystemData)](systemdata-element-deploymentsystemdata.md)|
+[SystemData Element (DeploymentSystemData)](systemdata-element-deploymentsystemdata.md)
    
 ## See also
 
-
-
-[DeploymentSystemData Schema](deploymentsystemdata-schema.md)
+- [DeploymentSystemData Schema](deploymentsystemdata-schema.md)
 

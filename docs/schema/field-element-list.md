@@ -178,7 +178,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Height** <br/> |Optional **Integer**. Specifies the height in pixels of the images that are displayed for users in the User Information list.  <br/> |
 |**Hidden** <br/> |Optional **Boolean**. If **TRUE**, the field is completely hidden from the user interface. Setting **ReadOnly** to **TRUE** means the field is not displayed in New or Edit forms but can still be included in views.  <br/> |
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser; characters that could be confused with HTML tags are converted to entities.  <br/> |
-|**ID** <br/> |Optional **Text**. Specifies the GUID of the field contained within braces ( **{}**).  <br/> |
+|**ID** <br/> |Optional **Text**. Specifies the GUID of the field contained within braces (**{}**).  <br/> |
 |**Id** <br/> |Optional **Text**.  <br/> |
 |**IMEMode** <br/> | Optional **Text**. Specifies the Input Method Editor (IME) mode bias to use for the field. The IME allows for conversion of keystrokes between languages when one writing system has more characters than can be encoded for the given keyboard.  <br/>  Possible values include the following:  <br/> **auto** Not used. To specify this IME mode, set the **IMEMode** property value to an empty string ("").  <br/> **active** All characters are typed through the IME, but users can still deactivate the IME.  <br/> **inactive** Characters are typed without the IME, although users can still activate the IME.  <br/> |
 |**Indexed** <br/> |Optional **Boolean**. **TRUE** if the column is indexed for use in view filters.  <br/> |
@@ -251,7 +251,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Viewable** <br/> |Optional **Boolean**. **TRUE** to specify that the field is added to the default view. The default value is **TRUE**.  <br/> |
 |**WebId** <br/> |Optional **Text**.  <br/> |
 |**Width** <br/> |Optional **Integer**. Specifies the width in pixels of the images that are displayed for users in the User Information list.  <br/> |
-|**WikiLinking** <br/> |Optional **Boolean**. **TRUE** to specify that wiki links, which appear in the form of double brackets ( **[[…]]**), become translated into HTML links, which use the **\<a\>** tag.  <br/> |
+|**WikiLinking** <br/> |Optional **Boolean**. **TRUE** to specify that wiki links, which appear in the form of double brackets (**[[…]]**), become translated into HTML links, which use the **\<a\>** tag.  <br/> |
 |**XName** <br/> |Optional **Text**. Used internally in XML forms to identify fields that have been added, deleted, or modified. This attribute is not intended for public use.  <br/> |
    
 ### Child elements
@@ -288,7 +288,7 @@ By default, the field is rendered with the default attributes for that field def
   
 Within a **Fields** element enumeration, the **Name** attribute can be omitted. For some field references, the raw data stored for the field can be accessed by using  `<Column/>`.
   
-Some properties of fields from forms and from certain aspects of the authoring UI can be rendered through the **Property** element, for example,  `<Property Select="Description"/> or <Property Select="Type"/>`. These elements simply retrieve the value of any field attribute or child element ( **Property**) by name.
+Some properties of fields from forms and from certain aspects of the authoring UI can be rendered through the **Property** element, for example,  `<Property Select="Description"/> or <Property Select="Type"/>`. These elements simply retrieve the value of any field attribute or child element (**Property**) by name.
   
 In addition to the preceding types, the following predefined fields are used with the **Field** element. 
   

@@ -48,8 +48,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Value**|**Description**|
 |:-----|:-----|
-|Internal  <br/> |The class will be **internal** ( **Friend** in Visual Basic).  <br/> |
-|Public  <br/> |DEFAULT: The class will be **public** ( **Public** in Visual Basic).  <br/> |
+|Internal  <br/> |The class will be **internal** (**Friend** in Visual Basic).  <br/> |
+|Public  <br/> |DEFAULT: The class will be **public** (**Public** in Visual Basic).  <br/> |
    
 ### Child elements
 

@@ -1,7 +1,5 @@
 ---
 title: "Group Element (DeploymentUserGroupMap)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Group Element (DeploymentUserGroupMap)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents an instance of a deployment group ( **DeploymentGroup**) object for generating the group map (UserGroup.xml) file exported to the content migration package.
-  
-```
+Represents an instance of a deployment group (**DeploymentGroup**) object for generating the group map (UserGroup.xml) file exported to the content migration package.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="Group" 
@@ -48,7 +46,7 @@ USAGE
 
 ## Type
 
- **DeploymentGroup**
+**DeploymentGroup**
   
 ## Elements and attributes
 
@@ -61,7 +59,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Id** <br/> |xs:string  <br/> |Required. Identifier of the deployment group.  <br/> |
 |**Name** <br/> |xs:string  <br/> |Required. Name of the deployment group.  <br/> |
 |**Owner** <br/> |xs:string  <br/> |Required. Owner of the deployment group.  <br/> |
-|Owne **r**IsUser  <br/> |xs:boolean  <br/> |Required. Specifies whether the owner of the deployment group is also a user; **true** if the owner is also a user.  <br/> |
+|**OwnerIsUser**  <br/> |xs:boolean  <br/> |Required. Specifies whether the owner of the deployment group is also a user; **true** if the owner is also a user.  <br/> |
 |**Description** <br/> |xs:string  <br/> |Optional. Description of the deployment group.  <br/> |
 |**OnlyAllowMembersViewMembership** <br/> |xs:boolean  <br/> |Optional. Specifies whether only members of the deployment group are able to view the list of deployment group members; **true** if viewing membership is restricted to group members.  <br/> |
 |**AllowMembersEditMembership** <br/> |xs:boolean  <br/> |Optional. Specifies whether deployment group members can edit the list of group members; **true** if group members can edit the membership list.  <br/> |
@@ -71,19 +69,13 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Member Element (DeploymentUserGroupMap)](member-element-deploymentusergroupmap.md)|
+[Member Element (DeploymentUserGroupMap)](member-element-deploymentusergroupmap.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Groups Element (DeploymentUserGroupMap)](groups-element-deploymentusergroupmap.md)|
+[Groups Element (DeploymentUserGroupMap)](groups-element-deploymentusergroupmap.md)
    
 ## See also
 
-
-
-[DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
+- [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
 

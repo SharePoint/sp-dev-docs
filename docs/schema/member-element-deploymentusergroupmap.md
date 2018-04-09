@@ -1,7 +1,5 @@
 ---
 title: "Member Element (DeploymentUserGroupMap)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # Member Element (DeploymentUserGroupMap)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a member of a deployment group ( **DeploymentGroup**) object.
-  
-```
+Represents a member of a deployment group (**DeploymentGroup**) object.
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element 
     name="Member" 
@@ -38,7 +36,7 @@ USAGE
 
 ## Type
 
- **DeploymentGroupMember**
+**DeploymentGroupMember**
   
 ## Elements and attributes
 
@@ -52,19 +50,13 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Group Element (DeploymentUserGroupMap)](group-element-deploymentusergroupmap.md)|
+[Group Element (DeploymentUserGroupMap)](group-element-deploymentusergroupmap.md)
    
 ## See also
 
-
-
-[DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
+- [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
 

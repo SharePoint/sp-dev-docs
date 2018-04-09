@@ -52,7 +52,7 @@ To simplify the implementation of the various field types, and to allow for a hi
    
 ## Display Modes and Display Patterns
 
-Each of the display modes ( **Display**, **Edit**, and **New**) contains a definition of how to render each of the field data types that are supported by SharePoint Foundation.
+Each of the display modes (**Display**, **Edit**, and **New**) contains a definition of how to render each of the field data types that are supported by SharePoint Foundation.
   
 For each display mode there is a display pattern, or CAML-rendering expression. Some CAML elements are used specifically in display patterns. Others can be used in either context, for page rendering or for field rendering, but are used primarily in rendering fields. The following intrinsic CAML-rendering elements are used to build templates that can include both static HTML and data, as well as metadata of the field being rendered.
   
