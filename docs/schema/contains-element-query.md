@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[And](and-element-query.md), [Expr1](../../collaborative-application-markup-language-caml-schemas/view-schema/expr1-element-view.md), [Expr2](../../collaborative-application-markup-language-caml-schemas/view-schema/expr2-element-view.md), [Or](or-element-query.md), [Where](../../collaborative-application-markup-language-caml-schemas/general-schema/writesecurity-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

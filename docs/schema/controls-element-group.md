@@ -79,7 +79,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Group](group-element-ribbon.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

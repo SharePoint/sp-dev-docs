@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Aggregations](aggregations-element-list.md), [ViewData](viewdata-element-list.md), [ViewFields](viewfields-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

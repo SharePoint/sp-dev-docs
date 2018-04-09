@@ -53,7 +53,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[SiteFeatures](sitefeatures-element-site.md), [WebFeatures](webfeatures-element-site.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

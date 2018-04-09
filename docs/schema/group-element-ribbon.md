@@ -71,7 +71,7 @@ The following sections describe attributes, child elements, and parent elements.
 |[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
 |[Groups](groups-element.md) <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

@@ -63,7 +63,7 @@ The following sections describe attributes, child elements, and parent elements.
 |[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
 |[ContextualTabs](contextualtabs-element.md) <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

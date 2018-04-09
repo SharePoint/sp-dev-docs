@@ -105,7 +105,7 @@ None
 |[Controls](controls-element-group.md) (Group)  <br/> |
 |[Controls](controls-element-menusection.md) (MenuSection)  <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

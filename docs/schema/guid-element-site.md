@@ -43,7 +43,7 @@ None
 
 [GUIDMap](guidmap-element-site.md)
    
-## Occurrences
+### Occurrences
 
 - Minimum: 0  
 - Maximum: Unbounded 

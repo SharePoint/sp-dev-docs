@@ -53,7 +53,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Formats](formats-element.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

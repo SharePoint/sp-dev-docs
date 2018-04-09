@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

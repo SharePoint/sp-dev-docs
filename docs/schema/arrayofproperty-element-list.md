@@ -49,7 +49,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Customization](customization-element-list.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

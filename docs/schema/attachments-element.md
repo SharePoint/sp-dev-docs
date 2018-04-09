@@ -47,7 +47,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[RenderPattern](http://msdn.microsoft.com/library/439b5aec-2c0f-4085-86a0-bfd3a84bb0b2%28Office.15%29.aspx)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

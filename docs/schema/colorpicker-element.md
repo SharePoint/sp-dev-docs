@@ -65,7 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 |[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
 |[Controls](controls-element-menusection.md) (MenuSection)  <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

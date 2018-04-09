@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[DaylightTime](daylighttime-element-regional-settings.md), [History](history-element-regional-settings.md), [StandardTime](standardtime-element-regional-settings.md), [TimeZone](timezone-element-regional-settings.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

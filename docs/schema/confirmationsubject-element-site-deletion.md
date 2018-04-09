@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Confirmation](confirmation-element-site-deletion.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

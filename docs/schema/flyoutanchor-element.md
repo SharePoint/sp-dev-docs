@@ -108,7 +108,7 @@ The following sections describe attributes, child elements, and parent elements.
 |[Controls](controls-element-group.md) (Group)  <br/> |
 |[Controls](controls-element-menusection.md) (MenuSection)  <br/> |
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

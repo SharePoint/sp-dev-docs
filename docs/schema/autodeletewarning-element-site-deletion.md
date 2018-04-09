@@ -55,7 +55,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[Email](email-element-site-deletion.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|

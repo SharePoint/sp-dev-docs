@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|
 |[FieldSwitch](fieldswitch-element-view.md), [Switch](switch-element-view.md)|
    
-## Occurrences
+### Occurrences
 
 ||
 |:-----|
