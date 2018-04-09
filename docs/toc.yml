@@ -3069,24 +3069,24 @@
     - name: DeploymentExportSettings Schema
       href: schema/deploymentexportsettings-schema.md
       items:
-      - name: ExportSettings Element
-        href: schema/exportsettings-element-deploymentexportsettings.md
       - name: DeploymentObject Element
         href: schema/deploymentobject-element-deploymentexportsettings.md
       - name: ExportObjects Element
         href: schema/exportobjects-element-deploymentexportsettings.md
-      - name: SPIncludeSecurity Simple Type
-        href: schema/spincludesecurity-simple-type-deploymentexportsettings.md
-      - name: SPIncludeVersions Simple Type
-        href: schema/spincludeversions-simple-type-deploymentexportsettings.md
-      - name: SPExportMethodType Simple Type
-        href: schema/spexportmethodtype-simple-type-deploymentexportsettings.md
+      - name: ExportSettings Element
+        href: schema/exportsettings-element-deploymentexportsettings.md
       - name: Guid Simple Type
         href: schema/guid-simple-type-deploymentexportsettings.md
       - name: SPDeploymentObjectType Simple Type
         href: schema/spdeploymentobjecttype-simple-type-deploymentexportsettings.md
+      - name: SPExportMethodType Simple Type
+        href: schema/spexportmethodtype-simple-type-deploymentexportsettings.md
       - name: SPIncludeDescendents Simple Type
-        href: schema/spincludedescendents-simple-type-deploymentexportsettings.md
+        href: schema/spincludedescendents-simple-type-deploymentexportsettings.md                                        
+      - name: SPIncludeSecurity Simple Type
+        href: schema/spincludesecurity-simple-type-deploymentexportsettings.md
+      - name: SPIncludeVersions Simple Type
+        href: schema/spincludeversions-simple-type-deploymentexportsettings.md
     - name: DeploymentLookupListMap Schema
       href: schema/deploymentlookuplistmap-schema.md
       items:

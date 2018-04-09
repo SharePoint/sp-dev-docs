@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Specifies the name and access level (public or internal) of the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx) ) that SPMetal generates. 
+Specifies the name and access level (public or internal) of the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx)) that SPMetal generates. 
   
 For information about the default behavior of SPMetal when an optional element or attribute is not present, see [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx). 
   
@@ -41,8 +41,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|Class (optional)  <br/> |Specifies a name for the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx) ) that SPMetal generates.  <br/> |
-|AccessModifier (optional)  <br/> |Specifies whether the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx) ) is public or internal.  <br/> |
+|Class (optional)  <br/> |Specifies a name for the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx)) that SPMetal generates.  <br/> |
+|AccessModifier (optional)  <br/> |Specifies whether the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx)) is public or internal.  <br/> |
    
 #### AccessModifier Attribute Possible Values:
 

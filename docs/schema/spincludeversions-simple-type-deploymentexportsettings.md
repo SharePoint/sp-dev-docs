@@ -1,7 +1,5 @@
 ---
 title: "SPIncludeVersions Simple Type (DeploymentExportSettings)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SPIncludeVersions Simple Type (DeploymentExportSettings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **IncludeVersions** attribute on the [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md). 
-  
-```
+
+## Definition
+
+```XML
 <xs:simpleType name="SPIncludeVersions">
         <xs:restriction base="xs:string">
                 <xs:enumeration value="LastMajor" />
@@ -47,13 +45,6 @@ The value of the SPIncludeVersions simple type specifies which export object ver
   
 ## See also
 
-
-
- **SPIncludeVersions**
-
-
-[DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-
-
-[ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)
+- [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
+- [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "DeploymentObject Element (DeploymentExportSettings)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # DeploymentObject Element (DeploymentExportSettings)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a deployment object or objects ([SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx) ) marked for export to the content migration package. 
-  
-```
+Represents a deployment object or objects ([SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)) marked for export to the content migration package. 
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element
         name="DeploymentObject" type="SPExportObject"
@@ -63,22 +61,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ExportObjects Element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)|
+[ExportObjects Element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
    
 ## See also
 
-
-
-[SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)
-
-
-[DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
+- [SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)
+- [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
 

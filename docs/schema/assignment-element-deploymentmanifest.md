@@ -47,7 +47,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |**RoleID** <br/> |xs:string  <br/> |Identifier of the role associated with a specified assignment.  <br/> |
-|**PrincipalID** <br/> |xs:string  <br/> |An integer value representing either a user ID ([ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.ID.aspx) ), or a group ID ( [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPGroup.ID.aspx) ).  <br/> |
+|**PrincipalID** <br/> |xs:string  <br/> |An integer value representing either a user ID ([ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.ID.aspx)), or a group ID ( [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPGroup.ID.aspx)).  <br/> |
    
 ### Child elements
 

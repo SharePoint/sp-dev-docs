@@ -1,7 +1,5 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentExportSettings)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SPDeploymentObjectType Simple Type (DeploymentExportSettings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **Type** attribute on the [DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md). 
-  
-```
+
+## Definition
+
+```XML
 <xs:simpleType name="SPDeploymentObjectType">
         <xs:restriction base="xs:string">
                 <xs:enumeration value="Site" />
@@ -38,12 +36,12 @@ Provides values for the **Type** attribute on the [DeploymentObject Element (Dep
 
 |**Value**|**Description**|
 |:-----|:-----|
-|**Site** <br/> |Specifies a site ( **SPSite**) object type.  <br/> |
-|**Web** <br/> |Specifies a Web ( **SPWeb**) object type.  <br/> |
-|**Folder** <br/> |Specifies a folder ( **SPFolder**) object type.  <br/> |
-|**List** <br/> |Specifies a list or document library ( **SPList**) object type.  <br/> |
-|**ListItem** <br/> |Specifies a list item ( **SPListItem**) object type.  <br/> |
-|**File** <br/> |Specifies a file ( **SPFile**) object type.  <br/> |
+|**Site** <br/> |Specifies a site (**SPSite**) object type.  <br/> |
+|**Web** <br/> |Specifies a Web (**SPWeb**) object type.  <br/> |
+|**Folder** <br/> |Specifies a folder (**SPFolder**) object type.  <br/> |
+|**List** <br/> |Specifies a list or document library (**SPList**) object type.  <br/> |
+|**ListItem** <br/> |Specifies a list item (**SPListItem**) object type.  <br/> |
+|**File** <br/> |Specifies a file (**SPFile**) object type.  <br/> |
    
 ### Remarks
 
@@ -51,13 +49,6 @@ The **SPDeploymentObjectType** simple type values specify the object type for Wi
   
 ## See also
 
-
-
- **SPDeploymentObjectType**
-
-
-[DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-
-
-[DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)
+- [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
+- [DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)
 

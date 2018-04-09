@@ -1,7 +1,5 @@
 ---
 title: "ExportObjects Element (DeploymentExportSettings)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # ExportObjects Element (DeploymentExportSettings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a collection of deployment export object instances for inclusion in the content migration package.
-  
-```
+
+## Definition
+
+```XML
 DECLARATION
 <xs:element name="ExportObjects" 
    type="SPExportObjectCollection" 
@@ -37,7 +35,7 @@ USAGE
 
 ## Type
 
-[SPExportObjectCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObjectCollection.aspx) object. 
+[SPExportObjectCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObjectCollection.aspx) object
   
 ## Elements and attributes
 
@@ -45,28 +43,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Type**|**Description**|
-|:-----|:-----|:-----|
-|None  <br/> |||
+None
    
 ### Child elements
 
-||
-|:-----|
-|[DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)|
+[DeploymentObject Element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)|
+[ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)
    
 ## See also
 
-
-
-[SPExportObjectCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObjectCollection.aspx)
-
-
-[DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
+- [SPExportObjectCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObjectCollection.aspx)
+- [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
 

@@ -1,7 +1,5 @@
 ---
 title: "SPIncludeSecurity Simple Type (DeploymentExportSettings)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +12,13 @@ description: "Last modified: March 09, 2015"
 
 # SPIncludeSecurity Simple Type (DeploymentExportSettings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides values for the **IncludeSecurity** attribute on the [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md). 
-  
-```
+
+## Definition
+
+```XML
 <xs:simpleType name="SPIncludeSecurity">
     <xs:restriction base="xs:string">
         <xs:enumeration value="None" />
@@ -45,13 +43,6 @@ The values specify the user and group information that is included during an exp
   
 ## See also
 
-
-
- **SPIncludeSecurity**
-
-
-[DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-
-
-[ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)
+- [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
+- [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)
 

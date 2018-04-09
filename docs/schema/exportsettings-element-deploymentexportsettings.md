@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 Deployment export settings root element, which provides an XML wrapper for the deployment export settings container object and provides a means for exporting content to a content migration package.
 
-# Definition
+## Definition
 
 ```XML
 DECLARATION
@@ -62,22 +62,14 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[ExportObjects Element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)|
+[ExportObjects Element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ## See also
 
-
-
-[SPExportSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportSettings.aspx)
-
-
-[DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
+- [SPExportSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportSettings.aspx)
+- [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
 
