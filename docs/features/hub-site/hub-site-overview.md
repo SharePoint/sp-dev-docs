@@ -21,6 +21,7 @@ For more information on creating hub sites, see [Creating a SharePoint hub site 
 - You can create up to 50 hub sites for an organization.
 - If you set up SharePoint Multi-Geo for your organization, only sites within the same geo location can be associated with a hub site.
 - When users associate their sites with a hub site, it doesn't impact the permissions of either the hub site or the associated sites. It's important to make sure all users you allow to associate sites to the hub site have permission to the hub site.
+- The hub site navigation that is shown on all associated sites is based upon the top navigation bar of the hub site. In order to make programmatic changes to the hub site navigation you can use the REST API, CSOM API or PnP PowerShell.
 
 ## Resources
 
