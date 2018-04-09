@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 12/14/2017
+ms.date: 4/10/2017
 ---
 
 # Site design JSON schema
