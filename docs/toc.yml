@@ -3090,6 +3090,8 @@
     - name: DeploymentLookupListMap Schema
       href: schema/deploymentlookuplistmap-schema.md
       items:
+      - name: Guid Simple Type
+        href: schema/guid-simple-type-deploymentlookuplistmap.md      
       - name: LookupItem Element
         href: schema/lookupitem-element-deploymentlookuplistmap.md
       - name: LookupItems Element
@@ -3098,8 +3100,6 @@
         href: schema/lookuplist-element-deploymentlookuplistmap.md
       - name: LookupLists Element
         href: schema/lookuplists-element-deploymentlookuplistmap.md
-      - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentlookuplistmap.md
     - name: DeploymentRequirements Schema
       href: schema/deploymentrequirements-schema.md
       items:
@@ -3112,33 +3112,33 @@
     - name: DeploymentRootObjectMap Schema
       href: schema/deploymentrootobjectmap-schema.md
       items:
+      - name: Guid Simple Type
+        href: schema/guid-simple-type-deploymentrootobjectmap.md      
       - name: RootObject Element
         href: schema/rootobject-element-deploymentrootobjectmap.md
       - name: RootObjects Element
         href: schema/rootobjects-element-deploymentrootobjectmap.md
       - name: SPDeploymentObjectType Simple Type
         href: schema/spdeploymentobjecttype-simple-type-deploymentrootobjectmap.md
-      - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentrootobjectmap.md
     - name: DeploymentSystemData Schema
       href: schema/deploymentsystemdata-schema.md
       items:
+      - name: Guid Simple Type
+        href: schema/guid-simple-type-deploymentsystemdata.md      
       - name: ManifestFile Element
         href: schema/manifestfile-element-deploymentsystemdata.md
       - name: ManifestFiles Element
         href: schema/manifestfiles-element-deploymentsystemdata.md
       - name: SchemaVersion Element
         href: schema/schemaversion-element-deploymentsystemdata.md
+      - name: SPDeploymentObjectType Simple Type
+        href: schema/spdeploymentobjecttype-simple-type-deploymentsystemdata.md
+      - name: SystemData Element
+        href: schema/systemdata-element-deploymentsystemdata.md                
       - name: SystemObject Element
         href: schema/systemobject-element-deploymentsystemdata.md
       - name: SystemObjects Element
         href: schema/systemobjects-element-deploymentsystemdata.md
-      - name: SystemData Element
-        href: schema/systemdata-element-deploymentsystemdata.md
-      - name: SPDeploymentObjectType Simple Type
-        href: schema/spdeploymentobjecttype-simple-type-deploymentsystemdata.md
-      - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentsystemdata.md
     - name: DeploymentUserGroupMap Schema
       href: schema/deploymentusergroupmap-schema.md
       items:
@@ -3146,12 +3146,12 @@
         href: schema/group-element-deploymentusergroupmap.md
       - name: Groups Element
         href: schema/groups-element-deploymentusergroupmap.md
+      - name: Member Element
+        href: schema/member-element-deploymentusergroupmap.md        
       - name: User Element
         href: schema/user-element-deploymentusergroupmap.md
       - name: Users Element
         href: schema/users-element-deploymentusergroupmap.md
-      - name: Member Element
-        href: schema/member-element-deploymentusergroupmap.md
       - name: UserGroupMap Element
         href: schema/usergroupmap-element-deploymentusergroupmap.md
     - name: DeploymentViewFormsList Schema
