@@ -40,13 +40,13 @@ None
 
 - [FieldRef](fieldref-element-query.md)
 - [Value](value-element-query.md)
-- [XML](xml-element.md)|
+- [XML](xml-element.md)
    
 ### Parent elements
 
 - [And](and-element-query.md)
 - [Or](or-element-query.md)
-- [Where](where-element-query.md)|
+- [Where](where-element-query.md)
    
 ### Occurrences
 

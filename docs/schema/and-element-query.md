@@ -68,7 +68,7 @@ None
 
 This element can be nested inside other **And** and [Or](or-element-query.md) elements. The server supports unlimited complicated queries. However, any given **And** element can have only two conjuncts; that is, only two child elements. If you need to conjoin three or more conditions, you must nest the **And** elements, as demonstrated by the third example in the following section. 
   
-## Example
+## Examples
 
 The following example conveys criteria for a query on the ProductID field: (ProductID = J1539 AND ProductID = J9862) AND (ProductID = J0394 OR ProductID = J4589).
   

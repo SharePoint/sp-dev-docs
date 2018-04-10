@@ -29,137 +29,137 @@ For example, you can assign CAML query strings to the **Query** property of seve
   
 [\<And\>](and-element-query.md)
   
-    - [Logical joins] 
+- [Logical joins] 
     
-    - [Comparison operators] 
+- [Comparison operators] 
   
-    - [\<Membership\>](membership-element-query.md)
+- [\<Membership\>](membership-element-query.md)
   
 [\<Or\>](or-element-query.md)
   
-    - [Logical joins] 
+- [Logical joins] 
     
-    - [Comparison operators]
+- [Comparison operators]
   
-    - [\<Membership\>](membership-element-query.md)
+- [\<Membership\>](membership-element-query.md)
   
 ### Comparison operators
   
 [\<BeginsWith\>](beginswith-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<Contains\>](contains-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<DateRangesOverlap\>](daterangesoverlap-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
 [\<Eq\>](eq-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<Geq\>](geq-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<Gt\>](gt-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<In\>](in-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Values\>](values-element-query.md)
+- [\<Values\>](values-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<Includes\>](includes-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<IsNotNull\>](isnotnull-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
 [\<IsNull\>](isnull-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
 [\<Leq\>](leq-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<Lt\>](lt-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<Membership\>](membership-element-query.md)
   
 [\<Neq\>](neq-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 [\<NotIncludes\>](notincludes-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
-[\<Value\>](value-element-query.md)
+- [\<Value\>](value-element-query.md)
   
-[\<XML\>](xml-element.md)
+- [\<XML\>](xml-element.md)
   
 ### Group/order operators
   
 [\<GroupBy\>](groupby-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
 [\<OrderBy\>](orderby-element-query.md)
   
-[\<FieldRef\>](fieldref-element-query.md)
+- [\<FieldRef\>](fieldref-element-query.md)
   
 ### Value child elements
   
@@ -177,6 +177,6 @@ For example, you can assign CAML query strings to the **Query** property of seve
   
 ## See also
 
-- [View Schema](view-schema.md)
-- [List Schema](list-schema.md)
+- [View schema](view-schema.md)
+- [List schema](list-schema.md)
 

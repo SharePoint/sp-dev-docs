@@ -21,7 +21,14 @@ description: In CAML, used in the DateRangesOverlap element to retrieve from a c
 Used in the [DateRangesOverlap](daterangesoverlap-element-query.md) element to retrieve from a calendar all instances of a recurring event that occur within a month. 
   
 ```XML
-<DateRangesOverlap>  <FieldRef Name= "EventDate" />  <FieldRef Name= "EndDate" />  <FieldRef Name= "RecurrenceID" />  <Value Type=\"DateTime\">    <Month />  </Value></DateRangesOverlap>
+<DateRangesOverlap>
+    <FieldRef Name= "EventDate" />
+    <FieldRef Name= "EndDate" />
+    <FieldRef Name= "RecurrenceID" />
+    <Value Type=\"DateTime\">
+    <Month />
+    </Value>
+</DateRangesOverlap>
 ```
 
 ## Elements and attributes

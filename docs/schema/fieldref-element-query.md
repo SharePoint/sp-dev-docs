@@ -91,7 +91,7 @@ None
 - Minimum: 0 
 - Maximum: 1 (unbounded within [OrderBy](orderby-element-query.md))
    
-## Example
+## Examples
 
 The following example queries for cases where the Expires field is either **null** or contains a value greater than or equal to the current date. 
   
