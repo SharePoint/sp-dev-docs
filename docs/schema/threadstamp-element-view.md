@@ -1,6 +1,5 @@
 ---
-title: "ThreadStamp Element (View)"
-
+title: "ThreadStamp element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: dfd500ad-2b86-49c8-b272-74b858a48f4f
-description: "Last modified: March 09, 2015"
+description: Obsolete. Renders, in discussion boards, the current server's local time in a specific format (YYYYMMDDHHMMSS) for sorting purposes.
 ---
 
-# ThreadStamp Element (View)
+# ThreadStamp element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Obsolete. Renders, in discussion boards, the current server's local time in a specific format (YYYYMMDDHHMMSS) for sorting purposes.
   
-```
+```XML
 <ThreadStamp
   StripWS = "TRUE" | "FALSE">
 </ThreadStamp>
@@ -41,21 +38,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 
@@ -63,7 +55,7 @@ Each discussion board has a special threading field that consists of a concatena
   
 ## Example
 
-The following example uses CAML to render a hidden **\<INPUT\>** element in an HTML form. The value of this element is the first 504 characters of the concatenation of the Threading variable (if present; if not, the value is an empty string), followed by the value rendered by the **ThreadStamp** element, which represents the current time. 
+The following example uses CAML to render a hidden `<INPUT>` element in an HTML form. The value of this element is the first 504 characters of the concatenation of the Threading variable (if present; if not, the value is an empty string), followed by the value rendered by the **ThreadStamp** element, which represents the current time. 
   
 ```XML
 <RenderPattern Name="NewPattern" DisplayName="NewPattern">
@@ -79,4 +71,5 @@ The following example uses CAML to render a hidden **\<INPUT\>** element in an H
 </RenderPattern>
 ```
 
+<br/>
 

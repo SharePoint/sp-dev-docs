@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 60db0486-d2c3-4c97-a98e-260f6c9193e2
 ---
 
-# Property Element (FeatureSiteTemplateAssociation)
+# Property element (FeatureSiteTemplateAssociation)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

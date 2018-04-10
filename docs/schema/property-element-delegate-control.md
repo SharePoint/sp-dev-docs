@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 6ae5810a-4bc9-417e-945d-dd39a0eeb350
 ---
 
-# Property Element (Delegate Control)
+# Property element (Delegate Control)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

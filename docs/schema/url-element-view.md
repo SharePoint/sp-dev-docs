@@ -1,7 +1,5 @@
 ---
-title: "URL Element (View)"
-
-
+title: "URL element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c9fb4f3b-c2ce-468d-90f4-5cf7eb325e29
-description: "Last modified: March 09, 2015"
+description: Renders the URL of a particular form for a specified list.
 ---
 
-# URL Element (View)
+# URL element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the URL of a particular form for a specified list.
   
-```
+```XML
 <URL
   Cmd = "Text"
   NoID = "TRUE" | "FALSE">
@@ -44,21 +40,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded 
    
 ### Remarks
 
@@ -66,17 +57,14 @@ Because links returned by this element are absolute URLs and already encoded, th
   
 The following examples show the URLs returned by using the **URL** element on an Announcements list: 
   
--  `<URL Cmd="EDIT"/>` renders  `"http://` _Server_Nam_ _e/_ _Site_Name_ _/_ `Lists/Announcements/EditForm.aspx"`
+-  `<URL Cmd="EDIT"/>` renders  `"http://` *Server_Name* `/` *Site_Name* `/Lists/Announcements/EditForm.aspx"`
     
--  `<URL Cmd="NEW"/>` renders  `"http://` _Server_Name_ `/` _Site_Name_ `/Lists/Announcements/NewForm.aspx"`
+-  `<URL Cmd="NEW"/>` renders  `"http://` *Server_Name* `/` *Site_Name* `/Lists/Announcements/NewForm.aspx"`
     
--  `<URL Cmd="DISPLAY"/>` renders  `"http://` _Server_Name_ `/` _Site_Name_ `/Lists/Announcements/DispForm.aspx"`
+-  `<URL Cmd="DISPLAY"/>` renders  `"http://` *Server_Name* `/` *Site_Name* `/Lists/Announcements/DispForm.aspx"`
     
 ## See also
 
-
-
-[UrlBaseName Element (View)](urlbasename-element-view.md)
-  
-[UrlDirName Element (View)](urldirname-element-view.md)
+- [UrlBaseName element (View)](urlbasename-element-view.md)
+- [UrlDirName element (View)](urldirname-element-view.md)
 

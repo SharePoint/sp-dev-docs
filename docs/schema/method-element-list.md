@@ -1,7 +1,5 @@
 ---
-title: "Method Element (List)"
-
-
+title: "Method element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,11 +14,9 @@ ms.assetid: 6848da4e-e6f2-4663-bef9-0413f74b0251
 description: "Last modified: March 09, 2015"
 ---
 
-# Method Element (List)
+# Method element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 ```VB.net
 <Method  Name = "Text">  <Filter    Name = "Text"     Type = "Text"     Value = "Text" /> </Method>
@@ -38,29 +34,24 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Filter](filter-element-list.md)|
+- [Filter](filter-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md)|
+- [View](view-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
 This is the description for a Code Example.
   
-Microsoft.Win32.RegistryKey#4Optional comments.
+`Microsoft.Win32.RegistryKey#4Optional` comments.
   
-## .NET Framework equivalent
+### .NET Framework equivalent
 
 Optional .NET Framework equivalent section.
   

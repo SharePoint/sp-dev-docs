@@ -1,7 +1,5 @@
 ---
-title: "ScriptQuote Element (View)"
-
-
+title: "ScriptQuote element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: ff197349-375c-4bb7-b1c5-2cd54832e4cb
-description: "Last modified: March 09, 2015"
+description: Encodes a string to fit within JavaScript code. This element is used to render text from the server that must be interpreted as a quoted string.
 ---
 
-# ScriptQuote Element (View)
+# ScriptQuote element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Encodes a string to fit within JavaScript code. This element is used to render text from the server that must be interpreted as a quoted string.
   
-```
+```XML
 <ScriptQuote
   NotAddingQuote = "TRUE" | "FALSE">
 </ScriptQuote>
@@ -42,32 +38,27 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None 
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 
 The **ScriptQuote** element performs the following conversions on its body text: 
   
-- converts " to \"
+- Converts `"` to `\"`  
+- Converts `\` to `\\`   
+- Converts `CR` to `\r\CR` (where CR is character code 13)
     
-- converts \ to \\
-    
-- converts CR to \r\CR (where CR is character code 13)
-    
-For example, the code  `<ScriptQuote>This is a test</ScriptQuote>` returns "This is a test" because **NotAddingQuote** is not set to **TRUE**. The code  `<ScriptQuote NotAddingQuote="TRUE">This is a test</ScriptQuote>`, however, returns This is a test, without quotation marks, because **NotAddingQuote** is set to **TRUE**. Note that in the second case, the string is not surrounded by quotation marks.
+For example, the code `<ScriptQuote>This is a test</ScriptQuote>` returns "This is a test" because **NotAddingQuote** is not set to **TRUE**. 
+
+However, the code `<ScriptQuote NotAddingQuote="TRUE">This is a test</ScriptQuote>` returns This is a test, without quotation marks, because **NotAddingQuote** is set to **TRUE**. Note that in the second case, the string is not surrounded by quotation marks.
   
 

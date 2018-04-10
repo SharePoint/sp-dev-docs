@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 86e5f37b-d8ec-2825-2d4d-03da34be47d0
 ---
 
-# Property element 
+# Property element (propertiesType complexType) 
 
-(propertiesType complexType) (Action4)
+(Action4)
 
 **Applies to**: SharePoint Server 2013
 

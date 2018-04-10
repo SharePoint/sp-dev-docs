@@ -1,7 +1,5 @@
 ---
-title: "WebQueryInfo Element (View)"
-
-
+title: "WebQueryInfo element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b9ab32d8-a847-4a8d-a793-28e36a9824fb
-description: "Last modified: March 09, 2015"
+description: Used inside a TABLE tag surrounding a view to add attributes that assist the agents that are processing Web queries in extracting data from views.
 ---
 
-# WebQueryInfo Element (View)
+# WebQueryInfo element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used inside a **\<TABLE\>** tag surrounding a view to add attributes that assist the agents that are processing Web queries in extracting data from views. 
   
-```
+```XML
 <WebQueryInfo>
 </WebQueryInfo>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1
    
 ### Remarks
 
@@ -90,4 +79,4 @@ In the following example, the **WebQueryInfo** element is used in a [ViewHeader]
 </ViewHeader>
 ```
 
-
+<br/>

@@ -1,7 +1,5 @@
 ---
-title: "SetList Element (View)"
-
-
+title: "SetList element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: cd87a9ba-771d-4980-9a8a-1cca4cfd2ad1
-description: "Last modified: March 09, 2015"
+description: Designates which list is current.
 ---
 
-# SetList Element (View)
+# SetList element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Designates which list is current.
   
-```
+```XML
 <SetList
   Name = "Text"
   PreserveContext = "TRUE" | "FALSE"
@@ -46,33 +42,28 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Method](method-element-view.md)|
+- [Method](method-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
 When you use the **SetList** element, you need to use the internal name, which has no spaces and is invariant. 
   
-The **SetList** element has both a spanning and a nonspanning form, so that  `<SetList>Announcements</SetList>` would be the same as  `<SetList Name="Announcements"/>`.
+The **SetList** element has both a spanning and a nonspanning form, so that `<SetList>Announcements</SetList>` would be the same as `<SetList Name="Announcements"/>`.
   
 The **SetList** element is often a child to a [Method](method-element-view.md) element used in batch processing of requests. 
   
 ## Example
 
-The following example returns the value of the **Title** field from the Lists table in the database if the current list equals the list that is looked up. Initially, the current list is temporarily assigned to a variable,  `Old`, and then reinstated as the current list.
+The following example returns the value of the **Title** field from the Lists table in the database if the current list equals the list that is looked up. Initially, the current list is temporarily assigned to a variable `Old` and then reinstated as the current list.
   
 ```XML
 <SetVar Scope="Request" Name="Old">
@@ -97,7 +88,5 @@ The following example returns the value of the **Title** field from the Lists ta
 
 ## See also
 
-
-
-[List Element (List)](list-element-list.md)
+- [List element (List)](list-element-list.md)
 

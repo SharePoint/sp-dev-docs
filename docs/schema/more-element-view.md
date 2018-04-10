@@ -1,7 +1,5 @@
 ---
-title: "More Element (View)"
-
-
+title: "More element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: fc7582f3-ae99-4fa5-8fe7-9897faed6630
-description: "Last modified: March 09, 2015"
+description: Allows additional properties to be set when a limit is applied to text.
 ---
 
-# More Element (View)
+# More element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Allows additional properties to be set when a limit is applied to text.
   
-```
+```XML
 <More>
 </More>
 ```
@@ -35,26 +31,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[Limit](limit-element-view.md)|
+- [Limit](limit-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 

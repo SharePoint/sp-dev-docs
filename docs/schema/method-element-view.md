@@ -1,7 +1,5 @@
 ---
-title: "Method Element (View)"
-
-
+title: "Method element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: bfcb7a97-c9e7-4b16-9a20-9c023c9ffc2b
-description: "Last modified: March 09, 2015"
+description: Used in batch processing to specify commands within the Batch element. 
 ---
 
-# Method Element (View)
+# Method element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in batch processing to specify commands within the [Batch](batch-element-view.md) element. 
   
-```
+```XML
 <Method ID="Text"
   Cmd = "Text"
   ID = "Text">
@@ -39,26 +35,23 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Cmd** <br/> | Optional **Text**. Used in Web services to specify the command to post to the server for updating list items. Possible values include the following:  <br/> **Delete** — Delete the specified item.  <br/> **New** — Create the specified item.  <br/> **Update** — Modify the specified item.  <br/> |
+|**Cmd** <br/> | Optional **Text**. Used in Web services to specify the command to post to the server for updating list items. Possible values include the following:  <br/> - **Delete**: Delete the specified item.  <br/> - **New**: Create the specified item.  <br/> - **Update**: Modify the specified item.  <br/> |
 |**ID** <br/> |Required **Text**. A freeform identification string that is not actually used by the server but that is returned to the client.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[Field](field-element-list.md), [SetList](setlist-element-view.md), [SetVar](setvar-element-view.md)|
+- [Field](field-element-list.md)
+- [SetList](setlist-element-view.md)
+- [SetVar](setvar-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Batch](batch-element-view.md)|
+- [Batch](batch-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 1
+- Maximum: Unbounded  
    
 ### Remarks
 
@@ -82,4 +75,4 @@ The following example uses the **Method** element to post the remote procedure c
 </Batch>
 ```
 
-
+<br/>

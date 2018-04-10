@@ -1,7 +1,5 @@
 ---
-title: "Property Element (Site - Module)"
-
-
+title: "Property element (Site - Module)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: a2494c14-25f9-4fc3-8408-42948e8cb652
-description: "Last modified: March 09, 2015"
+description: Specifies a custom property value to implement within the file. 
 ---
 
-# Property Element (Site - Module)
+# Property element (Site - Module)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a custom property value to implement within the file. 
   
-```
+```XML
 <Property
   Name = "Text"
   Value = "Text">
@@ -44,20 +40,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-|**Element**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[File](file-element.md)|
+- [File](file-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

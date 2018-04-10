@@ -1,7 +1,5 @@
 ---
-title: "MapToText Element"
-
-
+title: "MapToText element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 68683b19-b395-4342-b047-3d16e236ccda
-description: "Last modified: March 09, 2015"
+description: Returns the name of the application in which a document was created, based on the file name extension and ProgID.
 ---
 
-# MapToText Element
+# MapToText element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the name of the application in which a document was created, based on the file name extension and **ProgID**.
   
-```
+```XML
 <MapToText>
     ProgID|File_Extension
 </MapToText>
@@ -32,27 +28,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 
@@ -76,4 +65,4 @@ The following example uses the **MapToText** element to assign the name of the a
 </SetVar>
 ```
 
-
+<br/>

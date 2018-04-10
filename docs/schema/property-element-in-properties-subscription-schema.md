@@ -8,9 +8,7 @@ localization_priority: Normal
 ms.assetid: ac84b248-6d84-3815-5f66-03e431fa9221
 ---
 
-# Property Element in Properties 
-
-(Subscription Schema)
+# Property Element in Properties (Subscription)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

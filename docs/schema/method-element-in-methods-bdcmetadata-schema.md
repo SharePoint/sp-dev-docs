@@ -10,9 +10,7 @@ localization_priority: Normal
 ms.assetid: 70e87a9e-4959-0a7b-3f37-ddec36473ff4
 ---
 
-# Method Element in Methods 
-
-(BDCMetadata Schema)
+# Method element in Methods (BDCMetadata)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

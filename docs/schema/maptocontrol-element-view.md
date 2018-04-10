@@ -1,7 +1,5 @@
 ---
-title: "MapToControl Element (View)"
-
-
+title: "MapToControl element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: cb544d36-be51-402e-8f67-19a4c6b4e499
-description: "Last modified: March 09, 2015"
+description: Returns the name of the application in which a document can be edited based on the file name extension and ProgID.
 ---
 
-# MapToControl Element (View)
+# MapToControl element (View)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Returns the name of the application in which a document can be edited based on the file name extension and **ProgID**.
   
-Returns the name of the application in which a document can be edited based on the file name extension and ProgID.
-  
-```
+```XML
 <MapToControl>
       ProgID|File_Extension
 </MapToControl>
@@ -36,31 +32,24 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 
-The **MapToControl** element uses the following syntax, separating the ProgID from the file name extension with a pipe symbol ("|"): 
+The **MapToControl** element uses the following syntax, separating the **ProgID** from the file name extension with a pipe symbol ("|"): 
   
 ```XML
 <MapToControl>ProgID|File_Extension </MapToControl>
@@ -80,4 +69,4 @@ The following example uses the **MapToControl** element to assign the name of th
 </SetVar>
 ```
 
-
+<br/>

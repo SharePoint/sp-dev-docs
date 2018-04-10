@@ -1,7 +1,5 @@
 ---
-title: "Text Element (View)"
-
-
+title: "Text element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2ebef148-ff62-4e96-9f95-a1c35224edcd
-description: "Last modified: March 09, 2015"
+description: Used within the Limit element to demarcate the text that is truncated when the More element is also specified.
 ---
 
-# Text Element (View)
+# Text element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within the [Limit](limit-element-view.md) element to demarcate the text that is truncated when the [More](more-element-view.md) element is also specified. 
   
-```
+```XML
 <Text>
 </Text>
 ```
@@ -35,26 +31,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Limit](limit-element-view.md)|
+- [Limit](limit-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 

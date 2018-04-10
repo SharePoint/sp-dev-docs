@@ -1,7 +1,5 @@
 ---
-title: "Then Element (View)"
-
-
+title: "Then element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 85d00ff9-fd0a-4fb1-8bd1-29ea84f0f470
-description: "Last modified: March 09, 2015"
+description: Contains what is rendered in an IfEqual or IfNew element, based on whether the contents of the Expr1 and Expr2 elements are equal or new, respectively.
 ---
 
-# Then Element (View)
+# Then element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains what is rendered in an [IfEqual](ifequal-element-view.md) or [IfNew](ifnew-element-view.md) element, based on whether the contents of the [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md) elements are equal or new, respectively. 
   
-```
+```XML
 <Then>
 </Then>
 ```
@@ -35,27 +31,25 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[IfEqual](ifequal-element-view.md), [IfHasRights](ifhasrights-element-view.md), [IfNew](ifnew-element-view.md), [IfSubString](ifsubstring-element-view.md)|
+- [IfEqual](ifequal-element-view.md)
+- [IfHasRights](ifhasrights-element-view.md)
+- [IfNew](ifnew-element-view.md)
+- [IfSubString](ifsubstring-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 ## Example
 
@@ -72,11 +66,7 @@ The following example uses the **IfEqual** element to render either the [Then](t
 
 ## See also
 
-
-
-[Else Element (View)](else-element-view.md)
-  
-[Expr1 Element (View)](expr1-element-view.md)
-  
-[Expr2 Element (View)](expr2-element-view.md)
+- [Else element (View)](else-element-view.md) 
+- [Expr1 element (View)](expr1-element-view.md) 
+- [Expr2 element (View)](expr2-element-view.md)
 

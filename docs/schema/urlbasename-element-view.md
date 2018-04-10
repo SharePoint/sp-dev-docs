@@ -1,7 +1,5 @@
 ---
-title: "UrlBaseName Element (View)"
-
-
+title: "UrlBaseName element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,28 +11,26 @@ api_name:
 api_type:
 - schema
 ms.assetid: 979ebe53-c76e-4f9e-96d4-2132cac502f8
-description: "Last modified: March 09, 2015"
+description: Renders the base name of a particular URL.
 ---
 
-# UrlBaseName Element (View)
+# UrlBaseName element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the base name of a particular URL.
   
-```
+```XML
 <UrlBaseName
   HTMLEncode = "TRUE" | "FALSE">
 </UrlBaseName>
 ```
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
-
 
 |**Attribute**|**Description**|
 |:-----|:-----|
@@ -42,21 +38,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Field](field-element-view.md), [LookupColumn](lookupcolumn-element-view.md)|
+- [Field](field-element-view.md)
+- [LookupColumn](lookupcolumn-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ### Remarks
 
@@ -93,9 +85,6 @@ If the image file has a .jpg extension and is contained in a picture library on 
   
 ## See also
 
-
-
-[URL](url-element-view.md)
-  
-[UrlDirName](urldirname-element-view.md)
+- [URL element (View)](url-element-view.md)
+- [UrlDirName element (View)](urldirname-element-view.md)
 

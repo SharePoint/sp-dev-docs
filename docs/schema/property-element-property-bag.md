@@ -10,7 +10,7 @@ api_name:
 ms.assetid: 5f636013-7678-4aab-b006-25b8347676e0
 ---
 
-# Property Element (Property Bag)
+# Property element (Property Bag)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

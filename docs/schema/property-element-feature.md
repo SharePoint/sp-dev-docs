@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 6656ccd6-a806-4643-81d5-c02524ee16ab
 ---
 
-# Property Element (Feature)
+# Property element (Feature)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 7aa5ec15-223f-4cf2-868f-2b10f27ade65
 ---
 
-# Property Element (Module)
+# Property element (Module)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

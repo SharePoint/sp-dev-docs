@@ -8,9 +8,7 @@ localization_priority: Normal
 ms.assetid: 642aaff0-f011-7d6f-b677-538eb95eef89
 ---
 
-# Property Element in Properties 
-
-(BDCMetadataResource Schema)
+# Property element in Properties (BDCMetadataResource)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

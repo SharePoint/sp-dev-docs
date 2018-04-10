@@ -10,7 +10,7 @@ ms.assetid: bb088270-da19-42a2-85ef-7555a57e8d69
 description: "Last modified: March 09, 2015"
 ---
 
-# Property Element (DeploymentManifest)
+# Property element (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   

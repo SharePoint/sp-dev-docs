@@ -1,7 +1,5 @@
 ---
-title: "UrlDirName Element (View)"
-
-
+title: "UrlDirName element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 8f02b269-f9af-4d6d-acb8-2756b2ec34c3
-description: "Last modified: March 09, 2015"
+description: Specifies the site-relative URL for the directory that contains a document.
 ---
 
-# UrlDirName Element (View)
+# UrlDirName element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the site-relative URL for the directory that contains a document.
   
-```
+```XML
 <UrlDirName>
 </UrlDirName>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ## Example
 
@@ -86,9 +75,6 @@ If the image file has a .jpg extension and is contained in a picture library on 
   
 ## See also
 
-
-
-[URL](url-element-view.md)
-  
-[UrlBaseName](urlbasename-element-view.md)
+- [URL element (View)](url-element-view.md)
+- [UrlBaseName element (View)](urlbasename-element-view.md)
 
