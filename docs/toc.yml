@@ -1962,297 +1962,297 @@
   - name: Business connectivity services (BCS) schemas
     href: schema/business-connectivity-services-bcs-schemas.md
     items:
-    - name: SolutionManifestDefinitions Schema
+    - name: SolutionManifestDefinitions schema
       href: schema/solutionmanifestdefinitions-schema.md
       items:
-      - name: ContextDefinition Element
+      - name: ContextDefinition element
         href: schema/contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md
-      - name: ContextDefinitionGroup Element
+      - name: ContextDefinitionGroup element
         href: schema/contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md
-      - name: ContextDefinitionGroups Element
+      - name: ContextDefinitionGroups element
         href: schema/contextdefinitiongroups-element-in-solutiondefinition-solutionmanifestdefinition.md
-      - name: Entities Element
+      - name: Entities element
         href: schema/entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md
-      - name: Entity Element
+      - name: Entity element
         href: schema/entity-element-in-entities-solutionmanifestdefinitions-schema.md
-      - name: OfficeItemCustomizations Element
+      - name: OfficeItemCustomizations element
         href: schema/officeitemcustomizations-element-in-contextdefinition-solutionmanifestdefinition.md
-      - name: PromotedProperty Element
+      - name: PromotedProperty element
         href: schema/promotedproperty-element-in-viewinstancedefinition-solutionmanifestdefinitions-s.md
-      - name: SolutionDefinition Element
+      - name: SolutionDefinition element
         href: schema/solutiondefinition-element-solutionmanifestdefinitions-schema.md
-      - name: SolutionSettings Element
+      - name: SolutionSettings element
         href: schema/solutionsettings-element-in-solutiondefinition-solutionmanifestdefinitions-schem.md
-      - name: View Element
+      - name: View element
         href: schema/view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md
-      - name: OutlookItemCustomizations Element
+      - name: OutlookItemCustomizations element
         href: schema/outlookitemcustomizations-element.md
-      - name: OfficeItemProperties Element
+      - name: OfficeItemProperties element
         href: schema/officeitemproperties-element.md
-      - name: OfficeItemProperty Element
+      - name: OfficeItemProperty element
         href: schema/officeitemproperty-element.md
-      - name: FormRegions Element
+      - name: FormRegions element
         href: schema/formregions-element.md
-      - name: FormRegion Element
+      - name: FormRegion element
         href: schema/formregion-element.md
-      - name: Picture Element
+      - name: Picture element
         href: schema/picture-element.md
-      - name: OutlookFolder Element
+      - name: OutlookFolder element
         href: schema/outlookfolder-element.md
-      - name: Associations Element
+      - name: Associations element
         href: schema/associations-element.md
-      - name: Association Element
+      - name: Association element
         href: schema/association-element.md
-      - name: Views Element
+      - name: Views element
         href: schema/views-element.md
-      - name: FolderViewDefinition Element
+      - name: FolderViewDefinition element
         href: schema/folderviewdefinition-element.md
-    - name: SolutionManifestDeclarativeExtensions Schema
+    - name: SolutionManifestDeclarativeExtensions schema
       href: schema/solutionmanifestdeclarativeextensions-schema.md
       items:
-      - name: Actions Element
+      - name: Actions element
         href: schema/actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md
-      - name: CodeMethodAction Element
+      - name: CodeMethodAction element
         href: schema/codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md
-      - name: ConstantParameter Element
+      - name: ConstantParameter element
         href: schema/constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.md
-      - name: ContextActivated Element
+      - name: ContextActivated element
         href: schema/contextactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeexte.md
-      - name: ContextDeactivated Element
+      - name: ContextDeactivated element
         href: schema/contextdeactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeex.md
-      - name: ContextEventHandlers Element
+      - name: ContextEventHandlers element
         href: schema/contexteventhandlers-element-in-declarativecontextdefinition-solutionmanifestdec.md
-      - name: DeclarativeAssociation Element
+      - name: DeclarativeAssociation element
         href: schema/declarativeassociation-element-solutionmanifestdeclarativeextensions-schema.md
-      - name: DeclarativeContextDefinition Element
+      - name: DeclarativeContextDefinition element
         href: schema/declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md
-      - name: DeclarativeContextDefinitionGroup Element
+      - name: DeclarativeContextDefinitionGroup element
         href: schema/declarativecontextdefinitiongroup-element-solutionmanifestdeclarativeextensions.md
-      - name: DeclarativeFormRegion Element
+      - name: DeclarativeFormRegion element
         href: schema/declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.md
-      - name: DeclarativeFormRegions Element
+      - name: DeclarativeFormRegions element
         href: schema/declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.md
-      - name: DeclarativeSolutionSettings Element
+      - name: DeclarativeSolutionSettings element
         href: schema/declarativesolutionsettings-element-solutionmanifestdeclarativeextensions-schema.md
-      - name: ExpressionParameter Element
+      - name: ExpressionParameter element
         href: schema/expressionparameter-element-in-actionparameterdefinitions-solutionmanifestdeclar.md
-      - name: Layout Element
+      - name: Layout element
         href: schema/layout-element-in-layouts-solutionmanifestdeclarativeextensions-schema.md
-      - name: Layouts Element
+      - name: Layouts element
         href: schema/layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md
-      - name: Parameters Element
+      - name: Parameters element
         href: schema/parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md
-      - name: Picture Element
+      - name: Picture element
         href: schema/picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md
-      - name: UrlAction Element
+      - name: UrlAction element
         href: schema/urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md
-    - name: LayoutDefinitions Schema
+    - name: LayoutDefinitions schema
       href: schema/layoutdefinitions-schema.md
       items:
-      - name: ActionName Element
+      - name: ActionName element
         href: schema/actionname-element-in-arrayofactions-layoutdefinitions-schema.md
-      - name: ActionNames Element
+      - name: ActionNames element
         href: schema/actionnames-element-in-obpart-layoutdefinitions-schema.md
-      - name: Children Element
+      - name: Children element
         href: schema/children-element-in-container-layoutdefinitions-schema.md
-      - name: Container Element
+      - name: Container element
         href: schema/container-element-layoutdefinitions-schema.md
-      - name: CustomProperties Element
+      - name: CustomProperties element
         href: schema/customproperties-element-in-uielement-layoutdefinitions-schema.md
-      - name: CustomProperty Element
+      - name: CustomProperty element
         href: schema/customproperty-element-in-arrayofcustomproperty-layoutdefinitions-schema.md
-      - name: OBPart Element
+      - name: OBPart element
         href: schema/obpart-element-in-arrayofobpart-layoutdefinitions-schema.md
-      - name: TitleBar Element
+      - name: TitleBar element
         href: schema/titlebar-element-in-obpart-layoutdefinitions-schema.md
-    - name: Subscription Schema
+    - name: Subscription schema
       href: schema/subscription-schema.md
       items:
-      - name: Association Element
+      - name: Association element
         href: schema/association-element-in-associations-subscription-schema.md
-      - name: Associations Element
+      - name: Associations element
         href: schema/associations-element-in-subscription-subscription-schema.md
-      - name: FilterValue Element
+      - name: FilterValue element
         href: schema/filtervalue-element-in-filtervalues-subscription-schema.md
-      - name: FilterValues Element
+      - name: FilterValues element
         href: schema/filtervalues-element-in-association-subscription-schema.md
-      - name: FilterValues Element
+      - name: FilterValues element
         href: schema/filtervalues-element-in-query-subscription-schema.md
-      - name: Identities Element
+      - name: Identities element
         href: schema/identities-element-in-subscription-subscription-schema.md
-      - name: Identity Element
+      - name: Identity element
         href: schema/identity-element-in-identities-subscription-schema.md
-      - name: LocalizedDisplayName Element
+      - name: LocalizedDisplayName element
         href: schema/localizeddisplayname-element-in-localizeddisplaynames-subscription-schema.md
-      - name: LocalizedDisplayNames Element
+      - name: LocalizedDisplayNames element
         href: schema/localizeddisplaynames-element-in-metadataobject-subscription-schema.md
-      - name: Properties Element
+      - name: Properties element
         href: schema/properties-element-in-metadataobject-subscription-schema.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-in-properties-subscription-schema.md
-      - name: Queries Element
+      - name: Queries element
         href: schema/queries-element-in-subscription-subscription-schema.md
-      - name: Query Element
+      - name: Query element
         href: schema/query-element-in-queries-subscription-schema.md
-      - name: Subscription Element
+      - name: Subscription element
         href: schema/subscription-element-subscription-schema.md
-    - name: BDCMetadata Schema
+    - name: BDCMetadata schema
       href: schema/bdcmetadata-schema.md
       items:
-      - name: AccessControlEntry Element
+      - name: AccessControlEntry element
         href: schema/accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md
-      - name: AccessControlList Element
+      - name: AccessControlList element
         href: schema/accesscontrollist-element-bdcmetadata-schema.md
-      - name: Action Element
+      - name: Action element
         href: schema/action-element-in-actions-bdcmetadata-schema.md
-      - name: ActionParameter Element
+      - name: ActionParameter element
         href: schema/actionparameter-element-in-actionparameters-bdcmetadata-schema.md
-      - name: ActionParameters Element
+      - name: ActionParameters element
         href: schema/actionparameters-element-in-action-bdcmetadata-schema.md
-      - name: Actions Element
+      - name: Actions element
         href: schema/actions-element-in-entity-bdcmetadata-schema.md
-      - name: Association Element
+      - name: Association element
         href: schema/association-element-in-methodinstances-bdcmetadata-schema.md
-      - name: AssociationGroup Element
+      - name: AssociationGroup element
         href: schema/associationgroup-element-in-associationgroups-bdcmetadata-schema.md
-      - name: AssociationGroups Element
+      - name: AssociationGroups element
         href: schema/associationgroups-element-in-entity-bdcmetadata-schema.md
-      - name: AssociationReference Element
+      - name: AssociationReference element
         href: schema/associationreference-element-in-associationgroup-bdcmetadata-schema.md
-      - name: ConvertType Element
+      - name: ConvertType element
         href: schema/converttype-element-in-interpretation-bdcmetadata-schema.md
-      - name: DefaultValue Element
+      - name: DefaultValue element
         href: schema/defaultvalue-element-in-defaultvalues-bdcmetadata-schema.md
-      - name: DefaultValues Element
+      - name: DefaultValues element
         href: schema/defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md
-      - name: DestinationEntity Element
+      - name: DestinationEntity element
         href: schema/destinationentity-element-in-association-bdcmetadata-schema.md
-      - name: Entities Element
+      - name: Entities element
         href: schema/entities-element-in-lobsystem-bdcmetadata-schema.md
-      - name: Entity Element
+      - name: Entity element
         href: schema/entity-element-in-entities-bdcmetadata-schema.md
-      - name: FilterDescriptor Element
+      - name: FilterDescriptor element
         href: schema/filterdescriptor-element-in-filterdescriptors-bdcmetadata-schema.md
-      - name: FilterDescriptors Element
+      - name: FilterDescriptors element
         href: schema/filterdescriptors-element-in-method-bdcmetadata-schema.md
-      - name: Identifier Element
+      - name: Identifier element
         href: schema/identifier-element-in-identifiers-bdcmetadata-schema.md
-      - name: Identifiers Element
+      - name: Identifiers element
         href: schema/identifiers-element-in-entity-bdcmetadata-schema.md
-      - name: Interpretation Element
+      - name: Interpretation element
         href: schema/interpretation-element-in-typedescriptor-bdcmetadata-schema.md
-      - name: LobSystem Element
+      - name: LobSystem element
         href: schema/lobsystem-element-in-lobsystems-bdcmetadata-schema.md
-      - name: LobSystemInstance Element
+      - name: LobSystemInstance element
         href: schema/lobsysteminstance-element-in-lobsysteminstances-bdcmetadata-schema.md
-      - name: LobSystemInstances Element
+      - name: LobSystemInstances element
         href: schema/lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md
-      - name: LobSystems Element
+      - name: LobSystems element
         href: schema/lobsystems-element-in-model-bdcmetadata-schema.md
-      - name: LocalizedDisplayName Element
+      - name: LocalizedDisplayName element
         href: schema/localizeddisplayname-element-in-localizeddisplaynames-bdcmetadata-schema.md
-      - name: LocalizedDisplayNames Element
+      - name: LocalizedDisplayNames element
         href: schema/localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md
-      - name: Method Element
+      - name: Method element
         href: schema/method-element-in-methods-bdcmetadata-schema.md
-      - name: MethodInstance Element
+      - name: MethodInstance element
         href: schema/methodinstance-element-in-methodinstances-bdcmetadata-schema.md
-      - name: MethodInstances Element
+      - name: MethodInstances element
         href: schema/methodinstances-element-in-method-bdcmetadata-schema.md
-      - name: Methods Element
+      - name: Methods element
         href: schema/methods-element-in-entity-bdcmetadata-schema.md
-      - name: Model Element
+      - name: Model element
         href: schema/model-element-bdcmetadata-schema.md
-      - name: NormalizeDateTime Element
+      - name: NormalizeDateTime element
         href: schema/normalizedatetime-element-in-interpretation-bdcmetadata-schema.md
-      - name: Parameter Element
+      - name: Parameter element
         href: schema/parameter-element-in-parameters-bdcmetadata-schema.md
-      - name: Parameters Element
+      - name: Parameters element
         href: schema/parameters-element-in-method-bdcmetadata-schema.md
-      - name: Properties Element
+      - name: Properties element
         href: schema/properties-element-in-metadataobject-bdcmetadata-schema.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-in-properties-bdcmetadata-schema.md
-      - name: Proxy Element
+      - name: Proxy element
         href: schema/proxy-element-in-lobsystem-bdcmetadata-schema.md
-      - name: Right Element
+      - name: Right element
         href: schema/right-element-in-accesscontrolentry-bdcmetadata-schema.md
-      - name: SourceEntity Element
+      - name: SourceEntity element
         href: schema/sourceentity-element-in-association-bdcmetadata-schema.md
-      - name: TypeDescriptor Element
+      - name: TypeDescriptor element
         href: schema/typedescriptor-element-bdcmetadata-schema.md
-      - name: TypeDescriptors Element
+      - name: TypeDescriptors element
         href: schema/typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md
-    - name: BDCMetadataResource Schema
+    - name: BDCMetadataResource schema
       href: schema/bdcmetadataresource-schema.md
       items:
-      - name: AccessControlEntry Element
+      - name: AccessControlEntry element
         href: schema/accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md
-      - name: AccessControlList Element
+      - name: AccessControlList element
         href: schema/accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md
-      - name: Action Element
+      - name: Action element
         href: schema/action-element-in-actions-bdcmetadataresource-schema.md
-      - name: ActionParameter Element
+      - name: ActionParameter element
         href: schema/actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md
-      - name: ActionParameters Element
+      - name: ActionParameters element
         href: schema/actionparameters-element-in-action-bdcmetadataresource-schema.md
-      - name: Actions Element
+      - name: Actions element
         href: schema/actions-element-in-entity-bdcmetadataresource-schema.md
-      - name: Association Element
+      - name: Association element
         href: schema/association-element-in-methodinstances-bdcmetadataresource-schema.md
-      - name: AssociationGroup Element
+      - name: AssociationGroup element
         href: schema/associationgroup-element-in-associationgroups-bdcmetadataresource-schema.md
-      - name: AssociationGroups Element
+      - name: AssociationGroups element
         href: schema/associationgroups-element-in-entity-bdcmetadataresource-schema.md
-      - name: Entities Element
+      - name: Entities element
         href: schema/entities-element-in-lobsystem-bdcmetadataresource-schema.md
-      - name: Entity Element
+      - name: Entity element
         href: schema/entity-element-in-entities-bdcmetadataresource-schema.md
-      - name: FilterDescriptor Element
+      - name: FilterDescriptor element
         href: schema/filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md
-      - name: FilterDescriptors Element
+      - name: FilterDescriptors element
         href: schema/filterdescriptors-element-in-method-bdcmetadataresource-schema.md
-      - name: Identifier Element
+      - name: Identifier element
         href: schema/identifier-element-in-identifiers-bdcmetadataresource-schema.md
-      - name: Identifiers Element
+      - name: Identifiers element
         href: schema/identifiers-element-in-entity-bdcmetadataresource-schema.md
-      - name: LobSystem Element
+      - name: LobSystem element
         href: schema/lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md
-      - name: LobSystemInstance Element
+      - name: LobSystemInstance element
         href: schema/lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md
-      - name: LobSystemInstances Element
+      - name: LobSystemInstances element
         href: schema/lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md
-      - name: LobSystems Element
+      - name: LobSystems element
         href: schema/lobsystems-element-in-model-bdcmetadataresource-schema.md
-      - name: LocalizedDisplayName Element
+      - name: LocalizedDisplayName element
         href: schema/localizeddisplayname-element-in-localizeddisplaynames-bdcmetadataresource-schema.md
-      - name: LocalizedDisplayNames Element
+      - name: LocalizedDisplayNames element
         href: schema/localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md
-      - name: Method Element
+      - name: Method element
         href: schema/method-element-in-methods-bdcmetadataresource-schema.md
-      - name: MethodInstance Element
+      - name: MethodInstance element
         href: schema/methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md
-      - name: MethodInstances Element
+      - name: MethodInstances element
         href: schema/methodinstances-element-in-method-bdcmetadataresource-schema.md
-      - name: Methods Element
+      - name: Methods element
         href: schema/methods-element-in-entity-bdcmetadataresource-schema.md
-      - name: Model Element
+      - name: Model element
         href: schema/model-element-bdcmetadataresource-schema.md
-      - name: Parameter Element
+      - name: Parameter element
         href: schema/parameter-element-in-parameters-bdcmetadataresource-schema.md
-      - name: Parameters Element
+      - name: Parameters element
         href: schema/parameters-element-in-method-bdcmetadataresource-schema.md
-      - name: Properties Element
+      - name: Properties element
         href: schema/properties-element-in-metadataobject-bdcmetadataresource-schema.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-in-properties-bdcmetadataresource-schema.md
-      - name: Right Element
+      - name: Right element
         href: schema/right-element-in-accesscontrolentry-bdcmetadataresource-schema.md
-      - name: TypeDescriptor Element
+      - name: TypeDescriptor element
         href: schema/typedescriptor-element-in-parameter-bdcmetadataresource-schema.md
-      - name: TypeDescriptor Element
+      - name: TypeDescriptor element
         href: schema/typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md
-      - name: TypeDescriptors Element
+      - name: TypeDescriptors element
         href: schema/typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md
   - name: Workflow schemas
     href: schema/workflow-schemas.md
@@ -2395,422 +2395,422 @@
     - name: WorkflowActions3 schema reference
       href: schema/workflowactions3-schema-reference.md
       items:
-      - name: Action Element
+      - name: Action element
         href: schema/action-element-workflowactions.md
-      - name: ActionBody Element
+      - name: ActionBody element
         href: schema/actionbody-element-workflowactions.md
-      - name: ActionConditions Element
+      - name: ActionConditions element
         href: schema/actionconditions-element-workflowactions.md
-      - name: ActionVariables Element
+      - name: ActionVariables element
         href: schema/actionvariables-element-workflowactions.md
-      - name: ActivitySource Element
+      - name: ActivitySource element
         href: schema/activitysource-element-workflowactions.md
-      - name: ContentType Element
+      - name: ContentType element
         href: schema/contenttype-element-workflowactions.md
-      - name: DataSources Element
+      - name: DataSources element
         href: schema/datasources-element-workflowactions.md
-      - name: DataSource Element
+      - name: DataSource element
         href: schema/datasource-element-workflowactions.md
-      - name: DataSourceRef Element
+      - name: DataSourceRef element
         href: schema/datasourceref-element-workflowactions.md
-      - name: Default Element
+      - name: Default element
         href: schema/default-element-workflowactions.md
-      - name: Dictionary Element
+      - name: Dictionary element
         href: schema/dictionary-element-workflowactions.md
-      - name: Evaluation Element
+      - name: Evaluation element
         href: schema/evaluation-element-workflowactions.md
-      - name: Field Element
+      - name: Field element
         href: schema/field-element-workflowactions.md
-      - name: FieldBind Element
+      - name: FieldBind element
         href: schema/fieldbind-element-workflowactions.md
-      - name: Fields Element
+      - name: Fields element
         href: schema/fields-element-workflowactions.md
-      - name: HashtableSource Element
+      - name: HashtableSource element
         href: schema/hashtablesource-element-workflowactions.md
-      - name: Modifications Element
+      - name: Modifications element
         href: schema/modifications-element-workflowactions.md
-      - name: Modification Element
+      - name: Modification element
         href: schema/modification-element-workflowactions.md
-      - name: NestedInitiationFieldNodes Element
+      - name: NestedInitiationFieldNodes element
         href: schema/nestedinitiationfieldnodes-element-workflowactions.md
-      - name: Option Element
+      - name: Option element
         href: schema/option-element-workflowactions.md
-      - name: Parameter Element
+      - name: Parameter element
         href: schema/parameter-element-workflowactions.md
-      - name: Parameters Element
+      - name: Parameters element
         href: schema/parameters-element-workflowactions.md
-      - name: RuleDesigner Element
+      - name: RuleDesigner element
         href: schema/ruledesigner-element-workflowactions.md
-      - name: SchemaSource Element
+      - name: SchemaSource element
         href: schema/schemasource-element-workflowactions.md
-      - name: WorkflowActions Element
+      - name: WorkflowActions element
         href: schema/workflowactions-element-workflowactions.md
     - name: Workflow configuration schema reference
       href: schema/workflow-configuration-schema-reference.md
       items:
-      - name: WorkflowConfig Element
+      - name: WorkflowConfig element
         href: schema/workflowconfig-element.md
-      - name: Template Element
+      - name: Template element
         href: schema/template-element-workflowconfig.md
-      - name: Association Element
+      - name: Association element
         href: schema/association-element-workflowconfig.md
-      - name: ContentTypes Element
+      - name: ContentTypes element
         href: schema/contenttypes-element-workflowconfig.md
-      - name: ContentType Element
+      - name: ContentType element
         href: schema/contenttype-element-workflowconfig.md
-      - name: Initiation Element
+      - name: Initiation element
         href: schema/initiation-element-workflowconfig.md
-      - name: Fields Element
+      - name: Fields element
         href: schema/fields-element-workflowconfig.md
-      - name: Parameters Element
+      - name: Parameters element
         href: schema/parameters-element-workflowconfig.md
-      - name: Parameter Element
+      - name: Parameter element
         href: schema/parameter-element-workflowconfig.md
     - name: WorkflowInfo schema reference
       href: schema/workflowinfo-schema-reference.md
       items:
       - name: .ACTIONS File Example
         href: schema/actions-file-example-workflowinfo.md
-      - name: Action Element
+      - name: Action element
         href: schema/action-element-workflowinfo.md
-      - name: ActionBody Element
+      - name: ActionBody element
         href: schema/actionbody-element-workflowinfo.md
-      - name: ActionConditions Element
+      - name: ActionConditions element
         href: schema/actionconditions-element-workflowinfo.md
-      - name: ActionVariables Element
+      - name: ActionVariables element
         href: schema/actionvariables-element-workflowinfo.md
-      - name: Actions Element
+      - name: Actions element
         href: schema/actions-element-workflowinfo.md
-      - name: Actions Schema Reference
+      - name: Actions schema reference
         href: schema/actions-schema-reference-workflowinfo.md
-      - name: ActivitySource Element
+      - name: ActivitySource element
         href: schema/activitysource-element-workflowinfo.md
-      - name: AssemblyRedirect Element
+      - name: AssemblyRedirect element
         href: schema/assemblyredirect-element-workflowinfo.md
-      - name: AssemblyRedirects Element
+      - name: AssemblyRedirects element
         href: schema/assemblyredirects-element-workflowinfo.md
-      - name: Coercion Element
+      - name: Coercion element
         href: schema/coercion-element-workflowinfo.md
-      - name: Coercions Element
+      - name: Coercions element
         href: schema/coercions-element-workflowinfo.md
-      - name: Condition Element
+      - name: Condition element
         href: schema/condition-element-workflowinfo.md
-      - name: Conditions Element
+      - name: Conditions element
         href: schema/conditions-element-workflowinfo.md
-      - name: CompositeSteps Element
+      - name: CompositeSteps element
         href: schema/compositesteps-element-workflowinfo.md
-      - name: CompositeStep Element
+      - name: CompositeStep element
         href: schema/compositestep-element-workflowinfo.md
-      - name: ContentType Element
+      - name: ContentType element
         href: schema/contenttype-element-workflowinfo.md
-      - name: DataSource Element
+      - name: DataSource element
         href: schema/datasource-element-workflowinfo.md
-      - name: DataSourceRef Element
+      - name: DataSourceRef element
         href: schema/datasourceref-element-workflowinfo.md
-      - name: DataSources Element
+      - name: DataSources element
         href: schema/datasources-element-workflowinfo.md
-      - name: Default Element
+      - name: Default element
         href: schema/default-element-workflowinfo.md
       - name: Default Workflow Actions
         href: schema/default-workflow-actions-workflowinfo.md
       - name: Default Workflow Conditions
         href: schema/default-workflow-conditions-workflowinfo.md
-      - name: Dictionary Element
+      - name: Dictionary element
         href: schema/dictionary-element-workflowinfo.md
-      - name: Evaluation Element
+      - name: Evaluation element
         href: schema/evaluation-element-workflowinfo.md
-      - name: Field Element
+      - name: Field element
         href: schema/field-element-workflowinfo.md
-      - name: FieldBind Element
+      - name: FieldBind element
         href: schema/fieldbind-element-workflowinfo.md
-      - name: Fields Element
+      - name: Fields element
         href: schema/fields-element-workflowinfo.md
-      - name: HashtableSource Element
+      - name: HashtableSource element
         href: schema/hashtablesource-element-workflowinfo.md
-      - name: Modification Element
+      - name: Modification element
         href: schema/modification-element-workflowinfo.md
-      - name: Modifications Element
+      - name: Modifications element
         href: schema/modifications-element-workflowinfo.md
-      - name: NestedInitiationFieldNodes Element
+      - name: NestedInitiationFieldNodes element
         href: schema/nestedinitiationfieldnodes-element-workflowinfo.md
-      - name: Option Element
+      - name: Option element
         href: schema/option-element-workflowinfo.md
-      - name: Parameter Element
+      - name: Parameter element
         href: schema/parameter-element-workflowinfo.md
-      - name: Parameters Element
+      - name: Parameters element
         href: schema/parameters-element-workflowinfo.md
-      - name: RuleDesigner Element
+      - name: RuleDesigner element
         href: schema/ruledesigner-element-workflowinfo.md
-      - name: SchemaSource Element
+      - name: SchemaSource element
         href: schema/schemasource-element-workflowinfo.md
-      - name: VariableType Element
+      - name: VariableType element
         href: schema/variabletype-element-workflowinfo.md
-      - name: VariableTypes Element
+      - name: VariableTypes element
         href: schema/variabletypes-element-workflowinfo.md
-      - name: WorkflowInfo Element
+      - name: WorkflowInfo element
         href: schema/workflowinfo-element-workflowinfo.md
   - name: SharePoint Features schemas
     href: schema/sharepoint-features-schemas.md
     items:
-    - name: Client Web Part Definition Schema
+    - name: Client Web Part Definition schema
       href: schema/client-web-part-definition-schema.md
     - name: Content Type Bindings
       href: schema/content-type-bindings.md
       items:
-      - name: ContentTypeBinding Element
+      - name: ContentTypeBinding element
         href: schema/contenttypebinding-element-contenttypebinding.md
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-contenttypebinding.md
     - name: Content Type Definitions
       href: schema/content-type-definitions.md
       items:
-      - name: ContentType Element
+      - name: ContentType element
         href: schema/contenttype-element-contenttype.md
-      - name: DocumentTemplate Element
+      - name: DocumentTemplate element
         href: schema/documenttemplate-element-contenttype.md
-      - name: Elements Element 
+      - name: Elements element 
         href: schema/elements-element-contenttype.md
-      - name: FieldRef Element 
+      - name: FieldRef element 
         href: schema/fieldref-element-contenttype.md
-      - name: FieldRefs Element 
+      - name: FieldRefs element 
         href: schema/fieldrefs-element-contenttype.md
-      - name: Folder Element 
+      - name: Folder element 
         href: schema/folder-element-contenttype.md
-      - name: RemoveFieldRef Element 
+      - name: RemoveFieldRef element 
         href: schema/removefieldref-element-contenttype.md
-      - name: XmlDocument Element 
+      - name: XmlDocument element 
         href: schema/xmldocument-element-contenttype.md
-      - name: XmlDocuments Element 
+      - name: XmlDocuments element 
         href: schema/xmldocuments-element-contenttype.md
-    - name: Custom Action Definition Schema
+    - name: Custom Action Definition schema
       href: schema/custom-action-definition-schema.md
       items:
-      - name: CommandUIDefinitions Element
+      - name: CommandUIDefinitions element
         href: schema/commanduidefinitions-element.md
-      - name: CommandUIDefinition Element
+      - name: CommandUIDefinition element
         href: schema/commanduidefinition-element.md
-      - name: CommandUIExtension Element
+      - name: CommandUIExtension element
         href: schema/commanduiextension-element.md
-      - name: CommandUIHandlers Element
+      - name: CommandUIHandlers element
         href: schema/commanduihandlers-element.md
-      - name: CommandUIHandler Element
+      - name: CommandUIHandler element
         href: schema/commanduihandler-element.md
-      - name: CustomAction Element
+      - name: CustomAction element
         href: schema/customaction-element.md
-      - name: CustomActionGroup Element
+      - name: CustomActionGroup element
         href: schema/customactiongroup-element-custom-action.md
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-custom-action.md
-      - name: HideCustomAction Element
+      - name: HideCustomAction element
         href: schema/hidecustomaction-element.md
-      - name: UrlAction Element
+      - name: UrlAction element
         href: schema/urlaction-element.md
       - name: Default Custom Action Locations and IDs
         href: schema/default-custom-action-locations-and-ids.md
     - name: Delegate Controls
       href: schema/delegate-controls.md
       items:
-      - name: Control Element
+      - name: Control element
         href: schema/control-element-delegate-control.md
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-delegate-control.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-delegate-control.md
     - name: Document Converter
       href: schema/document-converter.md
       items:
-      - name: DocumentConverter Element
+      - name: DocumentConverter element
         href: schema/documentconverter-element-document-converter.md
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-document-converter.md
     - name: Event Registrations
       href: schema/event-registrations.md
       items:
-      - name: Assembly Element
+      - name: Assembly element
         href: schema/assembly-element-event.md
-      - name: Class Element
+      - name: Class element
         href: schema/class-element-event.md
-      - name: Data Element
+      - name: Data element
         href: schema/data-element-event.md
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-event.md
-      - name: Filter Element
+      - name: Filter element
         href: schema/filter-element-event.md
-      - name: Name Element
+      - name: Name element
         href: schema/name-element-event.md
-      - name: Receiver Element
+      - name: Receiver element
         href: schema/receiver-element-event.md
-      - name: Receivers Element
+      - name: Receivers element
         href: schema/receivers-element-event.md
-      - name: SequenceNumber Element
+      - name: SequenceNumber element
         href: schema/sequencenumber-element-event.md
-      - name: SolutionId Element
+      - name: SolutionId element
         href: schema/solutionid-element-event.md
-      - name: Synchronization Element
+      - name: Synchronization element
         href: schema/synchronization-element-event.md
-      - name: Type Element
+      - name: Type element
         href: schema/type-element-event.md
-      - name: SourceId Element
+      - name: SourceId element
         href: schema/sourceid-element-events.md
-      - name: SourceType Element
+      - name: SourceType element
         href: schema/sourcetype-element-events.md
     - name: Feature.xml Files
       href: schema/feature-xml-files.md
       items:
-      - name: ActivationDependencies Element
+      - name: ActivationDependencies element
         href: schema/activationdependencies-element-feature.md
-      - name: ActivationDependency Element
+      - name: ActivationDependency element
         href: schema/activationdependency-element-feature.md
-      - name: AddContentTypeField Element
+      - name: AddContentTypeField element
         href: schema/addcontenttypefield-element-feature.md
-      - name: ApplyElementManifests Element
+      - name: ApplyElementManifests element
         href: schema/applyelementmanifests-element-feature.md
-      - name: CustomUpgradeAction Element
+      - name: CustomUpgradeAction element
         href: schema/customupgradeaction-element-feature.md
-      - name: ElementFile Element
+      - name: ElementFile element
         href: schema/elementfile-element-feature.md
-      - name: ElementManifest Element
+      - name: ElementManifest element
         href: schema/elementmanifest-element-feature.md
-      - name: ElementManifests Element
+      - name: ElementManifests element
         href: schema/elementmanifests-element-feature.md
-      - name: Feature Element
+      - name: Feature element
         href: schema/feature-element-feature.md
-      - name: MapFile Element
+      - name: MapFile element
         href: schema/mapfile-element-feature.md
-      - name: Parameter Element
+      - name: Parameter element
         href: schema/parameter-element-feature.md
-      - name: Parameters Element
+      - name: Parameters element
         href: schema/parameters-element-feature.md
-      - name: Properties Element
+      - name: Properties element
         href: schema/properties-element-feature.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-feature.md
-      - name: UpgradeActions Element
+      - name: UpgradeActions element
         href: schema/upgradeactions-element-feature.md
-      - name: VersionRange Element
+      - name: VersionRange element
         href: schema/versionrange-element-feature.md
     - name: Feature/Site Template Associations
       href: schema/feature-site-template-associations.md
       items:
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-featuresitetemplateassociation.md
-      - name: FeatureSiteTemplateAssociation Element
+      - name: FeatureSiteTemplateAssociation element
         href: schema/featuresitetemplateassociation-element-featuresitetemplateassociation.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-featuresitetemplateassociation.md
     - name: Field Definitions
       href: schema/field-definitions.md
       items:
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-field.md
-      - name: Field Element
+      - name: Field element
         href: schema/field-element-field.md
     - name: List Instances
       href: schema/list-instances.md
       items:
-      - name: Data Element
+      - name: Data element
         href: schema/data-element-list-instance.md
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-list-instance.md
-      - name: Field Element
+      - name: Field element
         href: schema/field-element-list-instance.md
-      - name: ListInstance Element
+      - name: ListInstance element
         href: schema/listinstance-element-list-instance.md
-      - name: Row Element
+      - name: Row element
         href: schema/row-element-list-instance.md
-      - name: Rows Element
+      - name: Rows element
         href: schema/rows-element-list-instance.md
-      - name: DataSource Element
+      - name: DataSource element
         href: schema/datasource-element-list-instance.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-list-instance.md
     - name: List Template Files
       href: schema/list-template-files.md
       items:
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-list-template.md
-      - name: ListTemplate Element
+      - name: ListTemplate element
         href: schema/listtemplate-element-list-template.md
       - name: List Definition (Schema.xml) Files
         href: schema/list-definition-schema-xml-files.md
     - name: Modules
       href: schema/modules.md
       items:
-      - name: AllUsersWebPart Element
+      - name: AllUsersWebPart element
         href: schema/alluserswebpart-element-module.md
-      - name: BinarySerializedWebPart Element
+      - name: BinarySerializedWebPart element
         href: schema/binaryserializedwebpart-element-module.md
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-module.md
-      - name: File Element
+      - name: File element
         href: schema/file-element-module.md
-      - name: GUID Element
+      - name: GUID element
         href: schema/guid-element-module.md
-      - name: GUIDMap Element
+      - name: GUIDMap element
         href: schema/guidmap-element-module.md
-      - name: Module Element
+      - name: Module element
         href: schema/module-element-module.md
-      - name: NavBarPage Element
+      - name: NavBarPage element
         href: schema/navbarpage-element-module.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-module.md
-      - name: View Element
+      - name: View element
         href: schema/view-element-module.md
-      - name: WebPart Element
+      - name: WebPart element
         href: schema/webpart-element-module.md
-      - name: WebPartConnection Element
+      - name: WebPartConnection element
         href: schema/webpartconnection-element-module.md
-      - name: WebPartTransformer Element
+      - name: WebPartTransformer element
         href: schema/webparttransformer-element-module.md
-    - name: Property Bag Schema
+    - name: Property Bag schema
       href: schema/property-bag-schema.md
       items:
-      - name: Elements Element
+      - name: Elements element
         href: schema/elements-element-property-bag.md
-      - name: PropertyBag Element
+      - name: PropertyBag element
         href: schema/propertybag-element-property-bag.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-property-bag.md
     - name: Site Definition (Onet.xml) Files
       href: schema/site-definition-onet-xml-files.md
     - name: Web Template XML
       href: schema/web-template-xml.md
       items:
-      - name: WebTemplate Element
+      - name: WebTemplate element
         href: schema/webtemplate-element-web-template.md
       - name: Elements
         href: schema/elements-web-template.md    
     - name: Workflow Definitions
       href: schema/workflow-definitions.md
       items:
-      - name: AssociationCategories Element 
+      - name: AssociationCategories element 
         href: schema/associationcategories-element-workflow.md
-      - name: AssociationData Element 
+      - name: AssociationData element 
         href: schema/associationdata-element-workflow.md
-      - name: Categories Element 
+      - name: Categories element 
         href: schema/categories-element-workflow.md
-      - name: Elements Element 
+      - name: Elements element 
         href: schema/elements-element-workflow.md
-      - name: ExtendedStatusColumnValues Element 
+      - name: ExtendedStatusColumnValues element 
         href: schema/extendedstatuscolumnvalues-element-workflow.md
-      - name: InitiationCategories Element 
+      - name: InitiationCategories element 
         href: schema/initiationcategories-element-workflow.md
-      - name: InitiationType Element 
+      - name: InitiationType element 
         href: schema/initiationtype-element-workflow.md
-      - name: MetaData Element 
+      - name: MetaData element 
         href: schema/metadata-element-workflow.md
-      - name: Modification_GUID_Name Element 
+      - name: Modification_GUID_Name element 
         href: schema/modification_guid_name-element-workflow.md
-      - name: StatusColumnValue Element 
+      - name: StatusColumnValue element 
         href: schema/statuscolumnvalue-element-workflow.md
-      - name: StatusPageUrl Element 
+      - name: StatusPageUrl element 
         href: schema/statuspageurl-element-workflow.md
-      - name: Workflow Element (Elements)
+      - name: Workflow element (Elements)
         href: schema/workflow-element-elements.md
   - name: Content migration schemas
     href: schema/content-migration-schemas.md
     items:
-    - name: DeploymentManifest Schema
+    - name: DeploymentManifest schema
       href: schema/deploymentmanifest-schema.md
       items:
       - name: Selected Type Definitions
@@ -2848,232 +2848,232 @@
           href: schema/spviewscope-simple-type-deploymentmanifest.md
         - name: TRUEFALSE Simple Type
           href: schema/truefalse-simple-type-deploymentmanifest.md
-      - name: Aggregations Element (SPView)
+      - name: Aggregations element (SPView)
         href: schema/aggregations-element-deployment-manifestspview.md
-      - name: Aggregations Element (SPWebPart)
+      - name: Aggregations element (SPWebPart)
         href: schema/aggregations-element-deploymentmanifestspwebpart.md
-      - name: Assignment Element
+      - name: Assignment element
         href: schema/assignment-element-deploymentmanifest.md
-      - name: Attachment Element
+      - name: Attachment element
         href: schema/attachment-element-deploymentmanifest.md
-      - name: Attachments Element
+      - name: Attachments element
         href: schema/attachments-element-deploymentmanifest.md
-      - name: CalendarViewStyles Element (SPView)
+      - name: CalendarViewStyles element (SPView)
         href: schema/calendarviewstyles-element-deploymentmanifestspview.md
-      - name: CalendarViewStyles Element (SPWebPart)
+      - name: CalendarViewStyles element (SPWebPart)
         href: schema/calendarviewstyles-element-deploymentmanifestspwebpart.md
-      - name: ContentType Element
+      - name: ContentType element
         href: schema/contenttype-element-deploymentmanifest.md
-      - name: ContentTypes Element
+      - name: ContentTypes element
         href: schema/contenttypes-element-deploymentmanifest.md
-      - name: DeletedField Element
+      - name: DeletedField element
         href: schema/deletedfield-element-deploymentmanifest.md
-      - name: DeletedFields Element
+      - name: DeletedFields element
         href: schema/deletedfields-element-deploymentmanifest.md
-      - name: DocumentLibrary Element
+      - name: DocumentLibrary element
         href: schema/documentlibrary-element-deploymentmanifest.md
-      - name: DocumentTemplate Element
+      - name: DocumentTemplate element
         href: schema/documenttemplate-element-deploymentmanifest.md
-      - name: EventReceiver Element
+      - name: EventReceiver element
         href: schema/eventreceiver-element-deploymentmanifest.md
-      - name: EventReceivers Element (SPFile)
+      - name: EventReceivers element (SPFile)
         href: schema/eventreceivers-element-deploymentmanifestspfile.md
-      - name: EventReceivers Element (SPList)
+      - name: EventReceivers element (SPList)
         href: schema/eventreceivers-element-deploymentmanifestsplist.md
-      - name: EventReceivers Element (SPListItem)
+      - name: EventReceivers element (SPListItem)
         href: schema/eventreceivers-element-deploymentmanifestsplistitem.md
-      - name: EventReceivers Element (SPWeb)
+      - name: EventReceivers element (SPWeb)
         href: schema/eventreceivers-element-deploymentmanifestspweb.md
-      - name: Feature Element
+      - name: Feature element
         href: schema/feature-element-deploymentmanifest.md
-      - name: Field Element (SPFieldCollection)
+      - name: Field element (SPFieldCollection)
         href: schema/field-element-deploymentmanifestspfieldcollection.md
-      - name: Field Element (FieldDataCollection)
+      - name: Field element (FieldDataCollection)
         href: schema/field-element-deploymentmanifestfielddatacollection.md
-      - name: Field Element (DeploymentFieldTemplate)
+      - name: Field element (DeploymentFieldTemplate)
         href: schema/field-element-deploymentmanifestdeploymentfieldtemplate.md
-      - name: FieldRef Element (SPFieldCollection)
+      - name: FieldRef element (SPFieldCollection)
         href: schema/fieldref-element-deploymentmanifestspfieldcollection.md
-      - name: FieldRef Element (SPFieldLinkCollection)
+      - name: FieldRef element (SPFieldLinkCollection)
         href: schema/fieldref-element-deploymentmanifestspfieldlinkcollection.md
-      - name: Fields Element (SPList)
+      - name: Fields element (SPList)
         href: schema/fields-element-deploymentmanifestsplist.md
-      - name: Fields Element (SPListItem)
+      - name: Fields element (SPListItem)
         href: schema/fields-element-deploymentmanifestsplistitem.md
-      - name: FieldTemplate Element
+      - name: FieldTemplate element
         href: schema/fieldtemplate-element-deploymentmanifest.md
-      - name: File Element (SPGenericObject)
+      - name: File element (SPGenericObject)
         href: schema/file-element-deploymentmanifestspgenericobject.md
-      - name: File Element (SPFileVersionCollection)
+      - name: File element (SPFileVersionCollection)
         href: schema/file-element-deploymentmanifestspfileversioncollection.md
-      - name: Folder Element
+      - name: Folder element
         href: schema/folder-element-deploymentmanifest.md
-      - name: Form Element
+      - name: Form element
         href: schema/form-element-deploymentmanifest.md
-      - name: Formats Element (SPView)
+      - name: Formats element (SPView)
         href: schema/formats-element-deploymentmanifestspview.md
-      - name: Formats Element (SPWebPart)
+      - name: Formats element (SPWebPart)
         href: schema/formats-element-deploymentmanifestspwebpart.md
-      - name: Forms Element
+      - name: Forms element
         href: schema/forms-element-deploymentmanifest.md
-      - name: GroupByFooter Element (SPView)
+      - name: GroupByFooter element (SPView)
         href: schema/groupbyfooter-element-deploymentmanifestspview.md
-      - name: GroupByFooter Element (SPWebPart)
+      - name: GroupByFooter element (SPWebPart)
         href: schema/groupbyfooter-element-deploymentmanifestspwebpart.md
       - name: GroupByHeader (SPView)
         href: schema/groupbyheader-deploymentmanifestspview.md
       - name: GroupByHeader (SPWebPart)
         href: schema/groupbyheader-deploymentmanifestspwebpart.md
-      - name: GroupX Element
+      - name: GroupX element
         href: schema/groupx-element-deploymentmanifest.md
-      - name: Link Element
+      - name: Link element
         href: schema/link-element-deploymentmanifest.md
-      - name: Links Element (SPFile)
+      - name: Links element (SPFile)
         href: schema/links-element-deploymentmanifestspfile.md
-      - name: Links Element (SPListItem)
+      - name: Links element (SPListItem)
         href: schema/links-element-deploymentmanifestsplistitem.md
-      - name: List Element
+      - name: List element
         href: schema/list-element-deploymentmanifest.md
-      - name: ListFormBody Element (SPView)
+      - name: ListFormBody element (SPView)
         href: schema/listformbody-element-deploymentmanifestspview.md
-      - name: ListFormBody Element (SPWebPart)
+      - name: ListFormBody element (SPWebPart)
         href: schema/listformbody-element-deploymentmanifestspwebpart.md
-      - name: ListItem Element (SPGenericObject)
+      - name: ListItem element (SPGenericObject)
         href: schema/listitem-element-deploymentmanifestspgenericobject.md
-      - name: ListItem Element (SPListItemVersionCollection)
+      - name: ListItem element (SPListItemVersionCollection)
         href: schema/listitem-element-deploymentmanifestsplistitemversioncollection.md
-      - name: ListTemplate Element
+      - name: ListTemplate element
         href: schema/listtemplate-element-deploymentmanifest.md
-      - name: Module Element
+      - name: Module element
         href: schema/module-element-deploymentmanifest.md
-      - name: PagedClientCallbackRowset Element (SPView)
+      - name: PagedClientCallbackRowset element (SPView)
         href: schema/pagedclientcallbackrowset-element-deploymentmanifestspview.md
-      - name: PagedClientCallbackRowset Element (SPWebPart)
+      - name: PagedClientCallbackRowset element (SPWebPart)
         href: schema/pagedclientcallbackrowset-element-deploymentmanifestspwebpart.md
-      - name: PagedRecurrenceRowset Element (SPView)
+      - name: PagedRecurrenceRowset element (SPView)
         href: schema/pagedrecurrencerowset-element-deploymentmanifestspview.md
-      - name: PagedRecurrenceRowset Element (SPWebPart)
+      - name: PagedRecurrenceRowset element (SPWebPart)
         href: schema/pagedrecurrencerowset-element-deploymentmanifestspwebpart.md
-      - name: PagedRowset Element (SPView)
+      - name: PagedRowset element (SPView)
         href: schema/pagedrowset-element-deploymentmanifestspview.md
-      - name: PagedRowset Element (SPWebPart)
+      - name: PagedRowset element (SPWebPart)
         href: schema/pagedrowset-element-deploymentmanifestspwebpart.md
-      - name: Personalization Element
+      - name: Personalization element
         href: schema/personalization-element-deploymentmanifest.md
-      - name: Personalizations Element
+      - name: Personalizations element
         href: schema/personalizations-element-deploymentmanifest.md
-      - name: PictureLibrary Element
+      - name: PictureLibrary element
         href: schema/picturelibrary-element-deploymentmanifest.md
-      - name: Properties Element (SPAttachment)
+      - name: Properties element (SPAttachment)
         href: schema/properties-element-deploymentmanifestspattachment.md
-      - name: Properties Element (SPFile)
+      - name: Properties element (SPFile)
         href: schema/properties-element-deploymentmanifestspfile.md
-      - name: Properties Element (SPFolder)
+      - name: Properties element (SPFolder)
         href: schema/properties-element-deploymentmanifestspfolder.md
-      - name: Properties Element (SPModule)
+      - name: Properties element (SPModule)
         href: schema/properties-element-deploymentmanifestspmodule.md
-      - name: Properties Element (SPWeb)
+      - name: Properties element (SPWeb)
         href: schema/properties-element-deploymentmanifestspweb.md
-      - name: Property Element
+      - name: Property element
         href: schema/property-element-deploymentmanifest.md
-      - name: Query Element (SPView)
+      - name: Query element (SPView)
         href: schema/query-element-deploymentmanifestspview.md
-      - name: Query Element (SPWebPart)
+      - name: Query element (SPWebPart)
         href: schema/query-element-deploymentmanifestspwebpart.md
-      - name: Role Element
+      - name: Role element
         href: schema/role-element-deploymentmanifest.md
-      - name: RoleAssignment Element
+      - name: RoleAssignment element
         href: schema/roleassignment-element-deploymentmanifest.md
-      - name: RoleAssignments Element
+      - name: RoleAssignments element
         href: schema/roleassignments-element-deploymentmanifest.md
-      - name: RoleAssignmentX Element
+      - name: RoleAssignmentX element
         href: schema/roleassignmentx-element-deploymentmanifest.md
-      - name: Roles Element
+      - name: Roles element
         href: schema/roles-element-deploymentmanifest.md
-      - name: RoleX Element
+      - name: RoleX element
         href: schema/rolex-element-deploymentmanifest.md
-      - name: RowLimit Element (SPView)
+      - name: RowLimit element (SPView)
         href: schema/rowlimit-element-deploymentmanifestspview.md
-      - name: RowLimit Element (SPWebPart)
+      - name: RowLimit element (SPWebPart)
         href: schema/rowlimit-element-deploymentmanifestspwebpart.md
-      - name: RowLimitExceeded Element (SPView)
+      - name: RowLimitExceeded element (SPView)
         href: schema/rowlimitexceeded-element-deploymentmanifestspview.md
-      - name: RowLimitExceeded Element (SPWebPart)
+      - name: RowLimitExceeded element (SPWebPart)
         href: schema/rowlimitexceeded-element-deploymentmanifestspwebpart.md
-      - name: Script Element (SPView)
+      - name: Script element (SPView)
         href: schema/script-element-deploymentmanifestspview.md
-      - name: Script Element (SPWebPart)
+      - name: Script element (SPWebPart)
         href: schema/script-element-deploymentmanifestspwebpart.md
-      - name: Site Element
+      - name: Site element
         href: schema/site-element-deploymentmanifest.md
-      - name: SPObject Element
+      - name: SPObject element
         href: schema/spobject-element-deploymentmanifest.md
-      - name: SPObjects Element
+      - name: SPObjects element
         href: schema/spobjects-element-deploymentmanifest.md
-      - name: Toolbar Element (SPView)
+      - name: Toolbar element (SPView)
         href: schema/toolbar-element-deploymentmanifestspview.md
-      - name: Toolbar Element (SPWebPart)
+      - name: Toolbar element (SPWebPart)
         href: schema/toolbar-element-deploymentmanifestspwebpart.md
-      - name: UserX Element
+      - name: UserX element
         href: schema/userx-element-deploymentmanifest.md
-      - name: Versions Element (SPFile)
+      - name: Versions element (SPFile)
         href: schema/versions-element-deploymentmanifestspfile.md
-      - name: Versions Element (SPListItem)
+      - name: Versions element (SPListItem)
         href: schema/versions-element-deploymentmanifestsplistitem.md
-      - name: View Element
+      - name: View element
         href: schema/view-element-deploymentmanifest.md
-      - name: ViewBidiHeader Element (SPView)
+      - name: ViewBidiHeader element (SPView)
         href: schema/viewbidiheader-element-deploymentmanifestspview.md
-      - name: ViewBidiHeader Element (SPWebPart)
+      - name: ViewBidiHeader element (SPWebPart)
         href: schema/viewbidiheader-element-deploymentmanifestspwebpart.md
-      - name: View Body Element (SPView)
+      - name: View Body element (SPView)
         href: schema/view-body-element-deploymentmanifestspview.md
-      - name: View Body Element (SPWebPart)
+      - name: View Body element (SPWebPart)
         href: schema/view-body-element-deploymentmanifestspwebpart.md
-      - name: ViewData Element (SPView)
+      - name: ViewData element (SPView)
         href: schema/viewdata-element-deploymentmanifestspview.md
-      - name: ViewData Element (SPWebPart)
+      - name: ViewData element (SPWebPart)
         href: schema/viewdata-element-deploymentmanifestspwebpart.md
-      - name: ViewEmpty Element (SPView)
+      - name: ViewEmpty element (SPView)
         href: schema/viewempty-element-deploymentmanifestspview.md
-      - name: ViewEmpty Element (SPWebPart)
+      - name: ViewEmpty element (SPWebPart)
         href: schema/viewempty-element-deploymentmanifestspwebpart.md
-      - name: ViewFields Element (SPView)
+      - name: ViewFields element (SPView)
         href: schema/viewfields-element-deploymentmanifestspview.md
-      - name: ViewFields Element (SPWebPart)
+      - name: ViewFields element (SPWebPart)
         href: schema/viewfields-element-deploymentmanifestspwebpart.md
-      - name: ViewFooter Element (SPView)
+      - name: ViewFooter element (SPView)
         href: schema/viewfooter-element-deploymentmanifestspview.md
-      - name: ViewFooter Element (SPWebPart)
+      - name: ViewFooter element (SPWebPart)
         href: schema/viewfooter-element-deploymentmanifestspwebpart.md
-      - name: ViewHeader Element (SPView)
+      - name: ViewHeader element (SPView)
         href: schema/viewheader-element-deploymentmanifestspview.md
-      - name: ViewHeader Element (SPWebPart)
+      - name: ViewHeader element (SPWebPart)
         href: schema/viewheader-element-deploymentmanifestspwebpart.md
-      - name: Views Element
+      - name: Views element
         href: schema/views-element-deploymentmanifest.md
-      - name: ViewStyle Element (SPView)
+      - name: ViewStyle element (SPView)
         href: schema/viewstyle-element-deploymentmanifestspview.md
-      - name: ViewStyle Element (SPWebPart)
+      - name: ViewStyle element (SPWebPart)
         href: schema/viewstyle-element-deploymentmanifestspwebpart.md
-      - name: Web Element
+      - name: Web element
         href: schema/web-element-deploymentmanifest.md
-      - name: WebPart Element
+      - name: WebPart element
         href: schema/webpart-element-deploymentmanifest.md
-      - name: WebParts Element
+      - name: WebParts element
         href: schema/webparts-element-deploymentmanifest.md
-      - name: WebStructure Element
+      - name: WebStructure element
         href: schema/webstructure-element-deploymentmanifest.md
-      - name: WebTemplate Element
+      - name: WebTemplate element
         href: schema/webtemplate-element-deploymentmanifest.md
-    - name: DeploymentExportSettings Schema
+    - name: DeploymentExportSettings schema
       href: schema/deploymentexportsettings-schema.md
       items:
-      - name: DeploymentObject Element
+      - name: DeploymentObject element
         href: schema/deploymentobject-element-deploymentexportsettings.md
-      - name: ExportObjects Element
+      - name: ExportObjects element
         href: schema/exportobjects-element-deploymentexportsettings.md
-      - name: ExportSettings Element
+      - name: ExportSettings element
         href: schema/exportsettings-element-deploymentexportsettings.md
       - name: Guid Simple Type
         href: schema/guid-simple-type-deploymentexportsettings.md
@@ -3087,79 +3087,79 @@
         href: schema/spincludesecurity-simple-type-deploymentexportsettings.md
       - name: SPIncludeVersions Simple Type
         href: schema/spincludeversions-simple-type-deploymentexportsettings.md
-    - name: DeploymentLookupListMap Schema
+    - name: DeploymentLookupListMap schema
       href: schema/deploymentlookuplistmap-schema.md
       items:
       - name: Guid Simple Type
         href: schema/guid-simple-type-deploymentlookuplistmap.md      
-      - name: LookupItem Element
+      - name: LookupItem element
         href: schema/lookupitem-element-deploymentlookuplistmap.md
-      - name: LookupItems Element
+      - name: LookupItems element
         href: schema/lookupitems-element-deploymentlookuplistmap.md
-      - name: LookupList Element
+      - name: LookupList element
         href: schema/lookuplist-element-deploymentlookuplistmap.md
-      - name: LookupLists Element
+      - name: LookupLists element
         href: schema/lookuplists-element-deploymentlookuplistmap.md
-    - name: DeploymentRequirements Schema
+    - name: DeploymentRequirements schema
       href: schema/deploymentrequirements-schema.md
       items:
-      - name: Requirement Element
+      - name: Requirement element
         href: schema/requirement-element-deploymentrequirements.md
-      - name: Requirements Element
+      - name: Requirements element
         href: schema/requirements-element-deploymentrequirements.md
       - name: SPRequirementObjectType Simple Type
         href: schema/sprequirementobjecttype-simple-type-deploymentrequirements.md
-    - name: DeploymentRootObjectMap Schema
+    - name: DeploymentRootObjectMap schema
       href: schema/deploymentrootobjectmap-schema.md
       items:
       - name: Guid Simple Type
         href: schema/guid-simple-type-deploymentrootobjectmap.md      
-      - name: RootObject Element
+      - name: RootObject element
         href: schema/rootobject-element-deploymentrootobjectmap.md
-      - name: RootObjects Element
+      - name: RootObjects element
         href: schema/rootobjects-element-deploymentrootobjectmap.md
       - name: SPDeploymentObjectType Simple Type
         href: schema/spdeploymentobjecttype-simple-type-deploymentrootobjectmap.md
-    - name: DeploymentSystemData Schema
+    - name: DeploymentSystemData schema
       href: schema/deploymentsystemdata-schema.md
       items:
       - name: Guid Simple Type
         href: schema/guid-simple-type-deploymentsystemdata.md      
-      - name: ManifestFile Element
+      - name: ManifestFile element
         href: schema/manifestfile-element-deploymentsystemdata.md
-      - name: ManifestFiles Element
+      - name: ManifestFiles element
         href: schema/manifestfiles-element-deploymentsystemdata.md
-      - name: SchemaVersion Element
+      - name: SchemaVersion element
         href: schema/schemaversion-element-deploymentsystemdata.md
       - name: SPDeploymentObjectType Simple Type
         href: schema/spdeploymentobjecttype-simple-type-deploymentsystemdata.md
-      - name: SystemData Element
+      - name: SystemData element
         href: schema/systemdata-element-deploymentsystemdata.md                
-      - name: SystemObject Element
+      - name: SystemObject element
         href: schema/systemobject-element-deploymentsystemdata.md
-      - name: SystemObjects Element
+      - name: SystemObjects element
         href: schema/systemobjects-element-deploymentsystemdata.md
-    - name: DeploymentUserGroupMap Schema
+    - name: DeploymentUserGroupMap schema
       href: schema/deploymentusergroupmap-schema.md
       items:
-      - name: Group Element
+      - name: Group element
         href: schema/group-element-deploymentusergroupmap.md
-      - name: Groups Element
+      - name: Groups element
         href: schema/groups-element-deploymentusergroupmap.md
-      - name: Member Element
+      - name: Member element
         href: schema/member-element-deploymentusergroupmap.md        
-      - name: User Element
+      - name: User element
         href: schema/user-element-deploymentusergroupmap.md
-      - name: Users Element
+      - name: Users element
         href: schema/users-element-deploymentusergroupmap.md
-      - name: UserGroupMap Element
+      - name: UserGroupMap element
         href: schema/usergroupmap-element-deploymentusergroupmap.md
-    - name: DeploymentViewFormsList Schema
+    - name: DeploymentViewFormsList schema
       href: schema/deploymentviewformslist-schema.md
       items:
-      - name: ViewForm Element
+      - name: ViewForm element
         href: schema/viewform-element-deploymentviewformslist.md
-      - name: ViewFormsList Element
+      - name: ViewFormsList element
         href: schema/viewformslist-element-deploymentviewformslist.md
   - name: Collaborative Application Markup Language (CAML) schemas
     href: schema/collaborative-application-markup-language-caml-schemas.md
@@ -3168,610 +3168,610 @@
       href: schema/introduction-to-collaborative-application-markup-language-caml.md
     - name: Major CAML Files
       href: schema/major-caml-files.md
-    - name: Data-Defining Elements
+    - name: Data-defining elements
       href: schema/data-defining-elements.md
-    - name: HTML-Rendering Elements
+    - name: HTML-rendering elements
       href: schema/html-rendering-elements.md
-    - name: Deprecated CAML Elements
+    - name: Deprecated CAML elements
       href: schema/deprecated-caml-elements.md
-    - name: Query Schema
+    - name: Query schema
       href: schema/query-schema.md
       items:
-      - name: And Element
+      - name: And element
         href: schema/and-element-query.md
-      - name: BeginsWith Element
+      - name: BeginsWith element
         href: schema/beginswith-element-query.md
-      - name: Contains Element
+      - name: Contains element
         href: schema/contains-element-query.md
-      - name: DateRangesOverlap Element
+      - name: DateRangesOverlap element
         href: schema/daterangesoverlap-element-query.md
-      - name: Eq Element
+      - name: Eq element
         href: schema/eq-element-query.md
-      - name: FieldRef Element
+      - name: FieldRef element
         href: schema/fieldref-element-query.md
-      - name: Geq Element
+      - name: Geq element
         href: schema/geq-element-query.md
-      - name: GroupBy Element
+      - name: GroupBy element
         href: schema/groupby-element-query.md
-      - name: Gt Element
+      - name: Gt element
         href: schema/gt-element-query.md
-      - name: In Element
+      - name: In element
         href: schema/in-element-query.md
-      - name: Includes Element
+      - name: Includes element
         href: schema/includes-element-query.md
-      - name: IsNotNull Element
+      - name: IsNotNull element
         href: schema/isnotnull-element-query.md
-      - name: IsNull Element
+      - name: IsNull element
         href: schema/isnull-element-query.md
-      - name: Leq Element
+      - name: Leq element
         href: schema/leq-element-query.md
-      - name: ListProperty Element
+      - name: ListProperty element
         href: schema/listproperty-element-query.md
-      - name: Lt Element
+      - name: Lt element
         href: schema/lt-element-query.md
-      - name: Membership Element
+      - name: Membership element
         href: schema/membership-element-query.md
-      - name: Month Element
+      - name: Month element
         href: schema/month-element-query.md
-      - name: Neq Element
+      - name: Neq element
         href: schema/neq-element-query.md
-      - name: NotIncludes Element
+      - name: NotIncludes element
         href: schema/notincludes-element-query.md
-      - name: Now Element
+      - name: Now element
         href: schema/now-element-query.md
-      - name: Or Element
+      - name: Or element
         href: schema/or-element-query.md
-      - name: OrderBy Element
+      - name: OrderBy element
         href: schema/orderby-element-query.md
-      - name: Today Element
+      - name: Today element
         href: schema/today-element-query.md
-      - name: UserID Element
+      - name: UserID element
         href: schema/userid-element-query.md
-      - name: Value Element
+      - name: Value element
         href: schema/value-element-query.md
-      - name: Values Element
+      - name: Values element
         href: schema/values-element-query.md
-      - name: Where Element
+      - name: Where element
         href: schema/where-element-query.md
-      - name: XML Element
+      - name: XML element
         href: schema/xml-element.md
-    - name: View Schema
+    - name: View schema
       href: schema/view-schema.md
       items:
-      - name: Global Attributes for HTML-Rendering Elements
+      - name: Global attributes for HTML-rendering elements
         href: schema/global-attributes-for-html-rendering-elements.md
       - name: A-F
         href: schema/view-schema-elements-a-f.md
         items:
-        - name: Batch Element
+        - name: Batch element
           href: schema/batch-element-view.md
-        - name: Case Element
+        - name: Case element
           href: schema/case-element-view.md
-        - name: Column Element
+        - name: Column element
           href: schema/column-element-view.md
-        - name: Column2 Element
+        - name: Column2 element
           href: schema/column2-element-view.md
-        - name: ContentTypes Element
+        - name: ContentTypes element
           href: schema/contenttypes-element-view.md
-        - name: Counter Element
+        - name: Counter element
           href: schema/counter-element-view.md
-        - name: CurrentRights Element
+        - name: CurrentRights element
           href: schema/currentrights-element-view.md
-        - name: Default Element
+        - name: Default element
           href: schema/default-element-view.md
-        - name: Else Element
+        - name: Else element
           href: schema/else-element-view.md
-        - name: Expr Element
+        - name: Expr element
           href: schema/expr-element-view.md
-        - name: Expr1 Element
+        - name: Expr1 element
           href: schema/expr1-element-view.md
-        - name: Expr2 Element
+        - name: Expr2 element
           href: schema/expr2-element-view.md
-        - name: Field Element
+        - name: Field element
           href: schema/field-element-view.md
-        - name: FieldPrefix Element
+        - name: FieldPrefix element
           href: schema/fieldprefix-element-view.md
-        - name: FieldProperty Element
+        - name: FieldProperty element
           href: schema/fieldproperty-element-view.md
-        - name: Fields Element
+        - name: Fields element
           href: schema/fields-element-view.md
-        - name: FieldSortParams Element
+        - name: FieldSortParams element
           href: schema/fieldsortparams-element-view.md
-        - name: FieldSwitch Element
+        - name: FieldSwitch element
           href: schema/fieldswitch-element-view.md
-        - name: FilterLink Element
+        - name: FilterLink element
           href: schema/filterlink-element-view.md
-        - name: ForEach Element
+        - name: ForEach element
           href: schema/foreach-element-view.md
       - name: G-L
         href: schema/view-schema-elements-g-l.md
         items:
-        - name: GetFileExtension Element
+        - name: GetFileExtension element
           href: schema/getfileextension-element-view.md
-        - name: GetVar Element
+        - name: GetVar element
           href: schema/getvar-element-view.md
-        - name: HTML Element
+        - name: HTML element
           href: schema/html-element-view.md
-        - name: HttpHost Element
+        - name: HttpHost element
           href: schema/httphost-element-view.md
-        - name: HttpPath Element
+        - name: HttpPath element
           href: schema/httppath-element-view.md
-        - name: HttpVDir Element
+        - name: HttpVDir element
           href: schema/httpvdir-element-view.md
-        - name: ID Element
+        - name: ID element
           href: schema/id-element-view.md
-        - name: Identity Element
+        - name: Identity element
           href: schema/identity-element-view.md
-        - name: IfEqual Element
+        - name: IfEqual element
           href: schema/ifequal-element-view.md
-        - name: IfHasRights Element
+        - name: IfHasRights element
           href: schema/ifhasrights-element-view.md
-        - name: IfNeg Element
+        - name: IfNeg element
           href: schema/ifneg-element-view.md
-        - name: IfNew Element
+        - name: IfNew element
           href: schema/ifnew-element-view.md
-        - name: IfSubString Element
+        - name: IfSubString element
           href: schema/ifsubstring-element-view.md
-        - name: Join Element
+        - name: Join element
           href: schema/join-element-view.md
-        - name: Joins Element
+        - name: Joins element
           href: schema/joins-element-view.md
-        - name: Length Element
+        - name: Length element
           href: schema/length-element-view.md
-        - name: Limit Element
+        - name: Limit element
           href: schema/limit-element-view.md
-        - name: List Element
+        - name: List element
           href: schema/list-element-view.md
-        - name: ListProperty Element
+        - name: ListProperty element
           href: schema/listproperty-element-view.md
-        - name: ListUrl Element
+        - name: ListUrl element
           href: schema/listurl-element-view.md
-        - name: ListUrlDir Element
+        - name: ListUrlDir element
           href: schema/listurldir-element-view.md
-        - name: LookupColumn Element
+        - name: LookupColumn element
           href: schema/lookupcolumn-element-view.md
       - name: M-Z
         href: schema/view-schema-elements-m-z.md
         items:
-        - name: MapToAll Element
+        - name: MapToAll element
           href: schema/maptoall-element-view.md
-        - name: MapToContentType Element
+        - name: MapToContentType element
           href: schema/maptocontenttype-element-view.md
-        - name: MapToControl Element
+        - name: MapToControl element
           href: schema/maptocontrol-element-view.md
-        - name: MapToIcon Element
+        - name: MapToIcon element
           href: schema/maptoicon-element-view.md
-        - name: MeetingProperty Element
+        - name: MeetingProperty element
           href: schema/meetingproperty-element-view.md
-        - name: Method Element
+        - name: Method element
           href: schema/method-element-view.md
-        - name: More Element
+        - name: More element
           href: schema/more-element-view.md
-        - name: PageUrl Element
+        - name: PageUrl element
           href: schema/pageurl-element-view.md
-        - name: ProjectProperty Element
+        - name: ProjectProperty element
           href: schema/projectproperty-element-view.md
-        - name: ProjectedFields Element
+        - name: ProjectedFields element
           href: schema/projectedfields-element-view.md
-        - name: Property Element
+        - name: Property element
           href: schema/property-element-view.md
-        - name: RightsChoices Element
+        - name: RightsChoices element
           href: schema/rightschoices-element-view.md
-        - name: RightsGroup Element
+        - name: RightsGroup element
           href: schema/rightsgroup-element-view.md
-        - name: ScriptQuote Element
+        - name: ScriptQuote element
           href: schema/scriptquote-element-view.md
-        - name: SelectionOptions Element
+        - name: SelectionOptions element
           href: schema/selectionoptions-element-view.md
-        - name: ServerProperty Element
+        - name: ServerProperty element
           href: schema/serverproperty-element-view.md
-        - name: SetList Element
+        - name: SetList element
           href: schema/setlist-element-view.md
-        - name: SetVar Element
+        - name: SetVar element
           href: schema/setvar-element-view.md
-        - name: Switch Element
+        - name: Switch element
           href: schema/switch-element-view.md
-        - name: Text Element
+        - name: Text element
           href: schema/text-element-view.md
-        - name: Then Element
+        - name: Then element
           href: schema/then-element-view.md
-        - name: ThreadStamp Element
+        - name: ThreadStamp element
           href: schema/threadstamp-element-view.md
-        - name: URL Element
+        - name: URL element
           href: schema/url-element-view.md
-        - name: UrlBaseName Element
+        - name: UrlBaseName element
           href: schema/urlbasename-element-view.md
-        - name: UrlDirName Element
+        - name: UrlDirName element
           href: schema/urldirname-element-view.md
-        - name: UserID Element
+        - name: UserID element
           href: schema/userid-element-view.md
-        - name: WebQueryInfo Element
+        - name: WebQueryInfo element
           href: schema/webqueryinfo-element-view.md
-    - name: List Schema
+    - name: List schema
       href: schema/list-schema.md
       items:
       - name: A-K
         href: schema/list-schema-elements-a-k.md
         items:
-        - name: Aggregations Element
+        - name: Aggregations element
           href: schema/aggregations-element-list.md
-        - name: AllUsersWebPart Element
+        - name: AllUsersWebPart element
           href: schema/alluserswebpart-element-list.md
-        - name: ArrayOfProperty Element
+        - name: ArrayOfProperty element
           href: schema/arrayofproperty-element-list.md
-        - name: CHOICE Element
+        - name: CHOICE element
           href: schema/choice-element-list.md
-        - name: CHOICES Element
+        - name: CHOICES element
           href: schema/choices-element-list.md
-        - name: ContentTypeRef Element
+        - name: ContentTypeRef element
           href: schema/contenttyperef-element-list.md
-        - name: ContentTypes Element
+        - name: ContentTypes element
           href: schema/contenttypes-element-list.md
-        - name: Customization Element
+        - name: Customization element
           href: schema/customization-element-list.md
-        - name: Default Element (Field)
+        - name: Default element (Field)
           href: schema/default-element-listfield.md
-        - name: Default Element (Form)
+        - name: Default element (Form)
           href: schema/default-element-listform.md
-        - name: DefaultDescription Element
+        - name: DefaultDescription element
           href: schema/defaultdescription-element-list.md
-        - name: DefaultFormula Element
+        - name: DefaultFormula element
           href: schema/defaultformula-element-list.md
-        - name: DefaultFormulaValue Element
+        - name: DefaultFormulaValue element
           href: schema/defaultformulavalue-element-list.md
-        - name: DisplayBidiPattern Element
+        - name: DisplayBidiPattern element
           href: schema/displaybidipattern-element-list.md
-        - name: DisplayPattern Element
+        - name: DisplayPattern element
           href: schema/displaypattern-element-list.md
-        - name: DocumentLibraryTemplate Element
+        - name: DocumentLibraryTemplate element
           href: schema/documentlibrarytemplate-element-list.md
-        - name: Field Element
+        - name: Field element
           href: schema/field-element-list.md
-        - name: FieldRef Element
+        - name: FieldRef element
           href: schema/fieldref-element-list.md
-        - name: FieldRefs Element
+        - name: FieldRefs element
           href: schema/fieldrefs-element-list.md
-        - name: Fields Element
+        - name: Fields element
           href: schema/fields-element-list.md
-        - name: Filter Element
+        - name: Filter element
           href: schema/filter-element-list.md
-        - name: Folder Element
+        - name: Folder element
           href: schema/folder-element-list.md
-        - name: Form Element
+        - name: Form element
           href: schema/form-element-list.md
-        - name: Forms Element
+        - name: Forms element
           href: schema/forms-element-list.md
-        - name: Formula Element
+        - name: Formula element
           href: schema/formula-element-list.md
-        - name: FormulaDisplayNames Element
+        - name: FormulaDisplayNames element
           href: schema/formuladisplaynames-element-list.md
-        - name: GroupByFooter Element
+        - name: GroupByFooter element
           href: schema/groupbyfooter-element-list.md
-        - name: GroupByHeader Element
+        - name: GroupByHeader element
           href: schema/groupbyheader-element-list.md
       - name: L-Z
         href: schema/list-schema-elements-l-z.md
         items:
-        - name: List Element
+        - name: List element
           href: schema/list-element-list.md
-        - name: ListFormBody Element
+        - name: ListFormBody element
           href: schema/listformbody-element-list.md
-        - name: ListFormButtons Element
+        - name: ListFormButtons element
           href: schema/listformbuttons-element-list.md
-        - name: ListFormClosing Element
+        - name: ListFormClosing element
           href: schema/listformclosing-element-list.md
-        - name: ListFormOpening Element
+        - name: ListFormOpening element
           href: schema/listformopening-element-list.md
-        - name: MAPPING Element
+        - name: MAPPING element
           href: schema/mapping-element-list.md
-        - name: MAPPINGS Element
+        - name: MAPPINGS element
           href: schema/mappings-element-list.md
-        - name: MetaData Element
+        - name: MetaData element
           href: schema/metadata-element-list.md
-        - name: Method Element
+        - name: Method element
           href: schema/method-element-list.md
-        - name: PagedClientCallbackRowset Element
+        - name: PagedClientCallbackRowset element
           href: schema/pagedclientcallbackrowset-element-list.md
-        - name: PagedRecurrenceRowset Element
+        - name: PagedRecurrenceRowset element
           href: schema/pagedrecurrencerowset-element-list.md
-        - name: PagedRowset Element
+        - name: PagedRowset element
           href: schema/pagedrowset-element-list.md
-        - name: ParameterBinding Element
+        - name: ParameterBinding element
           href: schema/parameterbinding-element-list.md
-        - name: ParameterBindings Element
+        - name: ParameterBindings element
           href: schema/parameterbindings-element-list.md
-        - name: Property Element
+        - name: Property element
           href: schema/property-element-list.md
-        - name: Query Element
+        - name: Query element
           href: schema/query-element-list.md
-        - name: RowLimit Element
+        - name: RowLimit element
           href: schema/rowlimit-element-list.md
-        - name: RowLimitExceeded Element
+        - name: RowLimitExceeded element
           href: schema/rowlimitexceeded-element-list.md
-        - name: Toolbar Element
+        - name: Toolbar element
           href: schema/toolbar-element-list.md
-        - name: Validation Element
+        - name: Validation element
           href: schema/validation-element-list.md
-        - name: View Element
+        - name: View element
           href: schema/view-element-list.md
-        - name: ViewBidiHeader Element
+        - name: ViewBidiHeader element
           href: schema/viewbidiheader-element-list.md
-        - name: ViewBody Element
+        - name: ViewBody element
           href: schema/viewbody-element-list.md
-        - name: ViewData Element
+        - name: ViewData element
           href: schema/viewdata-element-list.md
-        - name: ViewEmpty Element
+        - name: ViewEmpty element
           href: schema/viewempty-element-list.md
-        - name: ViewFields Element
+        - name: ViewFields element
           href: schema/viewfields-element-list.md
-        - name: ViewFooter Element
+        - name: ViewFooter element
           href: schema/viewfooter-element-list.md
-        - name: ViewHeader Element
+        - name: ViewHeader element
           href: schema/viewheader-element-list.md
-        - name: Views Element
+        - name: Views element
           href: schema/views-element-list.md
-        - name: ViewStyle Element
+        - name: ViewStyle element
           href: schema/viewstyle-element-list.md
-        - name: WebParts Element
+        - name: WebParts element
           href: schema/webparts-element-list.md
-        - name: XslLink Element
+        - name: XslLink element
           href: schema/xsllink-element-list.md
-    - name: Site Schema
+    - name: Site schema
       href: schema/site-schema.md
       items:
       - name: A-L
         href: schema/site-schema-elements-a-l.md
         items:
-        - name: AllUsersWebPart Element
+        - name: AllUsersWebPart element
           href: schema/alluserswebpart-element-site.md
-        - name: BaseType Element
+        - name: BaseType element
           href: schema/basetype-element-site.md
-        - name: BaseTypes Element
+        - name: BaseTypes element
           href: schema/basetypes-element-site.md
-        - name: BinarySerializedWebPart Element
+        - name: BinarySerializedWebPart element
           href: schema/binaryserializedwebpart-element-site.md
-        - name: Components Element
+        - name: Components element
           href: schema/components-element-site.md
-        - name: Configuration Element
+        - name: Configuration element
           href: schema/configuration-element-site.md
-        - name: Configurations Element
+        - name: Configurations element
           href: schema/configurations-element-site.md
-        - name: Data Element
+        - name: Data element
           href: schema/data-element-site.md
-        - name: DocumentTemplate Element
+        - name: DocumentTemplate element
           href: schema/documenttemplate-element-site.md
-        - name: DocumentTemplateFile Element
+        - name: DocumentTemplateFile element
           href: schema/documenttemplatefile-element-site.md
-        - name: DocumentTemplateFiles Element
+        - name: DocumentTemplateFiles element
           href: schema/documenttemplatefiles-element-site.md
-        - name: DocumentTemplates Element
+        - name: DocumentTemplates element
           href: schema/documenttemplates-element-site.md
-        - name: ExecuteUrl Element
+        - name: ExecuteUrl element
           href: schema/executeurl-element-site.md
-        - name: ExternalSecurityProvider Element
+        - name: ExternalSecurityProvider element
           href: schema/externalsecurityprovider-element-site.md
-        - name: Feature Element
+        - name: Feature element
           href: schema/feature-element-site.md
-        - name: Field Element
+        - name: Field element
           href: schema/field-element-site.md
-        - name: File Element
+        - name: File element
           href: schema/file-element.md
-        - name: FileDialogPostProcessor Element
+        - name: FileDialogPostProcessor element
           href: schema/filedialogpostprocessor-element-site.md
-        - name: GUID Element
+        - name: GUID element
           href: schema/guid-element-site.md
-        - name: GUIDMap Element
+        - name: GUIDMap element
           href: schema/guidmap-element-site.md
-        - name: List Element
+        - name: List element
           href: schema/list-element-site.md
-        - name: Lists Element
+        - name: Lists element
           href: schema/lists-element-site.md
-        - name: ListTemplate Element
+        - name: ListTemplate element
           href: schema/listtemplate-element-site.md
-        - name: ListTemplates Element
+        - name: ListTemplates element
           href: schema/listtemplates-element-site.md
       - name: M-Z
         href: schema/site-schema-elements-m-z.md
         items:
-        - name: MetaData Element
+        - name: MetaData element
           href: schema/metadata-element-site.md
-        - name: Module Element
+        - name: Module element
           href: schema/module-element-site.md
-        - name: Modules Element
+        - name: Modules element
           href: schema/modules-element-site.md
-        - name: NavBar Element
+        - name: NavBar element
           href: schema/navbar-element-site.md
-        - name: NavBarLink Element
+        - name: NavBarLink element
           href: schema/navbarlink-element-site.md
-        - name: NavBarPage Element (Module)
+        - name: NavBarPage element (Module)
           href: schema/navbarpage-element-sitemodule.md
-        - name: NavBarPage Element (NavBar)
+        - name: NavBarPage element (NavBar)
           href: schema/navbarpage-element-sitenavbar.md
-        - name: NavBars Element
+        - name: NavBars element
           href: schema/navbars-element-site.md
-        - name: Project Element
+        - name: Project element
           href: schema/project-element-site.md
-        - name: Properties Element
+        - name: Properties element
           href: schema/properties-element-site.md
-        - name: Property Element (Feature)
+        - name: Property element (Feature)
           href: schema/property-element-sitefeature.md
-        - name: Property Element (Module)
+        - name: Property element (Module)
           href: schema/property-element-sitemodule.md
-        - name: Row Element
+        - name: Row element
           href: schema/row-element-site.md
-        - name: Rows Element
+        - name: Rows element
           href: schema/rows-element-site.md
-        - name: ServerEmailFooter Element
+        - name: ServerEmailFooter element
           href: schema/serveremailfooter-element-site.md
-        - name: SiteFeatures Element
+        - name: SiteFeatures element
           href: schema/sitefeatures-element-site.md
-        - name: Template Element
+        - name: Template element
           href: schema/template-element-site.md
-        - name: Templates Element
+        - name: Templates element
           href: schema/templates-element-site.md
-        - name: View Element
+        - name: View element
           href: schema/view-element-site.md
-        - name: WebFeatures Element
+        - name: WebFeatures element
           href: schema/webfeatures-element-site.md
-        - name: WebPart Element
+        - name: WebPart element
           href: schema/webpart-element-site.md
-        - name: WebPartConnection Element
+        - name: WebPartConnection element
           href: schema/webpartconnection-element-site.md
-        - name: WebPartTransformer Element
+        - name: WebPartTransformer element
           href: schema/webparttransformer-element-site.md
-    - name: Site Deletion Confirmation Schema
+    - name: Site deletion confirmation schema
       href: schema/site-deletion-confirmation-schema.md
       items:
-      - name: AutoDeleteBody Element
+      - name: AutoDeleteBody element
         href: schema/autodeletebody-element-site-deletion.md
-      - name: AutoDeleteSubject Element
+      - name: AutoDeleteSubject element
         href: schema/autodeletesubject-element-site-deletion.md
-      - name: AutoDeleteWarning Element
+      - name: AutoDeleteWarning element
         href: schema/autodeletewarning-element-site-deletion.md
-      - name: Confirmation Element
+      - name: Confirmation element
         href: schema/confirmation-element-site-deletion.md
-      - name: ConfirmationBody Element
+      - name: ConfirmationBody element
         href: schema/confirmationbody-element-site-deletion.md
-      - name: ConfirmationSubject Element
+      - name: ConfirmationSubject element
         href: schema/confirmationsubject-element-site-deletion.md
-      - name: Email Element
+      - name: Email element
         href: schema/email-element-site-deletion.md
-    - name: Regional Settings Schema
+    - name: Regional settings schema
       href: schema/regional-settings-schema.md
       items:
-      - name: Bias Element
+      - name: Bias element
         href: schema/bias-element-regional-settings.md
-      - name: Currencies Element
+      - name: Currencies element
         href: schema/currencies-element-regional-settings.md
-      - name: Currency Element
+      - name: Currency element
         href: schema/currency-element-regional-settings.md
-      - name: Date Element
+      - name: Date element
         href: schema/date-element-regional-settings.md
-      - name: Day Element
+      - name: Day element
         href: schema/day-element-regional-settings.md
-      - name: DaylightTime Element
+      - name: DaylightTime element
         href: schema/daylighttime-element-regional-settings.md
-      - name: DayOfWeek Element
+      - name: DayOfWeek element
         href: schema/dayofweek-element-regional-settings.md
-      - name: History Element
+      - name: History element
         href: schema/history-element-regional-settings.md
-      - name: Hour Element
+      - name: Hour element
         href: schema/hour-element-regional-settings.md
-      - name: Language Element
+      - name: Language element
         href: schema/language-element-regional-settings.md
-      - name: Languages Element
+      - name: Languages element
         href: schema/languages-element-regional-settings.md
-      - name: Locale Element
+      - name: Locale element
         href: schema/locale-element-regional-settings.md
-      - name: Locales Element
+      - name: Locales element
         href: schema/locales-element-regional-settings.md
-      - name: Month Element
+      - name: Month element
         href: schema/month-element-regional-settings.md
-      - name: RegionalSettings Element
+      - name: RegionalSettings element
         href: schema/regionalsettings-element-regional-settings.md
-      - name: StandardTime Element
+      - name: StandardTime element
         href: schema/standardtime-element-regional-settings.md
-      - name: TimeZone Element
+      - name: TimeZone element
         href: schema/timezone-element-regional-settings.md
-      - name: TimeZones Element
+      - name: TimeZones element
         href: schema/timezones-element-regional-settings.md
-    - name: Document Icons Schema
+    - name: Document icons schema
       href: schema/document-icons-schema.md
       items:
-      - name: ByExtension Element
+      - name: ByExtension element
         href: schema/byextension-element-document-icons.md
-      - name: ByProgID Element
+      - name: ByProgID element
         href: schema/byprogid-element-document-icons.md
-      - name: DocIcons Element
+      - name: DocIcons element
         href: schema/docicons-element-document-icons.md
-      - name: Mapping Element
+      - name: Mapping element
         href: schema/mapping-element-document-icons.md
-    - name: General Schema
+    - name: General schema
       href: schema/general-schema.md
       items:
       - name: A-H
         href: schema/general-schema-elements-a-h.md
         items:
-        - name: Attachments Element
+        - name: Attachments element
           href: schema/attachments-element.md
-        - name: CategoryBot Element
+        - name: CategoryBot element
           href: schema/categorybot-element.md
-        - name: CrossProjectLink Element
+        - name: CrossProjectLink element
           href: schema/crossprojectlink-element.md
-        - name: DataFormatLCID Element
+        - name: DataFormatLCID element
           href: schema/dataformatlcid-element.md
-        - name: Discussions Element
+        - name: Discussions element
           href: schema/discussions-element.md
-        - name: Escape Element
+        - name: Escape element
           href: schema/escape-element.md
-        - name: FieldFilterImageURL Element
+        - name: FieldFilterImageURL element
           href: schema/fieldfilterimageurl-element.md
-        - name: FieldFilterOptions Element
+        - name: FieldFilterOptions element
           href: schema/fieldfilteroptions-element.md
-        - name: FieldSortImageURL Element
+        - name: FieldSortImageURL element
           href: schema/fieldsortimageurl-element.md
-        - name: Format Element
+        - name: Format element
           href: schema/format-element.md
-        - name: FormatDef Element
+        - name: FormatDef element
           href: schema/formatdef-element.md
-        - name: Formats Element
+        - name: Formats element
           href: schema/formats-element.md
-        - name: GetProgID Element
+        - name: GetProgID element
           href: schema/getprogid-element.md
-        - name: GlobalLists Element
+        - name: GlobalLists element
           href: schema/globallists-element.md
-        - name: GUID Element
+        - name: GUID element
           href: schema/guid-element.md
-        - name: HTMLBase Element
+        - name: HTMLBase element
           href: schema/htmlbase-element.md
-        - name: HtmlTrInfo Element
+        - name: HtmlTrInfo element
           href: schema/htmltrinfo-element.md
       - name: I-Z
         href: schema/general-schema-elements-i-z.md
         items:
-        - name: IfOld Element
+        - name: IfOld element
           href: schema/ifold-element.md
-        - name: ImagesPath Element
+        - name: ImagesPath element
           href: schema/imagespath-element.md
-        - name: InForm Element
+        - name: InForm element
           href: schema/inform-element.md
-        - name: IsPrivilegedUser Element
+        - name: IsPrivilegedUser element
           href: schema/isprivilegeduser-element.md
-        - name: ListForm Element
+        - name: ListForm element
           href: schema/listform-element.md
-        - name: LocaleInfo Element
+        - name: LocaleInfo element
           href: schema/localeinfo-element.md
-        - name: Mapping Element
+        - name: Mapping element
           href: schema/mapping-element.md
-        - name: MapToText Element
+        - name: MapToText element
           href: schema/maptotext-element.md
-        - name: OkToVote Element
+        - name: OkToVote element
           href: schema/oktovote-element.md
-        - name: PresenceEnabled Element
+        - name: PresenceEnabled element
           href: schema/presenceenabled-element.md
-        - name: QuotedXML Element
+        - name: QuotedXML element
           href: schema/quotedxml-element.md
-        - name: ReadSecurity Element
+        - name: ReadSecurity element
           href: schema/readsecurity-element.md
-        - name: Recurrence Element
+        - name: Recurrence element
           href: schema/recurrence-element.md
-        - name: SchemaSecurity Element
+        - name: SchemaSecurity element
           href: schema/schemasecurity-element.md
-        - name: Script Element
+        - name: Script element
           href: schema/script-element.md
-        - name: Security Element
+        - name: Security element
           href: schema/security-element.md
-        - name: Site Element
+        - name: Site element
           href: schema/site-element.md
-        - name: TodayISO Element
+        - name: TodayISO element
           href: schema/todayiso-element.md
-        - name: UserEmail Element
+        - name: UserEmail element
           href: schema/useremail-element.md
-        - name: ViewStyles Element
+        - name: ViewStyles element
           href: schema/viewstyles-element.md
-        - name: Week Element
+        - name: Week element
           href: schema/week-element.md
-        - name: WriteSecurity Element
+        - name: WriteSecurity element
           href: schema/writesecurity-element.md
   - name: SharePoint search settings portability schemas
     href: schema/sharepoint-search-settings-portability-schemas.md
@@ -4422,81 +4422,81 @@
     - name: Field Types schema
       href: schema/field-types-schema.md
       items:
-      - name: FieldTypes Element (Field Types)
+      - name: FieldTypes element (Field Types)
         href: schema/fieldtypes-element-field-types.md
-      - name: FieldType Element (Field Types)
+      - name: FieldType element (Field Types)
         href: schema/fieldtype-element-field-types.md
-      - name: Field Element (Field Types)
+      - name: Field element (Field Types)
         href: schema/field-element-field-types.md
-      - name: PropertySchema Element (Field Types)
+      - name: PropertySchema element (Field Types)
         href: schema/propertyschema-element-field-types.md
         items:
-        - name: Fields Element (Field Types Property Schema)
+        - name: Fields element (Field Types Property schema)
           href: schema/fields-element-field-types-property-schema.md
-        - name: Field Element (Field Types Property Schema)
+        - name: Field element (Field Types Property schema)
           href: schema/field-element-field-types-property-schema.md
-        - name: Default Element (Field Types Property Schema)
+        - name: Default element (Field Types Property schema)
           href: schema/default-element-field-types-property-schema.md
-      - name: RenderPattern Element (Field Types)
+      - name: RenderPattern element (Field Types)
         href: schema/renderpattern-element-field-types.md
     - name: AlertTemplates schema
       href: schema/alerttemplates-schema.md
       items:
-      - name: AlertTemplate Element
+      - name: AlertTemplate element
         href: schema/alerttemplate-element-alerttemplates.md
-      - name: AlertTemplates Element
+      - name: AlertTemplates element
         href: schema/alerttemplates-element-alerttemplates.md
-      - name: Digest Element
+      - name: Digest element
         href: schema/digest-element-alerttemplates.md
-      - name: DigestNotificationExcludedFields Element
+      - name: DigestNotificationExcludedFields element
         href: schema/digestnotificationexcludedfields-element-alerttemplates.md
-      - name: EventTypes Element
+      - name: EventTypes element
         href: schema/eventtypes-element-alerttemplates.md
-      - name: Fields Element
+      - name: Fields element
         href: schema/fields-element-alerttemplates.md
-      - name: FilterDefinition Element
+      - name: FilterDefinition element
         href: schema/filterdefinition-element-alerttemplates.md
-      - name: Filters Element
+      - name: Filters element
         href: schema/filters-element-alerttemplates.md
-      - name: Footer Element
+      - name: Footer element
         href: schema/footer-element-alerttemplates.md
-      - name: Format Element
+      - name: Format element
         href: schema/format-element-alerttemplates.md
-      - name: FriendlyName Element
+      - name: FriendlyName element
         href: schema/friendlyname-element-alerttemplates.md
-      - name: Header Element
+      - name: Header element
         href: schema/header-element-alerttemplates.md
-      - name: HeaderFields Element
+      - name: HeaderFields element
         href: schema/headerfields-element-alerttemplates.md
-      - name: HeaderFieldsFooter Element
+      - name: HeaderFieldsFooter element
         href: schema/headerfieldsfooter-element-alerttempaltes.md
-      - name: HeaderFieldsHeader Element
+      - name: HeaderFieldsHeader element
         href: schema/headerfieldsheader-element-alerttempaltes.md
-      - name: Immediate Element
+      - name: Immediate element
         href: schema/immediate-element-alerttemplates.md
-      - name: ImmediateNotificationExcludedFields Element
+      - name: ImmediateNotificationExcludedFields element
         href: schema/immediatenotificationexcludedfields-element-alerttemplates.md
-      - name: NotificationHandlerAssembly Element
+      - name: NotificationHandlerAssembly element
         href: schema/notificationhandlerassembly-element-alert-templates.md
-      - name: NotificationHandlerClassName Element
+      - name: NotificationHandlerClassName element
         href: schema/notificationhandlerclassname-element-alerttemplates.md
-      - name: Properties Element
+      - name: Properties element
         href: schema/properties-element-alerttemplates.md
-      - name: Query Element
+      - name: Query element
         href: schema/query-element-alerttemplates.md
-      - name: RowFields Element
+      - name: RowFields element
         href: schema/rowfields-element-alerttemplates.md
-      - name: RowFooter Element
+      - name: RowFooter element
         href: schema/rowfooter-element-alerttemplates.md
-      - name: RowHeader Element
+      - name: RowHeader element
         href: schema/rowheader-element-alerttemplates.md
-      - name: ShortName Element
+      - name: ShortName element
         href: schema/shortname-element-alerttemplates.md
-      - name: Subject Element
+      - name: Subject element
         href: schema/subject-element-alerttemplates.md
-      - name: UpdateHandlerAssembly Element
+      - name: UpdateHandlerAssembly element
         href: schema/updatehandlerassembly-element-alerttemplates.md
-      - name: UpdateHandlerClassName Element
+      - name: UpdateHandlerClassName element
         href: schema/updatehandlerclassname-element-alerttemplates.md
     - name: Mobile Document Viewer schema
       href: schema/mobile-document-viewer-schema.md
@@ -4512,170 +4512,170 @@
     - name: Server Ribbon schema
       href: schema/server-ribbon-schema.md
       items:
-      - name: Button Element
+      - name: Button element
         href: schema/button-element.md
-      - name: CheckBox Element
+      - name: CheckBox element
         href: schema/checkbox-element.md
-      - name: ColorPicker Element
+      - name: ColorPicker element
         href: schema/colorpicker-element.md
-      - name: Colors Element
+      - name: Colors element
         href: schema/colors-element.md
-      - name: Color Element
+      - name: Color element
         href: schema/color-element.md
-      - name: ComboBox Element
+      - name: ComboBox element
         href: schema/combobox-element.md
-      - name: CommandUI Element
+      - name: CommandUI element
         href: schema/commandui-element.md
-      - name: ContextualGroup Element
+      - name: ContextualGroup element
         href: schema/contextualgroup-element.md
-      - name: ContextualTabs Element
+      - name: ContextualTabs element
         href: schema/contextualtabs-element.md
-      - name: ControlRef Element
+      - name: ControlRef element
         href: schema/controlref-element.md
-      - name: Controls Element (CommandUIDefinition)
+      - name: Controls element (CommandUIDefinition)
         href: schema/controls-element-commanduidefinition.md
-      - name: Controls Element (Group)
+      - name: Controls element (Group)
         href: schema/controls-element-group.md
-      - name: Controls Element (MenuSection)
+      - name: Controls element (MenuSection)
         href: schema/controls-element-menusection.md
-      - name: DropDown Element
+      - name: DropDown element
         href: schema/dropdown-element.md
-      - name: FlyoutAnchor Element
+      - name: FlyoutAnchor element
         href: schema/flyoutanchor-element.md
-      - name: Gallery Element
+      - name: Gallery element
         href: schema/gallery-element.md
-      - name: GalleryButton Element (Gallery)
+      - name: GalleryButton element (Gallery)
         href: schema/gallerybutton-element-gallery.md
-      - name: GalleryButton Element (Group)
+      - name: GalleryButton element (Group)
         href: schema/gallerybutton-element-group.md
-      - name: Groups Element
+      - name: Groups element
         href: schema/groups-element.md
-      - name: Group Element
+      - name: Group element
         href: schema/group-element-ribbon.md
-      - name: GroupTemplate Element
+      - name: GroupTemplate element
         href: schema/grouptemplate-element.md
-      - name: InsertTable Element
+      - name: InsertTable element
         href: schema/inserttable-element.md
-      - name: Jewel Element
+      - name: Jewel element
         href: schema/jewel-element.md
-      - name: Label Element
+      - name: Label element
         href: schema/label-element.md
-      - name: Layout Element
+      - name: Layout element
         href: schema/layout-element.md
-      - name: MaxSize Element
+      - name: MaxSize element
         href: schema/maxsize-element.md
-      - name: Menu Element
+      - name: Menu element
         href: schema/menu-element.md
-      - name: MenuSection Element
+      - name: MenuSection element
         href: schema/menusection-element.md
-      - name: MRUSplitButton Element
+      - name: MRUSplitButton element
         href: schema/mrusplitbutton-element.md
-      - name: OverflowSection Element
+      - name: OverflowSection element
         href: schema/overflowsection-element.md
-      - name: OverflowArea Element
+      - name: OverflowArea element
         href: schema/overflowarea-element.md
-      - name: QAT Element
+      - name: QAT element
         href: schema/qat-element.md
-      - name: Ribbon Element
+      - name: Ribbon element
         href: schema/ribbon-element.md
       - name: RibbonTemplates
         href: schema/ribbontemplates.md
-      - name: Row Element
+      - name: Row element
         href: schema/row-element.md
-      - name: Scale Element
+      - name: Scale element
         href: schema/scale-element.md
-      - name: Scaling Element
+      - name: Scaling element
         href: schema/scaling-element.md
-      - name: Section Element
+      - name: Section element
         href: schema/section-element.md
-      - name: Spinner Element
+      - name: Spinner element
         href: schema/spinner-element.md
-      - name: SplitButton Element
+      - name: SplitButton element
         href: schema/splitbutton-element.md
-      - name: Strip Element
+      - name: Strip element
         href: schema/strip-element.md
-      - name: Tabs Element
+      - name: Tabs element
         href: schema/tabs-element.md
-      - name: Tab Element
+      - name: Tab element
         href: schema/tab-element.md
-      - name: Templates Element
+      - name: Templates element
         href: schema/templates-element.md
-      - name: TextBox Element
+      - name: TextBox element
         href: schema/textbox-element.md
-      - name: ToggleButton Element
+      - name: ToggleButton element
         href: schema/togglebutton-element.md
-      - name: Unit Element
+      - name: Unit element
         href: schema/unit-element-spinner.md
-      - name: UnitAbbreviation Element
+      - name: UnitAbbreviation element
         href: schema/unitabbreviation-element.md
     - name: Solution schema
       href: schema/solution-schema.md
       items:
-      - name: ActivationDependencies Element
+      - name: ActivationDependencies element
         href: schema/activationdependencies-element-solution.md
-      - name: ActivationDependency Element
+      - name: ActivationDependency element
         href: schema/activationdependency-element-solution.md
-      - name: App_GlobalResourceFile Element
+      - name: App_GlobalResourceFile element
         href: schema/app_globalresourcefile-element-solution.md
-      - name: ApplicationResourceFile Element
+      - name: ApplicationResourceFile element
         href: schema/applicationresourcefile-element-solution.md
-      - name: ApplicationResourceFiles Element
+      - name: ApplicationResourceFiles element
         href: schema/applicationresourcefiles-element-solution.md
-      - name: Assemblies Element (Assemblies)
+      - name: Assemblies element (Assemblies)
         href: schema/assemblies-element-solutionassemblies.md
-      - name: Assemblies Element (CodeAccessSecurity)
+      - name: Assemblies element (CodeAccessSecurity)
         href: schema/assemblies-element-solutioncodeaccesssecurity.md
-      - name: Assembly Element (Assemblies)
+      - name: Assembly element (Assemblies)
         href: schema/assembly-element-solutionassemblies.md
-      - name: Assembly Element (CodeAccessSecurity)
+      - name: Assembly element (CodeAccessSecurity)
         href: schema/assembly-element-solutioncodeaccesssecurity.md
-      - name: BindingRedirect Element
+      - name: BindingRedirect element
         href: schema/bindingredirect-element-solution.md
-      - name: BindingRedirects Element
+      - name: BindingRedirects element
         href: schema/bindingredirects-element-solution.md
-      - name: ClassResource Element
+      - name: ClassResource element
         href: schema/classresource-element-solution.md
-      - name: ClassResources Element
+      - name: ClassResources element
         href: schema/classresources-element-solution.md
-      - name: CodeAccessSecurity Element
+      - name: CodeAccessSecurity element
         href: schema/codeaccesssecurity-element-solution.md
-      - name: DwpFile Element
+      - name: DwpFile element
         href: schema/dwpfile-element-solution.md
-      - name: DwpFiles Element
+      - name: DwpFiles element
         href: schema/dwpfiles-element-solution.md
-      - name: FeatureManifest Element
+      - name: FeatureManifest element
         href: schema/featuremanifest-element-solution.md
-      - name: FeatureManifests Element
+      - name: FeatureManifests element
         href: schema/featuremanifests-element-solution.md
-      - name: IPermission Element
+      - name: IPermission element
         href: schema/ipermission-element-solution.md
-      - name: PermissionSet Element
+      - name: PermissionSet element
         href: schema/permissionset-element-solution.md
-      - name: PolicyItem Element
+      - name: PolicyItem element
         href: schema/policyitem-element-solution.md
-      - name: Resource Element
+      - name: Resource element
         href: schema/resource-element-solution.md
-      - name: Resources Element
+      - name: Resources element
         href: schema/resources-element-solution.md
-      - name: RootFile Element
+      - name: RootFile element
         href: schema/rootfile-element-solution.md
-      - name: RootFiles Element
+      - name: RootFiles element
         href: schema/rootfiles-element-solution.md
-      - name: SafeControl Element
+      - name: SafeControl element
         href: schema/safecontrol-element-solution.md
-      - name: SafeControls Element
+      - name: SafeControls element
         href: schema/safecontrols-element-solution.md
-      - name: SiteDefinitionManifest Element
+      - name: SiteDefinitionManifest element
         href: schema/sitedefinitionmanifest-element-solution.md
-      - name: SiteDefinitionManifests Element
+      - name: SiteDefinitionManifests element
         href: schema/sitedefinitionmanifests-element-solution.md
-      - name: Solution Element
+      - name: Solution element
         href: schema/solution-element-solution.md
-      - name: TemplateFile Element
+      - name: TemplateFile element
         href: schema/templatefile-element-solution.md
-      - name: TemplateFiles Element
+      - name: TemplateFiles element
         href: schema/templatefiles-element-solution.md
-      - name: WebTempFile Element
+      - name: WebTempFile element
         href: schema/webtempfile-element-solution.md
     - name: SPMetal Parameters schema
       href: schema/spmetal-parameters-schema.md
@@ -4709,23 +4709,23 @@
     - name: Upgrade Definition schema
       href: schema/upgrade-definition-schema.md
       items:
-      - name: AppliedSiteFeatures Element
+      - name: AppliedSiteFeatures element
         href: schema/appliedsitefeatures-element-upgrade.md
-      - name: AppliedWebFeatures Element
+      - name: AppliedWebFeatures element
         href: schema/appliedwebfeatures-element-upgrade.md
-      - name: Config Element
+      - name: Config element
         href: schema/config-element-upgrade.md
-      - name: Feature Element
+      - name: Feature element
         href: schema/feature-element-upgrade.md
-      - name: File Element
+      - name: File element
         href: schema/file-element-upgrade.md
-      - name: Files Element
+      - name: Files element
         href: schema/files-element-upgrade.md
-      - name: List Element
+      - name: List element
         href: schema/list-element-upgrade.md
-      - name: Lists Element
+      - name: Lists element
         href: schema/lists-element-upgrade.md
-      - name: WebTemplate Element
+      - name: WebTemplate element
         href: schema/webtemplate-element-upgrade.md
     - name: dsQueryResponse schema
       href: schema/dsqueryresponse-schema.md
