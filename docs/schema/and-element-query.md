@@ -1,5 +1,5 @@
 ---
-title: "And Element (Query)"
+title: And element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d71502b2-7f7d-4bd9-9a94-70848d85b24a
-description: "Last modified: March 09, 2015"
+description: In CAML, used within the Where element to group filters in a query for a view.
 ---
 
-# And Element (Query)
+# And element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within the [Where](where-element-query.md) element to group filters in a query for a view. 
   
-```
+```XML
 <And>
 </And>
 ```
@@ -33,27 +31,38 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[And](and-element-query.md), [BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [Geq](geq-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Membership](membership-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [Or](or-element-query.md)|
+- [And](and-element-query.md)
+- [BeginsWith](beginswith-element-query.md)
+- [Contains](contains-element-query.md)
+- [DateRangesOverlap](daterangesoverlap-element-query.md)
+- [Eq](eq-element-query.md)
+- [Geq](geq-element-query.md)
+- [Gt](gt-element-query.md)
+- [In](in-element-query.md)
+- [Includes](includes-element-query.md)
+- [IsNotNull](isnotnull-element-query.md)
+- [IsNull](isnull-element-query.md)
+- [Leq](leq-element-query.md)
+- [Lt](lt-element-query.md)
+- [Membership](membership-element-query.md)
+- [Neq](neq-element-query.md)
+- [NotIncludes](notincludes-element-query.md)
+- [Or](or-element-query.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
+- [And](and-element-query.md)
+- [Or](or-element-query.md)
+- [Where](where-element-query.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ### Remarks
 
@@ -63,7 +72,7 @@ This element can be nested inside other **And** and [Or](or-element-query.md) el
 
 The following example conveys criteria for a query on the ProductID field: (ProductID = J1539 AND ProductID = J9862) AND (ProductID = J0394 OR ProductID = J4589).
   
-```
+```XML
 <And>
   <And>
     <Eq>
@@ -88,9 +97,11 @@ The following example conveys criteria for a query on the ProductID field: (Prod
 </And>
 ```
 
+<br/>
+
 The following example performs a query for cases in which values of the **Status** field do not equal Completed and values of the **Sent** field are **null**. The records returned are sorted in descending order according to values of the **Modified** field. 
   
-```
+```XML
 <Query>
   <OrderBy>
     <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
@@ -109,9 +120,11 @@ The following example performs a query for cases in which values of the **Status
 </Query>
 ```
 
-The following example shows how to conjoin three conditions. Note that the first pair of conditions are within their own **And** element, which is itself a condition of an outer **And** element. 
+<br/>
+
+The following example shows how to conjoin three conditions. Note that the first pair of conditions is within their own **And** element, which is itself a condition of an outer **And** element. 
   
-```
+```XML
 <Where>
   <And>
     <And>
@@ -129,5 +142,7 @@ The following example shows how to conjoin three conditions. Note that the first
 </Where>
 
 ```
+
+<br/>
 
 

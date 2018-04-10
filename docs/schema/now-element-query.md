@@ -1,7 +1,5 @@
 ---
-title: "Now Element (Query)"
-
-
+title: Now element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: dcc172ed-cb4b-4cb9-9add-931332be5ee1
-description: "Last modified: March 09, 2015"
+description: In CAML, returns the current date and time.
 ---
 
-# Now Element (Query)
+# Now element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the current date and time.
   
-```
+```XML
 <Now>
 </Now>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ## Example
 
@@ -78,12 +67,7 @@ The following example queries for cases where a recurring event overlaps with th
 
 ## See also
 
-
-
-[TodayISO Element](todayiso-element.md)
-
-
-[Month Element (Regional Settings)](month-element-regional-settings.md)
-  
-[Today Element (Query)](today-element-query.md)
+- [TodayISO element](todayiso-element.md)
+- [Month element (Regional Settings)](month-element-regional-settings.md) 
+- [Today element (Query)](today-element-query.md)
 

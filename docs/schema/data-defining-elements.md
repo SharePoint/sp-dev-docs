@@ -1,7 +1,5 @@
 ---
-title: "Data-Defining Elements"
-
-
+title: Data-defining elements in CAML
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,22 +7,20 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: e873b640-c1ee-436a-81ef-ae8f6a439e61
-description: "Last modified: March 09, 2015"
+description:  CAML field rendering elements are designed for use when rendering individual field values.
 ---
 
-# Data-Defining Elements
+# Data-defining elements
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Collaborative Application Markup Language (CAML) has two major kinds of elements: those for page rendering, and those for field rendering and schema definition. The CAML field rendering elements are designed for use when rendering individual field values. These can appear in field type definitions or, more commonly, in [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) at  `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATES\XML`.
   
-## Field Rendering and Schema Definition
+## Field rendering and schema definition
 
-A field is a column or an attribute containing information that a user can add to a list. Each list on a Web site based on Microsoft SharePoint Foundation has metadata stored in the database. The format of the schema is an XML structure, such as the following:
+A field is a column or an attribute containing information that a user can add to a list. Each list on a website based on Microsoft SharePoint Foundation has metadata stored in the database. The format of the schema is an XML structure, such as the following:
   
-```
+```XML
 <Fields>
   <Field Type="Counter" Name="ID"/>
   ...other field definitions...
@@ -50,7 +46,7 @@ To simplify the implementation of the various field types, and to allow for a hi
 |**SQLType** <br/> |**Text** <br/> |Determines the underlying SQL data type for the given field. Examples are nvarchar(255), memo, integer, float. Used to generate the appropriate SQL (CREATE TABLE) for creation of a field of this type.  <br/> |
 |**SQLType2** <br/> |**Text** <br/> |When not blank, gives the type of a secondary column to create for the current field (see URL field type, for example).  <br/> |
    
-## Display Modes and Display Patterns
+## Display modes and display patterns
 
 Each of the display modes (**Display**, **Edit**, and **New**) contains a definition of how to render each of the field data types that are supported by SharePoint Foundation.
   
@@ -62,7 +58,7 @@ For each display mode there is a display pattern, or CAML-rendering expression. 
 |[Column2](column2-element-view.md) <br/> |Used in rendering a Link field type.  <br/> |
 |[Escape](escape-element.md) <br/> |Used to escape certain characters in strings.  <br/> |
 |[FieldFilterOptions](fieldfilteroptions-element.md) <br/> |Used in the **HeaderPattern** sections of [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) to display filter drop-down menus.  <br/> |
-|[FieldPrefix](fieldprefix-element-view.md) <br/> |Returns the Microsoft Office namespace, "urn:schemas-microsoft-com:office:office#".  <br/> |
+|[FieldPrefix](fieldprefix-element-view.md) <br/> |Returns the Microsoft Office namespace, `urn:schemas-microsoft-com:office:office#`.  <br/> |
 |[FieldRef](http://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7%28Office.15%29.aspx) <br/> |Used in computed fields to refer to the constituent fields and in views to define what fields are present.  <br/> |
 |[FieldSortImageURL](fieldsortimageurl-element.md) <br/> |Returns the URL to the image file used to indicate how a column is sorted.  <br/> |
 |[FieldSortParams](fieldsortparams-element-view.md) <br/> |Returns the sort direction on a list, rendering **Asc** or **Desc** based on whether the field has been sorted, and the current default sort direction for the field.  <br/> |
@@ -78,5 +74,5 @@ For each display mode there is a display pattern, or CAML-rendering expression. 
    
 ## See also
 
-- [HTML-Rendering Elements](html-rendering-elements.md)
+- [HTML-rendering elements](html-rendering-elements.md)
 

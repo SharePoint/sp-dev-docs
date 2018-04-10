@@ -1,5 +1,5 @@
 ---
-title: "Gt Element (Query)"
+title: Gt element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: bef3e077-949f-4d73-9792-c0a7b3e0ed46
-description: "Last modified: March 09, 2015"
+description: In CAML, arithmetic operator that means "greater than." This element is used similarly to the Eq and Lt elements. 
 ---
 
-# Gt Element (Query)
+# Gt element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Arithmetic operator that means "greater than." This element is used similarly to the [Eq](eq-element-query.md) and [Lt](lt-element-query.md) elements. 
   
-```
+```XML
 <Gt>
   <FieldRef Name = "Field_Name"/>
   <Value Type = "Field_Type"/>
@@ -36,27 +34,24 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-query.md), [Value](value-element-query.md), [XML](xml-element.md)|
+- [FieldRef](fieldref-element-query.md)
+- [Value](value-element-query.md)
+- [XML](xml-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
+- [And](and-element-query.md)
+- [Or](or-element-query.md)
+- [Where](where-element-query.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ### Remarks
 
@@ -89,13 +84,8 @@ The following example queries for cases where the Deadline field value either eq
 
 ## See also
 
-
-
-[Eq Element (Query)](eq-element-query.md)
-  
-[Geq Element (Query)](geq-element-query.md)
-  
-[Lt Element (Query)](lt-element-query.md)
-  
-[Neq Element (Query)](neq-element-query.md)
+- [Eq element (Query)](eq-element-query.md)  
+- [Geq element (Query)](geq-element-query.md)  
+- [Lt element (Query)](lt-element-query.md)  
+- [Neq element (Query)](neq-element-query.md)
 

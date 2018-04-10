@@ -1,5 +1,5 @@
 ---
-title: "Contains Element (Query)"
+title: Contains element (Query)
 ms.manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,16 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0eefc273-c539-4d82-84ef-338bb0a2021f
-description: "Last modified: March 09, 2015"
+description: In CAML, searches for a string anywhere within a column that holds Text or Note field type values. 
 ---
 
-# Contains Element (Query)
+# Contains element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Searches for a string anywhere within a column that holds **Text** or **Note** field type values. 
   
-```
+```XML
 <Contains>
   <FieldRef Name = "Field_Name"/>
   <Value Type = "Field_Type"/>
@@ -34,27 +34,26 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-query.md), [Value](value-element-query.md), [XML](xml-element.md)|
+- [FieldRef](fieldref-element-query.md)
+- [Value](value-element-query.md)
+- [XML](xml-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[And](and-element-query.md), [Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Or](or-element-query.md), [Where](writesecurity-element.md)|
+- [And](and-element-query.md)
+- [Expr1](expr1-element-view.md)
+- [Expr2](expr2-element-view.md)
+- [Or](or-element-query.md)
+- [Where](writesecurity-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ## Example
 
@@ -78,7 +77,5 @@ foreach (SPListItem item in myItems)
 
 ## See also
 
-
-
-[BeginsWith Element (Query)](beginswith-element-query.md)
+- [BeginsWith element (Query)](beginswith-element-query.md)
 

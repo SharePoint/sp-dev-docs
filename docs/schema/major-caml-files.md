@@ -1,33 +1,27 @@
 ---
-title: "Major CAML Files"
-
-
+title: Major CAML files
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- schemas [sharepoint 2010], xml
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: f2332dea-1113-424e-b245-9785c09ed3cc
-description: "Last modified: March 09, 2015"
+description: The major schema files that use Collaborative Application Markup Language (CAML) schemas for data definition or HTML rendering, and their locations.
 ---
 
-# Major CAML Files
+# Major CAML files
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Many critical files in Microsoft SharePoint Foundation use [Collaborative Application Markup Language (CAML) schemas](collaborative-application-markup-language-caml-schemas.md) to define how data is displayed and how HTML is rendered. 
   
-## CAML Files
+## CAML files
 
-The following table describes the major schema files that use [Collaborative Application Markup Language (CAML) schemas](collaborative-application-markup-language-caml-schemas.md) for data definition or HTML rendering, and specifies their locations under %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\. 
+The following table describes the major schema files that use CAML schemas for data definition or HTML rendering, and specifies their locations under %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\. 
   
 > [!CAUTION]
-> With the exception of  `DocIcon.xml`, Microsoft does not support modifying any of the built-in files that are installed with SharePoint Foundation. In most cases, you can supplement or override the effects of these files with files of your own. For details about modifying the effect of any specific file, see the SDK's documentation of the extensibility area to which the file belongs. 
+> With the exception of `DocIcon.xml`, Microsoft does not support modifying any of the built-in files that are installed with SharePoint Foundation. In most cases, you can supplement or override the effects of these files with files of your own. For details about modifying the effect of any specific file, see the SDK's documentation of the extensibility area to which the file belongs. 
   
 |**File name**|**Location**|**Description**|
 |:-----|:-----|:-----|
@@ -46,11 +40,7 @@ The following table describes the major schema files that use [Collaborative App
    
 ## See also
 
-
-
-[How to: Create a Custom Site Definition and Configuration](http://msdn.microsoft.com/library/62b0552d-b7a7-4856-b906-c7bcb3155792%28Office.15%29.aspx)
-  
-[Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx)
-  
-[Working with Features](http://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1%28Office.15%29.aspx)
+- [How to: Create a Custom Site Definition and Configuration](http://msdn.microsoft.com/library/62b0552d-b7a7-4856-b906-c7bcb3155792%28Office.15%29.aspx)
+- [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx) 
+- [Working with Features](http://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1%28Office.15%29.aspx)
 

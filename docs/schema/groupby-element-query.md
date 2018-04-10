@@ -1,5 +1,5 @@
 ---
-title: "GroupBy Element (Query)"
+title: GroupBy element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b368a7bf-13dc-4752-8cfd-cb59cdf1295f
-description: "Last modified: March 09, 2015"
+description: In CAML, contains a Group By section for grouping the data returned through a query in a list view.
 ---
 
-# GroupBy Element (Query)
+# GroupBy element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a Group By section for grouping the data returned through a query in a list view.
   
-```
+```XML
 <GroupBy
   Collapse = "TRUE" | "FALSE">
   <FieldRef Name = "Field_Name"/>
@@ -41,20 +39,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-query.md)|
+- [FieldRef](fieldref-element-query.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Query](query-element-list.md)|
+- [Expr1](expr1-element-view.md)
+- [Expr2](expr2-element-view.md)
+- [Query](query-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 

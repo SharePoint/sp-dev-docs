@@ -1,31 +1,25 @@
 ---
-title: "Introduction to Collaborative Application Markup Language (CAML)"
-
-
+title: Introduction to Collaborative Application Markup Language (CAML)
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- caml (collaborative application markup language) [sharepoint 2010],schemas [SharePoint 2010], CAML,Collaborative Application Markup Language (CAML) [SharePoint 2010]
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 031feabc-095e-4c62-91b6-904a739da923
-description: "Last modified: July 15, 2011"
+description: CAML is an XML-based language that is used in Microsoft SharePoint Foundation to define the fields and views that are used in sites and lists.
 ---
 
 # Introduction to Collaborative Application Markup Language (CAML)
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Collaborative Application Markup Language (CAML) is an XML-based language that is used in Microsoft SharePoint Foundation to define the fields and views that are used in sites and lists.
   
 > [!NOTE]
 > CAML is case-sensitive. 
   
-## Site Customization with CAML
+## Site customization with CAML
 
 CAML can be used in various ways to customize a SharePoint site, including the following:
   
@@ -39,7 +33,7 @@ CAML can be used in various ways to customize a SharePoint site, including the f
     
 ## Rendering with CAML
 
-CAML is used for two types of rendering in SharePoint Foundation: to define the type of data that is contained within a field, and to construct HTML that is displayed in the browser. For information on the two major uses of CAML, see [Data-Defining Elements](data-defining-elements.md) and [HTML-Rendering Elements](html-rendering-elements.md).
+CAML is used for two types of rendering in SharePoint Foundation: to define the type of data that is contained within a field, and to construct HTML that is displayed in the browser. For information about the two major uses of CAML, see [Data-Defining Elements](data-defining-elements.md) and [HTML-Rendering Elements](html-rendering-elements.md).
   
 ## Programming with CAML
 
@@ -77,9 +71,6 @@ The following programming tasks and overview topics illustrate various ways in w
     
 ## See also
 
-
-
-[Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx)
-  
-[Guidelines for Using Custom Site Definitions, Configurations, and Templates](http://msdn.microsoft.com/library/bc4e01b7-2aca-4cce-8bfa-4b647f95ff1d%28Office.15%29.aspx)
+- [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx) 
+- [Guidelines for Using Custom Site Definitions, Configurations, and Templates](http://msdn.microsoft.com/library/bc4e01b7-2aca-4cce-8bfa-4b647f95ff1d%28Office.15%29.aspx)
 

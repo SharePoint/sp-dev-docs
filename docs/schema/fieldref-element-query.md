@@ -1,5 +1,5 @@
 ---
-title: "FieldRef Element (Query)"
+title: FieldRef element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 4c912a6d-0c01-4cd0-affd-6333af69bd55
-description: "Last modified: March 09, 2015"
+description: In CAML, represents a reference to a field within a query.
 ---
 
-# FieldRef Element (Query)
+# FieldRef element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a reference to a field within a query.
   
-```
+```XML
 <FieldRef
   Alias = "Text"
   Ascending = "TRUE" | "FALSE"
@@ -62,25 +60,36 @@ The following sections describe attributes, child elements, and parent elements.
 |**RefType** <br/> |Optional **Text**. Specifies the type of reference for a field in an events list.  <br/> |
 |**ShowField** <br/> |Optional **Text**. The **ShowField** attribute can be set to the field name to display. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the **ShowField** attribute can be used to override that and display another field from the external list.  <br/> The following data types are allowed as targets of a **ShowField** attribute: **Text**, **Choice**, and **Counter**.  <br/> |
 |**TextOnly** <br/> |Optional **Boolean**. Specifies that the field contains only text values.  <br/> |
-|**Type** <br/> | Optional **Text**. Specifies the function that is applied to a totals column or a calculated column. Possible values include the following:  <br/> **AVG** Average value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **COUNT** Number of items. Applies to all field types that allow aggregation.  <br/> **MAX** Maximum value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **MIN** Minimum value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **SUM** Sum of values. Applies to **Number**, **Integer**, and **Currency** field types.  <br/> **STDEV** Standard deviation. Applies to **Number**, **Integer**, and **Currency** field types.  <br/> **VAR** Variance. Applies to **Number**, **Integer**, and **Currency** field types.  <br/>  The values for the **Type** attribute are not case-sensitive.  <br/> |
+|**Type** <br/> | Optional **Text**. Specifies the function that is applied to a totals column or a calculated column. Possible values include the following:<br/><br/> **AVG** Average value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **COUNT** Number of items. Applies to all field types that allow aggregation.  <br/> **MAX** Maximum value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **MIN** Minimum value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **SUM** Sum of values. Applies to **Number**, **Integer**, and **Currency** field types.  <br/> **STDEV** Standard deviation. Applies to **Number**, **Integer**, and **Currency** field types.  <br/> **VAR** Variance. Applies to **Number**, **Integer**, and **Currency** field types.  <br/><br/>The values for the **Type** attribute are not case-sensitive.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [FieldRefs](fieldrefs-element-list.md), [Geq](geq-element-query.md), [GroupBy](groupby-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [OrderBy](orderby-element-query.md)|
+- [BeginsWith](beginswith-element-query.md)
+- [Contains](contains-element-query.md)
+- [DateRangesOverlap](daterangesoverlap-element-query.md)
+- [Eq](eq-element-query.md)
+- [FieldRefs](fieldrefs-element-list.md)
+- [Geq](geq-element-query.md)
+- [GroupBy](groupby-element-query.md)
+- [Gt](gt-element-query.md)
+- [In](in-element-query.md)
+- [Includes](includes-element-query.md)
+- [IsNotNull](isnotnull-element-query.md)
+- [IsNull](isnull-element-query.md)
+- [Leq](leq-element-query.md)
+- [Lt](lt-element-query.md)
+- [Neq](neq-element-query.md)
+- [NotIncludes](notincludes-element-query.md)
+- [OrderBy](orderby-element-query.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1 (Unbounded within [OrderBy](orderby-element-query.md))  <br/> |
+- Minimum: 0 
+- Maximum: 1 (unbounded within [OrderBy](orderby-element-query.md))
    
 ## Example
 
@@ -107,7 +116,9 @@ The following example queries for cases where the Expires field is either **null
 </Query>
 ```
 
-The next example from the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for contacts lists specifies fields to display in the toolbar. 
+<br/>
+
+This example from the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for contacts lists fields to display in the toolbar. 
   
 ```XML
 <ViewFields>
@@ -118,4 +129,6 @@ The next example from the [Schema.xml](http://msdn.microsoft.com/library/c2f0106
 </ViewFields>
 ```
 
+
+<br/>
 

@@ -1,54 +1,49 @@
 ---
-title: "Query Schema"
-
-
+title: Query schema in CAML
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- query schema [sharepoint 2010],schemas [SharePoint 2010], query
-ms.prod: office-online-server
 localization_priority: Normal
 api_name:
 - Query schema
 api_type:
 - schema
 ms.assetid: 7cc82402-1f1d-4825-81cb-abc5f99a219c
-description: "Last modified: July 15, 2011"
+description: The various ways in which the Query schema of Collaborative Application Markup Language (CAML) is used within the context of Microsoft SharePoint Foundation to define queries against list data.
 ---
 
-# Query Schema
+# Query schema
+  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+  
+The Query schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used in various ways within the context of Microsoft SharePoint Foundation to define queries against list data. 
 
- **Last modified:** July 15, 2011 
+For example, you can assign CAML query strings to the **Query** property of several classes in the server and client object models to return data, or to method parameters of the **Lists** web service to work remotely with data. CAML queries are also used in the context of CAML views to return specific data. The [Query](query-element-list.md) element of the [List schema](list-schema.md) contains elements of the Query schema. 
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-The Query schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used in various ways within the context of Microsoft SharePoint Foundation to define queries against list data. For example, you can assign CAML query strings to the **Query** property of several classes in the server and client object models in order to return data, or to method parameters of the **Lists** web service to work remotely with data. CAML queries are also used in the context of CAML views to return specific data. The [Query](query-element-list.md) element of the [List schema](list-schema.md) contains elements of the Query schema. 
-  
-## Query Schema Elements
+## Query schema elements
 
 [\<Where\>](where-element-query.md)
   
- **Logical Joins**
+### Logical joins
   
 [\<And\>](and-element-query.md)
   
- [Logical Joins] 
+    - [Logical joins] 
+    
+    - [Comparison operators] 
   
- [Comparison Operators] 
-  
-[\<Membership\>](membership-element-query.md)
+    - [\<Membership\>](membership-element-query.md)
   
 [\<Or\>](or-element-query.md)
   
- [Logical Joins] 
+    - [Logical joins] 
+    
+    - [Comparison operators]
   
- [Comparison Operators] 
+    - [\<Membership\>](membership-element-query.md)
   
-[\<Membership\>](membership-element-query.md)
-  
- **Comparison Operators**
+### Comparison operators
   
 [\<BeginsWith\>](beginswith-element-query.md)
   
@@ -156,7 +151,7 @@ The Query schema of [Collaborative Application Markup Language (CAML)](introduct
   
 [\<XML\>](xml-element.md)
   
- **Group/Order Operators**
+### Group/order operators
   
 [\<GroupBy\>](groupby-element-query.md)
   
@@ -166,7 +161,7 @@ The Query schema of [Collaborative Application Markup Language (CAML)](introduct
   
 [\<FieldRef\>](fieldref-element-query.md)
   
- **Value Child Elements**
+### Value child elements
   
 [\<ListProperty\>](listproperty-element-query.md)
   
@@ -182,9 +177,6 @@ The Query schema of [Collaborative Application Markup Language (CAML)](introduct
   
 ## See also
 
-
-
-[View Schema](view-schema.md)
-  
-[List Schema](list-schema.md)
+- [View Schema](view-schema.md)
+- [List Schema](list-schema.md)
 

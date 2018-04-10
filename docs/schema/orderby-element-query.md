@@ -1,7 +1,5 @@
 ---
-title: "OrderBy Element (Query)"
-
-
+title: OrderBy element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7a659d08-9060-41d1-9a1c-e5a61376f3ba
-description: "Last modified: March 09, 2015"
+description: In CAML, determines the sort order for a query. The OrderBy element contains a group of FieldRef elements. 
 ---
 
-# OrderBy Element (Query)
+# OrderBy element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Determines the sort order for a query. The **OrderBy** element contains a group of [FieldRef](fieldref-element-query.md) elements. 
   
-```
+```XML
 <OrderBy  Override = "TRUE" | "FALSE"  UseIndexForOrderBy = "TRUE" | "FALSE">
   <FieldRef
     Ascending = "TRUE" | "FALSE"
@@ -46,21 +42,18 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-query.md)|
+- [FieldRef](fieldref-element-query.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Query](query-element-list.md)|
+- [Expr1](expr1-element-view.md)
+- [Expr2](expr2-element-view.md)
+- [Query](query-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
@@ -68,7 +61,7 @@ The order in which the fields appear is the order in which the fields are sorted
   
 ## Example
 
-The following example sorts the fields first in ascending order by the Newcomers field, then in descending order by Years, and finally in ascending order by Location.
+The following example sorts the fields first in ascending order by the Newcomers field, next in descending order by Years, and finally in ascending order by Location.
   
 ```XML
 <OrderBy>
@@ -78,4 +71,5 @@ The following example sorts the fields first in ascending order by the Newcomers
 </OrderBy>
 ```
 
+<br/>
 

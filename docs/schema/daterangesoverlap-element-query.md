@@ -1,5 +1,5 @@
 ---
-title: "DateRangesOverlap Element (Query)"
+title: DateRangesOverlap element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 26679fed-cd18-4b67-a307-0086b8c61486
-description: "Last modified: March 09, 2015"
+description: In CAML, used in queries to compare the dates in a recurring event with a specified DateTime value to determine whether they overlap.
 ---
 
-# DateRangesOverlap Element (Query)
+# DateRangesOverlap element (Query)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Used in queries to compare the dates in a recurring event with a specified **DateTime** value to determine whether they overlap. 
   
-Used in queries to compare the dates in a recurring event with a specified **DateTime** value, to determine whether they overlap. 
-  
-```
+```XML
 <DateRangesOverlap>
   <FieldRef Name = "Field_Name"/>
   <Value Type = "Field_Type"/>
@@ -36,27 +34,24 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-query.md), [Value](value-element-query.md), [XML](xml-element.md)|
+- [FieldRef](fieldref-element-query.md)
+- [Value](value-element-query.md)
+- [XML](xml-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
+- [And](and-element-query.md)
+- [Or](or-element-query.md)
+- [Where](where-element-query.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ## Example
 
@@ -77,4 +72,5 @@ The following example compares the event date and end date of a recurring event 
 </Query>
 ```
 
+<br/>
 

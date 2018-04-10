@@ -1,7 +1,5 @@
 ---
-title: "Deprecated CAML Elements"
-
-
+title: Deprecated CAML elements
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -9,16 +7,14 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 849d6d71-7b1d-4ce1-a184-93b9d20494c5
-description: "Last modified: July 15, 2011"
+description: Collaborative Application Markup Language (CAML) elements and attributes that were deprecated in Windows SharePoint Services 3.0.
 ---
 
-# Deprecated CAML Elements
-
- **Last modified:** July 15, 2011 
+# Deprecated CAML elements
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-The following elements and attributes were deprecated in Windows SharePoint Services 3.0.
+The following Collaborative Application Markup Language (CAML) elements and attributes were deprecated in Windows SharePoint Services 3.0.
   
 ## Elements
 
@@ -46,6 +42,7 @@ The following elements and attributes were deprecated in Windows SharePoint Serv
     
 - **ViewColPicker**
     
+
 ## Attributes
 
 - **PageType**
@@ -72,7 +69,7 @@ The following elements and attributes were deprecated in Windows SharePoint Serv
     
 - **Time24**
     
-## Differences in Page Execution
+## Differences in page execution
 
 CAML islands cannot be directly used on pages within the site, which now depend on ASP.NET for execution. Web Parts replace CAML views in the display of list data on these pages. This behavior differs from the previous version of SharePoint Foundation.
   

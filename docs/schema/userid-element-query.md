@@ -1,7 +1,5 @@
 ---
-title: "UserID Element (Query)"
-
-
+title: UserID element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 9ef6ba21-0f75-44b8-93cf-48186d1fc09d
-description: "Last modified: March 09, 2015"
+description: In CAML, contains the unique ID number of the currently authenticated user of a site, as defined in the UserInfo table of the content database.
 ---
 
-# UserID Element (Query)
+# UserID element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the unique ID number of the currently authenticated user of a site, as defined in the UserInfo table of the content database.
   
-```
+```XML
 <UserID>
 </UserID>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Value](value-element-query.md)|
+- [Value](value-element-query.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ## Example
 
@@ -88,4 +77,5 @@ The following query returns cases where either the Author or Editor field is equ
 </Query>
 ```
 
+<br/>
 

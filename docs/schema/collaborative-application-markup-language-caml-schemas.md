@@ -1,10 +1,10 @@
 ---
+title: Collaborative Application Markup Language (CAML) schemas
+description: Information and reference documentation for the elements used in Collaborative Application Markup Language (CAML).
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- sharepoint 2010, collaborative application markup language,schemas [SharePoint 2010], XML,templates [SharePoint 2010], CAML,schemas [SharePoint 2010], CAML,SharePoint 2010, CAML,site definitions, XML
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: e21daeee-6580-4d13-a448-6f515155d1e8
@@ -16,6 +16,8 @@ ms.assetid: e21daeee-6580-4d13-a448-6f515155d1e8
 
 This section provides overview topics as well as information and reference documentation for the elements used in Collaborative Application Markup Language (CAML).
 
+## Overview
+
 - [Introduction to Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md)
 
 - [Major CAML Files](major-caml-files.md)
@@ -25,6 +27,8 @@ This section provides overview topics as well as information and reference docum
 - [HTML-Rendering Elements](html-rendering-elements.md)
 
 - [Deprecated CAML Elements](deprecated-caml-elements.md)
+
+## Reference
 
 - [Query Schema](query-schema.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Membership Element (Query)"
+title: Membership element (Query)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c86b1110-ad5e-46f0-9a6a-b651565ad778
-description: "Last modified: March 09, 2015"
+description: Defines a filter based on the type of membership for the user.
 ---
 
-# Membership Element (Query)
+# Membership element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a filter based on the type of membership for the user.
   
-```
+```XML
 <Membership
   Type = "Text">
 </ Membership>
@@ -36,25 +34,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Type** <br/> | Required **Text**. Specifies the type of membership for the user. Possible values include the following:  <br/> **SPWeb.AllUsers** <br/> **SPGroup** <br/> **SPWeb.Groups** <br/> **CurrentUserGroups** <br/> **SPWeb.Users** <br/> |
+|**Type** <br/> | Required **Text**. Specifies the type of membership for the user. Possible values include the following:<br/><br/> **SPWeb.AllUsers** <br/> **SPGroup** <br/> **SPWeb.Groups** <br/> **CurrentUserGroups** <br/> **SPWeb.Users** <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-query.md)|
+- [FieldRef](fieldref-element-query.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[And](and-element-query.md), [Or](or-element-query.md), [Where](where-element-query.md)|
+- [And](and-element-query.md)
+- [Or](or-element-query.md)
+- [Where](where-element-query.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded
    
 ### Remarks
 
@@ -74,4 +69,5 @@ The following example defines a filter for cases where the user is either assign
 </Or>
 ```
 
+<br/>
 
