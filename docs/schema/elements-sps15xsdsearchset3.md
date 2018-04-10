@@ -1,7 +1,5 @@
 ---
 title: "Elements (SPS15XSDSearchSet3)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: ITPro
@@ -15,8 +13,6 @@ description: "This topic lists the elements in the schema_Microsoft.Office.Serve
 # Elements (SPS15XSDSearchSet3)
 
 This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Portability** XML schema. 
-  
- **Last modified:** February 19, 2014 
   
 - [Aliases element](aliases-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.md)
     

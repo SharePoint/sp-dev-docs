@@ -83,7 +83,7 @@ The following example evaluates the default value for a **DateTime** field type 
 
 
 
-[Month](regional-settings-schema/month-element-regional-settings.md)
+[Month](month-element-regional-settings.md)
   
 [Now](now-element-query.md)
   

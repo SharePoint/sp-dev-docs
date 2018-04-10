@@ -59,6 +59,6 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-In Microsoft SharePoint Foundation the list template for a standard SharePoint list is usually defined within the element manifest file of the Feature that contains the list definition. For more information about list template Features, see [List Template Files](../../sharepoint-features-schemas/list-template-files/list-template-files.md).
+In Microsoft SharePoint Foundation the list template for a standard SharePoint list is usually defined within the element manifest file of the Feature that contains the list definition. For more information about list template Features, see [List Template Files](list-template-files.md).
   
 

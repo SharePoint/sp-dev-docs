@@ -1,7 +1,5 @@
 ---
 title: "Elements (SPS15XSDSearchSet4)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -14,11 +12,9 @@ description: "This topic lists the elements in the \<\<schema name\>\> XML schem
 
 # Elements (SPS15XSDSearchSet4)
 
-This topic lists the elements in the \<\<schema name\>\> XML schema.
-  
- **Last modified:** October 02, 2013 
-  
  **Applies to:** SharePoint Server 2013
+
+This topic lists the elements in the \<\<schema name\>\> XML schema.
   
 - [BoundVariableOrigin element](boundvariableorigin-element-sps15xsdsearchset4.md)
     

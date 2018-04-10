@@ -31,7 +31,7 @@ A field is a column or an attribute containing information that a user can add t
 </Fields>
 ```
 
-To simplify the implementation of the various field types, and to allow for a higher degree of flexibility in rendering the various fields, [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) contains information about the rendering and behavior of each field type. The [Field](list-schema/field-element-list.md) element renders different HTML depending on the data type of the field in question, and FldTypes.xml defines the data types and rendering patterns for each kind of field. The following table presents the schema used in this file. 
+To simplify the implementation of the various field types, and to allow for a higher degree of flexibility in rendering the various fields, [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) contains information about the rendering and behavior of each field type. The [Field](field-element-list.md) element renders different HTML depending on the data type of the field in question, and FldTypes.xml defines the data types and rendering patterns for each kind of field. The following table presents the schema used in this file. 
   
 |**Name**|**Data type**|**Description**|
 |:-----|:-----|:-----|
@@ -60,21 +60,21 @@ For each display mode there is a display pattern, or CAML-rendering expression. 
 |:-----|:-----|
 |[Column](column-element-view.md) <br/> |Returns the raw data value for a particular field.  <br/> |
 |[Column2](column2-element-view.md) <br/> |Used in rendering a Link field type.  <br/> |
-|[Escape](general-schema/escape-element.md) <br/> |Used to escape certain characters in strings.  <br/> |
-|[FieldFilterOptions](general-schema/fieldfilteroptions-element.md) <br/> |Used in the **HeaderPattern** sections of [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) to display filter drop-down menus.  <br/> |
+|[Escape](escape-element.md) <br/> |Used to escape certain characters in strings.  <br/> |
+|[FieldFilterOptions](fieldfilteroptions-element.md) <br/> |Used in the **HeaderPattern** sections of [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) to display filter drop-down menus.  <br/> |
 |[FieldPrefix](fieldprefix-element-view.md) <br/> |Returns the Microsoft Office namespace, "urn:schemas-microsoft-com:office:office#".  <br/> |
 |[FieldRef](http://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7%28Office.15%29.aspx) <br/> |Used in computed fields to refer to the constituent fields and in views to define what fields are present.  <br/> |
-|[FieldSortImageURL](general-schema/fieldsortimageurl-element.md) <br/> |Returns the URL to the image file used to indicate how a column is sorted.  <br/> |
+|[FieldSortImageURL](fieldsortimageurl-element.md) <br/> |Returns the URL to the image file used to indicate how a column is sorted.  <br/> |
 |[FieldSortParams](fieldsortparams-element-view.md) <br/> |Returns the sort direction on a list, rendering **Asc** or **Desc** based on whether the field has been sorted, and the current default sort direction for the field.  <br/> |
 |[IfEqual](ifequal-element-view.md) <br/> |Allows for conditional rendering based on the comparison of two CAML expressions.  <br/> |
 |[IfNew](ifnew-element-view.md) <br/> |Returns **TRUE** if the item is considered new.  <br/> |
-|[ImagesPath](general-schema/imagespath-element.md) <br/> |Returns the HTTP path to the images directory for the project.  <br/> |
+|[ImagesPath](imagespath-element.md) <br/> |Returns the HTTP path to the images directory for the project.  <br/> |
 |[Limit](limit-element-view.md) <br/> |Truncates text to a specified size.  <br/> |
-|[LocaleInfo](general-schema/localeinfo-element.md) <br/> |Transfers server locale information to the client in order to display and edit dates and numbers properly.  <br/> |
+|[LocaleInfo](localeinfo-element.md) <br/> |Transfers server locale information to the client in order to display and edit dates and numbers properly.  <br/> |
 |[PageUrl](pageurl-element-view.md) <br/> |Used anywhere to return the absolute, encoded URL of the current page.  <br/> |
 |[Property](property-element-view.md) <br/> |Returns the property from the current **ForEach** context.  <br/> |
 |[ScriptQuote](scriptquote-element-view.md) <br/> |Used for rendering text from the server that must be interpreted as a quoted string.  <br/> |
-|[TodayISO](general-schema/todayiso-element.md) <br/> |Renders today's date and time in ISO format.  <br/> |
+|[TodayISO](todayiso-element.md) <br/> |Renders today's date and time in ISO format.  <br/> |
    
 ## See also
 

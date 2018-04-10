@@ -54,7 +54,7 @@ You can create or modify lists programmatically through the object model (for ex
   
 [\<Folder\>](folder-element-list.md)
   
-[\<ContentType\>](../../sharepoint-features-schemas/content-type-definitions/contenttype-element-contenttype.md)
+[\<ContentType\>](contenttype-element-contenttype.md)
   
 [\<Fields\>](fields-element-list.md)
   

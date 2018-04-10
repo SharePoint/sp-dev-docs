@@ -1,7 +1,5 @@
 ---
 title: "Elements (SPS15XSDSearchSet5)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -14,11 +12,9 @@ description: "This topic lists the elements in the schema_Microsoft.Office.Serve
 
 # Elements (SPS15XSDSearchSet5)
 
-This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Query** XML schema. 
-  
- **Last modified:** February 19, 2014 
-  
- **Applies to:** SharePoint Server 2013
+**Applies to:** SharePoint Server 2013
+
+This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Query** XML schema.
   
 - [AlertChangeType element](alertchangetype-element-sps15xsdsearchset5.md)
     

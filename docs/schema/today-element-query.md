@@ -84,7 +84,7 @@ The following example queries for cases where the due date is today.
 [TodayISO](todayiso-element.md)
 
 
-[Month](regional-settings-schema/month-element-regional-settings.md)
+[Month](month-element-regional-settings.md)
   
 [Now](now-element-query.md)
 

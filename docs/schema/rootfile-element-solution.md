@@ -65,7 +65,7 @@ Use this element to deploy a localization resource that is shared by several fea
 
 ```
 
-For more information about using shared localization resources, see the description of the **DefaultResourceFile** attribute in [Feature Element (Feature)](../../sharepoint-features-schemas/feature-xml-files/feature-element-feature.md).
+For more information about using shared localization resources, see the description of the **DefaultResourceFile** attribute in [Feature Element (Feature)](feature-element-feature.md).
   
 Localization resources used by extensions to the Central Administration user interface are located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Config\AdminResources folder. The following XML deploys localization resource files to that folder.
   

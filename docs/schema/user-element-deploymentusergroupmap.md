@@ -59,7 +59,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Email** <br/> |xs:string  <br/> |Optional. E-mail address for the user.  <br/> |
 |**IsDomainGroup** <br/> |xs:boolean  <br/> |Optional. Specifies whether the user identity represents a domain group; **true** if the user is a domain group.  <br/> |
 |**IsSiteAdmin** <br/> |xs:boolean  <br/> |Optional. Specifies whether the user is a Microsoft SharePoint Foundation site administrator; **true** if the user is a site administrator.  <br/> |
-|**SystemId** <br/> |xs:string  <br/> |Optional. Represents the value of the Active Directory SID, which is converted to a base64 data type by using the [ToBase64String](frlrfSystemConvertClassToBase64StringTopic.md) method. Note that functionality provided by the **SPExport** type does not validate the data that is passed through the **SystemId** attribute.  <br/> |
+|**SystemId** <br/> |xs:string  <br/> |Optional. Represents the value of the Active Directory SID, which is converted to a base64 data type by using the [ToBase64String](https://msdn.microsoft.com/en-us/library/system.convert.tobase64string(v=vs.110).aspx) method. Note that functionality provided by the **SPExport** type does not validate the data that is passed through the **SystemId** attribute.  <br/> |
 |**IsDeleted** <br/> |xs:boolean  <br/> |Optional. Specifies whether the user has been deleted; **true** if the user has been deleted.  <br/> |
    
 ### Child elements

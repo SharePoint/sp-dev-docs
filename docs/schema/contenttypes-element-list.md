@@ -43,7 +43,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[ContentType](../../sharepoint-features-schemas/content-type-definitions/contenttype-element-contenttype.md), [ContentTypeRef](contenttyperef-element-list.md)|
+|[ContentType](contenttype-element-contenttype.md), [ContentTypeRef](contenttyperef-element-list.md)|
    
 ### Parent elements
 

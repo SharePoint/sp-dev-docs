@@ -83,7 +83,7 @@ The following example queries for cases where a recurring event overlaps with th
 [TodayISO Element](todayiso-element.md)
 
 
-[Month Element (Regional Settings)](regional-settings-schema/month-element-regional-settings.md)
+[Month Element (Regional Settings)](month-element-regional-settings.md)
   
 [Today Element (Query)](today-element-query.md)
 
