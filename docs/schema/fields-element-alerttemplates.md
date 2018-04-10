@@ -1,7 +1,5 @@
 ---
 title: "Fields Element (AlertTemplates)"
-ms.
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -45,7 +43,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[GetVar](getvar-element-view.md)|
+|[GetVar](../../collaborative-application-markup-language-caml-schemas/view-schema/getvar-element-view.md)|
    
 ## Parent Element
 

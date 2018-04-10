@@ -1,7 +1,5 @@
 ---
 title: "Fields Element (Field Types Property Schema)"
-ms.
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
