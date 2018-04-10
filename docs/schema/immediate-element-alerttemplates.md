@@ -54,7 +54,7 @@ None
 |[Header](header-element-alerttemplates.md) <br/> |
 |[Subject](subject-element-alerttemplates.md) <br/> |
    
-## Parent Element
+### Parent elements
 
 ||
 |:-----|
