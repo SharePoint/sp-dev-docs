@@ -1,8 +1,6 @@
 ---
 title: "Contains Element (Query)"
-ms.
-
-manager: soliver
+ms.manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
@@ -18,9 +16,7 @@ description: "Last modified: March 09, 2015"
 
 # Contains Element (Query)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Searches for a string anywhere within a column that holds **Text** or **Note** field type values. 
   
