@@ -1,6 +1,6 @@
 ---
 title: "FeatureManifest Element (Solution)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

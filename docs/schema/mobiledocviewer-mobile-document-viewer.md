@@ -1,6 +1,6 @@
 ---
 title: "MobileDocViewer (Mobile Document Viewer)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

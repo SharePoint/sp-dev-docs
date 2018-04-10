@@ -1,6 +1,6 @@
 ---
 title: "ProjectProperty Element (View)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

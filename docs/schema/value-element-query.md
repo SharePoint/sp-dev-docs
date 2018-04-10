@@ -1,6 +1,6 @@
 ---
 title: "Value Element (Query)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

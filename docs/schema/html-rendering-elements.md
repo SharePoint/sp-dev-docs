@@ -28,28 +28,28 @@ The following table describes some of the prominent CAML HTML-rendering elements
   
 |**Name**|**Description**|
 |:-----|:-----|
-|[Batch](view-schema/batch-element-view.md) <br/> |Used for batch processing of commands within HTTP protocol.  <br/> |
-|[Case](view-schema/case-element-view.md) <br/> |Used inside a **Switch** or **FieldSwitch** statement to perform a comparison.  <br/> |
-|[Default](view-schema/default-element-view.md) <br/> |Contains the default value of a field to which new item forms are initialized.  <br/> |
-|[Expr](view-schema/expr-element-view.md) <br/> |Contains a CAML expression that is evaluated to determine the course of action for a **Switch** or **FieldSwitch** statement.  <br/> |
-|[FieldSwitch](view-schema/fieldswitch-element-view.md) <br/> |Provides conditional rendering based on the value of a CAML expression.  <br/> |
-|[ForEach](view-schema/foreach-element-view.md) <br/> |Provides a basic mechanism for enumerating a collection of views or fields defined in the current list.  <br/> |
-|[GetVar](view-schema/getvar-element-view.md) <br/> |Returns a variable in the context of rendering the page.  <br/> |
+|[Batch](batch-element-view.md) <br/> |Used for batch processing of commands within HTTP protocol.  <br/> |
+|[Case](case-element-view.md) <br/> |Used inside a **Switch** or **FieldSwitch** statement to perform a comparison.  <br/> |
+|[Default](default-element-view.md) <br/> |Contains the default value of a field to which new item forms are initialized.  <br/> |
+|[Expr](expr-element-view.md) <br/> |Contains a CAML expression that is evaluated to determine the course of action for a **Switch** or **FieldSwitch** statement.  <br/> |
+|[FieldSwitch](fieldswitch-element-view.md) <br/> |Provides conditional rendering based on the value of a CAML expression.  <br/> |
+|[ForEach](foreach-element-view.md) <br/> |Provides a basic mechanism for enumerating a collection of views or fields defined in the current list.  <br/> |
+|[GetVar](getvar-element-view.md) <br/> |Returns a variable in the context of rendering the page.  <br/> |
 |[HTMLBase](general-schema/htmlbase-element.md) <br/> |Returns a string that sets the base element for the current page.  <br/> |
-|[HttpHost](view-schema/httphost-element-view.md) <br/> |Renders the URL of the virtual server containing the current Web site.  <br/> |
-|[HttpPath](view-schema/httppath-element-view.md) <br/> |Returns the path to the appropriate OWSSVR.DLL.  <br/> |
-|[HttpVDir](view-schema/httpvdir-element-view.md) <br/> |Returns the root directory of the current site.  <br/> |
-|[IfEqual](view-schema/ifequal-element-view.md) <br/> |Allows for conditional rendering based on the comparison of two CAML expressions.  <br/> |
-|[ListProperty](view-schema/listproperty-element-view.md) <br/> |Returns the value of a specified column from the database.  <br/> |
+|[HttpHost](httphost-element-view.md) <br/> |Renders the URL of the virtual server containing the current Web site.  <br/> |
+|[HttpPath](httppath-element-view.md) <br/> |Returns the path to the appropriate OWSSVR.DLL.  <br/> |
+|[HttpVDir](httpvdir-element-view.md) <br/> |Returns the root directory of the current site.  <br/> |
+|[IfEqual](ifequal-element-view.md) <br/> |Allows for conditional rendering based on the comparison of two CAML expressions.  <br/> |
+|[ListProperty](listproperty-element-view.md) <br/> |Returns the value of a specified column from the database.  <br/> |
 |[Now](query-schema/now-element-query.md) <br/> |Renders the current time.  <br/> |
 |[Project](site-schema/project-element-site.md) <br/> |The top-level element in [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
-|[ProjectProperty](view-schema/projectproperty-element-view.md) <br/> |Returns a global property of the current team Web site.  <br/> |
-|[Property](view-schema/property-element-view.md) <br/> |Returns the property from the current **ForEach** context.  <br/> |
-|[SetList](view-schema/setlist-element-view.md) <br/> |Designates the current list.  <br/> |
-|[SetVar](view-schema/setvar-element-view.md) <br/> |Sets variables in the context of rendering the page.  <br/> |
-|[Switch](view-schema/switch-element-view.md) <br/> |Allows for conditional rendering based on the value of a CAML expression.  <br/> |
+|[ProjectProperty](projectproperty-element-view.md) <br/> |Returns a global property of the current team Web site.  <br/> |
+|[Property](property-element-view.md) <br/> |Returns the property from the current **ForEach** context.  <br/> |
+|[SetList](setlist-element-view.md) <br/> |Designates the current list.  <br/> |
+|[SetVar](setvar-element-view.md) <br/> |Sets variables in the context of rendering the page.  <br/> |
+|[Switch](switch-element-view.md) <br/> |Allows for conditional rendering based on the value of a CAML expression.  <br/> |
 |[Today](query-schema/today-element-query.md) <br/> |Renders today's date.  <br/> |
-|[URL](view-schema/url-element-view.md) <br/> |Renders a URL.  <br/> |
+|[URL](url-element-view.md) <br/> |Renders a URL.  <br/> |
 |[View](list-schema/view-element-list.md) <br/> |Defines a view in Microsoft SharePoint Foundation.  <br/> |
 |[XML](query-schema/xml-element.md) <br/> |Used as an outer wrapper to denote a section of CAML.  <br/> |
    

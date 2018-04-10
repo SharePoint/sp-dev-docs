@@ -274,7 +274,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-To create a custom field definition for a list definition that is based on a default SharePoint Foundation field type, use the **Field (List - Definition)** element within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file. To create a custom field definition as a pluggable Feature that is based on a default field type and that can be reused across Web sites and lists within a site collection, use the [Field (Field)](../../sharepoint-features-schemas/field-definitions/field-element-field.md) element to define a custom [site column](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx). To create a [custom field type](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](../../other-sharepoint-schemas/field-types-schema/field-element-field-types.md) element. 
+To create a custom field definition for a list definition that is based on a default SharePoint Foundation field type, use the **Field (List - Definition)** element within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file. To create a custom field definition as a pluggable Feature that is based on a default field type and that can be reused across Web sites and lists within a site collection, use the [Field (Field)](field-element-field.md) element to define a custom [site column](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx). To create a [custom field type](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element. 
   
 Fields can be referenced from View definitions as well as from expressions in computed field rendering elements. Use the [Field (View)](field-element-view.md) element to return a formatted field value for display within a view, and use the [Column (View)](column-element-view.md) element to return the raw data value of the field. The syntax for referencing a field is as follows: 
   
@@ -333,22 +333,22 @@ The following example uses the **Field** element to specify options for a list n
 
 
 
-[Field Element (Field)](../../sharepoint-features-schemas/field-definitions/field-element-field.md)
+[Field Element (Field)](field-element-field.md)
 
 
 [Column Element (View)](column-element-view.md)
   
 [Column2 Element (View)](column2-element-view.md)
   
-[Field Element (Field Types)](../../other-sharepoint-schemas/field-types-schema/field-element-field-types.md)
+[Field Element (Field Types)](field-element-field-types.md)
   
-[Field Element (Field Types Property Schema)](../../other-sharepoint-schemas/field-types-schema/field-element-field-types-property-schema.md)
+[Field Element (Field Types Property Schema)](field-element-field-types-property-schema.md)
   
-[Field Element (DeploymentManifest - DeploymentFieldTemplate)](../../content-migration-schemas/deploymentmanifest-schema/field-element-deploymentmanifestdeploymentfieldtemplate.md)
+[Field Element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)
   
-[Field Element (DeploymentManifest - FieldDataCollection)](../../content-migration-schemas/deploymentmanifest-schema/field-element-deploymentmanifestfielddatacollection.md)
+[Field Element (DeploymentManifest - FieldDataCollection)](field-element-deploymentmanifestfielddatacollection.md)
   
-[Field Element (DeploymentManifest - SPFieldCollection)](../../content-migration-schemas/deploymentmanifest-schema/field-element-deploymentmanifestspfieldcollection.md)
+[Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)
   
 [Field Element (View)](field-element-view.md)
   

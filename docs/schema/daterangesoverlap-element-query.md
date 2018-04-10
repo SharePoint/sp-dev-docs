@@ -1,7 +1,5 @@
 ---
 title: "DateRangesOverlap Element (Query)"
-ms.
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

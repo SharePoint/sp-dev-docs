@@ -1,6 +1,6 @@
 ---
 title: "ServerProperty Element (View)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015
