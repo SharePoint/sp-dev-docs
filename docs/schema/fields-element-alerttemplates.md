@@ -39,7 +39,7 @@ None
    
 ### Child elements
 
-[GetVar](view-schema/getvar-element-view.md)
+[GetVar](getvar-element-view.md)
    
 ### Parent elements
 
