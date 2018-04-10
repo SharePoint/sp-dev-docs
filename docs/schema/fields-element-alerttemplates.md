@@ -16,12 +16,12 @@ description: "Last modified: March 09, 2015"
 
 # Fields Element (AlertTemplates)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Specifies the fields to display in the alert message. Use  `<GetVar Name="OldValue#{Field}" />` or  `<GetVar Name="NewValue#{Field}" />` to specify the fields. To exclude fields, use the [DigestNotificationExcludedFields](digestnotificationexcludedfields-element-alerttemplates.md) and [ImmediateNotificationExcludedFields](immediatenotificationexcludedfields-element-alerttemplates.md) elements. 
-  
+Specifies the fields to display in the alert message. Use `<GetVar Name="OldValue#{Field}" />` or  `<GetVar Name="NewValue#{Field}" />` to specify the fields. To exclude fields, use the [DigestNotificationExcludedFields](digestnotificationexcludedfields-element-alerttemplates.md) and [ImmediateNotificationExcludedFields](immediatenotificationexcludedfields-element-alerttemplates.md) elements. 
+
+## Definition
+
 ```VB.net
 <Fields>
   <GetVar>
@@ -35,20 +35,14 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[GetVar](../../collaborative-application-markup-language-caml-schemas/view-schema/getvar-element-view.md)|
+[GetVar](view-schema/getvar-element-view.md)
    
-## Parent Element
+### Parent elements
 
-||
-|:-----|
-|[Immediate](immediate-element-alerttemplates.md)|
+[Immediate](immediate-element-alerttemplates.md)
    
 
