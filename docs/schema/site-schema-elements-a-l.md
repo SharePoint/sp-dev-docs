@@ -1,6 +1,6 @@
 ---
 title: "Site Schema Elements A-L"
-ms.
+
 
 manager: soliver
 ms.date: 11/16/2014

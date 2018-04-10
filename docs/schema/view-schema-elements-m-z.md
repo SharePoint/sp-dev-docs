@@ -1,6 +1,6 @@
 ---
 title: "View Schema Elements M-Z"
-ms.
+
 
 manager: soliver
 ms.date: 11/16/2014

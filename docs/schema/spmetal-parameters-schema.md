@@ -1,6 +1,6 @@
 ---
 title: "SPMetal Parameters schema"
-ms.
+
 
 manager: soliver
 ms.date: 11/16/2014

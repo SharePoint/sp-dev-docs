@@ -1,6 +1,6 @@
 ---
 title: "View Schema Elements G-L"
-ms.
+
 
 manager: soliver
 ms.date: 11/16/2014

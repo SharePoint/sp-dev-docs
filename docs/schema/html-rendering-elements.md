@@ -42,7 +42,7 @@ The following table describes some of the prominent CAML HTML-rendering elements
 |[IfEqual](ifequal-element-view.md) <br/> |Allows for conditional rendering based on the comparison of two CAML expressions.  <br/> |
 |[ListProperty](listproperty-element-view.md) <br/> |Returns the value of a specified column from the database.  <br/> |
 |[Now](now-element-query.md) <br/> |Renders the current time.  <br/> |
-|[Project](site-schema/project-element-site.md) <br/> |The top-level element in [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
+|[Project](project-element-site.md) <br/> |The top-level element in [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
 |[ProjectProperty](projectproperty-element-view.md) <br/> |Returns a global property of the current team Web site.  <br/> |
 |[Property](property-element-view.md) <br/> |Returns the property from the current **ForEach** context.  <br/> |
 |[SetList](setlist-element-view.md) <br/> |Designates the current list.  <br/> |

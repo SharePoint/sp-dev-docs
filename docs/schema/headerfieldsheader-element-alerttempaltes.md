@@ -1,6 +1,6 @@
 ---
 title: "HeaderFieldsHeader Element (AlertTempaltes)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

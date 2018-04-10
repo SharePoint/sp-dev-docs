@@ -1,7 +1,5 @@
 ---
 title: "Schema map (SPS15XSDSearchSet6)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -14,12 +12,10 @@ description: "This topic shows the schema definition for schema_Microsoft.Office
 
 # Schema map (SPS15XSDSearchSet6)
 
+**Applies to:** SharePoint Server 2013
+
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search**.
-  
- **Last modified:** February 19, 2014 
-  
- **Applies to:** SharePoint Server 2013
-  
+
 ```XML
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" tns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search">
     <xs:element name="LocStringId" type="tns:LocStringId"></xs:element>

@@ -1,6 +1,6 @@
 ---
 title: "Mobile Document Viewer schema"
-ms.
+
 
 manager: soliver
 ms.date: 11/16/2014

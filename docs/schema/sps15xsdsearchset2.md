@@ -1,7 +1,5 @@
 ---
 title: "SPS15XSDSearchSet2"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -14,10 +12,8 @@ description: "Last modified: February 19, 2014"
 
 # SPS15XSDSearchSet2
 
- **Last modified:** February 19, 2014 
-  
- **Applies to:** SharePoint Server 2013
-  
+**Applies to:** SharePoint Server 2013
+ 
 The **SPS15XSDSearchSet2** schema specifies XML that represents administrative types and members for managing a Shared Service Provider's instance of SharePoint Enterprise Search; this includes settings like result item types, property rules, etc. You can include the schema in your Visual Studio solution, if you are working on custom solutions to create or validate search configurations. 
   
 ## In this section

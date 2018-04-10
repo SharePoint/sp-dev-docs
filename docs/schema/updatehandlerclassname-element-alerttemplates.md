@@ -1,6 +1,6 @@
 ---
 title: "UpdateHandlerClassName Element (AlertTemplates)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

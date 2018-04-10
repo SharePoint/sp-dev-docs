@@ -1,7 +1,5 @@
 ---
 title: "Schema map (SPS15XSDSearchSet3)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: ITPro
@@ -15,8 +13,6 @@ description: "This topic shows the schema definition for schema_Microsoft.Office
 # Schema map (SPS15XSDSearchSet3)
 
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search.Portability**.
-  
- **Last modified:** January 13, 2014 
   
 ```XML
 <xs:schema ser="http://schemas.microsoft.com/2003/10/Serialization/" tns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability" xmlns:xs="http://www.w3.org/2001/XMLSchema">

@@ -1,6 +1,6 @@
 ---
 title: "ExcludeContentType (SPMetal)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

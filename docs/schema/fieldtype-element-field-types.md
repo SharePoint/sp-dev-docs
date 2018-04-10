@@ -1,6 +1,6 @@
 ---
 title: "FieldType Element (Field Types)"
-ms.
+
 
 manager: soliver
 ms.date: 3/9/2015

@@ -1,7 +1,5 @@
 ---
 title: "Schema map (SPS15XSDSearchSet1)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -14,12 +12,10 @@ description: "This topic shows the schema definition for schema_Microsoft.Office
 
 # Schema map (SPS15XSDSearchSet1)
 
+**Applies to:** SharePoint Server 2013
+
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search.Administration.Query**.
-  
- **Last modified:** January 13, 2014 
-  
- **Applies to:** SharePoint Server 2013
-  
+
 ```XML
 <xs:schema ser="http://schemas.microsoft.com/2003/10/Serialization/" tns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:complexType name="ArrayOfSource">
