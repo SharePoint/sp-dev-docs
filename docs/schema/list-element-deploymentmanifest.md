@@ -1,5 +1,5 @@
 ---
-title: "List Element (DeploymentManifest)"
+title: "List element (DeploymentManifest)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: c9fd975a-7133-4d0a-a3a2-9072ef08feee
 description: "Last modified: March 09, 2015"
 ---
 
-# List Element (DeploymentManifest)
+# List element (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   

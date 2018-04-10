@@ -1,7 +1,5 @@
 ---
-title: "IfEqual Element (View)"
-
-
+title: "IfEqual element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 61d1a179-91ae-4760-a697-fef330adb4ff
-description: "Last modified: March 09, 2015"
+description: Allows for conditional rendering based on the comparison of two Collaborative Application Markup Language (CAML) expressions.
 ---
 
-# IfEqual Element (View)
+# IfEqual element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Allows for conditional rendering based on the comparison of two Collaborative Application Markup Language (CAML) expressions.
   
-```
+```XML
 <IfEqual>
 </IfEqual>
 ```
@@ -35,21 +31,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Else](else-element-view.md), [Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Then](then-element-view.md)|
+- [Else](else-element-view.md)
+- [Expr1](expr1-element-view.md)
+- [Expr2](expr2-element-view.md)
+- [Then](then-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ## Example
 
@@ -81,7 +74,5 @@ The following example uses the **IfEqual** element to define the display pattern
 
 ## See also
 
-
-
-[IfNew Element (View)](ifnew-element-view.md)
+- [IfNew element (View)](ifnew-element-view.md)
 

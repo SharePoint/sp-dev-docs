@@ -1,7 +1,5 @@
 ---
-title: "ImagesPath Element"
-
-
+title: ImagesPath element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: fb008d30-a447-4c8c-a315-eac2bab8874b
-description: "Last modified: March 09, 2015"
+description: Returns the HTTP path to the images directory for the project, including the trailing forward slash.
 ---
 
 # ImagesPath Element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the HTTP path to the images directory for the project, including the trailing forward slash.
   
-```
+```XML
 <ImagesPath>
 </ImagesPath>
 ```
@@ -31,27 +27,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded 
    
 ## Example
 
@@ -72,4 +61,4 @@ The following example uses the **ImagesPath** element to specify the path for th
 </DisplayPattern>
 ```
 
-
+<br/>

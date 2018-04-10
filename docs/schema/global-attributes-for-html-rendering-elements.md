@@ -23,7 +23,7 @@ The View schema of [Collaborative Application Markup Language (CAML)](introducti
 > [!NOTE]
 > The presence of any one of these attributes implies that it is **TRUE** (for example, **HTMLEncode** cannot be set to **FALSE**). 
   
-Universal attributes include the following:
+Universal attributes include the following.
   
 ### AutoHyperLink
 

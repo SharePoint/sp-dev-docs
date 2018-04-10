@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: de3b9e21-c45c-b6fc-8c5d-e5e3cf55bd1e
 ---
 
-# Identity Element in Identities 
+# Identity element in Identities 
 
 (Subscription Schema)
 

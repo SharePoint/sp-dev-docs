@@ -1,7 +1,5 @@
 ---
-title: "GetFileExtension Element (View)"
-
-
+title: GetFileExtension element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: a15fb6c3-6635-444f-abca-290d2dce440d
-description: "Last modified: March 09, 2015"
+description: Returns the file extension for the specified file.
 ---
 
-# GetFileExtension Element (View)
+# GetFileExtension element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the file extension for the specified file.
   
-```
+```XML
 <GetFileExtension
   HTMLEncode = "TRUE" | "FALSE">
 </GetFileExtension>
@@ -42,25 +38,22 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Column](column-element-view.md), [Field](field-element-view.md), [LookupColumn](lookupcolumn-element-view.md)|
+- [Column](column-element-view.md)
+- [Field](field-element-view.md)
+- [LookupColumn](lookupcolumn-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded  
    
 ## Example
 
-The following line,  `<GetFileExtension>somefile.xls</GetFileExtension>`, would return "xls".
+The following line `<GetFileExtension>somefile.xls</GetFileExtension>` would return "xls".
   
 The following example returns file extensions from the Lookup column, except in cases where extension equals "htm".
   
@@ -80,4 +73,4 @@ The following example returns file extensions from the Lookup column, except in 
 </Switch>
 ```
 
-
+<br/>

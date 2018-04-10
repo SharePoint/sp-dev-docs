@@ -1,7 +1,5 @@
 ---
-title: "IfSubString Element (View)"
-
-
+title: "IfSubString element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b4e1b20c-bc22-4d91-8a00-70a02033409b
-description: "Last modified: March 09, 2015"
+description: Allows for conditional rendering based on whether a first expression (Expr1) is contained within a second expression (Expr2).
 ---
 
-# IfSubString Element (View)
+# IfSubString element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Allows for conditional rendering based on whether a first expression ([Expr1](expr1-element-view.md)) is contained within a second expression ([Expr2](expr2-element-view.md)).
   
-```
+```XML
 <IfSubString>
   <Expr1></Expr1>
   <Expr2></Expr2>
@@ -39,26 +35,24 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Else](else-element-view.md), [Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Then](then-element-view.md)|
+- [Else](else-element-view.md)
+- [Expr1](expr1-element-view.md)
+- [Expr2](expr2-element-view.md)
+- [Then](then-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

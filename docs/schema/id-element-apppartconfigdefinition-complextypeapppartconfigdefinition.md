@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 9c9dd6a2-8f5c-28be-3a7a-77e2a6c9a87f
 ---
 
-# Id element (AppPartConfigDefinition complexType) 
+# ID element (AppPartConfigDefinition complexType) 
 
 (AppPartConfigDefinition)
 

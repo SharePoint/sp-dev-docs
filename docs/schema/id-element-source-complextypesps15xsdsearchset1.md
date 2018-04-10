@@ -1,7 +1,5 @@
 ---
-title: "Id element (Source complexType) (SPS15XSDSearchSet1)"
-
-
+title: "ID element (Source complexType) (SPS15XSDSearchSet1)"
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,11 +10,9 @@ ms.assetid: c18fc433-14a4-7e55-a0bf-05035d912eab
 description: "Last modified: March 09, 2015"
 ---
 
-# Id element (Source complexType) (SPS15XSDSearchSet1)
+# ID element (Source complexType) (SPS15XSDSearchSet1)
 
- 
-  
- **Applies to:** SharePoint Server 2013
+**Applies to:** SharePoint Server 2013
   
 ## Element information
 

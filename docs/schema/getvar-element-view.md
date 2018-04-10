@@ -1,7 +1,5 @@
 ---
-title: "GetVar Element (View)"
-
-
+title: GetVar element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0bdaee4d-7d7c-4e2f-9b7c-09ea5f5d0b99
-description: "Last modified: March 09, 2015"
+description: Returns a variable in the context of rendering the page. Variables can be set either locally to the current level of XML or globally to the page.
 ---
 
-# GetVar Element (View)
+# GetVar element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns a variable in the context of rendering the page. Variables can be set either locally to the current level of XML or globally to the page.
   
-```
+```XML
 <GetVar
   AutoHyperlink = "TRUE" | "FALSE"
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
@@ -48,35 +44,30 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**AutoHyperlink** <br/> |Optional **Boolean**. **TRUE** to surround text with **\<A\>** tags if the text appears like a hyperlink, for example, www.microsoft.com.  <br/> |
-|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with **\<A\>** tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.  <br/> |
-|**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert **\<BR\>** tags into the text stream and to replace multiple spaces with a non-breaking space (**&amp;nbsp;**).  <br/> |
+|**AutoHyperlink** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink, for example, www.microsoft.com.  <br/> |
+|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.  <br/> |
+|**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a non-breaking space (`&nbsp;`).  <br/> |
 |**Default** <br/> |Optional **Text**. Renders the text assigned to this attribute if the value returned by the **Select** attribute of another element is an empty string.  <br/> |
 |**ExpandXML** <br/> |Optional **Boolean**. **TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.  <br/> |
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
 |**Name** <br/> |Required **Text**. The name of the variable.  <br/> |
 |**Scope** <br/> |If set to **Request**, the variable is globally available on the page.  <br/> |
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
-|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.  <br/> |
-|**URLEncodeAsUrl** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
+|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, `%c3%ab` for character `ë`.  <br/> |
+|**URLEncodeAsUrl** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0  
+- Maximum: Unbounded  
    
 ### Remarks
 
@@ -112,11 +103,9 @@ The following example uses the **GetVar** element to return current filtering in
 </Switch>
 ```
 
-If filter choices are open on the list and the Filter variable contains 1, "Hide Filter Choices" is displayed. If not, the default action implements a second **Switch** statement that evaluates a second variable, FilterField1. If the value of FilterField1 is an empty string, then no filter is applied and "Filter" is displayed in the toolbar; otherwise, the default action is to display "Change Filter." 
+If filter choices are open on the list and the **Filter** variable contains 1, **Hide Filter Choices** is displayed. If not, the default action implements a second **Switch** statement that evaluates a second variable, **FilterField1**. If the value of **FilterField1** is an empty string, no filter is applied and **Filter** is displayed in the toolbar; otherwise, the default action is to display **Change Filter**. 
   
 ## See also
 
-
-
-[SetVar Element (View)](setvar-element-view.md)
+- [SetVar element (View)](setvar-element-view.md)
 

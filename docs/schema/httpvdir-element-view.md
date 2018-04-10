@@ -1,7 +1,5 @@
 ---
-title: "HttpVDir Element (View)"
-
-
+title: HttpVDir element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b77312e4-d455-45e8-a087-19f4b30dfb9e
-description: "Last modified: March 09, 2015"
+description: Returns the root directory of the current subsite.
 ---
 
-# HttpVDir Element (View)
+# HttpVDir element (View)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Returns the root directory of the current subsite. For example, for `http://myserver/myweb/default.aspx`, the **HttpVDir** element would return  `http://myserver/myweb/`.
   
-Returns the root directory of the current subsite. For example, for  `http://myserver/myweb/default.aspx`, the **HttpVDir** element would return  `http://myserver/myweb/`.
-  
-```
+```XML
 <HttpVDir
   CurrentWeb = "TRUE" | "FALSE"
   URLEncode = "TRUE" | "FALSE"
@@ -41,26 +37,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**CurrentWeb** <br/> |Optional **Boolean**.  <br/> |
-|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).  <br/> |
-|**URLEncodeAsURL** <br/> |Optional **Boolean**. **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
+|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
+|**URLEncodeAsURL** <br/> |Optional **Boolean**. **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ## Example
 
@@ -85,10 +76,6 @@ The following example defines the **More Items** link to display when the number
 
 ## See also
 
-
-
-[HTMLBase Element](htmlbase-element.md)
-
-
-[HttpPath Element (View)](httppath-element-view.md)
+- [HTMLBase element](htmlbase-element.md)
+- [HttpPath element (View)](httppath-element-view.md)
 

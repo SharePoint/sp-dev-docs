@@ -1,7 +1,5 @@
 ---
-title: "List Element (List)"
-
-
+title: "List element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b2b26fee-eb45-48ac-99f1-65f725da293f
-description: "Last modified: March 09, 2015"
+description: Top-level element that contains the definition of a list.
 ---
 
-# List Element (List)
+# List element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element that contains the definition of a list.
   
-```
+```XML
 <List
   BaseType = "Integer" | "Text"
   Default = "TRUE" | "FALSE"
@@ -98,21 +94,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[MetaData](metadata-element-list.md)|
+- [MetaData](metadata-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0 
+- Maximum: 1 
    
 ### Remarks
 

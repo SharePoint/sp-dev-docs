@@ -1,7 +1,5 @@
 ---
-title: "ListUrl Element (View)"
-
-
+title: "ListUrl element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d6435e1e-12b9-41e2-a752-0e6f28ca4dc3
-description: "Last modified: March 09, 2015"
+description: Renders the URL of the list relative to the containing Web site. 
 ---
 
-# ListUrl Element (View)
+# ListUrl element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders the URL of the list relative to the containing Web site. 
   
-```
+```XML
 <ListUrl>
 </ListUrl>
 ```
@@ -35,26 +31,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
+
+<br/> 
    
 

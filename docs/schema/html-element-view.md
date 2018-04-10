@@ -1,7 +1,5 @@
 ---
-title: "HTML Element (View)"
-
-
+title: "HTML element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 407484ef-5401-44b0-948c-7f5046fd9287
-description: "Last modified: March 09, 2015"
+description: Escapes contained HTML tags so that the Collaborative Application Markup Language (CAML) parser does not parse the tags.
 ---
 
-# HTML Element (View)
+# HTML element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Escapes contained HTML tags so that the Collaborative Application Markup Language (CAML) parser does not parse the tags.
   
-```
+```XML
 <HTML>
 </HTML>
 ```
@@ -41,21 +37,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ## Example
 
@@ -67,7 +58,5 @@ The following line illustrates how to escape HTML tags by using this element and
 
 ## See also
 
-
-
-[XML Element](xml-element.md)
+- [XML element](xml-element.md)
 

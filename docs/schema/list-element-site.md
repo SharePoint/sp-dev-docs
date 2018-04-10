@@ -1,7 +1,5 @@
 ---
-title: "List Element (Site)"
-
-
+title: "List element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 8aeb55e1-2661-400d-a2d8-036c08fe9f30
-description: "Last modified: March 09, 2015"
+description: Specifies a list instance to include in sites created through a site definition configuration or Web template configuration.
 ---
 
-# List Element (Site)
+# List element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a list instance to include in sites created through a site definition configuration or Web template configuration.
   
-```
+```XML
 <List
   CustomSchema = "Text"
   Description = "Text"
@@ -67,20 +63,18 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Data](data-element-site.md)|
+- [Data](data-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[GlobalLists](globallists-element.md), [Lists](lists-element-site.md)|
+- [GlobalLists](globallists-element.md)
+- [Lists](lists-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

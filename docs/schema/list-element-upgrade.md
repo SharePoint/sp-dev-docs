@@ -1,7 +1,5 @@
 ---
-title: "List Element (Upgrade)"
-
-
+title: "List element (Upgrade)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7acb7d24-d174-4fdd-9700-f4e7fe45fd17
-description: "Last modified: March 09, 2015"
+description: Specifies how an existing list should be upgraded.
 ---
 
-# List Element (Upgrade)
+# List element (Upgrade)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies how an existing list should be upgraded.
   
-```
+```XML
 <List
   FromTemplateId = "Integer"
   ToFeatureId = "GUID"
@@ -46,21 +42,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Lists](lists-element-upgrade.md)|
+- [Lists](lists-element-upgrade.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded 
    
 ## Example
 

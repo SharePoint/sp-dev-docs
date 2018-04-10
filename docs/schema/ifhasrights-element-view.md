@@ -1,7 +1,5 @@
 ---
-title: "IfHasRights Element (View)"
-
-
+title: "IfHasRights element (View)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3f164acc-398c-4c1a-b498-1c2f4509b524
-description: "Last modified: March 09, 2015"
+description: Allows for conditional rendering of a field or of a toolbar item based on whether the current user has the specified permission.
 ---
 
-# IfHasRights Element (View)
+# IfHasRights element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Allows for conditional rendering of a field or of a toolbar item based on whether the current user has the specified permission.
   
-```
+```XML
 <IfHasRights>
   <RightsChoices>
     <RightsGroup
@@ -39,26 +35,23 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Else](else-element-view.md), [RightsChoices](rightschoices-element-view.md), [Then](then-element-view.md)|
+- [Else](else-element-view.md)
+- [RightsChoices](rightschoices-element-view.md)
+- [Then](then-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 
