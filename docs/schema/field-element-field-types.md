@@ -1,7 +1,5 @@
 ---
-title: "Field Element (Field Types)"
-
-
+title: Field element (Field Types)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +9,16 @@ localization_priority: Normal
 api_name:
 - Field Types XML
 ms.assetid: c168e8bc-8aba-4b72-a9c4-a0ad7a4aff9a
-description: "Last modified: March 09, 2015"
+description: Represents a characteristic of the field type.
 ---
 
-# Field Element (Field Types)
+# Field element (Field Types)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a characteristic of the field type.
   
-```
+```XML
 <Field
   Name="Text">
 </Field>
@@ -36,23 +32,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Name** <br/> |Required **Text**. A string that represents the name of the specific aspect of the field type that the **Field** element represents. The value must be one of the strings listed in the table below.  <br/> |
+|**Name** <br/> |Required **Text**. A string that represents the name of the specific aspect of the field type that the **Field** element represents. The value must be one of the strings listed in the table under **Remarks**.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[FieldType Element (Field Types)](fieldtype-element-field-types.md)|
+- [FieldType element (Field Types)](fieldtype-element-field-types.md)
    
 ### Remarks
 
-Field element children of **FieldType** elements are configured in fldtypes*.xml files in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML. 
+Field element children of **FieldType** elements are configured in fldtypes\*.xml files in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML. 
   
 Each **FieldType** element has several required and optional **Field** elements distinguished by their **Name** attribute. The following table describes these elements. In the object model, a field type is represented by the [SPFieldTypeDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldTypeDefinition.aspx) class. The latter class has a read-only property corresponding to all but two of the rows of the table. (The exceptions are **InternalType** and **SQLType**.) Except where noted otherwise, the property names match the value of the corresponding Name attribute.
   
@@ -103,15 +95,9 @@ The following example defines a custom field type.
 
 ## See also
 
-
-
-[Custom Field Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)
-  
-[Custom Field Classes](http://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)
-  
-[Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)
-  
-[Custom Field Type Definition](http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)
-  
-[Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx)
+- [Custom Field Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)  
+- [Custom Field Classes](http://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)  
+- [Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)  
+- [Custom Field Type Definition](http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)  
+- [Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx)
 

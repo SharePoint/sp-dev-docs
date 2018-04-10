@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 11b0cc8a-5cc9-4401-9042-a75bf208376c
 ---
 
-# Fields Element (WorkflowInfo)
+# Fields element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -1,7 +1,5 @@
 ---
-title: "FieldSwitch Element (View)"
-
-
+title: FieldSwitch element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 94f1c64a-50d6-4560-b941-98ce3df807b0
-description: "Last modified: March 09, 2015"
+description: Obsolete. Allows for conditional rendering based on the value of a field property. 
 ---
 
-# FieldSwitch Element (View)
+# FieldSwitch element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Obsolete. Allows for conditional rendering based on the value of a field property. 
   
-```
+```XML
 <FieldSwitch
    StripWS = "TRUE" | "FALSE">
        <Expr></Expr>
@@ -47,27 +43,24 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Case](case-element-view.md), [Default](default-element-view.md), [Expr](expr-element-view.md)|
+- [Case](case-element-view.md)
+- [Default](default-element-view.md)
+- [Expr](expr-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 
 The **FieldSwitch** element and the [Switch](switch-element-view.md) element use identical syntax, but a **FieldSwitch** element is evaluated only once per request for each view in which it applies to a view body or for each field in which it applies to a display pattern. The **FieldSwitch** element substantially optimizes performance in cases where different Collaborative Application Markup Language (CAML) code paths are required, depending on a field property (for example, whether rich text formatting is enabled) whose value does not change during the rendering process. 
   
-A **FieldSwitch** element contains an [Expr](expr-element-view.md) element, any number of [Case](case-element-view.md) elements, and a [Default](default-element-view.md) element. The value of the **Expr** element is compared against the **Value** attribute of each **Case** element. When a match is found, the **FieldSwitch** element returns the value of the matching **Case** element. If no match is found, and if a **Default** element is given, then the **FieldSwitch** element returns the value of the **Default** element. If no **Default** element is specified and none of the **Case** values match the **Expr** value, then the **FieldSwitch** element returns an empty string. 
+A **FieldSwitch** element contains an [Expr](expr-element-view.md) element, any number of [Case](case-element-view.md) elements, and a [Default](default-element-view.md) element. The value of the **Expr** element is compared against the **Value** attribute of each **Case** element. When a match is found, the **FieldSwitch** element returns the value of the matching **Case** element. If no match is found, and if a **Default** element is given, the **FieldSwitch** element returns the value of the **Default** element. If no **Default** element is specified and none of the **Case** values match the **Expr** value, the **FieldSwitch** element returns an empty string. 
   
 This element does not require any particular parent element.
   
@@ -94,7 +87,5 @@ The following example from the [FldTypes.xml](http://msdn.microsoft.com/library/
 
 ## See also
 
-
-
-[Switch Element (View)](switch-element-view.md)
+- [Switch element (View)](switch-element-view.md)
 

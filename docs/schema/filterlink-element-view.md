@@ -1,7 +1,5 @@
 ---
-title: "FilterLink Element (View)"
-
-
+title: FilterLink element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 4840227e-3207-4e29-8698-c65a9fa192ce
-description: "Last modified: March 09, 2015"
+description: Returns the URL for filtering a view; typically used in the toolbars that appear above lists.
 ---
 
-# FilterLink Element (View)
+# FilterLink element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the URL for filtering a view; typically used in the toolbars that appear above lists.
   
-```
+```XML
 <FilterLink
   AutoHyperLink = "TRUE" | "FALSE"
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
@@ -47,34 +43,29 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**AutoHyperLink** <br/> |Optional **Boolean**. **TRUE** to surround text with <A> tags if the text appears like a hyperlink (for example, www.microsoft.com).  <br/> |
-|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with <A> tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.  <br/> |
-|**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert <BR> tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).  <br/> |
-|**Default** <br/> |Optional **Text**. Specifies the filter string to use in generating the hypertext reference (HREF) for a link to an item when the URL does not specify a  _Filter_ parameter. If empty, the link URL will not contain a  _Filter_ parameter.  <br/> |
+|**AutoHyperLink** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, www.microsoft.com).  <br/> |
+|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.  <br/> |
+|**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).  <br/> |
+|**Default** <br/> |Optional **Text**. Specifies the filter string to use in generating the hypertext reference (HREF) for a link to an item when the URL does not specify a _Filter_ parameter. If empty, the link URL will not contain a _Filter_ parameter.  <br/> |
 |**ExpandXML** <br/> |Optional **Boolean**. **TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.  <br/> |
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
 |**Paged** <br/> |Optional **Boolean**. **TRUE** if items in the list are displayed page by page.  <br/> |
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
-|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).  <br/> |
-|**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes ("/") are not encoded.  <br/> |
+|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
+|**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 
@@ -86,7 +77,7 @@ http://Site_Name/Lists/Events/AllItems.aspx?Filter=1&amp;View=%7b4A760E71%2dEBF2
 
 ## Example
 
-The following example uses the **FilterLink** element to construct a hyperlink for the filter icon, so that clicking the icon posts the URL for applying filter options in the list view. 
+The following example uses the **FilterLink** element to construct a hyperlink for the filter icon, so that selecting the icon posts the URL for applying filter options in the list view. 
   
 ```XML
 <HTML><![CDATA[ <a tabindex=2 ID=diidFilterButton class="ms-toolbar" 
@@ -104,4 +95,4 @@ The following example uses the **FilterLink** element to construct a hyperlink f
 <HTML><![CDATA[ border=0 width=16 height=16></a></HTML>
 ```
 
-
+<br/>

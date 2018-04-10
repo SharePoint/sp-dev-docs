@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 5f0342fb-3643-4d63-8b6a-a2688538e8e3
 ---
 
-# Field Element (Field)
+# Field element (Field)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -791,9 +791,9 @@ The following example shows an element manifest for a Feature that creates three
 
 ## See also
 
-- [Field Definitions](field-definitions.md)
+- [Field definitions](field-definitions.md)
 - [Columns](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432(Office.15).aspx)
-- [Field Element(List)](field-element-list.md)
+- [Field element (List)](field-element-list.md)
 
 
 

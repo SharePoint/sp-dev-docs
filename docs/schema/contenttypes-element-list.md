@@ -1,7 +1,5 @@
 ---
-title: "ContentTypes Element (List)"
-
-
+title: ContentTypes element (List)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b5af3530-195e-41b6-865e-8623f2a3cd08
-description: "Last modified: March 09, 2015"
+description: Contains references to content types to associate with lists that are created through the list definition.
 ---
 
-# ContentTypes Element (List)
+# ContentTypes element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains references to content types to associate with lists that are created through the list definition.
   
-```
+```XML
 <ContentTypes>
 </ContentTypes>
 ```
@@ -35,27 +31,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-||
-|:-----|
-|None. |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[ContentType](contenttype-element-contenttype.md), [ContentTypeRef](contenttyperef-element-list.md)|
+- [ContentType](contenttype-element-contenttype.md)
+- [ContentTypeRef](contenttyperef-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[MetaData (List)](metadata-element-list.md), [MetaData (Site)](metadata-element-site.md)|
+- [MetaData (List)](metadata-element-list.md)
+- [MetaData (Site)](metadata-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -83,7 +74,5 @@ The following example shows a partial definition for a list that uses three cont
 
 ## See also
 
-
-
-[How to: Add a Content Type to a List](http://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666%28Office.15%29.aspx)
+- [How to: Add a Content Type to a List](http://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666%28Office.15%29.aspx)
 

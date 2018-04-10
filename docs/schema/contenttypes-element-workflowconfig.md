@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 8f42a4a9-8238-48e7-949d-3efd95c44b4c
 ---
 
-# ContentTypes Element (WorkflowConfig)
+# ContentTypes element (WorkflowConfig)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

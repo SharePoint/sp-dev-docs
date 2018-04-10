@@ -1,7 +1,5 @@
 ---
-title: "Case Element (View)"
-
-
+title: Case element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 5100d92b-a09f-430d-ab79-5cb770c1bd61
-description: "Last modified: March 09, 2015"
+description: Used inside a Switch statement or FieldSwitch statement to perform a comparison.
 ---
 
-# Case Element (View)
+# Case element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used inside a [Switch](switch-element-view.md) statement or [FieldSwitch](fieldswitch-element-view.md) statement to perform a comparison. 
   
-```
+```XML
 <Case
   Value = "Text">
 </Case>
@@ -42,25 +38,21 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[FieldSwitch](fieldswitch-element-view.md), [Switch](switch-element-view.md)|
+- [FieldSwitch](fieldswitch-element-view.md)
+- [Switch](switch-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded 
    
 ### Remarks
 
-Within a [Switch](switch-element-view.md) statement, the **Case** element is often used in conjunction with the [Default](default-element-view.md) element. If the criteria set by the **Case** value proves false, then the default value is implemented. 
+Within a [Switch](switch-element-view.md) statement, the **Case** element is often used in conjunction with the [Default](default-element-view.md) element. If the criteria set by the **Case** value proves false, the default value is implemented. 
   
 ## Example
 
@@ -74,4 +66,4 @@ The following example checks the value of a **UserID** field and returns "User Z
 </Switch>
 ```
 
-
+<br/>

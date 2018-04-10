@@ -1,7 +1,5 @@
 ---
-title: "ContentTypes Element (View)"
-
-
+title: ContentTypes element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,44 +11,37 @@ api_name:
 api_type:
 - schema
 ms.assetid: 55e6a307-0b4b-46ce-8c03-758fc7f2ee5d
-description: "Last modified: March 09, 2015"
+description: Used to conditionally add markup language or script to a page, based on evaluation of a content type ID.
 ---
 
-# ContentTypes Element (View)
+# ContentTypes element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used to conditionally add markup language or script to a page, based on evaluation of a content type ID.
   
-```
+```XML
 <ContentTypes>
 </ContentTypes>
 ```
 
 ## Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

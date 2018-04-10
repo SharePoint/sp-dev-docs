@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: d9c472d5-0eb5-4502-aec5-347a9f289055
 ---
 
-# Field Element (List Instance)
+# Field element (List Instance)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -1,7 +1,5 @@
 ---
-title: "Batch Element (View)"
-
-
+title: Batch element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2d716503-4843-4f8c-86d6-392707ce9095
-description: "Last modified: March 09, 2015"
+description: Provides batch processing of commands within HTTP protocol.
 ---
 
-# Batch Element (View)
+# Batch element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides batch processing of commands within HTTP protocol.
   
-```
+```XML
 <Batch
   OnError = "Return" | "Continue"
   ListVersion = ""
@@ -52,21 +48,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Method](method-element-view.md)|
+- [Method](method-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ### Remarks
 
@@ -86,4 +77,5 @@ The following code example, if contained within HTTP protocol, would return a li
 </ows:Batch>
 ```
 
+<br/>
 

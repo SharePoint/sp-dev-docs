@@ -1,7 +1,5 @@
 ---
-title: "View Schema Elements G-L"
-
-
+title: View schema elements G-L
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -16,58 +14,52 @@ ms.assetid: d7b7f560-446c-4343-85a0-41e8c6af7b08
 description: "Last modified: July 15, 2011"
 ---
 
-# View Schema Elements G-L
+# View schema elements G-L
 
- **Last modified:** July 15, 2011 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+- [GetFileExtension](getfileextension-element-view.md)
   
-[GetFileExtension](getfileextension-element-view.md)
+- [GetVar](getvar-element-view.md)
   
-[GetVar](getvar-element-view.md)
+- [HTML](html-element-view.md)
   
-[GroupByFooter](groupbyfooter-element-list.md)
+- [HttpHost](httphost-element-view.md)
   
-[GroupByHeader](groupbyheader-element-list.md)
+- [HttpPath](httppath-element-view.md)
   
-[HTML](html-element-view.md)
+- [HttpVDir](httpvdir-element-view.md)
   
-[HttpHost](httphost-element-view.md)
+- [ID](id-element-view.md)
   
-[HttpPath](httppath-element-view.md)
+- [Identity](identity-element-view.md)
   
-[HttpVDir](httpvdir-element-view.md)
+- [IfEqual](ifequal-element-view.md)
   
-[ID](id-element-view.md)
+- [IfHasRights](ifhasrights-element-view.md)
   
-[Identity](identity-element-view.md)
+- [IfNeg](ifneg-element-view.md)
   
-[IfEqual](ifequal-element-view.md)
+- [IfNew](ifnew-element-view.md)
   
-[IfHasRights](ifhasrights-element-view.md)
+- [IfSubString](ifsubstring-element-view.md)
   
-[IfNeg](ifneg-element-view.md)
+- [Join](join-element-view.md)
   
-[IfNew](ifnew-element-view.md)
+- [Joins](joins-element-view.md)
   
-[IfSubString](ifsubstring-element-view.md)
+- [Length](length-element-view.md)
   
-[Join](join-element-view.md)
+- [Limit](limit-element-view.md)
   
-[Joins](joins-element-view.md)
+- [List](list-element-view.md)
   
-[Length](length-element-view.md)
+- [ListProperty](listproperty-element-view.md)
   
-[Limit](limit-element-view.md)
+- [ListUrl](listurl-element-view.md)
   
-[List](list-element-view.md)
+- [ListUrlDir](listurldir-element-view.md)
   
-[ListProperty](listproperty-element-view.md)
-  
-[ListUrl](listurl-element-view.md)
-  
-[ListUrlDir](listurldir-element-view.md)
-  
-[LookupColumn](lookupcolumn-element-view.md)
+- [LookupColumn](lookupcolumn-element-view.md)
   
 

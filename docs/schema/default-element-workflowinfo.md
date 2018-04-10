@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 24ffa55e-9c63-4e52-ba2d-3382155a16ca
 ---
 
-# Default Element (WorkflowInfo)
+# Default element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

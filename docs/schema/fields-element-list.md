@@ -1,7 +1,5 @@
 ---
-title: "Fields Element (List)"
-
-
+title: Fields element (List)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 285aaef1-eeac-42e2-867b-3b0fc9bbf8c5
-description: "Last modified: March 09, 2015"
+description: Contains field definitions for a list definition within a Schema.xml file, or for a base list type within the global Onet.xml file, specifying the fields that are implemented in a list. 
 ---
 
-# Fields Element (List)
+# Fields element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains field definitions for a list definition within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file, or for a base list type within the global [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file, specifying the fields that are implemented in a list. 
   
-```
+```XML
 <Fields  Revision = "Integer">  ...
 </Fields>
 ```
@@ -41,25 +37,21 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Field](field-element-list.md)|
+- [Field](field-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Metadata (List)](metadata-element-list.md), [MetaData (Site)](metadata-element-site.md)|
+- [Metadata (List)](metadata-element-list.md)
+- [MetaData (Site)](metadata-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
-The following example from the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for tasks lists specifies fields uniquely used in a tasks list. 
+The following example from the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for tasks lists fields uniquely used in a tasks list. 
   
 ```XML
 <Fields>
@@ -95,4 +87,5 @@ The following example from the [Schema.xml](http://msdn.microsoft.com/library/c2
 </Fields>
 ```
 
+<br/>
 

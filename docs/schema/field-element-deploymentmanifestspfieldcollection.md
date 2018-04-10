@@ -1,5 +1,5 @@
 ---
-title: "Field Element (DeploymentManifest - SPFieldCollection)"
+title: "Field element (DeploymentManifest - SPFieldCollection)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 9ad6ac17-b255-4711-b2e1-a9cfeeea353f
 description: "Last modified: March 09, 2015"
 ---
 
-# Field Element (DeploymentManifest - SPFieldCollection)
+# Field element (DeploymentManifest - SPFieldCollection)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   

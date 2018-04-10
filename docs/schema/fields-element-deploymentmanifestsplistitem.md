@@ -1,5 +1,5 @@
 ---
-title: "Fields Element (DeploymentManifest - SPListItem)"
+title: "Fields element (DeploymentManifest - SPListItem)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,10 +7,10 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 3cc3a411-0d17-4281-a4d5-0d20ba307b75
-description: "Last modified: March 09, 2015"
+description: Represents a collection of SPField object instances on a Windows SharePoint Services 3.0 SPListItem.
 ---
 
-# Fields Element (DeploymentManifest - SPListItem)
+# Fields element (DeploymentManifest - SPListItem)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -48,12 +48,12 @@ None
    
 ### Child elements
 
-- [Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)
-- [FieldRef Element (DeploymentManifest - SPFieldCollection)](fieldref-element-deploymentmanifestspfieldcollection.md)
+- [Field element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)
+- [FieldRef element (DeploymentManifest - SPFieldCollection)](fieldref-element-deploymentmanifestspfieldcollection.md)
    
 ### Parent elements
 
-[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
+- [ListItem element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 

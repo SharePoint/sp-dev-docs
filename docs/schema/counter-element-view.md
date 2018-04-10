@@ -1,7 +1,5 @@
 ---
-title: "Counter Element (View)"
-
-
+title: Counter element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d456f350-4292-4c2d-9d7c-1daa1757a222
-description: "Last modified: March 09, 2015"
+description: Provides a counter variable whose value increments each time the tag appears within a field or view definition.
 ---
 
-# Counter Element (View)
+# Counter element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides a counter variable whose value increments each time the tag appears within a field or view definition.
   
-```
+```XML
 <Counter
    Type = "View">
 </Counter>
@@ -42,20 +38,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0 
+- Maximum: 1  
+
+<br/> 
    
 

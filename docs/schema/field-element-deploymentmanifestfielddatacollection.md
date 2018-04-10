@@ -1,5 +1,5 @@
 ---
-title: "Field Element (DeploymentManifest - FieldDataCollection)"
+title: "Field element (DeploymentManifest - FieldDataCollection)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 0b17884d-95b4-4b23-b74c-07a6957ae14a
 description: "Last modified: March 09, 2015"
 ---
 
-# Field Element (DeploymentManifest - FieldDataCollection)
+# Field element (DeploymentManifest - FieldDataCollection)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   

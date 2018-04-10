@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: c2b8d8df-8f4c-48c0-93ca-f0b21e0c6834
 ---
 
-# Fields Element (WorkflowActions)
+# Fields element (WorkflowActions)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -1,6 +1,5 @@
 ---
-title: "FieldPrefix Element (View)"
-
+title: FieldPrefix element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 454613cf-0a5e-4440-beec-8457f6762b75
-description: "Last modified: March 09, 2015"
+description: Obsolete. Returns the Microsoft Office namespace "urn:schemas-microsoft-com:office:office#", which is added to every field name for Office compatibility.
 ---
 
-# FieldPrefix Element (View)
+# FieldPrefix element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Obsolete. Returns the Microsoft Office namespace "urn:schemas-microsoft-com:office:office#", which is added to every field name for Office compatibility.
   
-```
+```XML
 <FieldPrefix>
 </FieldPrefix>
 ```
@@ -34,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ## Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded 
    
 ## Example
 
@@ -73,4 +63,5 @@ The following excerpt from the [FldTypes.xml](http://msdn.microsoft.com/library/
 </RenderPattern>
 ```
 
+<br/>
 

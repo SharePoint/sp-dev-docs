@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: befc0004-2f98-4cd9-9b5a-d7450e9a958d
 ---
 
-# Default Element (WorkflowActions)
+# Default element (WorkflowActions)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

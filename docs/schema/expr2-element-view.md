@@ -1,7 +1,5 @@
 ---
-title: "Expr2 Element (View)"
-
-
+title: Expr2 element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 81f23130-7926-4c38-aad8-12b404489498
-description: "Last modified: March 09, 2015"
+description: Used as part of a comparison with the value contained in an Expr1 element.
 ---
 
-# Expr2 Element (View)
+# Expr2 element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used as part of a comparison with the value contained in an [Expr1](expr1-element-view.md) element. The **Expr2** element contains the CAML expression that is evaluated to determine the course of action. The expressions can be any set of CAML elements that render text, or they can be other conditionals. 
   
-```
+```XML
 <Expr2>
 </Expr2>
 ```
@@ -35,27 +31,32 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[BeginsWith](beginswith-element-query.md), [Column](column-element-view.md), [Contains](contains-element-query.md), [Eq](eq-element-query.md), [Field](field-element-view.md), [GetVar](getvar-element-view.md), [GroupBy](groupby-element-query.md), [ListProperty](listproperty-element-view.md), [LookupColumn](lookupcolumn-element-view.md), [OrderBy](orderby-element-query.md), [Where](where-element-query.md)|
+- [BeginsWith](beginswith-element-query.md)
+- [Column](column-element-view.md)
+- [Contains](contains-element-query.md)
+- [Eq](eq-element-query.md)
+- [Field](field-element-view.md)
+- [GetVar](getvar-element-view.md)
+- [GroupBy](groupby-element-query.md)
+- [ListProperty](listproperty-element-view.md)
+- [LookupColumn](lookupcolumn-element-view.md)
+- [OrderBy](orderby-element-query.md)
+- [Where](where-element-query.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[IfEqual](ifequal-element-view.md), [IfNeg](ifneg-element-view.md), [IfSubString](ifsubstring-element-view.md)|
+- [IfEqual](ifequal-element-view.md)
+- [IfNeg](ifneg-element-view.md)
+- [IfSubString](ifsubstring-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ## Example
 
@@ -72,9 +73,6 @@ The following example evaluates two expressions, and if they are equal, it conve
 
 ## See also
 
-
-
-[Expr Element (View)](expr-element-view.md)
-  
-[Expr1 Element (View)](expr1-element-view.md)
+- [Expr element (View)](expr-element-view.md) 
+- [Expr1 element (View)](expr1-element-view.md)
 

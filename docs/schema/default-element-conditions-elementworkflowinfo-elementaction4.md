@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 17472e6d-2b05-757a-f897-26b66a763882
 ---
 
-# Default element 
+# Default element (Conditions element) 
 
-(Conditions element) (WorkflowInfo element) (Action4)
+(WorkflowInfo element) (Action4)
 
 **Applies to**: SharePoint Server 2013
 

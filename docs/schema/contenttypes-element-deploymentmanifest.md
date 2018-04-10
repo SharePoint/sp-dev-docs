@@ -1,5 +1,5 @@
 ---
-title: "ContentTypes Element (DeploymentManifest)"
+title: "ContentTypes element (DeploymentManifest)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: a24de782-ce49-43f7-ac73-dd844548eba8
 description: "Last modified: March 09, 2015"
 ---
 
-# ContentTypes Element (DeploymentManifest)
+# ContentTypes element (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -46,16 +46,16 @@ None
    
 ### Parent elements
 
-[List Element (DeploymentManifest)](list-element-deploymentmanifest.md)
+[List element (DeploymentManifest)](list-element-deploymentmanifest.md)
    
 ### Remarks
 
-The collections represented by the **ContentTypes** element are of object instances represented by the [ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md) element. 
+The collections represented by the **ContentTypes** element are of object instances represented by the [ContentType element (DeploymentManifest)](contenttype-element-deploymentmanifest.md) element. 
   
 ## See also
 
 - [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) 
 - [SPContentTypeCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentTypeCollection.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-- [ContentType Element (DeploymentManifest)](contenttype-element-deploymentmanifest.md)
+- [ContentType element (DeploymentManifest)](contenttype-element-deploymentmanifest.md)
 

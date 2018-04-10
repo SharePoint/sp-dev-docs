@@ -1,5 +1,5 @@
 ---
-title: "Field Element (DeploymentManifest - DeploymentFieldTemplate)"
+title: "Field element (DeploymentManifest - DeploymentFieldTemplate)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 5e1549be-c95f-4414-b72f-e9d0e124abd8
 description: "Last modified: March 09, 2015"
 ---
 
-# Field Element (DeploymentManifest - DeploymentFieldTemplate)
+# Field element (DeploymentManifest - DeploymentFieldTemplate)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   

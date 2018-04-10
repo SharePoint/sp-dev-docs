@@ -1,5 +1,5 @@
 ---
-title: "Fields Element (AlertTemplates)"
+title: "Fields element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,10 +11,10 @@ api_name:
 api_type:
 - schema
 ms.assetid: 199b07a2-2b6b-4f40-9c34-046b712d69d0
-description: "Last modified: March 09, 2015"
+description: Specifies the fields to display in the alert message.
 ---
 
-# Fields Element (AlertTemplates)
+# Fields element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   

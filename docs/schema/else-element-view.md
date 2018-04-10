@@ -1,7 +1,5 @@
 ---
-title: "Else Element (View)"
-
-
+title: Else element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c8f24def-d371-4490-9d3a-6913a3d6f9a6
-description: "Last modified: March 09, 2015"
+description: The instructions within this element are executed if the expressions contained in the IfEqual element are not TRUE.
 ---
 
-# Else Element (View)
+# Else element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The instructions within this element are executed if the expressions contained in the [IfEqual](ifequal-element-view.md) element are not **TRUE**.
   
-```
+```XML
 <Else>
 </Else>
 ```
@@ -35,27 +31,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[IfEqual](ifequal-element-view.md), [IfHasRights](ifhasrights-element-view.md), [IfSubString](ifsubstring-element-view.md)|
+- [IfEqual](ifequal-element-view.md)
+- [IfHasRights](ifhasrights-element-view.md)
+- [IfSubString](ifsubstring-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0 
+- Maximum: 1  
    
 ## Example
 
@@ -72,13 +63,8 @@ The following example evaluates two expressions, and if they are equal, it conve
 
 ## See also
 
-
-
-[Expr Element (View)](expr-element-view.md)
-  
-[Expr1 Element (View)](expr1-element-view.md)
-  
-[Expr2 Element (View)](expr2-element-view.md)
-  
-[Then Element (View)](then-element-view.md)
+- [Expr element (View)](expr-element-view.md)  
+- [Expr1 element (View)](expr1-element-view.md)  
+- [Expr2 element (View)](expr2-element-view.md)
+- [Then element (View)](then-element-view.md)
 

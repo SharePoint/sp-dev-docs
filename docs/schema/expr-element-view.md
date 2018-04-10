@@ -1,7 +1,5 @@
 ---
-title: "Expr Element (View)"
-
-
+title: Expr element (View)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 1c48aeb1-18dc-4f5f-8156-96ac1b821e77
-description: "Last modified: March 09, 2015"
+description: Contains a CAML expression that is evaluated to determine the course of action for a Switch or FieldSwitch statement. 
 ---
 
-# Expr Element (View)
+# Expr element (View)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a CAML expression that is evaluated to determine the course of action for a [Switch](switch-element-view.md) or [FieldSwitch](fieldswitch-element-view.md) statement. The expressions can be any set of CAML elements that render text, or they can be other conditionals. 
   
-```
+```XML
 <Expr>
 </Expr>
 ```
@@ -35,27 +31,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[FieldSwitch](fieldswitch-element-view.md), [Switch](switch-element-view.md)|
+- [FieldSwitch](fieldswitch-element-view.md)
+- [Switch](switch-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -71,9 +61,6 @@ The following example checks the value of a **UserID** field and returns "User Z
 
 ## See also
 
-
-
-[Expr1 Element (View)](expr1-element-view.md)
-  
-[Expr2 Element (View)](expr2-element-view.md)
+- [Expr1 element (View)](expr1-element-view.md)  
+- [Expr2 element (View)](expr2-element-view.md)
 

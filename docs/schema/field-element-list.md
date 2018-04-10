@@ -1,7 +1,5 @@
 ---
-title: "Field Element (List)"
-
-
+title: Field element (List)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,19 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2d8b69c1-0e47-4f76-bb95-8d8a43fd6cfd
-
-description: "Last modified: March 09, 2015"
+description: Defines the internal data types used in the list infrastructure of a SharePoint website. A field is a column or attribute of information that a user can add to a list.
 ---
 
 # Field Element (List)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Defines the internal data types used in the list infrastructure of a SharePoint website. A field is a column or attribute of information that a user can add to a list.
   
-Defines the internal data types used in the list infrastructure of a SharePoint Web site. A field is a column or attribute of information that a user can add to a list.
-  
-```
+```XML
 <Field
   Aggregation = "sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
   AllowDeletion = "TRUE" | "FALSE"
@@ -256,25 +251,31 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[CHOICES](choices-element-list.md), [Customization](customization-element-list.md), [Default](default-element-listfield.md), [DefaultFormula](defaultformula-element-list.md), [DisplayBidiPattern](displaybidipattern-element-list.md), [DisplayPattern](displaypattern-element-list.md), [FieldRefs](fieldrefs-element-list.md), [Formula](formula-element-list.md), [FormulaDisplayNames](formuladisplaynames-element-list.md), [MAPPINGS](mappings-element-list.md), [Validation](validation-element-list.md)|
+- [CHOICES](choices-element-list.md)
+- [Customization](customization-element-list.md)
+- [Default](default-element-listfield.md)
+- [DefaultFormula](defaultformula-element-list.md)
+- [DisplayBidiPattern](displaybidipattern-element-list.md)
+- [DisplayPattern](displaypattern-element-list.md)
+- [FieldRefs](fieldrefs-element-list.md)
+- [Formula](formula-element-list.md)
+- [FormulaDisplayNames](formuladisplaynames-element-list.md)
+- [MAPPINGS](mappings-element-list.md)
+- [Validation](validation-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Fields](fields-element-list.md), [ProjectedFields](projectedfields-element-view.md)|
+- [Fields](fields-element-list.md)
+- [ProjectedFields](projectedfields-element-view.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded when the parent is [Fields](fields-element-view.md). When the parent is [ProjectedFields](projectedfields-element-view.md) the maximum is difference between the maximum number of allowed fields in the primary list that is being queried and the number of fields already in the list.  <br/> |
+- Minimum: 0
+- Maximum: Unbounded when the parent is [Fields](fields-element-view.md). When the parent is [ProjectedFields](projectedfields-element-view.md), the maximum is the difference between the maximum number of allowed fields in the primary list that is being queried and the number of fields already in the list.  <br/> |
    
 ### Remarks
 
-To create a custom field definition for a list definition that is based on a default SharePoint Foundation field type, use the **Field (List - Definition)** element within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file. To create a custom field definition as a pluggable Feature that is based on a default field type and that can be reused across Web sites and lists within a site collection, use the [Field (Field)](field-element-field.md) element to define a custom [site column](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx). To create a [custom field type](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element. 
+To create a custom field definition for a list definition that is based on a default SharePoint Foundation field type, use the **Field (List - Definition)** element within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file. To create a custom field definition as a pluggable Feature that is based on a default field type and that can be reused across websites and lists within a site collection, use the [Field (Field)](field-element-field.md) element to define a custom [site column](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx). To create a [custom field type](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element. 
   
 Fields can be referenced from View definitions as well as from expressions in computed field rendering elements. Use the [Field (View)](field-element-view.md) element to return a formatted field value for display within a view, and use the [Column (View)](column-element-view.md) element to return the raw data value of the field. The syntax for referencing a field is as follows: 
   
@@ -288,7 +289,7 @@ By default, the field is rendered with the default attributes for that field def
   
 Within a **Fields** element enumeration, the **Name** attribute can be omitted. For some field references, the raw data stored for the field can be accessed by using  `<Column/>`.
   
-Some properties of fields from forms and from certain aspects of the authoring UI can be rendered through the **Property** element, for example,  `<Property Select="Description"/> or <Property Select="Type"/>`. These elements simply retrieve the value of any field attribute or child element (**Property**) by name.
+Some properties of fields from forms and from certain aspects of the authoring UI can be rendered through the **Property** element, for example, `<Property Select="Description"/>` or `<Property Select="Type"/>`. These elements simply retrieve the value of any field attribute or child element (**Property**) by name.
   
 In addition to the preceding types, the following predefined fields are used with the **Field** element. 
   
@@ -331,26 +332,15 @@ The following example uses the **Field** element to specify options for a list n
 
 ## See also
 
+- [Column element (View)](column-element-view.md) 
+- [Column2 element (View)](column2-element-view.md) 
+- [Field element (Field)](field-element-field.md)
+- [Field element (View)](field-element-view.md)  
+- [Field element (Site)](field-element-site.md)
+- [Field element (Field Types)](field-element-field-types.md)  
+- [Field element (Field Types Property Schema)](field-element-field-types-property-schema.md)  
+- [Field element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)  
+- [Field element (DeploymentManifest - FieldDataCollection)](field-element-deploymentmanifestfielddatacollection.md)  
+- [Field element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)  
 
-
-[Field Element (Field)](field-element-field.md)
-
-
-[Column Element (View)](column-element-view.md)
-  
-[Column2 Element (View)](column2-element-view.md)
-  
-[Field Element (Field Types)](field-element-field-types.md)
-  
-[Field Element (Field Types Property Schema)](field-element-field-types-property-schema.md)
-  
-[Field Element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)
-  
-[Field Element (DeploymentManifest - FieldDataCollection)](field-element-deploymentmanifestfielddatacollection.md)
-  
-[Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)
-  
-[Field Element (View)](field-element-view.md)
-  
-[Field Element (Site)](field-element-site.md)
 

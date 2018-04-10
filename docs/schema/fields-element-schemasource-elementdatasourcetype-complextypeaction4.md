@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: e50544d6-34c0-3cf8-a749-d129b7d6aa27
 ---
 
-# Fields element 
+# Fields element (SchemaSource element) 
 
-(SchemaSource element) (dataSourceType complexType) (Action4)
+(dataSourceType complexType) (Action4)
 
 **Applies to**: SharePoint Server 2013
 
