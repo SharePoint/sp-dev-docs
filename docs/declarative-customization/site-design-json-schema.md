@@ -536,11 +536,11 @@ Example:
 
 ## installSPFXSolution
 
-Use the **installSPFXSolution** action to register a deployed solution from the app catalog. 
+Use the **installSPFXSolution** action to install a deployed add-in or SharePoint Framework solution from the tenant app catalog. 
 
 JSON values:
 
-- **id** - The id of the catalog solution. 
+- **id** - The id of the add-in or solution in tenant catalog. 
 
 Example:
 
