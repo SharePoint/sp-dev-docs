@@ -60,7 +60,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**AccelerationInterval** <br/> |Optional. Specifies how much the value increases or decreases when you maintain focus on the up or down button.  <br/> |
 |**AltDownArrow** <br/> |Optional. Alternative text that is used for the decrement arrow.  <br/> |
 |**AltUpArrow** <br/> |Optional. Alternative text that is used for the increment arrow.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](../../sharepoint-features-schemas/custom-action-definition-schema/commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**DefaultUnit** <br/> |Optional. The name or abbreviation for the default [Unit](unit-element-spinner.md).  <br/> |
 |**DefaultValue** <br/> |Optional. Specifies the initial numeric value that is displayed in the control.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control.  <br/> |
@@ -88,7 +88,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
+|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
 |[Controls](controls-element-group.md) <br/> |
    
 ### Occurrences

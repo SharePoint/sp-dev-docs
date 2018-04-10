@@ -26,7 +26,7 @@ description: "Last modified: March 09, 2015"
 In a list definition ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), defines a view for a list in a Web site based on Microsoft SharePoint Foundation, where each list can contain a number of views.
   
 > [!NOTE]
-> SharePoint Foundation 2010 uses XSLT to define list views, and the [View schema](../../collaborative-application-markup-language-caml-schemas/view-schema/view-schema.md) is maintained for backward compatibility. For information about XSLT list views, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
+> SharePoint Foundation 2010 uses XSLT to define list views, and the [View schema](view-schema.md) is maintained for backward compatibility. For information about XSLT list views, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
   
 ```
 <View
@@ -124,7 +124,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|
 |:-----|
-|[Aggregations](aggregations-element-list.md), [GroupByFooter](groupbyfooter-element-list.md), [GroupByHeader](groupbyheader-element-list.md), [Joins](../../collaborative-application-markup-language-caml-schemas/view-schema/joins-element-view.md), [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md), [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md), [PagedRowset](pagedrowset-element-list.md), [ParameterBindings](parameterbindings-element-list.md), [ProjectedFields](../../collaborative-application-markup-language-caml-schemas/view-schema/projectedfields-element-view.md), [Query](query-element-list.md), [RowLimit](rowlimit-element-list.md), [RowLimitExceeded](rowlimitexceeded-element-list.md), [Toolbar](http://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c%28Office.15%29.aspx), [ViewBidiHeader](viewbidiheader-element-list.md), [ViewBody](viewbody-element-list.md), [ViewData](viewdata-element-list.md), [ViewEmpty](viewempty-element-list.md), [ViewFields](viewfields-element-list.md), [ViewFooter](viewfooter-element-list.md), [ViewHeader](viewheader-element-list.md), [ViewStyle](viewstyle-element-list.md), [XslLink](xsllink-element-list.md)|
+|[Aggregations](aggregations-element-list.md), [GroupByFooter](groupbyfooter-element-list.md), [GroupByHeader](groupbyheader-element-list.md), [Joins](joins-element-view.md), [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md), [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md), [PagedRowset](pagedrowset-element-list.md), [ParameterBindings](parameterbindings-element-list.md), [ProjectedFields](projectedfields-element-view.md), [Query](query-element-list.md), [RowLimit](rowlimit-element-list.md), [RowLimitExceeded](rowlimitexceeded-element-list.md), [Toolbar](http://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c%28Office.15%29.aspx), [ViewBidiHeader](viewbidiheader-element-list.md), [ViewBody](viewbody-element-list.md), [ViewData](viewdata-element-list.md), [ViewEmpty](viewempty-element-list.md), [ViewFields](viewfields-element-list.md), [ViewFooter](viewfooter-element-list.md), [ViewHeader](viewheader-element-list.md), [ViewStyle](viewstyle-element-list.md), [XslLink](xsllink-element-list.md)|
    
 ### Parent elements
 
@@ -156,7 +156,7 @@ The primary attributes that define an HTML view are as follows:
     
 - An HTML template for rendering the view.
     
-The **View** element is central to page rendering and generates a SQL query for the fields, sorts, and filters that are applied in a particular view. The **View** element iterates through the data set returned by the query and executes the [ViewBody](viewbody-element-list.md) element for each row that is returned. Within the **ViewBody** element, a [Fields](../../collaborative-application-markup-language-caml-schemas/view-schema/fields-element-view.md) element enumeration can be used to handle each field, or each field can be referred to individually by name within a [Field](field-element-list.md) element. 
+The **View** element is central to page rendering and generates a SQL query for the fields, sorts, and filters that are applied in a particular view. The **View** element iterates through the data set returned by the query and executes the [ViewBody](viewbody-element-list.md) element for each row that is returned. Within the **ViewBody** element, a [Fields](fields-element-view.md) element enumeration can be used to handle each field, or each field can be referred to individually by name within a [Field](field-element-list.md) element. 
   
 Each view has an internal name that is typically represented by a GUID. The view can be rendered on a page by using the \<View/\> tag.
   
@@ -201,7 +201,7 @@ In the following section of the example a [ViewFields](viewfields-element-list.m
 ```
 
 > [!NOTE]
-> If the view has a [Joins](../../collaborative-application-markup-language-caml-schemas/view-schema/joins-element-view.md) element, fields from the joined lists can be included in [ViewFields](viewfields-element-list.md), provided that they are also itemized in a [ProjectedFields](../../collaborative-application-markup-language-caml-schemas/view-schema/projectedfields-element-view.md) element. 
+> If the view has a [Joins](joins-element-view.md) element, fields from the joined lists can be included in [ViewFields](viewfields-element-list.md), provided that they are also itemized in a [ProjectedFields](projectedfields-element-view.md) element. 
   
 In the last section of the example the [Query](query-element-list.md) element is used to specify a result set that meets certain criteria, as in the following example, which returns a list of all the documents in a library that are written by Mary or John. 
   

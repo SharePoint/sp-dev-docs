@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Combines the functionality of the [MapToIcon](maptoicon-element-view.md), [MapToText](../../collaborative-application-markup-language-caml-schemas/general-schema/maptotext-element.md), and [MapToControl](maptocontrol-element-view.md) elements. 
+Combines the functionality of the [MapToIcon](maptoicon-element-view.md), [MapToText](maptotext-element.md), and [MapToControl](maptocontrol-element-view.md) elements. 
   
 ```
 <MapToAll>

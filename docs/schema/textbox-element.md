@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](../../sharepoint-features-schemas/custom-action-definition-schema/commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.Image.Image.Properties.AltText".  <br/> |
 |**ImeEnabled** <br/> |Optional. Set to **TRUE** to set the Input Method Editor (IME) to the **active** state. The default value is **FALSE**.  <br/> |
 |**MaxLength** <br/> |Optional. The maximum number of characters that a user can enter.  <br/> |
@@ -80,7 +80,7 @@ None
 
 ||
 |:-----|
-|[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
+|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
 |[Controls](controls-element-group.md) <br/> |
    
 ### Occurrences

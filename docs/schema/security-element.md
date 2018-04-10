@@ -48,7 +48,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[List](../../collaborative-application-markup-language-caml-schemas/list-schema/list-element-list.md)|
+|[List](list-element-list.md)|
    
 ### Occurrences
 

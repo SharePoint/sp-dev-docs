@@ -80,10 +80,10 @@ The following example queries for cases where a recurring event overlaps with th
 
 
 
-[TodayISO Element](../../collaborative-application-markup-language-caml-schemas/general-schema/todayiso-element.md)
+[TodayISO Element](todayiso-element.md)
 
 
-[Month Element (Regional Settings)](../../collaborative-application-markup-language-caml-schemas/regional-settings-schema/month-element-regional-settings.md)
+[Month Element (Regional Settings)](regional-settings-schema/month-element-regional-settings.md)
   
 [Today Element (Query)](today-element-query.md)
 

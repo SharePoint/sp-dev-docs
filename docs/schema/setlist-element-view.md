@@ -99,5 +99,5 @@ The following example returns the value of the **Title** field from the Lists ta
 
 
 
-[List Element (List)](../../collaborative-application-markup-language-caml-schemas/list-schema/list-element-list.md)
+[List Element (List)](list-element-list.md)
 

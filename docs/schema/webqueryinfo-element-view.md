@@ -63,7 +63,7 @@ The **WebQueryInfo** element renders an ID on the **\<TABLE\>** tag, a **Summary
   
 ## Example
 
-In the following example, the **WebQueryInfo** element is used in a [ViewHeader](../../collaborative-application-markup-language-caml-schemas/list-schema/viewheader-element-list.md) element to provide an ID for a table that contains a view. 
+In the following example, the **WebQueryInfo** element is used in a [ViewHeader](viewheader-element-list.md) element to provide an ID for a table that contains a view. 
   
 ```XML
 <ViewHeader>

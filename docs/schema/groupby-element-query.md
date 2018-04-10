@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[Expr1](../../collaborative-application-markup-language-caml-schemas/view-schema/expr1-element-view.md), [Expr2](../../collaborative-application-markup-language-caml-schemas/view-schema/expr2-element-view.md), [Query](../../collaborative-application-markup-language-caml-schemas/list-schema/query-element-list.md)|
+|[Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Query](query-element-list.md)|
    
 ### Occurrences
 

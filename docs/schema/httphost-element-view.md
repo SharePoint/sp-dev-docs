@@ -81,7 +81,7 @@ The following example constructs an opening <A> tag, using the **HttpHost** elem
 
 
 
-[HTMLBase Element](../../collaborative-application-markup-language-caml-schemas/general-schema/htmlbase-element.md)
+[HTMLBase Element](htmlbase-element.md)
 
 
 [HttpVDir Element (View)](httpvdir-element-view.md)

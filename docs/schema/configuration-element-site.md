@@ -105,7 +105,7 @@ There is one **Template** element in a  `WebTemp*.xml` file, and one  `Onet.xml`
   
 The **ID** attribute associates the **Configuration** element for a given site definition in a  `WebTemp*.xml` file with the corresponding **Configuration** element for that same site definition in the  `Onet.xml`. 
   
-A [Web template](http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30%28Office.15%29.aspx), as distinct from a [site definition configuration](http://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3%28Office.15%29.aspx), is defined with a [WebTemplate](../../sharepoint-features-schemas/web-template-xml/webtemplate-element-web-template.md) element in a  `elements.xml` file inside a .wsp file that is stored in the SharePoint database. Also in the .wsp file is an  `Onet.xml` file with a single **Configuration** element which specifies the details of the Web template. 
+A [Web template](http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30%28Office.15%29.aspx), as distinct from a [site definition configuration](http://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3%28Office.15%29.aspx), is defined with a [WebTemplate](webtemplate-element-web-template.md) element in an `elements.xml` file inside a .wsp file that is stored in the SharePoint database. Also in the .wsp file is an `Onet.xml` file with a single **Configuration** element which specifies the details of the Web template. 
   
 ## Example
 

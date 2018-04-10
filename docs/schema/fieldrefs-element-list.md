@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Contains a collection of [FieldRef](../../collaborative-application-markup-language-caml-schemas/query-schema/fieldref-element-query.md) elements that specifiy field references for a field. 
+Contains a collection of [FieldRef](fieldref-element-query.md) elements that specifiy field references for a field. 
   
 ```
 <FieldRefs>
@@ -42,7 +42,7 @@ Contains a collection of [FieldRef](../../collaborative-application-markup-langu
 
 ||
 |:-----|
-|[FieldRef](../../collaborative-application-markup-language-caml-schemas/query-schema/fieldref-element-query.md)|
+|[FieldRef](fieldref-element-query.md)|
    
 ### Parent elements
 

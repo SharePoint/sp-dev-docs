@@ -121,7 +121,7 @@ The following example creates a default URL for a sort on a list. The **FieldSor
 
 
 
-[FieldFilterImageURL Element](../../collaborative-application-markup-language-caml-schemas/general-schema/fieldfilterimageurl-element.md)
+[FieldFilterImageURL Element](fieldfilterimageurl-element.md)
   
-[FieldSortImageURL Element](../../collaborative-application-markup-language-caml-schemas/general-schema/fieldsortimageurl-element.md)
+[FieldSortImageURL Element](fieldsortimageurl-element.md)
 

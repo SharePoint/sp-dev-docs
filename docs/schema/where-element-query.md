@@ -49,7 +49,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[Expr1](../../collaborative-application-markup-language-caml-schemas/view-schema/expr1-element-view.md), [Expr2](../../collaborative-application-markup-language-caml-schemas/view-schema/expr2-element-view.md), [Query](../../collaborative-application-markup-language-caml-schemas/list-schema/query-element-list.md)|
+|[Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Query](query-element-list.md)|
    
 ### Occurrences
 
@@ -61,7 +61,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 The **Where** clause translates into the SQL **SELECT** statement. The format of the **Where** clause is a structured XML tree with a mixture of comparison operators, simple arithmetic operators, field (column) references, constant values, and predefined Collaborative Application Markup Language (CAML) constants. 
   
-Fields referenced in a **Where** element do not have to be fields of the primary list that is being queried. If a foreign list is being joined, then fields from the foreign list can be itemized in a [ProjectedFields](../../collaborative-application-markup-language-caml-schemas/view-schema/projectedfields-element-view.md) element and can then be referenced in the **Where** element. 
+Fields referenced in a **Where** element do not have to be fields of the primary list that is being queried. If a foreign list is being joined, then fields from the foreign list can be itemized in a [ProjectedFields](projectedfields-element-view.md) element and can then be referenced in the **Where** element. 
   
 ## Example
 

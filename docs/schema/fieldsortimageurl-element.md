@@ -85,5 +85,5 @@ The following example creates an <IMG> tag for the icon that is used to reflect 
 [FieldFilterImageURL Element](fieldfilterimageurl-element.md)
 
 
-[FieldSortParams Element (View)](../../collaborative-application-markup-language-caml-schemas/view-schema/fieldsortparams-element-view.md)
+[FieldSortParams Element (View)](fieldsortparams-element-view.md)
 

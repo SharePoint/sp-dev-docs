@@ -117,7 +117,7 @@ The following example shows the basic elements in an alert templates schema.
  **IAlertNotifyHandler**
 
 
-[Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)
+[Query Schema](query-schema.md)
 
 
 [Alerts in Windows SharePoint Services](http://msdn.microsoft.com/library/cb9586d9-84e1-43c9-93c9-8a7496f2f41d%28Office.15%29.aspx)

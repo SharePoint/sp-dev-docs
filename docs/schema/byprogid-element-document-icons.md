@@ -43,7 +43,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[Mapping](../../collaborative-application-markup-language-caml-schemas/general-schema/mapping-element.md)|
+|[Mapping](mapping-element.md)|
    
 ### Parent elements
 

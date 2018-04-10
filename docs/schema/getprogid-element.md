@@ -55,7 +55,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-This element can be used within a view only if the **HackLockWeb** attribute of the [View](../../collaborative-application-markup-language-caml-schemas/list-schema/view-element-list.md) element is set to **TRUE**.
+This element can be used within a view only if the **HackLockWeb** attribute of the [View](view-element-list.md) element is set to **TRUE**.
   
 ## Example
 

@@ -22,7 +22,7 @@ description: "Last modified: July 15, 2011"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-The View schema of [Introduction to Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) provides several universal attributes that can be used to describe any CAML rendering element. These attributes can be implemented in standard and specialized elements in the [View Schema](view-schema.md).
+The View schema of [Introduction to Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) provides several universal attributes that can be used to describe any CAML rendering element. These attributes can be implemented in standard and specialized elements in the [View Schema](view-schema.md).
   
 > [!NOTE]
 > The presence of any one of these attributes implies that it is **TRUE** (for example, **HTMLEncode** cannot be set to **FALSE**). 

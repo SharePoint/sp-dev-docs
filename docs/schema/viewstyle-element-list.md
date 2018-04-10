@@ -54,19 +54,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|
 |:-----|
-|[GroupByFooter](groupbyfooter-element-list.md), [GroupByHeader](groupbyheader-element-list.md), [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md), [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md), [PagedRowset](pagedrowset-element-list.md), [Script](../../collaborative-application-markup-language-caml-schemas/general-schema/script-element.md)[ViewBidiHeader](viewbidiheader-element-list.md), [ViewBody](viewbody-element-list.md), [ViewEmpty](viewempty-element-list.md), [ViewFields](viewfields-element-list.md), [ViewFooter](viewfooter-element-list.md), [ViewHeader](viewheader-element-list.md)|
+|[GroupByFooter](groupbyfooter-element-list.md), [GroupByHeader](groupbyheader-element-list.md), [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md), [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md), [PagedRowset](pagedrowset-element-list.md), [Script](script-element.md)[ViewBidiHeader](viewbidiheader-element-list.md), [ViewBody](viewbody-element-list.md), [ViewEmpty](viewempty-element-list.md), [ViewFields](viewfields-element-list.md), [ViewFooter](viewfooter-element-list.md), [ViewHeader](viewheader-element-list.md)|
    
 ### Parent elements
 
 ||
 |:-----|
-|[View Element (List)](view-element-list.md), [ViewStyles](../../collaborative-application-markup-language-caml-schemas/general-schema/viewstyles-element.md)|
+|[View Element (List)](view-element-list.md), [ViewStyles](viewstyles-element.md)|
    
 ### Occurrences
 
 ||
 |:-----|
-|Minimum: 0  <br/> Maximum: 1 (Unbounded within [ViewStyles](../../collaborative-application-markup-language-caml-schemas/general-schema/viewstyles-element.md))  <br/> |
+|Minimum: 0  <br/> Maximum: 1 (Unbounded within [ViewStyles](viewstyles-element.md))  <br/> |
    
 ## Example
 

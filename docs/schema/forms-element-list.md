@@ -49,7 +49,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[Default](default-element-listfield.md), [MetaData (List)](metadata-element-list.md), [MetaData (Site)](../../collaborative-application-markup-language-caml-schemas/site-schema/metadata-element-site.md)|
+|[Default](default-element-listfield.md), [MetaData (List)](metadata-element-list.md), [MetaData (Site)](metadata-element-site.md)|
    
 ### Occurrences
 

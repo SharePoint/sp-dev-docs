@@ -45,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[GetVar](../../collaborative-application-markup-language-caml-schemas/view-schema/getvar-element-view.md)|
+|[GetVar](getvar-element-view.md)|
    
 ## Parent Element
 

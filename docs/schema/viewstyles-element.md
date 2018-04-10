@@ -39,7 +39,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[ViewStyle](../../collaborative-application-markup-language-caml-schemas/list-schema/viewstyle-element-list.md)|
+|[ViewStyle](viewstyle-element-list.md)|
    
 ### Parent elements
 

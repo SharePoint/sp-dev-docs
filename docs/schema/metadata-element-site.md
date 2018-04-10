@@ -43,7 +43,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[ContentTypes](../../collaborative-application-markup-language-caml-schemas/list-schema/contenttypes-element-list.md), [Default](../../collaborative-application-markup-language-caml-schemas/list-schema/default-element-listform.md), [DefaultDescription](../../collaborative-application-markup-language-caml-schemas/list-schema/defaultdescription-element-list.md), [Fields](../../collaborative-application-markup-language-caml-schemas/list-schema/fields-element-list.md), [Forms](../../collaborative-application-markup-language-caml-schemas/list-schema/forms-element-list.md), [Toolbar](../../collaborative-application-markup-language-caml-schemas/list-schema/toolbar-element-list.md), [Validation](../../collaborative-application-markup-language-caml-schemas/list-schema/validation-element-list.md), [Views](../../collaborative-application-markup-language-caml-schemas/list-schema/views-element-list.md)|
+|[ContentTypes](contenttypes-element-list.md), [Default](default-element-listform.md), [DefaultDescription](defaultdescription-element-list.md), [Fields](fields-element-list.md), [Forms](forms-element-list.md), [Toolbar](toolbar-element-list.md), [Validation](validation-element-list.md), [Views](views-element-list.md)|
    
 ### Parent elements
 

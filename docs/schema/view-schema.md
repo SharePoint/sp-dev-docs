@@ -24,12 +24,12 @@ description: "Last modified: July 15, 2011"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-The View schema of [Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) is used to define how the contents of a list view are rendered in Microsoft SharePoint Foundation. 
+The View schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define how the contents of a list view are rendered in Microsoft SharePoint Foundation. 
   
 > [!NOTE]
 > SharePoint Foundation 2010 uses XSLT to define list views, and the View schema is maintained for backward compatibility. For information about XSLT list views, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
   
-A list view includes a query that returns the data that is displayed in the view. For the list of query elements, see [Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md). For the top-level elements that are used to organize a view, see [List Schema](../../collaborative-application-markup-language-caml-schemas/list-schema/list-schema.md).
+A list view includes a query that returns the data that is displayed in the view. For the list of query elements, see [Query Schema](query-schema.md). For the top-level elements that are used to organize a view, see [List Schema](list-schema.md).
   
 In SharePoint Foundation 2010 .aspx pages, the view is conveyed through a [Microsoft.SharePoint.WebPartPages.XsltListViewWebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.XsltListViewWebPart.aspx) object. Views can be created or modified programmatically through either the server-side or client-side object model (for example, members of [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) or [SPViewCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPViewCollection.aspx) and their related types in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) (JavaScript: [SP](http://msdn.microsoft.com/library/e3694767-6f32-f98c-37af-4282f2815c02%28Office.15%29.aspx)) namespace), through the Views web service (methods of the [Views](https://msdn.microsoft.com/library/websvcViews.Views.aspx) class), or through remote procedure call (RPC) protocol (see [Windows SharePoint Services RPC Methods](http://msdn.microsoft.com/library/fb791985-a9e4-4c94-b94a-1b3c7f00457a%28Office.15%29.aspx)).
   
@@ -203,9 +203,9 @@ The following standard rendering elements are used to render HTML within the var
 
 
 
-[Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)
+[Query Schema](query-schema.md)
   
-[List Schema](../../collaborative-application-markup-language-caml-schemas/list-schema/list-schema.md)
+[List Schema](list-schema.md)
 
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)

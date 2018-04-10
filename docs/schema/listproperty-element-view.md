@@ -80,7 +80,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ## Example
 
-The following example defines the link to display when the number of items exceeds the limit set for the page through the [RowLimit](../../collaborative-application-markup-language-caml-schemas/list-schema/rowlimit-element-list.md) element. The example uses the **ListProperty** element to return the URL for the default view. 
+The following example defines the link to display when the number of items exceeds the limit set for the page through the [RowLimit](rowlimit-element-list.md) element. The example uses the **ListProperty** element to return the URL for the default view. 
   
 ```XML
 <RowLimitExceeded>

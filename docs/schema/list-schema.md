@@ -24,7 +24,7 @@ description: "Last modified: December 07, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-The list schema of [Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) is used to define the metadata for creating lists. The list schema includes field definitions ( [Field](field-element-list.md) element), view definitions, and a toolbar definition, in addition to specifying content types, forms, and a default description for lists that are created. The definition for a list is contained in a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that is located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES or is included in sandboxed solutions. 
+The list schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define the metadata for creating lists. The list schema includes field definitions ( [Field](field-element-list.md) element), view definitions, and a toolbar definition, in addition to specifying content types, forms, and a default description for lists that are created. The definition for a list is contained in a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that is located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES or is included in sandboxed solutions. 
   
 You can create or modify lists programmatically through the object model (for example, members of the [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) class and the [SPListCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListCollection.aspx) class), through the Lists web service (methods of the [Lists](https://msdn.microsoft.com/library/websvcLists.Lists.aspx) class), and through the Remote Procedure Call (RPC) protocol (see [Windows SharePoint Services RPC Methods](http://msdn.microsoft.com/library/fb791985-a9e4-4c94-b94a-1b3c7f00457a%28Office.15%29.aspx)). 
   
@@ -62,7 +62,7 @@ You can create or modify lists programmatically through the object model (for ex
   
 [\<FieldRefs\>](fieldrefs-element-list.md)
   
-[\<FieldRef\>](../../collaborative-application-markup-language-caml-schemas/query-schema/fieldref-element-query.md)
+[\<FieldRef\>](fieldref-element-query.md)
   
 [\<DisplayPattern\>](displaypattern-element-list.md)
   
@@ -121,7 +121,7 @@ You can create or modify lists programmatically through the object model (for ex
 [\<View\>](view-element-list.md)
   
 > [!NOTE]
-> The following subelements lay out the structure of a view, but Microsoft SharePoint Foundation 2010 uses XSLT to define rendering of view contents. For information about the XSLT that is used, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). For the schema that Windows SharePoint Services 3.0 used to render the view contents, see [View Schema](../../collaborative-application-markup-language-caml-schemas/view-schema/view-schema.md). 
+> The following subelements lay out the structure of a view, but Microsoft SharePoint Foundation 2010 uses XSLT to define rendering of view contents. For information about the XSLT that is used, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). For the schema that Windows SharePoint Services 3.0 used to render the view contents, see [View Schema](view-schema.md). 
   
 [\<Aggregations\>](aggregations-element-list.md)
   
@@ -147,7 +147,7 @@ You can create or modify lists programmatically through the object model (for ex
   
 [\<Query\>](query-element-list.md)
   
- [see [Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)]
+ [see [Query Schema](query-schema.md)]
   
 [\<RowLimit\>](rowlimit-element-list.md)
   
@@ -181,7 +181,7 @@ You can create or modify lists programmatically through the object model (for ex
 
 
 
-[Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)
+[Query Schema](query-schema.md)
   
-[View Schema](../../collaborative-application-markup-language-caml-schemas/view-schema/view-schema.md)
+[View Schema](view-schema.md)
 

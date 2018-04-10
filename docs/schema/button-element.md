@@ -66,7 +66,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text for the button.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](../../sharepoint-features-schemas/custom-action-definition-schema/commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.  <br/> **General**. Not a specific type of command.  <br/> **OptionSelection**. A command that is generated when a user selects one option in an option group.  <br/> **IgnoredByMenu**. A command that is used for controls that should not close the menu when clicked.  <br/> |
 |**CommandValueId** <br/> |Optional. A string that is sent with the command event when the button is clicked.  <br/> |
 |**Description** <br/> |Optional. A string that describes the button. The description is displayed only when the button is in a menu and is being rendered with the **Menu32** display mode.  <br/> |
@@ -101,7 +101,7 @@ None
 
 ||
 |:-----|
-|[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
+|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
 |[Controls](controls-element-group.md) (Group)  <br/> |
 |[Controls](controls-element-menusection.md) (MenuSection)  <br/> |
    

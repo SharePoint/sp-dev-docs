@@ -52,7 +52,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
+|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
 |[ComboBox](combobox-element.md) <br/> |
 |[DropDown](dropdown-element.md) <br/> |
 |[FlyoutAnchor](flyoutanchor-element.md) <br/> |

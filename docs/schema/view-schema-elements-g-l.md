@@ -26,9 +26,9 @@ description: "Last modified: July 15, 2011"
   
 [GetVar](getvar-element-view.md)
   
-[GroupByFooter](../../collaborative-application-markup-language-caml-schemas/list-schema/groupbyfooter-element-list.md)
+[GroupByFooter](groupbyfooter-element-list.md)
   
-[GroupByHeader](../../collaborative-application-markup-language-caml-schemas/list-schema/groupbyheader-element-list.md)
+[GroupByHeader](groupbyheader-element-list.md)
   
 [HTML](html-element-view.md)
   

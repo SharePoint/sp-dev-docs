@@ -63,7 +63,7 @@ For a [FieldRef](fieldref-element-list.md) element to be used within a [ViewBody
   
 The SQL SELECT clause is generated from the collection of **FieldRef** listings. 
   
- **ViewFields** can include references to fields in a foreign list, if there is a join defined by a [Join](../../collaborative-application-markup-language-caml-schemas/view-schema/join-element-view.md) element. 
+ **ViewFields** can include references to fields in a foreign list, if there is a join defined by a [Join](join-element-view.md) element. 
   
 ## Example
 

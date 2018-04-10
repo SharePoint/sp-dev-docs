@@ -22,7 +22,7 @@ description: "Last modified: July 15, 2011"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-[Aggregations](../../collaborative-application-markup-language-caml-schemas/list-schema/aggregations-element-list.md)
+[Aggregations](aggregations-element-list.md)
   
 [Batch](batch-element-view.md)
   
@@ -54,7 +54,7 @@ description: "Last modified: July 15, 2011"
   
 [FieldProperty](fieldproperty-element-view.md)
   
-[FieldRef](../../collaborative-application-markup-language-caml-schemas/list-schema/fieldref-element-list.md)
+[FieldRef](fieldref-element-list.md)
   
 [Fields](fields-element-view.md)
   

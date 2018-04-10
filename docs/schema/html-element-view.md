@@ -69,5 +69,5 @@ The following line illustrates how to escape HTML tags by using this element and
 
 
 
-[XML Element](../../collaborative-application-markup-language-caml-schemas/query-schema/xml-element.md)
+[XML Element](xml-element.md)
 

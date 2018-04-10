@@ -45,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](../../sharepoint-features-schemas/custom-action-definition-schema/commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**CommandPreview** <br/> |Optional. The name of the command to execute for previewing a selection.  <br/> |
 |**CommandRevert** <br/> |Optional. The name of the command to execute to return to the state that existed before previewing a selection.  <br/> |
 |**ElementDimensions** <br/> | Required. An enumeration value that specifies the dimensions of rectangular child elements. Dimensions are in pixels and are in the format "width by height".  <br/> **Size16by16** <br/> **Size32by32** <br/> **Size48by48** <br/> **Size72by96** <br/> **Size96by72** <br/> **Size96by96** <br/> **Size128by128** <br/> **Size190by30** <br/> **Size190by40** <br/> **Size190by50** <br/> **Size190by60** <br/> |
@@ -64,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[CommandUIDefinition](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md) <br/> |
+|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
 |[MenuSection](menusection-element.md) <br/> |
    
 ### Occurrences

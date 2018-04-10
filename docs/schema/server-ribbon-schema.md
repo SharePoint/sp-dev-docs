@@ -234,7 +234,7 @@ The following list maps relationships between elements in the Server ribbon sche
 
 
 
-[CommandUIDefinition Element](../../sharepoint-features-schemas/custom-action-definition-schema/commanduidefinition-element.md)
+[CommandUIDefinition Element](commanduidefinition-element.md)
 
 
 [Building Block: Server Ribbon](http://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8%28Office.15%29.aspx)

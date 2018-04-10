@@ -81,10 +81,10 @@ The following example queries for cases where the due date is today.
 
 
 
-[TodayISO](../../collaborative-application-markup-language-caml-schemas/general-schema/todayiso-element.md)
+[TodayISO](todayiso-element.md)
 
 
-[Month](../../collaborative-application-markup-language-caml-schemas/regional-settings-schema/month-element-regional-settings.md)
+[Month](regional-settings-schema/month-element-regional-settings.md)
   
 [Now](now-element-query.md)
 

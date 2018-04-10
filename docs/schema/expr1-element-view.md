@@ -43,7 +43,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[BeginsWith](../../collaborative-application-markup-language-caml-schemas/query-schema/beginswith-element-query.md), [Column](column-element-view.md), [Contains](../../collaborative-application-markup-language-caml-schemas/query-schema/contains-element-query.md), [Eq](../../collaborative-application-markup-language-caml-schemas/query-schema/eq-element-query.md), [Field](field-element-view.md), [GetVar](getvar-element-view.md), [GroupBy](../../collaborative-application-markup-language-caml-schemas/query-schema/groupby-element-query.md), [ListProperty](listproperty-element-view.md), [LookupColumn](lookupcolumn-element-view.md), [OrderBy](../../collaborative-application-markup-language-caml-schemas/query-schema/orderby-element-query.md), [Where](../../collaborative-application-markup-language-caml-schemas/query-schema/where-element-query.md)|
+|[BeginsWith](beginswith-element-query.md), [Column](column-element-view.md), [Contains](contains-element-query.md), [Eq](eq-element-query.md), [Field](field-element-view.md), [GetVar](getvar-element-view.md), [GroupBy](groupby-element-query.md), [ListProperty](listproperty-element-view.md), [LookupColumn](lookupcolumn-element-view.md), [OrderBy](orderby-element-query.md), [Where](where-element-query.md)|
    
 ### Parent elements
 

@@ -24,7 +24,7 @@ description: "Last modified: July 15, 2011"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-The Query schema of [Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/introduction-to-collaborative-application-markup-language-caml.md) is used in various ways within the context of Microsoft SharePoint Foundation to define queries against list data. For example, you can assign CAML query strings to the **Query** property of several classes in the server and client object models in order to return data, or to method parameters of the **Lists** web service to work remotely with data. CAML queries are also used in the context of CAML views to return specific data. The [Query](../../collaborative-application-markup-language-caml-schemas/list-schema/query-element-list.md) element of the [List schema](../../collaborative-application-markup-language-caml-schemas/list-schema/list-schema.md) contains elements of the Query schema. 
+The Query schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used in various ways within the context of Microsoft SharePoint Foundation to define queries against list data. For example, you can assign CAML query strings to the **Query** property of several classes in the server and client object models in order to return data, or to method parameters of the **Lists** web service to work remotely with data. CAML queries are also used in the context of CAML views to return specific data. The [Query](query-element-list.md) element of the [List schema](list-schema.md) contains elements of the Query schema. 
   
 ## Query Schema Elements
 
@@ -184,7 +184,7 @@ The Query schema of [Collaborative Application Markup Language (CAML)](../../col
 
 
 
-[View Schema](../../collaborative-application-markup-language-caml-schemas/view-schema/view-schema.md)
+[View Schema](view-schema.md)
   
-[List Schema](../../collaborative-application-markup-language-caml-schemas/list-schema/list-schema.md)
+[List Schema](list-schema.md)
 

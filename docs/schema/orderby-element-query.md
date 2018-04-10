@@ -54,7 +54,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[Expr1](../../collaborative-application-markup-language-caml-schemas/view-schema/expr1-element-view.md), [Expr2](../../collaborative-application-markup-language-caml-schemas/view-schema/expr2-element-view.md), [Query](../../collaborative-application-markup-language-caml-schemas/list-schema/query-element-list.md)|
+|[Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), [Query](query-element-list.md)|
    
 ### Occurrences
 
@@ -64,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-The order in which the fields appear is the order in which the fields are sorted. The value of the **Ascending** attribute in the [FieldRef](../../collaborative-application-markup-language-caml-schemas/list-schema/fieldref-element-list.md) element determines whether to sort in ascending order. 
+The order in which the fields appear is the order in which the fields are sorted. The value of the **Ascending** attribute in the [FieldRef](fieldref-element-list.md) element determines whether to sort in ascending order. 
   
 ## Example
 

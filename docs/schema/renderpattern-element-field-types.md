@@ -46,7 +46,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|None explicitly defined, but this element is a container of CAML markup from the [View Schema](../../collaborative-application-markup-language-caml-schemas/view-schema/view-schema.md)|
+|None explicitly defined, but this element is a container of CAML markup from the [View Schema](view-schema.md)|
    
 ### Parent elements
 

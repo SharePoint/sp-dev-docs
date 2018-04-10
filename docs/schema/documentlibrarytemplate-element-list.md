@@ -76,7 +76,7 @@ The following example indicates that the document library whose schema is curren
 
 
 
-[DocumentTemplate Element (Site)](../../collaborative-application-markup-language-caml-schemas/site-schema/documenttemplate-element-site.md)
+[DocumentTemplate Element (Site)](documenttemplate-element-site.md)
   
-[DocumentTemplates Element (Site)](../../collaborative-application-markup-language-caml-schemas/site-schema/documenttemplates-element-site.md)
+[DocumentTemplates Element (Site)](documenttemplates-element-site.md)
 

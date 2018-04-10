@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Renders a form for the particular list that is specified by a previous [SetList](../../collaborative-application-markup-language-caml-schemas/view-schema/setlist-element-view.md) element. 
+Renders a form for the particular list that is specified by a previous [SetList](setlist-element-view.md) element. 
   
 ```
 <ListForm
@@ -58,5 +58,5 @@ The following sections describe attributes, child elements, and parent elements.
 
 
 
-[SetList Element (View)](../../collaborative-application-markup-language-caml-schemas/view-schema/setlist-element-view.md)
+[SetList Element (View)](setlist-element-view.md)
 

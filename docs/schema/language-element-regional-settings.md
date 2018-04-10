@@ -48,13 +48,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[Column](../../collaborative-application-markup-language-caml-schemas/view-schema/column-element-view.md)|
+|[Column](column-element-view.md)|
    
 ### Parent elements
 
 ||
 |:-----|
-|[DisplayPattern](../../collaborative-application-markup-language-caml-schemas/list-schema/displaypattern-element-list.md), [Languages](languages-element-regional-settings.md)|
+|[DisplayPattern](displaypattern-element-list.md), [Languages](languages-element-regional-settings.md)|
    
 ### Occurrences
 
@@ -64,6 +64,6 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-The **Language** element contains no [Column](../../collaborative-application-markup-language-caml-schemas/view-schema/column-element-view.md) subelement when used within the [Languages](languages-element-regional-settings.md) collection of the RGNLSTNG.XML file. 
+The **Language** element contains no [Column](column-element-view.md) subelement when used within the [Languages](languages-element-regional-settings.md) collection of the RGNLSTNG.XML file. 
   
 

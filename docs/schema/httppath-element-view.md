@@ -74,5 +74,5 @@ Prevent the character set from being represented by setting the **CS** attribute
 
 
 
-[HTMLBase Element](../../collaborative-application-markup-language-caml-schemas/general-schema/htmlbase-element.md)
+[HTMLBase Element](htmlbase-element.md)
 

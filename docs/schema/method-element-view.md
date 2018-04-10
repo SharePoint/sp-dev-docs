@@ -46,7 +46,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md), [SetList](setlist-element-view.md), [SetVar](setvar-element-view.md)|
+|[Field](field-element-list.md), [SetList](setlist-element-view.md), [SetVar](setvar-element-view.md)|
    
 ### Parent elements
 
@@ -66,7 +66,7 @@ The **Method** element is required for the **Batch** element, which is embedded 
   
 In operations where the [SetVar](setvar-element-view.md) element is used within the **Method** element to post commands, the **Cmd** attribute can contain methods in the [Windows SharePoint Services RPC Protocol](http://msdn.microsoft.com/library/1af2791b-f17f-42f3-95ea-1a4df9b8e3d0%28Office.15%29.aspx) protocol. 
   
-When used with the [UpdateListItems](https://msdn.microsoft.com/library/WebSvcLists.Lists.UpdateListItems.aspx) method of the [Lists](https://msdn.microsoft.com/library/WebSvcLists.Lists.aspx) Web service, each **Method** element contains [Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md) elements that specify the column values for each item being updated. 
+When used with the [UpdateListItems](https://msdn.microsoft.com/library/WebSvcLists.Lists.UpdateListItems.aspx) method of the [Lists](https://msdn.microsoft.com/library/WebSvcLists.Lists.aspx) Web service, each **Method** element contains [Field](field-element-list.md) elements that specify the column values for each item being updated. 
   
 ## Example
 

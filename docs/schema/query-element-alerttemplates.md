@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Specifies a query for the alert template filter. Define the query element inside the filter by using Collaborative Application Markup Language (CAML). For more information about CAML query schema, see [Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md). The **Query** element in the Alerts schema contains no **Where** element. 
+Specifies a query for the alert template filter. Define the query element inside the filter by using Collaborative Application Markup Language (CAML). For more information about CAML query schema, see [Query Schema](query-schema.md). The **Query** element in the Alerts schema contains no **Where** element. 
   
 ```
 <Query>
@@ -47,8 +47,8 @@ None
 
 ||
 |:-----|
-|[GroupBy](../../collaborative-application-markup-language-caml-schemas/query-schema/groupby-element-query.md) <br/> |
-|[OrderBy](../../collaborative-application-markup-language-caml-schemas/query-schema/orderby-element-query.md) <br/> |
+|[GroupBy](groupby-element-query.md) <br/> |
+|[OrderBy](orderby-element-query.md) <br/> |
    
 ## Parent Element
 

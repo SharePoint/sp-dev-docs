@@ -83,9 +83,9 @@ The following example evaluates the default value for a **DateTime** field type 
 
 
 
-[Month](../../collaborative-application-markup-language-caml-schemas/regional-settings-schema/month-element-regional-settings.md)
+[Month](regional-settings-schema/month-element-regional-settings.md)
   
-[Now](../../collaborative-application-markup-language-caml-schemas/query-schema/now-element-query.md)
+[Now](now-element-query.md)
   
-[Today](../../collaborative-application-markup-language-caml-schemas/query-schema/today-element-query.md)
+[Today](today-element-query.md)
 

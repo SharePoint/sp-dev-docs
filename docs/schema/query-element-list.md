@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[GroupBy](../../collaborative-application-markup-language-caml-schemas/query-schema/groupby-element-query.md), [OrderBy](../../collaborative-application-markup-language-caml-schemas/query-schema/orderby-element-query.md), [Where](../../collaborative-application-markup-language-caml-schemas/query-schema/where-element-query.md)|
+|[GroupBy](groupby-element-query.md), [OrderBy](orderby-element-query.md), [Where](where-element-query.md)|
    
 ### Parent elements
 
@@ -91,7 +91,7 @@ The following example queries the Status field for cases where the value does no
 
 
 
-[Query Schema](../../collaborative-application-markup-language-caml-schemas/query-schema/query-schema.md)
+[Query Schema](query-schema.md)
 
 
 [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)

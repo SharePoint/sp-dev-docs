@@ -76,5 +76,5 @@ The following excerpt uses the **FieldFilterImageURL** element to assemble the <
 [FieldSortImageURL Element](fieldsortimageurl-element.md)
 
 
-[FieldSortParams Element (View)](../../collaborative-application-markup-language-caml-schemas/view-schema/fieldsortparams-element-view.md)
+[FieldSortParams Element (View)](fieldsortparams-element-view.md)
 

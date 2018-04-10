@@ -68,5 +68,5 @@ The following sections describe attributes, child elements, and parent elements.
 
 
 
-[ListTemplate Element (Site)](../../collaborative-application-markup-language-caml-schemas/site-schema/listtemplate-element-site.md)
+[ListTemplate Element (Site)](listtemplate-element-site.md)
 

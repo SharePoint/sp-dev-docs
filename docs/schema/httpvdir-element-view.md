@@ -64,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ## Example
 
-The following example defines the **More Items** link to display when the number of items in the list exceeds the limit set with the [RowLimit](../../collaborative-application-markup-language-caml-schemas/list-schema/rowlimit-element-list.md) element for number of items to display on a page. The example uses the **HttpVDir** element to construct the full path for an image file. 
+The following example defines the **More Items** link to display when the number of items in the list exceeds the limit set with the [RowLimit](rowlimit-element-list.md) element for number of items to display on a page. The example uses the **HttpVDir** element to construct the full path for an image file. 
   
 ```XML
 <RowLimitExceeded>
@@ -87,7 +87,7 @@ The following example defines the **More Items** link to display when the number
 
 
 
-[HTMLBase Element](../../collaborative-application-markup-language-caml-schemas/general-schema/htmlbase-element.md)
+[HTMLBase Element](htmlbase-element.md)
 
 
 [HttpPath Element (View)](httppath-element-view.md)

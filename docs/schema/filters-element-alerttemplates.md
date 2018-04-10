@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Filters enable you to create new triggers for an event such as "the priority of a task has changed". To modify existing filters or create additional filters, modify the [Filter Definition](filterdefinition-element-alerttemplates.md) element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using [Collaborative Application Markup Language (CAML)](../../collaborative-application-markup-language-caml-schemas/collaborative-application-markup-language-caml-schemas.md).
+Filters enable you to create new triggers for an event such as "the priority of a task has changed". To modify existing filters or create additional filters, modify the [Filter Definition](filterdefinition-element-alerttemplates.md) element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using [Collaborative Application Markup Language (CAML)](collaborative-application-markup-language-caml-schemas.md).
   
 ```
 <Filters>

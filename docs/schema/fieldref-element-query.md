@@ -58,7 +58,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Format** <br/> |Optional **Text**.  <br/> |
 |**ID** <br/> |Optional **Text**. Specifies the GUID that identifies the field.  <br/> |
 |**Key** <br/> |Optional **Text**. If set to **Primary**, specifies that the field is the primary key for its table and thus uniquely identifies each record in the table.  <br/> |
-|**List** <br/> |Optional **Text**. Specifies the parent foreign list when the **FieldRef** element is a child of an [Eq](eq-element-query.md) element in [Join](../../collaborative-application-markup-language-caml-schemas/view-schema/join-element-view.md) element. The value is an alias for the list that is defined by the **ListAlias** attribute of the [Join](../../collaborative-application-markup-language-caml-schemas/view-schema/join-element-view.md) element.  <br/> |
+|**List** <br/> |Optional **Text**. Specifies the parent foreign list when the **FieldRef** element is a child of an [Eq](eq-element-query.md) element in [Join](join-element-view.md) element. The value is an alias for the list that is defined by the **ListAlias** attribute of the [Join](join-element-view.md) element.  <br/> |
 |**LookupId** <br/> |Optional **Boolean**. When the field is a Lookup type, specifies that queries should look for the item by its unique item ID rather than the field value. This can be useful, for example, when multiple items have identical values in the field and you want to query for a specific item. The default is false.  <br/> |
 |**Name** <br/> |Optional **Text**. This attribute provides the internal name of the field that is referenced.  <br/> |
 |**RefType** <br/> |Optional **Text**. Specifies the type of reference for a field in an events list.  <br/> |
@@ -76,7 +76,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [FieldRefs](../../collaborative-application-markup-language-caml-schemas/list-schema/fieldrefs-element-list.md), [Geq](geq-element-query.md), [GroupBy](groupby-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [OrderBy](orderby-element-query.md)|
+|[BeginsWith](beginswith-element-query.md), [Contains](contains-element-query.md), [DateRangesOverlap](daterangesoverlap-element-query.md), [Eq](eq-element-query.md), [FieldRefs](fieldrefs-element-list.md), [Geq](geq-element-query.md), [GroupBy](groupby-element-query.md), [Gt](gt-element-query.md), [In](in-element-query.md), [Includes](includes-element-query.md), [IsNotNull](isnotnull-element-query.md), [IsNull](isnull-element-query.md), [Leq](leq-element-query.md), [Lt](lt-element-query.md), [Neq](neq-element-query.md), [NotIncludes](notincludes-element-query.md), [OrderBy](orderby-element-query.md)|
    
 ### Occurrences
 

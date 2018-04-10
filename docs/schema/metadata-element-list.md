@@ -59,7 +59,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ## Example
 
-The following sample illustrates the skeletal structure of a list with **MetaData** and [Data](../../collaborative-application-markup-language-caml-schemas/site-schema/data-element-site.md) elements. 
+The following sample illustrates the skeletal structure of a list with **MetaData** and [Data](data-element-site.md) elements. 
   
 ```XML
 <List Name="Announcements" Title="My Announcements">
@@ -87,5 +87,5 @@ The following sample illustrates the skeletal structure of a list with **MetaDat
 
 
 
-[Data](../../collaborative-application-markup-language-caml-schemas/site-schema/data-element-site.md)
+[Data](data-element-site.md)
 

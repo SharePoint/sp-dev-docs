@@ -34,7 +34,7 @@ description: "Last modified: July 15, 2011"
   
 [MapToText](maptotext-element.md)
   
-[Now](../../collaborative-application-markup-language-caml-schemas/query-schema/now-element-query.md)
+[Now](now-element-query.md)
   
 [OkToVote](oktovote-element.md)
   
@@ -54,7 +54,7 @@ description: "Last modified: July 15, 2011"
   
 [Site](site-element.md)
   
-[Today](../../collaborative-application-markup-language-caml-schemas/query-schema/today-element-query.md)
+[Today](today-element-query.md)
   
 [TodayISO](todayiso-element.md)
   

@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Specifies alternate rendering when a row limit is exceeded. It executes if the **Paged** attribute of the [Row](../../collaborative-application-markup-language-caml-schemas/site-schema/row-element-site.md) element is not set to **TRUE**.
+Specifies alternate rendering when a row limit is exceeded. It executes if the **Paged** attribute of the [Row](row-element-site.md) element is not set to **TRUE**.
   
 > [!NOTE]
 > Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
@@ -89,5 +89,5 @@ The following example provides a link to more items if the row limit is exceeded
   
 [RowLimit Element (List)](rowlimit-element-list.md)
   
-[Rows Element (Site)](../../collaborative-application-markup-language-caml-schemas/site-schema/rows-element-site.md)
+[Rows Element (Site)](rows-element-site.md)
 

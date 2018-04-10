@@ -37,13 +37,13 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |Type  <br/> |Required. "LEFT" means a left outer join. "INNER" means an inner join.  <br/> |
-|ListAlias  <br/> | Optional. Specifies an alternate name for the foreign list. This can be useful when there are two joins to the same list. Different aliases are needed to differentiate the joins.  <br/>  There is no need to explicitly map the alias onto the real name of the foreign list because joins are only allowed through a lookup field relation and the foreign list is specified in the Lookup field definition.  <br/>  After this value is defined in a **Join** element, it is used as the value of a **List** attribute in two places:  <br/>  In a [FieldRef](../../collaborative-application-markup-language-caml-schemas/query-schema/fieldref-element-query.md) element that is a child to the [Eq](../../collaborative-application-markup-language-caml-schemas/query-schema/eq-element-query.md) element of the **Join** element.  <br/>  In a [Field](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md) element that is a child of a [ProjectedFields](projectedfields-element-view.md) element.  <br/> |
+|ListAlias  <br/> | Optional. Specifies an alternate name for the foreign list. This can be useful when there are two joins to the same list. Different aliases are needed to differentiate the joins.  <br/>  There is no need to explicitly map the alias onto the real name of the foreign list because joins are only allowed through a lookup field relation and the foreign list is specified in the Lookup field definition.  <br/>  After this value is defined in a **Join** element, it is used as the value of a **List** attribute in two places:  <br/>  In a [FieldRef](fieldref-element-query.md) element that is a child to the [Eq](eq-element-query.md) element of the **Join** element.  <br/>  In a [Field](field-element-list.md) element that is a child of a [ProjectedFields](projectedfields-element-view.md) element.  <br/> |
    
 ### Child elements
 
 ||
 |:-----|
-|[Eq](../../collaborative-application-markup-language-caml-schemas/query-schema/eq-element-query.md)|
+|[Eq](eq-element-query.md)|
    
 ### Parent elements
 
@@ -59,11 +59,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-The **Join** element translates into the SQL **JOIN** statement. The **Join** element refactors the [Eq](../../collaborative-application-markup-language-caml-schemas/query-schema/eq-element-query.md) element to specify the primary and foreign fields on which to make the join. The primary field must be defined as a Lookup field to the foreign field. 
+The **Join** element translates into the SQL **JOIN** statement. The **Join** element refactors the [Eq](eq-element-query.md) element to specify the primary and foreign fields on which to make the join. The primary field must be defined as a Lookup field to the foreign field. 
   
 ## Example
 
-The following is an example of two **Join** elements; both are left outer joins. CustomerName is a lookup field on an Orders list. It looks up to the ID field of a Customers list. The Customer list, in turn, has a CityName field that is a lookup field to a Cities list. The first **Join** element assigns 'customers' as an alias for the Customers list. The [Eq](../../collaborative-application-markup-language-caml-schemas/query-schema/eq-element-query.md) element child defines the join using the same source and target fields that constitute the lookup relation. The second **Join** element assigns 'customerCities' as an alias to the Cities list. It defines the join in parallel to the existing lookup relation between the Customer and Cities lists. 
+The following is an example of two **Join** elements; both are left outer joins. CustomerName is a lookup field on an Orders list. It looks up to the ID field of a Customers list. The Customer list, in turn, has a CityName field that is a lookup field to a Cities list. The first **Join** element assigns 'customers' as an alias for the Customers list. The [Eq](eq-element-query.md) element child defines the join using the same source and target fields that constitute the lookup relation. The second **Join** element assigns 'customerCities' as an alias to the Cities list. It defines the join in parallel to the existing lookup relation between the Customer and Cities lists. 
   
 Aliases are valuable for the lists because there can be more than one join to the same list and different aliases are needed to differentiate the joins. For example, in addition to the joins from Orders to Customer and from Customer to Cities, there could also be joins from Orders to Suppliers and from Suppliers to Cities. In the case of the last join, a different alias, say 'supplierCities', would be assigned to the Cities list from the one that is used for the Customer to Cities join.
   

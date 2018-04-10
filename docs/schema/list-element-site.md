@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**CustomSchema** <br/> |Optional **Text**.  <br/> |
-|**Description** <br/> |Optional **Text**. Provides a description for the list. This attribute must be specified within a configuration in an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file when you are adding a custom list definition to a site definition. The value of this attribute overrides the value contained with the [DefaultDescription](../../collaborative-application-markup-language-caml-schemas/list-schema/defaultdescription-element-list.md) element of a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file.  <br/> |
+|**Description** <br/> |Optional **Text**. Provides a description for the list. This attribute must be specified within a configuration in an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file when you are adding a custom list definition to a site definition. The value of this attribute overrides the value contained with the [DefaultDescription](defaultdescription-element-list.md) element of a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file.  <br/> |
 |**EmailAlias** <br/> |Optional **Text**. If e-mail notification is enabled, specifies the e-mail address to use to notify to the owner of an item when an assignment has changed or the item has been updated.  <br/> |
 |**EnableContentTypes** <br/> |Optional **Boolean**. **TRUE** to enable management of content types in lists created through the list definition.  <br/> |
 |**EnableMinorVersions** <br/> |Optional **Boolean**. **TRUE** to enable minor versions for items in the list.  <br/> |
@@ -75,7 +75,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[GlobalLists](../../collaborative-application-markup-language-caml-schemas/general-schema/globallists-element.md), [Lists](lists-element-site.md)|
+|[GlobalLists](globallists-element.md), [Lists](lists-element-site.md)|
    
 ### Occurrences
 

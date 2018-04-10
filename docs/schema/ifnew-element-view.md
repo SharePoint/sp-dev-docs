@@ -86,5 +86,5 @@ The following example displays a particular logo if the display pattern of the f
 
 
 
-[DisplayPattern Element (List)](../../collaborative-application-markup-language-caml-schemas/list-schema/displaypattern-element-list.md)
+[DisplayPattern Element (List)](displaypattern-element-list.md)
 

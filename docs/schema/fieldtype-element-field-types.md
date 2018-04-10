@@ -63,7 +63,7 @@ The following example defines two custom field types. The example has been edite
 > The **RenderPattern** and **PropertySchema** elements are obsolete. They are shown here solely to assist in the debugging of custom fields that were originally developed against earlier versions of SharePoint Foundation. 
   
 > [!NOTE]
-> The possible values for the  `<Field Name="ParentType">` element are exactly the same as the possible values for the Type attribute of the [Field Element (List)](../../collaborative-application-markup-language-caml-schemas/list-schema/field-element-list.md) element. 
+> The possible values for the  `<Field Name="ParentType">` element are exactly the same as the possible values for the Type attribute of the [Field Element (List)](field-element-list.md) element. 
   
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>
