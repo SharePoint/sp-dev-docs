@@ -1,11 +1,10 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Get started creating SharePoint site designs and site scripts for users to create their own sites from.
-ms.date: 01/08/2018
+ms.date: 04/10/2018
 ---
 
 # Get started creating site designs and site scripts
-
 
 You can create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. This article describes how to build a simple site design that adds a SharePoint list for tracking customer orders. You'll use the site design to create a new SharePoint site with the custom list.
 
