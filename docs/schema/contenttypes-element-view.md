@@ -25,7 +25,11 @@ Used to conditionally add markup language or script to a page, based on evaluati
 </ContentTypes>
 ```
 
-## Attributes
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
 
 None
    

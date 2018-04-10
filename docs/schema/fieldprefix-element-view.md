@@ -18,7 +18,7 @@ description: Obsolete. Returns the Microsoft Office namespace "urn:schemas-micro
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Obsolete. Returns the Microsoft Office namespace "urn:schemas-microsoft-com:office:office#", which is added to every field name for Office compatibility.
+Obsolete. Returns the Microsoft Office namespace `urn:schemas-microsoft-com:office:office#`, which is added to every field name for Office compatibility.
   
 ```XML
 <FieldPrefix>
@@ -41,7 +41,7 @@ None
 
 Numerous 
    
-## Occurrences
+### Occurrences
 
 - Minimum: 0 
 - Maximum: Unbounded 
