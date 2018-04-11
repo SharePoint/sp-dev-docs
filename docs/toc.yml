@@ -3619,7 +3619,7 @@
           href: schema/webpartconnection-element-site.md
         - name: WebPartTransformer element
           href: schema/webparttransformer-element-site.md
-    - name: Site deletion confirmation schema
+    - name: Site Deletion Confirmation schema
       href: schema/site-deletion-confirmation-schema.md
       items:
       - name: AutoDeleteBody element
@@ -3636,7 +3636,7 @@
         href: schema/confirmationsubject-element-site-deletion.md
       - name: Email element
         href: schema/email-element-site-deletion.md
-    - name: Regional settings schema
+    - name: Regional Settings schema
       href: schema/regional-settings-schema.md
       items:
       - name: Bias element
@@ -3675,7 +3675,7 @@
         href: schema/timezone-element-regional-settings.md
       - name: TimeZones element
         href: schema/timezones-element-regional-settings.md
-    - name: Document icons schema
+    - name: Document Icons schema
       href: schema/document-icons-schema.md
       items:
       - name: ByExtension element

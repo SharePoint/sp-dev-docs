@@ -1,7 +1,5 @@
 ---
-title: "List Schema Elements A-K"
-
-
+title: "List schema elements A-K"
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -16,11 +14,9 @@ ms.assetid: aac6a892-7123-42ae-8551-de071d807c94
 description: "Last modified: July 15, 2011"
 ---
 
-# List Schema Elements A-K
-
- **Last modified:** July 15, 2011 
+# List schema elements A-K
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [Aggregations](aggregations-element-list.md)
   
@@ -56,7 +52,7 @@ description: "Last modified: July 15, 2011"
   
 [Field](field-element-list.md)
   
-[FieldRef](http://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7%28Office.15%29.aspx)
+[FieldRef](fieldref-element-list.md)
   
 [FieldRefs](fieldrefs-element-list.md)
   
@@ -75,3 +71,6 @@ description: "Last modified: July 15, 2011"
 [FormulaDisplayNames](formuladisplaynames-element-list.md)
   
 
+## See also
+
+- [List schema elements L-Z](list-schema-elements-l-z.md)

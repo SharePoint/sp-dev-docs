@@ -1,13 +1,11 @@
 ---
-title: "Regional Settings Schema"
+title: "Regional Settings schema"
 ms.author: ricardol
 author: ricardol
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- schemas [sharepoint 2010], regional settings,regional settings schema [SharePoint 2010]
 ms.prod: office-online-server
 localization_priority: Normal
 api_name:
@@ -18,11 +16,9 @@ ms.assetid: 7c9dda02-a11e-4716-b6de-eda33c8d14c8
 description: "Last modified: July 15, 2011"
 ---
 
-# Regional Settings Schema
+# Regional Settings schema
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The Regional Settings schema is used to define the time zones, locales, languages, and currencies implemented within a SharePoint Foundation deployment. This schema is expressed primarily through two files located in the setup directory, RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) and TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG).
   
@@ -44,7 +40,7 @@ You can access or modify regional settings through various members of the follow
   
 [SPLanguageCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLanguageCollection.aspx)
   
-## Regional Settings Elements
+## Regional Settings elements
 
 ### RGNLSTNG.XML
 

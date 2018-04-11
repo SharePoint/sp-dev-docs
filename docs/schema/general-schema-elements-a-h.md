@@ -1,7 +1,5 @@
 ---
-title: "General Schema Elements A-H"
-
-
+title: "General schema elements A-H"
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -12,11 +10,9 @@ ms.assetid: 9b0a10ac-5207-4b5f-acb0-3df9283b2516
 description: "Last modified: July 15, 2011"
 ---
 
-# General Schema Elements A-H
+# General schema elements A-H
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [Attachments](attachments-element.md)
   
@@ -53,3 +49,6 @@ description: "Last modified: July 15, 2011"
 [HtmlTrInfo](htmltrinfo-element.md)
   
 
+## See also
+  
+- [General schema elements I-Z](general-schema-elements-i-z.md)

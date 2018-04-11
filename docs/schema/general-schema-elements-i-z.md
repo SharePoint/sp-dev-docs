@@ -1,7 +1,5 @@
 ---
-title: "General Schema Elements I-Z"
-
-
+title: "General schema elements I-Z"
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -12,11 +10,9 @@ ms.assetid: 89413666-68a2-45b7-af34-6fba5e5ff4f5
 description: "Last modified: July 15, 2011"
 ---
 
-# General Schema Elements I-Z
+# General schema elements I-Z
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [IfOld](ifold-element.md)
   
@@ -67,3 +63,7 @@ description: "Last modified: July 15, 2011"
 [WriteSecurity](writesecurity-element.md)
   
 
+## See also
+
+- [General schema elements A-H](general-schema-elements-a-h.md)
+  

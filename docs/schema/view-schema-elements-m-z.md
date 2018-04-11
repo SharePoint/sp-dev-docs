@@ -71,3 +71,7 @@ description: "Last modified: July 15, 2011"
 - [WebQueryInfo](webqueryinfo-element-view.md)
   
 
+## See also
+
+- [View schema elements A-F](view-schema-elements-a-f.md)
+- [View schema elements G-L](view-schema-elements-g-l.md)

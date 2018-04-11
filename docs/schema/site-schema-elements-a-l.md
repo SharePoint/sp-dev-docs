@@ -1,7 +1,5 @@
 ---
-title: "Site Schema Elements A-L"
-
-
+title: "Site schema elements A-L"
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -16,11 +14,9 @@ ms.assetid: 30797149-c2bc-4941-9443-80c60d8c5634
 description: "Last modified: July 15, 2011"
 ---
 
-# Site Schema Elements A-L
+# Site schema elements A-L
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [AllUsersWebPart](alluserswebpart-element-site.md)
   
@@ -71,3 +67,6 @@ description: "Last modified: July 15, 2011"
 [ListTemplates](listtemplates-element-site.md)
   
 
+## See also
+
+- [Site schema elements M-Z](site-schema-elements-m-z.md) 

@@ -1,7 +1,5 @@
 ---
-title: "Site Schema Elements M-Z"
-
-
+title: "Site schema elements M-Z"
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -16,11 +14,9 @@ ms.assetid: 782a6cd8-5b08-44f6-a6da-68337cafc596
 description: "Last modified: July 15, 2011"
 ---
 
-# Site Schema Elements M-Z
+# Site schema elements M-Z
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [MetaData](metadata-element-site.md)
   
@@ -68,4 +64,7 @@ description: "Last modified: July 15, 2011"
   
 [WebPartTransformer](webparttransformer-element-site.md)
   
+## See also
+
+- [Site schema elements A-L](site-schema-elements-a-l.md)
 

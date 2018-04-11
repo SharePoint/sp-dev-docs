@@ -1,14 +1,9 @@
 ---
-title: "Site Schema"
-
-
+title: "Site schema"
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- schemas [sharepoint 2010], site,site schema [SharePoint 2010]
-ms.prod: office-online-server
 localization_priority: Normal
 api_name:
 - Site schema
@@ -18,19 +13,19 @@ ms.assetid: e711f6b0-2787-4a13-b0e9-140c3435c1e2
 description: "Last modified: July 15, 2011"
 ---
 
-# Site Schema
+# Site schema
 
- **Last modified:** July 15, 2011 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-The Site schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define metadata for creating Web sites, including the root site of site collections. A site definition specifies the navigation bars, list templates, document templates, list base types, configurations, modules, components, and server email footer for creating sites. The site definition is specified through an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates, and through a [WebTemp\*.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML. 
+The Site schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define metadata for creating websites, including the root site of site collections. A site definition specifies the navigation bars, list templates, document templates, list base types, configurations, modules, components, and server email footer for creating sites. 
+
+The site definition is specified through an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates, and through a [WebTemp\*.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML. 
   
 Sites can be created or modified programmatically through the object model (for example, members of the [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) and [SPWebCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebCollection.aspx) classes, or members of the [SPSite](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPSite.aspx) and [SPSiteCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.SPSiteCollection.aspx) classes). They can also be remotely created or modified through the Administration Web service (methods of the [Admin](https://msdn.microsoft.com/library/WebSvcAdmin.Admin.aspx) class), the Document Workspace Web service (methods of [Dws](https://msdn.microsoft.com/library/WebSvcDWS.Dws.aspx)), or the Meetings Web service (members of [Meetings](https://msdn.microsoft.com/library/WebSvcMeetings.Meetings.aspx)). 
   
-## Site Schema Elements
+## Site schema elements
 
- **Onet.xml**
+### Onet.xml
   
 [\<Project\>](project-element-site.md)
   
@@ -78,9 +73,7 @@ Sites can be created or modified programmatically through the object model (for 
   
 [\<Field\>](field-element-site.md)
   
-[\<Modules\>](modules-element-site.md)
-  
- [See Module Schema] 
+[\<Modules\>](modules-element-site.md) (see [Module schema](#module-schema))
   
 [\<WebFeatures\>](webfeatures-element-site.md)
   
@@ -98,9 +91,7 @@ Sites can be created or modified programmatically through the object model (for 
   
 [\<Property\>](property-element-sitefeature.md)
   
-[\<Modules\>](modules-element-site.md)
-  
- [See Module Schema] 
+[\<Modules\>](modules-element-site.md) (see [Module schema](#module-schema))
   
 [\<Components\>](components-element-site.md)
   
@@ -110,7 +101,7 @@ Sites can be created or modified programmatically through the object model (for 
   
 [\<ServerEmailFooter\>](serveremailfooter-element-site.md)
   
- **Module Schema**
+### Module schema
   
 [\<Module\>](module-element-site.md)
   
@@ -144,7 +135,7 @@ Sites can be created or modified programmatically through the object model (for 
   
 [\<WebPartTransformer\>](webparttransformer-element-site.md)
   
- **WebTemp\*.xml**
+### WebTemp\*.xml
   
 [\<Templates\>](templates-element-site.md)
   
@@ -153,3 +144,7 @@ Sites can be created or modified programmatically through the object model (for 
 [\<Configuration\>](configuration-element-site.md)
   
 
+## See also
+
+- [Site schema elements A-L](site-schema-elements-a-l.md)
+- [Site schema elements M-Z](site-schema-elements-m-z.md) 

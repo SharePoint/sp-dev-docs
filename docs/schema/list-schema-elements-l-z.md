@@ -1,7 +1,5 @@
 ---
-title: "List Schema Elements L-Z"
-
-
+title: "List schema elements L-Z"
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -16,11 +14,9 @@ ms.assetid: 7330a8bc-fc61-43e5-b722-2a3915deb32b
 description: "Last modified: July 15, 2011"
 ---
 
-# List Schema Elements L-Z
+# List schema elements L-Z
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 [List](list-element-list.md)
   
@@ -81,3 +77,6 @@ description: "Last modified: July 15, 2011"
 [XslLink](xsllink-element-list.md)
   
 
+## See also
+
+- [List schema elements A-K](list-schema-elements-a-k.md)
