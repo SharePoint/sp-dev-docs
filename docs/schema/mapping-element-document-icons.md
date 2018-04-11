@@ -1,7 +1,5 @@
 ---
-title: "Mapping Element (Document Icons)"
-ms.author: ricardol
-author: ricardol
+title: "Mapping element (Document Icons)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 238311d9-6dc4-4864-a3a9-120475f3de20
-description: "Last modified: March 09, 2015"
+description: Used in the DocIcon.xml file to map particular document types to their respective icons. 
 ---
 
-# Mapping Element (Document Icons)
+# Mapping element (Document Icons)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to map particular document types to their respective icons. 
   
-```
+```XML
 <Mapping
   Key = "Text"
   Value = "Text">
@@ -47,27 +43,23 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ByExtension](byextension-element-document-icons.md), [ByProgID](byprogid-element-document-icons.md)|
+- [ByExtension](byextension-element-document-icons.md)
+- [ByProgID](byprogid-element-document-icons.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0 
+- Maximum: Unbounded  
    
 ## Example
 
 The following example maps **ProgIDs** and file name extensions as follows: 
   
-- For different values of the **ProgID** <META> tag, it maps **ProgIDs** to the icons representing the applications. For example, "Excel.Sheet" maps to ichtmxls.gif. 
+- For different values of the **ProgID** `<META>` tag, it maps **ProgIDs** to the icons representing the applications. For example, "Excel.Sheet" maps to ichtmxls.gif. 
     
 - It maps file name extensions to appropriate icons. For example, "docx" maps to icdocx.png. 
     

@@ -1,7 +1,7 @@
 ---
 title: "GalleryButton Element (Gallery)"
-ms.author: ricardol
-author: ricardol
+
+
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
