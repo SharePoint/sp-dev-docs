@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 85e24489-0a6b-dfda-fb03-474fe7b0d947
 ---
 
-# AccessControlEntry Element in AccessControlList 
+# AccessControlEntry element in AccessControlList 
 
 (BDCMetadata Schema)
 
@@ -70,7 +70,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadata-schema.md">Right Element in AccessControlEntry (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadata-schema.md">Right element in AccessControlEntry (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A **Right** element that specifies the permissions available to the security principal.</p></td>
 </tr>
 </tbody>
@@ -85,13 +85,13 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><p>Element</p></th>
+<th align="left"><p>element</p></th>
 <th align="left"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The access control list (ACL) that contains this ACE.</p></td>
 </tr>
 </tbody>

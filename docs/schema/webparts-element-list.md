@@ -20,7 +20,7 @@ description: Contains a collection of Web Parts in a form for a list definition 
   
 Contains a collection of Web Parts in a form for a list definition or a list template.
   
-```vb
+```XML
 <WebParts>
     <AllUsersWebPart
         WebPartOrder = Integer    

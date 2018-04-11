@@ -20,7 +20,7 @@ description: Applies the templates that are defined within the specified XSL fil
   
 Applies the templates that are defined within the specified XSL file to the list view.
   
-```vb
+```xsl
 <XslLink  Default = "TRUE" | "FALSE">  </XslLink>
 ```
 

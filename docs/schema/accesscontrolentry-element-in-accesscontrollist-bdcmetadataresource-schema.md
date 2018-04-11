@@ -8,13 +8,13 @@ localization_priority: Normal
 ms.assetid: caff772b-9029-5fe0-5d93-fca836c1fcb2
 ---
 
-# AccessControlEntry Element in AccessControlList 
+# AccessControlEntry element in AccessControlList 
 
 (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-For detailed information about this element, see [AccessControlEntry Element in AccessControlList (BDCMetadata Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md).
+For detailed information about this element, see [AccessControlEntry element in AccessControlList (BDCMetadata Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
@@ -65,7 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadataresource-schema.md">Right Element in AccessControlEntry (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadataresource-schema.md">Right element in AccessControlEntry (BDCMetadataResource Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -86,7 +86,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

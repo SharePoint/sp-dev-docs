@@ -72,6 +72,6 @@ The following example provides a link to more items if the row limit is exceeded
 
 - [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
 - [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx) 
-- [RowLimit Element (List)](rowlimit-element-list.md) 
-- [Rows Element (Site)](rows-element-site.md)
+- [RowLimit element (List)](rowlimit-element-list.md) 
+- [Rows element (Site)](rows-element-site.md)
 

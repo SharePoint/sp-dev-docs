@@ -33,16 +33,19 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> |Optional **Text**. Specifies a name for the parameter. The XSL stylesheet defines a parameter of the same name `<xsl:param name="ParameterName"/>` and the resource becomes available anywhere in the stylesheet through an XPath expression `<xsl:value-of select="$ParameterName" />`.  <br/> |
-|**Location** <br/> |Optional **Text**. Specifies the location of the resource. SharePoint Foundation uses a **Resource** function to define the value of **Location** in the format `Location = "Resource(ResourceFile, ResourceName)"`, where  _ResourceFile_ specifies the base name of a resource file minus the file extension, and  _ResourceName_ specifies the name of the resource string.  <br/><br/>In addition to specifying a localized resource in a .resx file, the **Location** attribute can be used to specify values indicated in the following table.  <br/> |
-   
+|**Location** <br/> |Optional **Text**. Specifies the location of the resource. SharePoint Foundation uses a **Resource** function to define the value of **Location** in the format `Location = "Resource(ResourceFile, ResourceName)"`, where  _ResourceFile_ specifies the base name of a resource file minus the file extension, and  _ResourceName_ specifies the name of the resource string.  <br/> |
+
+In addition to specifying a localized resource in a .resx file, the **Location** attribute can be used to specify the values indicated in the following table.
+
+#### Location attribute values 
 
 |**Context**|**Format**|
 |:-----|:-----|
-|Query strings  <br/> | `<ParameterBinding Name="SelectedID" Location="QueryString(SelectedID)"/>`Corresponding code in XSL:  `<xsl:param name="SelectedID"/>` <br/> |
-|Connection/Postback  <br/> | `<ParameterBinding Name="dvt_firstrow" Location="Postback;Connection"/>` <br/> |
-|Server variables  <br/> | `(Location="Form(variableName)")` <br/> |
-|Web Part Properties  <br/> | `(Location="WPProperty(PropertyValue")` <br/> |
-|Control IDs  <br/> | `(Location="Control(ControlID)")` <br/> |
+|**Query strings**  <br/> | `<ParameterBinding Name="SelectedID" Location="QueryString(SelectedID)"/>`Corresponding code in XSL:  `<xsl:param name="SelectedID"/>` <br/> |
+|**Connection/Postback**  <br/> | `<ParameterBinding Name="dvt_firstrow" Location="Postback;Connection"/>` <br/> |
+|**Server variables**  <br/> | `(Location="Form(variableName)")` <br/> |
+|**Web Part Properties**  <br/> | `(Location="WPProperty(PropertyValue")` <br/> |
+|**Control IDs**  <br/> | `(Location="Control(ControlID)")` <br/> |
 
 ### Child elements
 

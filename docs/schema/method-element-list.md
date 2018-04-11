@@ -50,6 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 This is the description for a Code Example.
   
 Microsoft.Win32.RegistryKey#4
+
 Optional comments.
   
 ### .NET Framework equivalent
