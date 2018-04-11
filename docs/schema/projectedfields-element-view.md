@@ -67,13 +67,13 @@ The following example shows how to add another field to the results that are ret
 The **Type** attribute does not indicate the data type of the field as it usually does in a [Field](field-element-list.md) element. When a [Field](field-element-list.md) element is a child of a **ProjectedFields** element, **Type** simply indicates whether the [Join](join-element-view.md) element (in the [Joins](joins-element-view.md) element on which the **ProjectedFields** element depends) is based on an existing lookup relation between the lists. As of SharePoint Foundation 2010, all joins must be based on an existing lookup relation, so **Type** always has the value "Lookup". The actual data type of the field is not indicated when it is a child of the **ProjectedFields** element. However, the field's data type does matter because only the following types of fields can be included in a **ProjectedFields** element: 
   
 - Calculated (treated as plain text)
-- ContentTypeId   
-- Counter   
-- Currency   
-- DateTime    
-- Guid   
-- Integer   
-- Note (one-line only)    
+- ContentTypeId
+- Counter
+- Currency
+- DateTime
+- Guid
+- Integer
+- Note (one-line only)
 - Number
 - Text
 

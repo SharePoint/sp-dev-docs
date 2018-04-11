@@ -89,7 +89,7 @@ The following example illustrates using the **SetVar** element to set global sco
 
 <br/>
 
-In the following example, the first [GetVar](http://msdn.microsoft.com/library/abf483e3-c6e7-4d72-97c6-76300e1b483e%28Office.15%29.aspx) element returns "Value\_2", and the second **GetVar** element returns "Value\_1" because the **SetVar** element that contains "Value\_2" applies only to children of the "Sample" element. "Value\_2" goes out of scope after the closing "Sample" tag. 
+In the following example, the first [GetVar](http://msdn.microsoft.com/library/abf483e3-c6e7-4d72-97c6-76300e1b483e%28Office.15%29.aspx) element returns `Value_2` and the second **GetVar** element returns `Value_1` because the **SetVar** element that contains `Value_2` applies only to children of the **Sample** element. `Value_2` goes out of scope after the closing Sample tag. 
   
 ```XML
 <SetVar Name="myVar">Value_1</SetVar>
