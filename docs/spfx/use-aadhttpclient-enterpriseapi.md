@@ -10,41 +10,39 @@ ms.prod: sharepoint
 > [!IMPORTANT]
 > The `AadHttpClient` class is currently in preview and is subject to change. Do not use it in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
 
-This article illustrates how you would connect to an enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well building the SharePoint Framework solution.
+This article illustrates how you would connect to an enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well as building the SharePoint Framework solution.
 
-## Create enterprise API secured with Azure AD
+## Create an enterprise API secured with Azure AD
 
-Start with creating an enterprise API secured with Azure Active Directory. While there are no restrictions how the API should be implemented from the SharePoint Framework point of view, in this tutorial, you will build the API using Azure Functions and secure it using Azure App Service Authentication.
+Start with creating an enterprise API secured with Azure Active Directory. While there are no restrictions on how the API should be implemented from the SharePoint Framework point of view, in this tutorial, you will build the API using Azure Functions and secure it using Azure App Service Authentication.
 
 > While your organization most likely already has specific APIs exposing their applications, this section is meant to give you a complete overview of the implementation and configuration steps.
 
-### Create Azure function
+### Create an Azure function
 
 In the Azure Portal (https://portal.azure.com), create a new Function App.
 
 > For more information on creating Function Apps in Azure see the [Create a function app from the Azure portal](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) help article.
 
-In the Function App, create new HTTP-triggered function. In this example, you will build it using C#, but there is no restriction with regards to which programming language you can use.
+In the Function App, you will create a new HTTP-triggered function. In this example, you will build the function using C#, but, in general, there is no restriction on which programming language you must use.
 
-In the Function App, choose the **Create new** button.
+In the Function App, press the **Create new** button:
 
 ![The 'Create new' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function.png)
 
-Next, choose on the **Custom function** link, to create a custom HTTP-triggered function.
+Next, click the **Custom function** link to create a custom HTTP-triggered function:
 
 ![The 'Custom function' link highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-custom-function.png)
 
-From the list of available function types, choose **HTTP trigger**.
+From the list of templates, choose **HTTP trigger**:
 
-![The 'HTTP trigger' function type highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-http-trigger.png)
+![The 'HTTP trigger' function template highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-http-trigger.png)
 
-In the settings of the function, choose **C#** as the language, specify the function name and set the **Authorization level** to **Anonymous**.
+In the New Function panel, choose **C#** as the language, specify the function name, set the **Authorization level** to **Anonymous**, and click the **Create** button:
 
 ![Settings for the new Azure function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
 
-Azure functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you will secure the underlying Function App. This is why, at this stage, you set not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
-
-To confirm your settings and create the function, choose the **Create** button.
+>Azure functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you will secure the underlying Function App. This is why, at this stage, you chose not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
 
 Once the function is created, replace its contents with the following snippet:
 
@@ -110,116 +108,116 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 }
 ```
 
-Verify, that the function is working correctly, by chooseing the **Save and run** button.
+Verify that the function is working correctly, by pressing the **Save and run** button:
 
 ![The 'Save and run' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-test.png)
 
-If the function executed correctly, you should see a *Status: 200 OK* label and the list orders displayed in the test pane.
+If the function executed correctly, you will see a *Status: 200 OK* label and the list orders displayed in the test pane.
 
-### Secure Azure function
+### Secure the Azure function
 
-Now that the Azure function is working, the next step is for you to secure it with Azure Active Directory so that in order to access it, you need to sign in with your organizational account.
+Now that the Azure function is working, the next step is to secure it with Azure Active Directory so that you will need to sign in with your organizational account to access it.
 
-On the Function App blade, from the side panel, select the function app.
+On the Function App blade in the side panel select the function app:
 
 ![Function app highlighted in the side panel of the Function App blade in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-select-function-app.png)
 
-In the top section, switch to the **Platform features** tab.
+In the top section, switch to the **Platform features** tab:
 
 ![The 'Platform features' tab highlighted on the Function App blade in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-platform-features.png)
 
-Next, from the **Networking** group, select the **Authentication / Authorization** link.
+Next, from the **Networking** group, select the **Authentication / Authorization** link:
 
 ![The 'Authentication / Authorization' link highlighted on the Function App blade in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-authn-authz.png)
 
-On the **Authentication / Authorization** blade, enable App Service Authentication by switching the **App Service Authentication** toggle button to **On**.
+On the **Authentication / Authorization** blade, enable App Service Authentication by switching the **App Service Authentication** toggle button to **On**:
 
 ![The 'On' option for the 'App Service Authentication' toggle button highlighted in the Function App authentication settings in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-authn-on.png)
 
-In the **Action to take when request not authenticated** drop down, change the value to *Login with Azure Active Directory*.
+In the **Action to take when request not authenticated** drop down, change the value to *Login with Azure Active Directory*. This setting ensures that anonymous requests to the API are not allowed:
 
 ![The 'Login with Azure Active Directory' option highlighted in the 'Action to take when request not authenticated' drop down on the Function App authentication settings blade](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-login.png)
 
-This setting ensures that anonymous requests to the API are not allowed.
-
-Next, in the list of authentication providers select **Azure Active Directory**.
+Next, in the list of authentication providers, select **Azure Active Directory**:
 
 !['Azure Active Directory' highlighted in the list of authentication providers for a Function App](../images/use-aadhttpclient-enterpriseapi-secure-function-aad.png)
 
-On the **Azure Active Directory Settings** blade, for the first **Management mode** option, choose *Express*. For the second **Management mode** option, choose *Create new AD App*.
+In the **Azure Active Directory Settings** blade, set the **Management mode** option to *Express*. Set the second **Management mode** option to *Create new AD App*:
 
 ![Azure Active Directory Settings blade opened for a Function app in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-settings.png)
 
 > [!IMPORTANT]
-> Before you continue, note the value in the **Create App** field. This value represents the name of the Azure AD application that you will use to secure the API, and which you will need later, to request permissions to access the API from the SharePoint Framework project.
+> Before you continue, note the value in the **Create App** field. This value represents the name of the Azure AD application that you will use to secure the API, and which you will need later to request permissions to access the API from the SharePoint Framework project.
 
-Confirm your selection, by chooseing the **OK** button.
+Confirm your selection by pressing the **OK** button.
 
-Update Function App authentication and authorization settings, by chooseing the **Save** button.
+Back in the **Authentication / Authorization** blade, update the Function App's authentication and authorization settings by pressing the **Save** button:
 
 ![The 'Save' button highlighted on the 'Authentication / Authorization' blade for a Function App in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-save.png)
 
-Confirm, that the API is correctly secured, by opening a new browser window in private mode and navigating to the API. If the authentication settings have been applied correctly, you should be redirected to the Azure AD login page.
+Confirm that the API is correctly secured by opening a new browser window in private mode and navigating to the API. The URL for your Function App can be found in the **Overview** section of the Function App blade. If the authentication settings have been applied correctly, you should be redirected to the Azure AD login page:
 
 ![Azure AD login page](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-login-page.png)
 
-### Get Azure AD application ID
+### Get an Azure AD application ID
 
 To be able to request an access token to connect to the API, you will need the application ID of the Azure AD application used to secure that API.
 
-In the Function App, navigate to the **Authentication** settings.
+In the Function App, navigate to the **Authentication** settings. If the **Authentication** link is not available under the **Configured features** header, press the **Refresh** button next to the Function App in the left panel:
 
 ![The 'Authentication' link highlighted on the Function App page](../images/use-aadhttpclient-enterpriseapi-appid-authn.png)
 
-From the list of authentication providers, select **Azure Active Directory**.
+From the list of authentication providers, select **Azure Active Directory**:
 
 !['Azure Active Directory' highlighted in the list of Function App authentication providers](../images/use-aadhttpclient-enterpriseapi-appid-aad.png)
 
-On the **Azure Active Directory Settings** blade, choose the **Manage Application** button.
+On the **Azure Active Directory Settings** blade, press the **Manage Application** button:
 
 ![The 'Manage Application' button highlighted on the 'Azure Active Directory Settings' blade](../images/use-aadhttpclient-enterpriseapi-appid-manageapp.png)
 
-On the Azure AD application blade, copy the value of the **Application ID** property.
+On the Azure AD application blade, copy the value of the **Application ID** property:
 
 ![The 'Copy' button next to the 'Application ID' property highlighted on the Azure AD application blade](../images/use-aadhttpclient-enterpriseapi-appid-copy.png)
 
 ### Enable CORS
 
-The Function App will be called from JavaScript running on a SharePoint page. Because the API is hosted on a different domain than the SharePoint portal, cross-domain security constraints will apply to the API call. By default, APIs implemented using Azure Function Apps cannot be called from other domains. You can change it, by adjusting the Function App's CORS settings.
+The Function App will be called from JavaScript running on a SharePoint page. Because the API is hosted on a different domain than the SharePoint portal, cross-domain security constraints will apply to the API call. By default, APIs implemented using Azure Function Apps cannot be called from other domains. You can change this by adjusting the Function App's CORS settings.
 
 In the Function App, switch to the **Platform features** tab.
 
-From the **API** group, select the **CORS** link.
+From the **API** group, select the **CORS** link:
 
 ![The 'CORS' link highlighted on the Function App Platform features tab](../images/use-aadhttpclient-enterpriseapi-cors.png)
 
-To the list of allowed origins, add the URL of your SharePoint tenant, eg. `https://contoso.sharepoint.com`.
+In the list of allowed origins, add the URL of your SharePoint tenant, eg. `https://contoso.sharepoint.com`:
 
 ![SharePoint tenant URL added to the list of allowed origins in the Function App CORS settings](../images/use-aadhttpclient-enterpriseapi-cors-sharepoint.png)
 
-Confirm your changes using the **Save** button.
+Confirm your changes by pressing the **Save** button.
 
-## Consume enterprise API secured with Azure AD from the SharePoint Framework
+## Consume the enterprise API secured with Azure AD from the SharePoint Framework
 
-With the API configured and working, the next step is to build the SharePoint Framework solution that will consume this API.
+With the API configured and working, the next step is to build the SharePoint Framework solution that will consume the API.
 
 > Before you proceed, ensure that you have installed version 1.4.1 or higher of the SharePoint Framework Yeoman generator. If you have installed the generator globally, you can check the installed version by executing in the command line: `npm ls -g --depth=0`.
 
-### Create new SharePoint Framework project
+### Create a new SharePoint Framework project
 
-Start with creating a new SharePoint Framework project. In the command line create new folder for your project:
+Next, you'll create a new SharePoint Framework project to consume the API.
+
+In the command line create a new folder for your project:
 
 ```sh
 md contoso-api
 ```
 
-Change the working directory by executing in the command line:
+Change the working directory:
 
 ```sh
 cd contoso-api
 ```
 
-To create new project, execute the SharePoint Framework Yeoman generator:
+To create a new project, launch the SharePoint Framework Yeoman generator:
 
 ```sh
 yo @microsoft/sharepoint
@@ -238,19 +236,19 @@ When prompted, use the following values:
 
 ![SharePoint Framework Yeoman generator prompts in a terminal window](../images/use-aadhttpclient-enterpriseapi-yeoman.png)
 
-After the project is created, open it in the code editor. In this tutorial you will use Visual Studio Code.
+After the project is created, open it in a code editor. In this tutorial, you will use Visual Studio Code:
 
 ![SharePoint Framework project opened in Visual Studio Code](../images/use-aadhttpclient-enterpriseapi-vscode.png)
 
 ### Request permissions to the enterprise API
 
-By default, SharePoint Framework has no access to enterprise APIs, even though they are registered in the same Azure Active Directory as Office 365. This is by design and allows organizations to consciously choose which APIs should be exposed to scripts and client-side solutions deployed to SharePoint. To get access to your enterprise APIs, you need to issue a permission request from the SharePoint Framework project that you're building.
+By default, SharePoint Framework has no access to enterprise APIs even though they are registered in the same Azure Active Directory as Office 365. This is by design and allows organizations to consciously choose which APIs should be exposed to scripts and client-side solutions deployed to SharePoint. To get access to your enterprise APIs, you need to issue a permission request from the SharePoint Framework project that you're building.
 
-In the code editor, open the **config/package-solution.json** file.
+In the code editor, open the **config/package-solution.json** file:
 
 ![The package solution file opened in Visual Studio Code](../images/use-aadhttpclient-enterpriseapi-vscode-package-solution.png)
 
-To the **solution** property, add a new section named `webApiPermissionRequests` with a reference to the Azure AD application used to secure your API:
+In the **solution** property, add a new property named `webApiPermissionRequests` with a reference to the Azure AD application used to secure your API:
 
 ```json
 {
@@ -277,13 +275,13 @@ To the **solution** property, add a new section named `webApiPermissionRequests`
 The value of the **resource** property refers to either the name or the ID of the Azure AD application used to secure the API. Using the name is more readable and easier to maintain over time. The value of the **scope** property specifies the permission scope that your solution needs in order to communicate with the API. In this tutorial, Azure AD is used only to secure the API, so `user_impersonation` is the scope that you will use.
 
 > [!NOTE]
-> If you want to connect to an enterprise API that has been created previously, contact your administrator to provide you with details for the Azure AD application used to secure it. You will need information such as the application ID, permissions the application exposes and the audience it's configured to.
+> If you want to connect to an enterprise API that has been created previously, contact your administrator to provide you with details for the Azure AD application used to secure it. You will need information such as the application ID, permissions the application exposes, and the audience it's configured to.
 
 ### Connect to the enterprise API
 
 The last part left is to implement the actual connection to the enterprise API.
 
-In the code editor, open the **src\webparts\orders\OrdersWebPart.ts** file.
+In the code editor, open the **src\webparts\orders\OrdersWebPart.ts** file:
 
 ![The OrdersWebPart.ts file opened in Visual Studio Code](../images/use-aadhttpclient-enterpriseapi-vscode-orders.png)
 
@@ -370,78 +368,80 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
 }
 ```
 
-### Deploy the solution to SharePoint app catalog
+### Deploy the solution to the SharePoint app catalog
 
 After completing the implementation of the SharePoint Framework solution, the next step is to deploy it to SharePoint.
 
-First, build and package the project, by executing in the command line:
+First, build and package the project using the command line:
 
 ```sh
 gulp bundle --ship && gulp package-solution --ship
 ```
 
-Next, in the explorer, open the project folder and navigate to the **sharepoint/solution** folder.
+Next, in file explorer, open the project folder and navigate to the **sharepoint/solution** folder:
 
 ![The 'sharepoint/solution' project folder opened in macOS Finder](../images/use-aadhttpclient-enterpriseapi-deploy-folder.png)
 
-In your web browser, navigate to the tenant app catalog in your Office 365 tenant.
+In your web browser, navigate to the tenant app catalog in your Office 365 tenant:
 
 ![Tenant app catalog displayed in web browser](../images/use-aadhttpclient-enterpriseapi-deploy-appcatalog.png)
 
-Add the newly generated .sppkg file by dragging and dropping it from explorer to the tenant app catalog.
+Add the newly generated .sppkg file by dragging and dropping it from explorer to the tenant app catalog:
 
 ![macOS Finder window displayed on top of the web browser showing the tenant app catalog](../images/use-aadhttpclient-enterpriseapi-deploy-draganddrop.png)
 
-When prompted, select the **Make this solution available to all sites in the organization** checkbox. Also, take note of the remark, that you should go to the **Service Principal Permissions Management Page** to approve pending permission requests. Confirm the deployment by chooseing the **Deploy** button.
+When prompted, select the **Make this solution available to all sites in the organization** checkbox. Also, take note of the remark that you should go to the **Service Principal Permissions Management Page** to approve pending permission requests. Confirm the deployment by pressing the **Deploy** button:
 
 ![Dialog prompting for confirming deployment of a SharePoint Framework solution package displayed in a web browser](../images/use-aadhttpclient-enterpriseapi-deploy-dialog.png)
 
 ### Grant access to the enterprise API
 
-In the web browser, navigate to the tenant admin site by choosing from the Office 365 app launcher, the **Admin** option.
+In the web browser, navigate to the tenant admin site by choosing the **Admin** option in the Office 365 app launcher:
 
 ![The 'Admin' option highlighted in the Office 365 app launcher menu](../images/use-aadhttpclient-enterpriseapi-grant-applauncher.png)
 
-In the menu, from the **Admin centers** group, choose **SharePoint**.
+In the menu, from the **Admin centers** group choose **SharePoint**:
 
 ![The 'SharePoint' option highlighted in the menu in the Office 365 Admin center](../images/use-aadhttpclient-enterpriseapi-grant-admincenter.png)
 
-In the SharePoint admin center, navigating to the new SharePoint admin center preview using the **Try the new SharePoint admin center preview** link.
+In the SharePoint admin center, navigate to the new SharePoint admin center preview using the **Try the new SharePoint admin center preview** link:
 
 ![The 'Try the new SharePoint admin center preview' link highlighted in the SharePoint admin center](../images/use-aadhttpclient-enterpriseapi-grant-trypreview.png)
 
-In the new admin center, from the menu, choose the **API management** option.
+In the new admin center, from the menu, choose the **API management** option:
 
 ![The 'API management' option highlighted in the menu in the new SharePoint admin center](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
-On the API management page, in the **Pending approval** group, select the newly added permission request to access the **contoso-api** API.
+On the API management page, in the **Pending approval** group, select the newly added permission request to access the **contoso-api** API (Your API name will be displayed):
 
 ![The select button next to a permission request highlighted on the API management page in the new SharePoint admin center](../images/use-aadhttpclient-enterpriseapi-grant-selectpermission.png)
 
-Next, from the toolbar, select the **Approve or reject** option.
+Next, from the toolbar, press the **Approve or reject** button:
 
 ![The 'Approve or reject' option highlighted in the toolbar on the API management page in the new SharePoint admin center](../images/use-aadhttpclient-enterpriseapi-grant-approvereject.png)
 
-In the side panel, grant the access to the API by chooseing the **Approve** button.
+In the side panel, grant the access to the API by pressing the **Approve** button:
 
 ![The 'Approve' button highlighted in the side panel for managing an API request in the new SharePoint admin center](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
 
 ### Add the Orders web part to the page
 
-To verify that everything is working as expected, add the previously created Orders web part to the page.
+To verify that everything is working as expected, add the previously created Orders web part to a page.
 
-In the web browser, navigate to a site in your tenant. From the toolbar, select the **Edit** option.
+In the web browser, navigate to a site in your tenant. From the toolbar, select the **Edit** option:
 
 ![The 'Edit' button highlighted on the toolbar in a modern team site](../images/use-aadhttpclient-enterpriseapi-webpart-edit.png)
 
-In the canvas, select a section to add the web part to.
+In the canvas, select a section to add the web part to:
 
 ![Page section highlighted in the web browser](../images/use-aadhttpclient-enterpriseapi-webpart-section.png)
 
-Select the **+** option to open the toolbox. In the search box type `Orders` to quickly find the **Orders** web part.
+Select the **+** option to open the toolbox. In the search box type `Orders` to quickly find the **Orders** web part:
 
 !['Orders' typed in the toolbox. Orders web part displayed in the toolbox](../images/use-aadhttpclient-enterpriseapi-webpart-toolbox.png)
 
-Select the **Orders** web part to add it to the page. You should see the list of orders retrieved from the enterprise API.
+Select the **Orders** web part to add it to the page. You should see the list of orders retrieved from the enterprise API:
 
 ![List of recent orders retrieved from an enterprise API displayed on a SharePoint page](../images/use-aadhttpclient-enterpriseapi-webpart-orders.png)
+
+>If you receive an error with the technical details of "Failed to open pop-up window", you have a pop-up blocker enabled. You will need to disable the browser's pop-up blocker for your site in order to show the page correctly.
