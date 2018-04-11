@@ -74,11 +74,11 @@ The **Type** attribute does not indicate the data type of the field as it usuall
 - Guid   
 - Integer   
 - Note (one-line only)    
-- Number    
+- Number
 - Text
 
- <br/
- >   
+<br/> 
+
 ```XML
 <ProjectedFields>
   <Field

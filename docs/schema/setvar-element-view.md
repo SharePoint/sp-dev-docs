@@ -64,6 +64,8 @@ If **Scope="Request"** is specified in the **SetVar** element, a variable assign
 The **SetVar** element is often a child to a [Method](method-element-view.md) element used in batch processing of requests. 
   
 The **SetVar** element is frequently used to change the display mode by setting **DisplayMode** to one of the following values. 
+
+<br/>
   
 |**Value**|**Description**|
 |:-----|:-----|
@@ -87,7 +89,7 @@ The following example illustrates using the **SetVar** element to set global sco
 
 <br/>
 
-In the following example, the first [GetVar](http://msdn.microsoft.com/library/abf483e3-c6e7-4d72-97c6-76300e1b483e%28Office.15%29.aspx) element returns "Value\_2", and the second **GetVar** element returns "Value\_1", because the **SetVar** element that contains "Value\_2" applies only to children of the "Sample" element. "Value\_2" goes out of scope after the closing "Sample" tag. 
+In the following example, the first [GetVar](http://msdn.microsoft.com/library/abf483e3-c6e7-4d72-97c6-76300e1b483e%28Office.15%29.aspx) element returns "Value\_2", and the second **GetVar** element returns "Value\_1" because the **SetVar** element that contains "Value\_2" applies only to children of the "Sample" element. "Value\_2" goes out of scope after the closing "Sample" tag. 
   
 ```XML
 <SetVar Name="myVar">Value_1</SetVar>
@@ -100,7 +102,7 @@ In the following example, the first [GetVar](http://msdn.microsoft.com/library/a
 
 <br/>
 
-The following example evaluates whether a field is required and, if it is required, creates the red asterisk (*) that is displayed beside required fields in New or Edit forms and sets the **HasRequired** variable to **TRUE**.
+The following example evaluates whether a field is required and, if it is required, creates the red asterisk (`*`) that is displayed beside required fields in New or Edit forms and sets the **HasRequired** variable to **TRUE**.
   
 ```XML
 <Switch>

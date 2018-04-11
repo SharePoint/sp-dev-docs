@@ -45,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 - [Case](case-element-view.md)
 - [Default](default-element-view.md)
-- [Expr](expr-element-view.md)|
+- [Expr](expr-element-view.md)
    
 ### Parent elements
 
