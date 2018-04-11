@@ -72,8 +72,6 @@ None
 
 - Minimum: 0
 - Maximum: 1  
-
-<br/> 
    
 ## Example
 
