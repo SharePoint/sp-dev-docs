@@ -21,7 +21,7 @@ GET /_api/web/HubSiteData
 
 |Name |In |Required|Type|Description|
 |-----|---|--------|----|-----------|
-|forceRefresh|query|False|boolean|Default value is false. If false, data is returned from the server's cache. If true, the cache is refreshed with latest updates. Use this if you just made changes and need to see the changes right away.|
+|forceRefresh|query|False|boolean|Default value is false. When false, the data is returned from the server's cache. When true, the cache is refreshed with the latest updates and then returned. Use this if you just made changes and need to see those changes right away.|
 
 ## Request headers
 
