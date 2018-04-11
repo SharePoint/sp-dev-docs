@@ -1,7 +1,5 @@
 ---
-title: "RowLimit Element (List)"
-
-
+title: "RowLimit element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 09906cae-0023-4a4f-94e5-4e167fd08773
-description: "Last modified: March 09, 2015"
+description: Sets the row limit for the number of items to display in a view.
 ---
 
-# RowLimit Element (List)
+# RowLimit element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Sets the row limit for the number of items to display in a view.
   
-```
+```XML
 <RowLimit
   Paged = "TRUE" | "FALSE">
 </RowLimit>
@@ -38,25 +34,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Paged** <br/> |Optional **Boolean**. **TRUE** to specify that the list supports displaying more items page by page. If **FALSE** or unspecified, the row limit is absolute and there is no link to see more items.  <br/> |
+|**Paged** <br/> |Optional **Boolean**. **TRUE** to specify that the list supports displaying more items page by page. If **FALSE** or unspecified, the row limit is absolute, and there is no link to see more items.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
+- [View](view-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ### Remarks
 
@@ -64,7 +56,7 @@ When **Paged** is set to **TRUE**, a [PagedRowset](pagedrowset-element-list.md) 
   
 If **Paged** is not **TRUE** and the row limit is exceeded, the server renders a [RowLimitExceeded](rowlimitexceeded-element-list.md) element in the view if this element is specified. Otherwise, the default behavior is to give no indication to the user that the row limit has been exceeded. 
   
-If **Paged** is **TRUE**, the number of items per page will be displayed, and a **Next** button will provide a link to the next set of items. 
+If **Paged** is **TRUE**, the number of items per page is displayed, and a **Next** button provides a link to the next set of items. 
   
 ## Example
 
@@ -76,7 +68,5 @@ The following line sets 100 as the row limit and specifies that a link be provid
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

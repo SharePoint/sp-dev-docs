@@ -1,7 +1,5 @@
 ---
-title: "ViewHeader Element (List)"
-
-
+title: "ViewHeader element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,26 +11,24 @@ api_name:
 api_type:
 - schema
 ms.assetid: a1007cbe-1c8d-4b2f-9ef7-9e302d15d5b0
-description: "Last modified: March 09, 2015"
+description: Defines how the headers, or prefixes, of view fields are rendered.
 ---
 
-# ViewHeader Element (List)
+# ViewHeader element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines how the headers, or prefixes, of view fields are rendered.
-  
-> [!NOTE]
-> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
-  
-```
+
+```XML
 <ViewHeader
   ExpandXML = "TRUE" | "FALSE">
 </ViewHeader>
 ```
 
+> [!NOTE]
+> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
+  
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -45,21 +41,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
+- [View](view-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1
    
 ### Remarks
 
@@ -67,9 +59,7 @@ This element often contains an HTML fragment with **ExpandXML** set to **TRUE** 
   
 ## Example
 
-The following example defines the field headers for a view. Each field header in the view is rendered according to the class **ms-vh**, which is defined in Core.css ( `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\LAYOUTS\LCID\STYLES`).
-  
-.
+The following example defines the field headers for a view. Each field header in the view is rendered according to the class **ms-vh**, which is defined in Core.css (`\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\LAYOUTS\LCID\STYLES`).
   
 ```XML
 <ViewHeader>
@@ -97,15 +87,9 @@ The following example defines the field headers for a view. Each field header in
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-  
-[XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
-  
-[ViewBidiHeader Element (List)](viewbidiheader-element-list.md)
-  
-[ViewBody Element (List)](viewbody-element-list.md)
-  
-[ViewFooter Element (List)](viewfooter-element-list.md)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx) 
+- [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)  
+- [ViewBidiHeader element (List)](viewbidiheader-element-list.md)  
+- [ViewBody element (List)](viewbody-element-list.md)  
+- [ViewFooter element (List)](viewfooter-element-list.md)
 

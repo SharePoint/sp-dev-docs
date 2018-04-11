@@ -1,5 +1,5 @@
 ---
-title: "PagedClientCallbackRowset Element (DeploymentManifest - SPView)"
+title: "PagedClientCallbackRowset element (DeploymentManifest - SPView)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 8bd99d11-95b5-4eb1-a8e4-e313deeec7a4
 description: "Last modified: March 09, 2015"
 ---
 
-# PagedClientCallbackRowset Element (DeploymentManifest - SPView)
+# PagedClientCallbackRowset element (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+- [View element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 

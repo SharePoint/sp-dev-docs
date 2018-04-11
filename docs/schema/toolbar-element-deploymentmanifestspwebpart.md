@@ -1,5 +1,5 @@
 ---
-title: "Toolbar Element (DeploymentManifest - SPWebPart)"
+title: "Toolbar element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: ac7741dd-5e9a-45e4-93fa-b0a6263a05d2
 description: "Last modified: March 09, 2015"
 ---
 
-# Toolbar Element (DeploymentManifest - SPWebPart)
+# Toolbar element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+- [WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 

@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-```VB.net
+```vb
 <Method  Name = "Text">  <Filter    Name = "Text"     Type = "Text"     Value = "Text" /> </Method>
 ```
 
@@ -49,7 +49,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 This is the description for a Code Example.
   
-`Microsoft.Win32.RegistryKey#4Optional` comments.
+Microsoft.Win32.RegistryKey#4
+Optional comments.
   
 ### .NET Framework equivalent
 

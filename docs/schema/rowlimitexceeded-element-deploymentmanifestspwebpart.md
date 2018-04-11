@@ -1,5 +1,5 @@
 ---
-title: "RowLimitExceeded Element (DeploymentManifest - SPWebPart)"
+title: "RowLimitExceeded element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 5fe03d39-4800-4333-ab03-377c6fa3871b
 description: "Last modified: March 09, 2015"
 ---
 
-# RowLimitExceeded Element (DeploymentManifest - SPWebPart)
+# RowLimitExceeded element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+- [WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 

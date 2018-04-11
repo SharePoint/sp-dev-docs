@@ -1,7 +1,5 @@
 ---
-title: "Views Element (List)"
-
-
+title: "Views element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 8596335f-5bb6-49e8-b362-a87a7c76a168
-description: "Last modified: March 09, 2015"
+description: Contains an enumeration of the views that are used in a list.
 ---
 
-# Views Element (List)
+# Views element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains an enumeration of the views that are used in a list.
   
-```
+```XML
 <Views>
 </Views>
 ```
@@ -35,27 +31,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[View](view-element-list.md)|
+- [View](view-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[MetaData (List)](metadata-element-list.md), [MetaData (Site)](metadata-element-site.md)|
+- [MetaData (List)](metadata-element-list.md)
+- [MetaData (Site)](metadata-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ## Example
 
@@ -109,7 +99,5 @@ The following example illustrates a collection of [View](view-element-list.md) e
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

@@ -1,5 +1,5 @@
 ---
-title: "PagedRowset Element (DeploymentManifest - SPView)"
+title: "PagedRowset element (DeploymentManifest - SPView)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 2e077bd2-785f-4fe3-816a-e25c9da93880
 description: "Last modified: March 09, 2015"
 ---
 
-# PagedRowset Element (DeploymentManifest - SPView)
+# PagedRowset element (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+- [View element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 

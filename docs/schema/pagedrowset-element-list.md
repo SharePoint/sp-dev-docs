@@ -1,7 +1,5 @@
 ---
-title: "PagedRowset Element (List)"
-
-
+title: "PagedRowset element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,20 +11,18 @@ api_name:
 api_type:
 - schema
 ms.assetid: 92b3b08a-c193-4a68-bfe0-706a349d448b
-description: "Last modified: March 09, 2015"
+description: Renders Collaborative Application Markup Language (CAML) within a view, executing if more items are returned in the view than the specified row limit for the view.
 ---
 
-# PagedRowset Element (List)
+# PagedRowset element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Renders Collaborative Application Markup Language (CAML) within a view, executing if more items are returned in the view than the specified row limit for the view.
   
 Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx).
   
-```
+```XML
 <PagedRowset>
 </PagedRowset>
 ```
@@ -37,45 +33,35 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
+- [View](view-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ### Remarks
 
 This element provides a section of the view that is rendered if there is more than one page of data. Within a **PagedRowset** element, the following variables can be implemented: 
   
--  `<GetVar Name="PageFirstRow"/>` returns the item number of the first item on the current page. 
+- `<GetVar Name="PageFirstRow"/>` returns the item number of the first item on the current page. 
     
--  `<GetVar Name="PageLastRow"/>` returns the item number of the last item on the current page. 
+- `<GetVar Name="PageLastRow"/>` returns the item number of the last item on the current page. 
     
--  `<GetVar Name="NextPageData"/>` returns the information that must be passed along in the URL so that the next page of data to be displayed can be determined. 
+- `<GetVar Name="NextPageData"/>` returns the information that must be passed along in the URL so that the next page of data to be displayed can be determined. 
     
 ## Example
 
-The following example uses the **PagedRowset** element to display the string "(Items 1 to  _N_)" where  _N_ represents the current setting for the [RowLimit](rowlimit-element-list.md) element. The example also displays "Next" and an icon representing "Next," which are both hyperlinks to the current view page with information necessary to display the next 100 items. 
-  
-```
-
-```
+The following example uses the **PagedRowset** element to display the string "(Items 1 to  _N_)" where  _N_ represents the current setting for the [RowLimit](rowlimit-element-list.md) element. The example also displays **Next** and an icon representing **Next**, which are both hyperlinks to the current view page with information necessary to display the next 100 items. 
 
 ```XML
 <PagedRowset>
@@ -115,9 +101,6 @@ The following example uses the **PagedRowset** element to display the string "(I
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-  
-[XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
+- [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
 

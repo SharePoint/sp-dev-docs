@@ -1,5 +1,5 @@
 ---
-title: "RowLimit Element (DeploymentManifest - SPWebPart)"
+title: "RowLimit element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 4a0bc9f1-5506-4a06-9a45-ce35252a4f62
 description: "Last modified: March 09, 2015"
 ---
 
-# RowLimit Element (DeploymentManifest - SPWebPart)
+# RowLimit element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -43,7 +43,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+- [WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 

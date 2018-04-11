@@ -1,5 +1,5 @@
 ---
-title: "ListFormBody Element (DeploymentManifest - SPView)"
+title: "ListFormBody element (DeploymentManifest - SPView)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: cfbbd832-9d11-479e-9d15-59a495ed19f3
 description: "Last modified: March 09, 2015"
 ---
 
-# ListFormBody Element (DeploymentManifest - SPView)
+# ListFormBody element (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+- [View element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 

@@ -1,7 +1,5 @@
 ---
-title: "ParameterBindings Element (List)"
-
-
+title: "ParameterBindings element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c70a0a33-efd8-48fa-9841-0dd4ae4bea84
-description: "Last modified: March 09, 2015"
+description: Contains a collection of stylesheet parameter bindings to make information available to the XSL that renders the view.
 ---
 
-# ParameterBindings Element (List)
+# ParameterBindings element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of stylesheet parameter bindings to make information available to the XSL that renders the view.
   
-```VB.net
+```vb
 <ParameterBindings>  <ParameterBinding    Name = "Text"    Location = "Text" /></ParameterBindings>
 ```
 
@@ -34,27 +30,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[ParameterBinding](parameterbinding-element-list.md)|
+- [ParameterBinding](parameterbinding-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md)|
+- [View](view-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
@@ -62,13 +51,8 @@ For information about how to use this element, see [XSLT Parameter Bindings](htt
   
 ## See also
 
-
-
-[XSLT Parameter Bindings](http://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d%28Office.15%29.aspx)
-  
-[XSLT Global Parameters](http://msdn.microsoft.com/library/13abde86-c820-42bd-863a-c9c8829255a6%28Office.15%29.aspx)
-  
-[How to: Implement Resources in Custom List Views](http://msdn.microsoft.com/library/f8a01a0b-0538-4c4a-b2af-30c3f7f1ff4b%28Office.15%29.aspx)
-  
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [XSLT Parameter Bindings](http://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d%28Office.15%29.aspx)
+- [XSLT Global Parameters](http://msdn.microsoft.com/library/13abde86-c820-42bd-863a-c9c8829255a6%28Office.15%29.aspx) 
+- [How to: Implement Resources in Custom List Views](http://msdn.microsoft.com/library/f8a01a0b-0538-4c4a-b2af-30c3f7f1ff4b%28Office.15%29.aspx) 
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

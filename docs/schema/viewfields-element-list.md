@@ -1,7 +1,5 @@
 ---
-title: "ViewFields Element (List)"
-
-
+title: "ViewFields element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 488d22b5-b3e0-465c-a56a-1a38afb15db5
-description: "Last modified: March 09, 2015"
+description: Provides an enumeration of the fields in a view through a listing of the FieldRef elements.
 ---
 
-# ViewFields Element (List)
+# ViewFields element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Provides an enumeration of the fields in a view through a listing of the [FieldRef](fieldref-element-list.md) elements. 
   
-```
+```XML
 <ViewFields>
 </ViewFields>
 ```
@@ -35,27 +31,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-list.md)|
+- [FieldRef](fieldref-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
+- [View](view-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ### Remarks
 
@@ -63,7 +53,7 @@ For a [FieldRef](fieldref-element-list.md) element to be used within a [ViewBody
   
 The SQL SELECT clause is generated from the collection of **FieldRef** listings. 
   
- **ViewFields** can include references to fields in a foreign list, if there is a join defined by a [Join](join-element-view.md) element. 
+**ViewFields** can include references to fields in a foreign list, if there is a join defined by a [Join](join-element-view.md) element. 
   
 ## Example
 
@@ -82,9 +72,6 @@ The following example enumerates the collection of fields used in a view.
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-  
-[ViewBody Element (List)](viewbody-element-list.md)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx) 
+- [ViewBody element (List)](viewbody-element-list.md)
 

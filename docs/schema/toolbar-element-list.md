@@ -1,7 +1,5 @@
 ---
-title: "Toolbar Element (List)"
-
-
+title: "Toolbar element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 75aabf27-88ad-4c87-be5f-0592fce90d56
-description: "Last modified: March 09, 2015"
+description: Defines the toolbar of a list view, which is the section of a view that is rendered above the view header.
 ---
 
-# Toolbar Element (List)
+# Toolbar element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the toolbar of a list view, which is the section of a view that is rendered above the view header.
   
-```
+```XML
 <Toolbar
   Position = "After"
   Type = "Standard" | "FreeForm">
@@ -39,26 +35,23 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Position** <br/> |Optional **Text**. If **Position = "After"** is specified, the toolbar will appear below the view body. If not specified, the toolbar will appear above the view body.  <br/> |
+|**Position** <br/> |Optional **Text**. If **Position = "After"** is specified, the toolbarappears below the view body. If not specified, the toolbar appears above the view body.  <br/> |
 |**Type** <br/> |Required **Text**. Specifies the kind of toolbar; this can be set to either **Standard** or **FreeForm**.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[MetaData (List)](metadata-element-list.md), [MetaData (Site)](metadata-element-site.md), [View](view-element-list.md)|
+- [MetaData (List)](metadata-element-list.md)
+- [MetaData (Site)](metadata-element-site.md)
+- [View](view-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -81,7 +74,5 @@ The following excerpt from the [Schema.xml](http://msdn.microsoft.com/library/c2
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

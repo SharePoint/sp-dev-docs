@@ -1,7 +1,5 @@
 ---
-title: "ListFormBody Element (List)"
-
-
+title: "ListFormBody element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: fb387978-a288-49d0-b847-64ddca76cb18
-description: "Last modified: March 09, 2015"
+description: Contains the definition of the body for a list form.
 ---
 
-# ListFormBody Element (List)
+# ListFormBody element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the definition of the body for a list form.
   
-```
+```XML
 <ListFormBody>
 </ListFormBody>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[Form](form-element-list.md)|
+- [Form](form-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ### Remarks
 
@@ -63,11 +52,7 @@ The **ListFormBody** element is used in the [Schema.xml](http://msdn.microsoft.c
   
 ## See also
 
-
-
-[ListFormButtons](listformbuttons-element-list.md)
-  
-[ListFormClosing](listformclosing-element-list.md)
-  
-[ListFormOpening](http://msdn.microsoft.com/library/15f6cc48-7dd9-4d5d-baf5-e54e1fb7945bfb7945b%28Office.15%29.aspx)
+- [ListFormButtons](listformbuttons-element-list.md)  
+- [ListFormClosing](listformclosing-element-list.md)  
+- [ListFormOpening](listformopening-element-list.md)
 

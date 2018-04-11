@@ -1,7 +1,5 @@
 ---
-title: "WebParts Element (List)"
-
-
+title: "WebParts element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,19 +11,22 @@ api_name:
 api_type:
 - schema
 ms.assetid: b3cf8641-bf7b-4e48-a4fa-5fe270bd0ad3
-description: "Last modified: March 09, 2015"
+description: Contains a collection of Web Parts in a form for a list definition or a list template.
 ---
 
-# WebParts Element (List)
+# WebParts element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of Web Parts in a form for a list definition or a list template.
   
-```VB.net
-<WebParts>  <AllUsersWebPart    WebPartOrder = Integer    WebPartZoneID = "Text">      <![CDATA[...]]>  </AllUsersWebPart></WebParts>
+```vb
+<WebParts>
+    <AllUsersWebPart
+        WebPartOrder = Integer    
+        WebPartZoneID = "Text">      <![CDATA[...]]>  
+    </AllUsersWebPart>
+</WebParts>
 ```
 
 ## Elements and attributes
@@ -34,27 +35,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[AllUsersWebPart](alluserswebpart-element-list.md)|
+- [AllUsersWebPart](alluserswebpart-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Form](form-element-list.md)|
+- [Form](form-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ### Remarks
 

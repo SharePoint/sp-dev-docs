@@ -1,5 +1,5 @@
 ---
-title: "PagedClientCallbackRowset Element (DeploymentManifest - SPWebPart)"
+title: "PagedClientCallbackRowset element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 7ce7e786-c712-4a8c-95bc-77be740c55f2
 description: "Last modified: March 09, 2015"
 ---
 
-# PagedClientCallbackRowset Element (DeploymentManifest - SPWebPart)
+# PagedClientCallbackRowset element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+- [WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 

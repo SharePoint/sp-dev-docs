@@ -1,7 +1,5 @@
 ---
-title: "XslLink Element (List)"
-
-
+title: "XslLink element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: df2bc8b1-73d2-475b-8c25-4ac57060ea0c
-description: "Last modified: March 09, 2015"
+description: Applies the templates that are defined within the specified XSL file to the list view.
 ---
 
-# XslLink Element (List)
+# XslLink element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Applies the templates that are defined within the specified XSL file to the list view.
   
-```VB.net
+```vb
 <XslLink  Default = "TRUE" | "FALSE">  </XslLink>
 ```
 
@@ -40,25 +36,18 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md)|
+- [View](view-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

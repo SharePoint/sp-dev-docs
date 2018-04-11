@@ -1,5 +1,5 @@
 ---
-title: "ListFormBody Element (DeploymentManifest - SPWebPart)"
+title: "ListFormBody element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: c48d91b7-0452-488d-8b47-7546f9bae59b
 description: "Last modified: March 09, 2015"
 ---
 
-# ListFormBody Element (DeploymentManifest - SPWebPart)
+# ListFormBody element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -46,7 +46,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+- [WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 

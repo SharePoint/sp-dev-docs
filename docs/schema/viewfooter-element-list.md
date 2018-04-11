@@ -1,7 +1,5 @@
 ---
-title: "ViewFooter Element (List)"
-
-
+title: "ViewFooter element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,26 +11,24 @@ api_name:
 api_type:
 - schema
 ms.assetid: d36abf5f-814e-42c7-90c8-a50c7f1130ac
-description: "Last modified: March 09, 2015"
+description: Defines the footer, or suffix, for a view.
 ---
 
-# ViewFooter Element (List)
+# ViewFooter element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the footer, or suffix, for a view.
-  
-> [!NOTE]
-> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
-  
-```
+
+```XML
 <ViewFooter
   ExpandXML = "TRUE" | "FALSE">
 </ViewFooter>
 ```
 
+> [!NOTE]
+> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
+  
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -45,21 +41,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
+- [View](view-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -84,13 +76,8 @@ The following example defines the view footer for a document library.
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-  
-[XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
-  
-[ViewBody Element (List)](viewbody-element-list.md)
-  
-[ViewHeader Element (List)](viewheader-element-list.md)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
+- [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx) 
+- [ViewBody element (List)](viewbody-element-list.md) 
+- [ViewHeader element (List)](viewheader-element-list.md)
 

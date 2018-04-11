@@ -1,7 +1,5 @@
 ---
-title: "RowLimitExceeded Element (List)"
-
-
+title: "RowLimitExceeded element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,52 +11,43 @@ api_name:
 api_type:
 - schema
 ms.assetid: f40d722e-6579-4d89-9c9c-1c683bd3ca9a
-description: "Last modified: March 09, 2015"
+description: Specifies alternate rendering when a row limit is exceeded. Executes if the Paged attribute of the Row element is not set to TRUE.
 ---
 
-# RowLimitExceeded Element (List)
+# RowLimitExceeded element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies alternate rendering when a row limit is exceeded. It executes if the **Paged** attribute of the [Row](row-element-site.md) element is not set to **TRUE**.
+
+```XML
+<RowLimitExceeded>
+</RowLimitExceeded>
+```
   
 > [!NOTE]
 > Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
   
-```
-<RowLimitExceeded>
-</RowLimitExceeded>
-```
-
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md)|
+- [View](view-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -81,13 +70,8 @@ The following example provides a link to more items if the row limit is exceeded
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-  
-[XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
-  
-[RowLimit Element (List)](rowlimit-element-list.md)
-  
-[Rows Element (Site)](rows-element-site.md)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
+- [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx) 
+- [RowLimit Element (List)](rowlimit-element-list.md) 
+- [Rows Element (Site)](rows-element-site.md)
 

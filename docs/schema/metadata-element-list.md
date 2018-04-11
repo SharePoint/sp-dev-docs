@@ -1,7 +1,5 @@
 ---
-title: "MetaData Element (List)"
-
-
+title: "MetaData element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d5db52a4-83b2-45a9-a259-f539937dbcb3
-description: "Last modified: March 09, 2015"
+description: Used in list definitions (Schema.xml file) to separate list metadata from data.
 ---
 
-# MetaData Element (List)
+# MetaData element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in list definitions ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file) to separate list metadata from data. 
   
-```
+```XML
 <MetaData>
 </MetaData>
 ```
@@ -35,27 +31,28 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[ContentTypes](contenttypes-element-list.md), [Default](default-element-listform.md), [DefaultDescription](defaultdescription-element-list.md), [DocumentLibraryTemplate](documentlibrarytemplate-element-list.md), [Fields](fields-element-list.md), [Forms](forms-element-list.md), [Toolbar](toolbar-element-list.md), [Validation](validation-element-list.md), [Views](views-element-list.md)|
+- [ContentTypes](contenttypes-element-list.md)
+- [Default](default-element-listform.md)
+- [DefaultDescription](defaultdescription-element-list.md)
+- [DocumentLibraryTemplate](documentlibrarytemplate-element-list.md)
+- [Fields](fields-element-list.md)
+- [Forms](forms-element-list.md)
+- [Toolbar](toolbar-element-list.md)
+- [Validation](validation-element-list.md)
+- [Views](views-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[List](list-element-list.md)|
+- [List](list-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -85,7 +82,5 @@ The following sample illustrates the skeletal structure of a list with **MetaDat
 
 ## See also
 
-
-
-[Data](data-element-site.md)
+- [Data](data-element-site.md)
 

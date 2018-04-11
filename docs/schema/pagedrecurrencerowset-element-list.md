@@ -1,7 +1,5 @@
 ---
-title: "PagedRecurrenceRowset Element (List)"
-
-
+title: "PagedRecurrenceRowset element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,20 +11,18 @@ api_name:
 api_type:
 - schema
 ms.assetid: de4d0dab-c427-4536-9c5d-6d3d1da8c1e9
-description: "Last modified: March 09, 2015"
+description: Contains the definition of the page to display for a recurring item in an events list when the number of items in the recurrence surpasses the limit set by the RowLimit element.
 ---
 
-# PagedRecurrenceRowset Element (List)
+# PagedRecurrenceRowset element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the definition of the page to display for a recurring item in an events list when the number of items in the recurrence surpasses the limit set by the [RowLimit](rowlimit-element-list.md) element. 
   
 Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx).
   
-```
+```XML
 <PagedRecurrenceRowset>
 </PagedRecurrenceRowset>
 ```
@@ -37,27 +33,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
+- [View](view-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ## Example
 
@@ -132,9 +122,6 @@ The following example from the [Schema.xml](http://msdn.microsoft.com/library/c2
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-  
-[XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
+- [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
 

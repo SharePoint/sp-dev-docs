@@ -1,7 +1,5 @@
 ---
-title: "ViewStyle Element (List)"
-
-
+title: "ViewStyle element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 6a970855-360e-4e20-b793-34078b95f005
-description: "Last modified: March 09, 2015"
+description: Contains the definition of a view style for a list.
 ---
 
-# ViewStyle Element (List)
+# ViewStyle element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the definition of a view style for a list.
   
-```
+```XML
 <ViewStyle
   BaseType = "Integer" | "Text"
   Description = "Text"
@@ -52,21 +48,28 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-|**Element**|
-|:-----|
-|[GroupByFooter](groupbyfooter-element-list.md), [GroupByHeader](groupbyheader-element-list.md), [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md), [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md), [PagedRowset](pagedrowset-element-list.md), [Script](script-element.md)[ViewBidiHeader](viewbidiheader-element-list.md), [ViewBody](viewbody-element-list.md), [ViewEmpty](viewempty-element-list.md), [ViewFields](viewfields-element-list.md), [ViewFooter](viewfooter-element-list.md), [ViewHeader](viewheader-element-list.md)|
+- [GroupByFooter](groupbyfooter-element-list.md)
+- [GroupByHeader](groupbyheader-element-list.md)
+- [PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md)
+- [PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md)
+- [PagedRowset](pagedrowset-element-list.md)
+- [Script](script-element.md)
+- [ViewBidiHeader](viewbidiheader-element-list.md)
+- [ViewBody](viewbody-element-list.md)
+- [ViewEmpty](viewempty-element-list.md)
+- [ViewFields](viewfields-element-list.md)
+- [ViewFooter](viewfooter-element-list.md)
+- [ViewHeader](viewheader-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[View Element (List)](view-element-list.md), [ViewStyles](viewstyles-element.md)|
+- [View element (List)](view-element-list.md)
+- [ViewStyles](viewstyles-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1 (Unbounded within [ViewStyles](viewstyles-element.md))  <br/> |
+- Minimum: 0
+- Maximum: 1 (Unbounded within [ViewStyles](viewstyles-element.md))  
    
 ## Example
 
@@ -109,7 +112,5 @@ The following example outlines the sections contained within the Boxed view styl
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

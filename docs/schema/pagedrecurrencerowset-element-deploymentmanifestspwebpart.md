@@ -1,5 +1,5 @@
 ---
-title: "PagedRecurrenceRowset Element (DeploymentManifest - SPWebPart)"
+title: "PagedRecurrenceRowset element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 5178c6d7-f7b2-4ccd-bb3a-18e43886b841
 description: "Last modified: March 09, 2015"
 ---
 
-# PagedRecurrenceRowset Element (DeploymentManifest - SPWebPart)
+# PagedRecurrenceRowset element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -46,7 +46,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+- [WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 

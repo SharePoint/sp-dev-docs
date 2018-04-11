@@ -1,7 +1,5 @@
 ---
-title: "PagedClientCallbackRowset Element (List)"
-
-
+title: "PagedClientCallbackRowset element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,24 +11,22 @@ api_name:
 api_type:
 - schema
 ms.assetid: 4013f6b8-ec7e-4072-a74e-e9c1a38b716e
-description: "Last modified: March 09, 2015"
+description: Defines user interface elements to display for accessing subsequent pages when the number of rows returned in a view surpasses the limit set by the RowLimit element.
 ---
 
-# PagedClientCallbackRowset Element (List)
+# PagedClientCallbackRowset element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines user interface elements to display for accessing subsequent pages when the number of rows returned in a view surpasses the limit set by the [RowLimit](rowlimit-element-list.md) element. 
-  
-> [!NOTE]
-> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
-  
-```
+
+```XML
 <PagedClientCallbackRowset>
 </PagedClientCallbackRowset>
 ```
+
+> [!NOTE]
+> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
 
 ## Elements and attributes
 
@@ -38,27 +34,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md), [ViewStyle](viewstyle-element-list.md)|
+- [View](view-element-list.md)
+- [ViewStyle](viewstyle-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -94,9 +84,6 @@ The following example uses the **PagedClientCallbackRowset** element to define a
 
 ## See also
 
-
-
-[List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-  
-[XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
+- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx) 
+- [XMLDefinition and CAML View Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
 

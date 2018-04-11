@@ -1,5 +1,5 @@
 ---
-title: "PagedRecurrenceRowset Element (DeploymentManifest - SPView)"
+title: "PagedRecurrenceRowset element (DeploymentManifest - SPView)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 53a0de25-b57c-4f55-b508-75c38dac199d
 description: "Last modified: March 09, 2015"
 ---
 
-# PagedRecurrenceRowset Element (DeploymentManifest - SPView)
+# PagedRecurrenceRowset element (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+- [View element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 

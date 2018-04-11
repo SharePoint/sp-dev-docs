@@ -1,7 +1,5 @@
 ---
-title: "ListFormOpening Element (List)"
-
-
+title: "ListFormOpening element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 15f6cc48-7dd9-4d5d-baf5-e54e1fb7945b
-description: "Last modified: March 09, 2015"
+description: Defines the opening section in a form for a list.
 ---
 
-# ListFormOpening Element (List)
+# ListFormOpening element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the opening section in a form for a list.
   
-```
+```XML
 <ListFormOpening>
 </ListFormOpening>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Parent elements
 
-||
-|:-----|
-|[Form](form-element-list.md)|
+- [Form](form-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1
    
 ### Remarks
 
@@ -63,11 +52,7 @@ The **ListFormOpening** element is used in the [Schema.xml](http://msdn.microsof
   
 ## See also
 
-
-
-[ListFormBody](listformbody-element-list.md)
-  
-[ListFormButtons](listformbuttons-element-list.md)
-  
-[ListFormClosing](listformclosing-element-list.md)
+- [ListFormBody](listformbody-element-list.md) 
+- [ListFormButtons](listformbuttons-element-list.md)  
+- [ListFormClosing](listformclosing-element-list.md)
 
