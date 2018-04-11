@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 749fc52f-df5a-4fe6-9aea-6f6a6f0edd73
 ---
 
-# NavBarPage Element (Module)
+# NavBarPage element (Module)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

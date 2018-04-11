@@ -1,7 +1,5 @@
 ---
-title: "Rows Element (Site)"
-
-
+title: "Rows element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 9b011981-3df6-4e9e-a910-e6aa4bd2de31
-description: "Last modified: March 09, 2015"
+description: Contains a collection of Row elements specifying default data for lists. 
 ---
 
-# Rows Element (Site)
+# Rows element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of [Row](row-element-site.md) elements specifying default data for lists. 
   
-```
+```XML
 <Rows>
   <Row></Row>
   <Row></Row>
@@ -38,27 +34,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Row](row-element-site.md)|
+- [Row](row-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Data](data-element-site.md)|
+- [Data](data-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ### Remarks
 

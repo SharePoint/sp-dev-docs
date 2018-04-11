@@ -1,7 +1,5 @@
 ---
-title: "NavBars Element (Site)"
-
-
+title: "NavBars element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: e3e5a204-99e9-47aa-ba25-74f1a7bf5672
-description: "Last modified: March 09, 2015"
+description: Contains the collection of links that appear in the top and left navigation areas of a home page.
 ---
 
-# NavBars Element (Site)
+# NavBars element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the collection of links that appear in the top and left navigation areas of a home page.
   
-```
+```XML
 <NavBars>
 </NavBars>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[NavBar](navbar-element-site.md)|
+- [NavBar](navbar-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Project](project-element-site.md)|
+- [Project](project-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ## Example
 

@@ -1,7 +1,5 @@
 ---
-title: "Properties Element (Site)"
-
-
+title: "Properties element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: cc3e73da-e9c5-44fb-a43c-f7fa17b6c144
-description: "Last modified: March 09, 2015"
+description: Specifies custom property values to implement within the Feature. 
 ---
 
-# Properties Element (Site)
+# Properties element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies custom property values to implement within the Feature. 
   
-```
+```XML
 <Properties>
     <Property
       Key = "Text"
@@ -39,26 +35,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Property](property-element-sitefeature.md)|
+- [Property](property-element-sitefeature.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Feature](feature-element-site.md)|
+- [Feature](feature-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 

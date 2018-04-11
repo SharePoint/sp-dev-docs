@@ -1,7 +1,5 @@
 ---
-title: "SiteFeatures Element (Site)"
-
-
+title: "SiteFeatures element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 8e2776f2-cdc2-4e27-9a6b-0a4b308b7562
-description: "Last modified: March 09, 2015"
+description: Specifies site collection Features to activate in site collections that are created through the site definition.
 ---
 
-# SiteFeatures Element (Site)
+# SiteFeatures element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies site collection Features to activate in site collections that are created through the site definition.
   
-```
+```XML
 <SiteFeatures>
 </SiteFeatures>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Feature](feature-element-site.md)|
+- [Feature](feature-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Configuration](configuration-element-site.md)|
+- [Configuration](configuration-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 

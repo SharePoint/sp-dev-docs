@@ -1,7 +1,5 @@
 ---
-title: "WebPartConnection Element (Site)"
-
-
+title: "WebPartConnection element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,13 +14,11 @@ ms.assetid: ed34f1b6-52b3-4f2d-a84e-c19138f9c5b3
 description: "Last modified: March 09, 2015"
 ---
 
-# WebPartConnection Element (Site)
+# WebPartConnection element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-```
+```XML
 <WebPartConnection
   ConsumerConnectionPointID = "Text"  ConsumerID = "Text"  CrossPageConnectionID = "Text"  CrossPageSchema = "Text"  ID = "Text"  ProviderConnectionPointID = "Text"  ProviderID = "Text"  TargetPageUrl = "Text">
 </WebPartConnection>
@@ -47,20 +43,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[WebPartTransformer](webparttransformer-element-site.md)|
+- [WebPartTransformer](webparttransformer-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[File](file-element.md)|
+- [File](file-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

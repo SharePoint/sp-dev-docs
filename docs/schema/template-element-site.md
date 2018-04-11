@@ -1,7 +1,5 @@
 ---
-title: "Template Element (Site)"
-
-
+title: "Template element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 093d5a6c-c6a0-472e-8e79-172ceedd0e24
-description: "Last modified: March 09, 2015"
+description: Specifies, in a WebTemp*.xml file, a site definition that can be used to create websites within the deployment. 
 ---
 
-# Template Element (Site)
+# Template element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Specifies, in a `WebTemp*.xml` file, a site definition that can be used to create websites within the deployment. 
   
-Specifies, in a  `WebTemp*.xml` file, a site definition that can be used to create Web sites within the deployment. 
-  
-```
+```XML
 <Template
   ID = "Text"
   Name = "Text"
@@ -46,20 +42,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Configuration](configuration-element-site.md)|
+- [Configuration](configuration-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Templates](templates-element-site.md)|
+- [Templates](templates-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

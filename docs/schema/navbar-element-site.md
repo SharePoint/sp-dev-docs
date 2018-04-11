@@ -1,7 +1,5 @@
 ---
-title: "NavBar Element (Site)"
-
-
+title: "NavBar element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0f997d7b-d1c1-4405-9d83-26e20cd37767
-description: "Last modified: March 09, 2015"
+description: Contains the definition of the navigation area for either the top links of all pages within a site or for the Quick Launch area of the home page.
 ---
 
-# NavBar Element (Site)
+# NavBar element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the definition of the navigation area for either the top links of all pages within a site or for the Quick Launch area of the home page.
   
-```
+```XML
 <NavBar
   Body = "Text"
   ID = "Integer"
@@ -54,21 +50,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[NavBarLink](navbarlink-element-site.md), [NavBarPage](navbarpage-element-sitemodule.md)|
+- [NavBarLink](navbarlink-element-site.md)
+- [NavBarPage](navbarpage-element-sitemodule.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[NavBars](navbars-element-site.md)|
+- [NavBars](navbars-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ## Example
 

@@ -1,7 +1,5 @@
 ---
-title: "Project Element (Site)"
-
-
+title: "Project element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2ee96a89-03e9-4283-8a29-05c1e5b4788a
-description: "Last modified: March 09, 2015"
+description: Serves as the top-level element in an Onet.xml file that contains a site definition configuration or Web template configuration for a new website.
 ---
 
-# Project Element (Site)
+# Project element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Serves as the top-level element in an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file that contains a site definition configuration or Web template configuration for a new website. 
   
-Serves as the top-level element in an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file that contains a site definition configuration or Web template configuration for a new Web site. 
-  
-```
+```XML
 <Project
   AlternateCSS = "Text"
   AlternateHeader = "Text"  AlternateUrl = "Text"
@@ -49,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**AlternateHeader** <br/> |Optional **Text**. Used to specify the name of an ASPX page located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternate header for the top area in site pages. This attribute provides a means to replace the header region of a page with the output of an ASPX page that defines a different header. For example, add  `AlternateHeader="myHeader.aspx"` to the **Project** element to specify  `myHeader.aspx` as the name of the file that provides an alternate header.  <br/> |
 |**AlternateUrl** <br/> |Optional **Text**.  <br/> |
 |**CustomJSUrl** <br/> |Optional **Text**. Specifies a custom JavaScript file located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that contains script to execute within a site created from the site definition.  <br/> |
-|**DisableWebDesignFeatures** <br/> | Optional **Text**. Blocks specific editing features that are used in SharePoint Designer. Possible values include the following, which can be delimited using semicolons:  <br/> **wdfbackup** Disable Web site backup.  <br/> **wdfrestore** Disable Web site restore.  <br/> **wdfpackageimport** Disable Web site package import.  <br/> **wdfpackageexport** Disable Web site package export.  <br/> **wdfthemeweb** Disable theme support for the Web site.  <br/> **wdfthemepage** Disable theme support for individual pages.  <br/> **wdfnavigationbars** Disable support for navigation bars.  <br/> **wdfnavigationview** Disable the Navigation view for the Web site.  <br/> **wdfpublishview** Disable the Remote Web site view for the Web site.  <br/> **wdfpublishselectedfile** Do not allow the selected file to be published.  <br/> **wdfopensite** Disable access to the entire Web site.  <br/> **wdfnewsubsite** Do not allow the creation of a new subsite.  <br/> |
+|**DisableWebDesignFeatures** <br/> | Optional **Text**. Blocks specific editing features that are used in SharePoint Designer.<br/><br/>Possible values include the following, which can be delimited using semicolons:  <br/> **wdfbackup** Disable website backup.  <br/> **wdfrestore** Disable website restore.  <br/> **wdfpackageimport** Disable website package import.  <br/> **wdfpackageexport** Disable website package export.  <br/> **wdfthemeweb** Disable theme support for the website.  <br/> **wdfthemepage** Disable theme support for individual pages.  <br/> **wdfnavigationbars** Disable support for navigation bars.  <br/> **wdfnavigationview** Disable the Navigation view for the website.  <br/> **wdfpublishview** Disable the Remote website view for the website.  <br/> **wdfpublishselectedfile** Do not allow the selected file to be published.  <br/> **wdfopensite** Disable access to the entire website.  <br/> **wdfnewsubsite** Do not allow the creation of a new subsite.  <br/> |
 |**ListDir** <br/> |Required **Text**. Specifies the directory in which to implement new lists.  <br/> |
 |**Revision** <br/> |Optional **Integer**. Specifies the build number of the site definition.  <br/> |
 |**SiteLogoUrl** <br/> |Optional **Text**. Specifies a server-relative URL for a custom image to use for the site logo. For example,  `/_layouts//images/MyCustomLogo.gif`.  <br/> |
@@ -59,21 +55,25 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[BaseTypes](basetypes-element-site.md), [Components](components-element-site.md), [Configurations](configurations-element-site.md), [DocumentTemplates](documenttemplates-element-site.md), [ListTemplates](listtemplates-element-site.md), [Modules](modules-element-site.md), [NavBars](navbars-element-site.md), [ServerEmailFooter](serveremailfooter-element-site.md)|
+- [BaseTypes](basetypes-element-site.md)
+- [Components](components-element-site.md)
+- [Configurations](configurations-element-site.md)
+- [DocumentTemplates](documenttemplates-element-site.md)
+- [ListTemplates](listtemplates-element-site.md)
+- [Modules](modules-element-site.md)
+- [NavBars](navbars-element-site.md)
+- [ServerEmailFooter](serveremailfooter-element-site.md)|
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 ## Example
 

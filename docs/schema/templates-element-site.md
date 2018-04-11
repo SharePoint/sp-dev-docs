@@ -1,7 +1,5 @@
 ---
-title: "Templates Element (Site)"
-
-
+title: "Templates element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 208c0e62-e9e2-49ec-ad7b-f7aa1770a604
-description: "Last modified: March 09, 2015"
+description: Top-level element in a WebTemp*.xml file that specifies the collection of site definitions available for instantiating sites within the deployment. 
 ---
 
-# Templates Element (Site)
+# Templates element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element in a [WebTemp\*.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file that specifies the collection of site definitions available for instantiating sites within the deployment. 
   
-```
+```XML
 <Templates>
     <Template
       ID = "Text"
@@ -42,27 +38,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Template](template-element-site.md)|
+- [Template](template-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1   
    
 ## Example
 

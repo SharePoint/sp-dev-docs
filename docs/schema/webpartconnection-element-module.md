@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 20bf718c-4ba6-4808-a014-f17ce9b9bde0
 ---
 
-# WebPartConnection Element (Module)
+# WebPartConnection element (Module)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

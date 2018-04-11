@@ -1,7 +1,5 @@
 ---
-title: "ServerEmailFooter Element (Site)"
-
-
+title: "ServerEmailFooter element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d9df4fb9-7e0a-4699-94d7-4b420f5066f6
-description: "Last modified: March 09, 2015"
+description: Defines the footer section for server email, which includes both HTML and the text that is displayed. 
 ---
 
-# ServerEmailFooter Element (Site)
+# ServerEmailFooter element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Defines the footer section for server email, which includes both HTML and the text that is displayed. 
   
-Defines the footer section for server e-mail, which includes both HTML and the text that is displayed. 
-  
-```
+```XML
 <ServerEmailFooter
     Name = "Text">
 </ ServerEmailFooter>
@@ -42,20 +38,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Project](project-element-site.md)|
+- [Project](project-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 

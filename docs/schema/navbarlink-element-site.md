@@ -1,7 +1,5 @@
 ---
-title: "NavBarLink Element (Site)"
-
-
+title: "NavBarLink element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 4ff60a7b-7dc9-4129-add5-0a4e50a47175
-description: "Last modified: March 09, 2015"
+description: Defines a hyperlink used in the top navigation area of a home page.
 ---
 
-# NavBarLink Element (Site)
+# NavBarLink element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a hyperlink used in the top navigation area of a home page.
   
-```
+```XML
 <NavBarLink
   Name = "Text"
   Url = "Text">
@@ -44,21 +40,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[NavBar](navbar-element-site.md)|
+- [NavBar](navbar-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ## Example
 

@@ -1,7 +1,5 @@
 ---
-title: "Row Element (Site)"
-
-
+title: "Row element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,15 +14,13 @@ ms.assetid: 33449e60-4a1f-4e53-bea7-72b88a742ae0
 description: "Last modified: March 09, 2015"
 ---
 
-# Row Element (Site)
+# Row element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used within the [Data](data-element-site.md) element in a list definition to provide a set of default data when a list is instantiated during site provisioning. 
   
-```
+```XML
 <Row>
 </Row>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Field](field-element-site.md)|
+- [Field](field-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Rows](rows-element-site.md)|
+- [Rows](rows-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ## Example
 

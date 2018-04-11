@@ -1,7 +1,5 @@
 ---
-title: "Module Element (Site)"
-
-
+title: "Module element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: cee7eacc-0142-4b33-a363-3ef0873799dc
-description: "Last modified: March 09, 2015"
+description: Specifies files and "all user" Web Parts with which to provision a website.
 ---
 
-# Module Element (Site)
+# Module element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Specifies files and "all user" Web Parts with which to provision a website.
   
-Specifies files and "all user" Web Parts with which to provision a Web site.
-  
-```
+```XML
 <Module>
   HyperlinkBaseUrl = "Text"
   IncludeFolders = "Text"
@@ -48,35 +44,30 @@ The following sections describe attributes, child elements, and parent elements.
 |**HyperlinkBaseUrl** <br/> |Optional **Text**.  <br/> |
 |**IncludeFolders** <br/> |Optional **Text**.  <br/> |
 |**List** <br/> |Optional **Integer**. Specifies the type of list, which is defined within [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
-|**Name** <br/> | Required **Text**. Contains the name of the file set. Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|**Path** <br/> | Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates\ _Site_Definition_. Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|**RootWebOnly** <br/> |Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level Web site of the site collection.  <br/> |
-|**SetupPath** <br/> | Optional **Text**. Specifies the physical path to a folder in the SharePoint Foundation setup directory %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE) that contains a file to include in the module. Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|**Url** <br/> | Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.  <br/>  The **Url** attribute cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
+|**Name** <br/> | Required **Text**. Contains the name of the file set.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
+|**Path** <br/> | Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates\ \_Site\_Definition_.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
+|**RootWebOnly** <br/> |Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level website of the site collection.  <br/> |
+|**SetupPath** <br/> | Optional **Text**. Specifies the physical path to a folder in the SharePoint Foundation setup directory %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE) that contains a file to include in the module.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
+|**Url** <br/> | Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.<br/><br/>The **Url** attribute cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[File](file-element.md)|
+- [File](file-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Modules](modules-element-site.md)|
+- [Modules](modules-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 
 A detailed **Module** element appears in a **Modules** element directly under the **Project** element of an  `Onet.xml` file. Each such module is referenced by at least one other **Module** element that is in a **Configuration** element of the same file. 
   
-The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a Web Part Page, the module definition can specify which Web Parts should be included on the page. 
+The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a Web Part page, the module definition can specify which Web Parts should be included on the page. 
   
 ## Example
 
@@ -106,7 +97,5 @@ The following example from [Onet.xml](http://msdn.microsoft.com/library/b99d6657
 
 ## See also
 
-
-
-[How to: Provision a File](http://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6%28Office.15%29.aspx)
+- [How to: Provision a File](http://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6%28Office.15%29.aspx)
 

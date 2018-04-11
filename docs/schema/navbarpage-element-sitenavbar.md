@@ -1,7 +1,5 @@
 ---
-title: "NavBarPage Element (Site - NavBar)"
-
-
+title: "NavBarPage element (Site - NavBar)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,13 +14,11 @@ ms.assetid: 2dd54346-63b3-4498-8217-8aaa07283ac3
 description: "Last modified: March 09, 2015"
 ---
 
-# NavBarPage Element (Site - NavBar)
+# NavBarPage element (Site - NavBar)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-```
+```XML
 <NavBarPage
   Name = "Text"
   Url = "Text">
@@ -42,20 +38,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None 
    
 ### Parent elements
 
-||
-|:-----|
-|[NavBar](navbar-element-site.md)|
+- [NavBar](navbar-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 
