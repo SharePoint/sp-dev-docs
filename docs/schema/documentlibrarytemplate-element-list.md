@@ -1,7 +1,5 @@
 ---
-title: "DocumentLibraryTemplate Element (List)"
-
-
+title: "DocumentLibraryTemplate element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: eb0ec0a6-82a9-4f92-8d82-c685c287e9e1
-description: "Last modified: March 09, 2015"
+description: Used in the wire protocol that the server uses to export list metadata to the SharePoint Designer client. This element specifies which file serves as the template document for a document library. 
 ---
 
-# DocumentLibraryTemplate Element (List)
+# DocumentLibraryTemplate element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in the wire protocol that the server uses to export list metadata to the SharePoint Designer client. This element specifies which file serves as the template document for a document library. 
   
-```
+```XML
 <DocumentLibraryTemplate>
 </DocumentLibraryTemplate>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Metadata](metadata-element-list.md)|
+- [Metadata](metadata-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ## Example
 
@@ -74,9 +63,9 @@ The following example indicates that the document library whose schema is curren
 
 ## See also
 
+- [DocumentTemplate element (Site)](documenttemplate-element-site.md)
+- [DocumentTemplates element (Site)](documenttemplates-element-site.md)
 
-
-[DocumentTemplate Element (Site)](documenttemplate-element-site.md)
-  
-[DocumentTemplates Element (Site)](documenttemplates-element-site.md)
+   
+<br/> 
 

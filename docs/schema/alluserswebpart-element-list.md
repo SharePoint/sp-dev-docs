@@ -1,7 +1,5 @@
 ---
-title: "AllUsersWebPart Element (List)"
-
-
+title: "AllUsersWebPart element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c2342ade-ffa0-4cf1-b33b-51be2d3ef6cf
-description: "Last modified: March 09, 2015"
+description: Contains a Web Part in a form definition for list.
 ---
 
-# AllUsersWebPart Element (List)
+# AllUsersWebPart element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a Web Part in a form definition for list.
   
-```
+```XML
 <AllUsersWebPart  WebPartOrder = Integer  WebPartZoneID = "Text">    <![CDATA[...]]></AllUsersWebPart>
 ```
 
@@ -41,21 +37,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|CDATA |
+- CDATA 
    
 ### Parent elements
 
-||
-|:-----|
-|[WebParts](webparts-element-list.md)|
+- [WebParts](webparts-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 

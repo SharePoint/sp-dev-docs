@@ -1,7 +1,5 @@
 ---
-title: "CHOICE Element (List)"
-
-
+title: "CHOICE element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 36923464-f2bd-44c9-9fa0-74664205a02f
-description: "Last modified: March 09, 2015"
+description: Used to define a choice within a Choice field. 
 ---
 
-# CHOICE Element (List)
+# CHOICE element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used to define a choice within a **Choice** field. 
   
-```
+```XML
 <CHOICES>
   <CHOICE
     Value = "Text">
@@ -44,25 +40,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Value** <br/> |Optional **Text**. Specifies the display text for the choice.  <br/> The value can be a reference to a resource in the format  `$Resources:String`. However, choice values are not supported by the multilingual user interface (MUI). Choice values are initialized in the default language of the web site and do not change when a user switches to an alternate language supported by the site.  <br/> |
+|**Value** <br/> |Optional **Text**. Specifies the display text for the choice.  <br/> The value can be a reference to a resource in the format `$Resources:String`. However, choice values are not supported by the multilingual user interface (MUI). Choice values are initialized in the default language of the website and do not change when a user switches to an alternate language supported by the site.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[CHOICES](choices-element-list.md)|
+- [CHOICES](choices-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 
@@ -83,4 +74,4 @@ The following example defines a **Choice** field with three choices.
     
 ```
 
-
+<br/>

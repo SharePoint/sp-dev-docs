@@ -1,7 +1,5 @@
 ---
-title: "Aggregations Element (List)"
-
-
+title: "Aggregations element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 8671bf2b-829a-4c9d-a315-f4bde3563b64
-description: "Last modified: March 09, 2015"
+description: Contains field references for totals columns or calculated columns; in other words, for fields to which a function is applied.
 ---
 
-# Aggregations Element (List)
+# Aggregations element (List)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Contains field references for totals columns or calculated columns; in other words, for fields to which a function is applied.
   
-Contains field references for totals columns or calculated columns — in other words, for fields to which a function is applied.
-  
-```
+```XML
 <Aggregations
   Value = "Text">
   <FieldRef />
@@ -44,21 +40,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[FieldRef](fieldref-element-list.md)|
+- [FieldRef](fieldref-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[View](view-element-list.md)|
+- [View](view-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ## Example
 
@@ -74,4 +65,5 @@ The following example uses the **Aggregations** element to contain references fo
 </View>
 ```
 
+<br/>
 

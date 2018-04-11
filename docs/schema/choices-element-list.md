@@ -1,7 +1,5 @@
 ---
-title: "CHOICES Element (List)"
-
-
+title: "CHOICES element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 43754a61-a86e-4720-870b-1a328bdb4e0d
-description: "Last modified: March 09, 2015"
+description: Used to define several choices within a field for a drop-down list.
 ---
 
-# CHOICES Element (List)
+# CHOICES element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used to define several choices within a field for a drop-down list.
   
-```
+```XML
 <CHOICES>
   <CHOICE
     Value = "Text">
@@ -42,27 +38,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[CHOICE](choice-element-list.md)|
+- [CHOICE](choice-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Field](field-element-list.md)|
+- [Field](field-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0 
+- Maximum: 1 
    
 ### Remarks
 
@@ -82,4 +71,5 @@ This example defines a **Choice** field with three choices.
 </CHOICES>
 ```
 
+<br/>
 

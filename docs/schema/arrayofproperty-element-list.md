@@ -1,7 +1,5 @@
 ---
-title: "ArrayOfProperty Element (List)"
-
-
+title: "ArrayOfProperty element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,13 +14,11 @@ ms.assetid: 0e6faff5-8298-4f07-b1e2-fe67aaa29162
 description: "Last modified: March 09, 2015"
 ---
 
-# ArrayOfProperty Element (List)
+# ArrayOfProperty element (List)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-```
+```XML
 <Customization>  <ArrayOfProperty>    <Property>    </Property>  </ArrayOfProperty>
 </Customization>
 ```
@@ -33,26 +29,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Property](property-element-list.md)|
+- [Property](property-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Customization](customization-element-list.md)|
+- [Customization](customization-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

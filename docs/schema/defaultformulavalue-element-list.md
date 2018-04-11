@@ -1,7 +1,5 @@
 ---
-title: "DefaultFormulaValue Element (List)"
-
-
+title: "DefaultFormulaValue element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 326e5e17-3e68-4b02-90cb-f2767d9a56a5
-description: "Last modified: March 09, 2015"
+description: Contains the default value for a field that has a formula.
 ---
 
-# DefaultFormulaValue Element (List)
+# DefaultFormulaValue element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the default value for a field that has a formula. 
   
-```
+```XML
 <DefaultFormulaValue>
 </DefaultFormulaValue>
 ```
@@ -35,26 +31,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Field](field-element-list.md)|
+- [Field](field-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1
    
-
+<br/> 

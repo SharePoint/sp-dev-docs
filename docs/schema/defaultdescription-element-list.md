@@ -1,7 +1,5 @@
 ---
-title: "DefaultDescription Element (List)"
-
-
+title: "DefaultDescription element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 04d63b39-b0fb-4458-a8e0-3fc14cd29986
-description: "Last modified: March 09, 2015"
+description: Sets the default description that appears in the title area of list views and on the Documents and Lists page in Microsoft SharePoint Foundation. 
 ---
 
-# DefaultDescription Element (List)
+# DefaultDescription element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Sets the default description that appears in the title area of list views and on the **Documents and Lists** page in Microsoft SharePoint Foundation. 
   
-```
+```XML
 <DefaultDescription>
 </DefaultDescription>
 ```
@@ -35,21 +31,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[MetaData (List)](metadata-element-list.md), [MetaData (Site)](metadata-element-site.md)|
+- [MetaData (List)](metadata-element-list.md)
+- [MetaData (Site)](metadata-element-site.md)
    
 ### Remarks
 
@@ -66,4 +57,5 @@ The following excerpt sets the default description for announcements lists.
 </DefaultDescription>
 ```
 
+<br/>
 

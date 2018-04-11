@@ -1,7 +1,5 @@
 ---
-title: "Customization Element (List)"
-
-
+title: "Customization element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,13 +14,11 @@ ms.assetid: b9abdfc7-93f8-4404-9133-b0e9d4c33b3c
 description: "Last modified: March 09, 2015"
 ---
 
-# Customization Element (List)
+# Customization element (List)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-```
+```XML
 <Customization><ArrayOfProperty
 </Customization>
 ```
@@ -33,26 +29,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[ArrayOfProperty](arrayofproperty-element-list.md)|
+- [ArrayOfProperty](arrayofproperty-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Field](field-element-list.md)|
+- [Field](field-element-list.md)
    
 ## Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 
