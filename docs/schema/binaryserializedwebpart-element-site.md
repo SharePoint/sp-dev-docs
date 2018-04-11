@@ -1,7 +1,5 @@
 ---
-title: "BinarySerializedWebPart Element (Site)"
-
-
+title: "BinarySerializedWebPart element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,13 +14,11 @@ ms.assetid: d7a9bee2-4c6e-4247-9e8d-540ecf59177e
 description: "Last modified: March 09, 2015"
 ---
 
-# BinarySerializedWebPart Element (Site)
+# BinarySerializedWebPart element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-```
+```XML
 <BinarySerializedWebPart>  <GUIDMap>    <GUID      Id = "Text"      ListUrl = "Text"/>  </GUIDMap></BinarySerializedWebPart>
 ```
 
@@ -32,26 +28,23 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[GUIDMap](guidmap-element-site.md), [WebPart](webpart-element-site.md)|
+- [GUIDMap](guidmap-element-site.md)
+- [WebPart](webpart-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[File](file-element.md), [View](view-element-site.md)|
+- [File](file-element.md)
+- [View](view-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

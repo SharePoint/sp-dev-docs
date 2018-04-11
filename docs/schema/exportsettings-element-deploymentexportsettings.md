@@ -1,5 +1,5 @@
 ---
-title: "ExportSettings Element (DeploymentExportSettings)"
+title: "ExportSettings element (DeploymentExportSettings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 0dabce09-2a1e-4688-a97b-5f3fc5b6ba67
 description: "Last modified: March 09, 2015"
 ---
 
-# ExportSettings Element (DeploymentExportSettings)
+# ExportSettings element (DeploymentExportSettings)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
@@ -62,7 +62,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-[ExportObjects Element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
+- [ExportObjects element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
    
 ### Parent elements
 

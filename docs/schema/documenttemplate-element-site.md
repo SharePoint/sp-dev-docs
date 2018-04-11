@@ -1,7 +1,5 @@
 ---
-title: "DocumentTemplate Element (Site)"
-
-
+title: "DocumentTemplate element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 32b6d4ad-df45-44db-8ecd-b0f1b2d24143
-description: "Last modified: March 09, 2015"
+description: Defines a document library template for the New Document Library page in a website based on Microsoft SharePoint Foundation.
 ---
 
-# DocumentTemplate Element (Site)
+# DocumentTemplate element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Defines a document library template for the New Document Library page in a website based on Microsoft SharePoint Foundation.
   
-Defines a document library template for the New Document Library page in a Web site based on Microsoft SharePoint Foundation.
-  
-```
+```XML
 <DocumentTemplate
   Default = "TRUE" | "FALSE"
     Description = "Text"
@@ -53,21 +49,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[DocumentTemplateFiles](documenttemplatefiles-element-site.md)|
+- [DocumentTemplateFiles](documenttemplatefiles-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[DocumentTemplates](documenttemplates-element-site.md)|
+- [DocumentTemplates](documenttemplates-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ## Example
 
@@ -81,4 +72,4 @@ The following example defines a Microsoft Office Excel 2007 document library tem
 </DocumentTemplate>
 ```
 
-
+<br/>

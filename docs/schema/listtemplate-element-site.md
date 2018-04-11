@@ -1,7 +1,5 @@
 ---
-title: "ListTemplate Element (Site)"
-
-
+title: "ListTemplate element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,19 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 37a89367-4fed-46b9-afe9-386844f3e82c
-
-description: "Last modified: March 09, 2015"
+description: Specifies a list definition that is available as an option for creating lists on the Create Page.
 ---
 
-# ListTemplate Element (Site)
+# ListTemplate element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a list definition that is available as an option for creating lists on the **Create Page**.
   
-```
+```XML
 <ListTemplate
   AllowDeletion = "TRUE" | "FALSE"
   AllowEveryoneViewItems = "TRUE" | "FALSE"
@@ -82,7 +77,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**BaseType** <br/> |Required **Integer**. Specifies the base type, or default schema, for lists created from the definition. In SharePoint Foundation, this can be 0, 1, 3, 4, or 5. It cannot be 2.  <br/> |
 |**CacheSchema** <br/> |Optional **Boolean**. **TRUE** to enable schema caching of the list when provisioning a site. The **CacheSchema** attribute is used, for example, in the global [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file to enable caching of the user list for the current site collection.  <br/> |
 |**Catalog** <br/> |Optional **Boolean**. **TRUE** to specify that the list definition is for a site gallery, a list gallery, or a Web Part gallery.  <br/> |
-|**Category** <br/> | Optional **Text**. Specifies the category with which to associate lists created through the list definition. Possible values include the following:  <br/> **Libraries** <br/> **Communications** <br/> **Tracking** <br/> **Custom Lists** <br/> |
+|**Category** <br/> | Optional **Text**. Specifies the category with which to associate lists created through the list definition.<br/><br/>Possible values include the following:  <br/> **Libraries** <br/> **Communications** <br/> **Tracking** <br/> **Custom Lists** <br/> |
 |**Default** <br/> |Optional **Boolean**. **TRUE** to specify that new SharePoint sites will include this list.  <br/> |
 |**Description** <br/> |Optional **Text**. Provides a description of the list definition.  <br/> |
 |**DisableAttachments** <br/> |Optional **Boolean**. **TRUE** to specify that users can attach files to items in lists created through the list definition; otherwise, **FALSE**.  <br/> |
@@ -109,35 +104,30 @@ The following sections describe attributes, child elements, and parent elements.
 |**OnQuickLaunch** <br/> |Optional **Boolean**. **TRUE** to display lists created from the list definition on the **Quick** **Launch** bar, if that bar has a Lists node.  <br/> |
 |**Path** <br/> |Optional **Text**. Specifies the name of the site definition that contains the list definition, for example, **STS**. This path is assumed to be relative to the 12\TEMPLATE directory. The path can be directed at a features schema, for example, Features\Announcements. This attribute has been deprecated in SharePoint Foundation.  <br/> |
 |**RootWebOnly** <br/> |Optional **Boolean**. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection. This attribute has been deprecated in SharePoint Foundation.  <br/> |
-|**SecurityBits** <br/> |Optional **Text**. Defines the item-level permissions in the list for users with sufficient permission to read or edit list items. The **SecurityBits** attribute contains a 2-digit string. The first digit in the string controls the read access, while the second digit in the string controls the edit access. For read access, the following are valid digits:  <br/> **1** Users can read all items.  <br/> **2** Users can read only their own items.  <br/> For edit access, the following are valid digits:  <br/> **1** Users can edit all items.  <br/> **2** Users can edit only their own items.  <br/> **4** Users cannot edit items.  <br/> **Note** Users with the **ManageLists** permission can read and edit all items, regardless of the **SecurityBits** attribute value.  <br/> This attribute does not apply to document libraries.  <br/> |
+|**SecurityBits** <br/> |Optional **Text**. Defines the item-level permissions in the list for users with sufficient permission to read or edit list items. The **SecurityBits** attribute contains a 2-digit string. The first digit in the string controls the read access, while the second digit in the string controls the edit access.<br/><br/>For read access, the following are valid digits:  <br/> **1** Users can read all items.  <br/> **2** Users can read only their own items.<br/><br/>For edit access, the following are valid digits:  <br/> **1** Users can edit all items.  <br/> **2** Users can edit only their own items.  <br/> **4** Users cannot edit items.<br/><br/>**NOTE**: Users with the **ManageLists** permission can read and edit all items, regardless of the **SecurityBits** attribute value.  <br/> This attribute does not apply to document libraries.  <br/> |
 |**Sequence** <br/> |Optional **Integer**. Specifies the ordering priority to use for the list definition on the **Create** page. If **Sequence** is not set, the list definition shows up last in arbitrary order with any other list definitions that also lack a **Sequence** value. Two list definitions that specify the same sequence are sorted together in an arbitrary order.  <br/> |
 |**SetupPath** <br/> |Optional **Text**. Specifies the path to a folder in the SharePoint Foundation setup directory ( `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE`) that contains a file to be included in the list definition.  <br/> |
 |**SyncType** <br/> |Optional **Boolean**. **TRUE** to override the default client list type associated with a SharePoint Foundation base template.  <br/> |
-|**Type** <br/> | Optional **Integer**. Provides a unique identifier for the list definition. This identifier must be unique within the feature, but need not be unique across all feature definitions or site definitions. SharePoint Foundation includes the following list types by default.  <br/> **100** Generic list  <br/> **101** Document library  <br/> **102** Survey  <br/> **103** Links list  <br/> **104** Announcements list  <br/> **105** Contacts list  <br/> **106** Events list  <br/> **107** Tasks list  <br/> **108** Discussion board  <br/> **109** Picture library  <br/> **110** Data sources  <br/> **111** Site template gallery  <br/> **112** User Information list  <br/> **113** Web Part gallery  <br/> **114** List template gallery  <br/> **115** XML Form library  <br/> **116** Master pages gallery  <br/> **117** No-Code Workflows  <br/> **118** Custom Workflow Process  <br/> **119** Wiki Page library  <br/> **120** Custom grid for a list  <br/> **130** Data Connection library  <br/> **140** Workflow History  <br/> **150** Gantt Tasks list  <br/> **200** Meeting Series list  <br/> **201** Meeting Agenda list  <br/> **202** Meeting Attendees list  <br/> **204** Meeting Decisions list  <br/> **207** Meeting Objectives list  <br/> **210** Meeting text box  <br/> **211** Meeting Things To Bring list  <br/> **212** Meeting Workspace Pages list  <br/> **301** Blog Posts list  <br/> **302** Blog Comments list  <br/> **303** Blog Categories list  <br/> **1100** Issue tracking  <br/> **1200** Administrator tasks list  <br/>  For custom list templates this attribute should be set to a number above 10000 to ensure that it does not conflict with any present or future Microsoft supplied list types.  <br/>  This attribute corresponds to the **Type** attribute of the [List](list-element-list.md) element.  <br/> |
+|**Type** <br/> | Optional **Integer**. Provides a unique identifier for the list definition. This identifier must be unique within the feature, but need not be unique across all feature definitions or site definitions.<br/><br/>SharePoint Foundation includes the following list types by default.  <br/> **100** Generic list  <br/> **101** Document library  <br/> **102** Survey  <br/> **103** Links list  <br/> **104** Announcements list  <br/> **105** Contacts list  <br/> **106** Events list  <br/> **107** Tasks list  <br/> **108** Discussion board  <br/> **109** Picture library  <br/> **110** Data sources  <br/> **111** Site template gallery  <br/> **112** User Information list  <br/> **113** Web Part gallery  <br/> **114** List template gallery  <br/> **115** XML Form library  <br/> **116** Master pages gallery  <br/> **117** No-Code Workflows  <br/> **118** Custom Workflow Process  <br/> **119** Wiki Page library  <br/> **120** Custom grid for a list  <br/> **130** Data Connection library  <br/> **140** Workflow History  <br/> **150** Gantt Tasks list  <br/> **200** Meeting Series list  <br/> **201** Meeting Agenda list  <br/> **202** Meeting Attendees list  <br/> **204** Meeting Decisions list  <br/> **207** Meeting Objectives list  <br/> **210** Meeting text box  <br/> **211** Meeting Things To Bring list  <br/> **212** Meeting Workspace Pages list  <br/> **301** Blog Posts list  <br/> **302** Blog Comments list  <br/> **303** Blog Categories list  <br/> **1100** Issue tracking  <br/> **1200** Administrator tasks list<br/><br/>For custom list templates this attribute should be set to a number above 10000 to ensure that it does not conflict with any present or future Microsoft supplied list types.<br/><br/>This attribute corresponds to the **Type** attribute of the [List](list-element-list.md) element.  <br/> |
 |**Unique** <br/> |Optional **Boolean**. **TRUE** to specify that the list definition or list template can only be used to create a list during site creation and cannot be used to create a list through the object model or user interface after the site template or definition is applied. Setting this attribute to **TRUE** has the effect of making the list hidden so that it does not appear as an option on the **Create Page** or on the **Documents and Lists** page.  <br/> |
-|**UseRootFolderForNavigation** <br/> |Optional **Boolean**. **TRUE** to specify that a link to the list that is displayed in **Quick Launch** points to the root folder so that users go to a custom welcome page, instead of to the default list view page.  <br/> > [!NOTE]> If a custom welcome URL is not set for the list, rendering a link to the root folder is functionally equivalent to linking to the default list view.           |
+|**UseRootFolderForNavigation** <br/> |Optional **Boolean**. **TRUE** to specify that a link to the list that is displayed in **Quick Launch** points to the root folder so that users go to a custom welcome page, instead of to the default list view page.<br/><br/>**NOTE**: If a custom welcome URL is not set for the list, rendering a link to the root folder is functionally equivalent to linking to the default list view.           |
 |**VersioningEnabled** <br/> |Optional **Boolean**. **TRUE** to specify that versioning is enabled by default in lists created through the list definition; otherwise, **FALSE**.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ListTemplates](listtemplates-element-site.md)|
+- [ListTemplates](listtemplates-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 
-In SharePoint Foundation the list template for a standard SharePoint list is usually defined within the element manifest file of the Feature that contains the list definition. For more information about list template Features, see [List Template Files](list-template-files.md).
+In SharePoint Foundation, the list template for a standard SharePoint list is usually defined within the element manifest file of the Feature that contains the list definition. For more information about list template Features, see [List template files](list-template-files.md).
   
 

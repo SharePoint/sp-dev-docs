@@ -1,7 +1,5 @@
 ---
-title: "ExternalSecurityProvider Element (Site)"
-
-
+title: "ExternalSecurityProvider element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: a3f25b67-1ab6-4b74-bd10-eb1df99046b4
-description: "Last modified: March 09, 2015"
+description: Represents an interface that returns custom information about the security used in Microsoft SharePoint Foundation for indexing by a search crawler on a portal.
 ---
 
-# ExternalSecurityProvider Element (Site)
+# ExternalSecurityProvider element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents an interface that returns custom information about the security used in Microsoft SharePoint Foundation for indexing by a search crawler on a portal.
   
-```
+```XML
 <ExternalSecurityProvider
   ID = "Text"
   Type = "Text">
@@ -44,26 +40,20 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Components](components-element-site.md)|
+- [Components](components-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1
    
 ### Remarks
 
 The **ExternalSecurityProvider** element corresponds to the **Microsoft.SharePoint.IExternalSecurityWeb** interface. 
   
-See [Components Element (Site)](components-element-site.md) for an example that uses the **ExternalSecurityProvider** element. 
-  
+For an example that uses the **ExternalSecurityProvider** element, see [Components element (Site)](components-element-site.md). 
 

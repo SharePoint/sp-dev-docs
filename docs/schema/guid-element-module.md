@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 0aee8955-b6ec-4128-b121-13dfd09f84d7
 ---
 
-# GUID Element (Module)
+# GUID element (Module)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

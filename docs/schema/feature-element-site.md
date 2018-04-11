@@ -1,7 +1,5 @@
 ---
-title: "Feature Element (Site)"
-
-
+title: "Feature element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: f2ba770d-4b36-4865-9365-5bec061b8c07
-description: "Last modified: March 09, 2015"
+description: Specifies a reference to a Feature within a site definition. 
 ---
 
-# Feature Element (Site)
+# Feature element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a reference to a Feature within a site definition. 
   
-```
+```XML
 <Feature
   Id = "Text"  SourceVersion = "Text">
 </Feature>
@@ -43,20 +39,18 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Properties](properties-element-site.md)|
+- [Properties](properties-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[SiteFeatures](sitefeatures-element-site.md), [WebFeatures](webfeatures-element-site.md)|
+- [SiteFeatures](sitefeatures-element-site.md)
+- [WebFeatures](webfeatures-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

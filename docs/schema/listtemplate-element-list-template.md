@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: e565ead9-adcb-4a90-97e3-04850719420a
 ---
 
-# ListTemplate Element (List Template)
+# ListTemplate element (List Template)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

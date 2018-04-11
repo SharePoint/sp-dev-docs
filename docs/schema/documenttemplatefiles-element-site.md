@@ -1,7 +1,5 @@
 ---
-title: "DocumentTemplateFiles Element (Site)"
-
-
+title: "DocumentTemplateFiles element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0abc33e2-380f-4703-a3c0-98a7fca69573
-description: "Last modified: March 09, 2015"
+description: Contains a collection of files that are part of a multifile document template.
 ---
 
-# DocumentTemplateFiles Element (Site)
+# DocumentTemplateFiles element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of files that are part of a multifile document template.
   
-```
+```XML
 <DocumentTemplateFiles>
 </DocumentTemplateFiles>
 ```
@@ -35,30 +31,23 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[DocumentTemplateFile](documenttemplatefile-element-site.md)|
+- [DocumentTemplateFile](documenttemplatefile-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[DocumentTemplate](documenttemplate-element-site.md)|
+- [DocumentTemplate](documenttemplate-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
-See [DocumentTemplates](documenttemplates-element-site.md) for an example that shows how to use the **DocumentTemplateFiles** element. 
+For an example that shows how to use the **DocumentTemplateFiles** element, see [DocumentTemplates](documenttemplates-element-site.md). 
   
 

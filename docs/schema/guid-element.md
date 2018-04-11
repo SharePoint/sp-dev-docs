@@ -10,7 +10,7 @@ ms.assetid: 466ffa8a-0f31-4be9-a418-f4ce444024c7
 description: "Last modified: March 09, 2015"
 ---
 
-# GUID Element
+# GUID element
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   

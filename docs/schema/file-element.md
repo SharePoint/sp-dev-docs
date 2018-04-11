@@ -1,5 +1,5 @@
 ---
-title: "file element"
+title: "File element"
 ms.author: kdeding
 author: kdeding
 manager: soliver
@@ -13,18 +13,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: db86d800-9f68-43cc-b7d5-3bd76537dfde
-description: "Last modified: March 09, 2015"
+description: Specifies a file to include within a module in a site definition configuration or Web template configuration. 
 ---
 
-# file element
+# File element
 
- 
-  
- **Applies to:** Lync 2013 | Lync Server 2013 | SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** Lync 2013 | Lync Server 2013 | SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a file to include within a module in a site definition configuration or Web template configuration. 
   
-```
+```XML
 <File
   DocumentTemplateForList = "Text"  DoGUIDFixUp = "TRUE" | "FALSE"
   IgnoreIfAlreadyExists = "TRUE" | "FALSE"
@@ -52,29 +50,29 @@ The following sections describe attributes, child elements, and parent elements.
 |**Name** <br/> | Optional **Text**. Specifies the virtual path for the file. Cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
 |**NavBarHome** <br/> |Optional **Boolean**. **TRUE** if the file is the destination URL for the **Home** link in the top navigation bar used throughout the site.  <br/> |
 |**Path** <br/> | Optional **Text**. Specifies the physical path to the file relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates\ _Site_Definition_ for Onet.xml files. Specifies the physical path to the file relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES\  _Feature_Name_ for Feature.xml files. Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|**Type** <br/> |Optional **Text**. Specifies that the file be cached in memory on the front-end server. Possible values include **Ghostable** and **GhostableInLibrary**. Both values specify that the file will be cached, but **GhostableInLibrary** specifies that the file will be cached as part of a list whose base type is **Document** **Library**.  <br/> For example, when changes are made to a home page through the user interface (UI), only the differences between the original page definition and the new page are stored in the database. The default.aspx is cached in memory, in addition to the schema files. The HTML page that is displayed in the browser is constructed through the combined page definition that results from the original page definition that is cached in memory and from changes that are stored in the database.  <br/> |
+|**Type** <br/> |Optional **Text**. Specifies that the file be cached in memory on the front-end server. Possible values include **Ghostable** and **GhostableInLibrary**. Both values specify that the file will be cached, but **GhostableInLibrary** specifies that the file will be cached as part of a list whose base type is **Document** **Library**.<br/><br/>For example, when changes are made to a home page through the user interface (UI), only the differences between the original page definition and the new page are stored in the database. The default.aspx is cached in memory, in addition to the schema files. The HTML page that is displayed in the browser is constructed through the combined page definition that results from the original page definition that is cached in memory and from changes that are stored in the database.  <br/> |
 |**Url** <br/> | Required **Text**. Specifies the virtual path for the file. If the **Name** attribute is specified, its value is used for the virtual path. If **Path** is not specified, the value of **Url** is used for the physical path. Cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[AllUsersWebPart](alluserswebpart-element-site.md), [BinarySerializedWebPart](binaryserializedwebpart-element-site.md), [NavBarPage](navbarpage-element-sitemodule.md), [Property](property-element-sitemodule.md), [View](view-element-site.md), [WebPartConnection](webpartconnection-element-site.md)|
+- [AllUsersWebPart](alluserswebpart-element-site.md)
+- [BinarySerializedWebPart](binaryserializedwebpart-element-site.md)
+- [NavBarPage](navbarpage-element-sitemodule.md)
+- [Property](property-element-sitemodule.md)
+- [View](view-element-site.md)
+- [WebPartConnection](webpartconnection-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Module](module-element-site.md)|
+- [Module](module-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded   
    
 ### Remarks
 
-See [Module Element (Site)](module-element-site.md) for an example that uses the **File** element. 
+For an example that uses the **File** element, see [Module element (Site)](module-element-site.md).  
   
 

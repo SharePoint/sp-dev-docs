@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: b55fc060-a472-4f9f-9528-731078d97ca0
 ---
 
-# GUIDMap Element (Module)
+# GUIDMap element (Module)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

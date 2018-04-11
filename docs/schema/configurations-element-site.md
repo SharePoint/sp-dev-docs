@@ -1,7 +1,5 @@
 ---
-title: "Configurations Element (Site)"
-
-
+title: "Configurations element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -15,18 +13,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: f05f8b97-90d5-4c7e-99df-0e58bd06be43
-description: "Last modified: March 09, 2015"
+description: Contains the configurations of lists and modules that make up a site definition.
 ---
 
-# Configurations Element (Site)
+# Configurations element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the configurations of lists and modules that make up a site definition.
   
-```
+```XML
 <Configurations>
   <Configuration>
   </Configuration>
@@ -40,27 +36,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Configuration](configuration-element-site.md)|
+- [Configuration](configuration-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Project](project-element-site.md)|
+- [Project](project-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
@@ -164,4 +153,5 @@ The following example from [Onet.xml](http://msdn.microsoft.com/library/b99d6657
 </Configurations>
 ```
 
+<br/>
 

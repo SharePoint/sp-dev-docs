@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: b7f97740-5d2c-f91a-1028-10e2890d4a99
 ---
 
-# AccessControlList Element 
+# AccessControlList element 
 
 (BDCMetadata Schema)
 
@@ -51,7 +51,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md">AccessControlEntry Element in AccessControlList (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md">AccessControlEntry element in AccessControlList (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An access control entry (ACE).</p></td>
 </tr>
 </tbody>
@@ -66,33 +66,33 @@ None.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><p>Element</p></th>
+<th align="left"><p>element</p></th>
 <th align="left"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadata-schema.md">Model Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadata-schema.md">Model element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A model containing external content types in a business application.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem element in LobSystems (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The LobSystems contained inside the model.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity element in Entities (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An external content type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method element in Methods (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A method of an external content type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An association.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadata-schema.md">MethodInstance Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadata-schema.md">MethodInstance element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A method instance of an external content type.</p></td>
 </tr>
 </tbody>

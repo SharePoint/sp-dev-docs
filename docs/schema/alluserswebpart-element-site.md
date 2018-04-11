@@ -1,7 +1,5 @@
 ---
-title: "AllUsersWebPart Element (Site)"
-
-
+title: "AllUsersWebPart element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 14b304f8-c887-4199-92dc-712407a0d6d3
-description: "Last modified: March 09, 2015"
+description: Contains a Web Part in a module of a site definition.
 ---
 
-# AllUsersWebPart Element (Site)
+# AllUsersWebPart element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a Web Part in a module of a site definition.
   
-```
+```XML
 <AllUsersWebPart
   ID = "Text"    WebPartOrder = "Integer"
   WebPartZoneID = "Text">
@@ -45,29 +41,20 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-|**Element**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[File](file-element.md)|
+- [File](file-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
 ### Remarks
 
-See [Module Element (Site)](module-element-site.md) for an example that uses the **AllUsersWebPart** element. 
+For an example that uses the **AllUsersWebPart** element, see [Module element (Site)](module-element-site.md). 
   
-## See also
 
-
-
-[Module Element (Site)](module-element-site.md)
 

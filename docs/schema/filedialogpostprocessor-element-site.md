@@ -1,7 +1,5 @@
 ---
-title: "FileDialogPostProcessor Element (Site)"
-
-
+title: "FileDialogPostProcessor element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,15 +14,13 @@ ms.assetid: 5c1876ef-9e45-410f-85dc-e478b01aeaac
 description: "Last modified: March 09, 2015"
 ---
 
-# FileDialogPostProcessor Element (Site)
+# FileDialogPostProcessor element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents an interface in Microsoft SharePoint Foundation that is used for Web views in the file dialog boxes and forms of document libraries.
   
-```
+```XML
 <FileDialogPostProcessor
   ID = "Text">
 </FileDialogPostProcessor>
@@ -42,26 +38,21 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Components](components-element-site.md)|
+- [Components](components-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
 The **FileDialogPostProcessor** element corresponds to the **Microsoft.SharePoint.IFileDialogPostProcessor** interface. 
   
-See [Components Element (Site)](components-element-site.md) for an example that uses the **FileDialogPostProcessor** element. 
+For an example that uses the **FileDialogPostProcessor** element, see [Components element (Site)](components-element-site.md).
   
 

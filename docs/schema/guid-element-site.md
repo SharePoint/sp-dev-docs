@@ -1,5 +1,5 @@
 ---
-title: "GUID Element (Site)"
+title: "GUID element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,13 +14,13 @@ ms.assetid: d00f61bb-1547-425f-9764-cae4f05947e9
 description: "Last modified: March 09, 2015"
 ---
 
-# GUID Element (Site)
+# GUID element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 ## Definition
 
-```VB.net
+```vb
 <GUID  Id = "Text"  ListUrl = "Text"/></GUIDMap>
 ```
 
@@ -41,7 +41,7 @@ None
    
 ### Parent elements
 
-[GUIDMap](guidmap-element-site.md)
+- [GUIDMap](guidmap-element-site.md)
    
 ### Occurrences
 

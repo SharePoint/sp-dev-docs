@@ -1,7 +1,5 @@
 ---
-title: "BaseType Element (Site)"
-
-
+title: "BaseType element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 764911ab-d94c-4829-a1fb-f85d3f359c81
-description: "Last modified: March 09, 2015"
+description: Defines the default schema (for example, the fields) that all lists derived from the base type must contain. Every list in a SharePoint website inherits its schema from a base type.
 ---
 
-# BaseType Element (Site)
+# BaseType element (Site)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Defines the default schema (for example, the fields) that all lists derived from the base type must contain. Every list in a SharePoint website inherits its schema from a base type.
   
-Defines the default schema (for example, the fields) that all lists derived from the base type must contain. Every list in a SharePoint Web site inherits its schema from a base type.
-  
-```
+```XML
 <BaseType
   Image = "Text"
   Title = "Text"
@@ -40,27 +36,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Image** <br/> |Optional **Text**. Sets the image used by a list base type in the Lists page (_layouts/viewlsts.htm). However, all SharePoint list definitions (such as for Announcements, Events, etc.) provide their own images so that, in practice, this attribute is never used.  <br/> |
+|**Image** <br/> |Optional **Text**. Sets the image used by a list base type in the Lists page (_layouts/viewlsts.htm). However, all SharePoint list definitions (such as for Announcements or Events) provide their own images so that, in practice, this attribute is never used.  <br/> |
 |**Title** <br/> |Required **Text**. The name of the base type.  <br/> |
 |**Type** <br/> |Required **Text**. Unique ID for the base type. The following values are possible for built-in base types:  <br/> 0 — Custom List  <br/> 1 — Document Library  <br/> 2 — **Not** used  <br/> 3 — Obsolete. Use 0 for discussion boards.  <br/> 4 — Surveys  <br/> 5 — Issues List  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[MetaData](metadata-element-site.md)|
+- [MetaData](metadata-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[BaseTypes](basetypes-element-site.md)|
+- [BaseTypes](basetypes-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 

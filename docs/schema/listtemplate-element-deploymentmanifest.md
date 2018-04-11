@@ -1,5 +1,5 @@
 ---
-title: "ListTemplate Element (DeploymentManifest)"
+title: "ListTemplate element (DeploymentManifest)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 40b7918d-5678-4be8-bb97-6ac22bd0265f
 description: "Last modified: March 09, 2015"
 ---
 
-# ListTemplate Element (DeploymentManifest)
+# ListTemplate element (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   

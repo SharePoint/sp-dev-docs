@@ -1,7 +1,5 @@
 ---
-title: "Lists Element (Site)"
-
-
+title: "Lists element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 74e6167c-6f19-4296-8db4-fd142da3f43a
-description: "Last modified: March 09, 2015"
+description: Contains the collection of lists for a configuration.
 ---
 
-# Lists Element (Site)
+# Lists element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the collection of lists for a configuration.
   
-```
+```XML
 <Lists>
 </Lists>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[List](list-element-site.md)|
+- [List](list-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Configuration](configuration-element-site.md)|
+- [Configuration](configuration-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 

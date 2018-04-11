@@ -1,7 +1,5 @@
 ---
-title: "DocumentTemplates Element (Site)"
-
-
+title: "DocumentTemplates element (Site)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: f3c0c837-6d70-40e9-8d8a-e2064c5dad83
-description: "Last modified: March 09, 2015"
+description: Contains the collection of document library templates that are available for creating document libraries. 
 ---
 
-# DocumentTemplates Element (Site)
+# DocumentTemplates element (Site)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the collection of document library templates that are available for creating document libraries. This collection is listed in the **Template Type** drop-down list box on the **New Document Library** page. 
   
-```
+```XML
 <DocumentTemplates>
 </DocumentTemplates>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[DocumentTemplate](documenttemplate-element-site.md)|
+- [DocumentTemplate](documenttemplate-element-site.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Project](project-element-site.md)|
+- [Project](project-element-site.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
