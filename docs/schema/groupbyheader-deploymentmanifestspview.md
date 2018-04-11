@@ -7,14 +7,14 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 80342bb9-0523-41e4-8810-8946b38f25c7
-description: "Last modified: March 09, 2015"
+description: Represents the definition of a Group By Header parameter (GroupByHeader) in a view. 
 ---
 
 # GroupByHeader (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents the definition of a Group By header parameter ([GroupByHeader](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByHeader.aspx)) in a view. 
+Represents the definition of a Group By Header parameter ([GroupByHeader](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByHeader.aspx)) in a view. 
 
 ## Definition
 

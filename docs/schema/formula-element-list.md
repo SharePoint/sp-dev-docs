@@ -1,7 +1,5 @@
 ---
-title: "Formula Element (List)"
-
-
+title: "Formula element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 5e9634dc-f6f6-453a-b0bf-070ec3d764b8
-description: "Last modified: March 09, 2015"
+description: Contains a formula used in the definition of a field.
 ---
 
-# Formula Element (List)
+# Formula element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a formula used in the definition of a field.
   
-```
+```XML
 <Formula>
 </Formula>
 ```
@@ -35,27 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Field](field-element-list.md)|
+- [Field](field-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 
@@ -71,4 +60,4 @@ The following example defines a calculated field containing a formula that multi
 </Field>
 ```
 
-
+<br/>

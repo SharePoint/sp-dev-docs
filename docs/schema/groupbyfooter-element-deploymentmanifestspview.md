@@ -7,14 +7,14 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: c4456c92-6a37-421c-b48d-3090798fc0ad
-description: "Last modified: March 09, 2015"
+description: Represents the definition of a Group By Footer (GroupByFooter) used in a view. 
 ---
 
 # GroupByFooter Element (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents the definition of a Group By footer ([GroupByFooter](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByFooter.aspx)) used in a view. 
+Represents the definition of a Group By Footer ([GroupByFooter](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.GroupByFooter.aspx)) used in a view. 
 
 ## Definition
 
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+- [View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 

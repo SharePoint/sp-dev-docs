@@ -1,7 +1,5 @@
 ---
-title: "Folder Element (List)"
-
-
+title: "Folder element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3c0ab191-c790-40c2-96ac-c0392a9d7c79
-description: "Last modified: March 09, 2015"
+description: Specifies the relative folder path for the content type's resource folder.
 ---
 
-# Folder Element (List)
+# Folder element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the relative folder path for the content type's resource folder.
   
-```
+```XML
 <Folder
   TargetName="Text">
 </Folder>
@@ -42,20 +38,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ContentTypeRef](contenttyperef-element-list.md)|
+- [ContentTypeRef](contenttyperef-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 

@@ -1,7 +1,5 @@
 ---
-title: "FormulaDisplayNames Element (List)"
-
-
+title: "FormulaDisplayNames element (List)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7f9bfb77-606f-4985-b4f1-a1a1c59151c1
-description: "Last modified: March 09, 2015"
+description: Contains the display names of formulas used within a list field. 
 ---
 
-# FormulaDisplayNames Element (List)
+# FormulaDisplayNames element (List)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the display names of formulas used within a list field. 
   
-```
+```XML
 <FormulaDisplayNames>
 </FormulaDisplayNames>
 ```
@@ -35,26 +31,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Field](field-element-list.md)|
+- [Field](field-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 
