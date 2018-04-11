@@ -61,6 +61,8 @@ https://contoso.sharepoint.com/sites/marketing/_api/SP.HubSites.CanCreate
 ```
 
 ## Definitions
+|Type|Description|
+|---|---|
 | [SPHubSiteCanCreate](#sphubsitecancreate) | Indicates if you have permissions to create a hub site.|
 
 ### SPHubSiteCanCreate
