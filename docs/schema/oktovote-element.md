@@ -1,7 +1,5 @@
 ---
-title: "OkToVote Element"
-
-
+title: "OkToVote element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: cb803116-b471-4893-87b8-d03ef0632b9c
-description: "Last modified: March 09, 2015"
+description: Used to determine whether a specific user can vote in a survey.
 ---
 
-# OkToVote Element
+# OkToVote element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used to determine whether a specific user can vote in a survey.
   
-```
+```XML
 <OkToVote>
 </OkToVote>
 ```
@@ -31,27 +27,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ### Remarks
 
@@ -59,7 +48,7 @@ This element requires that a **SetList** element be implemented for the appropri
   
 The **OkToVote** element renders as follows: 
   
-- **0** — It is OK for the currently authenticated user to vote in the survey whose internal name is u_Survey. 
+- **0** — It is okay for the currently authenticated user to vote in the survey whose internal name is u_Survey. 
     
 - **1** — The user cannot vote because u_Survey has no questions. 
     
@@ -67,4 +56,4 @@ The **OkToVote** element renders as follows:
     
 This element can be combined with a **Switch** statement to take actions, depending on the user's status in relation to a particular survey. 
   
-
+<br/>

@@ -1,5 +1,5 @@
 ---
-title: "Script Element (DeploymentManifest - SPWebPart)"
+title: "Script element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 15350a26-d4bd-444e-a707-b2fc5cb3fcf7
 description: "Last modified: March 09, 2015"
 ---
 
-# Script Element (DeploymentManifest - SPWebPart)
+# Script element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+- [WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ### Remarks
 

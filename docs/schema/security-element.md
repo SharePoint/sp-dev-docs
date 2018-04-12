@@ -1,7 +1,5 @@
 ---
-title: "Security Element"
-
-
+title: "Security element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 20e21cab-8353-449a-a5a9-da18e16c1a0c
-description: "Last modified: March 09, 2015"
+description: Contains the Read, Schema, and Write security settings that specify how the security for a list is configured.
 ---
 
-# Security Element
+# Security element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the Read, Schema, and Write security settings that specify how the security for a list is configured.
   
-```
+```XML
 <Security>
   <ReadSecurity> 1 | 2 </ReadSecurity>
   <SchemaSecurity> 1 | 2 </SchemaSecurity>
@@ -34,27 +30,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[ReadSecurity](readsecurity-element.md), [SchemaSecurity](schemasecurity-element.md), [WriteSecurity](writesecurity-element.md)|
+- [ReadSecurity](readsecurity-element.md)
+- [SchemaSecurity](schemasecurity-element.md)
+- [WriteSecurity](writesecurity-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[List](list-element-list.md)|
+- [List](list-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 

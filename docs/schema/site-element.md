@@ -1,7 +1,5 @@
 ---
-title: "Site Element"
-
-
+title: "Site element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 33c9ee16-a90e-44f5-9e9c-8818e7a9468e
-description: "Last modified: March 09, 2015"
+description: Top-level element used in the BASE.XML file to contain the schema definitions for tables in the content database.
 ---
 
-# Site Element
+# Site element
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Top-level element used in the BASE.XML file (`\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\XML`) to contain the schema definitions for tables in the content database.
   
-Top-level element used in the BASE.XML file ( `\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\XML`) to contain the schema definitions for tables in the content database.
-  
-```
+```XML
 <Site>
 </Site>
 ```
@@ -31,26 +27,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[GlobalLists](globallists-element.md)|
+- [GlobalLists](globallists-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 

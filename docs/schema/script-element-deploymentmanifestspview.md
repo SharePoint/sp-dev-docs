@@ -1,5 +1,5 @@
 ---
-title: "Script Element (DeploymentManifest - SPView)"
+title: "Script element (DeploymentManifest - SPView)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: f20d0d2f-c7aa-415a-8f89-79df17ae0840
 description: "Last modified: March 09, 2015"
 ---
 
-# Script Element (DeploymentManifest - SPView)
+# Script element (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+- [View element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 

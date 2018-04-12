@@ -10,7 +10,7 @@ ms.assetid: fb008d30-a447-4c8c-a315-eac2bab8874b
 description: Returns the HTTP path to the images directory for the project, including the trailing forward slash.
 ---
 
-# ImagesPath Element
+# ImagesPath element
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   

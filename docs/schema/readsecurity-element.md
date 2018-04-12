@@ -1,7 +1,5 @@
 ---
-title: "ReadSecurity Element"
-
-
+title: "ReadSecurity element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: b9961811-42e2-449d-9484-2134962adccd
-description: "Last modified: March 09, 2015"
+description: Contains the Read security setting for a list.
 ---
 
-# ReadSecurity Element
+# ReadSecurity element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains the Read security setting for a list.
   
-```
+```XML
 <ReadSecurity>
 </ReadSecurity>
 ```
@@ -31,27 +27,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Security](security-element.md)|
+- [Security](security-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
@@ -61,13 +50,10 @@ The **ReadSecurity** element can contain the following values:
     
 - **2** — Users have Read access only to items that they create. 
     
-See [Security Element](security-element.md) for an example that shows how to use the **ReadSecurity** element. 
+For an example that shows how to use the **ReadSecurity** element, see [Security element](security-element.md). 
   
 ## See also
 
-
-
-[SchemaSecurity Element](schemasecurity-element.md)
-  
-[WriteSecurity Element](writesecurity-element.md)
+- [SchemaSecurity element](schemasecurity-element.md) 
+- [WriteSecurity element](writesecurity-element.md)
 
