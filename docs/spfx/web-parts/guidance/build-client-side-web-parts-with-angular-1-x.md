@@ -786,7 +786,7 @@ To allow users to configure the value of your newly added property, you have to 
   ```typescript
   declare interface IToDoWebPartStrings {
     PropertyPaneDescription: string;
-    BasicGroupName: string;
+    ViewGroupName: string;
     HideFinishedTasksFieldLabel: string;
   }
 
