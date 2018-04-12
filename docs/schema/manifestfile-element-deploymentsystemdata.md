@@ -1,5 +1,5 @@
 ---
-title: "ManifestFile Element (DeploymentSystemData)"
+title: "ManifestFile element (DeploymentSystemData)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 37164e6f-d94d-451c-80c1-5558bd4889ca
 description: "Last modified: March 09, 2015"
 ---
 
-# ManifestFile Element (DeploymentSystemData)
+# ManifestFile element (DeploymentSystemData)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
@@ -54,7 +54,7 @@ None
    
 ### Parent elements
 
-[ManifestFiles Element (DeploymentSystemData)](manifestfiles-element-deploymentsystemdata.md)
+- [ManifestFiles element (DeploymentSystemData)](manifestfiles-element-deploymentsystemdata.md)
    
 ## See also
 

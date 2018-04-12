@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 12fd8fb9-91eb-4f23-89d6-2870fb9e30a8
 ---
 
-# OfficeItemProperty Element
+# OfficeItemProperty element
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

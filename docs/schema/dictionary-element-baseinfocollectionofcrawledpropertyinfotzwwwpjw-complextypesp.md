@@ -1,7 +1,5 @@
 ---
-title: "dictionary element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
-
-
+title: "Dictionary element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -12,7 +10,7 @@ ms.assetid: 6e21603d-c7b1-cf6e-1c2c-fe399042bca0
 description: "Last modified: March 09, 2015"
 ---
 
-# dictionary element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
+# Dictionary element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
 
  
   

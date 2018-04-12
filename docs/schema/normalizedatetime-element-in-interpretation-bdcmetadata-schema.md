@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: bbae3bfa-0754-d576-2bee-1ac0e8508a57
 ---
 
-# NormalizeDateTime Element in Interpretation 
+# NormalizeDateTime element in Interpretation 
 
 (BDCMetadata Schema)
 
@@ -98,7 +98,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.</p></td>
 </tr>
 </tbody>

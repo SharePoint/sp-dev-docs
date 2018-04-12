@@ -1,7 +1,5 @@
 ---
 title: "ResultType element (SPS15XSDSearchSet5)"
-
-
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer

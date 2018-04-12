@@ -1,5 +1,5 @@
 ---
-title: "RenderPattern Element (Field Types)"
+title: "RenderPattern element (Field Types)"
 
 
 manager: soliver
@@ -16,7 +16,7 @@ ms.assetid: d1b292bf-6be1-4372-b529-2c87d1f83d7d
 description: "Last modified: March 09, 2015"
 ---
 
-# RenderPattern Element (Field Types)
+# RenderPattern element (Field Types)
 
  
   
@@ -52,7 +52,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ||
 |:-----|
-|[FieldType Element (Field Types)](fieldtype-element-field-types.md)|
+|[FieldType element (Field Types)](fieldtype-element-field-types.md)|
    
 ### Remarks
 

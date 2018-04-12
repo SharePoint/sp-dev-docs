@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: f7e98365-4dfd-4d2c-98bf-5f61271b876e
 ---
 
-# NestedInitiationFieldNodes Element (WorkflowInfo)
+# NestedInitiationFieldNodes element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

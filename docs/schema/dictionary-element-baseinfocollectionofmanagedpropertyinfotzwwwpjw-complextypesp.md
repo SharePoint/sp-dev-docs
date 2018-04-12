@@ -1,7 +1,5 @@
 ---
-title: "dictionary element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
-
-
+title: "Dictionary element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -12,7 +10,7 @@ ms.assetid: d0012e3f-c260-6806-1d26-5b32642be173
 description: "Last modified: March 09, 2015"
 ---
 
-# dictionary element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
+# Dictionary element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
 
  
   

@@ -1775,9 +1775,9 @@
           href: schema/contextualtabs-element-commanduidefinitiontype-complextypeapphostwebfeatures.md
         - name: Controls element
           href: schema/controls-element-commanduidefinitiontype-complextypeapphostwebfeatures.md
-        - name: CustomAction element (CustomActionDefinitions complexType)
+        - name: CustomAction element (CustomActionDefinitions)
           href: schema/customaction-element-customactiondefinitions-complextypeapphostwebfeatures.md
-        - name: CustomAction element (ElementDefinitionCollection complexType)
+        - name: CustomAction element (ElementDefinitionCollection)
           href: schema/customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.md
         - name: DropDown element
           href: schema/dropdown-element-commanduidefinitiontype-complextypeapphostwebfeatures.md
@@ -1795,7 +1795,7 @@
           href: schema/enumitems-element-clientwebpartproperty-complextypeapphostwebfeatures.md
         - name: Feature element
           href: schema/feature-element-apphostwebfeatures.md
-        - name: Feature element (FeatureTemplateReferences complexType)
+        - name: Feature element (FeatureTemplateReferences)
           href: schema/feature-element-featuretemplatereferences-complextypeapphostwebfeatures.md
         - name: FlyoutAnchor element
           href: schema/flyoutanchor-element-commanduidefinitiontype-complextypeapphostwebfeatures.md
@@ -1821,17 +1821,17 @@
           href: schema/menusection-element-commanduidefinitiontype-complextypeapphostwebfeatures.md
         - name: MRUSplitButton element
           href: schema/mrusplitbutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.md
-        - name: Properties element (FeatureDefinition complexType)
+        - name: Properties element (FeatureDefinition)
           href: schema/properties-element-featuredefinition-complextypeapphostwebfeatures.md
-        - name: Properties element (FeatureTemplateReference complexType)
+        - name: Properties element (FeatureTemplateReference)
           href: schema/properties-element-featuretemplatereference-complextypeapphostwebfeatures.md
-        - name: Properties element (ClientWebPartDefinition complexType)
+        - name: Properties element (ClientWebPartDefinition)
           href: schema/properties-element-clientwebpartdefinition-complextypeapphostwebfeatures.md
-        - name: Property element (FeaturePropertyDefinitions complexType)
+        - name: Property element (FeaturePropertyDefinitions)
           href: schema/property-element-featurepropertydefinitions-complextypeapphostwebfeatures.md
-        - name: Property element (PropertyBagDefinition complexType)
+        - name: Property element (PropertyBagDefinition)
           href: schema/property-element-propertybagdefinition-complextypeapphostwebfeatures.md
-        - name: Property element (ClientWebPartProperties complexType)
+        - name: Property element (ClientWebPartProperties)
           href: schema/property-element-clientwebpartproperties-complextypeapphostwebfeatures.md
         - name: QAT element
           href: schema/qat-element-commanduidefinitiontype-complextypeapphostwebfeatures.md
@@ -2341,9 +2341,9 @@
           href: schema/nestedinitiationfieldnodes-element-schemasource-elementdatasourcetype-complextyp.md
         - name: Option element
           href: schema/option-element-fieldbind-elementruledesignertype-complextypeaction4.md
-        - name: Parameter element (parametersType complexType)
+        - name: Parameter element (parametersType)
           href: schema/parameter-element-parameterstype-complextypeaction4.md
-        - name: Parameter element (coercionParametersType complexType)
+        - name: Parameter element (coercionParametersType)
           href: schema/parameter-element-coercionparameterstype-complextypeaction4.md
         - name: Parameters element (Condition element)
           href: schema/parameters-element-condition-elementconditions-elementworkflowinfo-elementaction.md
@@ -2363,7 +2363,7 @@
           href: schema/ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md
         - name: RuleDesigner element (Flow element)
           href: schema/ruledesigner-element-flow-elementflows-elementworkflowinfo-elementaction4.md
-        - name: RuleDesigner element (defaultElementType complexType)
+        - name: RuleDesigner element (defaultElementType)
           href: schema/ruledesigner-element-defaultelementtype-complextypeaction4.md
         - name: SchemaSource element
           href: schema/schemasource-element-datasourcetype-complextypeaction4.md
@@ -3818,7 +3818,7 @@
           href: schema/providerid-element-source-complextypesps15xsdsearchset1.md
         - name: QueryTransform element
           href: schema/querytransform-element-source-complextypesps15xsdsearchset1.md
-        - name: Source element (ArrayOfSource complexType)
+        - name: Source element (ArrayOfSource)
           href: schema/source-element-arrayofsource-complextypesps15xsdsearchset1.md
         - name: Source element
           href: schema/source-element-sps15xsdsearchset1.md
@@ -3845,9 +3845,9 @@
           href: schema/_authsubmissionpath-element-formsauthcredentials-complextypesps15xsdsearchset2.md
         - name: _Cookies element
           href: schema/_cookies-element-cookieauthdata-complextypesps15xsdsearchset2.md
-        - name: _ErrorPageUrl element (CookieAuthData complexType)
+        - name: _ErrorPageUrl element (CookieAuthData)
           href: schema/_errorpageurl-element-cookieauthdata-complextypesps15xsdsearchset2.md
-        - name: _ErrorPageUrl element (FormsAuthCredentials complexType)
+        - name: _ErrorPageUrl element (FormsAuthCredentials)
           href: schema/_errorpageurl-element-formsauthcredentials-complextypesps15xsdsearchset2.md
         - name: _nameValuePairs element
           href: schema/_namevaluepairs-element-ssoauthdata-complextypesps15xsdsearchset2.md
@@ -3909,7 +3909,7 @@
           href: schema/cookieauthdata-element-sps15xsdsearchset2.md
         - name: CrawledPropertyInfo element
           href: schema/crawledpropertyinfo-element-sps15xsdsearchset2.md
-        - name: CrawledPropertyInfo element (ArrayOfCrawledPropertyInfo complexType)
+        - name: CrawledPropertyInfo element (ArrayOfCrawledPropertyInfo)
           href: schema/crawledpropertyinfo-element-arrayofcrawledpropertyinfo-complextypesps15xsdsearch.md
         - name: CrawledPropertyInfoCollection element
           href: schema/crawledpropertyinfocollection-element-sps15xsdsearchset2.md
@@ -3929,15 +3929,15 @@
           href: schema/description-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
         - name: DescriptionLSID element
           href: schema/descriptionlsid-element-propertyruleoperator-complextypesps15xsdsearchset2.md
-        - name: dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType)
+        - name: Dictionary element (AliasInfo)
           href: schema/dictionary-element-baseinfocollectionofaliasinfotzwwwpjw-complextypesps15xsdsear.md
-        - name: dictionary element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType)
+        - name: Dictionary element (CrawledPropertyInfo)
           href: schema/dictionary-element-baseinfocollectionofcrawledpropertyinfotzwwwpjw-complextypesp.md
-        - name: dictionary element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType)
+        - name: Dictionary element (ManagedPropertyInfo)
           href: schema/dictionary-element-baseinfocollectionofmanagedpropertyinfotzwwwpjw-complextypesp.md
-        - name: dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType)
+        - name: Dictionary element (MappingInfo)
           href: schema/dictionary-element-baseinfocollectionofmappinginfotzwwwpjw-complextypesps15xsdse.md
-        - name: dictionary element (BaseInfoCollectionOfOverrideInfoTzWWwPjw complexType)
+        - name: Dictionary element (OverrideInfo)
           href: schema/dictionary-element-baseinfocollectionofoverrideinfotzwwwpjw-complextypesps15xsds.md
         - name: DisableInheritance element
           href: schema/disableinheritance-element-searchobjectowner-complextypesps15xsdsearchset2.md
@@ -3983,27 +3983,27 @@
           href: schema/isreadonly-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
         - name: JoinedByOr element
           href: schema/joinedbyor-element-propertyruleoperator-complextypesps15xsdsearchset2.md
-        - name: LastItemName element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType)
+        - name: LastItemName element (AliasInfo)
           href: schema/lastitemname-element-baseinfocollectionofaliasinfotzwwwpjw-complextypesps15xsdse.md
-        - name: LastItemName element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType)
+        - name: LastItemName element (CrawledProperty)
           href: schema/lastitemname-element-baseinfocollectionofcrawledpropertyinfotzwwwpjw-complextype.md
-        - name: LastItemName element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType)
+        - name: LastItemName element (ManagedPropertyInfo)
           href: schema/lastitemname-element-baseinfocollectionofmanagedpropertyinfotzwwwpjw-complextype.md
-        - name: LastItemName element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType)
+        - name: LastItemName element (MappingInfo)
           href: schema/lastitemname-element-baseinfocollectionofmappinginfotzwwwpjw-complextypesps15xsd.md
-        - name: LastItemName element (BaseInfoCollectionOfOverrideInfoTzWWwPjw complexType)
+        - name: LastItemName element (OverrideInfo)
           href: schema/lastitemname-element-baseinfocollectionofoverrideinfotzwwwpjw-complextypesps15xs.md
         - name: LastModifiedDate element
           href: schema/lastmodifieddate-element-resultitemtype-complextypesps15xsdsearchset2.md
         - name: ManagedDataType element
           href: schema/manageddatatype-element-sps15xsdsearchset2.md
-        - name: ManagedPid element (AliasInfo complexType)
+        - name: ManagedPid element (AliasInfo)
           href: schema/managedpid-element-aliasinfo-complextypesps15xsdsearchset2.md
-        - name: ManagedPid element (MappingInfo complexType)
+        - name: ManagedPid element (MappingInfo)
           href: schema/managedpid-element-mappinginfo-complextypesps15xsdsearchset2.md
-        - name: ManagedPid element (OverrideInfo complexType)
+        - name: ManagedPid element (OverrideInfo)
           href: schema/managedpid-element-overrideinfo-complextypesps15xsdsearchset2.md
-        - name: ManagedPropertyInfo element (ArrayOfManagedPropertyInfo complexType)
+        - name: ManagedPropertyInfo element (ArrayOfManagedPropertyInfo)
           href: schema/managedpropertyinfo-element-arrayofmanagedpropertyinfo-complextypesps15xsdsearch.md
         - name: ManagedPropertyInfo element
           href: schema/managedpropertyinfo-element-sps15xsdsearchset2.md
@@ -4025,11 +4025,11 @@
           href: schema/mappingorder-element-mappinginfo-complextypesps15xsdsearchset2.md
         - name: MappingsOverridden element
           href: schema/mappingsoverridden-element-overrideinfo-complextypesps15xsdsearchset2.md
-        - name: Name element (ResultItemType complexType)
+        - name: Name element (ResultItemType)
           href: schema/name-element-resultitemtype-complextypesps15xsdsearchset2.md
-        - name: Name element (PropertyRuleOperator complexType)
+        - name: Name element (PropertyRuleOperator)
           href: schema/name-element-propertyruleoperator-complextypesps15xsdsearchset2.md
-        - name: Name element (BaseInfo complexType)
+        - name: Name element (BaseInfo)
           href: schema/name-element-baseinfo-complextypesps15xsdsearchset2.md
         - name: NameLSID element
           href: schema/namelsid-element-propertyruleoperator-complextypesps15xsdsearchset2.md
@@ -4049,7 +4049,7 @@
           href: schema/propertyname-element-propertyrule-complextypesps15xsdsearchset2.md
         - name: PropertyOperator element
           href: schema/propertyoperator-element-propertyrule-complextypesps15xsdsearchset2.md
-        - name: PropertyRule element (ArrayOfPropertyRule complexType)
+        - name: PropertyRule element (ArrayOfPropertyRule)
           href: schema/propertyrule-element-arrayofpropertyrule-complextypesps15xsdsearchset2.md
         - name: PropertyRule element
           href: schema/propertyrule-element-sps15xsdsearchset2.md
@@ -4069,7 +4069,7 @@
           href: schema/refinable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
         - name: RefinerAnchoring element
           href: schema/refineranchoring-element-sps15xsdsearchset2.md
-        - name: RefinerConfiguration element (ManagedPropertyInfo complexType)
+        - name: RefinerConfiguration element (ManagedPropertyInfo)
           href: schema/refinerconfiguration-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
         - name: RefinerConfiguration element
           href: schema/refinerconfiguration-element-sps15xsdsearchset2.md
@@ -4083,7 +4083,7 @@
           href: schema/resolution-element-refinerconfiguration-complextypesps15xsdsearchset2.md
         - name: RespectPriority element
           href: schema/respectpriority-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
-        - name: ResultItemType element (ArrayOfResultItemType complexType)
+        - name: ResultItemType element (ArrayOfResultItemType)
           href: schema/resultitemtype-element-arrayofresultitemtype-complextypesps15xsdsearchset2.md
         - name: ResultItemType element
           href: schema/resultitemtype-element-sps15xsdsearchset2.md
@@ -4099,13 +4099,13 @@
           href: schema/safeforanonymous-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
         - name: Samples element
           href: schema/samples-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md
-        - name: SchemaId element (AliasInfo complexType)
+        - name: SchemaID element (AliasInfo)
           href: schema/schemaid-element-aliasinfo-complextypesps15xsdsearchset2.md
-        - name: SchemaId element (CrawledPropertyInfo complexType)
+        - name: SchemaID element (CrawledPropertyInfo)
           href: schema/schemaid-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md
-        - name: SchemaId element (MappingInfo complexType)
+        - name: SchemaID element (MappingInfo)
           href: schema/schemaid-element-mappinginfo-complextypesps15xsdsearchset2.md
-        - name: SchemaId element (OverrideInfo complexType)
+        - name: SchemaID element (OverrideInfo)
           href: schema/schemaid-element-overrideinfo-complextypesps15xsdsearchset2.md
         - name: Searchable element
           href: schema/searchable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
@@ -4117,7 +4117,7 @@
           href: schema/serializablesecurablenamevaluepairs-element-securableauthdata-complextypesps15xs.md
         - name: Sortable element
           href: schema/sortable-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
-        - name: SortableType element (ManagedPropertyInfo complexType)
+        - name: SortableType element (ManagedPropertyInfo)
           href: schema/sortabletype-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
         - name: SortableType element
           href: schema/sortabletype-element-sps15xsdsearchset2.md
@@ -4133,9 +4133,9 @@
           href: schema/spwebid-element-searchobjectowner-complextypesps15xsdsearchset2.md
         - name: SsoAuthData element
           href: schema/ssoauthdata-element-sps15xsdsearchset2.md
-        - name: TokenNormalization element (ManagedPropertyInfo complexType)
+        - name: TokenNormalization element (ManagedPropertyInfo)
           href: schema/tokennormalization-element-managedpropertyinfo-complextypesps15xsdsearchset2.md
-        - name: TokenNormalization element (OverrideInfo complexType)
+        - name: TokenNormalization element (OverrideInfo)
           href: schema/tokennormalization-element-overrideinfo-complextypesps15xsdsearchset2.md
         - name: TotalCount element
           href: schema/totalcount-element-managedpropertyinfocollection-complextypesps15xsdsearchset2.md
@@ -4264,17 +4264,17 @@
           href: schema/resulttypes-element-searchqueryconfigurationsettings-complextypesps15xsdsearchse.md
         - name: SearchConfigurationSettings element
           href: schema/searchconfigurationsettings-element-sps15xsdsearchset3.md
-        - name: SearchQueryConfigurationSettings element (SearchConfigurationSettings complexType)
+        - name: SearchQueryConfigurationSettings element (SearchConfigurationSettings)
           href: schema/searchqueryconfigurationsettings-element-searchconfigurationsettings-complextype.md
-        - name: SearchQueryConfigurationSettings element (ArrayOfSearchQueryConfigurationSettings complexType)
+        - name: SearchQueryConfigurationSettings element (ArrayOfSearchQueryConfigurationSettings)
           href: schema/searchqueryconfigurationsettings-element-arrayofsearchqueryconfigurationsettings.md
         - name: SearchQueryConfigurationSettings element
           href: schema/searchqueryconfigurationsettings-element-sps15xsdsearchset3.md
-        - name: SearchRankingModelConfigurationSettings element (SearchConfigurationSettings complexType)
+        - name: SearchRankingModelConfigurationSettings element (SearchConfigurationSettings)
           href: schema/searchrankingmodelconfigurationsettings-element-searchconfigurationsettings-comp.md
         - name: SearchRankingModelConfigurationSettings element
           href: schema/searchrankingmodelconfigurationsettings-element-sps15xsdsearchset3.md
-        - name: SearchSchemaConfigurationSettings element (SearchConfigurationSettings complexType)
+        - name: SearchSchemaConfigurationSettings element (SearchConfigurationSettings)
           href: schema/searchschemaconfigurationsettings-element-searchconfigurationsettings-complextyp.md
         - name: SearchSchemaConfigurationSettings element
           href: schema/searchschemaconfigurationsettings-element-sps15xsdsearchset3.md
@@ -4354,7 +4354,7 @@
           href: schema/queryauthenticationtype-element-sps15xsdsearchset5.md
         - name: QueryHint element
           href: schema/queryhint-element-sps15xsdsearchset5.md
-        - name: ReorderingRule element (ArrayOfReorderingRule complexType)
+        - name: ReorderingRule element (ArrayOfReorderingRule)
           href: schema/reorderingrule-element-arrayofreorderingrule-complextypesps15xsdsearchset5.md
         - name: ReorderingRule element
           href: schema/reorderingrule-element-sps15xsdsearchset5.md

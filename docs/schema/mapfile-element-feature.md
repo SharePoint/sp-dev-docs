@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 9e5e6eb7-89c7-4fb8-baff-e08cdce7ba18
 ---
 
-# MapFile Element (Feature)
+# MapFile element (Feature)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -63,7 +63,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></p></td>
+<td align="left"><p><a href="upgradeactions-element-feature.md">UpgradeActions element (Feature)</a></p></td>
 </tr>
 </tbody>
 </table>

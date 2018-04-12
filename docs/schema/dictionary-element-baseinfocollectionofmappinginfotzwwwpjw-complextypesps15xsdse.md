@@ -1,7 +1,5 @@
 ---
-title: "dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
-
-
+title: "Dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -12,7 +10,7 @@ ms.assetid: 9e2022cc-81d5-96c2-161d-9b9d32fa4ea8
 description: "Last modified: March 09, 2015"
 ---
 
-# dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
+# Dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
 
  
   

@@ -1,7 +1,5 @@
 ---
 title: "AuthenticationType element (AuthenticationInformation complexType) (SPS15XSDSearchSet2)"
-
-
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -13,9 +11,7 @@ description: "Last modified: March 09, 2015"
 ---
 
 # AuthenticationType element (AuthenticationInformation complexType) (SPS15XSDSearchSet2)
-
  
-  
 ## Element information
 
 |||

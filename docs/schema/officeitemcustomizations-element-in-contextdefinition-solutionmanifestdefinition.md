@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 79c8b258-dbc7-37f2-7ff5-4ea58eb376ca
 ---
 
-# OfficeItemCustomizations Element in ContextDefinition 
+# OfficeItemCustomizations element in ContextDefinition 
 
-(SolutionManifestDefinitions Schema)
+(SolutionManifestDefinitions schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -63,13 +63,13 @@ None.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><p>Element</p></th>
+<th align="left"><p>element</p></th>
 <th align="left"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: e880c329-38ff-4dc4-a4af-167a4c575be6
 ---
 
-# Dictionary Element (WorkflowInfo)
+# Dictionary element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

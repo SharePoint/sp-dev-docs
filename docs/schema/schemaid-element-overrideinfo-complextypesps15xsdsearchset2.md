@@ -1,7 +1,5 @@
 ---
-title: "SchemaId element (OverrideInfo complexType) (SPS15XSDSearchSet2)"
-
-
+title: "SchemaID element (OverrideInfo complexType) (SPS15XSDSearchSet2)"
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -12,7 +10,7 @@ ms.assetid: 0b40f067-c7f5-626e-4673-5c55d776942a
 description: "Last modified: March 09, 2015"
 ---
 
-# SchemaId element (OverrideInfo complexType) (SPS15XSDSearchSet2)
+# SchemaID element (OverrideInfo complexType) (SPS15XSDSearchSet2)
 
  
   

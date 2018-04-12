@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 8ec2e7b0-156f-ff4a-a87b-fe5764e4875b
 ---
 
-# Proxy Element in LobSystem 
+# Proxy element in LobSystem 
 
 (BDCMetadata Schema)
 

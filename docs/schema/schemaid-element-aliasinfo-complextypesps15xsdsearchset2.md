@@ -1,7 +1,5 @@
 ---
-title: "SchemaId element (AliasInfo complexType) (SPS15XSDSearchSet2)"
-
-
+title: "SchemaID element (AliasInfo complexType) (SPS15XSDSearchSet2)"
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -12,7 +10,7 @@ ms.assetid: 321f714b-600b-9936-8d6c-bc3c618912ee
 description: "Last modified: March 09, 2015"
 ---
 
-# SchemaId element (AliasInfo complexType) (SPS15XSDSearchSet2)
+# SchemaID element (AliasInfo complexType) (SPS15XSDSearchSet2)
 
  
   

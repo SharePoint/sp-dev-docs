@@ -1,5 +1,5 @@
 ---
-title: "NotificationHandlerAssembly Element (Alert Templates)"
+title: "NotificationHandlerAssembly element (Alert Templates)"
 
 
 manager: soliver
@@ -16,7 +16,7 @@ ms.assetid: 09ba7a32-e810-4fcf-8993-efb3d4678b7d
 description: "Last modified: March 09, 2015"
 ---
 
-# NotificationHandlerAssembly Element (Alert Templates)
+# NotificationHandlerAssembly element (Alert Templates)
 
  
   

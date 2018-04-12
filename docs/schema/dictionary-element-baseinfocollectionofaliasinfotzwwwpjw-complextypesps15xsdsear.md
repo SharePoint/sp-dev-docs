@@ -1,7 +1,5 @@
 ---
-title: "dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
-
-
+title: "Dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -12,7 +10,7 @@ ms.assetid: 9847bf12-e597-be75-7f40-703e0df8f9af
 description: "Last modified: March 09, 2015"
 ---
 
-# dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
+# Dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
 
  
   

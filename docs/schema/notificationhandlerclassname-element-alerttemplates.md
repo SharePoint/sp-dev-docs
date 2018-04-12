@@ -1,5 +1,5 @@
 ---
-title: "NotificationHandlerClassName Element (AlertTemplates)"
+title: "NotificationHandlerClassName element (AlertTemplates)"
 
 
 manager: soliver
@@ -16,7 +16,7 @@ ms.assetid: 7eb1fb83-2a22-44e4-9526-c20400a9eb6b
 description: "Last modified: March 09, 2015"
 ---
 
-# NotificationHandlerClassName Element (AlertTemplates)
+# NotificationHandlerClassName element (AlertTemplates)
 
  
   

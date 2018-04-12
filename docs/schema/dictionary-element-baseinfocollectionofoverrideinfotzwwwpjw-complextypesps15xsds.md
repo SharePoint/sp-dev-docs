@@ -1,5 +1,5 @@
 ---
-title: "dictionary element (BaseInfoCollectionOfOverrideInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
+title: "Dictionary element (BaseInfoCollectionOfOverrideInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
 
 
 manager: arnek
@@ -12,7 +12,7 @@ ms.assetid: 9c2793b9-977f-02e7-0f85-906aedd411ed
 description: "Last modified: March 09, 2015"
 ---
 
-# dictionary element (BaseInfoCollectionOfOverrideInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
+# Dictionary element (BaseInfoCollectionOfOverrideInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
 
  
   
