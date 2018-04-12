@@ -4422,22 +4422,22 @@
     - name: Field Types schema
       href: schema/field-types-schema.md
       items:
-      - name: FieldTypes element (Field Types)
+      - name: FieldTypes element
         href: schema/fieldtypes-element-field-types.md
-      - name: FieldType element (Field Types)
+      - name: FieldType element
         href: schema/fieldtype-element-field-types.md
-      - name: Field element (Field Types)
+      - name: Field element
         href: schema/field-element-field-types.md
-      - name: PropertySchema element (Field Types)
+      - name: PropertySchema element
         href: schema/propertyschema-element-field-types.md
         items:
-        - name: Fields element (Field Types Property schema)
+        - name: Fields element 
           href: schema/fields-element-field-types-property-schema.md
-        - name: Field element (Field Types Property schema)
+        - name: Field element 
           href: schema/field-element-field-types-property-schema.md
-        - name: Default element (Field Types Property schema)
+        - name: Default element 
           href: schema/default-element-field-types-property-schema.md
-      - name: RenderPattern element (Field Types)
+      - name: RenderPattern element
         href: schema/renderpattern-element-field-types.md
     - name: AlertTemplates schema
       href: schema/alerttemplates-schema.md
@@ -4501,13 +4501,13 @@
     - name: Mobile Document Viewer schema
       href: schema/mobile-document-viewer-schema.md
       items:
-      - name: MobileDocViewers (Mobile Document Viewer)
+      - name: MobileDocViewers 
         href: schema/mobiledocviewers-mobile-document-viewer.md
-      - name: MobileDocViewer (Mobile Document Viewer)
+      - name: MobileDocViewer 
         href: schema/mobiledocviewer-mobile-document-viewer.md
-      - name: BrowserCondition (Mobile Document Viewer)
+      - name: BrowserCondition 
         href: schema/browsercondition-mobile-document-viewer.md
-      - name: Override (Mobile Document Viewer)
+      - name: Override 
         href: schema/override-mobile-document-viewer.md
     - name: Server Ribbon schema
       href: schema/server-ribbon-schema.md
@@ -4680,31 +4680,31 @@
     - name: SPMetal Parameters schema
       href: schema/spmetal-parameters-schema.md
       items:
-      - name: Column (SPMetal)
+      - name: Column 
         href: schema/column-spmetal.md
-      - name: ContentType (SPMetal)
+      - name: ContentType 
         href: schema/contenttype-spmetal.md
-      - name: ExcludeColumn (SPMetal)
+      - name: ExcludeColumn 
         href: schema/excludecolumn-spmetal.md
-      - name: ExcludeContentType (SPMetal)
+      - name: ExcludeContentType 
         href: schema/excludecontenttype-spmetal.md
-      - name: ExcludeList (SPMetal)
+      - name: ExcludeList 
         href: schema/excludelist-spmetal.md
-      - name: ExcludeOtherColumns (SPMetal)
+      - name: ExcludeOtherColumns 
         href: schema/excludeothercolumns-spmetal.md
-      - name: ExcludeOtherContentTypes (SPMetal)
+      - name: ExcludeOtherContentTypes 
         href: schema/excludeothercontenttypes-spmetal.md
-      - name: ExcludeOtherLists (SPMetal)
+      - name: ExcludeOtherLists 
         href: schema/excludeotherlists-spmetal.md
-      - name: IncludeHiddenColumns (SPMetal)
+      - name: IncludeHiddenColumns 
         href: schema/includehiddencolumns-spmetal.md
-      - name: IncludeHiddenContentTypes (SPMetal)
+      - name: IncludeHiddenContentTypes 
         href: schema/includehiddencontenttypes-spmetal.md
-      - name: IncludeHiddenLists (SPMetal)
+      - name: IncludeHiddenLists 
         href: schema/includehiddenlists-spmetal.md
-      - name: List (SPMetal)
+      - name: List 
         href: schema/list-spmetal.md
-      - name: Web (SPMetal)
+      - name: Web 
         href: schema/web-spmetal.md
     - name: Upgrade Definition schema
       href: schema/upgrade-definition-schema.md
@@ -4732,8 +4732,8 @@
       items:
       - name: dsQueryResponse
         href: schema/dsqueryresponse.md
-      - name: Rows (dsQueryResponse)
+      - name: Rows
         href: schema/rows-dsqueryresponse.md
-      - name: Row (dsQueryResponse)
+      - name: Row
         href: schema/row-dsqueryresponse.md    
   
