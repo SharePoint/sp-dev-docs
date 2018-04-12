@@ -1,7 +1,5 @@
 ---
-title: "Escape Element"
-
-
+title: "Escape element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 3269e06e-bc2d-4f96-8c33-867e15a2d40b
-description: "Last modified: March 09, 2015"
+description: In vCard support, escapes certain characters in strings.
 ---
 
-# Escape Element
+# Escape element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 In vCard support, escapes certain characters in strings. The **Escape** element can be used to replace every occurrence of a character in the string. 
   
-```
+```XML
 <Escape
   EscapeChar = "Text"
   EscapeChars = "Text">
@@ -40,21 +36,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Field](field-element-list.md)|
+- [Field](field-element-list.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 

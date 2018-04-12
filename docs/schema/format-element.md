@@ -1,7 +1,5 @@
 ---
-title: "Format Element"
-
-
+title: "Format element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 55dae1d8-d415-445c-8c6c-5d9a1b140b64
-description: "Last modified: March 09, 2015"
+description: Contains definitions of column and row formatting that are used in a Datasheet view.
 ---
 
-# Format Element
+# Format element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains definitions of column and row formatting that are used in a Datasheet view.
   
-```
+```XML
 <Format
   Name = "Text">
     <FormatDef
@@ -43,21 +39,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[FormatDef](formatdef-element.md)|
+- [FormatDef](formatdef-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Formats](formats-element.md)|
+- [Formats](formats-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded 
    
 ## Example
 

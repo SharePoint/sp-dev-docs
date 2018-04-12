@@ -10,7 +10,7 @@ ms.assetid: e4df2439-f74e-48fa-b8d5-b09e94af2906
 description: "Last modified: July 15, 2011"
 ---
 
-# General Schema
+# General schema
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   

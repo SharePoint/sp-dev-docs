@@ -1,7 +1,5 @@
 ---
-title: "FieldFilterImageURL Element"
-
-
+title: "FieldFilterImageURL element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: cbafc593-010d-4278-af89-e38295da9a67
-description: "Last modified: March 09, 2015"
+description: Returns the URL to the icon that is used to indicate filtering on a list.
 ---
 
-# FieldFilterImageURL Element
+# FieldFilterImageURL element
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Returns the URL to the icon that is used to indicate filtering on a list.
   
-```
+```XML
 <FieldFilterImageURL>
 </FieldFilterImageURL>
 ```
@@ -31,27 +27,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 
@@ -59,7 +48,7 @@ This element is used in the [FldTypes.xml](http://msdn.microsoft.com/library/8f8
   
 ## Example
 
-The following excerpt uses the **FieldFilterImageURL** element to assemble the <IMG> tag for displaying the filter image. 
+The following excerpt uses the **FieldFilterImageURL** element to assemble the `<IMG>` tag for displaying the filter image. 
   
 ```XML
 <HTML><![CDATA[ <IMG SRC=" ]]></HTML>
@@ -71,10 +60,6 @@ The following excerpt uses the **FieldFilterImageURL** element to assemble the <
 
 ## See also
 
-
-
-[FieldSortImageURL Element](fieldsortimageurl-element.md)
-
-
-[FieldSortParams Element (View)](fieldsortparams-element-view.md)
+- [FieldSortImageURL element](fieldsortimageurl-element.md)
+- [FieldSortParams element (View)](fieldsortparams-element-view.md)
 

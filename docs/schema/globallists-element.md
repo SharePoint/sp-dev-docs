@@ -1,7 +1,5 @@
 ---
-title: "GlobalLists Element"
-
-
+title: "GlobalLists element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,18 +7,16 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 2d55466f-0fe1-4715-8454-b8008070494f
-description: "Last modified: March 09, 2015"
+description: Top-level element used in the file BASE.XML to define the built-in lists of websites based on Microsoft SharePoint Foundation.
 ---
 
-# GlobalLists Element
+# GlobalLists element
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Top-level element used in the file BASE.XML (`\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\XML`) to define the built-in lists of websites based on Microsoft SharePoint Foundation.
   
-Top-level element used in the file BASE.XML ( `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\XML`) to define the built-in lists of websites based on Microsoft SharePoint Foundation.
-  
-```
+```XML
 <GlobalLists>
 </GlobalLists>
 ```
@@ -31,27 +27,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[List](list-element-list.md)|
+- [List](list-element-list.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Site](site-element.md)|
+- [Site](site-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 

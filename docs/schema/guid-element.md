@@ -1,5 +1,5 @@
 ---
-title: "GUID Element"
+title: "GUID element"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 466ffa8a-0f31-4be9-a418-f4ce444024c7
-description: "Last modified: March 09, 2015"
+description: An internal ID number used in the database.
 ---
 
 # GUID element
@@ -15,8 +15,6 @@ description: "Last modified: March 09, 2015"
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 An internal ID number used in the database. The **GUID** element generates a globally unique identifier (GUID) as returned by the Microsoft Component Object Model (COM) function **CoCreateGuid**.
-
-## Definition
 
 ```XML
 <GUID>
