@@ -12,7 +12,7 @@ ms.assetid: 6793ccee-0f76-f798-eeb8-c1f9309d7685
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-This topic shows the schema definition for App Manifest.
+This topic shows the schema definition for **SharePoint Add-in Manifest**.
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
