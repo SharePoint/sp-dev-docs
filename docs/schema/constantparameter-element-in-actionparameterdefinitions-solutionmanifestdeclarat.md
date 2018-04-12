@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 12b3bdb6-09d0-b59a-e36c-6f8f628bfd27
 ---
 
-# ConstantParameter Element in ActionParameterDefinitions 
+# ConstantParameter element in ActionParameterDefinitions 
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -145,7 +145,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters Element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **Parameters** element that contains all the parameters of an action.</p></td>
 </tr>
 </tbody>

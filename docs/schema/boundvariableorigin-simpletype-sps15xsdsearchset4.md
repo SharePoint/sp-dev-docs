@@ -1,7 +1,5 @@
 ---
 title: "BoundVariableOrigin simpleType (SPS15XSDSearchSet4)"
-
-
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +12,7 @@ description: "Last modified: March 09, 2015"
 
 # BoundVariableOrigin simpleType (SPS15XSDSearchSet4)
 
- 
-  
- **Applies to:** SharePoint Server 2013
+**Applies to:** SharePoint Server 2013
   
 ## Type information
 

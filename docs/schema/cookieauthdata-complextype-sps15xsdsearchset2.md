@@ -1,7 +1,5 @@
 ---
 title: "CookieAuthData complexType (SPS15XSDSearchSet2)"
-
-
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro

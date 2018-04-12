@@ -12,8 +12,6 @@ description: "Last modified: March 09, 2015"
 
 # BaseInfoCollectionOfOverrideInfoTzWWwPjw element (SPS15XSDSearchSet2)
 
- 
-  
 ## Element information
 
 |||

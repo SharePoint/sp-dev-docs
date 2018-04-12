@@ -1,7 +1,5 @@
 ---
 title: "ArrayOfSearchQueryConfigurationSettings complexType (SPS15XSDSearchSet3)"
-
-
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -14,8 +12,6 @@ description: "Last modified: March 09, 2015"
 
 # ArrayOfSearchQueryConfigurationSettings complexType (SPS15XSDSearchSet3)
 
- 
-  
 ## Type information
 
 |||

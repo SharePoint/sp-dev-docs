@@ -1,7 +1,5 @@
 ---
 title: "AlertChangeType simpleType (SPS15XSDSearchSet5)"
-
-
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -14,9 +12,7 @@ description: "Last modified: March 09, 2015"
 
 # AlertChangeType simpleType (SPS15XSDSearchSet5)
 
- 
-  
- **Applies to:** SharePoint Server 2013
+**Applies to:** SharePoint Server 2013
   
 ## Type information
 
@@ -42,7 +38,7 @@ description: "Last modified: March 09, 2015"
 ## Enumeration values
 
 |**Value**|**Description**|
-|:-----|:-----|
+|:-----|:-----:|
 |Discovered  <br/> |1  <br/> |
 |Modified  <br/> |2  <br/> |
 |DiscoveredOrModified  <br/> |3  <br/> |

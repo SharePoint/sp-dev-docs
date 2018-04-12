@@ -1,7 +1,5 @@
 ---
 title: "RankingModels element (SearchRankingModelConfigurationSettings complexType) (SPS15XSDSearchSet3)"
-
-
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
