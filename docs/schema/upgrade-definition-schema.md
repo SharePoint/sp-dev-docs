@@ -1,13 +1,11 @@
 ---
 title: "Upgrade Definition schema"
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 keywords:
-- upgrading [sharepoint 2010], definition schema
+- upgrading - [sharepoint 2010], definition schema
 ms.prod: office-online-server
 localization_priority: Normal
 api_name:
@@ -20,33 +18,31 @@ description: "Last modified: July 15, 2011"
 
 # Upgrade Definition schema
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 The following elements and attributes are implemented within a site upgrade definition file.
   
 [Config](config-element-upgrade.md)
   
-[WebTemplate](webtemplate-element-upgrade.md)
+- [WebTemplate](webtemplate-element-upgrade.md)
   
-[Lists](lists-element-upgrade.md)
+  - [Lists](lists-element-upgrade.md)
   
-[List](list-element-upgrade.md)
+    - [List](list-element-upgrade.md)
   
-[Files](http://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2%28Office.15%29.aspx)
+  - [Files](http://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2%28Office.15%29.aspx)
   
-[File](file-element-upgrade.md)
+    - [File](file-element-upgrade.md)
   
-[AppliedSiteFeatures](appliedsitefeatures-element-upgrade.md)
+  - [AppliedSiteFeatures](appliedsitefeatures-element-upgrade.md)
   
-[Feature](feature-element-upgrade.md)
+    - [Feature](feature-element-upgrade.md)
   
-[AppliedWebFeatures](feature-element-upgrade.md)
+  - [AppliedWebFeatures](feature-element-upgrade.md)
   
-[Feature](feature-element-upgrade.md)
+    - [Feature](feature-element-upgrade.md)
   
-## Upgrade Definition Example
+## Example
 
 The following example outlines the format of an upgrade definition.
   

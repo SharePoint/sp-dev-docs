@@ -1,90 +1,86 @@
 ---
 title: "Solution schema"
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 keywords:
-- solution schema [sharepoint 2010],XML schema [SharePoint 2010]
+- solution schema - [sharepoint 2010],XML schema - [SharePoint 2010]
 ms.prod: office-online-server
 localization_priority: Normal
 api_type:
 - schema
 ms.assetid: 48efc045-5b54-4332-abed-6813d011c803
-description: "Last modified: July 15, 2011"
+description: A solution manifest file defines the constituent parts of a solution, including its files, assemblies, code access security, Web Parts, Features, site definitions, and other resources.
 ---
 
 # Solution schema
 
- **Last modified:** July 15, 2011 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 A solution manifest file defines the constituent parts of a solution, including its files, assemblies, code access security, Web Parts, Features, site definitions, and other resources.
   
 [Solution](solution-element-solution.md)
   
-[ActivationDependencies Element (Solution)](activationdependencies-element-solution.md)
+- [ActivationDependencies Element (Solution)](activationdependencies-element-solution.md)
   
-[ActivationDependency Element (Solution)](activationdependency-element-solution.md)
+  - [ActivationDependency Element (Solution)](activationdependency-element-solution.md)
   
-[ApplicationResourceFiles](applicationresourcefiles-element-solution.md)
+- [ApplicationResourceFiles](applicationresourcefiles-element-solution.md)
   
-[ApplicationResourceFile](applicationresourcefile-element-solution.md)
+  - [ApplicationResourceFile](applicationresourcefile-element-solution.md)
   
-[Assemblies](assemblies-element-solutionassemblies.md)
+- [Assemblies](assemblies-element-solutionassemblies.md)
   
-[Assembly](assembly-element-solutionassemblies.md)
+  - [Assembly](assembly-element-solutionassemblies.md)
   
-[SafeControls](safecontrols-element-solution.md)
+    - [SafeControls](safecontrols-element-solution.md)
   
-[SafeControl](safecontrol-element-solution.md)
+      - [SafeControl](safecontrol-element-solution.md)
   
-[ClassResources](classresources-element-solution.md)
+    - [ClassResources](classresources-element-solution.md)
   
-[ClassResource](classresource-element-solution.md)
+      - [ClassResource](classresource-element-solution.md)
   
-[CodeAccessSecurity](codeaccesssecurity-element-solution.md)
+- [CodeAccessSecurity](codeaccesssecurity-element-solution.md)
   
-[PolicyItem](policyitem-element-solution.md)
+  - [PolicyItem](policyitem-element-solution.md)
   
-[PermissionSet](permissionset-element-solution.md)
+    - [PermissionSet](permissionset-element-solution.md)
   
-[IPermission](ipermission-element-solution.md)
+      - [IPermission](ipermission-element-solution.md)
   
-[Assemblies](assemblies-element-solutioncodeaccesssecurity.md)
+    - [Assemblies](assemblies-element-solutioncodeaccesssecurity.md)
   
-[Assembly](assembly-element-solutioncodeaccesssecurity.md)
+      - [Assembly](assembly-element-solutioncodeaccesssecurity.md)
   
-[DwpFiles](dwpfiles-element-solution.md)
+- [DwpFiles](dwpfiles-element-solution.md)
   
-[DwpFile](dwpfile-element-solution.md)
+  - [DwpFile](dwpfile-element-solution.md)
   
-[FeatureManifests](featuremanifests-element-solution.md)
+- [FeatureManifests](featuremanifests-element-solution.md)
   
-[FeatureManifest](featuremanifest-element-solution.md)
+  - [FeatureManifest](featuremanifest-element-solution.md)
   
-[Resources](resources-element-solution.md)
+- [Resources](resources-element-solution.md)
   
-[Resource](resource-element-solution.md)
+  - [Resource](resource-element-solution.md)
   
-[RootFiles](rootfiles-element-solution.md)
+- [RootFiles](rootfiles-element-solution.md)
   
-[RootFile](rootfile-element-solution.md)
+  - [RootFile](rootfile-element-solution.md)
   
-[SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md)
+- [SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md)
   
-[SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)
+  - [SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)
   
-[WebTempFile](webtempfile-element-solution.md)
+    - [WebTempFile](webtempfile-element-solution.md)
   
-[TemplateFiles](templatefiles-element-solution.md)
+- [TemplateFiles](templatefiles-element-solution.md)
   
-[TemplateFile](templatefile-element-solution.md)
+  - [TemplateFile](templatefile-element-solution.md)
   
-## Example
+## Examples
 
 The following example shows a solution manifest file that includes declarations for Features, site definition files, and assemblies.
   
@@ -111,6 +107,8 @@ The following example shows a solution manifest file that includes declarations 
   </Assemblies>
 </Solution>
 ```
+
+<br/>
 
 The following example shows a manifest for a solution that includes two Features and three global language resource files.
   
