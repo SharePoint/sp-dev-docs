@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Revision** <br/> |Optional **Integer**. Specifies the build number of the site definition.  <br/> |
 |**SiteLogoUrl** <br/> |Optional **Text**. Specifies a server-relative URL for a custom image to use for the site logo. For example,  `/_layouts//images/MyCustomLogo.gif`.  <br/> |
 |**SiteLogoDescription** <br/> |Optional **Text**. Provides a description of the site logo.  <br/> |
-|**Title** <br/> |Required **Text**. Specifies a default name for Web sites that are created from the site definition.  <br/> |
+|**Title** <br/> |Required **Text**. Specifies a default name for websites that are created from the site definition.  <br/> |
 |**UIVersion** <br/> |Optional **Integer**. Specifies the version of the SharePoint Foundation UI that is being used by the sites based on the site definition.  <br/> |
    
 ### Child elements

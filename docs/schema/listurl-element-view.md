@@ -11,14 +11,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: d6435e1e-12b9-41e2-a752-0e6f28ca4dc3
-description: Renders the URL of the list relative to the containing Web site. 
+description: Renders the URL of the list relative to the containing website. 
 ---
 
 # ListUrl element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Renders the URL of the list relative to the containing Web site. 
+Renders the URL of the list relative to the containing website. 
   
 ```XML
 <ListUrl>

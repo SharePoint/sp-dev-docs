@@ -61,7 +61,7 @@ The following example defines one row of fields for the welcome page.
 <Data>
    <Rows>
       <Row>
-         <Field Name="Title">Welcome to your new team Web site!</Field>
+         <Field Name="Title">Welcome to your new team website!</Field>
          <Field Name="Body">You can use this site to share information 
             with members of the site. To add a new announcement, click 
             "Add new announcement" below. This is a great way to 

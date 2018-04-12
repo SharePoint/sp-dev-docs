@@ -37,7 +37,7 @@ Provides values for the **Type** attribute on the [SystemObject element](systemo
 |**Value**|**Description**|
 |:-----|:-----|
 |**Site** <br/> |Specifies that the system object type is a SharePoint Foundation site (**SPSite**).  <br/> |
-|**Web** <br/> |Specifies that the system object type is a SharePoint Foundation Web site (**SPWeb**).  <br/> |
+|**Web** <br/> |Specifies that the system object type is a SharePoint Foundation website (**SPWeb**).  <br/> |
 |**Folder** <br/> |Specifies that the system object type is a SharePoint Foundation folder (**SPFolder**).  <br/> |
 |**List** <br/> |Specifies that the system object type is a SharePoint Foundation list (**SPList**).  <br/> |
 |**ListItem** <br/> |Specifies that the system object type is a SharePoint Foundation list item (**SPListItem**).  <br/> |

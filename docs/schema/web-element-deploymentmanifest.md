@@ -129,7 +129,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Provisioned** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether the website has been provisioned. The value is **true** if the website has been provisioned.  <br/> |
 |**QuickLaunchEnabled** <br/> |xs:boolean  <br/> |Optional. Flag specifying whether the Quick Launch area is enabled on the website. The value is **true** if Quick Launch is enabled.  <br/> |
 |**RegionalSettingsLocaleId** <br/> |xs:long  <br/> |Optional. Provides an integer value specifying regional locale.  <br/> |
-|**RequestAccessEmail** <br/> |xs:string  <br/> |Optional. Specifies the e-mail address to which requests for access to the website are sent.  <br/> |
+|**RequestAccessEmail** <br/> |xs:string  <br/> |Optional. Specifies the email address to which requests for access to the website are sent.  <br/> |
 |**RootFolderId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the root folder for the website.  <br/> |
 |**SecurityProvider** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional.  <br/> |
 |**ServerRelativeUrl** <br/> |xs:string  <br/> |Required. Specifies the server-relative URL for the website.  <br/> |

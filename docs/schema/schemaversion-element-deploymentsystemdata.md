@@ -52,7 +52,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Version** <br/> |xs:string  <br/> |Version of the manifest schema that is presently in use.  <br/> |
 |**Build** <br/> |xs:string  <br/> |Build number.  <br/> |
 |**DatabaseVersion** <br/> |xs:string  <br/> |Version of the database exporting content.  <br/> |
-|**SiteVersion** <br/> |xs:string  <br/> |Verison of the parent Web site.  <br/> |
+|**SiteVersion** <br/> |xs:string  <br/> |Verison of the parent website.  <br/> |
    
 ### Child elements
 

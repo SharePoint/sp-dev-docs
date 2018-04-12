@@ -32,14 +32,14 @@ The following table describes some of the prominent CAML HTML-rendering elements
 |[ForEach](foreach-element-view.md) <br/> |Provides a basic mechanism for enumerating a collection of views or fields defined in the current list.  <br/> |
 |[GetVar](getvar-element-view.md) <br/> |Returns a variable in the context of rendering the page.  <br/> |
 |[HTMLBase](htmlbase-element.md) <br/> |Returns a string that sets the base element for the current page.  <br/> |
-|[HttpHost](httphost-element-view.md) <br/> |Renders the URL of the virtual server containing the current Web site.  <br/> |
+|[HttpHost](httphost-element-view.md) <br/> |Renders the URL of the virtual server containing the current website.  <br/> |
 |[HttpPath](httppath-element-view.md) <br/> |Returns the path to the appropriate OWSSVR.DLL.  <br/> |
 |[HttpVDir](httpvdir-element-view.md) <br/> |Returns the root directory of the current site.  <br/> |
 |[IfEqual](ifequal-element-view.md) <br/> |Allows for conditional rendering based on the comparison of two CAML expressions.  <br/> |
 |[ListProperty](listproperty-element-view.md) <br/> |Returns the value of a specified column from the database.  <br/> |
 |[Now](now-element-query.md) <br/> |Renders the current time.  <br/> |
 |[Project](project-element-site.md) <br/> |The top-level element in [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
-|[ProjectProperty](projectproperty-element-view.md) <br/> |Returns a global property of the current team Web site.  <br/> |
+|[ProjectProperty](projectproperty-element-view.md) <br/> |Returns a global property of the current team website.  <br/> |
 |[Property](property-element-view.md) <br/> |Returns the property from the current **ForEach** context.  <br/> |
 |[SetList](setlist-element-view.md) <br/> |Designates the current list.  <br/> |
 |[SetVar](setvar-element-view.md) <br/> |Sets variables in the context of rendering the page.  <br/> |

@@ -108,8 +108,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**Direction** <br/> |xs:string  <br/> |Optional. Specifies the direction of the reading order for the list. The string value "**ltr**" specifies left-to-right; the string "**rtl**" specifies either right-to-left, or that no reading order is specified.  <br/> |
 |**DocumentTemplateId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the document template.  <br/> |
 |**DraftVersionVisibility** <br/> |[DraftVisibilityType Simple Type (DeploymentManifest)](draftvisibilitytype-simple-type-deploymentmanifest.md) <br/> |Optional. Specifies user types that can view minor versions of document drafts within the list.  <br/> |
-|**EmailAlias** <br/> |xs:string  <br/> |Optional. When e-mail notification is enabled (**EnableAssignToEmail=true**), specifies the e-mail address to use to notify the owner of an item when the item has been updated or the assignment has changed.  <br/> |
-|**EnableAssignToEmail** <br/> |xs:boolean  <br/> |Optional. Specifies whether e-mail notification is enabled for the list.  <br/> |
+|**EmailAlias** <br/> |xs:string  <br/> |Optional. When email notification is enabled (**EnableAssignToEmail=true**), specifies the email address to use to notify the owner of an item when the item has been updated or the assignment has changed.  <br/> |
+|**EnableAssignToEmail** <br/> |xs:boolean  <br/> |Optional. Specifies whether email notification is enabled for the list.  <br/> |
 |**EnableAttachments** <br/> |xs:boolean  <br/> |Optional. Specifies whether attachments can be added to items in the list; **true** if attachments can be added, otherwise **false**.  <br/> |
 |**EnableContentTypes** <br/> |xs:boolean  <br/> |Optional.  <br/> |
 |**EnableDeployWithDependentList** <br/> |xs:boolean  <br/> |Optional. Specifies whether the list can be deployed with a dependent list; **true** if the list can be deployed with a dependent list, otherwise **false**.  <br/> |

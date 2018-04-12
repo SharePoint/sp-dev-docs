@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|**Email** <br/> |xs:string  <br/> |Optional. Provides the e-mail address of the user.  <br/> |
+|**Email** <br/> |xs:string  <br/> |Optional. Provides the email address of the user.  <br/> |
 |**Id** <br/> |xs:string  <br/> |Required. Provides the member ID for the user.  <br/> |
 |**IsDeleted** <br/> |xs:boolean  <br/> |Optional.Specifies whether the user has been deleted.  <br/> |
 |**IsDomainGroup** <br/> |xs:boolean  <br/> |Optional. Specifies whether the user is a domain group; **true** if the user is a domain group, otherwise **false**.  <br/> |

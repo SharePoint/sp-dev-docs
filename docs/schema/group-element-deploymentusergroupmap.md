@@ -65,7 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**AllowMembersEditMembership** <br/> |xs:boolean  <br/> |Optional. Specifies whether deployment group members can edit the list of group members; **true** if group members can edit the membership list.  <br/> |
 |**AllowRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether the deployment group accepts requests to join or leave the deployment group: **true** if the group accepts such requests.  <br/> |
 |**AutoAcceptRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether the deployment group automatically accepts requests to join or leave the deployment group; **true** if the group automatically accepts such requests.  <br/> |
-|**RequestToJoinLeaveEmailSetting** <br/> |xs:string  <br/> |Optional. Provides the e-mail address to which users can send requests to join or leave the deployment group.  <br/> |
+|**RequestToJoinLeaveEmailSetting** <br/> |xs:string  <br/> |Optional. Provides the email address to which users can send requests to join or leave the deployment group.  <br/> |
    
 ### Child elements
 

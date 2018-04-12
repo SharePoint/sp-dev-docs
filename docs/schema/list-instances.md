@@ -46,8 +46,8 @@ The following example shows the contents of an XML file in which the [ListInstan
              <Rows>
                 <Row>
                    <Field Name="Action">/_admin/globalemailconfig.aspx?Source=/default.aspx, Configure Outgoing E-Mail Settings</Field>
-                   <Field Name="Description">Specify the SMTP e-mail server to use for alerts and administrator notifications.</Field>
-                   <Field Name="Title">Outgoing e-mail settings</Field>
+                   <Field Name="Description">Specify the SMTP email server to use for alerts and administrator notifications.</Field>
+                   <Field Name="Title">Outgoing email settings</Field>
                    <Field Name="SystemTask">True</Field>
                    <Field Name="Priority">01</Field>
                    <Field Name="Service">SMTP</Field>

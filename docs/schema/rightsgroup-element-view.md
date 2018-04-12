@@ -62,7 +62,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**PermUpdatePersonalWebPar="Required"ts** <br/> |Update Web Parts to display personalized information.  <br/> |
 |**PermUseRemoteAPIs="Required"** <br/> |Use the APIs defined through remote applications.  <br/> |
 |**PermViewFormPages="Required"** <br/> |View list item form pages.  <br/> |
-|**PermViewListItems="Required"** <br/> |View items in lists, documents in document libraries, view Web discussion comments, and set up e-mail alerts for lists.  <br/> |
+|**PermViewListItems="Required"** <br/> |View items in lists, documents in document libraries, view Web discussion comments, and set up email alerts for lists.  <br/> |
 |**PermViewPages="Required"** <br/> |View pages in a website.  <br/> |
 |**PermViewUsageData="Required"** <br/> |View reports on website usage.  <br/> |
 |**PermViewVersions="Required"** <br/> |View versions of items.  <br/> |

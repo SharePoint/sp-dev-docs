@@ -58,7 +58,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-Use this element to deploy binary resources to an Internet Information Services (IIS) Web site used by a SharePoint Foundation Web Application. Files specified by [ApplicationResourceFile](applicationresourcefile-element-solution.md) child elements are deployed to a virtual directory named  `wpresources`. Files specified by [App_GlobalResourceFile](app_globalresourcefile-element-solution.md) child elements are deployed to a virtual directory named  `App_GlobalResources`.
+Use this element to deploy binary resources to an Internet Information Services (IIS) website used by a SharePoint Foundation Web Application. Files specified by [ApplicationResourceFile](applicationresourcefile-element-solution.md) child elements are deployed to a virtual directory named  `wpresources`. Files specified by [App_GlobalResourceFile](app_globalresourcefile-element-solution.md) child elements are deployed to a virtual directory named  `App_GlobalResources`.
   
 ## See also
 

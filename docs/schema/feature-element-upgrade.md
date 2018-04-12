@@ -22,7 +22,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Specifies a Feature to be marked as "provisioned" for Web sites or site collections created in Microsoft SharePoint Foundation 2010.
+Specifies a Feature to be marked as "provisioned" for websites or site collections created in Microsoft SharePoint Foundation 2010.
   
 ```
 <Feature

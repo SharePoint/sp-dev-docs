@@ -53,7 +53,7 @@ The following sections describe attributes, child elements, and parent elements.
 |Id  <br/> |[Guid Simple Type (DeploymentRootObjectMap))](guid-simple-type-deploymentrootobjectmap.md) <br/> |Optional. Unique identifier of the root object.  <br/> |
 |Type  <br/> |[SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)](spdeploymentobjecttype-simple-type-deploymentrootobjectmap.md) <br/> |Optional. Specifies the object type of the root object: **Site**, **Web**, **Folder**, **List**, **ListItem**, or **File**.  <br/> |
 |ParentId  <br/> |[Guid Simple Type (DeploymentRootObjectMap))](guid-simple-type-deploymentrootobjectmap.md) <br/> |Optional. Unique identifier of the parent Web.  <br/> |
-|WebUrl  <br/> |xs:string  <br/> |Optional. URL to the parent Web site.  <br/> |
+|WebUrl  <br/> |xs:string  <br/> |Optional. URL to the parent website.  <br/> |
 |Url  <br/> |xs:string  <br/> |Optional. URL to the root object.  <br/> |
 |IsDependency  <br/> |xs:boolean  <br/> |Optional. Specifies whether the object is a dependent object. The value is **true** if the object is dependent; otherwise, **false**.  <br/> |
    

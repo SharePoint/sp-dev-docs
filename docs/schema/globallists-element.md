@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
  **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Top-level element used in the file BASE.XML ( `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\XML`) to define the built-in lists of Web sites based on Microsoft SharePoint Foundation.
+Top-level element used in the file BASE.XML ( `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\XML`) to define the built-in lists of websites based on Microsoft SharePoint Foundation.
   
 ```
 <GlobalLists>
