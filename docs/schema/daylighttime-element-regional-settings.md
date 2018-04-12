@@ -1,7 +1,5 @@
 ---
-title: "DaylightTime Element (Regional Settings)"
-
-
+title: "DaylightTime element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0163934a-04be-4467-a276-9ef8bbb95a72
-description: "Last modified: March 09, 2015"
+description: Used in TIMEZONE.XML to contain the date and time on which daylight saving time begins for a time zone.
 ---
 
-# DaylightTime Element (Regional Settings)
+# DaylightTime element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain the date and time on which daylight saving time begins for a time zone.
   
-```
+```XML
 <DaylightTime>
   <Bias>
     </Bias>
@@ -40,27 +36,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Bias](bias-element-regional-settings.md), [Date](date-element-regional-settings.md)|
+- [Bias](bias-element-regional-settings.md)
+- [Date](date-element-regional-settings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[History](history-element-regional-settings.md), [TimeZone](timezone-element-regional-settings.md)|
+- [History](history-element-regional-settings.md)
+- [TimeZone](timezone-element-regional-settings.md)
    
-## Occurrences
+### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 

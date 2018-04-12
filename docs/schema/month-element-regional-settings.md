@@ -1,7 +1,5 @@
 ---
-title: "Month Element (Regional Settings)"
-
-
+title: "Month element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 16a6ccc7-5d5e-4703-a085-4e861e94dae8
-description: "Last modified: March 09, 2015"
+description: Used in TIMEZONE.XML to contain an integer representing the month in which standard time or daylight saving time begins for a time zone. 
 ---
 
-# Month Element (Regional Settings)
+# Month element (Regional Settings)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain an integer representing the month in which standard time or daylight saving time begins for a time zone. If the **Month** element is empty outside the context of TIMEZONE.XML, such as in a view definition ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), it returns the current month.
   
-Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain an integer representing the month in which standard time or daylight saving time begins for a time zone. If the **Month** element is empty outside the context of TIMEZONE.XML, such as in a view definition ( [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), it returns the current month.
-  
-```
+```XML
 <Month>
 </Month>
 ```
@@ -35,39 +31,28 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|Numerous |
+Numerous 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1 (Unbounded outside TIMEZONE.XML)  <br/> |
+- Minimum: 0
+- Maximum: 1 (Unbounded outside TIMEZONE.XML) 
    
 ### Remarks
 
-See [StandardTime Element (Regional Settings)](standardtime-element-regional-settings.md) for an example that shows how to use the **Month** element. 
+For an example that shows how to use the **Month** element, see [StandardTime element (Regional Settings)](standardtime-element-regional-settings.md).
   
 ## See also
 
-
-
-[Date Element (Regional Settings)](date-element-regional-settings.md)
-  
-[Day Element (Regional Settings)](day-element-regional-settings.md)
-  
-[Hour Element (Regional Settings)](hour-element-regional-settings.md)
+- [Date element (Regional Settings)](date-element-regional-settings.md) 
+- [Day element (Regional Settings)](day-element-regional-settings.md)  
+- [Hour element (Regional Settings)](hour-element-regional-settings.md)
 

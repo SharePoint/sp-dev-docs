@@ -1,7 +1,5 @@
 ---
-title: "DayOfWeek Element (Regional Settings)"
-
-
+title: "DayOfWeek element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0b96187a-034b-4e04-a792-624417f483a0
-description: "Last modified: March 09, 2015"
+description: Used in TIMEZONE.XML to contain an integer that represents the day of the week on which standard time or daylight saving time begins for a time zone.
 ---
 
-# DayOfWeek Element (Regional Settings)
+# DayOfWeek element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain an integer that represents the day of the week on which standard time or daylight saving time begins for a time zone.
   
-```
+```XML
 <DayOfWeek>
 </DayOfWeek>
 ```
@@ -35,30 +31,26 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Date](date-element-regional-settings.md)|
+- [Date](date-element-regional-settings.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
+
 ### Remarks
 
-See [StandardTime Element (Regional Settings)](standardtime-element-regional-settings.md) for an example that shows how to use the **DayOfWeek** element. 
+For an example that shows how to use the **DayOfWeek** element, see [StandardTime element (Regional Settings)](standardtime-element-regional-settings.md). 
+
+
   
 

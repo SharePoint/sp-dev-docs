@@ -1,7 +1,5 @@
 ---
-title: "StandardTime Element (Regional Settings)"
-
-
+title: "StandardTime element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b025e10a-2fa1-4965-91b0-b87e7b959b02
-description: "Last modified: March 09, 2015"
+description: Used in TIMEZONE.XML to contain both the bias in minutes that standard time for a time zone differs from Coordinated Universal Time (UTC), and the date on which standard time begins.
 ---
 
-# StandardTime Element (Regional Settings)
+# StandardTime element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain both the bias in minutes that standard time for a time zone differs from Coordinated Universal Time (UTC), and the date on which standard time begins.
   
-```
+```XML
 <StandardTime>
   <Bias>
   </Bias>
@@ -40,27 +36,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Bias](bias-element-regional-settings.md), [Date](date-element-regional-settings.md)|
+- [Bias](bias-element-regional-settings.md)
+- [Date](date-element-regional-settings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[History](history-element-regional-settings.md), [TimeZone](timezone-element-regional-settings.md)|
+- [History](history-element-regional-settings.md)
+- [TimeZone](timezone-element-regional-settings.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 

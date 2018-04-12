@@ -1,7 +1,5 @@
 ---
-title: "RegionalSettings Element (Regional Settings)"
-
-
+title: "RegionalSettings element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d0d3ccfc-881f-4c50-8811-dd875b9555c9
-description: "Last modified: March 09, 2015"
+description: Contains the regional settings for currency, language, locale, and time zone that are used in the deployment of Microsoft SharePoint Foundation. 
 ---
 
-# RegionalSettings Element (Regional Settings)
+# RegionalSettings element (Regional Settings)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Contains the regional settings for currency, language, locale, and time zone that are used in the deployment of Microsoft SharePoint Foundation. Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) and RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML).
   
-Contains the regional settings for currency, language, locale, and time zone that are used in the deployment of Microsoft SharePoint Foundation. Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG). and RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML).
-  
-```
+```XML
 <RegionalSettings>
 </RegionalSettings>
 ```
@@ -35,27 +31,23 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Currencies](currencies-element-regional-settings.md), [Languages](languages-element-regional-settings.md), [Locales](locales-element-regional-settings.md), [TimeZones](timezones-element-regional-settings.md)|
+- [Currencies](currencies-element-regional-settings.md)
+- [Languages](languages-element-regional-settings.md)
+- [Locales](locales-element-regional-settings.md)
+- [TimeZones](timezones-element-regional-settings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 

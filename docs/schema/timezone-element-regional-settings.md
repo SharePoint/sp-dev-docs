@@ -1,7 +1,5 @@
 ---
-title: "TimeZone Element (Regional Settings)"
-
-
+title: "TimeZone element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c98179df-d7b5-4baf-b8e5-179310220d2d
-description: "Last modified: March 09, 2015"
+description: Defines a time zone for regional settings in TIMEZONE.XML or specifies a time zone in RGNLSTNG.XML.
 ---
 
-# TimeZone Element (Regional Settings)
+# TimeZone element (Regional Settings)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Defines a time zone for regional settings in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) or specifies a time zone in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML).
   
-Defines a time zone for regional settings in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG). or specifies a time zone in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML).
-  
-```
+```XML
 <TimeZone
   Hidden = "TRUE" | "FALSE"
   HTMLEncode = "TRUE" | "FALSE"
@@ -57,21 +53,19 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Bias](bias-element-regional-settings.md), [DaylightTime](daylighttime-element-regional-settings.md), [History](history-element-regional-settings.md), [StandardTime](standardtime-element-regional-settings.md)|
+- [Bias](bias-element-regional-settings.md)
+- [DaylightTime](daylighttime-element-regional-settings.md)
+- [History](history-element-regional-settings.md)
+- [StandardTime](standardtime-element-regional-settings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[TimeZones](timezones-element-regional-settings.md)|
+- [TimeZones](timezones-element-regional-settings.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 

@@ -1,7 +1,5 @@
 ---
-title: "Language Element (Regional Settings)"
-
-
+title: "Language element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7c03b64c-4b27-4a2d-9b36-c0e0a9ebcadb
-description: "Last modified: March 09, 2015"
+description: Used in RGNLSTNG.XML to specify a natural language in the regional settings, or used within a field display pattern to render a language name.
 ---
 
-# Language Element (Regional Settings)
+# Language element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) to specify a natural language in the regional settings, or used within a field display pattern to render a language name.
   
-```
+```XML
 <Language
    HTMLEncode = "TRUE" | "FALSE" 
    ID = "Integer"
@@ -46,21 +42,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Column](column-element-view.md)|
+- [Column](column-element-view.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[DisplayPattern](displaypattern-element-list.md), [Languages](languages-element-regional-settings.md)|
+- [DisplayPattern](displaypattern-element-list.md)
+- [Languages](languages-element-regional-settings.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 

@@ -1,7 +1,5 @@
 ---
-title: "Languages Element (Regional Settings)"
-
-
+title: "Languages element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: b242d612-f7f8-4dff-bc78-f98db0056a16
-description: "Last modified: March 09, 2015"
+description: Used in RGNLSTNG.XML to contain the collection of languages for regional settings.
 ---
 
-# Languages Element (Regional Settings)
+# Languages element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) to contain the collection of languages for regional settings.
   
-```
+```XML
 <Languages>
   <Language 
         ID ="Integer"
@@ -39,26 +35,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Language](language-element-regional-settings.md)|
+- [Language](language-element-regional-settings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[RegionalSettings](regionalsettings-element-regional-settings.md)|
+- [RegionalSettings](regionalsettings-element-regional-settings.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
+
+<br/> 
    
 

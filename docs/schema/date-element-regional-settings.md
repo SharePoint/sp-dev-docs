@@ -1,7 +1,5 @@
 ---
-title: "Date Element (Regional Settings)"
-
-
+title: "Date element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 693febc5-5e66-402c-a4e1-6dde9a9674e9
-description: "Last modified: March 09, 2015"
+description: Used in TIMEZONE.XML to contain the date and time on which standard time or daylight saving time begins for a time zone.
 ---
 
-# Date Element (Regional Settings)
+# Date element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain the date and time on which standard time or daylight saving time begins for a time zone.
   
-```
+```XML
 <Date>
   <Day>
   </Day>
@@ -43,30 +39,27 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Day](day-element-regional-settings.md), [DayOfWeek](dayofweek-element-regional-settings.md), [Hour](hour-element-regional-settings.md), [Month](month-element-regional-settings.md)|
+- [Day](day-element-regional-settings.md)
+- [DayOfWeek](dayofweek-element-regional-settings.md)
+- [Hour](hour-element-regional-settings.md)
+- [Month](month-element-regional-settings.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[DaylightTime](daylighttime-element-regional-settings.md), [StandardTime](standardtime-element-regional-settings.md)|
+- [DaylightTime](daylighttime-element-regional-settings.md)
+- [StandardTime](standardtime-element-regional-settings.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ### Remarks
 
-See [StandardTime Element (Regional Settings)](standardtime-element-regional-settings.md) for an example that shows how to use the **Date** element. 
+For an example that shows how to use the **Date** element, see [StandardTime element (Regional Settings)](standardtime-element-regional-settings.md). 
   
 

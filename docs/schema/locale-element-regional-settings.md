@@ -1,7 +1,5 @@
 ---
-title: "Locale Element (Regional Settings)"
-
-
+title: "Locale element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 43003802-d5f7-4501-be81-c46ded2352fc
-description: "Last modified: March 09, 2015"
+description: Used in RGNLSTNG.XML to specify a locale in the regional settings. 
 ---
 
-# Locale Element (Regional Settings)
+# Locale element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) to specify a locale in the regional settings. 
   
-```
+```XML
 <Locale
   ID = "Integer"
   Name = "Text">
@@ -44,20 +40,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Locales](locales-element-regional-settings.md)|
+- [Locales](locales-element-regional-settings.md)
    
 ## Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
+
+<br/> 
    
 

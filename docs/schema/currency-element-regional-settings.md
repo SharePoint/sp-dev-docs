@@ -1,7 +1,5 @@
 ---
-title: "Currency Element (Regional Settings)"
-
-
+title: "Currency element (Regional Settings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: eb09fd5e-b84a-4934-9f69-fb410ec2f1d7
-description: "Last modified: March 09, 2015"
+description: Used in RGNLSTNG.XML to specify the currency format used for a locale.
 ---
 
-# Currency Element (Regional Settings)
+# Currency element (Regional Settings)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) to specify the currency format used for a locale.
   
-```
+```XML
 <Currency
   ID = "Integer">
 </Currency>
@@ -42,21 +38,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Currencies](currencies-element-regional-settings.md)|
+- [Currencies](currencies-element-regional-settings.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded  
    
 ### Remarks
 
