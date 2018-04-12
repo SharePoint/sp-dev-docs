@@ -12,7 +12,7 @@ ms.assetid: b08aeead-5898-8758-99fd-90fac82f058f
 
 **Applies to**: SharePoint Server 2013
 
-This topic lists the types in the **schema name** XML schema.
+This topic lists the types in the **Workflow actions** XML schema.
 
 - [appliesToTypes simpleType](appliestotypes-simpletype-action4.md)
 

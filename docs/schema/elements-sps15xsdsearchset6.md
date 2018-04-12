@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 1819bfc4-4a51-44de-bb3d-942bebde2d95
-description: "This topic lists the elements in the schema_Microsoft.Office.Server.Search XML schema."
+description: Lists the elements in the schema_Microsoft.Office.Server.Search XML schema.
 ---
 
 # Elements (SPS15XSDSearchSet6)

@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 20bc0905-610c-8a8b-a07f-fa1f9f7c7518
-description: "This topic lists the elements in the schema_Microsoft.Office.Server.Search.Administration.Query XML schema."
+description: Lists the elements in the schema_Microsoft.Office.Server.Search.Administration.Query XML schema.
 ---
 
 # Elements (SPS15XSDSearchSet1)
@@ -15,7 +15,6 @@ description: "This topic lists the elements in the schema_Microsoft.Office.Serve
 **Applies to:** SharePoint Server 2013
 
 This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Administration.Query** XML schema. 
-
   
 - [Active element](active-element-source-complextypesps15xsdsearchset1.md)
     

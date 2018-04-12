@@ -1,7 +1,5 @@
 ---
 title: "Regional Settings schema"
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -44,92 +42,48 @@ You can access or modify regional settings through various members of the follow
 
 ### RGNLSTNG.XML
 
-[RegionalSettings](regionalsettings-element-regional-settings.md)
-  
-[TimeZones](timezones-element-regional-settings.md)
-  
-[TimeZone](timezone-element-regional-settings.md)
-  
-[Locales](locales-element-regional-settings.md)
-  
-[Locale](locale-element-regional-settings.md)
-  
-[Languages](languages-element-regional-settings.md)
-  
-[Language](language-element-regional-settings.md)
-  
 [Currencies](currencies-element-regional-settings.md)
-  
+
 [Currency](currency-element-regional-settings.md)
+
+[Language](language-element-regional-settings.md)
+
+[Languages](languages-element-regional-settings.md)
+
+[Locale](locale-element-regional-settings.md)
+
+[Locales](locales-element-regional-settings.md)
+
+[RegionalSettings](regionalsettings-element-regional-settings.md)
+
+[TimeZone](timezone-element-regional-settings.md)
+
+[TimeZones](timezones-element-regional-settings.md)
+
   
 ### TIMEZONE.XML
 
-[RegionalSettings](regionalsettings-element-regional-settings.md)
-  
-[TimeZones](timezones-element-regional-settings.md)
-  
-[TimeZone](timezone-element-regional-settings.md)
-  
 [Bias](bias-element-regional-settings.md)
-  
-[StandardTime](standardtime-element-regional-settings.md)
-  
-[Bias](bias-element-regional-settings.md)
-  
+
 [Date](date-element-regional-settings.md)
-  
-[Month](month-element-regional-settings.md)
-  
+
 [Day](day-element-regional-settings.md)
-  
-[Hour](hour-element-regional-settings.md)
-  
-[DayOfWeek](dayofweek-element-regional-settings.md)
-  
+
 [DaylightTime](daylighttime-element-regional-settings.md)
-  
-[Bias](bias-element-regional-settings.md)
-  
-[Date](date-element-regional-settings.md)
-  
-[Month](month-element-regional-settings.md)
-  
-[Day](day-element-regional-settings.md)
-  
-[Hour](hour-element-regional-settings.md)
-  
+
 [DayOfWeek](dayofweek-element-regional-settings.md)
-  
+
 [History](history-element-regional-settings.md)
-  
-[Bias](bias-element-regional-settings.md)
-  
+
+[Hour](hour-element-regional-settings.md)
+
+[Month](month-element-regional-settings.md)
+
+[RegionalSettings](regionalsettings-element-regional-settings.md)
+
 [StandardTime](standardtime-element-regional-settings.md)
-  
-[Bias](bias-element-regional-settings.md)
-  
-[Date](date-element-regional-settings.md)
-  
-[Month](month-element-regional-settings.md)
-  
-[Day](day-element-regional-settings.md)
-  
-[Hour](hour-element-regional-settings.md)
-  
-[DayOfWeek](dayofweek-element-regional-settings.md)
-  
-[DaylightTime](daylighttime-element-regional-settings.md)
-  
-[Bias](bias-element-regional-settings.md)
-  
-[Date](date-element-regional-settings.md)
-  
-[Month](month-element-regional-settings.md)
-  
-[Day](day-element-regional-settings.md)
-  
-[Hour](hour-element-regional-settings.md)
-  
-[DayOfWeek](dayofweek-element-regional-settings.md)
-  
+
+[TimeZone](timezone-element-regional-settings.md)
+
+[TimeZones](timezones-element-regional-settings.md)
 

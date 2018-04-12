@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 8969fd16-5505-5e36-07ab-c94d2b693093
-description: "This topic shows the schema definition for schema_Microsoft.Office.Server.Search."
+description: Shows the schema definition for schema_Microsoft.Office.Server.Search.
 ---
 
 # Schema map (SPS15XSDSearchSet6)

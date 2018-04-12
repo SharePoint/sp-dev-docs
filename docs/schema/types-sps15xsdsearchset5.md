@@ -1,7 +1,5 @@
 ---
 title: "Types (SPS15XSDSearchSet5)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -9,16 +7,14 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: bc5be9c9-a11f-0441-e8bf-436492c66428
-description: "This topic lists the types in the SPS15XSDSearchSet5 XML schema."
+description: Lists the types in the SPS15XSDSearchSet5 XML schema.
 ---
 
 # Types (SPS15XSDSearchSet5)
+  
+**Applies to:** SharePoint Server 2013
 
-This topic lists the types in the **SPS15XSDSearchSet5** XML schema. 
-  
- **Last modified:** February 19, 2014 
-  
- **Applies to:** SharePoint Server 2013
+This topic lists the types in the **schema_Microsoft.Office.Server.Search.Query** XML schema. 
   
 - [AlertChangeType simpleType](alertchangetype-simpletype-sps15xsdsearchset5.md)
     

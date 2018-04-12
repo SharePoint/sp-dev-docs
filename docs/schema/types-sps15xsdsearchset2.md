@@ -1,7 +1,5 @@
 ---
 title: "Types (SPS15XSDSearchSet2)"
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: ITPro
@@ -9,14 +7,14 @@ ms.topic: article
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 946664a0-2144-ccfd-3376-73f42e3ff259
-description: "This topic lists the types in the schema_Microsoft.Office.Server.Search.Administration XML schema."
+description: Lists the types in the schema_Microsoft.Office.Server.Search.Administration XML schema.
 ---
 
 # Types (SPS15XSDSearchSet2)
+  
+**Applies to:** SharePoint Server 2013
 
 This topic lists the types in the **schema_Microsoft.Office.Server.Search.Administration** XML schema. 
-  
- **Last modified:** February 19, 2014 
   
 - [AccountAuthCredentials complexType](accountauthcredentials-complextype-sps15xsdsearchset2.md)
     

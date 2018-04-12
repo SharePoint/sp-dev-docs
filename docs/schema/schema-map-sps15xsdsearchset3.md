@@ -7,10 +7,12 @@ ms.topic: article
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 0b1ecfc3-a648-be87-6198-148a3946ebdd
-description: "This topic shows the schema definition for schema_Microsoft.Office.Server.Search.Portability."
+description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Portability.
 ---
 
 # Schema map (SPS15XSDSearchSet3)
+
+**Applies to:** SharePoint Server 2013
 
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search.Portability**.
   

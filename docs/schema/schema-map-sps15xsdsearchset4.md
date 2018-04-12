@@ -7,10 +7,11 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: a992fb73-66c2-44d4-9df8-45fcb0cc5970
-description: "This topic shows the schema definition for schema_Microsoft.Office.Server.Search.Query.Rules."
+description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Query.Rules.
 ---
 
 # Schema map (SPS15XSDSearchSet4)
+
 **Applies to:** SharePoint Server 2013
 
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search.Query.Rules**.

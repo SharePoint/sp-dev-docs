@@ -7,10 +7,12 @@ ms.topic: article
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: a088c6ef-6e66-04d6-5fa4-232a4e513598
-description: "This topic shows the schema definition for schema_Microsoft.Office.Server.Search.Administration."
+description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Administration.
 ---
 
 # Schema map (SPS15XSDSearchSet2)
+
+**Applies to:** SharePoint Server 2013
 
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search.Administration**.
   

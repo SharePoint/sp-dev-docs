@@ -7,10 +7,12 @@ ms.topic: article
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: af3c177e-6ac7-9acf-4748-b9c7c3b1b112
-description: "This topic lists the elements in the schema_Microsoft.Office.Server.Search.Portability XML schema."
+description: Lists the elements in the schema_Microsoft.Office.Server.Search.Portability XML schema.
 ---
 
 # Elements (SPS15XSDSearchSet3)
+
+**Applies to:** SharePoint Server 2013
 
 This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Portability** XML schema. 
   

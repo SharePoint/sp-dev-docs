@@ -7,14 +7,14 @@ ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 25eeee29-60ba-b21e-f170-5400a81b72bf
-description: "This topic lists the elements in the schema name XML schema."
+description: Lists the elements in the schema_Microsoft.Office.Server.Search.Query.Rules XML schema.
 ---
 
 # Elements (SPS15XSDSearchSet4)
 
 **Applies to:** SharePoint Server 2013
 
-This topic lists the elements in the `<schema name>` XML schema.
+This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Query.Rules** XML schema.
   
 - [BoundVariableOrigin element](boundvariableorigin-element-sps15xsdsearchset4.md)
     
