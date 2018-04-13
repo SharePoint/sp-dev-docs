@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: d334d1ef-f7a4-d709-3b9b-ce564aa60890
 ---
 
-# Association Element in Associations 
+# Association element in Associations 
 
 (Subscription Schema)
 
@@ -114,15 +114,15 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames element in MetadataObject (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The list of the localized display names of this subscription association.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties element in MetadataObject (Subscription Schema)</a></span></p></td>
 <td align="left"><p>Not used by Business Connectivity Services in this release.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues Element in Association (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues element in Association (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The list of the filter values for the **Association** method instance execution.</p></td>
 </tr>
 </tbody>
@@ -143,7 +143,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.md">Associations Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.md">Associations element in Subscription (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The **Associations** element that contains this subscription association.</p></td>
 </tr>
 </tbody>

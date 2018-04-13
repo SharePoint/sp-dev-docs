@@ -8,13 +8,13 @@ localization_priority: Normal
 ms.assetid: ab936b33-96a6-7ecd-8e12-23bb60c7acad
 ---
 
-# ActionParameters Element in Action 
+# ActionParameters element in Action 
 
 (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-For more information, see [ActionParameters Element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md).
+For more information, see [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
@@ -46,7 +46,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md">ActionParameter Element in ActionParameters (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md">ActionParameter element in ActionParameters (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -64,7 +64,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action Element in Actions (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action element in Actions (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

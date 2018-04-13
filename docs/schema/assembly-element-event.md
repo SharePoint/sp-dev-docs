@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 92b6f66c-a2af-4505-9287-91c29716a052
 ---
 
-# Assembly Element (Event)
+# Assembly element (Event)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

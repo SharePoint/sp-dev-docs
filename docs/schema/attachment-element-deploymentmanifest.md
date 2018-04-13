@@ -1,5 +1,5 @@
 ---
-title: "Attachment Element (DeploymentManifest)"
+title: "Attachment element (DeploymentManifest)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 5c78cfef-9a58-42ae-a7ca-a5f2e61668ac
 description: "Last modified: March 09, 2015"
 ---
 
-# Attachment Element (DeploymentManifest)
+# Attachment element (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -73,11 +73,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-[Properties Element (DeploymentManifest - SPAttachment)](properties-element-deploymentmanifestspattachment.md)
+- [Properties](properties-element-deploymentmanifestspattachment.md)
    
 ### Parent elements
 
-[Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md)
+- [Attachments](attachments-element-deploymentmanifest.md)
    
 ### Remarks
 
@@ -85,5 +85,5 @@ Attachments are available for any list items that are not part of a document lib
   
 ## See also
 
-- [DeploymentManifest Schema](deploymentmanifest-schema.md)
+- [DeploymentManifest schema](deploymentmanifest-schema.md)
 

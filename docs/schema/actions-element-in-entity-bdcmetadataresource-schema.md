@@ -8,13 +8,13 @@ localization_priority: Normal
 ms.assetid: 4d4822f7-bda6-a18d-8f38-64ee92f31c17
 ---
 
-# Actions Element in Entity 
+# Actions element in Entity 
 
 (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-For more information, see [Actions Element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md).
+For more information, see [Actions element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
@@ -45,7 +45,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action Element in Actions (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action element in Actions (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -63,7 +63,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity element in Entities (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

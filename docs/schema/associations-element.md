@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: edcb759b-4c10-4202-8534-38ba1db7be19
 ---
 
-# Associations Element
+# Associations element
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

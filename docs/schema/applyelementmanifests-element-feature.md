@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: c087a0c3-1e27-4034-b4da-e025991454d6
 ---
 
-# ApplyElementManifests Element (Feature)
+# ApplyElementManifests element (Feature)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -39,10 +39,10 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="elementfile-element-feature.md">ElementFile Element (Feature)</a></p></td>
+<td align="left"><p><a href="elementfile-element-feature.md">ElementFile element (Feature)</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="elementmanifest-element-feature.md">ElementManifest Element (Feature)</a></p></td>
+<td align="left"><p><a href="elementmanifest-element-feature.md">ElementManifest element (Feature)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -55,7 +55,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></p></td>
+<td align="left"><p><a href="upgradeactions-element-feature.md">UpgradeActions element (Feature)</a></p></td>
 </tr>
 </tbody>
 </table>

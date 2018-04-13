@@ -1,5 +1,5 @@
 ---
-title: "Attachments Element (DeploymentManifest)"
+title: "Attachments element (DeploymentManifest)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 9634ffe7-daaf-4c0a-9195-516d913ee0a9
 description: "Last modified: March 09, 2015"
 ---
 
-# Attachments Element (DeploymentManifest)
+# Attachments element (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -45,14 +45,14 @@ None
    
 ### Child elements
 
-[Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
+- [Attachment](attachment-element-deploymentmanifest.md)
    
 ### Parent elements
 
-[ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
+- [ListItem](listitem-element-deploymentmanifestspgenericobject.md)
    
 ## See also
 
-- [DeploymentManifest Schema](deploymentmanifest-schema.md)
-- [Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
+- [DeploymentManifest schema](deploymentmanifest-schema.md)
+- [Attachment element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
 

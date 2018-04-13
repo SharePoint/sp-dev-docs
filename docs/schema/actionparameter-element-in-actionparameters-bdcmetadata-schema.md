@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 1f5fa96a-1bff-f007-984d-a644cbbb2648
 ---
 
-# ActionParameter Element in ActionParameters 
+# ActionParameter element in ActionParameters 
 
 (BDCMetadata Schema)
 
@@ -136,11 +136,11 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized display names for the **ActionParameter**.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the **ActionParameter**.</p></td>
 </tr>
 </tbody>
@@ -157,13 +157,13 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><p>**Element**</p></th>
+<th align="left"><p>Element</p></th>
 <th align="left"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters Element in Action (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **ActionParameters** element that contains this **ActionParameter**.</p></td>
 </tr>
 </tbody>

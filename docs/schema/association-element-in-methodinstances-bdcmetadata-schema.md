@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0
 ---
 
-# Association Element in MethodInstances 
+# Association element in MethodInstances 
 
 (BDCMetadata Schema)
 
@@ -212,23 +212,23 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The LocalizedDisplayNames element specifies a list of localized names for the Association.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The Properties element specifies the properties of the Association.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The AccessControlList element specifies a set of access rights for the Association.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="sourceentity-element-in-association-bdcmetadata-schema.md">SourceEntity Element in Association (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="sourceentity-element-in-association-bdcmetadata-schema.md">SourceEntity element in Association (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The SourceEntity element specifies the source external content type in the association.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="destinationentity-element-in-association-bdcmetadata-schema.md">DestinationEntity Element in Association (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="destinationentity-element-in-association-bdcmetadata-schema.md">DestinationEntity element in Association (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The DestinationEntity element specifies the destination external content type in the Association.</p></td>
 </tr>
 </tbody>
@@ -251,7 +251,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadata-schema.md">MethodInstances Element in Method (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadata-schema.md">MethodInstances element in Method (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The MethodInstances element that contains the Association.</p></td>
 </tr>
 </tbody>

@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 4296c120-5ebc-4b22-97cd-214146d5a65e
 ---
 
-# AssociationCategories Element (Workflow)
+# AssociationCategories element (Workflow)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -43,7 +43,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="metadata-element-workflow.md">MetaData Element (Workflow)</a></p></td>
+<td align="left"><p><a href="metadata-element-workflow.md">MetaData element (Workflow)</a></p></td>
 </tr>
 </tbody>
 </table>

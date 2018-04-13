@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 851af424-b313-4b6f-805e-cc8989f3fa3e
 ---
 
-# ActionConditions Element (WorkflowActions)
+# ActionConditions element (WorkflowActions)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

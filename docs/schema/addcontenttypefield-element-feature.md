@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: cb04a3ac-f41a-4ffe-aaa1-d4bf3fb6347d
 ---
 
-# AddContentTypeField Element (Feature)
+# AddContentTypeField element (Feature)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -68,7 +68,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></p></td>
+<td align="left"><p><a href="upgradeactions-element-feature.md">UpgradeActions element (Feature)</a></p></td>
 </tr>
 </tbody>
 </table>

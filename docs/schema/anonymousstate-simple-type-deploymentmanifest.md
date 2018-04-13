@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
  
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Specifies a value representing the current state of the **AnonymousState** attribute on the **SPWeb** object type - [Web Element (DeploymentManifest)](web-element-deploymentmanifest.md).
+Specifies a value representing the current state of the **AnonymousState** attribute on the **SPWeb** object type - [Web element (DeploymentManifest)](web-element-deploymentmanifest.md).
 
 ## Definition
 

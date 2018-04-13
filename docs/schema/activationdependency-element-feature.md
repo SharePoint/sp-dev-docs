@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: d0a43250-3ad2-4f55-8ac5-7d82e32eb9cb
 ---
 
-# ActivationDependency Element (Feature)
+# ActivationDependency element (Feature)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

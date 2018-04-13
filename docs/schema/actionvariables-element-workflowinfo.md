@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: f48251a8-eea3-43d5-8970-c5d1412791ca
 ---
 
-# ActionVariables Element (WorkflowInfo)
+# ActionVariables element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

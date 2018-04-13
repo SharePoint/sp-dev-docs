@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 3bcfca05-2eff-830a-b058-cba0184efc8d
 ---
 
-# ActionName Element in ArrayOfActions 
+# ActionName element in ArrayOfActions 
 
 (LayoutDefinitions Schema)
 
@@ -52,7 +52,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames Element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The list of actions that contains this action.</p></td>
 </tr>
 </tbody>

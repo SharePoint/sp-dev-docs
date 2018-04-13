@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: fb0f93f5-1bb9-4c27-9d07-1dcd3872f908
 ---
 
-# AllUsersWebPart Element (Module)
+# AllUsersWebPart element (Module)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

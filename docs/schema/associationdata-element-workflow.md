@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 878ef52b-94e2-4218-a499-56c1416340ba
 ---
 
-# AssociationData Element (Workflow)
+# AssociationData element (Workflow)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -43,7 +43,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflow-element-elements.md">Workflow Element (Elements)</a></p></td>
+<td align="left"><p><a href="workflow-element-elements.md">Workflow element (Elements)</a></p></td>
 </tr>
 </tbody>
 </table>

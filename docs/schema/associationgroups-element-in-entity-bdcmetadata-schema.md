@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: b50c2648-daea-d8c0-039a-b95590b9924c
 ---
 
-# AssociationGroups Element in Entity 
+# AssociationGroups element in Entity 
 
 (BDCMetadata Schema)
 
@@ -49,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup Element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An **AssociationGroup**.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity element in Entities (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The external content type that this **AssociationGroups** element is associated with.</p></td>
 </tr>
 </tbody>

@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 74ddbc41-2cc4-433d-a38c-9dae695ea434
 ---
 
-# AssemblyRedirect Element (WorkflowInfo)
+# AssemblyRedirect element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

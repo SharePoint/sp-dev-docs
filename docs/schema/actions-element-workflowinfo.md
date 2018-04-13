@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: fcbb11a2-eb91-40ae-914b-cf3678a072db
 ---
 
-# Actions Element (WorkflowInfo)
+# Actions element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

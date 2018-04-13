@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: f58b96c0-77a8-69d3-8710-fff03d4970b9
 ---
 
-# Action Element in Actions 
+# Action element in Actions 
 
 (BDCMetadata Schema)
 
@@ -114,15 +114,15 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized names of the action.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the action.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters Element in Action (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The parameters of the action.</p></td>
 </tr>
 </tbody>
@@ -145,7 +145,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions Element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The list of actions of an external content type.</p></td>
 </tr>
 </tbody>

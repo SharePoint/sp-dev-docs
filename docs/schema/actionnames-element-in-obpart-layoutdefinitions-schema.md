@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 64a35165-b5cf-08f4-8469-a00fabda6a88
 ---
 
-# ActionNames Element in OBPart 
+# ActionNames element in OBPart 
 
 (LayoutDefinitions Schema)
 
@@ -47,7 +47,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionname-element-in-arrayofactions-layoutdefinitions-schema.md">ActionName Element in ArrayOfActions (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionname-element-in-arrayofactions-layoutdefinitions-schema.md">ActionName element in ArrayOfActions (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The name of the action.</p></td>
 </tr>
 </tbody>
@@ -68,7 +68,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The Office External Part.</p></td>
 </tr>
 </tbody>

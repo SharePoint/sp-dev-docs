@@ -8,13 +8,13 @@ localization_priority: Normal
 ms.assetid: 23403618-d39a-783d-ff3c-12c439e5f4d3
 ---
 
-# Association Element in MethodInstances 
+# Association element in MethodInstances 
 
 (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies localized display names, properties, and permissions in any combination, for an [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md).
+Specifies localized display names, properties, and permissions in any combination, for an [Association element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
@@ -59,13 +59,13 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -83,7 +83,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadataresource-schema.md">MethodInstances Element in Method (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadataresource-schema.md">MethodInstances element in Method (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

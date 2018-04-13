@@ -1,5 +1,5 @@
 ---
-title: "Aggregations Element (DeploymentManifest - SPWebPart)"
+title: "Aggregations element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 0a1c2a28-93cf-4b65-b101-f985f6112461
 description: "Last modified: March 09, 2015"
 ---
 
-# Aggregations Element (DeploymentManifest - SPWebPart)
+# Aggregations element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -44,10 +44,10 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+[WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-- [Aggregations Element (Deployment Manifest - SPView)](aggregations-element-deployment-manifestspview.md)
+- [Aggregations element (Deployment Manifest - SPView)](aggregations-element-deployment-manifestspview.md)
 

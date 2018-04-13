@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 7f3e7e9f-256f-4570-ba3f-745bbdfbc5b8
 ---
 
-# Association Element (WorkflowConfig)
+# Association element (WorkflowConfig)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -99,7 +99,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig Element</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig element</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: e32c5267-53b0-9ff0-6e9a-1cb00d9f1d57
 ---
 
-# AssociationReference Element in AssociationGroup 
+# AssociationReference element in AssociationGroup 
 
 (BDCMetadata Schema)
 
@@ -91,7 +91,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup Element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **AssociationGroup** that this **AssociationReference** belongs to.</p></td>
 </tr>
 </tbody>

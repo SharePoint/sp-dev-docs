@@ -8,13 +8,13 @@ localization_priority: Normal
 ms.assetid: 86ddee43-cc12-227d-4efc-17a1671894d8
 ---
 
-# ActionParameter Element in ActionParameters 
+# ActionParameter element in ActionParameters 
 
 (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies localized display names and properties, in any combination, for an [ActionParameter Element in ActionParameters (BDCMetadata Schema)](actionparameter-element-in-actionparameters-bdcmetadata-schema.md).
+Specifies localized display names and properties, in any combination, for an [ActionParameter element in ActionParameters (BDCMetadata Schema)](actionparameter-element-in-actionparameters-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
@@ -45,10 +45,10 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -66,7 +66,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadataresource-schema.md">ActionParameters Element in Action (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadataresource-schema.md">ActionParameters element in Action (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

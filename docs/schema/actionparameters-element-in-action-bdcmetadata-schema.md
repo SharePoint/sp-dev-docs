@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: e14df901-621c-1851-db78-e99fd3cf31ae
 ---
 
-# ActionParameters Element in Action 
+# ActionParameters element in Action 
 
 (BDCMetadata Schema)
 
@@ -49,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadata-schema.md">ActionParameter Element in ActionParameters (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadata-schema.md">ActionParameter element in ActionParameters (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An **ActionParameter**.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadata-schema.md">Action Element in Actions (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadata-schema.md">Action element in Actions (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **Action** that these **ActionParameters** belong to.</p></td>
 </tr>
 </tbody>

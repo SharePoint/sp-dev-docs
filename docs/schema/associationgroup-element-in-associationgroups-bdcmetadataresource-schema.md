@@ -8,13 +8,13 @@ localization_priority: Normal
 ms.assetid: f73d97e6-15d6-dae0-743c-aab2d66d741d
 ---
 
-# AssociationGroup Element in AssociationGroups 
+# AssociationGroup element in AssociationGroups 
 
 (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies localized display names and properties, in any combination, for an [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](associationgroup-element-in-associationgroups-bdcmetadata-schema.md).
+Specifies localized display names and properties, in any combination, for an [AssociationGroup element in AssociationGroups (BDCMetadata Schema)](associationgroup-element-in-associationgroups-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 
@@ -45,10 +45,10 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -66,7 +66,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadataresource-schema.md">AssociationGroups Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadataresource-schema.md">AssociationGroups element in Entity (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

@@ -1,5 +1,5 @@
 ---
-title: "Assignment Element (DeploymentManifest)"
+title: "Assignment element (DeploymentManifest)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: b0cabb42-a2ed-488f-a736-0a5bf121a703
 description: "Last modified: March 09, 2015"
 ---
 
-# Assignment Element (DeploymentManifest)
+# Assignment element (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -55,7 +55,7 @@ None
    
 ### Parent elements
 
-[RoleAssignment Element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)
+[RoleAssignment element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)
    
 ## See also
 
