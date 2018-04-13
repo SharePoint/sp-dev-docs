@@ -48,5 +48,7 @@ None
 ## Example
 
 For an example of how this element is used, see [RootFile element (Solution)](rootfile-element-solution.md).
+
+<br/>
   
 
