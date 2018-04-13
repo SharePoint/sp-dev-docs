@@ -50,7 +50,7 @@ None.
 
 |**Element**|**Description**|
 |:-----|:-----|
-|[ContentType (SPMetal)](contenttype-spmetal.md) <br/> |Specifies that a content type should be included in code generation and modifies which columns in the content type are included in code generation.  <br/> |
+|[ContentType](contenttype-spmetal.md) <br/> |Specifies that a content type should be included in code generation and modifies which columns in the content type are included in code generation.  <br/> |
    
 ### Remarks
 
