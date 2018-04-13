@@ -1,7 +1,5 @@
 ---
-title: "IncludeHiddenContentTypes (SPMetal)"
-
-
+title: "IncludeHiddenContentTypes element (SPMetal)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,22 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: dee878c6-637d-4075-b920-6e715c49e1bf
-description: "Last modified: March 09, 2015"
+description: Specifies that SPMetal generates classes for hidden content types.
 ---
 
-# IncludeHiddenContentTypes (SPMetal)
+# IncludeHiddenContentTypes element (SPMetal)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies that SPMetal generates classes for hidden content types.
   
-[Web (SPMetal)](web-spmetal.md)
-  
-[IncludeHiddenContentTypes (SPMetal)](includehiddencontenttypes-spmetal.md)
-  
-```VB.net
+```XML
 <IncludeHiddenContentTypes />
 ```
 
@@ -48,15 +40,15 @@ None.
 
 |**Element**|**Description**|
 |:-----|:-----|
-|[Web (SPMetal)](web-spmetal.md) <br/> |Specifies the name and access level (public or internal) of the class (derived from **DataContext**) that SPMetal generates.  <br/> |
+|[Web](web-spmetal.md) <br/> |Specifies the name and access level (public or internal) of the class (derived from **DataContext**) that SPMetal generates.  <br/> |
    
 ### Remarks
 
-A Web element cannot have both an ExcludeOtherContentTypes element and an IncludeHiddenContentTypes element.
+A **Web** element cannot have both an **ExcludeOtherContentTypes** element and an **IncludeHiddenContentTypes** element.
   
 ## Example
 
-The following is an example of a IncludeHiddenContentTypes element in use. 
+The following is an example of an **IncludeHiddenContentTypes** element in use. 
   
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,9 +69,6 @@ The following is an example of a IncludeHiddenContentTypes element in use.
 
 ## See also
 
-
-
-[SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
-  
-[Overriding SPMetal Defaults by Using a Parameters XML File](http://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
+- [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)  
+- [Overriding SPMetal Defaults by Using a Parameters XML File](http://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
 

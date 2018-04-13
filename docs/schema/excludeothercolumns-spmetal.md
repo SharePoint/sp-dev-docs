@@ -1,7 +1,5 @@
 ---
-title: "ExcludeOtherColumns (SPMetal)"
-
-
+title: "ExcludeOtherColumns  element (SPMetal)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,24 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: aee1bc6c-4e8a-4745-9116-521ff82b8d95
-description: "Last modified: March 09, 2015"
+description: Specifies that SPMetal should generate code only for columns that are explicitly represented by Column elements.
 ---
 
-# ExcludeOtherColumns (SPMetal)
+# ExcludeOtherColumns  element (SPMetal)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Specifies that SPMetal should generate code only for columns that are explicitly represented by **Column** elements.
   
-Specifies that SPMetal should generate code only for columns that are explicitly represented by Column elements.
-  
-[Web (SPMetal)](web-spmetal.md)
-  
-[ContentType (SPMetal)](contenttype-spmetal.md)
-  
-[ExcludeOtherColumns (SPMetal)](excludeothercolumns-spmetal.md)
-  
-```VB.net
+```XML
 <ExcludeOtherColumns />
 ```
 
@@ -50,15 +40,15 @@ None.
 
 |**Element**|**Description**|
 |:-----|:-----|
-|[ContentType (SPMetal)](contenttype-spmetal.md) <br/> |Specifies that a content type should be included in code generation and modifies which columns in the content type are included in code generation.  <br/> |
+|[ContentType](contenttype-spmetal.md) <br/> |Specifies that a content type should be included in code generation, and modifies which columns in the content type are included in code generation.  <br/> |
    
 ### Remarks
 
-A ContentType element cannot have both an ExcludeOtherColumns element and an IncludeHiddenColumns element.
+A **ContentType** element cannot have both an **ExcludeOtherColumns** element and an **IncludeHiddenColumns** element.
   
 ## Example
 
-The following shows the ExcludeOtherColumns element in use. The presence of the element ensures that code generated for the Contact content type class has properties for only the three columns explicitly represented by Column elements.
+The following shows the **ExcludeOtherColumns** element in use. The presence of the element ensures that code generated for the **Contact** content type class has properties for only the three columns explicitly represented by **Column** elements.
   
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -79,9 +69,6 @@ The following shows the ExcludeOtherColumns element in use. The presence of the 
 
 ## See also
 
-
-
-[SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
-  
-[Overriding SPMetal Defaults by Using a Parameters XML File](http://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
+- [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
+- [Overriding SPMetal Defaults by Using a Parameters XML File](http://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
 
