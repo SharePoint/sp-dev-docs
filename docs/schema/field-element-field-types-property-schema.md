@@ -18,9 +18,6 @@ description: Represents a variable property of a custom field type that is set w
 
 Represents a variable property of a custom field type that is set when a column based on the field type is created.
 
-> [!IMPORTANT]
-> This topic describes markup that was used in an obsolete method of rendering custom field type properties. It is provided solely to assist with the debugging of custom field type properties developed against earlier versions of SharePoint Foundation. For information about the recommended method, [Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx). 
-  
 ```XML
 <Field
   Name="Text" 
@@ -30,6 +27,9 @@ Represents a variable property of a custom field type that is set when a column 
   Type="Text">
 </Field>
 ```
+
+> [!IMPORTANT]
+> This topic describes markup that was used in an obsolete method of rendering custom field type properties. It is provided solely to assist with the debugging of custom field type properties developed against earlier versions of SharePoint Foundation. For information about the recommended method, see [Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx). 
 
 ## Elements and attributes
 
