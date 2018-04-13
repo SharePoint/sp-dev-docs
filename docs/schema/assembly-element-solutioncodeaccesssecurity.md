@@ -1,7 +1,5 @@
 ---
-title: "Assembly Element (Solution - CodeAccessSecurity)"
-
-
+title: "Assembly element (Solution - CodeAccessSecurity)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 12325238-b3d7-44cf-a9ae-5dee6644d73f
-description: "Last modified: March 09, 2015"
+description: Specifies an assembly in a solution's code access security policy.
 ---
 
-# Assembly Element (Solution - CodeAccessSecurity)
+# Assembly element (Solution - CodeAccessSecurity)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies an assembly in a solution's code access security policy.
   
-```
+```XML
 <Assembly
   Name = "Text"
   PublicKeyBlob = "Text"
@@ -46,15 +42,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Assemblies](assemblies-element-solutioncodeaccesssecurity.md)|
+- [Assemblies](assemblies-element-solutioncodeaccesssecurity.md)
    
 ## Example
 

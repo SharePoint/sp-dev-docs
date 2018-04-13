@@ -34,7 +34,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|Location  <br/> |Required **Text**. Specifies a location relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES.  <br/> |
+|**Location**  <br/> |Required **Text**. Specifies a location relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES.  <br/> |
    
 ### Child elements
 
