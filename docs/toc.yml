@@ -4501,13 +4501,13 @@
     - name: Mobile Document Viewer schema
       href: schema/mobile-document-viewer-schema.md
       items:
-      - name: MobileDocViewers 
+      - name: MobileDocViewers element 
         href: schema/mobiledocviewers-mobile-document-viewer.md
-      - name: MobileDocViewer 
+      - name: MobileDocViewer element 
         href: schema/mobiledocviewer-mobile-document-viewer.md
-      - name: BrowserCondition 
+      - name: BrowserCondition element 
         href: schema/browsercondition-mobile-document-viewer.md
-      - name: Override 
+      - name: Override element 
         href: schema/override-mobile-document-viewer.md
     - name: Server Ribbon schema
       href: schema/server-ribbon-schema.md
@@ -4680,31 +4680,31 @@
     - name: SPMetal Parameters schema
       href: schema/spmetal-parameters-schema.md
       items:
-      - name: Column 
+      - name: Column element
         href: schema/column-spmetal.md
-      - name: ContentType 
+      - name: ContentType element 
         href: schema/contenttype-spmetal.md
-      - name: ExcludeColumn 
+      - name: ExcludeColumn element 
         href: schema/excludecolumn-spmetal.md
-      - name: ExcludeContentType 
+      - name: ExcludeContentType element 
         href: schema/excludecontenttype-spmetal.md
-      - name: ExcludeList 
+      - name: ExcludeList element 
         href: schema/excludelist-spmetal.md
-      - name: ExcludeOtherColumns 
+      - name: ExcludeOtherColumns element 
         href: schema/excludeothercolumns-spmetal.md
-      - name: ExcludeOtherContentTypes 
+      - name: ExcludeOtherContentTypes element 
         href: schema/excludeothercontenttypes-spmetal.md
-      - name: ExcludeOtherLists 
+      - name: ExcludeOtherLists element 
         href: schema/excludeotherlists-spmetal.md
-      - name: IncludeHiddenColumns 
+      - name: IncludeHiddenColumns element 
         href: schema/includehiddencolumns-spmetal.md
-      - name: IncludeHiddenContentTypes 
+      - name: IncludeHiddenContentTypes element 
         href: schema/includehiddencontenttypes-spmetal.md
-      - name: IncludeHiddenLists 
+      - name: IncludeHiddenLists element 
         href: schema/includehiddenlists-spmetal.md
-      - name: List 
+      - name: List element 
         href: schema/list-spmetal.md
-      - name: Web 
+      - name: Web element 
         href: schema/web-spmetal.md
     - name: Upgrade Definition schema
       href: schema/upgrade-definition-schema.md
@@ -4730,10 +4730,10 @@
     - name: dsQueryResponse schema
       href: schema/dsqueryresponse-schema.md
       items:
-      - name: dsQueryResponse
+      - name: dsQueryResponse element
         href: schema/dsqueryresponse.md
-      - name: Rows
+      - name: Rows element
         href: schema/rows-dsqueryresponse.md
-      - name: Row
+      - name: Row element
         href: schema/row-dsqueryresponse.md    
   
