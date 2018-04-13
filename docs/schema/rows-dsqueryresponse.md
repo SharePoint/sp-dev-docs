@@ -1,7 +1,5 @@
 ---
-title: "Rows (dsQueryResponse)"
-
-
+title: "Rows element (dsQueryResponse)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +9,16 @@ localization_priority: Normal
 api_name:
 - dsQueryResponse XML
 ms.assetid: c4c14d0d-5002-445f-8663-bd38fd21434e
-description: "Last modified: March 09, 2015"
+description: Contains a collection of Row elements that specify the data from the list. 
 ---
 
-# Rows (dsQueryResponse)
+# Rows element (dsQueryResponse)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains a collection of **Row** elements that specify the data from the list. 
   
-```
+```XML
 <Rows>
   <Row></Row>
   <Row></Row>
@@ -40,21 +36,16 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[Row](row-dsqueryresponse.md)|
+- [Row](row-dsqueryresponse.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[dsQueryResponse](dsqueryresponse.md)|
+- [dsQueryResponse](dsqueryresponse.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 

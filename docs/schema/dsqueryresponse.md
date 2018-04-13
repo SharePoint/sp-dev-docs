@@ -1,7 +1,5 @@
 ---
-title: "dsQueryResponse"
-
-
+title: "dsQueryResponse element (dsQueryResponse)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +9,16 @@ localization_priority: Normal
 api_name:
 - dsQueryResponse XML
 ms.assetid: 4c8c17dc-af06-4ef1-a1ad-831a1ea19e06
-description: "Last modified: March 09, 2015"
+description: Top-level element that contains the list data that is rendered by the XSLT list view rendering system.
 ---
 
-# dsQueryResponse
+# dsQueryResponse element (dsQueryResponse)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Top-level element that contains the list data that is rendered by [the XSLT list view rendering system](http://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593%28Office.15%29.aspx).
   
-```
+```XML
 <dsQueryResponse 
   ViewStyleID="Integer" 
   BaseViewID="Integer" 
@@ -46,9 +42,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Rows](rows-dsqueryresponse.md)|
+- [Rows](rows-dsqueryresponse.md)
    
 ### Parent elements
 
@@ -56,9 +50,8 @@ None
   
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: 1  <br/> |
+- Minimum: 1
+- Maximum: 1  
    
 ## Example
 

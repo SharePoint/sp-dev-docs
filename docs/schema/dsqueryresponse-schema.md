@@ -22,7 +22,7 @@ For information about the XSLT list view rendering system, see [Overview of XSLT
   
 ## dsQueryResponse markup elements
 
-- [dsQueryResponse](dsqueryresponse.md)
+- [dsQueryResponse (dsQueryResponse)](dsqueryresponse.md) 
 
 - [Rows (dsQueryResponse)](rows-dsqueryresponse.md)
 
