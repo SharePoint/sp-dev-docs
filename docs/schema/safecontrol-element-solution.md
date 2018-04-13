@@ -1,7 +1,5 @@
 ---
-title: "SafeControl Element (Solution)"
-
-
+title: "SafeControl element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 26d20282-3df9-4f57-a9c9-d32dcfe91ce0
-description: "Last modified: March 09, 2015"
+description: Adds or removes a control assembly from the safe controls list for a solution.
 ---
 
-# SafeControl Element (Solution)
+# SafeControl element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Adds or removes a control assembly from the safe controls list for a solution. 
   
-```
+```XML
 <SafeControl
   Assembly = "Text"
   Namespace = "Text"
@@ -50,15 +46,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SafeControls](safecontrols-element-solution.md)|
+- [SafeControls](safecontrols-element-solution.md)
    
 ## Example
 

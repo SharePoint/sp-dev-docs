@@ -1,7 +1,5 @@
 ---
-title: "RootFile Element (Solution)"
-
-
+title: "RootFile element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 40f9da2a-f1cc-4948-9dec-9a12f41c0d64
-description: "Last modified: March 09, 2015"
+description: Specifies a root path to which solution files are copied.
 ---
 
-# RootFile Element (Solution)
+# RootFile element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a root path to which solution files are copied.
   
-```
+```XML
 <RootFile
   Location = "Text">
 </RootFile>
@@ -42,15 +38,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[RootFiles](rootfiles-element-solution.md)|
+- [RootFiles](rootfiles-element-solution.md)
    
 ### Remarks
 
@@ -66,7 +58,9 @@ Use this element to deploy a localization resource that is shared by several fea
 ```
 
 For more information about using shared localization resources, see the description of the **DefaultResourceFile** attribute in [Feature Element (Feature)](feature-element-feature.md).
-  
+
+<br/>
+
 Localization resources used by extensions to the Central Administration user interface are located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Config\AdminResources folder. The following XML deploys localization resource files to that folder.
   
 ```XML

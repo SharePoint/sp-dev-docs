@@ -1,7 +1,5 @@
 ---
-title: "SiteDefinitionManifest Element (Solution)"
-
-
+title: "SiteDefinitionManifest element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2f51fe9d-fd61-48a8-b2e2-e6bd3f315f4b
-description: "Last modified: March 09, 2015"
+description: Specifies a site definition manifest to include in the solution.
 ---
 
-# SiteDefinitionManifest Element (Solution)
+# SiteDefinitionManifest element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a site definition manifest to include in the solution.
   
-```
+```XML
 <SiteDefinitionManifest
   Location="Text">
   <WebTempFile
@@ -40,19 +36,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|Location  <br/> |Required **Text**. The relative path of the root folder for a site definition.  <br/> |
+|**Location**  <br/> |Required **Text**. The relative path of the root folder for a site definition.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[WebTempFile](webtempfile-element-solution.md)|
+- [WebTempFile](webtempfile-element-solution.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md)|
+- [SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md)
    
 ## Example
 

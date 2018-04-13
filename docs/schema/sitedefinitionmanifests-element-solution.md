@@ -1,7 +1,5 @@
 ---
-title: "SiteDefinitionManifests Element (Solution)"
-
-
+title: "SiteDefinitionManifests element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 4ce00124-6799-44ea-a04a-3e0d566f03b8
-description: "Last modified: March 09, 2015"
+description: Specifies the site definitions to include in the solution.
 ---
 
-# SiteDefinitionManifests Element (Solution)
+# SiteDefinitionManifests element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the site definitions to include in the solution.
   
-```
+```XML
 <SiteDefinitionManifests
   <SiteDefinitionManifest
     Location="Text">
@@ -41,21 +37,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)|
+- [SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Solution](solution-element-solution.md)|
+- [Solution](solution-element-solution.md)
    
 ## Example
 

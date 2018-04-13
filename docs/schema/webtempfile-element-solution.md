@@ -1,7 +1,5 @@
 ---
-title: "WebTempFile Element (Solution)"
-
-
+title: "WebTempFile element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: dad6e4c4-96a3-46cf-9c0c-ad2ffd8fd946
-description: "Last modified: March 09, 2015"
+description: Specifies a Web template file that is associated with a site definition manifest.
 ---
 
-# WebTempFile Element (Solution)
+# WebTempFile element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a Web template file that is associated with a site definition manifest.
   
-```
+```XML
 <WebTempFile
   Location="Text">
 </WebTempFile>
@@ -38,19 +34,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|Location  <br/> |Required **Text**. Specifies a relative location within the solution that contains the Web template file.  <br/> |
+|**Location**  <br/> |Required **Text**. Specifies a relative location within the solution that contains the Web template file.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)|
+- [SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)
    
 ## Example
 

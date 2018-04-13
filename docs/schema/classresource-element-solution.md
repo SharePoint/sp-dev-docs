@@ -1,7 +1,5 @@
 ---
-title: "ClassResource Element (Solution)"
-
-
+title: "ClassResource element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 299589c7-4a36-4b73-b52e-eb089fca67dc
-description: "Last modified: March 09, 2015"
+description: Specifies a class resource to include in a solution's assembly.
 ---
 
-# ClassResource Element (Solution)
+# ClassResource element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a class resource to include in a solution's assembly.
   
-```
+```XML
 <ClassResource
   FileName = "Text"
   Location = "Text">
@@ -44,15 +40,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ClassResources](classresources-element-solution.md)|
+- [ClassResources](classresources-element-solution.md)
    
 ## Example
 

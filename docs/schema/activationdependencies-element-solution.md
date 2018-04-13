@@ -1,5 +1,5 @@
 ---
-title: "ActivationDependencies Element (Solution)"
+title: "ActivationDependencies element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,16 +11,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: d6ea8200-bea4-4366-9244-e0eceda99942
-description: "Last modified: March 09, 2015"
+description: Specifies the activation dependencies for a solution.
 ---
 
-# ActivationDependencies Element (Solution)
+# ActivationDependencies element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the activation dependencies for a solution.
-
-## Definition
 
 ```XML
 <ActivationDependencies />
@@ -36,11 +34,11 @@ None
    
 ### Child elements
 
-[ActivationDependency Element (Solution)](activationdependency-element-solution.md)
+- [ActivationDependency](activationdependency-element-solution.md)
    
 ### Parent elements
 
-[Solution Element (Solution)](solution-element-solution.md)
+- [Solution](solution-element-solution.md)
    
 ## Example
 

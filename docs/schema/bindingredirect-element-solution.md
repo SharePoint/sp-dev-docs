@@ -1,5 +1,5 @@
 ---
-title: "BindingRedirect Element (Solution)"
+title: "BindingRedirect element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 16ebf1ac-50a3-415a-9ea8-2d16c5a22fba
-description: "Last modified: March 09, 2015"
+description: Specifies a binding redirect for a solution.
 ---
 
-# BindingRedirect Element (Solution)
+# BindingRedirect element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a binding redirect for a solution.
   
-```
+```XML
 <BindingRedirect 
   OldVersion = string />
 ```
@@ -43,9 +41,7 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[BindingRedirects Element (Solution)](bindingredirects-element-solution.md)|
+- [BindingRedirects](bindingredirects-element-solution.md)
    
 ## Example
 

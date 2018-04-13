@@ -1,7 +1,5 @@
 ---
-title: "TemplateFile Element (Solution)"
-
-
+title: "TemplateFile element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 23530994-7751-462f-b135-64ae1a08dcfa
-description: "Last modified: March 09, 2015"
+description: Specifies a template file to include in the solution.
 ---
 
-# TemplateFile Element (Solution)
+# TemplateFile element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a template file to include in the solution.
   
-```
+```XML
 <TemplateFile
   Location="Text">
 </TemplateFile>
@@ -38,19 +34,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|Location  <br/> |Required **Text**. Specifies a relative location within the solution that contains the template file.  <br/> |
+|**Location**  <br/> |Required **Text**. Specifies a relative location within the solution that contains the template file.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[TemplateFiles](templatefiles-element-solution.md)|
+- [TemplateFiles](templatefiles-element-solution.md)
    
 ## Example
 

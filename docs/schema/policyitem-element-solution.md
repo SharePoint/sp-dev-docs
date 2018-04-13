@@ -1,7 +1,5 @@
 ---
-title: "PolicyItem Element (Solution)"
-
-
+title: "PolicyItem element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: f28e6ce3-d10f-4157-bd01-2bed86ab8a87
-description: "Last modified: March 09, 2015"
+description: Specifies a code access security policy for a solution.
 ---
 
-# PolicyItem Element (Solution)
+# PolicyItem element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a code access security policy for a solution.
   
-```
+```XML
 <PolicyItem>
   <PermissionSet
     class = "Text"
@@ -45,21 +41,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[Assemblies](assemblies-element-solutioncodeaccesssecurity.md), [PermissionSet](permissionset-element-solution.md)|
+- [Assemblies](assemblies-element-solutioncodeaccesssecurity.md)
+- [PermissionSet](permissionset-element-solution.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CodeAccessSecurity](codeaccesssecurity-element-solution.md)|
+- [CodeAccessSecurity](codeaccesssecurity-element-solution.md)
    
 ## Example
 

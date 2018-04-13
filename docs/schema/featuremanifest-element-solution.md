@@ -1,7 +1,5 @@
 ---
-title: "FeatureManifest Element (Solution)"
-
-
+title: "FeatureManifest element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: ea8952ad-0faa-457a-a3fa-515eeb81133d
-description: "Last modified: March 09, 2015"
+description: Specifies a Feature to include in the solution.
 ---
 
-# FeatureManifest Element (Solution)
+# FeatureManifest element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a Feature to include in the solution.
   
-```
+```XML
 <FeatureManifest
     Location="Text">
 </FeatureManifest>
@@ -42,15 +38,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[FeatureManifests](featuremanifests-element-solution.md)|
+- [FeatureManifests](featuremanifests-element-solution.md)
    
 ## Example
 

@@ -1,7 +1,5 @@
 ---
-title: "Resource Element (Solution)"
-
-
+title: "Resource element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3d416397-8688-4e0f-b0fd-a0af8cb66629
-description: "Last modified: March 09, 2015"
+description: Specifies a binary resource to deploy to an existing Feature folder.
 ---
 
-# Resource Element (Solution)
+# Resource element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a binary resource to deploy to an existing Feature folder.
   
-```
+```XML
 <Resource
   Location="Text">
 </Resource>
@@ -42,15 +38,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[Resources](resources-element-solution.md)|
+- [Resources](resources-element-solution.md)
    
 ### Remarks
 

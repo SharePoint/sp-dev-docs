@@ -1,7 +1,5 @@
 ---
-title: "App_GlobalResourceFile Element (Solution)"
-
-
+title: "App_GlobalResourceFile element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3ccb16a3-18fc-4cf5-afbd-b5ad5cc84ea5
-description: "Last modified: March 09, 2015"
+description: Specifies a global resource file for a solution.
 ---
 
-# App_GlobalResourceFile Element (Solution)
+# App_GlobalResourceFile element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a global resource file for a solution.
   
-```
+```XML
 <App_GlobalSourceFile 
   Location = string />
 ```
@@ -45,9 +41,7 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[ApplicationResourceFiles Element (Solution)](applicationresourcefiles-element-solution.md)|
+- [ApplicationResourceFiles](applicationresourcefiles-element-solution.md)
    
 ## Example
 

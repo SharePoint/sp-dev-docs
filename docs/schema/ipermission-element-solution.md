@@ -1,7 +1,5 @@
 ---
-title: "IPermission Element (Solution)"
-
-
+title: "IPermission element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 1278fc42-db4a-4270-a8d4-0c33784dac19
-description: "Last modified: March 09, 2015"
+description: Specifies a permission in a permission set.
 ---
 
-# IPermission Element (Solution)
+# IPermission element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a permission in a permission set.
   
-```
+```XML
 <IPermission/>
 ```
 
@@ -34,21 +30,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[PermissionSet](permissionset-element-solution.md)|
+- [PermissionSet](permissionset-element-solution.md)
    
 ## Example
 

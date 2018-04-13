@@ -1,7 +1,5 @@
 ---
-title: "BindingRedirects Element (Solution)"
-
-
+title: "BindingRedirects element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 264029a5-9193-42f8-80f7-ea1745bbf22a
-description: "Last modified: March 09, 2015"
+description: Specifies a global resource file for a solution.
 ---
 
-# BindingRedirects Element (Solution)
+# BindingRedirects element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a global resource file for a solution.
   
-```
+```XML
 <BindingRedirects />
 ```
 
@@ -38,15 +34,11 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[BindingRedirect Element (Solution)](bindingredirect-element-solution.md)|
+- [BindingRedirect](bindingredirect-element-solution.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Assembly Element (Solution - Assemblies)](assembly-element-solutionassemblies.md)|
+- [Assembly](assembly-element-solutionassemblies.md)
    
 ## Example
 

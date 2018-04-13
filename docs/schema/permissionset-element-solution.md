@@ -1,7 +1,5 @@
 ---
-title: "PermissionSet Element (Solution)"
-
-
+title: "PermissionSet element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 797ed1b9-93b5-4e64-9cd7-197c759886c7
-description: "Last modified: March 09, 2015"
+description: Specifies the permissions for a solution's code access security policy.
 ---
 
-# PermissionSet Element (Solution)
+# PermissionSet element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the permissions for a solution's code access security policy.
   
-```
+```XML
 <PermissionSet
   class = "Text"
   Description = "Text"
@@ -49,15 +45,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[IPermission](ipermission-element-solution.md)|
+- [IPermission](ipermission-element-solution.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[PolicyItem](policyitem-element-solution.md)|
+- [PolicyItem](policyitem-element-solution.md)
    
 ## Example
 

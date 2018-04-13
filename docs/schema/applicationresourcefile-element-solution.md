@@ -1,7 +1,5 @@
 ---
-title: "ApplicationResourceFile Element (Solution)"
-
-
+title: "ApplicationResourceFile element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 838486ac-1bc5-4bcb-8768-d3dffb329654
-description: "Last modified: March 09, 2015"
+description: Specifies an application resource file to include in the solution.
 ---
 
-# ApplicationResourceFile Element (Solution)
+# ApplicationResourceFile element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies an application resource file to include in the solution.
   
-```
+```XML
 <ApplicationResourceFile
   Location="Text">
 </ApplicationResourceFile>
@@ -42,15 +38,11 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[ApplicationResourceFiles](applicationresourcefiles-element-solution.md)|
+- [ApplicationResourceFiles](applicationresourcefiles-element-solution.md)
    
 ## Example
 

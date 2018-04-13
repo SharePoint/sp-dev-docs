@@ -1,7 +1,5 @@
 ---
-title: "DwpFile Element (Solution)"
-
-
+title: "DwpFile element (Solution)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 50b282e2-269d-4533-bf34-0d9d4601536d
-description: "Last modified: March 09, 2015"
+description: Specifies a Web Part file (.dwp or .webpart) to include in the solution.
 ---
 
-# DwpFile Element (Solution)
+# DwpFile element (Solution)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a Web Part file (.dwp or .webpart) to include in the solution.
   
-```
+```XML
   <DwpFile
         FileName = "Text" 
         Location = "Text">
@@ -44,14 +40,10 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|None |
+None
    
 ### Parent elements
 
-||
-|:-----|
-|[DwpFiles](dwpfiles-element-solution.md)|
+- [DwpFiles](dwpfiles-element-solution.md)
    
 

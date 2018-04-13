@@ -20,7 +20,7 @@ description: A solution manifest file defines the constituent parts of a solutio
   
 A solution manifest file defines the constituent parts of a solution, including its files, assemblies, code access security, Web Parts, Features, site definitions, and other resources.
   
-[Solution](solution-element-solution.md)
+[Solution](solution-element-solution.md) 
   
 - [ActivationDependencies Element (Solution)](activationdependencies-element-solution.md)
   
