@@ -1,7 +1,5 @@
 ---
-title: "Lists Element (Upgrade)"
-
-
+title: "Lists element (Upgrade)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: a375d4a2-af94-498f-abe2-69336cc21fe4
-description: "Last modified: March 09, 2015"
+description: Contains definitions for how existing lists should be upgraded on a list template by list template basis.
 ---
 
-# Lists Element (Upgrade)
+# Lists element (Upgrade)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains definitions for how existing lists should be upgraded on a list template by list template basis.
   
-```
+```XML
 <Lists>
   <List
     FromTemplateId = "Integer"
@@ -46,27 +42,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[List](list-element-upgrade.md)|
+- [List](list-element-upgrade.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[WebTemplate](webtemplate-element-upgrade.md)|
+- [WebTemplate](webtemplate-element-upgrade.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1
    
 ## Example
 

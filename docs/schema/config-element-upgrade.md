@@ -1,7 +1,5 @@
 ---
-title: "Config Element (Upgrade)"
-
-
+title: "Config element (Upgrade)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c1dc6528-0eee-400a-8ca7-89b4924f5ccd
-description: "Last modified: March 09, 2015"
+description: Specifies the top-level containing element for the upgrade definition.
 ---
 
-# Config Element (Upgrade)
+# Config element (Upgrade)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies the top-level containing element for the upgrade definition.
   
-```
+```XML
 <Config
   xmlns = "urn:Microsoft.SharePoint.Upgrade">
   <WebTemplate 
@@ -52,23 +48,18 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[WebTemplate](webtemplate-element-upgrade.md)|
+- [WebTemplate](webtemplate-element-upgrade.md)
    
 ### Parent elements
 
-||
-|:-----|
-|None |
+None
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: Unbounded  <br/> |
+- Minimum: 0
+- Maximum: Unbounded
    
-### Remarks
+## Example
 
 For an example of how this element is used, see [Upgrade Definition schema](upgrade-definition-schema.md).
   

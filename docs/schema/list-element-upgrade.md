@@ -55,6 +55,6 @@ None
    
 ## Example
 
-For an example of how this element is used, see [Upgrade Definition schema](upgrade-definition-schema.md).
+For an example of how this element is used, see [Upgrade Definition schema](upgrade-definition-schema.md). 
   
 
