@@ -20,7 +20,7 @@ Find how-to articles and related code examples that show how to perform basic de
 |:-----|:-----|
 | [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md) <br/> |Learn how to set up a development environment for SharePoint Framework development.  <br/> |
 | [Building your first SharePoint client-side web part](../spfx/web-parts/get-started/build-a-hello-world-web-part.md) <br/> |Learn how to get started with developing SharePoint Framework client-side web parts.  <br/> |
-| [Build your first SharePoint Framework Extension](../spfx/extensions/get-started/build-a-hello-world-extension) <br/> |Learn how to get started with developing SharePoint Framework Extensions.  <br/> |
+| [Build your first SharePoint Framework Extension](../spfx/extensions/get-started/build-a-hello-world-extension.md) <br/> |Learn how to get started with developing SharePoint Framework Extensions.  <br/> |
 
 <a name="bk_starthowtos"> </a>
 ## Getting started how-tos for SharePoint Add-ins
