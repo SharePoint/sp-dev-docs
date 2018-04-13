@@ -1,7 +1,5 @@
 ---
-title: "Tabs Element"
-
-
+title: "Tabs element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: f78ef87f-479b-44da-a802-4167baef2cf7
-description: "Last modified: March 09, 2015"
+description: Contains elements that define tab controls.
 ---
 
-# Tabs Element
+# Tabs element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define tab controls.
   
-```
+```XML
 <Tabs
   Id="IdType"
 />
@@ -42,20 +38,15 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Tab](tab-element.md)|
+- [Tab](tab-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Ribbon](ribbon-element.md)|
+- [Ribbon](ribbon-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: 1  <br/> |
+- Minimum: 1
+- Maximum: 1  
    
 

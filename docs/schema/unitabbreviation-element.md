@@ -1,7 +1,5 @@
 ---
-title: "UnitAbbreviation Element"
-
-
+title: "UnitAbbreviation element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c7627982-c773-459b-abcd-ba39b661b85d
-description: "Last modified: March 09, 2015"
+description: Defines an abbreviation for a unit within a spinner control.
 ---
 
-# UnitAbbreviation Element
+# UnitAbbreviation element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines an abbreviation for a unit within a spinner control.
   
-```
+```XML
 <UnitAbbreviation
   Sequence="Integer"
   Value="Text"
@@ -48,14 +44,11 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Unit](unit-element-spinner.md)|
+- [Unit](unit-element-spinner.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: unbounded  <br/> |
+- Minimum: 1
+- Maximum: unbounded
    
 

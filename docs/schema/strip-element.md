@@ -1,7 +1,5 @@
 ---
-title: "Strip Element"
-
-
+title: "Strip element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,38 +11,39 @@ api_name:
 api_type:
 - schema
 ms.assetid: 1219e531-4915-473c-89d5-25667763ec6f
-description: "Last modified: March 09, 2015"
+description: Defines a horizontally scrolling strip that contains one or more controls.
 ---
 
-# Strip Element
+# Strip element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a horizontally scrolling strip that contains one or more controls.
   
-```
+```XML
 <Strip />
 ```
 
+## Elements and attributes
+
+The following sections describe attributes, child elements, and parent elements.
+
+### Attributes
+
+None
+
 ### Child elements
 
-||
-|:-----|
-|[ControlRef](controlref-element.md)|
+- [ControlRef](controlref-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Row](row-element.md)|
+- [Row](row-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 ## Example
 

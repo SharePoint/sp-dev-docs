@@ -1,7 +1,5 @@
 ---
-title: "Section Element"
-
-
+title: "Section element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c75b13c7-3102-46b9-931e-48a834b09e98
-description: "Last modified: March 09, 2015"
+description: Defines a section of a layout.
 ---
 
-# Section Element
+# Section element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a section of a layout.
   
-```
+```XML
 <Section
   Type="Divider | OneRow | TwoRow | ThreeRow"
   Alignment="Top | Middle"
@@ -39,26 +35,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Type** <br/> | Optional. An enumeration value that specifies the type of section.  <br/> **Divider**. The section cannot contain child [Row](row-element.md) elements.  <br/> **OneRow**. The section can contain one child **Row** element.  <br/> **TwoRow**. The section can contain two child **Row** elements.  <br/> **ThreeRow**. The section can contain three child **Row** elements.  <br/> |
-|**Alignment** <br/> | Optional. An enumeration value that specifies the vertical alignment of controls within the section.  <br/> **Top**. Control icons are aligned to the top edge of their row.  <br/> **Middle**. Control icons are aligned in the middle of their row.  <br/>  The default alignment is **Top**.  <br/> |
+|**Type** <br/> | Optional. An enumeration value that specifies the type of section.<br/><br/> **Divider**. The section cannot contain child [Row](row-element.md) elements.  <br/> **OneRow**. The section can contain one child **Row** element.  <br/> **TwoRow**. The section can contain two child **Row** elements.  <br/> **ThreeRow**. The section can contain three child **Row** elements.  <br/> |
+|**Alignment** <br/> | Optional. An enumeration value that specifies the vertical alignment of controls within the section.<br/><br/> **Top**. Control icons are aligned to the top edge of their row.  <br/> **Middle**. Control icons are aligned in the middle of their row.  <br/><br/>  The default alignment is **Top**.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[Row](row-element.md)|
+- [Row](row-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Layout](layout-element.md)|
+- [Layout](layout-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded 
    
 ## Example
 

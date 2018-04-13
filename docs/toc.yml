@@ -4578,7 +4578,7 @@
         href: schema/qat-element.md
       - name: Ribbon element
         href: schema/ribbon-element.md
-      - name: RibbonTemplates
+      - name: RibbonTemplates element
         href: schema/ribbontemplates.md
       - name: Row element
         href: schema/row-element.md

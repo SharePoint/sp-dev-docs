@@ -1,7 +1,5 @@
 ---
-title: "Scale Element"
-
-
+title: "Scale element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 65065281-a30c-4654-bbb4-3c622add0174
-description: "Last modified: March 09, 2015"
+description: Defines how a group of controls on a tab are sized.
 ---
 
-# Scale Element
+# Scale element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines how a group of controls on a tab are sized.
   
-```
+```XML
 <Scale
   GroupId="Text"
   Id="Text"
@@ -54,19 +50,14 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Scaling](scaling-element.md)|
+- [Scaling](scaling-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded 
    
 ## See also
 
-
-
-[Server Ribbon XML](http://msdn.microsoft.com/library/5eeb45be-4af7-4a38-8ba0-3aafc62aed4b%28Office.15%29.aspx)
+- [Server Ribbon XML](http://msdn.microsoft.com/library/5eeb45be-4af7-4a38-8ba0-3aafc62aed4b%28Office.15%29.aspx)
 

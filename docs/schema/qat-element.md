@@ -1,7 +1,5 @@
 ---
-title: "QAT Element"
-
-
+title: QAT element (Server Ribbon)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 795f4be2-9dd2-4da0-88bb-2b0bc33a6133
-description: "Last modified: March 09, 2015"
+description: Defines a quick-access toolbar.
 ---
 
-# QAT Element
+# QAT element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a quick-access toolbar.
   
-```
+```XML
 <QAT
   Id="Text"
   ImageDownArrow="Url"
@@ -66,20 +62,15 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Controls](controls-element-group.md)|
+- [Controls](controls-element-group.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUI](commandui-element.md)|
+- [CommandUI](commandui-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 

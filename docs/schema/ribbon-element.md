@@ -1,7 +1,5 @@
 ---
-title: "Ribbon Element"
-
-
+title: "Ribbon element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 98ffbc4d-ec57-4dbd-8e3b-d16e17bc75dc
-description: "Last modified: March 09, 2015"
+description: Contains elements that define the server ribbon user interface.
 ---
 
-# Ribbon Element
+# Ribbon element (Server Ribbon)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Contains elements that define the server ribbon user interface.
   
-Contains elements that define the Server ribbon user interface.
-  
-```
+```XML
 <Ribbon
   Id="Text"
   Image32by32GroupPopupDefault="Url"
@@ -128,26 +124,19 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Tabs](tabs-element.md) <br/> |
-|[ContextualTabs](contextualtabs-element.md) <br/> |
+- [Tabs](tabs-element.md) 
+- [ContextualTabs](contextualtabs-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUI](commandui-element.md)|
+- [CommandUI](commandui-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0 
+- Maximum: 1  
    
 ## See also
 
-
-
-[Customizing the Server Ribbon](http://msdn.microsoft.com/library/dedfad80-0f32-44cd-9080-1507be3288e7%28Office.15%29.aspx)
+- [Customizing the Server Ribbon](http://msdn.microsoft.com/library/dedfad80-0f32-44cd-9080-1507be3288e7%28Office.15%29.aspx)
 

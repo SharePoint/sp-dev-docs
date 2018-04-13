@@ -1,7 +1,5 @@
 ---
-title: "OverflowSection Element"
-
-
+title: "OverflowSection element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: c5e266a6-6664-41a2-acf3-c0d338fa5f41
-description: "Last modified: March 09, 2015"
+description: Defines a section that can be created dynamically with a variable number of controls.
 ---
 
-# OverflowSection Element
+# OverflowSection element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a section that can be created dynamically with a variable number of controls.
   
-```
+```XML
 <OverflowSection
   DisplayMode="Small | Medium | Large | Menu | Menu16 | Menu32"
   DividerAfter="TRUE | FALSE"
@@ -54,14 +50,11 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Layout](layout-element.md)|
+- [Layout](layout-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 

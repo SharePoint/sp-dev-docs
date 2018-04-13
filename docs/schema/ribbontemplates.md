@@ -1,7 +1,5 @@
 ---
-title: "RibbonTemplates"
-
-
+title: "RibbonTemplates element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 76fa6b51-bc3f-4826-bca7-f8fd5def2317
-description: "Last modified: March 09, 2015"
+description: Contains elements that define group templates.
 ---
 
-# RibbonTemplates
+# RibbonTemplates element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define group templates.
   
-```
+```XML
 <RibbonTemplates
   Id="Text"
 />
@@ -42,14 +38,10 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[GroupTemplate](grouptemplate-element.md)|
+- [GroupTemplate](grouptemplate-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Templates](templates-element.md)|
+- [Templates](templates-element.md)
    
 

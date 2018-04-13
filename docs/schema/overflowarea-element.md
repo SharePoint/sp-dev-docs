@@ -1,7 +1,5 @@
 ---
-title: "OverflowArea Element"
-
-
+title: "OverflowArea element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 170a5483-873b-4b45-8d4f-b7943216cfdf
-description: "Last modified: March 09, 2015"
+description: Defines an area where multiple controls can render as a list.
 ---
 
-# OverflowArea Element
+# OverflowArea element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines an area where multiple controls can render as a list.
   
-```
+```XML
 <OverflowArea
   DisplayMode="Small | Medium | Large | Menu | Menu16 | Menu32"
   TemplateAlias="Text"
@@ -48,14 +44,11 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Row](row-element.md)|
+- [Row](row-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 

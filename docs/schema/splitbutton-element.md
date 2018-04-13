@@ -1,7 +1,5 @@
 ---
-title: "SplitButton Element"
-
-
+title: "SplitButton element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,19 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 56fa2683-f70c-40e6-9b98-7ba4611f17fa
-
-description: "Last modified: March 09, 2015"
+description: Defines a control that combines a button and a drop-down menu.
 ---
 
-# SplitButton Element
+# SplitButton element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a control that combines a button and a drop-down menu.
   
-```
+```XML
 <SplitButton
   Alt="Text"
   CacheMenuVersions="TRUE | FALSE"
@@ -105,21 +100,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Menu](menu-element.md)|
+- [Menu](menu-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-group.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-group.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded 
    
 

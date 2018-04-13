@@ -1,7 +1,5 @@
 ---
-title: "Spinner Element"
-
-
+title: "Spinner element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 96b49b4e-696e-4920-97ab-61353e35a561
-description: "Last modified: March 09, 2015"
+description: Defines a spinner control.
 ---
 
-# Spinner Element
+# Spinner element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a spinner control.
   
-```
+```XML
 <Spinner
   AccelerationInterval="Integer"
   AltDownArrow="Text"
@@ -80,21 +76,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Unit](unit-element-spinner.md)|
+- [Unit](unit-element-spinner.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-group.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-group.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded 
    
 

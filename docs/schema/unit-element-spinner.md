@@ -1,7 +1,5 @@
 ---
-title: "Unit Element (Spinner)"
-
-
+title: "Unit element (Spinner) (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: e33fbd48-21f0-42bb-97de-3b2b632997de
-description: "Last modified: March 09, 2015"
+description: Defines a unit for use within the spinner control.
 ---
 
-# Unit Element (Spinner)
+# Unit element (Spinner) (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a unit for use within the spinner control.
   
-```
+```XML
 <Unit
   Name="Text"
   MinimumValue="Decimal"
@@ -50,21 +46,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[UnitAbbreviation](unitabbreviation-element.md)|
+- [UnitAbbreviation](unitabbreviation-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[Spinner](spinner-element.md)|
+- [Spinner](spinner-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: unbounded  <br/> |
+- Minimum: 1
+- Maximum: unbounded 
    
 ## Example
 

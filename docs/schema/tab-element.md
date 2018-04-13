@@ -1,7 +1,5 @@
 ---
-title: "Tab Element"
-
-
+title: "Tab element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: e9ec3dc0-79a2-4ac6-bd01-7195425c248b
-description: "Last modified: March 09, 2015"
+description: Represents a tab control.
 ---
 
-# Tab Element
+# Tab element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a tab control.
   
-```
+```XML
 <Tab
   Command="Text"
   CssClass="Text"
@@ -52,27 +48,20 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Scaling](scaling-element.md) <br/> |
-|[Groups](groups-element.md) <br/> |
+- [Scaling](scaling-element.md) 
+- [Groups](groups-element.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[ContextualGroup](contextualgroup-element.md) <br/> |
-|[Tabs](tabs-element.md) <br/> |
+- [ContextualGroup](contextualgroup-element.md) 
+- [Tabs](tabs-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 ## See also
 
-
-
-[Walkthrough: Adding a Tab to the Server Ribbon](http://msdn.microsoft.com/library/3d1fb8b6-4c9b-4801-9bba-6d2f5caee0d9%28Office.15%29.aspx)
+- [Walkthrough: Adding a Tab to the Server Ribbon](http://msdn.microsoft.com/library/3d1fb8b6-4c9b-4801-9bba-6d2f5caee0d9%28Office.15%29.aspx)
 
