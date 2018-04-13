@@ -97,7 +97,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text that is used for the control.  <br/> |
 |**CacheMenuVersions** <br/> |Optional. **TRUE** to store previously constructed versions of a dynamic menu. The default is **FALSE**.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected.  <br/> |
 |**CommandMenuClose** <br/> |Optional. The name of the command to execute when the drop-down menu is closed.  <br/> |
 |**CommandMenuOpen** <br/> |Optional. The name of the command to execute when the drop-down menu is opened.  <br/> |
 |**Height** <br/> |Optional. The height of the control in pixels.  <br/> |

@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text that is used for the check box.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**Id** <br/> |Required. Identifies the control. The value can be a string representation of a GUID or a unique term, such as "Ribbon.Library.Share.NewRibbonCheckBox".  <br/> |
 |**LabelText** <br/> |Optional. The text to label the control.  <br/> |
 |**MenuItemId** <br/> |Optional. A string that identifies the menu item where the button is located.  <br/> |

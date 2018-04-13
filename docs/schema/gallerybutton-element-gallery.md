@@ -59,11 +59,11 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text that is used for the control.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**CommandPreview** <br/> |Optional. The name of the command to execute for previewing a selection.  <br/> |
 |**CommandRevert** <br/> |Optional. The name of the command to execute to return to the state that existed before previewing a selection.  <br/> |
-|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.  <br/> **General**. Not a specific type of command.  <br/> **OptionSelection**. A command that is generated when a user selects one option in an option group.  <br/> **IgnoredByMenu**. A command that is used for controls that should not close the menu when they are clicked.  <br/> |
-|**CommandValueId** <br/> |Optional. A string that is sent with the command event when the button is clicked.  <br/> |
+|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.  <br/> **General**. Not a specific type of command.  <br/> **OptionSelection**. A command that is generated when a user selects one option in an option group.  <br/> **IgnoredByMenu**. A command that is used for controls that should not close the menu when they are selected.  <br/> |
+|**CommandValueId** <br/> |Optional. A string that is sent with the command event when the button is selected.  <br/> |
 |**ElementDimensions** <br/> | Required. An enumeration value that specifies the dimensions of the rectangle in which the button is rendered. Dimensions are in pixels and are in the format "width by height".  <br/> **Size16by16** <br/> **Size32by32** <br/> **Size48by48** <br/> **Size72by96** <br/> **Size96by72** <br/> **Size96by96** <br/> **Size128by128** <br/> **Size190by30** <br/> **Size190by40** <br/> **Size190by50** <br/> **Size190by60** <br/> |
 |**Id** <br/> |Required. A string that identifies the element, such as "buttonStaticStyle1".  <br/> |
 |**Image** <br/> |Optional. A server-relative URL to a file that contains an image to be used as an icon.  <br/> If an **Image** attribute is not defined, an **InnerHTML** attribute must be defined.  <br/> |
@@ -82,7 +82,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 

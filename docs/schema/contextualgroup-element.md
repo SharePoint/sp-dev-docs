@@ -40,7 +40,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Color** <br/> |Optional. An enumeration value that specifies a color scheme for the group.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the group is clicked.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the group is selected.  <br/> |
 |**ContextualGroupId** <br/> |Optional. A string that identifies the contextual group, such as "EditingTools".  <br/> |
 |**Id** <br/> |Required. A string that identifies the element, such as "Ribbon.EditingTools".  <br/> |
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |

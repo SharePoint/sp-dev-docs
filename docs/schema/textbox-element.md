@@ -50,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.Image.Image.Properties.AltText".  <br/> |
 |**ImeEnabled** <br/> |Optional. Set to **TRUE** to set the Input Method Editor (IME) to the **active** state. The default value is **FALSE**.  <br/> |
 |**MaxLength** <br/> |Optional. The maximum number of characters that a user can enter.  <br/> |
@@ -65,7 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
 |**Width** <br/> |Optional. The width of the text box in pixels.  <br/> |
    
 ### Child elements

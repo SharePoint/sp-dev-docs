@@ -67,10 +67,10 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text that is used for the control.  <br/> |
 |**CacheMenuVersions** <br/> |Optional. **TRUE** to store previously constructed versions of a dynamic menu. The default is **FALSE**.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**CommandMenuOpen** <br/> |Optional. The name of the command to execute when the menu opens.  <br/> |
 |**CommandMenuClose** <br/> |Optional. The name of the command to execute when the menu closes.  <br/> |
-|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.  <br/> **General**. Not a specific type of command.  <br/> **OptionSelection**. A command that is generated when a user selects one option in an option group.  <br/> **IgnoredByMenu**. A command that is used for controls that should not close the menu when they are clicked.  <br/> |
+|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.  <br/> **General**. Not a specific type of command.  <br/> **OptionSelection**. A command that is generated when a user selects one option in an option group.  <br/> **IgnoredByMenu**. A command that is used for controls that should not close the menu when they are selected.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control.  <br/> |
 |**Image32by32** <br/> |Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".  <br/> |
 |**Image32by32Class** <br/> |Optional. The name of a CSS class selector to be applied to the image.  <br/> |
@@ -82,7 +82,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Image16by16Top** <br/> |Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16** attribute points to an image file that contains images for many icons. The value of the **Image16by16Top** attribute is used to set the CSS **top** attribute for the inline style of an HTML **img** tag.  <br/> |
 |**LabelText** <br/> |Optional. Text to label the control.  <br/> |
 |**MenuAlt** <br/> |Optional. Alternative text to represent the menu.  <br/> |
-|**MenuCommand** <br/> |Optional. The name of the command to execute when the menu is clicked.  <br/> |
+|**MenuCommand** <br/> |Optional. The name of the command to execute when the menu is selected.  <br/> |
 |**PopulateDynamically** <br/> |Optional. **TRUE** to create the menu dynamically. The default is **FALSE**.  <br/> |
 |**PopulateQueryCommand** <br/> |Optional. The name of the command to execute when creating a dynamic menu.  <br/> |
 |**PopulateOnlyOnce** <br/> |Optional. **TRUE** to populate a dynamic menu only the first time that it is accessed.  <br/> |
@@ -96,7 +96,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipSelectedItemTitle** <br/> |Optional. The title of the tooltip that appears for the selected item.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 

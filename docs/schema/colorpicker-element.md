@@ -40,7 +40,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**CommandPreview** <br/> |Optional. The name of the command to execute to preview a color selection.  <br/> |
 |**CommandRevert** <br/> |Optional. The name of the command to execute to return to the state that existed before previewing a color selection.  <br/> |
 |**Id** <br/> |Required. Identifies the control. The value can be a string representation of a GUID or a unique term such as "Ribbon.Library.Share.NewRibbonColorPicker".  <br/> |

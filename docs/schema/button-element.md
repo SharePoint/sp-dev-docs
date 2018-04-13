@@ -62,8 +62,8 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text for the button.  <br/> |
 |**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
-|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.<br/><br/>**General**. Not a specific type of command.<br/><br/>**OptionSelection**. A command that is generated when a user selects one option in an option group.<br/><br/>**IgnoredByMenu**. A command that is used for controls that should not close the menu when clicked.  <br/> |
-|**CommandValueId** <br/> |Optional. A string that is sent with the command event when the button is clicked.  <br/> |
+|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.<br/><br/>**General**. Not a specific type of command.<br/><br/>**OptionSelection**. A command that is generated when a user selects one option in an option group.<br/><br/>**IgnoredByMenu**. A command that is used for controls that should not close the menu when selected.  <br/> |
+|**CommandValueId** <br/> |Optional. A string that is sent with the command event when the button is selected.  <br/> |
 |**Description** <br/> |Optional. A string that describes the button. The description is displayed only when the button is in a menu and is being rendered with the **Menu32** display mode.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.Library.Share.NewRibbonButton".  <br/> |
 |**Image32by32** <br/> |Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".  <br/> |

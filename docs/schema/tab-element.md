@@ -39,7 +39,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Command** <br/> |Optional. The **Id** of the command to execute when the tab is clicked.  <br/> |
+|**Command** <br/> |Optional. The **Id** of the command to execute when the tab is selected.  <br/> |
 |**CssClass** <br/> |Optional. The name of the CSS class (such as "ms-browseTab") to apply when the tab is rendered.  <br/> |
 |**Description** <br/> |Optional. A description of the tab.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.CustomTabExample".  <br/> |

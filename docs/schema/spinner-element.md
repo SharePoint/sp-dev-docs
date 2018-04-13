@@ -56,7 +56,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**AccelerationInterval** <br/> |Optional. Specifies how much the value increases or decreases when you maintain focus on the up or down button.  <br/> |
 |**AltDownArrow** <br/> |Optional. Alternative text that is used for the decrement arrow.  <br/> |
 |**AltUpArrow** <br/> |Optional. Alternative text that is used for the increment arrow.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**DefaultUnit** <br/> |Optional. The name or abbreviation for the default [Unit](unit-element-spinner.md).  <br/> |
 |**DefaultValue** <br/> |Optional. Specifies the initial numeric value that is displayed in the control.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control.  <br/> |
@@ -72,7 +72,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 

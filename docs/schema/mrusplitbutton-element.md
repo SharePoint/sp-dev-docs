@@ -61,7 +61,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text that is used for the button.  <br/> |
 |**CacheMenuVersions** <br/> |Optional. **TRUE** to store previously constructed versions of a dynamic menu. The default is **FALSE**.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
 |**CommandMenuOpen** <br/> |Optional. The name of the command to execute when the drop-down menu is opened.  <br/> |
 |**CommandMenuClose** <br/> |Optional. The name of the command to execute when the drop-down menu is closed.  <br/> |
 |**CommandPreview** <br/> |Optional. The name of the command to execute for previewing a selection.  <br/> |
@@ -69,7 +69,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Id** <br/> |Required. A string that identifies the control.  <br/> |
 |**InitialItem** <br/> |Optional. The ID of the menu item to display in the control when it is first rendered.  <br/> |
 |**MenuAlt** <br/> |Optional. Alternative text to represent the menu.  <br/> |
-|**MenuCommand** <br/> |Optional. The name of the command to execute when the menu is clicked.  <br/> |
+|**MenuCommand** <br/> |Optional. The name of the command to execute when the menu is selected.  <br/> |
 |**PopulateDynamically** <br/> |Optional. **TRUE** to create the menu dynamically. The default is **FALSE**.  <br/> |
 |**PopulateQueryCommand** <br/> |Optional. The name of the command to execute when creating a dynamic menu.  <br/> |
 |**PopulateOnlyOnce** <br/> |Optional. **TRUE** to populate a dynamic menu only the first time that it is accessed.  <br/> |
@@ -84,7 +84,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipSelectedItemTitle** <br/> |Optional. The title of the tooltip that appears for the selected item.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 
