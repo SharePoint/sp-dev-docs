@@ -1,7 +1,5 @@
 ---
-title: "Label Element"
-
-
+title: "Label element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 6b271365-08bf-470c-9e5d-8f9240e79baa
-description: "Last modified: March 09, 2015"
+description: Defines a label control.
 ---
 
-# Label Element
+# Label element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a label control.
   
-```
+```XML
 <Label
   ForId="Text"
   Id="Text"
@@ -66,16 +62,13 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-group.md) <br/> |
-   
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-group.md) 
+
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1 
    
 ## Example
 

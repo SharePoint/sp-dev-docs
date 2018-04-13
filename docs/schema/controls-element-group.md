@@ -1,7 +1,5 @@
 ---
-title: "Controls Element (Group)"
-
-
+title: "Controls element (Group) (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d3635d99-fb58-4327-864f-6e59b222833d
-description: "Last modified: March 09, 2015"
+description: Contains elements that define controls.
 ---
 
-# Controls Element (Group)
+# Controls element (Group) (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define controls.
   
-```
+```XML
 <Controls
      Id="Text"
      ToolTipImage32by32="Url"
@@ -54,35 +50,30 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, then the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, then the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[Button](button-element.md) <br/> |
-|[CheckBox](checkbox-element.md) <br/> |
-|[ComboBox](combobox-element.md) <br/> |
-|[DropDown](dropdown-element.md) <br/> |
-|[FlyoutAnchor](flyoutanchor-element.md) <br/> |
-|[GalleryButton](gallerybutton-element-group.md) <br/> |
-|[Label](label-element.md) <br/> |
-|[MRUSplitButton](mrusplitbutton-element.md) <br/> |
-|[Spinner](spinner-element.md) <br/> |
-|[SplitButton](splitbutton-element.md) <br/> |
-|[TextBox](textbox-element.md) <br/> |
-|[ToggleButton](togglebutton-element.md) <br/> |
+- [Button](button-element.md) 
+- [CheckBox](checkbox-element.md) 
+- [ComboBox](combobox-element.md) 
+- [DropDown](dropdown-element.md) 
+- [FlyoutAnchor](flyoutanchor-element.md) 
+- [GalleryButton](gallerybutton-element-group.md) 
+- [Label](label-element.md) 
+- [MRUSplitButton](mrusplitbutton-element.md) 
+- [Spinner](spinner-element.md) 
+- [SplitButton](splitbutton-element.md) 
+- [TextBox](textbox-element.md) 
+- [ToggleButton](togglebutton-element.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[Group](group-element-ribbon.md)|
+- [Group](group-element-ribbon.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: 1  <br/> |
+- Minimum: 1
+- Maximum: 1 
    
 

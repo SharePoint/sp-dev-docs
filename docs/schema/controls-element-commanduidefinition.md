@@ -1,7 +1,5 @@
 ---
-title: "Controls Element (CommandUIDefinition)"
-
-
+title: "Controls element (CommandUIDefinition) (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 680c3002-c5c4-43f7-9cc2-368dd9172d92
-description: "Last modified: March 09, 2015"
+description: Contains elements that define controls. 
 ---
 
-# Controls Element (CommandUIDefinition)
+# Controls element (CommandUIDefinition) (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define controls. 
   
-```
+```XML
 <Controls
      Id="Text"
 />
@@ -38,35 +34,30 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Id** <br/> |Required. Identifies the element. The value can be a string representation of a GUID or a unique term such as "Ribbon.Library.Share.NewRibbonCheckBox".  <br/> |
+|**Id** <br/> |Required. Identifies the element. The value can be a string representation of a GUID or a unique term such as `Ribbon.Library.Share.NewRibbonCheckBox`.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[Button](button-element.md) <br/> |
-|[CheckBox](checkbox-element.md) <br/> |
-|[ComboBox](combobox-element.md) <br/> |
-|[DropDown](dropdown-element.md) <br/> |
-|[FlyoutAnchor](flyoutanchor-element.md) <br/> |
-|[GalleryButton](gallerybutton-element-group.md) <br/> |
-|[Label](label-element.md) <br/> |
-|[MRUSplitButton](mrusplitbutton-element.md) <br/> |
-|[Spinner](spinner-element.md) <br/> |
-|[SplitButton](splitbutton-element.md) <br/> |
-|[TextBox](textbox-element.md) <br/> |
-|[ToggleButton](togglebutton-element.md) <br/> |
+- [Button](button-element.md) 
+- [CheckBox](checkbox-element.md) 
+- [ComboBox](combobox-element.md) 
+- [DropDown](dropdown-element.md) 
+- [FlyoutAnchor](flyoutanchor-element.md) 
+- [GalleryButton](gallerybutton-element-group.md) 
+- [Label](label-element.md) 
+- [MRUSplitButton](mrusplitbutton-element.md) 
+- [Spinner](spinner-element.md) 
+- [SplitButton](splitbutton-element.md) 
+- [TextBox](textbox-element.md) 
+- [ToggleButton](togglebutton-element.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md)|
+- [CommandUIDefinition](commanduidefinition-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 

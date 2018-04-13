@@ -1,7 +1,5 @@
 ---
-title: "Gallery Element"
-
-
+title: "Gallery element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: fb7004bc-2baa-4110-ae30-03e6b349b5e9
-description: "Last modified: March 09, 2015"
+description: Defines a gallery.
 ---
 
-# Gallery Element
+# Gallery element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a gallery.
   
-```
+```XML
 <Gallery
   Command="Text"
   CommandPreview="Text"
@@ -56,22 +52,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[GalleryButton](gallerybutton-element-gallery.md)|
+- [GalleryButton](gallerybutton-element-gallery.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[MenuSection](menusection-element.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [MenuSection](menusection-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: 1  <br/> |
+- Minimum: 1
+- Maximum: 1  
    
 ### Remarks
 

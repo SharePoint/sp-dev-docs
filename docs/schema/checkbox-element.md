@@ -1,7 +1,5 @@
 ---
-title: "CheckBox Element"
-
-
+title: "CheckBox element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 34effc7f-c03d-48b0-bc77-6685087cb2a5
-description: "Last modified: March 09, 2015"
+description: Defines a check box control.
 ---
 
-# CheckBox Element
+# CheckBox element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a check box control.
   
-```
+```XML
 <CheckBox
      Alt="Text"
      Command="Text"
@@ -68,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 
@@ -76,16 +72,13 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-group.md) (Group)  <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-group.md) (Group) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded 
    
 ## Example
 

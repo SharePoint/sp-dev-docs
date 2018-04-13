@@ -1,7 +1,5 @@
 ---
-title: "Colors Element"
-
-
+title: "Colors element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 339b3330-0e6d-4ea2-b480-e2795b23d695
-description: "Last modified: March 09, 2015"
+description: Contains elements that define colors.
 ---
 
-# Colors Element
+# Colors element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains elements that define colors. 
   
-```
+```XML
 <Colors />
 ```
 
@@ -38,20 +34,15 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[Color](color-element.md)|
+- [Color](color-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[ColorPicker](colorpicker-element.md)|
+- [ColorPicker](colorpicker-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 

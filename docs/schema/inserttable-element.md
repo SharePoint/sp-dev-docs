@@ -1,7 +1,5 @@
 ---
-title: "InsertTable Element"
-
-
+title: "InsertTable element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 4b663d81-e819-42d1-a06e-6c8493b6b94e
-description: "Last modified: March 09, 2015"
+description: Defines a menu control for inserting a table that contains a variable number of cells.
 ---
 
-# InsertTable Element
+# InsertTable element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a menu control for inserting a table that contains a variable number of cells.
   
-```
+```XML
 <InsertTable
   Alt="Text"
   Command="Text"
@@ -62,15 +58,12 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-menusection.md) (MenuSection)  <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-menusection.md) (MenuSection)  
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 

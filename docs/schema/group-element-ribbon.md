@@ -1,7 +1,5 @@
 ---
-title: "Group Element (Ribbon)"
-
-
+title: "Group element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: ac68e3f5-6d5d-4384-86d4-4e94132d06d4
-description: "Last modified: March 09, 2015"
+description: Defines a group of controls.
 ---
 
-# Group Element (Ribbon)
+# Group element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a group of controls.
   
-```
+```XML
 <Group
   Command="Text"
   Description="Text"
@@ -60,22 +56,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Controls](controls-element-group.md)|
+- [Controls](controls-element-group.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Groups](groups-element.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Groups](groups-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 ## Example
 
@@ -112,7 +103,5 @@ The following XML fragment defines a group that contains two buttons.
 
 ## See also
 
-
-
-[Walkthrough: Adding a Group to the Server Ribbon](http://msdn.microsoft.com/library/0696705f-e805-49e7-90c5-0e9e5f894d6a%28Office.15%29.aspx)
+- [Walkthrough: Adding a Group to the Server Ribbon](http://msdn.microsoft.com/library/0696705f-e805-49e7-90c5-0e9e5f894d6a%28Office.15%29.aspx)
 

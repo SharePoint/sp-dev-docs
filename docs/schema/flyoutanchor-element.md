@@ -1,7 +1,5 @@
 ---
-title: "FlyoutAnchor Element"
-
-
+title: "FlyoutAnchor element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,19 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3f9dd191-ab3a-4e6a-93c8-d477418cccb8
-
-description: "Last modified: March 09, 2015"
+description: Defines the anchor point for a flyout menu.
 ---
 
-# FlyoutAnchor Element
+# FlyoutAnchor element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the anchor point for a flyout menu.
   
-```
+```XML
 <FlyoutAnchor
      Alt="Text"
      CachMenuVersions="TRUE | FALSE"
@@ -74,7 +69,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.WikiPageTab.Share.AlertMe".  <br/> |
 |**Image16by16** <br/> |Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap16x16.png".  <br/> |
 |**Image16by16Class** <br/> |Optional. The name of a CSS class selector to be applied to the image.  <br/> |
-|**Image16by16Left** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16** attribute points to an image file that contains images for many icons.  <br/> The value of the **Image16by16Left** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag. For example, setting the **Image16by16Left** attribute to "-176" and the **Image16by16Top** attribute to "-48" results in an inline style that is similar to the one in the following HTML markup:  <br/> ```HTML<img src="/_layouts/1033/images/formatmap16x16.png" style="position: absolute;left: -176px;top: -48px;" />```|
+|**Image16by16Left** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16** attribute points to an image file that contains images for many icons.  <br/> The value of the **Image16by16Left** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag. For example, setting the **Image16by16Left** attribute to "-176" and the **Image16by16Top** attribute to "-48" results in an inline style that is similar to the one in the following HTML markup:  <br/> `HTML<img src="/_layouts/1033/images/formatmap16x16.png" style="position: absolute;left: -176px;top: -48px;" />`|
 |**Image16by16Top** <br/> |Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16** attribute points to an image file that contains images for many icons. The value of the **Image16by16Top** attribute is used to set the CSS **top** attribute for the inline style of an HTML **img** tag.  <br/> |
 |**Image32by32** <br/> |Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".  <br/> |
 |**Image32by32Class** <br/> |Optional. The name of a CSS class selector to be applied to the image.  <br/> |
@@ -92,26 +87,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[Menu](menu-element.md)|
+- [Menu](menu-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-group.md) (Group)  <br/> |
-|[Controls](controls-element-menusection.md) (MenuSection)  <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-group.md) (Group)  
+- [Controls](controls-element-menusection.md) (MenuSection) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 

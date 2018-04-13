@@ -1,7 +1,5 @@
 ---
-title: "Layout Element"
-
-
+title: "Layout element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 60a72dbc-6c85-4adc-98d9-f75129458482
-description: "Last modified: March 09, 2015"
+description: Defines the layout of controls in a template.
 ---
 
-# Layout Element
+# Layout element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the layout of controls in a template.
   
-```
+```XML
 <Layout
   Title="Text"
   LayoutTitle="Text"
@@ -44,22 +40,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Section](section-element.md) <br/> |
-|[OverflowSection](overflowsection-element.md) <br/> |
+- [Section](section-element.md) 
+- [OverflowSection](overflowsection-element.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[GroupTemplate](grouptemplate-element.md)|
+- [GroupTemplate](grouptemplate-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 ## Example
 

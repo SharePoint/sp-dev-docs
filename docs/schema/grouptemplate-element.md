@@ -1,7 +1,5 @@
 ---
-title: "GroupTemplate Element"
-
-
+title: "GroupTemplate element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: de7dba66-d71d-45cc-9d8a-7f62a9de6a19
-description: "Last modified: March 09, 2015"
+description: Defines the scaling behavior for controls in a Group element. 
 ---
 
-# GroupTemplate Element
+# GroupTemplate element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the scaling behavior for controls in a [Group](group-element-ribbon.md) element. 
   
-```
+```XML
 <GroupTemplate
   Id="Text"
   ClassName="CSS Class Selector"
@@ -44,21 +40,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Layout](layout-element.md)|
+- [Layout](layout-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[RibbonTemplates](ribbontemplates.md)|
+- [RibbonTemplates](ribbontemplates.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 ## Example
 

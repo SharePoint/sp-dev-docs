@@ -1,7 +1,5 @@
 ---
-title: "ContextualTabs Element"
-
-
+title: "ContextualTabs element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3e68437b-036f-4797-bba7-6022cfb772c9
-description: "Last modified: March 09, 2015"
+description: Contains groups of tabs that are conditionally present. 
 ---
 
-# ContextualTabs Element
+# ContextualTabs element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Contains groups of tabs that are conditionally present. 
   
-```
+```XML
 <ContextualTabs
   Id="Text"
 />
@@ -42,21 +38,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[ContextualGroup](contextualgroup-element.md)|
+- [ContextualGroup](contextualgroup-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Ribbon](ribbon-element.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Ribbon](ribbon-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: 1  <br/> |
+- Minimum: 1
+- Maximum: 1  
    
 

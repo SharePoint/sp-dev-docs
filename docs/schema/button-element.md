@@ -1,7 +1,5 @@
 ---
-title: "Button Element"
-
-
+title: "Button element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,19 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2e49d1b4-8bab-4671-b843-5beec6767417
-
-description: "Last modified: March 09, 2015"
+description: Defines a push button control.
 ---
 
-# Button Element
+# Button element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a push button control.
   
-```
+```XML
 <Button
      Alt="Text"
      Command="Text"
@@ -66,14 +61,14 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Alt** <br/> |Optional. Alternative text for the button.  <br/> |
-|**Command** <br/> |Optional. The name of the command to execute when the control is clicked. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
-|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.  <br/> **General**. Not a specific type of command.  <br/> **OptionSelection**. A command that is generated when a user selects one option in an option group.  <br/> **IgnoredByMenu**. A command that is used for controls that should not close the menu when clicked.  <br/> |
+|**Command** <br/> |Optional. The name of the command to execute when the control is selected. If the control is in a [CommandUIDefinition](commanduidefinition-element.md) element, the value of the **Command** attribute of the control should be the same as the value of the **Command** attribute of a corresponding [CommandUIHandler](commanduihandler-element.md) element.  <br/> |
+|**CommandType** <br/> | Optional. An enumeration value that specifies the type of command.<br/><br/>**General**. Not a specific type of command.<br/><br/>**OptionSelection**. A command that is generated when a user selects one option in an option group.<br/><br/>**IgnoredByMenu**. A command that is used for controls that should not close the menu when clicked.  <br/> |
 |**CommandValueId** <br/> |Optional. A string that is sent with the command event when the button is clicked.  <br/> |
 |**Description** <br/> |Optional. A string that describes the button. The description is displayed only when the button is in a menu and is being rendered with the **Menu32** display mode.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.Library.Share.NewRibbonButton".  <br/> |
 |**Image32by32** <br/> |Optional. A server-relative URL to a file that contains a 32-by-32-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap32x32.png".  <br/> |
 |**Image32by32Class** <br/> |Optional. The name of a CSS class selector to be applied to the image.  <br/> |
-|**Image32by32Left** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains images for many icons.  <br/> The value of the **Image32by32Left** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag. For example, setting the **Image32by32Left** attribute to "-160" and the **Image32by32Top** attribute to "-448" results in an inline style that is similar to the one in the following HTML markup:  <br/> ```HTML<img src="/_layouts/1033/images/formatmap32x32.png" style="position: absolute;left: -160px;top: -448px;" />```|
+|**Image32by32Left** <br/> |Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains images for many icons.<br/><br/>The value of the **Image32by32Left** attribute is used to set the CSS **left** attribute for the inline style of an HTML **img** tag. For example, setting the **Image32by32Left** attribute to "-160" and the **Image32by32Top** attribute to "-448" results in an inline style that is similar to the one in the following HTML markup:  <br/> `HTML<img src="/_layouts/1033/images/formatmap32x32.png" style="position: absolute;left: -160px;top: -448px;" />`|
 |**Image32by32Top** <br/> |Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains the images for many icons. The value of the **Image32by32Top** attribute is used to set the CSS **top** attribute for the inline style of an HTML **img** tag.  <br/> |
 |**Image16by16** <br/> |Optional. A server-relative URL to a file that contains a 16-by-16-pixel image to be used as an icon, such as "/_layouts/1033/images/formatmap16x16.png".  <br/> |
 |**Image16by16Class** <br/> |Optional. The name of a CSS class selector to be applied to the image.  <br/> |
@@ -91,7 +86,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
    
 ### Child elements
 
@@ -99,21 +94,18 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-group.md) (Group)  <br/> |
-|[Controls](controls-element-menusection.md) (MenuSection)  <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-group.md) (Group)  
+- [Controls](controls-element-menusection.md) (MenuSection)  
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 ## Example
 
-The following example shows how to add a button control to the Server ribbon. The example adds a "Help" button to the ribbon in the same group as the built-in **New Document**, **New Folder**, and **Upload Document** controls: 
+The following example shows how to add a button control to the server ribbon. The example adds a **Help** button to the ribbon in the same group as the built-in **New Document**, **New Folder**, and **Upload Document** controls: 
   
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -149,7 +141,5 @@ The following example shows how to add a button control to the Server ribbon. Th
 
 ## See also
 
-
-
-[Walkthrough: Adding a Button to the Server Ribbon](http://msdn.microsoft.com/library/82d7078a-696d-4c93-99bf-d40cfb4db305%28Office.15%29.aspx)
+- [Walkthrough: Adding a Button to the Server Ribbon](http://msdn.microsoft.com/library/82d7078a-696d-4c93-99bf-d40cfb4db305%28Office.15%29.aspx)
 

@@ -1,7 +1,5 @@
 ---
-title: "ComboBox Element"
-
-
+title: "ComboBox element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 79d28a90-c4bc-47a1-847f-503f3af8fec7
-description: "Last modified: March 09, 2015"
+description: Defines a combo box control.
 ---
 
-# ComboBox Element
+# ComboBox element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a combo box control.
   
-```
+```XML
 <ComboBox
   AllowFreeForm="TRUE | FALSE"
   AltArrow="Text"
@@ -93,26 +89,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipTitle** <br/> |Optional. The text that appears as the title of the tooltip.  <br/> |
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
-|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is ALT + J, the value for this attribute is "ALT + J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(ALT + J)".  <br/> |
+|**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
 |**Width** <br/> |Optional. The width in pixels of the text box that is part of this combo box.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[Menu](menu-element.md)|
+- [Menu](menu-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Controls](controls-element-group.md) (Group)  <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Controls](controls-element-group.md) (Group) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 

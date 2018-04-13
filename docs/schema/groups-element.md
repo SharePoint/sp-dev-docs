@@ -1,7 +1,5 @@
 ---
-title: "Groups Element"
-
-
+title: "Groups element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: dc90a6a1-4a9e-4707-9e78-e9b98452ca17
-description: "Last modified: March 09, 2015"
+description: Defines the groups of controls on a tab.
 ---
 
-# Groups Element
+# Groups element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the groups of controls on a tab.
   
-```
+```XML
 <Groups
   Id="Text"
 />
@@ -42,22 +38,17 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Group](group-element-ribbon.md)|
+- [Group](group-element-ribbon.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[Tab](tab-element.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [Tab](tab-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: 1  <br/> |
+- Minimum: 1
+- Maximum: 1  
    
 ## Example
 

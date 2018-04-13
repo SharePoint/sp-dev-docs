@@ -1,7 +1,5 @@
 ---
-title: "ControlRef Element"
-
-
+title: "ControlRef element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: f0fe56cb-8773-498c-954b-4485647441a8
-description: "Last modified: March 09, 2015"
+description: Represents a placeholder for a control in a GroupTemplate element. 
 ---
 
-# ControlRef Element
+# ControlRef element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents a placeholder for a control in a [GroupTemplate](grouptemplate-element.md) element. 
   
-```
+```XML
 <ControlRef
   DisplayMode="Small | Medium | Large | Menu | Menu16 | Menu32"
   TemplateAlias="Text"
@@ -39,7 +35,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**DisplayMode** <br/> | Optional. An enumeration value that determines how a control is rendered.  <br/> **Small**. Renders as a small icon without label text.  <br/> **Medium**. Renders as a 16-by-16-pixel icon with label text.  <br/> **Large**. Renders as a 32-by-32-pixel icon with label text.  <br/> **Menu**. Renders as a text-only menu item.  <br/> **Menu16**. Renders as a menu item with a 16-by-16-pixel icon.  <br/> **Menu32**. Renders as a menu item with a 32-by-32-pixel icon.  <br/> |
+|**DisplayMode** <br/> | Optional. An enumeration value that determines how a control is rendered:<br/><br/>- **Small**. Renders as a small icon without label text.  <br/>- **Medium**. Renders as a 16-by-16-pixel icon with label text.  <br/>- **Large**. Renders as a 32-by-32-pixel icon with label text.  <br/>- **Menu**. Renders as a text-only menu item.  <br/>- **Menu16**. Renders as a menu item with a 16-by-16-pixel icon.  <br/>- **Menu32**. Renders as a menu item with a 32-by-32-pixel icon.  <br/> |
 |**TemplateAlias** <br/> |Optional. A string that a control can reference in its own **TemplateAlias** attribute. The **TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group. No two elements that are contained by the same [GroupTemplate](grouptemplate-element.md) element should have the same **TemplateAlias** value.  <br/> |
    
 ### Child elements
@@ -48,20 +44,19 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Row](row-element.md) <br/> |
-|[Strip](strip-element.md) <br/> |
+- [Row](row-element.md) 
+- [Strip](strip-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 ### Remarks
 
 Controls do not necessarily support all display modes. The following table lists the modes that are supported by each type of control.
+
+<br/>
   
 ||**Small**|**Medium**|**Large**|**Menu**|**Menu16**|**Menu32**|
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
@@ -83,7 +78,13 @@ Controls do not necessarily support all display modes. The following table lists
    
 ## Example
 
-The following example is an XML fragment that shows the relationship between the **TemplateAlias** attribute for controls in a [Group](group-element-ribbon.md) element and the same attribute for **ControlRef** elements in a [GroupTemplate](grouptemplate-element.md) element. Notice that the **Group** element contains three [Button](button-element.md) elements, each with a **TemplateAlias** attribute set to a value of "row1", "row2", or "row3". The **GroupTemplate** element also contains three **ControlRef** elements that have attributes set to a value of "row1", "row2", or "row3". When the template is applied to the group, the layout of the controls in the group is determined by matching the **TemplateAlias** attribute of a **Button** element to the **TemplateAlias** attribute of a **ControlRef** element. 
+The following example is an XML fragment that shows the relationship between the **TemplateAlias** attribute for controls in a [Group](group-element-ribbon.md) element and the same attribute for **ControlRef** elements in a [GroupTemplate](grouptemplate-element.md) element. 
+
+Notice that the **Group** element contains three [Button](button-element.md) elements, each with a **TemplateAlias** attribute set to a value of `"row1"`, `"row2"`, or `"row3"`. 
+
+The **GroupTemplate** element also contains three **ControlRef** elements that have attributes set to a value of `"row1"`, `"row2"`, or `"row3"`. 
+
+When the template is applied to the group, the layout of the controls in the group is determined by matching the **TemplateAlias** attribute of a **Button** element to the **TemplateAlias** attribute of a **ControlRef** element. 
   
 ```XML
 <Group

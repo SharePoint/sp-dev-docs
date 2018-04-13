@@ -1,7 +1,5 @@
 ---
-title: "Jewel Element"
-
-
+title: "Jewel element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 20fae442-aca1-4bbc-b89c-139afab7dead
-description: "Last modified: March 09, 2015"
+description: Defines the Microsoft Office button.
 ---
 
-# Jewel Element
+# Jewel element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines the Microsoft Office button.
   
-```
+```XML
 <Jewel
   Alt="Text"
   CacheMenuVersions="TRUE | FALSE"
@@ -163,20 +159,15 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Menu](menu-element.md)|
+- [Menu](menu-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUI](commandui-element.md)|
+- [CommandUI](commandui-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 

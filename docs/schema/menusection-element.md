@@ -1,7 +1,5 @@
 ---
-title: "MenuSection Element"
-
-
+title: "MenuSection element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 358a7aff-0801-4e87-8943-631469c63dd5
-description: "Last modified: March 09, 2015"
+description: Defines a section of a menu.
 ---
 
-# MenuSection Element
+# MenuSection element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a section of a menu.
   
-```
+```XML
 <MenuSection
   Id="Text"
   Title="Text"
@@ -52,24 +48,19 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Controls](controls-element-menusection.md) <br/> |
-|[Gallery](gallery-element.md) <br/> |
+- [Controls](controls-element-menusection.md) 
+- [Gallery](gallery-element.md) 
    
 > [!NOTE]
 > A **MenuSection** element must contain either a **Controls** element or a **Gallery** element. 
   
 ### Parent elements
 
-||
-|:-----|
-|[Menu](menu-element.md)|
+- [Menu](menu-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: unbounded  <br/> |
+- Minimum: 1
+- Maximum: unbounded 
    
 

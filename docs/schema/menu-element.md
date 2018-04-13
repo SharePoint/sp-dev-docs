@@ -1,7 +1,5 @@
 ---
-title: "Menu Element"
-
-
+title: "Menu element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,15 +14,13 @@ ms.assetid: 1bc70fb9-bcf5-4758-a3dd-a3af3b4a745f
 description: "Last modified: March 09, 2015"
 ---
 
-# Menu Element
+# Menu element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a menu control.
   
-```
+```XML
 <Menu
   Id="Text"
   MaxWidth="Integer"
@@ -44,26 +40,21 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[MenuSection](menusection-element.md)|
+- [MenuSection](menusection-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[ComboBox](combobox-element.md) <br/> |
-|[DropDown](dropdown-element.md) <br/> |
-|[FlyoutAnchor](flyoutanchor-element.md) <br/> |
-|[Jewel](jewel-element.md) <br/> |
-|[MRUSplitButton](mrusplitbutton-element.md) <br/> |
-|[SplitButton](splitbutton-element.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [ComboBox](combobox-element.md) 
+- [DropDown](dropdown-element.md) 
+- [FlyoutAnchor](flyoutanchor-element.md) 
+- [Jewel](jewel-element.md) 
+- [MRUSplitButton](mrusplitbutton-element.md) 
+- [SplitButton](splitbutton-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: 1  <br/> |
+- Minimum: 0
+- Maximum: 1  
    
 

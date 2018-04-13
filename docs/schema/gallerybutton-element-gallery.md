@@ -1,7 +1,5 @@
 ---
-title: "GalleryButton Element (Gallery)"
-
-
+title: "GalleryButton element (Gallery) (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: aff7ea4c-6599-4770-bedb-e61e2158291f
-description: "Last modified: March 09, 2015"
+description: Defines a gallery button.
 ---
 
-# GalleryButton Element (Gallery)
+# GalleryButton element (Gallery) (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a gallery button.
   
-```
+```XML
 <GalleryButton
   Alt="Text"
   Command="Text"
@@ -94,14 +90,11 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Gallery](gallery-element.md)|
+- [Gallery](gallery-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 1  <br/> Maximum: unbounded  <br/> |
+- Minimum: 1
+- Maximum: unbounded 
    
 

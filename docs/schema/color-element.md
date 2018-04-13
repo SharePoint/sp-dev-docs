@@ -1,7 +1,5 @@
 ---
-title: "Color Element"
-
-
+title: "Color element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 86127151-d2e8-474d-aefb-5f66d834d53e
-description: "Last modified: March 09, 2015"
+description: Defines a color.
 ---
 
-# Color Element
+# Color element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a color.
   
-```
+```XML
 <Color
      Sequence="Integer"
      Title="Text"
@@ -46,7 +42,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Title** <br/> |Optional. Specifies text for the **Title** attribute of the HTML anchor tag that renders the color.  <br/> |
 |**Style** <br/> |Optional. The name of a CSS selector to apply to the table cell that represents the color.  <br/> |
 |**Color** <br/> |Optional. A color string to be passed with the command event when the color is selected.  <br/> |
-|**DisplayColor** <br/> |Optional. A hexadecimal color code to use for the background color of the table cell, such as "#FF0000" (red).  <br/> |
+|**DisplayColor** <br/> |Optional. A hexadecimal color code to use for the background color of the table cell, such as `#FF0000` (red).  <br/> |
    
 ### Child elements
 
@@ -54,15 +50,12 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Colors](colors-element.md)|
+- [Colors](colors-element.md)
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 ## Example
 

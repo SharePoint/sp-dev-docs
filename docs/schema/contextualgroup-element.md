@@ -1,7 +1,5 @@
 ---
-title: "ContextualGroup Element"
-
-
+title: "ContextualGroup element (Server Ribbon)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 6d4fe8d8-90c4-49cb-bd6d-7062a0f45e0a
-description: "Last modified: March 09, 2015"
+description: Defines a group of tabs that are presented when they are relevant. 
 ---
 
-# ContextualGroup Element
+# ContextualGroup element (Server Ribbon)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines a group of tabs that are presented when they are relevant. 
   
-```
+```XML
 <ContextualGroup
   Color="None | DarkBlue | LightBlue | Teal | Orange | Green | Magenta | Yellow | Purple"
   Command="Text"
@@ -52,21 +48,16 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Child elements
 
-||
-|:-----|
-|[Tab](tab-element.md)|
+- [Tab](tab-element.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[CommandUIDefinition](commanduidefinition-element.md) <br/> |
-|[ContextualTabs](contextualtabs-element.md) <br/> |
+- [CommandUIDefinition](commanduidefinition-element.md) 
+- [ContextualTabs](contextualtabs-element.md) 
    
 ### Occurrences
 
-||
-|:-----|
-|Minimum: 0  <br/> Maximum: unbounded  <br/> |
+- Minimum: 0
+- Maximum: unbounded  
    
 
