@@ -17,7 +17,7 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 
 | Repository | Description |
 |--------|--------|
-| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for new SharePoint dev center documentation exposed at http://docs.microsoft.com/sharepoint/dev/ |
+| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at http://docs.microsoft.com/sharepoint/dev/ |
 | [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) | Samples and tutorial code around SharePoint Framework client-side web parts |
 | [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions) | Samples and tutorial code around SharePoint Framework extensions |
 | [sp-dev-solutions](https://github.com/SharePoint/sp-dev-solutions) | More polished and fine-tuned reusable solutions built with the SharePoint Framework |

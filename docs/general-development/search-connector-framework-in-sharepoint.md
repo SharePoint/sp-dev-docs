@@ -311,8 +311,6 @@ The connector framework also provides improved exception capturing and logging t
 
 -  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
     
-  
--  [SharePoint 2013: MyFileConnector custom BCS indexing connector sample](https://code.msdn.microsoft.com/sharepoint-2013-myfileconne-79d2ea26)
     
   
 -  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
