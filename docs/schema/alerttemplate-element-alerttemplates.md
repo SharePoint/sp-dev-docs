@@ -1,7 +1,5 @@
 ---
-title: "AlertTemplate Element (AlertTemplates)"
-
-
+title: "AlertTemplate element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 716ce7f6-2d1e-426d-9afb-48ee9e033a15
-description: "Last modified: March 09, 2015"
+description: Defines an alert message template.
 ---
 
-# AlertTemplate Element (AlertTemplates)
+# AlertTemplate element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines an alert message template.
   
-```
+```XML
 <AlertTemplate
   Type="List" | "Item" | "Custom"
   Default="True" | "False"
@@ -50,20 +46,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|Type  <br/> |Specifies the item type that is associated with the alert template; either "List", "Item", or "Custom".  <br/> |
-|Default  <br/> |Specifies whether the template is the default alert template.  <br/> |
-|Name  <br/> |Specifies the template name.  <br/> |
+|**Type**  <br/> |Specifies the item type that is associated with the alert template; either **List**, **Item**, or **Custom**.  <br/> |
+|**Default**  <br/> |Specifies whether the template is the default alert template.  <br/> |
+|**Name**  <br/> |Specifies the template name.  <br/> |
    
 ### Child elements
 
-||
-|:-----|
-|[EventTypes](eventtypes-element-alerttemplates.md), [Format](format-element-alerttemplates.md), [Properties](properties-element-alerttemplates.md), [Filters](filters-element-alerttemplates.md)|
+- [EventTypes](eventtypes-element-alerttemplates.md)
+- [Format](format-element-alerttemplates.md)
+- [Properties](properties-element-alerttemplates.md)
+- [Filters](filters-element-alerttemplates.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[AlertTemplates](alerttemplates-element-alerttemplates.md)|
+- [AlertTemplates](alerttemplates-element-alerttemplates.md)
    
 

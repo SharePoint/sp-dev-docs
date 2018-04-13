@@ -1,7 +1,5 @@
 ---
-title: "FilterDefinition Element (AlertTemplates)"
-
-
+title: "FilterDefinition element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 20942c6a-0f6e-4cde-b382-2dbb563c0d29
-description: "Last modified: March 09, 2015"
+description: Defines an alert template filter.
 ---
 
-# FilterDefinition Element (AlertTemplates)
+# FilterDefinition element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Defines an alert template filter. To modify existing filters or create additional filters, modify the **FilterDefinition** element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using Collaborative Application Markup Language (CAML). 
   
-```
+```XML
 <FilterDefinition>
   <FriendlyName>
   </FriendlyName>  <ShortName>
@@ -50,17 +46,13 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[FriendlyName](friendlyname-element-alerttemplates.md) <br/> |
-|[ShortName](shortname-element-alerttemplates.md) <br/> |
-|[Query](query-element-alerttemplates.md) <br/> |
+- [FriendlyName](friendlyname-element-alerttemplates.md)
+- [ShortName](shortname-element-alerttemplates.md) 
+- [Query](query-element-alerttemplates.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[Filters](filters-element-alerttemplates.md)|
+- [Filters](filters-element-alerttemplates.md)
    
 ## Example
 

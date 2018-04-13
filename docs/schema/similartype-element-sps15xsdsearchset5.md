@@ -12,9 +12,7 @@ description: "Last modified: March 09, 2015"
 
 # SimilarType element (SPS15XSDSearchSet5)
 
- 
-  
- **Applies to:** SharePoint Server 2013
+**Applies to:** SharePoint Server 2013
   
 ## Element information
 

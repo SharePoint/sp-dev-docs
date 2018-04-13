@@ -1,7 +1,5 @@
 ---
-title: "Format Element (AlertTemplates)"
-
-
+title: "Format element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3460eda3-e6c2-451f-9c1f-87dc5a612ad2
-description: "Last modified: March 09, 2015"
+description: Modifies the appearance of an alert message.
 ---
 
-# Format Element (AlertTemplates)
+# Format element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Modifies the appearance of an alert message. You can also customize the formatting of the alert message by using embedded styles.
   
-```
+```XML
 <Format>
   <Digest>
     ...
@@ -43,15 +39,11 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[Digest](digest-element-alerttemplates.md) <br/> |
-|[Immediate](immediate-element-alerttemplates.md) <br/> |
+- [Digest](digest-element-alerttemplates.md) 
+- [Immediate](immediate-element-alerttemplates.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[AlertTemplate](alerttemplate-element-alerttemplates.md)|
+- [AlertTemplate](alerttemplate-element-alerttemplates.md)
    
 

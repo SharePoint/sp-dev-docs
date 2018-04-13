@@ -1,7 +1,5 @@
 ---
-title: "DigestNotificationExcludedFields Element (AlertTemplates)"
-
-
+title: "DigestNotificationExcludedFields element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 9dcc075e-8cba-446c-84f9-4e4bc70a2732
-description: "Last modified: March 09, 2015"
+description: Specifies fields to exclude from a digest alert message.
 ---
 
-# DigestNotificationExcludedFields Element (AlertTemplates)
+# DigestNotificationExcludedFields element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies fields to exclude from a digest alert message.
   
-```
+```XML
 <DigestNotificationExcludedFields>
   Field1; Field2; ... Fieldn
 </DigestNotificationExcludedFields>
@@ -44,12 +40,10 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Properties](properties-element-alerttemplates.md)|
+- [Properties](properties-element-alerttemplates.md)
    
 ## Example
 
-For an example of how this element is used, see [Properties Element (AlertTemplates)](properties-element-alerttemplates.md).
+For an example of how this element is used, see [Properties element (AlertTemplates)](properties-element-alerttemplates.md).
   
 

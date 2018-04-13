@@ -1,7 +1,5 @@
 ---
-title: "Header Element (AlertTemplates)"
-
-
+title: "Header element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d6834119-9198-418d-a7f7-b789f872fe85
-description: "Last modified: March 09, 2015"
+description: Specifies header information for the alert message.
 ---
 
-# Header Element (AlertTemplates)
+# Header element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies header information for the alert message.
   
-```
+```XML
 <Header>
 </Header>
 ```
@@ -43,9 +39,7 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Digest](digest-element-alerttemplates.md) <br/> |
-|[Immediate](immediate-element-alerttemplates.md) <br/> |
+- [Digest](digest-element-alerttemplates.md) 
+- [Immediate](immediate-element-alerttemplates.md) 
    
 

@@ -1,7 +1,5 @@
 ---
-title: "Query Element (AlertTemplates)"
-
-
+title: "Query element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 21185fee-8967-40be-bfa5-5dc7c905832c
-description: "Last modified: March 09, 2015"
+description: Specifies a query for the alert template filter.
 ---
 
-# Query Element (AlertTemplates)
+# Query element (AlertTemplates)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Specifies a query for the alert template filter. Define the query element inside the filter by using Collaborative Application Markup Language (CAML). For more information about CAML query schema, see [Query schema](query-schema.md). The **Query** element in the Alerts schema contains no **Where** element. 
   
-Specifies a query for the alert template filter. Define the query element inside the filter by using Collaborative Application Markup Language (CAML). For more information about CAML query schema, see [Query Schema](query-schema.md). The **Query** element in the Alerts schema contains no **Where** element. 
-  
-```
+```XML
 <Query>
   <GroupBy>
     ...
@@ -45,19 +41,15 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[GroupBy](groupby-element-query.md) <br/> |
-|[OrderBy](orderby-element-query.md) <br/> |
+- [GroupBy](groupby-element-query.md) 
+- [OrderBy](orderby-element-query.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[FilterDefinition](filterdefinition-element-alerttemplates.md)|
+- [FilterDefinition](filterdefinition-element-alerttemplates.md)
    
 ## Example
 
-For an example of how this element is used, see [FilterDefinition Element (AlertTemplates)](filterdefinition-element-alerttemplates.md).
+For an example of how this element is used, see [FilterDefinition element (AlertTemplates)](filterdefinition-element-alerttemplates.md).
   
 

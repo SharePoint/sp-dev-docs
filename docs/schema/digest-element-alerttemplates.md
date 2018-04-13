@@ -1,7 +1,5 @@
 ---
-title: "Digest Element (AlertTemplates)"
-
-
+title: "Digest element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0dafe79d-fa7a-4aee-a665-6baebacfb0c1
-description: "Last modified: March 09, 2015"
+description: Specifies format information for alert messages in digest format.
 ---
 
-# Digest Element (AlertTemplates)
+# Digest element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies format information for alert messages in digest format.
   
-```
+```XML
 <Digest>
   <Subject>
   </Subject>
@@ -57,22 +53,18 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[Footer](footer-element-alerttemplates.md) <br/> |
-|[Header](header-element-alerttemplates.md) <br/> |
-|[HeaderFields](headerfields-element-alerttemplates.md) <br/> |
-|[HeaderFieldsFooter](headerfieldsfooter-element-alerttempaltes.md) <br/> |
-|[HeaderFieldsHeader](headerfieldsheader-element-alerttempaltes.md) <br/> |
-|[RowFields](rowfields-element-alerttemplates.md) <br/> |
-|[RowFooter](rowfooter-element-alerttemplates.md) <br/> |
-|[RowHeader](rowheader-element-alerttemplates.md) <br/> |
-|[Subject](subject-element-alerttemplates.md) <br/> |
+- [Footer](footer-element-alerttemplates.md)
+- [Header](header-element-alerttemplates.md)
+- [HeaderFields](headerfields-element-alerttemplates.md)
+- [HeaderFieldsFooter](headerfieldsfooter-element-alerttempaltes.md)
+- [HeaderFieldsHeader](headerfieldsheader-element-alerttempaltes.md) 
+- [RowFields](rowfields-element-alerttemplates.md) 
+- [RowFooter](rowfooter-element-alerttemplates.md) 
+- [RowHeader](rowheader-element-alerttemplates.md) 
+- [Subject](subject-element-alerttemplates.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[Format](format-element-alerttemplates.md)|
+- [Format](format-element-alerttemplates.md)
    
 

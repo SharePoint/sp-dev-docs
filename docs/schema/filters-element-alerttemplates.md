@@ -1,7 +1,5 @@
 ---
-title: "Filters Element (AlertTemplates)"
-
-
+title: "Filters element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 9ddc11ad-dcb2-423d-a69f-09545611eada
-description: "Last modified: March 09, 2015"
+description: Filters enable you to create new triggers for an event such as "the priority of a task has changed."
 ---
 
-# Filters Element (AlertTemplates)
+# Filters element (AlertTemplates)
 
- 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+Filters enable you to create new triggers for an event such as *the priority of a task has changed*. To modify existing filters or create additional filters, modify the [Filter Definition](filterdefinition-element-alerttemplates.md) element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using [Collaborative Application Markup Language (CAML)](collaborative-application-markup-language-caml-schemas.md).
   
-Filters enable you to create new triggers for an event such as "the priority of a task has changed". To modify existing filters or create additional filters, modify the [Filter Definition](filterdefinition-element-alerttemplates.md) element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using [Collaborative Application Markup Language (CAML)](collaborative-application-markup-language-caml-schemas.md).
-  
-```
+```XML
 <Filters>
   <FilterDefinition>
     ...
@@ -40,24 +36,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|None  <br/> |N/A  <br/> |
+None
    
 ### Child elements
 
-||
-|:-----|
-|[FilterDefinition](filterdefinition-element-alerttemplates.md)|
+- [FilterDefinition](filterdefinition-element-alerttemplates.md)
    
 ### Parent elements
 
-||
-|:-----|
-|[AlertTemplate](alerttemplate-element-alerttemplates.md)|
+- [AlertTemplate](alerttemplate-element-alerttemplates.md)
    
 ## Example
 
-For an example of how this element is used, see [FilterDefinition Element (AlertTemplates)](filterdefinition-element-alerttemplates.md).
+For an example of how this element is used, see [FilterDefinition element (AlertTemplates)](filterdefinition-element-alerttemplates.md).
   
 

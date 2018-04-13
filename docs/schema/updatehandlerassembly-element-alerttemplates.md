@@ -1,7 +1,5 @@
 ---
-title: "UpdateHandlerAssembly Element (AlertTemplates)"
-
-
+title: "UpdateHandlerAssembly element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2c964982-f0a9-491f-8f0c-e7682eb50248
-description: "Last modified: March 09, 2015"
+description: Specifies assembly information for an alert update handler.
 ---
 
-# UpdateHandlerAssembly Element (AlertTemplates)
+# UpdateHandlerAssembly element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies assembly information for an alert update handler.
   
-```
+```XML
 <UpdateHandlerAssembly>
 </UpdateHandlerAssembly>
 ```
@@ -43,13 +39,9 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Properties](properties-element-alerttemplates.md)|
+- [Properties](properties-element-alerttemplates.md)
    
 ## See also
 
-
-
-[NotificationHandlerAssembly](notificationhandlerassembly-element-alert-templates.md)
+- [NotificationHandlerAssembly element (AlertTemplates)](notificationhandlerassembly-element-alert-templates.md)
 

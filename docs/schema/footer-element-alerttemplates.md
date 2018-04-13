@@ -1,7 +1,5 @@
 ---
-title: "Footer Element (AlertTemplates)"
-
-
+title: "Footer element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d831ff97-22fd-4bf0-aeb1-e686148eb37d
-description: "Last modified: March 09, 2015"
+description: Specifies footer information for the alert message.
 ---
 
-# Footer Element (AlertTemplates)
+# Footer element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies footer information for the alert message.
   
-```
+```XML
 <Footer>
 </Footer>
 ```
@@ -43,9 +39,7 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Digest](digest-element-alerttemplates.md) <br/> |
-|[Immediate](immediate-element-alerttemplates.md) <br/> |
+- [Digest](digest-element-alerttemplates.md)
+- [Immediate](immediate-element-alerttemplates.md)
    
 

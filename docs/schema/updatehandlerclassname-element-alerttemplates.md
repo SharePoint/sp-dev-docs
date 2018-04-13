@@ -1,7 +1,5 @@
 ---
-title: "UpdateHandlerClassName Element (AlertTemplates)"
-
-
+title: "UpdateHandlerClassName element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,15 +14,13 @@ ms.assetid: 00e03c45-7a86-4328-9da6-633d317c41f8
 description: "Last modified: March 09, 2015"
 ---
 
-# UpdateHandlerClassName Element (AlertTemplates)
+# UpdateHandlerClassName element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a class name for an alert update handler.
   
-```
+```XML
 <UpdateHandlerClassName>
 </UpdateHandlerClassName>
 ```
@@ -43,13 +39,9 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Properties](properties-element-alerttemplates.md)|
+- [Properties](properties-element-alerttemplates.md)
    
 ## See also
 
-
-
-[NotificationHandlerClassName](notificationhandlerclassname-element-alerttemplates.md)
+- [NotificationHandlerClassName element (AlertTemplates)](notificationhandlerclassname-element-alerttemplates.md)
 

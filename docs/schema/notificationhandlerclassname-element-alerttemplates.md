@@ -1,7 +1,5 @@
 ---
 title: "NotificationHandlerClassName element (AlertTemplates)"
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7eb1fb83-2a22-44e4-9526-c20400a9eb6b
-description: "Last modified: March 09, 2015"
+description: Specifies a class name for an alert notification handler.
 ---
 
 # NotificationHandlerClassName element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies a class name for an alert notification handler.
   
-```
+```XML
 <NotificationHandlerClassName>
 </NotificationHandlerClassName>
 ```
@@ -43,9 +39,7 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Properties](properties-element-alerttemplates.md)|
+- [Properties](properties-element-alerttemplates.md)
    
 ## Example
 

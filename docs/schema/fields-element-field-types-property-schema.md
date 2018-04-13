@@ -36,7 +36,7 @@ None
    
 ### Child elements
 
-- [Field element (Field Types Property Schema)](field-element-field-types-property-schema.md)
+- [Field element (Field Types Property)](field-element-field-types-property-schema.md)
    
 ### Parent elements
 

@@ -1,7 +1,5 @@
 ---
-title: "RowFields Element (AlertTemplates)"
-
-
+title: "RowFields element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: ebcb32f3-57dd-4d6d-b2d1-2d911014cc66
-description: "Last modified: March 09, 2015"
+description: Specifies row fields for the alert message.
 ---
 
-# RowFields Element (AlertTemplates)
+# RowFields element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies row fields for the alert message.
   
-```
+```XML
 <RowFields>
 </RowFields>
 ```
@@ -43,8 +39,6 @@ None
   
 ### Parent elements
 
-||
-|:-----|
-|[Digest](digest-element-alerttemplates.md)|
+- [Digest](digest-element-alerttemplates.md)
    
 

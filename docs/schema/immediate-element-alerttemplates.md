@@ -1,7 +1,5 @@
 ---
-title: "Immediate Element (AlertTemplates)"
-
-
+title: "Immediate element (AlertTemplates)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -13,18 +11,16 @@ api_name:
 api_type:
 - schema
 ms.assetid: d4db781e-467e-4d70-81ad-0e542c748895
-description: "Last modified: March 09, 2015"
+description: Specifies format information for immediate notification alert messages.
 ---
 
-# Immediate Element (AlertTemplates)
+# Immediate element (AlertTemplates)
 
- 
-  
- **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Specifies format information for immediate notification alert messages.
   
-```
+```XML
 <Immediate>
   <Subject>
   </Subject>
@@ -47,17 +43,13 @@ None
   
 ### Child elements
 
-||
-|:-----|
-|[Fields](fields-element-alerttemplates.md) <br/> |
-|[Footer](footer-element-alerttemplates.md) <br/> |
-|[Header](header-element-alerttemplates.md) <br/> |
-|[Subject](subject-element-alerttemplates.md) <br/> |
+- [Fields](fields-element-alerttemplates.md) 
+- [Footer](footer-element-alerttemplates.md) 
+- [Header](header-element-alerttemplates.md) 
+- [Subject](subject-element-alerttemplates.md) 
    
 ### Parent elements
 
-||
-|:-----|
-|[Format](format-element-alerttemplates.md)|
+- [Format](format-element-alerttemplates.md)
    
 
