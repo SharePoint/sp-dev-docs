@@ -79,7 +79,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Product feedback</h3>
+                        <h3>Videos</h3>
                     </div>
                 </div>
             </div>
@@ -215,4 +215,4 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
 
 --- 
 
-"Sharing is caring!"
+<i>"Sharing is caring!"</i>
