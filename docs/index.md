@@ -15,7 +15,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part">
+        <a href="/sharepoint/dev/spfx/set-up-your-development-environment.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -25,7 +25,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Setup dev environment</h3>
+                        <h3>Setup</h3>
                     </div>
                 </div>
             </div>
