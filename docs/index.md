@@ -15,6 +15,24 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
 
 <ul class="panelContent cardsFTitle">
     <li>
+        <a href="/sharepoint/dev/spfx/set-up-your-development-environment.md">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/media/common/i_dev-ops.svg" alt="Setup dev environment" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Setup</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
         <a href="/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part">
         <div class="cardSize">
             <div class="cardPadding">
@@ -57,7 +75,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="Blog" />
+                            <img src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" alt="Blog" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -105,17 +123,53 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
         </a>
     </li>    
     <li>
-        <a href="https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform/">
+        <a href="https://aka.ms/spdev-uservoice">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_feedback.svg" alt="Feedback" />
+                            <img src="https://docs.microsoft.com/en-us/media/common/i_feedback.svg" alt="Ideas" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Product feedback</h3>
+                        <h3>Ideas</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://aka.ms/spdev-issues">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/media/common/i_bug.svg" alt="Ideas" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Issues</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://aka.ms/spdev-community">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg" alt="Forum" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Forum</h3>
                     </div>
                 </div>
             </div>
@@ -189,9 +243,9 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint development overview</h3>
-                            <p><a href="/SharePoint/dev//general-development/programming-models-in-sharepoint">Programming models for SharePoint</a></p>
-                            <p><a href="/SharePoint/dev//general-development/office-365-cdn">Use the Office 365 content delivery network</a></p>
-                            <p><a href="/SharePoint/dev//general-development/site-collection-app-catalog">Use the site collection app catalog</a></p>
+                            <p><a href="/SharePoint/dev/general-development/programming-models-in-sharepoint.md">Programming models for SharePoint</a></p>
+                            <p><a href="/SharePoint/dev/general-development/office-365-cdn.md">Use the Office 365 content delivery network</a></p>
+                            <p><a href="/SharePoint/dev//general-development/site-collection-app-catalog.md">Use the site collection app catalog</a></p>
                     </div>
                 </div>
             </div>
@@ -203,9 +257,9 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>Solution Guidance</h3>
-                            <p><a href="/sharepoint/dev/solution-guidance/modernize-classic-sites">Modernize your classic SharePoint sites</a></p>
-                            <p><a href="/sharepoint/dev/solution-guidance/modern-experience-customizations">Customizing modern experiences</a></p>
-                            <p><a href="/sharepoint/dev/solution-guidance/portal-overview">Building SharePoint Online portals</a></p>
+                            <p><a href="/sharepoint/dev/transform/modernize-classic-sites.md">Modernize your classic SharePoint sites</a></p>
+                            <p><a href="/sharepoint/dev/solution-guidance/modern-experience-customizations.md">Customizing modern experiences</a></p>
+                            <p><a href="/sharepoint/dev/solution-guidance/portal-overview.md">Building SharePoint Online portals</a></p>
                     </div>
                 </div>
             </div>
