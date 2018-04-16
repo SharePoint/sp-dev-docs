@@ -317,7 +317,7 @@
         href: features/hub-site/REST-sphubsite-type.md
       - name: SPHubSiteData type
         href: features/hub-site/REST-sphubsitedata-type.md
-  - name: Overview of the ‘Connect to new Office 365 Group’ feature
+  - name: Connect to Office 365 Group
     href: features/groupify/groupify-overview.md
     items:
     - name: CSOM API
