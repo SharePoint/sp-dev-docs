@@ -8,79 +8,79 @@ localization_priority: Normal
 ms.assetid: fad74037-ed09-81cc-60f2-df2297b38bd7
 ---
 
-# BDCMetadataResource Schema
+# BDCMetadataResource schema
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 This section contains documentation for the [BDC Metadata Resource schema (BDCMetadataResource.xsd)](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources). Explore the topics in this section to learn about each element in this schema.
 
-- [AccessControlEntry Element in AccessControlList (BDCMetadataResource Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md)
+- [AccessControlEntry element in AccessControlList (BDCMetadataResource schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md)
 
-- [AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md)
+- [AccessControlList element in IndividuallySecurableMetadataObject (BDCMetadataResource schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md)
 
-- [Action Element in Actions (BDCMetadataResource Schema)](action-element-in-actions-bdcmetadataresource-schema.md)
+- [Action element in Actions (BDCMetadataResource schema)](action-element-in-actions-bdcmetadataresource-schema.md)
 
-- [ActionParameter Element in ActionParameters (BDCMetadataResource Schema)](actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md)
+- [ActionParameter element in ActionParameters (BDCMetadataResource schema)](actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md)
 
-- [ActionParameters Element in Action (BDCMetadataResource Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md)
+- [ActionParameters element in Action (BDCMetadataResource schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md)
 
-- [Actions Element in Entity (BDCMetadataResource Schema)](actions-element-in-entity-bdcmetadataresource-schema.md)
+- [Actions element in Entity (BDCMetadataResource schema)](actions-element-in-entity-bdcmetadataresource-schema.md)
 
-- [Association Element in MethodInstances (BDCMetadataResource Schema)](association-element-in-methodinstances-bdcmetadataresource-schema.md)
+- [Association element in MethodInstances (BDCMetadataResource schema)](association-element-in-methodinstances-bdcmetadataresource-schema.md)
 
-- [AssociationGroup Element in AssociationGroups (BDCMetadataResource Schema)](associationgroup-element-in-associationgroups-bdcmetadataresource-schema.md)
+- [AssociationGroup element in AssociationGroups (BDCMetadataResource schema)](associationgroup-element-in-associationgroups-bdcmetadataresource-schema.md)
 
-- [AssociationGroups Element in Entity (BDCMetadataResource Schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.md)
+- [AssociationGroups element in Entity (BDCMetadataResource schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.md)
 
-- [Entities Element in LobSystem (BDCMetadataResource Schema)](entities-element-in-lobsystem-bdcmetadataresource-schema.md)
+- [Entities element in LobSystem (BDCMetadataResource schema)](entities-element-in-lobsystem-bdcmetadataresource-schema.md)
 
-- [Entity Element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md)
+- [Entity element in Entities (BDCMetadataResource schema)](entity-element-in-entities-bdcmetadataresource-schema.md)
 
-- [FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md)
+- [FilterDescriptor element in FilterDescriptors (BDCMetadataResource schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md)
 
-- [FilterDescriptors Element in Method (BDCMetadataResource Schema)](filterdescriptors-element-in-method-bdcmetadataresource-schema.md)
+- [FilterDescriptors element in Method (BDCMetadataResource schema)](filterdescriptors-element-in-method-bdcmetadataresource-schema.md)
 
-- [Identifier Element in Identifiers (BDCMetadataResource Schema)](identifier-element-in-identifiers-bdcmetadataresource-schema.md)
+- [Identifier element in Identifiers (BDCMetadataResource schema)](identifier-element-in-identifiers-bdcmetadataresource-schema.md)
 
-- [Identifiers Element in Entity (BDCMetadataResource Schema)](identifiers-element-in-entity-bdcmetadataresource-schema.md)
+- [Identifiers element in Entity (BDCMetadataResource schema)](identifiers-element-in-entity-bdcmetadataresource-schema.md)
 
-- [LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md)
+- [LobSystem element in LobSystems (BDCMetadataResource schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md)
 
-- [LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md)
+- [LobSystemInstance element in LobSystemInstances (BDCMetadataResource schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md)
 
-- [LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md)
+- [LobSystemInstances element in LobSystem (BDCMetadataResource schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md)
 
-- [LobSystems Element in Model (BDCMetadataResource Schema)](lobsystems-element-in-model-bdcmetadataresource-schema.md)
+- [LobSystems element in Model (BDCMetadataResource schema)](lobsystems-element-in-model-bdcmetadataresource-schema.md)
 
-- [LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadataResource Schema)](localizeddisplayname-element-in-localizeddisplaynames-bdcmetadataresource-schema.md)
+- [LocalizedDisplayName element in LocalizedDisplayNames (BDCMetadataResource schema)](localizeddisplayname-element-in-localizeddisplaynames-bdcmetadataresource-schema.md)
 
-- [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)
+- [LocalizedDisplayNames element in MetadataObject (BDCMetadataResource schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)
 
-- [Method Element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md)
+- [Method element in Methods (BDCMetadataResource schema)](method-element-in-methods-bdcmetadataresource-schema.md)
 
-- [MethodInstance Element in MethodInstances (BDCMetadataResource Schema)](methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md)
+- [MethodInstance element in MethodInstances (BDCMetadataResource schema)](methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md)
 
-- [MethodInstances Element in Method (BDCMetadataResource Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.md)
+- [MethodInstances element in Method (BDCMetadataResource schema)](methodinstances-element-in-method-bdcmetadataresource-schema.md)
 
-- [Methods Element in Entity (BDCMetadataResource Schema)](methods-element-in-entity-bdcmetadataresource-schema.md)
+- [Methods element in Entity (BDCMetadataResource schema)](methods-element-in-entity-bdcmetadataresource-schema.md)
 
-- [Model Element (BDCMetadataResource Schema)](model-element-bdcmetadataresource-schema.md)
+- [Model element (BDCMetadataResource schema)](model-element-bdcmetadataresource-schema.md)
 
-- [Parameter Element in Parameters (BDCMetadataResource Schema)](parameter-element-in-parameters-bdcmetadataresource-schema.md)
+- [Parameter element in Parameters (BDCMetadataResource schema)](parameter-element-in-parameters-bdcmetadataresource-schema.md)
 
-- [Parameters Element in Method (BDCMetadataResource Schema)](parameters-element-in-method-bdcmetadataresource-schema.md)
+- [Parameters element in Method (BDCMetadataResource schema)](parameters-element-in-method-bdcmetadataresource-schema.md)
 
-- [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)
+- [Properties element in MetadataObject (BDCMetadataResource schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)
 
-- [Property Element in Properties (BDCMetadataResource Schema)](property-element-in-properties-bdcmetadataresource-schema.md)
+- [Property element in Properties (BDCMetadataResource schema)](property-element-in-properties-bdcmetadataresource-schema.md)
 
-- [Right Element in AccessControlEntry (BDCMetadataResource Schema)](right-element-in-accesscontrolentry-bdcmetadataresource-schema.md)
+- [Right element in AccessControlEntry (BDCMetadataResource schema)](right-element-in-accesscontrolentry-bdcmetadataresource-schema.md)
 
-- [TypeDescriptor Element in Parameter (BDCMetadataResource Schema)](typedescriptor-element-in-parameter-bdcmetadataresource-schema.md)
+- [TypeDescriptor element in Parameter (BDCMetadataResource schema)](typedescriptor-element-in-parameter-bdcmetadataresource-schema.md)
 
-- [TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md)
+- [TypeDescriptor element in TypeDescriptors (BDCMetadataResource schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md)
 
-- [TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)](typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md)
+- [TypeDescriptors element in TypeDescriptor (BDCMetadataResource schema)](typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md)
 
 
 

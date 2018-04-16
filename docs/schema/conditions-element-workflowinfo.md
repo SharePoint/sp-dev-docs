@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 930e0d1c-a01a-4557-a58b-209621f1632e
 ---
 
-# Conditions Element (WorkflowInfo)
+# Conditions element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -137,7 +137,7 @@ The following example demonstrates how to format the **Conditions** element so t
 
 - [Creating Declarative, No-Code Workflow Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-- [WorkflowInfo Element](workflowinfo-element-workflowinfo.md)
+- [WorkflowInfo element](workflowinfo-element-workflowinfo.md)
 
 
 

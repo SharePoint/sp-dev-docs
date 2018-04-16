@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: dd003614-115e-4eb4-aa20-ffcfb0d0b805
 ---
 
-# Property Bag Schema
+# Property Bag schema
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

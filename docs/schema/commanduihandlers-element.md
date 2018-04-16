@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 18dc2366-b5e2-4a57-a9f6-5ce8ffb184c2
 ---
 
-# CommandUIHandlers Element
+# CommandUIHandlers element
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

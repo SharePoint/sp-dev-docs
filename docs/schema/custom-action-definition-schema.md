@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 6e8dc354-7a26-412c-816f-b6dc4d2fe55c
 ---
 
-# Custom Action Definition Schema
+# Custom Action Definition schema
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -97,7 +97,7 @@ The following example shows an XML file whose contents replace default actions i
 
 
 
-
+ 
 
 
 

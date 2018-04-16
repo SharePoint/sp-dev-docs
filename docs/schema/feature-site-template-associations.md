@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: ed2a52f8-358f-47f5-afcb-5819b288e913
 ---
 
-# Feature/Site Template Associations
+# Feature/Site Template Associations 
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

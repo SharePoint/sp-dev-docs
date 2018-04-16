@@ -12,7 +12,7 @@ ms.assetid: edb7c69f-736d-4808-b137-48b6861b4caa
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The Content Type Definition Schema defines the structure of the XML that creates a content type in the element manifest file of a Feature.
+The Content Type Definition schema defines the structure of the XML that creates a content type in the element manifest file of a Feature.
 
 ## XML schema definition
 
@@ -22,23 +22,23 @@ An element manifest that defines a content type must validate with the schema in
 
 The following list maps the relationships between elements in the schema definition.
 
-- [Elements Element (ContentType)](elements-element-contenttype.md)
+- [Elements element (ContentType)](elements-element-contenttype.md)
 
-- [ContentType Element (ContentType)](contenttype-element-contenttype.md)
+- [ContentType element (ContentType)](contenttype-element-contenttype.md)
 
-- [Folder Element (ContentType)](folder-element-contenttype.md)
+- [Folder element (ContentType)](folder-element-contenttype.md)
 
-- [FieldRefs Element (ContentType)](fieldrefs-element-contenttype.md)
+- [FieldRefs element (ContentType)](fieldrefs-element-contenttype.md)
 
-- [FieldRef Element (ContentType)](fieldref-element-contenttype.md)
+- [FieldRef element (ContentType)](fieldref-element-contenttype.md)
 
-- [RemoveFieldRef Element (ContentType)](removefieldref-element-contenttype.md)
+- [RemoveFieldRef element (ContentType)](removefieldref-element-contenttype.md)
 
-- [XmlDocuments Element (ContentType)](xmldocuments-element-contenttype.md)
+- [XmlDocuments element (ContentType)](xmldocuments-element-contenttype.md)
 
-- [XmlDocument Element (ContentType)](xmldocument-element-contenttype.md)
+- [XmlDocument element (ContentType)](xmldocument-element-contenttype.md)
 
-- [DocumentTemplate Element (ContentType)](documenttemplate-element-contenttype.md)
+- [DocumentTemplate element (ContentType)](documenttemplate-element-contenttype.md)
 
 ## Example
 
@@ -160,7 +160,7 @@ Note that the first new content type, Financial Document, is derived from the bu
 
 
 
-
+ 
 
 
 

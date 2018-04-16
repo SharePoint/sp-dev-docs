@@ -14,63 +14,63 @@ ms.assetid: 7a03ead8-30e0-4601-9c6f-edfb04ce57f9
 
 The WorkflowActions schema contains the following elements:
 
-- [WorkflowActions Element (WorkflowActions)](workflowactions-element-workflowactions.md)
+- [WorkflowActions element (WorkflowActions)](workflowactions-element-workflowactions.md)
 
-- [Default Element (WorkflowActions)](default-element-workflowactions.md)
+- [Default element (WorkflowActions)](default-element-workflowactions.md)
 
-- [RuleDesigner Element (WorkflowActions)](ruledesigner-element-workflowactions.md)
+- [RuleDesigner element (WorkflowActions)](ruledesigner-element-workflowactions.md)
 
-- [FieldBind Element (WorkflowActions)](fieldbind-element-workflowactions.md)
+- [FieldBind element (WorkflowActions)](fieldbind-element-workflowactions.md)
 
-- [Option Element (WorkflowActions)](option-element-workflowactions.md)
+- [Option element (WorkflowActions)](option-element-workflowactions.md)
 
-- [DataSourceRef Element (WorkflowActions)](datasourceref-element-workflowactions.md)
+- [DataSourceRef element (WorkflowActions)](datasourceref-element-workflowactions.md)
 
-- [Action Element (WorkflowActions)](action-element-workflowactions.md)
+- [Action element (WorkflowActions)](action-element-workflowactions.md)
 
-- [Parameters Element (WorkflowActions)](parameters-element-workflowactions.md)
+- [Parameters element (WorkflowActions)](parameters-element-workflowactions.md)
 
-- [Parameter Element (WorkflowActions)](parameter-element-workflowactions.md)
+- [Parameter element (WorkflowActions)](parameter-element-workflowactions.md)
 
-- [RuleDesigner Element (WorkflowActions)](ruledesigner-element-workflowactions.md)
+- [RuleDesigner element (WorkflowActions)](ruledesigner-element-workflowactions.md)
 
-- [FieldBind Element (WorkflowActions)](fieldbind-element-workflowactions.md)
+- [FieldBind element (WorkflowActions)](fieldbind-element-workflowactions.md)
 
-- [Option Element (WorkflowActions)](option-element-workflowactions.md)
+- [Option element (WorkflowActions)](option-element-workflowactions.md)
 
-- [DataSourceRef Element (WorkflowActions)](datasourceref-element-workflowactions.md)
+- [DataSourceRef element (WorkflowActions)](datasourceref-element-workflowactions.md)
 
-- [DataSources Element (WorkflowActions)](datasources-element-workflowactions.md)
+- [DataSources element (WorkflowActions)](datasources-element-workflowactions.md)
 
-- [DataSource Element (WorkflowActions)](datasource-element-workflowactions.md)
+- [DataSource element (WorkflowActions)](datasource-element-workflowactions.md)
 
-- [SchemaSource Element (WorkflowActions)](schemasource-element-workflowactions.md)
+- [SchemaSource element (WorkflowActions)](schemasource-element-workflowactions.md)
 
-- [Fields Element (WorkflowActions)](fields-element-workflowactions.md)
+- [Fields element (WorkflowActions)](fields-element-workflowactions.md)
 
-- [Field Element (WorkflowActions)](field-element-workflowactions.md)
+- [Field element (WorkflowActions)](field-element-workflowactions.md)
 
-- [ContentType Element (WorkflowActions)](contenttype-element-workflowactions.md)
+- [ContentType element (WorkflowActions)](contenttype-element-workflowactions.md)
 
-- [Dictionary Element (WorkflowActions)](dictionary-element-workflowactions.md)
+- [Dictionary element (WorkflowActions)](dictionary-element-workflowactions.md)
 
-- [NestedInitiationFieldNodes Element (WorkflowActions)](nestedinitiationfieldnodes-element-workflowactions.md)
+- [NestedInitiationFieldNodes element (WorkflowActions)](nestedinitiationfieldnodes-element-workflowactions.md)
 
-- [Evaluation Element (WorkflowActions)](evaluation-element-workflowactions.md)
+- [Evaluation element (WorkflowActions)](evaluation-element-workflowactions.md)
 
-- [ActivitySource Element (WorkflowActions)](activitysource-element-workflowactions.md)
+- [ActivitySource element (WorkflowActions)](activitysource-element-workflowactions.md)
 
-- [HashtableSource Element (WorkflowActions)](hashtablesource-element-workflowactions.md)
+- [HashtableSource element (WorkflowActions)](hashtablesource-element-workflowactions.md)
 
-- [Modifications Element (WorkflowActions)](modifications-element-workflowactions.md)
+- [Modifications element (WorkflowActions)](modifications-element-workflowactions.md)
 
-- [Modification Element (WorkflowActions)](modification-element-workflowactions.md)
+- [Modification element (WorkflowActions)](modification-element-workflowactions.md)
 
-- [ActionVariables Element (WorkflowActions)](actionvariables-element-workflowactions.md)
+- [ActionVariables element (WorkflowActions)](actionvariables-element-workflowactions.md)
 
-- [ActionBody Element (WorkflowActions)](actionbody-element-workflowactions.md)
+- [ActionBody element (WorkflowActions)](actionbody-element-workflowactions.md)
 
-- [ActionConditions Element (WorkflowActions)](actionconditions-element-workflowactions.md)
+- [ActionConditions element (WorkflowActions)](actionconditions-element-workflowactions.md)
 
 
 ## See also

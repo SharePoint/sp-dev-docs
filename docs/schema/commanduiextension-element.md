@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 8b48246a-3cf6-4be1-8e4a-5c2c8a1fda52
 ---
 
-# CommandUIExtension Element
+# CommandUIExtension element
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

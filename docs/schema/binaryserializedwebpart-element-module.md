@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 924e8a3f-0ec6-48c8-9337-6597c21dc7d1
 ---
 
-# BinarySerializedWebPart Element (Module)
+# BinarySerializedWebPart element (Module)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -43,11 +43,11 @@ None
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="guidmap-element-module.md">GUIDMap Element (Module)</a></p></td>
+<td align="left"><p><a href="guidmap-element-module.md">GUIDMap element (Module)</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="webpart-element-module.md">WebPart Element (Module)</a></p></td>
+<td align="left"><p><a href="webpart-element-module.md">WebPart element (Module)</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>

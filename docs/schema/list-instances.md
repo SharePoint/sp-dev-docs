@@ -17,7 +17,7 @@ The [ListInstance](listinstance-element-list-instance.md) element specifies defa
 > [!WARNING] 
 > When a list instance is provisioned in a Feature, the **Title** attribute must be specified and unique.
 
-<br/>
+<br/> 
 
 - [Elements](elements-element-list-instance.md)
 

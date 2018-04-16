@@ -12,13 +12,13 @@ ms.assetid: cd110fe6-2968-4dd7-80fa-0269fa01251b
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Each element manifest file that defines document converters must adhere to the Document Converter Definition Schema.
+Each element manifest file that defines document converters must adhere to the Document Converter Definition schema.
 
-Following is a list of the elements in the Document Converter Definition Schema. Select the element name for detailed information about that element.
+Following is a list of the elements in the Document Converter Definition schema. Select the element name for detailed information about that element.
 
-- [DocumentConverter Element (Document Converter)](documentconverter-element-document-converter.md)
+- [DocumentConverter element (Document Converter)](documentconverter-element-document-converter.md)
 
-- [Elements Element (Document Converter)](elements-element-document-converter.md)
+- [Elements element (Document Converter)](elements-element-document-converter.md)
 
 ## Document converter definition schema example
 

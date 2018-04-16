@@ -1,5 +1,5 @@
 ---
-title: "DeploymentObject Element (DeploymentExportSettings)"
+title: "DeploymentObject element (DeploymentExportSettings)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: 128f7174-b2d1-4150-a966-c1abfc0e1bf8
 description: "Last modified: March 09, 2015"
 ---
 
-# DeploymentObject Element (DeploymentExportSettings)
+# DeploymentObject element (DeploymentExportSettings)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
@@ -65,10 +65,10 @@ None
    
 ### Parent elements
 
-[ExportObjects Element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
+[ExportObjects element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
    
 ## See also
 
 - [SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)
-- [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
+- [DeploymentExportSettings schema](deploymentexportsettings-schema.md)
 

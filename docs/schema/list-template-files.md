@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: b52d306c-539b-4e00-b691-66c24cc16d17
 ---
 
-# List Template Files
+# List Template files
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

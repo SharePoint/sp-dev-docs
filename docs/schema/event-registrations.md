@@ -28,15 +28,15 @@ The [Receivers](receivers-element-event.md) element specifies an event handler f
 
 - [Data](data-element-event.md)
 
-- [Filter Element (Event)](filter-element-event.md)
+- [Filter element (Event)](filter-element-event.md)
 
 - [Name](name-element-event.md)
 
 - [SequenceNumber](sequencenumber-element-event.md)
 
-- [SolutionId Element (Event)](solutionid-element-event.md)
+- [SolutionId element (Event)](solutionid-element-event.md)
 
-- [Synchronization Element (Event)](synchronization-element-event.md)
+- [Synchronization element (Event)](synchronization-element-event.md)
 
 - [Type](type-element-event.md)
 

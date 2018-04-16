@@ -38,3 +38,4 @@ For a programming task that describes how to customize this file, see [How to: A
 
 - [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx)
 
+ 

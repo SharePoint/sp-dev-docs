@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 370d9f60-5565-4660-854c-31f79daad941
 ---
 
-# Coercion Element (WorkflowInfo)
+# Coercion element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

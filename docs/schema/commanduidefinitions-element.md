@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 2af047df-af28-4f09-878f-db5cb5f02a42
 ---
 
-# CommandUIDefinitions Element
+# CommandUIDefinitions element
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: b8da155c-7f37-461a-84ab-99a41b0720ea
 ---
 
-# Container Element 
+# Container element 
 
 (LayoutDefinitions Schema)
 
@@ -92,11 +92,11 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties Element in UIElement (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties element in UIelement (LayoutDefinitions schema)</a></span></p></td>
 <td align="left"><p>The list of the custom properties.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.md">Children Element in Container (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.md">Children element in Container (LayoutDefinitions schema)</a></span></p></td>
 <td align="left"><p>The list of the Office External Parts in this layout.</p></td>
 </tr>
 </tbody>

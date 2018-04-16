@@ -30,33 +30,33 @@ In a Feature.xml file, the [Feature](feature-element-feature.md) element defines
 
 - [Property](property-element-feature.md)
 
-- [UpgradeActions Element (Feature)](upgradeactions-element-feature.md)
+- [UpgradeActions element (Feature)](upgradeactions-element-feature.md)
 
-- [AddContentTypeField Element (Feature)](addcontenttypefield-element-feature.md)
+- [AddContentTypeField element (Feature)](addcontenttypefield-element-feature.md)
 
-- [ApplyElementManifests Element (Feature)](applyelementmanifests-element-feature.md)
+- [ApplyElementManifests element (Feature)](applyelementmanifests-element-feature.md)
 
-- [ElementFile Element (Feature)](elementfile-element-feature.md)
+- [ElementFile element (Feature)](elementfile-element-feature.md)
 
-- [ElementManifest Element (Feature)](elementmanifest-element-feature.md)
+- [ElementManifest element (Feature)](elementmanifest-element-feature.md)
 
-- [CustomUpgradeAction Element (Feature)](customupgradeaction-element-feature.md)
+- [CustomUpgradeAction element (Feature)](customupgradeaction-element-feature.md)
 
-- [Parameters Element (Feature)](parameters-element-feature.md)
+- [Parameters element (Feature)](parameters-element-feature.md)
 
-- [Parameter Element (Feature)](parameter-element-feature.md)
+- [Parameter element (Feature)](parameter-element-feature.md)
 
-- [MapFile Element (Feature)](mapfile-element-feature.md)
+- [MapFile element (Feature)](mapfile-element-feature.md)
 
-- [VersionRange Element (Feature)](versionrange-element-feature.md)
+- [VersionRange element (Feature)](versionrange-element-feature.md)
 
-- [AddContentTypeField Element (Feature)](addcontenttypefield-element-feature.md)
+- [AddContentTypeField element (Feature)](addcontenttypefield-element-feature.md)
 
-- [ApplyElementManifests Element (Feature)](applyelementmanifests-element-feature.md)
+- [ApplyElementManifests element (Feature)](applyelementmanifests-element-feature.md)
 
-- [CustomUpgradeAction Element (Feature)](customupgradeaction-element-feature.md)
+- [CustomUpgradeAction element (Feature)](customupgradeaction-element-feature.md)
 
-- [MapFile Element (Feature)](mapfile-element-feature.md)
+- [MapFile element (Feature)](mapfile-element-feature.md)
 
 For information about where to create and how to implement Feature.xml files, see [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx). 
 

@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: 1eaeefb2-8b18-bf8c-3594-f72ac27cd74d
 ---
 
-# Subscription Element 
+# Subscription element 
 
-(Subscription Schema)
+(Subscription schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -18,7 +18,7 @@ The top-level (root) element that defines a cache subscription.
 
 **Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
 
-**Schema**: Subscription
+**schema**: Subscription
 
 ```XML
 <Subscription EntityName = "String" EntityNamespace = "String" RefreshIntervalInMinutes = "Long" View = "String" Enabled = "Boolean" LobSystemInstanceName = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Subscription>
@@ -109,23 +109,23 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames element in MetadataObject (Subscription schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties Element in MetadataObject (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties element in MetadataObject (Subscription schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identities-element-in-subscription-subscription-schema.md">Identities Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="identities-element-in-subscription-subscription-schema.md">Identities element in Subscription (Subscription schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.md">Queries Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.md">Queries element in Subscription (Subscription schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.md">Associations Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.md">Associations element in Subscription (Subscription schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

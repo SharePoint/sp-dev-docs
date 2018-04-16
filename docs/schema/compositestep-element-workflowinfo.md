@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 4e71ca46-7b14-4595-a498-5de85d905043
 ---
 
-# CompositeStep Element (WorkflowInfo)
+# CompositeStep element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

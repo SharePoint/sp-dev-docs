@@ -13,7 +13,7 @@ ms.assetid: e711f6b0-2787-4a13-b0e9-140c3435c1e2
 description: "Last modified: July 15, 2011"
 ---
 
-# Site schema
+# Site schema 
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   

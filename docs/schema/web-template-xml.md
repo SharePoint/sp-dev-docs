@@ -20,7 +20,7 @@ The Web Template XML provides information about the basic structure and settings
 
 - [Elements (Web Template)](elements-web-template.md)
 
-- [WebTemplate Element (Web Template)](webtemplate-element-web-template.md)
+- [WebTemplate element (Web Template)](webtemplate-element-web-template.md)
 
 ## See also
 

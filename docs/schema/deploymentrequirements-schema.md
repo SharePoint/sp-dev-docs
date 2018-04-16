@@ -8,11 +8,11 @@ localization_priority: Normal
 ms.assetid: f07210c3-2c1a-4c4d-b9b8-d9d30c57d8c8
 ---
 
-# DeploymentRequirements Schema
+# DeploymentRequirements schema
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The DeploymentRequirements Schema provides validation for the Requirements.xml file exported to the content migration package. The Requirements.xml file maintains a list of deployment requirements in the form of installation requirements on the migration target, such as Feature definitions, template versions, Web Part assemblies, language packs, and so forth.
+The DeploymentRequirements schema provides validation for the Requirements.xml file exported to the content migration package. The Requirements.xml file maintains a list of deployment requirements in the form of installation requirements on the migration target, such as Feature definitions, template versions, Web Part assemblies, language packs, and so forth.
 
 ## DeploymentRequirements schema elements and types
 
@@ -33,16 +33,16 @@ The following table lists elements in the DeploymentRequirements.xsd schema file
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement Element (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a></span></p></td>
 <td align="left"><p>Represents specific deployment export requirement objects (**SPRequirement**).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="requirements-element-deploymentrequirements.md">Requirements Element (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="requirements-element-deploymentrequirements.md">Requirements element (DeploymentRequirements)</a></span></p></td>
 <td align="left"><p>Represents a container of deployment export requirement objects.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="sprequirementobjecttype-simple-type-deploymentrequirements.md">SPRequirementObjectType Simple Type (DeploymentRequirements)</a></span></p></td>
-<td align="left"><p>Enumeration simple type that provides values for the **Type** attribute on the <span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement Element (DeploymentRequirements)</a>. The value specifies the object type of the deployment requirement specified with the content migration package.</p></td>
+<td align="left"><p>Enumeration simple type that provides values for the **Type** attribute on the <span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a>. The value specifies the object type of the deployment requirement specified with the content migration package.</p></td>
 </tr>
 </tbody>
 </table>

@@ -8,53 +8,53 @@ localization_priority: Normal
 ms.assetid: f7fb29db-d6e2-8ec8-243f-93ff39a2d506
 ---
 
-# SolutionManifestDefinitions Schema
+# SolutionManifestDefinitions schema
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 This section contains documentation for the [Solution Manifest Definition schema (SolutionManifestDefinitions.xsd)](http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest). Explore the topics in this section to learn about each element in this schema.
 
-- [ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)
+- [ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)
 
-- [ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)](contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md)
+- [ContextDefinitionGroup element in ContextDefinitionGroups (SolutionManifestDefinitions schema)](contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md)
 
-- [ContextDefinitionGroups Element in SolutionDefinition (SolutionManifestDefinitions Schema)](contextdefinitiongroups-element-in-solutiondefinition-solutionmanifestdefinition.md)
+- [ContextDefinitionGroups element in SolutionDefinition (SolutionManifestDefinitions schema)](contextdefinitiongroups-element-in-solutiondefinition-solutionmanifestdefinition.md)
 
-- [Entities Element in ContextDefinition (SolutionManifestDefinitions Schema)](entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md)
+- [Entities element in ContextDefinition (SolutionManifestDefinitions schema)](entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md)
 
-- [Entity Element in Entities (SolutionManifestDefinitions Schema)](entity-element-in-entities-solutionmanifestdefinitions-schema.md)
+- [Entity element in Entities (SolutionManifestDefinitions schema)](entity-element-in-entities-solutionmanifestdefinitions-schema.md)
 
-- [OfficeItemCustomizations Element in ContextDefinition (SolutionManifestDefinitions Schema)](officeitemcustomizations-element-in-contextdefinition-solutionmanifestdefinition.md)
+- [OfficeItemCustomizations element in ContextDefinition (SolutionManifestDefinitions schema)](officeitemcustomizations-element-in-contextdefinition-solutionmanifestdefinition.md)
 
-- [PromotedProperty Element in ViewInstanceDefinition (SolutionManifestDefinitions Schema)](promotedproperty-element-in-viewinstancedefinition-solutionmanifestdefinitions-s.md)
+- [PromotedProperty element in ViewInstanceDefinition (SolutionManifestDefinitions schema)](promotedproperty-element-in-viewinstancedefinition-solutionmanifestdefinitions-s.md)
 
-- [SolutionDefinition Element (SolutionManifestDefinitions Schema)](solutiondefinition-element-solutionmanifestdefinitions-schema.md)
+- [SolutionDefinition element (SolutionManifestDefinitions schema)](solutiondefinition-element-solutionmanifestdefinitions-schema.md)
 
-- [SolutionSettings Element in SolutionDefinition (SolutionManifestDefinitions Schema)](solutionsettings-element-in-solutiondefinition-solutionmanifestdefinitions-schem.md)
+- [SolutionSettings element in SolutionDefinition (SolutionManifestDefinitions schema)](solutionsettings-element-in-solutiondefinition-solutionmanifestdefinitions-schem.md)
 
-- [View Element in EntityInstanceDefinition (SolutionManifestDefinitions Schema)](view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md)
+- [View element in EntityInstanceDefinition (SolutionManifestDefinitions schema)](view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md)
 
-- [OutlookItemCustomizations Element](outlookitemcustomizations-element.md)
+- [OutlookItemCustomizations element](outlookitemcustomizations-element.md)
 
-- [OfficeItemProperties Element](officeitemproperties-element.md)
+- [OfficeItemProperties element](officeitemproperties-element.md)
 
-- [OfficeItemProperty Element](officeitemproperty-element.md)
+- [OfficeItemProperty element](officeitemproperty-element.md)
 
-- [FormRegions Element](formregions-element.md)
+- [FormRegions element](formregions-element.md)
 
-- [FormRegion Element](formregion-element.md)
+- [FormRegion element](formregion-element.md)
 
-- [Picture Element](picture-element.md)
+- [Picture element](picture-element.md)
 
-- [OutlookFolder Element](outlookfolder-element.md)
+- [OutlookFolder element](outlookfolder-element.md)
 
-- [Associations Element](associations-element.md)
+- [Associations element](associations-element.md)
 
-- [Association Element](association-element.md)
+- [Association element](association-element.md)
 
-- [Views Element](views-element.md)
+- [Views element](views-element.md)
 
-- [FolderViewDefinition Element](folderviewdefinition-element.md)
+- [FolderViewDefinition element](folderviewdefinition-element.md)
 
 
 

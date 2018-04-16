@@ -22,33 +22,33 @@ This section provides overview topics as well as information and reference docum
 
 - [Major CAML Files](major-caml-files.md)
 
-- [Data-Defining Elements](data-defining-elements.md)
+- [Data-Defining elements](data-defining-elements.md)
 
-- [HTML-Rendering Elements](html-rendering-elements.md)
+- [HTML-Rendering elements](html-rendering-elements.md)
 
-- [Deprecated CAML Elements](deprecated-caml-elements.md)
+- [Deprecated CAML elements](deprecated-caml-elements.md)
 
 ## Reference
 
-- [Query Schema](query-schema.md)
+- [Query schema](query-schema.md)
 
-- [View Schema](view-schema.md)
+- [View schema](view-schema.md)
 
-- [List Schema](list-schema.md)
+- [List schema](list-schema.md)
 
-- [Site Schema](site-schema.md)
+- [Site schema](site-schema.md)
 
-- [Site Deletion Confirmation Schema](site-deletion-confirmation-schema.md)
+- [Site Deletion Confirmation schema](site-deletion-confirmation-schema.md)
 
-- [Regional Settings Schema](regional-settings-schema.md)
+- [Regional Settings schema](regional-settings-schema.md)
 
-- [Document Icons Schema](document-icons-schema.md)
+- [Document Icons schema](document-icons-schema.md)
 
-- [General Schema](general-schema.md)
+- [General schema](general-schema.md)
 
 ## See also
 
-- [Other CAML Schemas](http://msdn.microsoft.com/library/cee9f788-89a3-4fe1-92d8-10517c8904cf(Office.15).aspx)
+- [Other CAML schemas](http://msdn.microsoft.com/library/cee9f788-89a3-4fe1-92d8-10517c8904cf(Office.15).aspx)
 
 
 

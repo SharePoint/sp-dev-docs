@@ -1,5 +1,5 @@
 ---
-title: "CalendarViewStyles Element (DeploymentManifest - SPView)"
+title: "CalendarViewStyles element (DeploymentManifest - SPView)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: d13febe7-f623-415b-b49d-1e4a86b4e8b9
 description: "Last modified: March 09, 2015"
 ---
 
-# CalendarViewStyles Element (DeploymentManifest - SPView)
+# CalendarViewStyles element (DeploymentManifest - SPView)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[View Element (DeploymentManifest)](view-element-deploymentmanifest.md)
+[View element (DeploymentManifest)](view-element-deploymentmanifest.md)
    
 ## See also
 

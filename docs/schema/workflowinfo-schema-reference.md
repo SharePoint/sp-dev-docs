@@ -14,129 +14,129 @@ ms.assetid: f3bdcc70-15a0-44b2-9b01-330f13430354
 
 The WorkflowInfo schema contains the following elements:
 
-- [WorkflowInfo Element (WorkflowInfo)](workflowinfo-element-workflowinfo.md)
+- [WorkflowInfo element (WorkflowInfo)](workflowinfo-element-workflowinfo.md)
 
-- [Conditions Element (WorkflowInfo)](conditions-element-workflowinfo.md)
+- [Conditions element (WorkflowInfo)](conditions-element-workflowinfo.md)
 
-- [Default Element (WorkflowInfo)](default-element-workflowinfo.md)
+- [Default element (WorkflowInfo)](default-element-workflowinfo.md)
 
-- [RuleDesigner Element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
+- [RuleDesigner element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
 
-- [FieldBind Element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
+- [FieldBind element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
 
-- [Option Element (WorkflowInfo)](option-element-workflowinfo.md)
+- [Option element (WorkflowInfo)](option-element-workflowinfo.md)
 
-- [DataSourceRef Element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
+- [DataSourceRef element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
 
-- [Condition Element (WorkflowInfo)](condition-element-workflowinfo.md)
+- [Condition element (WorkflowInfo)](condition-element-workflowinfo.md)
 
-- [RuleDesigner Element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
+- [RuleDesigner element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
 
-- [FieldBind Element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
+- [FieldBind element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
 
-- [Option Element (WorkflowInfo)](option-element-workflowinfo.md)
+- [Option element (WorkflowInfo)](option-element-workflowinfo.md)
 
-- [DataSourceRef Element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
+- [DataSourceRef element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
 
-- [Parameters Element (WorkflowInfo)](parameters-element-workflowinfo.md)
+- [Parameters element (WorkflowInfo)](parameters-element-workflowinfo.md)
 
-- [Parameter Element (WorkflowInfo)](parameter-element-workflowinfo.md)
+- [Parameter element (WorkflowInfo)](parameter-element-workflowinfo.md)
 
-- [Actions Element (WorkflowInfo)](actions-element-workflowinfo.md)
+- [Actions element (WorkflowInfo)](actions-element-workflowinfo.md)
 
-- [Default Element (WorkflowInfo)](default-element-workflowinfo.md)
+- [Default element (WorkflowInfo)](default-element-workflowinfo.md)
 
-- [RuleDesigner Element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
+- [RuleDesigner element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
 
-- [FieldBind Element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
+- [FieldBind element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
 
-- [Option Element (WorkflowInfo)](option-element-workflowinfo.md)
+- [Option element (WorkflowInfo)](option-element-workflowinfo.md)
 
-- [DataSourceRef Element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
+- [DataSourceRef element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
 
-- [Action Element (WorkflowInfo)](action-element-workflowinfo.md)
+- [Action element (WorkflowInfo)](action-element-workflowinfo.md)
 
-- [Parameters Element (WorkflowInfo)](parameters-element-workflowinfo.md)
+- [Parameters element (WorkflowInfo)](parameters-element-workflowinfo.md)
 
-- [Parameter Element (WorkflowInfo)](parameter-element-workflowinfo.md)
+- [Parameter element (WorkflowInfo)](parameter-element-workflowinfo.md)
 
-- [RuleDesigner Element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
+- [RuleDesigner element (WorkflowInfo)](ruledesigner-element-workflowinfo.md)
 
-- [FieldBind Element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
+- [FieldBind element (WorkflowInfo)](fieldbind-element-workflowinfo.md)
 
-- [Option Element (WorkflowInfo)](option-element-workflowinfo.md)
+- [Option element (WorkflowInfo)](option-element-workflowinfo.md)
 
-- [DataSourceRef Element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
+- [DataSourceRef element (WorkflowInfo)](datasourceref-element-workflowinfo.md)
 
-- [DataSources Element (WorkflowInfo)](datasources-element-workflowinfo.md)
+- [DataSources element (WorkflowInfo)](datasources-element-workflowinfo.md)
 
-- [DataSource Element (WorkflowInfo)](datasource-element-workflowinfo.md)
+- [DataSource element (WorkflowInfo)](datasource-element-workflowinfo.md)
 
-- [SchemaSource Element (WorkflowInfo)](schemasource-element-workflowinfo.md)
+- [SchemaSource element (WorkflowInfo)](schemasource-element-workflowinfo.md)
 
-- [Fields Element (WorkflowInfo)](fields-element-workflowinfo.md)
+- [Fields element (WorkflowInfo)](fields-element-workflowinfo.md)
 
-- [Field Element (WorkflowInfo)](field-element-workflowinfo.md)
+- [Field element (WorkflowInfo)](field-element-workflowinfo.md)
 
-- [ContentType Element (WorkflowInfo)](contenttype-element-workflowinfo.md)
+- [ContentType element (WorkflowInfo)](contenttype-element-workflowinfo.md)
 
-- [Dictionary Element (WorkflowInfo)](dictionary-element-workflowinfo.md)
+- [Dictionary element (WorkflowInfo)](dictionary-element-workflowinfo.md)
 
-- [NestedInitiationFieldNodes Element (WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.md)
+- [NestedInitiationFieldNodes element (WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.md)
 
-- [Evaluation Element (WorkflowInfo)](evaluation-element-workflowinfo.md)
+- [Evaluation element (WorkflowInfo)](evaluation-element-workflowinfo.md)
 
-- [ActivitySource Element (WorkflowInfo)](activitysource-element-workflowinfo.md)
+- [ActivitySource element (WorkflowInfo)](activitysource-element-workflowinfo.md)
 
-- [HashtableSource Element (WorkflowInfo)](hashtablesource-element-workflowinfo.md)
+- [HashtableSource element (WorkflowInfo)](hashtablesource-element-workflowinfo.md)
 
-- [Modifications Element (WorkflowInfo)](modifications-element-workflowinfo.md)
+- [Modifications element (WorkflowInfo)](modifications-element-workflowinfo.md)
 
-- [Modification Element (WorkflowInfo)](modification-element-workflowinfo.md)
+- [Modification element (WorkflowInfo)](modification-element-workflowinfo.md)
 
-- [ActionVariables Element (WorkflowInfo)](actionvariables-element-workflowinfo.md)
+- [ActionVariables element (WorkflowInfo)](actionvariables-element-workflowinfo.md)
 
-- [ActionBody Element (WorkflowInfo)](actionbody-element-workflowinfo.md)
+- [ActionBody element (WorkflowInfo)](actionbody-element-workflowinfo.md)
 
-- [ActionConditions Element (WorkflowInfo)](actionconditions-element-workflowinfo.md)
+- [ActionConditions element (WorkflowInfo)](actionconditions-element-workflowinfo.md)
 
-- [CompositeSteps Element (WorkflowInfo)](compositesteps-element-workflowinfo.md)
+- [CompositeSteps element (WorkflowInfo)](compositesteps-element-workflowinfo.md)
 
-- [CompositeStep Element (WorkflowInfo)](compositestep-element-workflowinfo.md)
+- [CompositeStep element (WorkflowInfo)](compositestep-element-workflowinfo.md)
 
-- [DataSources Element (WorkflowInfo)](datasources-element-workflowinfo.md)
+- [DataSources element (WorkflowInfo)](datasources-element-workflowinfo.md)
 
-- [DataSource Element (WorkflowInfo)](datasource-element-workflowinfo.md)
+- [DataSource element (WorkflowInfo)](datasource-element-workflowinfo.md)
 
-- [SchemaSource Element (WorkflowInfo)](schemasource-element-workflowinfo.md)
+- [SchemaSource element (WorkflowInfo)](schemasource-element-workflowinfo.md)
 
-- [Fields Element (WorkflowInfo)](fields-element-workflowinfo.md)
+- [Fields element (WorkflowInfo)](fields-element-workflowinfo.md)
 
-- [Field Element (WorkflowInfo)](field-element-workflowinfo.md)
+- [Field element (WorkflowInfo)](field-element-workflowinfo.md)
 
-- [ContentType Element (WorkflowInfo)](contenttype-element-workflowinfo.md)
+- [ContentType element (WorkflowInfo)](contenttype-element-workflowinfo.md)
 
-- [Dictionary Element (WorkflowInfo)](dictionary-element-workflowinfo.md)
+- [Dictionary element (WorkflowInfo)](dictionary-element-workflowinfo.md)
 
-- [NestedInitiationFieldNodes Element (WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.md)
+- [NestedInitiationFieldNodes element (WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.md)
 
-- [Evaluation Element (WorkflowInfo)](evaluation-element-workflowinfo.md)
+- [Evaluation element (WorkflowInfo)](evaluation-element-workflowinfo.md)
 
-- [ActivitySource Element (WorkflowInfo)](activitysource-element-workflowinfo.md)
+- [ActivitySource element (WorkflowInfo)](activitysource-element-workflowinfo.md)
 
-- [HashtableSource Element (WorkflowInfo)](hashtablesource-element-workflowinfo.md)
+- [HashtableSource element (WorkflowInfo)](hashtablesource-element-workflowinfo.md)
 
-- [VariableTypes Element (WorkflowInfo)](variabletypes-element-workflowinfo.md)
+- [VariableTypes element (WorkflowInfo)](variabletypes-element-workflowinfo.md)
 
-- [VariableType Element (WorkflowInfo)](variabletype-element-workflowinfo.md)
+- [VariableType element (WorkflowInfo)](variabletype-element-workflowinfo.md)
 
-- [AssemblyRedirects Element (WorkflowInfo)](assemblyredirects-element-workflowinfo.md)
+- [AssemblyRedirects element (WorkflowInfo)](assemblyredirects-element-workflowinfo.md)
 
-- [AssemblyRedirect Element (WorkflowInfo)](assemblyredirect-element-workflowinfo.md)
+- [AssemblyRedirect element (WorkflowInfo)](assemblyredirect-element-workflowinfo.md)
 
-- [Coercions Element (WorkflowInfo)](coercions-element-workflowinfo.md)
+- [Coercions element (WorkflowInfo)](coercions-element-workflowinfo.md)
 
-- [Coercion Element (WorkflowInfo)](coercion-element-workflowinfo.md)
+- [Coercion element (WorkflowInfo)](coercion-element-workflowinfo.md)
 
 
 ## See also

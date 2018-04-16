@@ -21,13 +21,13 @@ element, in addition to providing the previously described specifications, point
 
 In addition to describing the file format of [Feature.xml Files](feature-xml-files.md) and the Feature sections in [Site Definition (Onet.xml) Files](site-definition-onet-xml-files.md), this section describes the file formats used for the following Feature types:
 
-- [Client Web Part Definition Schema](client-web-part-definition-schema.md)
+- [Client Web Part Definition schema](client-web-part-definition-schema.md)
 
 - [Content Type Bindings](content-type-bindings.md)
 
 - [Content Type Definitions](content-type-definitions.md)
 
-- [Custom Action Definition Schema](custom-action-definition-schema.md)
+- [Custom Action Definition schema](custom-action-definition-schema.md)
 
 - [Delegate Controls](delegate-controls.md)
 
@@ -47,7 +47,7 @@ In addition to describing the file format of [Feature.xml Files](feature-xml-fil
 
 - [Modules](modules.md)
 
-- [Property Bag Schema](property-bag-schema.md)
+- [Property Bag schema](property-bag-schema.md)
 
 - [Site Definition (Onet.xml) Files](site-definition-onet-xml-files.md)
 
@@ -55,7 +55,7 @@ In addition to describing the file format of [Feature.xml Files](feature-xml-fil
 
 - [Workflow Definitions](workflow-definitions.md)
 
-
+ 
 
 
 

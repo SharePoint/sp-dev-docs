@@ -38,23 +38,23 @@ For more information about creating workflow editors, see [Creating Declarative,
 
 The workflow configuration schema contains the following elements:
 
-- [WorkflowConfig Element](workflowconfig-element.md)
+- [WorkflowConfig element](workflowconfig-element.md)
 
-- [Template Element (WorkflowConfig)](template-element-workflowconfig.md)
+- [Template element (WorkflowConfig)](template-element-workflowconfig.md)
 
-- [Association Element (WorkflowConfig)](association-element-workflowconfig.md)
+- [Association element (WorkflowConfig)](association-element-workflowconfig.md)
 
-- [ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)
+- [ContentTypes element (WorkflowConfig)](contenttypes-element-workflowconfig.md)
 
-- [ContentType Element (WorkflowConfig)](contenttype-element-workflowconfig.md)
+- [ContentType element (WorkflowConfig)](contenttype-element-workflowconfig.md)
 
-- [Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)
+- [Initiation element (WorkflowConfig)](initiation-element-workflowconfig.md)
 
-- [Fields Element (WorkflowConfig)](fields-element-workflowconfig.md)
+- [Fields element (WorkflowConfig)](fields-element-workflowconfig.md)
 
-- [Parameters Element (WorkflowConfig)](parameters-element-workflowconfig.md)
+- [Parameters element (WorkflowConfig)](parameters-element-workflowconfig.md)
 
-- [Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md)
+- [Parameter element (WorkflowConfig)](parameter-element-workflowconfig.md)
 
 
 ### Description

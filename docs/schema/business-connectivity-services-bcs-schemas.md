@@ -14,19 +14,19 @@ ms.assetid: b02774df-6ce9-45d5-ae5b-88bebf6d441a
 
 This section provides reference documentation for the Microsoft Business Connectivity Services (BCS) XML schemas.
 
-- [SolutionManifestDefinitions Schema](solutionmanifestdefinitions-schema.md)
+- [SolutionManifestDefinitions schema](solutionmanifestdefinitions-schema.md)
 
-- [SolutionManifestDeclarativeExtensions Schema](solutionmanifestdeclarativeextensions-schema.md)
+- [SolutionManifestDeclarativeExtensions schema](solutionmanifestdeclarativeextensions-schema.md)
 
-- [LayoutDefinitions Schema](layoutdefinitions-schema.md)
+- [LayoutDefinitions schema](layoutdefinitions-schema.md)
 
-- [Subscription Schema](subscription-schema.md)
+- [Subscription schema](subscription-schema.md)
 
-- [BDCMetadata Schema](bdcmetadata-schema.md)
+- [BDCMetadata schema](bdcmetadata-schema.md)
 
-- [BDCMetadataResource Schema](bdcmetadataresource-schema.md)
+- [BDCMetadataResource schema](bdcmetadataresource-schema.md)
 
-<!-- [BDCSchemaAnnotations Schema](http://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
+<!-- [BDCSchemaAnnotations schema](http://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
 
  
 

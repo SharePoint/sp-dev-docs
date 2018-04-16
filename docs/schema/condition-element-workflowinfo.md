@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.assetid: 2f33746f-e028-45ae-a48f-cc37ae0e73b4
 ---
 
-# Condition Element (WorkflowInfo)
+# Condition element (WorkflowInfo)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

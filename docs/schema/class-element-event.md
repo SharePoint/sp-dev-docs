@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: 40e63193-d08b-4770-b184-cb804ad68e9f
 ---
 
-# Class Element (Event)
+# Class element (Event)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

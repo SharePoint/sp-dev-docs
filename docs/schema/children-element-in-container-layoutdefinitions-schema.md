@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.assetid: ff84af75-d4f5-885b-f728-534a101c38b8
 ---
 
-# Children Element in Container 
+# Children element in Container 
 
 (LayoutDefinitions Schema)
 
@@ -47,7 +47,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>An External Data Part.</p></td>
 </tr>
 </tbody>
@@ -68,7 +68,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.md">Container Element (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.md">Container element (LayoutDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The layout for the External Data Parts.</p></td>
 </tr>
 </tbody>

@@ -1,5 +1,5 @@
 ---
-title: "CalendarViewStyles Element (DeploymentManifest - SPWebPart)"
+title: "CalendarViewStyles element (DeploymentManifest - SPWebPart)"
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -10,7 +10,7 @@ ms.assetid: b2a4215f-151c-4e5d-863f-a55bf9cf5b01
 description: "Last modified: March 09, 2015"
 ---
 
-# CalendarViewStyles Element (DeploymentManifest - SPWebPart)
+# CalendarViewStyles element (DeploymentManifest - SPWebPart)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
@@ -47,7 +47,7 @@ None
    
 ### Parent elements
 
-[WebPart Element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
+[WebPart element (DeploymentManifest)](webpart-element-deploymentmanifest.md)
    
 ## See also
 
