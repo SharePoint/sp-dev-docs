@@ -198,115 +198,6 @@ Example:
 }
 ```
 
-### createSiteColumn
-
-Defines a new site column that can then be associated to a list directly or using the addContentType action. 
-
-JSON value:
-
-> [!NOTE]
-> When referencing the content type ID only one of the three references are required - ID, parentName, or parentId  
-
-- **fieldType** - The type of column to add. Supported values - like SPField - are Text, Note, Number, Boolean, User, and DateTime. For other data types refer to the addSPFieldXml script action. 
-- **internalName** - The internal name of the site column.
-- **displayName** - The display name of the site column.  
-- **isRequired** - True if this field is required to contain information; otherwise, false.
-- **group** - An optional attribute to designate the column group.
-- **enforceUnique** - An optional attribute that defaults to false. If true, then all values for this field must be unique.
-
-Example:
-
-```json
-{
-    "verb": "createSiteColumn",
-    "fieldType": "User",
-    "internalName": "siteColumn4User",
-    "displayName": "Project Owner",
-    "isRequired": false
-}
-```
-
-### addSiteColumn
-
-Subaction to add a previously defined site column directly to a list or content type (exisiting or created through the site script).
-
-> [!NOTE]
-> This action can be used to add created site columns to a list or content type.  
-
-JSON value:
-
-- **internalName** - The internal name of the site column to add.
-
-Example:
-
-```json
- {
-    "verb": "addSiteColumn",
-    "internalName": "siteColumnUser"
- }
- ```
-
-### removeSiteColumn
-
-Subaction to remove a site column from a list or content type. 
-
-JSON value:
-
-- **internalName** - The internal name of the site column to remove.
-
-Example:
-
-```json
- {
-    "verb": "removeSiteColumn",
-    "internalName": "siteColumnUser"
- }
- ```
-
-### createContentType
-
-Defines a new content type that can then be associated to a list using the addContentType action. 
-
-JSON value:
-
-> [!NOTE]
-> When referencing the content type ID only one of the three references are required - ID, parentName, or parentId  
-
-- **name** - The name of the content type to create.
-- **description** - The optional description of the content type.
-- **parentName** - Name of the parent content type. 
-- **parentId** - ID of the parent content type.
-- **id** - ID of the content type.
-- **hidden** - Specifies whether the content type is visible or hidden.
-- **subactions** - Specifies subactions to run on the content type. These are used to designate the site columns to add.
-
-Example:
-
-```json
-{
-    "verb": "createContentType",
-    "name": "Contoso Projects",
-    "description": "custom list content type",
-    "parentName": "Item",
-    "hidden": false,
-    "subactions":
-        [
-            {
-                "verb": "addSiteColumn",
-                "internalName": "siteColumn1Text"
-            },
-            {
-                "verb": "addSiteColumn",
-                "internalName": "siteColumn2Number"
-                },
-            {
-                "verb": "addSiteColumn",
-                "internalName": "siteColumn3Note"
-            }
-        ]
-}
-```
-
 ### addContentType
 
 Adds a content type to the list. Currently these are limited to the default content types included in the site template or ones defined in a script using the createContentType action.
@@ -404,6 +295,115 @@ Example: In this example we are formatting a number column as a data bar
                     }
                 }
 ```
+
+
+## createSiteColumn
+
+Defines a new site column that can then be associated to a list directly or using the addContentType action. 
+
+JSON value:
+
+- **fieldType** - The type of column to add. Supported values - like SPField - are Text, Note, Number, Boolean, User, and DateTime. For other data types refer to the addSPFieldXml script action. 
+- **internalName** - The internal name of the site column.
+- **displayName** - The display name of the site column.  
+- **isRequired** - True if this field is required to contain information; otherwise, false.
+- **group** - An optional attribute to designate the column group.
+- **enforceUnique** - An optional attribute that defaults to false. If true, then all values for this field must be unique.
+
+Example:
+
+```json
+{
+    "verb": "createSiteColumn",
+    "fieldType": "User",
+    "internalName": "siteColumn4User",
+    "displayName": "Project Owner",
+    "isRequired": false
+}
+```
+
+## createContentType
+
+Defines a new content type that can then be associated to a list using the addContentType action. 
+
+JSON value:
+
+> [!NOTE]
+> When referencing the content type ID only one of the three references are required - ID, parentName, or parentId  
+
+- **name** - The name of the content type to create.
+- **description** - The optional description of the content type.
+- **parentName** - Name of the parent content type. 
+- **parentId** - ID of the parent content type.
+- **id** - ID of the content type.
+- **hidden** - Specifies whether the content type is visible or hidden.
+- **subactions** - Specifies subactions to run on the content type. These are used to designate the site columns to add.
+
+Example:
+
+```json
+{
+    "verb": "createContentType",
+    "name": "Contoso Projects",
+    "description": "custom list content type",
+    "parentName": "Item",
+    "hidden": false,
+    "subactions":
+        [
+            {
+                "verb": "addSiteColumn",
+                "internalName": "siteColumn1Text"
+            },
+            {
+                "verb": "addSiteColumn",
+                "internalName": "siteColumn2Number"
+                },
+            {
+                "verb": "addSiteColumn",
+                "internalName": "siteColumn3Note"
+            }
+        ]
+}
+```
+
+### addSiteColumn
+
+Subaction to add a previously defined site column directly to a list or content type (exisiting or created through the site script).
+
+> [!NOTE]
+> This action can be used to add created site columns to a list or content type.  
+
+JSON value:
+
+- **internalName** - The internal name of the site column to add.
+
+Example:
+
+```json
+ {
+    "verb": "addSiteColumn",
+    "internalName": "siteColumnUser"
+ }
+ ```
+
+### removeSiteColumn
+
+Subaction to remove a site column from a list or content type. 
+
+JSON value:
+
+- **internalName** - The internal name of the site column to remove.
+
+Example:
+
+```json
+ {
+    "verb": "removeSiteColumn",
+    "internalName": "siteColumnUser"
+ }
+ ```
+
+
 
 ## Add a navigation link
 
