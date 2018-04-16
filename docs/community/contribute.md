@@ -9,12 +9,12 @@ ms.prod: sharepoint
 
 There are multiple ways to contribute to the SharePoint Developer Community (SharePoint PnP). Here are a few options:
 
-* Participate in discussions within the [Microsoft Tech Community - SharePoint Developer group](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev)
-* Participate in the SharePoint community calls and provide input in the discussion during the calls
-* Do a live demo of your sample, solution, or architecture design in the SharePoint community calls
-* Report and fix issues within the GitHub repositories in the [SharePoint GitHub Organization](http://github.com/sharepoint)
-* Report issues in the GitHub issue lists to help others find where they can assist
-* Provide input on new feature requests within [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform)
+* Participate in discussions within the [Microsoft Tech Community - SharePoint Developer group](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev).
+* Participate in the SharePoint community calls and provide input in the discussion during the calls.
+* Do a live demo of your sample, solution, or architecture design in the SharePoint community calls.
+* Report and fix issues within the GitHub repositories in the [SharePoint GitHub Organization](http://github.com/sharepoint).
+* Report issues in the GitHub issue lists to help others find where they can assist.
+* Provide input on new feature requests within [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform).
 
 ## FAQ
 
@@ -24,7 +24,7 @@ Contributing to the official articles, samples, and open-source projects ensures
 
 ### Why won't you link samples from my repositories?
 
-This is due to liability reasons. As samples are linked from the official SharePoint Developer portal, we need to ensure that we control the information published within the samples. We can't cross-link to non-Microsoft controlled repositories or articles because we don't control that content, and we need to guarantee that information remains available as long as it's cross-linked from Microsoft controlled sites.
+This is due to liability reasons. Because samples are linked from the official SharePoint Developer portal, we need to ensure that we control the information published within the samples. We can't cross-link to non-Microsoft controlled repositories or articles because we don't control that content, and we need to guarantee that information remains available as long as it's cross-linked from Microsoft controlled sites.
 
 If you contribute to the SharePoint GitHub organization, we'll absolutely make maintenance of your samples easy for you.
 

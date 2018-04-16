@@ -9,6 +9,8 @@ ms.prod: sharepoint
 
 There are numerous open-source projects that are coordinated by the SharePoint PnP initiative. These are open-source, community-driven initiatives that are still closely involved with SharePoint engineering, but are not part of the standard product or service offerings.
 
+<br/>
+
 | Repository | Description |
 |--------|--------|
 | [GDPR Activity Hub](https://github.com/SharePoint/sp-dev-gdpr-activity-hub) | A starter kit for building a management hub for EU GDPR (European Global Data Protection Regulation). |
@@ -18,11 +20,11 @@ There are numerous open-source projects that are coordinated by the SharePoint P
 | [PnP PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) | Allow you to perform complex provisioning and artifact management actions for SharePoint. The commands use CSOM and can work against both SharePoint online as well as SharePoint on-premises. |
 | [PnP remote provisioning schema](https://github.com/SharePoint/PnP-provisioning-schema) | Designed to be used as remote creation instructions for the remote provisioning engine for Office 365. |
 | [PnPJS](https://pnp.github.io/pnpjs/) | A fluent JavaScript API for consuming SharePoint and Office 365 REST APIs in a type-safe way. |
-| [SharePoint Framework reusable property pane controls](https://sharepoint.github.io/sp-dev-fx-property-controls) | Controls that can be used in SharePoint Framework (SPFx) solutions. |
-| [SharePoint Framework reusable react controls](https://sharepoint.github.io/sp-dev-fx-controls-react) | Controls that can be used in SharePoint Framework (SPFx) solutions. |
+| [SharePoint Framework reusable property pane controls](https://sharepoint.github.io/sp-dev-fx-property-controls) | Can be used in SharePoint Framework (SPFx) solutions. |
+| [SharePoint Framework reusable react controls](https://sharepoint.github.io/sp-dev-fx-controls-react) | Can be used in SharePoint Framework (SPFx) solutions. |
 | [Visual Studio extension for SharePoint Framework](https://github.com/SharePoint/sp-dev-fx-vs-extension) | Projects that you can use with Visual Studio 2015 or 2017. |
 
-## Supportability of these open-source projects
+## Supportability of open-source projects
 
 The following statements apply across all of the SharePoint development (PnP) samples, reusable solutions, controls, and core components, and even the more polished solutions, such as the GDPR Activity Hub or the PnP Provisioning Engine:
 
