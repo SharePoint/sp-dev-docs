@@ -1,13 +1,14 @@
 ---
-title:  SharePoint Dev Community resources
-description: Assets and references around SharePoint Dev community
-ms.date: 03.29.2018
+title:  SharePoint Developer Community resources
+description: The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. 
+ms.date: 03/29/2018
 ms.prod: sharepoint
+
 ---
 
 # SharePoint Developer Community - SharePoint PnP
 
-The SharePoint Development Community (aka. the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. This community controls SharePoint Development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
+The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
 
 ## Blog posts, videos, and social media
 
@@ -19,30 +20,30 @@ The SharePoint Development Community (aka. the SharePoint PnP community) is an o
 * [OfficeDevPnP Facebook](https://www.facebook.com/OfficeDevPnP/) - Community account for SharePoint and Office 365 developer topics
 
 
-## Issues with SharePoint Development
+## Issues with SharePoint development
 
 Found an issue related to SharePoint development around the APIs, documentation, or other topics? Are we missing something from the developer documentation? Please let us know!
 
-* [SharePoint Dev Issue List](https://github.com/SharePoint/sp-dev-docs/issues)
+* [SharePoint development issues list](https://github.com/SharePoint/sp-dev-docs/issues)
 
 ## Community calls
 
-There are numerous community calls for SharePoint development and you can choose which of them you'd like to join based on your interest and availability. Each call has live demos from SharePoint Engineering, MVPs, or other community members. 
+There are numerous community calls for SharePoint development, and you can choose which of them you'd like to join based on your interest and availability. Each call has live demos from SharePoint Engineering, MVPs, or other community members. 
 
 > [!TIP]
-> If you are interested in doing a live demo in any of our community calls, please reach out and we'll get you a 10-15 min spot for demonstrating your SharePoint development topic(s).
+> If you are interested in doing a live demo in any of our community calls, please reach out and we'll get you a spot for 10-15 minutes for demonstrating your SharePoint development topic(s).
 
-| Community Call | When | Description |
-|--------|--------|--------|
-| [Monthly Community Call](https://aka.ms/sppnp-call) | 2nd Tuesday of each month at 8 AM PT / 4 PM GMT | Monthly community call covering the latest changes in SharePoint Development related topics within the last month, including news, UserVoice updates, and community contributions. [Direct Skype link to meeting](https://meet.lync.com/microsoft/vesaj/WVZ5CVZV). |
-| [Special Interest Group Call for SharePoint Framework](https://aka.ms/spdev-spfx-call) | Bi-weekly on Thursdays at 7 AM PT / 3 PM GMT | SharePoint Engineering updates, SharePoint Framework, PnPJS, Office 365 CLI, reusable SPFx controls, etc. [Direct Skype link to meeting](https://meet.lync.com/microsoft/patrodg/G0C1PCKS). |
-| [Special Interest Group call for General SharePoint Dev](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7 AM PT / 3 PM GMT | SharePoint Engineering updates, end-to-end solution designs, provisioning, PnP CSOM, PnP PowerShell, etc. [Direct Skype link to meeting](https://meet.lync.com/microsoft/vesaj/D2HB7HDL). |
+| Community call | When | Description | Skype |
+|--------|--------|--------|--------|
+| [Monthly community call](https://aka.ms/sppnp-call) | Second Tuesday of each month at 8:00 AM PT / 4:00 PM GMT | Monthly community call covering the latest changes in SharePoint development-related topics within the last month, including news, UserVoice updates, and community contributions. | [Direct Skype link to meeting](https://meet.lync.com/microsoft/vesaj/WVZ5CVZV) |
+| [Special interest group call for SharePoint Framework](https://aka.ms/spdev-spfx-call) | Bi-weekly on Thursdays at 7:00 AM PT / 3:00 PM GMT | SharePoint Engineering updates, SharePoint Framework, PnPJS, Office 365 CLI, and reusable SPFx controls.  |  [Direct Skype link to meeting](https://meet.lync.com/microsoft/patrodg/G0C1PCKS) |
+| [Special interest group call for general SharePoint development](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7:00 AM PT / 3:00 PM GMT | SharePoint Engineering updates, end-to-end solution designs, provisioning, PnP CSOM, and PnP PowerShell. |  [Direct Skype link to meeting](https://meet.lync.com/microsoft/vesaj/D2HB7HDL) |
 
 
 > [!NOTE]
-> Currently these invites are recurrent invites until the end of June 2018. They will be renewed after that for the next 12 months.
+> Currently these are recurring invites until the end of June 2018. They will be renewed after that for the next 12 months.
 
 ## See also
 
-- [SharePoint Developer Portal](http://aka.ms/spdev)
-- [SharePoint Developer Samples](http://aka.ms/spdev-samples)
+- [SharePoint developer portal](http://aka.ms/spdev)
+- [SharePoint developer samples](http://aka.ms/spdev-samples)
