@@ -149,7 +149,7 @@ Example:
 
 ### addSPView
 
-Defines and adds a view to the list. Use this action to specify the desired columns and how you want the list items displayed (using a CAML query). Subactions allow you to specify row limits, whether the view is paged, and recurses over items in nested folders or not. You can also designate your constructed view as the default.
+Defines and adds a view to the list. Use this action to specify the desired columns and how you want the list items displayed (using a CAML query). Action properties allow you to specify row limits, whether the view is paged, and recurses over items in nested folders or not. You can also designate your constructed view as the default.
 
 JSON value:
 
