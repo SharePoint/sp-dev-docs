@@ -532,7 +532,7 @@ These queries differ in how the results are ranked. When you use the **WORDS** o
 
 ### Wildcard operator
 
-You use the wildcard operator—the asterisk character (" **\*** ")—to enable prefix matching. You can specify part of a word, from the beginning of the word, followed by the wildcard operator, in your query, as follows. This query would match results that include terms beginning with "serv", followed by zero or more characters, such as serve, server, service, and so on:
+You use the wildcard operator—the asterisk character (" **&ast;** ")—to enable prefix matching. You can specify part of a word, from the beginning of the word, followed by the wildcard operator, in your query, as follows. This query would match results that include terms beginning with "serv", followed by zero or more characters, such as serve, server, service, and so on:
   
     
     

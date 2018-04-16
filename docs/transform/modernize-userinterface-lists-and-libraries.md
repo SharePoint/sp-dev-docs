@@ -9,6 +9,23 @@ ms.prod: sharepoint
 
 Getting the maximum amount of lists and libraries present themselves using the modern user interface is the topic of this article. You might wonder "why not all lists and libraries?"...there's certain types of lists and libraries which are not (yet) built by the SharePoint team to show up in a modern user interface. Samples are a Task list, Events list... For these you'll have to wait for the SharePoint team to implement a modern version or switch over to equivalent options like using Microsoft Planner instead of a classic task list or using the calendar of your Office 365 group instead of a classic SharePoint events list calendar. That being said there's also a category of lists and libraries that can be shown in modern but are blocked due to an incompatible configuration or customization...and you can take action here.
 
+## List templates that show up using a modern user interface (as of March 2018)
+
+For the most commonly used list template types SharePoint can show a modern user interface:
+
+- List (100)
+- Document Library (101)
+- Links list (103)
+- Announcements list (104)
+- Picture library (109)
+- Form library (115)
+- Site pages library (119)
+- Promoted links list (170)
+- Assets library (851)
+
+> [!NOTE]
+> Microsoft is adding modern user interface support for more and more list template types. If your adoption of the modern list and library user interface is blocked due to a key missing list template type, then let us know via [UserVoice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration).
+
 ## Detecting lists and libraries that will not use the modern user interface
 
 The recommended approach to find out which lists and libraries are not showing in modern is running the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner). This tool will perform a deep analysis of all the lists and libraries in your tenant and create reports giving you details on which lists and libraries do not show in modern and more important why that happens. Based on the scanner output you can unblock lists and libraries by remediating them, which is the topic of the next chapter.

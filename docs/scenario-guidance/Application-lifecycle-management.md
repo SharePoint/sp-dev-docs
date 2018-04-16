@@ -1,11 +1,16 @@
+---
+title: Scenario Guidance - Application Lifecycle Management
+description: Scenario guidance on application lifecycle management topics with SharePoint Framework and SharePoint add-ins.
+ms.date: 03/26/2018
+---
+
 # Application Lifecycle Management
 
 ## Summary
 Microsoft SharePoint gives developers several options for creating and deploying applications that are based on SharePoint Online, or SharePoint 2013/2016 on-premises. SharePoint offers increased flexibility in the shape applications can take as well as new options for using standards-based technologies with applications. However, developers must be able to infuse quality, testing and Application Lifecycle Management (ALM) considerations into the development process. In this article you can find some useful references to the available options in the fields of ALM while developing SharePoint technologies.
 
-## Available options
 
-### SharePoint Add-Ins
+## SharePoint Add-Ins
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -22,7 +27,7 @@ The SharePoint Add-In Model introduces new development techniques, mainly based 
 ### Videos
 * [PnP Webcast - ALM APIs for SharePoint Framework solutions and add-ins](https://www.youtube.com/watch?v=MUmd85-E5SI&index=1&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS)
 
-### SharePoint Framework
+## SharePoint Framework
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2016 (FP2)_
 

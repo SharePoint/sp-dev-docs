@@ -1092,6 +1092,29 @@ The following example shows how a lookup field might be used on a current field.
 }
 ``` 
 
+**Hyperlink fields**
+
+The hyperlink field object has the following property (with example value):
+
+```JSON
+{
+   "desc": "SharePoint Patterns and Practices",
+}
+```
+To reference the URL value, use `@currentField`.
+
+The following example shows how a hyperlink field might be used on a current field.
+```JSON
+{
+   "elmType": "a",
+   "txtContent": "@currentField.desc",
+   "attributes": {
+      "href": "@currentField",
+      "target": "_blank"
+   }
+}
+``` 
+
 #### "[$FieldName]" 
 The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row. For example, to get the value of a field named "MarchSales", use `[$MarchSales]`.
 

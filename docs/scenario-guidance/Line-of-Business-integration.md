@@ -1,19 +1,20 @@
 # Line of Business Integration
 
 ## Summary
+
 Very often SharePoint is used as the unique and central access point for all of the content and services related to a business, hence the name of the product. Thus, very often customers need to consume and access Line-of-Business (LOB) data and applications from within SharePoint, whether having custom metadata fields of list items and documents whose values are retrieved from external systems, whether using custom developed solutions that consume business data.
 In order to access and consume LOB data and systems from within SharePoint, you can leverage multiple techniques, which you can choose based on the kind of data sources that you need to consume, and on the physical architecture of your solution (i.e. SharePoint 2013/2016 on-premises or SharePoint Online). In this article you can find detailed information about the various LOB integration techniques that you can choose from.
 
 ## High-level guideline/general rules
+
 Here follow some high-level guidelines and general rules that you should consider whenever you need to integrate SharePoint with any LOB system:
+
 * Try to consume REST-based APIs, rather than SOAP services or custom APIs, in order to being able to leverage modern development techniques and to use modern security protocols (OAuth 2.0, OpenID Connect, etc.).
 * Use a data cache intermediary, instead of directly consuming any external service, so that you can speed up the consumption process and avoid useless network roundtrips to retrieve data that you already requested from the LOB system.
 * Make your best to list data page by page, rather than listing all the data in "one huge shot", to avoid flooding the data cache and to overload the network bandwidth.
 * From an Authentication and Authorization perspective, tend to use services that leverage well-known protocols like OAuth 2.0, OpenID Connect, etc. and which are possibly registered in Azure Active Directory, in order to share a unique security infrastructure.
 
-## Available Options
-
-### Client-side Connection
+## Client-side Connection
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2016_
 
@@ -33,7 +34,7 @@ Whenever you need to consume LOB systems from a client-side solution, like a cli
 * [Calling external APIs securely from SharePoint Framework](https://www.youtube.com/watch?v=SDjKRfHA1nw)
 * [Let's build with SharePoint (Web Parts, Extensions and much more)](https://myignite.microsoft.com/sessions/55180)
 
-### Business Connectivity Services
+## Business Connectivity Services
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -49,7 +50,7 @@ Moreover, in SharePoint Online, if compared with SharePoint on-premises, you don
 ### Videos
 * [Configuring Hybrid Business Connectivity Services with SharePoint 2013](https://channel9.msdn.com/Events/SharePoint-Conference/2014/SPC319)
 
-### Hybrid - Connect to on-premises
+## Hybrid - Connect to on-premises
 
 _**Applies to:** Office 365 | SharePoint Online_
 

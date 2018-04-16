@@ -215,11 +215,11 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
     ```
     .HelloWorld {
       .cell {
-        display: 'inline-block';
+        display: inline-block;
       }
       .full {
-        background-color: '#e5e5e5';
-        width: '100px';
+        background-color: #e5e5e5;
+        width: 100px;
       }
     }
 

@@ -54,6 +54,35 @@ When you select a classic theme, a modern theme will be generated from the setti
 
 For the simplest experience, we recommend that you use modern themes with modern pages. If you need to use classic themes with modern pages, test your site carefully to verify that your content is readable and accessible.
 
+## Change the default experience at the site collection level by using Windows PowerShell (for administrators) 
+
+While the new client-side theming architecture is more performant, if you have customizations that aren’t rendering properly after you change the site’s theme you can opt the site out of the new  theming experience by disabling the feature.
+
+To do this you must use a Windows PowerShell script with a CSOM (Client-side object model) wrapper. We recommend using the PnP enable feature command:
+
+1. Verify that you meet the following minimum requirements:  
+    * You are a global administrator 
+    * You must read about [Execution Policies](https://technet.microsoft.com/library/dd347641.aspx)
+
+1. Download the latest PnP PowerShell from https://github.com/SharePoint/PnP-PowerShell/releases
+
+1. Enter `Connect-PnPOnline -Url <SiteUrl> -Credentials getCredentials`(replacing `<SiteUrl>` with the url of the site you wish to opt out)
+
+1. Enter your credentials when prompted.
+
+1. To opt-out the site you need to enable a feature:
+
+    * Enter `“Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B”`
+    * Verify that nothing is returned from the previous command (this confirms the feature isn’t enabled yet) 
+    * Enter `“Enable-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B”`
+    * Enter `“Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B”`
+
+1. Verify that the following is returned: 
+
+    *ClientSideThemingOptOut* - *5138468e-3d76-4f72-9de4-e029f1245a7b*
+
+1. For additional information about Windows PowerShell, see [Using Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/fundamental/using-windows-powershell).
+
 ## See also
 
 * [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818?ui=en-US&rs=en-US&ad=US#ID0EAACAAA=Online)

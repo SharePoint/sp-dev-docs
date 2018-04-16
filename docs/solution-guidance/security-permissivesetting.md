@@ -1,7 +1,15 @@
+---
+title: Migrating from the permissive browser file handling to the default strict browser file handling
+ms.date: 07/02/2017
+---
+
 # Introduction
 Most of the SharePoint Online tenants handles the file open experience using the **strict** model. As a result, all files which can potentially cause harm (e.g. a html file having embedded script) are not executed in the browser but downloaded or shown as raw content (html preview in the modern user experience). If your tenant is configured using the **permissive** model then the file open experience will execute the file, for example a html file in a document library does get executed and page is shown in the browser. In strict this file would be downloaded.
 
-Today the default setting is strict, and you already cannot switch your tenant to the permissive model. For tenants that switched to permissive in the past things will change: the tenant permissive model will be deprecated, at that point all tenants will be switched to strict.
+Today the default setting is strict, and you already cannot switch your tenant to the permissive model. For tenants that switched to permissive in the past things will change: the tenant permissive model will be deprecated by end of 2018, at that point all tenants will be switched to strict.
+
+> [!IMPORTANT]
+> On December 31st 2018 all tenants still using the **permissive** model will be switched to the **strict** model!
 
 
 # Is my tenant impacted?
@@ -28,7 +36,7 @@ The result of the scanner is CSV file listing all the impacted (html/htm + optio
 Once you’ve the list of impacted files you need to assess which if these files and the sites holding these files are still business relevant. The file and/or site might be stale and if so remediation of those files/sites might be skipped. To help you with understanding the business need the report contains the site collection admins and site owners, providing you the needed information to contact them.
 
 ## Step 3: Remediate the files
-If the files are still important and you’ll want to continue to be able to execute the files once the tenant has moved to the strict setting, then you’ll need to remediate the files as explained in the next chapters. 
+If the files are still important and you’ll want to continue to be able to execute the files once the tenant has moved to the strict setting, then you’ll need to remediate the files as explained in the next chapters.
 
 # Remediation process for html/htm files
 The main reason for customers sticking with permissive mode is because they want to be able to use html files from inside a document library. As mentioned before once moved to strict these files will simply download and not automatically open anymore.

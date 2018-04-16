@@ -46,7 +46,7 @@ Do not supply a request body for this method.
 #### Sample Request
 
 ```HTTP
-GET
+POST
 https://contoso.sharepoint.com/sites/advertising/collections/_api/web/SyncHubSiteTheme
 ```
 
