@@ -1,12 +1,12 @@
 ---
-title:  SharePoint Developer Community resources
+title:  SharePoint Developer Community (SharePoint PnP) resources
 description: The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. 
 ms.date: 03/29/2018
 ms.prod: sharepoint
 
 ---
 
-# SharePoint Developer Community - SharePoint PnP
+# SharePoint Developer Community (SharePoint PnP) resources
 
 The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
 
