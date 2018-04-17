@@ -187,19 +187,11 @@ Office 365 tenant administrators can manage permission grants and requests throu
 
 1. Open the modern SharePoint admin center by navigating to the [Office 365 portal landing page](https://portal.office.com).  Sign in with your organizational account.
 
-  ![Office 365 portal landing page](./../images/webapipermissions-o365portal.png)
-
 2. From the list of apps, choose **Admin**.
-
-  ![The Admin app highlighted in the Office 365 portal landing page](./../images/webapipermissions-o365portal-adminlink.png)
 
 3. In the Office 365 Admin center, in the **Admin centers** group, choose **SharePoint**.
 
-  ![The link to SharePoint admin center highlighted in the Office 365 Admin center](./../images/webapipermissions-o365portal-spadminlink.png)
-
 4. In the SharePoint admin center, choose the **Try the new SharePoint admin center** link.
-
-  ![The 'Try the new SharePoint admin center' link highlighted in the SharePoint admin center](./../images/webapipermissions-o365portal-modernspadminlink.png)
 
 <br/>
 
