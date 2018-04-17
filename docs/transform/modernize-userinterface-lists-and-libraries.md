@@ -42,7 +42,7 @@ A list can be blocked due to one or more reasons, which are all spelled out in t
 
 ### Incompatible customizations
 
-This is the most common reason for lists not to render in modern. Incompatible customizations are typically one of the following:
+An incompatible customization is the most common reason for lists not rendering in modern, and is typically due to one of the following:
 
 - The use of JSLink
 - The use of a user custom action that embeds JavaScript
