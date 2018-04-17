@@ -66,5 +66,5 @@ After you analyze the sites that you want to modernize, you can continue with th
 ## See also
 
 - [Maximize use of the modern list and library user interface](modernize-userinterface-lists-and-libraries.md)
-- [Modernize your classic SharePoint sites](modernize-classic-site.md)
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)
 <!-- [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md)-->

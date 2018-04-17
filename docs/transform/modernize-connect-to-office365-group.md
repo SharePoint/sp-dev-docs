@@ -195,4 +195,4 @@ Running the following PowerShell script requires that you update the tenant admi
 
 ## See also
 
-- [Modernize your classic SharePoint sites](modernize-classic-site.md)
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)

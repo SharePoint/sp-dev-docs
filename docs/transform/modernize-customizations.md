@@ -121,4 +121,4 @@ Currently it's not possible to add your own custom menu items to the site action
 - [Overview of the SharePoint Framework](../spfx/sharepoint-framework-overview.md)
 - [Overview of SharePoint Framework Extensions](../spfx/extensions/overview-extensions.md)
 - [SharePoint Framework Extensions samples and tutorial materials](https://github.com/SharePoint/sp-dev-fx-extensions)
-- [Modernize your classic SharePoint sites](modernize-classic-site.md)
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)

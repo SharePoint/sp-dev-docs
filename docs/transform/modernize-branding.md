@@ -106,4 +106,4 @@ Set-PnPWebTheme -Theme "CustomCompanyTheme"
 ## See also
 
 - [SharePoint site theming](../declarative-customization/site-theming/sharepoint-site-theming-overview.md)
-- [Modernize your classic SharePoint sites](modernize-classic-site.md)
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)

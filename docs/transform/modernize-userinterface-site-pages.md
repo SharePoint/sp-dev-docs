@@ -11,4 +11,4 @@ Content to come soon.
 
 ## See also
 
-- [Modernize your classic SharePoint sites](modernize-classic-site.md)
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)

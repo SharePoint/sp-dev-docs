@@ -64,4 +64,4 @@ Classic list view and edit pages are editable by users, so you could, for exampl
 ## See also
 
 - [Modernize the user interface](modernize-userinterface.md)
-- [Modernize your classic SharePoint sites](modernize-classic-site.md)
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)
