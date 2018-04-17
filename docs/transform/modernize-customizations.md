@@ -1,11 +1,11 @@
 ---
-title: Modernize the customizations
+title: Modernize customizations
 description: Modernize the customizations using SharePoint Framework and other modern options
 ms.date: 03/23/2018
 ms.prod: sharepoint
 ---
 
-# Introduction
+# Modernize customizations
 
 An important aspect of a site modernization is understanding the customizations that are used on that site as not all existing customizations continue to work after the site modernization. A classic example we see coming back a lot is a site banner showing some company information (e.g. a legal notice). 
 
