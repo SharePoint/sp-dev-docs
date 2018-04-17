@@ -587,7 +587,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
     
 7. Select **SAVE** at the bottom of the screen.
     
-8. Register the add-in with Azure ACS. This must be done even if the add-in does not access SharePoint and does not use tokens from ACS because the same process also registers the add-in with the Add-in Management Service of the Office 365 subscription, which is a requirement. (It is called "Add-in Management Service" because SharePoint Add-ins were originally called "apps for SharePoint".) 
+8. Register the add-in with Azure ACS. This must be done even if the add-in does not access SharePoint and does not use tokens from ACS because the same process also registers the add-in with the Add-in Management Service of the Office 365 subscription, which is a requirement. (It is called "Add-in Management Service" because SharePoint Add-ins were originally called "apps for SharePoint.") 
 
   You perform the registration on the AppRegNew.aspx page of any SharePoint website in the Office 365 subscription. For details, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md). 
   

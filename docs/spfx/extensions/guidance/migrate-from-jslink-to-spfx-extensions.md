@@ -156,7 +156,7 @@ To reproduce the same behavior of the `JSLink` custom field rendering, you need 
 
 2. Open the **CustomColorFieldFieldCustomizer.ts** file in the **src/extensions/customColorField** folder, and edit the content according to the following code snippet:
 
-    ``` TypeScript
+    ```TypeScript
     import { Log } from '@microsoft/sp-core-library';
     import { override } from '@microsoft/decorators';
     import {
@@ -269,7 +269,7 @@ You are now ready to replace the JavaScript code with TypeScript to benefit from
 
 1. Open the file **CustomColorFieldFieldCustomizer.module.scss** in the **src/extensions/customColorField** folder. This file, which is a Sass CSS, represents the UI style for the field customizer. Replace the content of the SCSS file with the following.
 
-    ``` SCSS
+    ```SCSS
     .CustomColorField {
     .cell {
         float: left;
@@ -303,7 +303,7 @@ You are now ready to replace the JavaScript code with TypeScript to benefit from
 
 2. Replace the implementation of the `onRenderCell` method with the following code excerpt.
 
-    ``` TypeScript
+    ```TypeScript
     @override
     public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 

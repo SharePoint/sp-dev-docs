@@ -158,7 +158,7 @@ Now that we have configured the loader, let's update our code and add a few file
 
 5. You can then reference this string in your code, for example:
 
-  ``` TypeScript
+  ```TypeScript
   public render(): void {
     this.domElement.innerHTML = markdownString;
   }

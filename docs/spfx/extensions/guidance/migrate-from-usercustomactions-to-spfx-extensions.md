@@ -199,7 +199,7 @@ The UI elements of the custom footer are rendered using React and a custom React
 
     In the following code excerpt, you can see the imports section of the **CustomFooterApplicationCustomizer.ts** file.
 
-    ``` TypeScript
+    ```TypeScript
     import * as React from 'react';
     import * as ReactDom from 'react-dom';
 
@@ -222,7 +222,7 @@ The UI elements of the custom footer are rendered using React and a custom React
 
     In the following code excerpt you can see the implementation of the custom footer Application Customizer class.
 
-    ``` TypeScript
+    ```TypeScript
     /** A Custom Action which can be run during execution of a Client Side Application */
     export default class CustomFooterApplicationCustomizer
     extends BaseApplicationCustomizer<ICustomFooterApplicationCustomizerProperties> {
