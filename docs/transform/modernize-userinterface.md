@@ -1,6 +1,6 @@
 ---
 title: Modernize the user interface
-description: Make the switch to a modern user interface by updating your lists and libraries and site pages.
+description: Make the switch to a modern user interface by updating your SharePoint lists and libraries and site pages.
 ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
@@ -66,5 +66,5 @@ After you analyze the sites that you want to modernize, you can continue with th
 ## See also
 
 - [Maximize use of the modern list and library user interface](modernize-userinterface-lists-and-libraries.md)
-
+- [Modernize your classic SharePoint sites](modernize-classic-site.md)
 <!-- [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md)-->

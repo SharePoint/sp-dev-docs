@@ -8,3 +8,7 @@ ms.prod: sharepoint
 # Transform classic pages to modern client-side pages
 
 Content to come soon.
+
+## See also
+
+- [Modernize your classic SharePoint sites](modernize-classic-site.md)

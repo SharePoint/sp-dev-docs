@@ -1,6 +1,6 @@
 ---
 title: Modernize customizations
-description: Overview of the customizations that are not compatible with the modern user interface and guidelines on how to remediate them.
+description: Overview of the customizations that are not compatible with the modern user interface in SharePoint and guidelines on how to remediate them.
 ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
@@ -121,3 +121,4 @@ Currently it's not possible to add your own custom menu items to the site action
 - [Overview of the SharePoint Framework](../spfx/sharepoint-framework-overview.md)
 - [Overview of SharePoint Framework Extensions](../spfx/extensions/overview-extensions.md)
 - [SharePoint Framework Extensions samples and tutorial materials](https://github.com/SharePoint/sp-dev-fx-extensions)
+- [Modernize your classic SharePoint sites](modernize-classic-site.md)

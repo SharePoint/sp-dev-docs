@@ -1,6 +1,6 @@
 ---
 title: Modernize site branding
-description: Guidance on moving to modern customization experiences within SharePoint
+description: Guidance on moving to modern customization experiences within SharePoint, including how to handle the custom master pages and alternate CSS configurations.
 ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
@@ -106,3 +106,4 @@ Set-PnPWebTheme -Theme "CustomCompanyTheme"
 ## See also
 
 - [SharePoint site theming](../declarative-customization/site-theming/sharepoint-site-theming-overview.md)
+- [Modernize your classic SharePoint sites](modernize-classic-site.md)
