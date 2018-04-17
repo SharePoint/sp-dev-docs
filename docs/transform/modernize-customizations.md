@@ -1,7 +1,7 @@
 ---
 title: Modernize customizations
 description: Modernize the customizations using SharePoint Framework and other modern options
-ms.date: 03/23/2018
+ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 

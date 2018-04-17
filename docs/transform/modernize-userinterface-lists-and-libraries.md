@@ -1,7 +1,7 @@
 ---
 title: Maximize use of the modern list and library user interface
 description: Maximize your use of the modern list and library user interface
-ms.date: 03/23/2018
+ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 

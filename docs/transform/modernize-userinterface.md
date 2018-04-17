@@ -1,76 +1,70 @@
 ---
 title: Modernize the user interface
-description: Modernize the user interface
-ms.date: 03/23/2018
+description: Make the switch to a modern user interface by updating your lists and libraries and site pages.
+ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 
 # Modernize the user interface
 
-One of the immediately visible elements of a modern site, like a modern team site or communication site, is it's modern user interface. These sites do have a home page which is using a modern site page and when you navigate to the lists and libraries you'll notice that they're shown using a modern user interface as well. But what if your site today still shows lists and libraries using the classic user interface or your site still has classic site pages in the form of wiki pages or web part pages? There are options to modernize your site's user interface, which is the main topic of this article series.
+One of the immediately visible elements of a modern team site or communication site is its modern user interface, as evidenced on its home page and lists and libraries pages. 
 
-When it comes to switching to a modern user interface there are two areas you need to work on:
+But what if your site today still has lists and libraries, wiki pages, or web part pages that use the classic user interface?
+
+To make the switch to a modern user interface, you need to focus on the following:
  
-- Making your lists and libraries use the modern user interface (also referred to as the modern list and library experience)
-- Transforming your site pages from classic wiki and web part pages into modern client side pages
-
-Both areas will be discussed in more detail in this article series.
+- Transitioning your lists and libraries to use the modern user interface (also referred to as the modern list and library experience)
+- Transforming your site pages from classic wiki and web part pages into modern client-side pages
 
 > [!IMPORTANT]
-> We're not deprecating the "classic" experience; both "classic" and "modern" will coexist.
+> The "classic" experience is not being deprecated; both "classic" and "modern" will coexist.
 
-## User interface modernization process
+Where do you start when you want to modernize the user interface of your sites? What sites should be modernized first? These are very relevant questions, and are addressed in the following steps.
 
-Where do you start when you want to modernize the user interface of your sites? What sites can be modernized first? These are all very relevant questions which will be addressed in this chapter via a step by step approach.
+## Step 1: Identify and educate stakeholders
 
-### Step 1: Learn
+Before embarking on this modernization journey, it's important that the following stakeholders become familiar with the SharePoint modern user interface.
 
-Before embarking this modernization journey it's important that the involved stakeholders build up knowledge around the modern user interface in SharePoint:
+- **Key business stakeholders** - The modern user interface must meet the needs of the business user, and the key business stakeholders should be advocates of this change. Granting them access to a playground environment and closely working with them will help them understand what works well and what doesn't. Later on, these key business stakeholders will play a crucial role in helping your end users adopt the modern user interface.
+- **Customization team and developers** - Because customizations built in the past may no longer work in the modern user interface, this team needs to be available to redesign those customizations.
+- **SharePoint administrators** -  The admins will be the ones that enable the modern user interface across your tenant and its sites.
+- **Change management and governance teams** - If these teams exist in your organization, they should be looped in as well because switching from the classic user interface to the modern user interface impacts change for users, and might require an update of internal training materials.
 
-- The key business stakeholders should have the option to experiment with the modern user interface: it's important that the modern user interface fulfils the business user needs and that the key business stakeholders are advocates of this change. By granting them access to a playground environment and by closely working with them one will understand what works well, but also what doesn't work well. The key business stakeholders later on play a crucial role in helping your end users adopt the modern user interface
-- Your customization team / developers are important as well as customizations built in the past do not always work anymore on the modern user interface. Often these customizations can be redesigned to work, so this should not be a blocking issue
-- The SharePoint administrators will have to enable the modern user interface across your tenant and it's sites, hence they should also become familiar with the modern user interface
-- Change management / governance teams should be looped in as well (if they exist in your organization) as switching from classic user interface to a modern user interface is an end user impacting change and might require that you need to update internal training material
+With the right teams looped in and educated, you can continue to the next step.
 
-With the right teams looped in and educated you can continue to the next step.
+## Step 2: Analyze your site collections
 
-### Step 2: Analyze
+Your tenant might contain thousands of site collections, so which of these site collections are good candidates to modernize and which aren't? To help you understand the readiness of your existing sites, Microsoft has built the following scanners:
 
-Your tenant might contain thousands of site collections...so which of these site collections are good candidates to modernize and which aren't? To help you understand the readiness of your existing sites Microsoft has built scanners:
+- **SharePoint "Modern" user interface experience scanner** - The [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) helps you get a deep understanding of the modern user interface compatibility of your lists and libraries. If your focus is to **transform your lists and libraries** to use the modern user interface, use this scanner. Certain lists and libraries cannot be shown when using a modern user interface due to reasons such as:
 
-- The [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) will help get a deep understanding on the modern user interface compatibility of your lists and libraries: certain lists and libraries cannot be shown using a modern user interface due numerous reasons like for example:
+  - A list has columns that are not compatible with the modern user interface.
+  - A list uses customizations (for example, JSLink) that are not compatible.
+  - A list template (for example, an events list) is not (yet) built to work in the modern user interface.
 
-  - List has columns which are not compatible with modern
-  - List uses customizations (e.g. JSLink) which are not compatible
-  - List template (e.g. events list) was not (yet) build to work in modern
-  - ...
+- **SharePoint Modernization scanner** - The [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) provides a detailed analysis of your site's readiness for connecting to an Office 365 Group combined with a detailed analysis of the wiki and web part pages in your environment. These outcomes can be used initially to drive remediation work, followed later on by migration work. If your focus is to **transform your site pages** to use the modern user interface, use this scanner.
 
-- The [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) provides a detailed analysis of your site's readiness for connecting to an Office 365 group combined with a detailed analysis of the wiki and web part pages in your environment. These outcomes can be used to initially drive remediation work, followed by migration work later on
+## Step 3: Modernize your site collections
 
-If you are going to spent on time making your lists and libraries use the modern user interface then us the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner), when it comes to page modernization use the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization).
+After you analyze the sites that you want to modernize, you can continue with the actual modernization, which contains one or more of the following components:
 
-### Step 3: Modernize
+- Replace incompatible customizations with equivalents that work in a modern user interface. Following are some samples. For more information, see [Modernize customizations](modernize-customizations.md).
 
-After you've analyzed the sites you want to modernize you can continue with the actual modernization which contains one or more from the below components:
+  - Replace JSLink with a [column formatter](../declarative-customization/column-formatting.md) or with a [SharePoint Framework field customizer extension](../spfx/extensions/get-started/building-simple-field-customizer.md).
+  - Replace existing first-party web parts with [SharePoint Framework client-side web parts](../spfx/web-parts/overview-client-side-web-parts.md) in case there's no out-of-the-box client-side web part available that provides similar capabilities.
+  - Replace JavaScript embedding via user custom actions with a [SharePoint Framework application customizer extension](../spfx/extensions/get-started/build-a-hello-world-extension.md).
+  - Replace list commands (user custom actions) with [SharePoint Framework ListView command set extensions](../spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md).
 
-- Replace incompatible customizations with equivalents that work in a modern user interface. Below are some samples and much more details can be found in the [Modernize your customizations](modernize-customizations.md) article:
+- Modernize your user experience by:
 
-  - Replacing JSLink with a [column formatter](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting) or with a [SharePoint Framework field customizer extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer)
-  - Replace existing first party web parts with [SharePoint Framework client side web parts](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/overview-client-side-web-parts) in case there's no out-of-the-box client side web part available that provides similar capabilities
-  - Replace JavaScript embedding via user custom action with a [SharePoint Framework application customizer extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
-  - Replace list commands (user custom actions) with [SharePoint Framework ListView command set extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-cmdset-with-dialog-api)
+  - **Enabling lists and libraries to show in the modern user interface** by replacing customizations, removing incompatible columns from the used views, or (as a last resort) moving data into a modern user interface-compatible list type.
+  - **Connecting your site to an Office 365 Group** (that is, **groupify**), which gives your site a modern home page and enables your site to use, for example, a mailbox or Microsoft Planner, which then enables you to use a modern version of a calendar and task list.
+  - **Creating modern client-side pages** and configuring these to be "similar" to your key classic wiki and web part pages. Programmatic page transformation should be done for the key pages of your sites; transforming all pages is resource-intensive and often not needed. To assist in this triage, the SharePoint Modernization scanner can give you usage information about the current wiki and web part pages.
 
-- Modernize your user experience via:
+- Communicate to your end users about the completed changes; the site will work differently in a modern version, so your users need to be aware of that.
 
-  - Enabling lists and libraries to show in modern by replacing customizations, by removing incompatible columns from the used views or by (as last resort) moving data into a modern user interface compatible list type
-  - Connecting your site to an Office 365 Group (so called "groupify") which will give your site a modern home page and will enable your site to use for example a mailbox or Microsoft Planner, which then enables you to use a modern version of a calendar and task list
-  - Creating modern client side pages and configuring these to be "similar" to your key classic wiki and web part pages. Programmatic page transformation should be done for the key pages of your sites, transforming all pages will be resource intensive and often is not needed. To assist in this "triage" the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) will give you usage information about the current wiki and web part pages
+## See also
 
-- Communicate to your end users about the done changes: things will work different in a modern version, so your users need to be aware of that
+- [Maximize use of the modern list and library user interface](modernize-userinterface-lists-and-libraries.md)
 
-## Learn more
-
-You can learn more about the user interface modernization via below articles:
-
-- [Maximize your use of the modern list and library user interface](modernize-userinterface-lists-and-libraries.md)
-- [Transforming classic pages to modern client side pages](modernize-userinterface-lists-and-libraries.md)
+<!-- [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md)-->

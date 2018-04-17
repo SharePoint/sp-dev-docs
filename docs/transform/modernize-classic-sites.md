@@ -1,15 +1,15 @@
 ---
 title: Modernize your classic SharePoint sites
-description: Guidance on modernizing classic SharePoint sites
+description: Steps to transform your classic site into a modern Office 365 Group-connected team site or communication site.
 ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 
 # Modernize your classic SharePoint sites
 
-SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 Group-connected team sites or communication sites, combined with more and more functionality that can be consumed from a beautiful modern user interface. 
+SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 Group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. 
 
-All of this is great...but you might ask yourself the question: *I've got lots of classic (team) sites...how do I bring those into the modern SharePoint world?*. There's no magic switch that automatically transforms your classic sites into modern sites, but it is possible to transform a classic site into a modern site by following the guidance described in this article series.
+All of this is great...but you might ask yourself the question: *I have lots of classic (team) sites...how do I bring them into the modern SharePoint world?* You can transform a classic site into a modern site by following the guidance described in this section.
 
 ## Steps to modernize your site
 
@@ -20,7 +20,7 @@ If you want to transform (or "modernize") a classic site into a modern Office 36
 
 ### Enable your sites to fully leverage the modern user interface
 
-The most visible aspect of a modern site is its modern user interface. If you haven't turned off the modern experience at the tenant level (the **SharePoint Lists and Libraries experience** setting in the tenant admin center), certain pages appear using a modern user interface:
+The most visible aspect of a modern site is its modern user interface. If you haven't turned off the modern experience at the tenant level (the **SharePoint Lists and Libraries experience** setting in the tenant admin center), certain pages appear in the modern user interface:
 
 - List and library pages for most lists and libraries
 - Site Contents page
@@ -43,13 +43,15 @@ Classic (team) sites are not connected to an Office 365 Group, whereas modern te
 There are two options to make this happen:
 
 - You can have each site owner do this on their behalf by using a wizard that can be launched from the user interface.
-- You can perform a bulk operation in which you connect an Office 365 Group to a series of sites at one time. This option is preferred for enterprise customers because it enables you to control the used configuration (public/private, site classification, alias name).
+- You can perform a bulk operation in which you connect an Office 365 Group to a series of sites at one time. This option is preferred for enterprise customers because it enables you to control the configuration (public/private, site classification, alias name).
 
 For more information, see [Connect to an Office 365 Group](modernize-connect-to-office365-group.md).
 
-### Switch to a modern tenant scoped branding
+### Switch to a modern tenant-scoped branding
 
-Having SharePoint (team) sites use your company branding is a very common thing and for classic sites you've used one or more of the following components: site themes, alternate CSS and master pages. Master pages and alternate CSS are however not compatible with the modern user interface, so you will need to evaluate whether these branding customizations are still relevant or not. Classic site themes are respected in a modern user interface but since we now have tenant controlled site theming, switching over to that model will future proof your modernized site.
+Using your company branding on SharePoint (team) sites is very common, and for classic sites you used one or more of the following components: site themes, alternate CSS, and master pages. However, alternate CSS and master pages are not compatible with the modern user interface, so you must evaluate whether these branding customizations are still relevant. 
+
+While classic site themes are respected in a modern user interface, we now have tenant-controlled site theming, so switching over to that model will future proof your modernized site.
 
 For more information, see [Modernize site branding](modernize-branding.md).
 

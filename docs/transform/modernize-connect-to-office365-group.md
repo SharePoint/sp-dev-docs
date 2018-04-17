@@ -1,7 +1,7 @@
 ---
 title: Connect to an Office 365 Group
 description: Connect SharePoint team sites to an Office 365 Group
-ms.date: 03/23/2018
+ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 

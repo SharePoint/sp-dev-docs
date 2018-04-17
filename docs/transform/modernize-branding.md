@@ -1,7 +1,7 @@
 ---
 title: Modernize site branding
 description: Guidance on moving to modern customization experiences within SharePoint
-ms.date: 03/23/2018
+ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 
