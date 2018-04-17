@@ -39,7 +39,7 @@ Before you run this add-in , do the following:
     
 3. This add-in uses app-only permissions. You need to assign app-only permissions using the AppInv.aspx page in Office 365. Copy the following XML from the AppManifest.xml file to the Permission Request XML textbox on the AppInv.aspx page, as shown in Figure 1. 
 
-	``` 
+	```XML 
 	  <AppPermissionRequests AllowAppOnlyPolicy="true">
 	    <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
 	    <AppPermissionRequest Scope="http://sharepoint/taxonomy" Right="Read" />

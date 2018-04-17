@@ -104,7 +104,7 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 
 3. Open the **CustomEcbCommandSet.ts** file in the **src/extensions/customEcb** folder and edit the content according to the following code snippet:
 
-  ``` TypeScript
+  ```TypeScript
   import { Guid } from '@microsoft/sp-core-library';
   import { override } from '@microsoft/decorators';
   import {
