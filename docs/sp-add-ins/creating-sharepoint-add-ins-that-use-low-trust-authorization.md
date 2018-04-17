@@ -16,7 +16,7 @@ Provider-hosted SharePoint Add-ins that use the low-trust authorization system c
 
 ## Registration with Azure ACS
 
-To use the low-trust system, the SharePoint Add-in must first be registered with Azure ACS and with the App Management Service of the SharePoint farm or SharePoint Online tenancy. (It is called "App Management Service" because SharePoint Add-ins were originally called "apps for SharePoint".) 
+To use the low-trust system, the SharePoint Add-in must first be registered with Azure ACS and with the App Management Service of the SharePoint farm or SharePoint Online tenancy. (It is called "App Management Service" because SharePoint Add-ins were originally called "apps for SharePoint.") 
 
 For add-ins that are sold through the Office Store, registration to ACS is performed in the Seller Dashboard, and registration with the service is performed when the add-in is installed. 
 
