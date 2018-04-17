@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.assetid: e9c97a17-51ad-43ba-a94a-5078bcb83c74
 ---
 
-# Schema reference for SharePoint 2013
+# Schema reference for SharePoint
 
-**Applies to**: SharePoint Add-ins | SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+**Applies to**: SharePoint Framework | SharePoint Add-ins | SharePoint Online | SharePoint 2016 | SharePoint Server 2013 | SharePoint Foundation 2013 
 
 This section collects all SharePoint schemas into eight sections, providing easy access to schemas for SharePoint Add-ins, BCS, workflows CAML, SharePoint search settings portability schemas, and other SharePoint schemas.
 

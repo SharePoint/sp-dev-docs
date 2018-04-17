@@ -1624,7 +1624,7 @@
   - name: PnP Sites Core API reference - Extension methods
     href: https://docs.microsoft.com/en-us/dotnet/api/?term=microsoft.sharepoint
 - name: SharePoint schema reference
-  href: schema/schema-reference-for-sharepoint-2013.md
+  href: schema/schema-reference-for-sharepoint.md
   items:
   - name: SharePoint Add-in schemas
     href: schema/sharepoint-add-in-schemas.md

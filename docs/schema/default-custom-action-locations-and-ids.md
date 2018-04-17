@@ -465,14 +465,6 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 
 - [Custom Action Definition Schema](custom-action-definition-schema.md)
 - [How to: Add Actions to the User Interface](http://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)
-- [Schema reference for SharePoint 2013](schema-reference-for-sharepoint-2013.md)
-
+- [Schema reference for SharePoint](schema-reference-for-sharepoint-2013.md)
 
 <br/>
-
-
-
-
-
-
-
