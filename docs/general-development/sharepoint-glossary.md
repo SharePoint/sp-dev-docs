@@ -31,7 +31,7 @@ Find definitions for terms used in SharePoint developer documentation.
 |alternate account  <br/> |An additional user account that is in a different domain, but within the same forest as the primary account.  <br/> |
 |app catalog  <br/> |A SharePoint document library that administrators can use to distribute apps for Office and SharePoint to their end users.  <br/> |
 |app custom action  <br/> |A type of custom action that is added to a host site by a SharePoint Add-in (formerly an app for SharePoint) and that links to more functionality that is contained by the add-in.  <br/> |
-|app for SharePoint  <br/> |A cloud-enabled app that integrates rich, scenario-focused content and services into a SharePoint environment. Now known as SharePoint Add-in. <br/> |
+|app for SharePoint  <br/> |A cloud-enabled app that integrates rich, scenario-focused content and services into a SharePoint environment. Now known as "SharePoint Add-in." <br/> |
 |app part  <br/> |A component of a SharePoint Add-in (formerly an app for SharePoint) that can be embedded on a site page to expose the functionality of the add-in.  <br/> |
 |app web  <br/> |A sub website to which the SharePoint components of an add-in are deployed when the add-in is installed on a host web.  <br/> |
 |application directory  <br/> |The directory on an index server or a query server where all files are stored for the purpose of creating a full-text index catalog or performing queries on a full-text index catalog.  <br/> |
@@ -176,6 +176,7 @@ Find definitions for terms used in SharePoint developer documentation.
 |server-to-server protocol  <br/> |An authentication protocol between two servers or services.  <br/> |
 |Shared Documents library  <br/> |A document library that is included by default in the Team Site site template.  <br/> |
 |shared view  <br/> |A view of a list or web part Page that every user who has the appropriate permissions can see.  <br/> |
+|SharePoint Add-in  <br/> |Formerly "app for SharePoint." A cloud-enabled add-in that integrates rich, scenario-focused content and services into a SharePoint environment. <br/> |
 |SharePoint Search SQL syntax  <br/> |The rules that govern the construction of an enterprise search SQL query.  <br/> |
 |single sign-on ticket  <br/> |A token that contains the encrypted identity of a single sign-on (SSO) user in the form of a security identifier string and a nonce.  <br/> |
 |site collection administrator  <br/> |A user who has administrative permissions for a site collection.  <br/> |
