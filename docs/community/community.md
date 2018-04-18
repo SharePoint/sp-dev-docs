@@ -47,3 +47,4 @@ There are numerous community calls for SharePoint development, and you can choos
 
 - [SharePoint developer portal](http://aka.ms/spdev)
 - [SharePoint developer samples](http://aka.ms/spdev-samples)
+- [SharePoint glossary](../general-development/sharepoint-glossary.md) 

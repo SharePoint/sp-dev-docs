@@ -31,7 +31,9 @@ This section collects all SharePoint schemas into eight sections, providing easy
 - [Other SharePoint schemas](other-sharepoint-schemas.md)
 
 
+## See also
 
+- [SharePoint glossary](../general-development/sharepoint-glossary.md) 
 
 
 
