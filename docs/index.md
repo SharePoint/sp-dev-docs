@@ -229,9 +229,9 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint Add-ins</h3>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins">Overview of SharePoint add-ins</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins">Provider hosted add-ins</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins">SharePoint hosted add-ins</a></p>
+                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins">Overview of SharePoint Add-ins</a></p>
+                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins">Provider-hosted add-ins</a></p>
+                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins">SharePoint-hosted add-ins</a></p>
                     </div>
                 </div>
             </div>
@@ -243,9 +243,10 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint development overview</h3>
-                            <p><a href="/SharePoint/dev/general-development/programming-models-in-sharepoint.md">Programming models for SharePoint</a></p>
-                            <p><a href="/SharePoint/dev/general-development/office-365-cdn.md">Use the Office 365 content delivery network</a></p>
-                            <p><a href="/SharePoint/dev//general-development/site-collection-app-catalog.md">Use the site collection app catalog</a></p>
+                            <p><a href="../general-development/programming-models-in-sharepoint.md">Programming models for SharePoint</a></p>
+                            <p><a href="../general-development/office-365-cdn.md">Use the Office 365 content delivery network</a></p>
+                            <p><a href="../general-development/site-collection-app-catalog.md">Use the site collection app catalog</a></p>
+                            <p><a href="../general-development/sharepoint-glossary.md">Refer to the SharePoint glossary</a></p>
                     </div>
                 </div>
             </div>
@@ -256,10 +257,10 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Solution Guidance</h3>
-                            <p><a href="/sharepoint/dev/transform/modernize-classic-sites.md">Modernize your classic SharePoint sites</a></p>
-                            <p><a href="/sharepoint/dev/solution-guidance/modern-experience-customizations.md">Customizing modern experiences</a></p>
-                            <p><a href="/sharepoint/dev/solution-guidance/portal-overview.md">Building SharePoint Online portals</a></p>
+                        <h3>Solution guidance</h3>
+                            <p><a href="../transform/modernize-classic-sites.md">Modernize your classic SharePoint sites</a></p>
+                            <p><a href="../solution-guidance/modern-experience-customizations.md">Customizing modern experiences</a></p>
+                            <p><a href="../solution-guidance/portal-overview.md">Building SharePoint Online portals</a></p>
                     </div>
                 </div>
             </div>
