@@ -1,6 +1,6 @@
 ---
 title: Modernize customizations
-description: Overview of the customizations that are not compatible with the modern user interface in SharePoint and guidelines on how to remediate them.
+description: Overview of the customizations that are not compatible with the modern user interface in SharePoint, and guidelines on how to remediate them.
 ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
@@ -13,7 +13,7 @@ This typically is realized via a user custom action that embeds JavaScript on th
 
 This article gives an overview of the customizations that are not compatible with the modern user interface and guidelines on how to remediate them.
 
-## Customizations used in lists and libraries
+## Customizations in lists and libraries
 
 This section focuses on customizations that you might have implemented in your lists and libraries. SharePoint automatically falls back to the classic list and library user interface when it detects an incompatible customization. Therefore, it's important to address these customizations if you want to get a 100% modern experience. 
 
@@ -68,7 +68,7 @@ To learn more about SharePoint Framework Field Customizer extensions, see:
 
 ### List-scoped user custom actions that add custom menu options or embed JavaScript
 
-Using a list-scoped user custom action that adds custom menu options in the list ribbon or context menu or embeds JavaScript is, next to JSLink, a very common customization pattern that does not work anymore for the modern list and library experience. Fortunately, by using SharePoint Framework Extensions, you can realize similar customizations, in particular via command set extensions that allow you to add custom ECB menu items or custom buttons to the command bar of a list or library. You can associate any JavaScript (TypeScript) action to these commands.
+Using a list-scoped user custom action that adds custom menu options in the list ribbon or context menu or embeds JavaScript is, next to JSLink, a very common customization pattern that does not work anymore for the modern list and library experience. Fortunately, by using SharePoint Framework Extensions, you can realize similar customizations, in particular via command set extensions that allow you to add custom Edit Control Block (ECB) menu items or custom buttons to the command bar of a list or library. You can associate any JavaScript (TypeScript) action to these commands.
 
 <br/>
 
@@ -78,19 +78,21 @@ To learn more about SharePoint Framework ListView Command Set extensions, see:
 
 - [Build your first ListView Command Set extension](../spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md)
 - [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](../spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md)
-- [Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extensions](../spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md)
+- [Migrating from ECB menu item to SharePoint Framework Extensions](../spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md)
 - [Migrating from UserCustomAction to SharePoint Framework Extensions tutorial](../spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md)
 
 
-## Customizations used on pages
+## Customizations on pages
 
 SharePoint has multiple flavors of classic site pages such as wiki pages, web part pages, and publishing pages. Each of these pages allow the user to customize them by adding web parts and (formatted) text or by embedding JavaScript via user custom actions. This section gives an overview of the existing customization models and how these can be replaced by modern compatible options.
 
-### The use of out-of-the-box classic web parts
+### Out-of-the-box classic web parts
 
-SharePoint has many out-of-the-box web parts (including the script editor web part) that work on classic pages but not on modern pages (that is, there's no out-of-the-box modern equivalent). There's also a nice set of modern, first-party, client-side web parts available that offer similar functionality for some of the classic web parts; however, there's no feature parity. 
+SharePoint has many out-of-the-box web parts (including the script editor web part) that work on classic pages but not on modern pages (that is, there's no out-of-the-box modern equivalent). There's also a set of modern, first-party, client-side web parts available that offer similar functionality for some of the classic web parts; however, there's no feature parity. 
 
-If you need the functionality of a classic web part as a modern client-side equivalent, you must either roll your own version based on the SharePoint Framework or alternatively consume a web part from the large list of open source SharePoint Framework web parts, which you can find in the [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) GitHub repository. Following is a diagram showing a sample web part.
+If you need the functionality of a classic web part as a modern client-side equivalent, you must either roll your own version based on the SharePoint Framework or alternatively consume a web part from the large list of open source SharePoint Framework web parts, which you can find in the [sp-dev-fx-webparts GitHub repository](https://github.com/SharePoint/sp-dev-fx-webparts). 
+
+Following is a diagram showing a sample web part.
 
 ![SPFX Web Part sample](media/modernize/spfx-react-image-magnifier.gif)
 
@@ -102,17 +104,21 @@ To learn more about SharePoint Framework client-side web parts, see:
 
 ### Site or web-scoped user custom actions that embed JavaScript
 
-In the introduction, we mentioned the common pattern of adding a site banner by embedding JavaScript via a site/web-scoped user custom action. Because this pattern is not compatible with the modern user interface, you must rework this type of customization based upon the SharePoint Framework Application Customizer extensions. By using application customizers, you can insert custom script that can be used to embed HTML into the SharePoint modern user interface at predefined extension points at the top or bottom of the page.
+In the introduction, we mentioned the common pattern of adding a site banner by embedding JavaScript via a site/web-scoped user custom action. Because this pattern is not compatible with the modern user interface, you must rework this type of customization based upon the SharePoint Framework application customizer extensions. By using application customizers, you can insert custom script that can be used to embed HTML into the SharePoint modern user interface at predefined extension points at the top or bottom of the page.
+
+<br/>
 
 ![SPFX Application Customizer sample](media/modernize/spfx-application-customizer-sample.png)
 
-To learn more about SharePoint Framework Application Customizer extensions, see:
+<br/>
 
-- [Build your first SharePoint Framework Application Customizer Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
+To learn more about SharePoint Framework application customizer extensions, see:
+
+- [Build your first SharePoint Framework Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
 - [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
 - [Migrating from UserCustomAction to SharePoint Framework Extensions tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
 
-### The addition of custom menu items in the site actions
+### Custom menu items in the site actions menu
 
 Currently it's not possible to add your own custom menu items to the site actions menu (the **gear icon**) on modern pages. Alternative strategies you can follow are adding the needed links into the site's navigation or by adding the needed links on the site's home page.
 

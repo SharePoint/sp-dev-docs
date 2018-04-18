@@ -13,7 +13,9 @@ Next to these master pages and alternate CSS settings, you could have used a cla
 
 ## Detect sites that use master pages or alternate CSS
 
-The recommended approach to find out which sites use a custom master page or use the alternate CSS option is to run the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner). This tool performs a deep analysis of all the sites in your tenant and create reports that give you details on sites that still have incompatible master pages or alternate CSS settings. Based on the scanner output, you can remediate these sites. 
+The recommended approach to find out which sites use a custom master page or use the alternate CSS option is to run the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner). This tool performs a deep analysis of all the sites in your tenant and creates reports that give you details about sites that still have incompatible master pages or alternate CSS settings. Based on the scanner output, you can remediate these sites. 
+
+### Revert back to the default configuration
 
 Following is a PnP PowerShell script that shows how to revert back to the default configuration:
 
@@ -38,7 +40,9 @@ $web.Context.ExecuteQuery()
 
 ## Use a tenant-controlled SharePoint theme
 
-SharePoint offers a series of default themes out-of-the-box that you can use, but if you want to push your company branding, we recommend that you create your company theme and hide the out-of-the-box themes. After that configuration is complete, your users can only select from the company SharePoint themes that you've configured, and you can programmatically set such a theme as part of the modernization effort.
+SharePoint offers a series of default themes out-of-the-box that you can use, but if you want to push your company branding, we recommend that you create your company theme and hide the out-of-the-box themes. After that configuration is complete, your users can only select from the company SharePoint themes that you've configured, and you can programmatically set such themes as part of the modernization effort.
+
+### Add a company SharePoint theme
 
 Following is a sample PnP PowerShell script showing how to add a company SharePoint theme:
 
@@ -85,7 +89,7 @@ $themepalette = @{
 Add-PnPTenantTheme -Identity "CustomCompanyTheme" -Palette $themepalette -IsInverted:$false
 ```
 
-<br/>
+### Use your company SharePoint theme
 
 To use your company SharePoint theme, you can use the following script:
 
