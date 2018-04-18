@@ -1290,14 +1290,14 @@
     - name: Modernize the user interface
       href: transform/modernize-userinterface.md
       items:
-      - name: Maximize use of the modern list and library user interface
+      - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md
-    - name: Connect to an Office 365 Group
-      href: transform/modernize-connect-to-office365-group.md
     - name: Modernize site branding
       href: transform/modernize-branding.md
+    - name: Connect to an Office 365 Group
+      href: transform/modernize-connect-to-office365-group.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:

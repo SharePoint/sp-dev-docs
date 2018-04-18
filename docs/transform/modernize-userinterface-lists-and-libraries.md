@@ -1,11 +1,11 @@
 ---
-title: Maximize use of the modern list and library user interface
+title: Maximize use of modern lists and libraries
 description: Get the maximum number of lists and libraries when using the SharePoint modern user interface.
 ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 
-# Maximize use of the modern list and library user interface
+# Maximize use of modern lists and libraries
 
 This article discusses how to get the maximum number of lists and libraries when using the modern user interface in SharePoint.
 

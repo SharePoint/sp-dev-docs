@@ -37,7 +37,7 @@ You probably already have the out-of-the-box modern user interface for lists and
 
 To maximize the use of the modern user interface for your site pages and list and library pages, see [Modernize the user interface](modernize-userinterface.md). 
 
-To learn more about how to unblock your lists and libraries when using the modern user interface, see [Maximize use of the modern list and library user interface](modernize-userinterface-lists-and-libraries.md).
+To learn more about how to unblock your lists and libraries when using the modern user interface, see [Maximize use of modern lists and libraries](modernize-userinterface-lists-and-libraries.md).
 
 You will also need to modernize your customizations as explained in [Modernize customizations](modernize-customizations.md).
 
@@ -55,7 +55,7 @@ For more information about connecting to an Office 365 Group and performing a **
 
 ## Switch to a modern tenant-scoped branding
 
-Connecting your site to an Office 365 Group not only gives you the benefits of a group-connected site, but also provides you with a new modern site home page. Depending on your needs, this new home page might meet your needs, but you can also choose to create your own modern home page. After that point, it makes sense to include other modernization tasks as well, such as switching to a modern site theme.
+Connecting your site to an Office 365 Group not only gives you the benefits of a group-connected site, but also provides you with a new modern site home page. Depending on your needs, this new home page might be adequate, but you can choose to create your own modern home page. At that point, it makes sense to include other modernization tasks as well, such as switching to a modern site theme.
 
 Using your company branding on SharePoint (team) sites is very common, and for classic sites you used one or more of the following components: site themes, alternate CSS, and master pages. However, alternate CSS and master pages are not compatible with the modern user interface, so you must evaluate whether these branding customizations are still relevant. 
 
