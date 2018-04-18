@@ -1,6 +1,6 @@
 ---
 title: Connect to an Office 365 Group
-description: Connect an Office 365 Group to an existing SharePoint site to modernize that site and have it benefit from all other group-connected services such as Microsoft Teams and Planner.
+description: Connect an Office 365 Group to an existing SharePoint site to modernize it and have it benefit from all other group-connected services such as Microsoft Teams and Planner.
 ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
