@@ -68,3 +68,4 @@ You can also post issues, questions, or feedback about the docs or the SharePoin
 - [Overview of SharePoint client-side web parts](./web-parts/overview-client-side-web-parts.md)
 - [Overview of SharePoint Framework Extensions](./extensions/overview-extensions.md)
 - [SharePoint development](https://docs.microsoft.com/en-us/sharepoint/dev/)
+- [SharePoint glossary](../general-development/sharepoint-glossary.md) 

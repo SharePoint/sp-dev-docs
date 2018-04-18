@@ -144,4 +144,5 @@ Ready to get started?
 
 ## See also
 
-[Developing Microsoft SharePoint Server 2013 Core Solutions Jump Start](http://www.microsoftvirtualacademy.com/training-courses/developing-microsoft-sharepoint-server-core-solutions-jump-start)
+- [Developing Microsoft SharePoint Server 2013 Core Solutions Jump Start](http://www.microsoftvirtualacademy.com/training-courses/developing-microsoft-sharepoint-server-core-solutions-jump-start)
+- [SharePoint glossary](../general-development/sharepoint-glossary.md) 
