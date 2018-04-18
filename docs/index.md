@@ -15,7 +15,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/sharepoint/dev/spfx/set-up-your-development-environment.md">
+        <a href="/sharepoint/dev/spfx/set-up-your-development-environment">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -243,10 +243,10 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint development overview</h3>
-                            <p><a href="../general-development/programming-models-in-sharepoint.md">Programming models for SharePoint</a></p>
-                            <p><a href="../general-development/office-365-cdn.md">Use the Office 365 content delivery network</a></p>
-                            <p><a href="../general-development/site-collection-app-catalog.md">Use the site collection app catalog</a></p>
-                            <p><a href="../general-development/sharepoint-glossary.md">Refer to the SharePoint glossary</a></p>
+                            <p><a href="/sharepoint/dev/general-development/programming-models-in-sharepoint">Programming models for SharePoint</a></p>
+                            <p><a href="/sharepoint/dev/general-development/office-365-cdn">Use the Office 365 content delivery network</a></p>
+                            <p><a href="/sharepoint/dev/general-development/site-collection-app-catalog">Use the site collection app catalog</a></p>
+                            <p><a href="/sharepoint/dev/general-development/sharepoint-glossary">Refer to the SharePoint glossary</a></p>
                     </div>
                 </div>
             </div>
@@ -258,9 +258,9 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>Solution guidance</h3>
-                            <p><a href="../transform/modernize-classic-sites.md">Modernize your classic SharePoint sites</a></p>
-                            <p><a href="../solution-guidance/modern-experience-customizations.md">Customizing modern experiences</a></p>
-                            <p><a href="../solution-guidance/portal-overview.md">Building SharePoint Online portals</a></p>
+                            <p><a href="/sharepoint/dev/transform/modernize-classic-sites">Modernize your classic SharePoint sites</a></p>
+                            <p><a href="/sharepoint/dev/solution-guidance/modern-experience-customizations">Customizing modern experiences</a></p>
+                            <p><a href="/sharepoint/dev/solution-guidance/portal-overview">Building SharePoint Online portals</a></p>
                     </div>
                 </div>
             </div>
