@@ -187,9 +187,9 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint Framework</h3>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview">Overview of the SharePoint Framework</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment">Set up your development environment</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part">Build your first client-side web part</a></p>
+                        <p><a href="/sharepoint/dev/spfx/sharepoint-framework-overview">Overview of the SharePoint Framework</a></p>
+                        <p><a href="/sharepoint/dev/spfx/set-up-your-development-environment">Set up your development environment</a></p>
+                        <p><a href="/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part">Build your first client-side web part</a></p>
                     </div>
                 </div>
             </div>
@@ -201,8 +201,8 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint REST service</h3>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service">Get to know the SharePoint REST service</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints">Complete basic operations</a></p>
+                        <p><a href="/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service">Get to know the SharePoint REST service</a></p>
+                        <p><a href="/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints">Complete basic operations</a></p>
                         <p><a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/sharepoint">SharePoint in Microsoft Graph</a></p>
                      </div>
                 </div>
@@ -215,9 +215,9 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint webhooks</h3>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks">Overview of SharePoint webhooks</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/apis/webhooks/get-started-webhooks">Get started with SharePoint webhooks</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks">SharePoint list webhooks</a></p>
+                        <p><a href="/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks">Overview of SharePoint webhooks</a></p>
+                        <p><a href="/sharepoint/dev/apis/webhooks/get-started-webhooks">Get started with SharePoint webhooks</a></p>
+                        <p><a href="/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks">SharePoint list webhooks</a></p>
                </div>
                 </div>
             </div>
@@ -229,9 +229,9 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardText">
                         <h3>SharePoint Add-ins</h3>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins">Overview of SharePoint Add-ins</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins">Provider-hosted add-ins</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins">SharePoint-hosted add-ins</a></p>
+                        <p><a href="/sharepoint/dev/sp-add-ins/sharepoint-add-ins">Overview of SharePoint Add-ins</a></p>
+                        <p><a href="/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins">Provider-hosted add-ins</a></p>
+                        <p><a href="/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins">SharePoint-hosted add-ins</a></p>
                     </div>
                 </div>
             </div>
