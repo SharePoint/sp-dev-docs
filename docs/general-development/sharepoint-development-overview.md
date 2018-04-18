@@ -124,7 +124,7 @@ When you know the kinds of SharePoint Add-in that you want to create, we provide
 - [Protocol handler error due to deprecated interface in SharePoint 2016](protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md)
 - [.NET server API reference for SharePoint](http://msdn.microsoft.com/library/fb8a82f1-9239-49ae-89f3-ce1385fb28b5%28Office.15%29.aspx)
 - [.NET client API reference for SharePoint Online](http://msdn.microsoft.com/library/88e5e1b9-eab2-4f3b-a3f2-75c96b86f1f4%28Office.15%29.aspx)
-- [SharePoint glossary](general-development/sharepoint-glossary.md) 
+- [SharePoint glossary](sharepoint-glossary.md) 
     
   
 
