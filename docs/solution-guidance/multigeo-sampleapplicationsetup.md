@@ -61,7 +61,7 @@ When using the CSOM API to manipulate profile properties you'll only do this for
 #### Using user credentials
 This requires setting up a `ClientContext` object using the tenant admin url and using SharePoint Online admin credentials. Since there's only one Azure AD instance holding users this also implies that a SharePoint Online admin is admin for all the geo locations.
 
-```C#
+```csharp
 string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 
 using (ClientContext cc = new ClientContext(tenantAdminSiteForMyGeoLocation))
@@ -112,7 +112,7 @@ When you click on Create you'll be presented with a permission consent dialog. P
 ##### Use the principal in your code
 Once the principal is created and consented you can use the principal's id and secret to request an access. The `TokenHelper.cs` class will grab the id and secret from the application's configuration file.
 
-```C#
+```csharp
 string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 
 //Get the realm for the URL

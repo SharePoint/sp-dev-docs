@@ -144,7 +144,7 @@ The  **View Notes List in App Web** link provides an "out of the box" view of th
 
 This app uses the Model-View-Controller (MVC) pattern. You can see the code for the notes scenario in the Views/CustomerDashboard/Notes.cshtml file. It uses simple REST calls to add and retrieve data. The following code retrieves notes from the Notes list for a specified customer.
 
-```C#
+```csharp
 function getNotesAndShow() {
     var executor = new SP.RequestExecutor(appWebUrl);
     executor.executeAsync(
@@ -169,7 +169,7 @@ function getNotesAndShow() {
 
 The following code adds a note for a given customer to the notes list.
 
-```C#
+```csharp
 function addNoteToList(note, customerID) {
     var executor = new SP.RequestExecutor(appWebUrl);
     var bodyProps = {
@@ -293,7 +293,7 @@ The content search web part deployed by this app uses a custom display template.
 
 The following JavaScript code that you'll find in the Views/SupportCaseAppPart\Index.cshtml file uses the cross-domain library to invoke a REST query on the SharePoint list on the host web. 
 
-```C#
+```csharp
 function execCrossDomainRequest() {
 var executor = new SP.RequestExecutor(appWebUrl);
 
@@ -341,7 +341,7 @@ This UI page is a Model-View-Controller view. The display is defined in the View
 
 The following code runs when you choose the  **Customer Dashboard** link. It retrieves all the customer names and IDs in order to populate the drop-down menu.
 
-```C#
+```csharp
 var getCustomerIDsUrl = "https://odatasampleservices.azurewebsites.net/V3/Northwind/Northwind.svc/Customers?$format=json&amp;$select=CustomerID";
     $.get(getCustomerIDsUrl).done(getCustomerIDsDone)
         .error(function (jqXHR, textStatus, errorThrown) {
@@ -351,7 +351,7 @@ var getCustomerIDsUrl = "https://odatasampleservices.azurewebsites.net/V3/Northw
 
 The following code runs when you select a customer name from the drop-down menu. It uses the OData  **$filter** argument to specify the customer ID and other query string arguments to retrieve information related to this customer.
 
-```C#
+```csharp
 var url = "https://odatasampleservices.azurewebsites.net/V3/Northwind/Northwind.svc/Customers?$format=json" +  "&amp;$select=CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Country,Phone,Fax" + "&amp;$filter=CustomerID eq '" + customerID + "'";
 
 $.get(url).done(getCustomersDone)
@@ -384,7 +384,7 @@ The app's interface displays the current user's survey rating in the center page
 
 The following code from the CSRInfoController.cs defines the  **Home** method that retrieves the user's **nameId**.
 
-```C#
+```csharp
 [SharePointContextFilter]
 public ActionResult Home()
 {
@@ -403,7 +403,7 @@ public ActionResult Home()
 
 The following code from the SurveyRatingService.cs file defines the  **SurveyRatingsService** constructor, which sets up the connection to the Azure storage account.
 
-```C#
+```csharp
 public SurveyRatingsService(string storageConnectionStringConfigName = 
         "StorageConnectionString")
 {
@@ -418,7 +418,7 @@ public SurveyRatingsService(string storageConnectionStringConfigName =
 
 The following code from the same file defines the  **GetUserScore** method, which retrieves the user's survey score from the Azure storage table.
 
-```C#
+```csharp
 public float GetUserScore(string userName)
 {
     var query = new TableQuery<Models.Customer>()
@@ -439,7 +439,7 @@ public float GetUserScore(string userName)
 
 If the table doesn't contain any survey data related to the current user, the  **AddSurveyRating** method randomly assigns a score for the user.
 
-```C#
+```csharp
 private float AddSurveyRatings(string userName)
 {
     float sum = 0;
@@ -483,7 +483,7 @@ The app's interface displays a support call queue in the center pane when you ch
 
 This page is a Model-View-Controller view that is defined in the Views\CallQueue\Home.cshmtl file. The Controllers\CallQueueController.cs file defines the  **CallQueueController** class, which contains methods for retrieving all calls in the queue, adding a call to the queue (simulating a call), and removing a call from the queue (taking a call). Each of these methods calls methods defined in the Services\CallQueueService.cs file, which uses the Azure storage queue API to retrieve the underlying information in the storage queue.
 
-```C#
+```csharp
 public class CallQueueController : Controller
 {
     public CallQueueService CallQueueService { get; private set; }
@@ -522,7 +522,7 @@ public class CallQueueController : Controller
 
 The CallQueueService.cs file defines the  **CallQueueService** class, which establishes the connection to the Azure storage queue. That class also contains the methods for adding, removing (dequeuing), and retrieving the calls from the queue.
 
-```C#
+```csharp
 public class CallQueueService
 {
     private CloudQueueClient queueClient;
@@ -623,7 +623,7 @@ This page is a Model-View-Controller view defined in the Views\CustomerDashboard
 
 The following code from the CustomerDashboardController.cs file performs the database query and returns the data to the view.
 
-```C#
+```csharp
 public ActionResult Orders(string customerId)
 {            
     Order[] orders;

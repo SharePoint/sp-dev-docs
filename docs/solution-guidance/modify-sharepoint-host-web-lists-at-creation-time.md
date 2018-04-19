@@ -25,7 +25,7 @@ The following code example shows how the  **AppInstalled** event receiver is mod
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 bool rerExists = false;
 cc.Load(cc.Web.EventReceivers);
 cc.ExecuteQuery();
@@ -58,7 +58,7 @@ if (!rerExists)
 
 When the  **ListAdded** event handler is firing, the following code runs.
 
-```C#
+```csharp
 private void HandleListAdded(SPRemoteEventProperties properties)
 {
   using (ClientContext cc = TokenHelper.CreateRemoteEventReceiverClientContext(properties))

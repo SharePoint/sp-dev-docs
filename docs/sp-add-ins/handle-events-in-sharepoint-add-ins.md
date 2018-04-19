@@ -258,7 +258,7 @@ In the following code samples, the first example (SharePoint solutions) implemen
 
 #### SharePoint solutions
 
-```C#
+```csharp
     // Trigger an event when an item is added to the SharePoint list.
     Public class OnPlantUpdated : SPItemEventReceiver
     {
@@ -278,7 +278,7 @@ In the following code samples, the first example (SharePoint solutions) implemen
 
 #### SharePoint Add-ins   
     
-```C#
+```csharp
     /* Trigger an event when an item is added to the SharePoint list*/
     Public class OnPlantUpdated : IRemoteEventService
     {

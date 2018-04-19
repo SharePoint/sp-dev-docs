@@ -51,7 +51,7 @@ If you work through the continuing example in this article, you will have a fini
 
 6. The file includes a `ProcessEvent` method that looks something like the following. (There may also be a block of code that illustrates how to get a client context. Delete it or comment it out.) 
 
-    ```C#
+    ```csharp
     public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
     {
         SPRemoteEventResult result = new SPRemoteEventResult();
@@ -71,7 +71,7 @@ If you work through the continuing example in this article, you will have a fini
 
 7. Immediately after the line that declares the `result` variable, add the following switch structure to identify which event is being handled.
         
-    ```C#
+    ```csharp
     switch (properties.EventType)
     {
         case SPRemoteEventType.AppInstalled:
@@ -90,7 +90,7 @@ If you work through the continuing example in this article, you will have a fini
 
     One way to accomplish these goals is to add the following code inside the **case** for the AppInstalled event.
     
-    ```C#
+    ```csharp
     case SPRemoteEventType.AppInstalled:
     try
     {
@@ -115,7 +115,7 @@ If you work through the continuing example in this article, you will have a fini
     
     The following is the new version of the AppInstalled **case** block. Note that initialization logic that applies to all events goes above the **switch** block. Because the same list that is installed is removed in the AppUninstalling handler, the list is identified there.
 
-    ```C#
+    ```csharp
     SPRemoteEventResult result = new SPRemoteEventResult();
     String listTitle = "MyList";
 
@@ -147,7 +147,7 @@ If you work through the continuing example in this article, you will have a fini
 
 10. Add the list creation method to the **AppEventReceiver** class as a **private** method with the following code. Note that the `TokenHelper` class has a special method that is optimized for getting a client context for an add-in event. Passing **false** for the last parameter ensures that the context is for the host web.
     
-    ```C#
+    ```csharp
     private string TryCreateList(String listTitle, SPRemoteEventProperties properties)
     {    
         string errorMessage = String.Empty;          
@@ -168,7 +168,7 @@ If you work through the continuing example in this article, you will have a fini
 
     Add the following code to the **if** block in the preceding snippet.
     
-    ```C#
+    ```csharp
     ExceptionHandlingScope scope = new ExceptionHandlingScope(clientContext); 
 
     using (scope.StartScope()) 
@@ -198,7 +198,7 @@ If you work through the continuing example in this article, you will have a fini
 
     Add the following code *above* the constructor for the **ExceptionHandlingScope**.
     
-    ```C#
+    ```csharp
     ListCollection allLists = clientContext.Web.Lists;
     IEnumerable<List> matchingLists =
         clientContext.LoadQuery(allLists.Where(list => list.Title == listTitle));
@@ -212,7 +212,7 @@ If you work through the continuing example in this article, you will have a fini
 
     Add the following code inside the **StartTry** block.
     
-    ```C#
+    ```csharp
     ConditionalScope condScope = new ConditionalScope(clientContext, 
             () => foundList.ServerObjectIsNull.Value == true, true);
     using (condScope.StartScope())
@@ -229,7 +229,7 @@ If you work through the continuing example in this article, you will have a fini
 
     Add the following code to the **StartCatch** block.
     
-    ```C#
+    ```csharp
     ConditionalScope condScope = new ConditionalScope(clientContext, 
             () => createdList.ServerObjectIsNull.Value != true, true);
     using (condScope.StartScope())
@@ -249,7 +249,7 @@ If you work through the continuing example in this article, you will have a fini
 
 The entire TryCreateList method should look like the following. (The **StartFinally** block is required even when it is not being used.)
     
-```C#
+```csharp
     private string TryCreateList(String listTitle, SPRemoteEventProperties properties)
     {    
         string errorMessage = String.Empty;  
@@ -330,7 +330,7 @@ The entire TryCreateList method should look like the following. (The **StartFina
     
     Sometimes you want to keep data, such as lists, even after the add-in is deleted; however, as an example for this article, the following is an uninstalling event handler that deletes the list that was created with the installed event handler.
 
-    ```C#
+    ```csharp
     case SPRemoteEventType.AppUninstalling:
 
     try
@@ -358,7 +358,7 @@ The entire TryCreateList method should look like the following. (The **StartFina
     
     - There are two conditional scopes that test for a list's existence by checking to see if a reference to it is **null**. But both of them have an inner **if** block that tests the very same object for nullity a second time. The outer tests, with conditional scope blocks, run on the server, but the inner nullity tests are also needed. This is because the client runtime moves through the code line-by-line to create the XML message that the **ExecuteQuery** method sends to the server. When the references to the **foundList** and **recycledList** objects are reached, one or another of these lines throws a Null Reference exception unless they are encased inside the inner nullity checks.
  
-        ```C#
+        ```csharp
         private string TryRecycleList(String listTitle, SPRemoteEventProperties properties)
         {
             string errorMessage = String.Empty;

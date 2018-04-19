@@ -255,7 +255,7 @@ The custom ribbon displays on all sites and lists on the host web because  **Reg
     
 6. Registers the custom ribbon by setting the  **CustomAction.RegistrationId** and **CustomAction.RegistrationType** to the attribute values of the **CustomAction** object read in step 2.
 
-```C#
+```csharp
  protected void InitializeButton_Click(object sender, EventArgs e) {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
 

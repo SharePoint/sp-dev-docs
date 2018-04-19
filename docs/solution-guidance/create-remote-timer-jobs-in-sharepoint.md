@@ -42,7 +42,7 @@ In Core.TimerJobs.Samples.SimpleJob,  **Main** in Program.cs performs the follow
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
  static void Main(string[] args)
         {
             SimpleJob simpleJob = new SimpleJob();
@@ -67,7 +67,7 @@ When the  **simpleJob** object is instantiated, the **SimpleJob** constructor:
     
 2. Assigns the  **SimpleJob_TimerJobRun** event handler to handle the **TimerJobRun** events. **SimpleJob_TimerJobRun** runs when a call is made to **TimerJob.Run**, which is described in more detail later in this article.
 
-```C#
+```csharp
 public SimpleJob() : base("SimpleJob")
         {
             TimerJobRun += SimpleJob_TimerJobRun;
@@ -76,7 +76,7 @@ public SimpleJob() : base("SimpleJob")
 
 When  **PrintJobSettingsAndRunJob** runs, output from the TimerJob is written to the console window, and then **TimerJob.Run** is called.
 
-```C#
+```csharp
  private static void PrintJobSettingsAndRunJob(TimerJob job)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -99,7 +99,7 @@ When  **PrintJobSettingsAndRunJob** runs, output from the TimerJob is written to
 
 **TimerJob.Run** raises **TimerJobRun** events. **TimerJob.Run** calls **SimpleJob_TimerJobRun** in SimpleJob.cs, which you set as the event handler to handle **TimerJobRun** events in the constructor of **SimpleJob**. In **SimpleJob_TimerJobRun**, you can add your custom code that you want your timer job to perform when the timer job runs. **SimpleJob_TimerJobRun** runs your custom code on the sites you added using **TimerJob.AddSite** in Program.cs. In this code sample, **SimpleJob_TimerJobRun** uses the **ClientContext** from the **TimerJob** to write the title of the site to the console window. If multiple sites were added using **TimerJob.AddSite** , **SimpleJob_TimerJobRun** is called for each site.
 
-```C#
+```csharp
  void SimpleJob_TimerJobRun(object sender, TimerJobRunEventArgs e)
         {
             e.WebClientContext.Load(e.WebClientContext.Web, p => p.Title);
@@ -133,7 +133,7 @@ The Core.TimerJobs.Samples.ContentTypeRetentionEnforcementJob project shows how 
     
 2. For each document library on the site, reads the configuration information specified in  **ContentTypeRetentionPolicyPeriod** in app.config. For each content type ID and retention period pair that was read from app.config, **ApplyRetentionPolicy** is called.
 
-```C#
+```csharp
  void ContentTypeRetentionEnforcementJob_TimerJobRun(object sender, TimerJobRunEventArgs e)
         {
             try
@@ -175,7 +175,7 @@ The Core.TimerJobs.Samples.ContentTypeRetentionEnforcementJob project shows how 
     
 3. For each list item, applying custom retention actions to perform on the documents using custom code.
 
-```C#
+```csharp
 private void ApplyRetentionPolicy(ClientContext clientContext, List documentLibrary, object contentTypeId, int retentionPeriodDays)
         {
             // Calculate validation date. You need to enforce the retention policy on any document modified before validation date.
@@ -231,7 +231,7 @@ The Core.TimerJobs.Samples.GovernanceJob project uses timer jobs to ensure two a
     
 4. If the site has two or more administrators, the notification message is removed using [DeleteJsLink](https://github.com/SharePoint/PnP/blob/master/OfficeDevPnP.Core/OfficeDevPnP.Core/AppModelExtensions/JavaScriptExtensions.cs).
 
-```C#
+```csharp
 void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
         {
             try

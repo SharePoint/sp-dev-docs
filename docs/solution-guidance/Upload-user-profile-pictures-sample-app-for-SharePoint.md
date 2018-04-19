@@ -120,7 +120,7 @@ This code sample runs as a console application. When the code sample runs, the  
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 static void Main(string[] args)
         {
             int count = 0;
@@ -255,7 +255,7 @@ The  **Main** method in Program.cs calls **UploadImageToSpo** to upload the user
     
 	- If you configured the application to upload three images per user, the application checks the value of  **createSMLThumbs** in the configuration file to determine whether three different sized images are required. If three different sized images are required, the application uses **ResizeImageSmall** and **ResizeImageLarge** to create three different sized images from the source image. The application then uploads the resized images to the picture library. If three different sized images are not required, the application uploads three images of the same size to the picture library.
 
-```C#
+```csharp
 static string UploadImageToSpo(string PictureName, Stream ProfilePicture)
         {
             try
@@ -360,7 +360,7 @@ static string UploadImageToSpo(string PictureName, Stream ProfilePicture)
     
 -  **SPS-PicturePlaceholderState** - Set to zero to indicate that SharePoint Online should show the uploaded picture for the user.
 
-```C#
+```csharp
 static void SetMultipleProfileProperties(string UserName, string[] PropertyName, string[] PropertyValue)
         {
 
@@ -395,7 +395,7 @@ static void SetMultipleProfileProperties(string UserName, string[] PropertyName,
 
 **SetAdditionalProfileProperties** sets any additional user profile properties you want to update after uploading the image files. You can specify additional properties to update in the configuration.xml file.
 
-```C#
+```csharp
 static void SetAdditionalProfileProperties(string UserName)
         {
             if (_appConfig.AdditionalProfileProperties.Properties == null) // If there are no additional properties to update. 

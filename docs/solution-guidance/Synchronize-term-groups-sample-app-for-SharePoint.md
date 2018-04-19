@@ -86,7 +86,7 @@ The following code shows the  **CopyNewTermGroups** and **CreateNewTargetTermGro
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 public bool CopyNewTermGroups(ClientContext sourceContext, ClientContext targetContext, List<string> termGroupExclusions = null, string termGroupToCopy = null)
         {
             TermStore sourceTermStore = GetTermStoreObject(sourceContext);
@@ -264,7 +264,7 @@ When you select  **Process Changes**, the add-in prompts you to enter a Term Gro
 
 The  **ProcessChanges** method starts by creating a **TaxonomySession** object.
 
-```C#
+```csharp
 Log.Internal.TraceInformation((int)EventId.TaxonomySession_Open, "Opening the taxonomy session");
             TaxonomySession sourceTaxonomySession = TaxonomySession.GetTaxonomySession(sourceClientContext);
             TermStore sourceTermStore = sourceTaxonomySession.GetDefaultKeywordsTermStore();
@@ -279,7 +279,7 @@ Log.Internal.TraceInformation((int)EventId.TaxonomySession_Open, "Opening the ta
 
 Next, it retrieves changes by using the  **ChangeInformation** object, and setting the start date on the **ChangeInformation** object. This example retrieves all changes that were made within the last year.
 
-```C#
+```csharp
 Log.Internal.TraceInformation((int)EventId.TermStore_GetChangeLog, "Reading the changes");
             ChangeInformation changeInformation = new ChangeInformation(sourceClientContext);
             changeInformation.StartTime = startFrom;
@@ -291,7 +291,7 @@ Log.Internal.TraceInformation((int)EventId.TermStore_GetChangeLog, "Reading the 
 
 The  **GetChanges** method returns a **ChangedItemCollection**, which enumerates all changes occurring in the term store, as shown in the following code example. The last line of the example checks to determine whether the  **ChangedItem** was a term group. **ProcessChanges** includes code to perform similar checks on the **ChangedItem** for term sets and terms.
 
-```C#
+```csharp
 foreach (ChangedItem _changeItem in termStoreChanges)
                 {
                     
@@ -318,7 +318,7 @@ The changed item type might be a term group, term set, or term. Each changed ite
 
 The following code shows how to perform a delete operation when a term group was deleted in the source managed metadata service.
 
-```C#
+```csharp
 #region Delete group
                         if (_changeItem.Operation == ChangedOperationType.DeleteObject)
                         {

@@ -41,7 +41,7 @@ CSOM uses a batching system. Chunks of managed code are converted into XML and s
 
 SharePoint code on a client begins by retrieving a client context object that represents the current request context, including the identity of the SharePoint website (and its parent site collection), and through this context you can obtain access to CSOM objects. The following is the basic structure that you will see again and again. 
 
-```C#
+```csharp
   using (var clientContext = spContext.CreateUserClientContextForSPHost())
   {
       // CRUD operation or query code goes here.
@@ -60,7 +60,7 @@ Note the following about this code:
 
 There was an example of this pattern in the previous article of this series, in the `GetLocalEmployeeName` method shown here. 
 
-```C#
+```csharp
 private string GetLocalEmployeeName()
 {
     ListItem localEmployee;

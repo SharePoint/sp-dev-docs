@@ -40,7 +40,7 @@ When you start this code sample, a console application appears. You must supply 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 public void UploadDocumentContent(ClientContext ctx, string libraryName, string filePath)
         {
             Web web = ctx.Web;
@@ -78,7 +78,7 @@ In FileUploadService.cs, this code sample provides three options that you can us
     
 In FileUploadService.cs,  **SaveBinaryDirect** uses the **Microsoft.SharePoint.Client.File.SaveBinaryDirect** method with a **FileStream** object to upload files to a document library.
 
-```C#
+```csharp
 public void SaveBinaryDirect(ClientContext ctx, string libraryName, string filePath)
         {
             Web web = ctx.Web;
@@ -99,7 +99,7 @@ public void SaveBinaryDirect(ClientContext ctx, string libraryName, string fileP
 
 In FileUploadService.cs,  **UploadDocumentContentStream** uses the **FileCreationInformation.ContentStream** property with the **FileStream** object to upload a file to a document library.
 
-```C#
+```csharp
 public void UploadDocumentContentStream(ClientContext ctx, string libraryName, string filePath)
         {
 

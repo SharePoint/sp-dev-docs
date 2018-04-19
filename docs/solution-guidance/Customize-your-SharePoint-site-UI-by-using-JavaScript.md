@@ -55,7 +55,7 @@ All pages on your SharePoint site will now run scenario1.js and display the UI c
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
  public void AddJsLink(ClientContext ctx, Web web)
         {
             string scenarioUrl = String.Format("{0}://{1}:{2}/Scripts", this.Request.Url.Scheme, 

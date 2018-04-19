@@ -168,7 +168,7 @@ To read data from the remote service, you must do the following:
 
     - Ends the connection.
 
-    ```C#
+    ```csharp
     string content;
     content = "Just some text.";
     Response.ContentType="text/plain";

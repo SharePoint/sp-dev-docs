@@ -25,7 +25,7 @@ In this article, you create a handler for this list item event and then programm
 
 1. In **Solution Explorer**, open the Utilities\SharePointComponentDeployer.cs file in the **ChainStoreWeb** project. Add the following method to the `SharePointComponentDeployer` class. 
 
-     ```C#
+     ```csharp
 	  private static void CreateExpectedShipmentsList()
 	 {
 	    using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -88,7 +88,7 @@ In this article, you create a handler for this list item event and then programm
 
 2. In the **DeployChainStoreComponentsToHostWeb** method, add the following line, just above the line `RemoteTenantVersion = localTenantVersion`.
     
-    ```C#
+    ```csharp
       CreateExpectedShipmentsList();
     ```
 
@@ -113,7 +113,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 4. Open the code-behind file RemoteEventReceiver1.svc.cs. Replace its entire contents with the following code. 
 
-    ```C#
+    ```csharp
 	  using System;
 	using System.Collections.Generic;
 	using Microsoft.SharePoint.Client;
@@ -158,7 +158,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 5. Add the following code to the **ProcessOneWayEvent** method. Note that the **ItemUpdated** event is the only one that this sample will handle, so we could have used a simple **if** structure instead of a **switch**. But event receivers typically handle multiple events, so we want you to see the pattern you'll most commonly be using in your event handlers as a SharePoint add-in developer.
     
-    ```C#
+    ```csharp
 	  switch (properties.EventType)
 	{
 	    case SPRemoteEventType.ItemUpdated:
@@ -171,7 +171,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 6. Replace `TODO12` with the following code. Again, here, we are using a **switch** structure when a simple **if** structure would do because we want you to see the common pattern in SharePoint event receivers.
     
-    ```C#
+    ```csharp
 	  switch (properties.ItemEventProperties.ListTitle)
 	{
 	    case "Expected Shipments":
@@ -190,7 +190,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
     
    Add the following code in place of `TODO13`. The two methods, `TryUpdateInventory` and `RecordInventoryUpdateLocally` are created in later steps.
 
-    ```C#
+    ```csharp
 	  bool updateComplete = TryUpdateInventory(properties);
 	if (updateComplete)
 	{
@@ -201,7 +201,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 8. The **ProcessOneWayEvent** method should now look like the following:
 
-    ```C#
+    ```csharp
 	  public void ProcessOneWayEvent(SPRemoteEventProperties properties)
 	{
 	    switch (properties.EventType)
@@ -225,7 +225,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 9. Add the following method to the `RemoteEventReceiver1` class.
     
-    ```C#
+    ```csharp
 	  private bool TryUpdateInventory(SPRemoteEventProperties properties)
 	{
 	    bool successFlag = false;
@@ -244,7 +244,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
     
     Therefore, the handler needs to know what the values of these fields are just after the user updates the item. The **SPRemoteEventProperties** object has an **ItemEventProperties** property. And, in turn, it has an indexed **AfterProperties** property that holds the values of the fields in the updated item. The following code uses these properties to test whether the handler should react. Put this in place of `TODO14`.
 
-     ```C#
+     ```csharp
 	  var arrived = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Arrived"]);
 	var addedToInventory = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Added_x0020_to_x0020_Inventory"]);
 
@@ -259,7 +259,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 11. Replace `TODO15` with the following code. 
 
-     ```C#
+     ```csharp
 	  using (SqlConnection conn = SQLAzureUtilities.GetActiveSqlConnection())
 	using (SqlCommand cmd = conn.CreateCommand())
 	{
@@ -287,7 +287,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 12. We are not finished with the **TryUpdateInventory** method yet, but at this point it should look like the following.
     
-     ```C#
+     ```csharp
 	  private bool TryUpdateInventory(SPRemoteEventProperties properties)
 	{
 	    bool successFlag = false;
@@ -333,7 +333,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
     
 14. Add the following **catch** block just under the **try** block.
     
-     ```C#
+     ```csharp
 	  catch (KeyNotFoundException)
 	{
 	    successFlag = false;
@@ -345,7 +345,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 15. The entire method should now look like the following.
 
-     ```C#
+     ```csharp
 	  private bool TryUpdateInventory(SPRemoteEventProperties properties)
 	{
 	    bool successFlag = false;
@@ -384,7 +384,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 
 16. Add the following method to the `RemoteEventReceiver1` class. 
 
-     ```C#
+     ```csharp
 	  private void RecordInventoryUpdateLocally(SPRemoteEventProperties properties)
 	{
 	    using (ClientContext clientContext = TokenHelper.CreateRemoteEventReceiverClientContext(properties))
@@ -412,13 +412,13 @@ The final task is to tell SharePoint that we have a custom receiver that we want
 
 1. Open the SharePointContentDeployer.cs file and add the following line to the **DeployChainStoreComponentsToHostWeb** method, just under the line that creates the **Expected Shipments** list (we'll add this method in the next step). Note that we are passing to the method the **HttpRequest** object that the add-in's start page passed to the **DeployChainStoreComponentsToHostWeb** method.
     
-    ```C#
+    ```csharp
       RegisterExpectedShipmentsEventHandler(request);
     ```
 
 2. Add the following method to the `SharePointComponentDeployer` class.
     
-    ```C#
+    ```csharp
 	  private static void RegisterExpectedShipmentsEventHandler(HttpRequest request)
 	{
 	    using (var clientContext = sPContext.CreateUserClientContextForSPHost())    
@@ -440,7 +440,7 @@ The final task is to tell SharePoint that we have a custom receiver that we want
 
 3. Replace `TODO16` with the following lines. Note that there is a lightweight **CreationInformation** class for event receivers just as there is for lists and list items.
     
-    ```C#
+    ```csharp
 	EventReceiverDefinitionCreationInformation receiver = new EventReceiverDefinitionCreationInformation();
 	receiver.ReceiverName = "ExpectedShipmentsItemUpdated";
 	receiver.EventType = EventReceiverType.ItemUpdated;
@@ -457,7 +457,7 @@ The final task is to tell SharePoint that we have a custom receiver that we want
     
    Unfortunately, this won't work when you are debugging the add-in from Visual Studio. When you are debugging, the receiver is hosted in the Azure Service Bus, not in the localhost URL where the remote pages are hosted. We need to set distinct URLs for the receiver depending on whether we are debugging or not, so replace `TODO17` with the following structure that uses C# compiler directives. Note that in debug mode the receiver's URL is read from a web.config setting (you will create this setting in a later step). 
 
-    ```C#
+    ```csharp
 	  #if DEBUG
 			    receiver.ReceiverUrl = WebConfigurationManager.AppSettings["RERdebuggingServiceBusUrl"].ToString();
 	#else
@@ -469,7 +469,7 @@ The final task is to tell SharePoint that we have a custom receiver that we want
 
 5. The entire **RegisterExpectedShipmentsEventHandler** method should now look like the following.
     
-    ```C#
+    ```csharp
 	  private static void RegisterExpectedShipmentsEventHandler(HttpRequest request)
 	{    
 	    using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -499,7 +499,7 @@ The final task is to tell SharePoint that we have a custom receiver that we want
 
 6. Add the following **using** statement to the top of the file.
     
-    ```C#
+    ```csharp
       using System.Web.Configuration;
     ```
 
@@ -540,7 +540,7 @@ When you are debugging, the add-in receiver is hosted at an Azure Service Bus en
 
 2. Add the following as the very first line in the **ProcessEvent** method.
     
-    ```C#
+    ```csharp
       string debugEndpoint = System.ServiceModel.OperationContext.Current.Channel.LocalAddress.Uri.ToString(); 
     ```
 

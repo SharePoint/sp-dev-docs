@@ -37,7 +37,7 @@ In this first step, create a new project of the type "console" and reference the
 4. Add your Timer Job logic to the `TimerJobRun` event handler.
 
 The result will be similar to the following:
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,7 +73,7 @@ The Timer Job created in the previous step still needs to be executed. To do so,
 3. Add one or more sites for the Timer Job program to access. This example uses a wild card character in the URL. The Timer Job will run on all sites that match this wild card URL.
 4. Start the Timer Job by calling the `Run` method.
 
-```C#
+```csharp
 static void Main(string[] args)
 {
     // Instantiate the Timer Job class
@@ -180,7 +180,7 @@ Before a Timer Job can be used the Timer Job needs to know how to authenticate b
 
 #### User credentials ####
 To specify user credentials for running against **Office 365** you can use these 2 methods:
-```C#
+```csharp
 public void UseOffice365Authentication(string userUPN, string password)
 public void UseOffice365Authentication(string credentialName)
 ```
@@ -190,7 +190,7 @@ The first method simply accepts a user name and password. The second one allows 
 ![The Windows Credential Manager](media/timerjob-framework/HdqvsHy.png)
 
 There are similar methods for running against **SharePoint on-premises**:
-```C#
+```csharp
 public void UseNetworkCredentialsAuthentication(string samAccountName, string password, string domain)
 public void UseNetworkCredentialsAuthentication(string credentialName)
 ```
@@ -202,7 +202,7 @@ App only is the **preferred method** as you can grant tenant scoped permissions.
 > Certain site resolving logic wont work with App-only authentication. Details can be found in the next section. 
 
 To configure the job for app-only authentication, use one of the following methods:
-```C#
+```csharp
 public void UseAppOnlyAuthentication(string clientId, string clientSecret)
 public void UseAzureADAppOnlyAuthentication(string clientId, string clientSecret)
 ```
@@ -215,7 +215,7 @@ The same method can be used for either Office 365 or SharePoint on-premises whic
 ### Sites to operate on ###
 When a Timer Job runs it needs one or more sites to run against. To add sites to a Timer Job, use the below set of methods.
 
-```C#
+```csharp
 public void AddSite(string site)
 public void ClearAddedSites()
 ```
@@ -224,7 +224,7 @@ To add a site, specify either a fully qualified URL (for example, https://tenant
 
 Typically the sites are added by the program that instantiates the Timer Job object, but if needed the Timer Job can take control over the passed list of sites. Do this by adding a method override for the `UpdateAddedSites`virtual method as shown in sample below:
 
-```C#
+```csharp
 public override List<string> UpdateAddedSites(List<string> addedSites)
 {
     // Let's assume we're not happy with the provided list of sites, so first clear it
@@ -245,13 +245,13 @@ After adding a wild card URL and setting authentication to app-only, specify the
 Given that the search API doesn't work with a user context, the Timer Job falls back to the specified enumeration credentials. 
 
 To specify user credentials for running against **Office 365** you can use these 2 methods:
-```C#
+```csharp
 public void SetEnumerationCredentials(string userUPN, string password)
 public void SetEnumerationCredentials(string credentialName)
 ```
 
 There are similar methods for running against **SharePoint on-premises**:
-```C#
+```csharp
 public void SetEnumerationCredentials(string samAccountName, string password, string domain)
 public void SetEnumerationCredentials(string credentialName)
 ```
@@ -264,7 +264,7 @@ Often you want the Timer Job code to be executed against the root site of the si
 #### Override resolved and/or expanded sites ####
 Once the timer framework resolves the wild card sites, and optionally expands the sub sites, the next step is to process the list of sites. Prior to processing the list of sites, you might want to modify the list of sites. For example, you may want to remove specific sites or add more sites to the list. This can be accomplished by overriding the `ResolveAddedSites` virtual method. The sample below shows how to override the `ResolveAddedSites` method to remove one site from the list. 
 
-```C#
+```csharp
 public override List<string> ResolveAddedSites(List<string> addedSites)
 {
     // Use default TimerJob base class site resolving
@@ -282,7 +282,7 @@ public override List<string> ResolveAddedSites(List<string> addedSites)
 ### TimerJobRun event ###
 The Timer Job Framework splits the list of sites into work batches. Each batch of sites will be run on its own thread. By default, the framework will create five batches and five threads to run those five batches. See the **Threading** section to learn more about Timer Job threading options. When a thread processes a batch the `TimerJobRun` event is triggered by the timer framework and will provide all the necessary information to run the Timer Job. Timer Jobs are run as events, so the code must connect an event handler to the `TimerJobRun` event:
 
-```C#
+```csharp
 public SimpleJob() : base("SimpleJob")
 {
     TimerJobRun += SimpleJob_TimerJobRun;
@@ -296,7 +296,7 @@ void SimpleJob_TimerJobRun(object sender, TimerJobRunEventArgs e)
 
 An alternative approach is using an inline delegate as shown here:
 
-```C#
+```csharp
 public SimpleJob() : base("SimpleJob")
 {
     // Inline delegate
@@ -333,7 +333,7 @@ Next to these standard properties you also have the option to specify your own p
 
 The following code shows how state management can be used:
 
-```C#
+```csharp
 void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
 {
     try
@@ -412,7 +412,7 @@ Timer Jobs may have concurrency issues when using multiple threads to process su
 
 The following code shows how to use the `GetAllSubSites` method within a Timer Job:
 
-```C#
+```csharp
 public class SiteCollectionScopedJob: TimerJob
 {
     public SiteCollectionScopedJob() : base("SiteCollectionScopedJob")
@@ -466,7 +466,7 @@ Using the above configuration file the Timer Job Framework will use the `System.
 
 It is strongly advised to use the same logging approach for your custom Timer Job code as you do for the Timer Job Framework. In your Timer Job code you can use the PnP Core `Log` class:
 
-```C#
+```csharp
 void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
 {
     try

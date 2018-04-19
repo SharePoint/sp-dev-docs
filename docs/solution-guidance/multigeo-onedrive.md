@@ -46,7 +46,7 @@ GET https://contoso.sharepoint.com/_api/SP.UserProfiles.PeopleManager/GetPropert
 
 If you're using C#, you can use CSOM to get the location of an OneDrive for Business site.
 
-```C#
+```csharp
 public string GetUserPersonalUrlCSOM(ClientContext ctx, string userPrincipalName)
 {
     string result = null;

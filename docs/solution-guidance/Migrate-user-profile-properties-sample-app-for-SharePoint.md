@@ -103,7 +103,7 @@ This code sample runs as a console application. When the code sample runs, the  
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 static void Main(string[] args)
         {
             int userCount = 1;
@@ -179,7 +179,7 @@ Note that the  **GetSingleValuedProperty** method uses userprofileservice.asmx t
     
 - Returns the first value in the  **UserProfileValueCollection** if the value is not **null**. 
 
-```C#
+```csharp
 private static string GetSingleValuedProperty(UserProfile spUser,string userProperty)
         {
             string returnString = string.Empty;
@@ -213,7 +213,7 @@ Note that the  **GetMultiValuedProperty** method uses userprofileservice.asmx to
     
 - Builds a string of user profile property values separated by the  **PROPERTYSEPARATOR** specified in the App.config file.
 
-```C#
+```csharp
 private static string GetMultiValuedProperty(UserProfile spUser, string userProperty)
         {
             StringBuilder sb = new StringBuilder("");
@@ -268,7 +268,7 @@ This code sample runs as a console application. When the code sample runs, the  
     
 **InitializeWebService** connects to SharePoint Online, and sets a reference of the user profile service to an instance variable. Other methods in this code sample use this instance variable to write values to user profile properties. To administer the user profile, this code sample uses the userprofileservice.asmx web service on the SharePoint Online admin center.
 
-```C#
+```csharp
 static bool InitializeWebService()
         {
             try
@@ -319,7 +319,7 @@ The  **SetSingleMVProfileProperty** method sets a multivalued user profile prope
     
 The data is written to the user profile service using  **ModifyUserPropertyByAccountName** on the **userprofileservice.asmx** web service on the SharePoint Online admin center. The user running this code sample must be an Office 365 administrator.
 
-```C#
+```csharp
 static void SetSingleMVProfileProperty(string UserName, string PropertyName, string PropertyValue)
         {
 
@@ -355,7 +355,7 @@ static void SetSingleMVProfileProperty(string UserName, string PropertyName, str
 
 The  **SetSingleValuedProperty** method sets single-valued user profile properties, such as **AboutMe**.  **SetSingleValuedProperty** implements the same technique as **SetSingleMVProfileProperty**, but uses a  **ValueData** array with one element only.
 
-```C#
+```csharp
 static void SetSingleProfileProperty(string UserName, string PropertyName, string PropertyValue)
         {
 

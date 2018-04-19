@@ -135,7 +135,7 @@ You can detect that a site is a "modern" team site by checking the 'Web.WebTempl
 
 Because there's no direct property to check if the scripting is enabled or not, you can use permissions to determine the current status. When scripting is enabled, there's no AddAndCustomizePages permission in the base permissions of the site.
 
-```C#
+```csharp
 /// <summary>
 /// Can be used to check if site has noscript enabled.
 /// </summary>

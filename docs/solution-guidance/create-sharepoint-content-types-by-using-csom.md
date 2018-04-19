@@ -21,7 +21,7 @@ The following code example shows how to create a content type by using the  **Co
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 ContentTypeCollection contentTypes = web.ContentTypes;
 cc.Load(contentTypes);
 cc.ExecuteQuery();
@@ -59,7 +59,7 @@ cc.ExecuteQuery();
 
 Link the fields to the content type by using the  **FieldLinkCollection** and **FieldLinkCreationInformation** classes.
 
-```C#
+```csharp
 FieldCollection fields = web.Fields;
 Field fld = fields.GetByInternalNameOrTitle("ContosoString");
 cc.Load(fields);
@@ -88,7 +88,7 @@ cc.ExecuteQuery();
 
 Use the following code to localize the site title and site description.
 
-```C#
+```csharp
 web.TitleResource.SetValueForUICulture("fi-FI", "KielikÃ¤Ã¤nnÃ¤ minut");
 web.DescriptionResource.SetValueForUICulture("fi-FI", "KielikÃ¤Ã¤nnetty saitti");
 
@@ -96,7 +96,7 @@ web.DescriptionResource.SetValueForUICulture("fi-FI", "KielikÃ¤Ã¤nnetty sait
 
 For a list, you use the same approach as for a site.
 
-```C#
+```csharp
 list.TitleResource.SetValueForUICulture("fi-FI", "KielikÃ¤Ã¤nnÃ¤ minut");
 list.DescriptionResource.SetValueForUICulture("fi-FI", "TÃ¤mÃ¤ esimerkki nÃ¤yttÃ¤Ã¤ miten voit kielikÃ¤Ã¤ntÃ¤Ã¤ listoja.");
 
@@ -104,7 +104,7 @@ list.DescriptionResource.SetValueForUICulture("fi-FI", "TÃ¤mÃ¤ esimerkki nÃ
 
 For content types, you have the option to localize the name and description. for fields, you can localize the title and description values.
 
-```C#
+```csharp
 myContentType.NameResource.SetValueForUICulture("fi-FI", "Contoso Dokumentti");
 myContentType.DescriptionResource.SetValueForUICulture("fi-FI", "TÃ¤mÃ¤ on geneerinen Contoso dokumentti.");
 
@@ -119,7 +119,7 @@ The following example shows how to create document content types and then associ
 
 This example adds a new content type called 'Contoso Document' to the site collection. This content type has a custom template associated with it when a new document is created.
 
-```C#
+```csharp
 ContentType ct = web.ContentTypes.GetById("0x0101009189AB5D3D2647B580F011DA2F356FB2");
             cc.Load(ct); cc.ExecuteQuery();
             string ctFolderServerRelativeURL = "_cts/" + ct.Name;

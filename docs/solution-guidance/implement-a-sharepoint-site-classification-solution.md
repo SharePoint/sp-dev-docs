@@ -48,7 +48,7 @@ You can insert a custom action for site classification to the  **Settings** page
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 /// <summary>
 /// Adds a custom Action to a Site Collection.
 /// </summary>
@@ -101,7 +101,7 @@ You can use the  **Edit Site Information** page to choose the following specific
     
 Both  **Audience Reach** and **Site Classification** are searchable and will have managed properties associated with them after a crawl takes place. You can then use these properties to search for specific types of sites by using a custom hidden list within the site collection. This list is implemented in the [Core.SiteClassification.Common](https://github.com/SharePoint/PnP/tree/dev/Scenarios/Core.SiteClassification/Core.SiteClassification.Common) project in the **SiteManagerImpl** class.
 
-```C#
+```csharp
 private void CreateSiteClassificationList(ClientContext ctx)
 {
   var _newList = new ListCreationInformation()
@@ -166,7 +166,7 @@ private void CreateSiteClassificationList(ClientContext ctx)
 
 By default, when you create a list either out of the box or by using CSOM, the list will be available in the  **Recent** menu. The list needs to be hidden, however. The following code removes the item from the Recent menu.
 
-```C#
+```csharp
 private void RemoveFromQuickLaunch(ClientContext ctx, string listName)
   {
   Site _site = ctx.Site;
@@ -195,7 +195,7 @@ The Core.SiteClassification sample provides for the possibility that a site admi
 
 The list verification check is also implemented in the  **SiteManagerImpl** class, in the **Initialize** member.
 
-```C#
+```csharp
 internal void Initialize(ClientContext ctx)
 {
 try {
@@ -226,7 +226,7 @@ You can add an indicator to a site page to show its classification. The Core.Sit
 
 The following method is defined in the Core.SiteClassificationWeb project, scripts, and classifier.js. The images are stored in a Microsoft Azure website. You will have to change the hard-coded URLs to match your environment.
 
-```C#
+```csharp
 function setClassifier() {
     if (!classified)
     {

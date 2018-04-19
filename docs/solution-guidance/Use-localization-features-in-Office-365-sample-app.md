@@ -93,7 +93,7 @@ The  **LocalizeContentTypeAndField** method shows you how to do the following:
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 private static void LocalizeSiteAndList(ClientContext cc, Web web)
         {
             // Localize the site title.

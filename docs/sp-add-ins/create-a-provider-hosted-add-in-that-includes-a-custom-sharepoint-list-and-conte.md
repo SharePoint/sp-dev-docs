@@ -320,7 +320,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
 2. Open the Default.aspx.cs file and add the following **using** statements to it.
       
-  ```C#
+  ```csharp
     using Microsoft.SharePoint.Client;
     using Microsoft.IdentityModel.S2S.Tokens;
     using System.Net;

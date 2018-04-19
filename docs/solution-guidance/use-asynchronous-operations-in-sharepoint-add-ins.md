@@ -138,7 +138,7 @@ When you run the Core.QueueWebJobUsage code sample, the provider-hosted add-in a
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 protected void btnAsync_Click(object sender, EventArgs e)
         {
 
@@ -174,7 +174,7 @@ In Core.QueueWebJobUsage.Common, in SiteManager.cs,  **AddAsyncOperationRequestT
     
 5. Uses [CloudQueue.AddMessage](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueue.addmessage.aspx) to add a new message to the Azure Storage queue. The **modifyRequest** business object is serialized into a [CloudQueueMessage](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueuemessage.aspx) object, which is added to the Azure Storage queue.
 
-```C#
+```csharp
 public void AddAsyncOperationRequestToQueue(SiteModifyRequest modifyRequest, 
                                                     string storageConnectionString)
         {
@@ -193,7 +193,7 @@ public void AddAsyncOperationRequestToQueue(SiteModifyRequest modifyRequest,
 
 After the message is added to the Azure Storage Queue, a continuously running Azure WebJob waits for and then processes the new message. The Azure WebJob is defined in Core.QueueWebJobUsage.Job. When the Azure WebJob runs, Main in Core.QueueWebJobUsage.Job\Program.cs creates a new  **JobHost**, and then calls **RunAndBlock**. The **JobHost** coordinates calls to methods marked with the **QueueTrigger** attribute, and watches for messages on a specific queue. **RunAndBlock** ensures that the Azure WebJob runs continuously and calls **ProcessQueueMessage**, which is the method to trigger when a new message is added to the Azure Storage Queue. The Azure WebJobs SDK associates the **Main** thread with **ProcessQueueMessage**. For more information, see [Create a .NET WebJob in Azure Add-in Service](https://azure.microsoft.com/documentation/articles/websites-dotnet-webjobs-sdk-get-started/).
 
-```C#
+```csharp
 static void Main()
         {
             var host = new JobHost();
@@ -210,7 +210,7 @@ static void Main()
     
 3. Calling  **SiteManager().PerformSiteModification** to perform a long-running business process on the site. In this code sample, the thread is put to sleep for 10 seconds, and then a document library is created.
 
-```C#
+```csharp
 public static void ProcessQueueMessage(
             [QueueTrigger(SiteManager.StorageQueueName)] 
             SiteModifyRequest modifyRequest, TextWriter log)

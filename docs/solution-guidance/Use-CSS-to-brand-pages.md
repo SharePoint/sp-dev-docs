@@ -97,7 +97,7 @@ Apply CSS to a SharePoint site by using an external style sheet and including a 
 
 The following code example shows how to upload custom CSS to the asset library, apply a reference to the CSS URL with a custom action, and then create a custom action to build a link to the new CSS file. This code is part of the  [Branding.AlternateCSSAndSiteLogo ](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo) sample on GitHub.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

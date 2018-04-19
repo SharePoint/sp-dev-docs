@@ -65,7 +65,7 @@ When choosing  **Connect** on **Connect to Office 365**,  **Connect** in Control
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
  public ActionResult Connect(string hostUrl)
         {
             TokenRepository repository = new TokenRepository(Request, Response);
@@ -79,7 +79,7 @@ When choosing  **Connect** on **Connect to Office 365**,  **Connect** in Control
 > [!NOTE] 
 > **TokenHelper.GetAuthorizationUrl** returns a URL of the form **https://contoso.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?IsDlg=1&amp;client_id=<Client ID>&amp;scope=Web.Manage&amp;response_type=code** , where **&lt;Client ID&gt;** is the add-in's Client ID. If your add-in is registered through the Seller Dashboard, any Office 365 site can install the add-in. If your add-in is not registered through the Seller Dashboard, you must register your add-in by using appregnew.aspx, and then update Core.DynamicPermissionsWeb\web.config. To learn more, see[Register SharePoint Add-ins 2013](http://msdn.microsoft.com/library/be41a5dc-2af9-4fd9-bf4e-ad6dfa849524%28Office.15%29.aspx).
 
-```C#
+```csharp
  public void Connect(string hostUrl)
         {
             if (!IsConnectedToO365)
@@ -95,7 +95,7 @@ When choosing  **Connect** on **Connect to Office 365**,  **Connect** in Control
 
 After authorization, the add-in is redirected to  **Callback** in Controllers\HomeController.cs, which is the Redirect URI specified on the appregnew.aspx. **TokenHelper** passes the authorization code, **code** , to **Callback** . To grant the access token described later in this article, the authorization code, **code** , must be returned to **Callback** . **Callback** then calls **TokenRepository.Callback** .
 
-```C#
+```csharp
  public ActionResult Callback(string code)
         {
             TokenRepository repository = new TokenRepository(Request, Response);
@@ -106,7 +106,7 @@ After authorization, the add-in is redirected to  **Callback** in Controllers\Ho
 
 **TokenRepository.Callback** calls **TokenCache.UpdateCacheWithCode** , which uses **TokenHelper.GetAccessToken** to obtain an OAuth access token based on the authorization code, **code** .
 
-```C#
+```csharp
 public void Callback(string code)
         {
             HttpCookie spHostUrlCookie = _request.Cookies["SPHostUrl"];
@@ -118,7 +118,7 @@ public void Callback(string code)
         }
 ```
 
-```C#
+```csharp
  public static void UpdateCacheWithCode(HttpRequestBase request, HttpResponseBase response, Uri targetUri)
         {
             string refreshToken = TokenHelper.GetAccessToken(request.QueryString["code"], "00000003-0000-0ff1-ce00-000000000000", targetUri.Authority, TokenHelper.GetRealmFromTargetUrl(targetUri), new Uri(request.Url.GetLeftPart(UriPartial.Path))).RefreshToken;

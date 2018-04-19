@@ -193,7 +193,7 @@ The main tasks for the code in the SharePoint Add-in are the following:
 
 If you are using managed code, sample code for some of these tasks is in the SharePointContext.cs (or .vb) and TokenHelper.cs (or .vb) files that are included in Microsoft Office Developer Tools for Visual Studio. You just need to make simple calls to the members of the TokenHelper class. For example, your code can do the first task with the following single line of code:
 
-```C#
+```csharp
 SharePointContextToken contextToken =
     TokenHelper.ReadAndValidateContextToken(contextTokenString, 
     Request.Url.Authority);
@@ -375,7 +375,7 @@ The logic in your application must get the authorization code from the query par
 
 The `nbf` and `exp` claims are in the format specified by the [JWT specification](http://self-issued.info/docs/draft-goland-json-web-token-00l). They are written as the number of seconds since January 1, 1970. In C#, you can translate these values with the following code, where `jWTTimeStamp` is the value from the token, such as `1335822895`.
 
-```C#
+```csharp
 DateTime exp = new DateTime(1970,1,1).AddSeconds(jWTTimeStamp);
 
 ```

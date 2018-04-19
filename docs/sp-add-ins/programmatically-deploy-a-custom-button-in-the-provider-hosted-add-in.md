@@ -66,13 +66,13 @@ The following procedure shows how to implement this strategy.
 
 2. In the file SharePointComponentDeployer.cs, add the following line to the **DeployChainStoreComponentsToHostWeb** method, just under the line that calls `CreateLocalEmployeesList` (you create this method in the next step).
     
-    ```C#
+    ```csharp
       ChangeCustomActionRegistration();
     ```
 
 3. Add the following method to the `SharePointComponentDeployer` class. 
 
-    ```C#
+    ```csharp
 	  private static void ChangeCustomActionRegistration()
 	{
 	    using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -113,7 +113,7 @@ The following procedure shows how to implement this strategy.
 
 4. Replace `TODO8` with the following code. Note that when you retract an add-in, components created by the add-in are not removed. After your first-run logic executes, there will be a custom action in the list's **UserCustomActions** collection, and it will not be retracted the next time you select F5. To avoid confusion, the last line in this code `listActions.Clear();` empties the collection.
 
-    ```C#
+    ```csharp
 	var queryForList = from list in clientContext.Web.Lists
 			   where list.Title == "Local Employees"
 			   select list;
@@ -128,13 +128,13 @@ The following procedure shows how to implement this strategy.
 
 5. Replace `TODO9` with the following line, which adds an undefined custom action to the **Local Employees** list.
     
-    ```C#
+    ```csharp
       var listScopedEmployeeAction = listActions.Add();
     ```
 
 6. Replace `TODO10` with the following code. 
 
-    ```C#
+    ```csharp
 	listScopedEmployeeAction.Title = webScopedEmployeeAction.Title;
 	listScopedEmployeeAction.Location = webScopedEmployeeAction.Location;
 	listScopedEmployeeAction.Sequence = webScopedEmployeeAction.Sequence;
@@ -150,13 +150,13 @@ The following procedure shows how to implement this strategy.
 
 7. Replace `TODO11` with the following line, which deletes the original descriptively-defined button. If we did not have this line, every list on the website that uses list template "100" would have the custom button on it. Because the button's functionality is closely tied to the **Local Employees** list, it would make no sense to have the button on any other list. Also, without this line, the button would appear *twice*  on the **Local Employees** list, because that list uses template "100".
     
-    ```C#
+    ```csharp
       webScopedEmployeeAction.DeleteObject();
     ```
     
 8. The entire method should now look like the following (except there should be a GUID in place of the placeholder).
     
-    ```C#
+    ```csharp
 	  private static void ChangeCustomActionRegistration()
 	{
 	    using (var clientContext = SPContext.CreateUserClientContextForSPHost())

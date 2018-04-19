@@ -26,7 +26,7 @@ The following example shows how to create a __Microsoft.Online.SharePoint.Tenant
 > * The URL used to create the context object includes the _-admin_ suffix, because **TenantAdministration** methods work with the admin site.
 > * Create a __Tenant__ instance with the [Tenant constructor](https://msdn.microsoft.com/en-us/library/dn174852.aspx), and then call the methods on that instance.
 
-```C#
+```csharp
 using System.Security;
 using Microsoft.SharePoint.Client;
 using Microsoft.Online.SharePoint.TenantAdministration;

@@ -130,7 +130,7 @@ This error is an SSL handshake issue, not an OAuth issue. Make sure that the cer
 
 HTTP DAV does not work with OAuth. If you are using the SharePoint client object model (CSOM), use the following code to read a file.
 
-```C#
+```csharp
 File f = clientContext.Web.GetFileByServerRelativeUrl( url);
 ClientResult<Stream> r = f.OpenBinaryStream();
 clientContext.ExecuteQuery();

@@ -18,7 +18,7 @@ The following example shows how to create a __Microsoft.Online.SharePoint.Tenant
 > * Create a __Tenant__ instance with the [Tenant constructor](https://msdn.microsoft.com/en-us/library/dn174852.aspx), and then call the methods on that instance.
 > * You can use the same approach to call other theme management methods.
 
-```C#
+```csharp
 using System.Security;
 using Microsoft.SharePoint.Client;
 using Microsoft.Online.SharePoint.TenantAdministration;
@@ -39,7 +39,7 @@ ClientObjectList<ThemeProperties> themes = tenant.GetAllTenantThemes();
 
 For methods that take a theme argument, the following code defines an __SPOTheme__ class that you can use to create custom themes.
 
-```C#
+```csharp
 /// <summary> 
 /// Properties defining a theme in SharePoint Online. 
 /// </summary> 
