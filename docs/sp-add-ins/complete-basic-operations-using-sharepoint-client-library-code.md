@@ -1,12 +1,11 @@
 ﻿---
 title: Complete basic operations using SharePoint client library code
-description: How to write code to perform basic operations with the SharePoint .NET Framework client object model (CSOM).
-ms.date: 12/13/2017
+description: Write code to perform basic operations with the SharePoint .NET Framework client object model (CSOM).
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
 
 # Complete basic operations using SharePoint client library code
-
 
 You can use the SharePoint client object model (CSOM) to retrieve, update, and manage data in SharePoint. SharePoint makes the CSOM available in several forms: 
 
@@ -37,7 +36,7 @@ When you create an **Add-in for SharePoint** project in Visual Studio 2012, refe
 
 All of these examples assume that the code is in a code-behind file for a Microsoft ASP.NET webpage. You must add the following **using** statement to the code file.
 
-```
+```csharp
 using Microsoft.SharePoint.Client;
 ```
 
@@ -641,7 +640,7 @@ label1.Text = web.Title;
 
 The differences are the addition of these lines; the first line creates a query for the web's **Title** property. The second line executes the query. 
 
-```
+```csharp
 context.Load(web, w => w.Title); 
 context.ExecuteQuery(); 
 
@@ -763,7 +762,7 @@ static void Method2()
 
 These are not equally efficient. In **Method1**, the code to retrieve the web's title and description is grouped together. In **Method2**, the code to retrieve the web's title and description is separated by other actions. This means that **Method2** triggers two separated queries on the same web object, and there are two result sets for the same web. Because the client library tries to return consistent data, the second result set includes both the title and description. You could think of the previous code as the following.
 
-```
+```csharp
 Method1: 
 SELECT Title, Description FROM Webs WHERE ... 
 SELECT Description FROM Lists WHERE … 
@@ -781,7 +780,8 @@ SELECT Title, Description FROM Webs WHERE …
 
 In the SharePoint server object model, if you get an **SPWeb** object, you can inspect all of its properties. In SQL, to get all of the columns of a table you can run:
 
-```
+
+```sql
 SELECT * FROM Webs 
 ```
 
@@ -863,8 +863,6 @@ if (scope.TestResult.Value)
 This example shows how to create and use an exception handling scope with an **ExceptionHandlingScope** object. The scenario is to update the description of a list and also enable folder creation. There is a possibility that the list might not exist.
 
 ```csharp
-
-
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -905,7 +903,6 @@ context.ExecuteQuery();
 
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 - [Build sites for SharePoint](../general-development/build-sites-for-sharepoint.md)

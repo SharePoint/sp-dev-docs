@@ -1,7 +1,7 @@
 ﻿---
 title: Upload a file by using the REST API and jQuery
 description: Upload a local file to a SharePoint folder by using the REST API and jQuery AJAX requests.
-ms.date: 12/14/2017
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
 
@@ -65,7 +65,7 @@ The following code example uses the SharePoint REST API and jQuery AJAX requests
 You need to meet [these requirements](#RunTheExamples) to use this example.
  
 
-```javascript
+```js
 'use strict';
 
 var appWebUrl, hostWebUrl;
@@ -240,7 +240,7 @@ The following code example uses the SharePoint REST API and jQuery AJAX requests
 
 You need to meet [these requirements](#RunTheExamples) before you can run this example. 
 
-```javascript
+```js
 'use strict';
 
 jQuery(document).ready(function () {
@@ -380,7 +380,6 @@ function onError(error) {
 <br/>
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md)

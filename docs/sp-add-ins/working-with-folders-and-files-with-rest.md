@@ -1,7 +1,7 @@
 ---
 title: Working with folders and files with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on folders and files with the SharePoint REST interface.
-ms.date: 12/13/2017
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
 
@@ -43,7 +43,7 @@ The following XML shows an example of folder properties that are returned when y
 
 <br/>
 
-The following example shows how to **create** a folder.
+The following example shows how to **create a folder**.
 
 ```
 url: http://site url/_api/web/folders
@@ -59,7 +59,7 @@ Headers:
 
 <br/>
 
-The following example shows how to **update** a folder by using the **MERGE** method.
+The following example shows how to **update a folder by using the MERGE method**.
 
 ```
 url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')
@@ -96,7 +96,7 @@ Headers:
 
 ## Working with files by using REST
 
-The following example shows how to **retrieve** all of the files in a folder.
+The following example shows how to **retrieve all of the files in a folder**.
 
 ```
 url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/Files
@@ -109,7 +109,7 @@ headers:
 
 <br/>
 
-The following example shows how to **retrieve** a specific file.
+The following example shows how to **retrieve a specific file**.
 
 ```
 url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/Files('file name')/$value
@@ -120,7 +120,7 @@ headers:
 
 <br/>
 
-You can also **retrieve** a file when you know its URL, as in the following example.
+You can also **retrieve a file when you know its URL**, as in the following example.
 
 ```
 url: http://site url/_api/web/GetFileByServerRelativeUrl('/Folder Name/file name')/$value
@@ -131,7 +131,7 @@ headers:
 
 <br/>
 
-The following example shows how to **create** a file and add it to a folder.
+The following example shows how to **create a file and add it to a folder**.
 
 ```
 url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/Files/add(url='a.txt',overwrite=true)
@@ -145,7 +145,7 @@ Headers:
 
 <br/>
 
-The following example shows how to **update** a file by using the **PUT** method.
+The following example shows how to **update a file by using the PUT method**.
  
 > [!NOTE] 
 > **PUT** is the only method that you can use to update a file. The **MERGE** method is not allowed.
@@ -165,7 +165,9 @@ Headers:
 
 If you want to update a file's metadata, you have to construct an endpoint that reaches the file as a list item. You can do this because each folder is also a list, and each file is also a list item. Construct an endpoint that looks like this: `https://<site url>/_api/web/lists/getbytitle('Documents')/items(<item id>)`. For information about how to update a list item's metadata, see [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md). 
 
-You may want to check out a file to make sure that no one changes it before you update it. After your update, you should check the file back in so that others can work with it. The following example shows you how to **check a file out**.
+You may want to check out a file to make sure that no one changes it before you update it. After your update, you should check the file back in so that others can work with it. 
+
+The following example shows how to **check out a file**.
 
 ```
 url: http://site url/_api/web/GetFileByServerRelativeUrl('/Folder Name/file name')/CheckOut(),
@@ -177,7 +179,7 @@ headers:
 
 <br/>
 
-The following example shows you how to **check a file in**.
+The following example shows how to **check in a file**.
 
 ```
 url: http://site url/_api/web/GetFileByServerRelativeUrl('/Folder Name/file name')/CheckIn(comment='Comment',checkintype=0)
@@ -189,7 +191,7 @@ headers:
 
 <br/>
 
-The following example shows how to **delete** a file.
+The following example shows how to **delete a file**.
 
 ```
 url: http://site url/_api/web/GetFileByServerRelativeUrl('/Folder Name/file name')
@@ -208,7 +210,9 @@ headers:
 
 ## Working with large files by using REST
 
-When you need to upload a binary file that is larger than 1.5 megabytes (MB), the REST interface is your only option. For a code example that shows you how to upload a binary file that is smaller than 1.5 MB by using the SharePoint JavaScript object model, see [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md). The maximum size of a binary file that you can create with REST is 2 gigabytes (GB). The following example shows how to **create** a large binary file.
+When you need to upload a binary file that is larger than 1.5 megabytes (MB), the REST interface is your only option. For a code example that shows you how to upload a binary file that is smaller than 1.5 MB by using the SharePoint JavaScript object model, see [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md). The maximum size of a binary file that you can create with REST is 2 gigabytes (GB). 
+
+The following example shows how to **create a large binary file**.
  
 > [!WARNING] 
 > This approach works only with Internet Explorer 10 and the latest versions of other browsers.
@@ -264,7 +268,7 @@ ro.executeAsync(info);
 ## Working with files attached to list items by using REST
 
 
-The following example shows how to **retrieve** all of the files that are attached to a list item.
+The following example shows how to **retrieve all of the files that are attached to a list item**.
 
 ```
 url: http://site url/_api/web/lists/getbytitle('list title')/items(item id)/AttachmentFiles/
@@ -277,7 +281,7 @@ headers:
 
 <br/>
 
-The following example shows how to **retrieve** a file that is attached to a list item.
+The following example shows how to **retrieve a file that is attached to a list item**.
 
 ```
 url: http://site url/_api/web/lists/getbytitle('list title')/items(item id)/AttachmentFiles('file name')/$value
@@ -290,7 +294,7 @@ headers:
 
 <br/>
 
-The following example shows how to **create** a file attachment to a list item.
+The following example shows how to **create a file attachment to a list item**.
 
 ```
 url: http://site url/_api/web/lists/getbytitle('list title')/items(item id)/AttachmentFiles/ add(FileName='file name')
@@ -304,7 +308,7 @@ headers:
 
 <br/>
 
-The following example shows how to **update** a file attachment to a list item by using the **PUT** method.
+The following example shows how to **update a file attachment to a list item by using the PUT method**.
  
 > [!NOTE] 
 > **PUT** is the only method that you can use to update a file. The **MERGE** method is not allowed.
@@ -323,7 +327,6 @@ headers:
 <br/>
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)   

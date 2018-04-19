@@ -1,7 +1,7 @@
 ---
 title: Set custom permissions on a list by using the REST interface
 description: Define custom, fine-grained permissions on a SharePoint list by using the REST interface and JavaScript.
-ms.date: 12/14/2017
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
 
@@ -46,7 +46,7 @@ Before you run the code, replace the placeholder values with actual values. If y
 
 ### Example 1: Cross-domain library requests
 
-```
+```js
 'use strict';
 
 // Change placeholder values before you run this code.
@@ -177,7 +177,7 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 
 ### Example 2: jQuery AJAX requests
 
-```
+```js
 // Change placeholder values before you run this code.
 var siteUrl = 'http://server/site';
 var listTitle = 'List 1';
@@ -272,7 +272,6 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 <br/>
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
