@@ -15,12 +15,13 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Build your first web part](build-a-hello-world-web-part.md)
 * [Connect your web part to SharePoint](connect-to-sharepoint.md) 
 
-You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=qAqNk_X82QM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=8). 
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=qAqNk_X82QM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=8">
-<img src="../../../images/spfx-youtube-tutorial7.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
 
+> [!Video https://www.youtube.com/embed/qAqNk_X82QM]
+
+<br/>
 
 ## Create a new web part project
 

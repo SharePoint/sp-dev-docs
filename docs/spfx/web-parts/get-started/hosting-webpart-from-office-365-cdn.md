@@ -22,11 +22,13 @@ Make sure that you have completed the following tasks before you begin:
 * [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 * [Deploy your client-side web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md)
 
-You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=MEZMs8VMVQ0&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=MEZMs8VMVQ0&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/MEZMs8VMVQ0]
+
+<br/>
 
 ## Enable CDN in your Office 365 tenant
 

@@ -13,13 +13,14 @@ Ensure that you have completed the procedures in the following articles before y
 * [Build your first SharePoint client-side web part](./build-a-hello-world-web-part.md)
 * [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 
-You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=BpJ01ahxbiY&index=4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=BpJ01ahxbiY&index=4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../images/spfx-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
 
+> [!Video https://www.youtube.com/embed/BpJ01ahxbiY]
 
+<br/>
+ 
 ## Package the HelloWorld web part
 
 1. In the console window, go to the web part project directory created in [Build your first SharePoint client-side web part](./build-a-hello-world-web-part.md).

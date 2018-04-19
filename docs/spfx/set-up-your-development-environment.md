@@ -13,11 +13,13 @@ You can use Visual Studio or your own custom development environment to build Sh
 > [!NOTE] 
 > Before following the steps in this article, be sure to [Set up your Office 365 tenant](./set-up-your-developer-tenant.md).
 
-You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=WX9FL0BjE0I&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=-tXf8gxjmOI&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-    <img src="../images/spfx-youtube-tutorial0.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/tXf8gxjmOI]
+
+<br/> 
 
 ## Install developer tools
 

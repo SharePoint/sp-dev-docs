@@ -15,11 +15,13 @@ Be sure you have completed the procedures in the following articles before you b
 * [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
 * [Deploy your extension to SharePoint (Hello World part 3)](./serving-your-extension-from-sharepoint.md)
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=oOIHWamPr34&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
+You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=nh1qFArXG2Y">
-<img src="../../../images/spfx-ext-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/nh1qFArXG2Y]
+
+<br/> 
 
 ## Enable the CDN in your Office 365 tenant
 
