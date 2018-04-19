@@ -504,7 +504,7 @@ namespace PushNotificationsList
         /// <summary>
         /// Creates a SharePoint list (based on the Generic List template).
         /// </summary>
-        /// <param name="spWeb">The target Web site for the list.</param>
+        /// <param name="spWeb">The target website for the list.</param>
         /// <param name="listTitle">The title of the list.</param>
         /// <param name="listDescription">A description for the list.</param>
         /// <param name="columns">A Dictionary object containing field names and types.</param>

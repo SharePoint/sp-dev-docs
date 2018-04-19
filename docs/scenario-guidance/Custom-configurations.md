@@ -68,10 +68,10 @@ _**Applies to:** Office 365 | SharePoint Server_
 ### Samples
 
 - [Angular client-side web part (passing web part configuration to Angular and reacting to configuration changes)](https://github.com/SharePoint/sp-dev-fx-webparts/blob/master/samples/angular-todo/README.md)
-- [Weather SharePoint Framework field customizer](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/js-field-weather/README.md)
-- [Announcements SharePoint Framework application customizer](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/react-app-announcements/README.md)
-- [Conditional formatting SharePoint Framework field customizer](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/js-field-conditionalformatting/README.md)
-- [Directions SharePoint Framework list view command set](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/react-command-directions/README.md)
+- [Weather SharePoint Framework Field Customizer](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/js-field-weather/README.md)
+- [Announcements SharePoint Framework Application Customizer](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/react-app-announcements/README.md)
+- [Conditional formatting SharePoint Framework Field Customizer](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/js-field-conditionalformatting/README.md)
+- [Directions SharePoint Framework ListView Command Set](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/react-command-directions/README.md)
 
 ## SharePoint add-ins
 

@@ -9,7 +9,7 @@ ms.prod: sharepoint
 
 An important aspect when modernizing a site is understanding the customizations used on that site because not all existing customizations continue to work after the site is modernized. A classic example that occurs frequently is a site banner that shows some type of company information (such as a legal notice). 
 
-This typically is realized via a user custom action that embeds JavaScript on the page, which in turn is responsible for showing the banner. This banner is visible on all classic pages, but will not be visible on modern pages. To work around this problem, you can implement the banner as a SharePoint Framework application customizer extension and deploy that to the tenant/site. 
+This typically is realized via a user custom action that embeds JavaScript on the page, which in turn is responsible for showing the banner. This banner is visible on all classic pages, but will not be visible on modern pages. To work around this problem, you can implement the banner as a SharePoint Framework Application Customizer extension and deploy that to the tenant/site. 
 
 This article gives an overview of the customizations that are not compatible with the modern user interface and guidelines on how to remediate them.
 
@@ -104,7 +104,7 @@ To learn more about SharePoint Framework client-side web parts, see:
 
 ### Site or web-scoped user custom actions that embed JavaScript
 
-In the introduction, we mentioned the common pattern of adding a site banner by embedding JavaScript via a site/web-scoped user custom action. Because this pattern is not compatible with the modern user interface, you must rework this type of customization based upon the SharePoint Framework application customizer extensions. By using application customizers, you can insert custom script that can be used to embed HTML into the SharePoint modern user interface at predefined extension points at the top or bottom of the page.
+In the introduction, we mentioned the common pattern of adding a site banner by embedding JavaScript via a site/web-scoped user custom action. Because this pattern is not compatible with the modern user interface, you must rework this type of customization based upon the SharePoint Framework Application Customizer extensions. By using application customizers, you can insert custom script that can be used to embed HTML into the SharePoint modern user interface at predefined extension points at the top or bottom of the page.
 
 <br/>
 
@@ -112,7 +112,7 @@ In the introduction, we mentioned the common pattern of adding a site banner by 
 
 <br/>
 
-To learn more about SharePoint Framework application customizer extensions, see:
+To learn more about SharePoint Framework Application Customizer extensions, see:
 
 - [Build your first SharePoint Framework Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
 - [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)

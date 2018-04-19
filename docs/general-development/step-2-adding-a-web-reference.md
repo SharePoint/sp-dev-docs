@@ -8,7 +8,7 @@ ms.assetid: e9175863-ddb4-4750-847d-d53cb59b33cb
 
 # Step 2: Adding a Web Reference
 
-Web service discovery is the process by which a client locates a Web service and obtains its service description. The process of Web service discovery in Visual Studio involves interrogating a Web site following a predetermined algorithm. The goal of the process is to locate the service description, which is an XML document that uses the Web Services Description Language (WSDL).
+Web service discovery is the process by which a client locates a Web service and obtains its service description. The process of Web service discovery in Visual Studio involves interrogating a website following a predetermined algorithm. The goal of the process is to locate the service description, which is an XML document that uses the Web Services Description Language (WSDL).
   
     
     

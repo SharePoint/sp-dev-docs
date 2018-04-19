@@ -137,7 +137,7 @@ If your test SharePoint installation is on-premises, you must carry out the firs
  
 3. Select **Anonymous Access** on the ribbon.    
  
-4. On the **Anonymous Access** form, select either **Entire Web site** or **Lists and libraries**, depending on the level of access the add-in that you are testing needs. (Regardless of which option you choose, anonymous users cannot access a list or library with a SharePoint-hosted add-in unless the list or library is individually configured to all anonymous access. A later procedure describes how to do this.    
+4. On the **Anonymous Access** form, select either **Entire website** or **Lists and libraries**, depending on the level of access the add-in that you are testing needs. (Regardless of which option you choose, anonymous users cannot access a list or library with a SharePoint-hosted add-in unless the list or library is individually configured to all anonymous access. A later procedure describes how to do this.    
  
 5. If the add-in you are testing needs to access the SharePoint client object model, ensure that the **Require Use Remote Interfaces permission** check box is *not* selected. If the check box is grayed out, the requirement was turned off at the web application level, which has the same effect as the box being cleared. (As noted in the previous procedure, this setting, in the context of developing SharePoint Add-ins for anonymous users, is only meaningful for SharePoint-hosted add-ins.)
     

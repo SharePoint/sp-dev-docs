@@ -244,7 +244,7 @@ private void CreateLibrary(ClientContext ctx, Library library, string associateC
             }
             else
             {
-                throw new Exception("A list, survey, discussion board, or document library with the specified title already exists in this Web site.  Please choose another title.");
+                throw new Exception("A list, survey, discussion board, or document library with the specified title already exists in this website.  Please choose another title.");
             }
         }
 ```

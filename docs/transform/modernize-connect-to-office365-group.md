@@ -180,7 +180,7 @@ The shared sample version of the script implements the following steps:
 - Verifies site template / publishing feature use and prevent **groupify**; aligns with the logic in the scanner.
 - Ensures that no modern blocking features are enabled, and if so, fixes them.
 - Ensures that the modern page feature is enabled.
-- **Optional**: Deploys applications (for example, application customizer).
+- **Optional**: Deploys applications (for example, Application Customizer).
 - **Optional**: Adds your own modern home page.
 - Calls the **groupify** API.
 - Defines site admins and site owners as group owners.
