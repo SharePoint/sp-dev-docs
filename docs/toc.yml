@@ -260,13 +260,13 @@
       href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
     - name: PowerShell cmdlets
       href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
+    - name: CSOM API
+      href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
     - name: REST API
       href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
-    - name: CSOM API
-      href: declarative-customization/site-theming/sharepoint-site-theming-csom.md  
   - name: Column formatting
     href: declarative-customization/column-formatting.md   
-  - name: Communication Site
+  - name: Communication site
     href: apis/communication-site-creation-rest.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md      

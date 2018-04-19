@@ -93,9 +93,9 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 
 ## See also
 
-* [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818?ui=en-US&rs=en-US&ad=US#ID0EAACAAA=Online)
-* [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
-* [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
+* [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
+
+

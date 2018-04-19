@@ -793,5 +793,5 @@ The following code shows how to define a dictionary in PowerShell for the Dark B
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
-* [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
+* [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)

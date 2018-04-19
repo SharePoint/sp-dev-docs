@@ -29,7 +29,7 @@ ALM APIs are natively provided by using REST APIs, but there are additional CSOM
 ## REST API
 
 > [!TIP] 
-> ALM APIs are also  supported for the [site collection app catalog](../general-development/site-collection-app-catalog.md). URLs for the site collection app catalog operations are exactly the same, but you can change the `tenantappcatalog` as `sitecollectionappcatalog`. Notice also that you will need to enable site collection app catalog in your site collection or you will get an exception when trying to use these APIs.
+> ALM APIs are also supported for the [site collection app catalog](../general-development/site-collection-app-catalog.md). URLs for the site collection app catalog operations are exactly the same, but you can change the `tenantappcatalog` to `sitecollectionappcatalog`. Notice also that you will need to enable the site collection app catalog in your site collection or you will get an exception when trying to use these APIs.
 
 ### Add solution package to the app catalog
 
@@ -161,7 +161,7 @@ By using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint
 ### Add and publish your app to the app catalog
 Adding your app (.sppkg file, .app file) to the app catalog is a prerequisite to making your app available for use on your SharePoint sites. You can do this by using the following cmdlet:
 
-```PowerShell
+```powershell
 Add-PnPApp -Path ./myapp.sppkg -Scope Tenant
 ```
 
@@ -226,6 +226,7 @@ Get-PnPApp -Scope Tenant
 Using the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs), you can automate deploying, publishing, installing, upgrading, and retracting your apps. The Office 365 CLI is a cross-platform command-line interface that can be used on any platform, including Windows, MacOS, and Linux. To learn more about these commands, see the following sections.
 
 ### Add and publish your app to the app catalog
+
 Adding your app (.sppkg file, .app file) to the tenant app catalog is a prerequisite to making your app available for use on your SharePoint sites. Use the [add](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command to do this:
 
 ```shell
@@ -245,6 +246,7 @@ spo app deploy --id <app id> --skipFeatureDeployment
 
 
 ### Remove the app from the app catalog
+
 You may want to remove an app that you added earlier, and you can do this by using the [remove](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
 ```shell
@@ -253,6 +255,7 @@ spo app remove --id <app id>
 
 
 ### Use apps on your site
+
 After the app is added to the app catalog and published, you can install the app to your site by using the [install](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
 ```shell

@@ -145,6 +145,6 @@ RestRequest("/_api/thememanager/GetTenantThemingOptions");
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
-* [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
+* [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
 
 
