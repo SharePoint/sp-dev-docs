@@ -50,7 +50,7 @@ Headers:
 
 <br/>
 
-The following XML shows an example of the list properties that are returned when you request the XML content type.
+The following XML shows an example of the **list properties that are returned when you request the XML content type**.
 
 ```XML
   <content type="application/xml">

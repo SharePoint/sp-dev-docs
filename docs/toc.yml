@@ -222,7 +222,7 @@
     href: spfx/known-issues-and-common-questions.md 
 - name: Features
   items:
-  - name: Introduction to SharePoint APIs
+  - name: SharePoint APIs
     items:
     - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
       href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
@@ -254,9 +254,8 @@
       - name: Make batch requests
         href: sp-add-ins/make-batch-requests-with-the-rest-apis.md 
   - name: Site theming
+    href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     items:
-    - name: Overview
-      href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     - name: JSON schema reference
       href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
     - name: PowerShell cmdlets

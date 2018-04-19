@@ -15,7 +15,7 @@ ms.prod: sharepoint
 
 ## Working with folders by using REST
 
-You can retrieve a folder inside a document library when you know its URL. For example, you can retrieve the root folder of your Shared Documents library by using the endpoint in the following example.
+You can retrieve a folder inside a document library when you know its URL. For example, you can **retrieve the root folder of your Shared Documents library** by using the endpoint in the following example.
 
 ```
 url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Shared Documents')
@@ -28,7 +28,7 @@ headers:
 
 <br/>
 
-The following XML shows an example of folder properties that are returned when you request the XML content type.
+The following XML shows an example of **folder properties that are returned when you request the XML content type**.
 
 ```XML
 <content type="application/xml">
@@ -77,7 +77,7 @@ Headers:
 
 <br/>
 
-The following example shows how to **delete** a folder.
+The following example shows how to **delete a folder**.
 
 ```
 url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')
@@ -230,7 +230,7 @@ headers:
 
 <br/>
 
-The following code sample shows how to create a file by using this REST endpoint and the cross-domain library.
+The following code sample shows how to **create a file by using this REST endpoint and the cross-domain library**.
 
 ```
 function uploadFileBinary() {
