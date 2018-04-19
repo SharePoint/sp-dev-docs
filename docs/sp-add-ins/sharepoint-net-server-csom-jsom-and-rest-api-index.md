@@ -5,7 +5,6 @@ ms.date: 12/13/2017
 ms.prod: sharepoint
 ---
 
-
 # SharePoint .NET Server, CSOM, JSOM, and REST API index
 
 Use the API index to look up many of the most frequently used types and objects that are implemented in the .NET server object model and at least one client programming model: .NET client-side object model (CSOM), JavaScript object model (JSOM), and/or REST.

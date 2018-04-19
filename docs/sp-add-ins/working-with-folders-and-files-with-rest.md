@@ -17,7 +17,6 @@ ms.prod: sharepoint
 
 You can retrieve a folder inside a document library when you know its URL. For example, you can retrieve the root folder of your Shared Documents library by using the endpoint in the following example.
 
-
 ```
 url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Shared Documents')
 method: GET

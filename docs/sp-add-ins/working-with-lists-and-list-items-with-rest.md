@@ -14,7 +14,6 @@ ms.prod: sharepoint
 
 This topic assumes that you are already familiar with the topics [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) and [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md). It does not provide code snippets.
  
-
 <a name="RetrieveLists"> </a> 
 
 ## Retrieving lists and list properties with REST

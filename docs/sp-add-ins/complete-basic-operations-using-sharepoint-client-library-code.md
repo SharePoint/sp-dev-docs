@@ -5,7 +5,6 @@ ms.date: 12/13/2017
 ms.prod: sharepoint
 ---
 
-
 # Complete basic operations using SharePoint client library code
 
 

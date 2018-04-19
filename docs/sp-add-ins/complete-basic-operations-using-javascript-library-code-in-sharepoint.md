@@ -5,7 +5,6 @@ ms.date: 12/13/2017
 ms.prod: sharepoint
 ---
 
-
 # Complete basic operations using JavaScript library code in SharePoint
 
 You can use the SharePoint client object model to retrieve, update, and manage data in SharePoint. SharePoint makes the object model available in several forms:
