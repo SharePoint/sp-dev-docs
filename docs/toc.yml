@@ -222,6 +222,40 @@
     href: spfx/known-issues-and-common-questions.md 
 - name: Features
   items:
+  - name: Connect to Office 365 Group
+    href: features/groupify/groupify-overview.md
+    items:
+    - name: CSOM API
+      href: features/groupify/groupify-csom.md
+  - name: Hub sites
+    href: features/hub-site/hub-site-overview.md
+    items:
+    - name: Create a hub site with PowerShell
+      href: features/hub-site/create-hub-site-with-powershell.md
+    - name: PowerShell
+      href: features/hub-site/hub-site-powershell.md
+    - name: REST API
+      items:
+      - name: SP.HubSites.CanCreate
+        href: features/hub-site/REST-cancreate-method.md
+      - name: GetById
+        href: features/hub-site/REST-getbyid-method.md
+      - name: HubSiteData
+        href: features/hub-site/REST-hubsitedata-method.md
+      - name: HubSites
+        href: features/hub-site/REST-hubsites-method.md
+      - name: JoinHubSite
+        href: features/hub-site/REST-joinhubsite-method.md
+      - name: RegisterHubSite
+        href: features/hub-site/REST-registerhubsite.method.md
+      - name: SyncHubSiteTheme
+        href: features/hub-site/REST-synchubsitetheme-method.md
+      - name: UnRegisterHubSite
+        href: features/hub-site/REST-unregisterhubsite-method.md
+      - name: SPHubSite type
+        href: features/hub-site/REST-sphubsite-type.md
+      - name: SPHubSiteData type
+        href: features/hub-site/REST-sphubsitedata-type.md         
   - name: SharePoint APIs
     items:
     - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
@@ -252,24 +286,7 @@
       - name: Set custom permissions
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
       - name: Make batch requests
-        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md 
-  - name: Site theming
-    href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
-    items:
-    - name: JSON schema reference
-      href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
-    - name: PowerShell cmdlets
-      href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
-    - name: CSOM API
-      href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
-    - name: REST API
-      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
-  - name: Column formatting
-    href: declarative-customization/column-formatting.md   
-  - name: Communication site
-    href: apis/communication-site-creation-rest.md
-  - name: Application Lifecycle Management (ALM) APIs
-    href: apis/alm-api-for-spfx-add-ins.md      
+        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
@@ -286,41 +303,18 @@
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
     - name: PnP Provisioning Engine
-      href: declarative-customization/site-design-pnp-provisioning.md
-  - name: Hub sites
-    href: features/hub-site/hub-site-overview.md
+      href: declarative-customization/site-design-pnp-provisioning.md         
+  - name: Site theming
+    href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     items:
-    - name: Create a hub site with PowerShell
-      href: features/hub-site/create-hub-site-with-powershell.md
-    - name: PowerShell
-      href: features/hub-site/hub-site-powershell.md
-    - name: REST API
-      items:
-      - name: SP.HubSites.CanCreate
-        href: features/hub-site/REST-cancreate-method.md
-      - name: GetById
-        href: features/hub-site/REST-getbyid-method.md
-      - name: HubSiteData
-        href: features/hub-site/REST-hubsitedata-method.md
-      - name: HubSites
-        href: features/hub-site/REST-hubsites-method.md
-      - name: JoinHubSite
-        href: features/hub-site/REST-joinhubsite-method.md
-      - name: RegisterHubSite
-        href: features/hub-site/REST-registerhubsite.method.md
-      - name: SyncHubSiteTheme
-        href: features/hub-site/REST-synchubsitetheme-method.md
-      - name: UnRegisterHubSite
-        href: features/hub-site/REST-unregisterhubsite-method.md
-      - name: SPHubSite type
-        href: features/hub-site/REST-sphubsite-type.md
-      - name: SPHubSiteData type
-        href: features/hub-site/REST-sphubsitedata-type.md
-  - name: Connect to Office 365 Group
-    href: features/groupify/groupify-overview.md
-    items:
+    - name: JSON schema reference
+      href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
+    - name: PowerShell cmdlets
+      href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
     - name: CSOM API
-      href: features/groupify/groupify-csom.md        
+      href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
+    - name: REST API
+      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md            
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
@@ -341,6 +335,12 @@
         href: apis/webhooks/lists/delete-subscription.md
       - name: Get subscription
         href: apis/webhooks/lists/get-subscription.md
+  - name: Application Lifecycle Management (ALM) APIs
+    href: apis/alm-api-for-spfx-add-ins.md         
+  - name: Column formatting
+    href: declarative-customization/column-formatting.md   
+  - name: Communication site
+    href: apis/communication-site-creation-rest.md     
   - name: Shorter share links
     href: spfx/shorter-share-link-format.md
 - name: SharePoint development overview
