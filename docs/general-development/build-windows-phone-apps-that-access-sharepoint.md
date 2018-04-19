@@ -113,22 +113,13 @@ In SharePoint Foundation 2010, the client object models provide APIs that enable
     
 
 **Figure 2. SharePoint client object model architecture**
-
   
-    
-    
-
-  
-    
-    
 ![SharePoint client object model architecture](../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig3.png)
-  
-    
-    
-To learn how to use the JavaScript client object model against SharePoint data, see  [ECMAScript Client Object Model](http://channel9.msdn.com/learn/courses/SharePoint2010Developer/ClientObjectModel/ECMAScriptClientObjectModel)
-  
-    
-    
+   
+To learn how to use the JavaScript client object model against SharePoint data, see the ECMAScript Client Object Model video:
+
+> [!VIDEO http://channel9.msdn.com/learn/courses/SharePoint2010Developer/ClientObjectModel/ECMAScriptClientObjectModel/player]
+
 
 #### REST endpoints in SharePoint
 
