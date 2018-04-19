@@ -14,7 +14,11 @@ The reference implementation only works with [SharePoint list webhooks](./lists/
 
 You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
+<br/>
+
 > [!Video https://www.youtube.com/embed/P4a1_EWokwM]
+
+<br/>
 
 **Applies to** Office 365 Multi Tenant (MT).
 
