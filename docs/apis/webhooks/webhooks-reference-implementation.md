@@ -14,10 +14,7 @@ The reference implementation only works with [SharePoint list webhooks](./lists/
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=j3hWCAI9R20).
 
-> [!Video https://www.youtube.com/embed/watch?v=j3hWCAI9R20]
-
-
-<a href="https://www.youtube.com/watch?v=j3hWCAI9R20">
+<a href="https://www.youtube.com/embed/watch?v=j3hWCAI9R20">
 <img src="../../images/youtube-introducing-sharepoint-webhooks.png" alt="PnP webcast - Introducing SharePoint webhooks" />
 </a>
 
