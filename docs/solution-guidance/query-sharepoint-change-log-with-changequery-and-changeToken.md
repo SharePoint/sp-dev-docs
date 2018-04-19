@@ -81,7 +81,7 @@ In Program.cs,  **Main** calls **DoWork** to read and process SharePoint's chang
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 private static void DoWork()
         {
             Console.WriteLine();

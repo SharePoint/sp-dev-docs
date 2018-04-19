@@ -13,11 +13,13 @@ This model is similar to using a **UserCustomAction** collection in a **Site** o
 
 This article describes how to extend your [Hello World extension](./build-a-hello-world-extension.md) to take advantage of page placeholders. 
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ipRw6o6bOTw&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV).
+You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=3LXuYBaJ1Lc">
-<img src="../../../images/spfx-ext-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/3LXuYBaJ1Lc]
+
+<br/> 
 
 ## Get access to page placeholders
 

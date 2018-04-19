@@ -102,7 +102,7 @@ To use the add-in part definition in your CSOM code:
     
 - Assign the add-in part definition to a string that will be used in your CSOM code.
 
-```C#
+```csharp
 private const string appPartXml = @"<webParts>
   <webPart xmlns=""http://schemas.microsoft.com/WebPart/v3"">
     <metaData>
@@ -149,7 +149,7 @@ private const string appPartXml = @"<webParts>
     
 3. For each list item returned from the  **Pages** library, calling **FindWebPartToReplace**.
 
-```C#
+```csharp
 protected void ReplaceWebPartsWithAppParts(object sender, EventArgs e)
 {
     var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -189,7 +189,7 @@ protected void ReplaceWebPartsWithAppParts(object sender, EventArgs e)
     
 3. For each Web Part in the Web Part manager's [WebParts](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.webparts.aspx) property, determining whether the Web Part's title and the **oldWebPartTitle** variable, which is set to the title of the Web Part you are replacing, are equal. If the Web Part title and **oldWebPartTitle** are equal, call **ReplaceWebPart**; otherwise continue with the next iteration of the **foreach** loop.
 
-```C#
+```csharp
 private static void FindWebPartToReplace(ListItem item, ClientContext clientContext, Web web)
 {
     File page = item.File;
@@ -220,7 +220,7 @@ private static void FindWebPartToReplace(ListItem item, ClientContext clientCont
     
 3. Using [WebPartDefinition.DeleteWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.webpartdefinition.deletewebpart.aspx) to delete the old Web Part from the page.
 
-```C#
+```csharp
 private static void ReplaceWebPart(Web web, ListItem item, LimitedWebPartManager webPartManager,
       WebPartDefinition oldWebPartDefinition, ClientContext clientContext, File page)
   {

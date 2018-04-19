@@ -84,9 +84,9 @@ gulp serve --nobrowser
 
 Next, in the web browser, navigate to the modern page, on which you want to test the extension. After the page loaded, copy its URL. Depending on the type of extension you want to test, there are different parameters that you need to add to the URL.
 
-#### Debug application customizer
+#### Debug Application Customizer
 
-To debug an application customizer, to the URL of your modern page, add `?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"<extensionId>":{"location":"<extensionType>","properties":<propertiesJSON>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}`.
+To debug an Application Customizer, to the URL of your modern page, add `?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"<extensionId>":{"location":"<extensionType>","properties":<propertiesJSON>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}`.
 
 Following are the query string parameters that you need to add:
 

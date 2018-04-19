@@ -95,7 +95,7 @@ Using this model the ACS endpoint url to use is formatted like https:// + endpoi
 
 When you want to do SharePoint add-in authorization using Azure ACS then you're using `tokenhelper.cs` (or `tokenhelper.vb`). The default tokenhelper class will have hardcoded references to the Azure ACS endpoints and methods to acquire the ACS endpoint as shown below:
 
-```C#
+```csharp
 ...
 
 private static string GlobalEndPointPrefix = "accounts";
@@ -107,7 +107,7 @@ private static string AcsHostUrl = "accesscontrol.windows.net";
 #### Tokenhelper.cs updates for Germany
 Update the static variables `GlobalEndPointPrefix` and `AcsHostUrl` to the Germany Azure ACS values.
 
-```C#
+```csharp
 ...
 
 private static string GlobalEndPointPrefix = "login";
@@ -119,7 +119,7 @@ private static string AcsHostUrl = "microsoftonline.de";
 #### Tokenhelper.cs updates for China
 Update the static variables `GlobalEndPointPrefix` and `AcsHostUrl` to the China Azure ACS values:
 
-```C#
+```csharp
 ...
 
 private static string GlobalEndPointPrefix = "accounts";

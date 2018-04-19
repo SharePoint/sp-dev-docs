@@ -54,7 +54,7 @@ After you analyze the sites that you want to modernize, you can continue with th
 
   - Replace JSLink with a [column formatter](../declarative-customization/column-formatting.md) or with a [SharePoint Framework Field Customizer extension](../spfx/extensions/get-started/building-simple-field-customizer.md).
   - Replace existing first-party web parts with [SharePoint Framework client-side web parts](../spfx/web-parts/overview-client-side-web-parts.md) in case there's no out-of-the-box client-side web part available that provides similar capabilities.
-  - Replace JavaScript embedding via user custom actions with a [SharePoint Framework application customizer extension](../spfx/extensions/get-started/build-a-hello-world-extension.md).
+  - Replace JavaScript embedding via user custom actions with a [SharePoint Framework Application Customizer extension](../spfx/extensions/get-started/build-a-hello-world-extension.md).
   - Replace list commands (user custom actions) with [SharePoint Framework ListView Command Set extensions](../spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md).
 
 - Modernize your user experience by:

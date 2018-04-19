@@ -90,7 +90,7 @@ Choosing  **Run scenario 1** calls the **btnScenario1_Click** method in CodeSamp
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 protected void btnScenario1_Click(object sender, EventArgs e)
         {
 
@@ -140,7 +140,7 @@ Choosing  **Run scenario 2** calls the **btnScenario2_Click** method in CodeSamp
     
 	- The property value, in HTML format ( ** I am a software engineer at Contoso** in this scenario).
     
-```C#
+```csharp
 protected void btnScenario2_Click(object sender, EventArgs e)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -201,7 +201,7 @@ Choosing  **Run scenario 3** calls **btnScenario3_Click** in CodeSample3.aspx.cs
     
 	- The property values as a  **List** of string objects.
 
-```C#
+```csharp
   protected void btnScenario3_Click(object sender, EventArgs e)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);

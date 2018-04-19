@@ -33,7 +33,7 @@ With the preparation work done let's continue to the next chapter showing how yo
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 In a first step, you add the SharePoint PnP Sites Core library nuget package: https://www.nuget.org/packages/SharePointPnPCoreOnline. Once that’s done you can use below code construct:
 
-```C#
+```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/demo";
 using (var cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext(siteUrl, "[Your Client ID]", "[Your Client Secret]"))
 {
@@ -48,7 +48,7 @@ Once the principal is created and consented you can use the principal's id and s
 using Microsoft.SharePoint.Client;
 using System;
 
-```C#
+```csharp
 namespace AzureACSAuth
 {
     class Program

@@ -43,7 +43,7 @@ At this point we’ve created our Console Application and we’ve added the requ
 
 The following code demonstrates how to wire up the call to your site quite easily now that we’ve added the helper classes from our NuGet package.
 
-```C#
+```csharp
  static void Main(string[] args)
   {
       using (ClientContext context = new ClientContext("https://redacted.sharepoint.com"))
@@ -148,7 +148,7 @@ In his post called "[Building a SharePoint Add-in as a Timer Job](http://tz.nu/1
 
 ## Extending the code with some CSOM magic ##
 At this point we have a working Console Application which can authenticate and execute requests to your Office 365 sites. Nothing fancy has been done in the code yet, so here’s a sample snippet for pulling out some information from a list called "Automatic Translations" that I have created, and the code logic will see if there’s any items in the list that haven’t been translated and then it’ll execute a call to a translation-service and translate the text to the desired output language.
-```C#
+```csharp
 static void Main(string[] args)
 {
    try

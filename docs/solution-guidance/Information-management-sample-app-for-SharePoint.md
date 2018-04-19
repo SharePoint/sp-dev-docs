@@ -48,7 +48,7 @@ The following code in the  **Page_Load** method of the Default.aspx.cs page fetc
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 // Get site expiration and closure dates.
 if (cc.Web.HasSitePolicyApplied())
 {
@@ -60,7 +60,7 @@ if (cc.Web.HasSitePolicyApplied())
 
 The following code in the  **Page_Load** method of the Default.aspx.cs page displays the names of all site policies that can be applied to the site (including the currently applied site policy). This code calls the **GetSitePolicies** extension method of the OfficeDevPnP.Core project.
 
-```C#
+```csharp
 // List the defined policies.
 List<SitePolicyEntity> policies = cc.Web.GetSitePolicies();
 string policiesString = "";
@@ -75,7 +75,7 @@ lblSitePolicies.Text = policiesString;
 
 The following code in the  **Page_Load** method of the Default.aspx.cs page displays the name of the site policy currently applied to the site. This calls the **GetAppliedSitePolicy** extension method of the OfficeDevPnP.Core project.
 
-```C#
+```csharp
 // Show the assigned policy.
 SitePolicyEntity appliedPolicy = cc.Web.GetAppliedSitePolicy();
 if (appliedPolicy != null)
@@ -91,7 +91,7 @@ else
 
 The following code in the  **Page_Load** method of the Default.aspx.cs page populates the drop-down list with the site policies that are available, except for the site policy that is currently assigned to the site.
 
-```C#
+```csharp
 // Fill the policies combo.
 foreach (var policy in policies)
 {
@@ -106,7 +106,7 @@ btnApplyPolicy.Enabled = drlPolicies.Items.Count > 0;
 
 The following code in the Default.aspx.cs page applies the selected site policy to the site. The original site policy is replaced by the new site policy. 
 
-```C#
+```csharp
 protected void btnApplyPolicy_Click(object sender, EventArgs e)
 {
 if (drlPolicies.SelectedItem != null)

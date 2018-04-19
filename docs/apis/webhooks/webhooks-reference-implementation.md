@@ -12,11 +12,13 @@ The SharePoint Patterns and Practices (PnP) reference implementation shows how y
 
 The reference implementation only works with [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks.md). 
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=j3hWCAI9R20).
+You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=j3hWCAI9R20">
-<img src="../../images/youtube-introducing-sharepoint-webhooks.png" alt="PnP webcast - Introducing SharePoint webhooks" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/P4a1_EWokwM]
+
+<br/>
 
 **Applies to** Office 365 Multi Tenant (MT).
 

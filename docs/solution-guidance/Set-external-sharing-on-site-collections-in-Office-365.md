@@ -68,7 +68,7 @@ When you run this code sample,  **Main** in Program.cs performs the following ta
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
  static void Main(string[] args)
         {
            
@@ -131,7 +131,7 @@ When you run this code sample,  **Main** in Program.cs performs the following ta
     
 -  If sharing is enabled in your Office 365 subscription, sets the **SiteProperties.SharingCapability** to the external sharing settings the user entered.
 
-```C#
+```csharp
 public static void SetSiteSharing(ClientContext adminCC, string siteCollectionURl, SharingCapabilities shareSettings)
         {
             var _tenantAdmin = new Tenant(adminCC);

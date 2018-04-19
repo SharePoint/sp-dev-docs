@@ -29,14 +29,14 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong s
 
 2. Add the following line to the **Page_Load** method between the call of `AddLocalEmployeeToCorpDB` and the call of `Response.Redirect`. In the next step, you create the **SetLocalEmployeeSyncStatus** method.
     
-    ```C#
+    ```csharp
        // Write to SharePoint 
      SetLocalEmployeeSyncStatus();
     ```
 
 3. Add the following new method to the `EmployeeAdder` class. 
 
-    ```C#
+    ```csharp
        private void SetLocalEmployeeSyncStatus()
      {
          using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -142,13 +142,13 @@ Now you add a function to the add-in that creates an item in the **Expected Ship
 
 3. In the **btnCreateOrder_Click** method, add the following line just under the call to `CreateOrder`. You'll create the **CreateExpectedShipment** method in the next step.
     
-    ```C#
+    ```csharp
       CreateExpectedShipment(txtBoxSupplier.Text, txtBoxItemName.Text, quantity);
     ```
 
 4. Add the following method to the `OrderForm` class. 
 
-    ```C#
+    ```csharp
       private void CreateExpectedShipment(string supplier, string product, UInt16 quantity)
     {
         using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -189,7 +189,7 @@ Instead, you need to use a special CSOM class called **ConditionalScope**. The r
 
 An alternative way to check for the existence of a list is as follows: instead of using the **GetByTitle** method to get a reference to the list, you can check to see if a list with the specified name is in the website's "list of lists" with code like the following.
 
-```C#
+```csharp
 var query = from list in clientContext.Web.Lists 
              where list.Title == "Expected Shipments" 
              select list; 

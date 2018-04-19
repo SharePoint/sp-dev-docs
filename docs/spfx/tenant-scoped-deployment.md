@@ -12,11 +12,14 @@ You can configure your SharePoint Framework components to be immediately availab
 
 When the solution has this attribute enabled, the tenant administrator is provided the option to enable the solution to be available automatically across all site collections and sites in the tenant when the solution package is installed to the tenant app catalog. 
 
-You can also see the tenant-wide deployment option demonstrated by watching the following video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=pemHOZCSwZI).
+You can also see the tenant-wide deployment option demonstrated by watching the following video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=pemHOZCSwZI&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG">
-<img src="../images/tenant-deploy-youtube-video.png" alt="PnP Short Guidance video on tenant-wide deployment option" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/pemHOZCSwZI]
+
+<br/> 
+
 
 > [!NOTE] 
 > You have to update to the latest SharePoint Framework Yeoman template version to be able to use this capability. You can update your global installation by executing `npm install -g @microsoft/generator-sharepoint`. 

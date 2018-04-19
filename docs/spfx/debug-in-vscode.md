@@ -10,11 +10,13 @@ ms.prod: sharepoint
 
 Visual Studio Code is a popular code editor frequently used for building SharePoint Framework solutions. By setting up debugging of your SharePoint Framework solution in Visual Studio Code, you can more efficiently step through your code and fix errors. 
 
-You can also see the required steps to enable debugging in Visual Studio Code in this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=oNChcluMrm8&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG). 
+You can also see the required steps to enable debugging in Visual Studio Code in this video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=oNChcluMrm8&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG">
-<img src="../images/spfx-debug-youtube.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/watch?v=oNChcluMrm8?list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG]
+
+<br/> 
 
 ## Prerequisites
 

@@ -29,7 +29,7 @@ In the following code,  **Main** shows the order of operations to perform to rep
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 static void Main(string[] args)
 {
     using (var clientContext = new ClientContext("http://contoso.sharepoint.com"))
@@ -54,7 +54,7 @@ In the following code,  **GetContentTypeByName** gets a content type from the cu
     
 2. Finding and then returning a content type from the site, by matching the site content type name to the name of the existing content type, which is submitted by the **name** parameter.
 
-```C#
+```csharp
 private static ContentType GetContentTypeByName(ClientContext cc, Web web, string name)
 {
     ContentTypeCollection contentTypes = web.ContentTypes;
@@ -74,7 +74,7 @@ In the following code,  **CreateContentType** creates a new content type by:
     
 4. Adding the new content type using [ContentTypeCollection.Add](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttypecollection.add.aspx).
 
-```C#
+```csharp
 private static void CreateContentType(ClientContext cc, Web web)
 {
     // The new content type will be created using this name.
@@ -109,7 +109,7 @@ In the following code,  **CreateSiteColumn** creates a new site column by:
     
 3. Finding a matching field on the site by matching the field names on the site to  **fieldName**. If the field already exists, no further action is necessary and control passes back to **Main** when **return** is called. If the field does not exist, a CAML string specifying the field schema is assigned to **FieldAsXML**, and then the field is created using [FieldCollection.AddFieldAsXml](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.fieldcollection.addfieldasxml.aspx).
 
-```C#
+```csharp
 private static void CreateSiteColumn(ClientContext cc, Web web)
 {
     // The new field will be created using this name.
@@ -151,7 +151,7 @@ In the following code,  **AddSiteColumnToContentType** creates a connection betw
     
 5. Adding the  **FieldLinkCreationInformation** object to the **ContentType.FieldLinks** property.
 
-```C#
+```csharp
 private static void AddSiteColumnToContentType(ClientContext cc, Web web)
 {
     // The name of the content type. 
@@ -211,7 +211,7 @@ In the following code,  **ReplaceContentType** checks all items in all libraries
 > [!NOTE] 
 > The old content type is still in the list but it is not used anymore. You can now delete the old content type from the lists, and then retract it.This article describes how to replace document content types only. If you are replacing content types on page layouts, ensure you update the [AssociatedContentType](https://msdn.microsoft.com/library/office/microsoft.sharepoint.publishing.pagelayout.associatedcontenttype.aspx) property on each page layout in the site collection.
 
-```C#
+```csharp
 private static void ReplaceContentType(ClientContext cc, Web web)
 {
     // The old content type. 

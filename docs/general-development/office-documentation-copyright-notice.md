@@ -8,7 +8,7 @@ ms.assetid: a9c2f3d9-cea2-49a3-b709-40dc614b9f86
 
 # Office 2013 documentation copyright notice
 
-This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. 
+This document is provided "as-is". Information and views expressed in this document, including URL and other Internet website references, may change without notice. You bear the risk of using it. 
   
     
     

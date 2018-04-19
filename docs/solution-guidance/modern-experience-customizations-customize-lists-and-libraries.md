@@ -309,7 +309,7 @@ If you want to control the experience at the library level, you can go to **List
 
 The same can also be done by using CSOM as shown in this snippet:
 
-```C#
+```csharp
 // Load the list you want to update
 var list = context.Web.Lists.GetByTitle(title);
 context.Load(list);
@@ -358,7 +358,7 @@ The previous section explained the reasoning behind our auto-detect mechanism, b
 
 #### CSOM sample
 
-```C#
+```csharp
 using (var cc = new ClientContext(siteUrl))
 {
     cc.Credentials = new SharePointOnlineCredentials(userName, password);

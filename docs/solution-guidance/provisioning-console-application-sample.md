@@ -74,7 +74,7 @@ To begin, we need to connect to the site that we wish to model as our provisioni
 
 1. Collect connection information from the user. Note that in the program's  `Main` routine, we do three simple things: collect connection information, GET the provisioning template, and APPLY the provisioning template. The heavy lifting is done by the **GetProvisioningTemplate** and **ApplyProvisioningTemplate** methods that we define below.
     
-	```C#
+	```csharp
 	static void Main(string[] args)
 	    {
 	        ConsoleColor defaultForeground = Console.ForegroundColor;

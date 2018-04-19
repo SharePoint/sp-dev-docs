@@ -9,11 +9,13 @@ ms.prod: sharepoint
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-You can follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
+You can follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=JBhgdSgWgdM">
-<img src="../../../images/spfx-ext-youtube-tutorialcommand.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/JBhgdSgWgdM]
+
+<br/> 
 
 ## Create an extension project
 

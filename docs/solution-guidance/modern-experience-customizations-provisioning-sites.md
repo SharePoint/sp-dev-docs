@@ -51,7 +51,7 @@ See the following Office Support article for details:
 
 In the SharePoint PnP Core component - since the October 2017 release (v. 2.19.1710.1) - there is a new extension method for the CSOM _ClientContext_ type. The extension method name is _CreateSiteAsync_ and allows you to create a "modern" team site in a matter of few seconds. In the following code snippet you can see how to use this technique.
 
-```C#
+```csharp
 // Let's use the CreateSiteAsync extension method of PnP CSOM Core
 // to create the "modern" team site
 
@@ -122,7 +122,7 @@ https://[tenant].sharepoint.com/sites/[mailNickname]
 
 The PnP CSOM Core component, available as a [NuGet package](https://www.nuget.org/packages/SharePointPnPCoreOnline), has simplified methods for the "modern" group handling. 
 
-```C#
+```csharp
 /// <summary>
 /// Let's use the UnifiedGroupsUtility class from PnP CSOM Core to simplify managed code operations for Office 365 groups
 /// </summary>
@@ -192,7 +192,7 @@ If you rather prefer, you can create a "modern" communication site programmatica
 
 The PnP CSOM Core component, available as a [NuGet package](https://www.nuget.org/packages/SharePointPnPCoreOnline), has simplified methods for the "modern" sites handling. 
 
-```C#
+```csharp
 // Let's use the CreateSiteAsync extension method of PnP CSOM Core
 // to create the "modern" team site
 

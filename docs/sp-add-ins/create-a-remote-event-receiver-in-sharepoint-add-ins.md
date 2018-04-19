@@ -79,7 +79,7 @@ To follow along with this article and enter the code yourself, download the samp
     > [!NOTE] 
     > At the time this article was written, the Office Developer Tools for Visual Studio had references to all the needed assemblies when the receiver is created, but later versions of the tools may not. If you get compiler errors, simply add the missing references; for example, you may need to add references to System.ServiceModel or System.ComponentModel.DataAnnotations.
 
-    ```C#
+    ```csharp
     using System;
     using System.Collections.Generic;
     using System.Linq;

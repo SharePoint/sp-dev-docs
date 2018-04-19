@@ -37,7 +37,7 @@ After you have Fiddler installed, you can also check the response headers from S
 
 Several things can cause a **401 Unauthorized** error when the high-trust add-in first accesses SharePoint. If you are using the Client-side Object Model (CSOM), the error looks something like the following:
 
-```C#
+```csharp
 [WebException: The remote server returned an error: (401) Unauthorized.]
    System.Net.HttpWebRequest.GetResponse() +8515936
    Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute() +178
@@ -52,7 +52,7 @@ Several things can cause a **401 Unauthorized** error when the high-trust add-in
 
 If you are using the TokenHelper file and Windows identity, the code that triggers the exception looks like the following:
 
-```C#
+```csharp
 ClientContext clientContext = 
     TokenHelper.GetS2SClientContextWithWindowsIdentity(sharepointUrl, Request.LogonUserIdentity); 
 clientContext.Load(clientContext.Web);

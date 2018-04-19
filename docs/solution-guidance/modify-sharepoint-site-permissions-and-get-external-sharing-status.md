@@ -23,13 +23,13 @@ To update the administrators of a site collection, you must be an administrator 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 ClientContext cc = new AuthenticationManager().GetSharePointOnlineAuthenticatedContextTenant(String.Format("https://{0}.sharepoint.com/sites/{1}", tenantName, siteName), String.Format("{0}@{1}.onmicrosoft.com", userName, tenantName), password); 
 ```
 
 Using the  **ClientContext** object, you can get a list of the current site collection administrators or update the site collection administrators, as shown in the following example.
 
-```C#
+```csharp
 List<UserEntity> admins = cc.Web.GetAdministrators();
 
 List<UserEntity> adminsToAdd = new List<UserEntity>();
@@ -43,7 +43,7 @@ cc.Web.RemoveAdministrator(adminToRemove);
 
 You can set the site collection administrators for site collections where you're not already a site collection administrator by creating a  **ClientContext** object using a registered add-in. Here, the **ClientContext** object is based on an OAuth token with tenant-level permissions.
 
-```C#
+```csharp
 // Use (Get-MsolCompanyInformation).ObjectID to obtain Target/Tenant realm: <guid>
 //
 // Manually register an add-in via the appregnew.aspx page and generate an add-in ID and 
@@ -67,7 +67,7 @@ You can set the site collection administrators for site collections where you're
 ```
 After you've done that, you can use the following code to obtain a  **ClientContext** object for this add-in.
 
-```C#
+```csharp
 ClientContext cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext("https://tenantname-my.sharepoint.com/personal/user2", "<your tenant realm>", "<appID>", "<appsecret>");
 ```
 
@@ -75,13 +75,13 @@ ClientContext cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext("h
 
 This scenario shows how to get the external sharing status of a site collection, and get a list of external users for a specific site collection or for the whole tenant. Because this requires the tenant CSOM libraries, you need to create a  **ClientContext** against the tenant admin site collection. The user account has to be a tenant administrator account.
 
-```C#
+```csharp
 ClientContext ccTenant = new AuthenticationManager().GetSharePointOnlineAuthenticatedContextTenant(String.Format("https://{0}-admin.sharepoint.com/", tenantName), String.Format("{0}@{1}.onmicrosoft.com", userName, tenantName), password);
 ```
 
 After the  **ClientContext** is ready, you can use the following code to get the external sharing status and a list of external users.
 
-```C#
+```csharp
 ccTenant.Web.GetSharingCapabilitiesTenant(new Uri(String.Format("https://{0}.sharepoint.com/sites/{1}", tenantName, siteName)))
 
 List<ExternalUserEntity> externalUsers = ccTenant.Web.GetExternalUsersForSiteTenant(new Uri(String.Format("https://{0}.sharepoint.com/sites/{1}", tenantName, siteName)));

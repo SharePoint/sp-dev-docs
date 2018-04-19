@@ -39,7 +39,7 @@ Once you've done this you'll have code behind...but this code behind is not doin
 #### How do I know the code behind is "useless"?
 The [SharePoint Sandbox Solution scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.SandBoxTool) will tell you if your InfoPath has useless code, but if you want to learn more then continue reading. You might wonder how to distinguish between useless and needed code behind as you can only fix the first category. If you still have the original deployed form (so not the one you've downloaded in previous steps) you can simply have a peek at the code. The default empty code is shown below and if you've similar code then this form can be fixed by dropping the code:
 
-```C#
+```csharp
 using Microsoft.Office.InfoPath;
 using System;
 using System.Xml;

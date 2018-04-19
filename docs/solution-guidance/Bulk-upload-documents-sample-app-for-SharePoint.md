@@ -56,7 +56,7 @@ From the  **Main** method in Program.cs, the **RecurseActions** method calls the
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 public override void Run(BaseAction parentAction, DateTime CurrentTime, LogHelper logger)
         {
             CsvProcessor csvProcessor = new CsvProcessor();
@@ -84,7 +84,7 @@ The SharePointSite.csv file lists a file to upload and the document library to u
 > [!NOTE] 
 > The file name is overwritten with the value of  **FileUploadName** specified in OneDriveUploader.xml.
 
-```C#
+```csharp
 public override void IterateCollection(Collection<string> entries, LogHelper logger)
         {
             Stopwatch IterationSW = new Stopwatch();

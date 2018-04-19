@@ -218,7 +218,7 @@ Perform the steps in the following procedure to create an isolated add-in domain
 For information about your options for deploying your add-ins, see [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md).
  
 > [!TIP]
-> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a Web site that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](http://support.microsoft.com/kb/896861).
+> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a website that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](http://support.microsoft.com/kb/896861).
  
 
 ## See also

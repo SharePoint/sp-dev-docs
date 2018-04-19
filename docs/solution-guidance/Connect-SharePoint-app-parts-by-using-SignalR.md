@@ -112,7 +112,7 @@ In this code sample, the Core.ConnectedAppParts project contains two app parts (
 
 When the inline JavaScript code in ConnectedPartOne.aspx runs  **chat.server.send**, a call is made to the  **Send** method in ChatHub.cs. The **Send** method in ChatHub.cs receives the broadcasting app part's name and the message, and then broadcasts the information to all connected app parts by using **Clients.All.broadcastMessage**.  **Clients.All.broadcastMessage** calls the JavaScript function (in all connected app parts) that was defined by using **chat.client.broadcastMessage**.
 
-```C#
+```csharp
  public void Send(string name, string message)
         {
             // Call the broadcastMessage method to update the app parts.

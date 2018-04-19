@@ -59,7 +59,7 @@ The main settings, from a 'Site Classification' perspective are:
 Another option that you have to enable the 'Site Classification' capability is to leverage the PnP Core Library, which provides few extension methods to manage classification in C# code.
 For example, to enable the 'Site Classification' you can write C# code like the one illustrated below.
 
-```C#
+```csharp
 // Connect to the admin central of your tenant
 using (var adminContext = new ClientContext("https://[tenant]-admin.sharepoint.com/"))
 {
@@ -127,7 +127,7 @@ Remove-AzureADDirectorySetting -Id $currentSettings.Id
 Another option that you have is to use the PnP Core Library.
 For example, to update the 'Site Classification' you can write C# code like the one illustrated below.
 
-```C#
+```csharp
 // Connect to the admin central of your tenant
 using (var adminContext = new ClientContext("https://[tenant]-admin.sharepoint.com/"))
 {
@@ -154,7 +154,7 @@ using (var adminContext = new ClientContext("https://[tenant]-admin.sharepoint.c
 
 Moreover, in order to disable and remove the 'Site Classification' settings, you can use a code snippet like the following one.
 
-```C#
+```csharp
 // Connect to the admin central of your tenant
 using (var adminContext = new ClientContext("https://[tenant]-admin.sharepoint.com/"))
 {
@@ -203,7 +203,7 @@ Based on the classification value of a site, you can define automation and custo
 
 In the PnP Core Library there is an extension method for the Site object of CSOM, which allows you to easily read the classification value of a site. In the following code snippet you can see how to leverage this extension method.
 
-```C#
+```csharp
 // Connect to the target site collectiion
 using (var clientContext = new ClientContext("https://[tenant].sharepoint.com/sites/[modernsite]"))
 {
@@ -226,7 +226,7 @@ If your target is a "modern" team site and you want to update the classification
 
 In order to make it easier for you to update the classification of a site, in the PnP Core Library there is an extension method that applies for you the right behavior, depending on the "modern" site type. In the following code excerpt you can see how to use it.
 
-```C#
+```csharp
 // Connect to the target site collectiion
 using (var clientContext = new ClientContext("https://[tenant].sharepoint.com/sites/[modernsite]"))
 {

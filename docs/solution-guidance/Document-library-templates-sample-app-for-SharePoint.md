@@ -25,7 +25,7 @@ To get started, download the  [ECM.DocumentLibraries](https://github.com/SharePo
 
 Users accessing the ECM.DocumentLibraries add-in must have permissions to manage lists. The  **DoesUserHavePermission** method in Default.aspx.cs checks the user's permissions to ensure they can manage lists. If the user does not have permissions to manage lists, the add-in presents an error message to the user.
 
-```C#
+```csharp
 private bool DoesUserHavePermission()
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -55,7 +55,7 @@ When users choose  **Create**, the  **CreateLibrary_Click** method in Default.as
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 protected void CreateLibrary_Click(object sender, EventArgs e)
         {
             try
@@ -99,7 +99,7 @@ The  **CreateContosoDocumentLibrary** method then performs the following tasks, 
     
 4. Creates the document library with the content type.
 
-```C#
+```csharp
         public void CreateContosoDocumentLibrary(ClientContext ctx, Library library)
         {
             // Check the fields.
@@ -133,7 +133,7 @@ The  **CreateContosoDocumentLibrary** method then performs the following tasks, 
 
 **CreateContosoDocumentLibrary** calls the **CreateTaxonomyField** method, which is part of the OfficeDevPnP.Core. **CreateTaxonomyField** creates a field in the managed metadata service from the provider-hosted add-in .
 
-```C#
+```csharp
 public static Field CreateTaxonomyField(this Web web, Guid id, string internalName, string displayName, string group, TermSet termSet, bool multiValue = false)
 		{
 			internalName.ValidateNotNullOrEmpty("internalName");
@@ -173,7 +173,7 @@ public static Field CreateTaxonomyField(this Web web, Guid id, string internalNa
 
 **CreateContosoDocumentLibrary** calls the **CreateContentType** method which is part of OfficeDevPnP.Core. **CreateContentType** creates a new content type.
 
-```C#
+```csharp
 public static ContentType CreateContentType(this Web web, string name, string description, string id, string group, ContentType parentContentType = null)
         {
             LoggingUtility.Internal.TraceInformation((int)EventId.CreateContentType, CoreResources.FieldAndContentTypeExtensions_CreateContentType01, name, id);
@@ -201,7 +201,7 @@ public static ContentType CreateContentType(this Web web, string name, string de
 
 **CreateContosoDocumentLibrary** calls the **AddFieldToContentTypeById** method, which is part of OfficeDevPnP.Core. **AddFieldToContentTypeById** associates a field with a content type.
 
-```C#
+```csharp
 public static void AddFieldToContentTypeById(this Web web, string contentTypeID, string fieldID, bool required = false, bool hidden = false)
         {
             // Get content type.
@@ -220,7 +220,7 @@ public static void AddFieldToContentTypeById(this Web web, string contentTypeID,
 
 **CreateContosoDocumentLibrary** calls the **CreateLibrary** method in ContentTypeManager.cs to create the document library. The **CreateLibrary** method assigns library settings such as the document library's description, document versioning, and associated content types.
 
-```C#
+```csharp
 private void CreateLibrary(ClientContext ctx, Library library, string associateContentTypeID)
         {
             if (!ctx.Web.ListExists(library.Title))
@@ -244,14 +244,14 @@ private void CreateLibrary(ClientContext ctx, Library library, string associateC
             }
             else
             {
-                throw new Exception("A list, survey, discussion board, or document library with the specified title already exists in this Web site.  Please choose another title.");
+                throw new Exception("A list, survey, discussion board, or document library with the specified title already exists in this website.  Please choose another title.");
             }
         }
 ```
 
 **CreateLibrary** calls **RemoveContentTypeByName** in ListExtensions.cs, which is part of OfficeDevPnP.Core. **RemoveContentTypeByName** removes the default content type on the document library.
 
-```C#
+```csharp
         public static void RemoveContentTypeByName(this List list, string contentTypeName)
         {
             if (string.IsNullOrEmpty(contentTypeName))

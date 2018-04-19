@@ -22,7 +22,7 @@ The `CreateSite` method call needs to be executed on an instantiated `Tenant` ob
 
 Below sample shows how to provision a site collection in the European geo location:
 
-```C#
+```csharp
 // Use the Multi-Geo discovery guidance to discover the tenant admin and root site urls for this geo location
 string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 string targetUrl = "https://contoso-europe.sharepoint.com/sites/demosite";

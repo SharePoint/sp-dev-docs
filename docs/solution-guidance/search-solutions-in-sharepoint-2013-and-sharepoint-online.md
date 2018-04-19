@@ -350,7 +350,7 @@ SharePoint 2013 search includes .NET and JavaScript client object models and a R
 
 To use the query .NET CSOM, create a new instance of the [T:Microsoft.SharePoint.Client.ClientContext](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.clientcontext.aspx) class, which is located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.aspx) namespace in the Microsoft.SharePoint.Client.dll. Then use the query object model in the [Microsoft.SharePoint.Search.Client.Query](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.search.query.aspx) namespace. The following is a simple example.
 
-```C#
+```csharp
 using Microsoft.SharePoint.Client; 
 using Microsoft.SharePoint.Client.Search.Query;
 â€¦
@@ -367,7 +367,7 @@ using (ClientContext clientContext = new ClientContext("http://intranet.contoso.
 
 Now you can iterate through the search results. The following example writes out the title of each result.
 
-```C#
+```csharp
 foreach (var row in results.Value[0].ResultRows) 
 { 
     Console.WriteLine(row["Title"]); 
@@ -415,7 +415,7 @@ For more information, see [Add-in permissions in SharePoint 2013](http://msdn.mi
 
 You can use the .NET CSOM, JavaScript CSOM, or search REST service to retrieve search results in a search add-ins. The following example shows how to use the query .NET CSOM to retrieve search results in a search add-ins.
 
-```C#
+```csharp
 var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
 using (var clientContext = spContext.CreateUserClientContextForSPHost())
 {

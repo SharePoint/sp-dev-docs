@@ -69,7 +69,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
    The tools may also have included a **using** block in this method that creates a **ClientContext** object. The custom handler in the Chain Store add-in isn't going to call back into SharePoint, so delete this block. The method should now look like the following.
     
-    ```C#
+    ```csharp
        public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
      {
          SPRemoteEventResult result = new SPRemoteEventResult();
@@ -80,7 +80,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 5. The event receiver could be called by any of three possible add-in events, so add the following **switch** structure to the **ProcessEvent** method in between the lines that create and return the `result` object (the event names have the string "App" in them because add-ins used to be called "apps").
     
-    ```C#
+    ```csharp
       switch (properties.EventType)
     {
         case SPRemoteEventType.AppInstalled:
@@ -101,7 +101,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 6. Our installation logic is going to call an SQL stored procedure to register the Hong Kong store as a tenant in the remote web application. It is very important that, if this process fails, the handler signals SharePoint to roll back the installation of the add-in, so add the following **try/catch** blocks in place of `TODO2`. 
 
-    ```C#
+    ```csharp
       try
     {
         CreateTenant(tenantName);
@@ -121,7 +121,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 7. The host web URL, which is the sample's tenant discriminator, is part of the information that SharePoint passes to the receiver in the **SPRemoteEventProperties** parameter. Add the following line to the **ProcessEvent** method on the line that is just under the initialization of the **SPRemoteEventResult** object.
     
-    ```C#
+    ```csharp
       string tenantName = properties.AppEventProperties.HostWebFullUrl.ToString();
     ```
 
@@ -129,7 +129,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
    Add the following code under the initialization of the `tenantName` object.
     
-    ```C#
+    ```csharp
       if (!tenantName.EndsWith("/"))
     {
         tenantName += "/";
@@ -138,7 +138,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 9. Add the following **using** statements to the top of the file.
     
-    ```C#
+    ```csharp
       using System.Data.SqlClient;
       using System.Data;
       using ChainStoreWeb.Utilities;
@@ -146,7 +146,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 10. Add the following method to the `AppEventReceiver` class. We don't discuss this in detail because the purpose of this series of articles is to teach SharePoint Add-in programming, not SQL Server/Azure programming.
 
-     ```C#
+     ```csharp
        private void CreateTenant(string tenantName)
      {
          // Do not catch exceptions. Allow them to bubble up and trigger roll back
@@ -177,7 +177,7 @@ The uninstallation event does not run, as you might expect, when a user removes 
 
 2. Add the following code in place of `TODO3` in the AppEventReceiver.svc.cs file. 
 
-    ```C#
+    ```csharp
       try
     {
         DeleteTenant(tenantName);
@@ -197,7 +197,7 @@ The uninstallation event does not run, as you might expect, when a user removes 
 
 3. Add the following method to the `AppEventReceiver` class.
     
-    ```C#
+    ```csharp
       private void DeleteTenant(string tenantName)
     {
         // Do not catch exceptions. Allow them to bubble up and trigger roll back

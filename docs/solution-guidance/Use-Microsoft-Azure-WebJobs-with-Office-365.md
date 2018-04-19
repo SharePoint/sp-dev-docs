@@ -80,7 +80,7 @@ In Program.cs, add the following code to the console application.
 
 1. Add  **using** statements.
     
-	```C#
+	```csharp
 	using Microsoft.SharePoint.Client;
 	using System.Security;
 	using System.Configuration; 
@@ -94,7 +94,7 @@ In Program.cs, add the following code to the console application.
     
   -  **GetSPOAccountName** reads your username from app.config.
 
-	```C#
+	```csharp
 	static void Main(string[] args)
 	    {
 	        using (ClientContext context = new ClientContext("https://contoso.sharepoint.com"))

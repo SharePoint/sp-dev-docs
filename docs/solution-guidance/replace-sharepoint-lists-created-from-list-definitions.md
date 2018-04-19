@@ -57,7 +57,7 @@ In the following code, the method shows how to find lists that were created usin
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 static void Main(string[] args)
 {
     using (var clientContext = new ClientContext("http://w15-sp/sites/ftclab"))
@@ -90,7 +90,7 @@ static void Main(string[] args)
 
 After identifying a list that should be replaced,  **ReplaceList** shows the order of operations to perform to replace the list.
 
-```C#
+```csharp
 private static void ReplaceList(ClientContext clientContext, ListCollection listCollection, List listToBeReplaced)
 {
     var newList = CreateReplacementList(clientContext, listCollection, listToBeReplaced);
@@ -109,7 +109,7 @@ private static void ReplaceList(ClientContext clientContext, ListCollection list
 
 To create a new list,  **CreateReplacementList** uses [ListCreationInformation](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.listcreationinformation.aspx). The title of the new list is set to the title of the existing list, with Add-in appended to it. The [ListTemplateType](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.listtemplatetype.aspx) enumeration is used to set the list's template type to a document library. If you are creating a list based on a different template type, make sure to use the correct template type. For example, if you are creating a calendar list, use **ListTemplateType.Events** instead of **ListTemplateType.DocumentLibrary**.
 
-```C#
+```csharp
 private static List CreateReplacementList(ClientContext clientContext, ListCollection lists,List listToBeReplaced)
 {
     var creationInformation = new ListCreationInformation
@@ -129,7 +129,7 @@ private static List CreateReplacementList(ClientContext clientContext, ListColle
     
 2. Applying the list setting from the original list to the new list.
 
-```C#
+```csharp
 private static void SetListSettings(ClientContext clientContext, List listToBeReplaced, List newList)
 {
     clientContext.Load(listToBeReplaced, 
@@ -174,7 +174,7 @@ private static void SetListSettings(ClientContext clientContext, List listToBeRe
  2. Set the content type on the list items when migrating the content from the original list to the new list in MigrateContent.
 
 
-```C#
+```csharp
 private static void SetContentTypes(ClientContext clientContext, List listToBeReplaced, List newList)
 {
     clientContext.Load(listToBeReplaced,
@@ -236,7 +236,7 @@ Users can add or remove views defined on a list to meet their business needs. Fo
     
 4. Adding the views to the  **List.Views** collection by using the **Add** method on the list's Views collection.
 
-```C#
+```csharp
 private static void AddViews(ClientContext clientContext, List listToBeReplaced, List newList)
 {
     ViewCollection views = listToBeReplaced.Views;
@@ -306,7 +306,7 @@ In the following code,  **RemoveViews** removes views from the new list by:
     
 3. Deleting all views in  **viewsToRemove** by using [View.DeleteObject](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.view.deleteobject.aspx).
     
-```C#
+```csharp
 private static void RemoveViews(ClientContext clientContext, List listToBeReplaced, List newList)
 {
     // Get the list of views on the new list.
@@ -344,7 +344,7 @@ private static void RemoveViews(ClientContext clientContext, List listToBeReplac
 > [!NOTE] 
 > The following code returns all list items. In your production environment, consider optimizing the following code by implementing a loop, and using multiple iterations to migrate small amounts of list items.
 
-```C#
+```csharp
 private static void MigrateContent(ClientContext clientContext, List listToBeReplaced, List newList)
 {
     ListItemCollection items = listToBeReplaced.GetItems(CamlQuery.CreateAllItemsQuery());

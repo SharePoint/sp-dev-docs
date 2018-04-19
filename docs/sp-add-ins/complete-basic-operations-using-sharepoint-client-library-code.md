@@ -60,7 +60,7 @@ These examples show how to use the .NET Framework CSOM to complete website-relat
 Retrieve the title of a SharePoint website.
 
 
-```C#
+```csharp
 
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
@@ -89,7 +89,7 @@ Sometimes, the client is interested only in a few properties of an object. The S
 
 Note that you need to add a **using** statement for [System.Linq](https://msdn.microsoft.com/EN-US/library/bb336768).
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -121,7 +121,7 @@ label1.Text = web. Description;
 This example shows how to write to the website's properties.
 
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -147,7 +147,7 @@ context.ExecuteQuery();
 
 This example shows how to create a new SharePoint site as a subsite of the current website. Use the **WebCreationInformation** class to create a new website. You also need to add **using** statements for [System.Collections.Generic](https://msdn.microsoft.com/EN-US/library/0sbxh9x2) and [System.Text](https://msdn.microsoft.com/EN-US/library/x76y3wky).
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -177,7 +177,7 @@ These examples show how to use the .NET Framework CSOM to complete list-related 
 
 This example retrieves all SharePoint lists in a SharePoint website. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768).
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -208,7 +208,7 @@ foreach (List list in web.Lists)
  
 <br/>
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -239,7 +239,7 @@ foreach (List list in web.Lists)
 
 This example creates a SharePoint list and updates it by using the **ListCreationInformation** class.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -264,7 +264,7 @@ context.ExecuteQuery();
 
 This example deletes a SharePoint list.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -288,7 +288,7 @@ This example adds a field to a SharePoint list. Add an alias to the using statem
 > [!NOTE] 
 > The example uses **context.CastTo** to do a cast. Before executing the query, the client library does not know the real type of the returned object "field", and **SharePoint.Field** is the only possible type. If you know the real type, you can use the **ClientContext.CastTo<RealType>** method to cast the object.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -322,7 +322,7 @@ This example retrieves the items in a SharePoint list. You also need to add a **
 > [!NOTE] 
 > You can use the **FolderServerRelativeUrl** property to further restrict the items that are returned to those in a specified folder.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -352,7 +352,7 @@ foreach (ListItem listItem in items)
 
 This example creates a new SharePoint list item by using the **ListItemCreationInformation** class.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -380,7 +380,7 @@ context.ExecuteQuery();
 
 This example updates a SharePoint list item.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -405,7 +405,7 @@ context.ExecuteQuery();
 
 This example deletes a SharePoint list item.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -433,7 +433,7 @@ These examples show how to use the SharePoint .NET Framework CSOM to complete fi
 
 This example retrieves all of the fields in a SharePoint list. You also need to add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously; for example, `using SP = Microsoft.SharePoint.Client;`.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -460,7 +460,7 @@ If you want to retrieve information about a specific field, use the **Fields.Get
 > [!NOTE] 
 > The **GetByInternalNameOrTitle** method used in this example is a remote method. It does not use the data from the client collection even if the client collection is already populated.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -488,7 +488,7 @@ You can use the SharePoint .NET Framework CSOM to manage SharePoint users, group
 
 This example adds a user and some user information to a SharePoint group named Members.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -517,7 +517,7 @@ context.ExecuteQuery();
 
 This example retrieves information about all users from a SharePoint group named Members.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -543,7 +543,7 @@ foreach (User member in membersGroup.Users)
 
 This example creates a role that has create and manage alerts permissions.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -569,7 +569,7 @@ context.ExecuteQuery();
 
 This example adds a user to a role.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -600,7 +600,7 @@ These examples illustrate some important best practices and requirements you sho
 The SharePoint .NET Framework CSOM requires that you use a SQL-like programming pattern: declare what you want and execute the query before you access the data. For example, the following code, which attempts to display the SharePoint website's title, throws an exception.
 
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -623,7 +623,7 @@ In SharePoint .NET Framework CSOM, when you call a method, you build a query. Qu
 The following example shows the code that is required to display the website's title. You also need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
  
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -654,7 +654,7 @@ context.ExecuteQuery();
 
 When a value object is returned from a method or property, you cannot use that object until after you have executed the query. For example, the following code tries to create a SharePoint list that has the same title as the parent website, but it throws an exception. 
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -671,7 +671,7 @@ List newList = web.Lists.Add(creationInfo);
 
 An exception is thrown because the property is not available before you execute the query. In SQL, you would declare a local variable to hold the value for `web.Title` and use the local variable for web creation. In the client library, you can't create a local variable. You have to split functionality into two separate queries as is shown in the following example. You also need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the using statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -695,7 +695,7 @@ context.ExecuteQuery();
 
 The difference is the following three lines:
 
-```C#
+```csharp
 context.Load(web, w => w.Title); 
 context.ExecuteQuery(); 
 ...
@@ -715,7 +715,7 @@ In the client library, the corresponding server object has the `[ClientCallable(
 
 The counterpart to the value object is the client object. If the corresponding server object has the **[ClientCallable(ValueObject = false)]** attribute, the object is a client object. For client objects, we keep track of how the object is created; this is called **ObjectPath** in the client library implementation. For example, if we have code like the following:
 
-```C#
+```csharp
 ClientContext context = new ClientContext("http://SiteUrl"); 
 Web web = context.Web; 
 SP.List list = web.Lists.GetByTitle("Announcements"); 
@@ -735,7 +735,7 @@ When the SharePoint .NET Framework CSOM passes this information to the server, y
 
 When reading multiple pieces of data from the same object, you should try to get all of it in a single query; that is, a single call to the  **Load<T>(T, [])** method. The following code shows two ways to retrieve a website's title and description and the **Announcements** list's description. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the using **statement** for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`. 
 
-```C#
+```csharp
 
 static void Method1() 
 { 
@@ -788,7 +788,7 @@ SELECT * FROM Webs
 
 In the client library, neither **Load<T>** nor any other method returns all properties, so you have to explicitly specify what you want. For example, the following code retrieves the website object without specifying which properties to return. It then tries to read two properties and one of them is not among the properties that is automatically returned by **Load**. This code throws an exception. 
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -806,7 +806,7 @@ Console.WriteLine(web.HasUniqueRoleAssignments);
 
 To get the code to compile successfully, update it to the following. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -830,7 +830,7 @@ To conditionally execute code, set a conditional scope by using a **ConditionalS
 > [!NOTE] 
 > Calling method and setting properties within a conditional scope are not permitted, because the client library does not track the side effects of method calls and property settings. You should use only **Load** inside the conditional scope.
 
-```C#
+```csharp
 // Starting with ClientContext, the constructor requires a URL to the 
 // server running SharePoint. 
 ClientContext context = new ClientContext("http://SiteUrl"); 
@@ -863,7 +863,7 @@ if (scope.TestResult.Value)
 
 This example shows how to create and use an exception handling scope with an **ExceptionHandlingScope** object. The scenario is to update the description of a list and also enable folder creation. There is a possibility that the list might not exist.
 
-```C#
+```csharp
 
 
 // Starting with ClientContext, the constructor requires a URL to the 
