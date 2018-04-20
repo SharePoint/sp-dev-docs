@@ -43,6 +43,7 @@ To set up app-only access, you need to have two different pages on your tenant&m
 
 7. Copy the values for **Client Id** and **Client Secret** because you will need them later. 
 
+<br/>
 
 Next, trust the app, so that it has the appropriate access to your tenant:
 
@@ -88,7 +89,7 @@ To set up the Azure Queue storage:
 
 ## Create the flow
 
-To put a message in the queue, you need to create a flow. 
+To put a message in the queue, you need to create a flow: 
 
 1. Go to the [Microsoft Flow](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page. 
 
@@ -209,7 +210,6 @@ Copy the following provisioning template XML to a new file and save the file as 
 
 8. Choose **Create**. An editor where you can enter PowerShell cmdlets opens. 
 
-
 Next, you'll upload the PnP PowerShell module so that you can use it in the Azure function.
 
 ## Upload the PnP PowerShell module for your Azure function
@@ -224,7 +224,9 @@ You'll need to download the PnP PowerShell module so that you can upload it for 
     Save-Module -Name SharePointPnPPowerShellOnline -Path [pathtoyourfolder]
    ```
 
-The PowerShell module files download to a folder within the folder that you created. 
+   The PowerShell module files download to a folder within the folder that you created. 
+
+<br/>
 
 Next, upload the files so that your Azure function can use the module.
 
@@ -259,9 +261,9 @@ Next, upload the files so that your Azure function can use the module.
 
     ![Screenshot of the View files tab](images/pnpprovisioning-view-files.png)
 
-1. Select **Upload** and upload the provisioning template file that you created earlier. 
+2. Select **Upload** and upload the provisioning template file that you created earlier. 
 
-2. Replace the PowerShell script with the following:
+3. Replace the PowerShell script with the following:
 
    ```powershell
     $in = Get-Content $triggerInput -Raw
@@ -271,11 +273,11 @@ Next, upload the files so that your Azure function can use the module.
     Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTemplate\FlowDemoTemplate.xml
    ```
 
-Notice that you're using two environment variables: `SPO_AppId`and `SPO_AppSecret`. To set those variables, go to the main Function app page in the Azure Portal, select **Application settings**, and add two new application settings:
+4. Notice that you're using two environment variables: `SPO_AppId`and `SPO_AppSecret`. To set those variables, go to the main Function app page in the Azure Portal, select **Application settings**, and add two new application settings:
 
-1. `SPO_AppId` - Set the value to the Client ID you copied in the first step when you created your app on your tenant. 
+   - `SPO_AppId` - Set the value to the Client ID you copied in the first step when you created your app on your tenant. 
 
-2. `SPO_AppSecret` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
+   - `SPO_AppSecret` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
 
 ## Create the site design
 
@@ -292,6 +294,8 @@ Notice that you're using two environment variables: `SPO_AppId`and `SPO_AppSecre
    ```powershell
     Get-SPOSiteDesign
    ```
+
+<br/>
 
 To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
 
