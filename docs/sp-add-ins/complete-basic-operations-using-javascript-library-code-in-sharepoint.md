@@ -1,10 +1,9 @@
 ---
 title: Complete basic operations using JavaScript library code in SharePoint
-description: How to write code to perform basic operations using the JavaScript client object model in SharePoint.
-ms.date: 12/13/2017
+description: Write code to perform basic operations using the JavaScript client object model in SharePoint.
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
-
 
 # Complete basic operations using JavaScript library code in SharePoint
 

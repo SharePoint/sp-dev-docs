@@ -1,11 +1,21 @@
-﻿# SharePoint site theming: JSON schema
+﻿---
+title: SharePoint site theming - JSON schema
+description: The new SharePoint site theming features use a JSON schema to store color settings and other information about each theme.
+ms.date: 04/19/2018
+---
+
+# SharePoint site theming: JSON schema
 
 The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Theme settings are stored in a JSON object that contains the following keys:
 
-* __name__ &mdash; The name of the theme, which appears in the theme picker UI and is also used by administrators and developers to refer to the theme in PowerShell cmdlets or calls to the SharePoint REST API.
-* __isInverted__ &mdash; This value should be false for light themes and true for dark themes; it controls whether SharePoint will use dark or light theme colors to render text on colored backgrounds.
-* __backgroundImageUri__ &mdash; The URI of an optional background image for the theme (value can be blank if no background image).
-* __theme__ &mdash; The RGB color settings for the theme, stored as a nested JSON object with the following keys:
+* __name__ &ndash; The name of the theme, which appears in the theme picker UI and is also used by administrators and developers to refer to the theme in PowerShell cmdlets or calls to the SharePoint REST API.
+
+* __isInverted__ &ndash; This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
+
+* __backgroundImageUri__ &ndash; The URI of an optional background image for the theme (value can be blank if no background image).
+
+* __theme__ &ndash; The RGB color settings for the theme, stored as a nested JSON object with the following keys:
+
     * themePrimary
     * themeLighterAlt
     * themeLighter
@@ -33,7 +43,7 @@ The new [SharePoint site theming](sharepoint-site-theming-overview.md) features 
     * primaryText
     * error
 
-The colors in the _theme_ element are specified as 6-digit or 3-digit hexadecimal RGB string values.
+The colors in the **theme** element are specified as 6-digit or 3-digit hexadecimal RGB string values.
 
 The following is an example of a JSON object that defines a theme.
 
@@ -77,7 +87,7 @@ The following is an example of a JSON object that defines a theme.
 
 The SharePoint Framework includes eight built-in themes: six on light backgrounds, and two on dark backgrounds. You might find it useful to create a custom theme by starting from one of the built-in themes and adjusting it to suit your needs.
 
-Another option is to use the [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) to build a custom theme. It provides an interactive UI for selecting theme colors, and automatically generates the JSON, SASS, and PowerShell definitions for your custom theme:
+Another option is to use the [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) to build a custom theme. It provides an interactive UI for selecting theme colors, and automatically generates the JSON, SASS, and PowerShell definitions for your custom theme.
 
 ![Theme Generator tool](../../images/theme-generator-tool.png)
 
@@ -86,6 +96,8 @@ The following is a summary of the built-in themes, including JSON definitions fo
 ## Red theme
 
 The following table shows the color palette used by the Red theme.
+
+<br/>
 
 <table>
 <tr>
@@ -169,6 +181,8 @@ The following code shows how to define a dictionary in PowerShell for the Red th
 ## Orange theme
 
 The following table shows the color palette used by the Orange theme.
+
+<br/>
 
 <table>
 <tr>
@@ -255,6 +269,8 @@ The following code shows how to define a dictionary in PowerShell for the Orange
 
 The following table shows the color palette used by the Green theme.
 
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#094c23">themeDarker: #094c23</td>
@@ -339,6 +355,8 @@ The following code shows how to define a dictionary in PowerShell for the Green 
 ## Blue theme
 
 The following table shows the color palette used by the Blue theme.
+
+<br/>
 
 <table>
 <tr>
@@ -425,6 +443,8 @@ The following code shows how to define a dictionary in PowerShell for the Blue t
 
 The following table shows the color palette used by the Purple theme.
 
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#27268a">themeDarker: #27268a</td>
@@ -510,6 +530,8 @@ The following code shows how to define a dictionary in PowerShell for the Purple
 
 The following table shows the color palette used by the Gray theme.
 
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#323130">themeDarker: #323130</td>
@@ -594,6 +616,8 @@ The following code shows how to define a dictionary in PowerShell for the Gray t
 ## Dark Yellow theme
 
 The following table shows the color palette used by the Dark Yellow theme.
+
+<br/>
 
 <table>
 <tr>
@@ -681,6 +705,8 @@ The following code shows how to define a dictionary in PowerShell for the Dark Y
 
 The following table shows the color palette used by the Dark Blue theme.
 
+<br/>
+
 <table>
 <tr>
 <td style="color:black; background-color:#6cdfff">themeDarker: #6cdfff</td>
@@ -767,5 +793,5 @@ The following code shows how to define a dictionary in PowerShell for the Dark B
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
-* [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
+* [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)

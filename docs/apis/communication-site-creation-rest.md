@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint Communication site using REST
 description: Create and get the status of a new modern SharePoint Communication site by using the REST interface.
-ms.date: 02/08/2018
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
 
@@ -26,7 +26,7 @@ The URL for Communication site REST commands is based on `_api/sitepages/communi
 
 ## Create Communication site
 
-```
+```json
 url: /_api/sitepages/communicationsite/create
 method: POST
 body:
@@ -59,7 +59,7 @@ New in this API is the concept of `SiteDesignID`. Much like the in-product site 
 
 If successful, this method returns a `200, OK` response code and simple JSON object in the response body with the following details.
 
-```
+```json
 {
   "d":{
       "Create":{
@@ -76,7 +76,7 @@ If successful, this method returns a `200, OK` response code and simple JSON obj
 
 The REST API for getting the status of a modern SharePoint Communication site:
 
-```
+```json
 url: /_api/sitepages/communicationsite/status?url='https%3A%2F%2Fcontoso.sharepoint.com%2Fsites%2Fcomm1'
 method: GET
 body: none
@@ -88,7 +88,7 @@ If successful, this method returns a `200, OK` response code and simple JSON obj
  
 If the site exists, the response returns the site status and site URL:
 
-```
+```json
 {
   "d":{
       "Status":{
@@ -100,9 +100,11 @@ If the site exists, the response returns the site status and site URL:
 }
 ```
 
+<br/>
+
 If the site does not exist, the response returns a site status of 0 with no URL.
 
-```
+```json
 {
   "d":{
       "Status":{

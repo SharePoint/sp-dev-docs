@@ -1,7 +1,7 @@
 ---
 title: Working with lists and list items with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
-ms.date: 12/13/2017
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
 
@@ -14,12 +14,11 @@ ms.prod: sharepoint
 
 This topic assumes that you are already familiar with the topics [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) and [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md). It does not provide code snippets.
  
-
 <a name="RetrieveLists"> </a> 
 
 ## Retrieving lists and list properties with REST
 
-The following example shows how to **retrieve** a specific list if you know its GUID.
+The following example shows how to **retrieve a specific list if you know its GUID**.
 
 ```
 url: http://site url/_api/web/lists(guid'list GUID'),
@@ -38,7 +37,7 @@ Headers:
  
 <br/>
 
-The following example shows how to  **retrieve** a specific list if you know its title.
+The following example shows how to **retrieve a specific list if you know its title**.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')
@@ -51,7 +50,7 @@ Headers:
 
 <br/>
 
-The following XML shows an example of the list properties that are returned when you request the XML content type.
+The following XML shows an example of the **list properties that are returned when you request the XML content type**.
 
 ```XML
   <content type="application/xml">
@@ -107,7 +106,7 @@ The following XML shows an example of the list properties that are returned when
 
 ## Working with lists by using REST
 
-The following example shows how to  **create** a list.
+The following example shows how to **create a list**.
 
 ```
 url: http://site url/_api/web/lists
@@ -124,7 +123,7 @@ Headers:
 
 <br/>
 
-The following example shows how to **update** a list by using the **MERGE** method.
+The following example shows how to **update a list by using the MERGE method**.
 
 ```
 url: http://site url/_api/web/lists(guid'list GUID')
@@ -142,7 +141,7 @@ Headers:
 
 <br/>
 
-The following example shows how to **create** a **custom field** for a list.
+The following example shows how to **create a custom field for a list**.
 
 ```
 Url: url: http://site url/_api/web/lists(guid'list GUID')/Fields
@@ -157,7 +156,7 @@ Headers:
 
 <br/>
 
-The following example shows how to **delete** a list.
+The following example shows how to **delete a list**.
 
 ```
 url: http://site url/_api/web/lists(guid'list GUID')
@@ -178,7 +177,7 @@ Headers:
 
 ### Retrieve all list items
 
-The following example shows how to **retrieve** all of a list's items.
+The following example shows how to  retrieve all of a list's items.
  
 > [!NOTE] 
 > The OData $skip query option does not work when querying list items. In may situations, you can use the [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
@@ -194,7 +193,7 @@ headers:
 
 ### Retrieve specific list item
 
-The following example shows how to **retrieve** a specific list item.
+The following example shows how to retrieve a specific list item.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items(item id)
@@ -431,21 +430,21 @@ Label|Description|Value
 
 #### Examples
 
-Retrieve item with specific ID
+**Retrieve item with specific ID**
 
 ```text
 POST https://contoso.sharepoint.com/sites/team-a/_api/web/GetList(@listUrl)/RenderListDataAsStream?@listUrl=%27%2Fsites%2Fteam-a%2Flists%2FList%27&FilterField1=ID&FilterValue1=1
 accept: application/json;odata=nometadata
 ```
 
-Sort items descending by ID
+**Sort items descending by ID**
 
 ```text
 POST https://contoso.sharepoint.com/sites/team-a/_api/web/GetList(@listUrl)/RenderListDataAsStream?@listUrl=%27%2Fsites%2Fteam-a%2Flists%2FList%27&SortField=ID&SortDir=Desc
 accept: application/json;odata=nometadata
 ```
 
-Retrieve items from the specified folder
+**Retrieve items from the specified folder**
 
 ```text
 POST https://contoso.sharepoint.com/sites/team-a/_api/web/GetList(@listUrl)/RenderListDataAsStream?@listUrl=%27%2Fsites%2Fteam-a%2Flists%2FOrders%27
@@ -459,7 +458,7 @@ content-type: application/json;odata=nometadata
 }
 ```
 
-Retrieve list schema
+**Retrieve list schema**
 
 ```text
 POST https://contoso.sharepoint.com/sites/team-a/_api/web/GetList(@listUrl)/RenderListDataAsStream?@listUrl=%27%2Fsites%2Fteam-a%2Flists%2FList%27
@@ -473,7 +472,7 @@ content-type: application/json;odata=nometadata
 }
 ```
 
-Retrieve information about list content types
+**Retrieve information about list content types**
 
 ```text
 POST https://contoso.sharepoint.com/sites/team-a/_api/web/GetList(@listUrl)/RenderListDataAsStream?@listUrl=%27%2Fsites%2Fteam-a%2Flists%2FList%27
@@ -489,7 +488,7 @@ content-type: application/json;odata=nometadata
 
 ### Create list item
 
-The following example shows how to **create** a list item.
+The following example shows how to create a list item.
  
 > [!NOTE] 
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
@@ -508,7 +507,7 @@ headers:
 
 ### Create list item in a folder
 
-Create list item in a folder.
+The following example shows how to create a list item in a folder.
 
 ```text
 POST /_api/web/lists/GetByTitle('Test')/AddValidateUpdateItemUsingPath
@@ -583,7 +582,7 @@ The `value` property contains the list of properties that have been set when cre
 
 ### Update list item
 
-The following example shows how to **update** a list item.
+The following example shows how to update a list item.
  
 > [!NOTE] 
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
@@ -604,7 +603,7 @@ headers:
 
 ### Delete list item
 
-The following example shows how to **delete** a list item.
+The following example shows how to delete a list item.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items(item id)
@@ -635,7 +634,6 @@ If the **ETag** you specify in your request does not match the **ETag** of the d
 Within SharePoint, ETags apply only to SharePoint lists and list items.
  
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
