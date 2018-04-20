@@ -1,6 +1,6 @@
 ---
 title: HubSiteData REST method
-description: HubSiteData REST method
+description: Gets hub site data for the current web.
 ms.date: 4/20/2018
 ---
 
@@ -9,19 +9,19 @@ ms.date: 4/20/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-Get hub site data for the current web.
+Gets hub site data for the current web.
 
 ## HTTP request
 
-```
+```HTTP
 GET /_api/web/HubSiteData
 ```
 
-## URI Parameters
+## URI parameters
 
 |Name |In |Required|Type|Description|
 |-----|---|--------|----|-----------|
-|forceRefresh|query|False|boolean|Default value is false. When false, the data is returned from the server's cache. When true, the cache is refreshed with the latest updates and then returned. Use this if you just made changes and need to see those changes right away.|
+|forceRefresh|query|False|boolean|Default value is **false**. When **false**, the data is returned from the server's cache. When **true**, the cache is refreshed with the latest updates and then returned. Use this if you just made changes and need to see those changes right away.|
 
 ## Request headers
 
@@ -29,7 +29,7 @@ GET /_api/web/HubSiteData
 |--------|-------|
 |Accept|application/json;odata=verbose|
 |Content-Type|application/json;odata=verbose;charset=utf-8|
-|x-requestdigest|The appropriate digest for current site|
+|x-requestdigest|The appropriate digest for current site.|
 
 ## Request body
 
@@ -45,14 +45,15 @@ Do not supply a request body for this method.
 
 ### Get hub site data for marketing web
 
-#### Sample Request
+#### Sample request
 
 ```HTTP
 GET
 https://contoso.sharepoint.com/sites/marketing/_api/web/HubSiteData(true)
 ```
 
-#### Sample Response
+#### Sample response
+
 **Status code:** 200
 
 ```JSON

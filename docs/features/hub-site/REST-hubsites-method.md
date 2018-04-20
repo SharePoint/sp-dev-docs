@@ -1,6 +1,6 @@
 ---
 title: HubSites REST method
-description: HubSites REST method
+description: Gets information about all hub sites that the current user can access.
 ms.date: 4/20/2018
 ---
 
@@ -9,15 +9,15 @@ ms.date: 4/20/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-Gets information about all hub sites which the current user can access.
+Gets information about all hub sites that the current user can access.
 
 ## HTTP request
 
-```
+```HTTP
 GET /_api/HubSites
 ```
 
-## URI Parameters
+## URI parameters
 
 There are no parameters for this method.
 
@@ -27,7 +27,7 @@ There are no parameters for this method.
 |--------|-------|
 |Accept|application/json;odata=verbose|
 |Content-Type|application/json;odata=verbose;charset=utf-8|
-|x-requestdigest|The appropriate digest for current site|
+|x-requestdigest|The appropriate digest for current site.|
 
 ## Request body
 
@@ -44,14 +44,15 @@ Do not supply a request body for this method.
 
 ### Get list of hub sites
 
-#### Sample Request
+#### Sample request
 
 ```HTTP
 GET
 https://contoso.sharepoint.com/_api/HubSites
 ```
 
-#### Sample Response
+#### Sample response
+
 **Status code:** 200
 
 ```JSON

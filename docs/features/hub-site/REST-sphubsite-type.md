@@ -1,6 +1,6 @@
 ---
 title: SPHubSite object type
-description: SPHubSite object type
+description: Contains data describing a SharePoint hub site.
 ms.date: 4/20/2018
 ---
 
@@ -9,7 +9,7 @@ ms.date: 4/20/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-Contains data describing a SharePoint Hub site.
+Contains data describing a SharePoint hub site.
 
 
 |Name    |Type   |Description |
@@ -21,7 +21,7 @@ Contains data describing a SharePoint Hub site.
 |SiteUrl |string |URL of the hub parent site.
 |logoUrl |string |The URL of a logo to use in the hub site navigation. |
 |Description |string |A description of the hub site. |
-|Targets |string |List of security groups with access to join the hub site. Null if everyone has permission. |
+|Targets |string |List of security groups with access to join the hub site. **Null** if everyone has permission. |
 
 ## See also
 

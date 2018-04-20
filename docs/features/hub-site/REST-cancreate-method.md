@@ -13,7 +13,7 @@ Returns whether the current user can create a hub site. Only tenant admins can c
 
 ## HTTP request
 
-```
+```HTTP
 GET /_api/SP.HubSites.CanCreate
 ```
 
@@ -27,7 +27,7 @@ None
 |--------|-------|
 |Accept|application/json;odata=verbose|
 |Content-Type|application/json;odata=verbose;charset=utf-8|
-|x-requestdigest|The appropriate digest for current site|
+|x-requestdigest|The appropriate digest for current site.|
 
 ## Request body
 

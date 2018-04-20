@@ -1,6 +1,6 @@
 ---
 title: SPHubSiteData object type
-description: SPHubSiteData object type
+description: Contains data describing a SharePoint hub site.
 ms.date: 4/20/2018
 ---
 
@@ -9,7 +9,7 @@ ms.date: 4/20/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-Contains data describing a SharePoint Hub site.
+Contains data describing a SharePoint hub site.
 
 |Name     |Type   |Description |
 |---------|-------|------------|
@@ -17,8 +17,8 @@ Contains data describing a SharePoint Hub site.
 |name     |string |The name of the hub site. |
 |url  |string   |Full URL of the hub site. |
 |LogoUrl |string |The URL of a logo to use in the hub site navigation. |
-|usesMetadataNavigation |Boolean | True if publishing features are enabled on the hub parent site; otherwise, false. |
-|navigation |SP.NavigationNode[] | **navigation** is only list if **usesMetadataNavigation** is false. |
+|usesMetadataNavigation |Boolean | **True** if publishing features are enabled on the hub parent site; otherwise, **false**. |
+|navigation |SP.NavigationNode[] | **navigation** is only list if **usesMetadataNavigation** is **false**. |
 
 
 ### Navigation node properties

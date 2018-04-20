@@ -1,6 +1,6 @@
 ---
 title: RegisterHubSite REST method
-description: RegisterHubSite REST method
+description: Registers an existing site as a hub site.
 ms.date: 4/20/2018
 ---
 
@@ -13,11 +13,11 @@ Registers an existing site as a hub site.
 
 ## HTTP request
 
-```
+```HTTP
 POST /_api/site/RegisterHubSite
 ```
 
-## URI Parameters
+## URI parameters
 
 None
 
@@ -27,7 +27,7 @@ None
 |--------|-------|
 |Accept|application/json;odata=verbose|
 |Content-Type|application/json;odata=verbose;charset=utf-8|
-|x-requestdigest|The appropriate digest for current site|
+|x-requestdigest|The appropriate digest for current site.|
 
 ## Request body
 
@@ -44,14 +44,15 @@ Do not supply a request body for this method.
 
 ### Register a marketing site as a hub site
 
-#### Sample Request
+#### Sample request
 
 ```HTTP
 POST
 https://contoso.sharepoint.com/sites/marketing/_api/site/RegisterHubSite
 ```
 
-#### Sample Response
+#### Sample response
+
 **Status code:** 200
 
 ```JSON
