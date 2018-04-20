@@ -230,9 +230,9 @@
   - name: Hub sites
     href: features/hub-site/hub-site-overview.md
     items:
-    - name: Create a hub site with PowerShell
+    - name: Create hub sites with PowerShell
       href: features/hub-site/create-hub-site-with-powershell.md
-    - name: PowerShell
+    - name: PowerShell cmdlets for hub sites
       href: features/hub-site/hub-site-powershell.md
     - name: REST API
       items:

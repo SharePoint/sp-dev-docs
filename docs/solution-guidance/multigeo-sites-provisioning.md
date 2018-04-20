@@ -64,8 +64,8 @@ using (var ctx = new ClientRuntimeContext(tenantAdminSiteForMyGeoLocation))
 > [!NOTE] 
 > If you want to learn more about the needed permissions and how to configure your applications then please checkout the [Setting up the Multi-Geo sample applications](multigeo-sampleapplicationsetup.md) article.
 
-## Resources
-Below list of resources are useful when you're learning more about working with sites:
+## See also
+
 - [Provisioning modern team sites](https://msdn.microsoft.com/en-us/pnp_articles/modern-experience-customizations-provisioning-sites)
 - [Site provisioning in the SharePoint add-in model](site-provisioning-sharepoint-add-in.md)
 - [Provision sites in batches with the add-in model](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Batch)

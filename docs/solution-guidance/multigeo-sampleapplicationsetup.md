@@ -174,8 +174,8 @@ Using the CSOM Tenant API is very similar to the previously described CSOM guida
 </AppPermissionRequests>
 ```
 
-## Resources
-Below list of resources are useful when you're learning more about the Microsoft Graph API and CSOM API's:
+## See also
+
 - [Microsoft Graph developer center](https://developer.microsoft.com/en-us/graph)
 - [Get access tokens to call the Graph API](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview)
 - [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)

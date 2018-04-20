@@ -80,7 +80,7 @@ if (window.hasOwnProperty('Type')) {
 The ``RegisterModuleInit`` function declares a proper ``Type`` Namespace.  
 Files attached with JSLink are **not** re-executed on MDS navigation, use the AsyncDeltaManager functions for that.
 
-### Resources:
+### See also:
 
 * [Wictor Wilén - The correct way to execute javascript functions in SharePoint MDS enabled sites](http://www.wictorwilen.se/the-correct-way-to-execute-javascript-functions-in-sharepoint-2013-mds-enabled-sites)
 * [Hugh Wood - SharePoint JavaScript context development - AsyncDeltaManager](https://rencore.com/blog/sharepoint-javascript-context-development-part-4-the-way-of-the-async-delta-manager/)
