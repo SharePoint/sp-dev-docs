@@ -109,6 +109,29 @@ $web.WebTemplate + "#" + $web.Configuration
 ```
 
 ### Provision an Office 365 group programmatically
+#### Provisioning a "modern" team site using the Office 365 CLI
+
+Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" sites. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. 
+
+The following bash script will create a "modern" team site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use it to automate other operations on the created site.
+
+```bash
+#!/usr/bin/env bash
+# Connect to SharePoint Online
+# This command will prompt a sign-in confirmation message to authenticate
+o365 spo connect https://[tenant].sharepoint.com/
+
+# Create the new "modern" team site
+siteUrl=$(o365 spo site add --type TeamSite --title 'displayName' --alias 'mymodernteamsite' --description 'description' --isPublic --classification 'classification')
+
+# Display the modern site url
+echo $siteUrl
+
+# Since the Office 365 CLI is connected to SharePoint Online we can do any operations. 
+# As example, we can list all the properties from the site property bag:
+o365 spo propertybag list -u $siteUrl
+```
+
 
 "Modern" team sites can be created programmatically by creating an [Office 365 group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create an Office 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Office 365 group and has the following default structure. 
 
@@ -168,6 +191,23 @@ Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 
 # Create a new modern team site
 New-PnPSite -Type Team -Title "Awesome Group" -Description "Awesome Group" -Alias "awesome-group"
+```
+
+#### Provisioning an Office 365 Group using the Office 365 CLI
+
+Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create an Office 365 Group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
+The example below shows how it can be done using the [Office 365 CLI immersive mode](https://sharepoint.github.io/office365-cli/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
+
+```bash
+# Use the Office 365 CLI immersive mode by typing o365 in the terminal
+# Connect to Microsoft Graph using the Office 365 CLI
+# This command will prompt a sign-in confirmation message to authenticate
+graph connect
+
+# Create an Office 365 Group
+# The newly created SharePoint site for that group will has URL
+# https://[tenant].sharepoint.com/sites/awesome-group
+graph o365group add --displayName 'Awesome Group' --description 'Awesome Group' --mailNickname awesome-group
 ```
 
 > [!NOTE]
@@ -244,6 +284,27 @@ $web = Get-PnPWeb
 $context.Load($web, $web.Title)
 Execute-PnPQuery
 $web.Title
+```
+
+#### Provisioning a "modern" communication site using the Office 365 CLI
+
+Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/cmd/spo/site/site-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" Communication site. The following bash script will create the site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL you can use it to automate other operations on the created site.
+
+```bash
+#!/usr/bin/env bash
+# Connect to SharePoint Online
+# This command will prompt a sign-in confirmation message to authenticate
+o365 spo connect https://[tenant].sharepoint.com/
+
+# Create the new "modern" communication site
+siteUrl=$(o365 spo site add --type CommunicationSite --url https://[tenant].sharepoint.com/sites/mymoderncommunicationsite --title displayName --description description --classification classification)
+
+# Display the modern site url
+echo $siteUrl
+
+# Since the Office 365 CLI is connected to SharePoint Online we can do any operations. 
+# As example, we can list all the properties from the site property bag:
+o365 spo propertybag list -u $siteUrl
 ```
 
 ## Additional considerations
