@@ -1,7 +1,7 @@
 ---
 title: SharePoint hub sites overview
 description: SharePoint hub sites connect and organize sites based on organizational attributes such as project, department, division, or region. 
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # SharePoint hub sites overview
