@@ -1,21 +1,25 @@
 ---
-title: Modernize the site branding
-description: Guidance on moving to modern customization experiences within SharePoint
-ms.date: 03/23/2018
+title: Modernize site branding
+description: Guidance on moving to modern customization experiences within SharePoint, including how to handle the custom master pages and alternate CSS configurations.
+ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 
-# Modernize the site branding
+# Modernize site branding
 
-The SharePoint modern user interface does handle branding differently than classic SharePoint, more in particular it simply ignores custom master page or alternate CSS configurations. You can opt to leave these configurations in place in your modernized site so it still applies to a page being shown in a classic user interface, but it's cleaner to switch back the OOB master pages and remove the alternate CSS configuration. Next to these master pages and alternate CSS settings you could have used a classic custom theme. These classic custom themes do work on both classic as modern pages, but the more future proof model is the new tenant controlled SharePoint theme which obviously also applies to both classic as modern pages.
+The SharePoint modern user interface handles branding differently from classic SharePoint; in particular, it simply ignores custom master pages or alternate CSS configurations (which are incompatible in the modern user interface). You can opt to leave these configurations in place in your modernized site so that it still applies to a page being shown in a classic user interface, but it's cleaner to switch back the OOB master pages and remove the alternate CSS configuration. 
 
-## Detecting sites using master pages or alternate CSS, which is incompatible the modern user interface
+Next to these master pages and alternate CSS settings, you could have used a classic custom theme. These classic custom themes work on both classic and modern pages, but the more future-proof model is the new tenant-controlled SharePoint theme, which obviously applies to both classic and modern pages.
 
-The recommended approach to find out which sites use a custom master page or use the alternate CSS option is running the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner). This tool will perform a deep analysis of all the sites in your tenant and create reports giving you details on sites still have incompatible master pages or alternate CSS settings. Based on the scanner output you can remediate these sites.
+## Detect sites that use master pages or alternate CSS
 
-Below is a PnP PowerShell script that shows how to revert back to the default configuration:
+The recommended approach to find out which sites use a custom master page or use the alternate CSS option is to run the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner). This tool performs a deep analysis of all the sites in your tenant and creates reports that give you details about sites that still have incompatible master pages or alternate CSS settings. Based on the scanner output, you can remediate these sites. 
 
-```PowerShell
+### Revert back to the default configuration
+
+Following is a PnP PowerShell script that shows how to revert back to the default configuration:
+
+```powershell
 $minimumVersion = New-Object System.Version("2.24.1803.0")
 if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
 {
@@ -34,13 +38,15 @@ $web.AlternateCssUrl = ""
 $web.Context.ExecuteQuery()
 ```
 
-## Using a tenant controlled SharePoint theme
+## Use a tenant-controlled SharePoint theme
 
-SharePoint offers a series of default themes out-of-the-box which you can use, but if you want to push your company branding it's recommended that you create your company theme and hide the out-of-the-box themes. Once that configuration is done your users can only select from the company SharePoint themes you've configured and you can programmatically set such a company SharePoint theme as part of the modernization effort.
+SharePoint offers a series of default themes out-of-the-box that you can use, but if you want to push your company branding, we recommend that you create your company theme and hide the out-of-the-box themes. After that configuration is complete, your users can only select from the company SharePoint themes that you've configured, and you can programmatically set such themes as part of the modernization effort.
 
-Sample PnP PowerShell script showing how to add a company SharePoint theme
+### Add a company SharePoint theme
 
-```PowerShell
+Following is a sample PnP PowerShell script showing how to add a company SharePoint theme:
+
+```powershell
 $minimumVersion = New-Object System.Version("2.24.1803.0")
 if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
 {
@@ -83,9 +89,11 @@ $themepalette = @{
 Add-PnPTenantTheme -Identity "CustomCompanyTheme" -Palette $themepalette -IsInverted:$false
 ```
 
-To use your company SharePoint theme you can use the below script:
+### Use your company SharePoint theme
 
-```PowerShell
+To use your company SharePoint theme, you can use the following script:
+
+```powershell
 $minimumVersion = New-Object System.Version("2.24.1803.0")
 if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
 {
@@ -99,6 +107,7 @@ Connect-PnPOnline -Url "<your site url>"
 Set-PnPWebTheme -Theme "CustomCompanyTheme"
 ```
 
-## Learn more
+## See also
 
-You can find all the details in the [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview) article.
+- [SharePoint site theming](../declarative-customization/site-theming/sharepoint-site-theming-overview.md)
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)

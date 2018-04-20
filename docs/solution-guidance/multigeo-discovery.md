@@ -28,7 +28,7 @@ Depending on your scenario, you can use one or a combination of the following AP
 
 Obtaining the geo location of your tenant can be done via CSOM by using the `Tenant` class and the `GetTenantInstances` method as shown in below snippet:
 
-```C#
+```csharp
 Tenant tenant = new Tenant(clientContext);
 var tenantInstances = tenant.GetTenantInstances();
 clientContext.Load(tenantInstances);

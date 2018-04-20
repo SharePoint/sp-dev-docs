@@ -1,11 +1,11 @@
 ---
-title: Consuming APIs secured with Azure AD within the SharePoint Framework
-description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
+title: Consume the Microsoft Graph in the SharePoint Framework
+description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to the Microsoft Graph in SharePoint Framework solutions.
 ms.date: 03/16/2018
 ms.prod: sharepoint
 ---
 
-# Consuming APIs secured with Azure AD within the SharePoint Framework
+# Consume the Microsoft Graph in the SharePoint Framework
 
 > [!IMPORTANT]
 > `AadHttpClient` and `MSGraphClient` client objects are currently in preview and are subject to change. Do not use them in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.

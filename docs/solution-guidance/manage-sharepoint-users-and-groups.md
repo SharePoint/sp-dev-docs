@@ -21,7 +21,7 @@ The following example shows you how to add groups and add users to groups.
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 cc.Load(cc.Web, web => web.CurrentUser);
 cc.ExecuteQuery();
 Microsoft.SharePoint.Client.User currentUser = cc.Web.CurrentUser;
@@ -35,7 +35,7 @@ if (!cc.Web.GroupExists("Test"))
 
 The next example removes a group.
 
-```C#
+```csharp
 if (cc.Web.GroupExists("Test"))
 {
   cc.Web.RemoveGroup("Test");
@@ -44,7 +44,7 @@ if (cc.Web.GroupExists("Test"))
 
 The next example removes users from groups.
 
-```C#
+```csharp
 cc.Load(cc.Web, web => web.CurrentUser);
 cc.ExecuteQuery();
 Microsoft.SharePoint.Client.User currentUser = cc.Web.CurrentUser;
@@ -61,7 +61,7 @@ if (cc.Web.GroupExists("Test"))
 
 The following example adds a permission level to a group.
 
-```C#
+```csharp
 if (cc.Web.GroupExists("Test"))
 {
   cc.Web.AddPermissionLevelToGroup("Test", RoleType.Contributor);
@@ -70,7 +70,7 @@ if (cc.Web.GroupExists("Test"))
 
 The next example adds a permission level to a user.
 
-```C#
+```csharp
 cc.Load(cc.Web, web => web.CurrentUser);
 cc.ExecuteQuery();
 Microsoft.SharePoint.Client.User currentUser = cc.Web.CurrentUser;
@@ -81,7 +81,7 @@ cc.Web.AddPermissionLevelToUser(currentUser.LoginName, RoleType.Reader);
 
 The following example removes a permission level from a group.
 
-```C#
+```csharp
 if (cc.Web.GroupExists("Test"))
 {
   cc.Web.RemovePermissionLevelFromGroup("Test", RoleType.Reader);
@@ -90,7 +90,7 @@ if (cc.Web.GroupExists("Test"))
 ```
 The next example removes a permission level from a user.
 
-```C#
+```csharp
 cc.Load(cc.Web, web => web.CurrentUser);
 cc.ExecuteQuery();
 Microsoft.SharePoint.Client.User currentUser = cc.Web.CurrentUser;

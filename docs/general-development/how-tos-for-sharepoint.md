@@ -1,17 +1,26 @@
 ---
-title: How-tos for SharePoint
+title: How-tos for SharePoint Development
 description: Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint, including how to set up your development environment and start building sites, mobile apps, and SharePoint Add-ins.
-ms.date: 11/30/2017
+ms.date: 04/13/2017
 ms.prod: sharepoint
 ms.assetid: ca78b080-0be4-4da4-b112-b86b1bde66e4
 ---
 
 
-# How-tos for SharePoint
+# How-tos for SharePoint Development
 
 ![SharePoint](../images/mod_logo_sharepoint.png)
 
-Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint, including how to set up your development environment and start building sites, mobile apps, and SharePoint Add-ins.
+Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint, including how to set up your development environment and start building sites, SharePoint Framework and SharePoint Add-ins.
+
+<a name="bk_starthowtosspfx"> </a>
+## Getting started how-tos for SharePoint Framework
+
+|**Title**|**Summary**|
+|:-----|:-----|
+| [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md) <br/> |Learn how to set up a development environment for SharePoint Framework development.  <br/> |
+| [Building your first SharePoint client-side web part](../spfx/web-parts/get-started/build-a-hello-world-web-part.md) <br/> |Learn how to get started with developing SharePoint Framework client-side web parts.  <br/> |
+| [Build your first SharePoint Framework Extension](../spfx/extensions/get-started/build-a-hello-world-extension.md) <br/> |Learn how to get started with developing SharePoint Framework Extensions.  <br/> |
 
 <a name="bk_starthowtos"> </a>
 ## Getting started how-tos for SharePoint Add-ins
@@ -206,9 +215,7 @@ Find how-to articles and related code examples that show how to perform basic de
 <a name="bk_addresc_howtos"> </a>
 ## See also
 
--  [SharePoint general development](https://msdn.microsoft.com/en-us/library/office/mt674607.aspx)
--  [Code samples for SharePoint](code-samples-for-sharepoint.md)
--  [SharePoint Code Samples](http://code.msdn.microsoft.com/sharepoint) (on the SharePoint Dev Center)
--  [Microsoft SharePoint Team Blog](https://blogs.office.com/en-us/sharepoint/)
-    
-  
+-  [SharePoint development](https://docs.microsoft.com/en-us/sharepoint/dev/)
+-  [SharePoint Dev Center](https://developer.microsoft.com/en-us/sharepoint)
+-  [SharePoint Code Samples](https://developer.microsoft.com/en-us/SharePoint/gallery?filterBy=SharePoint,Samples)
+-  [Microsoft SharePoint Team Blog](http://dev.office.com/blogs)

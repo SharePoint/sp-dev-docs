@@ -47,7 +47,7 @@ After you supply the SharePoint URL and your credentials, user authentication oc
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 ClientContext cc = new ClientContext(siteUrl);
 cc.AuthenticationMode = ClientAuthenticationMode.Default;
 // For SharePoint Online.
@@ -56,7 +56,7 @@ cc.Credentials = new SharePointOnlineCredentials(userName, pwd);
 
 The following code performs user authentication in SharePoint Online Dedicated or in an on-premises SharePoint 2013 farm.
 
-```C#
+```csharp
 ClientContext cc = new ClientContext(siteUrl);
 cc.AuthenticationMode = ClientAuthenticationMode.Default;
 // For SharePoint Online Dedicated or on-premises .
@@ -65,7 +65,7 @@ cc.Credentials = new NetworkCredential(userName, pwd);
 
 The  **CreateNecessaryMMSTermsToCloud** method creates a group, term set, and several terms in the managed metadata service. The code first gets a reference to the **TaxonomySession** object, then the **TermStore** object, before creating the custom **TermGroup**,  **TermSet**, and new terms. 
 
-```C#
+```csharp
 private static void CreateNecessaryMMSTermsToCloud(ClientContext cc)
         {
             // Get access to taxonomy CSOM.
@@ -98,7 +98,7 @@ private static void CreateNecessaryMMSTermsToCloud(ClientContext cc)
 
 After creating the new terms, the  **GetMMSTermsFromCloud()** method retrieves all term groups, term sets, and terms from the managed metadata service. Similar to the **CreateNecessaryMMSTermsToCloud()** method, the code first gets a reference to the **TaxonomySession** object, then the **TermStore** object, before retrieving and displaying the term information.
 
-```C#
+```csharp
 private static void GetMMSTermsFromCloud(ClientContext cc)
         {
             //

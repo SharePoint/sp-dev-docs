@@ -32,7 +32,7 @@ To customize Web Part Zones by using CSS, you use the Script Editor Web Part. Fo
 
 The following code example uploads custom CSS to the Asset Library, applies a reference to the CSS URL with a custom action, and then creates a custom action to build a link to the new CSS file.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

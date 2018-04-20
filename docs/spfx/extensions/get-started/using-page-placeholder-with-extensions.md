@@ -13,11 +13,13 @@ This model is similar to using a **UserCustomAction** collection in a **Site** o
 
 This article describes how to extend your [Hello World extension](./build-a-hello-world-extension.md) to take advantage of page placeholders. 
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ipRw6o6bOTw&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV).
+You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
-<a href="https://www.youtube.com/watch?v=3LXuYBaJ1Lc">
-<img src="../../../images/spfx-ext-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+<br/>
+
+> [!Video https://www.youtube.com/embed/3LXuYBaJ1Lc]
+
+<br/> 
 
 ## Get access to page placeholders
 
@@ -210,6 +212,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 	* Extension code should not assume that the expected placeholder is available.
 	* The code expects custom properties called `Top` and `Bottom`. If the properties exist, they render inside the placeholders.
 	* Notice that the code path for both the top and bottom placeholders is almost identical. The only differences are the variables used and the style definitions.
+	* It is possible to use the class names defined in the style sheet directly but it is not recommended. In case no style sheet reference defined in the ```styles``` variable is found in the code, the style sheet won't get added to the page. This is because unused references will get removed during bild process.
 
 9. Add the following method after the `_renderPlaceHolders` method. In this case, you simply output a console message when the extension is removed from the page. 
 

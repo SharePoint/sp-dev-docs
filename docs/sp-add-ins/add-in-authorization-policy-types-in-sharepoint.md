@@ -53,7 +53,7 @@ To be able to make add-in-only calls to SharePoint, your add-in must request per
 ```
 
 > [!NOTE] 
-> SharePoint Add-ins used to be called "apps for SharePoint". To maintain backward compatibility, the app manifest schema was not changed, so the string "app" appears in many element and attribute names.
+> SharePoint Add-ins used to be called "apps for SharePoint." To maintain backward compatibility, the app manifest schema was not changed, so the string "app" appears in many element and attribute names.
  
 
 A user installing the add-in is prompted to approve this request. If the add-in asks for tenant-scoped permissions, only a tenant administrator can grant use of the add-in-only policy, so only a tenant administrator can install the add-in. 
@@ -67,7 +67,7 @@ If the add-in does not ask for any permissions scoped higher than site collectio
 
 The difference between an add-in-only call to SharePoint and a user+add-in call is the type of access token that is included in the call. The following code shows how to obtain user+add-in and add-in-only access tokens in managed code. The detailed coding is done for you in the TokenHelper.cs (or .vb) file that the Office Developer Tools for Visual Studio automatically add to the project in Visual Studio.
 
-```C#
+```csharp
     string contextTokenString = TokenHelper.GetContextTokenFromRequest(Request);
     if (contextTokenString != null)
     {

@@ -255,7 +255,7 @@ Browsing to the created URL and log in as a tenant admin, and consent to the app
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 In a first step, you add the SharePointPnPCoreOnline library nuget package: https://www.nuget.org/packages/SharePointPnPCoreOnline. Once that’s done you can use below code construct:
 
-```C#
+```csharp
 using OfficeDevPnP.Core;
 using System;
 

@@ -36,7 +36,7 @@ The following table lists some useful articles that can help you to understand t
 
 The easiest way to retrieve the identity of the current user of the website is via the **Web** object. With the TokenHelper.cs file in your project, you can get the current website user identity by using the following code snippet.
 
-```C#
+```csharp
     ClientContext clientContext =
                 TokenHelper.GetClientContextWithAccessToken(sharepointUrl.ToString(), accessToken);
     
@@ -73,7 +73,7 @@ The following is another way to retrieve a user's sign-in name. If you have the 
 
 The following is sample code to show how to get the user sign-in information.
 
-```C#
+```csharp
     ClientResult<Microsoft.SharePoint.Client.Utilities.PrincipalInfo> persons = Microsoft.SharePoint.Client.Utilities.Utility.ResolvePrincipal(clientContext, clientContext.Web, <email>, Microsoft.SharePoint.Client.Utilities.PrincipalType.User, Microsoft.SharePoint.Client.Utilities.PrincipalSource.All, null, true);
                 clientContext.ExecuteQuery();
                 Microsoft.SharePoint.Client.Utilities.PrincipalInfo person = persons.Value;
@@ -90,7 +90,7 @@ If you want to retrieve the user's identity and properties, you can use the OAut
 
 The following sample code shows how to get the user profile properties.
 
-```C#
+```csharp
 
     ClientContext clientContext = new ClientContext(<sharepointurl>);
     clientContext.AuthenticationMode = ClientAuthenticationMode.Anonymous;
@@ -107,7 +107,7 @@ The following sample code shows how to get the user profile properties.
 
 Next, use the **UserProfilesPeopleManager** API to get the properties of the user who is using the add-in.
 
-```C#
+```csharp
     PeopleManager peopleManager = new PeopleManager(clientContext);
     PersonProperties personDetails = peopleManager.GetMyProperties();
     clientContext.Load(personDetails, personsD => personsD.AccountName, personsD => personsD.Email,  personsD => personsD.DisplayName);
@@ -128,7 +128,7 @@ For the code to work:
 
 The following is another sample code snippet that shows how to access the user profile store.
 
-```C#
+```csharp
     ClientContext clientContext; //Create this like you normally would.               
     PeopleManager peopleManager = new PeopleManager(clientContext);
     PersonProperties myProperties = peopleManager.GetMyProperties();

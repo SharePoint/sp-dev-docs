@@ -43,7 +43,7 @@ When Default.aspx loads, **Page_Load** runs and does the following:
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
  protected void Page_Load(object sender, EventArgs e)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -70,7 +70,7 @@ When Default.aspx loads, **Page_Load** runs and does the following:
     
 After the GET call is made to the endpoint URI, the returned stream is a Base64-encoded string. The returned string is set to the **src** attribute of the image.
 
-```C#
+```csharp
  public string GetImage(string accessToken, string site, string folder, string file)
         {
             // Create the HttpWebRequest to call the REST endpoint.

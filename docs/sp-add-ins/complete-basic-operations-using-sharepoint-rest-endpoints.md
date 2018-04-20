@@ -1,7 +1,7 @@
 ---
 title: Complete basic operations using SharePoint REST endpoints
 description: Perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.
-ms.date: 12/13/2017
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
 
@@ -9,7 +9,7 @@ ms.prod: sharepoint
 
 You can perform basic create, read, update, and delete (CRUD) operations by using the Representational State Transfer (REST) interface provided by SharePoint. The REST interface exposes all the SharePoint entities and operations that are available in the other SharePoint client APIs. One advantage of using REST is that you don't have to add references to any SharePoint libraries or client assemblies. Instead, you make HTTP requests to the appropriate endpoints to retrieve or update SharePoint entities, such as webs, lists, and list items. 
 
-For an introduction to the SharePoint REST interface and its architecture, see [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md). 
+For an introduction to the SharePoint REST interface and its architecture, see [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md).
 
 For information about how to work with core SharePoint entities, see [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md) and [Working with folders and files with REST](working-with-folders-and-files-with-rest.md). 
 
@@ -52,7 +52,7 @@ The following C# code demonstrates how to make this **GET** request that returns
 
 For more information about how you can obtain an access token, see [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md) and [Authorization Code OAuth flow for SharePoint Add-ins](authorization-code-oauth-flow-for-sharepoint-add-ins.md).
 
-```C#
+```csharp
 
 HttpWebRequest endpointRequest =
   (HttpWebRequest)HttpWebRequest.Create(
@@ -72,7 +72,7 @@ This request would look a little different if you are writing your add-in in Jav
 
 The following code demonstrates how this request would look if you are using the cross-domain library and want to receive the OData representation of the lists as XML instead of JSON. (Because Atom is the default response format, you don't have to include an **Accept** header.) For more information about using the cross-domain library, see [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
 
-```
+```js
 var executor = new SP.RequestExecutor(appweburl);
 executor.executeAsync(
     {
@@ -91,7 +91,7 @@ executor.executeAsync(
 
 The code in the following example shows you how to request a JSON representation of all of the lists in a site by using C#. It assumes that you have an OAuth access token that you are storing in the `accessToken` variable.
 
-```C#
+```csharp
 HttpWebRequest endpointRequest = (HttpWebRequest)HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
 endpointRequest.Accept = "application/json;odata=verbose";
@@ -123,7 +123,7 @@ You can create and update SharePoint entities by constructing RESTful HTTP reque
 
 Another important consideration when creating, updating, and deleting SharePoint entities is that if you aren't using OAuth to authorize your requests, these operations require the server's request form digest value as the value of the **X-RequestDigest** header. You can retrieve this value by making a **POST** request with an empty body to `http://<site url>/_api/contextinfo` and extracting the value of the `d:FormDigestValue` node in the XML that the **contextinfo** endpoint returns. The following example shows an HTTP request to the **contextinfo** endpoint in C#.
 
-```C#
+```csharp
 
 HttpWebRequest endpointRequest =
   (HttpWebRequest)HttpWebRequest.Create(
@@ -144,7 +144,7 @@ If you're using the JavaScript cross-domain library, SP.RequestExecutor handles 
 If you're creating a SharePoint-hosted SharePoint Add-in, you don't have to make a separate HTTP request to retrieve the form digest value. Instead, you can retrieve the value in JavaScript code from the SharePoint page (if the page uses the default master page), as shown in the following example, which uses JQuery and creates a list.
 
 
-```
+```js
 jQuery.ajax({
         url: "http://<site url>/_api/web/lists",
         type: "POST",
@@ -167,7 +167,7 @@ jQuery.ajax({
 
 The following example shows how to update the list that is created in the previous example. The example changes the title of the list, uses JQuery, and assumes that you are doing this operation in a SharePoint-hosted add-in.
 
-```
+```js
 jQuery.ajax({
         url: "http://<site url>/_api/web/lists/GetByTitle('Test')",
         type: "POST",
@@ -207,7 +207,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gm
 
 The following example shows how to create a site in JavaScript.
 
-```
+```js
 jQuery.ajax({
     url: "http://<site url>/_api/web/webinfos/add",
     type: "POST",
@@ -295,7 +295,7 @@ Cross-domain library requests use this format when they access data on the add-i
  
 SharePoint Add-ins can get the add-in web URL and host web URL from the query string of the add-in page, as shown in the following code example. The example also shows how to reference the cross-domain library, which is defined in the SP.RequestExecutor.js file on the host web. The example assumes that your add-in launches from SharePoint. For guidance about setting your SharePoint context correctly when your add-in does not launch from SharePoint, see [Authorization Code OAuth flow for SharePoint Add-ins](authorization-code-oauth-flow-for-sharepoint-add-ins.md). 
 
-```
+```js
 var hostweburl;
 var appweburl;
 
@@ -368,7 +368,6 @@ Table 2 shows properties that are commonly used in HTTP requests for the SharePo
 The SharePoint Online (and on-premises SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [SharePoint: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-Perform-ab9c4ae5)

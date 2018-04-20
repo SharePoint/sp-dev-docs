@@ -86,13 +86,13 @@ To upload and update references to the new master pages on your SharePoint site:
 
 1. In Program.cs, add the following  **using** statement.
     
-	```C#
+	```csharp
 		using System.Security;
 	```
 
 2. In Program.cs, add the following methods to perform authentication to Office 365.
     
-  ```C#
+  ```csharp
   static SecureString GetPassword()
         {
             SecureString sStrPwd = new SecureString();
@@ -159,7 +159,7 @@ To upload and update references to the new master pages on your SharePoint site:
     
 	5. Gets the content type of master pages from the master page gallery. This content type is used to set the content type of the new master page later in this article. 
     
-	```C#
+	```csharp
 	static void Main(string[] args)
 	    { 
 	        string userName = GetUserName();
@@ -214,7 +214,7 @@ To upload and update references to the new master pages on your SharePoint site:
     
 	3. For each  **MasterPageGalleryFile** business object in the list, making a call to **UploadAndSetMasterPage**.
     
-	```C#
+	```csharp
 	  	
 	private static void UploadAndSetMasterPages(Web web, Folder folder, ClientContext clientContext, XDocument settings, string contentTypeId)
 	{
@@ -246,7 +246,7 @@ To upload and update references to the new master pages on your SharePoint site:
     
 	6. If the current site's master page or custom master page URL is set to the old master page, updates [Web.MasterUrl](https://msdn.microsoft.com/library/microsoft.sharepoint.client.web.masterurl.aspx) or[Web.CustomMasterUrl](https://msdn.microsoft.com/library/microsoft.sharepoint.client.web.custommasterurl.aspx) to use the newly uploaded master page URL.
     
-	```C#
+	```csharp
 	  private static void UploadAndSetMasterPage(Web web, Folder folder, ClientContext clientContext, MasterPageGalleryFile masterPage)
 	{
 	    using (var fileReadingStream = System.IO.File.OpenRead(masterPage.File))
@@ -310,7 +310,7 @@ To replace page layouts that were deployed using modules in farm solutions, uplo
     
 	3. Calling  **UploadPageLayoutsAndUpdateReferences**.
     
-	```C#
+	```csharp
 				static void Main(string[] args)
 	    { 
 	        string userName = GetUserName();
@@ -374,7 +374,7 @@ To replace page layouts that were deployed using modules in farm solutions, uplo
     
   		3. Calls  **UpdatePages** to update existing pages to use the new page layouts.
 
-  ```C#
+  ```csharp
   		private static void UploadPageLayoutsAndUpdateReferences(Web web, Folder folder, ClientContext clientContext, XDocument settings, string contentTypeId)
 {
     // Read the replacement settings stored in pageLayout elements in settings.xml.
@@ -420,7 +420,7 @@ To replace page layouts that were deployed using modules in farm solutions, uplo
 	7. If the newly uploaded page layout file's  **defaultLayout** attribute value from settings.xml is set to **true** , uses **PublishingHelper.SetDefaultPageLayout** to update the XML stored in the **DefaultPageLayout** property on the current site.
     
 
-	```C#
+	```csharp
 	private static void UploadPageLayout(Web web, Folder folder, ClientContext clientContext, LayoutFile pageLayout)
 	{
 	    using (var fileReadingStream = System.IO.File.OpenRead(pageLayout.File))
@@ -471,7 +471,7 @@ To replace page layouts that were deployed using modules in farm solutions, uplo
     
 		3. Checks in, publishes, and approves the file referenced by the list item.
 
-	```C#
+	```csharp
 	private static void UpdatePages(Web web, ClientContext clientContext, IList<LayoutFile> pageLayouts)
 	{
 	    // Get the Pages Library, and then get all the list items in it.

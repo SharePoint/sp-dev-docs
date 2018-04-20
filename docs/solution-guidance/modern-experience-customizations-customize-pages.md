@@ -115,7 +115,7 @@ By default, users can add comments (July 2017) on "modern" pages. If your organi
 ### Adding "modern" pages
 Creating a "modern" page comes down to creating a list item in the site pages library and assigning it the correct content type combined with setting some additional properties as shown in the following code snippet:
 
-```C#
+```csharp
 // pagesLibrary is List object for the "site pages" library of the site
 ListItem item = pagesLibrary.RootFolder.Files.AddTemplateFile(serverRelativePageName, TemplateFileType.ClientSidePage).ListItemAllFields;
 
@@ -137,7 +137,7 @@ clientContext.ExecuteQuery();
 
 When using PnP (as of the March 2017 release), you can leverage our extension methods, which gives you a model for adding a page easily:
 
-```C#
+```csharp
 cc.Web.AddClientSidePage("mypage.aspx", true);
 ```
 
@@ -152,7 +152,7 @@ As of the March 2017 release, the [PnP Sites core library](http://aka.ms/sppnp) 
 
 In this sample, we create a new client-side page in memory, add a rich text editor control, and finally save the page to the site pages library as mypage.aspx. The first step is creating a ClientSidePage instance, and then we instantiate a control that we add on the page by using the `AddControl` method. After that's done, the page is saved.
 
-```C#
+```csharp
 // cc is the ClientContext instance for the site you're working with
 ClientSidePage myPage = new ClientSidePage(cc);
 
@@ -165,7 +165,7 @@ myPage.Save("mypage.aspx");
 
 When you want to modify or copy an existing page, you can load that page into the PnP client-side object model; the loading "transforms" the HTML content into an object model that you can manipulate. Loading an existing page is done by using the `Load` method.
 
-```C#
+```csharp
 // load the page with name "page3.aspx"
 ClientSidePage p = ClientSidePage.Load(cc, "page3.aspx");
 
@@ -180,7 +180,7 @@ p.Save()
 
 Pages can have a flexible layout; you can add one or more sections on a page, and these sections can have up to three columns. You can add sections to your pages by using the SharePoint user interface, or you can do this programmatically.
 
-```C#
+```csharp
 var page2 = cc.Web.AddClientSidePage("PageWithSections.aspx", true);
 page2.AddSection(CanvasSectionTemplate.ThreeColumn, 5);
 page2.AddSection(CanvasSectionTemplate.TwoColumn, 10);
@@ -189,7 +189,7 @@ page2.AddSection(CanvasSectionTemplate.TwoColumn, 10);
 #### Add an out-of-the-box web part 
 The following sample shows how you can add an out-of-the-box **image** client-side web part on a page. Note that we instantiate the web part object by using the `InstantiateDefaultWebPart` method call. After the web part is initiated, its properties are set to the default properties defined in the web part manifest. For most web parts, you need to update the properties as shown in this sample.
 
-```C#
+```csharp
 ClientSidePage page5 = new ClientSidePage(cc);
 var imageWebPart = page5.InstantiateDefaultWebPart(DefaultClientSideWebParts.Image);
 imageWebPart.Properties["imageSourceType"] = 2;
@@ -208,7 +208,7 @@ page5.Save("page5.aspx");
 
 Previous samples showed how to work with out-of-the-box web parts, but you can also add your custom built client-side web parts to a page. You would start by getting your web part information by using the `AvailableClientSideComponents` method, and then search for your web part and use the information you find to instantiate a `ClientSideWebPart` instance, which is added to the page in the last step.
 
-```C#
+```csharp
 ClientSidePage p = new ClientSidePage(cc);
 
 // get a list of possible client side web parts that can be added
@@ -231,7 +231,7 @@ p.Save("PnPRocks.aspx");
 #### Adjust control order
 You have different methods to control the order in which the controls appear on the page. The key aspect is the `Order` attribute on the actual control: the list of controls is sorted by the value of that `Order` attribute when the page HTML is generated, and the order in the HTML is also the order at page rendering time.
 
-```C#
+```csharp
 // Set the order when initiating the control
 ClientSideText txt1 = new ClientSideText() { Text = "PnP Rocks", Order = 5 };
 
@@ -247,7 +247,7 @@ myPage.Controls[1].Order = 10;
 
 If you want to delete a control from a page, you can simply call the `Delete` method on the control and save the page back.
 
-```C#
+```csharp
 ClientSidePage deleteDemoPage = ClientSidePage.Load(cc, "page3.aspx");
 deleteDemoPage.Controls[0].Delete();
 deleteDemoPage.Save();
@@ -257,7 +257,7 @@ deleteDemoPage.Save();
 
 Finally, you can delete a client-side page.
 
-```C#
+```csharp
 ClientSidePage p = ClientSidePage.Load(cc, "deleteme.aspx");
 p.Delete();
 ```

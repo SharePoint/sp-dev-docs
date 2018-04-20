@@ -39,7 +39,7 @@ Before you run this add-in , do the following:
     
 3. This add-in uses app-only permissions. You need to assign app-only permissions using the AppInv.aspx page in Office 365. Copy the following XML from the AppManifest.xml file to the Permission Request XML textbox on the AppInv.aspx page, as shown in Figure 1. 
 
-	``` 
+	```XML 
 	  <AppPermissionRequests AllowAppOnlyPolicy="true">
 	    <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
 	    <AppPermissionRequest Scope="http://sharepoint/taxonomy" Right="Read" />
@@ -53,7 +53,7 @@ Before you run this add-in , do the following:
 
 4. In the ECM.AutoTaggingWeb project, in the ReceiverHelper.cs file, in the  **CreateEventReciever** method, update the **ReceiverUrl** property with the URL of your Azure Web Site.
 
-	```C#
+	```csharp
 	    public static EventReceiverDefinitionCreationInformation CreateEventReciever(string receiverName, EventReceiverType type)
 	        {
 	
@@ -112,7 +112,7 @@ The following code, in the  **btnScenario1_Click** method of the Default.aspx.cs
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 protected void btnScenario1_Click(object sender, EventArgs e)
         {
             var _libraryToCreate = this.GetLibaryInformationItemAdding();
@@ -141,7 +141,7 @@ protected void btnScenario1_Click(object sender, EventArgs e)
 
 A call is made to the  **CreateContosoDocumentLibrary** method. The following code in the ScenarioHandler.cs file uses methods from OfficeDevPnP.Core to create a custom document library with a custom content type. The default content type in the document library is removed.
 
-```C#
+```csharp
 public void CreateContosoDocumentLibrary(ClientContext ctx, Library library)
         {
             // Check the fields.
@@ -202,7 +202,7 @@ private void CreateLibrary(ClientContext ctx, Library library, string associateC
             }
             else
             {
-                throw new Exception("A list, survey, discussion board, or document library with the specified title already exists in this Web site.  Please choose another title.");
+                throw new Exception("A list, survey, discussion board, or document library with the specified title already exists in this website.  Please choose another title.");
             }
         }
 ```
@@ -215,7 +215,7 @@ After this code runs, the AutoTaggingSampleItemAdding document library is create
 
 In the ECM.AutoTaggingWeb project, in the ReceiverHelper.cs file, the  **CreateEventReciever** method creates the ItemAdding event receiver definition. In the ECM.AutoTaggingWeb project, the Services folder includes a web service called AutoTaggingService.svc. When you published the ECM.AutoTaggingWeb project to your Azure Web Site, this web service was also deployed to your site. The **CreateEventReciever** method assigns this web service as the remote event receiver on the document library. The following code from the **CreateEventReciever** method shows how to assign the web service to the remote event receiver.
 
-```C#
+```csharp
 public static EventReceiverDefinitionCreationInformation CreateEventReciever(string receiverName, EventReceiverType type)
         {
 
@@ -232,7 +232,7 @@ public static EventReceiverDefinitionCreationInformation CreateEventReciever(str
 
 The following code from the  **AddEventReceiver** method assigns the remote event receiver to the document library.
 
-```C#
+```csharp
 public static void AddEventReceiver(ClientContext ctx, List list, EventReceiverDefinitionCreationInformation eventReceiverInfo)
         {
             if (!DoesEventReceiverExistByName(ctx, list, eventReceiverInfo.ReceiverName))
@@ -256,7 +256,7 @@ Now, the remote event receiver is added to the document library. When you upload
 
 The  **HandleAutoTaggingItemAdding** method, in the AutoTaggingService.svc.cs file, uses the **GetProfilePropertyFor** method to retrieve the value of the Classification user profile property.
 
-```C#
+```csharp
 public void HandleAutoTaggingItemAdding(SPRemoteEventProperties properties,SPRemoteEventResult result)
         {
             using (ClientContext ctx = TokenHelper.CreateRemoteEventReceiverClientContext(properties))
@@ -283,7 +283,7 @@ public void HandleAutoTaggingItemAdding(SPRemoteEventProperties properties,SPRem
     
 **Important**  After retrieving the  **Classification** value from the **GetProfilePropertyFor** method, the **Classification** value must be formatted in a certain way before it can be stored as metadata on the document. The **GetTaxonomyFormat** method in the AutoTaggingHelper.cs file shows how to format the **Classification** value.
 
-```C#
+```csharp
 public static string GetTaxonomyFormat(ClientContext ctx, string term)
         { 
             if(string.IsNullOrEmpty(term))
@@ -321,7 +321,7 @@ public static string GetTaxonomyFormat(ClientContext ctx, string term)
 
 When you choose the button  **Remove Event Scenario 1**, the following code runs to remove the event receiver from the document library.
 
-```C#
+```csharp
 public static void RemoveEventReceiver(ClientContext ctx, List list, string receiverName)
         {
             ctx.Load(list, lib => lib.EventReceivers);

@@ -290,7 +290,7 @@ If the remote components are PHP or other non-Microsoft formats, see the localiz
 
 Override the page language and the thread language to match the language of the host web. You do this by overriding the inherited **InitializeCulture** method in the code-behind of your ASP.NET pages. To identify the host web's language, use the **SPLanguage** query parameter that SharePoint passes to the remote page. The following code shows how to do this in ASP.NET. You should do something parallel in a PHP web application or other platform.
 
-```C#
+```csharp
     protected override void InitializeCulture()
     {
         if (Request.QueryString["SPLanguage"] != null)

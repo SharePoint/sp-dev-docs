@@ -66,7 +66,7 @@ The following code activates or deactivates the In-Place Records Management feat
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 protected void btnToggleIPRStatus_Click(object sender, EventArgs e)
         {
             if (cc.Site.IsInPlaceRecordsManagementActive())
@@ -84,7 +84,7 @@ protected void btnToggleIPRStatus_Click(object sender, EventArgs e)
 
 OfficeDevPnP.Core includes extension methods to get and set all site-scoped in-place records management settings. The following code from the  **EnableSiteForInPlaceRecordsManagement** method shows how to use these extension methods to set restrictions, and specify who can declare or undeclare records on your site.
 
-```C#
+```csharp
 public static void EnableSiteForInPlaceRecordsManagement(this Site site)
         {
             // Activate the In-Place Records Management feature if not yet enabled.
@@ -112,7 +112,7 @@ public static void EnableSiteForInPlaceRecordsManagement(this Site site)
 
 When the user changes their in-place records management settings and chooses the  **Save changes** button, the following code in the **btnSaveSiteScopedIPRSettings_Click** method runs.
 
-```C#
+```csharp
 protected void btnSaveSiteScopedIPRSettings_Click(object sender, EventArgs e)
         {
             EcmSiteRecordRestrictions restrictions = (EcmSiteRecordRestrictions)Convert.ToInt32(rdRestrictions.SelectedValue);
@@ -127,7 +127,7 @@ protected void btnSaveSiteScopedIPRSettings_Click(object sender, EventArgs e)
 
 In the previous code, a call is made to the  **SetRecordRestrictions** method in RecordsManagementExtensions.cs. The **SetRecordRestrictions** method in the next example shows how to set restrictions on the records.
 
-```C#
+```csharp
 public static void SetRecordRestrictions(this Site site, EcmSiteRecordRestrictions restrictions)
         {
             string restrictionsProperty = "";
@@ -160,7 +160,7 @@ Scenario 2 shows how to interact with in-place records management settings for l
 
 The following code in Default.aspx.cs runs when a user chooses the  **Save Changes** button.
 
-```C#
+```csharp
 protected void btnSaveListScopedIPRSettings_Click(object sender, EventArgs e)
         {
             List ipr = cc.Web.GetListByTitle(IPR_LIBRARY);
@@ -185,7 +185,7 @@ The code calls the following two methods in the RecordsManagementExtensions.cs f
     
 -  **SetListAutoRecordDeclaration** - Automatically declares items added to this list as a record. If records declaration is set to automatic on this list, the manual records declaration settings on the list no longer apply. Event receivers are added to the list to start specific records management actions when events occur.
 
-```C#
+```csharp
 public static void SetListManualRecordDeclaration(this List list, EcmListManualRecordDeclaration settings)
         {
             if (settings == EcmListManualRecordDeclaration.UseSiteCollectionDefaults)

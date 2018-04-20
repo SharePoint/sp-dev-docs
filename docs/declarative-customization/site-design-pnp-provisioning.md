@@ -27,7 +27,7 @@ You'll use these components to trigger the PnP provisioning code after you creat
 
 To set up app-only access, you need to have two different pages on your tenant - one on the regular site, and the other on your SharePoint administration site.
 
-1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx` (you can go to any site, but for now pick the root site).
+1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/15/appregnew.aspx` (you can go to any site, but for now pick the root site).
 1. Choose the **Generate** button next to the **Client Id** and **Client Secret** fields.
 1. Enter a title for your app, such as "Site Provisioning".
 1. In the **App Domain** box, enter **localhost**.
@@ -227,8 +227,8 @@ Next, upload the files so that your Azure Function can use the module.
 
 Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_AppSecret```. To set those variables, go to the main Function App page in the Azure Portal, select **Application Settings**, and add two new application settings:
 
-1. ```SPO_AppId``` - Set the value to the Client ID you copied in the first step when you created your app on your tenant.
-2. ```SPO_AppSecret``` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
+1. `SPO_AppId` - Set the value to the Client ID you copied in the first step when you created your app on your tenant.
+2. `SPO_AppSecret` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
 
 ## Create the site design
 

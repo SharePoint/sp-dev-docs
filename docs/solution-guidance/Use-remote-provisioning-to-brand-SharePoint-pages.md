@@ -61,7 +61,7 @@ You can use the  **ThemeInfo** class to get details about themes that are applie
 
 The following code example shows how to use  **ApplyTheme** and **ThemeInfo** in CSOM code. You can use this code in the remote provisioning pattern. For example, you might decide to create composed looks programmatically, as specified by a designer, and provision them to sites in your web application.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

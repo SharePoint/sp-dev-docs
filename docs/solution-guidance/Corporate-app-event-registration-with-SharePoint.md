@@ -179,7 +179,7 @@ The Event.cs file contains the following implementations of the  **ReadPropertie
 
 **ReadProperties**
 
-```C#
+```csharp
         protected override void ReadProperties(ListItem item) {
             RegisteredEventId = BaseGet<string>(item, FIELD_REGISTERED_EVENT_ID);
             Description = BaseGet<string>(item, FIELD_DESCRIPTION);

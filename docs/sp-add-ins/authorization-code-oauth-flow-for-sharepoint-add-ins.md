@@ -149,7 +149,7 @@ The values listed in the **Scope alias** column are shorthand versions of their 
 
 The scope aliases are used only in the context of using the OAuthAuthorize.aspx redirect page. As shown in [step 2 of the OAuth flow](#FlowStep2) described in the previous section, when the add-in is using managed code, the aliases are used when you call the **GetAuthorizationUrl** method of TokenHelper.cs (or .vb) in your project. The following is another example: 
 
-```C#
+```csharp
 Response.Redirect(TokenHelper.GetAuthorizationUrl(
     sharePointSiteUrl.ToString(), 
     "Web.Read List.Write ", 
@@ -224,7 +224,7 @@ The following is an example of the code-behind of such a page in an ASP.NET appl
 
 For a more complex example that uses the refresh token to get a new access token, see the next section.
 
-```C#
+```csharp
 public partial class RedirectAccept : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -273,7 +273,7 @@ The following is code-behind for a Default.aspx page. This page assumes a scenar
 
 **Code-behind for a Default.aspx page**
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -332,7 +332,7 @@ The following is a code example for a token cache module that the previous sampl
 
 **Code example for a token cache module**
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

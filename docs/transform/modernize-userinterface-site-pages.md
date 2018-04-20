@@ -1,10 +1,14 @@
 ---
-title: Transforming classic pages to modern client side pages
-description: Transforming classic pages to modern client side pages
+title: Transform classic pages to modern client-side pages
+description: TBD
 ms.date: 03/23/2018
 ms.prod: sharepoint
 ---
 
-# Transforming classic pages to modern client side pages
+# Transform classic pages to modern client-side pages
 
 Content to come soon.
+
+## See also
+
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)

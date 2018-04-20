@@ -187,7 +187,7 @@ In some scenarios, you want your remote pages to have their own branding, but in
     
    In the **Page_Load** method, a **using** statement writes the name of the SharePoint host web to the remote start page. This is sample code, so delete the entire **using** statement (but leave the line that initializes the `spContext` variable). The method should now look like the following.
 
-    ```C#
+    ```csharp
       protected void Page_Load(object sender, EventArgs e)
     {
         spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -213,13 +213,13 @@ In some scenarios, you want your remote pages to have their own branding, but in
 
 10. This step and the next one have already been done for the Order Form page and the Account page, so they apply only to the Contact page and Help page. To get the `spContext` object onto each of the pages, open the \*.aspx.cs code behind files for the three aspx pages. In each of them, add the following member to the **Page** class.
     
-    ```C#
+    ```csharp
       protected SharePointContext spContext;
     ```
 
 11. Replace the **Page_Load** method with the following version. The object is being retrieved from the Session cache. It was cached there when it was first created by the **Page_Load** method of the add-in's start page.
     
-    ```C#
+    ```csharp
       protected void Page_Load(object sender, EventArgs e)
     {
         spContext = Session["SPContext"] as SharePointContext;

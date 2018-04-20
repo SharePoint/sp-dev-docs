@@ -1,10 +1,9 @@
 ﻿---
 title: SharePoint .NET Server, CSOM, JSOM, and REST API index
 description: The most frequently used types and objects that are implemented in the .NET server object model and at least one client programming model.
-ms.date: 12/13/2017
+ms.date: 4/19/2018
 ms.prod: sharepoint
 ---
-
 
 # SharePoint .NET Server, CSOM, JSOM, and REST API index
 
@@ -18,9 +17,8 @@ This table lists the most frequently used core APIs, which are in most cases bas
  
 ## SharePoint API index
 
-|                                                                                                 |                                                                                                                                                    |                                                                                                                                                                 |
-| :---------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **API**                                                                                         | **SP.Object/Enumeration (sp.js)**                                                                                                                  | **REST Endpoint**                                                                                                                                               |
+| API   | SP.Object/Enumeration (sp.js)   | REST Endpoint      |
+| :------------- | :--------------------- | :-------------- |
 | **AttachmentCollection** **SPAttachmentCollection**                                             | [SP.AttachmentCollection](http://msdn.microsoft.com/library/28247ba7-eeaf-e1fc-0609-fb4c39b5d53c%28Office.15%29.aspx)                              | `…/_api/web/lists('<list id>')/items(<item id>)/attachmentfiles`                                                                                                |
 | **BasePermissions** **SPBasePermissions**                                                       | [SP.BasePermissions object](http://msdn.microsoft.com/library/40349d51-1068-08c6-8ba4-b23ee58396c4%28Office.15%29.aspx)                            | N/A                                                                                                                                                             |
 | **CalendarType** **SPCalendarType**                                                             | [SP.CalendarType enumeration](http://msdn.microsoft.com/library/33242ef7-1300-b534-6e8e-c5df1a3df85b%28Office.15%29.aspx)                          | N/A                                                                                                                                                             |
@@ -93,7 +91,6 @@ This table lists the most frequently used core APIs, which are in most cases bas
 | **WebTemplateCollection** **SPWebTemplateCollection**                                           | [SP.WebTemplateCollection object](http://msdn.microsoft.com/library/c6e8b2c8-4f0f-bfda-2626-49c59ef92844%28Office.15%29.aspx)                      | `…/_api/web/GetAvailableWebTemplates(languageid,includecrosslanguage)`                                                                                          |
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 - [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)

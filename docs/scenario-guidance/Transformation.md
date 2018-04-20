@@ -21,7 +21,7 @@ Office 365 and SharePoint evolve continuously. As new capabilities are added, it
 
 _**Applies to:** SharePoint Server_
 
-Typically, farm solutions are packaged as SharePoint solution package (WSP) files that contain assemblies, other non-compiled components, and an XML manifest file. A farm administrator uses Windows PowerShell, the STSADM command-line tool, or the SharePoint Central Administration Web site to install solution packages to the server environment. After a solution package is installed, the farm administrator can activate the solution to a specific Web application (or multiple Web applications, if you use the full-trust model).
+Typically, farm solutions are packaged as SharePoint solution package (WSP) files that contain assemblies, other non-compiled components, and an XML manifest file. A farm administrator uses Windows PowerShell, the STSADM command-line tool, or the SharePoint Central Administration website to install solution packages to the server environment. After a solution package is installed, the farm administrator can activate the solution to a specific Web application (or multiple Web applications, if you use the full-trust model).
 
 #### Related resources
 

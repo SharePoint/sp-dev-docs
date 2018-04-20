@@ -39,7 +39,7 @@ GET https://contoso.sharepoint.com/_api/SP.UserProfiles.PeopleManager/GetPropert
 
 If you're using C#, CSOM, as shown in the following example, is easier to use.
 
-```C#
+```csharp
 public string GetUserPersonalSiteHostUrlCSOM(string userPrincipalName)
 {
     string result = null;
@@ -112,7 +112,7 @@ You can add company-specific user profile properties to user profiles in SharePo
 - Custom user profile properties are created at the geo location level. If you create a property in the Europe geo location, that property is not available in the other geo locations. As a best practice, create custom user profile properties in all geo locations. This reduces the risk that data will be lost when a user move across geo locations.
 - You must read and update custom user profile properties at the geo location level. If you created a custom property in all geo locations, you need to iterate over the geo locations and update the property for all  users.
 
-```C#
+```csharp
 // For SharePoint Online custom properties, use the following approach.
 string userPrincipalName = "bert@contoso.onmicrosoft.com";
 string userAccountName = $"i:0#.f|membership|{userPrincipalName}";

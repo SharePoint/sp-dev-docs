@@ -74,7 +74,7 @@ In Core.AppScriptPartWeb\Pages\Default.aspx, **Run Scenario** runs **btnScenario
     
 4. When userprofileinformation.webpart is found, assigns the Web Part to a custom group named **Add-in Script Part**.
 
-```C#
+```csharp
 protected void btnScenario_Click(object sender, EventArgs e)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);

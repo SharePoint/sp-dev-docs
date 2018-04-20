@@ -89,7 +89,7 @@ Here are some sample code for basic scenarios in CSOM:
  
 - Add a file to a folder (.net)
 
-```C#
+```csharp
   ClientContext context = new ClientContext("http://site");
   Web web = context.Web;
   // Get the parent folder
@@ -123,7 +123,7 @@ Here are some sample code for basic scenarios in CSOM:
 
 - Add a sub-folder to a folder  (.net)
 
-```C#
+```csharp
     ClientContext context = new ClientContext("http://site");
     Web web = context.Web;
     // Get the parent folder
@@ -153,7 +153,7 @@ Here are some sample code for basic scenarios in CSOM:
 
 - Get a file in the web (.net)
 
-```C#
+```csharp
     ClientContext context = new ClientContext("http://site");
     Web web = context.Web;
     // Get the file

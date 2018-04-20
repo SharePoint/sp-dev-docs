@@ -104,7 +104,7 @@ The  **ProcessEvent** handles the following **SPRemoteEventType** remote events:
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
         {
 
@@ -130,7 +130,7 @@ public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
 
 **HandleAppInstalled** calls **RemoteEventReceiverManager.AssociateRemoteEventsToHostWeb** in RemoteEventReceiverManager.cs.
 
-```C#
+```csharp
  private void HandleAppInstalled(SPRemoteEventProperties properties)
         {
             using (ClientContext clientContext =
@@ -158,7 +158,7 @@ public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
     
 	- Adds a new event receiver to the list using  **List.EventReceivers.Add**.
 
-```C#
+```csharp
 public void AssociateRemoteEventsToHostWeb(ClientContext clientContext)
         {
             // Add Push Notification feature to host web.
@@ -225,7 +225,7 @@ public void AssociateRemoteEventsToHostWeb(ClientContext clientContext)
 
 When an item is added to the  **Remote Event Receiver Jobs** list, **ProcessEvent** in AppEventReceiver.svc.cs handles the **ItemAdded** event, and then calls **HandleItemAdded**.  **HandleItemAdded** calls **RemoteEventReceiverManager.ItemAddedToListEventHandler**.  **ItemAddedToListEventHandler** fetches the list item that was added, and adds the string **Updated by ReR** to the list item's description.
 
-```C#
+```csharp
  public void ItemAddedToListEventHandler(ClientContext clientContext, Guid listId, int listItemId)
         {
             try
