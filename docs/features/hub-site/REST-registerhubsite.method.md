@@ -1,7 +1,7 @@
 ---
 title: RegisterHubSite REST method
 description: RegisterHubSite REST method
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # RegisterHubSite
@@ -71,3 +71,7 @@ https://contoso.sharepoint.com/sites/marketing/_api/site/RegisterHubSite
 	"Title": "Marketing site"
 }
 ```
+
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)

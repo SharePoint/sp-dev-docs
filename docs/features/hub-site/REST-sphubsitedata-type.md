@@ -1,7 +1,7 @@
 ---
 title: SPHubSiteData object type
 description: SPHubSiteData object type
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # SPHubSiteData object type
@@ -30,3 +30,8 @@ Contains data describing a SharePoint Hub site.
 |Url      |string                   |URL the navigation node points to  |
 |ParentId |number                   |ID of the parent navigation node   |
 |Children |List of navigation nodes |List of child navigation nodes     |
+
+
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)

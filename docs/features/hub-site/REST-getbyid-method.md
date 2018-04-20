@@ -1,7 +1,7 @@
 ---
 title: GetById REST method
 description: GetById REST method
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # GetById
@@ -107,3 +107,7 @@ https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-49
   "Description": "Hub site for marketing coordination"
 }
 ```
+
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)

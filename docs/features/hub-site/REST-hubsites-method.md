@@ -1,7 +1,7 @@
 ---
 title: HubSites REST method
 description: HubSites REST method
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # HubSites
@@ -89,3 +89,7 @@ https://contoso.sharepoint.com/_api/HubSites
 	]
 }
 ```
+
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)

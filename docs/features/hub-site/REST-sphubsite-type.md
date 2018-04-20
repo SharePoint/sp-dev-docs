@@ -1,7 +1,7 @@
 ---
 title: SPHubSite object type
 description: SPHubSite object type
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # SPHubSite object type
@@ -22,3 +22,7 @@ Contains data describing a SharePoint Hub site.
 |logoUrl |string |The URL of a logo to use in the hub site navigation. |
 |Description |string |A description of the hub site. |
 |Targets |string |List of security groups with access to join the hub site. Null if everyone has permission. |
+
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)

@@ -1,7 +1,7 @@
 ---
 title: JoinHubSite REST method
 description: JoinHubSite REST method
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # JoinHubSite
@@ -70,3 +70,7 @@ https://contoso.sharepoint.com/sites/advertising/_api/site/JoinHubSite('00000000
 
 #### Sample Response
 **Status code:** 204
+
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)
