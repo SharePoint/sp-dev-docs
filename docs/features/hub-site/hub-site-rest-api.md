@@ -6,7 +6,7 @@ ms.date: 4/20/2018
 
 # Hub site REST API
 
-You can use the SharePoint REST interface to register sites as hub sites, associate existing sites with hub sites, and obtain or update information about hub sites.
+You can use the SharePoint REST interface to register sites as hub sites, associate existing sites with hub sites, and obtain or update information about hub sites. 
 
 The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option. 
 
@@ -49,3 +49,4 @@ To remove, or disassociate a site from a hub site, call [JoinHubSite](REST-joinh
 ## See also
 
 - [SharePoint hub sites overview](hub-site-overview.md)
+

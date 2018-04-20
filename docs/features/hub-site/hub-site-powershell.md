@@ -7,7 +7,7 @@ ms.date: 4/20/2018
 # PowerShell cmdlets for SharePoint hub sites
 
 > [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Use PowerShell cmdlets to create and manage SharePoint hub sites.
 

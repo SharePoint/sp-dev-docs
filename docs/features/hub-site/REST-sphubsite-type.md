@@ -7,7 +7,7 @@ ms.date: 4/20/2018
 # SPHubSite object type
 
 > [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Contains data describing a SharePoint hub site.
 

@@ -9,7 +9,7 @@ ms.date: 4/20/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-Applies any theme updates from the parent hub site.
+Applies any theme updates from the parent hub site. 
 
 ## HTTP request
 

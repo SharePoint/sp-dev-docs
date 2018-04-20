@@ -7,7 +7,7 @@ ms.date: 4/20/2018
 # HubSites
 
 > [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Gets information about all hub sites that the current user can access.
 
