@@ -102,7 +102,7 @@ For the sake of completeness, you can see how the custom rendering of the list w
 As you can see, "Color" fields render a colored box filled with the color selected at the item level.
 
 > [!NOTE]
-> To provision this kind of solution in a "classic" site you can eventually use a PnP Provisioning Template, which can provision both the list with the custom field, and the `JSLink` property at once.
+> To provision this kind of solution in a "classic" site you can eventually use a PnP provisioning template, which can provision both the list with the custom field, and the `JSLink` property at once.
 
 To migrate the previous solution to the SharePoint Framework, see the following steps.
 

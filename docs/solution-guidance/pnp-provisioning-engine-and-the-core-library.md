@@ -9,7 +9,7 @@ Take a high-level look at the remote provisioning process, including a closer lo
 The PnP provisioning engine is the heart of the provisioning framework, and at its foundation is the OfficeDevPnP.Core library. The provisioning engine is part of the Core library and it leverages the Core library extensions in the implementation of provisioning tasks. Comprised of extension methods on the SharePoint CSOM/REST object model, the Core library enables provisioning tasks like enumerating and getting provisioning templates as well as storing and then applying templates to new and existing sites. It also allows you to automate provisioning tasks and to introduce coded logic into your provisioning routines.
 
 > [!NOTE] 
-> To see a video walkthrough of creating and persisting, and applying a provisioning template, go to [Getting Started with PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
+> To see a video walkthrough of creating and persisting, and applying a provisioning template, go to [Getting Started with PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 
 ## PnP provisioning engine
 

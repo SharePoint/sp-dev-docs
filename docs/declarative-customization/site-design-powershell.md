@@ -45,3 +45,4 @@ The following cmdlets are available for managing site designs and site scripts f
 - [JSON schema reference](site-design-json-schema.md)
 - [REST API](site-design-rest-api.md)
 - [Apply a scope to your site design](site-design-scoping.md)
+- [SharePoint site design and site script overview](site-design-overview.md)

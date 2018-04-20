@@ -19,7 +19,7 @@ The approach you take to handle feature receivers in SharePoint is slightly diff
 
 |**Approach**|**Additional Information**|
 |:-----|:-----|
-|PowerShell based customizations|<p>You use PowerShell scripts to provision new site collections (and potentially sub sites) where needed customizations are applied using remote APIs. Typically this is done by using CSOM/REST directly in the PowerShell scripts or by using PnP PowerShell commands, which provides easy way to modify sites and content remotely.</p><p><lu><li>[PnP Provisioning Engine](https://github.com/SharePoint/PnP-PowerShell)</li><li>[PnP PowerShell - Getting started with latest updates](http://dev.office.com/blogs/pnp-powershell-getting-started-with-latest-updates)</li></lu></p>|
+|PowerShell based customizations|<p>You use PowerShell scripts to provision new site collections (and potentially sub sites) where needed customizations are applied using remote APIs. Typically this is done by using CSOM/REST directly in the PowerShell scripts or by using PnP PowerShell commands, which provides easy way to modify sites and content remotely.</p><p><lu><li>[PnP provisioning engine](https://github.com/SharePoint/PnP-PowerShell)</li><li>[PnP PowerShell - Getting started with latest updates](http://dev.office.com/blogs/pnp-powershell-getting-started-with-latest-updates)</li></lu></p>|
 |Code based customizations|<p>You can apply the needed customizations also using managed code with remote APIs. This means that you will either apply them as part of the administrative operation when the site is created or you apply customizations to SharePoint, which will hook in your code to be part of the UI elements, like by overiding the sub site creation logic, so that you can associate customizations as part of the provisioning logic.</p><p><lu><li>[Remote provisioning pattern for sub site creation](https://channel9.msdn.com/blogs/OfficeDevPnP/Using-remote-provisioning-pattern-for-sub-site-creation)</li><li>[PnP CSOM Core Component](https://github.com/SharePoint/PnP-sites-core)</li></lu></p>|
 
 ## Design Considerations
@@ -82,7 +82,7 @@ web.SetComposedLookByUrl("Green");
 
 ```
 
-When you are using code based approaches, we recommend using [PnP Provisioning Engine](http://dev.office.com/blogs/sharepoint-pnp-remote-provisioning-engine-august-2016) for the template management, which will dramatically simplify the development efforts. 
+When you are using code based approaches, we recommend using [PnP provisioning engine](http://dev.office.com/blogs/sharepoint-pnp-remote-provisioning-engine-august-2016) for the template management, which will dramatically simplify the development efforts. 
 
 ## Removing sandbox solution containing feature receiver code from your site
 <a name="sectionSection3"> </a>

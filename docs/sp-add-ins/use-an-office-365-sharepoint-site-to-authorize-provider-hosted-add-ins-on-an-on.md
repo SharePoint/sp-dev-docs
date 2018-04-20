@@ -193,7 +193,7 @@ param(
     Add-PSSnapin Microsoft.SharePoint.PowerShell
     #Import the Microsoft Online Services Sign-In Assistant.
     Import-Module -Name MSOnline
-    #Import the Microsoft Online Services Module for Windows Powershell.
+    #Import the Microsoft Online Services Module for Windows PowerShell.
     Import-Module MSOnlineExtended -force -verbose 
     #Set values for Constants.
     New-Variable -Option Constant -Name SP_APPPRINCIPALID -Value '00000003-0000-0ff1-ce00-000000000000' | Out-Null

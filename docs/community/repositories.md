@@ -39,7 +39,7 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 | [pnp](https://github.com/SharePoint/pnp) | Main repository for SharePoint Add-ins, Microsoft Graph, and other samples |
 | [pnp-sites-core](https://github.com/SharePoint/pnp-sites-core) | Office Dev PnP CSOM Core component - Extension component for native SharePoint Client-Side Object Model |
 | [pnp-powershell](https://github.com/SharePoint/pnp-powershell) | Source code for [SharePoint PnP PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) |
-| [pnp-provisioning-schema](https://github.com/SharePoint/PnP-Provisioning-Schema) | PnP Provisioning engine schema repository |
+| [pnp-provisioning-schema](https://github.com/SharePoint/PnP-Provisioning-Schema) | PnP provisioning engine schema repository |
 | [pnp-tools](https://github.com/SharePoint/PnP-Tools) | Repository for tools and scripts targeted primarily for IT pros and for on-premises SharePoint 2013 and SharePoint 2016 |
 | [pnp-partner-pack](https://github.com/SharePoint/PnP-Partner-Pack) | Packaged guidance with detailed instructions about setting things up in Office 365 and Azure |
 | [pnp-js-core](https://github.com/SharePoint/PnP-JS-Core) | Office Dev PnP Core component for JavaScript |

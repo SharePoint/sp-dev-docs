@@ -292,10 +292,10 @@ You can take advantage of the User Profile Service bulk import API with PowerShe
 
 By using PowerShell, you do not need to compile your code within Visual Studio, which may be a more suitable model for some customers.
 
-### Sample PowerShell Script
+### Sample PowerShell script
 Below is a sample PowerShell script which performs the same operations as the code above: 
 
-```Powershell
+```powershell
 # Get needed information from the end user
 $adminUrl = Read-Host -Prompt 'Enter the admin URL of your tenant'
 $userName = Read-Host -Prompt 'Enter your user name'
