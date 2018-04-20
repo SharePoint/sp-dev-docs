@@ -39,3 +39,7 @@ After your site is connected to an Office 365 Group, it behaves like a modern gr
 - [PowerShell cmdlet to connect a SharePoint team site to a new Office 365 Group](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteOffice365Group)
 - [Modernize your classic SharePoint sites](../../transform/modernize-classic-sites.md)
 
+
+
+
+
