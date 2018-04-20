@@ -235,7 +235,7 @@
     - name: PowerShell cmdlets for hub sites
       href: features/hub-site/hub-site-powershell.md
     - name: REST API
-      items:
+      items: features/hub-site/hub-site-rest-api.md
       - name: SP.HubSites.CanCreate
         href: features/hub-site/REST-cancreate-method.md
       - name: GetById

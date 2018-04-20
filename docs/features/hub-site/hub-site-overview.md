@@ -13,7 +13,7 @@ SharePoint hub sites connect and organize sites based on organizational attribut
 
 For more information about SharePoint hub sites, see [What is a SharePoint hub site](https://go.microsoft.com/fwlink/?linkid=869149).
 
-For more information about creating hub sites, see [Creating a SharePoint hub site using PowerShell](create-hub-site-with-powershell.md).
+For more information about creating hub sites, see [Create SharePoint hub sites using PowerShell](create-hub-site-with-powershell.md).
 
 ## Additional details
 

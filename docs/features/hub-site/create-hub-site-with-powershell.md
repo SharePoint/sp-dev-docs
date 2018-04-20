@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint hub sites using PowerShell
 description: Example code for creating a SharePoint hub site using PowerShell.
-ms.date: 2/26/2018
+ms.date: 4/20/2018
 ---
 
 # Create SharePoint hub sites using PowerShell
@@ -80,7 +80,7 @@ The hub site doesn't have a logo or description yet. We also want to constrain i
 
 1. Upload a logo image for the site by going to `https://contoso.sharepoint.com/sites/marketing/SiteAssets` and uploading any image you like. Make a note of the image file name. 
 
-2. Use the [Set-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spohubsite?view=sharepoint-ps) cmdlet to set the logo and description. In place of **mylogo.jpg**, specify the name of the image that you uploaded:
+2. Use the [Set-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spohubsite?view=sharepoint-ps) cmdlet to set the logo and description. In place of `mylogo.jpg`, specify the name of the image that you uploaded:
 
    ```powershell
     Set-SPOHubSite 
