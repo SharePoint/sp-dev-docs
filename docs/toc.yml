@@ -225,7 +225,7 @@
   - name: Connect to Office 365 Group
     href: features/groupify/groupify-overview.md
     items:
-    - name: CSOM API
+    - name: Groupify (CSOM API)
       href: features/groupify/groupify-csom.md
   - name: Hub sites
     href: features/hub-site/hub-site-overview.md
