@@ -67,6 +67,7 @@ __Return type:__ void
 | isPublic          | bool                | Whether the group is public or private. |
 | optionalParams    | GroupCreationParams | An optional set of creation parameters for the group. |
 
+<br/>
 
 __type:__ Microsoft.Online.SharePoint.TenantAdministration.GroupCreationParams<br/>
 

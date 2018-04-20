@@ -62,8 +62,11 @@ CSOM does not have a supported way to interact with user input links. Some appli
 
 To work around this:
 1.	Open a **ClientContext** on the root site (scheme://hostname). 
-2.	Call `Web.WebUrlFromPageUrlDirect()` to get the web URL of the link.
-3.	Open a new **ClientContext** using this web URL to make additional requests.
+
+2.	Call `Web.WebUrlFromPageUrlDirect()` to get the web URL of the link. 
+
+3.	Open a new **ClientContext** using this web URL to make additional requests. 
+
 
 > [!NOTE]
 > This approach is not supported.
