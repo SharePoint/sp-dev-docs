@@ -6,7 +6,7 @@ ms.date: 04/20/2018
 
 # Site design JSON schema
 
-The site design is a list of actions. For more complex actions, such as creating a list, there are also subactions. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time. 
+The site design is a list of **actions**. For more complex actions, such as creating a list, there are also **subactions**. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time. 
 
 The overall JSON structure is specified as follows:
 
@@ -48,6 +48,8 @@ Use the **createSPList** verb to create a new SharePoint list.
     ]
 }
 ```
+
+<br/>
 
 The subactions array provides additional actions to specify how to construct the list. Subactions are also specified using a **verb** value.
 
