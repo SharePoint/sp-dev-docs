@@ -57,8 +57,6 @@ Create a new Office 365 Group and attach it to an existing site. After this succ
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Return type:__ void
 
-#### Parameters
-
 |Parameter          | Type                |Description |
 |-----------        |------               |-------------|
 | siteUrl           | string              | URL of the site to groupify. |
@@ -77,6 +75,8 @@ __type:__ Microsoft.Online.SharePoint.TenantAdministration.GroupCreationParams<b
 | Owners          | string[]  | Gets and sets the group owners. These should be the principal names of the users.|
 | CreationOptions | string[]  | Gets and sets the group's creation options. |
 | Classification  | string    | Gets and sets the group's data classification. |
+
+<br/>
 
 ## See also
 

@@ -9,7 +9,7 @@ ms.date: 4/19/2018
 > [!IMPORTANT]
 > The option to connect an Office 365 Group to an existing site is **not** yet available and will be released during Q2 of calendar year 2018.
 
-With the ‘Connect to new Office 365 Group’ feature, you can augment your team site collaboration capabilities with the benefits of other group services such as Outlook, Planner, Microsoft Teams, etc.  This keeps your site, its content, permissions and customizations intact and eliminates the need to migrate content to a new group-backed site.  
+With the **Connect to new Office 365 Group** feature, you can augment your team site collaboration capabilities with the benefits of other group services such as Outlook, Planner, and Microsoft Teams. This keeps your site, its content, permissions, and customizations intact and eliminates the need to migrate content to a new group-backed site.  
 
 ## What happens when you connect your site to an Office 365 Group? 
 
@@ -34,7 +34,7 @@ After your site is connected to an Office 365 Group, it behaves like a modern gr
 
 ## See also
 
-- [Connect a classic experience SharePoint team site to a new Office 365 Group](../../transform/modernize-connect-to-office365-group.md)
+- [Connect a classic SharePoint team site to a new Office 365 Group](../../transform/modernize-connect-to-office365-group.md)
 - [SharePoint Modernization scanner tool](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization)
 - [PowerShell cmdlet to connect a SharePoint team site to a new Office 365 Group](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteOffice365Group)
 - [Modernize your classic SharePoint sites](../../transform/modernize-classic-sites.md)
