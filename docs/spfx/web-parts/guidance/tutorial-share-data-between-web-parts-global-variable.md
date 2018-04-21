@@ -502,7 +502,7 @@ The Recent Document web part displays information about the most recently modifi
 
 2. In the code editor, open the **./src/webparts/recentDocument/components/RecentDocument.tsx** file, and paste the following code:
 
-  ```typescriptx
+  ```tsx
   import * as React from 'react';
   import {
     DocumentCard,
