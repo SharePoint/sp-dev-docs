@@ -230,12 +230,13 @@
   - name: Hub sites
     href: features/hub-site/hub-site-overview.md
     items:
-    - name: Create a hub site with PowerShell
+    - name: Create hub sites with PowerShell
       href: features/hub-site/create-hub-site-with-powershell.md
-    - name: PowerShell
+    - name: PowerShell cmdlets for hub sites
       href: features/hub-site/hub-site-powershell.md
     - name: REST API
-      items:
+      href: features/hub-site/hub-site-rest-api.md
+      items: 
       - name: SP.HubSites.CanCreate
         href: features/hub-site/REST-cancreate-method.md
       - name: GetById
@@ -294,7 +295,7 @@
       href: declarative-customization/get-started-create-site-design.md
     - name: Set scope
       href: declarative-customization/site-design-scoping.md
-    - name: Customize a default site design
+    - name: Customize default design
       href: declarative-customization/customize-default-site-design.md
     - name: JSON schema reference
       href: declarative-customization/site-design-json-schema.md
@@ -302,7 +303,7 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
-    - name: PnP Provisioning Engine
+    - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md         
   - name: Site theming
     href: declarative-customization/site-theming/sharepoint-site-theming-overview.md

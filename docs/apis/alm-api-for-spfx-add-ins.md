@@ -8,7 +8,7 @@ ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
 
 # Application Lifecycle Management (ALM) APIs
 
-ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant. ALM APIs support the following capabilities:
+ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant. ALM APIs support the following capabilities: 
 
 - Add SharePoint Framework solution or SharePoint Add-in to tenant or site collection app catalog.
 - Remove SharePoint Framework solution or SharePoint Add-in from tenant or site collection app catalog.

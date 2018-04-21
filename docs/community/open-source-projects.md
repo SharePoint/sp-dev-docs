@@ -26,7 +26,7 @@ There are numerous open-source projects that are coordinated by the SharePoint P
 
 ## Supportability of open-source projects
 
-The following statements apply across all of the SharePoint development (PnP) samples, reusable solutions, controls, and core components, and even the more polished solutions, such as the GDPR Activity Hub or the PnP Provisioning Engine:
+The following statements apply across all of the SharePoint development (PnP) samples, reusable solutions, controls, and core components, and even the more polished solutions, such as the GDPR Activity Hub or the PnP provisioning engine:
 
 * PnP guidance and samples are created by Microsoft and the community.
 * PnP guidance and samples are maintained by Microsoft and the community.

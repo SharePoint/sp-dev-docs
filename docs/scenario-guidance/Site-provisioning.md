@@ -42,32 +42,32 @@ It can be used both in SharePoint 2013/2016 on-premises, and in SharePoint Onlin
 ### Videos
 * [SharePoint 2013 Remote Provisioning](https://www.youtube.com/watch?v=Jh7syofhNkg)
 
-### PnP Provisioning Engine
+### PnP provisioning engine
 
 _**Applies to:** Office 365 | SharePoint Server 2016 | SharePoint Server 2013_
 
-The PnP Provisioning Engine is an open source engine provided by the [PnP community project](http://aka.ms/SharePointPnP), which allows to leverage the remote provisioning technique reusing a rich set of ready to go capabilities. Instead of reinventing the wheel, you can just use the PnP Provisioning Engine and provision your Information Architecture using this engine. The PnP Provisioning Engine is available as a .NET library that you can reference in your own projects, as well as through a set of PowerShell command lets, if you need to automate the remote provisioning using scripts.
-One of the killer features of the PnP Provisioning Engine is the fact that you can export a template from a live site, and apply that template onto another target site, that you have to create prior to apply the template. Thus, it is a very powerfull solution to move the Information Architecture from development, to staging, and to production.
-Moreover, the PnP Provisioning Engine supports versioning and delta handling, so you can use the engine to update the IA of already created sites.
-The PnP Provisioning Engine can target both classic sites, as well as modern sites.
+The PnP provisioning engine is an open source engine provided by the [PnP community project](http://aka.ms/SharePointPnP), which allows to leverage the remote provisioning technique reusing a rich set of ready to go capabilities. Instead of reinventing the wheel, you can just use the PnP provisioning engine and provision your Information Architecture using this engine. The PnP provisioning engine is available as a .NET library that you can reference in your own projects, as well as through a set of PowerShell command lets, if you need to automate the remote provisioning using scripts.
+One of the killer features of the PnP provisioning engine is the fact that you can export a template from a live site, and apply that template onto another target site, that you have to create prior to apply the template. Thus, it is a very powerfull solution to move the Information Architecture from development, to staging, and to production.
+Moreover, the PnP provisioning engine supports versioning and delta handling, so you can use the engine to update the IA of already created sites.
+The PnP provisioning engine can target both classic sites, as well as modern sites.
 
 ### Articles
-* [Introducing the PnP Provisioning Engine](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine)
+* [Introducing the PnP provisioning engine](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine)
 * [PnP provisioning engine and the core library](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/pnp-provisioning-engine-and-the-core-library)
 
 ### Samples
-* [Getting started with the PnP Provisioning engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console)
-* [PnP Provisioning Engine - Self-service site collection provisioning](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.Framework.Cloud.Async)
+* [Getting started with the PnP provisioning engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console)
+* [PnP provisioning engine - Self-service site collection provisioning](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.Framework.Cloud.Async)
 * [Create "modern" site collections](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Modern.Async)
 
 ### Solutions
 * [PnP Partner Pack v. 2.0](https://github.com/SharePoint/PnP-Partner-Pack)
-* [PnP Provisioning - Self service site collection provisioning reference implementation](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.UX.App)
+* [PnP provisioning - Self service site collection provisioning reference implementation](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.UX.App)
 
 ### Videos
-* [Getting started with the PnP Provisioning Engine in .NET](https://www.youtube.com/watch?v=kRbrrGCfUtE)
-* [Getting Started with PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine)
-* [Introduction to Office 365 Dev PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Web-Cast-Introduction-to-Office-365-Dev-PnP-provisioning-engine)
+* [Getting started with the PnP provisioning engine in .NET](https://www.youtube.com/watch?v=kRbrrGCfUtE)
+* [Getting Started with PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine)
+* [Introduction to Office 365 Dev PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Web-Cast-Introduction-to-Office-365-Dev-PnP-provisioning-engine)
 
 ### Web templates
 

@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - PowerShell cmdlets
 description: Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 03/22/2018
+ms.date: 04/20/2018
 ---
 
 # SharePoint site design: PowerShell cmdlets
@@ -45,3 +45,4 @@ The following cmdlets are available for managing site designs and site scripts f
 - [JSON schema reference](site-design-json-schema.md)
 - [REST API](site-design-rest-api.md)
 - [Apply a scope to your site design](site-design-scoping.md)
+- [SharePoint site design and site script overview](site-design-overview.md)

@@ -17,7 +17,7 @@ In this sample, we create a basic console application that implements classes in
 - Apply the provisioning template to a new or existing site collection.
     
 > [!NOTE] 
-> This sample walkthrough is a companion to a sample currently available on GitHub: [Getting Started with the PnP Provisioning Engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site: [Getting Started with the PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
+> This sample walkthrough is a companion to a sample currently available on GitHub: [Getting Started with the PnP provisioning engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site: [Getting Started with the PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 
 ## Remote provisioning walkthrough
 
