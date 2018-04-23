@@ -5,20 +5,20 @@ ms.date: 04/17/2018
 ms.prod: sharepoint
 ---
 
-# Connect to an Office 365 Group
+# Connect to an Office 365 group
 
-Being able to connect an Office 365 Group to an existing SharePoint site is important if you want to modernize that site. After your site is connected to an Office 365 Group, it can benefit from all other group-connected services such as Microsoft Teams and Planner. This connection also brings your classic site a step closer to being like the current modern team site, which by default is connected to an Office 365 Group. 
+Being able to connect an Office 365 group to an existing SharePoint site is important if you want to modernize that site. After your site is connected to an Office 365 group, it can benefit from all other group-connected services such as Microsoft Teams and Planner. This connection also brings your classic site a step closer to being like the current modern team site, which by default is connected to an Office 365 Group. 
 
-The process to connect an existing site to a new Office 365 Group is called **groupifying**. You can **groupify** your site from the user interface site-by-site, which might be good for smaller environments. However, larger customers often want to offer a consistent experience to their users, and therefore want to perform a bulk **groupify** of their sites. 
+You can **connect your site to new Office 365 group** from the user interface site-by-site, which might be good for smaller environments. However, larger customers often want to offer a consistent experience to their users, and therefore want to perform a bulk operation of their sites. 
 
-In this article, you'll learn how to prepare for such a bulk **groupify** and how to actually make it happen.
+In this article, you'll learn how to prepare for such a bulk operation for **associating sites to new Office 365 groups** and how to actually make it happen.
 
 > [!IMPORTANT]
 > The option to connect an Office 365 Group to an existing site is not yet available and will be released sometime in 2018.
 
-## What groupify does to your site
+## What connecting to new Office 365 group does to your site
 
-When you **groupify** your site, a number of things happen:
+When you **connect your site to new Office 365 group**, a number of things happen:
 
 - A new Office 365 Group is created, and that group is connected to your site collection
 - A new modern home page is created on your site and set as the site's home page
@@ -30,7 +30,7 @@ After your site is connected to an Office 365 Group, it behaves like a modern gr
 
 ## Connect an Office 365 Group using the SharePoint user interface
 
-One approach to connect an Office 365 Group to your site is to use the option available in the user interface. By selecting the **gear** icon in the navigation bar, you can select the **Connect to new Office 365 Group** option, which launches a wizard that walks you through the **groupify** process as shown in the following screenshots.
+One approach to connect an Office 365 Group to your site is to use the option available in the user interface. By selecting the **gear** icon in the navigation bar, you can select the **Connect to new Office 365 Group** option, which launches a wizard that walks you through the **group connection** process as shown in the following screenshots.
 
 **Site actions menu (gear icon)** 
 
@@ -50,45 +50,45 @@ To programmatically connect an Office 365 Group, we recommend that you follow a 
 - Analyze
 - Modernize
 
-### Step 1: Learn what groupify does to your site
+### Step 1: Learn what group connection does to your site
 
-Getting familiar with what **groupify** does to your site is important, and therefore we recommend that you do a manual **groupify** for some test sites by using the user interface option. An important aspect to evaluate is whether you want to keep the newly created modern home page. As part of the modernization script, you'll be able to create a tailored home page, but if the default one serves your needs, that's the preferred option.
+Getting familiar with what **group connection** does to your site is important, and therefore we recommend that you do a manual **group connection** for some test sites by using the user interface option. An important aspect to evaluate is whether you want to keep the newly created modern home page. As part of the modernization script, you'll be able to create a tailored home page, but if the default one serves your needs, that's the preferred option.
 
 ### Step 2: Analyze your site environment
 
-The user interface option shown in the previous section is not suitable if you want to **groupify** hundreds of site collections. At that point, using an API to programmatically do this makes a lot of sense. But before doing that, it's best to verify which sites are ready to be **groupified**, because not all sites are suitable for this. 
+The user interface option shown in the previous section is not suitable if you want to **group connect** hundreds of site collections. At that point, using an API to programmatically do this makes a lot of sense. But before doing that, it's best to verify which sites are ready to be **group connected**, because not all sites are suitable for this. 
 
-To help you understand which sites are ready to be **groupified**, you can use the [SharePoint Modernization Scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) to analyze your environment. This link contains all the details needed to use the scanner and information about what gets output by the scanner. 
+To help you understand which sites are ready to be **group connected**, you can use the [SharePoint Modernization Scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) to analyze your environment. This link contains all the details needed to use the scanner and information about what gets output by the scanner. 
 
-Following are the key items to verify before you **groupify** a site:
+Following are the key items to verify before you **group connect** a site:
 
-#### Check for groupify blockers
+#### Check for group connection blockers
 
-Certain configurations on a site can prevent it from successfully being **groupified**:
+Certain configurations on a site can prevent it from successfully being **group connected**:
 
-- `IncompatibleWebTemplate` - Site is based on a web template that's not supported by **groupify**.
+- `IncompatibleWebTemplate` - Site is based on a web template that's not supported by **group connection**.
 - `PublishingFeatureEnabled` - Site has publishing features enabled.
 - `SiteHasOffice365Group` - Site was already connected to an Office 365 Group.
 
-In the scanner, sites with **groupify** blockers have the column `ReadyForGroupify` set to `False`.
+In the scanner, sites with **group connection** blockers have the column `ReadyForGroupify` set to `False`.
 
-#### Check for groupify warnings
+#### Check for group connection warnings
 
-Sites can have other configurations that are not optimal when that site gets **groupified**. In the scanner, these are flagged as warnings because they're not necessarily causing issues after **groupifying**, but you should be aware of them, and if needed take corrective steps before or after **groupifying** the site. 
+Sites can have other configurations that are not optimal when that site gets **groupified**. In the scanner, these are flagged as warnings because they're not necessarily causing issues after **group connection**, but you should be aware of them, and if needed take corrective steps before or after **group connected** the site. 
 
 In the scanner, you can see the warnings in the column `GroupifyWarnings`, but depending on the warning, more details can be found in the columns `PermissionWarnings` and `ModernUIWarnings`. Before spending time on a site, it's wise to evaluate whether the site is still business-relevant; to help you with that decision, the report contains columns showing the recent and lifetime views and unique users for a site collection.
 
-Following are the possible **groupify** warnings:
+Following are the possible **group connection** warnings:
 
-- `ModernUIIssues` - The default **groupify** process gives your site a new modern home page. However, if your site is blocking modern UI or has customizations that are not compatible, you might want to first ensure that the site is ready for modern UI before **groupifying** it. The details of which modern UI issues were found by the scanner can be found in the column `ModernUIWarnings`
-- `ADGroupWillNotBeExpanded` - When you **groupify** via the user interface, you have an option to define the Office 365 Group's owners and members; when you bulk **groupify**, the sample script explained later does the same. However, because an Office 365 Group can only contain persons as Owners or Members, this means that if today you granted access to your SharePoint site by using an Azure Active Directory (Azure AD) security group, you can't add that Azure AD security group as an Office 365 Group owner or member. If you want to only rely on the permissions defined on the Office 365 Group, you must add all individual Azure AD group members as part of the **groupify** process, but having identical access defined on both the SharePoint site and the Office 365 Group is not needed, making this not a blocking issue.
-- `SiteHasSubSites` - In the modern team and communication sites, the use of subsites is de-emphasized; you can **groupify** a site collection with subsites, although the scanner raises this as a warning for awareness.
-- `DefaultHomePageImpacted` - Because **groupify** by default creates and sets a new home page for the site, this might impact your site's functionality if the site was based on a web template different from the classic team site template. You might have a tailored home page and want to create a new tailored, modern home page (see later in this article), which makes this a non-issue, but it's important to verify this.
+- `ModernUIIssues` - The default **group connection** process gives your site a new modern home page. However, if your site is blocking modern UI or has customizations that are not compatible, you might want to first ensure that the site is ready for modern UI before **group connecting** it. The details of which modern UI issues were found by the scanner can be found in the column `ModernUIWarnings`
+- `ADGroupWillNotBeExpanded` - When you **gourp connect** via the user interface, you have an option to define the Office 365 Group's owners and members; when you bulk **group connect**, the sample script explained later does the same. However, because an Office 365 Group can only contain persons as Owners or Members, this means that if today you granted access to your SharePoint site by using an Azure Active Directory (Azure AD) security group, you can't add that Azure AD security group as an Office 365 Group owner or member. If you want to only rely on the permissions defined on the Office 365 Group, you must add all individual Azure AD group members as part of the **group connection** process, but having identical access defined on both the SharePoint site and the Office 365 Group is not needed, making this not a blocking issue.
+- `SiteHasSubSites` - In the modern team and communication sites, the use of subsites is de-emphasized; you can **group connect** a site collection with subsites, although the scanner raises this as a warning for awareness.
+- `DefaultHomePageImpacted` - Because **group connection** by default creates and sets a new home page for the site, this might impact your site's functionality if the site was based on a web template different from the classic team site template. You might have a tailored home page and want to create a new tailored, modern home page (see later in this article), which makes this a non-issue, but it's important to verify this.
 
 If you see a `ModernUIIssues` warning, you can get a better understanding of the issues via the `ModernUIWarnings` column:
 
-- `ModernPageFeatureDisabled` - Because the site gets a modern home page after **groupifying**, it's important that the modern homepage feature is enabled.
-- `ModernListsBlockedAtSiteLevel` and `ModernListsBlockedAtWebLevel` - Preventing the modern user interface for lists and libraries is not blocking **groupify**, but because **groupify** is typically part of a site modernization, it makes no sense to prevent lists and libraries to use the modern user interface on an Office 365 Group-connected site.
+- `ModernPageFeatureDisabled` - Because the site gets a modern home page after **group connection** creation, it's important that the modern homepage feature is enabled.
+- `ModernListsBlockedAtSiteLevel` and `ModernListsBlockedAtWebLevel` - Preventing the modern user interface for lists and libraries is not blocking **group connection**, but because **group connection** is typically part of a site modernization, it makes no sense to prevent lists and libraries to use the modern user interface on an Office 365 Group-connected site.
 - `MasterPageUsed` and `AlternateCSSUsed` - Custom master pages or alternate CSS is not used on modern pages. If your site depends on these, you might want to verify that, because your custom master pages and CSS will not work on the modern home page that the site gets.
 - `UserCustomActionUsed` - Using user custom actions that embed JavaScript is common for customizing sites, but this does not work for modern pages. If you have user custom actions, you can build alternatives by using SharePoint Framework Extensions and install those to your site (see later in this article).
 - `PublishingFeatureEnabled` - The publishing features are not compatible with the modern page feature, which is a requirement due to the modern home page being set.
@@ -101,19 +101,19 @@ The last warnings column is `PermissionWarnings`:
 
 ### Step 3: Modernize your sites
 
-The bulk **groupify** process consists of two steps:
+The bulk **group connect** process consists of two steps:
 
-- Prepare and validate an input file that you'll use to drive the bulk **groupify** process.
-- Run the bulk **groupify** process.
+- Prepare and validate an input file that you'll use to drive the bulk **group connect** process.
+- Run the bulk **group connect** process.
 
 #### Create an input file for bulk groupify and validate it
 
-After running the scanner and processing the results, you have identified which sites are ready to **groupify**.The next step is to prepare a CSV file to drive the bulk **groupify** process. The CSV file format is simple:
+After running the scanner and processing the results, you have identified which sites are ready to **group connect**.The next step is to prepare a CSV file to drive the bulk **group connection** process. The CSV file format is simple:
 
-- **URL** column contains the URL to the site collection to **groupify**.
+- **URL** column contains the URL to the site collection to **group connect**.
 - **Alias** contains the Office 365 Group alias that you want to use. Note that this alias cannot contain spaces, and it should not have been used before.
 - **IsPublic** indicates whether you want the site to be a public or private site.
-- **Classification** contains the site classification that you want to set to the site after you **groupify**. This is needed because after being connected to a group, this classification is maintained at the Office 365 Group level.
+- **Classification** contains the site classification that you want to set to the site after you **group connection**. This is needed because after being connected to a group, this classification is maintained at the Office 365 Group level.
 
 Following is a short sample:
 
@@ -127,9 +127,9 @@ To help you verify this file before using it, you can use the PowerShell script 
 
 During the validation script execution, the following errors can appear:
 
-- **[ERROR] AzureAD Naming policy : _PrefixSuffix_ does contain AD attributes that are resolved based on the user running the groupify**
+- **[ERROR] AzureAD Naming policy : _PrefixSuffix_ does contain AD attributes that are resolved based on the user running the groip connection**
 
-    In Azure AD, you can define a [naming policy for Office 365 Groups](https://support.office.com/en-us/article/office-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552?ui=en-US&rs=en-001&ad=US). If this policy contains user Active Directory attributes, this might be an issue because bulk **groupify** handles all sites using the _current_ user.
+    In Azure AD, you can define a [naming policy for Office 365 Groups](https://support.office.com/en-us/article/office-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552?ui=en-US&rs=en-001&ad=US). If this policy contains user Active Directory attributes, this might be an issue because bulk **group connect** handles all sites using the _current_ user.
 
 - **[ERROR] AzureAD Creation policy : _adminUPN_ is not part of group _CanCreateGroupsId_ which controls Office 365 Group creation** 
 
@@ -149,7 +149,7 @@ During the validation script execution, the following errors can appear:
 
 - **[ERROR] _siteUrl_ : Site is already connected a group**
 
-    A site can only be connected to a single Office 365 Group, so after a site is connected, it cannot be **groupified** anymore.
+    A site can only be connected to a single Office 365 Group, so after a site is connected, it cannot be **group connected** anymore.
 
 - **[ERROR] _siteUrl_ : Alias [_siteAlias_] is already in use**
 
@@ -157,7 +157,7 @@ During the validation script execution, the following errors can appear:
 
 - **[ERROR] _siteUrl_ : Alias [_siteAlias_] was already marked as approved alias for another site in this file**
 
-    The proposed site alias was already defined for another site in earlier input lines of the bulk **groupify** CSV file.
+    The proposed site alias was already defined for another site in earlier input lines of the bulk **group connect** CSV file.
 
 - **[ERROR] _siteUrl_ : Site does not exist or is not available (status = _site.Status_)**
 
@@ -168,21 +168,21 @@ During the validation script execution, the following errors can appear:
 
 During script execution, a log file is generated, combined with an error file that contains a subset of the log file (only the errors).
 
-[!code-powershell[validategroupifyinput](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/ValidateInput.ps1 "Validate groupify input file")]
+[!code-powershell[validategroupifyinput](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/ValidateInput.ps1 "Validate group connect input file")]
 
-#### Run the bulk groupify process
+#### Run the bulk group connect process
 
-Now that we have an input file that's defining the sites that need to be **groupified**, we can finally make it happen. The following PowerShell script is a sample script that you can tweak to your needs because you might want more or fewer things as part of **groupify**. 
+Now that we have an input file that's defining the sites that need to be **groupified**, we can finally make it happen. The following PowerShell script is a sample script that you can tweak to your needs because you might want more or fewer things as part of **group connect**. 
 
 The shared sample version of the script implements the following steps:
 
-- Adds current tenant admin as site admin when needed: **groupify** requires a user account (so no app-only).
-- Verifies site template / publishing feature use and prevent **groupify**; aligns with the logic in the scanner.
+- Adds current tenant admin as site admin when needed: **group connection** requires a user account (so no app-only).
+- Verifies site template / publishing feature use and prevent **group connection**; aligns with the logic in the scanner.
 - Ensures that no modern blocking features are enabled, and if so, fixes them.
 - Ensures that the modern page feature is enabled.
 - **Optional**: Deploys applications (for example, Application Customizer).
 - **Optional**: Adds your own modern home page.
-- Calls the **groupify** API.
+- Calls the **group connect** API.
 - Defines site admins and site owners as group owners.
 - Defines site members as group members.
 - Removes added tenant admin and site owners from SharePoint admins.
@@ -195,7 +195,7 @@ Running the following PowerShell script requires that you update the tenant admi
 
 During script execution, a log file is generated, combined with an error file that contains a subset of the log file (only the errors).
 
-[!code-powershell[bulkgroupify](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/GroupifySite.ps1 "Bulk groupify sites")]
+[!code-powershell[bulkgroupify](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/GroupifySite.ps1 "Bulk group connect sites")]
 
 ## See also
 

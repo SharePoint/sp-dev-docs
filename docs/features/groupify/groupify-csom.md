@@ -1,10 +1,10 @@
 ---
-title: Groupify - CSOM development
-description: Client side object model development for groupify operation
+title: Connect to New Office 365 Group - CSOM development
+description: Client side object model development for connecting to New Office 365 Group operation
 ms.date: 4/19/2018
 ---
 
-# Groupify: CSOM development
+# Connect to New Office 365 Group: CSOM development
 
 > [!IMPORTANT]
 > The option to connect an Office 365 Group to an existing site is **not** yet available and will be released during Q2 of calendar year 2018.
@@ -59,7 +59,7 @@ __Return type:__ void
 
 |Parameter          | Type                |Description |
 |-----------        |------               |-------------|
-| siteUrl           | string              | URL of the site to groupify. |
+| siteUrl           | string              | URL of the site to connect to New Office 365 Group. |
 | displayName       | string              | Display Name group to create. |
 | alias             | string              | Alias of the new group to create. |
 | isPublic          | bool                | Whether the group is public or private. |
