@@ -27,8 +27,8 @@ After your site is connected to an Office 365 group, it behaves like a modern gr
 ## Additional details 
 
 - An admin setting exists that specifies whether this feature is available to site administrators in the classic team site UI.  Tenant admins will always be able to connect team sites to new Office 365 groups by using PowerShell cmdlets or API. 
-- Group connection can be performed for top-level site collections only. You cannot connect subsites to Office 365 groups. 
-- If executed via the UI, group connection is only available for the Team site template (STS#0). 
+- Group-connection can be performed for top-level site collections only. You cannot connect subsites to Office 365 groups. 
+- If executed via the UI, group-connection is only available for the Team site template (STS#0). 
 - Because this process results in the creation of a new Office 365 group, membership must be managed independently of the site’s membership.  
 
 

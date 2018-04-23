@@ -30,7 +30,7 @@ After your site is connected to an Office 365 group, it behaves like a modern gr
 
 ## Connect an Office 365 group using the SharePoint user interface
 
-One approach to connect an Office 365 group to your site is to use the option available in the user interface. By selecting the **gear** icon in the navigation bar, you can select the **Connect to new Office 365 Group** option, which launches a wizard that walks you through the group connection process as shown in the following screenshots.
+One approach to connect an Office 365 group to your site is to use the option available in the user interface. By selecting the **gear** icon in the navigation bar, you can select the **Connect to new Office 365 Group** option, which launches a wizard that walks you through the group-connection process as shown in the following screenshots.
 
 **Site actions menu (gear icon)** 
 
@@ -50,9 +50,9 @@ To programmatically connect an Office 365 group, we recommend that you follow a 
 - Analyze
 - Modernize
 
-### Step 1: Learn what group connection does to your site
+### Step 1: Learn what group-connection does to your site
 
-Getting familiar with what group connection does to your site is important, and therefore we recommend that you do a manual group connection for some test sites by using the user interface option. An important aspect to evaluate is whether you want to keep the newly created modern home page. As part of the modernization script, you'll be able to create a tailored home page, but if the default one serves your needs, that's the preferred option.
+Getting familiar with what group-connection does to your site is important, and therefore we recommend that you do a manual group-connection for some test sites by using the user interface option. An important aspect to evaluate is whether you want to keep the newly created modern home page. As part of the modernization script, you'll be able to create a tailored home page, but if the default one serves your needs, that's the preferred option.
 
 ### Step 2: Analyze your site environment
 
@@ -195,7 +195,7 @@ Running the following PowerShell script requires that you update the tenant admi
 
 During script execution, a log file is generated, combined with an error file that contains a subset of the log file (only the errors).
 
-[!code-powershell[bulkgroupify](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/GroupifySite.ps1 "Bulk group connect sites")]
+[!code-powershell[bulkgroupify](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/GroupifySite.ps1 "Bulk group-connect sites")]
 
 ## See also
 
