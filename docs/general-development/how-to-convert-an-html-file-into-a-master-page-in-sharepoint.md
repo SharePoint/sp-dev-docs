@@ -13,7 +13,7 @@ With Design Manager, you can convert an .html file into a SharePoint master page
 ## Introduction to converting a master page
 <a name="Introduction"> </a>
 
- With Design Manager, you can convert an.html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
+ With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
   
     
     
