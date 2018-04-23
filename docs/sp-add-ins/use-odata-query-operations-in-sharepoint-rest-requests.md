@@ -27,7 +27,7 @@ Use the [$select](http://www.odata.org/documentation/odata-version-2-0/uri-conve
 
 In addition, you can specify that the request returns projected fields from other lists and the values of lookups. To do this, specify the field name in both the `$select` and `$expand` query options. For example:
 
-`http://server/site/_api/web/lists('guid')/items?$select=Title,Products/Name&amp;$expand=Products/Name`
+`http://server/site/_api/web/lists('guid')/items?$select=Title,Products/Name&$expand=Products/Name`
 
 Bulk expansion and selection of related items is not supported.
 
@@ -67,7 +67,7 @@ The `$top` option enables you to select the first *n* items of the return set fo
 
 The $skiptoken option enables you to skip over items until the specified item is reached and return the rest.
 
-`$skiptoken=Paged=TRUE&amp;p_ID=5`
+`$skiptoken=Paged=TRUE%26p_ID=5`
  
 > [!NOTE] 
 > When using these query options, take into account that paging in OData is ordinal. For example, suppose you are implementing a next page button to display SharePoint list items. You use the REST service to enable the button to return items 1 through 20 when clicked, and then items 21 through 40, and so on. However, suppose another user deletes items 4 and 18 between clicks of the next button. In such a case, the ordinal positioning of the remaining items is reset, and displaying items 21 through 40 actually skips over two items.
