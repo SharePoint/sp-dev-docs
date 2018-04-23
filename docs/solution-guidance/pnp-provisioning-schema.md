@@ -16,7 +16,7 @@ There is a 20-minute Channel 9 video that discusses the provisioning schema: [De
 
 Sample schemas are available on: [GitHub at PnP-Provisioning-Schema/Samples](https://github.com/SharePoint/PnP-Provisioning-Schema/tree/master/Samples).
 
-The code block below displays the schema's root element and direct child elements of the root. You can find provisioning schema documentation on GitHub: [PnP provisioning schema](https://github.com/SharePoint/PnP-Sites-Core/blob/dev/Core/Tools/OfficeDevPnP.Core.Tools.DocsGenerator/OfficeDevPnP.Core.Tools.DocsGenerator/ProvisioningSchema-2015-08.md).
+The code block below displays the schema's root element and direct child elements of the root. You can find provisioning schema documentation on GitHub: [PnP provisioning schema](https://github.com/SharePoint/PnP-Provisioning-Schema).
 
 ```
 <pnp:ProvisioningTemplate
@@ -55,6 +55,6 @@ The code block below displays the schema's root element and direct child element
 
 - [Deep dive to PnP provisioning engine schema](https://channel9.msdn.com/blogs/OfficeDevPnP/Deep-dive-to-PnP-provisioning-engine-schema)
     
-- [PnP provisioning schema](https://github.com/SharePoint/PnP-Sites-Core/blob/dev/Core/Tools/OfficeDevPnP.Core.Tools.DocsGenerator/OfficeDevPnP.Core.Tools.DocsGenerator/ProvisioningSchema-2015-08.md)
+- [PnP provisioning schema](https://github.com/SharePoint/PnP-Provisioning-Schema)
     
 - [GitHub at PnP-Provisioning-Schema/Samples](https://github.com/SharePoint/PnP-Provisioning-Schema/tree/master/Samples)
