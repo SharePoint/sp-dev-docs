@@ -20,7 +20,7 @@ Insights and details based on scenarios and functional requirements.
 |[Localization solutions](localization-solutions-for-sharepoint-2013-and-sharepoint-online.md)|Localize your SharePoint site contents and UI text.|
 |[Search solutions](search-solutions-in-sharepoint-2013-and-sharepoint-online.md)|Find out about the SharePoint search architecture, search APIs, and search add-ins.|
 |[Security and performance](security-and-performance.md)|Improve the security and performance of your SharePoint sites with OAuth, support for Germany, China and US Government environments, cross-domain images, elevated privileges, and external sharing.|
-|[SharePoint Add-In recipes](sharepoint-add-in-recipes.md)|Find a list of SharePoint Add-in recipes.|
+|[SharePoint Add-in recipes](sharepoint-add-in-recipes.md)|Find a list of SharePoint Add-in recipes.|
 |[Transform farm solutions to the SharePoint Add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)|Convert your farm solutions to the SharePoint Add-in model.|
 |[Sandbox solution transformation guidance](sandbox-solution-transformation-guidance.md)|Convert your sandbox solutions to the add-in model or alternative solutions.|
 |[User profile solutions](user-profile-solutions-for-sharepoint.md)|Work with SharePoint user profile data.|
