@@ -13,7 +13,7 @@ For an introduction to the SharePoint REST interface and its architecture, see [
 
 For information about how to work with core SharePoint entities, see [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md) and [Working with folders and files with REST](working-with-folders-and-files-with-rest.md). 
 
-For a sample that shows you how to do many of these operations in the context of an ASP.NET web application written in C#, see [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations.md). 
+For a sample that shows you how to do many of these operations in the context of an ASP.NET web application written in C#, see [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations). 
 
 For information about the sets of APIs available on the SharePoint platform, see [Choose the right API set in SharePoint](../general-development/choose-the-right-api-set-in-sharepoint.md). 
 
