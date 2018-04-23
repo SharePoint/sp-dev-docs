@@ -1,7 +1,7 @@
 ---
 title: SharePoint "modern" sites classification
 description: Configure out of the box site classification for modern SharePoint sites.
-ms.date: 12/19/2017
+ms.date: 4/23/2018
 ---
 
 # SharePoint "modern" sites classification
@@ -219,10 +219,10 @@ using (var clientContext = new ClientContext("https://[tenant].sharepoint.com/si
 
 If your target is a  "modern" communication site, you can use the _Classification_ property of CSOM to update the value, too.
 
-If your target is a "modern" team site and you want to update the classification value, you should use the Microsoft Graph because the _Classification_ property of CSOM simply replicates the value of the _classification_ property of the Office 365 Group.
+If your target is a "modern" team site and you want to update the classification value, you should use the Microsoft Graph because the _Classification_ property of CSOM simply replicates the value of the _classification_ property of the Office 365 group.
 
 > [!NOTE]
-> You can find further details about how to update an Office 365 Group using the Microsoft Graph in the document [Update group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_update).
+> You can find further details about how to update an Office 365 group using the Microsoft Graph in the document [Update group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_update).
 
 In order to make it easier for you to update the classification of a site, in the PnP Core Library there is an extension method that applies for you the right behavior, depending on the "modern" site type. In the following code excerpt you can see how to use it.
 

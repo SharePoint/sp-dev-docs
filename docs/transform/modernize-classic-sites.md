@@ -1,17 +1,17 @@
 ---
 title: Modernize your classic SharePoint sites
-description: Steps to transform your SharePoint classic site into a modern Office 365 Group-connected team site or communication site.
-ms.date: 04/17/2018
+description: Steps to transform your SharePoint classic site into a modern Office 365 group-connected team site or communication site.
+ms.date: 04/23/2018
 ms.prod: sharepoint
 ---
 
 # Modernize your classic SharePoint sites
 
-SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 Group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. 
+SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. 
 
 All of this is great, but you might ask yourself, *I have lots of classic (team) sites...how do I bring them into the modern SharePoint world?* 
 
-You can transform (or "modernize") a classic site into a modern Office 365 Group-connected site by following the guidance in this section. 
+You can transform (or "modernize") a classic site into a modern Office 365 group-connected site by following the guidance in this section. 
 
 > [!TIP]
 > You can decide which steps to run and the order in which to run them. Although there's no one-size-fits-all process to modernize your site, the following is the recommended approach.
@@ -41,21 +41,21 @@ To learn more about how to unblock your lists and libraries when using the moder
 
 You will also need to modernize your customizations as explained in [Modernize customizations](modernize-customizations.md).
 
-## Connect your site to an Office 365 Group
+## Connect your site to an Office 365 group
 
-Classic (team) sites are not connected to an Office 365 Group, whereas modern team sites are. Connecting your site to an Office 365 Group is an essential part of modernizing a site. The connection to an Office 365 Group enables the site to consume other Office 365 services such as Teams, Planner, and Outlook. 
+Classic (team) sites are not connected to an Office 365 group, whereas modern team sites are. Connecting your site to an Office 365 group is an essential part of modernizing a site. The connection to an Office 365 group enables the site to consume other Office 365 services such as Teams, Planner, and Outlook. 
 
-There are two options to connect your sites to an Office 365 Group:
+There are two options to connect your sites to an Office 365 group:
 
 - You can have each site owner do this on their behalf by using a wizard that can be launched from the user interface.
-- You can perform a bulk operation (known as a **groupify**) in which you connect an Office 365 Group to a series of sites at one time. This option is preferred for enterprise customers because it enables you to control the configuration (public/private, site classification, alias name).
+- You can perform a bulk operation (known as a **group-connection**) in which you connect an Office 365 group to a series of sites at one time. This option is preferred for enterprise customers because it enables you to control the configuration (public/private, site classification, alias name).
 
-For more information about connecting to an Office 365 Group and performing a **groupify**, see [Connect to an Office 365 Group](modernize-connect-to-office365-group.md).
+For more information about connecting to an Office 365 group and performing a group-connection, see [Connect to an Office 365 group](modernize-connect-to-office365-group.md).
 
 
 ## Switch to a modern tenant-scoped branding
 
-Connecting your site to an Office 365 Group not only gives you the benefits of a group-connected site, but also provides you with a new modern site home page. Depending on your needs, this new home page might be adequate, but you can choose to create your own modern home page. At that point, it makes sense to include other modernization tasks as well, such as switching to a modern site theme.
+Connecting your site to an Office 365 group not only gives you the benefits of a group-connected site, but also provides you with a new modern site home page. Depending on your needs, this new home page might be adequate, but you can choose to create your own modern home page. At that point, it makes sense to include other modernization tasks as well, such as switching to a modern site theme.
 
 Using your company branding on SharePoint (team) sites is very common, and for classic sites you used one or more of the following components: site themes, alternate CSS, and master pages. However, alternate CSS and master pages are not compatible with the modern user interface, so you must evaluate whether these branding customizations are still relevant. 
 
