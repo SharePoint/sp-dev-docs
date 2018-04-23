@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Create SharePoint Communication site using REST
 
-This topic assumes that you are already familiar with the following topics:
+This topic assumes that you are already familiar with the following topics: 
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)

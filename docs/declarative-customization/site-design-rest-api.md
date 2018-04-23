@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design REST API
 description: Work with SharePoint site designs through the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations.
-ms.date: 12/14/2017
+ms.date: 04/20/2018
 ---
 
 # Site design and site script REST API
@@ -11,7 +11,9 @@ You can use the SharePoint REST interface to perform basic create, read, update,
 The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option. For details and links to code samples, see [Make batch requests with the REST APIs](../sp-add-ins/make-batch-requests-with-the-rest-apis.md).
 
 ## Prerequisites
+
 Before you get started, make sure that you're familiar with the following:
+
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md) 
 - [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 
@@ -19,24 +21,24 @@ Before you get started, make sure that you're familiar with the following:
 
 The following REST commands are available for working with site designs and site scripts:
 
-- **CreateSiteScript** &mdash; Creates a new site script.
-- **GetSiteScripts** &mdash; Gets a list of information on existing site scripts.
-- **GetSiteScriptMetadata** &mdash; Gets information about a specific site script.
-- **UpdateSiteScript** &mdash; Updates a site script with new values.
-- **DeleteSiteScript** &mdash; Deletes a site script.
-- **CreateSiteDesign** &mdash; Creates a site design.
-- **ApplySiteDesign** &mdash; Applies a site design to an existing site collection.
-- **GetSiteDesigns** &mdash; Gets a list of information on existing site designs.
-- **GetSiteDesignMetadata** &mdash; Gets information about a sepcific site design.
-- **UpdateSiteDesign** &mdash; Updates a site design with new values.
-- **DeleteSiteDesign** &mdash; Deletes a site design.
-- **GetSiteDesignRights** &mdash; Gets a list of principals that have access to a site design.
-- **GrantSiteDesignRights** &mdash; Grants access to a site design for one or more principals.
-- **RevokeSiteDesignRights** &mdash; Revokes access from a site design for one or more principals.
+- **CreateSiteScript** &ndash; Creates a new site script.
+- **GetSiteScripts** &ndash; Gets a list of information on existing site scripts.
+- **GetSiteScriptMetadata** &ndash; Gets information about a specific site script.
+- **UpdateSiteScript** &ndash; Updates a site script with new values.
+- **DeleteSiteScript** &ndash; Deletes a site script.
+- **CreateSiteDesign** &ndash; Creates a site design.
+- **ApplySiteDesign** &ndash; Applies a site design to an existing site collection.
+- **GetSiteDesigns** &ndash; Gets a list of information on existing site designs.
+- **GetSiteDesignMetadata** &ndash; Gets information about a specific site design.
+- **UpdateSiteDesign** &ndash; Updates a site design with new values.
+- **DeleteSiteDesign** &ndash; Deletes a site design.
+- **GetSiteDesignRights** &ndash; Gets a list of principals that have access to a site design.
+- **GrantSiteDesignRights** &ndash; Grants access to a site design for one or more principals.
+- **RevokeSiteDesignRights** &ndash; Revokes access from a site design for one or more principals.
 
 ## Create a function to send REST requests
 
-To work with the REST API we recommend creating a helper function to make the REST calls. The following **RestRequest** function will call the REST method specified in the **url** parameter and pass the additional parameters in **params**.
+To work with the REST API, we recommend creating a helper function to make the REST calls. The following **RestRequest** function calls the REST method specified in the **url** parameter and passes the additional parameters in **params**.
 
 ```javascript
 function RestRequest(url,params) {
@@ -70,6 +72,8 @@ Creates a new site script.
 | Title       | The display name of the site design. |
 | Content     | JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).|
 
+### Examples
+
 The following example creates a new site script that applies a custom theme.
 
 ```javascript
@@ -88,6 +92,8 @@ var site_script =
 
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='Contoso theme script'", site_script);
 ```
+
+<br/>
 
 Here is an example of the JSON returned after calling **CreateSiteScript**. It contains the ID of the new site script.
 
@@ -110,11 +116,15 @@ Gets a list of information on all existing site scripts.
 
 None.
 
+### Examples
+
 The following example gets the site script information for all site scripts.
 
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScripts");
 ```
+
+<br/>
 
 Here is an example of the JSON returned after calling **GetSiteScripts**.
 
@@ -155,6 +165,8 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 {id:"07702c07-0485-426f-b710-4704241caad9"});
 ```
 
+### Examples
+
 Here is an example of the JSON returned after calling **GetSiteScriptMetadata**.
 
 ```json
@@ -170,17 +182,19 @@ Here is an example of the JSON returned after calling **GetSiteScriptMetadata**.
 
 ## UpdateSiteScript
 
-Updates a site script with new values. In the REST call all parameters are optional except the site script Id.
+Updates a site script with new values. In the REST call, all parameters are optional except the site script Id.
 
 ### Parameters
 
 |Parameter   | Description  |
 |------------|--------------|
 | Id         | The ID of the site script to update. |
-|Title       | (optional) The new display name of the site script. |
-|Description | (Optional) The new description of the site script. |
+| Title      | (Optional) The new display name of the site script. |
+| Description | (Optional) The new description of the site script. |
 | Version    | (Optional) The new version number of the site script. |
-| Content    | (Optional) A new JSON script defining the script actions. For more information, see [Site design JSON schema](site-design-json-schema.md) |
+| Content    | (Optional) A new JSON script defining the script actions. For more information, see [Site design JSON schema](site-design-json-schema.md). |
+
+### Examples
 
 Here's an example of updating an existing site script with a new JSON script and values.
 
@@ -198,7 +212,6 @@ var updated_site_script =
   "version": 2
 };
 
-
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript", 
 {updateInfo:{
   Id:"07702c07-0485-426f-b710-4704241caad9",
@@ -207,6 +220,8 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
   Version: 2, 
   Content: JSON.stringify(updated_site_script)}});
 ```
+
+<br/>
 
 Here is an example of the JSON returned after calling **UpdateSiteScript**.
 
@@ -231,6 +246,8 @@ Deletes a site script.
 |------------|--------------|
 | id         | The ID of the site script to delete. |
 
+### Examples
+
 Here's an example of deleting a site script.
 
 ```javascript
@@ -251,9 +268,11 @@ Creates a new site design available to users when they create a new site from th
 |WebTemplate           | Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template. |
 |SiteScripts           | An array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
 |Description         | (Optional) The display description of site design. |
-|PreviewImageUrl     | (Optional) The URL of a preview image. If none is specified SharePoint will use a generic image. |
+|PreviewImageUrl     | (Optional) The URL of a preview image. If none is specified, SharePoint uses a generic image. |
 |PreviewImageAltText | (Optional) The alt text description of the image for accessibility. |
-|IsDefault           | (Optional) **true** if the site design is applied as the default site design; otherwise, **false**. For more information see [Customize a default site design](customize-default-site-design.md) |
+|IsDefault           | (Optional) **True** if the site design is applied as the default site design; otherwise, **false**. For more information see [Customize a default site design](customize-default-site-design.md). |
+
+### Examples
 
 Here's an example of creating a new site design.
 
@@ -269,6 +288,8 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
     }
   });
 ```
+
+<br/>
 
 Here is an example of the JSON returned after calling **CreateSiteDesign**. It contains the ID of the new site design.
 
@@ -295,7 +316,9 @@ Applies a site design to an existing site collection.
 |Parameter   | Description  |
 |------------|--------------|
 | id         | The ID of the site design to apply. |
-| webUrl         | The Url of the site collection where you want to apply the site design. |
+| webUrl         | The URL of the site collection where you want to apply the site design. |
+
+### Examples
 
 Here's an example of applying a site design to the ProjectGo site collection.
 
@@ -305,17 +328,21 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 ## GetSiteDesigns
 
-Gets a list of information on existing site designs.
+Gets a list of information about existing site designs.
 
 ### Parameters
 
 None
+
+### Examples
 
 Here's an example of getting all the site designs.
 
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesigns");
 ```
+
+<br/>
 
 Here is an example of the JSON returned after calling **GetSiteDesigns**.
 
@@ -359,12 +386,16 @@ Gets information about a specific site design.
 |------------|--------------|
 | id         | The ID of the site design to get information about. |
 
+### Examples
+
 Here's an example of getting information about a specific site design by ID.
 
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata", 
 {id:"614f9b28-3e85-4ec9-a961-5971ea086cca"});
 ```
+
+<br/>
 
 Here is an example of the JSON returned after calling **GetSiteDesignMetadata**.
 
@@ -385,20 +416,25 @@ Here is an example of the JSON returned after calling **GetSiteDesignMetadata**.
 
 ## UpdateSiteDesign
 
-Updates a site design with new values. In the REST call all parameters are optional except the site script Id. NOTE: if you had previously set the IsDefault parameter to TRUE and wish it to remain true, you must pass in this parameter again (otherwise it will be reset to FALSE). 
+Updates a site design with new values. In the REST call, all parameters are optional except the site script Id. 
+
+> [!NOTE] 
+> If you had previously set the IsDefault parameter to **TRUE** and wish it to remain true, you must pass in this parameter again (otherwise it will be reset to **FALSE**). 
 
 ### Parameters
 
 |Parameter  | Description  |
 |-----------|--------------|
 |Id         | The ID of the site design to update. |
-|Title                 |  (optional) The new display name of the updated site design. |
-|WebTemplate           | (optional) The new template to add the site design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template. |
-|SiteScripts           | (optional) A new array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
-|Description         | (Optional) The new display description of updated site design. |
+|Title               | (Optional) The new display name of the updated site design. |
+|WebTemplate         | (Optional) The new template to add the site design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template. |
+|SiteScripts         | (Optional) A new array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed. |
+|Description         | (Optional) The new display description of the updated site design. |
 |PreviewImageUrl     | (Optional) The new URL of a preview image. |
 |PreviewImageAltText | (Optional) The new alt text description of the image for accessibility. |
-|IsDefault           | (Optional) **true** if the site design is applied as the default site design; otherwise, **false**. For more information see [Customize a default site design](customize-default-site-design.md) |
+|IsDefault           | (Optional) **True** if the site design is applied as the default site design; otherwise, **false**. For more information see [Customize a default site design](customize-default-site-design.md). |
+
+### Examples
 
 Here's an example that updates every value on an existing site design.
 
@@ -416,9 +452,12 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
    IsDefault: false}});
 ```
 
+<br/>
+
 Here is an example of the JSON returned after calling **UpdateSiteDesign**.
 
-```json{
+```json
+{
   "@odata.context": "https://contoso.sharepoint.com/_api/$metadata#Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteDesignMetadata",
   "Description": "Creates site with customer theme and list",
   "IsDefault": false,
@@ -442,6 +481,8 @@ Deletes a site design.
 |------------|--------------|
 | id         | The ID of the site design to delete. |
 
+### Examples
+
 Here's an example of deleting a site design.
 
 ```javascript
@@ -460,12 +501,16 @@ Gets a list of principals that have access to a site design.
 |------------|--------------|
 | id         | The ID of the site design to get rights information from. |
 
+### Examples
+
 Here's an example of getting view rights for a specific site design.
 
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights", 
 {id:"dc076f7b-6c15-4d76-8f85-948a17f5dd18"});
 ```
+
+<br/>
 
 Here is an example of the JSON returned after calling **GetSiteDesignRights**.
 
@@ -505,6 +550,8 @@ Grants access to a site design for one or more principals.
 | principalNames | An array of one or more principals to grant view rights. Principals can be users or mail-enabled security groups in the form of "alias" or "alias@\<*domain name*\>.com" |
 | grantedRights | Always set to **1**. This represents the **View** right. |
 
+### Examples
+
 Here's an example of granting view rights to a site design for Nestor and Patti (fictional users at Contoso.)
 
 ```javascript
@@ -526,6 +573,8 @@ Revokes access from a site design for one or more principals.
 | id         | The ID of the site design to revoke rights from. |
 | principalNames | An array of one or more principals to revoke view rights from. If all principals have rights revoked on the site design, the site design becomes viewable to everyone. |
 
+### Examples
+
 Here's an example of revoking view rights from a site design for Patti (fictional user at Contoso.)
 
 ```javascript
@@ -533,3 +582,7 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 {id:"5d4756e9-e1f5-42f7-afa7-5fa5aac170aa",
  principalNames:["debrab@Contoso.sharepoint.com"] });
 ```
+
+## See also
+
+- [SharePoint site design and site script overview](site-design-overview.md)

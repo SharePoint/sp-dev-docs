@@ -92,7 +92,7 @@ After executing this script, the **Apps for SharePoint** library will be added t
 ### Disable the site collection app catalog
 
 > [!NOTE]
-> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet for the SharePoint Online Powershell or `spo connect` command for the Office 365 CLI.
+> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet for the SharePoint Online PowerShell or `spo connect` command for the Office 365 CLI.
 
 To disable the site collection app catalog in your site collection, use the `Remove-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be disabled as the `-Site` parameter. Alternatively, if you have your site collection's ID, you can use the `Remove-SPOSiteCollectionAppCatalogById` cmdlet instead.
 

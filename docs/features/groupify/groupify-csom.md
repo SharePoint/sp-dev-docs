@@ -1,13 +1,13 @@
 ---
-title: Groupify - CSOM development
-description: Client side object model development for groupify operation
-ms.date: 4/19/2018
+title: Connect to new Office 365 group - CSOM development
+description: Client-side object model development for connecting to a new Office 365 group operation.
+ms.date: 4/23/2018
 ---
 
-# Groupify: CSOM development
+# Connect to new Office 365 group: CSOM development
 
 > [!IMPORTANT]
-> The option to connect an Office 365 Group to an existing site is **not** yet available and will be released during Q2 of calendar year 2018.
+> The option to connect an Office 365 group to an existing site is **not** yet available and will be released during Q2 of calendar year 2018.
 
 The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.    
 
@@ -52,16 +52,14 @@ Use the following methods to customize the set of available themes for a SharePo
 
 ### CreateGroupForSite method
 
-Create a new Office 365 Group and attach it to an existing site. After this succeeds for a given site, calling it again with the same site will throw an Exception.
+Create a new Office 365 group and attach it to an existing site. After this succeeds for a given site, calling it again with the same site will throw an Exception.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Return type:__ void
 
-#### Parameters
-
 |Parameter          | Type                |Description |
 |-----------        |------               |-------------|
-| siteUrl           | string              | URL of the site to groupify. |
+| siteUrl           | string              | URL of the site to connect to a new Office 365 group. |
 | displayName       | string              | Display Name group to create. |
 | alias             | string              | Alias of the new group to create. |
 | isPublic          | bool                | Whether the group is public or private. |
@@ -78,9 +76,11 @@ __type:__ Microsoft.Online.SharePoint.TenantAdministration.GroupCreationParams<b
 | CreationOptions | string[]  | Gets and sets the group's creation options. |
 | Classification  | string    | Gets and sets the group's data classification. |
 
+<br/>
+
 ## See also
 
-- [Overview of the "Connect to new Office 365 Group" feature](groupify-overview.md)
+- [Overview of the "Connect to new Office 365 group" feature](groupify-overview.md)
 - [Modernize your classic SharePoint sites](../../transform/modernize-classic-sites.md)
 
 

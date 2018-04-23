@@ -1,21 +1,23 @@
 ---
 title: Scoping access to SharePoint site designs
 description: Set scope on SharePoint site designs to control who can view and access them.
-ms.date: 01/08/2018
+ms.date: 04/20/2018
 ---
 
 # Scoping access to site designs
 
-Site designs are available to everyone by default. You can also scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. This article will explain how you can control which users and groups can see specific site designs.
+Site designs are available to everyone by default. You can also scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. 
 
-## Granting rights to a site design
+This article explains how you can control which users and groups can see specific site designs.
+
+## Grant rights to a site design
 
 When a site design is first created, it is available to everyone. You can grant **View** rights to the site design. After rights are granted, only the users or groups (principals) specified have access. You can continue granting rights to more principals with subsequent API calls.
 
 > [!NOTE]
 > Scoping is currently only available for mail-enabled security groups and users. We are planning to provide support for Office 365 Groups in the future.
 
-## Granting rights to security groups
+## Grant rights to security groups
 
 The following example shows how to scope an existing site design so that only the mail-enabled security group **accounting** can view and use the site design.
 
@@ -25,6 +27,8 @@ Grant-SPOSiteDesignRights `
   -Principals ("accounting@contoso.sharepoint.com") `
   -Rights View
 ```
+
+<br/>
 
 You might want to create a new site design and grant rights at the same time, as shown in the next example.
 
@@ -40,7 +44,7 @@ Add-SPOSiteDesign `
   -Rights View
 ```
 
-## Granting rights to users
+## Grant rights to users
 
 The following example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
 
@@ -51,7 +55,7 @@ PS C:\> Grant-SPOSiteDesignRights `
          -Rights View
 ```
 
-## Viewing rights assigned to a site design
+## View rights assigned to a site design
 
 To view rights, use the **Get-SPOSiteDesignRights** cmdlet. The following example shows how to use this cmdlet and a response in the case where only Nestor has view rights.
 
@@ -65,7 +69,7 @@ DisplayName  PrincipalName                                      Rights
 Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
 ```
 
-## Revoking rights from a site design
+## Revoke rights from a site design
 
 You can revoke rights for any principal. If you revoke view rights for all principles, the site design will again be available to everyone.
 
@@ -76,3 +80,7 @@ Revoke-SPOSiteDesignRights `
   -Identity db752673-18fd-44db-865a-aa3e0b28698e `
   -Principals ("accounting@contoso.sharepoint.com","nestorw@spdfcontosodemo2.onmicrosoft.com") `
 ```
+
+## See also
+
+- [SharePoint site design and site script overview](site-design-overview.md)

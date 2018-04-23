@@ -1,7 +1,7 @@
 ---
 title: UnRegisterHubSite REST method
-description: UnRegisterHubSite REST method
-ms.date: 2/26/2018
+description: Unregisters a hub site so that it is no longer a hub site.
+ms.date: 4/20/2018
 ---
 
 # UnRegisterHubSite
@@ -9,15 +9,15 @@ ms.date: 2/26/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-Unregisters a hub site so that it is no longer a hub site. It will become a regular site. Any sites associated with the hub site will no longer be associated. This can take up to an hour to propagate. If you want to speed up the process, first remove any associated sites before unregistering the hub site.
+Unregisters a hub site so that it is no longer a hub site. It will become a regular site. Any sites associated with the hub site will no longer be associated. This can take up to an hour to propagate. If you want to speed up the process, first remove any associated sites before unregistering the hub site. 
 
 ## HTTP request
 
-```
+```HTTP
 POST /_api/site/UnRegisterHubSite
 ```
 
-## URI Parameters
+## URI parameters
 
 None
 
@@ -27,7 +27,7 @@ None
 |--------|-------|
 |Accept|application/json;odata=verbose|
 |Content-Type|application/json;odata=verbose;charset=utf-8|
-|x-requestdigest|The appropriate digest for current site|
+|x-requestdigest|The appropriate digest for current site.|
 
 ## Request body
 
@@ -44,13 +44,17 @@ Do not supply a request body for this method.
 
 ### UnRegister a marketing site so it is no longer a hub site
 
-#### Sample Request
+#### Sample request
 
 ```HTTP
 POST
 https://contoso.sharepoint.com/sites/marketing/_api/site/UnRegisterHubSite
 ```
 
-#### Sample Response
+#### Sample response
+
 **Status code:** 204
 
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)

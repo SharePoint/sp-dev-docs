@@ -1,24 +1,24 @@
 ---
 title: GetById REST method
-description: GetById REST method
-ms.date: 2/26/2018
+description: Gets or updates information about a hub site.
+ms.date: 4/20/2018
 ---
 
 # GetById
 
 > [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Gets or updates information about a hub site.
 
 ## HTTP request
 
-```
+```HTTP
 GET /_api/HubSites/GetById
 POST /_api/HubSites/GetById
 ```
 
-## URI Parameters
+## URI parameters
 
 |Name |In |Required|Type|Description|
 |-----|---|--------|----|-----------|
@@ -30,7 +30,9 @@ POST /_api/HubSites/GetById
 |--------|-------|
 |Accept|application/json;odata=verbose|
 |Content-Type|application/json;odata=verbose;charset=utf-8|
-|x-requestdigest|The appropriate digest for current site|
+|x-requestdigest|The appropriate digest for current site.|
+
+<br/>
 
 When using POST to update a hub site with new information, use the following additional header values:
 
@@ -60,14 +62,15 @@ For GET, no request body is needed. When using POST to update a hub site with ne
 
 ### Get a hub site
 
-#### Sample Request
+#### Sample request
 
 ```HTTP
 GET
 https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-499c-92db-38800eefbe44'
 ```
 
-#### Sample Response
+#### Sample response
+
 **Status code:** 200
 
 ```JSON
@@ -90,14 +93,15 @@ https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-49
 
 ### Update a hub site
 
-#### Sample Request
+#### Sample request
 
 ```HTTP
 POST
 https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-499c-92db-38800eefbe44'
 ```
 
-#### Sample Response
+#### Sample response
+
 **Status code:** 204
 
 ```JSON
@@ -107,3 +111,7 @@ https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-49
   "Description": "Hub site for marketing coordination"
 }
 ```
+
+## See also
+
+- [Hub site REST API](hub-site-rest-api.md)

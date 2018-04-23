@@ -1,14 +1,14 @@
 ---
-title: Introducing the PnP Provisioning Engine
+title: Introducing the PnP provisioning engine
 ms.date: 11/03/2017
 ---
-# Introducing the PnP Provisioning Engine
+# Introducing the PnP provisioning engine
 
 **Author:** Paolo Pialorsi - [www.piasys.com](http://www.piasys.com/) - [@PaoloPia](https://www.twitter.com/PaoloPia/)
 
 _**Applies to:** SharePoint 2013 | SharePoint Online | Office 365_
 
-This short whitepaper introduces the PnP Provisioning Engine, which was released in April 2015 within the [OfficeDev PnP](http://aka.ms/officedevpnp) project, and which will be updated on a monthly basis, in alignment with the release schedule of the Office Dev PnP Core Library. What you will see here is available thanks to the efforts of some of the Office Dev PnP Core Team members ([Vesa Juvonen](https://twitter.com/vesajuvonen), [Bert Jansen](https://twitter.com/O365Bert), [Frank Marasco](https://twitter.com/frank_marasco), [Erwin van Hunen](https://twitter.com/erwinvanhunen), and [me](https://twitter/paolopia)), as well as the whole OfficeDev PnP community.
+This short whitepaper introduces the PnP provisioning engine, which was released in April 2015 within the [OfficeDev PnP](http://aka.ms/officedevpnp) project, and which will be updated on a monthly basis, in alignment with the release schedule of the Office Dev PnP Core Library. What you will see here is available thanks to the efforts of some of the Office Dev PnP Core Team members ([Vesa Juvonen](https://twitter.com/vesajuvonen), [Bert Jansen](https://twitter.com/O365Bert), [Frank Marasco](https://twitter.com/frank_marasco), [Erwin van Hunen](https://twitter.com/erwinvanhunen), and [me](https://twitter/paolopia)), as well as the whole OfficeDev PnP community.
 
 <a name="thegoal"> </a>
 ## The Goal
@@ -17,7 +17,7 @@ Let’s start from the main goal of having a provisioning engine. With the intro
 
 What if you want to model and provision artifacts using a test and a production environment, or what if you want to automate provisioning of artifacts, just because you want to sell your customizations to multiple customers? Likewise, what if you want to define a custom site template that you can reuse across multiple site instances, like customer-oriented sites, or project-oriented sites?
 
-Using the new PnP Provisioning Engine, you can model a site by configuring the design of Site Columns, Content Types, List Definitions and Instances, Composed Looks, Pages (either WebPart Pages or Wiki Pages), and much more, via your web browser. When you are done with the design, you can export what you have done into a persistent provisioning template format (XML, JSON, or whatever you like), and you can apply that template to as many target sites as you would like.
+Using the new PnP provisioning engine, you can model a site by configuring the design of Site Columns, Content Types, List Definitions and Instances, Composed Looks, Pages (either WebPart Pages or Wiki Pages), and much more, via your web browser. When you are done with the design, you can export what you have done into a persistent provisioning template format (XML, JSON, or whatever you like), and you can apply that template to as many target sites as you would like.
 
 If it sounds interesting... keep reading, and let’s learn how to do it!
 
@@ -46,9 +46,9 @@ The *–Out* argument instructs the cmdlet about where to save the Provisioning 
 
 On the other side, in order to use the CSOM extensions, you can simply create any kind (Console, Windows, SharePoint Add-in, whatever you like) of .NET software project, and add the OfficeDev PnP NuGet Package. The NuGet Package is available in two flavors: OfficeDev PnP Core V15, which targets Microsoft SharePoint 2013 on-premises, and OfficeDev PnP Core, which targets Microsoft SharePoint Online.
 
-Let's target Microsoft SharePoint Online, which has been tested more, and is the main target of the PnP Core Team efforts. You will simply need to connect to Microsoft Office 365, create a *ClientContext* instance and retrieve a reference to a *Web* object. Thanks to a new extension method, called *GetProvisioningTemplate*, you will be able to retrieve a *ProvisioningTemplate* object that can be saved using a template provider and a serialization formatter. Both the template provider and the serialization formatter objects can be customized, so that you can implement whatever persistence storage and serialization format you like. Out of the box, the PnP Provisioning Engine provides support for File System, SharePoint, and Azure Blob Storage template providers, as well as for XML and JSON serialization formatters. In the following figure (credits to [Vesa](https://twitter.com/vesajuvonen)) you can see an outline of the overall architecture of the PnP Provisioning Engine.
+Let's target Microsoft SharePoint Online, which has been tested more, and is the main target of the PnP Core Team efforts. You will simply need to connect to Microsoft Office 365, create a *ClientContext* instance and retrieve a reference to a *Web* object. Thanks to a new extension method, called *GetProvisioningTemplate*, you will be able to retrieve a *ProvisioningTemplate* object that can be saved using a template provider and a serialization formatter. Both the template provider and the serialization formatter objects can be customized, so that you can implement whatever persistence storage and serialization format you like. Out of the box, the PnP provisioning engine provides support for File System, SharePoint, and Azure Blob Storage template providers, as well as for XML and JSON serialization formatters. In the following figure (credits to [Vesa](https://twitter.com/vesajuvonen)) you can see an outline of the overall architecture of the PnP provisioning engine.
 
-![The architecture of the PnP Provisioning Engine Framework](./media/Introducing-the-PnP-Provisioning-Engine/Figure-4-PnP-Provisioning-Framework-Outline.png)
+![The architecture of the PnP provisioning engine Framework](./media/Introducing-the-PnP-Provisioning-Engine/Figure-4-PnP-Provisioning-Framework-Outline.png)
 
 The result of extracting and saving a *ProvisioningTemplate* instance object will be for instance an XML file like the one shown in the following XML code excerpt:
     
@@ -164,13 +164,13 @@ The result of extracting and saving a *ProvisioningTemplate* instance object wil
     </pnp:Provisioning>
     
 
-As you can see, the XML elements are fairly self-explanatory. The XML schema used in the example references the 201505 version of the PnP Provisioning Schema (XML Namespace: *http://schemas.dev.office.com/PnP/2015/05/ProvisioningSchema*), which has been defined together with the OfficeDev PnP Community, and which can be found on GitHub at the following URL: [https://github.com/SharePoint/Pnp-Provisioning-Schema/](https://github.com/SharePoint/Pnp-Provisioning-Schema/). Within the same repository, you will also find a markdown (MD) auto-generated document, which describes the main elements, types, and attributes available to manually define an XML provisioning template.
+As you can see, the XML elements are fairly self-explanatory. The XML schema used in the example references the 201505 version of the PnP provisioning schema (XML Namespace: *http://schemas.dev.office.com/PnP/2015/05/ProvisioningSchema*), which has been defined together with the OfficeDev PnP Community, and which can be found on GitHub at the following URL: [https://github.com/SharePoint/Pnp-Provisioning-Schema/](https://github.com/SharePoint/Pnp-Provisioning-Schema/). Within the same repository, you will also find a markdown (MD) auto-generated document, which describes the main elements, types, and attributes available to manually define an XML provisioning template.
 
-However, the real power of this provisioning engine is the availability of a high-level, serialization format that is independent of the Domain Model. In fact, internally the PnP Provisioning Engine is completely decoupled from any kind of serialization format, and the whole engine simply handles instances of the *ProvisioningTemplate* type. For instance, in the following figure you can see the "Quick Watch" window of Microsoft Visual Studio 2013 showing a ProvisioningTemplate object instance.
+However, the real power of this provisioning engine is the availability of a high-level, serialization format that is independent of the Domain Model. In fact, internally the PnP provisioning engine is completely decoupled from any kind of serialization format, and the whole engine simply handles instances of the *ProvisioningTemplate* type. For instance, in the following figure you can see the "Quick Watch" window of Microsoft Visual Studio 2013 showing a ProvisioningTemplate object instance.
 
 ![The structure - within a debugger watch - of a ProvisioningTemplate object](./media/Introducing-the-PnP-Provisioning-Engine/Figure-5-Domain-Model.png)
 
-It is up to you to define the *ProvisioningTemplate* manually, using a model site, or by composing an XML document that validates against the PnP Provisioning XSD Schema, or by simply writing .NET code and constructing the hierarchy of objects. You can even do a mix of these approaches: you can design the provisioning template using a model site, save it into an XML file, and do some in-memory customizations, while handling the *ProvisioningTemplate* instance in your code.
+It is up to you to define the *ProvisioningTemplate* manually, using a model site, or by composing an XML document that validates against the PnP provisioning XSD schema, or by simply writing .NET code and constructing the hierarchy of objects. You can even do a mix of these approaches: you can design the provisioning template using a model site, save it into an XML file, and do some in-memory customizations, while handling the *ProvisioningTemplate* instance in your code.
 
 <a name="applyingtemplate"> </a>
 ## Applying a Provisioning Template
@@ -229,20 +229,20 @@ On average, the library will take a couple of minutes to apply the template, reg
 <a name="advancedtopics"> </a>
 ## Advanced Topics
 
-This is just an introductory article, as in the near future we will go deeper around some more advanced topics. Nevertheless, it is important to understand that using the new PnP Provisioning Engine, you can also provision Taxonomies, as well as use variables and tokens, which can be replaced at runtime, based on what you are provisioning (List IDs, Parameters, Term IDs, etc.). You can invoke the provisioning engine from timer job services, provider-hosted add-ins, external sites, and more. Lastly, you can use the PnP Provisioning Engine to move artifacts from test/staging environments to production environments.
+This is just an introductory article, as in the near future we will go deeper around some more advanced topics. Nevertheless, it is important to understand that using the new PnP provisioning engine, you can also provision Taxonomies, as well as use variables and tokens, which can be replaced at runtime, based on what you are provisioning (List IDs, Parameters, Term IDs, etc.). You can invoke the provisioning engine from timer job services, provider-hosted add-ins, external sites, and more. Lastly, you can use the PnP provisioning engine to move artifacts from test/staging environments to production environments.
 
-Moreover, on Channel 9 there is a [section dedicated to OfficeDev PnP](http://aka.ms/OfficeDevPnPVideos), where you can watch some videos about the PnP Provisioning Engine and the PnP PowerShell Extensions:
+Moreover, on Channel 9 there is a [section dedicated to OfficeDev PnP](http://aka.ms/OfficeDevPnPVideos), where you can watch some videos about the PnP provisioning engine and the PnP PowerShell Extensions:
 
-- [Getting Started with PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine)
+- [Getting Started with PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine)
 - [Deep dive to PnP provisioning engine schema](https://channel9.msdn.com/blogs/OfficeDevPnP/Deep-dive-to-PnP-provisioning-engine-schema)
-- [Introduction to PnP PowerShell Cmdlets](https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-PnP-PowerShell-Cmdlets)
+- [Introduction to PnP PowerShell cmdlets](https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-PnP-PowerShell-Cmdlets)
 
 <a name="wrapup"> </a>
 ## Requirements and Wrap Up ##
 
-In order to play with the PnP Provisioning Engine on-premises, you need to have at least the SharePoint 2013 March 2015 Cumulative Update installed, as the engine leverages some [new capabilities](http://blogs.msdn.com/b/vesku/archive/2015/04/10/new-sharepoint-csom-version-released-for-office-365.aspx) of the Client Side Object Model, which are not available in previous versions of the product. If you target Microsoft SharePoint Online, the requirements are automatically satisfied thanks to the Software as a Service model.
+In order to play with the PnP provisioning engine on-premises, you need to have at least the SharePoint 2013 March 2015 Cumulative Update installed, as the engine leverages some [new capabilities](http://blogs.msdn.com/b/vesku/archive/2015/04/10/new-sharepoint-csom-version-released-for-office-365.aspx) of the Client Side Object Model, which are not available in previous versions of the product. If you target Microsoft SharePoint Online, the requirements are automatically satisfied thanks to the Software as a Service model.
 
-Please, play with the PnP Provisioning Engine, give us feedback, and enjoy the future of the SharePoint Add-in Model and remote provisioning!
+Please, play with the PnP provisioning engine, give us feedback, and enjoy the future of the SharePoint Add-in Model and remote provisioning!
 
 <a name="bk_addresources"> </a>
 ## See also
