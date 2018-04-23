@@ -1,7 +1,7 @@
 ---
 title: Provisioning "modern" team sites programmatically
 description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
-ms.date: 12/19/2017
+ms.date: 4/23/2018
 ---
 
 # Provisioning "modern" team sites programmatically
@@ -14,10 +14,10 @@ ms.date: 12/19/2017
 ## Comparing "modern" team sites and "modern" communication sites
 Before digging into the details about how to provision "modern" sites, let's discuss a little bit about the two main flavors available: team sites, and communication sites.
 
-A "modern" team site is a place where a group of people can work together, collaborate, share documents and messages. Every "modern" team site has a backing Office 365 Group, in order to improve the overall collaboration experience. In fact, thanks to the Office 365 Group, members of the team can benefit of services like Planner, a shared Calendar, a shared OneDrive for Business storage, custom Office 365 connectors, etc.
-In a "modern" team site, typically the members can contribute to the content (read/write). Moreover, the Office 365 Group backing a "modern" team site can be private or public, and by default it is public.
+A "modern" team site is a place where a group of people can work together, collaborate, share documents and messages. Every "modern" team site has a backing Office 365 group, in order to improve the overall collaboration experience. In fact, thanks to the Office 365 group, members of the team can benefit of services like Planner, a shared Calendar, a shared OneDrive for Business storage, custom Office 365 connectors, etc.
+In a "modern" team site, typically the members can contribute to the content (read/write). Moreover, the Office 365 group backing a "modern" team site can be private or public, and by default it is public.
 
-A "modern" communication site is a place where you can share news, showcase a story, broadcast a message. The idea of a communication site is to have few editors that create and maintain the content, and a wide audience that consumes that content. However, a communication site does not have a backing Office 365 Group. Users can access the target communication site with the well-known set of permissions of any other SharePoint site, and by default every communication site is private.
+A "modern" communication site is a place where you can share news, showcase a story, broadcast a message. The idea of a communication site is to have few editors that create and maintain the content, and a wide audience that consumes that content. However, a communication site does not have a backing Office 365 group. Users can access the target communication site with the well-known set of permissions of any other SharePoint site, and by default every communication site is private.
 
 Thus, if you have to create a site for team collaboration, most likely the "modern" team site is the right choice. On the contrary, if you want to communicate something to a broad set of people, probably the communication site is your best choice.
 
@@ -107,7 +107,7 @@ Execute-PnPQuery
 $web.WebTemplate + "#" + $web.Configuration
 ```
 
-### Provisioning an Office 365 Group programmatically
+### Provisioning an Office 365 group programmatically
 
 "Modern" team sites can be created programmatically by creating an [Office 365 group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph, too. In fact, when you create an Office 365 group a "modern" team site is automatically provisioned for the group. The "modern" team site URI will be based upon the _mailNickname_ parameter of the Office 365 group and has the following default structure. 
 
@@ -118,7 +118,7 @@ https://[tenant].sharepoint.com/sites/[mailNickname]
 > [!NOTE]
 > A detailed description of group creation using Microsoft Graph is available from the [official documentation](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_post_groups).
 
-#### Provisioning an Office 365 Group using the PnP CSOM core component
+#### Provisioning an Office 365 group using the PnP CSOM core component
 
 The PnP CSOM Core component, available as a [NuGet package](https://www.nuget.org/packages/SharePointPnPCoreOnline), has simplified methods for the "modern" group handling. 
 
@@ -157,9 +157,9 @@ public static void ManipulateModernTeamSite(string accessToken)
 }
 ```
 
-#### Provisioning an Office 365 Group using PnP PowerShell
+#### Provisioning an Office 365 group using PnP PowerShell
 
-You can also create an Office 365 Group using [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/releases), which will let you easily authenticate with the Microsoft Graph using Azure Active Directory. The following script will create an Office 365 Group, together with a "modern" team site, and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use CSOM (with the SharePoint PnP Core component) or SharePoint PnP-PowerShell to automate other operations on the created site.
+You can also create an Office 365 group using [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/releases), which will let you easily authenticate with the Microsoft Graph using Azure Active Directory. The following script will create an Office 365 group, together with a "modern" team site, and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use CSOM (with the SharePoint PnP Core component) or SharePoint PnP-PowerShell to automate other operations on the created site.
 
 ```PowerShell
 # Connect to your SharePoint admin center, credentials will be asked
