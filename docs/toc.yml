@@ -1398,7 +1398,7 @@
     - name: Portal go live approach
       href: solution-guidance/portal-rollout.md
   - name: Composite business add-ins
-    href: solution-guidance/Composite-buisness-apps-for-SharePoint.md
+    href: solution-guidance/composite-business-apps-for-sharepoint.md
     items:
     - name: Migrate InfoPath forms
       href: solution-guidance/Migrate-InfoPath-forms-to-SharePoint.md

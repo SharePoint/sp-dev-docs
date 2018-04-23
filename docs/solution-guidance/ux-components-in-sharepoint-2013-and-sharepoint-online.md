@@ -24,4 +24,4 @@ _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
     
 - [Add a custom ribbon to your SharePoint site](Add-a-custom-ribbon-to-your-SharePoint-site.md)
     
-- [Composite business add-ins for SharePoint 2013 and SharePoint Online](Composite-buisness-apps-for-SharePoint.md)
+- [Composite business add-ins for SharePoint 2013 and SharePoint Online](composite-business-apps-for-sharepoint.md)

@@ -647,6 +647,6 @@ public ActionResult Orders(string customerId)
 ## See also
 <a name="bk_addresources"> </a>
 
--  [Composite business add-ins for SharePoint 2013 and SharePoint Online](Composite-buisness-apps-for-SharePoint.md)
+-  [Composite business add-ins for SharePoint 2013 and SharePoint Online](composite-business-apps-for-sharepoint.md)
     
 -  [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
