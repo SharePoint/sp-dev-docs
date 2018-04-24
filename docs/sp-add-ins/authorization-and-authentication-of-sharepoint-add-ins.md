@@ -60,7 +60,7 @@ You may have already heard that OAuth 2.0 plays an important role in the authent
 
 If you plan to build a SharePoint Add-in that runs in a remote web application and communicates back to SharePoint by using server-side code, you need to use OAuth. 
 
-If the remote web application is off-premises, you would use [the low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization.md), in which Azure ACS is the access token issuer. 
+If the remote web application is off-premises, you would use [the low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization.md), in which Azure ACS is the access token issuer.
 
 If it is on-premises, you would typically use [the high-trust system](creating-sharepoint-add-ins-that-use-high-trust-authorization.md), in which the add-in itself and a digital certificate are the access token issuers.
 

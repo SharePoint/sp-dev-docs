@@ -53,6 +53,9 @@ The token is automatically replaced by the actual protocol and domain (and port,
 
 If the add-in uses OAuth, the domain part of the StartPage value must exactly match the **Add-in Domain** specified when the SharePoint Add-in was registered with Microsoft Azure Access Control Service (ACS). For more information see [Register SharePoint Add-ins](../sp-add-ins/register-sharepoint-add-ins.md).
 
+> [!IMPORTANT]
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact SharePoint add-in model which is using `https://accounts.accesscontrol.windows.net` hostname, which is not impacted by this retirement. See more details on this from [Impact of Azure Access Control retirement for SharePoint add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+
 ## Element information
 
 <table>

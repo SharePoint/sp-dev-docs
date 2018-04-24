@@ -5,7 +5,6 @@ ms.date: 12/27/2017
 ms.prod: sharepoint
 ---
 
-
 # Creating SharePoint Add-ins that use the cross-domain library 
 
 There are some scenarios in which neither the low-trust nor the high-trust authorization systems can be used by a SharePoint Add-in, or they are not a good choice as the only means for the add-in to gain authorization to SharePoint resources. 

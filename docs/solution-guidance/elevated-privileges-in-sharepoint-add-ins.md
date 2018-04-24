@@ -53,7 +53,12 @@ Using the app-only policy requires that your add-in use either low-trust or high
 
 ### Low-trust authorization
 
-Your add-in can use low-trust authorization when using the Microsoft Azure Access Control Service (ACS) to establish trust between your provider-hosted add-in and either your Office 365 site or your on-premises SharePoint farm. You can learn more at [Three authorization systems for SharePoint Add-ins 2013](https://msdn.microsoft.com/en-us/library/office/dn790706.aspx). To get a reference to the [ClientContext](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.clientcontext.aspx) object, your add-in should:
+Your add-in can use low-trust authorization when using the Microsoft Azure Access Control Service (ACS) to establish trust between your provider-hosted add-in and either your Office 365 site or your on-premises SharePoint farm. You can learn more at [Three authorization systems for SharePoint Add-ins 2013](https://msdn.microsoft.com/en-us/library/office/dn790706.aspx). 
+
+> [!IMPORTANT]
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact SharePoint add-in model which is using `https://accounts.accesscontrol.windows.net` hostname, which is not impacted by this retirement. See more details on this from [Impact of Azure Access Control retirement for SharePoint add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+
+To get a reference to the [ClientContext](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.clientcontext.aspx) object, your add-in should:
 
 1. Get the access token by using TokenHelper.GetAppOnlyAccessToken.
 

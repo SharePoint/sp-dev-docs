@@ -5,7 +5,6 @@ ms.date: 12/29/2017
 ms.prod: sharepoint
 ---
 
-
 # Create and use access tokens in provider-hosted high-trust SharePoint Add-ins
 
 > [!IMPORTANT] 
