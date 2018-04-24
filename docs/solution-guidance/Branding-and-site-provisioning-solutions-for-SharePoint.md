@@ -29,11 +29,11 @@ To use the branding and site provisioning capabilities in SharePoint, you need t
     
 - Client-side programming in SharePoint with the .NET client-side object model (CSOM) and REST APIs
 
-## Key SharePoint terms and concepts
+## Terms and concepts
 
 The following table lists terms and concepts that are useful to know as you start to work with SharePoint site provisioning and branding with the remote provisioning pattern.
 
-**Table 1: SharePoint terms and concepts**
+**Table 1: Key SharePoint terms and concepts**
 
 |Term or concept|Description|For more information|
 |:-----|:-----|:-----|
@@ -56,11 +56,11 @@ The following table lists terms and concepts that are useful to know as you star
 |Site provisioning|A process for equipping sites with the features, structure, brand, and other functionality.|- [Site provisioning techniques and remote provisioning in SharePoint 2013](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/)<br/>- [Self-Service Site Provisioning using Apps for SharePoint 2013](https://blogs.msdn.microsoft.com/richard_dizeregas_blog/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013/)|
 |Subsite|A single SharePoint site in a SharePoint site collection. A subsite can inherit navigation and permissions from a parent site, or it can have unique permissions and navigation. You can create subsites that are based on the root site collection, or sites based on other site collections. You can choose to inherit permissions from the site collection or specify unique permissions for the subsite.||
 
-## Hierarchy of SharePoint structural elements
+## Hierarchy of structural elements
 
 Conceptually, the hierarchy of SharePoint objects is expressed in terms of containers: the types of objects and the type of the hierarchy contain all the types of objects under them in the hierarchy. Table 2 lists the hierarchy of SharePoint structural elements.
 
-**Table 2. SharePoint structural elements**
+**Table 2. Hierarchy of SharePoint structural elements**
 
 |Object type (in hierarchical order)|Description|
 |:-----|:-----|
@@ -74,9 +74,9 @@ Conceptually, the hierarchy of SharePoint objects is expressed in terms of conta
 
 SharePoint Add-ins are lightweight solutions that don't install on the SharePoint host server, which means they don't make excessive API calls to the host server. You can build SharePoint Add-ins by using the Cloud Add-in Model. Users can discover and download add-ins from AppSource (formerly the Office Store) or from the enterprise's app catalog. For more information, see [Overview of SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md). 
 
-## File system and content databases and how they work together
+## File system and content databases
 
-To understand your branding options and the implications that site customization can have on upgrade and migration, you'll need to understand the SharePoint file system and content databases.
+To understand your branding options and the implications that site customization can have on upgrade and migration, you'll need to understand the SharePoint file system and content databases and how they work together.
 
 ### File system
 
@@ -98,23 +98,23 @@ Content databases store SharePoint content objects, such as site collections. A 
 
 Some characteristics of a content database vary depending on how the site collection is used. For example, sites are often write-intensive, while other types of content, such as read-only documents, are read-intensive. How content is used affects aspects of the content database, such as size and performance. 
 
-## File customization states and their effects on upgrade
+## File customization states 
 
 The state of SharePoint files and content affects how easy it is to apply updates, and controls whether SharePoint serves the file from the content database or the file system. By default, all SharePoint files are uncustomized and ghosted, and reside in matching states in the SharePoint file system and in the content database. When a file, a content database entry, or both are used in specific ways or changed, the state of that content might be affected.
 
-**Table 3. File and content states**
+**Table 3. File and content states and their effects on upgrade**
 
 |File or content state |Definition |Comment|
 |:-----|:-----|:-----|
 |**uncustomized**|An attribute associated with a file that indicates that it hasn't been modified.|More than one copy of a file can point to the same source.<br/>This makes it easier for designers to implement changes.|
-|**customized**|An attribute associated with a file that indicates that it has been modified.|After a file becomes customized, it becomes more difficult to apply broad updates.<br/><br/>Be very careful about what you customize. As a general rule, it's better to use the default SharePoint files and functionality than to customize system files or introduce customizations that need to be manually updated.|
+|**customized**|An attribute associated with a file that indicates that it has been modified.|After a file becomes customized, it becomes more difficult to apply broad updates.<br/><br/>Be very careful about what you customize.<br/>As a general rule, it's better to use the default SharePoint files and functionality than to customize system files or introduce customizations that need to be manually updated.|
 |**ghosted**|A file with a source that is stored outside the content database.|A pointer in the content database (the ghost of the file) still exists that tells SharePoint to look for the file's source on the server's file system.|
-|**unghosted**|An uncustomized version of the source file resides in the content database.|Example: The SharePoint 2013 Design Manager creates a sandboxed solution to package branding files. It's never added to the file system of the server; therefore, by definition its files are considered unghosted.<br/>However, the files it deploys are still in an uncustomized state. |
+|**unghosted**|An uncustomized version of the source file resides in the content database.|Example: The SharePoint 2013 Design Manager creates a sandboxed solution to package branding files.<br/>It's never added to the file system of the server; therefore, by definition its files are considered unghosted.<br/>However, the files it deploys are still in an uncustomized state. |
 
 > [!NOTE] 
 > If a file has been customized, it won't be updated when you install new service packs or the SharePoint Online service is updated.
 
-## Site branding and provisioning with the Cloud Add-in Model
+## Branding and site provisioning with the Cloud Add-in Model
 
 In SharePoint Server 2013 or SharePoint Server 2016, you can use custom CSOM code in SharePoint Add-ins to provision SharePoint site collections, sites, and subsites with branding elements. This site provisioning pattern is called **remote provisioning**. SharePoint is increasingly focused on cloud-based deployments, so this pattern was created to help you use SharePoint's out-of-the-box capabilities to provision site branding in a way that reduces complexity and long-term operational costs.
 
