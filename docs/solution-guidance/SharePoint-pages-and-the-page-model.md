@@ -10,11 +10,11 @@ This article provides an overview of the SharePoint page model, including the pa
 
 A rendered SharePoint page is a combination of three page types: 
 
-- A **master page**, which controls the layout and appearance of the content.
+- **Master page** &ndash; controls the layout and appearance of the content
     
-- A **content page**, which contains the page field controls.
+- **Content page** &ndash; contains the page field controls
     
-- A **user-friendly authoring page**, which is where the user adds content.
+- **User-friendly authoring page** &ndash; where the user adds content
 
 ## Key terms and concepts
 
