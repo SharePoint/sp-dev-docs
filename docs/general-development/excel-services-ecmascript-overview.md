@@ -14,7 +14,7 @@ In Microsoft SharePoint Server 2010, Excel Services added support for ECMAScript
     
 
 The JavaScript object model in Excel Services enables developers to automate, customize, and interact with the Excel Web Access web part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access web part controls on a page. It also enables you to add more capabilities to your workbooks and to code around them.
-By using the JavaScript object model, it is possible to detect and react to a user's interactions with an Excel Web Access web part and to programmatically interact with one or multiple Excel Web Access Web Parts.
+By using the JavaScript object model, it is possible to detect and react to a user's interactions with an Excel Web Access web part and to programmatically interact with one or multiple Excel Web Access web parts.
   
     
     

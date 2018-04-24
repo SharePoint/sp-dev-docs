@@ -32,7 +32,7 @@ Whenever you need to consume LOB systems from a client-side solution, like a cli
 
 ### Videos
 * [Calling external APIs securely from SharePoint Framework](https://www.youtube.com/watch?v=SDjKRfHA1nw)
-* [Let's build with SharePoint (Web Parts, Extensions and much more)](https://myignite.microsoft.com/sessions/55180)
+* [Let's build with SharePoint (web parts, Extensions and much more)](https://myignite.microsoft.com/sessions/55180)
 
 ## Business Connectivity Services
 

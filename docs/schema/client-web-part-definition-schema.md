@@ -16,7 +16,7 @@ Client web part is the backing structure of app parts. App parts are defined in 
 
 ## XML schema definition
 
-An XML document that defines Client Web Parts must validate with the schema defined in the file wss.xsd. This file is located on the following path: 
+An XML document that defines Client web parts must validate with the schema defined in the file wss.xsd. This file is located on the following path: 
 
 `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML`
 
@@ -60,7 +60,7 @@ You can detect when the user is editing your Client web part by using the **\_ed
 
 The target page can dynamically resize the Client web part's **IFrame**. You can use JavaScript to issue a **postmessage** with the desired height and width. For a code sample that shows you how to resize an app part, see [Resize app parts dynamically in apps for SharePoint](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88).
 
-Client Web Parts don't support web part connections.
+Client web parts don't support web part connections.
 
 ## Example
 

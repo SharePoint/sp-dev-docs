@@ -59,7 +59,7 @@
           href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md        
     - name: Migrate existing customizations
       items:
-      - name: Script Editor Web Part
+      - name: Script Editor web part
         href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
       - name: jQuery and DataTables
         href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
@@ -469,7 +469,7 @@
               href: general-development/how-to-add-a-device-channel-panel-snippet-in-sharepoint.md
             - name: Edit Mode Panel snippet
               href: general-development/how-to-add-an-edit-mode-panel-snippet-in-sharepoint.md
-            - name: Web Part zone snippet
+            - name: Web part zone snippet
               href: general-development/how-to-add-a-web-part-zone-snippet-in-sharepoint.md
             - name: Security Trim snippet
               href: general-development/how-to-add-a-security-trim-snippet-in-sharepoint.md
@@ -493,7 +493,7 @@
         items:
         - name: Managed navigation
           href: general-development/managed-navigation-in-sharepoint.md
-        - name: Content Search Web Part
+        - name: Content Search web part
           href: general-development/content-search-web-part-in-sharepoint.md
         - name: Use code to pin terms to navigation term sets
           href: general-development/how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md
@@ -887,19 +887,19 @@
         - name: Excel Web Access
           href: general-development/excel-web-access.md
           items:
-          - name: Programmatically add a Web Part to a page
+          - name: Programmatically add a web part to a page
             href: general-development/how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md
           - name: Locate and copy required SharePoint DLLs
             href: general-development/how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md
         - name: ECMAScript
           href: general-development/excel-services-ecmascript-javascript-jscript.md
           items:
-          - name: Develop using the Content Editor Web Part
+          - name: Develop using the Content Editor web part
             href: general-development/walkthrough-developing-using-the-content-editor-web-part.md
             items:
             - name: Create an ECMAScript text file
               href: general-development/step-1-creating-a-ecmascript-text-file.md
-            - name: Add the Content Editor and Excel Services Web Parts
+            - name: Add the Content Editor and Excel Services web parts
               href: general-development/step-2-adding-the-content-editor-and-excel-services-web-parts.md
           - name: ECMAScript overview
             href: general-development/excel-services-ecmascript-overview.md
@@ -1085,7 +1085,7 @@
       href: sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md
     - name: 3. Add a custom content type
       href: sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 4. Add a Web Part to a page
+    - name: 4. Add a web part to a page
       href: sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md
     - name: 5. Add a workflow
       href: sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md
@@ -1164,7 +1164,7 @@
         href: sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in.md
       - name: Highlight content and enhance the functionality of SharePoint-hosted add-ins with the callout control
         href: sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint.md
-      - name: Include a Web Part in a webpage on the add-in web
+      - name: Include a web part in a webpage on the add-in web
         href: sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web.md
       - name: Office Web Widgets - Experimental overview
         href: sp-add-ins/office-web-widgetsexperimental-overview.md
@@ -1541,9 +1541,9 @@
       href: solution-guidance/user profile manipulation-sharepoint-add-in.md
     - name: Variations
       href: solution-guidance/variations-sharepoint-add-in.md
-    - name: Web Part
+    - name: Web part
       href: solution-guidance/web-part-sharepoint-add-in.md
-    - name: Upload Web Parts
+    - name: Upload web parts
       href: solution-guidance/upload-web-parts-in-sharepoint.md
     - name: Connect SharePoint Add-in parts
       href: solution-guidance/Connect-SharePoint-app-parts-by-using-SignalR.md
@@ -1560,12 +1560,12 @@
       href: solution-guidance/replace-files-deployed-using-modules-in-sharepoint-farm-solutions.md
     - name: Replace lists created from list definitions
       href: solution-guidance/replace-sharepoint-lists-created-from-list-definitions.md
-    - name: Replace Web Parts with add-in parts
+    - name: Replace web parts with add-in parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
   - name: Sandbox solution transformation guidance
     href: solution-guidance/Sandbox-Solution-Transformation-Guidance.md
     items:
-    - name: Web Parts
+    - name: Web parts
       href: solution-guidance/Sandbox-Solution-Transformation-Guidance-WebParts.md
     - name: Event receivers
       href: solution-guidance/Sandbox-Solution-Transformation-Guidance-Event-Receivers.md

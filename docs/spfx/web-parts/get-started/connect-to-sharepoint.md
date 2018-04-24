@@ -57,7 +57,7 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
             <div class="${ styles.row }">
               <div class="${ styles.column }">
                 <span class="${ styles.title }">Welcome to SharePoint!</span>
-                <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
+                <p class="${ styles.subTitle }">Customize SharePoint experiences using web parts.</p>
                 <p class="${ styles.description }">${escape(this.properties.description)}</p>
                 <p class="${ styles.description }">${escape(this.properties.test)}</p>
                 <p class="${ styles.description }">Loading from ${escape(this.context.pageContext.web.title)}</p>
@@ -347,7 +347,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
             <div class="${ styles.row }">
               <div class="${ styles.column }">
                 <span class="${ styles.title }">Welcome to SharePoint!</span>
-                <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
+                <p class="${ styles.subTitle }">Customize SharePoint experiences using web parts.</p>
                 <p class="${ styles.description }">${escape(this.properties.description)}</p>
                 <p class="${ styles.description }">${escape(this.properties.test)}</p>
                 <p class="${ styles.description }">Loading from ${escape(this.context.pageContext.web.title)}</p>

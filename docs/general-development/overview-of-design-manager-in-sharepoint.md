@@ -209,7 +209,7 @@ By default, most snippets inherit styles from the main SharePoint style sheet, c
 
 ### Edit display templates
 
-If you are using an on-premises installation of SharePoint Server, you can use the Content Search web part and other search-driven Web Parts to display the results of search queries as content on your pages. Search-driven Web Parts use display templates for two main purposes:
+If you are using an on-premises installation of SharePoint Server, you can use the Content Search web part and other search-driven web parts to display the results of search queries as content on your pages. Search-driven web parts use display templates for two main purposes:
   
     
     

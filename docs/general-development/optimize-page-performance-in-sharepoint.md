@@ -90,7 +90,7 @@ A particular element in the page must make sure that the critical resources need
 - ASP.NET pages
 - Custom master pages for errors
 - JavaScript files
-- Controls and Web Parts
+- Controls and web parts
 
 ### Master pages
 
@@ -235,9 +235,9 @@ The **ExecuteAndRegisterBeginEndFunctions** has the following parameters:
 -  _endFunc_: A function that is called after you retrieve the delta, but before the HTML and JavaScript for the new page are applied.
 -  _loadFunc_: A function that is called after the HTML and JavaScript for the new page is applied.
 
-### Controls and Web Parts
+### Controls and web parts
 
-To use MDS, controls and Web Parts have to register page resources by using the **SPPageContentManager** object. The most frequently registered resources using **SPPageContentManager** are JavaScript snippets (functions or JSON variables) and hidden fields. The following table shows common patterns for inserting hidden fields and JavaScript snippets, and how to do the same by using the **SPPageContentManager** object. 
+To use MDS, controls and web parts have to register page resources by using the **SPPageContentManager** object. The most frequently registered resources using **SPPageContentManager** are JavaScript snippets (functions or JSON variables) and hidden fields. The following table shows common patterns for inserting hidden fields and JavaScript snippets, and how to do the same by using the **SPPageContentManager** object. 
     
 <br/>    
 
@@ -265,7 +265,7 @@ Many APIs in previous versions of SharePoint did not provide the current control
 
 You can navigate between two pages by using a new function named **SPUpdatePage**. When a control or web part is rendered in MDS delta mode, the **HyperLink** controls must add the **onclick** handler and call **SPUpdatePage**.
  
-You must update the XSLT used by Web Parts because all the resources must be added by using the **SPPageContentManager** object to make them MDS-compliant. You can add JavaScript snippets to the XSLT by using the **RegisterScriptLink** and **RegisterScriptBlock** methods of the **SPPageContentManager** object.
+You must update the XSLT used by web parts because all the resources must be added by using the **SPPageContentManager** object to make them MDS-compliant. You can add JavaScript snippets to the XSLT by using the **RegisterScriptLink** and **RegisterScriptBlock** methods of the **SPPageContentManager** object.
 
 ## Optimize page downloads
 <a name="MDS"> </a>

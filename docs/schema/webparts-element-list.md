@@ -11,14 +11,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: b3cf8641-bf7b-4e48-a4fa-5fe270bd0ad3
-description: Contains a collection of Web Parts in a form for a list definition or a list template.
+description: Contains a collection of web parts in a form for a list definition or a list template.
 ---
 
 # WebParts element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Contains a collection of Web Parts in a form for a list definition or a list template.
+Contains a collection of web parts in a form for a list definition or a list template.
   
 ```XML
 <WebParts>

@@ -292,7 +292,7 @@ The control display template provides HTML to structure the overall layout for h
 
 The item display template provides HTML that determines how each item in the result set is displayed. For example, the item display template might provide the HTML for a list item that contains a picture, and three lines of text that are mapped to different managed properties associated with the item. The item display template is rendered one time for each item in the result set. So, if the result set contains ten items, the item display template creates its section of HTML ten times.
 
-For details display templates and their structure, see [SharePoint 2013 Design Manager display templates](http://msdn.microsoft.com/en-us/library/jj945138.aspx) and [Search-driven Web Parts and display templates](http://msdn.microsoft.com/en-us/library/jj191506.aspx) in [Overview of the SharePoint 2013 page model](http://msdn.microsoft.com/en-us/library/jj191506.aspx).
+For details display templates and their structure, see [SharePoint 2013 Design Manager display templates](http://msdn.microsoft.com/en-us/library/jj945138.aspx) and [Search-driven web parts and display templates](http://msdn.microsoft.com/en-us/library/jj191506.aspx) in [Overview of the SharePoint 2013 page model](http://msdn.microsoft.com/en-us/library/jj191506.aspx).
 
 For more information about display templates available in SharePoint 2013, see [Display template reference in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj944947.aspx).
 

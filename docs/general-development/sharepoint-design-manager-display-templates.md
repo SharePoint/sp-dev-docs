@@ -7,14 +7,14 @@ ms.assetid: 1a782bac-48ee-4baf-8751-0f943a306e0f
 
 
 # SharePoint Design Manager display templates
-Learn about display templates, including: how they relate to Search Web Parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
+Learn about display templates, including: how they relate to Search web parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
 ## Introduction to display templates
 <a name="bk_introduction"> </a>
 
-Display templates in SharePoint are templates used in Web Parts that use search technology (referred to in this article as Search Web Parts) to show the results of a query made to the search index. Display templates control which managed properties are shown in the search results, and how they appear in the web part. Each display template is made of two files: an HTML version of the display template that you can edit in your HTML editor, and a .js file that SharePoint uses.
+Display templates in SharePoint are templates used in web parts that use search technology (referred to in this article as Search web parts) to show the results of a query made to the search index. Display templates control which managed properties are shown in the search results, and how they appear in the web part. Each display template is made of two files: an HTML version of the display template that you can edit in your HTML editor, and a .js file that SharePoint uses.
   
 > [!NOTE]
-> Only Search Web Parts can use display templates. The Content Query web part is not search-driven, and so does not use display templates. 
+> Only Search web parts can use display templates. The Content Query web part is not search-driven, and so does not use display templates. 
   
     
     
@@ -62,7 +62,7 @@ When you create a display template by copying the HTML file for an existing disp
     
 
 
-## Understanding the relationship between display templates and Search Web Parts
+## Understanding the relationship between display templates and Search web parts
 <a name="bk_DTandSWP"> </a>
 
 There are two primary types of display templates:

@@ -104,7 +104,7 @@ Apply the following best practices when transforming specific solutions:
 |[Replace content types and site columns](replace-sharepoint-content-types-and-site-columns.md)|Use CSOM to replace SharePoint content types and site columns, add site columns to new content types, and replace the content types with new content types.|
 |[Replace files deployed using modules in farm solutions](replace-files-deployed-using-modules-in-sharepoint-farm-solutions.md)|Replace files, like master pages and page layouts in SharePoint, that were deployed using modules in farm solutions by uploading and updating references to use new files.|
 |[Replace lists created from list definitions](replace-sharepoint-lists-created-from-list-definitions.md)|Replace lists and libraries that were created by using list definitions in SharePoint.|
-|[Replace Web Parts with add-in parts](replace-sharepoint-web-parts-with-add-in-parts.md)|Use the transformation process to replace Web Parts with add-in parts by using the SharePoint client object model (CSOM).|
+|[Replace web parts with add-in parts](replace-sharepoint-web-parts-with-add-in-parts.md)|Use the transformation process to replace web parts with add-in parts by using the SharePoint client object model (CSOM).|
 
 ## See also
 

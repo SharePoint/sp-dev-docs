@@ -8,7 +8,7 @@ Localization in the SharePoint add-in model
 Summary
 -------
 
-The approach you take to implement localization for Add-ins is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, localization for custom components such as Web Parts, User Controls, and Web Controls was implemented with a combination of resource files, .Net managed code, properties, and declarative code.  All the artifacts were packaged in features deployed via SharePoint Solutions.
+The approach you take to implement localization for Add-ins is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, localization for custom components such as web parts, User Controls, and Web Controls was implemented with a combination of resource files, .Net managed code, properties, and declarative code.  All the artifacts were packaged in features deployed via SharePoint Solutions.
 
 In an SharePoint Add-in model scenario, you use JavaScript or the localization capabilities associated with the web technology you build your Add-ins with to implement localization. Depending on the localized resource, you might also use classic resources files, for example when you need to lozalize elements deployed to add-in web using feature framework elements in the add-in definition.
 

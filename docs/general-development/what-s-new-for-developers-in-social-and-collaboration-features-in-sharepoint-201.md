@@ -208,7 +208,7 @@ The following My Site Social API and features are deprecated in SharePoint:
 - The **Recent Activities** web part is replaced with a new **Newsfeed** web part that supports multithreaded conversations and dynamic feed retrieval.
     
     > [!NOTE] 
-    > We don't support customizations of the Newsfeed web part or other feed Web Parts (such as the Site Feed web part on team sites). If you do customize these Web Parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
+    > We don't support customizations of the Newsfeed web part or other feed web parts (such as the Site Feed web part on team sites). If you do customize these web parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
 
 - The **Social Comments** web part is deprecated.
     

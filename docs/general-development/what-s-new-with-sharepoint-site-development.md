@@ -75,7 +75,7 @@ If you prefer, SharePoint also includes HTML versions of several master pages an
 
 ### Snippet Gallery
 
-SharePoint contains many ready-to-use components—like Web Parts and controls—that you can add to your site's pages. For example, by inserting a SharePoint component such as a search box or navigation control into your HTML master page, you can quickly and easily build a lot of functionality into your pages.
+SharePoint contains many ready-to-use components—like web parts and controls—that you can add to your site's pages. For example, by inserting a SharePoint component such as a search box or navigation control into your HTML master page, you can quickly and easily build a lot of functionality into your pages.
   
     
     
@@ -210,7 +210,7 @@ When you import a design package, the design assets in the package overwrite any
 
 ### Catalogs
 
-SharePoint site publishing introduces catalogs, which enable you to incorporate lists into your publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to truly reuse content across your sites and across the boundary between your intranet sites, Internet sites, and extranet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search web part (CSWP)](content-search-web-part-in-sharepoint.md). You can write custom code to populate catalogs, connect a product catalog to a site, and curate individual pages with custom page layouts, Web Parts, and HTML content that appears only in the defined context.
+SharePoint site publishing introduces catalogs, which enable you to incorporate lists into your publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to truly reuse content across your sites and across the boundary between your intranet sites, Internet sites, and extranet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search web part (CSWP)](content-search-web-part-in-sharepoint.md). You can write custom code to populate catalogs, connect a product catalog to a site, and curate individual pages with custom page layouts, web parts, and HTML content that appears only in the defined context.
   
     
     

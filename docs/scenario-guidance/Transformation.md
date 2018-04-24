@@ -63,7 +63,7 @@ Typically, farm solutions are packaged as SharePoint solution package (WSP) file
 
 _**Applies to:** Office 365 and SharePoint Server_
 
-Script- and Content Editor Web Parts are used to build SharePoint customizations primarily by citizen developers. With nothing more than site owner permissions, citizen developers can build compelling SharePoint customizations that add business value. Whenever the customization needs to be updated, users with the necessary permissions can apply updates to the solution's script files and the changes are immediately visible to all users.
+Script- and Content Editor web parts are used to build SharePoint customizations primarily by citizen developers. With nothing more than site owner permissions, citizen developers can build compelling SharePoint customizations that add business value. Whenever the customization needs to be updated, users with the necessary permissions can apply updates to the solution's script files and the changes are immediately visible to all users.
 
 Script- and Content Editor web part solutions make it hard for IT organizations to keep track of what customizations are being used and where they are being used. Additionally, organizations can't tell which external scripts are being used in their intranet and have access to their data.
 

@@ -13,7 +13,7 @@ You can use a Security Trim snippet to display content only to specific users, b
 ## Introduction to the Security Trim snippet
 <a name="Introduction"> </a>
 
-You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have, and whether those users are authenticated or anonymous. You can add a Security Trim panel to a master page or page layout. A Security Trim panel is a container that can include other components or snippets, such as Web Parts, in addition to static content.
+You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have, and whether those users are authenticated or anonymous. You can add a Security Trim panel to a master page or page layout. A Security Trim panel is a container that can include other components or snippets, such as web parts, in addition to static content.
   
     
     

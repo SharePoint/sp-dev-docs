@@ -41,7 +41,7 @@ Table 1 lists useful articles that can help you understand the concepts and step
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj635883.aspx) <br/> |Learn about how to use cross-site publishing and Search Web Parts to create adaptive SharePoint Internet, intranet, and extranet sites.  <br/> |
+| [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj635883.aspx) <br/> |Learn about how to use cross-site publishing and Search web parts to create adaptive SharePoint Internet, intranet, and extranet sites.  <br/> |
 | [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md) <br/> |Learn about how to create page layouts in SharePoint.  <br/> |
 | [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md) <br/> |Learn about how to resolve any issues that prevent the server-side preview from rendering your page.  <br/> |
 | [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md) <br/> |Learn about how to use snippets to add SharePoint functionality to your HTML master page or page layout.  <br/> |

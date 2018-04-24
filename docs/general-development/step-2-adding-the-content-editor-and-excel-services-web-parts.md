@@ -1,14 +1,14 @@
 ---
-title: Step 2 Adding the Content Editor and Excel Services Web Parts
+title: Step 2 Adding the Content Editor and Excel Services web parts
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c9c66843-fd77-4a0d-a512-d936d15d4429
 ---
 
 
-# Step 2: Adding the Content Editor and Excel Services Web Parts
+# Step 2: Adding the Content Editor and Excel Services web parts
 
-After you create an ECMAScript (JavaScript, JScript) text file and save the text file in a trusted location, the next step is to create a Web Parts Page and add the Content Editor web part and the Excel Services web part to the page. 
+After you create an ECMAScript (JavaScript, JScript) text file and save the text file in a trusted location, the next step is to create a web parts Page and add the Content Editor web part and the Excel Services web part to the page. 
   
     
     
@@ -17,10 +17,10 @@ Next, display a workbook by using the Excel Services web part that you added to 
 ### To add the Content Editor web part and the Excel Services web part
 
 
-1. Create a new Web Parts Page. 
+1. Create a new web parts Page. 
     
   
-2. Add a Content Editor web part to the Web Parts Page that you just created.
+2. Add a Content Editor web part to the web parts Page that you just created.
     
   
 3. Feed the URL for the text file that you created in  [Step 1: Creating a ECMAScript Text File](step-1-creating-a-ecmascript-text-file.md) to the Content Editor web part. You do this by adding the URL for the text file that you uploaded to a trusted document library in [Step 1: Creating a ECMAScript Text File](step-1-creating-a-ecmascript-text-file.md). 

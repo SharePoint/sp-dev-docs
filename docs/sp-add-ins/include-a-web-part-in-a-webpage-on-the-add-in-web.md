@@ -61,7 +61,7 @@ For a code sample that illustrates the guidance of this topic, see [OfficeDev/Co
 7. Add **webPart** markup as a child of the **webParts** element. The following is an example that adds an **XsltListViewWebPart**. It assumes that a custom list called "Test List" is part of the same add-in project. For information about how to add a custom list to an add-in web, see [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md). 
     
     > [!NOTE] 
-    > Note that the web part does not have an ID property. It is a best practice to include an explicit ID for the web part only in the two cases where it is really required: The web part is being added to a SharePoint wiki page. The web part is one of two or more Web Parts that are connected.
+    > Note that the web part does not have an ID property. It is a best practice to include an explicit ID for the web part only in the two cases where it is really required: The web part is being added to a SharePoint wiki page. The web part is one of two or more web parts that are connected.
 
     ```XML
       <webParts>

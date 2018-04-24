@@ -175,7 +175,7 @@ Because there is already such an element in the **ElementManifests** section, si
      </Module>
     ```
 
-3. Pages can have Web Parts embedded in them as explained in [Include a web part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web.md). If you change a page that has a web part on it (or change the properties of the web part), there is an additional step: you have to add the following markup to the page to prevent SharePoint from adding a second copy of the web part onto the page. The markup should be added to the **asp:Content** element with the ID `PlaceHolderAdditionalPageHead`. (The Office Developer Tools for Visual Studio may have already added it when the page was first created, but you should verify that it is there.)
+3. Pages can have web parts embedded in them as explained in [Include a web part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web.md). If you change a page that has a web part on it (or change the properties of the web part), there is an additional step: you have to add the following markup to the page to prevent SharePoint from adding a second copy of the web part onto the page. The markup should be added to the **asp:Content** element with the ID `PlaceHolderAdditionalPageHead`. (The Office Developer Tools for Visual Studio may have already added it when the page was first created, but you should verify that it is there.)
     
     ```XML
       <meta name="WebPartPageExpansion" content="full" />

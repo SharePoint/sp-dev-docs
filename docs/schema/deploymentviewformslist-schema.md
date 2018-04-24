@@ -12,7 +12,7 @@ ms.assetid: 03e692c1-b27c-465b-8714-d169cf1fc10c
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-The DeploymentViewFormsList schema provides validation for the ViewFormsList.xml file exported into the content migration package. The ViewFormsList.xml file maintains a list of Web Parts and tracks whether each is a view or form.
+The DeploymentViewFormsList schema provides validation for the ViewFormsList.xml file exported into the content migration package. The ViewFormsList.xml file maintains a list of web parts and tracks whether each is a view or form.
 
 ## DeploymentViewFormsList schema elements
 

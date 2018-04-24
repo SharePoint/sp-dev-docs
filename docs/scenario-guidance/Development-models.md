@@ -44,7 +44,7 @@ This goal adheres perfectly to the cloud offering model and philosophy. Users ca
 * App-Parts: parts of a webpage, using a special kind of control called an add-in part, to surface an iframe element that contains the add-in.
 * UI Custom Actions: UI commands that extend ribbons and menus for lists, documents, and more.
 
-Moreover, a SharePoint Add-in can include classic SharePoint components such as lists, custom website pages, Web Parts, workflows, content types, and many other artifacts.
+Moreover, a SharePoint Add-in can include classic SharePoint components such as lists, custom website pages, web parts, workflows, content types, and many other artifacts.
 
 ### Articles
 

@@ -30,10 +30,10 @@ There are two limitations to using a Device Channel Panel:
     
     
 
-- **Display templates** Because display templates are rendered on the client side and Device Channel Panels run on the server side, you cannot use a Device Channel Panel within a display template. Instead, you should use two different Content Search Web Parts within Device Channel Panels on your page layout, or use the JavaScript variable to trigger the behavior you want within the display template itself.
+- **Display templates** Because display templates are rendered on the client side and Device Channel Panels run on the server side, you cannot use a Device Channel Panel within a display template. Instead, you should use two different Content Search web parts within Device Channel Panels on your page layout, or use the JavaScript variable to trigger the behavior you want within the display template itself.
     
   
-- **Web part zones** You cannot insert a web part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a web part zone).
+- **Web part zones** You cannot insert a web part zone inside a Device Channel Panel. If you want to allow authors to add web parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add web parts there. You can add web parts directly to a Device Channel Panel (without a web part zone).
     
   
 

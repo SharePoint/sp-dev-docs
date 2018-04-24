@@ -90,7 +90,7 @@ In this article, you add a web part to the default page of the Employee Orientat
 
 2. When the add-in's default page opens, the list view web part is on it and the list is displayed. 
     
-   *Figure 1. Default page with list view Web part*
+   *Figure 1. Default page with list view web part*
 
    ![Default page of the add-in with the "New Employees in Seattle" list displayed in a web part.](../images/31e8e4b1-e2e6-416b-b360-9979a1f16fc7.PNG)
 

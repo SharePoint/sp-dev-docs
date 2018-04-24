@@ -145,7 +145,7 @@ When you use Search-based Content Aggregation, please observe the following guid
 	- Target specific managed properties (i.e., site columns) as needed
 - Choose the Desired Display Controls:
 	- OOB Controls: 
-		- Use Content-by-Search Web Parts
+		- Use Content-by-Search web parts
 		- Return the minimal rows and columns needed
 		- Develop the necessary Display Templates
 		- Enable asynchronous client-side rendering if desired

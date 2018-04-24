@@ -12,7 +12,7 @@ This is the eighth in a series of articles about the basics of developing ShareP
 > [!NOTE]
 > If you have been working through this series about SharePoint-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeClientRenderedControl.sln file.
  
-You can use a little client-side JavaScript to customize the rendering of Web Parts, most types of fields (columns), and some other controls, by assigning a JavaScript file to the **JSLink** property of the control, such as **SPField.JSLink**. You can also add client-side validation logic in this way. In this article, you customize the rendering of a field in a list of the Employee Orientation SharePoint Add-in by using client-side rendering.
+You can use a little client-side JavaScript to customize the rendering of web parts, most types of fields (columns), and some other controls, by assigning a JavaScript file to the **JSLink** property of the control, such as **SPField.JSLink**. You can also add client-side validation logic in this way. In this article, you customize the rendering of a field in a list of the Employee Orientation SharePoint Add-in by using client-side rendering.
  
 > [!NOTE]
 > - If the end-user has JavaScript disabled in their browser, SharePoint will fall back to server-side rendering and validation.

@@ -51,7 +51,7 @@ While built on a new development model using a new toolchain, SharePoint Framewo
 
 ### Run as a part of the page
 
-Similar to customizations embedded in Script Editor Web Parts, SharePoint Framework solutions are part of the page. This gives these solutions access to the page's DOM and allows them to communicate with other components on the same page. Also, it allows developers to more easily make their solutions responsive to adapt to the different form factors on which a SharePoint page could be displayed, including the SharePoint mobile app.
+Similar to customizations embedded in Script Editor web parts, SharePoint Framework solutions are part of the page. This gives these solutions access to the page's DOM and allows them to communicate with other components on the same page. Also, it allows developers to more easily make their solutions responsive to adapt to the different form factors on which a SharePoint page could be displayed, including the SharePoint mobile app.
 
 Unlike SharePoint Add-ins, SharePoint Framework client-side web parts are not isolated in an iframe. As a consequence, whatever resources the particular client-side web part has access to, other elements on the page can access as well. This is important to keep in mind when building solutions that rely on OAuth implicit flow with bearer access tokens or use cookies or browser storage for storing sensitive information. Because client-side web parts run as a part of the page, other elements on that page are able to access all these resources as well.
 
@@ -69,7 +69,7 @@ Both SharePoint Framework and Script Editor web part solutions run in the browse
 
 ### Host solution in SharePoint
 
-One of the benefits of building SharePoint customizations using Script Editor Web Parts was the fact that their code could be hosted in a regular SharePoint document library. Compared to SharePoint Add-ins, it required less infrastructure and simplified hosting the solution. Additionally, organizations could use SharePoint permissions to control access to the solution files.
+One of the benefits of building SharePoint customizations using Script Editor web parts was the fact that their code could be hosted in a regular SharePoint document library. Compared to SharePoint Add-ins, it required less infrastructure and simplified hosting the solution. Additionally, organizations could use SharePoint permissions to control access to the solution files.
 
 While hosting SharePoint Framework solutions on a CDN offers a number of advantages, it is not required, and you could choose to host their code in a regular SharePoint document library. SharePoint Framework packages (.sppkg files) deployed to the app catalog specify the URL at which SharePoint Framework can find the solution's code. There are no restrictions with regards to what that URL must be, as long as the user browsing the page with the web part on it can download the script from the specified location.
 
@@ -87,7 +87,7 @@ Because SharePoint Framework solutions are deployed through the app catalog with
 
 ### Deployed and updated through IT
 
-Script Editor Web Parts are used to build SharePoint customizations primarily by citizen developers. With nothing more than site owner permissions, citizen developers can build compelling SharePoint customizations that add business value. Whenever the customization needs to be updated, users with the necessary permissions can apply updates to the solution's script files and the changes are immediately visible to all users.
+Script Editor web parts are used to build SharePoint customizations primarily by citizen developers. With nothing more than site owner permissions, citizen developers can build compelling SharePoint customizations that add business value. Whenever the customization needs to be updated, users with the necessary permissions can apply updates to the solution's script files and the changes are immediately visible to all users.
 
 Script Editor web part solutions make it hard for IT organizations to keep track of what customizations are being used and where they are being used. Additionally, organizations can't tell which external scripts are being used in their intranet and have access to their data.
 
@@ -101,7 +101,7 @@ One of the goals of the SharePoint Framework is to standardize building client-s
 
 ### Don't modify DOM outside of the customization
 
-Script Editor Web Parts were frequently used in the past to modify parts of the page, such as adding buttons to the toolbar or changing the heading or branding of the page. Such customizations relied on the existence of specific DOM elements, and whenever SharePoint UI would be updated, there was a chance that such customization would break.
+Script Editor web parts were frequently used in the past to modify parts of the page, such as adding buttons to the toolbar or changing the heading or branding of the page. Such customizations relied on the existence of specific DOM elements, and whenever SharePoint UI would be updated, there was a chance that such customization would break.
 
 SharePoint Framework encourages a more structured and reliable approach to customizing SharePoint. Rather than using specific DOM elements to customize SharePoint, SharePoint Framework provides developers with a public API that they can use to extend SharePoint. Client-side web parts are the only shape supported by the SharePoint Framework, but other shapes, such as equivalents of JSLink and User Custom Actions, are being [taken into consideration for the future](../../roadmap.md) so that developers can implement the most common customization scenarios by using the SharePoint Framew../ork.
 

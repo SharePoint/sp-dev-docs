@@ -8,7 +8,7 @@ Web part in the SharePoint add-in model
 Summary
 -------
 
-The approach you take to create portable page components is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, Web Parts were created to implement portable page components.
+The approach you take to create portable page components is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, web parts were created to implement portable page components.
 
 In an SharePoint Add-in model scenario, Add-in Parts (App Parts) are created to implement portable page components.  Add-in parts use client side code.
 

@@ -24,7 +24,7 @@ The following figure shows how the add-in part content is displayed in a SharePo
 
 <br/>
  
-An add-in part is implemented with the **ClientWebPart** class, and like all Web Parts it is a available in the Web Part Gallery after a user installs the SharePoint Add-in that includes it. Your users can further customize the add-in part by using the properties that you provide. (For an example of configurable properties in an add-in part, see the figure **SharePoint page hosting a basic add-in part** later in this article.)
+An add-in part is implemented with the **ClientWebPart** class, and like all web parts it is a available in the Web Part Gallery after a user installs the SharePoint Add-in that includes it. Your users can further customize the add-in part by using the properties that you provide. (For an example of configurable properties in an add-in part, see the figure **SharePoint page hosting a basic add-in part** later in this article.)
  
 The example in this article uses a webpage that is hosted on a remote server, not on SharePoint, as the content page. Keep in mind that you can also use SharePoint pages to host the add-in part content, as described in the  [Other common scenarios add-in parts](#SP15Createappparts_Nextsteps) section later in this article.
  

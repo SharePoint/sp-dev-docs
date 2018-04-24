@@ -80,7 +80,7 @@ For information about Excel Services topology, scalability, performance, and sec
 
 ## Excel Web Access
 
-Excel Web Access is a viewer page and an Excel Services web part that you can add to any Web Parts page in SharePoint Server 2010. Excel Web Access renders (in other words, creates the HTML for) live Excel workbooks on a Web page, and enables the user to interact with those workbooks and explore them. Excel Web Access is the visible Excel Services component for the user. You can use Excel Web Access like any other web part in SharePoint Server 2010. Excel Web Access does not require the user to install anything on the client computer.
+Excel Web Access is a viewer page and an Excel Services web part that you can add to any web parts page in SharePoint Server 2010. Excel Web Access renders (in other words, creates the HTML for) live Excel workbooks on a Web page, and enables the user to interact with those workbooks and explore them. Excel Web Access is the visible Excel Services component for the user. You can use Excel Web Access like any other web part in SharePoint Server 2010. Excel Web Access does not require the user to install anything on the client computer.
   
     
     

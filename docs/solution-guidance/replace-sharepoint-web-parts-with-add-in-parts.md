@@ -1,20 +1,20 @@
 ---
-title: Replace SharePoint Web Parts with add-in parts
+title: Replace SharePoint web parts with add-in parts
 ms.date: 11/03/2017
 ---
-# Replace SharePoint Web Parts with add-in parts
+# Replace SharePoint web parts with add-in parts
 
-Use the transformation process to replace Web Parts with add-in parts by using the SharePoint client object model (CSOM).
+Use the transformation process to replace web parts with add-in parts by using the SharePoint client object model (CSOM).
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
-You can use the transformation process to replace SharePoint Web Parts with add-in parts on pages by using CSOM to find and remove specific Web Parts, and then adding the new add-in parts.
+You can use the transformation process to replace SharePoint web parts with add-in parts on pages by using CSOM to find and remove specific web parts, and then adding the new add-in parts.
 
 **Important:**  Farm solutions cannot be migrated to SharePoint Online. By applying the techniques and code described in this article, you can build a new solution with similar functionality that your farm solutions provide, which can then be deployed to SharePoint Online. After you apply these techniques, your pages will be updated to use add-in parts, which can then be migrated to SharePoint Online. The code in this article requires additional code to provide a fully working solution. For example, this article does not discuss how to authenticate to Office 365, how to implement required exception handling, and so on. For additional code samples, see the [Office 365 Developer Patterns and Practices project](https://github.com/SharePoint/PnP).
 
 ## Before you begin
 
-Before performing the steps in this article to replace your Web Parts with add-in parts, make sure that you:
+Before performing the steps in this article to replace your web parts with add-in parts, make sure that you:
 
 - Are using a SharePoint environment that is configured to support add-ins. SharePoint Online is configured to support add-ins. If you are using SharePoint Server 2013 on-premises, see [Configure an environment for SharePoint Add-ins (SharePoint 2013)](https://technet.microsoft.com/library/fp161236%28v=office.15%29).
     
@@ -22,13 +22,13 @@ Before performing the steps in this article to replace your Web Parts with add-i
     
 - Have assigned your add-ins  **FullControl** permissions on the **Web**. For more information, see [Add-in permissions in SharePoint 2013](https://msdn.microsoft.com/library/office/fp142383.aspx).
 
-## Replace Web Parts with add-in parts
+## Replace web parts with add-in parts
 
-To replace Web Parts with new add-in parts:
+To replace web parts with new add-in parts:
 
 1. Export the new add-in part. Use the exported add-in part to get the add-in part definition. 
     
-2. Find all pages with Web Parts to be replaced, and then remove the Web Parts. 
+2. Find all pages with web parts to be replaced, and then remove the web parts. 
     
 3. Create the new add-in part on the page by using the add-in part definition. 
     
@@ -141,7 +141,7 @@ private const string appPartXml = @"<webParts>
 </webParts>";
 ```
 
-**ReplaceWebPartsWithAppParts** starts the process of finding the Web Parts to be replaced by:
+**ReplaceWebPartsWithAppParts** starts the process of finding the web parts to be replaced by:
 
 1. Getting some properties from the [Web](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.web.aspx) to find the **Pages** library on the site.
     
@@ -181,11 +181,11 @@ protected void ReplaceWebPartsWithAppParts(object sender, EventArgs e)
 }
 ```
 
-**FindWebPartToReplace** finds Web Parts that should be replaced with the new add-in part by:
+**FindWebPartToReplace** finds web parts that should be replaced with the new add-in part by:
 
 1. Setting  **page** to the file associated with the list item returned from the **Pages** library.
     
-2. Using [LimitedWebPartManager](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.aspx) to find all Web Parts on a specific page. The title of each web part is also returned in the lambda expression.
+2. Using [LimitedWebPartManager](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.aspx) to find all web parts on a specific page. The title of each web part is also returned in the lambda expression.
     
 3. For each web part in the web part manager's [WebParts](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.webparts.aspx) property, determining whether the web part's title and the **oldWebPartTitle** variable, which is set to the title of the web part you are replacing, are equal. If the web part title and **oldWebPartTitle** are equal, call **ReplaceWebPart**; otherwise continue with the next iteration of the **foreach** loop.
 

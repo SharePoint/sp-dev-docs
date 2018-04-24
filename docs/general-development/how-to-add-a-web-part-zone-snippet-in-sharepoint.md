@@ -8,12 +8,12 @@ ms.assetid: 7583b217-200c-4569-8f88-fe975c8ebd72
 
 # Add a web part zone snippet in SharePoint
 
-A web part zone is a snippet that you can add to a page layout so that content authors can add, edit, or delete Web Parts in that zone.
+A web part zone is a snippet that you can add to a page layout so that content authors can add, edit, or delete web parts in that zone.
 
 ## Introduction to the web part zone snippet
 <a name="Introduction"> </a>
 
-A web part is a server control that provides a specific piece of SharePoint functionality, and a web part zone is a container that determines the layout, behavior, and other properties of the Web Parts contained in that zone. For example, a web part zone can specify whether the Web Parts in the zone:
+A web part is a server control that provides a specific piece of SharePoint functionality, and a web part zone is a container that determines the layout, behavior, and other properties of the web parts contained in that zone. For example, a web part zone can specify whether the web parts in the zone:
   
     
     
@@ -30,7 +30,7 @@ A web part is a server control that provides a specific piece of SharePoint func
 - Can be personalized by site visitors who create a personal view of a web part when they view a page in the browser.
     
   
-In a publishing site, content authors with the necessary permissions can create or edit pages that reside in the Pages library. As a designer, you can add a web part zone to a page layout. When a content author creates or edits a page based on that page layout, the author can add, edit, or delete Web Parts in that zone. For example, you may want to add a web part zone to a page layout so that content authors can:
+In a publishing site, content authors with the necessary permissions can create or edit pages that reside in the Pages library. As a designer, you can add a web part zone to a page layout. When a content author creates or edits a page based on that page layout, the author can add, edit, or delete web parts in that zone. For example, you may want to add a web part zone to a page layout so that content authors can:
   
     
     
@@ -50,34 +50,34 @@ In a publishing site, content authors with the necessary permissions can create 
 
 ### When to use web part zones
 
-When a page layout includes one or more web part zones, the web part zones are available on all pages that use that layout, which enables authors to insert Web Parts onto those pages. If you enable authors to insert Web Parts on pages, you reduce your control over the users' experience of the site. For example, an author could insert a Table of Contents web part onto a page that exposes parts of your site that you don't want visitors to navigate to from the current page.
+When a page layout includes one or more web part zones, the web part zones are available on all pages that use that layout, which enables authors to insert web parts onto those pages. If you enable authors to insert web parts on pages, you reduce your control over the users' experience of the site. For example, an author could insert a Table of Contents web part onto a page that exposes parts of your site that you don't want visitors to navigate to from the current page.
   
     
     
 If you want complete control over how a web part appears on your site, and if you want that web part to appear on all pages of a certain type, add the web part directly to a page layout. If you want a web part to appear on all pages in a site, you can also add a web part directly to a master page.
   
 > [!NOTE]
-> web part zones are available on page layouts but not on master pages—the purpose of zones is to allow authors to modify Web Parts, and authors typically don't edit a master page. 
+> web part zones are available on page layouts but not on master pages—the purpose of zones is to allow authors to modify web parts, and authors typically don't edit a master page. 
   
     
     
 
-You can also add web part zones to a page layout but restrict their use. For example, you can add Web Parts to a zone, and then set a property of that zone so that content authors can edit the properties of existing Web Parts but not add or remove Web Parts from the zone. web part zones have a set of properties that serve a dual purpose. You can use one subset of properties to organize the layout and format of Web Parts on the page. You can use another subset of properties to provide an additional level of protection from modification (or "lock down") of the Web Parts within the zone.
+You can also add web part zones to a page layout but restrict their use. For example, you can add web parts to a zone, and then set a property of that zone so that content authors can edit the properties of existing web parts but not add or remove web parts from the zone. web part zones have a set of properties that serve a dual purpose. You can use one subset of properties to organize the layout and format of web parts on the page. You can use another subset of properties to provide an additional level of protection from modification (or "lock down") of the web parts within the zone.
   
     
     
-For varying levels of control over how Web Parts are presented on your site, you can:
+For varying levels of control over how web parts are presented on your site, you can:
   
     
     
 
-- Add Web Parts directly to a master page or page layout. This means content authors cannot modify the Web Parts.
+- Add web parts directly to a master page or page layout. This means content authors cannot modify the web parts.
     
   
-- Add Web Parts to zones on page layouts, but restrict those zones to only the default Web Parts that you add.
+- Add web parts to zones on page layouts, but restrict those zones to only the default web parts that you add.
     
   
-- Add web part zones to page layouts, and give content authors complete control over what Web Parts appear in those zones and how they are configured.
+- Add web part zones to page layouts, and give content authors complete control over what web parts appear in those zones and how they are configured.
     
   
 The properties of a web part zone can specify whether content authors are allowed to change:
@@ -85,7 +85,7 @@ The properties of a web part zone can specify whether content authors are allowe
     
     
 
-- The layout of Web Parts in the zone by adding, deleting, resizing, or moving the Web Parts.
+- The layout of web parts in the zone by adding, deleting, resizing, or moving the web parts.
     
   
 - The web part settings for all users (the shared view of a web part).
@@ -104,13 +104,13 @@ Table 1 shows important properties to consider when you want to restrict a web p
 
 |**Property Name**|**Description**|
 |:-----|:-----|
-|**AllowLayoutChange** <br/> |Specifies whether Web Parts within the zone can be closed, minimized, deleted, or restored.  <br/> If set to **False**, users cannot close, minimize, delete, or restore Web Parts in the zone, drag Web Parts to a different zone, or rearrange or move Web Parts within the zone. Users also cannot add Web Parts from the web part catalog, and several properties that affect the UI of Web Parts in the zone are disabled. This property does not affect the ability to change the layout programmatically.  <br/> If set to **True**, users with appropriate permissions can perform these actions.  <br/> |
-|**LockLayout** <br/> |Specifies whether Web Parts within the zone can be added, deleted, resized, or moved. This property works the same whether the web part Page is in personal view or shared view.  <br/> If set to **True**, the specific web part properties for each web part in the zone that are affected are: **Zone (ZoneID)**, **Part Order (PartOrder)**, **Visible on Page (IsVisible)**, **Height (Height)**, **Width (Width)**, **Allow Close (AllowRemove)**, and **IsIncluded** (the **Close** command on the **web part** menu). Other web part properties are not affected. <br/> If set to **False**, the web part properties determine whether modifications can be made (together with the appropriate site permissions).  <br/> |
-|**AllowCustomization** <br/> |Specifies whether shared property values of Web Parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make changes to the Web Parts in the zone for all users.  <br/> If set to **False**, users cannot make changes to the Web Parts in the zone in the UI in shared view. But, changes can still be made programmatically and by using the web part Maintenance page.  <br/> |
-|**AllowPersonalization** <br/> |Specifies whether personal property values of Web Parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make personal changes to the Web Parts in the zone.  <br/> If set to **False**, users cannot make personal changes to the Web Parts through the UI, unless the web part is a private web part and they have appropriate permissions.  <br/> |
+|**AllowLayoutChange** <br/> |Specifies whether web parts within the zone can be closed, minimized, deleted, or restored.  <br/> If set to **False**, users cannot close, minimize, delete, or restore web parts in the zone, drag web parts to a different zone, or rearrange or move web parts within the zone. Users also cannot add web parts from the web part catalog, and several properties that affect the UI of web parts in the zone are disabled. This property does not affect the ability to change the layout programmatically.  <br/> If set to **True**, users with appropriate permissions can perform these actions.  <br/> |
+|**LockLayout** <br/> |Specifies whether web parts within the zone can be added, deleted, resized, or moved. This property works the same whether the web part Page is in personal view or shared view.  <br/> If set to **True**, the specific web part properties for each web part in the zone that are affected are: **Zone (ZoneID)**, **Part Order (PartOrder)**, **Visible on Page (IsVisible)**, **Height (Height)**, **Width (Width)**, **Allow Close (AllowRemove)**, and **IsIncluded** (the **Close** command on the **web part** menu). Other web part properties are not affected. <br/> If set to **False**, the web part properties determine whether modifications can be made (together with the appropriate site permissions).  <br/> |
+|**AllowCustomization** <br/> |Specifies whether shared property values of web parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make changes to the web parts in the zone for all users.  <br/> If set to **False**, users cannot make changes to the web parts in the zone in the UI in shared view. But, changes can still be made programmatically and by using the web part Maintenance page.  <br/> |
+|**AllowPersonalization** <br/> |Specifies whether personal property values of web parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make personal changes to the web parts in the zone.  <br/> If set to **False**, users cannot make personal changes to the web parts through the UI, unless the web part is a private web part and they have appropriate permissions.  <br/> |
    
 > [!NOTE]
-> You cannot insert a web part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a web part zone). For more information, see  [How to: Add a Device Channel Panel snippet in SharePoint](how-to-add-a-device-channel-panel-snippet-in-sharepoint.md). 
+> You cannot insert a web part zone inside a Device Channel Panel. If you want to allow authors to add web parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add web parts there. You can add web parts directly to a Device Channel Panel (without a web part zone). For more information, see  [How to: Add a Device Channel Panel snippet in SharePoint](how-to-add-a-device-channel-panel-snippet-in-sharepoint.md). 
   
     
     
@@ -173,7 +173,7 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 12. Replace the **<div>** where `class="DefaultContentBlock"` with your own specific content.
     
   
-13. If you want to prepopulate the zone with Web Parts—for example, if the zone will restrict content authors to modifying only existing Web Parts and not adding new ones—insert web part snippets where the **<!--DC … -->** tag appears.
+13. If you want to prepopulate the zone with Web Parts—for example, if the zone will restrict content authors to modifying only existing web parts and not adding new ones—insert web part snippets where the **<!--DC … -->** tag appears.
     
   
 14. Save the page, and then refresh the server-side preview in Design Manager to make sure the page appears as expected.
@@ -183,7 +183,7 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 ## Understanding the snippet markup
 <a name="UnderstandMarkup"> </a>
 
-The two most important parts of a web part zone snippet are the **ID** property and the **<!--DC … -->** comment. Each zone should have a unique ID. If you want to add more than one web part zone to your page layout, make sure to choose **Refresh** in the Snippet Gallery before copying each snippet so that a new ID is generated. The **<!--DC … -->** comment should be replaced with any Web Parts that you want to appear in the zone by default.
+The two most important parts of a web part zone snippet are the **ID** property and the **<!--DC … -->** comment. Each zone should have a unique ID. If you want to add more than one web part zone to your page layout, make sure to choose **Refresh** in the Snippet Gallery before copying each snippet so that a new ID is generated. The **<!--DC … -->** comment should be replaced with any web parts that you want to appear in the zone by default.
   
     
     

@@ -1,8 +1,8 @@
 ---
-title: Sandbox solution transformation guidance - Web Parts
+title: Sandbox solution transformation guidance - web parts
 ms.date: 11/03/2017
 ---
-# Sandbox solution transformation guidance - Web Parts
+# Sandbox solution transformation guidance - web parts
 Transform or convert your code-based sandbox solutions to the SharePoint add-in model. Learn about the options and strategies of converting existing functionality to SharePoint add-in model or alternative solutions.
 
 _**Applies to:** Add-ins for SharePoint | SharePoint 2013 | SharePoint 2016 | SharePoint Online_
@@ -16,7 +16,7 @@ utilize the ASP.net controls. You can of course continue to use visual web parts
 Another method is to re-write the web part as a client side solution. This will involve redesigning the solution to use JavaScript, HTML fragments, and one or more supporting frameworks. While this is net-new work, it has the added benefit of setting up your solution to easily integrate into the upcoming SharePoint Framework. This is a great choice for simple display or data entry web parts and can scale up to full page client applications.
 
 
-## Options for replacing Web Parts
+## Options for replacing web parts
 <a name="sectionSection2"> </a>
 
 |**Approach**|**Additional Information**|

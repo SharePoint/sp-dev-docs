@@ -69,7 +69,7 @@ Incorrect site collection and sub site provisioning can affect an entire line-of
 
 For example: If you have SharePoint sites used to manage projects in your company, you will most likely create a common list scheme for all of them. This will require creating site columns and content types. When you search for information in these sites via the SharePoint search page, you filter the results by content type or tag (site column). If your site columns and content types are not perfectly consistent across all the project sites, you will not receive accurate search results.
 
-This example may also be applied to Content By Search Web Parts, SharePoint Add-ins, mobile apps, and any other systems that access the information in the SharePoint sites.
+This example may also be applied to Content By Search web parts, SharePoint Add-ins, mobile apps, and any other systems that access the information in the SharePoint sites.
 
 Options to create site collections and sub sites
 ------------------------------------------------

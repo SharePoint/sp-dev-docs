@@ -9,7 +9,7 @@ ms.prod: sharepoint
 
 SharePoint-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see [SharePoint Add-ins](sharepoint-add-ins.md). Here's a summary of SharePoint-hosted add-ins:
 
-- They contain SharePoint lists, Web Parts, workflows, custom pages, and other components, all of which are installed on a subweb, called the add-in web, of the SharePoint website where the add-in is installed.
+- They contain SharePoint lists, web parts, workflows, custom pages, and other components, all of which are installed on a subweb, called the add-in web, of the SharePoint website where the add-in is installed.
 - The only code they have is JavaScript on custom SharePoint pages.
 
 In this article, you'll complete the following steps:

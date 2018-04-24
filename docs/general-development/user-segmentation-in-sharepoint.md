@@ -38,7 +38,7 @@ Before you get started implementing user segmentation in SharePoint, be sure to 
 - Visual Studio 2012
     
   
-This article assumes that you have experience with developing Web Parts in SharePoint. For more information on developing Web Parts, refer to  [Building Block: Web Parts](http://msdn.microsoft.com/en-us/library/ee535520%28v=office.14%29.aspx)
+This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](http://msdn.microsoft.com/en-us/library/ee535520%28v=office.14%29.aspx)
   
     
     
@@ -135,10 +135,10 @@ static void CreateNavigationTermSet(string siteUrl)
 ## Create a custom web part for user segmentation
 <a name="SP15_Create_a_custom_web_part_user_segmentation"> </a>
 
-In Visual Studio 2012, create a custom web part by using the Visual Web Parts template from the SharePoint category. Your custom web part must inherit from the  [ContentBySearchWebPart](https://msdn.microsoft.com/en-us/library/office/microsoft.office.server.search.webcontrols.contentbysearchwebpart.aspx) object.
+In Visual Studio 2012, create a custom web part by using the Visual web parts template from the SharePoint category. Your custom web part must inherit from the  [ContentBySearchWebPart](https://msdn.microsoft.com/en-us/library/office/microsoft.office.server.search.webcontrols.contentbysearchwebpart.aspx) object.
   
 > [!NOTE] 
-> This article assumes that you have experience with developing Web Parts in SharePoint. For more information on developing Web Parts, refer to  [Building Block: Web Parts](http://msdn.microsoft.com/en-us/library/ee535520%28v=office.14%29.aspx)
+> This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](http://msdn.microsoft.com/en-us/library/ee535520%28v=office.14%29.aspx)
   
     
     

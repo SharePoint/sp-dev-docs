@@ -277,7 +277,7 @@ Pay special attention to the design and implementation of High-Volume Pages with
 
 A typical high-volume page is the portal home page.  Consider the scenario where the Corporate IT department of a large enterprise (50,000 users) decides to implement a Group Policy Object (GPO) that forces all desktop browsers to open the portal home page by default. The performance of the portal home page has now become a critical consideration.  If your initial design did not take this volume of traffic into account, the portal could encounter a significant performance degradation.
 
-- Avoid the use of Content-by-Query Web Parts on the page; favor Content-by-Search Web Parts instead
+- Avoid the use of Content-by-Query web parts on the page; favor Content-by-Search web parts instead
 - Limit, and optimize, the number of client-side data requests issued by the page
 - Ensure that proper client-side caching is in play for client-side data requests
 - "Chunk" the page

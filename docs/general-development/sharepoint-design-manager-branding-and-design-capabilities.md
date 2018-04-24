@@ -20,7 +20,7 @@ See these articles for more information about the design and support capabilitie
 -  [Device channels](sharepoint-design-manager-device-channels.md): With device channels in SharePoint, you can render a single publishing site in multiple ways by using different designs that target different devices. Learn how to create a device channel, change a device channel, delete a device channel, and reorder device channels in SharePoint.
     
   
--  [Display templates](sharepoint-design-manager-display-templates.md): Learn about display templates, including how they relate to Search Web Parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
+-  [Display templates](sharepoint-design-manager-display-templates.md): Learn about display templates, including how they relate to Search web parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
     
   
 -  [Image renditions](sharepoint-design-manager-image-renditions.md): Learn how to create, edit, or delete image renditions. An image rendition defines the dimensions that are used to display images in SharePoint publishing sites.

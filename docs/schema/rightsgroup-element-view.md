@@ -34,7 +34,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**PermAddAndCustomizePages="Required"** <br/> |Add, change, or delete ASPX pages, HTML pages, or web part Pages, and edit the website using a SharePoint Foundation-compatible editor.  <br/> |
-|**PermAddDelPrivateWebParts="Required"** <br/> |Add or remove Web Parts on a personalized web part Page.  <br/> |
+|**PermAddDelPrivateWebParts="Required"** <br/> |Add or remove web parts on a personalized web part Page.  <br/> |
 |**PermAddListItems="Required"** <br/> |Add items to lists, add documents to document libraries, and add Web discussion comments.  <br/> |
 |**PermApplyStyleSheets="Required"** <br/> |Apply a style sheet (.CSS file) to the website.  <br/> |
 |**PermApplyThemeAndBorder="Required"** <br/> |Apply a theme or borders to the entire website.  <br/> |
@@ -59,7 +59,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**PermManageWeb="Required"** <br/> |Manage a site, including the ability to perform all administration tasks for the site and manage contents and permissions  <br/> |
 |**PermOpen="Required"** <br/> |Open documents.  <br/> |
 |**PermOpenItems="Required"** <br/> |Open items.  <br/> |
-|**PermUpdatePersonalWebPar="Required"ts** <br/> |Update Web Parts to display personalized information.  <br/> |
+|**PermUpdatePersonalWebPar="Required"ts** <br/> |Update web parts to display personalized information.  <br/> |
 |**PermUseRemoteAPIs="Required"** <br/> |Use the APIs defined through remote applications.  <br/> |
 |**PermViewFormPages="Required"** <br/> |View list item form pages.  <br/> |
 |**PermViewListItems="Required"** <br/> |View items in lists, documents in document libraries, view Web discussion comments, and set up email alerts for lists.  <br/> |

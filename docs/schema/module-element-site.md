@@ -11,14 +11,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: cee7eacc-0142-4b33-a363-3ef0873799dc
-description: Specifies files and "all user" Web Parts with which to provision a website.
+description: Specifies files and "all user" web parts with which to provision a website.
 ---
 
 # Module element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Specifies files and "all user" Web Parts with which to provision a website.
+Specifies files and "all user" web parts with which to provision a website.
   
 ```XML
 <Module>
@@ -67,7 +67,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 A detailed **Module** element appears in a **Modules** element directly under the **Project** element of an  `Onet.xml` file. Each such module is referenced by at least one other **Module** element that is in a **Configuration** element of the same file. 
   
-The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a web part page, the module definition can specify which Web Parts should be included on the page. 
+The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a web part page, the module definition can specify which web parts should be included on the page. 
   
 ## Example
 
