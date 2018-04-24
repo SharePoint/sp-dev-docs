@@ -117,7 +117,7 @@ Find definitions for terms used in SharePoint developer documentation.
 |list server template  <br/> |A value that identifies the template that is used for a list.  <br/> |
 |list template  <br/> |An XML-based definition of list settings, including fields and views, and optionally list items. List templates are stored in .stp files in the content database.  <br/> |
 |list template identifier  <br/> |A GUID that is used to identify a list template.  <br/> |
-|list view page  <br/> |A web part Page that displays a view of a list.  <br/> |
+|list view page  <br/> |A web part page that displays a view of a list.  <br/> |
 |List View web part  <br/> |A reusable component that generates HTML-based views of items in a SharePoint list.  <br/> |
 |log level  <br/> |The amount of information that is stored in a log file for a transaction. Log levels can be represented by numbers or by words from the most to the least verbose.  <br/> |
 |managed keyword  <br/> |A word or phrase that is added to a SharePoint item, either as a value in the Managed Keyword column or as a social tag.  <br/> |
@@ -175,7 +175,7 @@ Find definitions for terms used in SharePoint developer documentation.
 |second-stage Recycle Bin  <br/> |A container for items that have been deleted from a first-stage Recycle Bin. Items in a second-stage Recycle Bin are visible only to site collection administrators.  <br/> |
 |server-to-server protocol  <br/> |An authentication protocol between two servers or services.  <br/> |
 |Shared Documents library  <br/> |A document library that is included by default in the Team Site site template.  <br/> |
-|shared view  <br/> |A view of a list or web part Page that every user who has the appropriate permissions can see.  <br/> |
+|shared view  <br/> |A view of a list or web part page that every user who has the appropriate permissions can see.  <br/> |
 |SharePoint Add-in  <br/> |Formerly "app for SharePoint." A cloud-enabled add-in that integrates rich, scenario-focused content and services into a SharePoint environment. <br/> |
 |SharePoint Search SQL syntax  <br/> |The rules that govern the construction of an enterprise search SQL query.  <br/> |
 |single sign-on ticket  <br/> |A token that contains the encrypted identity of a single sign-on (SSO) user in the form of a security identifier string and a nonce.  <br/> |

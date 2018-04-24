@@ -57,7 +57,7 @@ When a page layout includes one or more web part zones, the web part zones are a
 If you want complete control over how a web part appears on your site, and if you want that web part to appear on all pages of a certain type, add the web part directly to a page layout. If you want a web part to appear on all pages in a site, you can also add a web part directly to a master page.
   
 > [!NOTE]
-> web part zones are available on page layouts but not on master pages—the purpose of zones is to allow authors to modify web parts, and authors typically don't edit a master page. 
+> Web part zones are available on page layouts but not on master pages—the purpose of zones is to allow authors to modify web parts, and authors typically don't edit a master page. 
   
     
     
@@ -99,13 +99,13 @@ Table 1 shows important properties to consider when you want to restrict a web p
     
     
 
-**Table 1. web part zone properties used to restrict content authors**
+**Table 1. Web part zone properties used to restrict content authors**
 
 
 |**Property Name**|**Description**|
 |:-----|:-----|
 |**AllowLayoutChange** <br/> |Specifies whether web parts within the zone can be closed, minimized, deleted, or restored.  <br/> If set to **False**, users cannot close, minimize, delete, or restore web parts in the zone, drag web parts to a different zone, or rearrange or move web parts within the zone. Users also cannot add web parts from the web part catalog, and several properties that affect the UI of web parts in the zone are disabled. This property does not affect the ability to change the layout programmatically.  <br/> If set to **True**, users with appropriate permissions can perform these actions.  <br/> |
-|**LockLayout** <br/> |Specifies whether web parts within the zone can be added, deleted, resized, or moved. This property works the same whether the web part Page is in personal view or shared view.  <br/> If set to **True**, the specific web part properties for each web part in the zone that are affected are: **Zone (ZoneID)**, **Part Order (PartOrder)**, **Visible on Page (IsVisible)**, **Height (Height)**, **Width (Width)**, **Allow Close (AllowRemove)**, and **IsIncluded** (the **Close** command on the **web part** menu). Other web part properties are not affected. <br/> If set to **False**, the web part properties determine whether modifications can be made (together with the appropriate site permissions).  <br/> |
+|**LockLayout** <br/> |Specifies whether web parts within the zone can be added, deleted, resized, or moved. This property works the same whether the web part page is in personal view or shared view.  <br/> If set to **True**, the specific web part properties for each web part in the zone that are affected are: **Zone (ZoneID)**, **Part Order (PartOrder)**, **Visible on Page (IsVisible)**, **Height (Height)**, **Width (Width)**, **Allow Close (AllowRemove)**, and **IsIncluded** (the **Close** command on the **web part** menu). Other web part properties are not affected. <br/> If set to **False**, the web part properties determine whether modifications can be made (together with the appropriate site permissions).  <br/> |
 |**AllowCustomization** <br/> |Specifies whether shared property values of web parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make changes to the web parts in the zone for all users.  <br/> If set to **False**, users cannot make changes to the web parts in the zone in the UI in shared view. But, changes can still be made programmatically and by using the web part Maintenance page.  <br/> |
 |**AllowPersonalization** <br/> |Specifies whether personal property values of web parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make personal changes to the web parts in the zone.  <br/> If set to **False**, users cannot make personal changes to the web parts through the UI, unless the web part is a private web part and they have appropriate permissions.  <br/> |
    
@@ -119,7 +119,7 @@ Table 1 shows important properties to consider when you want to restrict a web p
 ## Inserting a web part zone snippet
 <a name="InsertSnippet"> </a>
 
-Like all snippets, you add this snippet from the Snippet Gallery. To navigate to the Snippet Gallery, you must first select a page layout to edit. web part zones can be added to page layouts but cannot be added to master pages.
+Like all snippets, you add this snippet from the Snippet Gallery. To navigate to the Snippet Gallery, you must first select a page layout to edit. Web part zones can be added to page layouts but cannot be added to master pages.
   
     
     
@@ -173,7 +173,7 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 12. Replace the **<div>** where `class="DefaultContentBlock"` with your own specific content.
     
   
-13. If you want to prepopulate the zone with Web Parts—for example, if the zone will restrict content authors to modifying only existing web parts and not adding new ones—insert web part snippets where the **<!--DC … -->** tag appears.
+13. If you want to prepopulate the zone with web parts—for example, if the zone will restrict content authors to modifying only existing web parts and not adding new ones—insert web part snippets where the **<!--DC … -->** tag appears.
     
   
 14. Save the page, and then refresh the server-side preview in Design Manager to make sure the page appears as expected.
@@ -201,7 +201,7 @@ Additional properties that can be used to restrict how content authors can use z
 ```HTML
 
 <div data-name="WebPartZone">
-    <!--CS: Start web part Zone Snippet-->
+    <!--CS: Start web part zone Snippet-->
     <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
     <div xmlns:ie="ie">
         <!--MS:<WebPartPages:WebPartZone runat="server" ID="x0e5f5212505f48a9aac43df13eeae4f9" AllowCustomization="True" AllowPersonalization="False" FrameType="TitleBarOnly" LockLayout="True" Orientation="Vertical">-->
@@ -210,7 +210,7 @@ Additional properties that can be used to restrict how content authors can use z
             <!--ME:</ZoneTemplate>-->
         <!--ME:</WebPartPages:WebPartZone>-->
     </div>
-    <!--CE: End web part Zone Snippet-->
+    <!--CE: End web part zone Snippet-->
 </div>
 
 ```
