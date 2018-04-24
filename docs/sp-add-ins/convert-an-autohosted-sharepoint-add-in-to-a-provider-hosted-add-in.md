@@ -212,7 +212,7 @@ However, in a provider-hosted add-in, the developer has to manually register the
 
 ## Update and deploy the Azure Web Site for the remote web application
 
-The next step is to reconfigure the remote web application so that it can be deployed as a provider-hosted add-in instead of an autohosted add-in. There are multiple ways to deploy an ASP.NET site to an Azure Web Site, including deploying it straight from Visual Studio, automatically from source control such as Visual Studio Online, from GitHub, or even by using the tried and true FTP option. In this article, Visual Studio is used. However before the web application can be deployed, it first needs a few updates to work with the provider-hosted add-in.
+The next step is to reconfigure the remote web application so that it can be deployed as a provider-hosted add-in instead of an autohosted add-in. There are multiple ways to deploy an ASP.NET site to an Azure Web Site, including deploying it straight from Visual Studio, automatically from source control such as [Visual Studio Team Services](https://www.visualstudio.com/vso/), from GitHub, or even by using the tried and true FTP option. In this article, Visual Studio is used. However before the web application can be deployed, it first needs a few updates to work with the provider-hosted add-in.
 
 ### To update the remote web application project
 

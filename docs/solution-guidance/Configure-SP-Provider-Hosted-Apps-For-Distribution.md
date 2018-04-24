@@ -2,19 +2,16 @@
 title: Configure SharePoint Provider-Hosted Add-ins for Distribution
 ms.date: 11/03/2017
 ---
-# Configure SharePoint Provider-Hosted Add-ins for Distribution
-
-### Summary ###
-
-This page explains issues that may arise when sharing a SharePoint Provider-Hosted application with other developers or when obtaining a copy from a source control system such as Team Foundation Server, Git or Visual Studio Online.
 
 # Configure SharePoint Provider-Hosted Add-ins for Distribution
+
+This page explains issues that may arise when sharing a SharePoint Provider-Hosted application with other developers or when obtaining a copy from a source control system such as Team Foundation Server, Git or [Visual Studio Team Services](https://www.visualstudio.com/vso/).
 
 All SharePoint Provider-Hosted add-ins created using Visual Studio 2013 include a NuGet package that adds SharePoint-specific code and references to the web application that serves as the RemoteWeb for the SharePoint add-in. 
 
 The NuGet package added to the web application project by the Office Developer Tools in Visual Studio is not present in the NuGet package registry and therefore attempts to perform a NuGet package restore will fail because it cannot find a matching package.
 
-## Understanding the Problem ##
+## Understanding the Problem
 
 The **Office Developer Tools for Visual Studio 2013**, version 12.0.31105, adds a NuGet package to web applications created as the RemoteWeb for SharePoint Provider-Hosted add-ins. This package, the **App for SharePoint Web Toolkit**, adds the following things to the web project:
 
@@ -28,9 +25,9 @@ When projects are committed to source control, typically the packages are not in
 
 The challenge is that a package with the same ID does not exist in the NuGet package registry; there is no package with an ID of **AppForSharePoint16WebToolkit**. Instead the exact same package was added to the NuGet package registry as **AppForSharePointWebToolkit** ([http://www.nuget.org/packages/AppForSharePointWebToolkit](http://www.nuget.org/packages/AppForSharePointWebToolkit))** (*notice the lack of the '16' in the ID*).
 
-## Preparing a SharePoint Provider-Hosted Add-in Project for Source Control / Distribution ##
+## Preparing a SharePoint Provider-Hosted Add-in Project for Source Control / Distribution
 
-Until the Office Developer Tools for Visual Studio 2013 are updated to fix this issue, it is recommended to alter the project prior to committing to your source control system, regardless if you are using Team Foundation Server, Visual Studio Online, Git or any other solution.
+Until the Office Developer Tools for Visual Studio 2013 are updated to fix this issue, it is recommended to alter the project prior to committing to your source control system, regardless if you are using Team Foundation Server, [Visual Studio Team Services](https://www.visualstudio.com/vso/), Git or any other solution.
 
 After creating the project, look within the project's `packages.config` file and search for a package with an ID of **AppForSharePoint16WebToolkit**. The safest way to update the project is to uninstall & then reinstall the package.
 
