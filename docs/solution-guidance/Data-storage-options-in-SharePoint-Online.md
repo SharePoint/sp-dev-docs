@@ -649,4 +649,4 @@ public ActionResult Orders(string customerId)
 
 -  [Composite business add-ins for SharePoint 2013 and SharePoint Online](composite-business-apps-for-sharepoint.md)
     
--  [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
+-  [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)

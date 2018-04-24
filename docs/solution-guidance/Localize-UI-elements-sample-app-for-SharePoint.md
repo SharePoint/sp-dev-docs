@@ -1,8 +1,9 @@
 ---
-title: Localize UI elements sample add-in for SharePoint
+title: Localize UI elements sample SharePoint Add-in
 ms.date: 11/03/2017
 ---
-# Localize UI elements sample add-in for SharePoint
+
+# Localize UI elements sample SharePoint Add-in
 
 You can localize SharePoint UI elements by using JavaScript to replace the text value of a UI element value with a translated text value loaded from a JavaScript resource file. 
 

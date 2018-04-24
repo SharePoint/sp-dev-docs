@@ -22,4 +22,4 @@ The samples in this solution pack show you how to use provider-hosted add-ins to
 
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
 - [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices)
-- [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
+- [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
