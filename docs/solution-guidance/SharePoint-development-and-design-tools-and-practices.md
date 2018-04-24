@@ -1,27 +1,25 @@
 ---
 title: SharePoint development and design tools and practices
-description: 
-ms.date: 11/03/2017
+description: Use SharePoint design and development tools to apply branding to your SharePoint sites.
+ms.date: 4/24/2018
 ---
 
 # SharePoint development and design tools and practices
 
-You can use SharePoint design and development tools to apply branding to your SharePoint sites.
-
 This article provides information about the development and design options that are available in SharePoint. You can also find information about how to use the remote provisioning pattern to apply branding assets to a SharePoint site.
 
-## Development and design terms and concepts
+## Terms and concepts
 
 **Table 1. Key SharePoint development and design terms and concepts**
 
 |Term or concept|Definition|More information|
 |:-----|:-----|:-----|
 |Design Manager|A feature activated in SharePoint publishing sites or Team sites with publishing enabled that is used to import and manage site branding assets and export them to a design package.|Use Design Manager to import branding assets created in other tools, such as Adobe PhotoShop or Adobe DreamWeaver, into SharePoint.<br/>SharePoint Designer is not available for use with OneDrive for Business or SharePoint Team sites where publishing is not enabled.|
-|Design package|Designed for use with SharePoint 2013 Publishing sites, contains branding assets that are stored in Design Manager.| [SharePoint 2013 Design Manager design packages](http://msdn.microsoft.com/library/85ad1993-4d75-4806-9097-b934865a899a.aspx)|
-|Remote provisioning|A model that involves provisioning sites by using templates and code that runs outside SharePoint in a provider-hosted add-in.| [Site provisioning techniques and remote provisioning in SharePoint 2013](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013.aspx)<br/>[Self-service site provisioning using apps in SharePoint 2013](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)|
+|Design package|Designed for use with SharePoint 2013 Publishing sites, contains branding assets that are stored in Design Manager.| [SharePoint Composites Handbook](../general-development/sharepoint-composites-handbook.md)|
+|Remote provisioning|A model that involves provisioning sites by using templates and code that runs outside SharePoint in a provider-hosted add-in.|- [Site provisioning techniques and remote provisioning in SharePoint 2013](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/)<br/>- [Self-Service Site Provisioning using Apps for SharePoint 2013](https://blogs.msdn.microsoft.com/richard_dizeregas_blog/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013/)|
 |Root web|The first web inside a site collection. The root web is also sometimes referred to as the Web Application Root.||
 |Sandboxed solutions|.wsp files that contain assemblies, other non-compiled components, and an XML manifest file. A sandbox solution uses partial-trust code.| [Sandboxed solutions](https://msdn.microsoft.com/en-us/library/ff798382.aspx)|
-|SharePoint Designer 2013|An HTML designer and design asset management tool for managing branding elements in SharePoint. In SharePoint 2013, SharePoint Designer mainly supports custom workflows.| [What's changed in SharePoint Designer 2013?](https://msdn.microsoft.com/en-us/library/office/jj728659.aspx)<br/>[What's new with SharePoint 2013 site development?](https://msdn.microsoft.com/en-us/library/office/jj163942.aspx)|
+|SharePoint Designer 2013|An HTML designer and design asset management tool for managing branding elements in SharePoint. In SharePoint 2013, SharePoint Designer mainly supports custom workflows.| [What's new for developers in SharePoint](/general-development/what-s-new-for-developers-in-sharepoint)<br/>[What's new with SharePoint 2013 site development?](https://msdn.microsoft.com/en-us/library/office/jj163942.aspx)|
 |.wsp file|A SharePoint solution file. A .wsp is a .cab file that categorizes site assets and organizes them with a manifest.xml file.| [Solutions overview](https://msdn.microsoft.com/en-us/library/office/aa543214%28v=office.14%29.aspx)|
 
 ## Development options
@@ -184,6 +182,8 @@ public static void Install(
 )
 ```
 
+<br/>
+
 The  [DesignPackageInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.designpackageinfo.aspx) class specifies metadata that describe the contents of the design package to be installed. Use the [Uninstall](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.uninstall.aspx) method to uninstall the design package from the site, as shown in the following example.
 
 ```cs
@@ -194,6 +194,8 @@ public static void UnInstall(
 )
 ```
 
+<br/>
+
 If you need to brand a Team site with the Publishing feature enabled, or a Publishing site on SharePoint Online, you can use the  [ExportEnterprise](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportenterprise.aspx) or the [ExportSmallBusiness](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportsmallbusiness.aspx) method to export design packages for site templates to the Solution Gallery. Use the **ExportSmallBusiness** method with the small business site template, and use the **ExportEnterprise** method for all other site templates, as shown in the following example. In the example, note thatpackageName is a string that represents the name of the design package.
 
 ```Cs
@@ -203,6 +205,8 @@ public static ClientResult<DesignPackageInfo> ExportEnterprise(
 	    bool includeSearchConfiguration
 )
 ```
+
+<br/>
 
 When you use this method, you can include the search configuration in the design package, as shown in the next example. Note that all design package methods operate at the level of the site collection.
 

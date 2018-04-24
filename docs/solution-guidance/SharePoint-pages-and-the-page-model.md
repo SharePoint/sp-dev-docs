@@ -16,7 +16,7 @@ A rendered SharePoint page is a combination of three page types:
     
 - **User-friendly authoring page** &ndash; where the user adds content
 
-## Key terms and concepts
+## Terms and concepts
 
 **Table 1. Key terms and concepts related to the SharePoint page model**
 
