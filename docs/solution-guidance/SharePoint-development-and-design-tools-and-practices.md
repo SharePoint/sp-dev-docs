@@ -228,4 +228,6 @@ The Enterprise edition includes a team site collection at the root web applicati
 
 ## See also
 
+- [SharePoint Developer Community (SharePoint PnP) resources](../community/community.md)  
+- [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
 - [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

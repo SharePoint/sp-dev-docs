@@ -160,7 +160,9 @@ You can use remote provisioning to provision site branding elements such as them
 To help maintain consistency on a custom master page, follow the existing coding pattern. For example, in areas of the page that use tables, reinforce the coding pattern by using tables. In areas where `<DIV>` tags or HTML5 are used, match any custom code with `<DIV>` tags or HTML5. In the long run, this makes any custom master pages that you have to create easier to maintain, and therefore, less expensive.
 
 ## See also
-  
+
+- [SharePoint Developer Community (SharePoint PnP) resources](../community/community.md)  
+- [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
 - [Master pages, the Master Page Gallery, and page layouts in SharePoint](../general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md) 
 - [SharePoint 2013: Use an app for SharePoint to provision a wiki page](https://code.msdn.microsoft.com/SharePoint-2013-Use-an-app-5db977e8)
 - [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

@@ -31,6 +31,7 @@ Solution guidance, including insights and details based on scenarios and functio
 
 ## See also
 
-- [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)   
+- [SharePoint Developer Community (SharePoint PnP) resources](../community/community.md)  
+- [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)  
 - [Developing on the Office 365 platform](http://msdn.microsoft.com/en-us/office/office365/howto/platform-development-overview)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md) 
