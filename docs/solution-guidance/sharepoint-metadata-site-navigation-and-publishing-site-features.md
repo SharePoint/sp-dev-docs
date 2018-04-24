@@ -1,18 +1,18 @@
 ---
 title: SharePoint metadata, site navigation, and publishing site features
-ms.date: 11/03/2017
+description: Use SharePoint Online metadata management features, site navigation, and publishing site features to support SharePoint publishing sites.
+ms.date: 4/24/2018
 ---
+
 # SharePoint metadata, site navigation, and publishing site features
-
-Use SharePoint Online metadata management features, site navigation, and publishing site features to support SharePoint publishing sites.
-
-_**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
 This article explains how to manage metadata and customize site navigation and publishing site features in SharePoint Online by using the add-in model. It also covers ways to work with common web programming patterns and libraries to help customize SharePoint publishing site branding.
 
-## Key metadata, navigation, and publishing terms and concepts
+## Terms and concepts
 
-|**Term or concept**|**Description and guidance**|
+**Table 1. Key metadata, navigation, and publishing terms and concepts**
+
+|Term or concept|Description and guidance|
 |:-----|:-----|
 |Content Search Web Part|A SharePoint Web Part that displays dynamic search content on pages in ways you can easily format. For more information, see: <ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p><a href="https://technet.microsoft.com/en-us/library/jj679900(v=office.15).aspx" target="_blank">Configure Search Web Parts in SharePoint Server 2013</a></p></li><li><p><a href="https://support.office.com/en-us/article/Configure-a-Content-Search-Web-Part-in-SharePoint-0dc16de1-dbe4-462b-babb-bf8338c36c9a?CorrelationId=5024de0f-f4f4-436a-9c4a-b578b74b4764&amp;ui=en-US&amp;rs=en-US&amp;ad=US" target="_blank">Configure a Content Search Web Part in SharePoint</a></p></li><li><p><a href="https://technet.microsoft.com/en-us/library/sharepoint-online-search-service-description.aspx" target="_blank">Search features in SharePoint Online</a></p></li></ul>|
 |ContentTypeId|Unique identifiers of content types that are designed to be recursive. For more information, see [ContentTypeId class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.contenttypeid.aspx) (CSOM).|
@@ -33,7 +33,8 @@ This article explains how to manage metadata and customize site navigation and p
 
 By default, web content published to public-facing SharePoint on-premises websites is available to anonymous users. By default, both CSOM and REST are not available to anonymous users.
 
-**Important:**  This scenario presents a potentially serious threat to on-premises SharePoint sites. Before you use the remote provisioning model described in [Use remote provisioning to brand SharePoint pages](Use-remote-provisioning-to-brand-SharePoint-pages.md) to provision branding to publishing sites, make sure that your site's security and permissions are set correctly, and consider the security implications of anonymous access.
+> [!IMPORTANT] 
+> This scenario presents a potentially serious threat to on-premises SharePoint sites. Before you use the remote provisioning model described in [Use remote provisioning to brand SharePoint pages](Use-remote-provisioning-to-brand-SharePoint-pages.md) to provision branding to publishing sites, make sure that your site's security and permissions are set correctly, and consider the security implications of anonymous access.
 
 In the event that the site administrator creates a new web application that includes a site collection that uses the publishing template and also enables anonymous access, anonymous access will be available to every user of the site when the application is uploaded to the add-in catalog. Because anonymous access is enabled for the on-premises SharePoint publishing site, what happens if a user who is not authenticated navigates to the site?
 
@@ -47,9 +48,9 @@ In **Site Permissions**, the  **Require Use Remote Interfaces permission** check
 
 There might be times when you want to remove the ability to use SharePoint Designer, but still permit the use of CSOM. The  **Use Remote Interfaces permission** checkbox enables you to let anonymous users use CSOM without requiring them to have Use Remote Interfaces permissions. When the **Use Remote Interfaces permission** checkbox is cleared, and you choose the linked title of the add-in to load the full-page experience, SharePoint does not throw an error. Basic error handling code interprets this case as an anonymous user.
 
-**Caution:**  
-- When you add apps to public-facing SharePoint sites that use the Publishing template, do not clear the **Use Remote Interfaces permissions** checkbox in Site Permissions. Enabling CSOM for anonymous users presents a possible information disclosure risk???it divulges much more information than you would anticipate. That said, even with access to the full CSOM, SharePoint permissions still apply. Anonymous users will only be able to see lists or items that have been explicitly made available to anonymous users. More than what you see on the webpage is available to anonymous users via CSOM and REST.
-- Unless absolutely necessary, do not clear the **Require Use Remote Interfaces permission** checkbox when anonymous access permissions are enabled on a SharePoint on-premises Publishing site. Doing so could expose both published and unpublished site content to anonymous users, and could leave your site open to a denial of service attack.
+> [!CAUTION] 
+> - When you add apps to public-facing SharePoint sites that use the Publishing template, do not clear the **Use Remote Interfaces permissions** checkbox in Site Permissions. Enabling CSOM for anonymous users presents a possible information disclosure risk???it divulges much more information than you would anticipate. That said, even with access to the full CSOM, SharePoint permissions still apply. Anonymous users will only be able to see lists or items that have been explicitly made available to anonymous users. More than what you see on the webpage is available to anonymous users via CSOM and REST.
+> - Unless absolutely necessary, do not clear the **Require Use Remote Interfaces permission** checkbox when anonymous access permissions are enabled on a SharePoint on-premises Publishing site. Doing so could expose both published and unpublished site content to anonymous users, and could leave your site open to a denial of service attack.
 
 ### Use the ViewFormPagesLockdown feature
 
@@ -57,13 +58,14 @@ To prevent users from accessing forms pages (for example, Pages/Forms/AllItems.a
 
 If CSOM and REST are available to all anonymous users&mdash; if the  **Use Remote Interfaces permissions** checkbox is cleared&mdash;then although they still can't see **Created By** and **Modified By** information in the browser, they can use CSOM or REST to access that information.
 
-### Security trimming
+### Configure anonymous access (security trimming)
 
 By configuring anonymous access for the web application, you specify the anonymous policy:  _Deny write&mdash;Has no write access_ . This means that users with anonymous access can't write to the site&mdash;even with CSOM or REST code. Anonymous users can only see the information that was granted to them when anonymous access to the site was configured.
 
 Unpublished pages are not visible to anonymous users by default. They can only see lists that enable anonymous access. 
 
-**Important:**  If the  **Use Remote Interfaces permissions** checkbox is cleared, use the permissions model and other precautions to be sure that anonymous users don't have access to things that they should not.
+> [!IMPORTANT] 
+> If the  **Use Remote Interfaces permissions** checkbox is cleared, use the permissions model and other precautions to be sure that anonymous users don't have access to things that they should not.
 
 ### Prevent denial of service attacks
 
@@ -79,7 +81,8 @@ For more information, see [Authorization and authentication of SharePoint Add-in
 
 When you use the add-in model, implement the Secure Sockets Layer (SSL) protocol to manage security of message transmissions on the Internet. SSL works by the remote website sending an access token in the HTTP header Authorization with a value of Bearer + a base64 encoded (not encrypted) string.
 
-**Important:**  SSL protects your SharePoint publishing site from attackers who want to get to an authorization token and exploit that access.
+> [!IMPORTANT] 
+> SSL protects your SharePoint publishing site from attackers who want to get to an authorization token and exploit that access.
 
 ## Remote provisioning and publishing sites
 
@@ -129,7 +132,9 @@ Unlike some other areas of the SharePoint object model, for managed metadata, th
     
 The following table compares classes in the .NET Server object model and the CSOM object model.
 
-|**.NET Server object model**|**Equivalent CSOM API**|
+**Table 2. Comparison of classes in two models**
+
+|.NET Server object model|Equivalent CSOM API|
 |:-----|:-----|
 |[Microsoft.SharePoint.Taxonomy.ChangedGroup](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.taxonomy.changedgroup.aspx)|[Microsoft.SharePoint.Client.Taxonomy.ChangedGroup](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.taxonomy.changedgroup.aspx)|
 |[Microsoft.SharePoint.Taxonomy.ChangedItem](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.taxonomy.changeditem.aspx)|[Microsoft.SharePoint.Client.Taxonomy.ChangedItem](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.taxonomy.changeditem.aspx)|
@@ -192,14 +197,15 @@ To create a page based on the new layout, go to  **New Page** > **Page** > **Pag
 There are four kinds of site navigation: 
 
 - Global navigation
-    
 - Local navigation
-    
 - Structured navigation
-    
 - Managed navigation
-    
-Global navigation refers to navigation elements that help users move from one SharePoint site to another. Local navigation refers to navigation within a SharePoint site. Structured and managed navigation are a bit more involved.
+
+**Global navigation** refers to navigation elements that help users move from one SharePoint site to another.
+
+**Local navigation** refers to navigation within a SharePoint site. 
+
+Structured and managed navigation are a bit more involved.
 
 ### Structured navigation
 
@@ -235,9 +241,11 @@ CSOM includes some unique classes and enumerations:
     
 - The  **StandardNavigationSettings** class manages the global and local navigation schemes.
     
-The following table lists the publishing navigation classes in the server object mode and their CSOM equivalents.
+The following table lists the publishing navigation classes in the server object model and their CSOM equivalents.
 
-|**Server object model**|**CSOM**|
+**Table 3. Publishing navigation classes**
+
+|Server object model|CSOM|
 |:-----|:-----|
 |[Microsoft.SharePoint.Publishing.Navigation.CachedObjectSiteMapNode](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.navigation.cachedobjectsitemapnode.aspx)|Not applicable.|
 |[Microsoft.SharePoint.Publishing.Navigation.NavigationComparer](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.navigation.navigationcomparer.aspx)|Not applicable.|
@@ -276,11 +284,11 @@ The following table lists the publishing navigation classes in the server object
 
 SharePoint 2013 and SharePoint Online include a few features that are specific to SharePoint publishing sites:
 
-- Device channels enable you to apply a single publishing site design to multiple devices and browsers.
+- **Device channels** enable you to apply a single publishing site design to multiple devices and browsers.
     
-- Display templates make it possible to brand and customize the appearance of search-related Web Parts.
+- **Display templates** make it possible to brand and customize the appearance of search-related Web Parts.
     
-- Image renditions define the dimensions that are used to display images on pages in SharePoint 2013 publishing sites.
+- **Image renditions** define the dimensions that are used to display images on pages in SharePoint 2013 publishing sites.
     
 You can implement these features by using classes in the [Publishing](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.aspx) namespace of the CSOM programming model.
 
@@ -294,14 +302,18 @@ A device can belong to more than one channel. In that case, you can rank channel
 
 You can create up to 10 channels (including the default channel) in Design Manager. The default channel captures all traffic not caught by one of the other channels. When you create a new channel, complete the fields listed in the following table.
 
-|**Field**|**Required or optional?**|**Description**|
+**Table 4. Device channels**
+
+|Field|Required or optional?|Description|
 |:-----|:-----|:-----|
 |Name|Required|Identifies the channel to distinguish it from others.|
 |Channel alias|Required|How code, the query string, cookies, or Device Channel Panels distinguish differences between channels.|
 |Device inclusion rules|Required|The user-agent substrings that direct requests from devices (each should be on a different line).|
 |Description|Optional|Describes what this channel does.|
 |Active|Optional|When checked, the channel uses the related assets for the channel to direct traffic. Otherwise, the query string  `?DeviceChannel=<alias>` previews the site in the channel.|
- **Device channel panels**
+ 
+
+**Device channel panels**
 
 After you create device channels, map a master page to each one. Because master page customizations are increasingly rare, this is often the default master page (seattle.master). If you create a unique master page for one or more device channels, you can reference a different CSS file than the master page for the default channel. Page layouts you create will work with every channel you create. You can use the Device Channel Panel control to differentiate page layout designs between channels.
 
@@ -321,7 +333,9 @@ A user-agent string is a small string of data that identifies the browser. This 
 
 When you create multiple channels, put them in the order in which you want them to resolve. The first channel that includes a device inclusion rule that matches the user agent string is used. The following table shows an example of this rule.
 
-|**Channel**|**Order 1**|**Order 2**|
+**Table 5. Example of device inclusion rule**
+
+|Channel|Order 1|Order 2|
 |:-----|:-----|:-----|
 |1|Windows Phone 8|Windows Phone|
 |2|Windows Phone|Windows Phone 8|
@@ -333,13 +347,15 @@ After you define and order device channels, you can apply different master pages
 > [!NOTE] 
 > CSOM does not include a public API for manipulating device channels and device channel panels.
 
-### Display Templates
+### Display templates
 
 SharePoint publishing sites use display templates to control which managed properties are shown in the search results, and how they appear in the Web Part. Only search Web Parts use display templates; the Content Query Web Part is not a search Web Part, and does not use display templates.
 
 The following table lists the types of display templates, in the order in which SharePoint applies them. 
 
-|**Display template**|**Notes**|
+**Table 6: Types of display templates**
+
+|Display template|Description|
 |:-----|:-----|
 |Control Display templates|Applies to the entire Web Part, so SharePoint applies it first, and only once. It provides HTML that structures the overall layout for presenting search results. For example, a control display template might provide HTML for the heading and the beginning and end of a list. This template is rendered only once in the Web Part. |
 |Group Display templates|Applied second, and is applied once per group to the search Results Web Part. |
@@ -373,7 +389,8 @@ If content approval is required in the Master Page Gallery, all CSS, JavaScript,
 
 SharePoint defines display templates in HTML files and JavaScript. If in Design Manager you change an HTML file that contains a display template definition and save changes, SharePoint compiles changes into a JavaScript file that has the same name. SharePoint uses this JavaScript file to render Web Parts on pages.
 
-**Important:**  Do not edit the JavaScript file that contains the display template definition. Only update the HTML file. The conversion process requires the HTML file to be XML-compliant. For example, use  **&lt;br&gt;**, not  **&lt;br/&gt;**. For more information, see [How to: Convert an HTML file into a master page in SharePoint 2013](http://msdn.microsoft.com/library/a76ab289-3256-45de-ac63-d5112a74e3c7%28Office.15%29.aspx).
+> [!IMPORTANT] 
+> Do not edit the JavaScript file that contains the display template definition. Only update the HTML file. The conversion process requires the HTML file to be XML-compliant. For example, use  **&lt;br&gt;**, not  **&lt;br/&gt;**. For more information, see [How to: Convert an HTML file into a master page in SharePoint 2013](http://msdn.microsoft.com/library/a76ab289-3256-45de-ac63-d5112a74e3c7%28Office.15%29.aspx).
 
 **Creating new display templates**
 
@@ -391,13 +408,13 @@ The easiest way to create a new display template is to modify an existing templa
 
 Before you start to identify properties that you can use in a display template, locate an existing display template you want to build from and then save it with a new name. Display template code is located within the  `<mso:ManagedPropertyMapping>` tag.
 
-```
+```xml
 <mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{Picture URL}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{Link URL}:'Path','Line 1'{Line 1}:'Title','Line 2'{Line 2}:'Description','Line 3'{Line3}:'','SecondaryFileExtension','ContentTypeId'</mso:ManagedPropertyMapping>
 ```
 
 Next, open  **Site Settings** > **Search Schema**, and then search for a column name in the Managed property filter box that you want to include in a display template. Select the managed property, then edit and copy the property name. 
 
-```
+```xml
 <mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{Picture URL}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{Link URL}:'Path','Line 1'{Line 1}:'Title','Line 2'{Line 2}:'Description','Line 3'{Line3}:'','owsTXTPrice','owsTXTColor'</mso:ManagedPropertyMapping>
 ```
 
@@ -410,7 +427,7 @@ An image rendition defines the dimensions that are used to display images on pag
 
 For more information, see [SharePoint 2013 Design Manager image renditions](http://msdn.microsoft.com/library/d08a74c0-5674-4f26-8646-11ea1f081c85%28Office.15%29.aspx).
 
-## SharePoint and common web programming techniques
+## SharePoint and web programming techniques
 
 SharePoint designers and developers often want to use standard web programming techniques with SharePoint when they design publishing sites. You can use responsive design, adaptive design, or device channels and responsive design used together.
 
