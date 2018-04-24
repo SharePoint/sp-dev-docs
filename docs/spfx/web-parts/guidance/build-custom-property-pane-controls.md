@@ -254,7 +254,7 @@ When creating a custom property pane control that uses React in the SharePoint F
 
 4. Define the asynchronous dropdown React component. In the **src/controls/PropertyPaneAsyncDropdown/components** folder, create a new file named **AsyncDropdown.tsx**, and enter the following code:
 
-  ```typescriptx
+  ```tsx
   import * as React from 'react';
   import { Dropdown, IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
   import { Spinner } from 'office-ui-fabric-react/lib/components/Spinner';
