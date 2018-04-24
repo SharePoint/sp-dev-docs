@@ -1,24 +1,24 @@
 ---
-title: Include a Web Part on a webpage in the add-in web
-description: Include an out-of-the-box Web Part on a page in the add-in web of a SharePoint Add-in.
+title: Include a web part on a webpage in the add-in web
+description: Include an out-of-the-box web part on a page in the add-in web of a SharePoint Add-in.
 ms.date: 12/20/2017
 ms.prod: sharepoint
 ---
 
 
-# Include a Web Part on a webpage in the add-in web
+# Include a web part on a webpage in the add-in web
 
-You can include an out-of-the-box Web Part on a page in the add-in web of a SharePoint Add-in, but it is important that you do this in a way that won't cause problems if you ever need to update the add-in.
+You can include an out-of-the-box web part on a page in the add-in web of a SharePoint Add-in, but it is important that you do this in a way that won't cause problems if you ever need to update the add-in.
  
 For a code sample that illustrates the guidance of this topic, see [OfficeDev/Core.WebPartOnAppWebPage](https://github.com/SharePoint/PnP/tree/master/Samples/Core.WebPartOnAppWebPage).
 
-## Add a Web Part to a page
+## Add a web part to a page
 
 1. Create a SharePoint-hosted SharePoint Add-in project in Visual Studio. For details, see [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md).
 
-2. Open the .aspx file to which you want to add a Web Part. This topic uses Default.aspx as an example. 
+2. Open the .aspx file to which you want to add a web part. This topic uses Default.aspx as an example. 
     
-3. Add a **WebPartZone** to the `<asp:Content>` element where you want the Web Part with markup. Typically, you want to add it to the `<asp:Content>` whose `ContentPlaceHolderId` is `PlaceHolderMain`. The following is an example.
+3. Add a **WebPartZone** to the `<asp:Content>` element where you want the web part with markup. Typically, you want to add it to the `<asp:Content>` whose `ContentPlaceHolderId` is `PlaceHolderMain`. The following is an example.
     
     ```XML
       <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
@@ -28,11 +28,11 @@ For a code sample that illustrates the guidance of this topic, see [OfficeDev/Co
     ```
 
     > [!WARNING] 
-    > It is possible to add a Web Part element, such as **<WebPartPages:XsltListViewWebPart>** as a child of the **WebPartZone**. But this is generally a bad practice in a SharePoint Add-in. If the add-in ever needs to be updated, a Web Part element inserted in the .aspx file can cause the update to fail in some scenarios with the message "A web part with this ID has already been added to this page." We recommend that you add web parts to the elements manifest for the page as described later in this procedure.
+    > It is possible to add a web part element, such as **<WebPartPages:XsltListViewWebPart>** as a child of the **WebPartZone**. But this is generally a bad practice in a SharePoint Add-in. If the add-in ever needs to be updated, a web part element inserted in the .aspx file can cause the update to fail in some scenarios with the message "A web part with this ID has already been added to this page." We recommend that you add web parts to the elements manifest for the page as described later in this procedure.
 
 4. Open the element manifest file for the page. This is usually called elements.xml and is located in the same project folder as the .aspx file.
     
-5. In the **File** element for the page, add a child **AllUsersWebPart** element, and set its **WebPartZoneID** to the value of the Web Part zone that you created on the page, as this example shows.
+5. In the **File** element for the page, add a child **AllUsersWebPart** element, and set its **WebPartZoneID** to the value of the web part zone that you created on the page, as this example shows.
     
     ```XML
       <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
@@ -61,7 +61,7 @@ For a code sample that illustrates the guidance of this topic, see [OfficeDev/Co
 7. Add **webPart** markup as a child of the **webParts** element. The following is an example that adds an **XsltListViewWebPart**. It assumes that a custom list called "Test List" is part of the same add-in project. For information about how to add a custom list to an add-in web, see [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md). 
     
     > [!NOTE] 
-    > Note that the Web Part does not have an ID property. It is a best practice to include an explicit ID for the Web Part only in the two cases where it is really required: The Web Part is being added to a SharePoint wiki page. The Web Part is one of two or more Web Parts that are connected.
+    > Note that the web part does not have an ID property. It is a best practice to include an explicit ID for the web part only in the two cases where it is really required: The web part is being added to a SharePoint wiki page. The web part is one of two or more Web Parts that are connected.
 
     ```XML
       <webParts>
@@ -86,7 +86,7 @@ For a code sample that illustrates the guidance of this topic, see [OfficeDev/Co
     </webParts>
     ```
 
-8. Select F5 to debug the add-in. You should see the Web Part on the page.
+8. Select F5 to debug the add-in. You should see the web part on the page.
     
  
 ## See also

@@ -38,7 +38,7 @@ A SharePoint Composite combines data, documents, and business process in a "do-i
   
     
     
- **Developer friendly** Starting an application from scratch is expensive, time-consuming, and risky. Enhancing a familiar, working solution is often preferred. For a developer, a SharePoint Composite can be a working prototype that lays the foundation for an application, and that now needs to scale up to potentially thousands of users or millions of rows. Perhaps, you only need to add a custom Web Part. Or you decide to revise part of the SharePoint Composite solution with custom, managed code. Either way, you improve your productivity.
+ **Developer friendly** Starting an application from scratch is expensive, time-consuming, and risky. Enhancing a familiar, working solution is often preferred. For a developer, a SharePoint Composite can be a working prototype that lays the foundation for an application, and that now needs to scale up to potentially thousands of users or millions of rows. Perhaps, you only need to add a custom web part. Or you decide to revise part of the SharePoint Composite solution with custom, managed code. Either way, you improve your productivity.
   
     
     

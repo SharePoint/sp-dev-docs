@@ -1,6 +1,6 @@
 ---
 title: Create add-in parts to install with your SharePoint Add-in
-description: Create an add-in part in SharePoint that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
+description: Create an add-in part in SharePoint that is available in the Web Part Gallery of the host web when you install your SharePoint Add-in.
 ms.date: 12/14/2017
 ms.prod: sharepoint
 ---
@@ -24,7 +24,7 @@ The following figure shows how the add-in part content is displayed in a SharePo
 
 <br/>
  
-An add-in part is implemented with the **ClientWebPart** class, and like all Web Parts it is a available in the Web Part gallery after a user installs the SharePoint Add-in that includes it. Your users can further customize the add-in part by using the properties that you provide. (For an example of configurable properties in an add-in part, see the figure **SharePoint page hosting a basic add-in part** later in this article.)
+An add-in part is implemented with the **ClientWebPart** class, and like all Web Parts it is a available in the Web Part Gallery after a user installs the SharePoint Add-in that includes it. Your users can further customize the add-in part by using the properties that you provide. (For an example of configurable properties in an add-in part, see the figure **SharePoint page hosting a basic add-in part** later in this article.)
  
 The example in this article uses a webpage that is hosted on a remote server, not on SharePoint, as the content page. Keep in mind that you can also use SharePoint pages to host the add-in part content, as described in the  [Other common scenarios add-in parts](#SP15Createappparts_Nextsteps) section later in this article.
  
@@ -119,7 +119,7 @@ After completing the tasks, your add-in part should look similar to the followin
 
 ### Add the add-in part to the SharePoint Add-in project
 
-1. Right-click the SharePoint Add-in project (not the web application project), and then select **Add** > **New Item** > **Office/SharePoint** > **Client Web Part (Host Web)**. ("Client Web Part" is another name for "add-in part".)
+1. Right-click the SharePoint Add-in project (not the web application project), and then select **Add** > **New Item** > **Office/SharePoint** > **Client web part (Host Web)**. ("Client web part" is another name for "add-in part".)
 
 2. Name the part **Basic add-in part**.
 
@@ -158,7 +158,7 @@ After completing the tasks, your add-in part should look similar to the followin
     
         **Custom Properties dialog for ClientWebPart**
 
-        ![The Client Web Part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](../images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
+        ![The Client web part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](../images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
 
         <br/>
 
@@ -188,7 +188,7 @@ After completing the tasks, your add-in part should look similar to the followin
 
         **ClientWebPartEnumItem Collection Editor**
 
-        ![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
+        ![The Client web part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
 
         <br/>
 
@@ -282,7 +282,7 @@ After completing the tasks, your add-in part should look similar to the followin
     
     **Add-in part in the Add-in Part gallery**
 
-    ![Basic app part in the web part gallery](../images/BasicAppPart_gallery.jpg)
+    ![Basic app part in the Web Part Gallery](../images/BasicAppPart_gallery.jpg)
 
     <br/>
  
@@ -320,7 +320,7 @@ In most cases, a webpage can't be displayed in a frame if it sends an **X-Frame-
 
 Be aware that certain scenarios are susceptible to [ClickJacking](http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx) attacks when the webpages are displayed in a frame. Carefully evaluate your add-in part scenarios to make sure there is no risk of **ClickJacking** attacks.
 
-If your page hosted on the add-in web is not susceptible to ClickJacking attacks, you can use the **AllowFraming** Web Part to suppress the **X-Frame-Options** header from your page's response. The following code example shows how to use the **AllowFraming** Web Part on a SharePoint page. Copy this markup into the page that is hosted on the add-in web. Put it just above the first **asp:content** element in the page. It should not be a child of any other element.
+If your page hosted on the add-in web is not susceptible to ClickJacking attacks, you can use the **AllowFraming** web part to suppress the **X-Frame-Options** header from your page's response. The following code example shows how to use the **AllowFraming** web part on a SharePoint page. Copy this markup into the page that is hosted on the add-in web. Put it just above the first **asp:content** element in the page. It should not be a child of any other element.
 
 ```XML
 <WebPartPages:AllowFraming ID="AllowFraming1" runat="server" />

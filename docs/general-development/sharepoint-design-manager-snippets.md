@@ -7,7 +7,7 @@ ms.assetid: 68caef4c-5941-4a88-b34b-f88122801cef
 
 
 # SharePoint Design Manager snippets
-A snippet is an HTML representation of a SharePoint component or control such as a navigation bar or a Web Part. By using the Snippet Gallery in Design Manager, you can quickly add SharePoint functionality to your HTML master page or page layout.
+A snippet is an HTML representation of a SharePoint component or control such as a navigation bar or a web part. By using the Snippet Gallery in Design Manager, you can quickly add SharePoint functionality to your HTML master page or page layout.
 ## Introduction to snippets and the Snippet Gallery
 <a name="Introduction"> </a>
 
@@ -28,7 +28,7 @@ After you convert a master page or create a page layout, you have an HTML versio
 - Copy the HTML code snippet to the Clipboard so that you can paste the snippet at the location you want in the HTML file.
     
   
-The Snippet Gallery displays different options on the ribbon, depending on whether you're editing a master page or page layout—for example, navigation controls are displayed only for master pages, and Web Part zones and page field controls are displayed only for page layouts. Also, when you are editing a page layout, the page fields that are available depend on the content type of the page layout that you're editing.
+The Snippet Gallery displays different options on the ribbon, depending on whether you're editing a master page or page layout—for example, navigation controls are displayed only for master pages, and web part zones and page field controls are displayed only for page layouts. Also, when you are editing a page layout, the page fields that are available depend on the content type of the page layout that you're editing.
   
     
     

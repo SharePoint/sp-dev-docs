@@ -12,7 +12,7 @@ ms.assetid: 83ad21a9-edcd-40fa-9989-b62ea3f225fa
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies the configuration information for a Web Part that has been serialized to binary data.
+Specifies the configuration information for a web part that has been serialized to binary data.
 
 ## Definition
 

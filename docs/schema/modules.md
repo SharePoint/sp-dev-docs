@@ -14,7 +14,7 @@ ms.assetid: 4f43e194-322e-4eca-9c96-8ad9f13818bd
 
 Modules are defined in an element manifest similarly to how they are defined in an [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx) file to specify files with which to provision SharePoint sites.
 
-Zero or more [File](file-element-module.md) elements are allowed as a child of the [Module](module-element-module.md) element. Use the [AllUsersWebPart](alluserswebpart-element-module.md) element to specify a Web Part instance inside a given page except for a list view Web Part. The [View](view-element-module.md) element specifies list view Web Parts to use on site pages. The [NavBarPage](navbarpage-element-module.md) element declares that the page containing this element should participate in the navigation bar structure. The [Property](property-element-module.md) element allows you to specify custom properties for a Feature.
+Zero or more [File](file-element-module.md) elements are allowed as a child of the [Module](module-element-module.md) element. Use the [AllUsersWebPart](alluserswebpart-element-module.md) element to specify a web part instance inside a given page except for a list view web part. The [View](view-element-module.md) element specifies list view Web Parts to use on site pages. The [NavBarPage](navbarpage-element-module.md) element declares that the page containing this element should participate in the navigation bar structure. The [Property](property-element-module.md) element allows you to specify custom properties for a Feature.
 
 An element manifest uses the following schema:
 
@@ -54,7 +54,7 @@ The following schema is used within an Onet.xml file:
 
 ## Examples
 
-The following example registers a Web Part Feature that specifies custom properties.
+The following example registers a web part Feature that specifies custom properties.
 
 ```XML 
     <?xml version="1.0" encoding="utf-8" ?>

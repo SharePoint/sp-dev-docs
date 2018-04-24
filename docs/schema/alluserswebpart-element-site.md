@@ -11,14 +11,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: 14b304f8-c887-4199-92dc-712407a0d6d3
-description: Contains a Web Part in a module of a site definition.
+description: Contains a web part in a module of a site definition.
 ---
 
 # AllUsersWebPart element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Contains a Web Part in a module of a site definition.
+Contains a web part in a module of a site definition.
   
 ```XML
 <AllUsersWebPart
@@ -36,8 +36,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**ID** <br/> |Optional **Text**.  <br/> |
-|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
-|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
+|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the web part within a zone.  <br/> |
+|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
    
 ### Child elements
 

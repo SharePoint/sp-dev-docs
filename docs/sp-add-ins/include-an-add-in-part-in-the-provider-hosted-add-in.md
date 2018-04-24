@@ -13,7 +13,7 @@ This is the sixth in a series of articles about the basics of developing provide
 > [!NOTE]
 > If you have been working through this series about provider-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeAdd-inPart.sln file.
 
-In this article, you add a special kind of Web Part called an add-in part to the SharePoint Add-in. The add-in part exposes the add-in's order form on a SharePoint page.
+In this article, you add a special kind of web part called an add-in part to the SharePoint Add-in. The add-in part exposes the add-in's order form on a SharePoint page.
 
 ## Create the add-in part
 
@@ -24,7 +24,7 @@ In this article, you add a special kind of Web Part called an add-in part to the
 
 1. In **Solution Explorer**, right-click the **ChainStore** project, and then select **Add** > **New Item**.
     
-2. Select **Client Web Part (Host Web)**, give it the name **Place Order**, and then select **Add**. ("Client Web Part" is another name for "add-in part".)
+2. Select **Client web part (Host Web)**, give it the name **Place Order**, and then select **Add**. ("Client web part" is another name for "add-in part".)
  
 3. On the next page of the wizard, select the second option: **Select or enter the URL of an existing web page for the client web part content**.
 
@@ -46,19 +46,19 @@ In this article, you add a special kind of Web Part called an add-in part to the
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
 
-2. When the add-in's start page opens, the add-in has been deployed, and the **Place Order** add-in part is available for users to add to any Web Part area on any SharePoint page on the Hong Kong store's website. Follow these steps to add it to the home page:
+2. When the add-in's start page opens, the add-in has been deployed, and the **Place Order** add-in part is available for users to add to any web part area on any SharePoint page on the Hong Kong store's website. Follow these steps to add it to the home page:
     
    1. Select **Back to Site** on the chrome control at the top of the start page to open the home page of the Hong Kong store.
    2. On the ribbon, open the **Page** tab and select **Edit**.
    3. After the page is in edit mode, open the **Insert** tab on the ribbon, and then select **Add-in Part** (the button may still be called **App Part**).
-   4. On the Web Part insertion control that opens, select the **Place Order** add-in part. The control looks similar to the following.
+   4. On the web part insertion control that opens, select the **Place Order** add-in part. The control looks similar to the following.
 
-      *Figure 1. SharePoint's Web Part insertion control*
+      *Figure 1. SharePoint's web part insertion control*
 
-      ![SharePoint's Web Part insertion control. The part called "Place Order" is highlighted. Its name and description appears in a box at the right.](../images/aae61f89-2e9e-4808-8b0c-2439dad7c701.PNG)
+      ![SharePoint's web part insertion control. The part called "Place Order" is highlighted. Its name and description appears in a box at the right.](../images/aae61f89-2e9e-4808-8b0c-2439dad7c701.PNG)
 
-   5. Select somewhere in one of the Web Part zones of the form to set the location where the add-in part will go. 
-   6. Select **Add** on the Web Part insertion control. The **Place Order** add-in part is added to the Web Part zone.
+   5. Select somewhere in one of the web part zones of the form to set the location where the add-in part will go. 
+   6. Select **Add** on the web part insertion control. The **Place Order** add-in part is added to the web part zone.
    7. On the ribbon, select **Save**.
     
 3. The order form now appears on the page, and it has the look-and-feel of the rest of the page. It should look like the following. 

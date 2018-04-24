@@ -161,10 +161,10 @@ Managed navigation is the taxonomy-based alternative to the traditional SharePoi
     
     
 
-### Content Search Web Part
+### Content Search web part
 <a name="SP15_BuildSitesForSP2013_ContentSearchWebPart"> </a>
 
-You can use the  [Content Search Web Part (CSWP)](content-search-web-part-in-sharepoint.md) to display search data on your pages. It serves a function similar to that of the Content Query Web Part, but it serves different site design goals. CSWP styles are easier to customize than Content Query Web Part styles. CSWP returns client-side results in JSON format. On the server, you can customize results by using display templates.
+You can use the  [Content Search web part (CSWP)](content-search-web-part-in-sharepoint.md) to display search data on your pages. It serves a function similar to that of the Content Query web part, but it serves different site design goals. CSWP styles are easier to customize than Content Query web part styles. CSWP returns client-side results in JSON format. On the server, you can customize results by using display templates.
   
     
     
@@ -210,14 +210,14 @@ When you import a design package, the design assets in the package overwrite any
 
 ### Catalogs
 
-SharePoint site publishing introduces catalogs, which enable you to incorporate lists into your publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to truly reuse content across your sites and across the boundary between your intranet sites, Internet sites, and extranet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part (CSWP)](content-search-web-part-in-sharepoint.md). You can write custom code to populate catalogs, connect a product catalog to a site, and curate individual pages with custom page layouts, Web Parts, and HTML content that appears only in the defined context.
+SharePoint site publishing introduces catalogs, which enable you to incorporate lists into your publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to truly reuse content across your sites and across the boundary between your intranet sites, Internet sites, and extranet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search web part (CSWP)](content-search-web-part-in-sharepoint.md). You can write custom code to populate catalogs, connect a product catalog to a site, and curate individual pages with custom page layouts, Web Parts, and HTML content that appears only in the defined context.
   
     
     
 
 ### Client-side rendering controls
 
-All new controls in SharePoint are rendered client-side. As a designer or a developer, you have control over how content is rendered on the page, and you can use various design techniques to get the look and behaviors you want on your published pages by using features including the Content Search Web Part and display templates. Data is written to the controls in a client-side JSON array, and you can display content using JavaScript, CSS, and templates. 
+All new controls in SharePoint are rendered client-side. As a designer or a developer, you have control over how content is rendered on the page, and you can use various design techniques to get the look and behaviors you want on your published pages by using features including the Content Search web part and display templates. Data is written to the controls in a client-side JSON array, and you can display content using JavaScript, CSS, and templates. 
   
     
     

@@ -71,7 +71,7 @@ Another way to think about your add-in architecture options is to think of the a
 |**Tier**|**Options**|**Good for**|
 |:-----|:-----|:-----|
 |UI|Custom views of SharePoint lists and libraries on add-in web pages |Maximizing integration with SharePoint appearance and behavior|
-||Silverlight application hosted in a Web Part (or within <object> tags) on an add-in web page|Leveraging existing Silverlight development experience; rich user interface|
+||Silverlight application hosted in a web part (or within <object> tags) on an add-in web page|Leveraging existing Silverlight development experience; rich user interface|
 |Business logic|A SharePoint workflow|Implementing business processes|
 ||Client-side JavaScript supplemented with the SharePoint cross-domain library|Accessing SharePoint data in the add-in web; accessing data in other websites within the tenancy|
 ||A remote event handler|Handling CRUD events in SharePoint lists and libraries using externally hosted logic|

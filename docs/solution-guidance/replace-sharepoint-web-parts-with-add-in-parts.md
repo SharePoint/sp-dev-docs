@@ -32,7 +32,7 @@ To replace Web Parts with new add-in parts:
     
 3. Create the new add-in part on the page by using the add-in part definition. 
     
-To use CSOM to replace a Web Part with an add-in part, you need to get the add-in part definition by exporting the add-in part. To export the add-in part to get the add-in part's definition:
+To use CSOM to replace a web part with an add-in part, you need to get the add-in part definition by exporting the add-in part. To export the add-in part to get the add-in part's definition:
 
 1. Open your SharePoint site and choose  **Settings**, or the gear icon, and then choose  **Edit page**.
     
@@ -40,7 +40,7 @@ To use CSOM to replace a Web Part with an add-in part, you need to get the add-i
     
 3. Choose your add-in part, and then choose  **Add**.
     
-4. When the add-in part is added to your page, choose the down arrow in the top-right corner of the add-in part, and then choose  **Edit Web Part**.
+4. When the add-in part is added to your page, choose the down arrow in the top-right corner of the add-in part, and then choose  **Edit web part**.
     
 5. In  **Advanced**, in  **Export Mode** choose **Export all data**, and then choose  **OK**.
     
@@ -62,7 +62,7 @@ To use CSOM to replace a Web Part with an add-in part, you need to get the add-i
   <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
     <metaData>
       <type name="Microsoft.SharePoint.WebPartPages.ClientWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
-      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+      <importErrorMessage>Cannot import this web part.</importErrorMessage>
     </metaData>
     <data>
       <properties>
@@ -107,7 +107,7 @@ private const string appPartXml = @"<webParts>
   <webPart xmlns=""http://schemas.microsoft.com/WebPart/v3"">
     <metaData>
       <type name=""Microsoft.SharePoint.WebPartPages.ClientWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"" />
-      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+      <importErrorMessage>Cannot import this web part.</importErrorMessage>
     </metaData>
     <data>
       <properties>
@@ -185,9 +185,9 @@ protected void ReplaceWebPartsWithAppParts(object sender, EventArgs e)
 
 1. Setting  **page** to the file associated with the list item returned from the **Pages** library.
     
-2. Using [LimitedWebPartManager](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.aspx) to find all Web Parts on a specific page. The title of each Web Part is also returned in the lambda expression.
+2. Using [LimitedWebPartManager](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.aspx) to find all Web Parts on a specific page. The title of each web part is also returned in the lambda expression.
     
-3. For each Web Part in the Web Part manager's [WebParts](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.webparts.aspx) property, determining whether the Web Part's title and the **oldWebPartTitle** variable, which is set to the title of the Web Part you are replacing, are equal. If the Web Part title and **oldWebPartTitle** are equal, call **ReplaceWebPart**; otherwise continue with the next iteration of the **foreach** loop.
+3. For each web part in the web part manager's [WebParts](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.webparts.aspx) property, determining whether the web part's title and the **oldWebPartTitle** variable, which is set to the title of the web part you are replacing, are equal. If the web part title and **oldWebPartTitle** are equal, call **ReplaceWebPart**; otherwise continue with the next iteration of the **foreach** loop.
 
 ```csharp
 private static void FindWebPartToReplace(ListItem item, ClientContext clientContext, Web web)
@@ -204,7 +204,7 @@ private static void FindWebPartToReplace(ListItem item, ClientContext clientCont
     foreach (var oldWebPartDefinition in webPartManager.WebParts)
     {
         var oldWebPart = oldWebPartDefinition.WebPart;
-        // Modify the Web Part if we find an old Web Part with the same title.
+        // Modify the web part if we find an old web part with the same title.
         if (oldWebPart.Title != oldWebPartTitle) continue;
 
         ReplaceWebPart(web, item, webPartManager, oldWebPartDefinition, clientContext, page);
@@ -212,24 +212,24 @@ private static void FindWebPartToReplace(ListItem item, ClientContext clientCont
 }
 ```
 
-**ReplaceWebPart** replaces the new Web Part by:
+**ReplaceWebPart** replaces the new web part by:
 
 1. Using [LimitedWebPartManager.ImportWebPart ](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.importwebpart.aspx) to convert the XML string in **appPartXml** into a [WebPartDefinition](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.webpartdefinition.aspx).
     
-2. Using [LimitedWebPartManager.AddWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.addwebpart.aspx) to add a Web Part to a page in a specific Web Part zone. Ensure you pass the **zoneId** to **AddWebPart**, otherwise an exception will be thrown when  **ExecuteQuery** runs.
+2. Using [LimitedWebPartManager.AddWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.addwebpart.aspx) to add a web part to a page in a specific web part zone. Ensure you pass the **zoneId** to **AddWebPart**, otherwise an exception will be thrown when  **ExecuteQuery** runs.
     
-3. Using [WebPartDefinition.DeleteWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.webpartdefinition.deletewebpart.aspx) to delete the old Web Part from the page.
+3. Using [WebPartDefinition.DeleteWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.webpartdefinition.deletewebpart.aspx) to delete the old web part from the page.
 
 ```csharp
 private static void ReplaceWebPart(Web web, ListItem item, LimitedWebPartManager webPartManager,
       WebPartDefinition oldWebPartDefinition, ClientContext clientContext, File page)
   {
      
-      // Create a Web Part definition using the XML string.
+      // Create a web part definition using the XML string.
       var definition = webPartManager.ImportWebPart(appPartXml);
       webPartManager.AddWebPart(definition.WebPart, "RightColumn", 0);
 
-      // Delete the old Web Part from the page.
+      // Delete the old web part from the page.
       oldWebPartDefinition.DeleteWebPart();
       clientContext.Load(page,
                           p => p.CheckOutType,

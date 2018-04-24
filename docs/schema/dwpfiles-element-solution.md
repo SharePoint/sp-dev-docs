@@ -11,14 +11,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2340490d-98ae-4363-bb0f-91ad199ec15f
-description: Specifies the Web Part files (.dwp or .webpart) to include in the solution.
+description: Specifies the web part files (.dwp or .webpart) to include in the solution.
 ---
 
 # DwpFiles element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Specifies the Web Part files (.dwp or .webpart) to include in the solution.
+Specifies the web part files (.dwp or .webpart) to include in the solution.
   
 ```XML
 <DwpFiles>

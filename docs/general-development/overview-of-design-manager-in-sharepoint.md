@@ -165,7 +165,7 @@ When you preview a master page, you can use the **Change Preview Page** option i
 
 #### Add snippets
 
-After you convert your master page and successfully preview it, you are ready to add snippets to the master page. A snippet is an HTML representation of a SharePoint component—such as a navigation control or search box or Web Part—that you can add to your master page. Adding snippets to your master page is how you quickly build the full range of SharePoint functionality into your master page. Adding snippets is basically a three-step process:
+After you convert your master page and successfully preview it, you are ready to add snippets to the master page. A snippet is an HTML representation of a SharePoint component—such as a navigation control or search box or web part—that you can add to your master page. Adding snippets to your master page is how you quickly build the full range of SharePoint functionality into your master page. Adding snippets is basically a three-step process:
   
     
     
@@ -209,7 +209,7 @@ By default, most snippets inherit styles from the main SharePoint style sheet, c
 
 ### Edit display templates
 
-If you are using an on-premises installation of SharePoint Server, you can use the Content Search Web Part and other search-driven Web Parts to display the results of search queries as content on your pages. Search-driven Web Parts use display templates for two main purposes:
+If you are using an on-premises installation of SharePoint Server, you can use the Content Search web part and other search-driven Web Parts to display the results of search queries as content on your pages. Search-driven Web Parts use display templates for two main purposes:
   
     
     

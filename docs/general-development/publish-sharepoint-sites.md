@@ -43,12 +43,12 @@ Different markets have different tastes. The variations feature helps accommodat
 - The device channels feature abstracts the problem of varying the presentation of content for mobile devices from the underlying site content and structure. You can create master pages that present to users based on the user's user agent. Avoid hard-coding in a master page content that will need to be localized.
     
   
-- Sites with dynamic content assembled from multiple sources risk having content rendered in multiple languages on the same page. For example, avoid cases where article page content is one language while content rendered by a Content Search Web Part is rendered in another language. 
+- Sites with dynamic content assembled from multiple sources risk having content rendered in multiple languages on the same page. For example, avoid cases where article page content is one language while content rendered by a Content Search web part is rendered in another language. 
     
   
 - If you work with display templates that are used with multiple languages, create language files and place them under folders that are named with the locale that they apply to. You can then reference the language files with the  `$includeLanguageScript` function and the `{Locale}` token.
     
-    If the Content Search Web Part relies on the **Language** property to find the appropriate CustomStrings.js file to include and one doesn't exist, and code in the template requests a string to display that cannot be found by using the `$resource()` or `Srch.U.loadResource()` functions, the Content Search Web Part displays an error message.
+    If the Content Search web part relies on the **Language** property to find the appropriate CustomStrings.js file to include and one doesn't exist, and code in the template requests a string to display that cannot be found by using the `$resource()` or `Srch.U.loadResource()` functions, the Content Search web part displays an error message.
     
   
 

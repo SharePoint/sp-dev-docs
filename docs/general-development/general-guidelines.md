@@ -88,7 +88,7 @@ This section contains general information related to Excel Services.
   
     
     
-> The Excel Web Access Web Part object model.
+> The Excel Web Access web part object model.
     
   
 

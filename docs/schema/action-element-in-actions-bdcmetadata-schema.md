@@ -26,7 +26,7 @@ Actions bridge the gap between Microsoft SharePoint 2010 and Microsoft Office 20
 
 By default, the Business Data Connectivity (BDC) service provides actions such as **View Item**, **Edit Item**, and **Delete Item** after you model these operations in the BDC model. In addition to these default actions, you can create actions for other functionality that you want to attach to your external content type. For example, you can use actions to perform simple actions such as to send email messages to a customer from the Customer external content type or to open a customer's home page in a browser.
 
-Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data Web Part or in an External Data column.
+Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data web part or in an External Data column.
 
 ```XML
 <Action Position = "Integer" IsOpenedInNewWindow = "Boolean" Url = "String" ImageUrl = "String" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"></Action>

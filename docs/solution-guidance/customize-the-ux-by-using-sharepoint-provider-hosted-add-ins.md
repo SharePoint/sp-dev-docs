@@ -18,7 +18,7 @@ This article describes samples that show best practices for customizing SharePoi
     
 - Client-side rendering (deploying JSLink files that customize the rendering of fields in SharePoint lists).
     
-- Web Part and add-in part manipulation (remotely provision and run an add-in script part in a provider-hosted add-in).
+- web part and add-in part manipulation (remotely provision and run an add-in script part in a provider-hosted add-in).
     
 - Data aggregation and caching (using HTML5 local storage and HTTP cookies to reduce the number of service calls to SharePoint).
 
@@ -87,7 +87,7 @@ public void AddHtmlToWikiPage(ClientContext ctx, Web web, string folder, string 
         }
 ```
 
-The sample code for the second scenario creates a new **WebPartEntity** instance. It then uses methods in a helper class to populate the Web Part with XML. The XML displays a promoted links list, including both [http://www.bing.com](http://www.bing.com) and the home page of the [OfficeDev/PnP GitHub](https://github.com/SharePoint/PnP) repository.
+The sample code for the second scenario creates a new **WebPartEntity** instance. It then uses methods in a helper class to populate the web part with XML. The XML displays a promoted links list, including both [http://www.bing.com](http://www.bing.com) and the home page of the [OfficeDev/PnP GitHub](https://github.com/SharePoint/PnP) repository.
 
 ```
 WebPartEntity wp2 = new WebPartEntity();
@@ -104,13 +104,13 @@ new LabHelper().AddHtmlToWikiPage(ctx, ctx.Web, "SitePages", htmlEntry.Text, sce
 this.hplPage2.NavigateUrl = string.Format("{0}/{1}", Request.QueryString["SPHostUrl"], scenario2PageUrl);
 ```
 
-The helper code displays the promoted links with a table inside an **XsltListViewWebPart** Web Part.
+The helper code displays the promoted links with a table inside an **XsltListViewWebPart** web part.
 
 **Figure 2. Second wiki page with XsltListViewWebPart and promoted links table**
 
 ![Second wiki page with XsltListViewWeb part and promoted links table](media/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins/6dc60a0b-b11a-4fe9-ad06-6b4d0d4b8b24.png)
 
-The **WpPromotedLinks** object on the **LabHelper** instance contains XML that defines the appearance of the Web Part that will be embedded into the wiki page. The **AddWebPartToWikiPage** method then inserts the newly defined Web Part inside a new `div` tag on the wiki page.
+The **WpPromotedLinks** object on the **LabHelper** instance contains XML that defines the appearance of the web part that will be embedded into the wiki page. The **AddWebPartToWikiPage** method then inserts the newly defined web part inside a new `div` tag on the wiki page.
 
 ```
 XmlDocument xd = new XmlDocument();
@@ -245,7 +245,7 @@ var newAction = existingActions.Add();
             web.Context.ExecuteQuery();
 ```
 
-When you choose the **Add page with script editor web part** button, the add-in uses the methods **AddWikiPage** and **AddWebPartToWikiPage** to create a wiki page inside the site pages library and add a configured Script Editor Web Part to the page.
+When you choose the **Add page with script editor web part** button, the add-in uses the methods **AddWikiPage** and **AddWebPartToWikiPage** to create a wiki page inside the site pages library and add a configured Script Editor web part to the page.
 
 ```
 string scenario1Page = String.Format("scenario1-{0}.aspx", DateTime.Now.Ticks);
@@ -293,7 +293,7 @@ public static string AddWikiPage(this Web web, string wikiPageLibraryName, strin
         }
 ```
 
-The **AddWebPartToWikiPage** method inserts the newly defined Web Part inside a new `<div>` tag on the wiki page. It then uses JSOM and the cross-domain library to retrieve the information that populates the list of SharePoint lists on the host web.
+The **AddWebPartToWikiPage** method inserts the newly defined web part inside a new `<div>` tag on the wiki page. It then uses JSOM and the cross-domain library to retrieve the information that populates the list of SharePoint lists on the host web.
 
 ```
 function printAllListNamesFromHostWeb() {
@@ -935,9 +935,9 @@ function hiddenFiledOnPreRender(ctx) {
 
 The [Core.AppScriptPart](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.AppScriptPart) sample shows how to use add-in script parts to embed scripts running in a provider-hosted add-in on a SharePoint page. This sample shows how to modify the UI of a page on the host site by deploying an add-in script part and adding it to a SharePoint page from the webpart gallery.
 
-An add-in script part is like a web part in that you can add it to a SharePoint page from the web part gallery, but in this case the .webpart file embeds a JavaScript file that runs remotely in a provider-hosted add-in. The add-in script part runs inside a  `<div>` tag on the SharePoint page and therefore provides a more responsive design and experience than you get with add-in parts that run in IFrames.
+An add-in script part is like a web part in that you can add it to a SharePoint page from the Web Part Gallery, but in this case the .webpart file embeds a JavaScript file that runs remotely in a provider-hosted add-in. The add-in script part runs inside a  `<div>` tag on the SharePoint page and therefore provides a more responsive design and experience than you get with add-in parts that run in IFrames.
 
-The start page includes a **Run Scenario** button that deploys the add-in script part to the web part gallery. The following code example constructs a **FileCreationInformationObject** instance that contains the contents of the .webpart file and then uploads the new file into the web part gallery. Note that you can also run this code automatically when the add-in part installs or as part of the site collection provisioning process.
+The start page includes a **Run Scenario** button that deploys the add-in script part to the Web Part Gallery. The following code example constructs a **FileCreationInformationObject** instance that contains the contents of the .webpart file and then uploads the new file into the Web Part Gallery. Note that you can also run this code automatically when the add-in part installs or as part of the site collection provisioning process.
 
 ```
 var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -975,11 +975,11 @@ using (var clientContext = spContext.CreateUserClientContextForSPHost())
         }
     }
 
-    lblStatus.Text = string.Format("add-in script part has been added to web part gallery. You can find 'User Profile Information' script part under 'Add-in Script Part' group in the <a href='{0}'>host web</a>.", spContext.SPHostUrl.ToString());
+    lblStatus.Text = string.Format("add-in script part has been added to Web Part Gallery. You can find 'User Profile Information' script part under 'Add-in Script Part' group in the <a href='{0}'>host web</a>.", spContext.SPHostUrl.ToString());
 }
 ```
 
-After you finish this step, you can locate the **User profile information** add-in script part inside a new **Add-in Script Part** category in the web part gallery. After you add the add-in script part to the page, the remotely running JavaScript controls the display of the information on the page.
+After you finish this step, you can locate the **User profile information** add-in script part inside a new **Add-in Script Part** category in the Web Part Gallery. After you add the add-in script part to the page, the remotely running JavaScript controls the display of the information on the page.
 
 When you view the add-in script part in edit mode, you'll see that it embeds the JavaScript file that is running remotely. The userprofileinformation.js script uses the JSON to get user profile information from the host site. 
 

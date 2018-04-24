@@ -112,8 +112,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolbarTemplate** <br/> |Optional **Text**. Specifies the name of the predefined toolbar template that is used for the view toolbar.  <br/> |
 |**Type** <br/> |Optional **Text**. Specifies the rendering type of the view. The type is the common enumerated HTML view and can be set to **HTML**, **Chart**, or **Pivot**.  <br/> |
 |**Url** <br/> |Optional **Text**. Specifies the URL for the view.  <br/> |
-|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
-|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
+|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the web part within a zone.  <br/> |
+|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
    
 ### Child elements
 

@@ -251,7 +251,7 @@ To load enough data to exceed the data storage limit:
 ## SharePoint list on the host web (Support Cases scenario)
 <a name="sectionSection2"> </a>
 
-The Support Cases scenario displays data that is stored in a SharePoint list in the host web. This scenario uses two different patterns to access and interact with the data. The first pattern includes the SharePoint Search Service and the Content By Search Web Part with a custom Display Template applied. The second pattern includes an App Part (Client Web Part) that displays an MVC view, which uses the  **SP.RequestExecutor** class to call the SharePoint REST API.
+The Support Cases scenario displays data that is stored in a SharePoint list in the host web. This scenario uses two different patterns to access and interact with the data. The first pattern includes the SharePoint Search Service and the Content By Search web part with a custom Display Template applied. The second pattern includes an App Part (Client web part) that displays an MVC view, which uses the  **SP.RequestExecutor** class to call the SharePoint REST API.
 
 There are several advantages to using this approach:
 
@@ -273,7 +273,7 @@ Offsetting these advantages are the following disadvantages:
     
 The data for this scenario is stored in a SharePoint list deployed to the host web. Data is retrieved and displayed by means of the following: 
 
-- A  [Content Search Web Part](https://msdn.microsoft.com/en-us/library/office/jj163789%28v=office.15%29.aspx).
+- A  [Content Search web part](https://msdn.microsoft.com/en-us/library/office/jj163789%28v=office.15%29.aspx).
     
 - An app part that's implemented as a model-view-controller view. 
     

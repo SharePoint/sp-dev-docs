@@ -160,7 +160,7 @@ By default, the Business Data Connectivity (BDC) service provides actions such a
   
     
     
-Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data Web Part or in an External Data column. 
+Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data web part or in an External Data column. 
   
     
     

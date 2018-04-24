@@ -24,11 +24,11 @@ This section contains information about ECMAScript (JavaScript, JScript) in Exce
 > Learn about the JavaScript object model in Excel Services.
     
   
- [Walkthrough: Developing Using the Content Editor Web Part](walkthrough-developing-using-the-content-editor-web-part.md)
+ [Walkthrough: Developing Using the Content Editor web part](walkthrough-developing-using-the-content-editor-web-part.md)
   
     
     
-> Learn how to call the JavaScript object model in Excel Services by using the Content Editor Web Part.
+> Learn how to call the JavaScript object model in Excel Services by using the Content Editor web part.
     
   
  [JavaScript user-defined functions overview](javascript-user-defined-functions-overview.md)

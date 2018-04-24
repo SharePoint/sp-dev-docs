@@ -181,10 +181,10 @@ When working with post-trimmers, it is important to notice that there are two ty
     
     
 
-- Exclude the sensitive refiners from the refinement panel in the default Web Part so that no information is leaked via the refiners.
+- Exclude the sensitive refiners from the refinement panel in the default web part so that no information is leaked via the refiners.
     
   
-- Use a custom Web Part to display results or refiners when using post-trimmers so that the **RefinementResults** may be elegantly hidden in cases where the **RefinementResults** count exceeds the **RelevantResults** count.
+- Use a custom web part to display results or refiners when using post-trimmers so that the **RefinementResults** may be elegantly hidden in cases where the **RefinementResults** count exceeds the **RelevantResults** count.
     
   
 

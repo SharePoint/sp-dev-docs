@@ -67,7 +67,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 A detailed **Module** element appears in a **Modules** element directly under the **Project** element of an  `Onet.xml` file. Each such module is referenced by at least one other **Module** element that is in a **Configuration** element of the same file. 
   
-The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a Web Part page, the module definition can specify which Web Parts should be included on the page. 
+The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a web part page, the module definition can specify which Web Parts should be included on the page. 
   
 ## Example
 

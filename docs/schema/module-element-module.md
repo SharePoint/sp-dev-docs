@@ -163,7 +163,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Remarks
 
-The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a Web Part Page, the module definition can specify which Web Parts should be included on the page.
+The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a web part Page, the module definition can specify which Web Parts should be included on the page.
 
 
 ## Example 

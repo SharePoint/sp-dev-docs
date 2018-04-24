@@ -116,7 +116,7 @@ You can customize the Search Box web part by editing properties in the web part 
     
 - Change the display template for the web part.
     
-For more information, see [Configure properties of the Search Box Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg576963%28v=office.15%29.aspx) and [How to change the text that is displayed in the Search Box Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794238%28v=office.15%29.aspx).
+For more information, see [Configure properties of the Search Box web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg576963%28v=office.15%29.aspx) and [How to change the text that is displayed in the Search Box web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794238%28v=office.15%29.aspx).
 
 #### Search Results web part
 
@@ -134,7 +134,7 @@ You can edit the Search Results web part properties in the web part tool pane to
     
 - Change the display template.
     
-For more information about the Search Results web parts, see [Configure properties of the Search Results Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549987.aspx) and [How to configure the Search Results Web Part to use a new result source in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794200%28v=office.15%29.aspx).
+For more information about the Search Results web parts, see [Configure properties of the Search Results web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549987.aspx) and [How to configure the Search Results web part to use a new result source in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794200%28v=office.15%29.aspx).
 
 #### Search Navigation web part
 
@@ -164,7 +164,7 @@ The Refinement web part filters search results into categories called refiners. 
     
 - The appearance, layout, and behavior of the Refinement web part.
     
-By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. For more information about this feature, see [Add refiner counts to the Refinement Web Part in Configure properties of the Refinement Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549985%28v=office.15%29.aspx).
+By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. For more information about this feature, see [Add refiner counts to the Refinement web part in Configure properties of the Refinement web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549985%28v=office.15%29.aspx).
 
 For more information about the Refinement web part and refiners, see [Plan to use refiners on a search results page in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794223%28v=office.15%29.aspx) and [How to add refiners to your search results page in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794243%28v=office.15%29.aspx).
 

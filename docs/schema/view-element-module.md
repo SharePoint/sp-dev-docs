@@ -197,11 +197,11 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**WebPartOrder**</p></td>
-<td align="left"><p>Optional **integer**. Specifies the order of the Web Part.</p></td>
+<td align="left"><p>Optional **integer**. Specifies the order of the web part.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**WebPartZoneID**</p></td>
-<td align="left"><p>Optional **string**. Specifies the zone for the Web Part.</p></td>
+<td align="left"><p>Optional **string**. Specifies the zone for the web part.</p></td>
 </tr>
 </tbody>
 </table>

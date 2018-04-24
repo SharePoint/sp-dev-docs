@@ -91,7 +91,7 @@ You can place custom branding files in  `/Style Library/Themable/` and `/Style L
 ## Applying custom CSS to a SharePoint page
 <a name="sectionSection4"> </a>
 
-You can add custom CSS to rich text fields and Web Part zones. To add CSS to a rich text field, put the page in edit mode and choose  **Insert** > **Embed Code** from the ribbon. For Web Part zones, use the Script Editor Web Part to add HTML, scripts, or an internal style sheet. You can use this approach to hide the Quick Launch navigation in the default SharePoint UI. If you are using SharePoint Online and the NoScript feature, NoScript will disable Script Editor Web Part.
+You can add custom CSS to rich text fields and web part zones. To add CSS to a rich text field, put the page in edit mode and choose  **Insert** > **Embed Code** from the ribbon. For web part zones, use the Script Editor web part to add HTML, scripts, or an internal style sheet. You can use this approach to hide the Quick Launch navigation in the default SharePoint UI. If you are using SharePoint Online and the NoScript feature, NoScript will disable Script Editor web part.
 
 Apply CSS to a SharePoint site by using an external style sheet and including a reference to the style sheet in the  `<link>` tag inside the `<head>` tags of the SharePoint page.
 

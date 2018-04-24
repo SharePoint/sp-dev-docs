@@ -100,7 +100,7 @@ Farm Solutions are distributed as SharePoint solution packages that farm adminis
 * [Build farm solutions in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/build-farm-solutions-in-sharepoint)
 * [SharePoint Add-ins compared with SharePoint solutions](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
 
-## Script Editor or Content Editor Web Part
+## Script Editor or Content Editor web part
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -108,7 +108,7 @@ Script Editor or Content Editor web parts are quite popular way to embed any cus
 
 This however raises a security challenges as scripts can be deployed to SharePoint site without any coordination from the administrators. To address this security concern, SharePoint Online sites (both modern and classic) by default do not support adding scripts to to the sites. This is blocked by so called no-script setting, which can be controlled by SharePoint Online tenant administrators.
 
-Moreover any custom code hosted within the Script Editor Web Part does not have any kind of maintenance capability, governance, or life-cycle management. That's why starting from 2017 Microsoft introduced the [SharePoint Framework](#SharePointFramework) model, which is similar to the Script Editor Web Part, but works in the "modern" UI, supports the no-script flag and provides centralized governance and control for the SharePoint administrators.
+Moreover any custom code hosted within the Script Editor web part does not have any kind of maintenance capability, governance, or life-cycle management. That's why starting from 2017 Microsoft introduced the [SharePoint Framework](#SharePointFramework) model, which is similar to the Script Editor web part, but works in the "modern" UI, supports the no-script flag and provides centralized governance and control for the SharePoint administrators.
 
 ### Articles
-* [Migrate existing Script Editor Web Part customizations to the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
+* [Migrate existing Script Editor web part customizations to the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)

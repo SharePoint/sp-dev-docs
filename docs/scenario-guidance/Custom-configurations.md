@@ -60,7 +60,7 @@ _**Applies to:** Office 365 | SharePoint Server_
 ### Videos
 
 - [PnP Shorts - Optimizing validation of client-side web part configuration](https://www.youtube.com/watch?v=yIVpdBICMmM)
-- [PnP Webcast - Integrate Client-Side Web Part Properties with SharePoint](https://www.youtube.com/watch?v=iB8PBs8RH-E)
+- [PnP Webcast - Integrate Client-Side web part Properties with SharePoint](https://www.youtube.com/watch?v=iB8PBs8RH-E)
 - [PnP Webcast - Custom Property Pane Controls with SharePoint Framework](https://www.youtube.com/watch?v=d_9o3tQ90zo)
 - [PnP Webcast - Validating SharePoint Framework client-side web part property values](https://www.youtube.com/watch?v=6r6MqUDzKvI)
 - [PnP Shorts - Correctly handling numeric web part properties](https://www.youtube.com/watch?v=vrPnOw-XxNM)

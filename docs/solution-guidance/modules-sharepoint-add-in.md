@@ -361,7 +361,7 @@ This sample has a little of everythign in it.  It demonstrates how to activate t
 	        ctx.ExecuteQuery();
 	    }
 		```
-		**Provision content into a publishing page (Content By Search Web Part, Script Editor Web Part, Add-in Part) and publish the page:**
+		**Provision content into a publishing page (Content By Search web part, Script Editor web part, Add-in Part) and publish the page:**
 		```
 		public static void SetSupportCaseContent(ClientContext ctx, string pageName, string url, string queryurl)
 	    {
@@ -402,24 +402,24 @@ This sample has a little of everythign in it.  It demonstrates how to activate t
 	
 	        string quicklaunchmenu = string.Format(quicklaunchmenuFormat, url, queryurl);
 	
-	        string qlwebPartXml = "<?xml version=\"1.0\" encoding=\"utf-8\"?><webParts><webPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\"><metaData><type name=\"Microsoft.SharePoint.WebPartPages.ScriptEditorWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" /><importErrorMessage>Cannot import this Web Part.</importErrorMessage></metaData><data><properties><property name=\"Content\" type=\"string\"><![CDATA[" + quicklaunchmenu + "​​​]]></property><property name=\"ChromeType\" type=\"chrometype\">None</property></properties></data></webPart></webParts>";
+	        string qlwebPartXml = "<?xml version=\"1.0\" encoding=\"utf-8\"?><webParts><webPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\"><metaData><type name=\"Microsoft.SharePoint.WebPartPages.ScriptEditorWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" /><importErrorMessage>Cannot import this web part.</importErrorMessage></metaData><data><properties><property name=\"Content\" type=\"string\"><![CDATA[" + quicklaunchmenu + "​​​]]></property><property name=\"ChromeType\" type=\"chrometype\">None</property></properties></data></webPart></webParts>";
 	        WebPartDefinition qlWpd = limitedWebPartManager.ImportWebPart(qlwebPartXml);
 	        WebPartDefinition qlWpdNew = limitedWebPartManager.AddWebPart(qlWpd.WebPart, "SupportCasesZoneLeft", 0);
 	        ctx.Load(qlWpdNew);
 	
-	        //Customer Dropdown List Script Web Part
+	        //Customer Dropdown List Script web part
 	        string dpwebPartXml = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Assets/CustomerDropDownlist.webpart");
 	        WebPartDefinition dpWpd = limitedWebPartManager.ImportWebPart(dpwebPartXml);
 	        WebPartDefinition dpWpdNew = limitedWebPartManager.AddWebPart(dpWpd.WebPart, "SupportCasesZoneTop", 0);
 	        ctx.Load(dpWpdNew);
 	
-	        //Support Case CBS Info Web Part
+	        //Support Case CBS Info web part
 	        string cbsInfoWebPartXml = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Assets/SupportCaseCBSWebPartInfo.webpart");
 	        WebPartDefinition cbsInfoWpd = limitedWebPartManager.ImportWebPart(cbsInfoWebPartXml);
 	        WebPartDefinition cbsInfoWpdNew = limitedWebPartManager.AddWebPart(cbsInfoWpd.WebPart, "SupportCasesZoneMiddle", 0);
 	        ctx.Load(cbsInfoWpdNew);
 	
-	        //Support Case Content By Search Web Part
+	        //Support Case Content By Search web part
 	        string cbswebPartXml = System.IO.File.ReadAllText(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Assets/SupportCase CBS Webpart/SupportCaseCBS.webpart");
 	        WebPartDefinition cbsWpd = limitedWebPartManager.ImportWebPart(cbswebPartXml);
 	        WebPartDefinition cbsWpdNew = limitedWebPartManager.AddWebPart(cbsWpd.WebPart, "SupportCasesZoneMiddle", 1);

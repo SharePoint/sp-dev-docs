@@ -35,7 +35,7 @@ To use a JavaScript UDF, you have to have the ability to modify the content of t
   
     
     
-When the webpage with the Excel Web Access Web Part or embedded workbook renders, you can invoke the JavaScript UDF in the workbook just like any other Excel workbook.
+When the webpage with the Excel Web Access web part or embedded workbook renders, you can invoke the JavaScript UDF in the workbook just like any other Excel workbook.
   
     
     

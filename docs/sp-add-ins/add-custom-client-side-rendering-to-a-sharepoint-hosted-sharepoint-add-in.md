@@ -125,7 +125,7 @@ You can use a little client-side JavaScript to customize the rendering of Web Pa
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. 
  
-2. The client-side rendering that you have configured affects the rendering of the field only on the list view page, not in the list view Web Part that we put on the home page. This is because the Web Part defaults to server-side rendering. There are ways to reverse this, but they are too advanced for this simple example. So, to see the client-side rendering in action, select the link at the bottom of the page **List View Page for New Employees in Seattle**.
+2. The client-side rendering that you have configured affects the rendering of the field only on the list view page, not in the list view web part that we put on the home page. This is because the web part defaults to server-side rendering. There are ways to reverse this, but they are too advanced for this simple example. So, to see the client-side rendering in action, select the link at the bottom of the page **List View Page for New Employees in Seattle**.
  
 3. When the list view page opens, set the **Orientation Stage** value for some items to **Not Started** and set others to **Completed** to see the custom color rendering.
     

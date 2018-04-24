@@ -47,9 +47,9 @@ The following sections describe attributes, child elements, and parent elements.
 |**Template** <br/> |Optional **Text**. Specifies the list template to which the form belongs.  <br/> |
 |**Type** <br/> |Required **Text**. Indicates the type of form being described and can be one of the following values: **DisplayForm**, **EditForm**, or **NewForm**.  <br/> |
 |**Url** <br/> |Required **URL**. Specifies the path to the ASP.NET file used for the form.  <br/> |
-|**UseDefaultListFormWebPart** <br/> |Optional **Text**. Specifies whether a ListFormWebPart should be created when the form is provisioned. By default, a **ListFormWebPart** object is created unless this attribute is set to **FALSE**. If this attribute equals **FALSE**, use the [WebParts](webparts-element-list.md) child element to define your customized list form Web Part.  <br/> |
+|**UseDefaultListFormWebPart** <br/> |Optional **Text**. Specifies whether a ListFormWebPart should be created when the form is provisioned. By default, a **ListFormWebPart** object is created unless this attribute is set to **FALSE**. If this attribute equals **FALSE**, use the [WebParts](webparts-element-list.md) child element to define your customized list form web part.  <br/> |
 |**UseLegacyForm** <br/> |Optional **Boolean**. Used during upgrade to specify that Microsoft SharePoint Foundation use Collaborative Application Markup Language (CAML), as in previous versions of the technology, instead of Web controls, to define the view of an item within a form.  <br/> |
-|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
+|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
    
 ### Child elements
 

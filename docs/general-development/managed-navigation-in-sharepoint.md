@@ -250,7 +250,7 @@ using (SPSite site = new SPSite(TestConfig.ServerUrl))
 <a name="SP15_ManagedNav_AdditionalResources"> </a>
 
 
--  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md)
+-  [Content Search web part in SharePoint](content-search-web-part-in-sharepoint.md)
     
   
 

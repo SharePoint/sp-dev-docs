@@ -22,13 +22,13 @@ For example, you can use a Security Trim panel to display the following content 
     
     
 
-- A Content by Search Web Part that displays which documents an authenticated user is currently working on.
+- A Content by Search web part that displays which documents an authenticated user is currently working on.
     
   
 - A list view of recently modified documents so that authenticated users can see what's new on the site.
     
   
-- A Content by Search Web Part that displays to non-authenticated visitors a list of recommended links based on the current article. Such a list of recommendations might be noise to authenticated content authors working in the site, but it's important for non-authenticated visitors.
+- A Content by Search web part that displays to non-authenticated visitors a list of recommended links based on the current article. Such a list of recommendations might be noise to authenticated content authors working in the site, but it's important for non-authenticated visitors.
     
   
 - A sign-in link separate from the ribbon, for non-authenticated users or users who have yet to be authenticated.

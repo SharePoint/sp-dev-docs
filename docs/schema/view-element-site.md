@@ -79,8 +79,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**Threaded** <br/> |Optional **Boolean**. **TRUE** to apply inner grouping in the view. A threaded view is constructed based on the built-in threading column (assumed to exist for the list). The view is sorted on this field as the secondary sort. If other columns in the view are specified as sorted or grouped, those are applied before the threading column sort order. As a result, all discussions grouped by a topic can be collected together, and the message threading can be displayed beneath the collection. <br/><br/>When **TRUE**, the [RowLimit](rowlimit-element-list.md) element has a different meaning when used on a threaded discussion board list view. Instead of specifying the number of items to return, it specifies the number of discussion threads to return, where a thread could consist of one or more items. In addition to having the **Threaded** attribute set to **TRUE**, a threaded view must be sorted by the thread ID in order for this row limit behavior to take effect.  <br/> |
 |**Type** <br/> |Optional **Text**. Specifies the rendering type of the view. The type is the common enumerated HTML view and can be set to **HTML**, **Chart**, **Pivot**, **GANTT**, or **CALENDAR**.  <br/> |
 |**Url** <br/> |Optional **URL**. Specifies the URL for the view.  <br/> |
-|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
-|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
+|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the web part within a zone.  <br/> |
+|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
    
 ### Child elements
 
