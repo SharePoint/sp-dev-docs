@@ -1,19 +1,20 @@
 ---
 title: SharePoint development and design tools and practices
+description: 
 ms.date: 11/03/2017
 ---
+
 # SharePoint development and design tools and practices
 
 You can use SharePoint design and development tools to apply branding to your SharePoint sites.
 
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-
 This article provides information about the development and design options that are available in SharePoint. You can also find information about how to use the remote provisioning pattern to apply branding assets to a SharePoint site.
 
-## Key SharePoint development and design terms and concepts
-<a name="sectionSection0"> </a>
+## Development and design terms and concepts
 
-|**Term or concept**|**Definition**|**More information**|
+**Table 1. Key SharePoint development and design terms and concepts**
+
+|Term or concept|Definition|More information|
 |:-----|:-----|:-----|
 |Design Manager|A feature activated in SharePoint publishing sites or Team sites with publishing enabled that is used to import and manage site branding assets and export them to a design package.|Use Design Manager to import branding assets created in other tools, such as Adobe PhotoShop or Adobe DreamWeaver, into SharePoint.<br/>SharePoint Designer is not available for use with OneDrive for Business or SharePoint Team sites where publishing is not enabled.|
 |Design package|Designed for use with SharePoint 2013 Publishing sites, contains branding assets that are stored in Design Manager.| [SharePoint 2013 Design Manager design packages](http://msdn.microsoft.com/library/85ad1993-4d75-4806-9097-b934865a899a.aspx)|
@@ -24,13 +25,12 @@ This article provides information about the development and design options that 
 |.wsp file|A SharePoint solution file. A .wsp is a .cab file that categorizes site assets and organizes them with a manifest.xml file.| [Solutions overview](https://msdn.microsoft.com/en-us/library/office/aa543214%28v=office.14%29.aspx)|
 
 ## Development options
-<a name="sectionSection1"> </a>
 
 When you use SharePoint 2013 as a development platform, you'll need to create an environment to develop, test, build, and deploy your content. For information about the options for development, see  [Development environment considerations](http://msdn.microsoft.com/library/caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a.aspx#DevEnvironment) in the article [SharePoint Server 2013 Application Lifecycle Management](http://msdn.microsoft.com/library/caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a.aspx). Table 2 lists the considerations for the various development options. 
 
-**Options for SharePoint development, testing, and acceptance**
+**Table 2. Options for SharePoint development, testing, and acceptance**
 
-|**Option**|**Considerations**|
+|Option|Considerations|
 |:-----|:-----|
 |Team foundation server|- Located on Visual Studio Online for easy access.<br/>- Includes a centralized source code and life cycle management system.|
 |Cloud test and acceptance environments|- Use a separate tenant for acceptance testing.<br/>- Separate test environment for on-premises testing.|
@@ -45,7 +45,6 @@ In most cases, you'll need at least the following tenants, although this can var
 -  **Production tenant**. Release tested, accepted, and approved apps to this tenant. You can create a developer site on this tenant to develop and test apps that are small in scope or have isolated impact. In general, avoid mixing your development and production environments.
     
 ## Design tools
-<a name="sectionSection2"> </a>
 
 Use standard web design and development tools, such as HTML, images, CSS files, and JavaScript files to create SharePoint site branding assets. For example, you can use Adobe DreamWeaver and Adobe PhotoShop to design the HTML, CSS, JavaScript, and image files you'll use to brand your SharePoint sites. Alternatively, you can use SharePoint Designer 2013 to create, manage, and customize branding assets, or create custom solutions in Visual Studio 2013.
 
@@ -74,7 +73,7 @@ This code was designed for use with Publishing sites. Although it is possible to
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```
+```cs
 using Microsoft.SharePoint.Client;
 using System;
 using System.Collections.Generic;
@@ -170,11 +169,13 @@ namespace ProviderSharePointAppWeb
 }
 ```
 
+<br/>
+
 #### Using FileCreationInformation to upload branding assets and a master page to a Team site
 
-You can use SharePoint 2013 CSOM functionality to install and uninstall design packages and export design packages to SharePoint Online sites. For example, use the  [SP.Publishing.DesignPackage.install Method (sp.publishing)](http://msdn.microsoft.com/library/26500127-210f-6c52-c0de-cf2894939a91.aspx) to install the design package on the site, as shown in the following example.
+You can use SharePoint 2013 CSOM functionality to install and uninstall design packages and export design packages to SharePoint Online sites. For example, use the  [SP.Publishing.DesignPackage.install Method (sp.publishing)](http://msdn.microsoft.com/library/26500127-210f-6c52-c0de-cf2894939a91.aspx) to install the design package on the site, as shown in the following example. <!--(Use https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.install.aspx?)-->
 
-```
+```cs
 public static void Install(
     	ClientRuntimeContext context,
 	    Site site,
@@ -185,7 +186,7 @@ public static void Install(
 
 The  [DesignPackageInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.designpackageinfo.aspx) class specifies metadata that describe the contents of the design package to be installed. Use the [Uninstall](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.uninstall.aspx) method to uninstall the design package from the site, as shown in the following example.
 
-```
+```cs
 public static void UnInstall(
 	    ClientRuntimeContext context,
 	    Site site,
@@ -195,7 +196,7 @@ public static void UnInstall(
 
 If you need to brand a Team site with the Publishing feature enabled, or a Publishing site on SharePoint Online, you can use the  [ExportEnterprise](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportenterprise.aspx) or the [ExportSmallBusiness](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportsmallbusiness.aspx) method to export design packages for site templates to the Solution Gallery. Use the **ExportSmallBusiness** method with the small business site template, and use the **ExportEnterprise** method for all other site templates, as shown in the following example. In the example, note thatpackageName is a string that represents the name of the design package.
 
-```
+```Cs
 public static ClientResult<DesignPackageInfo> ExportEnterprise(
 	    ClientRuntimeContext context,
 	    Site site,
@@ -205,7 +206,7 @@ public static ClientResult<DesignPackageInfo> ExportEnterprise(
 
 When you use this method, you can include the search configuration in the design package, as shown in the next example. Note that all design package methods operate at the level of the site collection.
 
-```
+```cs
 public static ClientResult<DesignPackageInfo> ExportSmallBusiness(
 	    ClientRuntimeContext context,
 	    Site site,
@@ -215,21 +216,15 @@ public static ClientResult<DesignPackageInfo> ExportSmallBusiness(
 ```
 
 ## Design tool options for SharePoint Online
-<a name="sectionSection3"> </a>
 
 The tools you can use to brand a SharePoint Online site depend on your SharePoint Online edition and the type of site you want to build. The Small Business edition, for example, includes one Team site and one public site. It does not include a Publishing site. You can use the Site Builder add-in in SharePoint Online to customize public site branding.
 
 The Enterprise edition includes a Team site collection at the root web application for the domain that does not include Publishing. It does not include a public site. Use Design Manager to manage SharePoint site branding elements for the Publishing site in the SharePoint Online Enterprise edition.
 
 ## See also
-<a name="bk_addresources"> </a>
 
 -  [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
-    
 -  [SharePoint Server 2013 Application Lifecycle Management](http://msdn.microsoft.com/library/caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a.aspx)
-    
 -  [Sandboxed solutions](https://msdn.microsoft.com/en-us/library/ff798382.aspx)
-    
 -  [Site provisioning techniques and remote provisioning in SharePoint 2013](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013.aspx)
-    
 -  [SharePoint 2013 Design Manager design packages](http://msdn.microsoft.com/library/85ad1993-4d75-4806-9097-b934865a899a.aspx)
