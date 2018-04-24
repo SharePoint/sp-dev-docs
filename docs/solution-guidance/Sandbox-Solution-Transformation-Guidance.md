@@ -93,12 +93,8 @@ Support will be removed by disabling code-based operations to be executed from s
 All declarative definitions in the sandbox solution will continue working after this change is be applied in SharePoint Online. 
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [Removing Code-Based Sandbox Solutions in SharePoint Online](http://dev.office.com/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
-
--  [Remove assembly reference from your Sandbox solution created in Visual Studio](https://support.microsoft.com/en-us/kb/3183084)
-
--  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
-    
--  [Build add-ins for SharePoint](https://msdn.microsoft.com/library/jj163230.aspx)
+- [Removing Code-Based Sandbox Solutions in SharePoint Online](http://dev.office.com/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
+- [Remove assembly reference from your Sandbox solution created in Visual Studio](https://support.microsoft.com/en-us/kb/3183084)
+- [Build add-ins for SharePoint](https://msdn.microsoft.com/library/jj163230.aspx)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

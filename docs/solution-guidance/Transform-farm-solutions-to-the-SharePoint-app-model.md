@@ -107,7 +107,6 @@ Apply the following best practices when transforming specific solutions:
 |[Replace Web Parts with add-in parts](replace-sharepoint-web-parts-with-add-in-parts.md)|Use the transformation process to replace Web Parts with add-in parts by using the SharePoint client object model (CSOM).|
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
--  [Build add-ins for SharePoint](https://msdn.microsoft.com/library/jj163230.aspx)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
+- [Build add-ins for SharePoint](https://msdn.microsoft.com/library/jj163230.aspx)

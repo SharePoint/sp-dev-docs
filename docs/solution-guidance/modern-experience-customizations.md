@@ -57,7 +57,7 @@ By default, "classic" SharePoint sites use "modern" pages for any newly added pa
 
 The SharePoint "modern" experiences are currently not available for SharePoint on-premises. As part of the SharePoint 2016 Feature Pack, "modern" experiences will be introduced within the OneDrive for Business experience, and you can take advantage of the SharePoint Framework client-side web parts in the classic page experience.
 
-<a name="bk_addresources"> </a>
+
 ## See also
 
 -  [Create connected SharePoint Online team sites in seconds](https://blogs.office.com/en-us/2016/11/08/create-connected-sharepoint-online-team-sites-in-seconds/)
@@ -67,3 +67,4 @@ The SharePoint "modern" experiences are currently not available for SharePoint o
 -  ["Modern" SharePoint lists are here - including integration with Microsoft Flow and PowerApps](https://blogs.office.com/en-us/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/)
 -  [Update on "Modern" Document Libraries and Extensibility](https://dev.office.com/blogs/update-on-modern-document-libraries-and-extensiblity)
 -  [Switch the default experience for lists or document libraries from "modern" or "classic"](https://support.office.com/en-us/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9?ui=en-US&rs=en-US&ad=US)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

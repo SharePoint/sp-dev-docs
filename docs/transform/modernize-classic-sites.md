@@ -73,4 +73,4 @@ Information about transforming site pages is coming soon. In the meantime, you c
 
 ## See also
 
-- [Solution guidance](../solution-guidance/office-365-development-patterns-and-practices-solution-guidance.md)
+- [Office 365 development and SharePoint PnP solution guidance](../solution-guidance/office-365-development-patterns-and-practices-solution-guidance.md)

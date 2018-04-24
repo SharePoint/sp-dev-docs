@@ -433,10 +433,8 @@ using (var clientContext = spContext.CreateUserClientContextForSPHost())
 - [Search customizations for SharePoint](search-customizations-for-sharepoint.md)
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
-    
-- [Search add-ins in SharePoint 2013](http://msdn.microsoft.com/library/21682e45-dd78-4f3c-8f1e-cdd48de3bde2%28Office.15%29.aspx)
-    
+- [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)   
+- [Search add-ins in SharePoint 2013](http://msdn.microsoft.com/library/21682e45-dd78-4f3c-8f1e-cdd48de3bde2%28Office.15%29.aspx)    
 - [Add search capabilities to your SharePoint Add-ins](http://blogs.msdn.com/b/officeapps/archive/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint.aspx)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

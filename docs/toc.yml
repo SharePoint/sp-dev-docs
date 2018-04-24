@@ -1309,6 +1309,8 @@
       href: solution-guidance/SharePoint-pages-and-the-page-model.md
     - name: Development and design tools and practices
       href: solution-guidance/SharePoint-development-and-design-tools-and-practices.md
+    - name: Metadata, site navigation, and publishing site features
+      href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md      
     - name: Site branding
       href: solution-guidance/SharePoint-site-branding-and-page-customization-solutions.md
       items:
@@ -1337,8 +1339,6 @@
         href: solution-guidance/modify-sharepoint-site-permissions-and-get-external-sharing-status.md
       - name: Manage users and groups
         href: solution-guidance/manage-sharepoint-users-and-groups.md
-    - name: Metadata, site navigation, and publishing site features
-      href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md
     - name: UX components
       href: solution-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
       items:

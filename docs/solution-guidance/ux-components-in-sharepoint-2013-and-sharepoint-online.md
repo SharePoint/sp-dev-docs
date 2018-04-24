@@ -18,9 +18,8 @@ _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
 |[Improve performance in SharePoint provider-hosted add-ins](improve-performance-in-sharepoint-provider-hosted-add-ins.md)|Use HTML5 and HTTP cookies to cache data and reduce the number of calls to SharePoint services.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)
     
 - [Add a custom ribbon to your SharePoint site](Add-a-custom-ribbon-to-your-SharePoint-site.md)
     

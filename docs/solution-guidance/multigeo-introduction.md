@@ -37,5 +37,7 @@ If you're developing new applications that need to work in an ODSP Multi-Geo Pre
 |[BCS and the Secure Store in a Multi-Geo tenant](multigeo-bcsandsecurestore.md)|Describes how to use Business Connectivity Services and the Secure Store in a Multi-Geo tenant.|
 
 
+## See also
 
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
 

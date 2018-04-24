@@ -18,6 +18,5 @@ The articles in this section show you how to improve the security and performanc
 |[JavaScript Patterns and Performance ](javascript-patterns-and-performance.md)| Learn which JavaScript techniques you can use to improve your add-in performance.
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

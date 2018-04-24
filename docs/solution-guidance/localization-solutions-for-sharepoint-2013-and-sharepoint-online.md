@@ -18,10 +18,7 @@ The code samples described in this section show you how to use provider-hosted a
 |[Localize UI elements sample SharePoint Add-in](Localize-UI-elements-sample-app-for-SharePoint.md)|[Core.JavaScriptCustomization](https://github.com/SharePoint/PnP/tree/master/Scenarios/Core.JavaScriptCustomization)|Localize SharePoint UI elements by using JavaScript to replace the text value of a UI element value with a translated text value loaded from a JavaScript resource file. |
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
-    
-- [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices)
-    
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)   
+- [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices) 
 - [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)

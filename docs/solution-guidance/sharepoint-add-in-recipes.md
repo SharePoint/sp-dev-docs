@@ -46,6 +46,5 @@ The articles in this section show you how to use the SharePoint Add-in model to 
 |[Yammer Integration](yammer-integration-sharepoint-add-in.md)|Integrate Yammer with SharePoint.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

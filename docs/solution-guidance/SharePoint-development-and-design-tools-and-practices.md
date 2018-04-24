@@ -19,12 +19,12 @@ This article provides information about the development and design options that 
 |Remote provisioning|A model that involves provisioning sites by using templates and code that runs outside SharePoint in a provider-hosted add-in.|- [Site provisioning techniques and remote provisioning in SharePoint 2013](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/)<br/>- [Self-Service Site Provisioning using Apps for SharePoint 2013](https://blogs.msdn.microsoft.com/richard_dizeregas_blog/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013/)|
 |Root web|The first web inside a site collection. The root web is also sometimes referred to as the Web Application Root.||
 |Sandboxed solutions|.wsp files that contain assemblies, other non-compiled components, and an XML manifest file. A sandbox solution uses partial-trust code.| [Sandboxed solutions](https://msdn.microsoft.com/en-us/library/ff798382.aspx)|
-|SharePoint Designer 2013|An HTML designer and design asset management tool for managing branding elements in SharePoint. In SharePoint 2013, SharePoint Designer mainly supports custom workflows.| [What's new for developers in SharePoint](/general-development/what-s-new-for-developers-in-sharepoint)<br/>[What's new with SharePoint 2013 site development?](https://msdn.microsoft.com/en-us/library/office/jj163942.aspx)|
+|SharePoint Designer 2013|An HTML designer and design asset management tool for managing branding elements in SharePoint. In SharePoint 2013, SharePoint Designer mainly supports custom workflows.|- [What's new for developers in SharePoint](../general-development/what-s-new-for-developers-in-sharepoint.md)<br/>- [What's new with SharePoint site development](../general-development/what-s-new-with-sharepoint-site-development.md)|
 |.wsp file|A SharePoint solution file. A .wsp is a .cab file that categorizes site assets and organizes them with a manifest.xml file.| [Solutions overview](https://msdn.microsoft.com/en-us/library/office/aa543214%28v=office.14%29.aspx)|
 
 ## Development options
 
-When you use SharePoint 2013 as a development platform, you'll need to create an environment to develop, test, build, and deploy your content. For information about the options for development, see  [Development environment considerations](http://msdn.microsoft.com/library/caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a.aspx#DevEnvironment) in the article [SharePoint Server 2013 Application Lifecycle Management](http://msdn.microsoft.com/library/caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a.aspx). Table 2 lists the considerations for the various development options. 
+When you use SharePoint as a development platform, you'll need to create an environment to develop, test, build, and deploy your content. For information about the options for development, see [SharePoint workflow object model](../general-development/sharepoint-workflow-object-model.md) and [Application Lifecycle Management (ALM) APIs](../apis/alm-api-for-spfx-add-ins.md).  
 
 **Table 2. Options for SharePoint development, testing, and acceptance**
 
@@ -36,7 +36,7 @@ When you use SharePoint 2013 as a development platform, you'll need to create an
  
 In most cases, you'll need at least the following tenants, although this can vary depending on your requirements:
 
--  **Developer tenant**. As a best practice, provision and use your own developer site. This way, you avoid mixing your data with the production environment. To sign up for and provision a developer site, see  [Sign up for an Office 365 Developer Site](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54.aspx#o365_signup) in the article [Sign up for an Office 365 Developer Subscription and set up your tools and environment](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54.aspx).
+-  **Developer tenant**. As a best practice, provision and use your own developer site. This way, you avoid mixing your data with the production environment. To sign up for and provision a developer site, see [Set up a development environment for SharePoint Add-ins on Office 365](../set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
     
 -  **Integration/testing tenant**. Use this site to make sure that new apps and functionality work across more than one site collection and against the services and data in the production environment. Configure the environment to include capabilities that are in preview. (To do this, in your tenant admin console, choose  **Service Settings**, and then under the  **Updates** setting, choose **First Release**.) You can use Visual Studio online to run automated testing and any other continuous integration testing.
     
@@ -171,7 +171,8 @@ namespace ProviderSharePointAppWeb
 
 #### Using FileCreationInformation to upload branding assets and a master page to a Team site
 
-You can use SharePoint 2013 CSOM functionality to install and uninstall design packages and export design packages to SharePoint Online sites. For example, use the  [SP.Publishing.DesignPackage.install Method (sp.publishing)](http://msdn.microsoft.com/library/26500127-210f-6c52-c0de-cf2894939a91.aspx) to install the design package on the site, as shown in the following example. <!--(Use https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.install.aspx?)-->
+You can use SharePoint 2013 CSOM functionality to install and uninstall design packages and export design packages to SharePoint Online sites. For example, use the [SP.Publishing.DesignPackage.install Method (sp.publishing)](https://msdn.microsoft.com/library/26500127-210f-6c52-c0de-cf2894939a91.aspx) or [DesignPackage.Install method](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.install.aspx) to install the design package on the site, as shown in the following example. 
+
 
 ```cs
 public static void Install(
@@ -198,7 +199,7 @@ public static void UnInstall(
 
 If you need to brand a Team site with the Publishing feature enabled, or a Publishing site on SharePoint Online, you can use the  [ExportEnterprise](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportenterprise.aspx) or the [ExportSmallBusiness](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportsmallbusiness.aspx) method to export design packages for site templates to the Solution Gallery. Use the **ExportSmallBusiness** method with the small business site template, and use the **ExportEnterprise** method for all other site templates, as shown in the following example. In the example, note thatpackageName is a string that represents the name of the design package.
 
-```Cs
+```cs
 public static ClientResult<DesignPackageInfo> ExportEnterprise(
 	    ClientRuntimeContext context,
 	    Site site,
@@ -227,8 +228,4 @@ The Enterprise edition includes a Team site collection at the root web applicati
 
 ## See also
 
--  [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
--  [SharePoint Server 2013 Application Lifecycle Management](http://msdn.microsoft.com/library/caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a.aspx)
--  [Sandboxed solutions](https://msdn.microsoft.com/en-us/library/ff798382.aspx)
--  [Site provisioning techniques and remote provisioning in SharePoint 2013](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013.aspx)
--  [SharePoint 2013 Design Manager design packages](http://msdn.microsoft.com/library/85ad1993-4d75-4806-9097-b934865a899a.aspx)
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

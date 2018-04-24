@@ -14,6 +14,5 @@ The articles in this section show you how to deploy your SharePoint add-ins.
 |[Configure Office 365 Projects for Distribution](Configure-O365Api-Project-For-Distribution.md)|This page explains some steps developers should consider taking on their projects that leverage the Office 365 APIs prior to distributing them to other developers, their customers, or to source control systems.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

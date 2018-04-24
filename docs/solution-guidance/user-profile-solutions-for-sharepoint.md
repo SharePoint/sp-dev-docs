@@ -18,8 +18,8 @@ The samples in this solution pack show you how to use provider-hosted add-ins to
 |Personalize search results sample SharePoint Add-in|[Search.PersonalizedResults](https://github.com/SharePoint/PnP/tree/dev/Samples/Search.PersonalizedResults)|Personalize SharePoint by filtering information based on the value of a user profile property. 
 |Upload user profile pictures sample SharePoint Add-in|[Core.ProfilePictureUploader](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.ProfilePictureUploader)|Do a bulk upload of user profile data from either a file share or SharePoint Online URL, and link user profile properties to uploaded images.
 
-## See also 
+## See also
 
-* [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
-* [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices)
-* [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
+- [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices)
+- [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)

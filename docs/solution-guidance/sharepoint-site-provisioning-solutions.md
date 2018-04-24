@@ -21,9 +21,8 @@ The samples described in this section show you how to use provider-hosted add-in
 |[Manage SharePoint users and groups](manage-sharepoint-users-and-groups.md)|[Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Scenarios/Core.GroupManagement)|Manage users, groups, and permissions within a SharePoint site collection.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)
     
 - [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices)
     

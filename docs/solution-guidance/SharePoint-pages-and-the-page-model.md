@@ -161,6 +161,6 @@ To help maintain consistency on a custom master page, follow the existing coding
 
 ## See also
   
--  [Master pages, the Master Page Gallery, and page layouts in SharePoint](../general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md) 
--  [SharePoint 2013: Use an app for SharePoint to provision a wiki page](https://code.msdn.microsoft.com/SharePoint-2013-Use-an-app-5db977e8)
--  [Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016, and SharePoint Online](branding-and-site-provisioning-solutions-for-sharepoint.md)
+- [Master pages, the Master Page Gallery, and page layouts in SharePoint](../general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md) 
+- [SharePoint 2013: Use an app for SharePoint to provision a wiki page](https://code.msdn.microsoft.com/SharePoint-2013-Use-an-app-5db977e8)
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

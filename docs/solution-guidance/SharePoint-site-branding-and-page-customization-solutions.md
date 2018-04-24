@@ -66,9 +66,8 @@ This section builds on your knowledge about [SharePoint development and design t
 |[Customize OneDrive for Business site branding](Customization-Options-For-OD4B-Sites.md)| Customize OneDrive for Business sites in Office 365 or by using the add-in model, depending on your organization's requirements.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)
 
 -  [SharePoint pages and the page model](SharePoint-pages-and-the-page-model.md)
 

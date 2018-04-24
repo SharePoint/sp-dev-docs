@@ -1,15 +1,17 @@
 ---
-title: Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016, and SharePoint Online
+title: Branding and site provisioning solutions for SharePoint
 description: The remote provisioning pattern shows you how to create custom SharePoint Add-ins that provision site branding and perform other site provisioning tasks.
 ms.date: 4/23/2018
 ---
-# Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016, and SharePoint Online
+# Branding and site provisioning solutions for SharePoint
 
 The introduction of the Cloud Add-in Model and SharePoint Add-ins provides alternatives to existing, established ways of branding and provisioning SharePoint sites. 
 
 Up to now, you might have used the SharePoint feature framework, site templates, web templates, and site definitions to provision your sites and site collections. 
 
-The articles in this section provide information about using SharePoint Add-ins to provision and manage site branding, a pattern that is sometimes referred to as **remote provisioning**. The remote provisioning pattern shows you how to create custom SharePoint Add-ins that provision site branding and perform other site provisioning tasks.
+The articles in this section provide information about using SharePoint Add-ins to provision and manage site branding, a pattern that is sometimes referred to as **remote provisioning**. The remote provisioning pattern shows you how to create custom SharePoint Add-ins that provision site branding and perform other site provisioning tasks. 
+
+This guidance applies to SharePoint Server 2013, SharePoint Server 2016, and SharePoint Online.
 
 ## What you need to know about SharePoint
 
@@ -262,5 +264,5 @@ When considering moving an existing customization from full-trust code to the Cl
 ## See also
 
 -  [SharePoint development and design tools and practices](sharepoint-development-and-design-tools-and-practices.md)   
--  [Office 365 development patterns and practices solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
+-  [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
     

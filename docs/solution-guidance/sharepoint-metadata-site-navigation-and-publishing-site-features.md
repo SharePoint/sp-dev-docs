@@ -455,9 +455,8 @@ The SharePoint context filter attribute performs additional processing to get st
 For more information, see [Learn About ASP.NET MVC](http://www.asp.net/mvc/overview) and[Introducing MVC support for SharePoint Add-ins](http://blogs.msdn.com/b/officeapps/archive/2013/07/09/introducing-mvc-support-for-apps-for-sharepoint.aspx).
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)
     
 - [How to: Apply styles to page fields in SharePoint 2013](http://msdn.microsoft.com/library/e227613d-0e4d-4312-924d-bb55e1fe4293%28Office.15%29.aspx)
     
