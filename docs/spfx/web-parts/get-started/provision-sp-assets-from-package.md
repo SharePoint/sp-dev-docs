@@ -160,7 +160,7 @@ In the following steps, we define the needed structure to be provisioned.
   * Custom fields are being referenced in the introduced content type.
   * We use the **CustomSchema** attribute in the **ListInstance** element to define a provisioning time schema.xml file for the list. This way the list is still based on the out-of-the-box list template (normal custom list '100' in this case), but we can define an alternative provisioning definition during initial provisioning.
 
-  More details about the used schema structures can be found at [FUsing Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) on MSDN.
+  More details about the used schema structures can be found at [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) on MSDN.
 
 ### To add a schema.xml file for defining list structure
 
