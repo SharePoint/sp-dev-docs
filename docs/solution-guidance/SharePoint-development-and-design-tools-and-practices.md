@@ -36,7 +36,7 @@ When you use SharePoint as a development platform, you need to create an environ
  
 In most cases, you need at least the following tenants, although this can vary depending on your requirements:
 
-- **Developer tenant**. As a best practice, provision and use your own developer site. This way, you avoid mixing your data with the production environment. To sign up for and provision a developer site, see [Set up a development environment for SharePoint Add-ins on Office 365](../set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
+- **Developer tenant**. As a best practice, provision and use your own developer site. This way, you avoid mixing your data with the production environment. To sign up for and provision a developer site, see [Set up a development environment for SharePoint Add-ins on Office 365](../sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
     
 - **Integration/testing tenant**. Use this site to make sure that new apps and functionality work across more than one site collection and against the services and data in the production environment. Configure the environment to include capabilities that are in preview. (To do this, in your tenant admin console, choose **Service Settings**, and then under the **Updates** setting, choose **First Release**.) You can use Visual Studio Team Services to run automated testing and any other continuous integration testing.
     
