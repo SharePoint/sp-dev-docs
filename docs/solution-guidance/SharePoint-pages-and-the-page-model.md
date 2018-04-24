@@ -25,21 +25,21 @@ A rendered SharePoint page is a combination of three page types:
 |Collaboration site|A team site.|||
 |Content placeholder|An entry in a master page that reserves a space for controls or content that can be programmatically replaced later.|All SharePoint master pages|Content placeholders are the building blocks of SharePoint master pages.|
 |Master page|A page that standardizes the behavior and presentation of the left and top navigation elements of a SharePoint page.|SharePoint file system Master Page Gallery||
-|Master page gallery|A special document library in SharePoint where all branding elements (master pages, page layouts, JavaScript files, CSS, and images) are stored by default. Every site has its own Master Page Gallery.| **Settings** > **Site Settings** > **Master Pages and Page Layouts**|The Master Page Gallery contains catalogs that store branding assets such as master pages and CSS files.<br/>**Tip**  When you create custom branding elements, store custom assets in the default Master Page Gallery file structure.<br/>[Master pages, the Master Page Gallery, and page layouts in SharePoint 2013](http://msdn.microsoft.com/library/80b9a360-bc2e-46c6-b0ca-1bc487b73db6.aspx)|
-|Minimal Download Strategy (MDS)|A strategy that reduces the amount of data that the browser must download when users navigate from one SharePoint page to another.|Site settings|When MDS is active, SharePoint passes all page requests through  `/_layouts/15/start.aspx` and checks for visual differences between new page requests and the previously loaded page.<br/>[Optimize page performance in SharePoint 2013](http://msdn.microsoft.com/library/262caeef-64fd-4e02-b947-d772faf01159.aspx)<br/>[Minimal Download Strategy overview](http://msdn.microsoft.com/library/9caa7d99-1e74-4889-96c7-ba5a10772ad7.aspx)|
-|Navigation|Functionality that enables users to move around the information architecture of a SharePoint site. Navigation elements in SharePoint include search, tree controls, buttons, the ribbon, hyperlinks, tabs, menus, and taxonomy.||[Navigation class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.navigation.aspx)<br/>[NavigationNode class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.navigationnode.aspx)|
+|Master page gallery|A special document library in SharePoint where all branding elements (master pages, page layouts, JavaScript files, CSS, and images) are stored by default. Every site has its own Master Page Gallery.| Settings > Site Settings > Master Pages and Page Layouts|The Master Page Gallery contains catalogs that store branding assets such as master pages and CSS files.<br/><br/>**Tip**:  When you create custom branding elements, store custom assets in the default Master Page Gallery file structure.<br/><br/>[Master pages, the Master Page Gallery, and page layouts in SharePoint](../general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md)|
+|Minimal Download Strategy (MDS)|A strategy that reduces the amount of data that the browser must download when users navigate from one SharePoint page to another.|Site settings|When MDS is active, SharePoint passes all page requests through  `/_layouts/15/start.aspx` and checks for visual differences between new page requests and the previously loaded page.<br/><br/>- [Optimize page performance in SharePoint](../general-development/optimize-page-performance-in-sharepoint.md)<br/>- [Minimal Download Strategy overview](../general-development/minimal-download-strategy-overview.md)|
+|Navigation|Functionality that enables users to move around the information architecture of a SharePoint site. Navigation elements in SharePoint include search, tree controls, buttons, the ribbon, hyperlinks, tabs, menus, and taxonomy.||- [Navigation class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.navigation.aspx)<br/>- [NavigationNode class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.navigationnode.aspx)|
 |Oslo master|A default master page in SharePoint.|SharePoint file system Master Page Gallery|Unlike the seattle.master master page, the current navigation is in the same position as the top navigation area.|
 |Page content control|A control on a publishing site where a web part can be added.|||
-|Page layout|A template applied to a publishing page that enforces the consistent presentation of content.|SharePoint file system Master Page Gallery| [How to: Create a page layout in SharePoint 2013](http://msdn.microsoft.com/library/5447e6a1-2f14-4667-81d0-7514b468be80.aspx)|
-|Page model|The files, content, and interactions that result in a SharePoint page rendered to users in a browser.|| [Overview of the SharePoint 2013 page model](http://msdn.microsoft.com/library/808b1af3-89ab-4f02-89cc-ea86cb1f9a6e.aspx)|
+|Page layout|A template applied to a publishing page that enforces the consistent presentation of content.|SharePoint file system Master Page Gallery| [Create a page layout in SharePoint](../general-development/how-to-create-a-page-layout-in-sharepoint.md) |
+|Page model|The files, content, and interactions that result in a SharePoint page rendered to users in a browser.|| [Overview of the SharePoint page model](../general-development/overview-of-the-sharepoint-page-model.md)|
 |Publishing page|An .aspx page on a publishing site.|| [PublishingPage class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.publishingpage.aspx)|
-|Publishing site|A SharePoint site that can access publishing sites and pages, which include page layouts, taxonomy, managed navigation, and other web content management and enterprise content management features. || [PublishingWeb class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.publishingweb.aspx) [What's new with SharePoint 2013 site development](https://msdn.microsoft.com/en-us/library/office/jj163942.aspx)|
+|Publishing site|A SharePoint site that can access publishing sites and pages, which include page layouts, taxonomy, managed navigation, and other web content management and enterprise content management features. || - [PublishingWeb class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.publishingweb.aspx)<br/>- [What's new with SharePoint site development](../general-development/what-s-new-with-sharepoint-site-development.md)|
 |Seattle.master|A default master page in SharePoint.|SharePoint file system Master Page Gallery||
 |Team site|A site designed for users to collaborate on documents, wikis, ideas, processes, and so on.|||
 |Text layout|Defines the content areas that appear on a wiki page.|||
 |Text layout control|A wiki page control that can contain text, images, web parts, and app parts.|||
-|Top-level site|The default, top-level site provided by the server.|| [Create a SharePoint site](https://support.office.com/en-us/article/Create-a-SharePoint-site-4b1c153a-ec2b-45df-9dd9-e31d25563d1b?CorrelationId=ad2fc24e-9e3e-4da4-be0f-500d2e89fc64&amp;ui=en-US&amp;rs=en-US&amp;ad=US)|
-|Web part|Server-side controls that run inside the context of site pages.|| [Custom actions and property bag entries from a SharePoint app](http://blogs.msdn.com/b/vesku/archive/2013/10/02/ftc-to-cam-custom-actions-and-property-bag-entries.aspx)|
+|Top-level site|The default, top-level site provided by the server.|| [Build sites for SharePoint](../general-development/build-sites-for-sharepoint.md)|
+|Web part|Server-side controls that run inside the context of site pages.|| [Custom actions and property bag entries from a SharePoint app](https://blogs.msdn.microsoft.com/vesku/2013/10/02/ftc-to-cam-custom-actions-and-property-bag-entries-from-sp-app/)|
 |Web part page|A content page made up of web part zones, which can contain web parts. Web parts are represented on web part pages by [WebPartDefinition](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.webparts.webpartdefinition.aspx) objects.|| [Microsoft.SharePoint.Client.WebParts namespace](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.webparts.aspx)|
 |Web part zone|An area on a page where a web part can be added.|||
 |Wiki page|A content page that uses the Enterprise wiki site template.|| [Provisioning.Pages sample app](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages)|
@@ -89,7 +89,7 @@ SharePoint uses dynamic tokens to bind the master page to the content page, whic
 |~sitecollection/&lt;abc&gt;.master|http://&lt;siteColl&gt;/&lt;abc&gt;.master|
 
 > [!NOTE] 
-> The dynamic tokens in content placeholders correspond to server-side API properties and methods. When using remote provisioning, write code in CSOM or REST.To learn more about dynamic tokens and SharePoint URLs, see  [URLs and Tokens in SharePoint 2013](http://msdn.microsoft.com/library/161418d7-8123-4c4e-91a1-97e43c17f0e6.aspx). Add-ins for SharePoint use some tokens that apply to site URLs.
+> The dynamic tokens in content placeholders correspond to server-side API properties and methods. When using remote provisioning, write code in CSOM or REST.To learn more about dynamic tokens and SharePoint URLs, see [URLs and tokens in SharePoint](../general-development/urls-and-tokens-in-sharepoint.md). SharePoint Add-ins use some tokens that apply to site URLs.
 
 ## Web part pages and wiki pages
 
@@ -121,7 +121,7 @@ To learn more about content types, see:
 - [Custom Information in Content Types](https://msdn.microsoft.com/en-us/library/office/ms468437%28v=office.14%29.aspx)
 
 > [!IMPORTANT] 
-> Currently, you can use the remote provisioning pattern to apply out-of-the-box page layouts to a SharePoint site. Although you can provision custom content types on a site by using CSOM code via custom add-ins for SharePoint code, and setting custom **ContentTypeId** via CSOM is supported in SharePoint Online, setting the ContentTypeId for a custom content type via remote provisioning on on-premises SharePoint sites is not currently supported. For more information, see [How to: Create a page layout in SharePoint 2013](http://msdn.microsoft.com/library/5447e6a1-2f14-4667-81d0-7514b468be80.aspx).
+> Currently, you can use the remote provisioning pattern to apply out-of-the-box page layouts to a SharePoint site. Although you can provision custom content types on a site by using CSOM code via custom add-ins for SharePoint code, and setting custom **ContentTypeId** via CSOM is supported in SharePoint Online, setting the ContentTypeId for a custom content type via remote provisioning on on-premises SharePoint sites is not currently supported. For more information, see [Create a page layout in SharePoint](../general-development/how-to-create-a-page-layout-in-sharepoint.md).
 
 ## SharePoint page processing model
 
@@ -134,7 +134,7 @@ The page processing model interprets and runs all the requests that user agents 
 
 ### Page processing
 
-When a SharePoint user loads a web part page, SharePoint gets it by parsing the path to its template, page content, and context. It also sets the web parts associated with the web part page, assigns a [WebPartCollection](http://msdn2.microsoft.com/EN-US/library/k41e9930) instance to the page, and populates the web part page and its web parts with content.
+When a SharePoint user loads a web part page, SharePoint gets it by parsing the path to its template, page content, and context. It also sets the web parts associated with the web part page, assigns a [WebPartCollection](https://msdn.microsoft.com/EN-US/library/k41e9930) instance to the page, and populates the web part page and its web parts with content.
 
 When a SharePoint user loads a wiki page (either by using the Enterprise wiki template on a team site or a publishing site), SharePoint gets it by parsing the path to its template, page content, and context. It also sets the text layout control associated with the wiki page, and populates the enterprise wiki page and its text layout with content. 
 
@@ -146,7 +146,7 @@ In SharePoint, the minimal download strategy feature manages which specific cont
 
 You can enable or disable the minimal download strategy through central site administration or by using the SharePoint client-side object model (CSOM). You can activate the feature by using the [EnableMinimalDownload](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.web.enableminimaldownload.aspx) property. 
 
-For more information, see [Minimal Download Strategy overview](http://msdn.microsoft.com/library/9caa7d99-1e74-4889-96c7-ba5a10772ad7.aspx). For more information about how to optimize a master page to work well with the minimal download strategy, see [Modify SharePoint components for MDS](http://msdn.microsoft.com/library/c967be7c-f29f-481a-9ce2-915ead315dcd.aspx).
+For more information, see [Minimal Download Strategy overview](../general-development/minimal-download-strategy-overview.md). For more information about how to optimize a master page to work well with the minimal download strategy, see [Modify SharePoint components for MDS](../general-development/modify-sharepoint-components-for-mds.md).
 
 The minimal download strategy feature is enabled by default on SharePoint team sites, and disabled by default on SharePoint publishing sites and SharePoint team sites with publishing enabled.
 
@@ -160,10 +160,7 @@ You can use remote provisioning to provision site branding elements such as them
 To help maintain consistency on a custom master page, follow the existing coding pattern. For example, in areas of the page that use tables, reinforce the coding pattern by using tables. In areas where `<DIV>` tags or HTML5 are used, match any custom code with `<DIV>` tags or HTML5. In the long run, this makes any custom master pages that you have to create easier to maintain, and therefore, less expensive.
 
 ## See also
-
--  [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)  
--  [Master pages, the Master Page Gallery, and page layouts in SharePoint 2013](http://msdn.microsoft.com/library/80b9a360-bc2e-46c6-b0ca-1bc487b73db6.aspx) 
--  [How to: Create a page layout in SharePoint 2013](http://msdn.microsoft.com/library/5447e6a1-2f14-4667-81d0-7514b468be80.aspx)
+  
+-  [Master pages, the Master Page Gallery, and page layouts in SharePoint](../general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md) 
 -  [SharePoint 2013: Use an app for SharePoint to provision a wiki page](https://code.msdn.microsoft.com/SharePoint-2013-Use-an-app-5db977e8)
--  [Minimal Download Strategy overview](http://msdn.microsoft.com/library/9caa7d99-1e74-4889-96c7-ba5a10772ad7.aspx)
--  [Introduction to Content Types](https://msdn.microsoft.com/en-us/library/office/ms472236%28v=office.14%29.aspx)
+-  [Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016, and SharePoint Online](branding-and-site-provisioning-solutions-for-sharepoint.md)
