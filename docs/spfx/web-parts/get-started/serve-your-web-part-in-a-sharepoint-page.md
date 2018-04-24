@@ -85,6 +85,9 @@ The JavaScript files, CSS, and other assets are packaged inside of the package w
 
 Next, you need to deploy the package that was generated to the app catalog.
 
+> [!NOTE]
+> If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/en-us/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
+
 1. Go to your site's app catalog.
 
 2. Upload or drag and drop the **helloworld-webpart.sppkg** to the app catalog.
