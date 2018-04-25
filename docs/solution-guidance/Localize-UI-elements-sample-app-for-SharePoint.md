@@ -137,55 +137,56 @@ protected void btnSubmit_Click(object sender, EventArgs e)
     }
 > ```
 
+<br/>
+
 > [!NOTE] 
 > Some JavaScript files may depend on other JavaScript files to be loaded first before they can run and complete successfully. The following code construct from **RemoteManager_Inject** uses the **loadScript** function in scenario1.js to first load jQuery, and then continue running the remaining JavaScript code.
+>
+> ```js
+    var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";
 
-```js
-var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";
+        // Load jQuery first, and then continue running the rest of the code.
+        loadScript(jQuery, function () {
+        // Add additional JavaScript code here to complete your task. 
+    });
+> ```
 
-    // Load jQuery first, then continue running the rest of the code.
-    loadScript(jQuery, function () {
-   	 // Add additional JavaScript code here to complete your task. 
-});
-```
-
-Choose **Back to Site**. As shown in Figure 7, the host web now displays a status bar message that was added by scenario1.js.
-
-**Figure 7. Status bar message added to a team site using JavaScript**
+Choose **Back to Site**. As shown in the following figure, the host web now displays a status bar message that was added by scenario1.js.
 
 ![Screenshot of the status bar message added to a team site by using JavaScript](media/c5d6fb6d-f05f-49aa-a3c5-af1240ee9135.png)
 
+<br/>
+
 ### Scenario 2
-<a name="bk_Scenario2"> </a>
 
-Scenario 2 uses the technique described in Scenario 1 to replace UI text with translated text read from a JavaScript resource file. Scenario 2 replaces the Quick Launch link title ( **My quicklaunch entry**) and site page title ( **Hello SharePoint**) that you created earlier. Scenario 2 attaches a JavaScript file which reads translated text values from variables in culture-specific JavaScript resource files. Scenario 2 then updates the UI. Figure 8 shows the start page for Scenario 2.
+Scenario 2 uses the technique described in Scenario 1 to replace UI text with translated text read from a JavaScript resource file. Scenario 2 replaces the **Quick Launch** link title (**My quicklaunch entry**) and site page title (**Hello SharePoint**) that you created earlier. Scenario 2 attaches a JavaScript file that reads translated text values from variables in culture-specific JavaScript resource files. Scenario 2 then updates the UI. 
 
-**Figure 8. Scenario 2 start page**
+The following figure shows the start page for Scenario 2.
 
-![Screenshot of the start page for Scenario 2](media/c706060b-e77d-4ae6-99c4-43dee80ff7d3.png)
+<img alt="Screenshot of the start page for Scenario 2" src="media/c706060b-e77d-4ae6-99c4-43dee80ff7d3.png" width="600">
 
-As shown in Figure 8, choosing **Inject customization** applies the following changes to the site:
+As shown, choosing **Inject customization** applies the following changes to the site:
 
-- The Quick Launch link title **My quicklaunch entry** is changed to **Contoso link**.
+- The **Quick Launch** link title **My quicklaunch entry** is changed to **Contoso link**.
     
 - The **Hello SharePoint** site page title is changed to **Contoso page**.
 
-**Figure 9. Scenario 2 customizations**
-
-![Scenario 2 customizations](media/47e8ec40-d291-496f-8677-01eb46441df2.png)
+    ![Scenario 2 customizations](media/47e8ec40-d291-496f-8677-01eb46441df2.png)
     
 > [!NOTE] 
-> If your values for the Quick Launch link title and site page title differ from those shown in Figure 8, edit the **quickLauch_Scenario2** and **pageTitle_HelloSharePoint** variables in the JavaScript resource files scenario2.en-us.js or scenario2.nl-nl.js. Then run the code sample again. The scenario2.en-us.js file stores English (US) culture-specific resources. The scenario2.nl-nl.js file stores Dutch culture-specific resources. If you are testing this code sample using another language, consider creating another JavaScript resource file using the same naming convention.
+> If your values for the **Quick Launch** link title and site page title differ from those shown in the preceding figure, edit the **quickLauch\_Scenario2** and **pageTitle\_HelloSharePoint** variables in the JavaScript resource file scenario2.en-us.js or scenario2.nl-nl.js, and then run the code sample again. 
+> 
+> The scenario2.en-us.js file stores English (US) culture-specific resources. The scenario2.nl-nl.js file stores Dutch culture-specific resources. If you are testing this code sample by using another language, consider creating another JavaScript resource file that uses the same naming convention.
 
-Similar to Scenario 1, **btnSubmit_Click** in scenario2.aspx.cs calls **AddJsLink** to add a reference to the Scripts\scenario2.js file. In scenario2.js, the **RemoteManager_Inject** function calls the **TranslateQuickLaunch** function, which performs the following tasks:
+Similar to Scenario 1, **btnSubmit\_Click** in scenario2.aspx.cs calls **AddJsLink** to add a reference to the Scripts\scenario2.js file. In scenario2.js, the **RemoteManager\_Inject** function calls the **TranslateQuickLaunch** function, which performs the following tasks:
 
-- Determines the site's culture using **_spPageContextInfo.currentUICultureName**.
+- Determines the site's culture by using **\_spPageContextInfo.currentUICultureName**.
     
-- Loads the JavaScript resource file containing culture specific resources that match the UI culture of the site. For example, if the site's culture was English (United States), the scenario2.en-us.js file is loaded.
+- Loads the JavaScript resource file containing culture-specific resources that match the UI culture of the site. For example, if the site's culture was English (United States), the scenario2.en-us.js file is loaded.
     
-- Replaces **my quicklaunch entry** with the value of the **quickLauch_Scenario2** variable read from the JavaScript resource file.
+- Replaces **my quicklaunch entry** with the value of the **quickLauch\_Scenario2** variable read from the JavaScript resource file.
 
-```
+```js
 function RemoteManager_Inject() {
 
     var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";
@@ -199,7 +200,7 @@ function TranslateQuickLaunch() {
     // Load jQuery and if complete, load the JS resource file.
     var scriptUrl = "";
     var scriptRevision = "";
-    // iterate over the scripts loaded on the page to find the scenario2 script. Then use the script URL to dynamically build the URL for the resource file to be loaded.
+    // Iterate over the scripts loaded on the page to find the scenario2 script. Then use the script URL to dynamically build the URL for the resource file to be loaded.
     $('script').each(function (i, el) {
         if (el.src.toLowerCase().indexOf('scenario2.js') > -1) {
             scriptUrl = el.src;
@@ -226,7 +227,7 @@ function TranslateQuickLaunch() {
             }
         });
 
-        // Page specific changes require an IsOnPage call.
+        // Page-specific changes require an IsOnPage call.
         // ----------------------------------------------------------
 
         // Change the title of the "Hello SharePoint" page.
