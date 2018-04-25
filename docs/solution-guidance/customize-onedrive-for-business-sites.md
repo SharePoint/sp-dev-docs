@@ -72,7 +72,7 @@ A classic example of these enterprise requirements is branding, and for that we 
 
 The following diagram shows the current settings for Office 365 theming, which can be applied across all Office 365 services.
 
-<img alt="Displays the Office 365 site, showing the custom theming tab page, entitled Manage custom themes for your organization, Customize Office 365 to reflect your oganization's brand. Settings are available for Custom logo, URL for a clickable logo, Background image, Accent color, Navigation bar background color, Text and icons color, and App menu icon color." src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-03.png" width="800">
+<img alt="Displays the Office 365 site, showing the custom theming tab page, entitled Manage custom themes for your organization, Customize Office 365 to reflect your oganization's brand. Settings are available for Custom logo, URL for a clickable logo, Background image, Accent color, Navigation bar background color, Text and icons color, and App menu icon color." src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-03.png" width="400">
 
 Because by default Office 365 theme settings control the OD4B site suite bar, you will most likely use these options together with other options to ensure that you can provide at least the right branding elements across your OD4B sites. Notice that when you change, for example, the Office 365 theme settings in the Office 365 admin tool, it does take quite a long time to get the settings applied for OD4B sites, so be patient. 
 
@@ -102,31 +102,32 @@ If you are familiar with classic SharePoint development models with farm solutio
 
 ### Pre-create and apply configuration
 
-This option relies on the pre-creation of the OD4B sites before users will access them. This can be achieved by using relatively new API which provides us away to create OD4B sites for specific users in batch process, using either CSOM or REST. Needed code can be initiated using a PowerShell script or by writing actual code which is calling the remote APIs. 
+This option relies on the pre-creation of the OD4B sites before users access them. This can be achieved by using relatively new API that provides us a way to create OD4B sites for specific users in a batch process by using either CSOM or REST. The needed code can be initiated by using a PowerShell script or by writing actual code that calls the remote APIs. 
 
-![An administrator uses, pre-create and customize, to create an OD4B site.](media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-05.png)
+<img alt="An administrator uses, pre-create and customize, to create an OD4B site." src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-05.png" width="800">
 
-1. Administrator is using the remote creation APIs to create OD4B sites for users and is applying the needed customizations to the OD4B sites as part of the script process.
-2. Actual OD4B sites are created to the Office 365 for specific users and associated to their user profiles
+1. Administrator uses the remote creation APIs to create OD4B sites for users and applies the needed customizations to the OD4B sites as part of the script process.
 
-In some sense this is also really reliable process, but you would have to manage new persons and updates “manually”, which could mean more work then using the hidden app part approach. This is definitely valid approach which can be taken and especially useful if you are migrating from some other file sharing solution to the OD4B and want to avoid the need of end users to access the OD4B site once, before actuals site creation is started.
+2. Actual OD4B sites are created to Office 365 for specific users and associated to their user profiles.
+
+While this is a reliable process, you have to manage new persons and updates manually, which could mean more work than using the hidden app part approach. Nevertheless, this is a valid approach and is especially useful if you are migrating from some other file sharing solution to the OD4B and want to avoid users needing to access the OD4B site one time before actual site creation is started.
 
 ### Remote timer job based on user profile updates
 
-This approach means scanning through user profiles for checking to whom the OD4B site has been created and then apply the changes to the sites as needed. This would mean scheduled job running outside of the SharePoint, which will periodically check the status and perform needed customizations. Scheduled job could be running as a WebJob in Azure or as simple as PowerShell script scheduled in your own windows scheduler. Obviously the scale of the deployment has huge impact on the chosen scheduling option.
+This approach means scanning through user profiles and checking to whom the OD4B site has been created and then applying the changes to the sites as needed. This would mean scheduled jobs running outside of SharePoint, which periodically check status and perform needed customizations. Scheduled jobs could be running as WebJobs in Azure or as PowerShell scripts in your own Windows scheduler. Obviously, the scale of the deployment has a huge impact on the chosen scheduling option.
 
-![A Remote timer job uses, Loop through site collections, to customize each site.](media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-06.png)
+<img alt="A Remote timer job uses, Loop through site collections, to customize each site." src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-06.png" width="800">
 
-1.Scheduled task is initiated which will access user profiles of the users for checking who has OD4B site provisioned
-2.Actual sites are customized one-by-one based on the business requirements
+1. Scheduled task is initiated, which accesses user profiles to check who has the OD4B site provisioned. 
 
-One of the key downsides of this option is that there can clearly be a situations where user can access the OD4B sites before the customizations have been applied. At the same time this option is interesting add-on for other options to ensure that end users have not changed any of the required settings on the sites or to check that the OD4B site content aligns with the company policies.
+2. Actual sites are customized one-by-one based on the business requirements.
+
+One of the key downsides of this option is that there can clearly be a situation where a user can access the OD4B sites before the customizations have been applied. At the same time, this option is an interesting add-on for other options to ensure that end users have not changed any of the required settings on the sites or to check that the OD4B site content aligns with the company policies.
 
 ## See also
 
-- [Customizing OneDrive for Business sites with add-in model (MSDN blog article)](http://blogs.msdn.com/b/vesku/archive/2015/01/01/customizing-onedrive-for-business-sites-with-app-model.aspx)
-- [Customizing OD4B sites using Async pattern](#)
-- [Classic app part and sync process for OD4B site customization](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.OneDrive)
+- [Customizing OneDrive for Business sites with app model (MSDN blog article)](https://blogs.msdn.microsoft.com/vesku/2015/01/05/customizing-onedrive-for-business-sites-with-app-model/)
+- [Classic app part and sync process for OD4B site customization (GitHub)](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.OneDrive)
 - [Pre-create OD4B sites for users](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.OneDriveProvisioning)
 - [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
 - [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

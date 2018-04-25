@@ -36,9 +36,9 @@ The **CSSLink** class renders all style sheets when the page is rendered. If you
 
 ## Corev15.css file
 
-A lot of CSS is applied to SharePoint by default. The corev15.css file is the main source for styles in SharePoint. This file is stored in the SharePoint 15 folder on the server at `\TEMPLATE\LAYOUTS\1033\STYLES\Themable\COREV15.CSS` and not in the Master Page Gallery of the root site and home page.
+Much of CSS is applied to SharePoint by default. The corev15.css file is the main source for styles in SharePoint. This file is stored in the SharePoint 15 folder on the server at `\TEMPLATE\LAYOUTS\1033\STYLES\Themable\COREV15.CSS` and not in the Master Page Gallery of the root site and home page.
 
-To see how SharePoint uses CSS out of the box, look at the corev15.css file by using the developer tools in your web browser. In Internet Explorer, use the Internet Explorer Developer Toolbar (access it by pressing **F12**) and choose the **CSS** tab to view corev15.css.
+To see how SharePoint uses CSS out-of-the-box, look at the corev15.css file by using the developer tools in your web browser. In Internet Explorer, use the Internet Explorer Developer Toolbar (access it by pressing **F12**), and choose the **CSS** tab to view corev15.css.
 
 Styles defined in corev15.css use the .ms- , and .s4- prefixes, which indicate styles that were created by Microsoft. Corev15.css also uses a lot of child and descendent selectors. 
 
@@ -47,8 +47,8 @@ When you view the file, you'll notice many comments in this format: `/* [Replace
 > [!NOTE] 
 > Selecting the corev15.css file this way loads the rendered CSS rather than the saved CSS. Sometimes you might find discrepancies between the two. User agents such as browsers can also change rendering in response to user actions.
 
-> [!IMPORTANT] 
-> Do not log on to the server and edit or customize core SharePoint CSS files in the SharePoint root. Doing so will negatively impact support and upgrade. Never edit the corev15.css directly; always create a copy, rename it, and edit the new file instead. Editing corev15.css will apply branding to all web applications on the server.
+> [!WARNING] 
+> Do not sign in to the server and edit or customize core SharePoint CSS files in the SharePoint root. Doing so negatively impacts support and upgrade. Never edit the corev15.css directly; always create a copy, rename it, and edit the new file instead. Editing corev15.css applies branding to all web applications on the server.
 
 ### To create a custom style sheet for SharePoint
 
@@ -78,16 +78,16 @@ You can use composed looks in custom branding when CSS is called from a master p
     
 -  `/Style Library/{culture}/Themable/`
     
-You can place custom branding files in  `/Style Library/Themable/` and `/Style Library/{culture}/Themable/`, but  `15\TEMPLATE\LAYOUTS\{LCID}\STYLES\Themable` is not editable, so you can't store custom files in that location.
+You can place custom branding files in `/Style Library/Themable/` and `/Style Library/{culture}/Themable/`, but  `15\TEMPLATE\LAYOUTS\{LCID}\STYLES\Themable` is not editable, so you can't store custom files in that location.
 
 > [!NOTE] 
-> If these locations don't exist by default, you can create them manually and SharePoint will recognize them as themable.
+> If these locations don't exist by default, you can create them manually and SharePoint recognizes them as themable.
 
 ## Applying custom CSS to a SharePoint page
 
-You can add custom CSS to rich text fields and web part zones. To add CSS to a rich text field, put the page in edit mode and choose **Insert** > **Embed Code** from the ribbon. For web part zones, use the Script Editor web part to add HTML, scripts, or an internal style sheet. You can use this approach to hide the Quick Launch navigation in the default SharePoint UI. If you are using SharePoint Online and the NoScript feature, NoScript will disable Script Editor web part.
+You can add custom CSS to rich text fields and web part zones. To add CSS to a rich text field, put the page in edit mode and choose **Insert** > **Embed Code** from the ribbon. For web part zones, use the Script Editor web part to add HTML, scripts, or an internal style sheet. You can use this approach to hide the **Quick Launch** navigation in the default SharePoint UI. If you are using SharePoint Online and the NoScript feature, NoScript disables the Script Editor web part.
 
-Apply CSS to a SharePoint site by using an external style sheet and including a reference to the style sheet in the  `<link>` tag inside the `<head>` tags of the SharePoint page.
+Apply CSS to a SharePoint site by using an external style sheet and including a reference to the style sheet in the `<link>` tag inside the `<head>` tags of the SharePoint page.
 
 The following code example shows how to upload custom CSS to the asset library, apply a reference to the CSS URL with a custom action, and then create a custom action to build a link to the new CSS file. This code is part of the  [Branding.AlternateCSSAndSiteLogo ](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo) sample on GitHub.
 
@@ -187,6 +187,5 @@ namespace AlternateCSSAppAutohostedWeb.Services
 
 ## See also
   
-- [Branding.AlternateCSSAndSiteLogo sample](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
 - [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
 - [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)
