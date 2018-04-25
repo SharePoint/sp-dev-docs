@@ -49,7 +49,7 @@ The following figure shows a SharePoint webpage that is using the style sheet.
 
 **Webpage using the style sheet**
 
-![A web page using the style sheet control](../images/StylesheetControl_result.png)
+![A webpage using the style sheet control](../images/StylesheetControl_result.png)
  
 <br/>
 
@@ -202,7 +202,7 @@ In some cases, the user has to be authenticated to SharePoint before your page i
     
     **Style sheet used in the page**
   
-    ![Style sheet control used in a web page](../images/StylesheetControl_result2.png)
+    ![Style sheet control used in a webpage](../images/StylesheetControl_result2.png)
 
 6. You can also go to the host web and change the theme. Reload the add-in webpage to use the new styles.
     

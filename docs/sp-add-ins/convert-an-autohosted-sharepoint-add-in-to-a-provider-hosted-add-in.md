@@ -45,7 +45,7 @@ Converting an autohosted SharePoint Add-in to a provider-hosted add-in involves 
 - The Microsoft Azure SQL Database, if any, in the add-in
     
 
-A SharePoint autohosted add-in deployed to the Azure Web Site and Azure SQL Database automatically when it was installed; however, provider-hosted add-ins can have their remote web application and other services exist on any web platform. This article assumes that the remote components in an autohosted add-in will remain as Azure services following the conversion to a provider-hosted add-in.
+A SharePoint autohosted add-in deployed to the Azure website and Azure SQL Database automatically when it was installed; however, provider-hosted add-ins can have their remote web application and other services exist on any web platform. This article assumes that the remote components in an autohosted add-in will remain as Azure services following the conversion to a provider-hosted add-in.
 
 The following sections walk through the process of converting an autohosted add-in to a provider-hosted add-in. The example autohosted add-in that is used, **Customer Manager**, is simple, in order to focus on the conversion steps and not the actual add-in. It consists of three projects:
 
@@ -61,11 +61,11 @@ Converting a SharePoint autohosted add-in to a provider-hosted add-in involves m
 
 1. Deploy the Azure SQL Database
 
-2. Create the Azure Web Site to host the remote web application
+2. Create the Azure website to host the remote web application
 
 3. Register the add-in with your SharePoint site
 
-4. Update and deploy the Azure Web Site for the remote web application
+4. Update and deploy the Azure website for the remote web application
 
 5. Reconfigure the SharePoint Add-in project
 
@@ -93,7 +93,7 @@ The approach outlined in the following steps uses the data-tier application depl
 
     <br/>
  
-5. In the **CREATE SERVER** dialog that appears, select the Azure **SUBSCRIPTION**, the **LOGIN NAME**, and **PASSWORD** for the user who will have rights to the server, and select the same **REGION** used when creating the Azure Web Site previously. Make a note of the Login name and password because you will need them in a later step.
+5. In the **CREATE SERVER** dialog that appears, select the Azure **SUBSCRIPTION**, the **LOGIN NAME**, and **PASSWORD** for the user who will have rights to the server, and select the same **REGION** used when creating the Azure website previously. Make a note of the Login name and password because you will need them in a later step.
 
     ![Azure SQL New DB dialog](../images/ConvertAuto2ProviderFig5.jpg)
 
@@ -163,27 +163,27 @@ After the Azure SQL Database has been created, make a copy of the connection str
 
     <br/>
  
-## Create an Azure Web Site
+## Create an Azure website
 
-The next step is to create a new Azure Web Site where the remote web application will reside for the provider-hosted add-in. This has to be done first because the URL of the remote web application is needed before registering the add-in. However, the registration of the add-in in SharePoint should precede the deployment of the files for the ASP.NET web application because there are two outputs from the registration process (the Client ID and Client Secret) that are needed prior to the deployment of the ASP.NET web application files.
+The next step is to create a new Azure website where the remote web application will reside for the provider-hosted add-in. This has to be done first because the URL of the remote web application is needed before registering the add-in. However, the registration of the add-in in SharePoint should precede the deployment of the files for the ASP.NET web application because there are two outputs from the registration process (the Client ID and Client Secret) that are needed prior to the deployment of the ASP.NET web application files.
  
-### To create a new Azure Web Site
+### To create a new Azure website
 
-1. Sign in to the **Azure Management Portal** (https://manage.windowsazure.com). When the dashboard loads, click the **WEB SITES** navigation link in the left margin, and then select the **NEW** button in the footer as shown in the following figure.
+1. Sign in to the **Azure Management Portal** (https://manage.windowsazure.com). When the dashboard loads, click the **websiteS** navigation link in the left margin, and then select the **NEW** button in the footer as shown in the following figure.
 
-    ![Azure Web Sites dashboard](../images/ConvertAuto2Providerfig13.jpg)
+    ![Azure websites dashboard](../images/ConvertAuto2Providerfig13.jpg)
 
     <br/>
  
-2. In the New Web Site Wizard, select **COMPUTE**, **WEB SITE**, and **QUICK CREATE**, and then specify a **URL** and **WEB HOSTING PLAN**. Finally specify the **REGION** where the website should be created. Make sure to remember the region selected because the same region should be used for the Azure SQL Database created later. 
+2. In the New website Wizard, select **COMPUTE**, **website**, and **QUICK CREATE**, and then specify a **URL** and **WEB HOSTING PLAN**. Finally specify the **REGION** where the website should be created. Make sure to remember the region selected because the same region should be used for the Azure SQL Database created later. 
 
 3. If a web hosting plan does not already exist or a new one is desired, select the option **Create new web hosting plan**. The following figure shows an example.
 
-    ![Create Azure Web Site dialog](../images/ConvertAuto2Providerfig14.jpg)
+    ![Create Azure website dialog](../images/ConvertAuto2Providerfig14.jpg)
 
     <br/>
  
-4. After creating the Azure Web Site, make a note of the URL that is used for the site. In the preceding figures, the site created is `http://spahapptoph.azurewebsites.net`. 
+4. After creating the Azure website, make a note of the URL that is used for the site. In the preceding figures, the site created is `http://spahapptoph.azurewebsites.net`. 
 
 
 ## Register a new add-in
@@ -205,66 +205,66 @@ However, in a provider-hosted add-in, the developer has to manually register the
 
 2. On the add-in registration page, set the **Add-in Type** to **An add-in running on a web server**, and select the two **Generate** buttons to create a new **Client ID** and **Client Secret**. 
 
-3. Enter the name of the add-in in the **Title** field, and enter the URL of the target Azure Web Site created in the previous step in the **Add-in Domain** field. Finally, select the **Create** button.
+3. Enter the name of the add-in in the **Title** field, and enter the URL of the target Azure website created in the previous step in the **Add-in Domain** field. Finally, select the **Create** button.
  
 4. After the add-in has been registered, SharePoint displays a summary of the information that was used in the form to create the registration. It is very important that this information is copied for safekeeping, specifically the Client ID and Client Secret, because these are needed in a later step.
 
 
-## Update and deploy the Azure Web Site for the remote web application
+## Update and deploy the Azure website for the remote web application
 
-The next step is to reconfigure the remote web application so that it can be deployed as a provider-hosted add-in instead of an autohosted add-in. There are multiple ways to deploy an ASP.NET site to an Azure Web Site, including deploying it straight from Visual Studio, automatically from source control such as [Visual Studio Team Services](https://www.visualstudio.com/vso/), from GitHub, or even by using the tried and true FTP option. In this article, Visual Studio is used. However before the web application can be deployed, it first needs a few updates to work with the provider-hosted add-in.
+The next step is to reconfigure the remote web application so that it can be deployed as a provider-hosted add-in instead of an autohosted add-in. There are multiple ways to deploy an ASP.NET site to an Azure website, including deploying it straight from Visual Studio, automatically from source control such as [Visual Studio Team Services](https://www.visualstudio.com/vso/), from GitHub, or even by using the tried and true FTP option. In this article, Visual Studio is used. However before the web application can be deployed, it first needs a few updates to work with the provider-hosted add-in.
 
 ### To update the remote web application project
 
 The big change that needs to occur in the ASP.NET MVC web application is within the web.config file. Within this file there are three settings found within the **<appSettings>** node. These are the **ClientId**, **ClientSecret**, and **SqlAzureConnectionString**. The first two are used by the Microsoft-provided class, in TokenHelper.cs or .vb, to facilitate authenticating and communicating with SharePoint from the remote web application. The latter,  **SqlAzureConnectionString**, is used by the add-in to connect to the Azure SQL Database.
 
-In a SharePoint autohosted add-in, Office 365 fills in the values for these settings when the Azure Web Site and Azure SQL Database are created when the add-in is installed. However, in a provider-hosted add-in, these must be manually set before the add-in is deployed.
+In a SharePoint autohosted add-in, Office 365 fills in the values for these settings when the Azure website and Azure SQL Database are created when the add-in is installed. However, in a provider-hosted add-in, these must be manually set before the add-in is deployed.
 
-One option is to paste in the values for the three settings from the steps earlier in this article, but the disadvantage with this approach is that if they ever need to be changed, the web.config will need to be manually updated and redeployed to the Azure Web Site.
+One option is to paste in the values for the three settings from the steps earlier in this article, but the disadvantage with this approach is that if they ever need to be changed, the web.config will need to be manually updated and redeployed to the Azure website.
 
-Another option is to simply clear these settings (leave the settings keys in place, just set the **value=""** attribute to an empty string) and instead define them in the Azure Web Site settings through the **Azure Management Portal**. This approach means that the settings can be changed without updating the codebase. To do this:
+Another option is to simply clear these settings (leave the settings keys in place, just set the **value=""** attribute to an empty string) and instead define them in the Azure website settings through the **Azure Management Portal**. This approach means that the settings can be changed without updating the codebase. To do this:
 
-1. Sign in to the **Azure Management Portal** (https://manage.windowsazure.com) and go to the Azure Web Site created in the previous steps. 
+1. Sign in to the **Azure Management Portal** (https://manage.windowsazure.com) and go to the Azure website created in the previous steps. 
 
-2. On the Azure Web Site dashboard page, select **CONFIGURE** in the top navigation menu, and then scroll down to the **add-in settings** section. 
+2. On the Azure website dashboard page, select **CONFIGURE** in the top navigation menu, and then scroll down to the **add-in settings** section. 
 
 3. Add three new add-in settings by using the same setting names from the web.config file. Use the values obtained in the previous steps for **ClientId**, **ClientSecret**, and **SqlAzureConnectionString**.
  
 Make sure that the Azure SQL Database connection string is correct and valid because, when the connection string is exposed through the **Azure Management Portal** and Visual Studio, the password attribute is replaced with a mask. The masked password in the connection string should be changed to use the correct password defined when creating the sign-in for the Azure SQL Database.
 
 
-### To deploy the remote web application to the Azure Web Site
+### To deploy the remote web application to the Azure website
 
-Now the ASP.NET MVC web application files need to be deployed to the Azure Web Site as the remote web application. 
+Now the ASP.NET MVC web application files need to be deployed to the Azure website as the remote web application. 
 
 1. Within Visual Studio, right-click the web project and select **Publish**. This launches the Publish Web Wizard dialog.
 
-2. In this dialog, select **Windows Azure Web Sites**, and then select **Publish**.
+2. In this dialog, select **Windows Azure websites**, and then select **Publish**.
 
-    ![Publish web site dialog in Visual Studio](../images/ConvertAuto2Providerfig17.jpg)
+    ![Publish website dialog in Visual Studio](../images/ConvertAuto2Providerfig17.jpg)
 
     <br/>
  
-3. Select the name of the Azure Web Site that was created in a previous step as shown in the following figure, select **OK**, and ensure that the URL of the site is HTTPS.
+3. Select the name of the Azure website that was created in a previous step as shown in the following figure, select **OK**, and ensure that the URL of the site is HTTPS.
 
-    ![Select existing web site dialog](../images/ConvertAuto2ProviderFig18.png)
+    ![Select existing website dialog](../images/ConvertAuto2ProviderFig18.png)
 
     <br/>
  
 4. Select **Validate Connection** to ensure that the settings and connection are in good working order. 
 
-5. Select **Publish**, which triggers Visual Studio to deploy the ASP.NET web application to the Azure Web Site.
+5. Select **Publish**, which triggers Visual Studio to deploy the ASP.NET web application to the Azure website.
 
 6. Copy the URL of the site. 
  
-After deploying the website, Visual Studio launches the default debugging browser and navigates to the Azure Web Site. However, the site renders with an error because the ASP.NET MVC controllers are decorated with an attribute (specifically the `SharePointContextFilter`) that expects SharePoint to send certain values to the controller in the header of an HTTP POST request, but by default the browser launched an HTTP GET request, so this error is expected.
+After deploying the website, Visual Studio launches the default debugging browser and navigates to the Azure website. However, the site renders with an error because the ASP.NET MVC controllers are decorated with an attribute (specifically the `SharePointContextFilter`) that expects SharePoint to send certain values to the controller in the header of an HTTP POST request, but by default the browser launched an HTTP GET request, so this error is expected.
  
 > [!NOTE] 
-> For additional options for deploying ASP.NET web applications to an Azure Web Site, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git).
+> For additional options for deploying ASP.NET web applications to an Azure website, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git).
 
-### Custom domains and SSL certificates for Azure Web Sites
+### Custom domains and SSL certificates for Azure websites
 
-All Azure Web Sites use the following naming convention: `http[s]://[site-name].azurewebsites.net`. Microsoft has already added a wildcard SSL certificate to all websites under the `*.azurewebsites.net` domain, but customers are free to associate a custom domain with their Azure Web Site as well as use their own SSL certificates for these custom domains.
+All Azure websites use the following naming convention: `http[s]://[site-name].azurewebsites.net`. Microsoft has already added a wildcard SSL certificate to all websites under the `*.azurewebsites.net` domain, but customers are free to associate a custom domain with their Azure website as well as use their own SSL certificates for these custom domains.
  
 For information about using custom domains, see [Map an existing custom DNS name to Azure Web Apps](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain). 
 
@@ -278,7 +278,7 @@ The last step is to reconfigure the SharePoint Add-in project. The Visual Studio
 
 1. Open the AppManifest.xml file in the SharePoint Add-in project, and change the **Hosting Type** option from **Autohosted** to **Provider-hosted**. 
  
-2. Set the **Start Page** of the add-in to point to the URL of the remote web application's start page, which is the URL of the Azure Web Site. Make sure to include the query string value {StandardTokens}, if it isn't already there. This ensures that SharePoint adds the core query string tokens to the URL when it opens the remote web application.
+2. Set the **Start Page** of the add-in to point to the URL of the remote web application's start page, which is the URL of the Azure website. Make sure to include the query string value {StandardTokens}, if it isn't already there. This ensures that SharePoint adds the core query string tokens to the URL when it opens the remote web application.
  
 3. Remove the reference in the SharePoint Add-in project to the ASP.NET MVC web application by selecting the SharePoint Add-in project in Visual Studio **Solution Explorer**. Within the **Properties** tool window, set the **Web Project** property to **(None)**, as shown in the following figure.
 
@@ -299,7 +299,7 @@ The last step is to reconfigure the SharePoint Add-in project. The Visual Studio
     > [!IMPORTANT] 
     > If the existing ProductId was used, SharePoint returns the error "The provided add-in differs from another add-in with the same version and product ID" when the converted add-in is installed.
  
-7. Find the **<RemoteWebApplication>** element and update the **ClientId** attribute to be the same GUID that was obtained when registering the add-in with SharePoint and that was used in the Azure Web Site's web.config add-in settings.
+7. Find the **<RemoteWebApplication>** element and update the **ClientId** attribute to be the same GUID that was obtained when registering the add-in with SharePoint and that was used in the Azure website's web.config add-in settings.
 
     ![Client ID attribute in app manifest](../images/ConvertAuto2ProviderFig22.jpg)
 

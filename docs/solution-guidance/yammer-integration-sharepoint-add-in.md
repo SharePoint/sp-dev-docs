@@ -34,7 +34,7 @@ You have a few options to integrate Yammer with SharePoint.
 Embed
 -----
 
-In this option you embed a Yammer feed in a SharePoint web page.
+In this option you embed a Yammer feed in a SharePoint webpage.
 	
 - This option is quickly and easily implemented.
 - This option allows you to control limited aspects of the feed and how it appears.
@@ -175,7 +175,7 @@ For more information about Yammer OpenGraph see the [Open Graph Introduction & F
 Yammer OpenGraph API & Yammer REST API with Yammer SDKs
 -------------------------------------------------------
 
-In this option you use the Yammer OpenGraph API and/or Yammer REST API with Yammer SDKs to integrate Yammer with SharePoint.  These APIs may also be used to integrate Yammer with processes outside of web pages.  Examples of such scenarios include services and long running operations. 
+In this option you use the Yammer OpenGraph API and/or Yammer REST API with Yammer SDKs to integrate Yammer with SharePoint.  These APIs may also be used to integrate Yammer with processes outside of webpages.  Examples of such scenarios include services and long running operations. 
 	
 - This option takes longer to implement.
 - This option allows you to control all aspects of the feed and how it appears and how you interact with it.

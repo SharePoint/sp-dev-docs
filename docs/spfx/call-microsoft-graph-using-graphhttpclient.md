@@ -189,7 +189,7 @@ The code needs to call the **GraphHttpClient** application that runs on SharePoi
   gulp serve --nobrowser
   ```
 
-4. Add the web part to a web page, or use the SharePoint Workbench.
+4. Add the web part to a webpage, or use the SharePoint Workbench.
 
   You should see the following on your page.
 
@@ -293,7 +293,7 @@ Again, you need to modify the HTML to add a button that creates a new group.
   gulp serve --nobrowser
   ```
 
-4. Add the web part to a web page, or use the SharePoint Workbench.
+4. Add the web part to a webpage, or use the SharePoint Workbench.
 
   You should see the following on your page.
 

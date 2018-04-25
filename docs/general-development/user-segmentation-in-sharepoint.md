@@ -20,7 +20,7 @@ In SharePoint, this user segmentation functionality can be beneficial in many sc
 - Displaying different discount offers depending on the end-user's locale 
     
   
-- Displaying different articles on a page depending on the end-user's referrer link (the web site that brought the end-user to your page). 
+- Displaying different articles on a page depending on the end-user's referrer link (the website that brought the end-user to your page). 
     
   
 To implement user segmentation in SharePoint, you'll do three things: create a term set for each user segment, extend the Content Search web part to make it aware of your user segments, and then use query rules to perform specific actions for each user segment.

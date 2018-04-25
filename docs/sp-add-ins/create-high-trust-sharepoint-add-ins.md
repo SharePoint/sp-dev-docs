@@ -94,7 +94,7 @@ You'll create a test .pfx certificate file first, and then a corresponding test 
     
   - **SecurityTokenServiceApplicationPool**
       
-  - The add-in pool that serves the IIS web site that hosts the parent SharePoint web application for your test SharePoint website. For the **SharePoint - 80** IIS website, the pool is called **OServerPortalAppPool**.
+  - The add-in pool that serves the IIS website that hosts the parent SharePoint web application for your test SharePoint website. For the **SharePoint - 80** IIS website, the pool is called **OServerPortalAppPool**.
      
 2. In IIS manager, select the _ServerName_ node in the tree view on the left.    
  

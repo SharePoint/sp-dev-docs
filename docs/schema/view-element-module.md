@@ -95,7 +95,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**FPModified**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** if the view has been altered through editing in a Web page editor, and the view is no longer customizable by the Microsoft Windows SharePoint Services UI.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** if the view has been altered through editing in a webpage editor, and the view is no longer customizable by the Microsoft Windows SharePoint Services UI.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FreeForm**</p></td>

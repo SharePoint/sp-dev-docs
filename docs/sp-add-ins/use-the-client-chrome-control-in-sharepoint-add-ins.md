@@ -45,7 +45,7 @@ The following figure shows a remote webpage with the chrome control.
 
 **Remote webpage with the chrome control**
 
-![A remote web page with the chrome control](../images/ChromeControl_result.png)
+![A remote webpage with the chrome control](../images/ChromeControl_result.png)
  
 <br/>
 

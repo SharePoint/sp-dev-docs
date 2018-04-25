@@ -123,7 +123,7 @@ After completing the tasks, your add-in part should look similar to the followin
 
 2. Name the part **Basic add-in part**.
 
-3. In the **Specify the client web part page** dialog box, select **Select or enter a URL for an existing web page**. Select the **TestAppWebPart/AppPartContent.aspx** page in the drop-down list. (After you've made your choice, the page URL may appear in the box with "TestAppWebPart" replaced by **~remoteAppUrl** and with **{StandardTokens }** added for the query parameters.)
+3. In the **Specify the client web part page** dialog box, select **Select or enter a URL for an existing webpage**. Select the **TestAppWebPart/AppPartContent.aspx** page in the drop-down list. (After you've made your choice, the page URL may appear in the box with "TestAppWebPart" replaced by **~remoteAppUrl** and with **{StandardTokens }** added for the query parameters.)
 
 4. Select **Finish**.
 

@@ -43,8 +43,8 @@ This section builds on your knowledge about [SharePoint development and design t
 |Page content control|A control on a publishing site where a web part can be added.||
 |Page layout|A template for a SharePoint publishing site page that lets users lay out information on the page in a consistent way.||
 |Quick Launch|Manages the navigation elements on the left side of the page of a collaboration site.|You can add heading links to group navigation items.|
-|REST|A stateless architectural style that abstracts architectural elements and uses HTTP verbs to read and write data from web pages that contain XML files.| [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)|
-|Root web|The first web page in a site collection.|The root web is also sometimes referred to as the Web Application Root. |
+|REST|A stateless architectural style that abstracts architectural elements and uses HTTP verbs to read and write data from webpages that contain XML files.| [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)|
+|Root web|The first webpage in a site collection.|The root web is also sometimes referred to as the Web Application Root. |
 |Seattle.master|The default master page for SharePoint team sites and publishing sites.||
 |Site layout|See master page.|The site layout combines the master page of a theme with its corresponding .preview file.|
 |Structured navigation|A navigation structure for publishing sites that is based on the site hierarchy of the publishing site. You can add headers and links to manually replace or customize the structured navigation that SharePoint automatically generates.| [How to: Customize Navigation in SharePoint Server 2010 (ECM)](https://msdn.microsoft.com/en-us/library/office/ms558975%28v=office.14%29.aspx)|

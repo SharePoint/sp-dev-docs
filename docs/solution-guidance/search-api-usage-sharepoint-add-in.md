@@ -40,7 +40,7 @@ In this option you use the .Net CSOM API to execute searches with the SharePoint
 **When is it a good fit?**
 
 - This API is a great fit for Provider-hosted Add-ins, long running operations, or other server-side scenarios that run on the .Net platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, ASP.NET Web API services, .Net console or Windows applications, and Azure Web Jobs.
+- Some examples of these scenarios are ASP.NET MVC websites, ASP.NET Web API services, .Net console or Windows applications, and Azure Web Jobs.
 
 **Getting Started**
 
@@ -130,7 +130,7 @@ In this option you use the JavaScript CSOM (JSOM) API to execute searches with t
 **When is it a good fit?**
 
 - This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-ins running on any web platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, PHP web sites, Python web sites, etc.
+- Some examples of these scenarios are ASP.NET MVC websites, PHP websites, Python websites, etc.
 
 **Getting Started**
 
@@ -177,7 +177,7 @@ In this option you use the REST API to execute searches with the SharePoint Sear
 **When is it a good fit?**
 
 This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-ins running on any web platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, PHP web sites, Python web sites, ASP.NET Web API services, .Net console or Windows applications, Azure Web Jobs, etc.
+- Some examples of these scenarios are ASP.NET MVC websites, PHP websites, Python websites, ASP.NET Web API services, .Net console or Windows applications, Azure Web Jobs, etc.
 
 **Getting Started**
 

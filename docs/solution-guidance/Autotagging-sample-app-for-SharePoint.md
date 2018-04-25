@@ -8,7 +8,7 @@ As part of your Enterprise Content Management (ECM) strategy, you can automatica
     
 _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
 
-The [ECM.AutoTagging](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.AutoTagging) sample shows you how to use a provider-hosted add-in to automatically tag content added to a SharePoint library with data sourced from a custom user profile property. This add-in uses remote event receivers, hosted on an Azure Web Site, to:   
+The [ECM.AutoTagging](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.AutoTagging) sample shows you how to use a provider-hosted add-in to automatically tag content added to a SharePoint library with data sourced from a custom user profile property. This add-in uses remote event receivers, hosted on an Azure website, to:   
 
 - Create fields, content types, and document libraries.
     
@@ -33,7 +33,7 @@ To get started, download the  [ECM.AutoTagging](https://github.com/SharePoint/Pn
 
 Before you run this add-in , do the following:
 
-1. Create an Azure Web Site and deploy the ECM.AutoTaggingWeb project to it.
+1. Create an Azure website and deploy the ECM.AutoTaggingWeb project to it.
     
 2. Register your add-in using the Appregnew.aspx page in Office 365. 
     
@@ -51,7 +51,7 @@ Before you run this add-in , do the following:
 
 	![Screenshot of the AppInv.aspx page, with the App ID and Permission Request XML boxes highlighted](media/d733e2b0-55f3-4aee-872b-49e7e2baf470.png)
 
-4. In the ECM.AutoTaggingWeb project, in the ReceiverHelper.cs file, in the  **CreateEventReciever** method, update the **ReceiverUrl** property with the URL of your Azure Web Site.
+4. In the ECM.AutoTaggingWeb project, in the ReceiverHelper.cs file, in the  **CreateEventReciever** method, update the **ReceiverUrl** property with the URL of your Azure website.
 
 	```csharp
 	    public static EventReceiverDefinitionCreationInformation CreateEventReciever(string receiverName, EventReceiverType type)
@@ -213,7 +213,7 @@ After this code runs, the AutoTaggingSampleItemAdding document library is create
 
 ![Screenshot shwoing the Site Contents page with the new AutoTaggingSampleItemAdd document library.](media/8820a44f-8df8-4c80-aeaa-e50c37b8912c.png)
 
-In the ECM.AutoTaggingWeb project, in the ReceiverHelper.cs file, the  **CreateEventReciever** method creates the ItemAdding event receiver definition. In the ECM.AutoTaggingWeb project, the Services folder includes a web service called AutoTaggingService.svc. When you published the ECM.AutoTaggingWeb project to your Azure Web Site, this web service was also deployed to your site. The **CreateEventReciever** method assigns this web service as the remote event receiver on the document library. The following code from the **CreateEventReciever** method shows how to assign the web service to the remote event receiver.
+In the ECM.AutoTaggingWeb project, in the ReceiverHelper.cs file, the  **CreateEventReciever** method creates the ItemAdding event receiver definition. In the ECM.AutoTaggingWeb project, the Services folder includes a web service called AutoTaggingService.svc. When you published the ECM.AutoTaggingWeb project to your Azure website, this web service was also deployed to your site. The **CreateEventReciever** method assigns this web service as the remote event receiver on the document library. The following code from the **CreateEventReciever** method shows how to assign the web service to the remote event receiver.
 
 ```csharp
 public static EventReceiverDefinitionCreationInformation CreateEventReciever(string receiverName, EventReceiverType type)

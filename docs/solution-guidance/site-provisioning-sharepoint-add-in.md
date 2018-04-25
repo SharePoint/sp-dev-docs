@@ -168,7 +168,7 @@ This option works well when you need to provide your end users with a self-servi
 
 - [Async provisioning with hybrid scenarios (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2015/03/05/hybrid-site-collection-provisioning-from-azure-to-on-premises-sharepoint.aspx)
 - [Provisioning.Hybrid.Simple (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Hybrid.Simple)
-	+ This sample demonstrates the simplest possible hybrid setup with Azure storage queues, WebJobs and Service Bus relay. This is a demonstration of hosting a provider SharePoint Add-in in the Azure web site, which can be used to provision new custom branded site collections to on-premises farm without any SharePoint Add-in infrastructure requirements on-premises.
+	+ This sample demonstrates the simplest possible hybrid setup with Azure storage queues, WebJobs and Service Bus relay. This is a demonstration of hosting a provider SharePoint Add-in in the Azure website, which can be used to provision new custom branded site collections to on-premises farm without any SharePoint Add-in infrastructure requirements on-premises.
 - [Provisioning.Services.SiteManager (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Services.SiteManager)
 	+ This sample shows how to extend on-premises farm to support site collection creation from a Provider-hosted SharePoint Add-in.
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)

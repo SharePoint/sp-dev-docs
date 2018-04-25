@@ -26,7 +26,7 @@ In this article, you add a special kind of web part called an add-in part to the
     
 2. Select **Client web part (Host Web)**, give it the name **Place Order**, and then select **Add**. ("Client web part" is another name for "add-in part".)
  
-3. On the next page of the wizard, select the second option: **Select or enter the URL of an existing web page for the client web part content**.
+3. On the next page of the wizard, select the second option: **Select or enter the URL of an existing webpage for the client web part content**.
 
 4. In the drop-down list, select the URL for the **OrderForm.aspx** page, and then select **Finish**.
     

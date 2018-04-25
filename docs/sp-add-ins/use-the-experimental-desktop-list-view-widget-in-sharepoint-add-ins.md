@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Use the experimental Desktop List View widget in SharePoint Add-ins
 
-You can use the Desktop List View widget on any web page, even if the page is not hosted in SharePoint. Use the List View widget in your add-ins to display data in lists that are hosted on a SharePoint site.
+You can use the Desktop List View widget on any webpage, even if the page is not hosted in SharePoint. Use the List View widget in your add-ins to display data in lists that are hosted on a SharePoint site.
  
 > [!WARNING] 
 > The Office Web Widgets - Experimental are only provided for research and feedback purposes. Do not use in production scenarios. The Office Web Widgets behavior may change significantly in future releases. Read and review the [Office Web Widgets - Experimental License Terms](office-web-widgetsexperimental-license-terms.md).

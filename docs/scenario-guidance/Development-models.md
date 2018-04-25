@@ -93,7 +93,7 @@ _**Applies to:** SharePoint 2013 | SharePoint 2016_
 
 SharePoint Farm Solutions are trusted SharePoint extensions whose custom logic calls the SharePoint server object model and runs with full trust on the SharePoint servers. These solutions are primarily for custom administrative extensions of SharePoint, such as timer jobs, custom Windows PowerShell commands, and extensions of Central Administration. 
 
-Farm Solutions are distributed as SharePoint solution packages that farm administrators upload to a farm-wide storage location from which they can be deployed. Components in Farm Solutions can have farm, web application, site collection, or web site scope. The Farm Solutions are supported in SharePoint on-premises only.
+Farm Solutions are distributed as SharePoint solution packages that farm administrators upload to a farm-wide storage location from which they can be deployed. Components in Farm Solutions can have farm, web application, site collection, or website scope. The Farm Solutions are supported in SharePoint on-premises only.
 
 ### Articles
 

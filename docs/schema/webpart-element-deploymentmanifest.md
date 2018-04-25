@@ -105,7 +105,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Flags** <br/> |xs:string  <br/> |Optional flag.  <br/> |
 |**FPModified** <br/> |xs:boolean  <br/> |Optional flag.  <br/> |
 |**FrameState** <br/> |xs:string  <br/> |Optional. Specifies the initial state of the web part frame; the frame can be normal (expanded) or minimized.  <br/> |
-|**Hidden** <br/> |xs:boolean  <br/> |Optional flag. Specifies whether the web part control is displayed on a Web page.The value is **true** if the control is hidden; the default is **false**.  <br/> |
+|**Hidden** <br/> |xs:boolean  <br/> |Optional flag. Specifies whether the web part control is displayed on a webpage.The value is **true** if the control is hidden; the default is **false**.  <br/> |
 |**IsIncluded** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Level** <br/> |xs:string  <br/> |Optional. Indicates whether the specified file is of the "major" or "minor" level. The default value is "major".  <br/> |
 |**ListId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the web part list.  <br/> |

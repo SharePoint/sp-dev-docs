@@ -198,7 +198,7 @@ New in Microsoft Excel Services and Microsoft SharePoint, ECMAScript (JavaScript
   
     
     
-JavaScript UDFs are similar to  [UDFs](http://msdn.microsoft.com/en-us/library/ms499792.aspx) that you can create for Microsoft Excel. The difference is that JavaScript UDFs are only used in workbooks embedded in a webpage and only exist on that web page.
+JavaScript UDFs are similar to  [UDFs](http://msdn.microsoft.com/en-us/library/ms499792.aspx) that you can create for Microsoft Excel. The difference is that JavaScript UDFs are only used in workbooks embedded in a webpage and only exist on that webpage.
   
     
     

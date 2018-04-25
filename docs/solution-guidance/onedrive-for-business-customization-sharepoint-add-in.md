@@ -8,7 +8,7 @@ OneDrive for Business customization in the SharePoint add-in model
 Summary
 -------
 
-The approach you take to customize OneDrive for Business sites in the new SharePoint Add-in model is different than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration web site.  SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
+The approach you take to customize OneDrive for Business sites in the new SharePoint Add-in model is different than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration website.  SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
 
 In an SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
 
@@ -408,7 +408,7 @@ Actual queue processing is really easy with WebJobs. Only thing we need to do is
        }
     }
 
-Other thing worth noticing is that you will need to ensure that you have set the *Copy Local* property for the SharePoint CSOM assembly references property for the project, so that all dependent assemblies are properly copied to Azure when you deploy the web job. This is simply because these assemblies are not located in normal Azure web site by default, so by setting this property *True*, you will ensure that the referenced assemblies are copied to cloud as well.
+Other thing worth noticing is that you will need to ensure that you have set the *Copy Local* property for the SharePoint CSOM assembly references property for the project, so that all dependent assemblies are properly copied to Azure when you deploy the web job. This is simply because these assemblies are not located in normal Azure website by default, so by setting this property *True*, you will ensure that the referenced assemblies are copied to cloud as well.
 
 **OD4B.Configuration.AsyncWeb**
 
@@ -531,18 +531,18 @@ There’s even a tester for sending rightly formatted messages to the queue in t
 WebJob environment variables
 ----------------------------
 
-One of the interesting things about the WebJobs are that they are running under a Azure web sites, but their execution location is slightly different than normal web sites in Azure. What I mean with this is that if you deploy any additional files or assets together with the WebJob to the Azure, you might run into challenges if you assume that you can reference those assets directly using classic relative paths in the WebJob code.
+One of the interesting things about the WebJobs are that they are running under a Azure websites, but their execution location is slightly different than normal websites in Azure. What I mean with this is that if you deploy any additional files or assets together with the WebJob to the Azure, you might run into challenges if you assume that you can reference those assets directly using classic relative paths in the WebJob code.
 
-In this case we had one JavaScript file and few files for the custom theme, which were deployed to the Azure web site, so that they could be uploaded to the SharePoint sites as needed. You can see those files in the Azure if you extend the Files branch under specific web site.
+In this case we had one JavaScript file and few files for the custom theme, which were deployed to the Azure website, so that they could be uploaded to the SharePoint sites as needed. You can see those files in the Azure if you extend the Files branch under specific website.
 
 ![The Server Explorer expanded the nested objects Websites, vesaj-od4bconf, Files, Resources, Themes, Garage, and displays files in the Garage folder.](media/Recipes/OD4BCustomization/azure-web-site.png)
 
-Typically in Azure web sites, you could reference to those files by using following format
+Typically in Azure websites, you could reference to those files by using following format
 
     string path = HostingEnvironment.MapPath(
         string.Format("~/{0}", "Resources/OneDriveConfiguration.js"));
 
-Since WebJobs are however executed in different location and not in the context of IIS, above reference to file would not work, since mapping would fail from the context of the WebJob process. This is where WebJob specific environment variables can help.  In the reference solution case, we used WebJob specific environment variable WEBROOT_PATH to gain access on the associated web site folder.
+Since WebJobs are however executed in different location and not in the context of IIS, above reference to file would not work, since mapping would fail from the context of the WebJob process. This is where WebJob specific environment variables can help.  In the reference solution case, we used WebJob specific environment variable WEBROOT_PATH to gain access on the associated website folder.
 
     string jsFile = Path.Combine(
         Environment.GetEnvironmentVariable("WEBROOT_PATH"), 
