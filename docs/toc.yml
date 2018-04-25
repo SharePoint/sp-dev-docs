@@ -1324,8 +1324,8 @@
         href: solution-guidance/Customize-a-SharePoint-page-by-using-remote-provisioning-and-CSS.md
       - name: Update the branding of existing sites and regions
         href: solution-guidance/update-the-branding-of-existing-sharepoint-sites-and-page-regions.md
-      - name: Customize OneDrive for Business site branding
-        href: solution-guidance/Customization-Options-For-OD4B-Sites.md
+      - name: Customize OneDrive for Business sites
+        href: solution-guidance/customize-onedrive-for-business-sites.md
     - name: Site provisioning
       href: solution-guidance/sharepoint-site-provisioning-solutions.md
       items:

@@ -1,52 +1,48 @@
 ---
 title: Use CSS to brand SharePoint pages
-ms.date: 11/03/2017
+description: Use CSS to support branding and site design in SharePoint. Find out about CSS master pages, the corev15.css file, and composed looks in custom branding.
+ms.date: 4/25/2018
 ---
+
 # Use CSS to brand SharePoint pages
-Use CSS to support branding and site design in SharePoint. Find out about CSS is master pages, the corev15.css file, and composed looks in custom branding.
 
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-
-Cascading style sheet (CSS) plays a large role in SharePoint branding. To successfully customize the site design in SharePoint 2013 and SharePoint Online, it's useful to be familiar with how SharePoint uses CSS.
+Cascading style sheet (CSS) plays a large role in SharePoint branding. To successfully customize the site design in SharePoint and SharePoint Online, it's useful to be familiar with how SharePoint uses CSS.
 
 ## CSS branding overview
-<a name="sectionSection0"> </a>
 
 When you create a SharePoint site collection, SharePoint creates a Master Page Gallery (_catalogs/masterpage) where most branding assets, including .master, .css, image, HTML, and JavaScript files are stored.
 
-In SharePoint 2013, SharePoint uses the seattle.master page by default for Team sites, Publishing sites, and Team sites with Publishing enabled. It uses mysite15.master for OneDrive for Business sites. Each .master file refers to the corev15.css file, which is built from a variety of .css files delivered with SharePoint out of the box.
+SharePoint uses the seattle.master page by default for team sites, publishing sites, and team sites with publishing enabled. It uses mysite15.master for OneDrive for Business sites. Each .master file refers to the corev15.css file, which is built from a variety of .css files delivered with SharePoint out of the box.
 
 All default master pages use corev15.css when processing styles, and rely on the CSS cascade and CSS file sharing to resolve which styles are applied to specific controls and elements in regions of a page. Multiple CSS files are also combined to build the oslo.css file, which is used with the oslo.master master page.
 
 ## CSS in master pages
-<a name="sectionSection1"> </a>
 
-The  `<SharePoint:CssRegistration>` content placeholder, which corresponds to the [WebControls.CssRegistration](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webcontrols.cssregistration.aspx) class in the server-side object model, defines the CSS file. Like a reference to a master page, SharePoint replaces the tokens in the master page when the page is processed. The [WebControls.CssLink](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webcontrols.csslink.aspx) class reads the registration from the master page and inserts a `<link>` tag in the resulting HTML file that is generated.
+The `<SharePoint:CssRegistration>` content placeholder, which corresponds to the [WebControls.CssRegistration](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webcontrols.cssregistration.aspx) class in the server-side object model, defines the CSS file. Like a reference to a master page, SharePoint replaces the tokens in the master page when the page is processed. The [WebControls.CssLink](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webcontrols.csslink.aspx) class reads the registration from the master page and inserts a `<link>` tag in the resulting HTML file that is generated.
 
 Consider the following example.
 
-```
+```XML
 <SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/~language/Core Styles/contoso.css%>" runat="server"/>
 ```
 
 At runtime, this code is rendered as follows.
 
-```
+```XML
 <link rel="stylesheet" type="text/css" href="/sites/nopub/Style%20Library/en-US/Core%20Styles/contoso.css">
 ```
 
-The  **CSSLink** class renders all style sheets when the page is rendered. If you define styles in a custom .css file that are also defined in corev15.css, they are overwritten.
+The **CSSLink** class renders all style sheets when the page is rendered. If you define styles in a custom .css file that are also defined in corev15.css, they are overwritten.
 
 ## Corev15.css file
-<a name="sectionSection2"> </a>
 
-A lot of CSS is applied to SharePoint by default. The corev15.css file is the main source for styles in SharePoint. This file is stored in the SharePoint 15 folder on the server at ` \TEMPLATE\LAYOUTS\1033\STYLES\Themable\COREV15.CSS` and not in the Master Page Gallery of the root site and home page.
+A lot of CSS is applied to SharePoint by default. The corev15.css file is the main source for styles in SharePoint. This file is stored in the SharePoint 15 folder on the server at `\TEMPLATE\LAYOUTS\1033\STYLES\Themable\COREV15.CSS` and not in the Master Page Gallery of the root site and home page.
 
-To see how SharePoint uses CSS out of the box, look at the corev15.css file by using the developer tools in your web browser. In Internet Explorer, use the Internet Explorer Developer Toolbar (access it by pressing  **F12**) and choose the  **CSS** tab to view corev15.css.
+To see how SharePoint uses CSS out of the box, look at the corev15.css file by using the developer tools in your web browser. In Internet Explorer, use the Internet Explorer Developer Toolbar (access it by pressing **F12**) and choose the **CSS** tab to view corev15.css.
 
 Styles defined in corev15.css use the .ms- , and .s4- prefixes, which indicate styles that were created by Microsoft. Corev15.css also uses a lot of child and descendent selectors. 
 
-When you view the file, you'll notice many comments in this format:  `/* [ReplaceFont ( themeFont:"body")] */`. SharePoint reads these comments when a composed look is applied. The comments tell SharePoint to change the attribute of the CSS that immediately follows the comment. Applying a composed look might change many of the default colors, fonts, and background images that are applied, and subsequently update the settings in corev15.css.
+When you view the file, you'll notice many comments in this format: `/* [ReplaceFont ( themeFont:"body")] */`. SharePoint reads these comments when a composed look is applied. The comments tell SharePoint to change the attribute of the CSS that immediately follows the comment. Applying a composed look might change many of the default colors, fonts, and background images that are applied, and subsequently update the settings in corev15.css.
 
 > [!NOTE] 
 > Selecting the corev15.css file this way loads the rendered CSS rather than the saved CSS. Sometimes you might find discrepancies between the two. User agents such as browsers can also change rendering in response to user actions.
@@ -60,20 +56,19 @@ When you view the file, you'll notice many comments in this format:  `/* [Replac
     
 2. Open contosov15.css and modify the CssRegistration line to point to contosov15.css from corev15.css, as shown in the following example.
     
-  ```
+  ```XML
   <SharePoint:CssRegistration Name="Themable/contoso.css" runat="server" />
   ```
 
 3. Below the CssRegistration line, add the following.
     
-  ```
+  ```XML
   <SharePoint:CssRegistration name="/_catalogs/masterpage/contoso/contoso.css" 
 runat="server">
 
   ```
 
 ## Composed looks in custom branding
-<a name="sectionSection3"> </a>
 
 You can use composed looks in custom branding when CSS is called from a master page. The CSS file is stored in the SharePoint file system in one of the following locations: 
 
@@ -89,9 +84,8 @@ You can place custom branding files in  `/Style Library/Themable/` and `/Style L
 > If these locations don't exist by default, you can create them manually and SharePoint will recognize them as themable.
 
 ## Applying custom CSS to a SharePoint page
-<a name="sectionSection4"> </a>
 
-You can add custom CSS to rich text fields and web part zones. To add CSS to a rich text field, put the page in edit mode and choose  **Insert** > **Embed Code** from the ribbon. For web part zones, use the Script Editor web part to add HTML, scripts, or an internal style sheet. You can use this approach to hide the Quick Launch navigation in the default SharePoint UI. If you are using SharePoint Online and the NoScript feature, NoScript will disable Script Editor web part.
+You can add custom CSS to rich text fields and web part zones. To add CSS to a rich text field, put the page in edit mode and choose **Insert** > **Embed Code** from the ribbon. For web part zones, use the Script Editor web part to add HTML, scripts, or an internal style sheet. You can use this approach to hide the Quick Launch navigation in the default SharePoint UI. If you are using SharePoint Online and the NoScript feature, NoScript will disable Script Editor web part.
 
 Apply CSS to a SharePoint site by using an external style sheet and including a reference to the style sheet in the  `<link>` tag inside the `<head>` tags of the SharePoint page.
 

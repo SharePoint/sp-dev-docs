@@ -62,7 +62,7 @@ This section builds on your knowledge about [SharePoint development and design t
 | [Use CSS to brand SharePoint pages](use-css-to-brand-pages.md)|Use remote provisioning to interact with themes in SharePoint.|
 | [Customize a SharePoint page by using remote provisioning and CSS](customize-a-sharepoint-page-by-using-remote-provisioning-and-css.md)|Use CSS to customize SharePoint rich text fields and web part zones.|
 | [Update the branding of existing SharePoint sites and page regions](update-the-branding-of-existing-sharepoint-sites-and-page-regions.md) | Customize and then refresh the branding of existing SharePoint sites or regions of SharePoint pages, including the ribbon, the site navigation, the Settings menu, the tree view, and the page content.
-|[Customize OneDrive for Business site](customization-options-for-od4b-sites.md)| Customize OneDrive for Business sites in Office 365 or by using the add-in model, depending on your organization's requirements.|
+|[Customize OneDrive for Business sites](customize-onedrive-for-business-sites.md)| Customize branding for OneDrive for Business sites in Office 365 or by using the add-in model, depending on your organization's requirements.|
 
 ## See also
 

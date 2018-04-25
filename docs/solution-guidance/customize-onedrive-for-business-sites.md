@@ -1,16 +1,19 @@
 ---
-title: 'Customization of OneDrive for Business sites #'
-ms.date: 11/03/2017
+title: Customize OneDrive for Business sites
+description: The actual patterns that you can use with the add-in model to customize OneDrive for Business sites. 
+ms.date: 4/25/2018
 ---
-# Customization of OneDrive for Business sites #
 
-### Summary ###
+# Customize OneDrive for Business sites
+
 OneDrive for Business sites can be customized in Office 365 or with app model in general, based on company requirements. Actual techniques to perform this customization are different than in the on-premises, since only app model techniques can be used. This page contains details on the actual patterns which can be used with app mdoel to customize OneDrive for Business sites. 
 
 > [!IMPORTANT]
-> This **only** applies to *classic* OneDrive for Business experience in the SharePoint Online. If you are using the default "New experience", this is not supported. Modern or new experiences of OneDrive for Business does not support custom branding. Tenant administrators can control the default experience from the SharePoint Online administrative settings.
+> This **only** applies to the *classic* OneDrive for Business experience in SharePoint Online. If you are using the default "New experience", this is not supported. Modern or new experiences of OneDrive for Business does not support custom branding. Tenant administrators can control the default experience from the SharePoint Online administrative settings.
 
-# Why would you customize OneDrive for Business sites? #
+*Patterns for Dedicated and on-premises are identical with add-in model techniques, but there are differences on the possible technologies which can be used.*
+
+## Why would you customize OneDrive for Business sites?
 
 There are numerous different aspects on applying customizations to OneDrive for Business (OD4B) sites. You certainly can customize these sites, since they are SharePoint sites, but at the same time you should always consider the short and long term impact of the customizations. As a rule of a thumb, we would like to give following high level guidelines for customizing OD4B sites. 
 
@@ -30,7 +33,7 @@ Here’s an example of OD4B site, which has been customized using above guidelin
 
 ![A customized OD4B site.](media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-01.png)
 
-# Challenge with applying OneDrive for Business site customizations? #
+## Challenge with applying OneDrive for Business site customizations
 
 Let’s start with defining what is the challenge and what are we trying to solve here. Technically each OneDrive for Business site is currently using identical architecture as what the personal or my sites used  back in SharePoint 2007 or 2010 version. This means that technically each OneDrive for Business site is their own site collection and we do not have any centralized location to apply branding or any other customizations.
 
@@ -40,7 +43,7 @@ Classic solution to apply needed configuration to the OneDrive for Business site
 
 In Office 365 there is no centralized event raised, which we could attach our custom code to when OD4B site is created. This means that we need to think about alternative solutions, which is quite common with app model approaches. Do not get stuck on old models, think about how to achieve same end result using new APIs and technologies. From pure requirement perspective, it does not really matter how we apply the customizations to the sites, as long as they are applied, since business requirement is not to use feature stapling, it’s about applying needed customizations using whatever supported technical mechanism. 
 
-# Different options for applying customizations #
+## Options for applying customizations
 
 In practice we do have four different mechanisms to apply centralized customizations to OD4B sites in the Office 365. You could also consider manual option as the fifth one, but in the case of having hundreds or thousands of OD4B sites, using manual options is not really a realistic option. Here’s the different options we have.
  
@@ -51,7 +54,7 @@ In practice we do have four different mechanisms to apply centralized customizat
 
 Each of the options have advantages and disadvantages in them and the right option depends on your detailed business requirements. Some of the settings you can also apply from the Office 365 suite level, but often you would be looking for some more specifics, so actual customizations are needed. It obviously all comes down on exact requirements and business case analyses on their impact on short and long term.
 
-## Office 365 suite level settings ##
+### Office 365 suite level settings
 
 Office 365 is much more than just SharePoint, like you know. You can find more and more additional services which are not based on even the SharePoint architecture, like Delve, Yammer and many upcoming services. This means that the enterprise branding and configuration is not just about controlling what we have in the SharePoint sites, rather we should be thinking the overall end user experience and how we provide consistent configurations cross different services.
 
@@ -63,7 +66,7 @@ Following picture shows the different settings right now for the Office 365 them
 
 Since by default Office 365 theme settings are for controlling OD4B site suite bar, you will most likely be using this options together with other options to ensure that you can provide at least the right branding elements cross your OD4B sites. Notice that when you change for example Office 365 theme settings in Office 365 admin tool, it does take a quite a long time to get the settings applied for OD4B sites, so be patience. 
 
-## Hidden app part with user context ##
+### Hidden app part with user context
 
 This is an approach where use centralized landing page as the location for starting the needed customization process. This means that you would have to have one centralized location, like company intranet front page, where the users are always landing when they open up their browser. This is pretty typical process with midsized and larger enterprises where corporate landing page is then controlled using group policy settings in the AD. This will ensure that end users cannot override default welcome page of the company domain joined browsers.
 
@@ -83,7 +86,7 @@ This is definitely the most reliable process of ensuring that there’s right co
 
 If you are familiar of classic SharePoint development models with farm solutions, this is pretty similar process as one time executing timer jobs.
 
-## Pre-create and apply configuration ##
+### Pre-create and apply configuration
 
 This option relies on the pre-creation of the OD4B sites before users will access them. This can be achieved by using relatively new API which provides us away to create OD4B sites for specific users in batch process, using either CSOM or REST. Needed code can be initiated using a PowerShell script or by writing actual code which is calling the remote APIs. 
 
@@ -94,7 +97,7 @@ This option relies on the pre-creation of the OD4B sites before users will acces
 
 In some sense this is also really reliable process, but you would have to manage new persons and updates “manually”, which could mean more work then using the hidden app part approach. This is definitely valid approach which can be taken and especially useful if you are migrating from some other file sharing solution to the OD4B and want to avoid the need of end users to access the OD4B site once, before actuals site creation is started.
 
-## Remote timer job based on user profile updates ##
+### Remote timer job based on user profile updates
 
 This approach means scanning through user profiles for checking to whom the OD4B site has been created and then apply the changes to the sites as needed. This would mean scheduled job running outside of the SharePoint, which will periodically check the status and perform needed customizations. Scheduled job could be running as a WebJob in Azure or as simple as PowerShell script scheduled in your own windows scheduler. Obviously the scale of the deployment has huge impact on the chosen scheduling option.
 
@@ -105,32 +108,11 @@ This approach means scanning through user profiles for checking to whom the OD4B
 
 One of the key downsides of this option is that there can clearly be a situations where user can access the OD4B sites before the customizations have been applied. At the same time this option is interesting add-on for other options to ensure that end users have not changed any of the required settings on the sites or to check that the OD4B site content aligns with the company policies.
 
-----------
-
-### Related links ###
--  [Customizing OneDrive for Business sites with add-in model (MSDN blog article)](http://blogs.msdn.com/b/vesku/archive/2015/01/01/customizing-onedrive-for-business-sites-with-app-model.aspx)
-
-### Related PnP samples ###
--  [Customizing OD4B sites using Async pattern](#)
--  [Classic app part and sync process for OD4B site customization](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.OneDrive)
--  [Pre-create OD4B sites for users](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.OneDriveProvisioning)
-
-### Applies to ###
--  Office 365 Multi Tenant (MT)
--  Office 365 Dedicated (D) - *partly*
--  SharePoint 2013 on-premises - *partly*
-
-*Patterns for Dedicated and on-premises are identical with add-in model techniques, but there are differences on the possible technologies which can be used.*
-
-### Author
-Vesa Juvonen (Microsoft) - [@vesajuvonen](https://twitter.com/vesajuvonen)
-
-### Version history ###
-Version  | Date | Comments
----------| -----| --------
-1.0  | January 2nd, 2015 | Initial release | Vesa Juvonen (Microsoft)
-
 ## See also
 
+- [Customizing OneDrive for Business sites with add-in model (MSDN blog article)](http://blogs.msdn.com/b/vesku/archive/2015/01/01/customizing-onedrive-for-business-sites-with-app-model.aspx)
+- [Customizing OD4B sites using Async pattern](#)
+- [Classic app part and sync process for OD4B site customization](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.OneDrive)
+- [Pre-create OD4B sites for users](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.OneDriveProvisioning)
 - [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
 - [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)
