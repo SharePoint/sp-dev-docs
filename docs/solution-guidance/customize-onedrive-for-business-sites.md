@@ -126,7 +126,7 @@ One of the key downsides of this option is that there can clearly be a situation
 
 ## See also
 
-- [Customizing OneDrive for Business sites with app model (MSDN blog article)](https://blogs.msdn.microsoft.com/vesku/2015/01/05/customizing-onedrive-for-business-sites-with-app-model/)
+- [Customizing OneDrive for Business sites with app model (blog post)](https://blogs.msdn.microsoft.com/vesku/2015/01/05/customizing-onedrive-for-business-sites-with-app-model/)
 - [Classic app part and sync process for OD4B site customization (GitHub)](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.OneDrive)
 - [Pre-create OD4B sites for users](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.OneDriveProvisioning)
 - [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    

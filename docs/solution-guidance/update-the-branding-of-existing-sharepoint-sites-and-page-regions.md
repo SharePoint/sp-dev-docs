@@ -16,7 +16,7 @@ The operation involves two steps:
 
 - Get the sites you want to update.
     
-- Update the sites.
+- Update the site branding.
 
 ### Get the sites you want to update
 
@@ -299,7 +299,7 @@ public void AddCustomActions(ClientContext clientContext)
 
 To modify the width of the tree view, add a  `<div>` tag around the tree tag in the .master page and assign a CSS class with a style width attribute to the `<div>`. You can increase the width of the **Quick Launch** navigation by adding the following style definition to the .css file.
 
-```cs
+```css
 .ms-nav {
   width: 220 px;
 }
