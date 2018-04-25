@@ -38,61 +38,67 @@ Customizations are definitely supported in Office 365, and you can keep on using
 
 Following is an example of an OD4B site that has been customized using the previous guidelines. In this case, the end result has been achieved with a combination of Office 365 themes, a site theme, and use of the JavaScript embedding pattern.
 
-<img alt="A customized OD4B site" src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-01.png" width="700">
+<img alt="A customized OD4B site" src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-01.png" width="800">
 
 
 ## Challenge with applying OneDrive for Business site customizations
 
-Let’s start with defining what is the challenge and what are we trying to solve here. Technically each OneDrive for Business site is currently using identical architecture as what the personal or my sites used  back in SharePoint 2007 or 2010 version. This means that technically each OneDrive for Business site is their own site collection and we do not have any centralized location to apply branding or any other customizations.
+Each OneDrive for Business site currently uses the same architecture as that of a personal site or My Sites, which was used in SharePoint 2007 and SharePoint 2010. This means that each OneDrive for Business site is their own site collection, and we do not have any centralized location to apply branding or any other customizations.
 
-![Each OneDrive for Business site is its own site collection under the personal managed path, and the url is created based on the assigned user profile. In the image, three sites are listed as child sites. The URL of the first child site ends with /bill_contoso_com. The second ends with /vesa_contoso_com. The third ends with /john_contoso_com.](media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-02.png)
+<img alt="Each OneDrive for Business site is its own site collection under the personal managed path, and the url is created based on the assigned user profile. In the image, three sites are listed as child sites. The URL of the first child site ends with /bill_contoso_com. The second ends with /vesa_contoso_com. The third ends with /john_contoso_com." src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-02.png" width="800">
 
-Classic solution to apply needed configuration to the OneDrive for Business sites (including my or personal sites) was based on feature stapling in farm level. This meant that you deployed farm solution to your SharePoint farm and used feature framework to associate your custom feature to be activated each time a my site is crated, which was then responsible of applying needed customizations. This similar approach does not work in Office 365, since it requires farm solution to be deployed and that is simply impossible with Office 365 sites. Therefore we need to look alternatives to apply the needed changes to the sites.
+The classic solution that was used to apply needed configurations to the OneDrive for Business sites was based on feature stapling at the farm level. This meant that you deployed a farm solution to your SharePoint farm and used the Feature Framework to associate your custom feature to be activated each time a My Site was created, which was then responsible for applying needed customizations. 
 
-In Office 365 there is no centralized event raised, which we could attach our custom code to when OD4B site is created. This means that we need to think about alternative solutions, which is quite common with add-in model approaches. Do not get stuck on old models, think about how to achieve same end result using new APIs and technologies. From pure requirement perspective, it does not really matter how we apply the customizations to the sites, as long as they are applied, since business requirement is not to use feature stapling, it’s about applying needed customizations using whatever supported technical mechanism. 
+This approach does not work in Office 365 because it requires a farm solution to be deployed, and that is impossible with Office 365 sites. Therefore, we need to look at alternatives to apply the needed changes to the sites.
+
+In Office 365, there is no centralized event raised that we could attach our custom code to when an OD4B site is created. Therefore, we need to think about alternative solutions, which is quite common with add-in model approaches. Do not get stuck on old models; think about how to achieve the same end result using new APIs and technologies. From a requirement perspective, it does not really matter how we apply the customizations to the sites, as long as they are applied, because the business requirement is not to use feature stapling, it’s to apply needed customizations by using whatever technical mechanism is supported. 
 
 ## Options for applying customizations
 
-In practice we do have four different mechanisms to apply centralized customizations to OD4B sites in the Office 365. You could also consider manual option as the fifth one, but in the case of having hundreds or thousands of OD4B sites, using manual options is not really a realistic option. Here’s the different options we have.
+There are four different mechanisms to apply centralized customizations to OD4B sites in Office 365. You could also consider a manual option as the fifth one, but in the case of having hundreds or thousands of OD4B sites, using the manual option is not realistic. The options are:
  
-1. Office 365 suite level settings (Office 365 themes and other settings)
-2. Hidden app part with user context
-3. Pre-create and apply configuration
-4. Remote timer job based on user profile updates
+- Office 365 suite level settings (Office 365 themes and other settings)
+- Hidden app part with user context
+- Pre-create and apply configuration
+- Remote timer job based on user profile updates
 
-Each of the options have advantages and disadvantages in them and the right option depends on your detailed business requirements. Some of the settings you can also apply from the Office 365 suite level, but often you would be looking for some more specifics, so actual customizations are needed. It obviously all comes down on exact requirements and business case analyses on their impact on short and long term.
+Each of these options has advantages and disadvantages, and the right option depends on your detailed business requirements. You can also apply some settings from the Office 365 suite level, but you would be looking for some more specifics, so actual customizations are needed. 
 
 ### Office 365 suite level settings
 
-Office 365 is much more than just SharePoint, like you know. You can find more and more additional services which are not based on even the SharePoint architecture, like Delve, Yammer and many upcoming services. This means that the enterprise branding and configuration is not just about controlling what we have in the SharePoint sites, rather we should be thinking the overall end user experience and how we provide consistent configurations cross different services.
+Office 365 is much more than just SharePoint. You can find additional services that are not based on the SharePoint architecture, such as Delve and Yammer. This means that the enterprise branding and configuration is not just about controlling what we have in the SharePoint sites; rather, we should be thinking about the overall end user experience and how we can provide consistent configurations across different services.
 
-Classic example of these enterprise requirements is branding and for that we have already Office 365 theming introduced, which can be used to control some level of branding. We have also other upcoming features, which will help to control your site governance and other settings, from centralized location outside of the site collection settings, like the upcoming Compliance Center for Office 365, which is currently listed in the roadmap of the Office 365.
+A classic example of these enterprise requirements is branding, and for that we already have Office 365 theming introduced, which can be used to control some level of branding. 
 
-Following picture shows the different settings right now for the Office 365 theming, which will be then applied cross all Office 365 services.
+The following diagram shows the current settings for Office 365 theming, which can be applied across all Office 365 services.
 
-![Displays the Office 365 site, showing the custom theming tab page, entitled Manage custom themes for your organization, Customize Office 365 to reflect your oganization's brand. Settings are available for Custom logo, URL for a clickable logo, Background image, Accent color, Navigation bar background color, Text and icons color, and App menu icon color.](media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-03.png)
+<img alt="Displays the Office 365 site, showing the custom theming tab page, entitled Manage custom themes for your organization, Customize Office 365 to reflect your oganization's brand. Settings are available for Custom logo, URL for a clickable logo, Background image, Accent color, Navigation bar background color, Text and icons color, and App menu icon color." src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-03.png" width="800">
 
-Since by default Office 365 theme settings are for controlling OD4B site suite bar, you will most likely be using this options together with other options to ensure that you can provide at least the right branding elements cross your OD4B sites. Notice that when you change for example Office 365 theme settings in Office 365 admin tool, it does take a quite a long time to get the settings applied for OD4B sites, so be patience. 
+Because by default Office 365 theme settings control the OD4B site suite bar, you will most likely use these options together with other options to ensure that you can provide at least the right branding elements across your OD4B sites. Notice that when you change, for example, the Office 365 theme settings in the Office 365 admin tool, it does take quite a long time to get the settings applied for OD4B sites, so be patient. 
 
 ### Hidden app part with user context
 
-This is an approach where use centralized landing page as the location for starting the needed customization process. This means that you would have to have one centralized location, like company intranet front page, where the users are always landing when they open up their browser. This is pretty typical process with midsized and larger enterprises where corporate landing page is then controlled using group policy settings in the AD. This will ensure that end users cannot override default welcome page of the company domain joined browsers.
+This approach uses a centralized landing page as the location for starting the needed customization process. This means that you need one centralized location, such as a company intranet home page, where users always land when they open their browser. This is a pretty typical process for mid-sized and larger enterprises where the corporate landing page is controlled by using Group Policy settings in Active Directory. This ensures that end users cannot override the default welcome page of the company domain-joined browsers.
 
-When user arrives to the intranet, we will have hidden app part in the page, which will start the customization process. It can actually be responsible of the whole OD4B site creation as well, since normally user would have to visit the OD4B site once time, before the site creation process will be started. Hidden app part is actually hosting a page from provider hosted add-in hosted in Azure. This page is then responsible of starting the customization process.
+When a user arrives on the intranet site, a hidden app part on the page starts the customization process. It can actually be responsible for the entire OD4B site creation as well because normally a user would have to visit the OD4B site once before the site creation process starts. The hidden app part hosts a page from the provider-hosted add-in hosted in Azure. This page is then responsible for starting the customization process.
 
-Let’s have a closer look on the logical design of this approach.
+Let’s have a closer look at the logical design of this approach.
 
-![Diagram to show relationships. The App part on the SharePoint site uses instantiate to go to Provider Hosted Apps. Provider Hosted Apps uses Add Message to go to Storage Queue. Storage Queue uses instantiate to go to WebJob. WebJob uses Apply modifications to go to the OD4B site.](media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-04.png)
+<img alt="Diagram to show relationships. The App part on the SharePoint site uses instantiate to go to Provider Hosted Apps. Provider Hosted Apps uses Add Message to go to Storage Queue. Storage Queue uses instantiate to go to WebJob. WebJob uses Apply modifications to go to the OD4B site." src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-04.png" width="800">
 
-1. Place hidden app part to centralized site where end users will land. Typically this is the corporate intranet front page.
-2. App part is hosting a page from provider hosted add-in, where in the server side code we initiate the customization process by adding needed metadata to the azure storage queue. This means that this page will only receive the customization request, but will not actually apply any changes to keep the processing time normal.
-3. This is the actual azure storage queue, which will receive the messages to queue for processing. This way we can handle the customization controlling process asynchronously so that it does not really matter how long end user will stay on the front page of the Intranet. If the customization process would be synchronous, we would be dependent on end user to keep the browser open in the Intranet front page until page execution is finalized. This would not definitely be optimal end user experience. 
-4. WebJob hooked to follow the storage queue, which is called when new item is placed to the storage queue. This WebJob will receive the needed parameters and metadata from the queued message to access right site collection. WebJob is using app only token and have been granted the needed permissions to manipulate site collections in the tenant level.
-5. Actual customizations are applied one-by-one to those people’s sites who visit the intranet front page to start the process.
+1. Place hidden app part on centralized site where end users land. Typically this is the corporate intranet front page.
 
-This is definitely the most reliable process of ensuring that there’s right configurations in the OD4B sites. You can easily add customization versioning logic to the process, which is also applying any needed updates to the OD4B sites, when there is an update needed and user visits the Intranet front page next time. This option does however require that you have that centralized location where your end users are landing.
+2. App part is hosting a page from the provider-hosted add-in, where in the server-side code, we initiate the customization process by adding needed metadata to the Azure Storage Queue. This means that this page only receives the customization request, but does not actually apply any changes to keep the processing time normal.
 
-If you are familiar of classic SharePoint development models with farm solutions, this is pretty similar process as one time executing timer jobs.
+3. This is the actual Azure Storage Queue, which receives the messages to queue for processing. This way we can handle the customization controlling process asynchronously so that it does not really matter how long the end user stays on the front page of the intranet. If the customization process was synchronous, we would be dependent on the end user keeping the browser open in the intranet front page until page execution was finalized. This would definitely not be an optimal end user experience. 
+
+4. WebJob is hooked to follow the Azure Storage Queue, which is called when a new item is placed in the storage queue. This WebJob receives the needed parameters and metadata from the queued message to access the right site collection. WebJob uses an app-only token and has been granted the needed permissions to manipulate site collections at the tenant level.
+
+5. Actual customizations are applied one-by-one to the sites of the users who visit the intranet front page to start the process.
+
+This is the most reliable process for ensuring that there are accurate configurations in the OD4B sites. You can easily add customization versioning logic to the process, which applies any needed updates to the OD4B sites when there is an update needed and the user visits the intranet front page next time. This option does, however, require that you have that centralized location where your end users are landing.
+
+If you are familiar with classic SharePoint development models with farm solutions, this process is similar to one-time executing timer jobs.
 
 ### Pre-create and apply configuration
 
