@@ -26,7 +26,7 @@ Before you run this code sample, complete the following steps.
     
 2. In **Site Administration**, choose **Language settings**.
     
-3. On the **Language Settings** page, in **Alternate language(s)**, choose the alternate languages your site should support. For example, you can choose **Finnish** and **French**, as shown in the following figure.
+3. On the **Language Settings** page, in **Alternate language(s)**, choose the alternate languages that your site should support. For example, you can choose **Finnish** and **French**, as shown in the following figure.
 
    ![Screenshot that shows the language settings for a site.](media/ffe149ae-17ab-4c55-a611-d47f4eb88c4e.png)
     
@@ -72,15 +72,15 @@ The **Main** method then calls the **LocalizeSiteAndList** and **LocalizeContent
 
 The **LocalizeSiteAndList** method shows you how to do the following:
 
-- Set different localized values for the title and description of a site, by using the **SetValueForUICulture** method on the **TitleResource** and **DescriptionResource** properties on the **Web** object.
+- Set different localized values for the title and description of a site by using the **SetValueForUICulture** method on the **TitleResource** and **DescriptionResource** properties on the **Web** object.
     
-- Set different localized values for the title and description of a site, by using the **SetValueForUICulture** method on the **TitleResource** and **DescriptionResource** properties on the **Web** object.
+- Set different localized values for the title and description of a site by using the **SetValueForUICulture** method on the **TitleResource** and **DescriptionResource** properties on the **Web** object.
     
 The **LocalizeContentTypeAndField** method shows you how to do the following:
 
-- Set different localized values for the name and description of a content type, by using the **SetValueForUICulture** method on the **NameResource** and **DescriptionResource** properties on the **ContentType** object.
+- Set different localized values for the name and description of a content type by using the **SetValueForUICulture** method on the **NameResource** and **DescriptionResource** properties on the **ContentType** object.
     
-- Set different localized values for the title and description of a site, by using the **SetValueForUICulture** method on the **TitleResource** and **DescriptionResource** properties on the **Field** object.
+- Set different localized values for the title and description of a site by using the **SetValueForUICulture** method on the **TitleResource** and **DescriptionResource** properties on the **Field** object.
     
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.

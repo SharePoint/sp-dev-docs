@@ -8,6 +8,8 @@ ms.date: 4/24/2018
 
 The samples described in this section show you how to use provider-hosted add-ins to perform common site provisioning tasks such as site classification, creating content types, and managing permissions and users. The articles in this section will help you get started with and walk you through the primary scenarios that each sample illustrates.  
 
+<br/>
+
 |Article|Sample|Shows you how to...|
 |:-----|:-----|:-----|
 |[Implement a SharePoint site classification solution](implement-a-sharepoint-site-classification-solution.md)|[Core.SiteClassification](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SiteClassification)|Implement a site classification solution and leverage site policies to improve search optimization. |

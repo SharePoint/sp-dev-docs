@@ -37,7 +37,7 @@ Before you run this code sample, complete the following steps.
     
 2. In **Site Administration**, choose **Language settings**.
     
-3. On the **Language Settings** page, in **Alternate language(s)**, choose the alternate languages your site should support. For example, choose **Finnish** and **French**, as shown in the following figure.
+3. On the **Language Settings** page, in **Alternate language(s)**, choose the alternate languages that your site should support. For example, choose **Finnish** and **French**, as shown in the following figure.
 
     ![Screenshot of the Language Settings page of Site Settings](media/0265dd57-cf25-4879-a6df-68072ffa5270.png)
     
@@ -54,7 +54,7 @@ Before you run this code sample, complete the following steps.
     
 3. Choose the ellipsis (...) for additional options, and then choose **Language and Region**.
     
-4. In **My Display Languages**, choose a new language in the **Pick a new language** list, and then choose **Add**. For example, choose **Finnish** and **French**. You might need to move your preferred language up or down by choosing the up and down arrows.
+4. In **My Display Languages**, choose a new language in the **Pick a new language** list, and then choose **Add**. For example, choose **Finnish** and **French**. You can move your preferred language up or down by choosing the up and down arrows.
 
     ![Screenshot of the Language and Region section of the Edit Details page](media/ff41b24e-42eb-48ca-83cd-00d88ef753bd.png)
     
@@ -66,7 +66,7 @@ Before you run this code sample, complete the following steps.
 > [!IMPORTANT] 
 > The CSOM is periodically updated with new features. If the CSOM provides new features to update site page or **Quick Launch** link titles, we recommend that you use the new features in the CSOM instead of the options discussed here.
 
-Before you run [Scenario 2](#bk_Scenario2) of this code sample, complete the following tasks.
+Before you run Scenario 2 of this code sample, complete the following tasks.
 
 ### Create a Quick Launch link
 
@@ -123,7 +123,9 @@ protected void btnSubmit_Click(object sender, EventArgs e)
             }
         }
 ```
-   
+
+<br/>
+  
 > [!NOTE] 
 > SharePoint uses Minimal Download Strategy to reduce the amount of data the browser downloads when users navigate between pages on a SharePoint site. In scenario1.js, the following code ensures that whether Minimal Download Strategy is used on your SharePoint site, the **RemoteManager_Inject** method is always called to run the JavaScript code to add the status bar message to the host web. For more information, see [Minimal Download Strategy overview](../general-development/minimal-download-strategy-overview.md).
 > 
@@ -144,7 +146,6 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 >
 > ```js
     var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";
-
         // Load jQuery first, and then continue running the rest of the code.
         loadScript(jQuery, function () {
         // Add additional JavaScript code here to complete your task. 

@@ -8,6 +8,8 @@ ms.date: 4/24/2018
 
 Use provider-hosted SharePoint Add-ins to control user experience (UX) components in SharePoint and SharePoint Online.
 
+<br/>
+
 |Article|Shows you how to...|
 |:-----|:-----|
 |[Customize the UX by using SharePoint provider-hosted add-ins](customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md)|Use provider-hosted add-ins that create and modify SharePoint pages, layouts, and other SharePoint artifacts and that customize the user experience on host sites.|
