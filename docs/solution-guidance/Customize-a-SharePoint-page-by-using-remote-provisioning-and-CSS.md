@@ -6,7 +6,7 @@ ms.date: 4/25/2018
 
 # Customize a SharePoint page by using remote provisioning and CSS
 
-You can use cascading style sheets (CSS) to customize SharePoint rich text fields and web part zones. To customize rich text fields, you can do this right in the page you're editing. For web part zones, you can use the Script Editor web part to add HTML or scripts, or associate a CSS style sheet.
+You can use cascading style sheets (CSS) to customize SharePoint rich text fields and web part zones. To customize rich text fields, you can do this right on the page you're editing. For web part zones, you can use the Script Editor web part to add HTML or scripts, or associate a CSS style sheet.
 
 For a code sample that is associated with this article, see [Branding.AlternateCSSAndSiteLogo](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo) in the Office 365 Developer Patterns and Practices project on GitHub.
 
@@ -14,15 +14,15 @@ For a code sample that is associated with this article, see [Branding.AlternateC
 
 You can customize rich text fields by using CSS right in the page editor:
 
-1. In your SharePoint page, choose  **Edit** to open the page editor.
+1. On your SharePoint page, choose **Edit** to open the page editor.
     
-2. From the ribbon, choose  **Insert** > **Embed Code**.
+2. From the ribbon, choose **Insert** > **Embed Code**.
     
 You can now add or modify CSS elements for a rich text field.
 
 ## Customize web part zones
 
-To customize web part zones by using CSS, you use the Script Editor web part. For more information, see [How to Use the Script Editor web part in SharePoint 2013](http://community.bamboosolutions.com/blogs/sharepoint-2013/archive/2013/05/20/how-to-use-script-editor-web-part-in-sharepoint-2013.aspx).
+To customize web part zones by using CSS, you use the Script Editor web part.
 
 > [!NOTE] 
 > If you are using SharePoint Online and the NoScript feature, the Script Editor web part is disabled. 

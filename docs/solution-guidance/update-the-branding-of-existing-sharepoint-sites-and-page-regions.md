@@ -10,7 +10,7 @@ You can refresh the branding on your existing SharePoint sites and site collecti
 
 ## Refresh branding of existing sites and subsites
 
-The [Branding.Refresh](https://github.com/SharePoint/PnP/tree/dev/Scenarios/Branding.Refresh) sample in the Office 365 Developer Patterns and Practices project on GitHub shows you how to use the OfficeDevPnP.Core library to iterate over existing sites and subsites to verify and update the applied branding. The sample shows how to update site branding, but the same concept can be used to do other things, such as deploy a new library to a list of sites, or update a custom action that was deployed during provisioning. You can use the same process to move existing sites to a newer version.
+The [Branding.Refresh](https://github.com/SharePoint/PnP/tree/dev/Samples/Branding.Refresh) sample in the Office 365 Developer Patterns and Practices project on GitHub shows you how to use the OfficeDevPnP.Core library to iterate over existing sites and subsites to verify and update the applied branding. The sample shows how to update site branding, but the same concept can be used to do other things, such as deploy a new library to a list of sites, or update a custom action that was deployed during provisioning. You can use the same process to move existing sites to a newer version.
 
 The operation involves two steps:
 
@@ -18,7 +18,7 @@ The operation involves two steps:
     
 - Update the sites.
 
-### Step one: Get the sites you want to update
+### Get the sites you want to update
 
 First, get a list of sites and subsites that you want to update. The sample shows how to do this by using the search functionality, but other options include reading from a site directory, or providing a management UI where administrators can specify the list. The following example shows you how to use search functionality to generate the list.
 
@@ -49,9 +49,9 @@ if (applyChangesToAllWebs)
 }
 ```
 
-The call to **GetSubSites** is recursive so it fetches the subsite tree. After the tree has been fetched, verify that the number returned is correct before you continue.
+The call to **GetSubSites** is recursive, so it fetches the subsite tree. After the tree has been fetched, verify that the number returned is correct before you continue.
 
-### Step two: Update the branding
+### Update the branding
 
 After you select a site for processing, you can use OfficeDevPnP.Core methods to manipulate the site. The sample shows how to do this for site branding, but you can process any type of change in the same way.
 
@@ -88,6 +88,8 @@ if (!String.IsNullOrEmpty(themeName))
   }
 }
 ```
+
+<br/>
 
 The code that then updates the theme is straightforward and is based on OfficeDevPnP.Core methods.
 
@@ -135,14 +137,14 @@ When your objective is to customize regions of a SharePoint page, you can use a 
 |Top navigation|Nav CSOM/JSOM<p>.master</p>Corresponding CSS (not in edit mode): <ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>New Item selected: .ms-core-listMenu-horizontalBox li.static > .ms-core.listMenu-selected</p></li><li><p>New Item Hover: .mscore-listMenu-horizontalBox li.static > a.ms-core-listMenu-item:hover</p></li><li><p>Flyout Arrow: .ms-core-listMenu-horizontalBox .dynamic-children.additional-background</p></li><li><p>Nav Item (corresponding to top-level menu items): .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item</p></li><li><p>Flyout Item: ul.dynamic .ms-core-listMenu-item</p></li><li><p>Flyout Container: ul.dynamic</p></li><li><p>Edit Links: .ms-navedit-editLinksText > span> .ms-metadata</p></li></ul>Corresponding CSS (in edit mode): <ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>Nav Edit Mode Link: .ms-core-listMenu-horizontalBox .ms-core-listMenuEdit > tr> .msnavedit-linkCell > .ms-core-listMenu-item</p></li><li><p>Add Link: .ms-core-listMenu-horizontalBox a.ms-navedit-addNewLink</p></li></ul>||
 |Page title|Corresponding CSS (in edit mode): <ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>Page Title and Page Title with Link: .ms-core-pageTitle, .ms-core-pageTitle a</p></li><li><p>Description button: #ms-pageDescriptionDiv</p></li><li><p>Description box: .js-callout-mainElement</p></li><li><p>Description box arrow: .js-callout-beak</p></li><li><p>Description text: .js-callout-body</p></li></ul>||
 |Search box|Nav CSOM/JSOM<p>.master</p>Corresponding CSS: <ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>Search Box Border: .ms-srch-sb-border</p></li><li><p>Search Box Border Hover: .ms-srch-sb-border: hover</p></li><li><p>Search Box Border when clicked: .ms-srch-sb-borderFocused</p></li><li><p>Search Box Input Text Box: .ms-srch-sb-borderFocused</p></li><li><p>Search Box Body: .ms-srch-sb</p></li><li><p>Search Box Input Text Box: .ms-srch-sb-searching</p></li><li><p>Search</p></li></ul>||
-|Left navigation|Nav CSOM/JSOM<p>.master</p>|For more information see: <ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p><a href="https://msdn.microsoft.com/en-us/library/office/ms558975(v=office.14).aspx" target="_blank">How to: Customize Navigation in SharePoint Server</a></p></li><li><p><a href="http://msdn.microsoft.com/library/c9da5011-3c73-4b83-8e00-e7a03a71ed02(Office.15).aspx" target="_blank">Managed navigation in SharePoint 2013</a></p></li></ul>|
+|Left navigation|Nav CSOM/JSOM<p>.master</p>|For more information see: <ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p><a href="https://msdn.microsoft.com/en-us/library/office/ms558975(v=office.14).aspx" target="_blank">How to: Customize Navigation in SharePoint Server</a></p></li><li><p><a href="../general-development/managed-navigation-in-sharepoint.md" target="_blank">Managed navigation in SharePoint</a></p></li></ul>|
 |Tree view|.master|For more information, see [How to customize the built-in Treeview navigator](https://social.msdn.microsoft.com/Forums/sharepoint/en-US/dd4d49fd-e107-469d-b326-d37c86ff66b8/how-to-customize-the-builtin-treeview-navigator-?forum=sharepointcustomizationprevious).|
-|Page content|Page Layout/Content Pages<br>Web part zone/web parts<p>Corresponding CSS (web part zone and web part):</p><ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>Web part zone: .ms-webpart-zone</p></li><li><p>Web part holder: .ms-webpartzone-cell</p></li><li><p>Web part title: .ms-webpart-titleText</p></li><li><p>Web part title with link: .ms-webpart-titleText > a</p></li><li><p>Web part body: .ms-WPBody</p></li></ul>|For more information, see [How to: Create a page layout in SharePoint 2013](http://msdn.microsoft.com/library/5447e6a1-2f14-4667-81d0-7514b468be80%28Office.15%29.aspx)|
+|Page content|Page Layout/Content Pages<br>Web part zone/web parts<p>Corresponding CSS (web part zone and web part):</p><ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>Web part zone: .ms-webpart-zone</p></li><li><p>Web part holder: .ms-webpartzone-cell</p></li><li><p>Web part title: .ms-webpart-titleText</p></li><li><p>Web part title with link: .ms-webpart-titleText > a</p></li><li><p>Web part body: .ms-WPBody</p></li></ul>|For more information, see [Create a page layout in SharePoint](../general-development/how-to-create-a-page-layout-in-sharepoint.md)|
 
 For samples related to customizing regions of a page, see the following in the Office 365 Developer Patterns and Practices project on GitHub:
 
 - [Branding.AlternateCSSAndSiteLogo](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo) 
-- [Branding.Themes](https://github.com/Lauragra/PnP/tree/master/Scenarios/Branding.Themes)
+- [Branding.Themes](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.Themes)
 
 ### Required "minimal" content placeholders in default SharePoint master pages
 
@@ -188,20 +190,20 @@ SharePoint .master pages require that you use content placeholders, which render
 
 If you remove one of the content placeholders listed in Table 2 from a SharePoint .master page, SharePoint will throw an error. You can add a content placeholder with hidden visibility, which hides the content from end users.
 
-For more information, see [Windows SharePoint Services Default Master Pages](https://msdn.microsoft.com/en-us/library/office/ms467402%28v=office.12%29.aspx) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](https://support.office.com/en-us/article/Working-with-content-placeholder-controls-d8b87b85-d1ef-409d-a5c7-044890f89288?CorrelationId=517ec37c-89ef-40d9-b70e-54aa63ac994f&amp;ui=en-US&amp;rs=en-US&amp;ad=US).
+For more information, see [Windows SharePoint Services Default Master Pages](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-services/ms467402(v=office.12)) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](https://support.office.com/en-us/article/Working-with-content-placeholder-controls-d8b87b85-d1ef-409d-a5c7-044890f89288?CorrelationId=517ec37c-89ef-40d9-b70e-54aa63ac994f&amp;ui=en-US&amp;rs=en-US&amp;ad=US).
 
-Default SharePoint master pages such as seattle.master and oslo.master include many more content placeholders than SharePoint requires. For example, these master pages include  `<SharePoint:Themes runat="server">` and `<SharePoint.CssRegistration runat="server">` controls.
+Default SharePoint master pages such as seattle.master and oslo.master include many more content placeholders than SharePoint requires. For example, these master pages include `<SharePoint:Themes runat="server">` and `<SharePoint.CssRegistration runat="server">` controls.
 
 Both the **Themes** and **CssRegistration** controls run during the page lifecycle. By using the remote provisioning pattern, you can use a custom action to add a server control to register custom CSS.
 
-Content placeholders that are not visible still work as expected, but any content they generate will be omitted from the HTML source that browsers recognize. A content placeholder with  `Visible="false"` is hidden.
+Content placeholders that are not visible still work as expected, but any content they generate is omitted from the HTML source that browsers recognize. A content placeholder with `Visible="false"` is hidden.
 
 > [!IMPORTANT] 
-> Do not create custom placeholders in custom master pages that exist in out-of-the-box .master pages such as Seattle.master and Oslo.master. This will cause catastrophic exceptions.
+> Do not create custom placeholders in custom master pages that exist in out-of-the-box .master pages such as seattle.master and oslo.master. This will cause catastrophic exceptions.
 
 ### SharePoint Online Suite Navigation control
 
-SharePoint Online introduces new master page markup for the **Suite Navigation** control, which renders the top navigation. The default markup for the **Suite Navigation** control differs depending on whether the site is an intranet or public-facing. To learn more about the **Suite Navigation** control and see code examples for both intranet and public-facing sites that you can add to your master pages, see [SharePoint Online Suite Navigation control](http://msdn.microsoft.com/library/ba93e5c0-e591-48d0-a716-a08ec7ef6cea%28Office.15%29.aspx).
+SharePoint Online introduces new master page markup for the **Suite Navigation** control, which renders the top navigation. The default markup for the **Suite Navigation** control differs depending on whether the site is an intranet or public-facing. To learn more about the **Suite Navigation** control and see code examples for both intranet and public-facing sites that you can add to your master pages, see [SharePoint Online Suite Navigation control](../general-development/sharepoint-online-suite-navigation-control.md).
 
 ### Use CSOM to customize the regions of a SharePoint page
 
@@ -237,7 +239,7 @@ Generally, we recommend that you use the [UserCustomAction](https://msdn.microso
 
 ### Customize the SharePoint ribbon
 
-When you customize the ribbon, the HTML that the server renders is assigned to the class name that you assign to a custom style. To use this feature, go to the Style Library and create a new CSS file for each style that you want to add to the ribbon. You can add custom styles to two sections of the ribbon:**Pag 
+When you customize the ribbon, the HTML that the server renders is assigned to the class name that you assign to a custom style. To use this feature, go to the Style Library and create a new CSS file for each style that you want to add to the ribbon. You can add custom styles to two sections of the ribbon: 
 
 - For the **Page Elements** section: `span.ms-rteElement-<yourowndefinedname>`. Alternatively, you can use styles H1, H2, H3, or H4, which will be wrapped around the text that the style is applied to.
     
@@ -251,7 +253,7 @@ Now you can finish defining the details of your custom CSS class in your custom 
 
 ### Customize Suite Navigation on a web part page
 
-In SharePoint 2013, the UI has a modern look and feel that is based on page tiles. For example, Live Tiles appear on the default SharePoint 2013 page by default. The top navigation makes it easy for users to see and access social content and OneDrive for Business. You can customize the look and feel of these areas by using a mix of CSS and JavaScript.
+In SharePoint, the UI has a modern look and feel that is based on page tiles. For example, Live Tiles appear on the default SharePoint page by default. The top navigation makes it easy for users to see and access social content and OneDrive for Business. You can customize the look and feel of these areas by using a mix of CSS and JavaScript.
 
 After you create a web part page, add a Script Editor web part to an available web part zone. You can use this web part to add JavaScript to your page. You can add JavaScript code to the Script Editor web part that identifies the top navigation bar by its **ElementId**, and then hide it by setting its visibility property to hidden.
 
@@ -297,7 +299,7 @@ public void AddCustomActions(ClientContext clientContext)
 
 To modify the width of the tree view, add a  `<div>` tag around the tree tag in the .master page and assign a CSS class with a style width attribute to the `<div>`. You can increase the width of the **Quick Launch** navigation by adding the following style definition to the .css file.
 
-```
+```cs
 .ms-nav {
   width: 220 px;
 }
@@ -307,7 +309,7 @@ To modify the width of the tree view, add a  `<div>` tag around the tree tag in 
 
 Requirements for customizing page content depend on the content you're including in your page. As for customizing the **Site Actions** menu, you can use a [UserCustomAction](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.usercustomaction.aspx) object to provision branding to web parts.
 
-If you are building a publishing site, see [How to: Create a page layout in SharePoint 2013](http://msdn.microsoft.com/library/5447e6a1-2f14-4667-81d0-7514b468be80%28Office.15%29.aspx) to learn the basics. Page layouts depend on the availability of the [ContentTypeId](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.contenttypeid.aspx) class in CSOM. As for other members that aren't available in CSOM, you can use a Windows Communication Foundation (WCF) service to work with **ContentTypeId** as a temporary workaround.
+If you are building a publishing site, see [Create a page layout in SharePoint](../general-development/how-to-create-a-page-layout-in-sharepoint.md) to learn the basics. Page layouts depend on the availability of the [ContentTypeId](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.contenttypeid.aspx) class in CSOM. As for other members that aren't available in CSOM, you can use a Windows Communication Foundation (WCF) service to work with **ContentTypeId** as a temporary workaround.
 
 ## See also
 
