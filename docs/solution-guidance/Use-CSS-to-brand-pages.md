@@ -192,8 +192,7 @@ namespace AlternateCSSAppAutohostedWeb.Services
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)
-    
--  [Branding.AlternateCSSAndSiteLogo sample](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
+  
+- [Branding.AlternateCSSAndSiteLogo sample](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
+- [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

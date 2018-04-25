@@ -312,8 +312,6 @@ Requirements for customizing page content depend on the content you're including
 If you are building a publishing site, see [How to: Create a page layout in SharePoint 2013](http://msdn.microsoft.com/library/5447e6a1-2f14-4667-81d0-7514b468be80%28Office.15%29.aspx) to learn the basics. Page layouts depend on the availability of the [ContentTypeId](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.contenttypeid.aspx) class in CSOM. As for other members that aren't available in CSOM, you can use a Windows Communication Foundation (WCF) service to work with **ContentTypeId** as a temporary workaround.
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)
-    
-- [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
+- [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

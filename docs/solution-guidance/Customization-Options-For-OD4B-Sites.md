@@ -129,3 +129,8 @@ Vesa Juvonen (Microsoft) - [@vesajuvonen](https://twitter.com/vesajuvonen)
 Version  | Date | Comments
 ---------| -----| --------
 1.0  | January 2nd, 2015 | Initial release | Vesa Juvonen (Microsoft)
+
+## See also
+
+- [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

@@ -66,6 +66,8 @@ Before you run this code sample, complete the following steps.
 > [!IMPORTANT] 
 > The CSOM is periodically updated with new features. If the CSOM provides new features to update site page or **Quick Launch** link titles, we recommend that you use the new features in the CSOM instead of the options discussed here.
 
+<br/>
+
 Before you run Scenario 2 of this code sample, complete the following tasks.
 
 ### Create a Quick Launch link
@@ -108,10 +110,10 @@ The following figure shows the start page for Scenario 1.
 
 ![Screenshot of the start page for Scenario 1](media/16972165-5f94-497f-b58c-0e1075d9616a.png)
 
-The **AddJSLink** method is part of the JavaScriptExtensions.cs file in **OfficeDevPnP.Core**. **AddJSLink** requires that you supply a string representing the identifier to assign to the custom action, and a string containing a semicolon delimited list of URLs to the JavaScript files that you want to add to the host web. Note that this code sample adds a reference to Scripts\scenario1.js, which adds a status bar message to the host web.
-    
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
+The **AddJSLink** method is part of the JavaScriptExtensions.cs file in **OfficeDevPnP.Core**. **AddJSLink** requires that you supply a string representing the identifier to assign to the custom action, and a string containing a semicolon delimited list of URLs to the JavaScript files that you want to add to the host web. Note that this code sample adds a reference to Scripts\scenario1.js, which adds a status bar message to the host web.
 
 ```js
 protected void btnSubmit_Click(object sender, EventArgs e)
@@ -151,6 +153,8 @@ protected void btnSubmit_Click(object sender, EventArgs e)
         // Add additional JavaScript code here to complete your task. 
     });
 > ```
+
+<br/>
 
 Choose **Back to Site**. As shown in the following figure, the host web now displays a status bar message that was added by scenario1.js.
 
