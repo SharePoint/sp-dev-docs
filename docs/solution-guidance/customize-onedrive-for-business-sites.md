@@ -6,32 +6,40 @@ ms.date: 4/25/2018
 
 # Customize OneDrive for Business sites
 
-OneDrive for Business sites can be customized in Office 365 or with app model in general, based on company requirements. Actual techniques to perform this customization are different than in the on-premises, since only app model techniques can be used. This page contains details on the actual patterns which can be used with app mdoel to customize OneDrive for Business sites. 
+OneDrive for Business sites can be customized in Office 365 or with the add-in model in general, based on company requirements. Actual techniques to perform this customization are different than in the on-premises scenario because only add-in model techniques can be used. 
 
 > [!IMPORTANT]
-> This **only** applies to the *classic* OneDrive for Business experience in SharePoint Online. If you are using the default "New experience", this is not supported. Modern or new experiences of OneDrive for Business does not support custom branding. Tenant administrators can control the default experience from the SharePoint Online administrative settings.
+> This applies to **only** the *classic* OneDrive for Business experience in SharePoint Online. If you are using the new default experience, this is not supported. Modern or new experiences of OneDrive for Business do not support custom branding. Tenant administrators can control the default experience from the SharePoint Online administrative settings.
+> 
+> Patterns for Dedicated and on-premises are identical with the add-in model techniques, but there are differences in the possible technologies that can be used.
 
-*Patterns for Dedicated and on-premises are identical with add-in model techniques, but there are differences on the possible technologies which can be used.*
+## Why customize OneDrive for Business sites?
 
-## Why would you customize OneDrive for Business sites?
+There are numerous aspects to applying customizations to OneDrive for Business (OD4B) sites. You can customize these sites because they are SharePoint sites, but you should always consider the short-term and long-term impact of the customizations. 
 
-There are numerous different aspects on applying customizations to OneDrive for Business (OD4B) sites. You certainly can customize these sites, since they are SharePoint sites, but at the same time you should always consider the short and long term impact of the customizations. As a rule of a thumb, we would like to give following high level guidelines for customizing OD4B sites. 
+Following are the high-level guidelines for customizing OneDrive for Business sites: 
 
-- Apply branding customizations using Office 365 themes or SharePoint site theming engine
-- If theme engines are not enough, you can adjust some CSS settings using alternate CSS option
-- Avoid customizing OD4B sites using custom master pages, since this will cause you additional long term costs and challenges with future updates
-  + In most of the cases, you can achieve all common branding scenarios with themes and alternate CSS, so this is not really that limiting factor
-  + If you chose to use custom master pages, be prepared on applying changes to the sites when major functional updates are applied to Office 365
-- You can use JavaScript embedding to modify or hide functionalities from the site
-- You can use CSOM to control for example language or regional settings in the OD4B sites (see new APIs)
-- We do not recommend usage of content types and site columns in OD4B sites to avoid challenges with the 
-  + Think OD4B sites as for personal un-structural data and documents. Team sites and collaboration sits are then for company data and documents where you can certainly use whatever information management policies and metadata you want.
+- Apply branding customizations by using Office 365 themes or the SharePoint site theming engine. 
 
-As a summary, customizations are definitely supported in Office 365 and you can keep on using them with OD4B sites. We just truly want to ensure that you consider the short and long term impact of these customizations from operational and maintenance perspective. This is not really specific for SharePoint, rather a rule of thumb for any IT solution build with any platform. 
+- If theme engines are not enough, you can adjust some CSS settings by using alternate CSS options.
+ 
+- Avoid customizing OD4B sites by using custom master pages because this causes you additional long-term costs and challenges with future updates.
+ 
+  - In most cases, you can achieve all common branding scenarios with themes and alternate CSS.
+  - If you choose to use custom master pages, be prepared to apply changes to the sites when major functional updates are applied to Office 365.
 
-Here’s an example of OD4B site, which has been customized using above guidelines. In this case the end result has been achieved with combination of Office 365 themes, site theme and usage of so called JavaScript embedding pattern.
+- You can use JavaScript embedding to modify or hide functionalities from the site.
 
-![A customized OD4B site.](media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-01.png)
+- You can use CSOM to control, for example, language or regional settings in the OD4B sites (see new APIs).
+
+- We do not recommend using content types and site columns in OD4B sites. Use OD4B sites for personal unstructured data and documents. Use team sites and collaboration sites for company data and documents, where you can use whatever information management policies and metadata you want.
+
+Customizations are definitely supported in Office 365, and you can keep on using them with OD4B sites. We just want to ensure that you consider the impact of these customizations from an operational and maintenance perspective. This is not really specific for SharePoint, but rather a rule of thumb for any IT solution built with any platform. 
+
+Following is an example of an OD4B site that has been customized using the previous guidelines. In this case, the end result has been achieved with a combination of Office 365 themes, a site theme, and use of the JavaScript embedding pattern.
+
+<img alt="A customized OD4B site" src="media/Customization-Options-For-OD4B-Sites/Customization-Options-For-OD4B-Sites-01.png" width="700">
+
 
 ## Challenge with applying OneDrive for Business site customizations
 
@@ -41,7 +49,7 @@ Let’s start with defining what is the challenge and what are we trying to solv
 
 Classic solution to apply needed configuration to the OneDrive for Business sites (including my or personal sites) was based on feature stapling in farm level. This meant that you deployed farm solution to your SharePoint farm and used feature framework to associate your custom feature to be activated each time a my site is crated, which was then responsible of applying needed customizations. This similar approach does not work in Office 365, since it requires farm solution to be deployed and that is simply impossible with Office 365 sites. Therefore we need to look alternatives to apply the needed changes to the sites.
 
-In Office 365 there is no centralized event raised, which we could attach our custom code to when OD4B site is created. This means that we need to think about alternative solutions, which is quite common with app model approaches. Do not get stuck on old models, think about how to achieve same end result using new APIs and technologies. From pure requirement perspective, it does not really matter how we apply the customizations to the sites, as long as they are applied, since business requirement is not to use feature stapling, it’s about applying needed customizations using whatever supported technical mechanism. 
+In Office 365 there is no centralized event raised, which we could attach our custom code to when OD4B site is created. This means that we need to think about alternative solutions, which is quite common with add-in model approaches. Do not get stuck on old models, think about how to achieve same end result using new APIs and technologies. From pure requirement perspective, it does not really matter how we apply the customizations to the sites, as long as they are applied, since business requirement is not to use feature stapling, it’s about applying needed customizations using whatever supported technical mechanism. 
 
 ## Options for applying customizations
 

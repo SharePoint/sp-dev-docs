@@ -274,6 +274,6 @@ namespace ApplyThemeAppWeb.Pages
 
 ## See also
 
-- [Use composed looks to brand SharePoint sites](use-composed-looks-to-brand-sharepoint-site.md)   
+- [Use composed looks to brand SharePoint sites](use-composed-looks-to-brand-sharepoint-sites.md)   
 - [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
 - [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)
