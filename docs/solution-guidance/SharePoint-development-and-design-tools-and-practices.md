@@ -8,7 +8,7 @@ ms.date: 4/24/2018
 
 This article provides information about the development and design options that are available in SharePoint. You can also find information about how to use the remote provisioning pattern to apply branding assets to a SharePoint site.
 
-## Terms and concepts
+## Terms and concepts 
 
 **Table 1. Key SharePoint development and design terms and concepts**
 

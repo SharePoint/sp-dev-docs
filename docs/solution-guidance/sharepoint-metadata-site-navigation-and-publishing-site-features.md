@@ -6,7 +6,7 @@ ms.date: 4/24/2018
 
 # SharePoint metadata, site navigation, and publishing site features
 
-This article explains how to manage metadata and customize site navigation and publishing site features in SharePoint Online by using the add-in model. It also covers ways to work with common web programming patterns and libraries to help customize SharePoint publishing site branding.
+This article explains how to manage metadata and customize site navigation and publishing site features in SharePoint Online by using the add-in model. It also covers ways to work with common web programming patterns and libraries to help customize SharePoint publishing site branding. 
 
 ## Terms and concepts
 

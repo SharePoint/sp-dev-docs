@@ -157,7 +157,7 @@ You can use remote provisioning to provision site branding elements such as them
 > [!IMPORTANT] 
 > Because of the potential long-term impact of ongoing support costs and maintenance, we recommend that you do not change the structure of a new master page. You can make changes to the master page that support branding that don't affect the structure, such as changing colors in the header, adding a color background to specific elements of a page, or showing and hiding a site logo. If the default master page you're using does not include a structural element (such as a footer) that you want to include on your page, use a different out-of-the-box master page.
 
-To help maintain consistency on a custom master page, follow the existing coding pattern. For example, in areas of the page that use tables, reinforce the coding pattern by using tables. In areas where `<DIV>` tags or HTML5 are used, match any custom code with `<DIV>` tags or HTML5. In the long run, this makes any custom master pages that you have to create easier to maintain, and therefore, less expensive.
+To help maintain consistency on a custom master page, follow the existing coding pattern. For example, in areas of the page that use tables, reinforce the coding pattern by using tables. In areas where `<DIV>` tags or HTML5 are used, match any custom code with `<DIV>` tags or HTML5. In the long run, this makes any custom master pages that you have to create easier to maintain, and therefore, less expensive. 
 
 ## See also
 

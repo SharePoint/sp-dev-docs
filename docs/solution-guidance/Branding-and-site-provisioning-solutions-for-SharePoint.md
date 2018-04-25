@@ -5,7 +5,7 @@ ms.date: 4/23/2018
 ---
 # Branding and site provisioning solutions for SharePoint
 
-The introduction of the Cloud Add-in Model and SharePoint Add-ins provides alternatives to existing, established ways of branding and provisioning SharePoint sites. 
+The introduction of the Cloud Add-in Model and SharePoint Add-ins provides alternatives to existing, established ways of branding and provisioning SharePoint sites.
 
 Up to now, you might have used the SharePoint feature framework, site templates, web templates, and site definitions to provision your sites and site collections. 
 

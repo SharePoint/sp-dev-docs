@@ -8,8 +8,6 @@ ms.date: 4/24/2018
 
 The code samples described in this section show you how to use provider-hosted add-ins to localize site features and UI elements in your SharePoint solution. The articles in this section will help you get started with and walk you through the primary scenarios that each sample illustrates. 
 
-## In this section
-
 |Article|Sample|Shows you how to...|
 |:-----|:-----|:-----|
 |[Use localization features in Office 365 sample add-in](use-localization-features-in-office-365-sample-app.md)|[Core.CreateContentTypes](https://github.com/SharePoint/PnP/tree/master/Samples/Core.CreateContentTypes)|Use the localization features in Office 365 to provide localized values for SharePoint sites, lists, content types, and site columns. |
