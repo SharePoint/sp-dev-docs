@@ -154,11 +154,11 @@ To create a custom theme:
     > [!NOTE] 
     > Save the file with a new file name (for example, custom_palette1.spcolor).
 
-   The following table maps colors and page elements to their code in the .spcolor file. It is a subset of the mappings that are available in the .spcolor file.
+    The following table maps colors and page elements to their code in the .spcolor file. It is a subset of the mappings that are available in the .spcolor file.
 
-   **Table 2. Mapping of colors and page elements to .spcolor file**
+    **Table 2. Mapping of colors and page elements to .spcolor file**
 
-	|**Element**|**Color**|**Code**|
+    |Element|Color|Code|
 	|:-----|:-----|:-----|
 	|Body text|Black| `<s:color name="BodyText" value="000000" />`|
 	|Global navigation background|Blue| `<s:color name="HeaderBackground" value="018dff" />`|
@@ -168,13 +168,11 @@ To create a custom theme:
 	|Title|White| `<s:color name="SiteTitle" value="FFFFFF" />`|
 	|Footer background|Black| `<s:color name="FooterBackground" value="000000" />`|
 
-6. To customize .spfont, download a copy of a .spfont file and open it in a text editor. Notice that the .spfont file is laid out a bit differently than .spcolor, but that both files share a similar structure. 
-    
-    **Figure 4. .spfont file**
+6. To customize .spfont, download a copy of an .spfont file and open it in a text editor. Notice that the .spfont file is laid out a bit differently than .spcolor, but that both files share a similar structure. 
 
     ![Screenshot that shows the contents of the .spfont file](media/893f905a-34d9-4dbd-a012-03797084f9e6.png)
 
-7. Edit each  `<s:fontSlot />` section to customize the font SharePoint applies to the specified font slot on the page. For example, notice the first entry, `<s:fontSlot name="title">`. This entry describes which font SharePoint uses to style the title of the page. This section also specifies which font will be used for different languages.
+7. Edit each `<s:fontSlot />` section to customize the font that SharePoint applies to the specified font slot on the page. For example, notice the first entry, `<s:fontSlot name="title">`. This entry describes which font SharePoint uses to style the title of the page. This section also specifies which font is used for different languages.
     
     > [!NOTE] 
     > You can upload custom fonts to SharePoint and point each entry to a custom .eot, .woff, .ttf, and .svg file. 
@@ -184,60 +182,60 @@ To create a custom theme:
     > [!NOTE] 
     > Save the file with a new file name (for example, custom_font.spfont).
 
-The following table maps page elements to fonts as they're defined in the .spfont file.
+    The following table maps page elements to fonts as they're defined in the .spfont file.
 
-**Table 3. Mapping of page elements to fonts**
+    **Table 3. Mapping of page elements to fonts**
 
-|**Element**|**Font**|**Code**|
-|:-----|:-----|:-----|
-|Title|Open Sans| `<s:cs typeface="Open Sans" />`|
-|Navigation|Roboto| `<s:cs typeface="Roboto" />`|
-|Headings|Trajan Pro| `<s:cs typeface="Trajan Pro" />`|
-|Body|Open Sans| `<s:cs typeface="Open Sans" />`|
+    |Element|Font|Code|
+    |:-----|:-----|:-----|
+    |Title|Open Sans| `<s:cs typeface="Open Sans" />`|
+    |Navigation|Roboto| `<s:cs typeface="Roboto" />`|
+    |Headings|Trajan Pro| `<s:cs typeface="Trajan Pro" />`|
+    |Body|Open Sans| `<s:cs typeface="Open Sans" />`|
 
-You might have to ensure that some custom fonts are available to users' browsers. For example, if the headings refer to a Trajan Pro font, which is uncommon on most users' computers, add the following font declarations at the top of the <s:fontSlot> declaration. This will ensure that the correct font is displayed. 
+    You might have to ensure that some custom fonts are available to users' browsers. For example, if the headings refer to a Trajan Pro font, which is uncommon on most users' computers, add the following font declarations at the top of the <s:fontSlot> declaration. This will ensure that the correct font is displayed. 
 
-```XML
-<s:latin typeface=" Trajan Pro" eotsrc="/SiteAssets/Trajan Pro.eot" woffsrc="/SiteAssets/Trajan Pro.woff" ttfsrc="/SiteAssets/Trajan Pro.ttf" svgsrc="/SiteAssets/Trajan Pro.svg"  />
-```
+    ```XML
+    <s:latin typeface="Trajan Pro" 
+        eotsrc="/SiteAssets/Trajan Pro.eot" 
+        woffsrc="/SiteAssets/Trajan Pro.woff" 
+        ttfsrc="/SiteAssets/Trajan Pro.ttf" 
+        svgsrc="/SiteAssets/Trajan Pro.svg"  />
+    ```
 
 ## Add a custom theme to SharePoint
-<a name="sectionSection2"> </a>
 
 After you make your customizations to the master page, .spcolor, and .spfont files, add them to the Composed Looks directory so that SharePoint can access them. 
 
 1. Go to **Site settings**, and under **Web Designer Galleries**, select **Composed Looks**. 
     
-2. Choose the **new item** link at the top left. A window opens, as shown in Figure 5.
-    
-    **Figure 5. Composed looks**
+2. Choose the **new item** link at the top left. The following window opens.
 
     ![Screenshot that shows the new composed look page](media/8155ba5d-9492-473d-b153-c3db566cbdec.png)
 
 3. Add a title and a name for your composed look.
     
-4. Complete the remaining field:
+4. Complete the remaining fields:
     
-	- In the **Master Page URL** field, add the URL of the master page you would like the theme to use.
+	- In the **Master Page URL** field, add the URL of the master page that you would like the theme to use.
     
-	- In the **Theme URL** field, add the URL of the .spcolor file.
+	- In **Theme URL**, add the URL of the .spcolor file.
     
-	- In the **Image URL** field, include the URL of an image that you want to use as a background. This is not required if your design doesn't call for a background image.
+	- In **Image URL**, include the URL of an image that you want to use as a background. This is not required if your design doesn't call for a background image.
     
-	- In the **Font Scheme URL** field, include the URL of the .spfont file.
+	- In **Font Scheme URL**, include the URL of the .spfont file.
     
-	- In the **Display Order** field, indicate the order in which the composed look should be displayed.
+	- In **Display Order**, indicate the order in which the composed look should be displayed.
     
-5. Choose **Save**. Your theme entry will now appear in the  **Composed Looks** list.
+5. Choose **Save**. Your theme entry appears in the **Composed Looks** list.
     
-After you add your custom theme to as a composed look, users can access the theme and apply it to a site by going to **Site settings** > **Look and Feel** > **Change the look**. Figure 6 shows an example of a **Change the look** section in **Site Settings**.
+After you add your custom theme as a composed look, users can access the theme and apply it to a site by going to **Site settings** > **Look and Feel** > **Change the look**. 
 
-**Figure 6. Composed looks available in Change the look**
+The following figure shows an example of a **Change the look** section in **Site Settings**.
 
 ![Screenshot that shows the composed looks that are available in Site Settings > Change the look](media/11acb4ea-cff6-483c-890f-8c574e14f29d.png)
 
-## What does the theming engine do when a user applies a composed look?
-<a name="sectionSection3"> </a>
+## What the theming engine does when a user applies a composed look
 
 When a user applies a composed look, SharePoint copies, transforms, and stores CSS in the content database. It also recolors and stores images in the content database. As part of the process of applying a theme to a site, the theming engine pulls color and font values from the specified color palette and font scheme found in the Theme Gallery of the root site. To apply .master page and the master page .preview file (the site layout), the theming engine pulls master pages in the Master Page Gallery that have a corresponding .preview file. 
 
@@ -249,7 +247,7 @@ The following table lists the CSS comment tokens.
 
 **Table 4. CSS comment tokens**
 
-|**Token**|**Description**|**Corresponding ApplyTheme parameter**|
+|Token|Description|Corresponding ApplyTheme parameter|
 |:-----|:-----|:-----|
 |/* ReplaceBGImage */|Swaps current background image with the image in the assigned composed look image URL.|backgroundImageUrl|
 |/* ReplaceFont */|Swaps the current font with one of the fonts found in the font scheme URL of the assigned composed look.|fontSchemeUrl|
