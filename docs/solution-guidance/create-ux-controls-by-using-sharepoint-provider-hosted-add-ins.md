@@ -1,7 +1,7 @@
 ---
 title: Create UX controls by using SharePoint provider-hosted add-ins
 description: Three samples that show you how to implement UX controls in your provider-hosted add-in.
-ms.date: 11/03/2017
+ms.date: 4/26/2018
 ---
 
 # Create UX controls by using SharePoint provider-hosted add-ins
@@ -117,7 +117,6 @@ The add-in sets up the term store on the host site. It uses CSOM objects and met
 When you choose the **Setup term store** button, the add-in:
 
 - Makes sure that the required languages (English, German, French, and Swedish) are enabled in the term store.
-    
 - Creates a term group and term set and populates the term set with four new terms.
     
 The following code in the **TaxonomyHelper** class verifies that the required languages are enabled, and if they're not, it enables them.
@@ -163,6 +162,8 @@ var peopleManager = new SP.UserProfiles.PeopleManager(context);
 var userProperty = peopleManager.getUserProfilePropertyFor(targetUser, "SPS-MUILanguages");
 ```
 
+<br/>
+
 The add-in then determines whether the user's language preference matches one of the enabled languages. If it finds a match, the following code gets the terms and the associated labels for the user's preferred language.
 
 ```js
@@ -174,6 +175,8 @@ while (termEnumerator.moveNext()) {
     termLabels.push(label);
     context.load(currentTerm);
 ```
+
+<br/>
 
 Finally, the following code in the topnav.js file inserts links that contain the terms into the top navigational element of the host site.
 
