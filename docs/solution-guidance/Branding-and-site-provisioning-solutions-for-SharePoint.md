@@ -3,6 +3,7 @@ title: Branding and site provisioning solutions for SharePoint
 description: The remote provisioning pattern shows you how to create custom SharePoint Add-ins that provision site branding and perform other site provisioning tasks.
 ms.date: 4/23/2018
 ---
+
 # Branding and site provisioning solutions for SharePoint
 
 The introduction of the Cloud Add-in Model and SharePoint Add-ins provides alternatives to existing, established ways of branding and provisioning SharePoint sites.
@@ -263,6 +264,8 @@ When considering moving an existing customization from full-trust code to the Cl
 
 ## See also
 
--  [SharePoint development and design tools and practices](sharepoint-development-and-design-tools-and-practices.md)   
--  [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
+- [SharePoint development and design tools and practices](sharepoint-development-and-design-tools-and-practices.md)
+- [SharePoint metadata, site navigation, and publishing site features](sharepoint-metadata-site-navigation-and-publishing-site-features.md) 
+- [UX components in SharePoint and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md) 
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
     

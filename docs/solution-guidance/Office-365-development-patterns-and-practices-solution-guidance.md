@@ -8,6 +8,8 @@ ms.date: 4/23/2018
 
 Solution guidance, including insights and details based on scenarios and functional requirements, for Office 365 development and SharePoint patterns and practices (PnP). 
 
+<br/>
+
 |Read this content|If you want to...|
 |:-----|:-----|
 |[Modernizing your classic SharePoint sites](../transform/modernize-classic-sites.md)|Transform your classic SharePoint sites into modern group-connected sites.|
