@@ -1,23 +1,25 @@
 ---
-title: Transform farm solutions to the SharePoint add-in model
+title: Transform farm solutions to the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-# Transform farm solutions to the SharePoint add-in model
-Transform or convert your farm solutions to the SharePoint add-in model. Learn how to convert web parts, page layouts, master pages, timer jobs, and so on to the SharePoint add-in model.
+
+# Transform farm solutions to the SharePoint Add-in model
+
+Transform or convert your farm solutions to the SharePoint Add-in model. Learn how to convert web parts, page layouts, master pages, timer jobs, and so on to the SharePoint Add-in model.
 
 _**Applies to:** add-ins for SharePoint | SharePoint 2013 | SharePoint Online_
 
-If you have extended your SharePoint environment by using farm solutions and you want to migrate your extensions to the SharePoint add-in model to make your transition to SharePoint Online easier, you need to transform your farm solutions to the SharePoint add-in model. Transforming your farm solutions to the SharePoint add-in model involves analyzing your existing extensions, designing and developing your new add-in for SharePoint, and then testing and deploying your add-in in your production environment. This article describes the process and best practices to use when you transform your farm solutions to the SharePoint add-in model.
+If you have extended your SharePoint environment by using farm solutions and you want to migrate your extensions to the SharePoint Add-in model to make your transition to SharePoint Online easier, you need to transform your farm solutions to the SharePoint Add-in model. Transforming your farm solutions to the SharePoint Add-in model involves analyzing your existing extensions, designing and developing your new add-in for SharePoint, and then testing and deploying your add-in in your production environment. This article describes the process and best practices to use when you transform your farm solutions to the SharePoint Add-in model.
 
 ## Plan the transformation process
 <a name="sectionSection0"> </a>
 
-When you transform your farm solutions to the SharePoint add-in model, you want to ensure that the impact on your users is minimal. Carefully analyze your current farm solutions, and then design your new add-in for SharePoint to meet the needs of your organization. We recommend the following process to ensure a successful transformation.
+When you transform your farm solutions to the SharePoint Add-in model, you want to ensure that the impact on your users is minimal. Carefully analyze your current farm solutions, and then design your new add-in for SharePoint to meet the needs of your organization. We recommend the following process to ensure a successful transformation.
 
 
 1. Readiness. Learn about:
     
-	- The SharePoint add-in model, different kinds of add-ins, and hosting options. For more information, see  [Overview of add-ins for SharePoint](https://msdn.microsoft.com/library/office/fp179930.aspx).
+	- The SharePoint Add-in model, different kinds of add-ins, and hosting options. For more information, see  [Overview of add-ins for SharePoint](https://msdn.microsoft.com/library/office/fp179930.aspx).
     
 	- Remote access technologies for accessing your on-premises data.
     
@@ -31,17 +33,17 @@ When you transform your farm solutions to the SharePoint add-in model, you want 
     
 	- Identifying unused features, and agreeing with your users to omit this functionality from the new add-in for SharePoint. 
     
-	- For each farm solution, determining whether to replace it with an add-in for SharePoint. Some solutions, such as SharePoint administration extensions, cannot be duplicated in the SharePoint add-in model. For more information, see  [add-ins for SharePoint compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8.aspx) and [Deciding between add-ins for SharePoint and SharePoint solutions](http://msdn.microsoft.com/library/8459e265-b8fd-4bf8-911e-d63cae8bf96f.aspx).
+	- For each farm solution, determining whether to replace it with an add-in for SharePoint. Some solutions, such as SharePoint administration extensions, cannot be duplicated in the SharePoint Add-in model. For more information, see  [add-ins for SharePoint compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8.aspx) and [Deciding between add-ins for SharePoint and SharePoint solutions](http://msdn.microsoft.com/library/8459e265-b8fd-4bf8-911e-d63cae8bf96f.aspx).
     
-3.  Solution planning. Design the new application using the SharePoint add-in model based on:
+3.  Solution planning. Design the new application using the SharePoint Add-in model based on:
     
 	- The requirements gathered in step 2.
     
 	- Your analysis of the existing code. During your code analysis, consider identifying portions of the code that can be dropped (for example, the code is no longer being used, or the requirements have changed).
     
-4. Develop and test the SharePoint add-in model version of your application. This is usually the most time-consuming step in the transformation process. 
+4. Develop and test the SharePoint Add-in model version of your application. This is usually the most time-consuming step in the transformation process. 
     
-5. Deploy your new add-in. Depending on your requirements, you might decide to keep the farm solutions running in parallel to the new add-in for SharePoint, or you may retract the farm solution and only allow users to use the new add-in for SharePoint. In either scenario, ensure that your deployment is stable, and send appropriate communication to your users. If your content in existing site collections depended on your farm solutions (for example, if content was created by using a content type), before you fully retract the farm solution, you need to transform your existing content to use your new SharePoint add-in model solution. Ensure that you allow enough time to complete this task because it can be time consuming and difficult.
+5. Deploy your new add-in. Depending on your requirements, you might decide to keep the farm solutions running in parallel to the new add-in for SharePoint, or you may retract the farm solution and only allow users to use the new add-in for SharePoint. In either scenario, ensure that your deployment is stable, and send appropriate communication to your users. If your content in existing site collections depended on your farm solutions (for example, if content was created by using a content type), before you fully retract the farm solution, you need to transform your existing content to use your new SharePoint Add-in model solution. Ensure that you allow enough time to complete this task because it can be time consuming and difficult.
 
 ## Transformation approaches to deploy your new add-in for SharePoint
 <a name="sectionSection1"> </a>

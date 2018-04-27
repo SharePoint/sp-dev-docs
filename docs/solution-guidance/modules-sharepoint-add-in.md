@@ -1,8 +1,8 @@
 ---
-title: Modules in the SharePoint add-in model
+title: Modules in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Modules in the SharePoint add-in model
+Modules in the SharePoint Add-in model
 ======================================
 
 Summary

@@ -1,8 +1,8 @@
 ---
-title: Search configuration in the SharePoint add-in model
+title: Search configuration in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Search configuration in the SharePoint add-in model
+Search configuration in the SharePoint Add-in model
 ===================================================
 
 Summary

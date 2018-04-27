@@ -66,7 +66,7 @@ _**Applies to:** Office 365 | SharePoint Server_
 - [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint)
 - [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly)
 - [How to provide add-in app only tenant administrative permissions in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online)
-- [App-only and elevated privileges in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
+- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
 - [Developing using Tenant permissions with App-Only in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online)
 - [Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 
@@ -86,7 +86,7 @@ If your solution allows users to perform actions for which they don't have adequ
 
 - [Elevated privileges in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/elevated-privileges-in-sharepoint-add-ins)
 - [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint#Scenario)
-- [App-only and elevated privileges in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
+- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
 
 ### Azure AD Authentication/Authorization
 
@@ -95,7 +95,7 @@ _**Applies to:** Office 365_
 When using SharePoint Online you can define applications in Azure AD and these applications can be granted permissions to SharePoint, but also to all the other services in Office 365. This model is the preferred model in case you’re using SharePoint Online, if you’re using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS.
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact SharePoint add-in model which is using `https://accounts.accesscontrol.windows.net` hostname, which is not impacted by this retirement. See more details on this from [Impact of Azure Access Control retirement for SharePoint add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 #### Related resources
 

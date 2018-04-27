@@ -1,8 +1,8 @@
 ---
-title: Web part in the SharePoint add-in model
+title: Web part in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Web part in the SharePoint add-in model
+Web part in the SharePoint Add-in model
 =======================================
 
 Summary

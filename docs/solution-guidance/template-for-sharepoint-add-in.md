@@ -1,8 +1,8 @@
 ---
-title: XYZ in the SharePoint add-in model
+title: XYZ in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-XYZ in the SharePoint add-in model
+XYZ in the SharePoint Add-in model
 ==================================
 
 Summary

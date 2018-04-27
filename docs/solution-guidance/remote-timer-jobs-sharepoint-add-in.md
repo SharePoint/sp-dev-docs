@@ -1,8 +1,8 @@
 ---
-title: Remote timer jobs in the SharePoint add-in model
+title: Remote timer jobs in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Remote timer jobs in the SharePoint add-in model
+Remote timer jobs in the SharePoint Add-in model
 ================================================
 
 Summary

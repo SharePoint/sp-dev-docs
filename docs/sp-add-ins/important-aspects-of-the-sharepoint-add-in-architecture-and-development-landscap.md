@@ -11,7 +11,7 @@ ms.prod: sharepoint
 <a name="SPAppModelArch_SPCenteredVsCloudCentered"> </a>
 This article supplements the information in the article [SharePoint Add-ins](sharepoint-add-ins.md).
 
-The SharePoint add-in model provides the following ways to host the components of a SharePoint Add-in: 
+The SharePoint Add-in model provides the following ways to host the components of a SharePoint Add-in: 
 
 -  **Provider-hosted:** Add-ins that include at least one remote component and may also include SharePoint components. The non-SharePoint components are deployed by your logic on your hardware or cloud account, or deployed on the customer's hardware or cloud account using installation programs and instructions that you provide.
 

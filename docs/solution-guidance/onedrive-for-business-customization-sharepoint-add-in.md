@@ -1,8 +1,8 @@
 ---
-title: OneDrive for Business customization in the SharePoint add-in model
+title: OneDrive for Business customization in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-OneDrive for Business customization in the SharePoint add-in model
+OneDrive for Business customization in the SharePoint Add-in model
 ==================================================================
 
 Summary

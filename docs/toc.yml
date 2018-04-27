@@ -1363,7 +1363,7 @@
       href: solution-guidance/modern-experience-customizations-customize-pages.md
     - name: SharePoint "modern" sites classification
       href: solution-guidance/modern-experience-site-classification.md
-  - name: SharePoint Multi-Geo tenant guidance
+  - name: OneDrive and SharePoint Online Multi-Geo
     href: solution-guidance/multigeo-introduction.md
     items:
     - name: Permissions
@@ -1551,7 +1551,7 @@
       href: solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in.md
     - name: Yammer integration
       href: solution-guidance/yammer-integration-sharepoint-add-in.md
-  - name: Transforming farm solutions to the SharePoint Add-in model
+  - name: Transforming farm solutions
     href: solution-guidance/Transform-farm-solutions-to-the-SharePoint-app-model.md
     items:
     - name: Replace content types and site columns
@@ -1562,7 +1562,7 @@
       href: solution-guidance/replace-sharepoint-lists-created-from-list-definitions.md
     - name: Replace web parts with add-in parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
-  - name: Sandbox solution transformation guidance
+  - name: Transforming sandbox solutions
     href: solution-guidance/Sandbox-Solution-Transformation-Guidance.md
     items:
     - name: Web parts

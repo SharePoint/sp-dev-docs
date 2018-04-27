@@ -1,8 +1,8 @@
 ---
-title: Performance considerations in the SharePoint add-in model
+title: Performance considerations in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Performance considerations in the SharePoint add-in model
+Performance considerations in the SharePoint Add-in model
 =========================================================
 
 Summary

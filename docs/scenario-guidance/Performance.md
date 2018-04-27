@@ -62,7 +62,7 @@ The approaches you take to ensure optimal performance with SharePoint is differe
 ##### Articles
 
 - [JavaScript Patterns and Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
-- [Performance considerations in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/performance-considerations-sharepoint-add-in)
+- [Performance considerations in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/performance-considerations-sharepoint-add-in)
 - [Improve performance in SharePoint provider-hosted add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins)
 - [Make batch requests with the REST APIs](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis)
 

@@ -1,8 +1,8 @@
 ---
-title: Custom field type in the SharePoint add-in model
+title: Custom field type in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Custom field type in the SharePoint add-in model
+Custom field type in the SharePoint Add-in model
 ================================================
 
 Summary

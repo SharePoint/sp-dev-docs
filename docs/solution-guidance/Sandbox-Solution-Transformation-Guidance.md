@@ -1,15 +1,17 @@
 ---
-title: Sandbox solution transformation guidance
+title: Transform sandbox solutions to the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-# Sandbox solution transformation guidance 
-Transform or convert your code-based sandbox solutions to the SharePoint add-in model. Learn about the options and strategies on converting existing code-based functionalities to SharePoint add-in model or alternative solutions.
+
+# Transform sandbox solutions to the SharePoint Add-in model
+
+Transform or convert your code-based sandbox solutions to the SharePoint Add-in model. Learn about the options and strategies on converting existing code-based functionalities to SharePoint Add-in model or alternative solutions.
 
 _**Applies to:** add-ins for SharePoint | SharePoint 2013 | SharePoint Online_
 
 Code-based sandbox solutions [were deprecated](https://blogs.msdn.microsoft.com/sharepointdev/2014/01/14/deprecation-of-custom-code-in-sandboxed-solutions/) back in 2014 and SharePoint online has started the process to completely remove this capability. Code-based sandbox solutions are also deprecated in SharePoint 2013 and in SharePoint 2016.
 
-Transforming your sandbox solutions to the SharePoint add-in model involves analyzing your existing extensions, designing and developing your new add-in(s) for SharePoint, and then testing and deploying your add-in in your production environment. 
+Transforming your sandbox solutions to the SharePoint Add-in model involves analyzing your existing extensions, designing and developing your new add-in(s) for SharePoint, and then testing and deploying your add-in in your production environment. 
 
 ## What is a code-based sandbox solution in SharePoint
 <a name="sectionSection0"> </a>
@@ -36,12 +38,12 @@ When you are planning to move away from the sandbox solutions, you should be eva
 ## Steps to perform transformation
 <a name="sectionSection1"> </a>
 
-When you transform your sandbox solutions to the SharePoint add-in model, you want to ensure that the impact on your users is minimal. Carefully analyze your current sandbox solutions, and then design your new add-in for SharePoint to meet the needs of your organization. We recommend the following process to ensure a successful transformation.
+When you transform your sandbox solutions to the SharePoint Add-in model, you want to ensure that the impact on your users is minimal. Carefully analyze your current sandbox solutions, and then design your new add-in for SharePoint to meet the needs of your organization. We recommend the following process to ensure a successful transformation.
 
 
 1. Readiness. Learn about:
     
-	- The SharePoint add-in model, different kinds of add-ins, and hosting options. For more information, see  [Overview of add-ins for SharePoint](https://msdn.microsoft.com/library/office/fp179930.aspx) and [SharePoint Patterns and Practices guidance](https://msdn.microsoft.com/en-us/pnp_articles/office-365-development-patterns-and-practices-solution-guidance).
+	- The SharePoint Add-in model, different kinds of add-ins, and hosting options. For more information, see  [Overview of add-ins for SharePoint](https://msdn.microsoft.com/library/office/fp179930.aspx) and [SharePoint Patterns and Practices guidance](https://msdn.microsoft.com/en-us/pnp_articles/office-365-development-patterns-and-practices-solution-guidance).
 
 2. Solution assessment. Analyze the functional and business requirements by: 
     
@@ -55,13 +57,13 @@ When you transform your sandbox solutions to the SharePoint add-in model, you wa
     
 	- For each solution, determining whether to replace it with an add-in for SharePoint or implement that either using with some out of the box capabilities or using some alternative solution.
     
-3.  Solution planning. Design the new application using the SharePoint add-in model based on:
+3.  Solution planning. Design the new application using the SharePoint Add-in model based on:
     
 	- The requirements gathered in step 2.
     
 	- Your analysis of the existing code. During your code analysis, consider identifying portions of the code that can be dropped (for example, the code is no longer being used, or the requirements have changed).
     
-4. Develop and test the SharePoint add-in model version of your application. 
+4. Develop and test the SharePoint Add-in model version of your application. 
     
 5. Deploy your new add-in. 
 

@@ -125,7 +125,7 @@ For more information on CDN's, see:
 ## See also
 <a name="bk_addresources"> </a>
 
-- [Branding SharePoint sites in the SharePoint add-in model](branding-sharepoint-sites-sharepoint-add-in.md)
+- [Branding SharePoint sites in the SharePoint Add-in model](branding-sharepoint-sites-sharepoint-add-in.md)
 - [Branding SharePoint Online](https://sharepointgurus.net/branding-sharepoint-online/)
 - [92% of Branding SharePoint is CSS, So Why Are You Living in a Master Page?](http://blog.sharepointexperience.com/2016/12/sptechcon-sf-2016-branding-with-css-session-recap/)
 - [Review of Valo: Ready-to-go intranet on Office 365 and SharePoint](https://absolute-sharepoint.com/2017/01/review-of-valo-ready-to-go-intranet-on-office-365-and-sharepoint.html)

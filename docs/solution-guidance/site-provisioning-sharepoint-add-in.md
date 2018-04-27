@@ -1,8 +1,8 @@
 ---
-title: Site provisioning in the SharePoint add-in model
+title: Site provisioning in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Site provisioning in the SharePoint add-in model
+Site provisioning in the SharePoint Add-in model
 ================================================
 
 Summary

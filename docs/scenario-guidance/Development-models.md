@@ -50,7 +50,7 @@ Moreover, a SharePoint Add-in can include classic SharePoint components such as 
 
 * [SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins)
 * [SharePoint Add-ins compared with SharePoint solutions](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
-* [Transform farm solutions to the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
+* [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 
 ### Samples
 

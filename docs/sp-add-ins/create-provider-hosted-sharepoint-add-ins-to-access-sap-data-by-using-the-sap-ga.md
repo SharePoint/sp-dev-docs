@@ -51,7 +51,7 @@ The process involves an OAuth "flow" in which the application, which can be a Sh
 > If your SharePoint Add-in accesses SharePoint in addition to accessing SAP Gateway for Microsoft, it needs to use *both* systems: Azure AD to get an access token to SAP Gateway for Microsoft, and the ACS authorization system to get an access token to SharePoint. The tokens from the two sources are not interchangeable. For more information, see [Add SharePoint access to the ASP.NET application (optional)](#SharePoint).
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact SharePoint add-in model which is using `https://accounts.accesscontrol.windows.net` hostname, which is not impacted by this retirement. See more details on this from [Impact of Azure Access Control retirement for SharePoint add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Azure AD, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code). 
 

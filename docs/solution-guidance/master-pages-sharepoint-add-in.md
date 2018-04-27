@@ -1,8 +1,8 @@
 ---
-title: Master pages in the SharePoint add-in model
+title: Master pages in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Master pages in the SharePoint add-in model
+Master pages in the SharePoint Add-in model
 ===========================================
 
 Summary
