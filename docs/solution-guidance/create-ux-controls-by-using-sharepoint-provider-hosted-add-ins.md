@@ -18,6 +18,9 @@ The article describes three samples that show you how to implement UX controls i
     
 These samples use JavaScript and the JSOM to communicate with SharePoint, and use the [cross-domain library](../sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md) to handle function calls from the add-in to the host site domain.
 
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 <a name="bmPeoplePicker"> </a>
 
 ## People picker control
@@ -30,9 +33,6 @@ The [Core.PeoplePicker](https://github.com/SharePoint/PnP/tree/dev/Components/Co
     
 > [!NOTE] 
 > The Visual Studio solution for the sample contains a module named "Dummy" to ensure that when the add-in is deployed, it creates an add-in web. An add-in web is required for cross-domain calls.
-
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 The Scripts folder of the Core.PeoplePickerWeb project contains app.js and peoplepickercontrol.js files (along with people picker resource files for additional language support). The app.js file fetches client context by using the cross-domain library and hooks the HTML in the Default.aspx file into the people picker control. The Default.aspx file contains the `<div>` tags that implement both the text box and the people search capability.
 

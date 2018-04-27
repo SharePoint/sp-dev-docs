@@ -1,25 +1,25 @@
 ---
 title: Create SharePoint content types by using CSOM
-ms.date: 11/03/2017
+description: You can use the Core.SPD sample to programmatically create site columns and content types and link them together.
+ms.date: 4/26/2018
 ---
+
 # Create SharePoint content types by using CSOM
 
-Create SharePoint content types by using CSOM, and make localization changes by using features introduced in SharePoint 2013 SP1.
+You can use the [Core.SPD](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SPD) sample to programmatically create site columns and content types and link them together. 
 
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
-
-You can use the [Core.SPD](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SPD) sample to programmatically create site columns and content types and link them together. You can also use the SharePoint 2013 SP1 CSOM APIs, available in the [SharePoint Server 2013 Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35585), to add a specific content type identifier, and localize content types, lists, and site titles. 
+You can also use the SharePoint CSOM APIs, available in the [SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=35585), to add a specific content type identifier, and localize content types, lists, and site titles. 
 
 ## Before you begin
 
-To get started, download the [Core.SPD](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SPD) sample from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
-
-## Create content types and site columns
-
-The following code example shows how to create a content type by using the  **ContentTypeCreationInformation** class, including setting the ID.
+To get started, download the [Core.SPD](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SPD) sample from the Office 365 Developer Patterns and Practices project on GitHub.
 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
+## Create content types and site columns
+
+The following code example shows how to create a content type by using the **ContentTypeCreationInformation** class, including setting the ID.
 
 ```csharp
 ContentTypeCollection contentTypes = web.ContentTypes;
@@ -57,7 +57,9 @@ cc.ExecuteQuery();
 
 ```
 
-Link the fields to the content type by using the  **FieldLinkCollection** and **FieldLinkCreationInformation** classes.
+<br/>
+
+Link the fields to the content type by using the **FieldLinkCollection** and **FieldLinkCreationInformation** classes.
 
 ```csharp
 FieldCollection fields = web.Fields;
@@ -84,7 +86,7 @@ cc.ExecuteQuery();
 
 ```
 
-## Localize content types, list, and site titles
+## Localize content types, lists, and site titles
 
 Use the following code to localize the site title and site description.
 
@@ -94,6 +96,8 @@ web.DescriptionResource.SetValueForUICulture("fi-FI", "KielikÃ¤Ã¤nnetty sait
 
 ```
 
+<br/>
+
 For a list, you use the same approach as for a site.
 
 ```csharp
@@ -102,7 +106,9 @@ list.DescriptionResource.SetValueForUICulture("fi-FI", "TÃ¤mÃ¤ esimerkki nÃ
 
 ```
 
-For content types, you have the option to localize the name and description. for fields, you can localize the title and description values.
+<br/>
+
+For content types, you have the option to localize the name and description. For fields, you can localize the title and description values.
 
 ```csharp
 myContentType.NameResource.SetValueForUICulture("fi-FI", "Contoso Dokumentti");
@@ -117,7 +123,7 @@ fld.DescriptionResource.SetValueForUICulture("fi-FI", "TÃ¤Ã¤ on niiku Contos
 
 The following example shows how to create document content types and then associate a document template with the content type. 
 
-This example adds a new content type called 'Contoso Document' to the site collection. This content type has a custom template associated with it when a new document is created.
+This example adds a new content type called `Contoso Document` to the site collection. This content type has a custom template associated with it when a new document is created.
 
 ```csharp
 ContentType ct = web.ContentTypes.GetById("0x0101009189AB5D3D2647B580F011DA2F356FB2");
@@ -152,11 +158,8 @@ ContentType ct = web.ContentTypes.GetById("0x0101009189AB5D3D2647B580F011DA2F356
 
 ```
 
-## See also
-<a name="bk_addresources"> </a>
 
+## See also
+  
+- [FTC to CAM – Create Content Types with specific IDs using CSOM](https://blogs.msdn.microsoft.com/vesku/2014/02/28/ftc-to-cam-create-content-types-with-specific-ids-using-csom/)
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)
-    
-- [FTC to CAM - Create Content Types with specific IDs using CSO](http://blogs.msdn.com/b/vesku/archive/2014/02/28/ftc-to-cam-create-content-types-with-specific-ids-using-csom.aspx)
-    
-- [SharePoint Server 2013 Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35585)

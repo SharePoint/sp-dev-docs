@@ -22,7 +22,7 @@ The sample start page shows the people picker control. This page allows you to a
 
 The following code from the Default.aspx file of the web project includes the people picker control inside a `<div>` tag.
 
-```XML
+```HTML
 <div id="peoplePickerBackupSiteOwners" data-office-control="Office.Controls.PeoplePicker" data-office-options=
       '{ "placeholder" : "Please choose one or more backup site owner", 
       "allowMultipleSelections" : true,

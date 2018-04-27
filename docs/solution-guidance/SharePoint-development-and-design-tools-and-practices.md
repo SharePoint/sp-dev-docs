@@ -8,6 +8,9 @@ ms.date: 4/24/2018
 
 This article provides information about the development and design options that are available in SharePoint. You can also find information about how to use the remote provisioning pattern to apply branding assets to a SharePoint site.
 
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 ## Terms and concepts 
 
 **Table 1. Key SharePoint development and design terms and concepts**
@@ -65,9 +68,6 @@ SharePoint includes the APIs that you can use to work with design packages. If y
 The following example shows how to use the Design Package APIs in the remote provisioning pattern to apply the contents of design packages to a SharePoint site.
 
 This code was designed for use with publishing sites. Although it is possible to use the Design Packages API to apply branding to team sites that have the publishing feature enabled, this can introduce long-term support issues.
-
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```cs
 using Microsoft.SharePoint.Client;

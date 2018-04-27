@@ -20,6 +20,9 @@ This article describes samples that show best practices for customizing SharePoi
     
 - Data aggregation and caching (using HTML5 local storage and HTTP cookies to reduce the number of service calls to SharePoint)
 
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 <a name="bmPageManipulate"> </a>
 
 ## Page manipulation
@@ -34,9 +37,6 @@ This sample uses the default site pages library and existing out-of-the-box layo
 **Start page for the page manipulation sample**
 
 ![Launch page for the page manipulation sample](media/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins/8c6353d9-b339-4563-b945-eaea3d4da2a8.png)
-
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 <br/>
 
