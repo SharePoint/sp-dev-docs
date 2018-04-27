@@ -1366,7 +1366,7 @@
   - name: OneDrive and SharePoint Online Multi-Geo
     href: solution-guidance/multigeo-introduction.md
     items:
-    - name: Permissions
+    - name: Permissions model
       href: solution-guidance/multigeo-permissions.md
     - name: Discover your tenant configuration
       href: solution-guidance/multigeo-discovery.md
@@ -1374,6 +1374,8 @@
       href: solution-guidance/multigeo-onedrive.md
     - name: Work with sites
       href: solution-guidance/multigeo-sites.md
+    - name: Provision classic team sites
+      href: solution-guidance/multigeo-sites-provisioning.md         
     - name: Manage apps/add-ins
       href: solution-guidance/multigeo-apps.md
     - name: Work with user profiles
@@ -1386,6 +1388,8 @@
       href: solution-guidance/multigeo-contenttypehub.md
     - name: Connect to external data using BCS and Secure Store Service
       href: solution-guidance/multigeo-bcsandsecurestore.md
+    - name: Set up a Multi-Geo sample application
+      href: solution-guidance/multigeo-sampleapplicationsetup.md   
   - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md
     items:
