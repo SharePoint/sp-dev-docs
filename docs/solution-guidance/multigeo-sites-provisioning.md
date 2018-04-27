@@ -1,10 +1,12 @@
 ---
 title: Working with sites in a Multi-Geo environment
-ms.date: 11/03/2017
+description: 
+ms.date: 4/27/2018
 ---
 # Working with sites in a Multi-Geo environment
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
 
 SharePoint sites can be spread across the default and satellite geo locations of a Multi-Geo tenant. When your custom development (script, app, console application, node.js app,...) needs to provision sites then it's important to be aware of the geo locations in your Multi-Geo tenant. 
 
@@ -70,3 +72,4 @@ using (var ctx = new ClientRuntimeContext(tenantAdminSiteForMyGeoLocation))
 - [Site provisioning in the SharePoint add-in model](site-provisioning-sharepoint-add-in.md)
 - [Provision sites in batches with the add-in model](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Batch)
 - [Create site collection or sub site using the PnP Sites Core library](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.CreateSite)
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)

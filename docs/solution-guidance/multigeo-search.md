@@ -1,8 +1,12 @@
 ---
 title: Search in a Multi-Geo SharePoint tenant
-ms.date: 11/03/2017
+description: 
+ms.date: 4/27/2018
 ---
 # Search in a Multi-Geo SharePoint tenant
+
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
 
 In a Multi-Geo SharePoint tenant, each geo location has its own search index, as well as its own independent search center. When a user searches, the query is fanned out to all the indexes, and the returned results are merged.
 
@@ -32,4 +36,4 @@ In the scenario shown in the following image, a Multi-Geo tenant has three geo l
 ## See also
 
 - [How does search work in a Multi-Geo environment](https://docs.microsoft.com/en-us/office365/enterprise/configure-search-for-multi-geo#how-does-search-work-in-a-multi-geo-environment)
-
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)

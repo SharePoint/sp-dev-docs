@@ -1,10 +1,12 @@
 ---
 title: Managing apps in a SharePoint Multi-Geo tenant
-ms.date: 11/08/2017
+description: 
+ms.date: 4/27/2018
 ---
 # Managing apps in a SharePoint Multi-Geo tenant
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
 
 In a Multi-Geo tenant, you'll have an app catalog per geo location which is something to take in account if you want to deploy your apps across all geo locations.
 
@@ -24,5 +26,6 @@ A consequence of this architecture is that you'll need to deploy your app in **a
 - [Deploying and installing SharePoint Add-ins: methods and options](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options)
 - [Hosting client-side web part from Office 365 CDN](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn)
 - [Host extension from Office 365 CDN](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/hosting-extension-from-office365-cdn) 
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
 
 

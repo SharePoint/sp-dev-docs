@@ -1,10 +1,13 @@
 ---
-title: Introduction to OneDrive and SharePoint Online Multi-Geo Preview
-ms.date: 11/03/2017
+title: OneDrive and SharePoint Online Multi-Geo Preview
+description: 
+ms.date: 4/27/2018
 ---
-# Introduction to OneDrive and SharePoint Online Multi-Geo Preview
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+# OneDrive and SharePoint Online Multi-Geo Preview
+
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
 
 The OneDrive and SharePoint Online (ODSP) Multi-Geo Preview allows multinational corporations (MNCs) that are part of the preview and have one or more geographical locations to expand their Office 365 ODSP tenancy to satisfy data residency requirements.
 

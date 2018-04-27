@@ -1,10 +1,12 @@
 ---
 title: Discover a Multi-Geo configuration for a SharePoint tenant
-ms.date: 11/03/2017
+description: 
+ms.date: 4/27/2018
 ---
 # Discover a Multi-Geo configuration for a SharePoint tenant
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
 
 When you're working with a SharePoint tenant, you'll need to be able to detect whether it's a Multi-Geo tenant, and identify the default and satellite geo locations. 
 
@@ -109,3 +111,4 @@ Example response for a single-geo tenant:
 - [Microsoft Graph developer center](https://developer.microsoft.com/en-us/graph)
 - [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)

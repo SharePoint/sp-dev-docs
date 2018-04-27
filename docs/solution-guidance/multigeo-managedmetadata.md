@@ -1,10 +1,12 @@
 ---
 title: Managed metadata in a SharePoint Multi-Geo tenant
-ms.date: 11/03/2017
+description: 
+ms.date: 4/27/2018
 ---
 # Managed metadata in a SharePoint Multi-Geo tenant
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
 
 Managed metadata in SharePoint is Multi-Geo aware. This article describes how to manage metadata in a SharePoint Multi-Geo tenant.
 
@@ -30,3 +32,4 @@ The following are important points to know about managed metadata in Multi-Geo t
 ## See also
 
 - [Plan hybrid SharePoint taxonomy and hybrid content types](https://support.office.com/en-us/article/Plan-hybrid-SharePoint-taxonomy-and-hybrid-content-types-71ae4d00-da98-407b-bee2-8d9972e1875c?ui=en-US&rs=en-US&ad=US) (applies to Multi-Geo tenants)
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)

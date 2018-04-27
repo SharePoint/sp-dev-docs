@@ -1,10 +1,12 @@
 ---
 title: Using OneDrive for Business in a Multi-Geo tenant
-ms.date: 11/03/2017
+description: 
+ms.date: 4/27/2018
 ---
 # Using OneDrive for Business in a Multi-Geo tenant
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
 
 Accessing a user's OneDrive for Business site, also known as personal site or my site, is a common scenario in custom applications. This article describes how to work with OneDrive for Business sites in a Multi-Geo tenant.
 
@@ -70,5 +72,5 @@ Reading files using CSOM is identical to reading files on other site collections
 - [Uploading files using REST](https://github.com/SharePoint/PnP/tree/master/Samples/Core.RestFileUpload)
 - [File Upload CSOM SharePoint Add-in](https://github.com/SharePoint/PnP/tree/master/Samples/Core.FileUpload)
 - [Large file upload with CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)
-
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
 
