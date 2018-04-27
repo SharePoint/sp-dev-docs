@@ -30,16 +30,17 @@ If you're developing new applications that need to work in a OneDrive and ShareP
 
 |**Article**|**Description**|
 |:-----|:-----|
-|[Permissions model](multigeo-permissions.md)|Describes the underlying security model in a Multi-Geo tenant.|
-|[Discover a Multi-Geo configuration for a SharePoint tenant](multigeo-discovery.md)|Explains how to detect and understand the geo setup, including the default and satellite geo locations.|
-|[Access OneDrive for Business in a Multi-Geo tenant](multigeo-onedrive.md)|Describes how to work with users' OneDrive for Business (ODB) sites, also known as personal sites or my sites, in Multi-Geo tenants.|
-|[Work with SharePoint sites in a Multi-Geo tenant](multigeo-sites.md)|Describes how to work with SharePoint sites across the default and satellite geo locations of a Multi-Geo tenant.|
-|[Managing Apps/Add-ins in a Multi-Geo tenant](multigeo-apps.md)|Explains the impact of deploying and managing SharePoint Framework apps or SharePoint Add-in a Multi-Geo tenant.|
-|[Multi-Geo user profile experience](multigeo-userprofileexperience.md)|In a Multi-Geo tenant you can define a preferred data location for a user which is explained in this article. Also covered is how to find the user's OneDrive site and how to read/update out-of-the-box and custom user profile properties.|
-|[Search in a Multi-Geo SharePoint tenant](multigeo-search.md)|Describes how search works in a Multi-Geo tenant.|
-|[Managed metadata in a Multi-Geo tenant](multigeo-managedmetadata.md)|Explains how to take advantage of SharePoint managed metadata in a Multi-Geo environment.|
-|[Content type hub in a Multi-Geo tenant](multigeo-contenttypehub.md)|Explains how the content type hub works in a Multi-Geo tenant.|
-|[BCS and the Secure Store in a Multi-Geo tenant](multigeo-bcsandsecurestore.md)|Describes how to use Business Connectivity Services and the Secure Store in a Multi-Geo tenant.|
+|[Permission model in a Multi-Geo tenant](multigeo-permissions.md)|Describes the underlying security model in a Multi-Geo tenant.|
+|[Discover a Multi-Geo tenant configuration](multigeo-discovery.md)|Explains how to detect and understand the geo setup, including the default and satellite geo locations.|
+|[Access OneDrive for Business in a Multi-Geo tenant](multigeo-onedrive.md)|Describes how to work with users' OneDrive for Business sites, also known as personal sites or my sites, in Multi-Geo tenants.|
+|[Work with sites in a Multi-Geo environment](multigeo-sites.md)|Describes how to work with SharePoint sites across the default and satellite geo locations of a Multi-Geo tenant.|
+|[Provision classic team sites in a Multi-Geo environment](multigeo-sites-provisioning.md) |Explains how to use the CSOM CreateSite method call to provision classic SharePoint team site collections.|
+|[Manage apps and add-ins in a Multi-Geo tenant](multigeo-apps.md)|Explains the impact of deploying and managing SharePoint Framework apps or SharePoint Add-ins in a Multi-Geo tenant.|
+|[Work with user profiles in a Multi-Geo tenant](multigeo-userprofileexperience.md)|Explains how to define a preferred data location for a user, detect a user's profile location and personal site URL, and read and update default and custom user profile properties.|
+|[Search in a Multi-Geo tenant](multigeo-search.md)|Describes how search works in a Multi-Geo tenant.|
+|[Manage metadata in a Multi-Geo tenant](multigeo-managedmetadata.md)|Explains how to take advantage of SharePoint managed metadata in a Multi-Geo environment.|
+|[Define and publish content types in a Multi-Geo tenant](multigeo-contenttypehub.md)|Explains how the content type hub works in a Multi-Geo tenant.|
+|[Connect to external data using BCS and the Secure Store Service in a Multi-Geo tenant](multigeo-bcsandsecurestore.md)|Describes how to use Business Connectivity Services and the Secure Store Service in a Multi-Geo tenant.|
 |[Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md) |Explains how to configure Multi-Geo sample applications. |
 
 ## See also

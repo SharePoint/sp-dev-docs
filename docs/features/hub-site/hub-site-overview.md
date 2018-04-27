@@ -21,7 +21,7 @@ For more information about creating hub sites, see [Create SharePoint hub sites 
 
 - You can create up to 50 hub sites for an organization. 
 
-- If you set up [SharePoint Multi-Geo](../solution-guidance/multigeo-introduction.md) for your organization, only sites within the same geographical location can be associated with a hub site. 
+- If you set up [SharePoint Multi-Geo](../../solution-guidance/multigeo-introduction.md) for your organization, only sites within the same geographical location can be associated with a hub site. 
 
 - When users associate their sites with a hub site, it doesn't impact the permissions of either the hub site or the associated sites. It's important to ensure that all users you allow to associate sites to the hub site have permission to the hub site. 
 
