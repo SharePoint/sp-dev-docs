@@ -30,7 +30,7 @@ There are five types of development that you can do by using Excel Services:
 - Extend the Microsoft Excel function library in Excel Services by using user-defined functions (UDFs) 
     
   
-- Customize the Excel Web Access Web Part
+- Customize the Excel Web Access web part
     
   
 - Develop solutions by using ECMAScript (JavaScript, JScript)
@@ -182,7 +182,7 @@ For an example of how to create managed-code UDFs, see  [Walkthrough: Developing
 
 ## Excel Web Access
 
-You can use the extensible properties of the Excel Web Access Web Part to:
+You can use the extensible properties of the Excel Web Access web part to:
   
     
     
@@ -193,11 +193,11 @@ You can use the extensible properties of the Excel Web Access Web Part to:
 - Change Excel Web Access properties programmatically.
     
   
-- Apply a theme or brand a Web Part page by using cascading style sheets (CSS).
+- Apply a theme or brand a web part page by using cascading style sheets (CSS).
     
   
 
-### Using Excel Web Access Web Part Extensibility
+### Using Excel Web Access web part Extensibility
 
 For information about:
   
@@ -210,13 +210,13 @@ For information about:
 - Excel Web Access CSS, see the CSS reference documentation.
     
   
-- How to programmatically configure a Web Part, see the SharePoint Foundation SDK. 
+- How to programmatically configure a web part, see the SharePoint Foundation SDK. 
     
   
 
 ## ECMAScript (JavaScript, JScript)
 
-In SharePoint Server 2010, Excel Services added support for JavaScript. The JavaScript object model in Excel Services enables developers to automate, customize, and interact with the Excel Web Access Web Part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access Web Part controls on a page. It also enables you to add more capabilities to your workbooks and code around them.
+In SharePoint Server 2010, Excel Services added support for JavaScript. The JavaScript object model in Excel Services enables developers to automate, customize, and interact with the Excel Web Access web part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access web part controls on a page. It also enables you to add more capabilities to your workbooks and code around them.
   
     
     
@@ -235,7 +235,7 @@ For more information about JavaScript, see the following links:
 - For more information about the JavaScript object model in Excel Services, see the  [Ewa](http://msdn.microsoft.com/library/6fe73191-3213-b986-1ad6-2c3b918a2241%28Office.15%29.aspx) namespace reference documentation.
     
   
-- For an example of how to interact with the JavaScript object model in Excel Services by using the Content Editor Web Part, see  [Walkthrough: Developing Using the Content Editor Web Part](walkthrough-developing-using-the-content-editor-web-part.md).
+- For an example of how to interact with the JavaScript object model in Excel Services by using the Content Editor web part, see  [Walkthrough: Developing Using the Content Editor web part](walkthrough-developing-using-the-content-editor-web-part.md).
     
   
 
@@ -281,7 +281,7 @@ For information about:
   
     
     
- [How to: Programmatically Add an Excel Web Access Web Part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md)
+ [How to: Programmatically Add an Excel Web Access web part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md)
 #### Concepts
 
 

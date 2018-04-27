@@ -105,7 +105,7 @@ Your SharePoint Add-in typically has an associated host web application that you
     You must specify an address that starts with the "https" prefix. See  [Why do my add-ins have to be SSL-secured?](http://msdn.microsoft.com/library/jj591603#bk_q7).
     
     > [!NOTE] 
-    > Azure web sites automatically provide an https endpoint. If you publish your add-in on an Office Store site or to the Office Store, the address must start with an https prefix. However, if you publish the add-in to an on-premises site, you can use an http prefix.
+    > Azure websites automatically provide an https endpoint. If you publish your add-in on an Office Store site or to the Office Store, the address must start with an https prefix. However, if you publish the add-in to an on-premises site, you can use an http prefix.
 
     In the  **What is the add-in's client ID?** text box, the client ID that you entered in the publishing profile should already appear.
     

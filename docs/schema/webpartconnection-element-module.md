@@ -12,7 +12,7 @@ ms.assetid: 20bf718c-4ba6-4808-a014-f17ce9b9bde0
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies the Web Part connections for a module.
+Specifies the web part connections for a module.
 
 ## Definition
 
@@ -48,7 +48,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Optional **string**. Specifies the ID of the Web Part connection.</p></td>
+<td align="left"><p>Optional **string**. Specifies the ID of the web part connection.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ConsumerID**</p></td>

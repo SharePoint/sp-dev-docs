@@ -205,12 +205,12 @@ The following My Site Social API and features are deprecated in SharePoint:
 - The My Site RSS feed (ActivityFeed.aspx) is replaced with new APIs in the REST service, the client object model, and the JavaScript object model. To migrate custom SharePoint 2010 code that uses this API (preferably a client API), replace all requests to ActivityFeed.aspx with calls to the new API and handle feed data that is returned in JavaScript Object Notation (JSON) format.
     
   
-- The **Recent Activities** Web Part is replaced with a new **Newsfeed** Web Part that supports multithreaded conversations and dynamic feed retrieval.
+- The **Recent Activities** web part is replaced with a new **Newsfeed** web part that supports multithreaded conversations and dynamic feed retrieval.
     
     > [!NOTE] 
-    > We don't support customizations of the Newsfeed Web Part or other feed Web Parts (such as the Site Feed Web Part on team sites). If you do customize these Web Parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
+    > We don't support customizations of the Newsfeed web part or other feed web parts (such as the Site Feed web part on team sites). If you do customize these web parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
 
-- The **Social Comments** Web Part is deprecated.
+- The **Social Comments** web part is deprecated.
     
   
 - The following activity events no longer automatically inform the feed: profile update, upcoming birthday, upcoming workplace anniversary, new membership, and change of manager. However, you can create custom event receivers for these activities. No new social events have been added.

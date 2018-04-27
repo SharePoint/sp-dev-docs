@@ -60,7 +60,7 @@ Before you convert your HTML file, here are some best practices and guidance to 
     
     
 
-- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains Web Parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
+- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains web parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
     
   
 - Make sure your HTML file is XML-compliant. For the conversion to work, the HTML file must be XML-compliant. Unfortunately, this requirement overrides some HTML 5 standards—for example, in HTML 5 you can specify the **doctype** in lowercase, but in XML the **doctype** must be uppercase. Also, you should remove any **\<form\>** tags from your HTML file. Consider running your HTML file through an external XML validator to identify XML errors before conversion.

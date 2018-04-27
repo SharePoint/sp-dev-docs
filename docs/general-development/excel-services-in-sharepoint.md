@@ -19,7 +19,7 @@ SharePoint brings new technologies to Excel Services─such as ECMAScript (JavaS
 ### JavaScript UDFs
 <a name="xlsJsUdfs"> </a>
 
-Excel Services already lets you create user-defined functions (UDFs) using managed code. Excel Services in SharePoint introduces a new kind of UDF—ECMAScript (JavaScript, JScript) UDFs. JavaScript UDFs run in the context of the browser: either in a Excel workbook that is hosted in an Excel Web Access Web Part on SharePoint, or in a workbook that is embedded on a host webpage. 
+Excel Services already lets you create user-defined functions (UDFs) using managed code. Excel Services in SharePoint introduces a new kind of UDF—ECMAScript (JavaScript, JScript) UDFs. JavaScript UDFs run in the context of the browser: either in a Excel workbook that is hosted in an Excel Web Access web part on SharePoint, or in a workbook that is embedded on a host webpage. 
   
     
     

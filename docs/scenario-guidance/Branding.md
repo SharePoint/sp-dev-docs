@@ -208,7 +208,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 
 _**Applies to:** Classic sites_
 
-Script Embedding means a pattern where custom JavaScript is added on the page which then modifies the end user experiences by modifying the html DOM structure. Typical approaches for this model is to use either *User Custom Actions*, *JSLink*, *Content Editor Web Part* or *Script Editor Web Part*. Challenge of the DOM manipulation related model is dependency on the actual page structure. These kind of customizations are fragile and can easily break as new capabilities are released in SharePoint Online.
+Script Embedding means a pattern where custom JavaScript is added on the page which then modifies the end user experiences by modifying the html DOM structure. Typical approaches for this model is to use either *User Custom Actions*, *JSLink*, *Content Editor web part* or *Script Editor web part*. Challenge of the DOM manipulation related model is dependency on the actual page structure. These kind of customizations are fragile and can easily break as new capabilities are released in SharePoint Online.
 
 ### Articles
 

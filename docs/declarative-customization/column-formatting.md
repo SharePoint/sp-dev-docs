@@ -435,7 +435,7 @@ To compare a date/time field value against another date constant, use the `Date(
 
 ## Create clickable actions
 
-You can use column formatting to provide hyperlinks that go to other web pages, or start custom functionality. This functionality is limited to static links that can be paramaterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, or `mailto:`.
+You can use column formatting to provide hyperlinks that go to other webpages, or start custom functionality. This functionality is limited to static links that can be paramaterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, or `mailto:`.
 
 ### Turn field values into hyperlinks (basic)
 

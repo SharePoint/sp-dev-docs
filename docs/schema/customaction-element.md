@@ -220,7 +220,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Remarks
 
-You can use the **CustomAction** element to add standard ASP.NET controls and user controls (for example, text boxes or option buttons) as custom actions in toolbars. However, you can only add controls instantiating menu items to the drop-down menus of toolbars; you cannot add Web Parts or arbitrary controls.
+You can use the **CustomAction** element to add standard ASP.NET controls and user controls (for example, text boxes or option buttons) as custom actions in toolbars. However, you can only add controls instantiating menu items to the drop-down menus of toolbars; you cannot add web parts or arbitrary controls.
 
 ## Example
 

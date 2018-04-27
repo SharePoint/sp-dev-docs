@@ -199,7 +199,7 @@ The **PictureRequest** class does not have any overloads for its constructor met
 ## Building a PowerPoint Automation Services application
 <a name="PAS_Build"> </a>
 
-The easiest way to show how to write code that uses PowerPoint Automation Services is to build a console application. You must build and run the console application on the SharePoint Server, not on a client computer. The code to start conversion requests is similar whether the conversion request code is incorporated into a Web Part, a workflow, or an event handler. By using PowerPoint Automation Services from a console application, the following procedure shows how to use the API without adding the complexities of a Web Part, an event handler, or a workflow.
+The easiest way to show how to write code that uses PowerPoint Automation Services is to build a console application. You must build and run the console application on the SharePoint Server, not on a client computer. The code to start conversion requests is similar whether the conversion request code is incorporated into a web part, a workflow, or an event handler. By using PowerPoint Automation Services from a console application, the following procedure shows how to use the API without adding the complexities of a web part, an event handler, or a workflow.
   
 > [!NOTE]
 > Because PowerPoint Automation Services is a service of SharePoint, you can use it only in an application that runs directly on a SharePoint Server. You must build the application as a farm solution. You cannot use PowerPoint Automation Services from a sandboxed solution. 

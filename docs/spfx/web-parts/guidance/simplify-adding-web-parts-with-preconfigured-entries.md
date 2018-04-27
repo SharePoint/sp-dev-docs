@@ -252,7 +252,7 @@ In the web part manifest, add web part properties so that users can configure th
                     Welcome to SharePoint!
                   </span>
                   <p className='ms-font-l ms-fontColor-white'>
-                    Customize SharePoint experiences using Web Parts.
+                    Customize SharePoint experiences using web parts.
                   </p>
                   <p className='ms-font-l ms-fontColor-white'>
                     List: {this.props.listName}<br />

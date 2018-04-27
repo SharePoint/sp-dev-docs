@@ -63,16 +63,16 @@ Typically, farm solutions are packaged as SharePoint solution package (WSP) file
 
 _**Applies to:** Office 365 and SharePoint Server_
 
-Script- and Content Editor Web Parts are used to build SharePoint customizations primarily by citizen developers. With nothing more than site owner permissions, citizen developers can build compelling SharePoint customizations that add business value. Whenever the customization needs to be updated, users with the necessary permissions can apply updates to the solution's script files and the changes are immediately visible to all users.
+Script- and Content Editor web parts are used to build SharePoint customizations primarily by citizen developers. With nothing more than site owner permissions, citizen developers can build compelling SharePoint customizations that add business value. Whenever the customization needs to be updated, users with the necessary permissions can apply updates to the solution's script files and the changes are immediately visible to all users.
 
-Script- and Content Editor Web Part solutions make it hard for IT organizations to keep track of what customizations are being used and where they are being used. Additionally, organizations can't tell which external scripts are being used in their intranet and have access to their data.
+Script- and Content Editor web part solutions make it hard for IT organizations to keep track of what customizations are being used and where they are being used. Additionally, organizations can't tell which external scripts are being used in their intranet and have access to their data.
 
 #### Related resources
 
 ##### Articles
 
-- [Migrate existing Script Editor Web Part customizations to the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
-- [Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx)
+- [Migrate existing Script Editor web part customizations to the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
+- [Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx)
 
 ##### Videos
 

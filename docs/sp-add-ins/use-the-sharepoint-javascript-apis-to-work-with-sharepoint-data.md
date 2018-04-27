@@ -132,7 +132,7 @@ Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, y
 
 10. Add the following function, `onDeleteCompletedItemsSuccess`, to the file. This is the function that runs if the completed items are successfully deleted (or there aren't any completed items on the list). 
 
-   The line `location.reload(true);` causes the page to reload from the server. This is a convenience because the list view Web Part on the page still shows the completed items until the page is refreshed. The Add-in.js file is reloaded too, but that doesn't cause a problem because it won't do so in a way that interrupts an ongoing JavaScript function.
+   The line `location.reload(true);` causes the page to reload from the server. This is a convenience because the list view web part on the page still shows the completed items until the page is refreshed. The Add-in.js file is reloaded too, but that doesn't cause a problem because it won't do so in a way that interrupts an ongoing JavaScript function.
     
     ```
       function onDeleteCompletedItemsSuccess() {
@@ -205,7 +205,7 @@ Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, y
 
 4. When the start page of the add-in has completely loaded, select the **Purge Completed Items** button. If the operation succeeds (you don't get any failure message), all the **Completed** items are deleted and you'll see a pop-up window that says **Completed orientations have been deleted**. 
 
-5. Close the pop-up window. The page reloads, and the **Completed** items are no longer in the list view Web Part.
+5. Close the pop-up window. The page reloads, and the **Completed** items are no longer in the list view web part.
     
    *Figure 2. List after purge of completed items*
 

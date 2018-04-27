@@ -8,7 +8,7 @@ ms.assetid: 110bcc88-2b55-4d80-ab5c-dc3b9658e48d
 
 # Advanced Scenarios and Additional Samples
 
-This topic describes some advanced REST scenarios and additional samples. It provides links to Web pages where you can get more detailed information.
+This topic describes some advanced REST scenarios and additional samples. It provides links to webpages where you can get more detailed information.
   
     
     

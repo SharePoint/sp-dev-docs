@@ -35,7 +35,7 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 	
 	For example:
 	
-	If the event receiver end point URL is unavailable the event receiver code will not execute.  The URL might be unavailable due to several reasons.  Some of the most common reasons include a misconfiguration when the end point URL is registered, DNS issues when trying to resolve the URL, or the web site hosting the end point is shut down or in an inoperable state.
+	If the event receiver end point URL is unavailable the event receiver code will not execute.  The URL might be unavailable due to several reasons.  Some of the most common reasons include a misconfiguration when the end point URL is registered, DNS issues when trying to resolve the URL, or the website hosting the end point is shut down or in an inoperable state.
 
 	Additionally, if there is a bug in poorly written event receiver code there is no way to notify SharePoint the bug occurred and the event should be executed again.  You can work around this to some degree with event receivers attached to SharePoint lists.  See below for more information about this approach.  
 - When an event receiver executes a significant amount of code an asynchronous pattern should be used.

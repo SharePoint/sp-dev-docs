@@ -156,7 +156,7 @@ Using the following code, you can access a data stream that the OData connector 
 ## Next steps
 <a name="bkmk_Next"> </a>
 
-After you have built an external content type, you can then use it to present data inside SharePoint by using the built-in objects (external lists, Business Data Web Parts, or custom code).
+After you have built an external content type, you can then use it to present data inside SharePoint by using the built-in objects (external lists, Business Data web parts, or custom code).
   
     
     

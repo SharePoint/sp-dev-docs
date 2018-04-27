@@ -133,7 +133,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
                   Welcome to SharePoint!
                 </span>
                 <p className='ms-font-l ms-fontColor-white'>
-                  Customize SharePoint experiences using Web Parts.
+                  Customize SharePoint experiences using web parts.
                 </p>
                 <p className='ms-font-l ms-fontColor-white'>
                   {escape(this.props.greeting)}
@@ -380,7 +380,7 @@ The default web part provided with the scaffolded SharePoint Framework project h
                   Welcome to SharePoint!
                 </span>
                 <p className='ms-font-l ms-fontColor-white'>
-                  Customize SharePoint experiences using Web Parts.
+                  Customize SharePoint experiences using web parts.
                 </p>
                 <p className='ms-font-l ms-fontColor-white'>
                   {escape(this.props.greeting)}

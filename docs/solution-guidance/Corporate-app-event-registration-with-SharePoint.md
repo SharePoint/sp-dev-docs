@@ -87,7 +87,7 @@ The Models\DataInitializer.cs file also defines the XML for both web parts that 
   <webPart xmlns='http://schemas.microsoft.com/WebPart/v3'>
     <metaData>
       <type name='Microsoft.SharePoint.WebPartPages.ClientWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' />
-      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+      <importErrorMessage>Cannot import this web part.</importErrorMessage>
     </metaData>
     <data>
       <properties>
@@ -287,7 +287,7 @@ public void Save(Web web) {
 ## See also
 <a name="bk_addresources"> </a>
 
--  [Composite business add-ins for SharePoint 2013 and SharePoint Online](Composite-buisness-apps-for-SharePoint.md)
+-  [Composite business add-ins for SharePoint 2013 and SharePoint Online](composite-business-apps-for-sharepoint.md)
     
 -  [Core.ModifyPages sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ModifyPages)
     

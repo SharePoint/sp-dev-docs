@@ -90,7 +90,7 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
   - Local administrator permissions on the development computer.
     
   
-  - Manage Web Site and Create Subsites user permissions to the SharePoint site where you're installing the app. By default, these permissions are available only to users who have the Full Control permission level or who are in the site Owners group.
+  - Manage website and Create Subsites user permissions to the SharePoint site where you're installing the app. By default, these permissions are available only to users who have the Full Control permission level or who are in the site Owners group.
     
   
   - You must be logged on as someone other than the system account. The system account does not have permission to install the app.

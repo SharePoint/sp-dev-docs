@@ -2,23 +2,23 @@
 title: Configure Office 365 API Projects for Distribution
 ms.date: 11/03/2017
 ---
+
 # Configure Office 365 API Projects for Distribution
 
-### Summary ###
-This page explains some steps developers should consider taking on their projects that leverage the Office 365 APIs prior to distributing them to other developers, their customers, or to source control systems such as Team Foundation Server, Git or Visual Studio Online.
+This page explains some steps developers should consider taking on their projects that leverage the Office 365 APIs prior to distributing them to other developers, their customers, or to source control systems such as Team Foundation Server, Git, or [Visual Studio Team Services](https://www.visualstudio.com/vso/).
 
 Specifically this page will look at two steps:
 
 - [Fixup Azure AD Graph Client NuGet Package Reference](#fixup-azure-ad-graph-client-nuget-package-reference)
 - [Cleaning the `web.config` for app-specific details](#cleaning-the-webconfig-for-app-specific-details)
 
-# Fixup Azure AD Graph Client NuGet Package Reference
+## Fix up Azure AD Graph Client NuGet Package Reference
 
 All projects that leverage the Office 365 API SDKs by way of adding a connected service include a NuGet package that adds Office 365 & Azure AD references to the project created in Visual Studio. 
 
 The NuGet package added to the project by the **Office 365 API Tools** in Visual Studio is not present in the NuGet package registry and therefore attempts to perform a NuGet package restore will fail because it cannot find a matching package.
 
-## Understanding the Problem ##
+## Understanding the Problem
 
 The **Office 365 API Tools for Visual Studio 2013**, version 1.3.41104.1, adds multiple NuGet packages to projects as part of completing the Add Connected Service wizard. One package in particular presents a challenge: **Microsoft Azure Active Directory Graph Client Library**.
 
@@ -28,9 +28,9 @@ When projects are committed to source control, typically the packages are not in
 
 The challenge is that a package with the same ID & version does not exist in the NuGet package registry; there is no package with an ID of **Microsoft.Azure.ActiveDirectory.GraphClient** & a version of **1.0.22**. The package does exist in the NuGet package registry, **[Microsoft.Azure.ActiveDirectory.GraphClient](http://www.nuget.org/packages/Microsoft.Azure.ActiveDirectory.GraphClient)**, but under different versions.
 
-## Fixing the Azure AD Graph Client NuGet Package Reference ##
+## Fixing the Azure AD Graph Client NuGet Package Reference
 
-Until the Office 365 API Tools for Visual Studio 2013 are updated to fix this issue, it is recommended to alter the project prior to committing to your source control system, regardless if you are using Team Foundation Server, Visual Studio Online, Git or any other solution.
+Until the Office 365 API Tools for Visual Studio 2013 are updated to fix this issue, it is recommended to alter the project prior to committing to your source control system, regardless if you are using Team Foundation Server, [Visual Studio Team Services](https://www.visualstudio.com/vso/), Git, or any other solution.
 
 After creating the project, look within the project's `packages.config` file and search for a package with an ID of **Microsoft.Azure.ActiveDirectory.GraphClient** & version of **1.0.22**. The safest way to update the project is to uninstall & then reinstall the package.
 
@@ -52,7 +52,7 @@ Now, install the public version of the same NuGet package from the public regist
 
 [back to top](#configure-office-365-api-projects-for-distribution)
 
-# Cleaning the `web.config` for App-Specific Details
+##  Cleaning the `web.config` for App-Specific Details
 
 The **Office 365 API Tools** for Visual Studio add the ability to create a new Azure AD application with the necessary permissions for the Office 365 APIs using the **Connected Service** wizard in Visual Studio. When completing the wizard, multiple entries and customizations are made to the project's `web.config` file.
 

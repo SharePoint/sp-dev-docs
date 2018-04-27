@@ -116,7 +116,7 @@ The actual deployment to Azure is based on Azure Web Jobs. To deploy this Timer 
 
 1. Right click the project in Visual Studio and choose **Publish as Azure WebJob...**
 2. Provide a schedule for the Timer Job and click **OK**
-3. Select **Microsoft Azure Websites** as a publish target. You'll be asked to login to Azure and select the Azure Web Site that will host the Timer Job (you can also create a new one if that would be needed)
+3. Select **Microsoft Azure Websites** as a publish target. You'll be asked to login to Azure and select the Azure website that will host the Timer Job (you can also create a new one if that would be needed)
 4. Press **Publish** to push the WebJob to Azure
 5. Once the Timer Job has been published you can trigger the job and check the job execution from Visual Studio or the [Azure management portal](https://manage.windowsazure.com).
 

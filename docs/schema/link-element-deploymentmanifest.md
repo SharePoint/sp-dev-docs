@@ -58,7 +58,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**TargetId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Identifier of the link target.  <br/> |
 |**TargetUrl** <br/> |xs:string  <br/> |Required. URL represented by the link.  <br/> |
 |**IsDirty** <br/> |xs:boolean  <br/> |Required. Specifies whether the link value has been changed; **true** if the link has changed, otherwise **false**.  <br/> |
-|**WebPartId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the Web Part in which the link is sited.  <br/> |
+|**WebPartId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the web part in which the link is sited.  <br/> |
 |**LinkNumber** <br/> |xs:int  <br/> |Optional. Identifying number of the link, if any.  <br/> |
 |**Type** <br/> |xs:unsignedByte  <br/> |Optional.  <br/> |
 |**Security** <br/> |xs:unsignedByte  <br/> |Optional.  <br/> |

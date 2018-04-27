@@ -248,7 +248,7 @@ Prefix matching is also supported. You can use the wildcard operator (*), but is
   
     
     
-When you specify a phrase for the property value, matched results must contain the specified phrase within the property value that is stored in the full-text index. The following query example returns content items with the text "Advanced Search" in the title, such as "Advanced Search XML", "Learning About the Advanced Search Web Part", and so on:
+When you specify a phrase for the property value, matched results must contain the specified phrase within the property value that is stored in the full-text index. The following query example returns content items with the text "Advanced Search" in the title, such as "Advanced Search XML", "Learning About the Advanced Search web part", and so on:
   
     
     

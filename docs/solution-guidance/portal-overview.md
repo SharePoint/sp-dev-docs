@@ -47,3 +47,6 @@ Below table contains an overview of the individual articles that are part of the
 |Branding|<p>Being able to apply a custom brand on a portal is a typical requirement and this article provides you with an overview of the branding options and branding best practices.</p><p>[Portal branding guidance](portal-branding.md)</p>|
 |Go Live|<p>Once you're portal has been developed and tested it's time to go live...but what strategy to follow for going live? This article will give you the Microsoft recommended approach.</p><p>[Portal go live guidance](portal-rollout.md)</p>|
 
+## See also
+
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

@@ -110,8 +110,5 @@ To see the List View widget in action, see the [Use the Desktop List View experi
 Widgets can help to speed up the development process and reduce the cost and time-to-market of your add-ins. Office Web Widgets - Experimental provide widgets that you can use in your non-production add-ins. Your feedback and comments are welcome at the [Office Developer Platform UserVoice site](http://officespdev.uservoice.com/).
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [Use the experimental People Picker widget in SharePoint Add-ins](use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md)
--  [Use the experimental Desktop List View widget in SharePoint Add-ins](use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md)
 -  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)

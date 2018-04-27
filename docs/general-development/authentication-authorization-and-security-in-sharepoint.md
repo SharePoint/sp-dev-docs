@@ -177,7 +177,7 @@ The role manager is optional. If a custom authentication system does not support
     
     
 
-In ASP.NET membership and role passive sign-in, the sign-in happens by redirecting the client to a web page where the ASP.NET log-in controls are hosted. After the identity object that represents a user identity is created, SharePoint converts it to a  [ClaimsIdentity](https://msdn.microsoft.com/library/Microsoft.IdentityModel.Claims.ClaimsIdentity.aspx) object (which represents a claims-based representation of a user).
+In ASP.NET membership and role passive sign-in, the sign-in happens by redirecting the client to a webpage where the ASP.NET log-in controls are hosted. After the identity object that represents a user identity is created, SharePoint converts it to a  [ClaimsIdentity](https://msdn.microsoft.com/library/Microsoft.IdentityModel.Claims.ClaimsIdentity.aspx) object (which represents a claims-based representation of a user).
   
 > [!NOTE]
 > For more information about signing into SharePoint, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md). 

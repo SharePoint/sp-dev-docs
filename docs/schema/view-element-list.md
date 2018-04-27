@@ -82,7 +82,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**DisplayName** <br/> |Optional **Text**. Specifies the name of the view that is displayed on the **Quick Launch** bar.  <br/> |
 |**FailIfEmpty** <br/> |Optional **Boolean**. If the view returns no items, **TRUE** to return a blank page and an HTTP error code instead of rendering the **ViewEmpty** element. Used for programmatic manipulation of views from a client application, so that the client application will not have to parse a document in order to discover whether the view is empty.  <br/> |
 |**FileDialog** <br/> |Optional **Boolean**. **TRUE** to specify that the view is displayed in file dialog boxes for applications that are used within the context of SharePoint Foundation, and that parse the output HTML to determine the contents of the list.  <br/> |
-|**FPModified** <br/> |Optional **Boolean**. **TRUE** if the view has been altered through editing in a Web page editor, and the view is no longer customizable by the SharePoint Foundation user interface (UI).  <br/> |
+|**FPModified** <br/> |Optional **Boolean**. **TRUE** if the view has been altered through editing in a webpage editor, and the view is no longer customizable by the SharePoint Foundation user interface (UI).  <br/> |
 |**FreeForm** <br/> |Optional **Boolean**. **TRUE** to specify alternate field formatting for certain field types when fields are rendered. In particular, this attribute affects the alignment of number columns, which is particularly useful in custom nontabular view types.  <br/> |
 |**Hidden** <br/> |Optional **Boolean**. **TRUE** to hide the view.  <br/> |
 |**ImageUrl** <br/> |Optional **Text**. Specifies the server-relative URL for the image that is displayed in the title area of the list view, for example,  `/_layouts/images/pgrpicon.png`.  <br/> |
@@ -112,8 +112,8 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolbarTemplate** <br/> |Optional **Text**. Specifies the name of the predefined toolbar template that is used for the view toolbar.  <br/> |
 |**Type** <br/> |Optional **Text**. Specifies the rendering type of the view. The type is the common enumerated HTML view and can be set to **HTML**, **Chart**, or **Pivot**.  <br/> |
 |**Url** <br/> |Optional **Text**. Specifies the URL for the view.  <br/> |
-|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the Web Part within a zone.  <br/> |
-|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the Web Part.  <br/> |
+|**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the web part within a zone.  <br/> |
+|**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
    
 ### Child elements
 

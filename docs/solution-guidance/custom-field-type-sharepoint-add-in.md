@@ -32,7 +32,7 @@ High-Level Guidelines
 As a rule of a thumb, we would like to provide the following high-level guidelines for implementing client-side rendering.
 
 - Use JavaScript files and client-side rendering to implement custom field types.
-- Use the remote provisioning pattern to deploy JavaScript files and register them with SharePoint fields or List View Web Parts.
+- Use the remote provisioning pattern to deploy JavaScript files and register them with SharePoint fields or List View web parts.
 - Register the JavaScript files with the Minimal Download Strategy (MDS) engine to ensure the MDS engine is aware of the custom rendering JavaScript files.
 - Setting JSLink property to host web requires at least full permission at web level, so this approach is not suitable for add-ins at the SharePoint store
 
@@ -41,17 +41,17 @@ Options to implement client-side rendering with JavaScript files via the JSLink 
 
 You have a couple of options to implement client-side rendering with JavaScript files via the JSLink property.
 
-- Set the JSLink property on a List View Web Part that renders a view of a SharePoint list.	
+- Set the JSLink property on a List View web part that renders a view of a SharePoint list.	
 - Set the JSLink property for a SharePoint field. 
 - Set the JSLink property for a SharePoint content type. 
 	
 
-Set the JSLink property on a List View Web Part that renders a view of a SharePoint list
+Set the JSLink property on a List View web part that renders a view of a SharePoint list
 -----------------------------------------------------------------------------------------
 In this option you set the JSLink property on a WebPartDefinition.
 	
 - **This approach does not specifically create a custom field type at the SPField level.**
-	+ Therefore, *the custom rendering only applies in the List View Web Part where you set the JSLink property*.
+	+ Therefore, *the custom rendering only applies in the List View web part where you set the JSLink property*.
 - This approach allows you to change the rendering for one or more SharePoint fields at once.
 - This approach may be done with declarative code, with the SharePoint server-side object model, with the SharePoint client-side object model (CSOM), or via PowerShell.
 	+ We recommend you use the SharePoint server-side object model, the SharePoint client-side object model, or PowerShell to set the JSLink property via the remote provisioning pattern.
@@ -62,11 +62,11 @@ When you need to define specific views for SharePoint list data and modify the r
 
 **Getting started**
 
-The following sample sets the JSLink property on a SharePoint List View Web Part.
+The following sample sets the JSLink property on a SharePoint List View web part.
 
 - [Branding.ClientSideRendering (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
-	+ Includes 9 samples that set the JSLink property on a SharePoint List View Web Part and an explanation of how each sample was implemented.
-	+ The RegisterJStoWebPart method sets the List View Web Part's JSLink property. 
+	+ Includes 9 samples that set the JSLink property on a SharePoint List View web part and an explanation of how each sample was implemented.
+	+ The RegisterJStoWebPart method sets the List View web part's JSLink property. 
 
 Set the JSLink property for a SharePoint field
 ----------------------------------------------

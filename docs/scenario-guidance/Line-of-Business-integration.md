@@ -18,7 +18,7 @@ Here follow some high-level guidelines and general rules that you should conside
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2016_
 
-Whenever you need to consume LOB systems from a client-side solution, like a client-side Web Part developed using SharePoint Framework, or a bunch of JavaScript code hosted in a Script Editor Web Part, you can consume a LOB system just using a REST API, eventually registered in Azure Active Directory. In this section you can find useful links to further information about this topic.
+Whenever you need to consume LOB systems from a client-side solution, like a client-side web part developed using SharePoint Framework, or a bunch of JavaScript code hosted in a Script Editor web part, you can consume a LOB system just using a REST API, eventually registered in Azure Active Directory. In this section you can find useful links to further information about this topic.
 
 ### Articles
 * [Connect to API secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad)
@@ -27,12 +27,12 @@ Whenever you need to consume LOB systems from a client-side solution, like a cli
 * [Call custom Web API secured with AAD from SharePoint Framework client-side web part](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-aad-webapi)
 * [Azure Active Directory implicit flow authentication samples](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-aad-implicitflow)
 * [Call custom Web API secured with AAD from SharePoint Framework client-side web part using Angular v1.x](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-aad-webapi)
-* [Angular MS Graph Web Part Built with Angular v1.x](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-msgraph)
+* [Angular MS Graph web part Built with Angular v1.x](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-msgraph)
 * [Application Customizer GraphClient from Modern Teamsite](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/js-application-graph-client)
 
 ### Videos
 * [Calling external APIs securely from SharePoint Framework](https://www.youtube.com/watch?v=SDjKRfHA1nw)
-* [Let's build with SharePoint (Web Parts, Extensions and much more)](https://myignite.microsoft.com/sessions/55180)
+* [Let's build with SharePoint (web parts, Extensions and much more)](https://myignite.microsoft.com/sessions/55180)
 
 ## Business Connectivity Services
 

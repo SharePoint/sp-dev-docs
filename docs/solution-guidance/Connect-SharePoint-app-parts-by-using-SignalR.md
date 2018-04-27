@@ -60,7 +60,7 @@ To see a demo of two app parts communicating by using SignalR:
     
 10. Verify that the message  **Hello World from App Part 1** appears in both **Connected Part - One** and **Connected Part - Two** app parts.
     
-In this code sample, the Core.ConnectedAppParts project contains two app parts (ConnectedPartOne and ConnectedPartTwo) that are deployed to the host web. ConnectedPartOne and ConnectedPartTwo run in an IFRAME. The web page contents for ConnectedPartOne and ConnectedPartTwo are defined in the Core.ConnectedAppPartsWeb project in Pages\ConnectedPartOne.aspx and Pages\ConnectedPartTwo.aspx. Both pages run in the provider-hosted app with the chat hub (ChatHub.cs) and use inline JavaScript to:
+In this code sample, the Core.ConnectedAppParts project contains two app parts (ConnectedPartOne and ConnectedPartTwo) that are deployed to the host web. ConnectedPartOne and ConnectedPartTwo run in an IFRAME. The webpage contents for ConnectedPartOne and ConnectedPartTwo are defined in the Core.ConnectedAppPartsWeb project in Pages\ConnectedPartOne.aspx and Pages\ConnectedPartTwo.aspx. Both pages run in the provider-hosted app with the chat hub (ChatHub.cs) and use inline JavaScript to:
 
 1. Include the SignalR jQuery library.
     

@@ -341,7 +341,7 @@ Having loaded the titles of SharePoint lists in the current site, the final step
             <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
               <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
                 <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-                <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+                <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
                 <p className="ms-font-l ms-fontColor-white">{escape(this.props.description)}</p>
                 <a className={styles.button} onClick={this.getListsTitles} role="button">
                   <span className={styles.label}>Get lists titles</span>
@@ -523,7 +523,7 @@ To support this, extend the React component's state with an additional property 
               <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
                 <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
                   <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-                  <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+                  <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
                   <p className="ms-font-l ms-fontColor-white">{escape(this.props.description)}</p>
                   <a className={styles.button} onClick={this.getListsTitles} role="button">
                     <span className={styles.label}>Get lists titles</span>

@@ -36,7 +36,7 @@ You can combine a SharePoint-hosted add-in with add-ins that have remotely hoste
 
 |**Get these benefits**|**But consider this**|
 |:-----|:-----|
-|Reuse common SharePoint items, like lists and Web Parts.|You can use only JavaScript in the add-in—you can't use any server-side code.|
+|Reuse common SharePoint items, like lists and web parts.|You can use only JavaScript in the add-in—you can't use any server-side code.|
 |Relatively easy to create and deploy, so they are good for small team productivity add-ins and business process automation, with lower complexity business rules.|Your add-in has only the authorization privileges of the signed-in user.|
 
 [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)

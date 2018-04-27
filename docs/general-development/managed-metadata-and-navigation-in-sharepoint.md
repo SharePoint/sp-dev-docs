@@ -238,7 +238,7 @@ A term store manager can enhance and expand term usage models based on more flex
 -  [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md)
     
   
--  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md)
+-  [Content Search web part in SharePoint](content-search-web-part-in-sharepoint.md)
     
   
 

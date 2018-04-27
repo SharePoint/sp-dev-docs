@@ -31,7 +31,7 @@ This topic shows one example of how you can access and look at a schema for the 
 http://myserver/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1|H3')?$format=atom
 ```
 
-Right-click the Web page, and then click **View Source**.
+Right-click the webpage, and then click **View Source**.
   
     
     

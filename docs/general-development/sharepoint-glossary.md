@@ -27,7 +27,7 @@ Find definitions for terms used in SharePoint developer documentation.
 |activity flow  <br/> |A running instance of a workflow that consists of a sequence of action instances and/or activity model instances. Action instances and activity model instances can be sequenced in any order to create a single activity flow.  <br/> |
 |activity model  <br/> |A predefined sequence of actions.  <br/> |
 |after event  <br/> |An asynchronous event whose handler runs only after the action that raised the event is complete.  <br/> |
-|alert subscription  <br/> |A request to receive an Internet message automatically when user-defined criteria are met. Such messages are generated automatically when items such as documents, web pages, list items, sites, or other resources on a server are changed.  <br/> |
+|alert subscription  <br/> |A request to receive an Internet message automatically when user-defined criteria are met. Such messages are generated automatically when items such as documents, webpages, list items, sites, or other resources on a server are changed.  <br/> |
 |alternate account  <br/> |An additional user account that is in a different domain, but within the same forest as the primary account.  <br/> |
 |app catalog  <br/> |A SharePoint document library that administrators can use to distribute apps for Office and SharePoint to their end users.  <br/> |
 |app custom action  <br/> |A type of custom action that is added to a host site by a SharePoint Add-in (formerly an app for SharePoint) and that links to more functionality that is contained by the add-in.  <br/> |
@@ -39,9 +39,9 @@ Find definitions for terms used in SharePoint developer documentation.
 |AppSource  <br/> | Formerly known as Office Store. An Internet site that provides a collection of products and services developed by Microsoft partners for Microsoft Office users.  <br/> |
 |audience identifier  <br/> |A GUID or string that is used to uniquely identify an audience.  <br/> |
 |audience rule  <br/> |A set of logical conditions that determine whether a user profile can be a member of an audience.  <br/> |
-|authoritative page  <br/> |A web page that a site collection administrator has designated as more relevant than other web pages. This is typically the URL of the home page for the intranet of an organization. The higher the authority level assigned to a page, the higher the page appears in search results. Also referred to as authoritative page.  <br/> |
-|authority level  <br/> |A floating-point number that designates that a specific web page is more relevant than other web pages. Allowed values are 0, 1, or 2. Zero (0) signifies the most valuable authoritative page level.  <br/> |
-|authority page  <br/> |A web page that a site collection administrator has designated as more relevant than other web pages. This is typically the URL of the home page for the intranet of an organization. The higher the authority level assigned to a page, the higher the page appears in search results. Also referred to as authoritative page.  <br/> |
+|authoritative page  <br/> |A webpage that a site collection administrator has designated as more relevant than other webpages. This is typically the URL of the home page for the intranet of an organization. The higher the authority level assigned to a page, the higher the page appears in search results. Also referred to as authoritative page.  <br/> |
+|authority level  <br/> |A floating-point number that designates that a specific webpage is more relevant than other webpages. Allowed values are 0, 1, or 2. Zero (0) signifies the most valuable authoritative page level.  <br/> |
+|authority page  <br/> |A webpage that a site collection administrator has designated as more relevant than other webpages. This is typically the URL of the home page for the intranet of an organization. The higher the authority level assigned to a page, the higher the page appears in search results. Also referred to as authoritative page.  <br/> |
 |autohost  <br/> |To deploy the components of an add-in on appropriate hosts and establish add-in isolation automatically.  <br/> |
 |available site template  <br/> |An XML-based collection of predefined or user-defined settings that are stored as a site definition configuration or a site template, and can be used when creating a site.  <br/> |
 |backward signing  <br/> |A condition of a handwritten signature, in an image or .ink file, that specifies the direction of the characters in the signature, right-to-left or left-to-right.  <br/> |
@@ -117,7 +117,7 @@ Find definitions for terms used in SharePoint developer documentation.
 |list server template  <br/> |A value that identifies the template that is used for a list.  <br/> |
 |list template  <br/> |An XML-based definition of list settings, including fields and views, and optionally list items. List templates are stored in .stp files in the content database.  <br/> |
 |list template identifier  <br/> |A GUID that is used to identify a list template.  <br/> |
-|list view page  <br/> |A web part Page that displays a view of a list.  <br/> |
+|list view page  <br/> |A web part page that displays a view of a list.  <br/> |
 |List View web part  <br/> |A reusable component that generates HTML-based views of items in a SharePoint list.  <br/> |
 |log level  <br/> |The amount of information that is stored in a log file for a transaction. Log levels can be represented by numbers or by words from the most to the least verbose.  <br/> |
 |managed keyword  <br/> |A word or phrase that is added to a SharePoint item, either as a value in the Managed Keyword column or as a social tag.  <br/> |
@@ -175,7 +175,7 @@ Find definitions for terms used in SharePoint developer documentation.
 |second-stage Recycle Bin  <br/> |A container for items that have been deleted from a first-stage Recycle Bin. Items in a second-stage Recycle Bin are visible only to site collection administrators.  <br/> |
 |server-to-server protocol  <br/> |An authentication protocol between two servers or services.  <br/> |
 |Shared Documents library  <br/> |A document library that is included by default in the Team Site site template.  <br/> |
-|shared view  <br/> |A view of a list or web part Page that every user who has the appropriate permissions can see.  <br/> |
+|shared view  <br/> |A view of a list or web part page that every user who has the appropriate permissions can see.  <br/> |
 |SharePoint Add-in  <br/> |Formerly "app for SharePoint." A cloud-enabled add-in that integrates rich, scenario-focused content and services into a SharePoint environment. <br/> |
 |SharePoint Search SQL syntax  <br/> |The rules that govern the construction of an enterprise search SQL query.  <br/> |
 |single sign-on ticket  <br/> |A token that contains the encrypted identity of a single sign-on (SSO) user in the form of a security identifier string and a nonce.  <br/> |

@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represeents the limit on the number of rows (items) returned by a query on an instance of a Web Part object.
+Represeents the limit on the number of rows (items) returned by a query on an instance of a web part object.
 
 ## Definition
 
