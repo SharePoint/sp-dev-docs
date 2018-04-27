@@ -1370,7 +1370,7 @@
       href: solution-guidance/multigeo-permissions.md
     - name: Discover your tenant configuration
       href: solution-guidance/multigeo-discovery.md
-    - name: OneDrive for Business
+    - name: Access OneDrive for Business
       href: solution-guidance/multigeo-onedrive.md
     - name: Work with sites
       href: solution-guidance/multigeo-sites.md
@@ -1378,12 +1378,14 @@
       href: solution-guidance/multigeo-apps.md
     - name: Work with user profiles
       href: solution-guidance/multigeo-userprofileexperience.md
-    - name: Search
+    - name: Search in a tenant
       href: solution-guidance/multigeo-search.md
-    - name: Managed metadata
+    - name: Manage metadata
       href: solution-guidance/multigeo-managedmetadata.md
-    - name: Content type hub
+    - name: Define and publish content types
       href: solution-guidance/multigeo-contenttypehub.md
+    - name: Connect to external data using BCS and Secure Store Service
+      href: solution-guidance/multigeo-bcsandsecurestore.md
   - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md
     items:

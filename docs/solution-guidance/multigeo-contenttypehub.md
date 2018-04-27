@@ -1,12 +1,13 @@
 ---
-title: Content type hub in a SharePoint Multi-Geo tenant
+title: Define and publish content types in a SharePoint Multi-Geo tenant
 description: 
 ms.date: 4/27/2018
 ---
-# Content type hub in a SharePoint Multi-Geo tenant
+
+# Define and publish content types in a SharePoint Multi-Geo tenant
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 Customers use the content type hub to define content types in a central location, and then publish the content types to all sites in a SharePoint tenant. This article explains how the content type hub works in a SharePoint Multi-Geo tenant.
 

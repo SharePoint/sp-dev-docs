@@ -1,14 +1,15 @@
 ---
-title: Search in a Multi-Geo SharePoint tenant
+title: Search in a SharePoint Multi-Geo tenant
 description: 
 ms.date: 4/27/2018
 ---
-# Search in a Multi-Geo SharePoint tenant
+
+# Search in a SharePoint Multi-Geo tenant
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
-In a Multi-Geo SharePoint tenant, each geo location has its own search index, as well as its own independent search center. When a user searches, the query is fanned out to all the indexes, and the returned results are merged.
+In a SharePoint Multi-Geo tenant, each geo location has its own search index, as well as its own independent search center. When a user searches, the query is fanned out to all the indexes, and the returned results are merged.
 
 For example, a user in one geo location can search for content stored in another geo location, or for content on a SharePoint site that’s restricted to a different geo location. If the user has access to this content, search will show the result. 
 

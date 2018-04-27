@@ -1,12 +1,13 @@
 ---
-title: Managing apps in a SharePoint Multi-Geo tenant
+title: Manage apps and add-ins in a SharePoint Multi-Geo tenant
 description: 
 ms.date: 4/27/2018
 ---
-# Managing apps in a SharePoint Multi-Geo tenant
+
+# Manage apps and add-ins in a SharePoint Multi-Geo tenant
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 In a Multi-Geo tenant, you'll have an app catalog per geo location which is something to take in account if you want to deploy your apps across all geo locations.
 

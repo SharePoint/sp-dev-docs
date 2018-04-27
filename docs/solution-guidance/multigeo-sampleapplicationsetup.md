@@ -1,9 +1,10 @@
 ---
-title: Set up your Multi-Geo sample applications
+title: Set up your SharePoint Multi-Geo sample applications
 description: 
 ms.date: 4/27/2018
 ---
-# Set up your Multi-Geo sample applications
+
+# Set up your SharePoint Multi-Geo sample applications
 
 > [!IMPORTANT] 
 > OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.

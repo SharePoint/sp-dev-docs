@@ -3,10 +3,11 @@ title: Permission model in OneDrive and SharePoint Online Multi-Geo Preview
 description: 
 ms.date: 4/27/2018
 ---
+
 # Permission model in OneDrive and SharePoint Online Multi-Geo Preview
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 The permission model in a OneDrive and SharePoint Online Multi-Geo Preview tenant is the same as that for a single geo tenant.
 
@@ -23,7 +24,7 @@ The following image shows a Multi-Geo tenant with:
 
 This tenant has one distributed Azure Active Directory (Azure AD) environment that includes all the users, groups, and permissions. The central Azure AD instance is distributed to all the geo locations. 
 
-![A world map showing a default geo location in North America, and satellite geo locations in Europe and Asia, with user accounts and groups stored in AAD](media/multigeo/multigeopermissions_intro.png)
+![A world map showing a default geo location in North America, and satellite geo locations in Europe and Asia, with user accounts and groups stored in Azure AD](media/multigeo/multigeopermissions_intro.png)
 
 To configure your applications for Multi-Geo tenants in Azure AD, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).
 

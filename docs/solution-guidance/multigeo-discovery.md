@@ -3,10 +3,11 @@ title: Discover a Multi-Geo configuration for a SharePoint tenant
 description: 
 ms.date: 4/27/2018
 ---
+
 # Discover a Multi-Geo configuration for a SharePoint tenant
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and subject to change.
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 When you're working with a SharePoint tenant, you'll need to be able to detect whether it's a Multi-Geo tenant, and identify the default and satellite geo locations. 
 
