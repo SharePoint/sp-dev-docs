@@ -1,10 +1,12 @@
 ---
 title: Set up your Multi-Geo sample applications
-ms.date: 11/03/2017
+description: 
+ms.date: 4/27/2018
 ---
 # Set up your Multi-Geo sample applications
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 When developing for a Multi-Geo tenant it's important to understand the security model and luckily the used model for a Multi-Geo tenant does not differ from the model used for a regular tenant. This article shows you how to configure the sample applications.
 
@@ -184,3 +186,4 @@ Using the CSOM Tenant API is very similar to the previously described CSOM guida
 - [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [App-only and elevated privileges in the SharePoint add-in model](app-only-elevated-privileges-sharepoint-add-in.md)
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
