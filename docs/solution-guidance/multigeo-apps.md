@@ -1,32 +1,36 @@
 ---
-title: Manage apps and add-ins in a SharePoint Multi-Geo tenant
-description: 
+title: Manage apps and add-ins in a Multi-Geo tenant
+description: In a Multi-Geo tenant, you have an app catalog per geo location, which is something to consider if you want to deploy your apps across all geo locations.
 ms.date: 4/27/2018
 ---
 
-# Manage apps and add-ins in a SharePoint Multi-Geo tenant
+# Manage apps and add-ins in a Multi-Geo tenant
 
 > [!IMPORTANT] 
 > OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
-In a Multi-Geo tenant, you'll have an app catalog per geo location which is something to take in account if you want to deploy your apps across all geo locations.
+In a Multi-Geo tenant, you have an app catalog per geo location, which is something to consider if you want to deploy your apps across all geo locations.
 
-## Where do I need to deploy my apps in a Multi-Geo tenant?
-Before talking about deploying apps let's first define what's meant with apps in this article: all apps that you deploy by first adding them to your tenant app catalog are in scope of this guidance, so that includes SharePoint Add-In's (so .app files) but also SharePoint Framework Apps and Extensions (the .sppkg files). In a Multi-Geo tenant you'll have one app catalog site per geo location as show below:
+By "app", we mean all apps that you deploy by first adding them to your tenant app catalog. All such apps are in scope of this guidance, including SharePoint Add-Ins (.app files) and SharePoint Framework apps and extensions (.sppkg files). 
 
-![World map showing app catalog in North America and satellite locations in Europe and Asia, with app catalog](media/multigeo/multigeoapps_intro.png)
+In a Multi-Geo tenant, you have one app catalog site per geo location, as shown in the following diagram.
 
-A consequence of this architecture is that you'll need to deploy your app in **all** app catalogs if you want your app to be available for all sites, regardless of the geo location the site is hosted in. To realize this you have 2 options:
-- Deploy your app manually in each of the app catalog sites
-- Use the ALM API's to automate the deployment of your apps: using these API's you can write code that consistently deploys/upgrades your apps in all the geo locations of your Multi-Geo tenant.
+![World map showing app catalogs in North America and satellite locations in Europe and Asia](media/multigeo/multigeoapps_intro.png)
+
+A consequence of this architecture is that you must deploy your app in **all** app catalogs if you want your app to be available for all sites, regardless of the geo location the site is hosted in. 
+
+To do this, you have two options:
+
+- Deploy your app manually in each of the app catalog sites. 
+
+- Use the [ALM APIs](../apis/alm-api-for-spfx-add-ins.md) to automate the deployment of your apps. By using these APIs, you can write code that consistently deploys/upgrades your apps in all the geo locations of your Multi-Geo tenant.
 
 
 ## See also
 
-- [SharePoint Apps ALM API's]()
-- [Deploying and installing SharePoint Add-ins: methods and options](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options)
-- [Hosting client-side web part from Office 365 CDN](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn)
-- [Host extension from Office 365 CDN](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/hosting-extension-from-office365-cdn) 
+- [Deploying and installing SharePoint Add-ins: methods and options](../sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
+- [Host your client-side web part from Office 365 CDN](../spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md)
+- [Host extension from Office 365 CDN](../spfx/extensions/get-started/hosting-extension-from-office365-cdn.md) 
 - [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
 
 

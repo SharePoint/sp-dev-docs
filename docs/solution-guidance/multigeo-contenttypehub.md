@@ -1,10 +1,10 @@
 ---
-title: Define and publish content types in a SharePoint Multi-Geo tenant
-description: 
+title: Define and publish content types in a Multi-Geo tenant
+description: Explains how the content type hub works in a SharePoint Multi-Geo tenant.
 ms.date: 4/27/2018
 ---
 
-# Define and publish content types in a SharePoint Multi-Geo tenant
+# Define and publish content types in a Multi-Geo tenant
 
 > [!IMPORTANT] 
 > OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
@@ -17,11 +17,15 @@ A Multi-Geo tenant has one content type hub per geo location. To define content 
 https://<tenant>.sharepoint.com/sites/contenttypehub
 ```
 
-There is, however, an important distinction between the content type hub in the default geo location and in satellite geo locations. When you create and publish a content type in the content type hub of the default geo location,  that content type will be available in all sites in your tenant. In the example shown in the following image, content types created in the default North America geo location (contenttype1 and contenttype2) are pushed to all sites across the satellite geo locations for the tenant. Content types created in the content type hub for the Europe satellite location (contenttype3 and contenttype4) are only  pushed to the sites in the European geo location.
+There is, however, an important distinction between the content type hub in the default geo location and in satellite geo locations. 
+
+When you create and publish a content type in the content type hub of the default geo location, that content type is available in all sites in your tenant. In the example shown in the following image, content types created in the default North America geo location (contenttype1 and contenttype2) are pushed to all sites across the satellite geo locations for the tenant. Content types created in the content type hub for the Europe satellite location (contenttype3 and contenttype4) are only pushed to the sites in the European geo location.
 
 ![World map showing that content types in the North America default geo location apply to all sites, and content types in the Europe and Asia satellite locations apply only to those geo locations](media/multigeo/multigeocontenttypehub_intro.png)
 
-Most organizations want to have consistent content types across a SharePoint tenant. As a best practice, use the content type hub in the default geo location to create and publish content types. If you don't want all content types in the default geo location content type hub to be published to all geo locations, you can use the `Set-SPOTenantContentTypeReplicationParameters` PowerShell cmdlet to configure the content types that you do want to publish. This cmdlet is part of the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/confirmation.aspx?id=35588).
+Most organizations want to have consistent content types across a SharePoint tenant. As a best practice, use the content type hub in the default geo location to create and publish content types. 
+
+If you don't want all content types in the default geo location content type hub to be published to all geo locations, you can use the `Set-SPOTenantContentTypeReplicationParameters` PowerShell cmdlet to configure the content types that you do want to publish. This cmdlet is part of the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
 As an alternative to using a content type hub, organizations can integrate content type provisioning into their site provisioning solutions. This offers more flexibility and can be fully automated.
 

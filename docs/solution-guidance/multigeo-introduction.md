@@ -1,6 +1,6 @@
 ---
 title: OneDrive and SharePoint Online Multi-Geo Preview
-description: 
+description: This Preview allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 tenancy to satisfy data residency requirements.
 ms.date: 4/27/2018
 ---
 
@@ -9,22 +9,22 @@ ms.date: 4/27/2018
 > [!IMPORTANT] 
 > OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
-The OneDrive and SharePoint Online (ODSP) Multi-Geo Preview allows multinational corporations (MNCs) that are part of the preview and have one or more geographical locations, to expand their Office 365 ODSP tenancy to satisfy data residency requirements.
+The OneDrive and SharePoint Online Multi-Geo Preview allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 ODSP tenancy to satisfy data residency requirements.
 
-In an ODSP Multi-Geo Preview configuration, your Office 365 tenant consists of a central location (also known as a default location) and one or more satellite geo (geographical) locations. A single tenancy spans one or more additional geo locations. Your tenant information, including geo locations, is stored in Azure Active Directory (Azure AD).
+In a OneDrive and SharePoint Online Multi-Geo Preview configuration, your Office 365 tenant consists of a central location (also known as a default location) and one or more satellite geo (geographical) locations. A single tenancy spans one or more additional geo locations. Your tenant information, including geo locations, is stored in Azure Active Directory (Azure AD).
 
 > [!NOTE] 
-> ODSP Multi-Geo Preview features are not designed to optimize performance. They are designed to meet data residency requirements.
+> OneDrive and SharePoint Online Multi-Geo Preview features are not designed to optimize performance. They are designed to meet data residency requirements.
 
-The following are key terms related to the ODSP Multi-Geo Preview:
+The following are key terms related to the OneDrive and SharePoint Online Multi-Geo Preview:
 
 - **Tenant**: An organization’s representation in Office 365, typically with one or more domains. For example, contoso.com.
 
-- **Geo location (or instance)**: A Multi-Geo tenant can have multiple geo locations (or instances) associated with it. Resources such as mailboxes or drives can be stored in these locations. For example, Contoso is an ODSP Multi-Geo Preview tenant with three geo locations: NAM, EUR, and APC.
+- **Geo location (or instance)**: A Multi-Geo tenant can have multiple geo locations (or instances) associated with it. Resources such as mailboxes or drives can be stored in these locations. For example, Contoso is a OneDrive and SharePoint Online Multi-Geo Preview tenant with three geo locations: NAM, EUR, and APC.
 
 - **Preferred Data Location (PDL)**: A property set by the Azure AD administrator for the user or group object that Office 365 services use to provision the corresponding data-at-rest resources (mailbox, OneDrive, groups sites, and so on).
 
-If you're developing new applications that need to work in an ODSP Multi-Geo Preview tenant, or if you need to update your existing applications to be Multi-Geo-aware, use the content in the following table to learn more. 
+If you're developing new applications that need to work in a OneDrive and SharePoint Online Multi-Geo Preview tenant, or if you need to update your existing applications to be Multi-Geo-aware, use the content in the following table to learn more. 
 
 <br/>
 
@@ -40,9 +40,10 @@ If you're developing new applications that need to work in an ODSP Multi-Geo Pre
 |[Managed metadata in a Multi-Geo tenant](multigeo-managedmetadata.md)|Explains how to take advantage of SharePoint managed metadata in a Multi-Geo environment.|
 |[Content type hub in a Multi-Geo tenant](multigeo-contenttypehub.md)|Explains how the content type hub works in a Multi-Geo tenant.|
 |[BCS and the Secure Store in a Multi-Geo tenant](multigeo-bcsandsecurestore.md)|Describes how to use Business Connectivity Services and the Secure Store in a Multi-Geo tenant.|
-
+|[Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md) |Explains how to configure Multi-Geo sample applications. |
 
 ## See also
 
+- [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://docs.microsoft.com/en-us/office365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
 
