@@ -53,35 +53,30 @@ The Microsoft Graph-based Multi-Geo samples use the Microsoft Authentication Lib
 
 7. Add the necessary **Application Permissions**. In this sample app, we have added the Sites.ReadWrite.All and User.ReadWrite.All application permissions.
 
-  ![Configure application in Azure AD part 2](media/multigeo/multigeopermissions_registerapp3.png)
-
 8. Clear the **Live SDK support** check box.
+
+  ![Configure application in Azure AD part 2](media/multigeo/multigeopermissions_registerapp3.png)
 
 9. Save your changes.
 
 
+### Consent to the application
 
+1. In this sample, the User.ReadWrite.All and Sites.ReadWrite.All application permissions require admin consent in a tenant before they can be used. Create a consent URL like the following:
 
+  ```
+  https://login.microsoftonline.com/<tenant>/adminconsent?client_id=<clientid>&state=<something>
+  ```
 
+2. Use the client ID from the registered app, and consent to the app from my tenant contoso.onmicrosoft.com; the URL looks like this:
 
+  ```
+  https://login.microsoftonline.com/contoso.onmicrosoft.com/adminconsent?client_id=6e4433ca-7011-4a11-85b6-1195b0114fea&state=12345
+  ```
 
+3. Browse to the created URL and sign in as a tenant admin, and consent to the application. You can see that the consent screen shows the name of your application as well as the permission scopes you configured.
 
-#### Consent to the application
-In this sample the User.ReadWrite.All and Sites.ReadWrite.All application permissions require admin consent in a tenant before it can be used. Create a consent URL like the following:
-
-```
-https://login.microsoftonline.com/<tenant>/adminconsent?client_id=<clientid>&state=<something>
-```
-
-Using the client id from the app registered and consenting to the app from my tenant contoso.onmicrosoft.com, the URL looks like this:
-
-```
-https://login.microsoftonline.com/contoso.onmicrosoft.com/adminconsent?client_id=6e4433ca-7011-4a11-85b6-1195b0114fea&state=12345
-```
-
-Browsing to the created URL and log in as a tenant admin, and consent to the application. You can see the consent screen show the name of your application as well as the permission scopes you configured.
-
-![Tenant consent for Azure AD application](media/multigeo/multigeopermissions_registerapp4.png)
+  ![Tenant consent for Azure AD application](media/multigeo/multigeopermissions_registerapp4.png)
 
 
 
@@ -89,84 +84,108 @@ Browsing to the created URL and log in as a tenant admin, and consent to the app
 
 ## Read and update profiles for all users using the CSOM User Profile API
 
-When using the CSOM API to manipulate profile properties you'll only do this for the custom created properties since out-of-the-box properties are better handled via the Microsoft Graph API...see the [Multi-geo User Profile Experience](multigeo-userprofileexperience.md) article for more details. From a permission point of view there's two modes:
+When using the CSOM API to manipulate profile properties, you do this only for the custom created properties because out-of-the-box properties are better handled via the Microsoft Graph API. For more information, see the article [Work with user profiles in a Multi-Geo tenant](multigeo-userprofileexperience.md). 
 
-#### Using user credentials
-This requires setting up a `ClientContext` object using the tenant admin url and using SharePoint Online admin credentials. Since there's only one Azure AD instance holding users this also implies that a SharePoint Online admin is admin for all the geo locations.
+From a permission point of view there are two modes:
 
-```csharp
-string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
+- Using user credentials
 
-using (ClientContext cc = new ClientContext(tenantAdminSiteForMyGeoLocation))
-{
-    SecureString securePassword = GetSecurePassword("password");
-    cc.Credentials = new SharePointOnlineCredentials("admin@contoso.onmicrosoft.com", securePassword);
-    
-    // user profile logic
-}
+  This requires setting up a `ClientContext` object by using the tenant admin URL and SharePoint Online admin credentials. Because there's only one Azure AD instance holding users, this implies that a SharePoint Online admin is the admin for all the geo locations.
 
-static SecureString GetSecurePassword(string Password)
-{
-    SecureString sPassword = new SecureString();
-    foreach (char c in Password.ToCharArray()) sPassword.AppendChar(c);
-    return sPassword;
-}
-```
+  ```csharp
+  string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 
-#### Using an app-only principal
-When using app-only you'll need to grant the created app principal **full control** for the [http://sharepoint/social/tenant](https://dev.office.com/sharepoint/docs/general-development/get-started-developing-with-social-features-in-sharepoint#bkmk_AppPerms) permission scope. Below instructions show you to use appregnew.aspx and appinv.aspx to register an app principal and consent it.
+  using (ClientContext cc = new ClientContext(tenantAdminSiteForMyGeoLocation))
+  {
+      SecureString securePassword = GetSecurePassword("password");
+      cc.Credentials = new SharePointOnlineCredentials("admin@contoso.onmicrosoft.com", securePassword);
+      
+      // user profile logic
+  }
 
-##### Create the principal
-Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then call the appregnew.aspx page (e.g. https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click on the Generate button to generate a client id and client secret and fill the remaining information like shown in the screen-shot below.
+  static SecureString GetSecurePassword(string Password)
+  {
+      SecureString sPassword = new SecureString();
+      foreach (char c in Password.ToCharArray()) sPassword.AppendChar(c);
+      return sPassword;
+  }
+  ```
+
+- Using an app-only principal
+
+  When using app-only, you must grant the created app principal **full control** for the [http://sharepoint/social/tenant](https://dev.office.com/sharepoint/docs/general-development/get-started-developing-with-social-features-in-sharepoint#bkmk_AppPerms) permission scope. 
+  
+The following instructions show you how to use appregnew.aspx and appinv.aspx to register an app principal and consent to it.
+
+### Create the principal
+
+1. Go to a site in your tenant (for example, `https://contoso.sharepoint.com`), and then call the appregnew.aspx page (for example, `https://contoso.sharepoint.com/_layouts/15/appregnew.aspx`). 
+
+2. On this page, choose the **Generate** button to generate a client ID and client secret. 
+
+3. Complete the remaining fields as follows:
+
+  - Title: `Multi-Geo demo`
+  - App Domain: `www.localhost.com`
+  - Redirect URI: `https://www.localhost.com`
+
+  ![Register ACS app principal](media/multigeo/multigeopermissions_registerprincipal1.png)
+
+  > [!NOTE] 
+  > Store the retrieved information (client ID and client secret) because you'll need these in the next step.
 
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
-![Register ACS app principal](media/multigeo/multigeopermissions_registerprincipal1.png)
 
-> [!IMPORTANT] 
-> Store the retrieved information (client id and client secret) since you'll need this in the next step!
+### Grant permissions to the created principal
 
-##### Grant permissions to the created principal
-Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx. Once the page is loaded add your client id and look up the created principal:
+The next step is granting permissions to the newly created principal. Because we're granting tenant-scoped permissions, this grant can only be done via the appinv.aspx page on the tenant administration site. 
 
-![Grant permissions to app principal](media/multigeo/multigeopermissions_registerprincipal2.png)
+1. You can reach this site via `https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx`. 
 
-In order to grant permissions you'll need to provide the permission XML that describes the needed permissions. Since the UI experience scanner needs to be able to access all sites + also uses search with app-only it requires below permissions:
+2. After the page is loaded, add your client ID, and then **look up** the created principal.
 
-```Xml
-<AppPermissionRequests AllowAppOnlyPolicy="true">
-  <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="FullControl" />
-</AppPermissionRequests>
-```
+  ![Grant permissions to app principal](media/multigeo/multigeopermissions_registerprincipal2.png)
 
-When you click on Create you'll be presented with a permission consent dialog. Press Trust It to grant the permissions:
+3. To grant permissions, you must provide the permission XML that describes the needed permissions. Because the UI experience scanner needs to be able to access all sites and uses search with app-only, it requires the following permissions:
 
-![Consent the app principal](media/multigeo/multigeopermissions_registerprincipal3.png)
+  ```xml
+  <AppPermissionRequests AllowAppOnlyPolicy="true">
+    <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="FullControl" />
+  </AppPermissionRequests>
+  ```
+
+4. When you choose **Create**, you are presented with a permission consent dialog. Choose **Trust It** to grant the permissions.
+
+  ![Consent the app principal](media/multigeo/multigeopermissions_registerprincipal3.png)
 
 
-##### Use the principal in your code
-Once the principal is created and consented you can use the principal's id and secret to request an access. The `TokenHelper.cs` class will grab the id and secret from the application's configuration file.
+### Use the principal in your code
+
+After the principal is created and consented, you can use the principal's ID and secret to request access. The `TokenHelper.cs` class grabs the ID and secret from the application's configuration file.
 
 ```csharp
 string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 
-//Get the realm for the URL
+//Get the realm for the URL.
 string realm = TokenHelper.GetRealmFromTargetUrl(siteUri);
 
 //Get the access token for the URL.  
 string accessToken = TokenHelper.GetAppOnlyAccessToken(TokenHelper.SharePointPrincipal, siteUri.Authority, realm).AccessToken;
 
-//Create a client context object based on the retrieved access token
+//Create a client context object based on the retrieved access token.
 using (ClientContext cc = TokenHelper.GetClientContextWithAccessToken(tenantAdminSiteForMyGeoLocation, accessToken))
 {
     // user profile logic
 }
 ```
 
+<br/>
+
 A sample app.config looks like this:
 
-```XML
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <appSettings>
@@ -179,7 +198,8 @@ A sample app.config looks like this:
 
 
 > [!NOTE] 
-> You can easily insert the `TokenHelper.cs` class in your project by adding the **AppForSharePointOnlineWebToolkit** nuget package to your solution.
+> You can easily insert the `TokenHelper.cs` class in your project by adding the [AppForSharePointOnlineWebToolkit] (https://www.nuget.org/packages/AppForSharePointOnlineWebToolkit/) NuGet package to your solution.
+
 
 <a name="discover"> </a>
 
