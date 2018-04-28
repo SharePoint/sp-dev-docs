@@ -1388,7 +1388,7 @@
       href: solution-guidance/multigeo-contenttypehub.md
     - name: Connect to external data using BCS and Secure Store Service
       href: solution-guidance/multigeo-bcsandsecurestore.md
-    - name: Set up a Multi-Geo sample application
+    - name: Set up a sample application
       href: solution-guidance/multigeo-sampleapplicationsetup.md   
   - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md

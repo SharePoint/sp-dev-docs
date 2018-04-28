@@ -233,7 +233,7 @@ Use the Azure AD application creation steps as described in the [Read/update pro
 
 ### Using the CSOM Tenant API
 
-Using the CSOM Tenant API is very similar to the [previously described CSOM guidance](#read-and-update-profiles-for-all-users-using-the-csom-user-profile-api); in fact, the guidance for using user credentials is identical. For using an app-only principal, the instructions are the same, but you must grant different permissions (**tenant** and **full control**).
+Using the CSOM Tenant API is very similar to the [previously described CSOM guidance](#read-update-csom); in fact, the guidance for using user credentials is identical. For using an app-only principal, the instructions are the same, but you must grant different permissions (**tenant** and **full control**).
 
 ```xml
 <AppPermissionRequests AllowAppOnlyPolicy="true">
