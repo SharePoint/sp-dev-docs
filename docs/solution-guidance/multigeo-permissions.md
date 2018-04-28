@@ -28,7 +28,7 @@ This tenant has one distributed Azure AD environment that includes all the users
 
 ![A world map showing a default geo location in North America, and satellite geo locations in Europe and Asia, with user accounts and groups stored in Azure AD](media/multigeo/multigeopermissions_intro.png)
 
-To configure your applications for Multi-Geo tenants in Azure AD, see [Set up your Multi-Geo sample applications](multigeo-sampleapplicationsetup.md).
+To configure your applications for Multi-Geo tenants in Azure AD, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).
 
 ## See also
 

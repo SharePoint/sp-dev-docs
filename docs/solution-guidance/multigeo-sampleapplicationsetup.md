@@ -88,7 +88,7 @@ When using the CSOM API to manipulate profile properties, you do this only for t
 
 From a permission point of view there are two modes:
 
-- Using user credentials
+- **Using user credentials**
 
   This requires setting up a `ClientContext` object by using the tenant admin URL and SharePoint Online admin credentials. Because there's only one Azure AD instance holding users, this implies that a SharePoint Online admin is the admin for all the geo locations.
 
@@ -111,7 +111,7 @@ From a permission point of view there are two modes:
   }
   ```
 
-- Using an app-only principal
+- **Using an app-only principal**
 
   When using app-only, you must grant the created app principal **full control** for the [http://sharepoint/social/tenant](https://dev.office.com/sharepoint/docs/general-development/get-started-developing-with-social-features-in-sharepoint#bkmk_AppPerms) permission scope. 
   
@@ -213,7 +213,7 @@ There is [a long list of possible permissions](https://developer.microsoft.com/e
 |:-----|:-----|:-----|:-----|
 |**[Sites.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#sites-permissions)** | Application permission | Allows the app to read/write documents and list items in all site collections without a signed-in user. | Yes |
 
-Use the Azure AD application creation steps as described in the **Read/update profiles for all users** section.
+Use the Azure AD application creation steps as described in the [Read/update profiles for all users](#read-update-graph) section.
 
 <a name="site-collections"> </a>
 
@@ -229,11 +229,11 @@ The [Multi-Geo sites](multigeo-sites.md) article provides more details about how
 
 The Microsoft Graph based Multi-Geo samples use the Microsoft Authentication Library (MSAL) to connect with the Microsoft Graph on the v2 endpoint. Compared to ADAL, which connects using the v1 endpoint, MSAL allows connection to the Microsoft Graph by using Microsoft accounts, Azure AD, and Azure AD B2C. 
 
-Use the Azure AD application creation steps as described in the **Read/update profiles for all users** section.
+Use the Azure AD application creation steps as described in the [Read/update profiles for all users](#read-update-graph) section.
 
 ### Using the CSOM Tenant API
 
-Using the CSOM Tenant API is very similar to the previously described CSOM guidance; in fact, the guidance for using user credentials is identical. For using an app-only principal, the instructions are the same, but you must grant different permissions (tenant, full control).
+Using the CSOM Tenant API is very similar to the [previously described CSOM guidance](#read-and-update-profiles-for-all-users-using-the-csom-user-profile-api); in fact, the guidance for using user credentials is identical. For using an app-only principal, the instructions are the same, but you must grant different permissions (**tenant** and **full control**).
 
 ```xml
 <AppPermissionRequests AllowAppOnlyPolicy="true">
