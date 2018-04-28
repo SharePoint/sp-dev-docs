@@ -4,7 +4,7 @@ ms.date: 11/03/2017
 ---
 # Use remote event receivers in SharePoint
 
-Use remote event receivers to handle events in the SharePoint add-in model. Use AppInstalled and AppUninstalling events to set up or remove SharePoint objects and other event receivers your add-in needs.
+Use remote event receivers to handle events in the SharePoint Add-in model. Use AppInstalled and AppUninstalling events to set up or remove SharePoint objects and other event receivers your add-in needs.
 
 _**Applies to:** add-ins for SharePoint | SharePoint 2013 | SharePoint Online_
 
@@ -15,7 +15,7 @@ The  [Core.EventReceivers](https://github.com/SharePoint/PnP/tree/master/Samples
 
 - Configure your add-in on first run using the AppInstalled event to set up various SharePoint objects or additional event receivers that your add-in works with.
     
-- Replace event receivers implemented using fully trusted code solutions. In fully trusted code solutions, you can run event receivers on the SharePoint server. In the new SharePoint add-in model, because you cannot run the event receiver on the SharePoint server, you need to implement a remote event receiver on a web server.
+- Replace event receivers implemented using fully trusted code solutions. In fully trusted code solutions, you can run event receivers on the SharePoint server. In the new SharePoint Add-in model, because you cannot run the event receiver on the SharePoint server, you need to implement a remote event receiver on a web server.
     
 - Receive notifications of changes occuring in SharePoint. For example, when a new item is added to a list, you want to perform a task.
 

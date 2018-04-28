@@ -1,8 +1,8 @@
 ---
-title: List instance in the SharePoint add-in model
+title: List instance in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-List instance in the SharePoint add-in model
+List instance in the SharePoint Add-in model
 ============================================
 
 Summary

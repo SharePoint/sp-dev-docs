@@ -1,8 +1,8 @@
 ---
-title: Event receivers and list event receivers in the SharePoint add-in model
+title: Event receivers and list event receivers in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Event receivers and list event receivers in the SharePoint add-in model
+Event receivers and list event receivers in the SharePoint Add-in model
 =======================================================================
 
 Summary

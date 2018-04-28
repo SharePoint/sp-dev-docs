@@ -243,6 +243,6 @@ private static void ReplaceWebPart(Web web, ListItem item, LimitedWebPartManager
 ## See also
 <a name="bk_addresources"> </a>
 
-- [Transform farm solutions to the SharePoint add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
+- [Transform farm solutions to the SharePoint Add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
     
 - [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Scenarios/Provisioning.Pages)

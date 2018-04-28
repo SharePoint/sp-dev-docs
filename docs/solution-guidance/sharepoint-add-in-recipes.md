@@ -29,7 +29,7 @@ The articles in this section show you how to use the SharePoint Add-in model to 
 |[OneDrive for Business customization](onedrive-for-business-customization-sharepoint-add-in.md)|Customize OneDrive for Business sites.|
 |[Performance Considerations](performance-considerations-sharepoint-add-in.md)|Ensure optimal performance with SharePoint.|
 |[Remote Timer Jobs](remote-timer-jobs-sharepoint-add-in.md)|Implement timer jobs.|
-|[Remote Event Receivers](Use-remote-event-receivers-in-SharePoint.md)|Use remote event receivers to handle events in the SharePoint add-in model.|
+|[Remote Event Receivers](Use-remote-event-receivers-in-SharePoint.md)|Use remote event receivers to handle events in the SharePoint Add-in model.|
 |[Search API Usage](search-api-usage-sharepoint-add-in.md)|Execute searches with the SharePoint Search Service.|
 |[Search Configuration](search-configuration-sharepoint-add-in.md)|Configure search.|
 |[SharePoint change log](query-sharepoint-change-log-with-changequery-and-changeToken.md)|Use ChangeQuery and ChangeToken to query the SharePoint change log for changes made to a SharePoint content database, site collection, site, or list.|

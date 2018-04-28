@@ -1363,27 +1363,33 @@
       href: solution-guidance/modern-experience-customizations-customize-pages.md
     - name: SharePoint "modern" sites classification
       href: solution-guidance/modern-experience-site-classification.md
-  - name: SharePoint Multi-Geo tenant guidance
+  - name: OneDrive and SharePoint Online Multi-Geo
     href: solution-guidance/multigeo-introduction.md
     items:
-    - name: Permissions
+    - name: Permissions model
       href: solution-guidance/multigeo-permissions.md
     - name: Discover your tenant configuration
       href: solution-guidance/multigeo-discovery.md
-    - name: OneDrive for Business
+    - name: Access OneDrive for Business
       href: solution-guidance/multigeo-onedrive.md
     - name: Work with sites
       href: solution-guidance/multigeo-sites.md
+    - name: Provision classic team sites
+      href: solution-guidance/multigeo-sites-provisioning.md         
     - name: Manage apps/add-ins
       href: solution-guidance/multigeo-apps.md
     - name: Work with user profiles
       href: solution-guidance/multigeo-userprofileexperience.md
-    - name: Search
+    - name: Search in a tenant
       href: solution-guidance/multigeo-search.md
-    - name: Managed metadata
+    - name: Manage metadata
       href: solution-guidance/multigeo-managedmetadata.md
-    - name: Content type hub
+    - name: Define and publish content types
       href: solution-guidance/multigeo-contenttypehub.md
+    - name: Connect to external data using BCS and Secure Store Service
+      href: solution-guidance/multigeo-bcsandsecurestore.md
+    - name: Set up a sample application
+      href: solution-guidance/multigeo-sampleapplicationsetup.md   
   - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md
     items:
@@ -1551,7 +1557,7 @@
       href: solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in.md
     - name: Yammer integration
       href: solution-guidance/yammer-integration-sharepoint-add-in.md
-  - name: Transforming farm solutions to the SharePoint Add-in model
+  - name: Transforming farm solutions
     href: solution-guidance/Transform-farm-solutions-to-the-SharePoint-app-model.md
     items:
     - name: Replace content types and site columns
@@ -1562,7 +1568,7 @@
       href: solution-guidance/replace-sharepoint-lists-created-from-list-definitions.md
     - name: Replace web parts with add-in parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
-  - name: Sandbox solution transformation guidance
+  - name: Transforming sandbox solutions
     href: solution-guidance/Sandbox-Solution-Transformation-Guidance.md
     items:
     - name: Web parts

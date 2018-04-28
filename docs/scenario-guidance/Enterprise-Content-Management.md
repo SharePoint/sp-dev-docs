@@ -168,7 +168,7 @@ Document ID allows to assign a unique identifier to documents. However, the tech
 
 ### Articles
 
-* [Document ID provider in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/document-id-provider-sharepoint-add-in)
+* [Document ID provider in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/document-id-provider-sharepoint-add-in)
 * [Enable and configure unique Document IDs](https://support.office.com/en-us/article/Enable-and-configure-unique-Document-IDs-ea7fee86-bd6f-4cc8-9365-8086e794c984)
 
 ## Information Management Policies
@@ -180,7 +180,7 @@ An information management policy is a set of rules for a type of content. Inform
 ### Articles
 
 * [Introduction to information management policies](https://support.office.com/en-us/article/Introduction-to-information-management-policies-63a0b501-ba59-44b7-a35c-999f3be057b2)
-* [Information management policy in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/information-management-policy-sharepoint-add-in)
+* [Information management policy in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/information-management-policy-sharepoint-add-in)
 * [Plan for information management policy in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/cc262490.aspx)
 * [Information management policies in Office 365](https://technet.microsoft.com/en-us/library/dn792007.aspx)
 * [Create and apply information management policies](https://support.office.com/en-us/article/create-and-apply-information-management-policies-eb501fe9-2ef6-4150-945a-65a6451ee9e9)
@@ -197,7 +197,7 @@ Site Columns and Content Types are fundamental to define the Information Archite
 
 ### Articles
 
-* [Site columns and content types in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/site-columns-and-content-types-sharepoint-add-in)
+* [Site columns and content types in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/site-columns-and-content-types-sharepoint-add-in)
 * [Replace SharePoint content types and site columns](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/replace-sharepoint-content-types-and-site-columns)
 
 ### Samples

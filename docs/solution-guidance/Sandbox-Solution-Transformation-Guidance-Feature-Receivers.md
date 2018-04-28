@@ -3,7 +3,7 @@ title: Sandbox solution transformation guidance - Feature receivers
 ms.date: 11/03/2017
 ---
 # Sandbox solution transformation guidance - Feature receivers 
-Transform or convert your code-based sandbox solutions to the SharePoint add-in model. Learn about the options and strategies of converting existing functionality to SharePoint add-in model or alternative solutions.
+Transform or convert your code-based sandbox solutions to the SharePoint Add-in model. Learn about the options and strategies of converting existing functionality to SharePoint Add-in model or alternative solutions.
 
 _**Applies to:** Add-ins for SharePoint | SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 
@@ -11,7 +11,7 @@ _**Applies to:** Add-ins for SharePoint | SharePoint 2013 | SharePoint 2016 | Sh
 ## Summary
 Feature receivers are typically used to apply different kind of configurations or settings to SharePoint sites when feature is activated or when site is created (if feature associated to site template / web template). Feature receivers have been deployed using Sandbox solutions in the SharePoint Online, but since code-based customizations cannot no logner be used, alternative design will need to be taken. 
 
-The approach you take to handle feature receivers in SharePoint is slightly different in the SharePoint add-in model than it was with Full Trust Code or in coded-sandbox solutions. You will need to re-design the solution in away that you use remote APIs (CSOM/REST) to apply the needed configurations to your sites, which previously existed in the feature receiver(s). 
+The approach you take to handle feature receivers in SharePoint is slightly different in the SharePoint Add-in model than it was with Full Trust Code or in coded-sandbox solutions. You will need to re-design the solution in away that you use remote APIs (CSOM/REST) to apply the needed configurations to your sites, which previously existed in the feature receiver(s). 
 
 
 ## Options for replacing Feature Receivers

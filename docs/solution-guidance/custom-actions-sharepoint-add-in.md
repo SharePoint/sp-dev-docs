@@ -1,8 +1,8 @@
 ---
-title: Custom actions in the SharePoint add-in model
+title: Custom actions in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Custom actions in the SharePoint add-in model
+Custom actions in the SharePoint Add-in model
 =============================================
 
 Summary

@@ -1,8 +1,8 @@
 ---
-title: Branding SharePoint sites in the SharePoint add-in model
+title: Branding SharePoint sites in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Branding SharePoint sites in the SharePoint add-in model
+Branding SharePoint sites in the SharePoint Add-in model
 ========================================================
 
 Summary

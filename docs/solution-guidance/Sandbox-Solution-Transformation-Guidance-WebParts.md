@@ -3,7 +3,7 @@ title: Sandbox solution transformation guidance - web parts
 ms.date: 11/03/2017
 ---
 # Sandbox solution transformation guidance - web parts
-Transform or convert your code-based sandbox solutions to the SharePoint add-in model. Learn about the options and strategies of converting existing functionality to SharePoint add-in model or alternative solutions.
+Transform or convert your code-based sandbox solutions to the SharePoint Add-in model. Learn about the options and strategies of converting existing functionality to SharePoint Add-in model or alternative solutions.
 
 _**Applies to:** Add-ins for SharePoint | SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 

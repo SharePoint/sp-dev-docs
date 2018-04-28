@@ -45,7 +45,7 @@ The Remote Event Receivers are a capability introduced with the SharePoint Add-I
 ### Articles
 * [Create a remote event receiver in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins)
 * [Use remote event receivers in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-remote-event-receivers-in-sharepoint)
-* [Event receivers and list event receivers in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in)
+* [Event receivers and list event receivers in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in)
 * [Handle events in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/handle-events-in-sharepoint-add-ins)
 * [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in)
 * [Sandbox solution transformation guidance - Event receivers](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance-event-receivers)
@@ -87,7 +87,7 @@ One third and last option is using Microsoft Flow, which - at the time of this w
 
 ### Articles
 * [Workflows in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/workflows-in-sharepoint)
-* [Workflows, actions (activities), events, and forms in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in)
+* [Workflows, actions (activities), events, and forms in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in)
 * [Call web services from SharePoint workflows](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/call-web-services-from-sharepoint-workflows)
 * [Introducing Microsoft Flow integration for SharePoint Document Libraries](https://flow.microsoft.com/en-us/blog/flow-in-spo-document-libraries/)
 

@@ -1,8 +1,8 @@
 ---
-title: Site columns and content types in the SharePoint add-in model
+title: Site columns and content types in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Site columns and content types in the SharePoint add-in model
+Site columns and content types in the SharePoint Add-in model
 =============================================================
 
 Summary
@@ -98,7 +98,7 @@ This option works well in Dev-Ops scenarios. It allows you to create custom appl
 
 Related links
 =============
-- [Site provisioning in the SharePoint add-in model (O365 PnP Recipe)](site-provisioning-sharepoint-add-in.md)
+- [Site provisioning in the SharePoint Add-in model (O365 PnP Recipe)](site-provisioning-sharepoint-add-in.md)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")

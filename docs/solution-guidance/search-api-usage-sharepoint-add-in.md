@@ -1,8 +1,8 @@
 ---
-title: Search API usage in the SharePoint add-in model
+title: Search API usage in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Search API usage in the SharePoint add-in model
+Search API usage in the SharePoint Add-in model
 ===============================================
 
 Summary

@@ -1,8 +1,8 @@
 ---
-title: Yammer integration in the SharePoint add-in model
+title: Yammer integration in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Yammer integration in the SharePoint add-in model
+Yammer integration in the SharePoint Add-in model
 =================================================
 
 Summary
