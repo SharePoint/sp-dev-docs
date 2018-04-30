@@ -68,7 +68,7 @@ Modern team sites are SharePoint team sites which are connected to an Office 365
  - Treat the modern team site like a “normal” site and grant permission like described in earlier chapters
 
 > [!IMPORTANT]
-> We recommend granting permissions at SharePoint level, so threat the modern team sites like regular classic SharePoint team sites. This approach aligns with what the web application policies were providing.
+> We recommend granting permissions at SharePoint level, so treat the modern team sites like regular classic SharePoint team sites. This approach aligns with what the web application policies were providing.
 
 #### Granting permissions using PnP PowerShell
 Below scripts show an easy way to grant access via using PnP PowerShell and they can be a good starting basis for your implementation. Below scripts do not take in account the following:
