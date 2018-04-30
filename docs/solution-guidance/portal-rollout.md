@@ -1,6 +1,7 @@
 ---
 title: Best practices for rolling out SharePoint Online portals
-ms.date: 11/03/2017
+description: 
+ms.date: 4/30/2018
 ---
 # Best practices for rolling out SharePoint Online portals
 
@@ -45,3 +46,5 @@ The above phased approach will give you time to absorb feedback and make adjustm
 <a name="bk_addresources"> </a>
 
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/en-us/article/Capacity-planning-and-load-testing-SharePoint-Online-c932bd9b-fb9a-47ab-a330-6979d03688c0?ui=en-US&rs=en-US&ad=US)
+
+- [Building SharePoint Online portals](portal-overview.md)

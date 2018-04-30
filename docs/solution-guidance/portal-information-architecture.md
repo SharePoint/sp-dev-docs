@@ -1,6 +1,7 @@
 ---
 title: Proven Practices for SharePoint Online Portal Information Architecture
-ms.date: 11/03/2017
+description: 
+ms.date: 4/30/2018
 ---
 # Proven Practices for SharePoint Online Portal Information Architecture
 
@@ -186,3 +187,5 @@ Storage and Server Resources
 
 - [Manage Site Collection Storage Limits](https://support.office.com/en-US/Article/Manage-site-collection-storage-limits-77389c2c-8e7e-4b16-ab97-1c7103784b08?ui=en-US&rs=en-US&ad=US)
 - [SharePoint Online Software Boundaries and Limits](https://support.office.com/en-us/article/SharePoint-Online-software-boundaries-and-limits-8f34ff47-b749-408b-abc0-b605e1f6d498?CTT=1&CorrelationId=ab0c93e3-8a23-4a72-887e-bac52c0a874d&ui=en-US&rs=en-US&ad=US)
+
+- [Building SharePoint Online portals](portal-overview.md)

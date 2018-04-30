@@ -1,6 +1,7 @@
 ---
 title: Proven Practices for SharePoint Online Portals - Navigation Solutions
-ms.date: 11/03/2017
+description: 
+ms.date: 4/30/2018
 ---
 # Proven Practices for SharePoint Online Portals - Navigation Solutions
 
@@ -178,3 +179,5 @@ Please refer to the [Portal Performance article](portal-performance.md) for more
 - [PnP O365 Starter Intranet - Navigation details](http://thecollaborationcorner.com/2016/08/31/part-4-the-navigation-implementation/#.WNoU5oVOKiM)
 - [ASP.Net Web API 2.0](https://msdn.microsoft.com/en-us/library/dn448365(v=vs.118))
 - [Azure AD Authentication Library for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js)
+
+- [Building SharePoint Online portals](portal-overview.md)

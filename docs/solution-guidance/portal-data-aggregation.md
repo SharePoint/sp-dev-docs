@@ -1,6 +1,7 @@
 ---
 title: Proven Practices for SharePoint Online Portals - Content Aggregation
-ms.date: 11/03/2017
+description: 
+ms.date: 4/30/2018
 ---
 # Proven Practices for SharePoint Online Portals - Content Aggregation
 
@@ -160,3 +161,5 @@ Please refer to the [Portal Performance article](portal-performance.md) for more
 <a name="bk_additionalResources"> </a>
 
 - [Portal performance guidance](portal-performance.md)
+
+- [Building SharePoint Online portals](portal-overview.md)

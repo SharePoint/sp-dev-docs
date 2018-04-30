@@ -1,6 +1,7 @@
 ---
 title: Proven Practices for SharePoint Online Portals - Performance
-ms.date: 11/03/2017
+description: 
+ms.date: 4/30/2018
 ---
 # Proven Practices for SharePoint Online Portals - Performance
 
@@ -373,3 +374,5 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 - [Office Development Patterns and Practices (PnP) JavaScript Core](https://github.com/SharePoint/PnP-JS-Core)
 - [Learn how to build a fast, responsive SharePoint portal in SharePoint Online](https://channel9.msdn.com/Events/Ignite/2016/BRK3026)
 - [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer)
+
+- [Building SharePoint Online portals](portal-overview.md)

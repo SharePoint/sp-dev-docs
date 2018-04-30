@@ -1,6 +1,7 @@
 ---
 title: Proven Practices for SharePoint Online portal branding
-ms.date: 11/03/2017
+description: 
+ms.date: 4/30/2018
 ---
 # Proven Practices for SharePoint Online portal branding
 
@@ -129,3 +130,5 @@ For more information on CDN's, see:
 - [Branding SharePoint Online](https://sharepointgurus.net/branding-sharepoint-online/)
 - [92% of Branding SharePoint is CSS, So Why Are You Living in a Master Page?](http://blog.sharepointexperience.com/2016/12/sptechcon-sf-2016-branding-with-css-session-recap/)
 - [Review of Valo: Ready-to-go intranet on Office 365 and SharePoint](https://absolute-sharepoint.com/2017/01/review-of-valo-ready-to-go-intranet-on-office-365-and-sharepoint.html)
+
+- [Building SharePoint Online portals](portal-overview.md)
