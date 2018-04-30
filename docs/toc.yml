@@ -1393,17 +1393,17 @@
   - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md
     items:
-    - name: Performance guidance
+    - name: Performance
       href: solution-guidance/portal-performance.md
     - name: Information architecture
       href: solution-guidance/portal-information-architecture.md
-    - name: Navigation considerations
+    - name: Navigation
       href: solution-guidance/portal-navigation.md
-    - name: Data aggregation guidance
+    - name: Content aggregation
       href: solution-guidance/portal-data-aggregation.md
-    - name: Branding your portals
+    - name: Branding
       href: solution-guidance/portal-branding.md
-    - name: Portal go live approach
+    - name: Deployment
       href: solution-guidance/portal-rollout.md
   - name: Composite business add-ins
     href: solution-guidance/composite-business-apps-for-sharepoint.md

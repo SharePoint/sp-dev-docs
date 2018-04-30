@@ -1,9 +1,10 @@
 ---
-title: Proven Practices for SharePoint Online portal branding
+title: Branding guidance for SharePoint Online portals
 description: 
 ms.date: 4/30/2018
 ---
-# Proven Practices for SharePoint Online portal branding
+
+# Branding guidance for SharePoint Online portals
 
 Being able to apply a custom brand on a portal is a critical capability and this article provides you with an overview of the branding options and branding best practices.
 

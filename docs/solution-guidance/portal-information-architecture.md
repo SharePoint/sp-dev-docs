@@ -1,9 +1,10 @@
 ---
-title: Proven Practices for SharePoint Online Portal Information Architecture
+title: Information architecture guidance for SharePoint Online portals
 description: 
 ms.date: 4/30/2018
 ---
-# Proven Practices for SharePoint Online Portal Information Architecture
+
+# Information architecture guidance for SharePoint Online portals
 
 Having a solid information architecture is an important prerequisite for realizing a well maintainable and performing portal. Designing the optimal structure requires detailed planning. If not done properly, there is a high risk of adversely affecting user adoption or possible significant performance issues and the likelihood of both is very possible. 
 

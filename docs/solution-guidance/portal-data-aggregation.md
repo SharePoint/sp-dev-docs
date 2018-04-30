@@ -1,9 +1,10 @@
 ---
-title: Proven Practices for SharePoint Online Portals - Content Aggregation
+title: Content aggregation guidance for SharePoint Online portals
 description: 
 ms.date: 4/30/2018
 ---
-# Proven Practices for SharePoint Online Portals - Content Aggregation
+
+# Content aggregation guidance for SharePoint Online portals
 
 Every portal design includes a suite of display components that dynamically locate content for display on portal pages.  Fundamental to the operation of these controls is the concept of Content Aggregation, which for the purposes of this article we define as the process of dynamically locating desired content at run-time. The technique that you choose to perform Content Aggregation can have significant impact on the performance of your portal and its pages.
 

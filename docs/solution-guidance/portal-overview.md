@@ -24,7 +24,7 @@ The guidance provides patterns and practices that will help you build well-perfo
 - Links to interesting resources where you can learn more.
 - Samples: For example, [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer).
 
-## Provide feedback
+## How to provide feedback
 
 This guidance is completely open source, and we encourage the community to provide feedback. On the top right of each page, you can choose **Edit**, which takes you to the GitHub repository hosting this guidance. In GitHub you can: 
 
@@ -38,7 +38,7 @@ We appreciate your contributions, and our publishing system will credit you as a
 
 ## Target audience
 
-Most sections target portal developers, but if you don't have a developer background, you can still use these guidelines because they discuss general areas such as information architecture, branding, and go live.
+Most sections target portal developers, but if you don't have a developer background, you can still use these guidelines because they discuss general areas such as information architecture, branding, and deployment.
 
 ## Portal guidance overview
 
@@ -51,9 +51,9 @@ The following table contains an overview of the individual articles that are par
 |[Performance](portal-performance.md)|<p>Describes numerous design patterns that will help you build well-performing portals.</p>|
 |[Information architecture](portal-information-architecture.md)|<p>Explains how information architecture is an important prerequisite for realizing good portal performance.</p>|
 |[Navigation](portal-navigation.md)|<p>Each portal project needs to tackle the navigation question and for SharePoint Online you'll need to take into account specific guidelines.</p>|
-|[Data aggregation](portal-data-aggregation.md)|<p>Aggregating and rolling up data from different locations, taking in account user preferences in something that almost all portals need. Check out this article to learn more about a flexible proven approach for aggregating data.</p>|
+|[Content aggregation](portal-data-aggregation.md)|<p>Aggregating and rolling up data from different locations, taking in account user preferences in something that almost all portals need. Check out this article to learn more about a flexible proven approach for aggregating data.</p>|
 |[Branding](portal-branding.md)|<p>Being able to apply a custom brand on a portal is a typical requirement and this article provides you with an overview of the branding options and branding best practices.</p></p>|
-|[Go live](portal-rollout.md)|<p>Once you're portal has been developed and tested it's time to go live...but what strategy to follow for going live? This article will give you the Microsoft recommended approach.</p><p>|
+|[Deployment](portal-rollout.md)|<p>Once you're portal has been developed and tested it's time to go live...but what strategy to follow for going live? This article will give you the Microsoft recommended approach.</p><p>|
 
 ## See also
 

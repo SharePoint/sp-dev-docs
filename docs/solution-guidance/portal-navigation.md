@@ -1,9 +1,10 @@
 ---
-title: Proven Practices for SharePoint Online Portals - Navigation Solutions
+title: Navigation solutions for SharePoint Online portals
 description: 
 ms.date: 4/30/2018
 ---
-# Proven Practices for SharePoint Online Portals - Navigation Solutions
+
+# Navigation solutions for SharePoint Online portals
 
 Every portal project needs to implement a navigation solution. Based on project requirements, the navigation solution might choose to leverage only Out-of-Box (OOB) Navigation components, only custom Navigation components, or a combination of both OOB and custom components. 
 

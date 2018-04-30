@@ -1,9 +1,10 @@
 ---
-title: Proven Practices for SharePoint Online Portals - Performance
+title: Performance guidance for SharePoint Online portals
 description: 
 ms.date: 4/30/2018
 ---
-# Proven Practices for SharePoint Online Portals - Performance
+
+# Performance guidance for SharePoint Online portals
 
 Every portal design includes at least one aspect that requires the customization of SharePoint. The customization model for SharePoint Online portals is the SharePoint Add-in Model or the SharePoint Framework. These are both basically using a distributed application architecture that can encompass a number of execution environments: SharePoint Online, Web Hoster(s), Service Provider(s), and the Client Browser. This architecture is predicated on the concept of client-to-server data requests.
 

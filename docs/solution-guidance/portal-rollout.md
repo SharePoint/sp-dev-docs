@@ -1,9 +1,10 @@
 ---
-title: Best practices for rolling out SharePoint Online portals
+title: Deployment guidance for SharePoint Online portals
 description: 
 ms.date: 4/30/2018
 ---
-# Best practices for rolling out SharePoint Online portals
+
+# Deployment guidance for SharePoint Online portals
 
 After you've spent your time and energy in building that new SharePoint based portal you do want to get it live as soon as possible...but what would be a good model for doing so? This article will explain the recommended model for deploying your portal for your end users.
 
