@@ -19,7 +19,7 @@ You should be considering following factors:
 Once you know more about the users, the content, it's intended usage, you will have a good foundation to start with and can possibly avoid some of the common pitfalls around information architecture.
 
 > [!NOTE] 
-> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
+> Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 >
 > This article is not meant to go deep into every aspect of governance, and Information architecture. The intended point is to highlight common issues that affect user adoption and/or performance, both of which are equally major problems.
 

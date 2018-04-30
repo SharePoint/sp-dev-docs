@@ -9,7 +9,7 @@ ms.date: 4/30/2018
 After you've spent your time and energy in building that new SharePoint based portal you do want to get it live as soon as possible...but what would be a good model for doing so? This article will explain the recommended model for deploying your portal for your end users.
 
 > [!NOTE] 
-> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
+> Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 
 
 _**Applies to:** SharePoint Online_

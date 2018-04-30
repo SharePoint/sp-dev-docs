@@ -9,7 +9,7 @@ ms.date: 4/30/2018
 Being able to apply a custom brand on a portal is a critical capability and this article provides you with an overview of the branding options and branding best practices.
 
 > [!NOTE] 
-> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
+> Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 
 
 _**Applies to:** SharePoint Online_
