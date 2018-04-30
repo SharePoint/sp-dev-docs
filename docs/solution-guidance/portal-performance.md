@@ -1,6 +1,6 @@
 ---
 title: Performance guidance for SharePoint Online portals
-description: Implementing customizations to SharePoint Online places an even greater emphasis on effective design and development for web applications in general, and client-side web applications in particular, especially when it comes to the concept of application performance.
+description: Guidelines for improving the performance of your SharePoint Online portal.
 ms.date: 4/30/2018
 ---
 
@@ -17,7 +17,7 @@ Implementing customizations to SharePoint Online places an even greater emphasis
 
 ## What not to do
 
-If you want to have performance problems with SharePoint in general, and your custom portal in particular, don't do the following:
+If you want to have performance problems with SharePoint in general, and your custom portal in particular, **don't do** the following:
 
 - Build custom client-side controls that issue client-side data requests to SharePoint and add a dozen or more of them to the page.
 - Implement your client-side controls without centralized data access to the SharePoint data, so that numerous controls are requesting exactly the same data numerous times on a page.
@@ -79,7 +79,7 @@ The following sections provide performance guidance for achieving this goal.
 
 <a name="bk_Telemetry"> </a>
 
-### Telemetry
+### Use telemetry
 
 Performance is often viewed in subjective terms by end-users. However, it is rather challenging to definitively resolve issues such as *The portal is slow*.  To quantify perceived performance issues, it is critical to obtain objective metrics for the client-side web application.
 
@@ -102,13 +102,15 @@ Consider using [Azure Application Insights](https://azure.microsoft.com/en-us/bl
 
 <a name="bk_clientBrowser"> </a>
 
-### Client browser
+### Use a modern client browser
 
 The client browser can have a significant impact on the performance of the client-side web application in terms of actual performance and available functionality.
 
 In general, you should target the most up-to-date version of modern browsers that are compatible with your desktop operating system. 
 
-It is common for a large enterprise to have at least one web-based Line-of-Business (LOB) application that still requires the use of a legacy browser. However, that constraint should not hinder the forward progress of new web applications. Design new client-side web applications to take advantage of the improved performance and functionality of modern browsers.  When dealing with a legacy browser constraint:
+It is common for a large enterprise to have at least one web-based Line-of-Business (LOB) application that still requires the use of a legacy browser. However, that constraint should not hinder the forward progress of new web applications. Design new client-side web applications to take advantage of the improved performance and functionality of modern browsers.  
+
+When dealing with a legacy browser constraint:
 
 - Treat legacy browser requirements as exceptions; analyze the total cost of resolving the exception.
 - Degrade/disable modern functionality in the new application when a legacy browser is detected at run-time.
@@ -118,7 +120,7 @@ For the latest Office 365 browser requirements, see [Which browsers work with Of
 
 <a name="bk_clientEnvironment"> </a>
 
-### Client environment and network topology
+### Consider the client environment and network topology
 
 The client environment and the network topology that connects the client to the server can have a significant impact on the performance of client-side web applications.
 
@@ -130,7 +132,7 @@ For guidance about network performance planning, see [Network planning and perfo
 
 <a name="bk_dataRequestPatterns"> </a>
 
-### Data request patterns
+### Manage data request patterns
 
 The proper management of client-side data request traffic is critical to the performance of a custom client-side web application. In this context, your primary goal should be to minimize and optimize the client-to-server data requests that your application requires.
 
@@ -175,7 +177,7 @@ Treat the Data Access Layer as a core component of your overall client-side fram
 
 <a name="bk_dataRequestApis"> </a>
 
-### Data request APIs
+### Manage data request APIs
 
 #### Some client-side data requests can negatively impact the SharePoint server severely
 
@@ -233,9 +235,9 @@ Make use of built-in functionality that can automatically deliver data to the cl
 
 <a name="bk_resourceFiles"> </a>
 
-### Resource files
+### Use resource files
 
-Use resource files effectively to improve the performance of your client-side web application.
+Use resource files effectively to improve the performance of your client-side web application:
 
 - Use JavaScript/CSS files to deliver common script/CSS content shared across pages and components. You get the same benefits described earlier for JavaScript-based configuration files, plus:
 	- Adheres to the precept of "One Rule, One Place."
@@ -254,7 +256,7 @@ Use resource files effectively to improve the performance of your client-side we
 
 <a name="bk_cdn"> </a>
 
-### Content Delivery Network
+### Use a Content Delivery Network
 
 A Content Delivery Network (CDN) is a geo-dispersed network that allows an end-user to obtain a given resource file from the closest CDN location. Use of a CDN results in better download times and contributes to an improved perception of overall page performance.
 
@@ -270,7 +272,7 @@ A Content Delivery Network (CDN) is a geo-dispersed network that allows an end-u
 
 <a name="bk_ajax"> </a>
 
-### AJAX
+### Use AJAX
 
 Asynchronous JavaScript and Xml (AJAX) allows a client-side web application to execute background data requests in a way that does not require a full page load.
  
@@ -282,7 +284,7 @@ The need for a synchronous call usually arises due to an order dependency in the
 
 <a name="bk_javaScript"> </a>
 
-### JavaScript
+### Execute JavaScript wisely
 
 The JavaScript execution phase is the last portion of the overall page load sequence.  During this phase, the browser executes all of the JavaScript necessary to tie everything together and present the final, rendered page to the user.
 
@@ -302,7 +304,7 @@ For in-depth guidelines about JavaScript performance:
 
 <a name="bk_highVolumePages"> </a>
 
-### High-volume pages
+### Monitor high-volume pages
 
 Pay special attention to the design and implementation of high-volume pages within your client-side web application.
 
