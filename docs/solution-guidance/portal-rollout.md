@@ -53,7 +53,7 @@ The following diagram shows a gradual roll-out plan. Note that this takes into a
 
 This phased approach gives you time to absorb feedback and make adjustments to your portal if needed. However, how do you measure and follow up on performance during this phased roll-out? 
 
-The recommended approach for doing this is to embed portal telemetry in your implementation, as explained in the [telemetry section in Performance guidance for SharePoint Online portals](portal-performance.md#telemetry). Having a continuous flow of portal performance data helps you understand if the portal performance changes as the number of users grows. It can also be valuable in the future when you make changes to the portal.
+The recommended approach for doing this is to embed portal telemetry in your implementation, as explained in the [telemetry section in Performance guidance for SharePoint Online portals](portal-performance.md#bk_Telemetry). Having a continuous flow of portal performance data helps you understand if the portal performance changes as the number of users grows. It can also be valuable in the future when you make changes to the portal.
 
 ## See also
 
