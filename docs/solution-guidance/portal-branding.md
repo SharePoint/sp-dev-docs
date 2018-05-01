@@ -14,12 +14,17 @@ Being able to apply a custom brand on a portal is a critical capability and this
 
 _**Applies to:** SharePoint Online_
 
-## Anti-patterns (in other words, don't do these things)
 <a name="sectionSectionAntiPatterns"> </a>
-Below list contains the key things **not** to do when it comes to branding your portal:
-- Override branding of Office 365 Suite Bar
-- Customize branding for personal sites
-- By default implement your custom branding by using custom master pages
+
+## What not to do
+
+The following list contains the key things **not** to do when it comes to branding your portal.
+
+Don't:
+
+- Override branding of the Office 365 Suite Bar.
+- Customize branding for personal sites.
+- By default implement your custom branding by using custom master pages.
 
 ## Overview
 <a name="sectionSection0"> </a>

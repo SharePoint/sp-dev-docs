@@ -14,12 +14,16 @@ After you've spent your time and energy in building that new SharePoint based po
 
 _**Applies to:** SharePoint Online_
 
-## Anti-patterns (in other words, don't do these things)
 <a name="sectionSectionAntiPatterns"> </a>
-Below list contains the key things **not** to do when it comes to rolling out your portal:
-- Stress test your portal against your SharePoint Online tenant
-- Do a big bang release, essentially releasing your new portal to **all** your users at the same moment
-- Sharing your portal by having a large number of security groups as site group members can cause problems. This can happen with a large number (30-40K) security groups each with a single site group membership, or it can be a smaller number of security groups that are members of many site groups.
+
+## What not to do
+
+The following list contains the key things **not** to do when it comes to rolling out your portal.
+
+Don't:
+- Stress test your portal against your SharePoint Online tenant.
+- Do a big bang release, essentially releasing your new portal to **all** your users at the same moment.
+- Share your portal by having a large number of security groups as site group members. This can happen with a large number (30-40 K) security groups each with a single site group membership, or it can be a smaller number of security groups that are members of many site groups.
 
 
 ## How did you do this in the past

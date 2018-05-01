@@ -13,18 +13,20 @@ Every portal design includes a suite of display components that dynamically loca
 
 _**Applies to:** SharePoint Online_
 
-## Anti-Patterns (in other words, don't do these things)
 <a name="bk_antiPatterns"> </a>
 
-If you wish to have problems with your portal in general, and your data aggregation in particular, consider the following Anti-Patterns:
+## What not to do
 
-- Use the "real-time" content aggregation technique whenever and wherever possible
-- Place a dozen or more poorly-designed content aggregation controls on a high-volume portal page (e.g., home page)
-- Use a Group Policy Object (GPO) to force all browsers to load the problematic portal page by default
-- Do not enforce row limits on the content aggregation results
-- Do not cache any of the content aggregation results
-- Target the legacy Lists (SOAP) web service
-	- for extra trouble, pass it some poorly-designed CAML queries
+The following list contains the key things **not** to do if you want to have a good content aggregation experience.
+
+Don't: 
+
+- Use the "real-time" content aggregation technique whenever and wherever possible.
+- Place a dozen or more poorly-designed content aggregation controls on a high-volume portal page (for example, the home page).
+- Use a Group Policy Object (GPO) to force all browsers to load the problematic portal page by default.
+- Not enforce row limits on the content aggregation results.
+- Not cache any of the content aggregation results.
+- Target the legacy Lists (SOAP) web service; for extra trouble, pass it some poorly-designed CAML queries.
 
 ## Content Aggregation Defined
 <a name="sectionSection0"> </a>
@@ -85,11 +87,11 @@ The following sections describe the two Content Aggregation techniques available
 
 The CAML-based Content Aggregation technique is based upon the use of Collaborative Application Markup Language (CAML) queries. 
 
-One can build CAML queries and use them to perform content aggregation operations within SharePoint. The queries are executed against the SharePoint content databases. CAML queries are baked into the implementation of server-side controls such as the Out-of-Box (OOB) Content-by-Query web part. CAML queries can also be used directly against the various content discovery APIs available to custom client-side JavaScript controls.
+One can build CAML queries and use them to perform content aggregation operations within SharePoint. The queries are executed against the SharePoint content databases. CAML queries are baked into the implementation of server-side controls such as the out-of-box Content-by-Query web part. CAML queries can also be used directly against the various content discovery APIs available to custom client-side JavaScript controls.
 
 The primary benefit of CAML is that it allows one to come as near as possible to achieving "real-time" content aggregation. The primary downside of CAML is that it requires knowledge and skill to design well-performing CAML queries; a seemingly innocuous change can result in a poorly-performing CAML query and/or an endless series of cache misses, the impact of which is not apparent until the portal is under heavy loads.
 
-By prohibiting the deployment of custom code, SharePoint Online has eliminated what has historically been the single worst category of SharePoint performance killer: custom server-side controls and web parts that leverage poorly-designed CAML queries. However, it is still possible to misuse CAML via the OOB Content-by-Query web parts, as well as via custom client-side JavaScript controls. Some things to note: 
+By prohibiting the deployment of custom code, SharePoint Online has eliminated what has historically been the single worst category of SharePoint performance killer: custom server-side controls and web parts that leverage poorly-designed CAML queries. However, it is still possible to misuse CAML via the out-of-box Content-by-Query web parts, as well as via custom client-side JavaScript controls. Some things to note: 
 
 - Each Client-side CAML request results in a direct database query
 	- Client-side CAML results are not cached on the server
@@ -120,7 +122,7 @@ Please refer to the [Portal Performance article](portal-performance.md) for more
 
 The Search-based Content Aggregation technique is based upon the use of SharePoint Search Keyword Query Language (KQL) queries. 
 
-One can build Search KQL queries and use them to perform content aggregation operations within SharePoint. The queries are executed against the SharePoint Search Index. Search KQL queries are baked into the implementation of server-side controls such as the Out-of-Box (OOB) Content-by-Search web part. KQL queries can also be used directly against the Search APIs available to custom client-side JavaScript controls.
+One can build Search KQL queries and use them to perform content aggregation operations within SharePoint. The queries are executed against the SharePoint Search Index. Search KQL queries are baked into the implementation of server-side controls such as the out-of-box Content-by-Search web part. KQL queries can also be used directly against the Search APIs available to custom client-side JavaScript controls.
 
 The primary benefit of Search-based content aggregation is that it leverages the SharePoint Search Service, which is built to provide exceptional performance at a large scale under heavy loads. The primary downside of Search-based content aggregation is its dependency upon the Search Index, which means there will be a slight delay before content changes appear in the Search Index.
 
@@ -146,7 +148,7 @@ When you use Search-based Content Aggregation, please observe the following guid
 	- Target individual content types as needed
 	- Target specific managed properties (i.e., site columns) as needed
 - Choose the Desired Display Controls:
-	- OOB Controls: 
+	- Out-of-box Controls: 
 		- Use Content-by-Search web parts
 		- Return the minimal rows and columns needed
 		- Develop the necessary Display Templates

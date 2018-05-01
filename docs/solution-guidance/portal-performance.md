@@ -17,7 +17,9 @@ Implementing customizations to SharePoint Online places an even greater emphasis
 
 ## What not to do
 
-If you want to have performance problems with SharePoint in general, and your custom portal in particular, **don't do** the following:
+The following list contains the key things **not** to do when planning for performance.
+
+Don't:
 
 - Build custom client-side controls that issue client-side data requests to SharePoint and add a dozen or more of them to the page.
 - Implement your client-side controls without centralized data access to the SharePoint data, so that numerous controls are requesting exactly the same data numerous times on a page.
