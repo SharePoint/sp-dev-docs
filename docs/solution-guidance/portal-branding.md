@@ -15,7 +15,7 @@ Being able to apply a custom brand on a portal is a critical capability, and thi
 
 ## What not to do
 
-The following list contains the key things **not** to do when it comes to branding your portal.
+The following list contains the key things **not** to do when you apply branding to your portal.
 
 Don't:
 
@@ -50,7 +50,7 @@ In the following sections, we discuss how to address these requirements.
 
 Consider the following general principles when branding portals in a SharePoint Online environment:
 
-- **The SharePoint Online service is constantly improving**. Updates provisioned to the service may affect the DOM structure of out-of-the-box pages and the content of out-of-the-box files (for example, master pages). Developers must keep this in mind and should not rely on unsupported customization approaches (for example, the position of specific elements in the DOM structure of the page).
+- **The SharePoint Online service is constantly improving**. Updates provisioned to the service may affect the Document Object Model (DOM) structure of out-of-the-box pages and the content of out-of-the-box files (for example, master pages). Developers must keep this in mind and should not rely on unsupported customization approaches (for example, the position of specific elements in the DOM structure of the page).
 
 - **Avoid customizing master pages**. Updates to the service may affect the structure of out-of-the-box master pages. If you have implemented a custom master page by copying the contents of any out-of-the-box master page, you must further monitor if this out-of-the-box master page is not updated, and re-implement these changes in your custom master page. Otherwise, some SharePoint functionality may behave incorrectly when your custom master page is in use. That's why customizing master pages leads to additional risks and maintenance costs, and we recommend that you avoid it when possible.
 

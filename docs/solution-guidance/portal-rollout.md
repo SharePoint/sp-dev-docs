@@ -15,7 +15,7 @@ After you've spent your time and energy building that new SharePoint-based porta
 
 ## What not to do
 
-The following list contains the key things **not** to do when it comes to deploying your portal.
+The following list contains the key things **not** to do when you deploy your portal.
 
 Don't:
 - Stress test your portal against your SharePoint Online tenant.

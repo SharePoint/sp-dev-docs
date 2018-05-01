@@ -19,12 +19,12 @@ The following list contains the key things **not** to do if you want to have a g
 
 Don't: 
 
-- Use the "real-time" content aggregation technique whenever and wherever possible.
+- Use the real-time content aggregation technique whenever and wherever possible.
 - Place a dozen or more poorly-designed content aggregation controls on a high-volume portal page (for example, the home page).
 - Use a Group Policy Object (GPO) to force all browsers to load the problematic portal page by default.
 - Not enforce row limits on the content aggregation results.
 - Not cache any of the content aggregation results.
-- Target the legacy Lists (SOAP) web service; for extra trouble, pass it some poorly-designed CAML queries.
+- Target the legacy Lists (SOAP) web service. For extra trouble, pass it some poorly-designed CAML queries.
 
 ## Content aggregation defined
 

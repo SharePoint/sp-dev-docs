@@ -17,7 +17,7 @@ This article describes how to build a well-performing navigation system in Share
 
 ## What not to do
 
-The following list contains the key things **not** to do if you want to have a good navigation solution.
+The following list contains the key things **not** to do when you design your navigation solution.
 
 Don't: 
 

@@ -22,7 +22,7 @@ The guidance provides patterns and practices that will help you build well-perfo
 - What not to do: Essentially, we tell you what you should **not** do anymore.
 - Best practices and patterns: How to implement your portal.
 - Links to interesting resources where you can learn more.
-- Samples: For example, [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer).
+- Samples. For example, [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer).
 
 ## How to provide feedback
 

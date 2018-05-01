@@ -294,7 +294,7 @@ Poorly-implemented JavaScript can still result in a poor user experience, even i
 
 Extensive performance guidelines for JavaScript are outside the scope of this article; however, we summarize several of the most important concepts here:
 
-- Limit updates to the Document Object Model (DOM).
+- Limit updates to the DOM.
 - Use looping structures efficiently.
 - Limit use of try/catch in critical code segments.
 - Use proper scope for variables.
@@ -367,7 +367,7 @@ The following diagram shows the logical architecture of the Client-Side Data Acc
 The logical architecture of the Data Access Layer (DAL) Framework includes the following components:
 
 - JavaScript-based display components
-	- These controls leverage intelligent data access patterns (for example, Lazy Load) and Document Object Model (DOM) events to ensure that data requests are deferred for as long as possible and initiated only when necessary (for example, wait until a collapsed menu is expanded).
+	- These controls leverage intelligent data access patterns (for example, Lazy Load) and DOM events to ensure that data requests are deferred for as long as possible and initiated only when necessary (for example, wait until a collapsed menu is expanded).
 	- Display controls may present status indicators while data requests are in flight.
 
 - Event-based data requests

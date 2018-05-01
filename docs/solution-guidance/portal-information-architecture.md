@@ -35,16 +35,16 @@ Information architecture is not a one-time process, rather, it a continuous proc
 
 ## What not to do
 
-The following list contains the key things **not** to do when it comes to designing your portal information architecture.
+The following list contains the key things **not** to do when you design your portal information architecture.
 
-Don't have:
+Don't:
 
-- **Too many top-level parent portal site collections**. This will cause confusion and can have adverse impacts on management, security considerations, usability, navigation, and adoption in general.
-- **Deep hierarchies in a single site collection with unique permissions**. This can cause performance challenges.
-- **Buried content**. Content that is too deep impacts discoverability as well as adoption. If the user cannot find the content they are looking for after a few levels, they will abandon their efforts and deem the portal as inefficient, which in turn, kills adoption. 
-- **Stale content**. Nobody likes stale content, and after a few times of seeing it, they won't come back for that reason. 
-- **A lack of content disposition strategies**. This is needed to help avoid stale content and to stay within the defined capacity boundaries. 
-- **A reliance on poor enterprise master data management**. This results in a poor SharePoint Online taxonomy design. 
+- **Have too many top-level parent portal site collections**. This will cause confusion and can have adverse impacts on management, security considerations, usability, navigation, and adoption in general.
+- **Use deep hierarchies in a single site collection with unique permissions**. This can cause performance challenges.
+- **Bury content**. Content that is too deep impacts discoverability as well as adoption. If the user cannot find the content that they are looking for after a few levels, they will abandon their efforts and deem the portal as inefficient, which in turn, kills adoption. 
+- **Keep stale content**. Nobody likes stale content, and after a few times of seeing it, they won't come back for that reason. 
+- **Not use content disposition strategies**. These are needed to help avoid stale content and to stay within the defined capacity boundaries. 
+- **Rely on poor enterprise master data management**. This results in a poor SharePoint Online taxonomy design. 
  
 <br/>
 
@@ -151,7 +151,7 @@ Enterprise metadata hierarchies can be based off of information security classif
 Enterprise term store hierarchies are typically managed by a governance steering committee with an input process from other teams in the organization.  
 
 > [!IMPORTANT] 
-> Poor planning and poor management can cause issues around large taxonomy hierarchies and deep sorting. The data needs to be sorted client-side, so we recommend that you carefully consider the potential depth of the hierarchy, and the number of terms being returned. The depth of the hierarchy and the number of terms can cause the client DOM sort to take several seconds. 
+> Poor planning and poor management can cause issues around large taxonomy hierarchies and deep sorting. The data needs to be sorted client-side, so we recommend that you carefully consider the potential depth of the hierarchy, and the number of terms being returned. The depth of the hierarchy and the number of terms can cause the client Document Object Model (DOM) sort to take several seconds. 
 >
 > Don't delete term-store items; deprecate them. Keep the term store clean of potentially missing objects or faulty permissions, causing delays in data being returned.
 >
