@@ -14,7 +14,7 @@ In an SharePoint Add-in model scenario, you can use the SharePoint Client Side O
 
 At a high level, the remote provisioning pattern looks like this:
 
-![1) A remote timer job, goes to 2) Initial provisioning based on the out of the box site. Usually either team site or publishing site. Assets are uploaded from the provisioning engine using CSOM/REST. 3) Apply the needed changes (configurations etc.) on top of the out of the box site based on the user selection to create the Project site, Organizational site, or Workgroup site. This is the specialization part, but since we start from OOB site, we always get the latest improvements to it as a base line.](media/Recipes/SiteProvisioning/overview.png)
+![1) A remote timer job, goes to 2) Initial provisioning based on the out-of-the-box site. Usually either team site or publishing site. Assets are uploaded from the provisioning engine using CSOM/REST. 3) Apply the needed changes (configurations etc.) on top of the out-of-the-box site based on the user selection to create the Project site, Organizational site, or Workgroup site. This is the specialization part, but since we start from OOB site, we always get the latest improvements to it as a base line.](media/Recipes/SiteProvisioning/overview.png)
 
 High Level Guidelines
 ---------------------

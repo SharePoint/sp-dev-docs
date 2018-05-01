@@ -140,7 +140,7 @@ The code that underlies the Notes section of the customer dashboard uses REST qu
 
 ![A screenshot that shows the UI for the Notes data storage model](media/d98ce2cf-5022-4f2b-ad3e-da4eea52dfb2.png)
 
-The  **View Notes List in App Web** link provides an "out of the box" view of the list data.
+The  **View Notes List in App Web** link provides an "out-of-the-box" view of the list data.
 
 This app uses the Model-View-Controller (MVC) pattern. You can see the code for the notes scenario in the Views/CustomerDashboard/Notes.cshtml file. It uses simple REST calls to add and retrieve data. The following code retrieves notes from the Notes list for a specified customer.
 

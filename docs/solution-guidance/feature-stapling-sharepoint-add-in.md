@@ -66,7 +66,7 @@ Use the remote provisioning pattern
 In this pattern you use the SharePoint Client Side Object Model (CSOM) to create and configure site collections and sub sites then deploy artifacts, configurations, and branding assets to them.
 
 - This pattern does not require packaging artifacts, configurations, and branding assets in separate features, or Add-ins.  Everything may be packaged in a single Add-in.
-- When you use this pattern for site provisioning you typically override the out of the box page to create a new site.
+- When you use this pattern for site provisioning you typically override the out-of-the-box page to create a new site.
 - For more information about this pattern see the [Site Provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)
 - If you wish to deploy Add-ins to a SharePoint site, this can be done via CSOM.  Here is an example which loads an Office Add-in via a .app manifest file and installs it in a SharePoint site.
 

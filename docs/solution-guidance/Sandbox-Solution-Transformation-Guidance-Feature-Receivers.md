@@ -56,7 +56,7 @@ Set-SPOTheme -ColorPaletteUrl /_catalogs/theme/15/company.spcolor
 ### Applying needed customizations to sites using code
 Here's a simple code piece which uses SharePoint Online CSOM to activate custom theme by first uploading the assets to SharePoint site and then activating custom theme. 
 
-> This sample is using [PnP CSOM Core Component](https://github.com/SharePoint/PnP-sites-core), which extends the native out of the box operations by introducing additional set of extension methods for common operations. You can perform similar operations also by using native CSOM, but code would be significantly more complex.
+> This sample is using [PnP CSOM Core Component](https://github.com/SharePoint/PnP-sites-core), which extends the native out-of-the-box operations by introducing additional set of extension methods for common operations. You can perform similar operations also by using native CSOM, but code would be significantly more complex.
 
 ```csharp
 

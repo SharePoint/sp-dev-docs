@@ -168,7 +168,7 @@ private void CreateSiteClassificationList(ClientContext ctx)
 
 <br/>
 
-By default, when you create a list either out of the box or by using CSOM, the list is available in the **Recent** menu. The list needs to be hidden, however. The following code removes the item from the **Recent** menu.
+By default, when you create a list either out-of-the-box or by using CSOM, the list is available in the **Recent** menu. The list needs to be hidden, however. The following code removes the item from the **Recent** menu.
 
 ```csharp
 private void RemoveFromQuickLaunch(ClientContext ctx, string listName)

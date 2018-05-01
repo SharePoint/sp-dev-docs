@@ -55,7 +55,7 @@ When you transform your sandbox solutions to the SharePoint Add-in model, you wa
     
 	- Identifying unused features, and agreeing with your users to omit this functionality from the new add-in for SharePoint. 
     
-	- For each solution, determining whether to replace it with an add-in for SharePoint or implement that either using with some out of the box capabilities or using some alternative solution.
+	- For each solution, determining whether to replace it with an add-in for SharePoint or implement that either using with some out-of-the-box capabilities or using some alternative solution.
     
 3.  Solution planning. Design the new application using the SharePoint Add-in model based on:
     

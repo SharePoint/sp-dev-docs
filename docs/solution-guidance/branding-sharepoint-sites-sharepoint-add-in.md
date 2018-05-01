@@ -276,8 +276,8 @@ In scenarios where a custom master page is the only way to implement your custom
 - Using custom master pages for SharePoint sites requires the largest amount of time to implement and maintain in the short and long term.
 - Any changes to out-of-the-box master pages that come with service updates will not be reflected in custom master pages.
 - You can apply custom master pages at a per-site level.
-- When using a custom master page it is recommended to start with one of the out of the box master pages and modify it to meet your needs.
-	+ Try to minimize the amount of customization you make with custom master pages, this will make it easier to update them when O365 service changes to out of the box master pages must be replicated to custom master pages.  
+- When using a custom master page it is recommended to start with one of the out-of-the-box master pages and modify it to meet your needs.
+	+ Try to minimize the amount of customization you make with custom master pages, this will make it easier to update them when O365 service changes to out-of-the-box master pages must be replicated to custom master pages.  
 - There are many required content placeholders in SharePoint master pages that must not be removed or they will cause the pages to error.  You will know when you have removed a required content placeholder because the minute you deploy it and assign the master page to your site errors will appear.
 
 **When are custom master pages and page layouts for a SharePoint site a good fit?**
@@ -316,8 +316,8 @@ Following bullet points are pointing out specific challenges with chosen pattern
 
 - Office 365 themes are highly limited and mainly control the suite navigation section of the page
 - SharePoint themes are dependent on the time they are applied to the site. When selected theme is applied to site, SharePoint will dynamically create needed CSS files based on the spcolor and spfont files. This could result maintenance requirments when new CSS definitions are introduced for the SharePoint UI.
-- Alternate CSS approach is based on overriding out of the box styles. When new oob CSS definitions are introduced, they could influence your site and you might be needed to apply changes on the associated custom CSS file.
-- Master pages are always created based on out of the box master pages. When new controls or layout structures are introduced to out of the box master pages, you might be forced to update your custom master pages as well cross used sites.
+- Alternate CSS approach is based on overriding out-of-the-box styles. When new oob CSS definitions are introduced, they could influence your site and you might be needed to apply changes on the associated custom CSS file.
+- Master pages are always created based on out-of-the-box master pages. When new controls or layout structures are introduced to out-of-the-box master pages, you might be forced to update your custom master pages as well cross used sites.
  
 Summary
 -------
@@ -340,7 +340,7 @@ Related PnP samples
 - [Theme management using CSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.DeployCustomThemeWeb)
 - [Set theme to site (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.SetThemeToSite)
 - [Setting a SharePoint Theme in an App for SharePoint (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.Themes)
-- [Making out of the box Seattle master responsive (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.InjectResponsiveCSS)
+- [Making out-of-the-box Seattle master responsive (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.InjectResponsiveCSS)
 - [AlternateCSSUrl and SiteLogoUrl Properties in the web object (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
 - Samples and content at https://github.com/SharePoint/PnP
 
