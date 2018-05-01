@@ -1,6 +1,6 @@
 ---
 title: Branding guidance for SharePoint Online portals
-description: Branding options and branding best practices.
+description: Describes branding requirements and general principles when branding portals in a SharePoint Online environment.
 ms.date: 4/30/2018
 ---
 

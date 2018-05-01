@@ -1,6 +1,6 @@
 ---
 title: Content aggregation guidance for SharePoint Online portals
-description: The technique that you choose to perform content aggregation can have significant impact on the performance of your portal and its pages.
+description: Describes best practices and techniques for content aggregation, and the cons of using real-time content aggregation.
 ms.date: 4/30/2018
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: Navigation solutions for SharePoint Online portals
-description: Guidelines for building a well-performing navigation system in SharePoint Online.
+description: Explains the pros and cons of using an out-of-the-box navigation solution versus a custom navigation solution.
 ms.date: 4/30/2018
 ---
 
 # Navigation solutions for SharePoint Online portals
 
-Every portal project needs to implement a navigation solution. Based on project requirements, the navigation solution might choose to leverage only out-of-box navigation components, only custom navigation components, or a combination of both. 
+Every portal project needs to implement a navigation solution. Based on project requirements, the navigation solution might choose to leverage only out-of-the-box navigation components, only custom navigation components, or a combination of both. 
 
 This article describes how to build a well-performing navigation system in SharePoint Online.
 
@@ -21,7 +21,7 @@ The following list contains the key things **not** to do if you want to have a g
 
 Don't: 
 
-- Use out-of-box **structural** site navigation when the site collections of your portal have complex structure (multiple level of sites and/or unique permissions). 
+- Use out-of-the-box **structural** site navigation when the site collections of your portal have complex structure (multiple level of sites and/or unique permissions). 
 - Use a custom navigation solution that requests all navigation nodes for all custom navigation controls as soon as the page loads, even for controls that are initially collapsed/hidden.
 - Use a custom navigation solution that does not cache the navigation nodes it receives.
 - Use a custom navigation solution that targets the legacy Lists (SOAP) web service; for extra trouble, pass it some poorly-formed CAML queries.
@@ -30,9 +30,9 @@ Don't:
 
 ## Rationale for a custom navigation solution
 
-There are many reasons why a portal architect might decide to pursue a custom navigation solution. Most reasons are related to the fact that modern portal designs are responsive in nature and usually include a feature-rich navigation system; as such, attempts to map the proposed design onto SharePoint ultimately fail because the out-of-box server-side navigation controls cannot be configured to meet one or more requirements of the proposed design. Specific examples follow. 
+There are many reasons why a portal architect might decide to pursue a custom navigation solution. Most reasons are related to the fact that modern portal designs are responsive in nature and usually include a feature-rich navigation system; as such, attempts to map the proposed design onto SharePoint ultimately fail because the out-of-the-box server-side navigation controls cannot be configured to meet one or more requirements of the proposed design. Specific examples follow. 
 
-The out-of-box control:
+The out-of-the-box control:
 
 - And its management UX do not support a responsive UI design.
 - Does not exhibit the required behaviors (such as flyout/hover, mega menu, rich media, Lazy Load).
@@ -46,13 +46,13 @@ When enough of the reasons add up, consider a custom navigation solution.
 
 <a name="bk_oobNavSolution"> </a>
 
-## Using an out-of-box navigation solution
+## Using an out-of-the-box navigation solution
 
-You've evaluated the rationale for a custom navigation solution and have decided that none of those reasons apply. The good news is that you can leverage proven patterns for an out-of-box navigation solution.
+You've evaluated the rationale for a custom navigation solution and have decided that none of those reasons apply. The good news is that you can leverage proven patterns for an out-of-the-box navigation solution.
 
-At its core, a navigation solution consists of a set of navigation controls that receive their data from a navigation store. When choosing an out-of-box navigation solution, managed navigation (described later in this article) is generally the preferred choice for a navigation store because it offers the better page load performance. 
+At its core, a navigation solution consists of a set of navigation controls that receive their data from a navigation store. When choosing an out-of-the-box navigation solution, **managed navigation** (described later in this article) is generally the preferred choice for a navigation store because it offers the better page load performance. 
 
-The other choice, out-of-box structured navigation (described later in this article), can easily become very resource-intensive (especially for complex site collection structures) and can result in significantly slower page-load performance.
+The other choice, out-of-the-box **structural navigation** (described later in this article), can easily become very resource-intensive (especially for complex site collection structures) and can result in significantly slower page-load performance.
 
 <a name="bk_customNavSolution"> </a>
 
@@ -86,25 +86,25 @@ Following is some general guidance for the various types of navigation controls 
 
 #### Typical navigation display controls
 
-- **Global navigation**: Implement a custom control that targets a central, portal-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-box management page.
-- **Footer navigation**: Implement a custom control that targets a central, portal-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-box management page.
+- **Global navigation**: Implement a custom control that targets a central, portal-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-the-box management page.
+- **Footer navigation**: Implement a custom control that targets a central, portal-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-the-box management page.
 - **Site map**: Implement a custom control that targets a central, portal-specific navigation configuration entity.
-- **Current navigation** (that is, Left-Hand): Implement a custom control that targets a local, web-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-box management page.
+- **Current navigation** (that is, Left-Hand): Implement a custom control that targets a local, web-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-the-box management page.
 - **Breadcrumb**: *Avoid implementing this custom control*; construction of the parent chain of web objects, based on the URL of the current web, is a costly operation.
-- **Useful links**: Implement a custom control that targets a local, web-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-box management page.
+- **Useful links**: Implement a custom control that targets a local, web-specific navigation configuration entity. Use a public cache for the navigation nodes. Consider the out-of-the-box management page.
 - **My Links**: Implement a custom control that targets a **private**, user-specific navigation configuration entity. Use a **private** cache for the navigation nodes. Provide a custom management page.
 
 <a name="bk_navStore"> </a> 
 
 ### Navigation store
 
-The navigation store persists the configuration of the custom navigation control. You can choose to have the custom navigation control use either a custom navigation store or an out-of-box navigation store.
+The navigation store persists the configuration of the custom navigation control. You can choose to have the custom navigation control use either a custom navigation store or an out-of-the-box navigation store.
 
 <a name="bk_customNavStores"> </a> 
 
 #### Custom navigation store
 
-The most-commonly used custom navigation store, a custom SharePoint list, strikes a balance between extensibility, manageability, and performance (when queried via search). The list schema can be easily extended with custom content types that represent navigation headers/groups and navigation links, and site columns that define the desired custom attributes (for example, display order). Crawled properties for these site columns can be mapped to managed properties within SharePoint Search. The navigation data is easily managed via the familiar out-of-box list management pages. The navigation data can be accessed remotely via the SharePoint Search REST API.
+The most-commonly used custom navigation store, a custom SharePoint list, strikes a balance between extensibility, manageability, and performance (when queried via search). The list schema can be easily extended with custom content types that represent navigation headers/groups and navigation links, and site columns that define the desired custom attributes (for example, display order). Crawled properties for these site columns can be mapped to managed properties within SharePoint Search. The navigation data is easily managed via the familiar out-of-the-box list management pages. The navigation data can be accessed remotely via the SharePoint Search REST API.
 
 > [!NOTE] 
 > Search-based navigation has a dependency on the search index. SharePoint continuously crawls portal content; however, there is still a slight delay before changes to the SharePoint list appear in the search index.
@@ -120,17 +120,17 @@ At the other end of the spectrum of custom navigation stores is the custom datab
 
 #### Out-of-box navigation store 
 
-- **Out-of-box managed navigation (MMS)**: <a name="bk_managedNavStore"> </a> Managed navigation allows you to use a Managed Metadata Service (MMS) Term set to configure the navigation nodes for a given site collection. Out-of-box navigation display controls automatically consume this data. The out-of-box navigation management page provides an easy-to-use user interface to manage the navigation nodes within an *unconstrained* hierarchy (unlimited depth). Custom navigation display controls can also consume this data, but must do so via JSOM because there is currently no REST API available to work with managed navigation.
+- **Out-of-the-box managed navigation (MMS)**: <a name="bk_managedNavStore"> </a> Managed navigation allows you to use a Managed Metadata Service (MMS) Term set to configure the navigation nodes for a given site collection. Out-of-box navigation display controls automatically consume this data. The out-of-the-box navigation management page provides an easy-to-use user interface to manage the navigation nodes within an *unconstrained* hierarchy (unlimited depth). Custom navigation display controls can also consume this data, but must do so via JSOM because there is currently no REST API available to work with managed navigation.
 
 	> [!NOTE] 
 	> It is quite cumbersome to configure and maintain a global navigation definition via managed navigation. As each new site collection is created, you must duplicate the configuration for the site collection and its associated term set. Also keep in mind that managed navigation is not security-trimmed, so your users might see links that they cannot access.
 
-- **Out-of-box structural navigation (Site)**: <a name="bk_structuralNavStore"> </a> Structural navigation allows you to use the native structure of the site collection (its webs and pages), as well as authored headings and links, to configure the navigation nodes for a given site collection. The out-of-box navigation management page provides a user interface to manage the navigation nodes within a *constrained* hierarchy (limited depth). Custom navigation display controls can also consume this data, but must do so via JSOM because there is currently no REST API available to work with structural navigation.
+- **Out-of-the-box structural navigation (Site)**: <a name="bk_structuralNavStore"> </a> Structural navigation allows you to use the native structure of the site collection (its webs and pages), as well as authored headings and links, to configure the navigation nodes for a given site collection. The out-of-the-box navigation management page provides a user interface to manage the navigation nodes within a *constrained* hierarchy (limited depth). Custom navigation display controls can also consume this data, but must do so via JSOM because there is currently no REST API available to work with structural navigation.
 
 	> [!NOTE] 
-	> The out-of-box navigation display controls use database queries (that is, content by query) to obtain the navigation data. They do this for each page load, which is very resource-intensive for complex site collection structures. The use of structural navigation is recommended only for small portals with simple site collection structures. Structural navigation always returns security-trimmed results.
+	> The out-of-the-box navigation display controls use database queries (that is, content by query) to obtain the navigation data. They do this for each page load, which is very resource-intensive for complex site collection structures. The use of structural navigation is recommended only for small portals with simple site collection structures. Structural navigation always returns security-trimmed results.
 
-- **Out-of-box search index (Search)**: <a name="bk_searchNavStore"> </a> Search driven navigation allows you to query the SharePoint search index for sites and pages by constructing the proper search query. There's no specific out-of-box navigation management page and you must implement custom navigation display controls to consume the data retrieved from the search queries.
+- **Out-of-the-box search index (Search)**: <a name="bk_searchNavStore"> </a> Search driven navigation allows you to query the SharePoint search index for sites and pages by constructing the proper search query. There's no specific out-of-the-box navigation management page and you must implement custom navigation display controls to consume the data retrieved from the search queries.
 
 	> [!NOTE] 
 	> When using search-driven navigation, it is important that you cache the obtained search results because you don't want to access the server for each page load. Later in this article, the Client-Side Data Access Layer is explained, which is the model to use in combination with search-driven navigation. Just like structural navigation, the search-driven navigation is security-trimmed, so your users will not see unreachable links. The downside of search-driven navigation is that it's hard to control the order of the returned navigation items.
@@ -141,9 +141,9 @@ At the other end of the spectrum of custom navigation stores is the custom datab
 
 The navigation management page provides a user interface to manage the configuration of the navigation control in a user-friendly way. The page can be accessed directly, as well as from an optional link present on the navigation control (for example, a Settings link). The page uses the appropriate navigation store APIs for the chosen navigation store to manage the configuration of the navigation control.
 
-You can choose to have the custom navigation control use either a custom navigation management page or an out-of-box navigation management page. 
+You can choose to have the custom navigation control use either a custom navigation management page or an out-of-the-box navigation management page. 
 
-In many cases, the default out-of-box navigation management page (for example, SharePoint List View or Term Set management page) associated with the chosen navigation store should suffice. When a default page is not available, you must obviously develop a custom page. When deciding if the existing default page is acceptable or not, be sure to consider the total cost of developing a custom management page (design, development/maintenance, hosting, and user training).
+In many cases, the default out-of-the-box navigation management page (for example, SharePoint List View or Term Set management page) associated with the chosen navigation store should suffice. When a default page is not available, you must obviously develop a custom page. When deciding if the existing default page is acceptable or not, be sure to consider the total cost of developing a custom management page (design, development/maintenance, hosting, and user training).
 
 As a rule of thumb, pursue custom management pages only when a default option does not exist, when the page must support a responsive UI, or when the page is meant to be consumed via the front-end user view of the portal (as opposed to the back-end admin view).  
 
@@ -151,7 +151,7 @@ As a rule of thumb, pursue custom management pages only when a default option do
 
 ### Navigation store API
 
-The navigation store API provides a programmatic interface to manage the configuration of the navigation control consistently and securely. You can choose to have the custom navigation control use either a custom navigation store API or an out-of-box navigation store API. 
+The navigation store API provides a programmatic interface to manage the configuration of the navigation control consistently and securely. You can choose to have the custom navigation control use either a custom navigation store API or an out-of-the-box navigation store API. 
 
 If you wish to develop and deploy a custom navigation store API, observe the following guidelines:
 

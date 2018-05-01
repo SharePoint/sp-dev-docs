@@ -1,6 +1,6 @@
 ---
 title: Information architecture guidance for SharePoint Online portals
-description: Guidelines for ensuring a solid information architecture for your intranet site.
+description: Describes site organization patterns, and guidelines for incorporating permissions, search, taxonomy, and large media in your SharePoint Online portal.
 ms.date: 4/30/2018
 ---
 

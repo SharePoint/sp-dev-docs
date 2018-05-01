@@ -48,12 +48,12 @@ The following table contains an overview of the individual articles that are par
 
 |Article|Description|
 |:-----|:-----|
-|[Performance](portal-performance.md)|<p>Describes numerous design patterns that will help you build well-performing portals.</p>|
-|[Information architecture](portal-information-architecture.md)|<p>Explains how information architecture is an important prerequisite for realizing good portal performance.</p>|
-|[Navigation](portal-navigation.md)|<p>Each portal project needs to tackle the navigation question and for SharePoint Online you'll need to take into account specific guidelines.</p>|
-|[Content aggregation](portal-data-aggregation.md)|<p>Aggregating and rolling up data from different locations, taking in account user preferences in something that almost all portals need. Check out this article to learn more about a flexible proven approach for aggregating data.</p>|
-|[Branding](portal-branding.md)|<p>Being able to apply a custom brand on a portal is a typical requirement and this article provides you with an overview of the branding options and branding best practices.</p></p>|
-|[Deployment](portal-rollout.md)|<p>Once you're portal has been developed and tested it's time to go live...but what strategy to follow for going live? This article will give you the Microsoft recommended approach.</p><p>|
+|[Performance](portal-performance.md)|<p>Describes the evolution of the SharePoint Online customization model, general performance guidelines for client-side web applications, and the Client-Side Data Access Layer (DAL) Framework.</p>|
+|[Information architecture](portal-information-architecture.md)|<p>Describes site organization patterns, and guidelines for incorporating permissions, search, taxonomy, and large media in your SharePoint Online portal.</p>|
+|[Navigation](portal-navigation.md)|<p>Explains the pros and cons of using an out-of-the-box navigation solution versus a custom navigation solution.</p>|
+|[Content aggregation](portal-data-aggregation.md)|<p>Describes best practices and techniques for content aggregation, and the cons of using real-time content aggregation.</p>|
+|[Branding](portal-branding.md)|<p>Describes branding requirements and general principles when branding portals in a SharePoint Online environment.</p></p>|
+|[Deployment](portal-rollout.md)|<p>Compares past deployment strategies with the now recommended strategy of using a phased roll-out plan and telemetry.</p><p>|
 
 ## See also
 

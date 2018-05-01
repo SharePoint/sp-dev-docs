@@ -1,6 +1,6 @@
 ---
 title: Deployment guidance for SharePoint Online portals
-description: The recommended model for deploying your portal for your end users.
+description: Compares past deployment strategies with the now recommended strategy of using a phased roll-out plan and telemetry.
 ms.date: 4/30/2018
 ---
 
@@ -41,7 +41,7 @@ The recommended approach for deploying your new portal is to use a phased roll-o
 
 ## Use a phased roll-out plan and telemetry
 
-A commonly used model for rolling out new functionality is a phased approach that typically consists of the following:
+The recommended model for rolling out new functionality is a phased approach that typically consists of the following:
 
 - **A pilot wave**: This is the first time the portal is opened up to a group of selected key users. It's important to get a set of representative, critical, key users that can provide the initial feedback.
 
