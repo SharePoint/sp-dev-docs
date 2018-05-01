@@ -146,9 +146,9 @@ The proper management of client-side data request traffic is critical to the per
 #### Use a client-side cache to fulfill all data requests
  
 - Consult the local data cache before issuing the data request to the server.
-- Return cached data if it is present and not yet expired (for example, upon a Cache Hit).
+- Return cached data if it is present and not yet expired (for example, upon a cache hit).
 
-#### Call the server (or other back-end data source) only when a Cache Miss occurs
+#### Call the server (or other back-end data source) only when a cache miss occurs
 
 - Fetch the fresh data via an asynchronous AJAX call (never use a synchronous AJAX call).
 - Return stale (or default) data if a request for fresh data fails.
@@ -344,7 +344,7 @@ The [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/P
 
 - Performance is Feature #1.
 - Core component of the overall client-side framework; to be leveraged by all custom client-side web applications and components for consistency and performance.
-- Fulfill data requests via the client-side data cache; if a Cache Miss occurs, execute the client-to-server data fetch.
+- Fulfill data requests via the client-side data cache; if a cache miss occurs, execute the client-to-server data fetch.
 - Fetch the server data via an asynchronous client-to-server AJAX call (never use a synchronous call).
 - Reduce cascading call failures by re-using stale data when/if a data request fails.
 - Honor request throttling responses and adjust behavior accordingly.
@@ -404,8 +404,8 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 4. The Business Data Manager computes the storage key and determines the storage options for the BDO.
 
 5. The Business Data Manager requests the BDO from the Storage Manager per the storage options.
-	- If the BDO is present and fresh, a Cache Hit occurs and the Storage Manager returns the BDO (go to step 10).
-	- If the BDO is absent or stale, a Cache Miss occurs and the Storage Manager returns no BDO (go to step 6).
+	- If the BDO is present and fresh, a cache hit occurs and the Storage Manager returns the BDO (go to step 10).
+	- If the BDO is absent or stale, a cache miss occurs and the Storage Manager returns no BDO (go to step 6).
 
 6. The Business Data Manager issues an (asynchronous) request to the External Service for fresh data.
 	- If the request fails, the Business Data Manager **re-uses** the stale BDO *if present* (go to step 9).
