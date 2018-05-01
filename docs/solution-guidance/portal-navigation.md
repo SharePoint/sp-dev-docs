@@ -118,9 +118,9 @@ At the other end of the spectrum of custom navigation stores is the custom datab
 
 <a name="bk_oobNavStores"> </a> 
 
-#### Out-of-the-box navigation store 
+#### Out-of-box navigation store 
 
-- **Out-of-the-box managed navigation (MMS)**: <a name="bk_managedNavStore"> </a> Managed navigation allows you to use a Managed Metadata Service (MMS) Term set to configure the navigation nodes for a given site collection. Out-of-box navigation display controls automatically consume this data. The out-of-box navigation management page provides an easy-to-use user interface to manage the navigation nodes within an *unconstrained* hierarchy (unlimited depth). Custom navigation display controls can also consume this data, but must do so via JSOM because there is currently no REST API available to work with managed navigation.
+- **Out-of-box managed navigation (MMS)**: <a name="bk_managedNavStore"> </a> Managed navigation allows you to use a Managed Metadata Service (MMS) Term set to configure the navigation nodes for a given site collection. Out-of-box navigation display controls automatically consume this data. The out-of-box navigation management page provides an easy-to-use user interface to manage the navigation nodes within an *unconstrained* hierarchy (unlimited depth). Custom navigation display controls can also consume this data, but must do so via JSOM because there is currently no REST API available to work with managed navigation.
 
 	> [!NOTE] 
 	> It is quite cumbersome to configure and maintain a global navigation definition via managed navigation. As each new site collection is created, you must duplicate the configuration for the site collection and its associated term set. Also keep in mind that managed navigation is not security-trimmed, so your users might see links that they cannot access.

@@ -73,7 +73,7 @@ Sites considered enterprise level sites might be structured as:
 
 Sites considered as publishing portal sites might be structured as:
 
--/sites/
+- /sites/
 	- Intranet Home
 	- Corporate Function A
 	- Corporate Function B
