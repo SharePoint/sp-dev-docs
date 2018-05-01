@@ -1,6 +1,7 @@
 ---
 title: Data storage options in SharePoint Online
-ms.date: 11/03/2017
+description: 
+ms.date: 5/1/2018
 ---
 # Data storage options in SharePoint Online
 
@@ -650,3 +651,5 @@ public ActionResult Orders(string customerId)
 -  [Composite business add-ins for SharePoint 2013 and SharePoint Online](composite-business-apps-for-sharepoint.md)
     
 -  [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
+
+- [Composite business apps for SharePoint](composite-business-apps-for-sharepoint.md)

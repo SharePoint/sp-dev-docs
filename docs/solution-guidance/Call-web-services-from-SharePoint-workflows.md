@@ -1,6 +1,7 @@
 ---
 title: Call web services from SharePoint workflows
-ms.date: 11/03/2017
+description: 
+ms.date: 5/1/2018
 ---
 # Call web services from SharePoint workflows
 
@@ -473,3 +474,5 @@ You have now deployed the workflow to the host web and associated it with a list
 -  [Workflow.AssociateToHostWeb](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.AssociateToHostWeb)
     
 -  [Workflow.CallCustomService](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallCustomService)
+
+- [Composite business apps for SharePoint](composite-business-apps-for-sharepoint.md)

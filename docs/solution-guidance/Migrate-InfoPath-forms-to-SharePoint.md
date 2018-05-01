@@ -1,6 +1,7 @@
 ---
 title: Migrate InfoPath forms to SharePoint 2013
-ms.date: 11/03/2017
+description: 
+ms.date: 5/1/2018
 ---
 # Migrate InfoPath forms to SharePoint 2013
 
@@ -36,3 +37,5 @@ We recommend the first two solutions, because information workers who don't know
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
     
 -  [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
+
+- [Composite business apps for SharePoint](composite-business-apps-for-sharepoint.md)

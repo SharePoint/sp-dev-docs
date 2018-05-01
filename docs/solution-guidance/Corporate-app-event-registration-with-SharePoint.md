@@ -1,6 +1,7 @@
 ---
 title: Corporate event app integration with SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/1/2018
 ---
 # Corporate event app integration with SharePoint
 
@@ -295,3 +296,4 @@ public void Save(Web web) {
     
 -  [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)
     
+- [Composite business apps for SharePoint](composite-business-apps-for-sharepoint.md)

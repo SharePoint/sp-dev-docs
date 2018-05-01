@@ -1,6 +1,7 @@
 ---
 title: Composite business apps for SharePoint 2013 and SharePoint Online
-ms.date: 11/03/2017
+description: 
+ms.date: 5/1/2018
 ---
 # Composite business apps for SharePoint 2013 and SharePoint Online
 
