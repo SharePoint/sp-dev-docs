@@ -1,15 +1,14 @@
 ---
 title: Upload large files sample SharePoint Add-in
-description: 
+description: Upload files larger than 2 MB to SharePoint and SharePoint Online by using SaveBinaryDirect, ContentStream, StartUpload, ContinueUpload, and FinishUpload. 
 ms.date: 5/2/2018
 ---
+
 # Upload large files sample SharePoint Add-in
 
-Upload files larger than 2MB to SharePoint and SharePoint Online using SaveBinaryDirect, ContentStream, StartUpload, ContinueUpload and FinishUpload. 
+The Core.LargeFileUpload sample shows you how to use a provider-hosted add-in to upload large files to SharePoint, and how to bypass the 2-MB file upload limit. Use this solution if you want to upload files that are larger than 2 MB to SharePoint. 
 
-_**Applies to:** add-ins for SharePoint | SharePoint 2013 | SharePoint Online_
-
-The  [Core.LargeFileUpload](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload) sample shows you how to use a provider-hosted add-in to upload large files to SharePoint, and how to bypass the 2 MB file upload limit. Use this solution if you want to upload files that are larger than 2 MB to SharePoint. This sample runs as a console application that uploads large files to a document library by using one of the following methods:
+This sample runs as a console application that uploads large files to a document library by using one of the following methods:
 
 - The  ** [SaveBinaryDirect](https://msdn.microsoft.com/library/office/ee538285.aspx)** method on the **Microsoft.SharePoint.Client.File** class.
     
@@ -29,7 +28,6 @@ The following table lists the file upload methods that are available and describ
 |Upload a single file as a set of chunks using the  **StartUpload**,  **ContinueUpload**, and  **FinishUpload** methods on the **File** class.|No file size limits. Time-out occurs after 30 minutes. Each chunk of the file must upload within 30 minutes of completion of the previous chunk to avoid the time-out. |Recommended for SharePoint Online when the file is larger than 10 MB.|SharePoint Online|
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
 To get started, download the [Core.LargeFileUpload](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 

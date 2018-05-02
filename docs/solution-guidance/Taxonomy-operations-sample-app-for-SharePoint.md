@@ -1,25 +1,23 @@
 ---
 title: Taxonomy operations sample SharePoint Add-in
-description: 
+description: As part of your Enterprise Content Management (ECM) strategy, you can create and read taxonomy data on a SharePoint list.
 ms.date: 5/2/2018
 ---
+
 # Taxonomy operations sample SharePoint Add-in
 
-As part of your Enterprise Content Management (ECM) strategy, you can create and read taxonomy data on a SharePoint list.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
+The Core.MMS sample console application shows you how to interact with the SharePoint managed metadata service to create and retrieve terms, term sets, and groups. This sample also runs in a provider-hosted add-in, such as an ASP.NET MVC web application. 
 
-The Core.MMS sample console application shows you how to interact with the SharePoint managed metadata service to create and retrieve terms, term sets, and groups. This sample will also run in a provider-hosted app, such as an ASP.NET MVC web application. Use this solution if you want to migrate terms between SharePoint farms or display terms in your custom app.   
+Use this solution if you want to migrate terms between SharePoint farms or display terms in your custom add-in.   
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
 To get started, download the [Core.MMS](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
     
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-Before you run this app, you'll need:
+Before you run this add-in, you'll need:
 
 - The URL of your SharePoint site.
     
@@ -37,14 +35,14 @@ To assign permissions to the term store:
     
   3. In  **Term Store Administrators**, enter the organizational account that requires term store administrator permissions.
 
-## Using the Core.MMS sample app
+## Using the Core.MMS sample add-in
 <a name="sectionSection1"> </a>
 
-When you start the app, you see a console application similar to Figure 2. You are prompted to enter the URL of your SharePoint 2013 or SharePoint Online site and your credentials. 
+When you start the add-in, you see a console application similar to Figure 2. You are prompted to enter the URL of your SharePoint 2013 or SharePoint Online site and your credentials. 
 
 **Figure 2. Core.MMS console application**
 
-![Screenshot of the Core.MMS sample app console, prompting for the SharePoint user name and password.](media/5ddaf3f1-2d7c-4818-9a9a-b0e905226db5.png)
+![Screenshot of the Core.MMS sample add-in console, prompting for the SharePoint user name and password.](media/5ddaf3f1-2d7c-4818-9a9a-b0e905226db5.png)
 
 After you supply the SharePoint URL and your credentials, user authentication occurs. The following code performs user authentication in SharePoint Online.
 

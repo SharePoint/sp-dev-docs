@@ -6,7 +6,7 @@ ms.date: 5/2/2018
 
 # AutoTagging sample SharePoint Add-in
 
-The ECM.AutoTagging sample add-in shows you how to use a provider-hosted add-in to automatically tag content added to a SharePoint library with data sourced from a custom user profile property. 
+The ECM.AutoTagging sample shows you how to use a provider-hosted add-in to automatically tag content added to a SharePoint library with data sourced from a custom user profile property. 
 
 This add-in uses remote event receivers, hosted on an Azure website, to:   
 

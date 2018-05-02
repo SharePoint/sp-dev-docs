@@ -6,7 +6,9 @@ ms.date: 5/2/2018
 
 # Information management sample SharePoint Add-in
 
-The Core.InformationManagement sample add-in shows you how to use an ASP.NET provider-hosted SharePoint add-in to get and set a site policy on a site. Use this solution if you want to:
+The Core.InformationManagement sample shows you how to use an ASP.NET provider-hosted add-in to get and set a site policy on a site. 
+
+Use this solution if you want to:
 
 - Apply policy settings during your custom site provisioning process. 
 - Create a new or modify an existing site policy.
@@ -34,7 +36,7 @@ When you start the Information Management add-in, the start page displays the fo
 
 From your SharePoint site, you can go to the add-in, which runs on the remote host, by choosing **Recent** > **Core.InformationManagement**. To return to your SharePoint site, choose **Back to Site**.
 
-The Pages\Default.aspx.cs file in the Core.InformationManagementWeb project contains the code for the page displayed in Figure 1. 
+The Pages\Default.aspx.cs file in the Core.InformationManagementWeb project contains the code for the page displayed in the previous figure. 
 
 The following code in the **Page_Load** method of the Default.aspx.cs page fetches and displays the closure and expiration dates of the site, based on the applied site policy. This code calls the **GetSiteExpirationDate** and **GetSiteCloseDate** extension methods of the OfficeDevPnP.Core project.
     

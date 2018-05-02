@@ -1,25 +1,22 @@
 ---
 title: Bulk upload documents sample SharePoint Add-in
-description: 
+description: As part of your Enterprise Content Management (ECM) strategy, you can bulk upload documents to document libraries, including OneDrive for Business.
 ms.date: 5/2/2018
 ---
-# Bulk upload documents sample SharePoint Add-in
 
-As part of your Enterprise Content Management (ECM) strategy, you can bulk upload documents to document libraries, including OneDrive for Business.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
+# Bulk upload documents sample SharePoint Add-in
 
 > [!NOTE] 
 > The sample uploads one file to a document library. To upload multiple files, you'll need to extend the sample.
 
-This add-in uses a console application to upload files by using REST API calls. Configuration settings are specified in an XML and a CSV file. Use this solution if you want to:
+The Core.BulkDocumentUploader sample add-in uses a console application to upload files by using REST API calls. Configuration settings are specified in an XML and a CSV file. 
 
-- Upload files to SharePoint Online.
-    
+Use this solution if you want to:
+
+- Upload files to SharePoint Online. 
 - Migrate to Office 365 and use a custom migration tool to move your files.
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
 To get started, download the [Core.BulkDocumentUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 

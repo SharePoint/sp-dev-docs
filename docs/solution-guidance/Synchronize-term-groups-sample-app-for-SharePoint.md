@@ -1,28 +1,22 @@
 ---
 title: Synchronize term groups sample SharePoint Add-in
-description: 
+description: As part of your Enterprise Content Management (ECM) strategy, you can synchronize term groups across multiple SharePoint term stores.
 ms.date: 5/2/2018
 ---
+
 # Synchronize term groups sample SharePoint Add-in
 
-As part of your Enterprise Content Management (ECM) strategy, you can synchronize term groups across multiple SharePoint term stores.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-
-The [Core.MMSSync](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS) sample shows you how to use a provider-hosted add-in to synchronize a source and target taxonomy. This add-in synchronizes two term stores in the managed metadata service - a source and a target term store. The following objects are used to synchronize term groups:
+The Core.MMSSync sample shows you how to use a provider-hosted add-in to synchronize a source and target taxonomy. This add-in synchronizes two term stores in the managed metadata service - a source and a target term store. The following objects are used to synchronize term groups:
 
 - **TermStore** 
-
 - **ChangeInformation** 
 
 Use this solution if you want to:
 
 - Synchronize two taxonomies. For example, you might use both SharePoint Online and SharePoint Server 2013 on-premises for different sets of data, but they use the same taxonomy.
-    
 - Synchronize changes made to a specific term group only.
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
 To get started, download the [Core.MMSSync](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 

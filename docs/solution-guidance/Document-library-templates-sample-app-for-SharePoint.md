@@ -6,7 +6,9 @@ ms.date: 5/2/2018
 
 # Document library templates sample SharePoint Add-in
 
-The ECM.DocumentLibraries sample shows you how to use a provider-hosted add-in to create a list or document library, assign a content type to it, and remove the default content type. Use this solution if you want to:    
+The ECM.DocumentLibraries sample shows you how to use a provider-hosted add-in to create a list or document library, assign a content type to it, and remove the default content type. 
+
+Use this solution if you want to:    
 
 - Create a list or document library and apply a default content type.
 - Assert greater control over the addition, maintenance, or implementation of localized versions of your custom fields.
