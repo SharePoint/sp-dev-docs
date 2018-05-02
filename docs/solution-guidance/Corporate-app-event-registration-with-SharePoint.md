@@ -111,6 +111,8 @@ The Models\DataInitializer.cs file also defines the XML for both web parts that 
 
 ```
 
+<br/>
+
 **Add the web parts to the page**
 
 ```cs
