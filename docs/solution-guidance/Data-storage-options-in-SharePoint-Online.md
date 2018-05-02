@@ -115,7 +115,9 @@ Also, you need to deploy the Northwind database to Microsoft Azure.
 
 The Notes list scenario, which uses a SharePoint list on an add-in web, shows how lists perform in a SharePoint Add-in web. The Notes list is created in the add-in web with a title and description field. The SharePoint REST API queries the Notes list and returns all the notes based on a customer ID.
 
-Using lists in the add-in web has one important advantage over other storage solutions: you can use simple SharePoint REST API calls to query data. However, there are some disadvantages:
+Using lists in the add-in web has one important advantage over other storage solutions: you can use simple SharePoint REST API calls to query data. 
+
+However, there are some disadvantages:
 
 - To update list metadata, you must update and redeploy the add-in.
 - To update the data structure, you must rewrite application logic for storing and updating data.  
@@ -244,26 +246,20 @@ The Support Cases scenario displays data that is stored in a SharePoint list in 
 
 There are several advantages to using this approach:
 
-- You can query data easily by using simple REST queries or client object model code.
-    
+- You can query data easily by using simple REST queries or client object model code. 
 - You can search for data in SharePoint.
-    
 - You can update the list metadata and create new views for a list without updating and redeploying the add-in. These changes won't affect the behavior of your add-in.
-    
 - Lists on the host web are not deleted when you uninstall your add-in, unless the add-in uses the **AppUninstalled** event to remove the list and/or delete the data.
     
 Offsetting these advantages are the following disadvantages:
 
-- The host web limits both the amount of data you can store in lists and the size of the query results. If your business needs require storing and/or querying large data sets, this is not a recommended approach.
-    
-- For complex queries, lists do not perform as well as databases.
-    
+- The host web limits both the amount of data you can store in lists and the size of the query results. If your business needs require storing and/or querying large data sets, this is not a recommended approach.  
+- For complex queries, lists do not perform as well as databases. 
 - For backing up and restoring data, lists do not perform as well as databases.
     
 The data for this scenario is stored in a SharePoint list deployed to the host web. Data is retrieved and displayed by means of the following: 
 
-- A [Content Search web part](../general-development/content-search-web-part-in-sharepoint.md).
-    
+- A [Content Search web part](../general-development/content-search-web-part-in-sharepoint.md). 
 - An app part that's implemented as a Model-View-Controller view. 
     
 The code in this view uses REST queries to retrieve information from the list, while the Content Search web part uses the SharePoint Search Service to retrieve the data. The two approaches demonstrate the significant advantage of this option: you can use both the Search Service and the REST/CSOM APIs to retrieve information from a list on the host web.
@@ -273,6 +269,8 @@ When you select a customer from the support cases list, you see the support case
 **User interface for the support case scenario**
 
 ![A screenshot that shows the UI for interacting with the support case scenario](media/eac41f5c-90b7-4fe3-b47e-0d65b79cbf1c.png)
+
+<br/>
 
 The Content Search web part deployed by this add-in uses a custom display template. The following figure shows where in the **Assets** directory of the web project you can find the web part and the associated template.
 
@@ -315,16 +313,11 @@ The Customer Dashboard scenario uses JQuery AJAX to invoke the NorthWind OData s
 
 The following are the advantages to using this approach:
 
-- A given web service can support multiple add-ins.
-    
+- A given web service can support multiple add-ins.   
 - You can update your web service without having to update and redeploy your add-in.
-    
 - Your SharePoint and web service installations do not affect one another.
-    
 - Hosting services such as Microsoft Azure enable you to scale your web services.
-    
 - You can back up and restore information on your web services separately from your SharePoint site.
-    
 - You don't lose data when uninstalling your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
 The customer dashboard scenario stores its data in a web service that implements the OData standard to retrieve data. In the customer dashboard interface, you select a customer from a drop-down menu, and customer information displays in the **Customer Info** pane.
@@ -364,15 +357,10 @@ The Customer Service Survey scenario allows a customer service representative to
 The following are the advantages to using this approach:
 
 - Azure Table Storage supports more than one add-in.
-    
 - You can update Azure Table Storage without having to update and redeploy your add-in.
-    
 - Your SharePoint installation and Azure Table Storage have no effect on each other's performance.
-    
 - Azure Table Storage scales easily.
-    
 - You can back up and restore your Azure Table Storage separately from your SharePoint site.
-    
 - You don't lose data when you uninstall your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
 The add-in's interface displays the current user's survey rating in the center page. If that Azure Table Storage is empty, the add-in adds some information to the table before it displays it.
@@ -468,15 +456,10 @@ The Customer Call Queue scenario lists callers in the support queue and simulate
 The following are the advantages to using this approach:
 
 - Azure Queue Storage supports more than one add-in.
-    
 - You can update Azure Queue Storage without having to update and redeploy your add-in.
-    
 - Your SharePoint installation and Azure Queue Storage have no effect on each other's performance.
-    
 - Azure Queue Storage scales easily.
-    
 - You can back up and restore your Azure Queue Storage separately from your SharePoint site.
-    
 - You don't lose data when you uninstall your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
 The add-in's interface displays a support call queue in the center pane when you choose the **Call Queue** link. You can simulate receiving calls (adding a call to the queue) by choosing **Simulate Calls**, and you can simulate taking the oldest call (removing a call from the queue) by choosing the **Take Call** action associated with a given call.
@@ -605,17 +588,11 @@ The Recent Orders scenario uses a direct call to the Northwind Azure SQL Databas
 The following are the advantages to using this approach:
 
 - A database can support more than one add-in.
-    
 - You can update your database schema without having to update and redeploy your add-in, as long as the schema changes don't affect the queries in your add-in.
-    
 - A relational database can support many-to-many relationships and thus support more complex business scenarios.
-    
 - You can use database design tools to optimize the design of your database.
-    
 - Relational databases provide better performance than the other options when you need to execute complex operations in your queries, such as calculations and joins.
-    
 - An Azure SQL Database allows you to import and export data easily, so it's easier to manage and move your data.
-    
 - You don't lose any data when you uninstall your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
 The recent orders interface works much like the customer dashboard interface. You choose the **Recent Orders** link in the left column, and then choose a customer from the drop-down menu at the top of the center pane. A list of orders from that customer appear in the center pane.
