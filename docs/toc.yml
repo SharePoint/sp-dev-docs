@@ -1438,7 +1438,7 @@
     - name: 'Supporting % and # in file and folder with the ResourcePath API'
       href: solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
   - name: Localization solutions
-    href: solution-guidance/localization-solutions-for-sharepoint-2013-and-sharepoint-online.md
+    href: solution-guidance/localization-solutions-for-sharepoint.md
     items:
     - name: Use localization features
       href: solution-guidance/Use-localization-features-in-Office-365-sample-app.md
