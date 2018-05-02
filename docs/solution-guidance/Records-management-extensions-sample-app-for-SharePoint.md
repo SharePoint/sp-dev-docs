@@ -1,9 +1,9 @@
 ---
-title: Records management extensions sample app for SharePoint
+title: Records management extensions sample SharePoint Add-in
 description: 
 ms.date: 5/2/2018
 ---
-# Records management extensions sample app for SharePoint
+# Records management extensions sample SharePoint Add-in
 
 As part of your Enterprise Content Management (ECM) strategy, you can enable and change in-place records management settings on your SharePoint sites and lists.
 
@@ -18,7 +18,10 @@ Use this solution if you want to:
 ## Before you begin
 <a name="sectionSection0"> </a>
 
-To get started, download the  [ECM.RecordsManagement](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.RecordsManagement) sample app from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [ECM.RecordsManagement](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.RecordsManagement) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 Before you run this app:
 
@@ -64,8 +67,7 @@ Scenario 1 addresses in-place records management features and settings for sites
 
 The following code activates or deactivates the In-Place Records Management feature on the site collection. The  **DisableInPlaceRecordsManagementFeature** and **EnableSiteForInPlaceRecordsManagement** methods are part of the AppModelExtensions\RecordsManagementExtensions.cs file in the [OfficeDevPnP.Core](https://github.com/SharePoint/PnP/tree/master/OfficeDevPnP.Core).
     
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 
 ```csharp
 protected void btnToggleIPRStatus_Click(object sender, EventArgs e)

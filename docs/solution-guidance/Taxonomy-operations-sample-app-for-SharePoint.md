@@ -1,9 +1,9 @@
 ---
-title: Taxonomy operations sample app for SharePoint
+title: Taxonomy operations sample SharePoint Add-in
 description: 
 ms.date: 5/2/2018
 ---
-# Taxonomy operations sample app for SharePoint
+# Taxonomy operations sample SharePoint Add-in
 
 As part of your Enterprise Content Management (ECM) strategy, you can create and read taxonomy data on a SharePoint list.
     
@@ -14,7 +14,10 @@ The Core.MMS sample console application shows you how to interact with the Share
 ## Before you begin
 <a name="sectionSection0"> </a>
 
-To get started, download the  [Core.MMS](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS) sample app from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.MMS](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+    
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 Before you run this app, you'll need:
 
@@ -44,9 +47,7 @@ When you start the app, you see a console application similar to Figure 2. You a
 ![Screenshot of the Core.MMS sample app console, prompting for the SharePoint user name and password.](media/5ddaf3f1-2d7c-4818-9a9a-b0e905226db5.png)
 
 After you supply the SharePoint URL and your credentials, user authentication occurs. The following code performs user authentication in SharePoint Online.
-    
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 
 ```csharp
 ClientContext cc = new ClientContext(siteUrl);

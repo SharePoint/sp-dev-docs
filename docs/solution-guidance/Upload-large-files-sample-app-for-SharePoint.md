@@ -1,9 +1,9 @@
 ---
-title: Upload large files sample add-in for SharePoint
+title: Upload large files sample SharePoint Add-in
 description: 
 ms.date: 5/2/2018
 ---
-# Upload large files sample add-in for SharePoint
+# Upload large files sample SharePoint Add-in
 
 Upload files larger than 2MB to SharePoint and SharePoint Online using SaveBinaryDirect, ContentStream, StartUpload, ContinueUpload and FinishUpload. 
 
@@ -31,15 +31,16 @@ The following table lists the file upload methods that are available and describ
 ## Before you begin
 <a name="sectionSection0"> </a>
 
-To get started, download the  [Core.LargeFileUpload](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.LargeFileUpload](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ## Using the Core.LargeFileUpload sample app
 <a name="sectionSection1"> </a>
 
 When you start this code sample, a console application appears. You must supply a SharePoint Online site collection URL and your logon credentials for Office 365. After authentication, the console application displays an exception. The exception occurs when the  **UploadDocumentContent** method in FileUploadService.cs tries to use the **FileCreationInformation.Content** property to upload a file that is larger than 2 MB. **UploadDocumentContent** also creates a document library called **Docs** if it does not already exist. The **Docs** document library is used later in this code sample.
 
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```csharp
 public void UploadDocumentContent(ClientContext ctx, string libraryName, string filePath)

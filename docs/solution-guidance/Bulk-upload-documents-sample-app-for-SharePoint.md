@@ -1,9 +1,9 @@
 ---
-title: Bulk upload documents sample add-in for SharePoint
+title: Bulk upload documents sample SharePoint Add-in
 description: 
 ms.date: 5/2/2018
 ---
-# Bulk upload documents sample add-in for SharePoint
+# Bulk upload documents sample SharePoint Add-in
 
 As part of your Enterprise Content Management (ECM) strategy, you can bulk upload documents to document libraries, including OneDrive for Business.
     
@@ -21,7 +21,10 @@ This add-in uses a console application to upload files by using REST API calls. 
 ## Before you begin
 <a name="sectionSection0"> </a>
 
-To get started, download the  [Core.BulkDocumentUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.BulkDocumentUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 Before you run the code sample, do the following:
 
@@ -54,8 +57,6 @@ Before you run the code sample, do the following:
 
 From the  **Main** method in Program.cs, the **RecurseActions** method calls the **Run** method in OneDriveMapper.cs. The **Run** method gets the location of the file to upload from SharePointSites.csv, and then calls the **IterateCollection** method.
 
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```csharp
 public override void Run(BaseAction parentAction, DateTime CurrentTime, LogHelper logger)

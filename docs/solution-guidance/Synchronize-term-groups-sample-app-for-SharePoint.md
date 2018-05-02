@@ -1,9 +1,9 @@
 ---
-title: Synchronize term groups sample add-in for SharePoint
+title: Synchronize term groups sample SharePoint Add-in
 description: 
 ms.date: 5/2/2018
 ---
-# Synchronize term groups sample add-in for SharePoint
+# Synchronize term groups sample SharePoint Add-in
 
 As part of your Enterprise Content Management (ECM) strategy, you can synchronize term groups across multiple SharePoint term stores.
     
@@ -24,7 +24,10 @@ Use this solution if you want to:
 ## Before you begin
 <a name="sectionSection0"> </a>
 
-To get started, download the  [Core.MMSSync](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.MMSSync](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 Before you run this add-in, you'll need permission to access the term store in the managed metadata service. Figure 1 shows the Office 365 admin center where these permissions are assigned.
 
@@ -84,8 +87,6 @@ You can set the  _TermGroupExclusions_,  _TermGroupToCopy_, and  _TermSetInclusi
 
 The following code shows the  **CopyNewTermGroups** and **CreateNewTargetTermGroup** methods in MMSSyncManager.cs.
 
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```csharp
 public bool CopyNewTermGroups(ClientContext sourceContext, ClientContext targetContext, List<string> termGroupExclusions = null, string termGroupToCopy = null)

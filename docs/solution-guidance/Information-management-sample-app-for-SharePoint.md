@@ -1,9 +1,9 @@
 ---
-title: Information management sample add-in for SharePoint
+title: Information management sample SharePoint Add-in
 description: 
 ms.date: 5/2/2018
 ---
-# Information management sample add-in for SharePoint
+# Information management sample SharePoint Add-in
 As part of your Enterprise Content Management (ECM) strategy, you can get or set site policies to manage the lifecycle of your SharePoint site.
     
 _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
@@ -19,7 +19,10 @@ The [Core.InformationManagement](https://github.com/SharePoint/PnP/tree/master/S
 ## Before you begin
 <a name="sectionSection0"> </a>
 
-To get started, download the  [Core.InformationManagement](https://github.com/SharePoint/PnP/tree/master/Samples/Core.InformationManagement) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.InformationManagement](https://github.com/SharePoint/PnP/tree/master/Samples/Core.InformationManagement) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 We recommend that you create at least one site policy, and assign it to your site before you run this add-in. Otherwise, the add-in will start without displaying sample data. For more information, see  [Overview of site policies in SharePoint 2013](http://technet.microsoft.com/en-US/library/jj219569%28v=office.15%29.aspx).
 
@@ -46,8 +49,7 @@ The Pages\Default.aspx.cs file in the Core.InformationManagementWeb project cont
 
 The following code in the  **Page_Load** method of the Default.aspx.cs page fetches and displays the closure and expiration dates of the site, based on the applied site policy. This code calls the **GetSiteExpirationDate** and **GetSiteCloseDate** extension methods of the OfficeDevPnP.Core project.
     
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 
 ```csharp
 // Get site expiration and closure dates.

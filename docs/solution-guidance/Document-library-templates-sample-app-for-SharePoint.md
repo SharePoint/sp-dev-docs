@@ -1,30 +1,26 @@
 ---
-title: Document library templates sample add-in for SharePoint
-description: 
+title: Document library templates sample SharePoint Add-in
+description: As part of your Enterprise Content Management (ECM) strategy, you can implement a custom document library template and customize site columns, site content types, taxonomy fields, version settings, and the default document content type.
 ms.date: 5/2/2018
 ---
-# Document library templates sample add-in for SharePoint
 
-As part of your Enterprise Content Management (ECM) strategy, you can implement a custom document library template, and customize site columns, site content types, taxonomy fields, version settings, and the default document content type.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
+# Document library templates sample SharePoint Add-in
 
-The [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries) sample shows you how to use a provider-hosted add-in to create a list or document library, assign a content type to it, and remove the default content type. Use this solution if you want to:    
+The ECM.DocumentLibraries sample shows you how to use a provider-hosted add-in to create a list or document library, assign a content type to it, and remove the default content type. Use this solution if you want to:    
 
 - Create a list or document library and apply a default content type.
-    
 - Assert greater control over the addition, maintenance, or implementation of localized versions of your custom fields.
-    
 - Remove the default content type on a list or library.
-    
 - Apply library configuration settings when you create a list or library.
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
-To get started, download the  [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 
-Users accessing the ECM.DocumentLibraries add-in must have permissions to manage lists. The  **DoesUserHavePermission** method in Default.aspx.cs checks the user's permissions to ensure they can manage lists. If the user does not have permissions to manage lists, the add-in presents an error message to the user.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
+Users accessing the ECM.DocumentLibraries sample add-in must have permissions to manage lists. The **DoesUserHavePermission** method in Default.aspx.cs checks the user's permissions to ensure that they can manage lists. If the user does not have permissions to manage lists, the add-in presents an error message to the user.
 
 ```csharp
 private bool DoesUserHavePermission()
@@ -43,18 +39,16 @@ private bool DoesUserHavePermission()
 ```
 
 ## Using the ECM.DocumentLibraries sample add-in 
-<a name="sectionSection1"> </a>
 
-When you start this add-in , the start page displays as shown in Figure 1. The ECM.DocumentLibraries start page looks like the page to add a new document library when you select  **Site Contents** > **add an app** > **Document Library** > **Advanced Options** - with one difference. When you start the add-in , the Document Template dropdown list displays custom document library template, IT Document and Contoso Document. When the user chooses **Create**, the selected custom content type is assigned to the new document library. 
+When you start this add-in, the start page displays as shown the following figure. The ECM.DocumentLibraries start page looks like the page to add a new document library when you select **Site Contents** > **Add an app** > **Document Library** > **Advanced Options**, with one difference. When you start the add-in, the Document Template list displays a custom document library template, IT Document, and Contoso Document. When the user chooses **Create**, the selected custom content type is assigned to the new document library. 
 
-**Figure 1. Start page of the ECM.DocumentLibraries add-in **
+**Start page of the ECM.DocumentLibraries sample add-in**
 
-![Screenshot that shows the ECM.DocumentLibraries add-in start page, with a Document Template drop-down box that lists IT Document as a choice.](media/d58b9d12-808e-4f2b-9065-31e6d735dbaa.png)
+![Screenshot that shows the ECM.DocumentLibraries sample add-in start page, with a Document Template drop-down box that lists IT Document as a choice.](media/d58b9d12-808e-4f2b-9065-31e6d735dbaa.png)
 
-When users choose  **Create**, the  **CreateLibrary_Click** method in Default.aspx.cs checks the selected default template and makes calls to either the **CreateITDocumentLibrary** or **CreateContosoDocumentLibrary** method in ContentTypeManager.cs, as shown in the following code.
-    
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+<br/>
+
+When users choose **Create**, the **CreateLibrary_Click** method in Default.aspx.cs checks the selected default template and makes calls to either the **CreateITDocumentLibrary** or **CreateContosoDocumentLibrary** method in ContentTypeManager.cs, as shown in the following code.
 
 ```csharp
 protected void CreateLibrary_Click(object sender, EventArgs e)
@@ -90,15 +84,14 @@ protected void CreateLibrary_Click(object sender, EventArgs e)
 
 ```
 
-The  **CreateContosoDocumentLibrary** method then performs the following tasks, as shown in the next code example:
+<br/>
 
-1. Creates custom fields in the Managed Metadata Service.
-    
-2. Creates a content type. 
-    
-3. Associates the custom fields with the content types.
-    
-4. Creates the document library with the content type.
+The **CreateContosoDocumentLibrary** method then performs the following tasks, as shown in the next code example:
+
+- Creates custom fields in the Managed Metadata Service.
+- Creates a content type. 
+- Associates the custom fields with the content types.
+- Creates the document library with the content type.
 
 ```csharp
         public void CreateContosoDocumentLibrary(ClientContext ctx, Library library)
@@ -132,7 +125,9 @@ The  **CreateContosoDocumentLibrary** method then performs the following tasks, 
 
 ```
 
-**CreateContosoDocumentLibrary** calls the **CreateTaxonomyField** method, which is part of the OfficeDevPnP.Core. **CreateTaxonomyField** creates a field in the managed metadata service from the provider-hosted add-in .
+<br/>
+
+**CreateContosoDocumentLibrary** calls the **CreateTaxonomyField** method, which is part of the OfficeDevPnP.Core. **CreateTaxonomyField** creates a field in the managed metadata service from the provider-hosted add-in.
 
 ```csharp
 public static Field CreateTaxonomyField(this Web web, Guid id, string internalName, string displayName, string group, TermSet termSet, bool multiValue = false)
@@ -172,7 +167,9 @@ public static Field CreateTaxonomyField(this Web web, Guid id, string internalNa
 		}
 ```
 
-**CreateContosoDocumentLibrary** calls the **CreateContentType** method which is part of OfficeDevPnP.Core. **CreateContentType** creates a new content type.
+<br/>
+
+**CreateContosoDocumentLibrary** calls the **CreateContentType** method, which is part of OfficeDevPnP.Core. **CreateContentType** creates a new content type.
 
 ```csharp
 public static ContentType CreateContentType(this Web web, string name, string description, string id, string group, ContentType parentContentType = null)
@@ -200,6 +197,8 @@ public static ContentType CreateContentType(this Web web, string name, string de
 
 ```
 
+<br/>
+
 **CreateContosoDocumentLibrary** calls the **AddFieldToContentTypeById** method, which is part of OfficeDevPnP.Core. **AddFieldToContentTypeById** associates a field with a content type.
 
 ```csharp
@@ -218,6 +217,8 @@ public static void AddFieldToContentTypeById(this Web web, string contentTypeID,
             AddFieldToContentType(web, ct, fld, required, hidden);
         }
 ```
+
+<br/>
 
 **CreateContosoDocumentLibrary** calls the **CreateLibrary** method in ContentTypeManager.cs to create the document library. The **CreateLibrary** method assigns library settings such as the document library's description, document versioning, and associated content types.
 
@@ -250,6 +251,8 @@ private void CreateLibrary(ClientContext ctx, Library library, string associateC
         }
 ```
 
+<br/>
+
 **CreateLibrary** calls **RemoveContentTypeByName** in ListExtensions.cs, which is part of OfficeDevPnP.Core. **RemoveContentTypeByName** removes the default content type on the document library.
 
 ```csharp
@@ -278,13 +281,15 @@ private void CreateLibrary(ClientContext ctx, Library library, string associateC
         }
 ```
 
-After you create the document library, go to the  **Library settings** on your document library to review the name, description, document versioning setting, content type, and custom fields the add-in assigned to your document library.
+<br/>
 
-**Figure 2. Library settings applied by the add-in **
+After you create the document library, go to the **Library settings** on your document library to review the name, description, document versioning setting, content type, and custom fields that the add-in assigned to your document library.
+
+**Library settings applied by the add-in**
 
 ![Screenshot of a Document Library Setting page, with Name, Web Address, and Description fields highlighted.](media/aedf5107-bacb-4872-8ad4-8e66b1afead8.png)
 
 ## See also
     
-- [ECM.Autotagging sample app](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.Autotagging)
+- [ECM.Autotagging sample add-in](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.Autotagging)
 - [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)
