@@ -286,14 +286,8 @@ public void Save(Web web) {
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [Composite business add-ins for SharePoint 2013 and SharePoint Online](composite-business-apps-for-sharepoint.md)
     
--  [Core.ModifyPages sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ModifyPages)
-    
--  [Provisioning.Pages sample](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages)
-    
--  [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)
-    
-- [Composite business apps for SharePoint](composite-business-apps-for-sharepoint.md)
+- [Core.ModifyPages sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ModifyPages)    
+- [Provisioning.Pages sample](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages)   
+- [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)   
+- [Composite business SharePoint Add-ins](composite-business-apps-for-sharepoint.md)

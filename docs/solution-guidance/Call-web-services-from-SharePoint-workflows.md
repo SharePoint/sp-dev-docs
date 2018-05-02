@@ -461,9 +461,6 @@ When you open this project in Visual Studio, you'll see that it is a simple, gen
 You have now deployed the workflow to the host web and associated it with a list on the host web. You can trigger a workflow manually, or you can update the workflow in Visual Studio so that it is triggered in other ways.
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [Composite business add-ins for SharePoint 2013 and SharePoint Online](composite-business-apps-for-sharepoint.md)
     
 -  [Debugging SharePoint 2013 workflows using Visual Studio 2013](http://blogs.msdn.com/b/officeapps/archive/2013/10/30/debugging-sharepoint-2013-workflows-using-visual-studio-2013.aspx)
     
@@ -475,4 +472,4 @@ You have now deployed the workflow to the host web and associated it with a list
     
 -  [Workflow.CallCustomService](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallCustomService)
 
-- [Composite business apps for SharePoint](composite-business-apps-for-sharepoint.md)
+- [Composite business SharePoint Add-ins](composite-business-apps-for-sharepoint.md)
