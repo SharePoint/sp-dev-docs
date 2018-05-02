@@ -1435,7 +1435,7 @@
       href: solution-guidance/Upload-large-files-sample-app-for-SharePoint.md
     - name: Synchronize term groups
       href: solution-guidance/Synchronize-term-groups-sample-app-for-SharePoint.md
-    - name: 'Support % and # in file and folder with the ResourcePath API'
+    - name: 'Support % and # in files and folders with ResourcePath API'
       href: solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
   - name: Localization solutions
     href: solution-guidance/localization-solutions-for-sharepoint.md
