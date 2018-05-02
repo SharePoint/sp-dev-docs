@@ -1409,13 +1409,13 @@
     href: solution-guidance/composite-business-apps-for-sharepoint.md
     items:
     - name: Migrate InfoPath forms
-      href: solution-guidance/Migrate-InfoPath-forms-to-SharePoint.md
+      href: solution-guidance/migrate-infopath-forms-to-sharepoint.md
     - name: Data storage options
-      href: solution-guidance/Data-storage-options-in-SharePoint-Online.md
-    - name: Corporate event app integration
-      href: solution-guidance/Corporate-app-event-registration-with-SharePoint.md
+      href: solution-guidance/data-storage-options-in-sharepoint-online.md
+    - name: Corporate event add-in integration
+      href: solution-guidance/corporate-app-event-registration-with-sharepoint.md
     - name: Call web services from workflows
-      href: solution-guidance/Call-web-services-from-SharePoint-workflows.md
+      href: solution-guidance/call-web-services-from-sharepoint-workflows.md
   - name: ECM solutions
     href: solution-guidance/Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md
     items:

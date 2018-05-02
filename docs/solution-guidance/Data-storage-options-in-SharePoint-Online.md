@@ -8,24 +8,22 @@ ms.date: 5/1/2018
 
 This article describes the [Core.DataStorageModels](https://github.com/SharePoint/PnP/tree/master/Samples/Core.DataStorageModels) sample app, which shows you each of the following data storage options and the advantages and disadvantages of each:
 
-- SharePoint list on the host web   
-- SharePoint list on the add-in web  
-- Azure SQL Database  
-- Azure Queue Storage  
-- Azure Table Storage  
+- SharePoint list on the add-in web
+- SharePoint list on the host web 
 - External web service
-    
-The Core.DataStorageModels sample app is a provider-hosted add-in written in C# and JavaScript that deploys a number of SharePoint artifacts (lists, add-in part, web part) to both the host web and the add-in web. It interacts with SharePoint lists on the add-in web and host web, and also makes calls to an Azure SQL Database, Azure Queue Storage, and Azure Table Storage, and a remote web service that implements OData. This sample uses the Model-View-Controller (MVC) pattern.
+- Azure Table Storage 
+- Azure Queue Storage   
+- Azure SQL Database  
+ 
+The Core.DataStorageModels sample app is a provider-hosted add-in written in C# and JavaScript that deploys a number of SharePoint artifacts (lists, add-in part, web part) to both the host web and the add-in web. It interacts with SharePoint lists on the add-in web and host web, and also makes calls to Azure SQL Database, Azure Queue Storage, and Azure Table Storage, and a remote web service that implements OData. This sample uses the Model-View-Controller pattern.
 
 The Core.DataStorageModels sample app applies each data storage option to a specific function for which the option is well-suited, as described in the following table.
-
-<br/>
 
 |Sample app storage option|Used for|
 |:--|:--|
 |SharePoint list add-in web|Customer notes|
 |SharePoint list host web|Support cases|
-|Northwind OData service|Customers|
+|Northwind OData web service|Customers|
 |Azure Table Storage|CSR ratings|
 |Azure Queue Storage|Call queue|
 |Azure SQL Northwind database|Orders, order details, products|
@@ -64,7 +62,7 @@ Also, you need to deploy the Northwind database to Microsoft Azure.
 
     ![Shows the list of SQL databases](media/a6b097e4-5ad2-47df-9e31-ac0d699efd76.png)
 
-6. Choose **CONFIGURE**, and then choose the arrow in the lower-right corner to complete the configuration, and choose **SAVE**.
+6. Choose **CONFIGURE**, choose the arrow in the lower-right corner to complete the configuration, and then choose **SAVE**.
     
 7. Open SQL Server Management Studio on your local development computer, and create a new database named **NorthWind**.
     
@@ -72,7 +70,7 @@ Also, you need to deploy the Northwind database to Microsoft Azure.
     
 9. In a text editor of your choice, open the northwind.sql SQL script that is provided with the  [Core.DataStorageModels](https://github.com/SharePoint/PnP/tree/master/Samples/Core.DataStorageModels) sample.
     
-10. Copy the text in the northwind.sql file and paste it into the **SQL Query window** in the SQL Server Management Studio, and then choose **Execute**.
+10. Copy the text in the northwind.sql file and paste it into the **SQL Query** window in SQL Server Management Studio, and then choose **Execute**.
     
 11. In the **Object Explorer**, open the shortcut menu for (right-click) the **Northwind** database, select **Tasks**, and then select **Deploy Database to SQL Azure**.
     
@@ -100,20 +98,21 @@ Also, you need to deploy the Northwind database to Microsoft Azure.
     
 22. In the Visual Studio **Solution Explorer**, locate the Web.config file.
     
-23. In the Web.config file, locate the add `name="NorthWindEntities"` element and replace the existing connectionString value with the connection string information that you saved locally in step 19. 
+23. In the Web.config file, locate the add `name="NorthWindEntities"` element and replace the existing `connectionString` value with the connection string information that you saved locally in step 19. 
     
 	```XML
 	  <add name="NorthWindEntities" 
       connectionString="metadata=res://*/Northwind.csdl|res://*/Northwind.ssdl|res://*/Northwind.msl;provider=System.Data.SqlClient;provider connection string=&amp;quot;data source=<Your Server Here>.database.windows.net;initial catalog=NorthWind;user id=<Your Username Here>@<Your Server Here>;password=<Your Password Here>;MultipleActiveResultSets=True;App=EntityFramework&amp;quot;"
       providerName="System.Data.EntityClient" />
 	```
+
     <br/>
 
 24. Save the Web.config file.
 
 ## SharePoint list on the add-in web (Notes scenario)
 
-The Notes list scenario, which uses a SharePoint list on an add-in web, shows how lists perform in a SharePoint Add-in web. The Notes list is created in the add-in web with a title and description field. The SharePoint REST API queries the Notes list and returns all the notes based on a customer ID.
+The Notes scenario, which uses a SharePoint list on an add-in web, shows how lists perform in a SharePoint Add-in web. The Notes list is created in the add-in web with a title and description field. The SharePoint REST API queries the Notes list and returns all the notes based on a customer ID.
 
 Using lists in the add-in web has one important advantage over other storage solutions: you can use simple SharePoint REST API calls to query data. 
 
@@ -133,7 +132,9 @@ The code that underlies the Notes section of the customer dashboard uses REST qu
 
 The **View Notes List in App Web** link provides an out-of-the-box view of the list data.
 
-This add-in uses the Model-View-Controller (MVC) pattern. You can see the code for the notes scenario in the Views/CustomerDashboard/Notes.cshtml file. It uses simple REST calls to add and retrieve data. The following code retrieves notes from the Notes list for a specified customer.
+This add-in uses the Model-View-Controller pattern. You can see the code for the Notes scenario in the Views/CustomerDashboard/Notes.cshtml file. It uses simple REST calls to add and retrieve data. 
+
+The following code retrieves notes from the Notes list for a specified customer.
 
 ```csharp
 function getNotesAndShow() {
@@ -160,7 +161,7 @@ function getNotesAndShow() {
 
 <br/>
 
-The following code adds a note for a given customer to the notes list.
+The following code adds a note for a given customer to the Notes list.
 
 ```csharp
 function addNoteToList(note, customerID) {
@@ -228,7 +229,7 @@ To load enough data to exceed the data storage limit:
     When the Notes list is updated, a message appears at the top of the page that indicates how many list items (Notes) you added and how many are left to add.
     
     > [!NOTE] 
-    > The operation takes about one minute to run each time you choose the button. The end result of running the operation 11 times is shown the next figure.
+    > The operation takes about one minute to run each time you choose the button. The end result of running the operation 11 times is shown in the next figure.
 
 4. After you perform the operation 11 times, an error message occurs when you choose the button, as shown in the following figure.
 
@@ -242,7 +243,7 @@ To load enough data to exceed the data storage limit:
 
 ## SharePoint list on the host web (Support Cases scenario)
 
-The Support Cases scenario displays data that is stored in a SharePoint list in the host web. This scenario uses two different patterns to access and interact with the data. The first pattern includes the SharePoint Search Service and the Content-by-Search web part with a custom display template applied. The second pattern includes an app part (client web part) that displays an MVC view, which uses the **SP.RequestExecutor** class to call the SharePoint REST API.
+The Support Cases scenario displays data that is stored in a SharePoint list in the host web. This scenario uses two different patterns to access and interact with the data. The first pattern includes the SharePoint Search Service and the Content-by-Search web part with a custom display template applied. The second pattern includes an app part (client web part) that displays a Model-View-Controller view, which uses the **SP.RequestExecutor** class to call the SharePoint REST API.
 
 There are several advantages to using this approach:
 
@@ -266,9 +267,9 @@ The code in this view uses REST queries to retrieve information from the list, w
 
 When you select a customer from the support cases list, you see the support case data for that customer displayed in both the web part and the app part. The web part might not return content right away, because it can take up to 24 hours for the SharePoint Search Service to index the data. You can also choose the **View Support Cases List in Host Web** link to see a conventional view of the list data.
 
-**User interface for the support case scenario**
+**User interface for the Support Cases scenario**
 
-![A screenshot that shows the UI for interacting with the support case scenario](media/eac41f5c-90b7-4fe3-b47e-0d65b79cbf1c.png)
+![A screenshot that shows the UI for interacting with the Support Cases scenario](media/eac41f5c-90b7-4fe3-b47e-0d65b79cbf1c.png)
 
 <br/>
 
@@ -280,7 +281,7 @@ The Content Search web part deployed by this add-in uses a custom display templa
 
 <br/>
 
-The following JavaScript code that you'll find in the Views/SupportCaseAppPart\Index.cshtml file uses the cross-domain library to invoke a REST query on the SharePoint list on the host web. 
+The following JavaScript code that you'll find in the Views/SupportCaseAppPart/Index.cshtml file uses the cross-domain library to invoke a REST query on the SharePoint list on the host web. 
 
 ```csharp
 function execCrossDomainRequest() {
@@ -314,15 +315,15 @@ The Customer Dashboard scenario uses JQuery AJAX to invoke the NorthWind OData s
 The following are the advantages to using this approach:
 
 - A given web service can support multiple add-ins.   
-- You can update your web service without having to update and redeploy your add-in.
+- You can update your web service without having to update and redeploy your add-ins.
 - Your SharePoint and web service installations do not affect one another.
 - Hosting services such as Microsoft Azure enable you to scale your web services.
 - You can back up and restore information on your web services separately from your SharePoint site.
 - You don't lose data when uninstalling your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
-The customer dashboard scenario stores its data in a web service that implements the OData standard to retrieve data. In the customer dashboard interface, you select a customer from a drop-down menu, and customer information displays in the **Customer Info** pane.
+The Customer Dashboard scenario stores its data in a web service that implements the OData standard to retrieve data. In the customer dashboard interface, you select a customer from a drop-down menu, and customer information displays in the **Customer Info** pane.
 
-This UI page is a Model-View-Controller view. The display is defined in the Views/CustomerDashboard\Home.cshtml file. The underlying code is in the Scripts/CustomerDashboard.js file. The JavaScript code uses AJAX to query the Northwind web service. Because this is an OData service, the web service query consists of query string arguments attached to a URL that points to a web service endpoint. The service returns customer information in JSON format.
+This UI page is a Model-View-Controller view. The display is defined in the Views/CustomerDashboard/Home.cshtml file. The underlying code is in the Scripts/CustomerDashboard.js file. The JavaScript code uses AJAX to query the Northwind web service. Because this is an OData service, the web service query consists of query string arguments attached to a URL that points to a web service endpoint. The service returns customer information in JSON format.
 
 The following code runs when you choose the **Customer Dashboard** link. It retrieves all the customer names and IDs  to populate the drop-down menu.
 
@@ -352,7 +353,7 @@ $.get(url).done(getCustomersDone)
 
 ## Azure Table Storage (Customer Service Survey scenario)
 
-The Customer Service Survey scenario allows a customer service representative to see their rating based on customer surveys and uses Azure Table Storage and the Microsoft.WindowsAzure.Storage.Table.CloudTable API to store and interact with the data.
+The Customer Service Survey scenario allows a customer service representative to see their rating based on customer surveys and uses Azure Table Storage and the **Microsoft.WindowsAzure.Storage.Table.CloudTable** API to store and interact with the data.
 
 The following are the advantages to using this approach:
 
@@ -464,7 +465,7 @@ The following are the advantages to using this approach:
     
 The add-in's interface displays a support call queue in the center pane when you choose the **Call Queue** link. You can simulate receiving calls (adding a call to the queue) by choosing **Simulate Calls**, and you can simulate taking the oldest call (removing a call from the queue) by choosing the **Take Call** action associated with a given call.
 
-This page is a Model-View-Controller view that is defined in the Views\CallQueue\Home.cshmtl file. The Controllers\CallQueueController.cs file defines the **CallQueueController** class, which contains methods for retrieving all calls in the queue, adding a call to the queue (simulating a call), and removing a call from the queue (taking a call). Each of these methods calls methods defined in the Services\CallQueueService.cs file, which uses the Azure Queue Storage API to retrieve the underlying information in the storage queue.
+This page is a Model-View-Controller view that is defined in the Views/CallQueue/Home.cshtml file. The Controllers/CallQueueController.cs file defines the **CallQueueController** class, which contains methods for retrieving all calls in the queue, adding a call to the queue (simulating a call), and removing a call from the queue (taking a call). Each of these methods calls methods defined in the Services/CallQueueService.cs file, which uses the Azure Queue Storage API to retrieve the underlying information in the storage queue.
 
 ```csharp
 public class CallQueueController : Controller
@@ -505,7 +506,7 @@ public class CallQueueController : Controller
 
 <br/>
 
-The CallQueueService.cs file defines the **CallQueueService** class, which establishes the connection to the Azure Queue Storage. That class also contains the methods for adding, removing (dequeuing), and retrieving the calls from the queue.
+The CallQueueService.cs file defines the **CallQueueService** class, which establishes the connection to Azure Queue Storage. That class also contains the methods for adding, removing (dequeuing), and retrieving the calls from the queue.
 
 ```csharp
 public class CallQueueService
@@ -595,9 +596,9 @@ The following are the advantages to using this approach:
 - An Azure SQL Database allows you to import and export data easily, so it's easier to manage and move your data.
 - You don't lose any data when you uninstall your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
-The recent orders interface works much like the customer dashboard interface. You choose the **Recent Orders** link in the left column, and then choose a customer from the drop-down menu at the top of the center pane. A list of orders from that customer appear in the center pane.
+The recent orders interface works much like the customer dashboard interface. You choose the **Recent Orders** link in the left column, and then choose a customer from the drop-down menu at the top of the center pane. A list of orders from that customer appears in the center pane.
 
-This page is a Model-View-Controller view defined in the Views\CustomerDashboard\Orders.cshtml file. Code in the Controllers\CustomerDashboardController.cs file uses the [Entity Framework ](https://msdn.microsoft.com/en-us/library/aa937723(v=vs.113).aspx) to query the **Orders** table in your Azure SQL Database. The customer ID is passed by using a query string parameter in the URL that is passed when the user selects a customer from the drop-down menu. The query creates a join on the **Customer**, **Employee**, and **Shipper** tables. The query result is then passed to the Model-View-Controller view that displays the results.
+This page is a Model-View-Controller view defined in the Views/CustomerDashboard/Orders.cshtml file. Code in the Controllers/CustomerDashboardController.cs file uses the [Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723(v=vs.113).aspx) to query the **Orders** table in your Azure SQL Database. The customer ID is passed by using a query string parameter in the URL that is passed when the user selects a customer from the drop-down menu. The query creates a join on the **Customer**, **Employee**, and **Shipper** tables. The query result is then passed to the Model-View-Controller view that displays the results.
 
 The following code from the CustomerDashboardController.cs file performs the database query and returns the data to the view.
 
