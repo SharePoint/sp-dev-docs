@@ -1,10 +1,10 @@
 ---
-title: Localization solutions for SharePoint and SharePoint Online
+title: Localization solutions for SharePoint
 description: Localize content in your SharePoint site.
 ms.date: 4/24/2018
 ---
 
-# Localization solutions for SharePoint and SharePoint Online
+# Localization solutions for SharePoint
 
 The code samples described in this section show you how to use provider-hosted add-ins to localize site features and UI elements in your SharePoint solution. The articles in this section will help you get started with and walk you through the primary scenarios that each sample illustrates. 
 

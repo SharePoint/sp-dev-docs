@@ -1,6 +1,7 @@
 ---
 title: Synchronize term groups sample add-in for SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/2/2018
 ---
 # Synchronize term groups sample add-in for SharePoint
 
@@ -341,10 +342,7 @@ The following code shows how to perform a delete operation when a term group was
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)
-    
--  [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core)
-    
--  [Core.MMS sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS)
+- [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core) 
+- [Core.MMS sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS)
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

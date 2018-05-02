@@ -18,7 +18,7 @@ Solution guidance, including insights and details based on scenarios and functio
 |[OneDrive and SharePoint Online Multi-Geo scenarios](multigeo-introduction.md)| Preview the OneDrive and SharePoint Online Multi-Geo tenant, which allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 OneDrive and SharePoint Online tenancy to satisfy data residency requirements.|
 |[Building SharePoint Online portals](portal-overview.md) |Factor in SharePoint Online specific performance considerations when developing your new portal. |
 |[Composite business add-ins](composite-business-apps-for-sharepoint.md)|Use composite business add-ins to integrate your SharePoint solutions with your business processes and technologies. |
-|[ECM solutions](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)|Perform common ECM tasks such as setting site policies, uploading files, synchronizing term groups, and more.|
+|[ECM solutions](enterprise-content-management-solutions-for-sharepoint.md)|Perform common ECM tasks such as setting site policies, uploading files, synchronizing term groups, and more.|
 |[Localization solutions](localization-solutions-for-sharepoint-2013-and-sharepoint-online.md)|Localize your SharePoint site contents and UI text.|
 |[Search solutions](search-solutions-in-sharepoint-2013-and-sharepoint-online.md)|Find out about the SharePoint search architecture, search APIs, and search add-ins.|
 |[Security and performance](security-and-performance.md)|Improve the security and performance of your SharePoint sites with OAuth, support for Germany, China and US Government environments, cross-domain images, elevated privileges, and external sharing.|

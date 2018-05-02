@@ -1,6 +1,7 @@
 ---
 title: 'Supporting % and # in file and folder with the ResourcePath API'
-ms.date: 11/03/2017
+description: 
+ms.date: 5/2/2018
 ---
 # Supporting % and # in file and folder with the ResourcePath API
 
@@ -223,3 +224,7 @@ Headers:
     Content-Length: length
  
 ```
+
+## See also
+
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

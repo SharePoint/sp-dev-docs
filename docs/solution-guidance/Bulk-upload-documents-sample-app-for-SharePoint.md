@@ -1,6 +1,7 @@
 ---
 title: Bulk upload documents sample add-in for SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/2/2018
 ---
 # Bulk upload documents sample add-in for SharePoint
 
@@ -212,8 +213,6 @@ public override void IterateCollection(Collection<string> entries, LogHelper log
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)   
--  [Core.LargeFileUpload sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)
-    
+  
+- [Core.LargeFileUpload sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)  
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

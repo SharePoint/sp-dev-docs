@@ -1,6 +1,7 @@
 ---
 title: Upload large files sample add-in for SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/2/2018
 ---
 # Upload large files sample add-in for SharePoint
 
@@ -315,8 +316,6 @@ Chunks must be uploaded in sequential order. You cannot upload slices concurrent
 After the code sample is finished, in your Office 365 site, you can go to the  **Docs** document library by choosing **Recent** > **Docs**. Verify that the  **Docs** document library contains three large files.
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [Enterprise content management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)
     
--  [Core.BulkDocumentUploader sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader)
+- [Core.BulkDocumentUploader sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader)
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

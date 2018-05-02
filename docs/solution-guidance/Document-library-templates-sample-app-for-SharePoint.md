@@ -1,6 +1,7 @@
 ---
 title: Document library templates sample add-in for SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/2/2018
 ---
 # Document library templates sample add-in for SharePoint
 
@@ -284,8 +285,6 @@ After you create the document library, go to the  **Library settings** on your d
 ![Screenshot of a Document Library Setting page, with Name, Web Address, and Description fields highlighted.](media/aedf5107-bacb-4872-8ad4-8e66b1afead8.png)
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)
     
--  [ECM.Autotagging sample app](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.Autotagging)
+- [ECM.Autotagging sample app](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.Autotagging)
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

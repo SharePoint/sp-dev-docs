@@ -235,6 +235,8 @@ When you start the Workflow.CallServiceUpdateSPViaProxy sample add-in, the start
 
 ![Screenshot that shows the start page for the sample add-in with update for proxy workflow add-in](media/29a447b3-f17d-441f-b428-dd2a34285bb6.png)
 
+<br/>
+
 The **Create** button calls a method in the Controllers\PartSuppliersController.cs file that creates a new entry in the **Part Suppliers** list on the add-in web. The **Create** method in that file calls the **Add** method that is defined in the Services\PartSuppliersService.cs file. Both are shown in the following two code examples.
 
 **Create method**

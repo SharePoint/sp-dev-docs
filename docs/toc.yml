@@ -1417,7 +1417,7 @@
     - name: Call web services from workflows
       href: solution-guidance/call-web-services-from-sharepoint-workflows.md
   - name: ECM solutions
-    href: solution-guidance/Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md
+    href: solution-guidance/enterprise-content-management-solutions-for-sharepoint.md
     items:
     - name: Document library templates
       href: solution-guidance/Document-library-templates-sample-app-for-SharePoint.md

@@ -1,6 +1,7 @@
 ---
 title: Records management extensions sample app for SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/2/2018
 ---
 # Records management extensions sample app for SharePoint
 
@@ -303,8 +304,6 @@ public static void SetListAutoRecordDeclaration(this List list, bool autoDeclare
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)
-    
--  [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)
+- [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

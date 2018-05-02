@@ -1,6 +1,7 @@
 ---
 title: Taxonomy operations sample app for SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/2/2018
 ---
 # Taxonomy operations sample app for SharePoint
 
@@ -157,10 +158,7 @@ You will see your term data from your managed metadata service displayed in the 
 ![Screenshot of the SharePoint admin center with the taxonomy term store expanded.](media/9e623deb-569b-457a-ad1c-fa6d0d4d0a38.png)
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)
     
--  [Core.MMSSync sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
-    
--  [Core.ContentTypesAndFields sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ContentTypesAndFields)
+- [Core.MMSSync sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)   
+- [Core.ContentTypesAndFields sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ContentTypesAndFields)
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

@@ -1,8 +1,10 @@
 ---
-title: Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online
-ms.date: 11/03/2017
+title: Enterprise Content Management solutions for SharePoint
+description: 
+ms.date: 5/2/2018
 ---
-# Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online
+
+# Enterprise Content Management solutions for SharePoint
 
 The Enterprise Content Management (ECM) solution pack includes code samples and documentation that you can use to transition your SharePoint Online and SharePoint 2013 ECM solutions from full-trust code to the add-in model. 
     
