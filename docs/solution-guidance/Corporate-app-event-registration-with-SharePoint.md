@@ -14,6 +14,8 @@ This sample app implements a centralized management system that consists of Shar
 
 ## Using the BusinessApps.CorporateEventsApp sample
 
+### Configure the sample
+
 When you start the BusinessApps.CorporateEventsApp sample app, the Home page provides an option for you to configure the sample. It also points you to a number of resources for more information.
 
 When you choose **Start configuration**, you go to the Configuration page, as shown in the following figure. When you choose **Initialize the data store** on the Configuration page, the sample deploys the SharePoint entities and sample data that support the sample.
@@ -40,12 +42,14 @@ The registration page runs separately on the remote host and contains a link bac
 
 <br/>
 
+### Models/DataInitializer.cs file
+
 The Models/DataInitializer.cs file contains the code that runs when you choose this button. The code in this file creates and deploys four new SharePoint lists, along with four corresponding content types:
 
-- Corporate events 
-- Event registration
-- Event speakers
-- Event sessions
+- Corporate Events 
+- Event Registration
+- Event Speakers
+- Event Sessions
     
 The code in this file uses a method similar to the one that is used in the [Core.ModifyPages](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ModifyPages) sample to add a custom page to the site.
 
@@ -142,11 +146,9 @@ These four classes and their corresponding SharePoint content types together mak
 
 The DataInitializer.cs file adds sample data for the **Corporate Events** list by creating sample **Event** objects that correspond with the **Corporate Events** content type and which the add-in adds to the **Corporate Events** list. 
 
-When you register for an event, the add-in creates a **Registration** object that corresponds with the **Event Registration** content type and that the add-in adds to the **Event Registration** list. The sample has not yet fully implemented the **Session** and **Speaker** objects, so the add-in currently doesn't work with those objects.
+When you register for an event, the add-in creates a **Registration** object that corresponds with the **Event Registration** content type and which the add-in adds to the **Event Registration** list. The sample has not yet fully implemented the **Session** and **Speaker** objects, so the add-in currently doesn't work with those objects.
 
 The following table lists the properties that need to be implemented by the classes that inherit from the **BaseListItem** abstract class.
-
-**Table 1. Methods to implement in classes inheriting from **BaseListItem**
 
 |Member|Description|
 |:-----|:-----|
@@ -158,8 +160,6 @@ The following table lists the properties that need to be implemented by the clas
 
 The following table lists the methods that have to be implemented by the classes that inherit from the **BaseListItem** abstract class. These methods return parameters that should be set to [blittable types](https://docs.microsoft.com/en-us/dotnet/framework/interop/blittable-and-non-blittable-types) so that they can be used on multiple platforms.
 
-**Table 2. Methods that return blittable types**
-
 |Method|Description|
 |:-----|:-----|
 |**ReadProperties(ListItem)**|Reads properties from the **ListItem** object using the **BaseGet** and **BaseGetEnum** methods and assigns them to properties of the subclass.|
@@ -167,9 +167,7 @@ The following table lists the methods that have to be implemented by the classes
 
 <br/>
 
-The following table lists the helper methods from the **BaseListItem** class that the subclasses need to implement the **ReadProperties** and **SetProperties** methods.
-
-**Table 3. BaseListItem helper methods**
+The following table lists the helper methods from the **BaseListItem** class that the subclasses need in order to implement the **ReadProperties** and **SetProperties** methods.
 
 |Helper method|Description|
 |:-----|:-----|
