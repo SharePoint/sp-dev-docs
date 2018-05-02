@@ -41,6 +41,8 @@ The Workflow.CallCustomService sample add-in start page includes a drop-down men
 
 ![Screenshot that shows the Start page of the sample add-in](media/b2def940-9c82-458b-8f57-7ea92548ea71.png)
 
+<br/>
+
 The **Create** button on the screen calls a **Create** method in the Controllers\PartSuppliersController.cs file that creates a new entry in the Part Suppliers list on the add-in web. The **Create** method then calls the **Add** method that is defined in the Services\PartSuppliersService.cs file. The sequence is shown in the following two code examples.
 
 **Create method**
@@ -88,6 +90,8 @@ public int Add(string country)
 After creating that new list item, the add-in presents a **Start Workflow** button that starts the approval workflow.
 
 ![Screenshot that shows the Start Workflow page in the sample add-in](media/1d5fc6a1-79fe-4767-b8d8-905a10354565.png)
+
+<br/>
 
 Choosing the **Start Workflow** button triggers the **StartWorkflow** method that is defined in the Controllers\PartSuppliersController.cs file. This method packages the add-in web URL, the web service URL (for your remotely hosted web application, not for the Northwind web service), and the context token values, and passes them to the **StartWorkflow** method. The **PartSuppliersService** method needs the context token to interact with SharePoint.
 
@@ -231,7 +235,7 @@ When you start the Workflow.CallServiceUpdateSPViaProxy sample add-in, the start
 
 ![Screenshot that shows the start page for the sample add-in with update for proxy workflow add-in](media/29a447b3-f17d-441f-b428-dd2a34285bb6.png)
 
-That button calls a method in the Controllers\PartSuppliersController.cs file that creates a new entry in the **Part Suppliers** list on the add-in web. The **Create** method in that file calls the **Add** method that is defined in the Services\PartSuppliersService.cs file. Both are shown in the following two code examples.
+The **Create** button calls a method in the Controllers\PartSuppliersController.cs file that creates a new entry in the **Part Suppliers** list on the add-in web. The **Create** method in that file calls the **Add** method that is defined in the Services\PartSuppliersService.cs file. Both are shown in the following two code examples.
 
 **Create method**
 
@@ -334,7 +338,9 @@ The **HttpSend** activity should be configured as a **GET** request with an **Ac
 
 ![Screenshot that shows the Request Headers grid for the HTTP Send activity](media/5cac4a52-cb8e-432a-bf72-6d0fa100f3fd.png)
 
-If the user selected Canada for the new supplier list item, for example, the JSON-formatted response will be as shown in the following example.
+<br/>
+
+If the user selected **Canada** for the new supplier list item, for example, the JSON-formatted response will be as shown in the following example.
 
 ```cs
 {
@@ -358,17 +364,25 @@ The workflow then passes the supplier list that it received from the Northwind s
 
 ![Screenshot that shows property and value grids for a custom web service payload activity](media/7a155105-e6d5-456a-8985-eab03d6dfad9.png)
 
+<br/>
+
 The **Create WebProxy Payload** activity constructs a payload that passes the contents of this payload to the web proxy URL.
 
 ![Screenshot that shows the Create WebProxy Payload activity dialog](media/0f016d2c-8e90-4d23-aea3-095ad6bf288a.png)
+
+<br/>
 
 The properties for the **WebProxy Payload** activity specify the add-in web URL, the POST request content length and type, and the request acceptance type via request headers.
 
 ![Screenshot that shows the property grid for the WebProxy Payload activity](media/0b335b2d-7bb3-43ec-ab96-019b493533a3.png)
 
+<br/>
+
 After the workflow has constructed the payload and the request, it passes the request to the web proxy by using an  **HttpSend** activity that's configured as a POST request to the web proxy URL. The request headers specify JSON-formatted OData in the **Content-Type** and **Accept** headers.
 
 ![Screenshot that shows the Request Headers dialog for the HTTP Send activity](media/01ce82fb-4690-4226-874a-c4734a17d9a4.png)
+
+<br/>
 
 The **Post** method inside the Controllers\DataController.cs file accepts the contents of the request that the workflow sends through the web proxy. The **Post** method in the previous sample called a method for retrieving the supplier list from Northwind as well as one for updating the corresponding SharePoint supplier list. 
 
