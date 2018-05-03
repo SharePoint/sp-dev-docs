@@ -1,7 +1,9 @@
 ---
 title: Search customizations for SharePoint
-ms.date: 11/03/2017
+description: 
+ms.date: 5/03/2018
 ---
+
 # Search customizations for SharePoint
 
 Create customized SharePoint 2013 and SharePoint Online search scenarios by using a search-based site directory, personalized search, or search configuration portability. 
@@ -329,10 +331,7 @@ private static void ImportSearchSettings(ClientContext context, string settingsF
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
-
-- [Search solutions in SharePoint 2013 and SharePoint Online](search-solutions-in-sharepoint-2013-and-sharepoint-online.md)
-    
-- [SharePoint 2013: Import and Export search settings for SharePoint Online](http://code.msdn.microsoft.com/SharePoint-2013-Import-and-6287b5ac)
-    
-- [SharePoint 2013: Personalizing search results in a SharePoint Add-in](http://code.msdn.microsoft.com/SharePoint-2013-Personalizi-fb6ddcf9)
+   
+- [SharePoint: Import and Export search settings for SharePoint Online](http://code.msdn.microsoft.com/SharePoint-2013-Import-and-6287b5ac)   
+- [SharePoint: Personalizing search results in a SharePoint Add-in](http://code.msdn.microsoft.com/SharePoint-2013-Personalizi-fb6ddcf9)
+- [Search solutions for SharePoint](search-solutions-in-sharepoint-2013-and-sharepoint-online.md)

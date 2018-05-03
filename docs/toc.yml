@@ -1441,9 +1441,9 @@
     href: solution-guidance/localization-solutions-for-sharepoint.md
     items:
     - name: Use localization features
-      href: solution-guidance/Use-localization-features-in-Office-365-sample-app.md
+      href: solution-guidance/use-localization-features-in-office-365-sample-app.md
     - name: Localize UI elements
-      href: solution-guidance/Localize-UI-elements-sample-app-for-SharePoint.md
+      href: solution-guidance/localize-ui-elements-sample-app-for-sharepoint.md
   - name: Search solutions
     href: solution-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
     items:

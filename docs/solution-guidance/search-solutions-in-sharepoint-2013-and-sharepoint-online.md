@@ -1,44 +1,40 @@
 ---
-title: Search solutions in SharePoint 2013 and SharePoint Online
-ms.date: 11/03/2017
+title: Search solutions for SharePoint
+description: Find out about the SharePoint search architecture, search APIs, and search add-ins.
+ms.date: 5/03/2018
 ---
-# Search solutions in SharePoint 2013 and SharePoint Online
 
-Find out about the SharePoint search architecture, search APIs, and search add-ins.
+# Search solutions for SharePoint
 
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
+Search in SharePoint combines ease of configuration and deployment with the scalability and extensibility of the FAST Search Server on a single enterprise search platform.
 
-Search in SharePoint 2013 combines ease of configuration and deployment with the scalability and extensibility of the FAST Search Server on a single enterprise search platform.
+SharePoint includes common patterns in the search platform to help you customize search for different scenarios. For example:
 
-SharePoint 2013 includes common patterns in the search platform to help you customize search for different scenarios. For example:
+- **Video search** and **conversation search** are included as out-of-the-box [search verticals](https://docs.microsoft.com/en-us/SharePoint/search/how-to-add-a-custom-search-vertical-to-your-search-results-page).
+- **Topic pages** and **Content-by-Search** enhance web content management capabilities and scenarios such as search-driven sites and knowledge management sites.
+- **My tasks** pulls together project tasks so that users can track tasks assigned in multiple sites in a central location: their OneDrive for Business site.
 
-- Video search and conversation search are included as out-of-the-box [search verticals](https://technet.microsoft.com/en-us/library/dn794227.aspx).
-    
-- Topic pages and Content by Search enhance web content management capabilities and scenarios such as search-driven sites and knowledge management sites.
-    
-- My tasks pulls together project tasks so that users can track tasks assigned in multiple sites in a central location, their OneDrive for Business site.
+## SharePoint search architecture
 
-## SharePoint 2013 search architecture
+The search architecture in SharePoint includes components and databases that work together. 
 
-The search architecture in SharePoint 2013 includes components and databases that work together. 
+**Search components in SharePoint**
 
-**Search components in SharePoint 2013**
-
-|**Component**|**Description**|
+|Component|Description|
 |:-----|:-----|
 |Crawl |Crawls content sources to collect properties and metadata and sends this information to the content processing component.|
-|Content processing |Transforms the crawled items and sends them to the index component. This component also maps crawled properties to managed properties.|
+|Content processing |Transforms the crawled items and sends them to the index component.<br/>This component also maps crawled properties to managed properties.|
 |Analytics processing |Carries out search analytics and usage analytics.|
-|Index |Receives the processed items from the content processing component and writes them to the search index. This component also handles incoming queries, retrieves information from the search index, and sends back the result set to the query processing component.|
-|Query processing |Analyzes incoming queries. This helps optimize precision, recall, and relevance. The queries are sent to the index component, which returns a set of search results for the query.|
+|Index |Receives the processed items from the content processing component and writes them to the search index.<br/>This component also handles incoming queries, retrieves information from the search index, and sends back the result set to the query processing component.|
+|Query processing |Analyzes incoming queries. This helps optimize precision, recall, and relevance.<br/>The queries are sent to the index component, which returns a set of search results for the query.|
 |Search administration |Runs the system processes for search, and adds and initializes new instances of search components.|
 
-**Search databases in SharePoint 2013**
+**Search databases in SharePoint**
 
-|**Database**|**Description**|
+|Database|Description|
 |:-----|:-----|
-|Crawl |Stores tracking information and historical information about crawled items such as documents and URLs. It also stores information such as the last crawl time, the last crawl ID, and the type of update (add, update, delete) during the last crawl.|
-|Link |Stores unprocessed information that is extracted by the content processing component and information about search clicks. The analytics processing component analyzes this information.|
+|Crawl |Stores tracking information and historical information about crawled items such as documents and URLs.<br/>It also stores information such as the last crawl time, the last crawl ID, and the type of update (add, update, delete) during the last crawl.|
+|Link |Stores unprocessed information that is extracted by the content processing component and information about search clicks.<br/>The analytics processing component analyzes this information.|
 |Analytics reporting |Stores the results of usage analysis.|
 |Search administration |Stores search configuration data.|
 
@@ -428,13 +424,10 @@ using (var clientContext = spContext.CreateUserClientContextForSPHost())
 
 ```
 
-## In this section
-
-- [Search customizations for SharePoint](search-customizations-for-sharepoint.md)
-
 ## See also
 
-- [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)   
-- [Search add-ins in SharePoint 2013](http://msdn.microsoft.com/library/21682e45-dd78-4f3c-8f1e-cdd48de3bde2%28Office.15%29.aspx)    
-- [Add search capabilities to your SharePoint Add-ins](http://blogs.msdn.com/b/officeapps/archive/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint.aspx)
+- [Search customizations for SharePoint](search-customizations-for-sharepoint.md)
+- [SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md)   
+- [Search SharePoint Add-ins](../general-development/search-add-ins-in-sharepoint.md)    
+- [Add search capabilities to your SharePoint Add-ins](https://blogs.msdn.microsoft.com/officeapps/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint/)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
