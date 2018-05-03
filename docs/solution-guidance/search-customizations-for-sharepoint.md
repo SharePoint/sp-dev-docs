@@ -295,7 +295,7 @@ The following table lists schema files that support a search configuration. For 
 
 **Search settings portability schemas**
 
-|**Schema**|**Description**|
+|Schema|Description|
 |:-----|:-----|
 |[SPS15XSDSearchSet1](../schema/sps15xsdsearchset1.md)|Specifies XML that represents result sources.|
 |[SPS15XSDSearchSet2](../schema/sps15xsdsearchset2.md)|Specifies XML that represents administrative types and members for managing an SSA search instance. This includes result item types and property rule settings.|

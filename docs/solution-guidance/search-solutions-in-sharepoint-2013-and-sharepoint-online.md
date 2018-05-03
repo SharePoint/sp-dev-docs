@@ -217,7 +217,7 @@ The following table lists conditions that you can specify that cause a query rul
 
 **Query rule conditions**
 
-|**Condition**|**Description**|
+|Condition|Description|
 |:-----|:-----|
 |Query matches keyword exactly|Apply the query rule when the query exactly matches a word or phrase that you specify.|
 |Query contains action term|Apply the query rule when the query contains a term in the form of a single word or phrase that indicates that the user is trying to do something.<br/>The term must be at the beginning or end of the query and might be a verb, a command, or a filter.|
@@ -393,7 +393,7 @@ The Search query REST service supports both HTTP **POST** and **GET** requests. 
 
 For a complete list of the query parameters available and how to use them, see [SharePoint workflow fundamentals](../general-development/sharepoint-workflow-fundamentals.md). 
 
-For sample code, see [SharePoint: Using the search REST service from a SharePoint Add-in](https://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d).
+For sample code, see [Using the search REST service from a SharePoint Add-in](https://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d).
 
 ### Search add-ins
 
