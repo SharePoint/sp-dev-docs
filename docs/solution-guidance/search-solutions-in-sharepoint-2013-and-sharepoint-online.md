@@ -226,123 +226,120 @@ The following table lists conditions that you can specify that cause a query rul
 
 A query rule can specify three kinds of actions:
 
-- Add **Promoted Results** (formerly called **Best Bets**) that appear above ranked results. For example, for the query "sick leave", a query rule could specify a particular Promoted Result, such as a link to a site that has a statement of company policy regarding time off work.
+- Add **Promoted Results** (formerly called **Best Bets**) that appear above ranked results. For example, for the query *sick leave*, a query rule could specify a particular Promoted Result, such as a link to a site that has a statement of company policy regarding time off work.
     
 - Add one or more groups of results, called result blocks. A result block contains a small subset of results that are related to a query in a particular way. Like individual results, you can promote a result block or rank it with other search results. 
     
-- Change the ranking of results by changing the query. For example, for a query that contains "download toolbox", a query rule could recognize the word "download" as an action term and boost search results that point to a particular download site on your intranet.
+- Change the ranking of results by changing the query. For example, for a query that contains *download toolbox*, a query rule could recognize the word *download* as an action term and boost search results that point to a particular download site on your intranet.
     
-For more information about query rules, see [Manage query rules in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj871676.aspx).
+For more information about query rules, see [Manage query rules in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/manage-query-rules).
 
 ### Query transforms
 
-To provide search results that are appropriate for a user query, sometimes the query needs to be modified. You do this with query transforms. Default search verticals included with SharePoint 2013, such as Videos, People, and Conversations, all contain predefined query transforms to optimize the search experience for that vertical.
+To provide search results that are appropriate for a user query, sometimes the query needs to be modified. You do this with query transforms. Default search verticals included with SharePoint, such as Videos, People, and Conversations, all contain predefined query transforms to optimize the search experience for that vertical.
 
 You can configure query transforms in three places:
 
 - In a web part, such as a Search Results web part. 
-    
-- In a query rule, which specifies that certain actions will be performed only if certain conditions are satisfied. 
-    
+- In a query rule, which specifies that certain actions are performed only if certain conditions are satisfied. 
 - In the result source that the query uses to get search results.
     
-A user query is transformed first by the web part, then by any query rules that apply, and finally by the result source. When you configure a transform in a result source, you know that the transform changes will not be discarded or overridden, because the result source transforms the query last. You can reuse a result source query transform in web parts or result blocks, and you can create query rules or result types that are only applied to results from certain result sources.
+A user query is transformed first by the web part, then by any query rules that apply, and finally by the result source. When you configure a transform in a result source, you know that the transform changes will not be discarded or overridden because the result source transforms the query last. You can reuse a result source query transform in web parts or result blocks, and you can create query rules or result types that are only applied to results from certain result sources.
 
-You can use the Query Builder to help you write and test query transforms. You can test the query from within the Query Builder by setting temporary test values for the query variables, running the query, and previewing the search results. For more information about query transforms, see [Plan to transform queries and order results in SharePoint 2013](http://technet.microsoft.com/en-us/library/60a1110d-27dc-45d0-86e2-cddc72d072b2%28v=office.15%29).
+You can use the Query Builder to help you write and test query transforms. You can test the query from within the Query Builder by setting temporary test values for the query variables, running the query, and previewing the search results. For more information about query transforms, see [Plan to transform queries and order results in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/plan-to-transform-queries-and-order-results).
 
 ### Result types and display templates
 
-SharePoint 2013 search includes a new results framework that makes it easy to customize the way search results are displayed. Now, instead of writing custom XSLT to change how search results are displayed, you can customize the appearance of important types of results by using display templates and result types.
+SharePoint search includes a new results framework that makes it easy to customize the way search results are displayed. Now, instead of writing custom XSLT to change how search results are displayed, you can customize the appearance of important types of results by using display templates and result types.
 
 #### Result types
 
 To display search results differently, search results have to be sorted into different result types. A result type is a classification of a search result that distinguishes one search result from another. It is comprised of a collection of the following:
 
-- **Rules** - One or more characteristics or conditions to compare each search result against, such as the result source or content type of the search result. Rule conditions can be joined by using equality, comparison, and logical operators.
+- **Rules** &ndash; One or more characteristics or conditions to compare each search result against, such as the result source or content type of the search result. Rule conditions can be joined by using equality, comparison, and logical operators.
     
-- **Properties** - The list of managed properties for the search result. You must add managed properties to the properties list before you map the managed property to a display template.
+- **Properties** &ndash; The list of managed properties for the search result. You must add managed properties to the properties list before you map the managed property to a display template.
     
-- **Display templates** - Controls the way in which all results that meet the conditions appear and behave on a search results page.
+- **Display templates** &ndash; Controls the way in which all results that meet the conditions appear and behave on a search results page.
     
-SharePoint search includes several default result types. To see them, go to **Site Settings** > **Site Collection Administration** > **Search Result Types**. You cannot edit any of the default result types. You can create new result types by copying existing ones, and modifying them. For more information about the default result types included with SharePoint 2013, see [Result types and display templates that are used to display search results in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn386874%28v=office.15%29.aspx).
+SharePoint search includes several default result types. To see them, go to **Site Settings** > **Site Collection Administration** > **Search Result Types**. You cannot edit any of the default result types. You can create new result types by copying existing ones and modifying them. 
+
+For more information about the default result types included with SharePoint, see [Result types and display templates that are used to display search results in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/technical-reference/result-types-and-display-templates-that-are-used-to-display-search-results).
 
 #### Display templates
 
 Display templates define the visual layout and behavior of search results. They control which managed properties are shown in search results and how they appear. SharePoint stores display templates in the Search subfolder of the Display Templates folder in the Master Page Gallery. Each display template consists of two files: 
 
 - An HTML version of the display template that you can edit in your HTML editor.
-    
 - A .js file that SharePoint uses. 
     
 When you work with display templates, you modify the HTML file. The .js file is created and modified by SharePoint. You do not edit this file at all.
 
 There are two primary types of display templates:
 
-- **Control display templates** - Determine the overall structure of how the results are presented.
-    
-- **Item display templates** - Determine how each result in the set is displayed.
+- **Control display templates** &ndash; Determine the overall structure of how the results are presented.
+- **Item display templates** &ndash; Determine how each result in the set is displayed.
     
 The control display template provides HTML to structure the overall layout for how you want to present the search results. For example, the control display template might provide the HTML for a heading and the beginning and end of a list. The control display template is rendered only once in the web part.
 
 The item display template provides HTML that determines how each item in the result set is displayed. For example, the item display template might provide the HTML for a list item that contains a picture, and three lines of text that are mapped to different managed properties associated with the item. The item display template is rendered one time for each item in the result set. So, if the result set contains ten items, the item display template creates its section of HTML ten times.
 
-For details display templates and their structure, see [SharePoint 2013 Design Manager display templates](http://msdn.microsoft.com/en-us/library/jj945138.aspx) and [Search-driven web parts and display templates](http://msdn.microsoft.com/en-us/library/jj191506.aspx) in [Overview of the SharePoint 2013 page model](http://msdn.microsoft.com/en-us/library/jj191506.aspx).
+For details about display templates and their structure, see:
+- [SharePoint Design Manager design packages](../general-development/sharepoint-design-manager-design-packages.md)
+- [Search-driven web parts and display templates](../general-development/overview-of-the-sharepoint-page-model.md#search-driven-web-parts-and-display-templates)
 
-For more information about display templates available in SharePoint 2013, see [Display template reference in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj944947.aspx).
+For more information about display templates available in SharePoint, see [Display template reference in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/technical-reference/display-template-reference-in-sharepoint-server).
 
 #### Customize display templates
 
-If you want to customize display templates included with SharePoint, create a new display template by copying the content from the one you want to modify, and then customize the new version. Starting from a copy of an existing display template is also the easiest way to create a new one, as it ensures that you are starting with all the required elements.
+If you want to customize display templates included with SharePoint, create a new display template by copying the content from the one you want to modify, and then customize the new version. Starting from a copy of an existing display template is also the easiest way to create a new one because it ensures that you are starting with all the required elements.
 
-Another tip when working with display templates is to map a network drive to the Master Page Gallery. For details, see [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](https://msdn.microsoft.com/en-us/library/office/jj733519.aspx).
+Another tip when working with display templates is to map a network drive to the Master Page Gallery. For details, see [Map a network drive to the SharePoint Master Page Gallery](../general-development/how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
 
-The HTML file that is used for a display template is a fully-formed HTML document, with  `head` and `body` elements. Within the `head` element, there's a `title` element that specifies the display name for the display template. The text in this tag is what will be shown when you do configurations in the SharePoint UI, for example, when you configure a result type.
+The HTML file that is used for a display template is a fully-formed HTML document with `head` and `body` elements. Within the `head` element, there's a `title` element that specifies the display name for the display template. The text in this tag is what is shown when you do configurations in the SharePoint UI; for example, when you configure a result type.
 
-After the  `title` element, there's a custom document properties element, `mso:CustomDocumentProperties`. In item display templates, this element contains a  `mso:ManagedPropertyMapping` element, which is where the managed properties used by SharePoint search are mapped to values used by the display template. The following is the syntax for this: `<display template reference name>:<managed property name>`, as shown in the following example.
+After the `title` element, there's a custom document properties element, `mso:CustomDocumentProperties`. In item display templates, this element contains an `mso:ManagedPropertyMapping` element, which is where the managed properties used by SharePoint search are mapped to values used by the display template. 
+
+The following is the syntax for this: `<display template reference name>:<managed property name>`, as shown in the following example.
 
 ```HTML
 <mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','Description':'Description'
 ```
 
-Within the  `body` element, there's a `script` element where you can include external resources such as CSS files or JavaScript files outside of the display template. See the "Script block" section in [SharePoint 2013 Design Manager display templates](http://msdn.microsoft.com/en-us/library/jj945138.aspx) for examples that show how to include external resources in the script element.
+Within the `body` element, there's a `script` element where you can include external resources such as CSS files or JavaScript files outside of the display template. For examples that show how to include external resources in the script element, see the **Script block** section in [SharePoint Design Manager display templates](../general-development/sharepoint-design-manager-display-templates.md#script-block).
 
-The next element is a  `div` element. This is where you place any HTML or script that you want as part of the display template. A good way to become familiar with the display template structure is to download copies of the default display templates for search results, Control_SearchResults.html, the control display template, and Item_Default.html, the item display template.
+The next element is a `div` element. This is where you place any HTML or script that you want as part of the display template. A good way to become familiar with the display template structure is to download copies of the default display templates for search results, Control\_SearchResults.html (the control display template) and Item\_Default.html (the item display template).
 
 #### See also for result types and display templates
 
 The following are some additional resources for display templates and result types:
 
-- [Customize search result types in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn135239%28v=office.15%29.aspx)
-    
-- [How to change the way search results are displayed in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794204%28v=office.15%29.aspx)
-    
-- [Understanding how search results are displayed in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794212%28v=office.15%29.aspx)
-    
-- [Understanding how item display templates and hit highlighting work in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794249%28v=office.15%29.aspx)
-    
-- [How to create a new result type in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794234%28v=office.15%29.aspx)
-    
-- [How to display values from custom managed properties in search results - option 1 in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794209%28v=office.15%29.aspx)
-    
-- [How to display values from custom managed properties in search results - option 2 in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794240%28v=office.15%29.aspx)
-    
-- [How to display values from custom managed properties in the hover panel in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794247%28v=office.15%29.aspx)
+- [Customize search result types in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/customize-search-result-types)
+- [How to change the way search results are displayed in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-change-the-way-search-results-are-displayed)
+- [Understanding how search results are displayed in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/understanding-how-search-results-are-displayed)
+- [Understanding how item display templates and hit highlighting work in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/understanding-how-item-display-templates-and-hit-highlighting-work)
+- [How to create a new result type in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-create-a-new-result-type)
+- [How to display values from custom managed properties in search results - option 1 in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-1)
+- [How to display values from custom managed properties in search results - option 2 in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-2)
+- [How to display values from custom managed properties in the hover panel in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-the-hover-panel)
 
 ## Query APIs and search add-ins
 
-SharePoint 2013 search includes .NET and JavaScript client object models and a REST service that enables access to search results for online, on-premises, and mobile development. 
+SharePoint search includes .NET and JavaScript client object models and a REST service that enables access to search results for online, on-premises, and mobile development. 
 
 **Search query APIs**
 
-|**API**|**Class library or schema path**|**Example**|
+|API|Class library or schema path|Example|
 |:-----|:-----|:-----|
-|.NET CSOM|Microsoft.SharePoint.Client.Search.dll[SharePoint Server 2013 Client Components SDK download](http://www.microsoft.com/en-us/download/details.aspx?id=35585)%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI[SharePoint Online Client Components SDK download](http://www.microsoft.com/en-us/download/details.aspx?id=42038)%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\16\ISAPI|[SharePoint 2013: Query Search with the Managed Client ](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1)[Object Model (Code Gallery)](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1)|
-|JavaScript CSOM|SP.search.js%ProgramFiles%\SharePoint Client Components\Scripts|[Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b) (Code Gallery)|
-|REST service|http://server/_api/search/queryhttp://server/_api/search/postqueryhttp://server/_api/search/suggest|[SharePoint 2013: Using the search REST service from a SharePoint Add-in ](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d) (Code Gallery)|
+|.NET CSOM|Microsoft.SharePoint.Client.Search.dll<br/>[SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=35585)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI<br/><br/>[SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\16\ISAPI|[SharePoint 2013: Query Search with the Managed Client Object Model](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1) (Code Gallery)|
+|JavaScript CSOM|SP.search.js<br/>%ProgramFiles%\SharePoint Client Components\Scripts|[Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b) (Code Gallery)|
+|REST service|`http://server/_api/search/query` <br/><br/>`http://server/_api/search/postquery`<br/><br/>`http://server/_api/search/suggest` |[SharePoint 2013: Using the search REST service from a SharePoint Add-in ](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d) (Code Gallery)|
 
 ### Search query .NET CSOM
 
-To use the query .NET CSOM, create a new instance of the [T:Microsoft.SharePoint.Client.ClientContext](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.clientcontext.aspx) class, which is located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.aspx) namespace in the Microsoft.SharePoint.Client.dll. Then use the query object model in the [Microsoft.SharePoint.Search.Client.Query](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.search.query.aspx) namespace. The following is a simple example.
+To use the query .NET CSOM, create a new instance of the [T:Microsoft.SharePoint.Client.ClientContext](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.clientcontext.aspx) class, which is located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.aspx) namespace in the Microsoft.SharePoint.Client.dll. Then use the query object model in the [Microsoft.SharePoint.Search.Client.Query](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.search.query.aspx) namespace. 
+
+The following is a simple example.
 
 ```csharp
 using Microsoft.SharePoint.Client; 
@@ -359,6 +356,8 @@ using (ClientContext clientContext = new ClientContext("http://intranet.contoso.
  
 ```
 
+<br/>
+
 Now you can iterate through the search results. The following example writes out the title of each result.
 
 ```csharp
@@ -370,7 +369,7 @@ foreach (var row in results.Value[0].ResultRows)
 
 ### Search query REST service
 
-The Search query REST service supports both HTTP **POST** and **GET** requests. When you make a call to the Search REST service, you specify query parameters with the request and search uses these query parameters to construct the search query. With a **GET** request, you specify the query parameters in the URL. For **POST** requests, you pass the query parameters in the body in JavaScript Object Notation (JSON) format.
+The Search query REST service supports both HTTP **POST** and **GET** requests. When you make a call to the Search REST service, you specify query parameters with the request, and search uses these query parameters to construct the search query. With a **GET** request, you specify the query parameters in the URL. For **POST** requests, you pass the query parameters in the body in JavaScript Object Notation (JSON) format.
 
 **JSON GET and POST requests**
 
@@ -379,35 +378,40 @@ The Search query REST service supports both HTTP **POST** and **GET** requests. 
 | **GET** requests| `http://server/_api/search/query`|
 | **POST** requests| `http://server/_api/search/postquery`|
 
+
+<br/>
+
 **Sample GET requests for Search REST service**
 
-|**Request type**|**Request URL**|
+|Request type|Request URL|
 |:-----|:-----|
-|Keywords|http://server/site/_api/search/query?querytext='{KQL Query}'|
-|Selecting Properties|http://server/site/_api/search/query?querytext='test'&amp;selectproperties='Title,Rank'|
-|Sorting|http://server/site/_api/search/query?querytext='test'&amp;sortlist='LastModifiedTime:descending'http://server/site/_api/search/query?querytext='test'&amp;sortlist='LastModifiedTime:descending,Rank:ascending'|
+|Keywords|`http://server/site/_api/search/query?querytext='{KQL Query}'`|
+|Selecting Properties|`http://server/site/_api/search/query?querytext='test'&selectproperties='Title,Rank'`|
+|Sorting|`http://server/site/_api/search/query?querytext='test'&sortlist='LastModifiedTime:descending`<br/><br/>`http://server/site/_api/search/query?querytext='test'&sortlist='LastModifiedTime:descending,Rank:ascending'`|
 
-For a complete list of the query parameters available and how to use them, see [SharePoint Search REST API overview](http://msdn.microsoft.com/library/8a4f7863-e4c1-4099-9189-a1894db36930%28Office.15%29.aspx). For sample code, see [SharePoint 2013: Using the search REST service from a SharePoint Add-in](https://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d).
+For a complete list of the query parameters available and how to use them, see [SharePoint workflow fundamentals](../general-development/sharepoint-workflow-fundamentals.md). 
+
+For sample code, see [SharePoint: Using the search REST service from a SharePoint Add-in](https://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d).
 
 ### Search add-ins
 
-SharePoint Add-ins (formerly known as apps for SharePoint) are self-contained pieces of functionality that extend the capabilities of a SharePoint website. Search add-ins (formerly known as search apps) are SharePoint Add-ins that use search functionality. In a search add-ins, you can use the search query APIs to retrieve search results. In addition, you can also use it to distribute search configurations from one SharePoint installation to another.
+SharePoint Add-ins (formerly known as apps for SharePoint) are self-contained pieces of functionality that extend the capabilities of a SharePoint website. Search add-ins (formerly known as search apps) are SharePoint Add-ins that use search functionality. In a search add-in, you can use the search query APIs to retrieve search results. In addition, you can also use it to distribute search configurations from one SharePoint installation to another.
 
-For information about setting up a development environment to create search add-ins, see [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) or [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx).
+For information about setting up a development environment to create search add-ins, see [Set up an on-premises development environment for SharePoint Add-ins](../sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) or [Set up a development environment for SharePoint Add-ins on Office 365](../sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
 
 #### Permissions
 
-Search add-ins require only user-level permissions, where the attribute value is  _QueryAsUserIgnoreAppPrincipal_. This permission lets you query the search add-ins based on the user's permissions. This means that search results will be returned based on the user's ACLs. To grant permissions to the add-ins to use search:
+Search add-ins require only user-level permissions, where the attribute value is  _QueryAsUserIgnoreAppPrincipal_. This permission lets you query the search add-ins based on the user's permissions. This means that search results are returned based on the user's ACLs. To grant permissions to the add-ins to use search:
 
 1. In **Solution Explorer**, open **AppManifest.xml**.
     
-2. On the **Permissions** tab, select **Search for Scope** and then select **QueryAsUserIgnoreAppPrincipal**.
+2. On the **Permissions** tab, select **Search for Scope**, and then select **QueryAsUserIgnoreAppPrincipal**.
     
-For more information, see [Add-in permissions in SharePoint 2013](http://msdn.microsoft.com/library/5f7a8440-3c09-4cf8-83ec-c236bfa2d6c4%28Office.15%29.aspx).
+For more information, see [Add-in permissions in SharePoint](../sp-add-ins/add-in-permissions-in-sharepoint.md).
 
 #### Query APIs
 
-You can use the .NET CSOM, JavaScript CSOM, or search REST service to retrieve search results in a search add-ins. The following example shows how to use the query .NET CSOM to retrieve search results in a search add-ins.
+You can use the .NET CSOM, JavaScript CSOM, or search REST service to retrieve search results in a search add-in. The following example shows how to use the query .NET CSOM to retrieve search results in a search add-in.
 
 ```csharp
 var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
