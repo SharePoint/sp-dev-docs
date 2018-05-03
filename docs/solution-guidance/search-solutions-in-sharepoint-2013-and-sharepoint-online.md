@@ -161,7 +161,9 @@ You can edit the Refinement web part properties in the web part tool pane to spe
 - The display template that is applied to each refiner.
 - The appearance, layout, and behavior of the Refinement web part.
     
-By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. For more information about this feature, see [Configure properties of the Refinement web part in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/configure-properties-of-the-refinement-web-part).
+By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. 
+
+For more information about this feature, see [Configure properties of the Refinement web part in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/configure-properties-of-the-refinement-web-part).
 
 For more information about the Refinement web part and refiners, see:
 
@@ -246,7 +248,9 @@ You can configure query transforms in three places:
     
 A user query is transformed first by the web part, then by any query rules that apply, and finally by the result source. When you configure a transform in a result source, you know that the transform changes will not be discarded or overridden because the result source transforms the query last. You can reuse a result source query transform in web parts or result blocks, and you can create query rules or result types that are only applied to results from certain result sources.
 
-You can use the Query Builder to help you write and test query transforms. You can test the query from within the Query Builder by setting temporary test values for the query variables, running the query, and previewing the search results. For more information about query transforms, see [Plan to transform queries and order results in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/plan-to-transform-queries-and-order-results).
+You can use the Query Builder to help you write and test query transforms. You can test the query from within the Query Builder by setting temporary test values for the query variables, running the query, and previewing the search results. 
+
+For more information about query transforms, see [Plan to transform queries and order results in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/plan-to-transform-queries-and-order-results).
 
 ### Result types and display templates
 
@@ -310,8 +314,6 @@ Within the `body` element, there's a `script` element where you can include exte
 
 The next element is a `div` element. This is where you place any HTML or script that you want as part of the display template. A good way to become familiar with the display template structure is to download copies of the default display templates for search results, Control\_SearchResults.html (the control display template) and Item\_Default.html (the item display template).
 
-#### See also for result types and display templates
-
 The following are some additional resources for display templates and result types:
 
 - [Customize search result types in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/customize-search-result-types)
@@ -331,9 +333,9 @@ SharePoint search includes .NET and JavaScript client object models and a REST s
 
 |API|Class library or schema path|Example|
 |:-----|:-----|:-----|
-|.NET CSOM|Microsoft.SharePoint.Client.Search.dll<br/>[SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=35585)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI<br/><br/>[SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\16\ISAPI|[SharePoint 2013: Query Search with the Managed Client Object Model](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1) (Code Gallery)|
-|JavaScript CSOM|SP.search.js<br/>%ProgramFiles%\SharePoint Client Components\Scripts|[Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b) (Code Gallery)|
-|REST service|`http://server/_api/search/query` <br/><br/>`http://server/_api/search/postquery`<br/><br/>`http://server/_api/search/suggest` |[SharePoint 2013: Using the search REST service from a SharePoint Add-in ](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d) (Code Gallery)|
+|.NET CSOM|Microsoft.SharePoint.Client.Search.dll<br/><br/>[SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=35585)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI<br/><br/>[SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\16\ISAPI|[Query Search with the Managed Client Object Model](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1) (Code Gallery)|
+|JavaScript CSOM|SP.search.js<br/>%ProgramFiles%\SharePoint Client Components\Scripts|[Query Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b) (Code Gallery)|
+|REST service|`http://server/_api/search/query` <br/><br/>`http://server/_api/search/postquery`<br/><br/>`http://server/_api/search/suggest` |[Using the search REST service from a SharePoint Add-in ](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d) (Code Gallery)|
 
 ### Search query .NET CSOM
 
@@ -386,8 +388,8 @@ The Search query REST service supports both HTTP **POST** and **GET** requests. 
 |Request type|Request URL|
 |:-----|:-----|
 |Keywords|`http://server/site/_api/search/query?querytext='{KQL Query}'`|
-|Selecting Properties|`http://server/site/_api/search/query?querytext='test'&selectproperties='Title,Rank'`|
-|Sorting|`http://server/site/_api/search/query?querytext='test'&sortlist='LastModifiedTime:descending`<br/><br/>`http://server/site/_api/search/query?querytext='test'&sortlist='LastModifiedTime:descending,Rank:ascending'`|
+|Selecting properties|`http://server/site/_api/search/query?querytext='test'&selectproperties='Title,Rank'`|
+|Sorting|`http://server/site/_api/search/query?querytext='test'&sortlist='LastModifiedTime:descending'`<br/><br/>`http://server/site/_api/search/query?querytext='test'&sortlist='LastModifiedTime:descending,Rank:ascending'`|
 
 For a complete list of the query parameters available and how to use them, see [SharePoint workflow fundamentals](../general-development/sharepoint-workflow-fundamentals.md). 
 
