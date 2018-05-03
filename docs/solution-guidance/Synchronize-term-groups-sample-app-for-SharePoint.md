@@ -248,6 +248,8 @@ When you select **Process Changes**, the add-in prompts you to enter a Term Grou
 > [!NOTE] 
 > This document includes only some parts of the **ProcessChanges** method. To review the entire method, open the Core.MMSSync solution in Visual Studio.
 
+<br/>
+
 The **ProcessChanges** method starts by creating a **TaxonomySession** object.
 
 ```csharp

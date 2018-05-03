@@ -6,15 +6,15 @@ ms.date: 5/2/2018
 
 # Upload large files sample SharePoint Add-in
 
-The Core.LargeFileUpload sample shows you how to use a provider-hosted add-in to upload large files to SharePoint, and how to bypass the 2-MB file upload limit. Use this solution if you want to upload files that are larger than 2 MB to SharePoint. 
+The Core.LargeFileUpload sample shows you how to use a provider-hosted add-in to upload large files to SharePoint, and how to bypass the 2-MB file upload limit. 
+
+Use this solution if you want to upload files that are larger than 2 MB to SharePoint. 
 
 This sample runs as a console application that uploads large files to a document library by using one of the following methods:
 
 - The [SaveBinaryDirect](https://msdn.microsoft.com/library/office/ee538285.aspx) method on the **Microsoft.SharePoint.Client.File** class.  
 - The [ContentStream](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.filecreationinformation.contentstream.aspx) property on the **FileCreationInformation** class.
 - The [StartUpload](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.file.startupload.aspx), [ContinueUpload](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.file.continueupload.aspx), and [FinishUpload](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.file.finishupload.aspx) methods on the **File** class.
-
-<br/>
 
 The following table lists the file upload methods that are available and describes when to use each method.
 
@@ -154,12 +154,11 @@ In FileUploadService.cs, **UploadFileSlicePerSlice** uploads a large file to a d
 > [!NOTE] 
 > Consider the following best practices:
 > - Use a retry mechanism in case your upload is interrupted. When an uploaded file is interrupted, the file is called an unfinished file. You may restart uploading an unfinished file soon after the upload was interrupted. Unfinished files are removed from the server between 6 hours to 24 hours after the unfinished file was interrupted. This removal period might change without notice.
-> 
 > - When uploading a file in chunks to SharePoint Online, a lock is placed on the file in SharePoint Online. When an interruption occurs, the file remains locked for 15 minutes. If the next chunk of the file is not uploaded to SharePoint Online within 15 minutes, the lock is removed. After the lock is removed, you can resume uploading, or another user can start uploading the file. If another user starts uploading the file, your unfinished file is removed from SharePoint Online. The period of time that the lock remains on a file after an upload is interrupted can change without notice.
-> 
 > - You might change the chunk size. We recommend using a chunk size of 10 MB.
-> 
 > - Resume an interrupted chunk by tracking which chunks uploaded successfully.
+
+<br/>
 
 Chunks must be uploaded in sequential order. You cannot upload slices concurrently (for example, by using a multithreaded approach).
 

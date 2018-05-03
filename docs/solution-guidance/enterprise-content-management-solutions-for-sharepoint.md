@@ -9,7 +9,6 @@ ms.date: 5/2/2018
 The Enterprise Content Management (ECM) solution pack includes code samples and documentation that you can use to transition your SharePoint Online and SharePoint ECM solutions from full-trust code to the add-in model. 
 
 - The samples in this solution pack show you how to use provider-hosted add-ins to perform common ECM tasks such as setting site policies, uploading files, or synchronizing term groups. 
-
 - The documentation helps you get started with and walk you through the primary scenarios that each sample illustrates. 
 
 <br/>
@@ -24,7 +23,7 @@ The Enterprise Content Management (ECM) solution pack includes code samples and 
 |[Bulk upload documents](bulk-upload-documents-sample-app-for-sharepoint.md)| [Core.BulkDocumentUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader) |Bulk upload documents to document libraries (including OneDrive for Business). |
 |[Upload large files](upload-large-files-sample-app-for-sharepoint.md)| [Core.LargeFileUpload](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload) |Use different methods to upload large files to a document library. |
 |[Synchronize term groups](synchronize-term-groups-sample-app-for-sharepoint.md)|[Core.MMSSync](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync) | Synchronize term groups across multiple term stores.|
-|[Support % and # in files and folders with the ResourcePath API](supporting-and-in-file-and-folder-with-the-resourcepath-api.md)| - | Find developer guidance on updated support for % and # in files and folders.|
+|[Support % and # in files and folders with ResourcePath API](supporting-and-in-file-and-folder-with-the-resourcepath-api.md)| - | Find developer guidance on updated support for % and # in files and folders.|
 
 ## See also
 

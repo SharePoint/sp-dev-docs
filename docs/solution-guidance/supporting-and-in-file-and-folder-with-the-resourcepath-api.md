@@ -10,7 +10,7 @@ Support for % and # in files and folders is being deployed within SharePoint Onl
 
 In summary, new APIs have been added to the SharePoint Online client object model (CSOM) surface to provide support for # and % characters.
 
-## ResourcePath
+## New ResourcePath class
  
 As a recap, note that existing string-based SharePoint APIs (such as SPFileCollection.GetByUrl) handle both encoded and decoded URLs by automatically assuming that % and # characters in a path imply that the URL has been encoded. With new support for % and # in files and folders, this automatic treatment is now problematic because it may cause downstream code to ignore or mishandle file names with % and # in them.
  
@@ -35,7 +35,7 @@ The following table shows the new APIs that we introduced to replace the existin
  
 For documentation about the new APIs, see [.NET client API reference for SharePoint Online](https://msdn.microsoft.com/en-us/library/jj193041.aspx). We have listed the .NET CSOM APIs, but the new methods are also available in equivalent form in our JavaScript CSOM libraries.
  
-**Assembly Microsoft.SharePoint.Client.dll**
+### Assembly Microsoft.SharePoint.Client.dll 
 
 | Type | Old Method | New Method | 
 |----------|-------------|------|
@@ -73,8 +73,8 @@ The following CSOM objects return ResourcePath properties that can be used in th
 | Microsoft.SharePoint.SPDocumentLibraryInformation | ServerRelativeUrl | ServerRelativePath | 
 
 
-## Existing APIs not ambiguous about the URL format that support # and %
- 
+## Existing APIs that are not ambiguous about the URL format and can support # and %
+
 The following APIs only accept properly encoded URLs as input. They also support under-encoded URLs as long as the URL can be consumed without any ambiguity. In other words, at least # or % characters in the path of the URL should be % encoded. These APIs will continue to work in the existing way. `#` in the URL is treated as a fragment delimiter, but not part of URL path.
 
 | Type | Old Property | 

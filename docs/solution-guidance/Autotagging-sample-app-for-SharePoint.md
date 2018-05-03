@@ -246,7 +246,9 @@ public static void AddEventReceiver(ClientContext ctx, List list, EventReceiverD
 
 <br/>
 
-Now the remote event receiver is added to the document library. When you upload a document to the **AutoTaggingSampleItemAdding** document library, the document is tagged with the value of the Classification custom user profile property for that user. The following figure shows how to view the properties on a document. 
+Now the remote event receiver is added to the document library. When you upload a document to the **AutoTaggingSampleItemAdding** document library, the document is tagged with the value of the Classification custom user profile property for that user. 
+
+The following figure shows how to view the properties on a document. 
 
 ![Screenshot of a test document in the library with the properties expanded.](media/991dc064-1855-4897-a012-c56c0079131e.png)
 
