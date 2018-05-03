@@ -1,8 +1,15 @@
+---
+title: Multi-Geo Capabilities
+ms.date: 03/21/2018
+---
+
 # Multi-Geo Capabilities
 
 ## Summary
 Multinational companies that have offices around the world often have needs to store their employee data at-rest in specific regions to meet their data residency requirements. The Multi-Geo Capabilities in Office 365, are a feature introduced in late 2017 that helps multinational customers address their regional, industry specific or organizational data residency requirements in Office 365.
+
 Multi-Geo enables a single Office 365 tenant to span across multiple Office 365 datacenter geographies (geos), and gives customers the ability to store their Exchange, SharePoint, and OneDrive data, at-rest, on a per-user basis, in their chosen geos.
+
 In this article you can find further details about the Multi-Geo Capabilities, as well as code samples, and videos. 
 
 ### Articles

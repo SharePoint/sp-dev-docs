@@ -3,9 +3,7 @@
 ## Summary
 Solutions Deployment and Maintenance are really important topics in the fields of developing for SharePoint, whenever you want to create sucessfull solutions. In this guidance article you can find references to articles, videos, and samples about how to manage deployment and maintenance of SharePoint Add-Ins, SharePoint Framework solutions, or Sandbox solutions on-premises.
 
-## Available Options
-
-### SharePoint Add-Ins
+## SharePoint Add-Ins
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -18,7 +16,7 @@ In the SharePoint Add-In Model there are many well-known rules and guidelines ab
 * [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/en-us/office/dev/store/create-or-update-client-ids-and-secrets)
 * [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store)
 
-### SharePoint Framework
+## SharePoint Framework
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2016 (FP2)_
 
@@ -40,7 +38,7 @@ The SharePoint Framework (SPFx) has been designed thinking about making it possi
 * [SharePoint Framework Training - Module 04 Section 1 - Deploy Assets for Production Usage](https://www.youtube.com/watch?v=6Sm78rfuImk)
 * [PnP Webcast - Site collection app catalog](https://www.youtube.com/watch?v=ZfUKkdMnSYQ)
 
-### Sandbox solutions
+## Sandbox solutions
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016_
 

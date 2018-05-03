@@ -19,9 +19,7 @@ Here follow some general high-level guidelines and rules that matter whenever yo
 * Avoid renaming or changing out-of-the-box artifacts, prefer using custom elements instead. For example, avoid renaming the *Title* field of any content type, because this could lead to unpredictable issues, considering that the existence of the *Title* field is often assumed as a guarantee by developers.
 * Try to use a provisioning technique that is open to versioning of artifacts and life cycle management of the templates, in order to support customers' requests on the go.
 
-## Available options
-
-### Remote provisioning
+## Remote provisioning
 
 _**Applies to:** Office 365 | SharePoint Server 2016 | SharePoint Server 2013_
 
@@ -42,7 +40,8 @@ It can be used both in SharePoint 2013/2016 on-premises, and in SharePoint Onlin
 ### Videos
 * [SharePoint 2013 Remote Provisioning](https://www.youtube.com/watch?v=Jh7syofhNkg)
 
-### PnP provisioning engine
+
+## PnP provisioning engine
 
 _**Applies to:** Office 365 | SharePoint Server 2016 | SharePoint Server 2013_
 
@@ -69,7 +68,7 @@ The PnP provisioning engine can target both classic sites, as well as modern sit
 * [Getting Started with PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine)
 * [Introduction to Office 365 Dev PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Web-Cast-Introduction-to-Office-365-Dev-PnP-provisioning-engine)
 
-### Web templates
+## Web templates
 
 _**Applies to:** SharePoint Server 2016 | SharePoint Server 2013_
 
@@ -83,7 +82,7 @@ It's a technique to create a new site based on the Information Architecture of a
 * [Save, download, and upload a SharePoint site as a template](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/save-download-and-upload-a-sharepoint-site-as-a-template)
 * [Site definitions vs. Web templates](https://blogs.msdn.microsoft.com/vesku/2011/07/22/site-definitions-vs-web-templates/)
 
-### Site definitions
+## Site definitions
 
 _**Applies to:** SharePoint Server 2016 | SharePoint Server 2013_
 
@@ -109,7 +108,7 @@ List definitions allow you to define a list template that you can reuse to creat
 ### Samples
 * [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)
 
-### List templates
+## List templates
 
 _**Applies to:** SharePoint Server 2016 | SharePoint Server 2013_
 
@@ -124,7 +123,7 @@ List templates target on-premises only and leverage a .STP template file that yo
 ### Videos
 * [Document and list templates with app model](https://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
 
-### Feature stapling
+## Feature stapling
 
 _**Applies to:** SharePoint Server 2016 | SharePoint Server 2013_
 
@@ -143,9 +142,9 @@ Whenever you need to provision sites, there is a frequently asked question: "Is 
 Actually, very often the answer is "it depends". Nevertheless, here are some information that can help you make a choice:
 
 * Every Site Collection has unique users and permissions, while a sub site can inherit users and permissions from its parent site. Thus, for completely different target users, you should consider creating different Site Collections, rather than different Sub Sites within a unique Site Collection.
-* From a SharePoint Online perspecitve, the Sharing feature can be enabled/disabled at Site Collection level, but not at the Sub Site level.
+* From a SharePoint Online perspective, the Sharing feature can be enabled/disabled at Site Collection level, but not at the Sub Site level.
 * When you define Site Columns, and Content Types at the Site Collection level, those will be inherited in all the Sub Sites, which is a good behavior leading to a shared Information Architecture across all of the sites of the same Site Collection.
 * Sub Sites of the same Site Collection, can share a common hierarchical navigation structure, which improves the overall User Experience.
-* From an on-premises perspective, every single Site Collection can be associated with a dedicate database file, which is not the case for a Sub Site, which can only stay in its parent Site Collection database. Thus, you can have more granural backup and maintenance policies at the Site Collection level, rather than at the Sub Site level, as long as you don't use third party management tools.
+* From an on-premises perspective, every single Site Collection can be associated with a dedicate database file, which is not the case for a Sub Site, which can only stay in its parent Site Collection database. Thus, you can have more granular backup and maintenance policies at the Site Collection level, rather than at the Sub Site level, as long as you don't use third party management tools.
 * From an on-premises perspective, a Site Collection can be easily moved across different database files, while a Sub Site can just follow its parent Site Collection database.
 * Having multiple Sub Sites within a Site Collection allows you to leverage the Content Query Web Part (on-premises or in the classic UI of SharePoint Online) to achieve better data aggregation across sites.

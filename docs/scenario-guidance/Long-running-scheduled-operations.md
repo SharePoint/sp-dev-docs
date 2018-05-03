@@ -24,6 +24,7 @@ In this pattern, the long-running or scheduled operation is implemented in an Az
 
 - Does not require additional hardware to run the Azure Function (scheduling and implementation code).
 - Advantageous because it uses the Azure Function for scheduling as well as the implementation code, which makes it easy to manage in one location.
+- Maximum timeout for execution is 10 minutes (default 5 minutes), which means that if your process takes longer thant that, alternative options should be considered.
 
 #### Related resources
 

@@ -10,17 +10,13 @@ SharePoint supports security for user access at the website, list, list or libra
 
 Authorization refers to the process by which SharePoint provides security for websites, lists, folders, or items by determining which users can perform specific actions on a given object. The authorization process assumes that the user has already been authenticated, which refers to the process by which SharePoint identifies the current user. SharePoint does not implement its own system for authentication or identity management, but instead relies on external systems, whether Windows authentication or non-Windows authentication.
 
-## Available options
-
-### General recommendations
-
-### General information
+## General information
 
 _**Applies to:** Office 365 | SharePoint Server_
 
-#### Related resources
+### Related resources
 
-##### Articles
+### Articles
 
 - [Authentication, authorization, and security in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/authentication-authorization-and-security-in-sharepoint)
 - [Authorization and authentication of SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins)
@@ -38,13 +34,13 @@ _**Applies to:** Office 365 | SharePoint Server_
 - [Moving Full Trust Code to the Cloud](https://github.com/OfficeDev/TrainingContent/blob/master/O3651/O3651-4%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices/Lab.md)
 - [A Series of Visual Studio Solutions to Accompany the MSDN Tutorial Series about Provider-hosted Add-ins](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials)
 
-##### Videos
+### Videos
 
 - [PnP Shorts - Implementing Web Application Policy alternatives in SharePoint Online](https://www.youtube.com/watch?v=zcmngkgQdTU&feature=youtu.be)
 - [PnP Webcast - Calling external APIs securely from SharePoint Framework](https://www.youtube.com/watch?v=SDjKRfHA1nw)
 - [PnP Webcast - Azure AD implicit flow with SPFx client-side web part with developer preview](https://www.youtube.com/watch?v=KRgHjF84xZc)
 
-##### Samples
+### Samples
 
 - [Dynamically request permissions for an add-in](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.DynamicPermissions)
 - [PnP-IdentityModel](https://github.com/SharePoint/PnP-IdentityModel)
@@ -55,13 +51,11 @@ _**Applies to:** Office 365 | SharePoint Server_
 - [Access SharePoint data with the Cross Domain JavaScript Library](https://dev.office.com/code-samples-detail/5814)
 - [Access SharePoint data with the Cross Domain JavaScript Library and the REST\OData endpoints](https://dev.office.com/code-samples-detail/5815)
 
-### App-only access to SharePoint
+## App-only access to SharePoint
 
 _**Applies to:** Office 365 | SharePoint Server_
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint)
 - [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly)
@@ -70,60 +64,40 @@ _**Applies to:** Office 365 | SharePoint Server_
 - [Developing using Tenant permissions with App-Only in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online)
 - [Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 
-##### Samples
+### Samples
 
 - [External Sharing APIs for SharePoint and OneDrive for Business (Core.ExternalSharing)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ExternalSharing)
 
-### Elevating privileges
+## Elevating privileges
 
 _**Applies to:** Office 365 | SharePoint Server_
 
 If your solution allows users to perform actions for which they don't have adequate individual permissions, it needs to elevate user's privileges to complete that operation. Different methods are used to elevate privileges in SharePoint Add-ins and farm solutions. Farm solutions elevate privileges by using `RunWithElevatedPrivileges(SPSecurity.CodeToRunElevated)`, which belongs to the SharePoint server-side object model. SharePoint Add-ins use either the app-only policy or service accounts.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Elevated privileges in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/elevated-privileges-in-sharepoint-add-ins)
 - [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint#Scenario)
 - [App-only and elevated privileges in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
 
-### Azure AD Authentication/Authorization
+## Azure AD Authentication/Authorization
 
 _**Applies to:** Office 365_
 
 When using SharePoint Online you can define applications in Azure AD and these applications can be granted permissions to SharePoint, but also to all the other services in Office 365. This model is the preferred model in case you’re using SharePoint Online, if you’re using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS.
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact SharePoint add-in model which is using `https://accounts.accesscontrol.windows.net` hostname, which is not impacted by this retirement. See more details on this from [Impact of Azure Access Control retirement for SharePoint add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
-
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly)
 
-##### Videos
+### Videos
 
 - [Access Microsoft SharePoint with the Microsoft Graph](https://www.youtube.com/watch?v=bBILnF5Tf_k)
 
-##### Samples
+### Samples
 
 - [PowerShell to enable low trust authentication model at on-premises](https://github.com/SharePoint/PnP-Tools/tree/master/Scripts/SharePoint.LowTrustACS.Configuration)
 - [SharePoint Web Hooks Azure AD reference implementation](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples/WebHooks.List.AzureAD)
-
-### Government environments
-
-_**Applies to:** Office 365_
-
-When your Office 365 tenant is hosted in an specific environment like the Germany, China or US Government environments there are some additional considerations that you have to take into account.
-
-#### Related resources
-
-##### Articles
-
-- [Authorization considerations for tenants hosted in the Germany, China or US Government environments](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/extending-sharepoint-online-for-germany-china-usgovernment-environments)
-- [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
 ### Authorization considerations for tenants hosted in Germany, China or US
 
@@ -131,9 +105,7 @@ _**Applies to:** Office 365_
 
 When your Office 365 tenant is hosted in an specific environment like the Germany, China or US Government environments there are some additional considerations that you have to take into account.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Authorization considerations for tenants hosted in the Germany, China or US Government environments](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/extending-sharepoint-online-for-germany-china-usgovernment-environments)
 - [Learn about Office 365 Germany](https://support.office.com/en-US/article/Learn-about-Office-365-Germany-8a5a4bbc-667a-4cac-8769-d8ac9015db4c)

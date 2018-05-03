@@ -10,7 +10,7 @@ In order to access and consume LOB data and systems from within SharePoint, you 
 Here follow some high-level guidelines and general rules that you should consider whenever you need to integrate SharePoint with any LOB system:
 
 * Try to consume REST-based APIs, rather than SOAP services or custom APIs, in order to being able to leverage modern development techniques and to use modern security protocols (OAuth 2.0, OpenID Connect, etc.).
-* Use a data cache intermediary, instead of directly consuming any external service, so that you can speed up the consumption process and avoid useless network roundtrips to retrieve data that you already requested from the LOB system.
+* Use a data cache intermediary, instead of directly consuming any external service, so that you can speed up the consumption process and avoid useless network round trips to retrieve data that you already requested from the LOB system.
 * Make your best to list data page by page, rather than listing all the data in "one huge shot", to avoid flooding the data cache and to overload the network bandwidth.
 * From an Authentication and Authorization perspective, tend to use services that leverage well-known protocols like OAuth 2.0, OpenID Connect, etc. and which are possibly registered in Azure Active Directory, in order to share a unique security infrastructure.
 
@@ -22,6 +22,8 @@ Whenever you need to consume LOB systems from a client-side solution, like a cli
 
 ### Articles
 * [Connect to API secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad)
+* [Connect to Azure AD-secured APIs in SharePoint Framework solutions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient)
+* [Consume enterprise APIs secured with Azure AD in SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient-enterpriseapi)
 
 ### Samples
 * [Call custom Web API secured with AAD from SharePoint Framework client-side web part](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-aad-webapi)
@@ -55,6 +57,9 @@ Moreover, in SharePoint Online, if compared with SharePoint on-premises, you don
 _**Applies to:** Office 365 | SharePoint Online_
 
 While consuming LOB systems, another option that you have is to create SharePoint Online solutions that leverage on-premises data through an hybrid topology. For example, you can create an Azure App Service that connects to an on-premises infrastructure and consumes a SQL Server database, or any other on-premises data repository, through an Hybrid Connection.
+
+> [!NOTE]
+> This kind of solution architecture can have challenges with network latency. Due the direct hybrid connectivity, services in SharePoint Online would have a dependency on the on-premises services which is not optimal. It's recommended to have data cache intermediary in Azure side rather than connecting directly to the on-premises, even though technically this can be implemented relatively easily.
 
 ### Articles
 * [Create hybrid connectivity apps for SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/create-hybrid-connectivity-apps-for-sharepoint)
