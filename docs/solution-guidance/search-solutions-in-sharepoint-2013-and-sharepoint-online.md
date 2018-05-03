@@ -40,7 +40,7 @@ The search architecture in SharePoint includes components and databases that wor
 
 ### Crawl and content processing
 
-The crawl process starts with the different sources of content (for example HTTP, file shares and SharePoint). For content to be added to the index, the crawler uses connectors that tell the crawler how to connect to the content source and access the content items within the source. After the crawler has found the content items, it uses an applicable format handler to parse the content.
+The crawl process starts with the different sources of content (for example HTTP, file shares, and SharePoint). For content to be added to the index, the crawler uses connectors that tell the crawler how to connect to the content source and access the content items within the source. After the crawler has found the content items, it uses an applicable format handler to parse the content.
 
 After retrieving the content, the crawl component passes crawled items to the content processing component, which processes the items and sends them to the index component. This includes document parsing, mapping crawled properties to their associated managed properties, and linguistics processing, such as language detection and entity extraction. The content processing component also writes information about links and URLs to the link database.
 
@@ -52,47 +52,49 @@ The query processing component analyzes and processes search queries to optimize
 
 SharePoint analyzes both the content itself (search analytics) and also the way that users interact with it (usage analytics), and uses this information to improve search.
 
-Search analytics is about extracting information, such as links, the number of times an item is clicked, anchor text, data related to people, and metadata, from the link database. Search analytics forms the basis of determining relevance. Usage analytics, on the other hand, is about analyzing usage log information received from the front-end via the event store. Usage analytics forms the basis of usage and statistics reports.
+Search analytics is about extracting information, such as links, the number of times an item is clicked, anchor text, data related to people, and metadata, from the link database. Search analytics forms the basis of determining relevance. 
+
+Usage analytics, on the other hand, is about analyzing usage log information received from the front-end via the event store. Usage analytics forms the basis of usage and statistics reports.
 
 The results from the analyses are added to the items in the search index. In addition, results from usage analytics are stored in the analytics reporting database.
 
 ## Building blocks for customizing the search experience
 
-Search in SharePoint 2013 and SharePoint Online includes new functionality and improvements that allow you to customize the search experience. Many of the improvements do not require you to write code. SharePoint search includes CSOM and REST APIs to help when you do need to write code for your customization, or if you want to create add-ins to access SharePoint search results outside of SharePoint.
+Search in SharePoint and SharePoint Online includes new functionality and improvements that allow you to customize the search experience. Many of the improvements do not require you to write code. SharePoint search includes CSOM and REST APIs to help when you do need to write code for your customization, or if you want to create add-ins to access SharePoint search results outside of SharePoint.
+
+The new functionality and improvements include the following:
+
+- Search Center site
+- Search Center web parts
+- Result sources
+- Query rules
+- Query transforms
+- Result types and display templates
 
 ### Search Center site
 
-The Search Center is a SharePoint site set up for search. It is a portal where you can search for content on your organization's intranet, and provides a centralized and highly customizable user interface. This article describes the Search Center's pages and web parts, along with the search configuration settings that you can modify to create custom search experiences without writing a lot of code, or create custom search applications.
+The Search Center is a SharePoint site set up for search. It is a portal where you can search for content on your organization's intranet, and it provides a centralized and highly customizable user interface. This section describes the Search Center's pages and web parts, along with the search configuration settings that you can modify to create custom search applications or search experiences without writing a lot of code.
 
 When you create a Search Center site, SharePoint creates a default search home page and a default search results page. In addition, several pages known as search verticals are also created. Search verticals are search results pages that are customized to search specific content types, such as People and Videos, and they display search results that are filtered and formatted for a specific content type or class.
 
 The following pages are created in a Search Center site collection, in the Pages library:
 
-- **default.aspx** - The home page for the Search Center, and the page where end users enter their queries.
+- **default.aspx** &ndash; The home page for the Search Center, and the page where end users enter their queries.
+- **results.aspx** &ndash; The default search results page for the Search Center. It is also the search results page for the **Everything** search vertical.
+- **peopleresults.aspx** &ndash; The search results page for the **People** search vertical.
+- **conversationresults.aspx** &ndash; The search results page for the **Conversations** search vertical.
+- **videoresults.aspx** &ndash; The search results page for the **Videos** search vertical.
+- **advanced.aspx** &ndash; The search page where end users can apply restrictions to their search phrases, for example, limiting the search to an exact phrase.
     
-- **results.aspx** - The default search results page for the Search Center. It is also the search results page for the **Everything** search vertical.
-    
-- **peopleresults.aspx** - The search results page for the **People** search vertical.
-    
-- **conversationresults.aspx** - The search results page for the **Conversations** search vertical.
-    
-- **videoresults.aspx** - The search results page for the **Videos** search vertical.
-    
-- **advanced.aspx** - The search page where end users can apply restrictions to their search phrases, for example, limiting the search to an exact phrase.
-    
-All the search vertical pages contain the Search Results web part, although the web part is configured differently for each search vertical. For each, the query in the Search Results web part is directed to a specific result source, applicable to that search vertical. For example, the query in the Search Results web part on the peopleresults.aspx page is limited to the Local People Results result source. Understanding how the default search verticals in SharePoint 2013 are configured can help you create your own search vertical or customize the Search Center.
+All the search vertical pages contain the Search Results web part, although the web part is configured differently for each search vertical. For each, the query in the Search Results web part is directed to a specific result source, applicable to that search vertical. For example, the query in the Search Results web part on the peopleresults.aspx page is limited to the Local People Results result source. Understanding how the default search verticals in SharePoint are configured can help you create your own search vertical or customize the Search Center.
 
 The following are additional resources to help you work with the Search Center:
 
-- [Set up a Search Center in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794206%28v=office.15%29.aspx)
-    
-- [How to create a Search Center Site Collection and enable crawling of your content in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794245%28v=office.15%29.aspx)
-    
-- [Create a Search Center site in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/hh582314%28v=office.15%29.aspx)
-    
-- [Manage the Search Center](http://technet.microsoft.com/en-us/library/jj851144%28v=office.15%29.aspx)
-    
-- [Manage the Search Center in SharePoint Online](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-the-search-center-in-sharepoint-online-HA103994122.aspx)
+- [Set up a Search Center in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/set-up-a-search-center)
+- [How to create a Search Center Site Collection and enable crawling of your content in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-create-a-search-center-site-collection-and-enable-crawling-of-your-conten)
+- [Create a Search Center site in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/create-a-search-center-site)
+- [Manage the Search Center in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/manage-the-search-center-in-sharepoint-server)
+- [Manage the Search Center in SharePoint Online](https://support.office.com/en-us/article/manage-the-search-center-in-sharepoint-online-174d36e0-2f85-461a-ad9a-8b3f434a4213?ui=en-US&rs=en-US&ad=US)
 
 ### Search Center web parts
 
@@ -105,86 +107,87 @@ The Search Box web part shows a text box where users enter text on which to sear
 You can customize the Search Box web part by editing properties in the web part tool pane. This allows you to do the following:
 
 - Change where the search results are displayed. For example, you can show results in a custom Search Results web part or on a custom search results page.
-    
 - Turn off query suggestions and people suggestions.
-    
 - Show links to a search preference page and an advanced search page.
-    
 - Change the display template for the web part.
     
-For more information, see [Configure properties of the Search Box web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg576963%28v=office.15%29.aspx) and [How to change the text that is displayed in the Search Box web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794238%28v=office.15%29.aspx).
+For more information, see:
+
+- [Configure properties of the Search Box web part in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/configure-properties-of-the-search-box-web-part)
+- [How to change the text that is displayed in the Search Box web part in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-change-the-text-that-is-displayed-in-the-search-box-web-part)
 
 #### Search Results web part
 
 The Search Results web part displays the results of a search query. By default, the Search Results web part is used on all default search vertical pages (results.aspx, peopleresults.aspx, conversationresults.aspx, and videoresults.aspx). The Search Results web part also sends the search results to the Refinement web part and the Search Navigation web part, so there must be a Search Results web part on a search results page for the other search web parts to work.
 
-You can edit the Search Results web part properties in the web part tool pane to change the search query, as well as to alter the behavior and appearance of results on the search results page. By changing property values, you can do the following:
+You can edit the Search Results web part properties in the web part tool pane to change the search query, as well as to alter the behavior and appearance of results on the search results page. 
+
+By changing property values, you can do the following:
 
 - Change the result source to specify which content should be searched.
-    
-- Add query variables or property filters to customize search results for different users or user groups.
-    
-- Promote or demote items or pages within the search results.
-    
-- Change the sorting of the search results.
-    
+- Add query variables or property filters to customize search results for different users or user groups.  
+- Promote or demote items or pages within the search results.  
+- Change the sorting of the search results.  
 - Change the display template.
     
-For more information about the Search Results web parts, see [Configure properties of the Search Results web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549987.aspx) and [How to configure the Search Results web part to use a new result source in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794200%28v=office.15%29.aspx).
+For more information about the Search Results web parts, see:
+
+- [Configure properties of the Search Results web part in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/configure-properties-of-the-search-results-web-part)
+- [How to configure the Search Results web part to use a new result source in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-configure-the-search-results-web-part-to-use-a-new-result-source)
 
 #### Search Navigation web part
 
-The Search Navigation web part shows links that let users move quickly between the different search verticals (Everything, People, Conversations, and Videos). The Search Navigation web part uses search results from the Search Results web part so that when users choose a search vertical link, the search results are filtered and displayed according to how the search vertical is set up. By editing the Search Navigation web part properties in the web part tool pane, you can customize the web part as follows:
+The Search Navigation web part shows links that let users move quickly between the different search verticals (Everything, People, Conversations, and Videos). The Search Navigation web part uses search results from the Search Results web part so that when users choose a search vertical link, the search results are filtered and displayed according to how the search vertical is set up. 
+
+By editing the Search Navigation web part properties in the web part tool pane, you can customize the web part as follows:
 
 - Specify a different web part from which to get the results.
-    
 - Change the number of search vertical links to show.
-    
 - Change the appearance and layout of the web part.
     
 Additionally, on the ribbon, you can select **Site Settings** > **Search Settings** to make the following changes:
 
 - Change the link display names.
-    
 - Change the link order.
 
 #### Refinement web part
 
-The Refinement web part filters search results into categories called refiners. Users can choose these refiners to narrow search results. Refiners are managed properties that are marked as  _Refinable_ and _Queryable_. For information about these settings, see [Managed property setting overview in Overview of the search schema in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj219669%28v=office.15%29.aspx). You can edit the Refinement web part properties in the web part tool pane to specify the following:
+The Refinement web part filters search results into categories called refiners. Users can choose these refiners to narrow search results. Refiners are managed properties that are marked as  _Refinable_ and _Queryable_. For information about these settings, see the [Managed property settings overview in Overview of the search schema in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/search-schema-overview#managed-property-settings-overview). 
+
+You can edit the Refinement web part properties in the web part tool pane to specify the following:
 
 - Which Search Results web part to filter search results from.
-    
 - The refiners to use in the Refinement web part.
-    
 - The display template that is applied to each refiner.
-    
 - The appearance, layout, and behavior of the Refinement web part.
     
-By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. For more information about this feature, see [Add refiner counts to the Refinement web part in Configure properties of the Refinement web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549985%28v=office.15%29.aspx).
+By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. For more information about this feature, see [Configure properties of the Refinement web part in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/configure-properties-of-the-refinement-web-part).
 
-For more information about the Refinement web part and refiners, see [Plan to use refiners on a search results page in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794223%28v=office.15%29.aspx) and [How to add refiners to your search results page in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794243%28v=office.15%29.aspx).
+For more information about the Refinement web part and refiners, see:
+
+- [Plan to use refiners on a search results page in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/plan-to-use-refiners-on-a-search-results-page)
+- [How to add refiners to your search results page in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/how-to-add-refiners-to-your-search-results-page)
 
 ### Result sources
 
 Result sources limit searches to certain content or to a subset of search results. You can define a result source by specifying the following:
 
-- A search provider or source URL to get search results from; for example, the search index of the local SharePoint Search service.
-    
+- A search provider or source URL to get search results from; for example, the search index of the local SharePoint Search service.   
 - A protocol to use to get search results; for example, the [OpenSearch](http://www.opensearch.org/Home) protocol.
-    
 - A query transform, which can narrow results from the given search provider or URL to a specific subset of results; for example, to a set of results that has a particular content type.
     
-SharePoint 2013 provides sixteen preconfigured result sources, including Local SharePoint Results, Conversations, and Items related to current user. You can view details about result sources from the **Manage Result Sources** page. (**Site Settings** > **Search** > **Result Sources**). Then, from the **Manage Result Sources** page, you can create new result sources in either of the following two ways:
+SharePoint provides sixteen preconfigured result sources, including Local SharePoint Results, Conversations, and Items related to current user. You can view details about result sources from the **Manage Result Sources** page (**Site Settings** > **Search** > **Result Sources**). 
 
-- Choose **New Result Source** and select the result source that you want. (For more information, see [Configure result sources for search in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj683115%28v=office.15%29.aspx).)
-    
+From the **Manage Result Sources** page, you can create new result sources in either of the following two ways:
+
+- Choose **New Result Source** and select the result source that you want. For more information, see [Configure result sources for search in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/configure-result-sources-for-search).
 - Point to the arrow next to an existing result source, choose **Copy**, and then modify the copy as necessary and save it with a new name.
     
 A result source specifies one of four protocols to obtain search results. If the result source uses a protocol other than **Local SharePoint**, the result source must also specify a URL from which to get search results.
 
 **Result source protocols and their providers**
 
-|**Result source protocol**|**Provider**|**URL**|
+|Result source protocol|Provider|URL|
 |:-----|:-----|:-----|
 |Local SharePoint|The search index of the local Search service.|N/A|
 |Remote SharePoint|The search index of a Search service hosted in another farm.|The address of the root site collection of the remote SharePoint farm. |
@@ -193,13 +196,10 @@ A result source specifies one of four protocols to obtain search results. If the
 
 For more information, see the following:
 
-- [Understanding result sources for search in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn186229%28v=office.15%29.aspx)
-    
-- [About result sources and federation](http://technet.microsoft.com/en-us/library/jj219577%28v=office.15%29.aspx#Section12)
-    
-- [Understanding result sources](http://office.microsoft.com/en-us/sharepoint-server-help/understanding-result-sources-HA102848849.aspx?CTT=1)
-    
-- [Manage result sources](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-result-sources-HA103639370.aspx)
+- [Understanding result sources for search in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/search/understanding-result-sources-for-search)
+- [About result sources and federation](https://docs.microsoft.com/en-us/SharePoint/search/plan-crawling-and-federation#about-result-sources-and-federation)
+- [Understanding result sources](https://support.office.com/en-us/article/understanding-result-sources-3fb2c8c4-ecbd-4210-abf7-1f0df59a370b?ocmsassetID=HA102848849&CTT=1&CorrelationId=707e7332-5113-44fc-ae26-fe5242fe3de5&ui=en-US&rs=en-US&ad=US)
+- [Manage result sources](https://support.office.com/en-us/article/manage-result-sources-fd8d6ac6-c5d0-454d-80a9-51580902b25d?ui=en-US&rs=en-US&ad=US)
 
 ### Query rules
 
@@ -208,9 +208,7 @@ Use query rules to customize the search experience for queries that are particul
 With respect to context, you can restrict query rule queries that are: 
 
 - Performed on a specified result source.
-    
 - From a specified topic category.
-    
 - Performed by a user matching a specified user segment.
     
 The following table lists conditions that you can specify that cause a query rule to run.
@@ -220,11 +218,11 @@ The following table lists conditions that you can specify that cause a query rul
 |**Condition**|**Description**|
 |:-----|:-----|
 |Query matches keyword exactly|Apply the query rule when the query exactly matches a word or phrase that you specify.|
-|Query contains action term|Apply the query rule when the query contains a term in the form of a single word or phrase that indicates that the user is trying to do something. The term must be at the beginning or end of the query and might be a verb, a command, or a filter.|
-|Query matches dictionary exactly|Apply the query rule when the query exactly matches a dictionary entry. This entry can be a term in the term store, or an entry in the people names dictionary. |
-|Query more common in source|Apply the query rule if the user's query is more commonly performed against a different result source than the current one. This condition uses an analysis of queries that users entered in the various result sources.|
-|Result type commonly clicked|Apply the query rule if the query often ends in users choosing results of a particular result type. When you create a new result type, you can indicate that these selections should be recorded to be used in query rules.|
-|Advanced query text match|Apply the query rule if the query matches a regular expression. It also allows you to use variations of the keyword, action term, and dictionary conditions explained earlier, but with more advanced control.|
+|Query contains action term|Apply the query rule when the query contains a term in the form of a single word or phrase that indicates that the user is trying to do something.<br/>The term must be at the beginning or end of the query and might be a verb, a command, or a filter.|
+|Query matches dictionary exactly|Apply the query rule when the query exactly matches a dictionary entry.<br/>This entry can be a term in the term store, or an entry in the people names dictionary. |
+|Query more common in source|Apply the query rule if the user's query is more commonly performed against a different result source than the current one.<br/>This condition uses an analysis of queries that users entered in the various result sources.|
+|Result type commonly clicked|Apply the query rule if the query often ends in users choosing results of a particular result type.<br/>When you create a new result type, you can indicate that these selections should be recorded to be used in query rules.|
+|Advanced query text match|Apply the query rule if the query matches a regular expression.<br/>It also allows you to use variations of the keyword, action term, and dictionary conditions explained earlier, but with more advanced control.|
 
 A query rule can specify three kinds of actions:
 
