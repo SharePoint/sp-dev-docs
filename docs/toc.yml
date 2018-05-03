@@ -1393,52 +1393,52 @@
   - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md
     items:
-    - name: Performance guidance
+    - name: Performance
       href: solution-guidance/portal-performance.md
     - name: Information architecture
       href: solution-guidance/portal-information-architecture.md
-    - name: Navigation considerations
+    - name: Navigation
       href: solution-guidance/portal-navigation.md
-    - name: Data aggregation guidance
+    - name: Content aggregation
       href: solution-guidance/portal-data-aggregation.md
-    - name: Branding your portals
+    - name: Branding
       href: solution-guidance/portal-branding.md
-    - name: Portal go live approach
+    - name: Deployment
       href: solution-guidance/portal-rollout.md
   - name: Composite business add-ins
     href: solution-guidance/composite-business-apps-for-sharepoint.md
     items:
     - name: Migrate InfoPath forms
-      href: solution-guidance/Migrate-InfoPath-forms-to-SharePoint.md
+      href: solution-guidance/migrate-infopath-forms-to-sharepoint.md
     - name: Data storage options
-      href: solution-guidance/Data-storage-options-in-SharePoint-Online.md
-    - name: Corporate event app integration
-      href: solution-guidance/Corporate-app-event-registration-with-SharePoint.md
+      href: solution-guidance/data-storage-options-in-sharepoint-online.md
+    - name: Corporate event add-in integration
+      href: solution-guidance/corporate-app-event-registration-with-sharepoint.md
     - name: Call web services from workflows
-      href: solution-guidance/Call-web-services-from-SharePoint-workflows.md
+      href: solution-guidance/call-web-services-from-sharepoint-workflows.md
   - name: ECM solutions
-    href: solution-guidance/Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md
+    href: solution-guidance/enterprise-content-management-solutions-for-sharepoint.md
     items:
     - name: Document library templates
-      href: solution-guidance/Document-library-templates-sample-app-for-SharePoint.md
-    - name: Autotagging
-      href: solution-guidance/Autotagging-sample-app-for-SharePoint.md
+      href: solution-guidance/document-library-templates-sample-app-for-sharepoint.md
+    - name: Auto-tagging
+      href: solution-guidance/autotagging-sample-app-for-sharepoint.md
     - name: Information management
-      href: solution-guidance/Information-management-sample-app-for-SharePoint.md
+      href: solution-guidance/information-management-sample-app-for-sharepoint.md
     - name: Records management extensions
-      href: solution-guidance/Records-management-extensions-sample-app-for-SharePoint.md
+      href: solution-guidance/records-management-extensions-sample-app-for-sharepoint.md
     - name: Taxonomy operations
-      href: solution-guidance/Taxonomy-operations-sample-app-for-SharePoint.md
+      href: solution-guidance/taxonomy-operations-sample-app-for-sharepoint.md
     - name: Bulk upload documents
-      href: solution-guidance/Bulk-upload-documents-sample-app-for-SharePoint.md
+      href: solution-guidance/bulk-upload-documents-sample-app-for-sharepoint.md
     - name: Upload large files
-      href: solution-guidance/Upload-large-files-sample-app-for-SharePoint.md
+      href: solution-guidance/upload-large-files-sample-app-for-sharepoint.md
     - name: Synchronize term groups
-      href: solution-guidance/Synchronize-term-groups-sample-app-for-SharePoint.md
-    - name: 'Supporting % and # in file and folder with the ResourcePath API'
+      href: solution-guidance/synchronize-term-groups-sample-app-for-sharepoint.md
+    - name: 'Support % and # in files and folders with ResourcePath API'
       href: solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
   - name: Localization solutions
-    href: solution-guidance/localization-solutions-for-sharepoint-2013-and-sharepoint-online.md
+    href: solution-guidance/localization-solutions-for-sharepoint.md
     items:
     - name: Use localization features
       href: solution-guidance/Use-localization-features-in-Office-365-sample-app.md

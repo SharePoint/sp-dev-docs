@@ -12,7 +12,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 
 When you create a SharePoint site collection, SharePoint creates a Master Page Gallery (_catalogs/masterpage) where most branding assets, including .master, .css, image, HTML, and JavaScript files are stored.
 
-SharePoint uses the seattle.master page by default for team sites, publishing sites, and team sites with publishing enabled. It uses mysite15.master for OneDrive for Business sites. Each .master file refers to the corev15.css file, which is built from a variety of .css files delivered with SharePoint out of the box.
+SharePoint uses the seattle.master page by default for team sites, publishing sites, and team sites with publishing enabled. It uses mysite15.master for OneDrive for Business sites. Each .master file refers to the corev15.css file, which is built from a variety of .css files delivered with SharePoint out-of-the-box.
 
 All default master pages use corev15.css when processing styles, and rely on the CSS cascade and CSS file sharing to resolve which styles are applied to specific controls and elements in regions of a page. Multiple CSS files are also combined to build the oslo.css file, which is used with the oslo.master master page.
 

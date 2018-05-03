@@ -116,7 +116,7 @@ When you deactivate your existing sandbox solution from your sites, any assets o
 
 _**Applies to:** Office 365 and SharePoint Server_
 
-Client-side rendering or JSLink is a concept introduced with SharePoint 2013.  With the help of this concept, you can customize the look and feel of SharePoint Out of the box VIEW/ADD/EDIT FORM.
+Client-side rendering or JSLink is a concept introduced with SharePoint 2013.  With the help of this concept, you can customize the look and feel of SharePoint out-of-the-box VIEW/ADD/EDIT FORM.
 
 JSLink is a JavaScript file which will override the default view of your list with the help of logically defined in your custom JSLink file. You can include the JSLink JavaScript file under the Miscellaneous section of your list view web part.
 

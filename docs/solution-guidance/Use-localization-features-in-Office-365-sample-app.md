@@ -157,5 +157,5 @@ As shown in the following figure, your site displays your custom French title **
 
 ## See also
   
-- [Enterprise Content Management solutions for SharePoint and SharePoint Online](enterprise-content-management-solutions-for-sharepoint-2013-and-sharepoint-online.md)
-- [Localization solutions for SharePoint and SharePoint Online](localization-solutions-for-sharepoint-2013-and-sharepoint-online.md)
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)
+- [Localization solutions for SharePoint](localization-solutions-for-sharepoint.md)

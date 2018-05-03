@@ -1,60 +1,49 @@
 ---
-title: Bulk upload documents sample add-in for SharePoint
-ms.date: 11/03/2017
+title: Bulk upload documents sample SharePoint Add-in
+description: As part of your Enterprise Content Management (ECM) strategy, you can bulk upload documents to document libraries, including OneDrive for Business.
+ms.date: 5/2/2018
 ---
-# Bulk upload documents sample add-in for SharePoint
 
-As part of your Enterprise Content Management (ECM) strategy, you can bulk upload documents to document libraries, including OneDrive for Business.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
+# Bulk upload documents sample SharePoint Add-in
 
 > [!NOTE] 
 > The sample uploads one file to a document library. To upload multiple files, you'll need to extend the sample.
 
-This add-in uses a console application to upload files by using REST API calls. Configuration settings are specified in an XML and a CSV file. Use this solution if you want to:
+The Core.BulkDocumentUploader sample add-in uses a console application to upload files by using REST API calls. Configuration settings are specified in an XML and a CSV file. 
 
-- Upload files to SharePoint Online.
-    
+Use this solution if you want to:
+
+- Upload files to SharePoint Online. 
 - Migrate to Office 365 and use a custom migration tool to move your files.
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
-To get started, download the  [Core.BulkDocumentUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.BulkDocumentUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkDocumentUploader) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 Before you run the code sample, do the following:
-
 
 1. Edit the OneDriveUploader.xml file with the following information:
     
 	- The location where you want to save your text and CSV log files.
-    
 	- The file path to your CSV mapping file (for example, C:\PnP\Samples\Core.BulkDocumentUploader\Input\SharePointSites.csv).
-    
 	- The location of the company policy files to upload (for example, C:\PnP\Samples\Core.BulkDocumentUploader\Input\OneDriveFiles).
-    
 	- Your SharePoint Online credentials.
-    
 	- The document action to perform (either upload or delete).
-    
 	- The new file name to apply to the file after the file is uploaded to the document library (for example, COMPANY POLICY DOCUMENT.xlsx).
     
 2. In the SharePointSites.csv mapping file, list the document library URL to upload files to, and the name of the company policy file to upload. 
     
-3. Add the file path of the OneDriveUploader.xml file as a command-line argument. To do this, open the Core.BulkDocumentUploader project properties in Solution Explorer, and then choose  **Properties** > **Debug**, as shown in Figure 1.
-    
-    **Figure 1. Setting OneDriveUploader.xml as a command-line argument in the project properties**
+3. Add the file path of the OneDriveUploader.xml file as a command-line argument. To do this, open the Core.BulkDocumentUploader project properties in Solution Explorer, and then choose **Properties** > **Debug**.
 
     ![Screenshot of the Core.BulkDocumentUploader properties pane with Debug highlighted.](media/f1d950b4-82be-4800-9ccc-07fa2c739fad.png)
 
 
-## Using the Core.BulkDocumentUploader sample app
-<a name="sectionSection1"> </a>
+## Using the Core.BulkDocumentUploader sample add-in
 
-From the  **Main** method in Program.cs, the **RecurseActions** method calls the **Run** method in OneDriveMapper.cs. The **Run** method gets the location of the file to upload from SharePointSites.csv, and then calls the **IterateCollection** method.
-
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+From the **Main** method in Program.cs, the **RecurseActions** method calls the **Run** method in OneDriveMapper.cs. The **Run** method gets the location of the file to upload from SharePointSites.csv, and then calls the **IterateCollection** method.
 
 ```csharp
 public override void Run(BaseAction parentAction, DateTime CurrentTime, LogHelper logger)
@@ -71,18 +60,20 @@ public override void Run(BaseAction parentAction, DateTime CurrentTime, LogHelpe
 
 ```
 
+<br/>
+
 The SharePointSite.csv file lists a file to upload and the document library to upload that file to. The  **IterateCollection** method then does the following to upload the file to the document library:
 
 1. Gets the file to upload. 
     
 2. Ensures that the user has permissions to add items.
     
-3. Creates the  **HttpWebRequest** object with the authentication cookie, the REST string request to upload the document, and the HTTP request action method.
+3. Creates the **HttpWebRequest** object with the authentication cookie, the REST string request to upload the document, and the HTTP request action method.
     
 4. Performs the file upload.
 
 > [!NOTE] 
-> The file name is overwritten with the value of  **FileUploadName** specified in OneDriveUploader.xml.
+> The file name is overwritten with the value of **FileUploadName** specified in OneDriveUploader.xml.
 
 ```csharp
 public override void IterateCollection(Collection<string> entries, LogHelper logger)
@@ -212,8 +203,6 @@ public override void IterateCollection(Collection<string> entries, LogHelper log
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)   
--  [Core.LargeFileUpload sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)
-    
+  
+- [Core.LargeFileUpload sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)  
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

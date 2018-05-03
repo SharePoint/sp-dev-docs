@@ -88,7 +88,7 @@ Related PnP samples
 - [AlternateCSSUrl and SiteLogoUrl Properties in the web object (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
 - [Set theme to site (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.SetThemeToSite)
 - [Setting a SharePoint Theme in an App for SharePoint (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.Themes)
-- [Making out of the box Seattle master responsive (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.InjectResponsiveCSS)
+- [Making out-of-the-box Seattle master responsive (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.InjectResponsiveCSS)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
 Applies to

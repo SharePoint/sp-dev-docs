@@ -27,7 +27,7 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 
 **Getting Started**
 
-Add-in Parts may be easily created by using the out of the box Add-in Script Part.  This allows you to provide a link to a JavaScript file hosted anywhere.  The JavaScript file uses client side code to interact with SharePoint or other services and render a user interface.
+Add-in Parts may be easily created by using the out-of-the-box Add-in Script Part.  This allows you to provide a link to a JavaScript file hosted anywhere.  The JavaScript file uses client side code to interact with SharePoint or other services and render a user interface.
 
 The following article describes the Add-in Script Part pattern and how to use it.
 

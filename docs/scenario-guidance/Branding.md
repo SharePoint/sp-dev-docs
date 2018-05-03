@@ -202,7 +202,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 
 - [CSS injection pattern](https://dev.office.com/patterns-and-practices-detail/1852)
 - [AlternateCssUrl & SiteLogoUrl properties in web object](https://dev.office.com/patterns-and-practices-detail/1849)
-- [Making out of the box Seattle master responsive](https://dev.office.com/patterns-and-practices-detail/5823)
+- [Making out-of-the-box Seattle master responsive](https://dev.office.com/patterns-and-practices-detail/5823)
 
 ## Script Embedding and DOM manipulation
 

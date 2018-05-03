@@ -1,51 +1,59 @@
 ---
-title: Guidelines for developing well performing SharePoint Online portals
-ms.date: 11/03/2017
+title: Building SharePoint Online portals
+description: Guidelines for developing well-performing SharePoint Online portals. 
+ms.date: 4/30/2018
 ---
-# Guidelines for developing well performing SharePoint Online portals
 
-SharePoint on-premises has been, and is, a popular platform for building enterprise portals (a.k.a. intranets). You can build similar portals on SharePoint Online as well, but since SharePoint Online is different from an infrastructure architecture point of view it's important to factor in the SharePoint Online specific performance considerations when developing your new portal. This set of articles will give you guidance on the key portal design areas.
+# Building SharePoint Online portals
 
-> [!NOTE] 
-> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
-
-_**Applies to:** SharePoint Online_
-
-## Why did we create these guidelines?
-<a name="sectionSection0"> </a>
-The growth of SharePoint Online is phenomenal and as a result more and more customers are building portals using SharePoint Online as their platform. While working with SharePoint support teams and several large customers we've noticed that many customers built their portals like they would be building them for SharePoint on-premises and this approach is negatively impacting portal performance. Often these performance problems are resolved after portal go live, which of course is not ideal. We hope that by following these guidelines customers will be better prepared for launching well performing portals on SharePoint Online.
-
-## What's included?
-The guidance currently mainly focuses on patterns and practices that will help you build well performing portals on SharePoint Online focusing on following topics: performance, information architecture, navigation, data aggregation, branding and portal roll-out. Each of the articles has the same layout:
-- We'll start with anti-patterns: essentially telling you what you should **not** do anymore
-- We'll then provide best practice and patterns on how you should be implementing your portal
-- We'll give you a set of links to interesting resources where you can learn more
-- We're complementing the best practices with samples like our [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer)
-
-## How to provide feedback around provided guidance?
-This guidance is completely open source and we encourage the community to provide feedback. On the top right of each page you can click on "Contribute" which will bring you to the GitHub repository hosting this guidance. Once in GitHub you can: 
-- Create an issue in the issue list if you want to start a discussion on the content
-- Fork the repository, make changes to the articles and create a pull request. We appreciate your contributions and our MSDN publishing system will credit you as page contributor once you're pull request has been accepted
+SharePoint on-premises has been, and is, a popular platform for building enterprise portals (also known as intranets). You can build similar portals on SharePoint Online as well. However, because SharePoint Online is different from an infrastructure architecture point of view, it's important to factor in the SharePoint Online-specific performance considerations when developing your new portal. This set of articles gives you guidance on the key portal design areas.
 
 > [!NOTE] 
-> We'll be further evolving this guidance by adding samples, additional insights, integration of new SharePoint Online capabilities and we would absolutely love community feedback and contributions.
+> Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 
-## What's the audience we're targeting with these guidelines?
-<a name="sectionSection1"> </a>
-Most sections are targeting portal developers, but if you're not having a developer background then the it's recommended to go over this guidelines as it also discusses more general areas like **Information Architecture**, **Branding** and **Go Live**.
+## Why we created these guidelines
+
+The growth of SharePoint Online is phenomenal, and as a result, more and more customers are building portals by using SharePoint Online as their platform. While working with SharePoint support teams and customers, we've noticed that many customers build their portals like they would for SharePoint on-premises, and this approach is negatively impacting portal performance. Often these performance problems are resolved after the portal goes live, which of course is not ideal. We hope that by following these guidelines, you will be better prepared for launching well-performing portals on SharePoint Online.
+
+## What's included
+
+The guidance provides patterns and practices that will help you build well-performing portals on SharePoint Online and focuses on the following topics: performance, information architecture, navigation, data aggregation, branding, and portal roll-out. Each article has the same layout:
+
+- What not to do: Essentially, we tell you what you should **not** do anymore.
+- Best practices and patterns: How to implement your portal.
+- Links to interesting resources where you can learn more.
+- Samples. For example, [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer).
+
+## How to provide feedback
+
+This guidance is completely open source, and we encourage the community to provide feedback. On the top right of each page, you can choose **Edit**, which takes you to the GitHub repository hosting this guidance. In GitHub you can: 
+
+- Create an issue in the list on the **Issues tab** if you want to start a discussion about the content.
+- Fork the repository, make changes to the articles, and create a pull request. 
+
+We appreciate your contributions, and our publishing system will credit you as a page contributor after your pull request has been accepted.
+
+> [!NOTE] 
+> We'll be further evolving this guidance by adding samples, additional insights, and integration of new SharePoint Online capabilities, and would absolutely love community feedback and contributions.
+
+## Target audience
+
+Most sections target portal developers, but if you don't have a developer background, you can still use these guidelines because they discuss general areas such as information architecture, branding, and deployment.
 
 ## Portal guidance overview
-<a name="sectionSection2"> </a>
-Below table contains an overview of the individual articles that are part of the SharePoint Online portal guidelines.
 
-|**Portal design area**|**Introduction to options**|
+The following table contains an overview of the individual articles that are part of the SharePoint Online portal guidelines.
+
+<br/>
+
+|Article|Description|
 |:-----|:-----|
-|Performance|<p>Performance is a critical aspect of any portal and this article contains numerous design patterns that will help you build well performing portals.</p><p>[Portal performance guidance](portal-performance.md)</p>|
-|Information architecture|<p>Having a sound information architecture is an important prerequisite for realizing good portal performance.</p><p>[Portal information architecture guidance](portal-information-architecture.md)</p>|
-|Navigation|<p>Each portal project needs to tackle the navigation question and for SharePoint Online you'll need to take in account specific guidelines which are described in this article.</p><p>[Portal navigation guidance](portal-navigation.md)</p>|
-|Data aggregation|<p>Aggregating and rolling up data from different locations, taking in account user preferences in something that almost all portals need. Check out this article to learn more about a flexible proven approach for aggregating data.</p><p>[Portal data aggregation guidance](portal-data-aggregation.md)</p>|
-|Branding|<p>Being able to apply a custom brand on a portal is a typical requirement and this article provides you with an overview of the branding options and branding best practices.</p><p>[Portal branding guidance](portal-branding.md)</p>|
-|Go Live|<p>Once you're portal has been developed and tested it's time to go live...but what strategy to follow for going live? This article will give you the Microsoft recommended approach.</p><p>[Portal go live guidance](portal-rollout.md)</p>|
+|[Performance](portal-performance.md)|<p>Describes the evolution of the SharePoint Online customization model, general performance guidelines for client-side web applications, and the Client-Side Data Access Layer (DAL) Framework.</p>|
+|[Information architecture](portal-information-architecture.md)|<p>Describes site organization patterns, and guidelines for incorporating permissions, search, taxonomy, and large media in your SharePoint Online portal.</p>|
+|[Navigation](portal-navigation.md)|<p>Explains the pros and cons of using an out-of-the-box navigation solution versus a custom navigation solution.</p>|
+|[Content aggregation](portal-data-aggregation.md)|<p>Describes best practices and techniques for content aggregation, and the cons of using real-time content aggregation.</p>|
+|[Branding](portal-branding.md)|<p>Describes branding requirements and general principles when branding portals in a SharePoint Online environment.</p></p>|
+|[Deployment](portal-rollout.md)|<p>Compares past deployment strategies with the now recommended strategy of using a phased roll-out plan and telemetry.</p><p>|
 
 ## See also
 
