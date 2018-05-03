@@ -80,11 +80,11 @@ For information about Excel Services topology, scalability, performance, and sec
 
 ## Excel Web Access
 
-Excel Web Access is a viewer page and an Excel Services Web Part that you can add to any Web Parts page in SharePoint Server 2010. Excel Web Access renders (in other words, creates the HTML for) live Excel workbooks on a Web page, and enables the user to interact with those workbooks and explore them. Excel Web Access is the visible Excel Services component for the user. You can use Excel Web Access like any other Web Part in SharePoint Server 2010. Excel Web Access does not require the user to install anything on the client computer.
+Excel Web Access is a viewer page and an Excel Services web part that you can add to any web parts page in SharePoint Server 2010. Excel Web Access renders (in other words, creates the HTML for) live Excel workbooks on a webpage, and enables the user to interact with those workbooks and explore them. Excel Web Access is the visible Excel Services component for the user. You can use Excel Web Access like any other web part in SharePoint Server 2010. Excel Web Access does not require the user to install anything on the client computer.
   
     
     
-The Excel Web Access Web Part properties are also customizable. For more information, see the **Microsoft.Office.Excel.Server.WebUI** namespace reference documentation.
+The Excel Web Access web part properties are also customizable. For more information, see the **Microsoft.Office.Excel.Server.WebUI** namespace reference documentation.
   
     
     
@@ -113,7 +113,7 @@ Excel Services UDFs enable you to use formulas in a cell to call custom function
 
 ## ECMAScript (JavaScript, JScript)
 
-The JavaScript object model in Excel Services enables developers to customize, automate, and drive the Excel Web Access Web Part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access Web Part controls on a page or an **iframe** with script on the page. It also enables you to add more capabilities to your workbooks and code around them.
+The JavaScript object model in Excel Services enables developers to customize, automate, and drive the Excel Web Access web part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access web part controls on a page or an **iframe** with script on the page. It also enables you to add more capabilities to your workbooks and code around them.
   
     
     

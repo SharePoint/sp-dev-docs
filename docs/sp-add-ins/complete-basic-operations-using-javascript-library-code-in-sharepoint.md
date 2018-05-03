@@ -216,7 +216,7 @@ function updateWebSite(siteUrl) {
     this.oWebsite = clientContext.get_web();
 
     this.oWebsite.set_title('Updated Web Site');
-    this.oWebsite.set_description('This is an updated Web site.');
+    this.oWebsite.set_description('This is an updated website.');
     this.oWebsite.update();
 
     clientContext.load(this.oWebsite, 'Title', 'Description');

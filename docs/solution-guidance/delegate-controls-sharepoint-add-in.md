@@ -1,8 +1,8 @@
 ---
-title: Delegate controls in the SharePoint add-in model
+title: Delegate controls in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Delegate controls in the SharePoint add-in model
+Delegate controls in the SharePoint Add-in model
 ================================================
 
 Summary

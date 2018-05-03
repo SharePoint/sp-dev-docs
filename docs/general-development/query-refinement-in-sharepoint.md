@@ -322,7 +322,7 @@ query.Refiners);
 <a name="SP15_Query_refinement_addresources"> </a>
 
 
--  [Configure properties of the Refinement Web Part in SharePoint](http://technet.microsoft.com/en-us/library/gg549985.aspx)
+-  [Configure properties of the Refinement web part in SharePoint](http://technet.microsoft.com/en-us/library/gg549985.aspx)
     
   
 -  [Overview of the search schema in SharePoint](http://technet.microsoft.com/en-us/library/jj219669%28office.15%29.aspx)

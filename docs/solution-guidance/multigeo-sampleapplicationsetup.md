@@ -1,139 +1,191 @@
 ---
-title: Set up your Multi-Geo sample applications
-ms.date: 11/03/2017
+title: Set up a Multi-Geo sample application
+description: Configure sample applications for a Multi-Geo tenant.
+ms.date: 4/27/2018
 ---
-# Set up your Multi-Geo sample applications
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+# Set up a Multi-Geo sample application
 
-When developing for a Multi-Geo tenant it's important to understand the security model and luckily the used model for a Multi-Geo tenant does not differ from the model used for a regular tenant. This article shows you how to configure the sample applications.
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
-## My application needs to be able to read/update profiles for all users
-### I'm using the Microsoft Graph API
-As explained in the [Multi-geo User Profile Experience](multigeo-userprofileexperience.md) article the preferred model to read/update user profile properties is by using the Graph API. This chapter explains which permissions you'll need to grant to your application to realize tenant wide user profile reads and updates. There [a long list of possible permissions](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference) that you can grant to an application defined in Azure AD, but for manipulating profiles you can limit permissions to:
+When developing for a Multi-Geo tenant, it's important to understand the security model. Fortunately, the model used for a Multi-Geo tenant is the same as the model used for a regular tenant. 
 
-|**Permission**|**Type**|**Description**| **Admin consent needed**
+This article shows you how to configure the following sample applications:
+
+- [An application that can read and update profiles for all users using the Graph API](#read-update-graph)
+- [An application that can read and update profiles for all users using the CSOM User Profile API](#read-update-csom)
+- [An application that can discover the Multi-Geo configuration](#discover)
+- [An application that can create and delete site collections and set tenant site collection properties](#site-collections)
+
+<a name="read-update-graph"> </a>
+
+## Read and update profiles for all users using the Graph API
+
+As explained in the article [Work with user profiles in a Multi-Geo tenant](multigeo-userprofileexperience.md), the preferred model to use to read and update user profile properties is the Graph API. This section explains the permissions you must grant to your application to realize tenant-wide user profile reads and updates. 
+
+There is [a long list of possible permissions](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference) that you can grant to an application defined in Azure AD, but for manipulating profiles, you can limit the permissions to the following.
+
+|Permission|Type|Description|Admin consent needed |
 |:-----|:-----|:-----|:-----|
-|**[User.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#user-permissions)** | Application permission | Allows the app to read and write the full set of profile properties, group membership, reports and managers of other users in your organization, without a signed-in user.  Also allows the app to create and delete non-administrative users. Does not allow reset of user passwords. | Yes
-|**[Sites.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#user-permissions)** | Application permission | Allows the app to read/write documents and list items in all site collections without a signed in user. This permission is only needed if the application will be retrieving the user's personal site location (e.g. https://graph.microsoft.com/v1.0/users/UserB@contoso.onmicrosoft.com?$select=mySite) | Yes
+|**[User.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#user-permissions)** | Application permission | Allows the app to read and write the full set of profile properties, group membership, reports, and managers of other users in your organization, without a signed-in user.<br/><br/>Also allows the app to create and delete non-administrative users.<br/><br/>Does not allow reset of user passwords. | Yes |
+|**[Sites.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#sites-permissions)** | Application permission | Allows the app to read/write documents and list items in all site collections without a signed-in user. <br/><br/>This permission is only needed if the application will be retrieving the user's personal site location (for example, `https://graph.microsoft.com/v1.0/users/UserB@contoso.onmicrosoft.com?$select=mySite`). | Yes |
 
-The Microsoft Graph based Multi-Geo samples are using the Microsoft Authentication Library (MSAL) to connect with the Microsoft Graph on the v2 endpoint. Compared to ADAL which connects using the v1 endpoint, MSAL allows connection to the Microsoft Graph with Microsoft Accounts, Azure AD and Azure AD B2C. Below instructions will help you setup your application for the v2 endpoint, but you can also use the "older" approach based on the v1 endpoints.
+The Microsoft Graph-based Multi-Geo samples use the Microsoft Authentication Library (MSAL) to connect with the Microsoft Graph on the v2 endpoint. Compared to ADAL, which connects by using the v1 endpoint, MSAL allows connection to the Microsoft Graph by using Microsoft accounts, Azure AD, and Azure AD B2C. The following instructions will help you set up your application for the v2 endpoint, but you can also use the "older" approach based on the v1 endpoints.
 
-#### Register your application
-To use application permissions against the Microsoft Graph you first have to register your application. You do this at https://apps.dev.microsoft.com. Once logged in click add a new Converged application, by clicking Add an app
+### Register your application
 
-![Register application in Azure AD](media/multigeo/multigeopermissions_registerapp1.png)
+1. To use application permissions against the Microsoft Graph, register your application at https://apps.dev.microsoft.com. 
 
-Give your application a name and hit Create application.
+2. After you're signed in, choose **Add an app**, and then choose **Add a new converged application**.
 
-In the application configuration screen configure the following:
-- Generate a password and make a note of it together with the application id
-- Click 'Add Platform' and select "Native application" as the platform target as the application does not have a landing page
-- Add the necessary Application Permission. In this sample app we have added the User.ReadWrite.All and Sites.ReadWrite.All application permissions.
-- Make sure to uncheck 'Live SDK support'
-- Once configured save your changes.
+3. Give your application a name, and then choose **Create application**.
 
-![Configure application in Azure AD part 1](media/multigeo/multigeopermissions_registerapp2.png)
+4. The application configuration screen appears.
 
-![Configure application in Azure AD part 2](media/multigeo/multigeopermissions_registerapp3.png)
+  ![Register application in Azure AD](media/multigeo/multigeopermissions_registerapp1.png)
+
+5. **Generate a new password** and make a note of it together with the **application ID**.
+
+6. Choose **Add Platform**, and then choose **Native application** as the platform target because the application does not have a landing page.
+
+  ![Configure application in Azure AD part 1](media/multigeo/multigeopermissions_registerapp2.png)
+
+7. Add the necessary **Application Permissions**. In this sample app, we have added the Sites.ReadWrite.All and User.ReadWrite.All application permissions.
+
+8. Clear the **Live SDK support** check box.
+
+  ![Configure application in Azure AD part 2](media/multigeo/multigeopermissions_registerapp3.png)
+
+9. Save your changes.
 
 
-#### Consent to the application
-In this sample the User.ReadWrite.All and Sites.ReadWrite.All application permissions require admin consent in a tenant before it can be used. Create a consent URL like the following:
+### Consent to the application
 
-```
-https://login.microsoftonline.com/<tenant>/adminconsent?client_id=<clientid>&state=<something>
-```
+1. In this sample, the User.ReadWrite.All and Sites.ReadWrite.All application permissions require admin consent in a tenant before they can be used. Create a consent URL like the following:
 
-Using the client id from the app registered and consenting to the app from my tenant contoso.onmicrosoft.com, the URL looks like this:
+  ```
+  https://login.microsoftonline.com/<tenant>/adminconsent?client_id=<clientid>&state=<something>
+  ```
 
-```
-https://login.microsoftonline.com/contoso.onmicrosoft.com/adminconsent?client_id=6e4433ca-7011-4a11-85b6-1195b0114fea&state=12345
-```
+2. Use the client ID from the registered app, and consent to the app from my tenant contoso.onmicrosoft.com; the URL looks like this:
 
-Browsing to the created URL and log in as a tenant admin, and consent to the application. You can see the consent screen show the name of your application as well as the permission scopes you configured.
+  ```
+  https://login.microsoftonline.com/contoso.onmicrosoft.com/adminconsent?client_id=6e4433ca-7011-4a11-85b6-1195b0114fea&state=12345
+  ```
 
-![Tenant consent for Azure AD application](media/multigeo/multigeopermissions_registerapp4.png)
+3. Browse to the created URL and sign in as a tenant admin, and consent to the application. You can see that the consent screen shows the name of your application as well as the permission scopes you configured.
 
-### I'm using the CSOM User Profile API
-When using the CSOM API to manipulate profile properties you'll only do this for the custom created properties since out-of-the-box properties are better handled via the Microsoft Graph API...see the [Multi-geo User Profile Experience](multigeo-userprofileexperience.md) article for more details. From a permission point of view there's two modes:
+  ![Tenant consent for Azure AD application](media/multigeo/multigeopermissions_registerapp4.png)
 
-#### Using user credentials
-This requires setting up a `ClientContext` object using the tenant admin url and using SharePoint Online admin credentials. Since there's only one Azure AD instance holding users this also implies that a SharePoint Online admin is admin for all the geo locations.
 
-```csharp
-string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 
-using (ClientContext cc = new ClientContext(tenantAdminSiteForMyGeoLocation))
-{
-    SecureString securePassword = GetSecurePassword("password");
-    cc.Credentials = new SharePointOnlineCredentials("admin@contoso.onmicrosoft.com", securePassword);
-    
-    // user profile logic
-}
+<a name="read-update-csom"> </a>
 
-static SecureString GetSecurePassword(string Password)
-{
-    SecureString sPassword = new SecureString();
-    foreach (char c in Password.ToCharArray()) sPassword.AppendChar(c);
-    return sPassword;
-}
-```
+## Read and update profiles for all users using the CSOM User Profile API
 
-#### Using an app-only principal
-When using app-only you'll need to grant the created app principal **full control** for the [http://sharepoint/social/tenant](https://dev.office.com/sharepoint/docs/general-development/get-started-developing-with-social-features-in-sharepoint#bkmk_AppPerms) permission scope. Below instructions show you to use appregnew.aspx and appinv.aspx to register an app principal and consent it.
+When using the CSOM API to manipulate profile properties, you do this only for the custom created properties because out-of-the-box properties are better handled via the Microsoft Graph API. For more information, see the article [Work with user profiles in a Multi-Geo tenant](multigeo-userprofileexperience.md). 
 
-##### Create the principal
-Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then call the appregnew.aspx page (e.g. https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click on the Generate button to generate a client id and client secret and fill the remaining information like shown in the screen-shot below.
+From a permission point of view there are two modes:
+
+- **Using user credentials**
+
+  This requires setting up a `ClientContext` object by using the tenant admin URL and SharePoint Online admin credentials. Because there's only one Azure AD instance holding users, this implies that a SharePoint Online admin is the admin for all the geo locations.
+
+  ```csharp
+  string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
+
+  using (ClientContext cc = new ClientContext(tenantAdminSiteForMyGeoLocation))
+  {
+      SecureString securePassword = GetSecurePassword("password");
+      cc.Credentials = new SharePointOnlineCredentials("admin@contoso.onmicrosoft.com", securePassword);
+      
+      // user profile logic
+  }
+
+  static SecureString GetSecurePassword(string Password)
+  {
+      SecureString sPassword = new SecureString();
+      foreach (char c in Password.ToCharArray()) sPassword.AppendChar(c);
+      return sPassword;
+  }
+  ```
+
+- **Using an app-only principal**
+
+  When using app-only, you must grant the created app principal **full control** for the [http://sharepoint/social/tenant](https://dev.office.com/sharepoint/docs/general-development/get-started-developing-with-social-features-in-sharepoint#bkmk_AppPerms) permission scope. 
+  
+The following instructions show you how to use appregnew.aspx and appinv.aspx to register an app principal and consent to it.
+
+### Create the principal
+
+1. Go to a site in your tenant (for example, `https://contoso.sharepoint.com`), and then call the appregnew.aspx page (for example, `https://contoso.sharepoint.com/_layouts/15/appregnew.aspx`). 
+
+2. On this page, choose the **Generate** button to generate a client ID and client secret. 
+
+3. Complete the remaining fields as follows:
+
+  - Title: `Multi-Geo demo`
+  - App Domain: `www.localhost.com`
+  - Redirect URI: `https://www.localhost.com`
+
+  ![Register ACS app principal](media/multigeo/multigeopermissions_registerprincipal1.png)
+
+  > [!NOTE] 
+  > Store the retrieved information (client ID and client secret) because you'll need these in the next step.
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact SharePoint add-in model which is using `https://accounts.accesscontrol.windows.net` hostname, which is not impacted by this retirement. See more details on this from [Impact of Azure Access Control retirement for SharePoint add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
-
-![Register ACS app principal](media/multigeo/multigeopermissions_registerprincipal1.png)
-
-> **Important**
-> Store the retrieved information (client id and client secret) since you'll need this in the next step!
-
-##### Grant permissions to the created principal
-Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx. Once the page is loaded add your client id and look up the created principal:
-
-![Grant permissions to app principal](media/multigeo/multigeopermissions_registerprincipal2.png)
-
-In order to grant permissions you'll need to provide the permission XML that describes the needed permissions. Since the UI experience scanner needs to be able to access all sites + also uses search with app-only it requires below permissions:
-
-```Xml
-<AppPermissionRequests AllowAppOnlyPolicy="true">
-  <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="FullControl" />
-</AppPermissionRequests>
-```
-
-When you click on Create you'll be presented with a permission consent dialog. Press Trust It to grant the permissions:
-
-![Consent the app principal](media/multigeo/multigeopermissions_registerprincipal3.png)
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 
-##### Use the principal in your code
-Once the principal is created and consented you can use the principal's id and secret to request an access. The `TokenHelper.cs` class will grab the id and secret from the application's configuration file.
+### Grant permissions to the created principal
+
+The next step is granting permissions to the newly created principal. Because we're granting tenant-scoped permissions, this grant can only be done via the appinv.aspx page on the tenant administration site. 
+
+1. You can reach this site via `https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx`. 
+
+2. After the page is loaded, add your client ID, and then **look up** the created principal.
+
+  ![Grant permissions to app principal](media/multigeo/multigeopermissions_registerprincipal2.png)
+
+3. To grant permissions, you must provide the permission XML that describes the needed permissions. Because the UI experience scanner needs to be able to access all sites and uses search with app-only, it requires the following permissions:
+
+  ```xml
+  <AppPermissionRequests AllowAppOnlyPolicy="true">
+    <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="FullControl" />
+  </AppPermissionRequests>
+  ```
+
+4. When you choose **Create**, you are presented with a permission consent dialog. Choose **Trust It** to grant the permissions.
+
+  ![Consent the app principal](media/multigeo/multigeopermissions_registerprincipal3.png)
+
+
+### Use the principal in your code
+
+After the principal is created and consented, you can use the principal's ID and secret to request access. The `TokenHelper.cs` class grabs the ID and secret from the application's configuration file.
 
 ```csharp
 string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 
-//Get the realm for the URL
+//Get the realm for the URL.
 string realm = TokenHelper.GetRealmFromTargetUrl(siteUri);
 
 //Get the access token for the URL.  
 string accessToken = TokenHelper.GetAppOnlyAccessToken(TokenHelper.SharePointPrincipal, siteUri.Authority, realm).AccessToken;
 
-//Create a client context object based on the retrieved access token
+//Create a client context object based on the retrieved access token.
 using (ClientContext cc = TokenHelper.GetClientContextWithAccessToken(tenantAdminSiteForMyGeoLocation, accessToken))
 {
     // user profile logic
 }
 ```
 
+<br/>
+
 A sample app.config looks like this:
 
-```XML
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <appSettings>
@@ -146,32 +198,44 @@ A sample app.config looks like this:
 
 
 > [!NOTE] 
-> You can easily insert the `TokenHelper.cs` class in your project by adding the **AppForSharePointOnlineWebToolkit** nuget package to your solution.
+> You can easily insert the `TokenHelper.cs` class in your project by adding the [AppForSharePointOnlineWebToolkit] (https://www.nuget.org/packages/AppForSharePointOnlineWebToolkit/) NuGet package to your solution.
 
-## My application needs to be able to be able to discover the Multi-Geo configuration
-### I'm using the Microsoft Graph API
-The only supported API discover the geo locations in a Multi-Geo tenant is by using the Graph API. This chapter explains which permissions you'll need to grant to your application to discover Multi-Geo information. There [a long list of possible permissions](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference) that you can grant to an application defined in Azure AD, but for reading Multi-Geo tenant configuration information you can limit permissions to:
 
-|**Permission**|**Type**|**Description**| **Admin consent needed**
+<a name="discover"> </a>
+
+## Discover the Multi-Geo configuration
+
+The only supported API that you can use to discover the geo locations in a Multi-Geo tenant is the Graph API. This section explains the permissions you must grant to your application to discover Multi-Geo information. 
+
+There is [a long list of possible permissions](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference) that you can grant to an application defined in Azure AD, but for reading Multi-Geo tenant configuration information, you can limit permissions to the following.
+
+|Permission |Type |Description |Admin consent needed |
 |:-----|:-----|:-----|:-----|
-|**[Sites.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#user-permissions)** | Application permission | Allows the app to read/write documents and list items in all site collections without a signed in user. | Yes
+|**[Sites.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#sites-permissions)** | Application permission | Allows the app to read/write documents and list items in all site collections without a signed-in user. | Yes |
 
-Use the Azure AD application creation steps as described in the "My application needs to be able to read/update profiles for all users" chapter.
+Use the Azure AD application creation steps as described in the [Read/update profiles for all users](#read-update-graph) section.
 
-## My application needs to be able to create/delete sites collections or set tenant site collection properties
-### I'm using the Microsoft Graph API
-The [Multi-Geo Sites](multigeo-sites.md) provides more details on how to create group sites (a.k.a. "modern" team sites) using the Microsoft Graph API, in this section we're only addressing the permissions. Below table lists the needed permissions
+<a name="site-collections"> </a>
 
-|**Permission**|**Type**|**Description**| **Admin consent needed**
+## Create and delete site collections and set tenant site collection properties
+
+### Using the Microsoft Graph API
+
+The [Multi-Geo sites](multigeo-sites.md) article provides more details about how to create group sites (also known as "modern" team sites) by using the Microsoft Graph API. In this section, we're only addressing the permissions. The following table lists the needed permissions.
+
+|Permission|Type|Description|Admin consent needed |
 |:-----|:-----|:-----|:-----|
-|**[Group.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#group-permissions)** | Application permission | Allows the app to create groups, read and update group memberships, and delete groups. All of these operations can be performed by the app without a signed-in user. Note that not all group API supports access using app-only permissions. | Yes
+|**[Group.ReadWrite.All](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#group-permissions)** | Application permission | Allows the app to create groups, read and update group memberships, and delete groups.<br/><br/>All of these operations can be performed by the app without a signed-in user.<br/><br/>Note that not all group API supports access using app-only permissions. | Yes |
 
-The Microsoft Graph based Multi-Geo samples are using the Microsoft Authentication Library (MSAL) to connect with the Microsoft Graph on the v2 endpoint. Compared to ADAL which connects using the v1 endpoint, MSAL allows connection to the Microsoft Graph with Microsoft Accounts, Azure AD and Azure AD B2C. Use the Azure AD application creation steps as described in the "My application needs to be able to read/update profiles for all users" chapter.
+The Microsoft Graph based Multi-Geo samples use the Microsoft Authentication Library (MSAL) to connect with the Microsoft Graph on the v2 endpoint. Compared to ADAL, which connects using the v1 endpoint, MSAL allows connection to the Microsoft Graph by using Microsoft accounts, Azure AD, and Azure AD B2C. 
 
-### I'm using the CSOM Tenant API
-Using the CSOM Tenant API is very similar to the previously described CSOM guidance, in a matter of fact the guidance for using user credentials is identical. For using an app-only principal the instructions are the same but you'll need to grant different permissions (tenant, full control):
+Use the Azure AD application creation steps as described in the [Read/update profiles for all users](#read-update-graph) section.
 
-```Xml
+### Using the CSOM Tenant API
+
+Using the CSOM Tenant API is very similar to the [previously described CSOM guidance](#read-update-csom); in fact, the guidance for using user credentials is identical. For using an app-only principal, the instructions are the same, but you must grant different permissions (**tenant** and **full control**).
+
+```xml
 <AppPermissionRequests AllowAppOnlyPolicy="true">
   <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
 </AppPermissionRequests>
@@ -179,8 +243,9 @@ Using the CSOM Tenant API is very similar to the previously described CSOM guida
 
 ## See also
 
-- [Microsoft Graph developer center](https://developer.microsoft.com/en-us/graph)
-- [Get access tokens to call the Graph API](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview)
+- [Microsoft Graph Developer Center](https://developer.microsoft.com/en-us/graph)
+- [Get access tokens to call Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview)
 - [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [App-only and elevated privileges in the SharePoint add-in model](app-only-elevated-privileges-sharepoint-add-in.md)
+- [App-only and elevated privileges in the SharePoint Add-in model](app-only-elevated-privileges-sharepoint-add-in.md)
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)

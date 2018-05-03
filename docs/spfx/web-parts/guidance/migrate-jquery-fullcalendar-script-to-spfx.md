@@ -1,22 +1,22 @@
 ---
-title: Migrate jQuery and FullCalendar solution built using Script Editor Web Part to SharePoint Framework
-description: Migrate a SharePoint customization by using FullCalendar built with the Script Editor Web Part to the SharePoint Framework.
+title: Migrate jQuery and FullCalendar solution built using Script Editor web part to SharePoint Framework
+description: Migrate a SharePoint customization by using FullCalendar built with the Script Editor web part to the SharePoint Framework.
 ms.date: 01/09/2018
 ms.prod: sharepoint
 ---
 
 
-# Migrate jQuery and FullCalendar solution built using Script Editor Web Part to SharePoint Framework
+# Migrate jQuery and FullCalendar solution built using Script Editor web part to SharePoint Framework
 
-When building SharePoint solutions, SharePoint developers often use the [FullCalendar](https://fullcalendar.io) jQuery plug-in to display data in calendar view. FullCalendar is a great alternative to the standard SharePoint calendar view, as it allows you to render as calendar data from multiple calendar lists, data from non-calendar lists, or even data from outside SharePoint. This article illustrates how you would migrate a SharePoint customization by using FullCalendar built with the Script Editor Web Part to the SharePoint Framework.
+When building SharePoint solutions, SharePoint developers often use the [FullCalendar](https://fullcalendar.io) jQuery plug-in to display data in calendar view. FullCalendar is a great alternative to the standard SharePoint calendar view, as it allows you to render as calendar data from multiple calendar lists, data from non-calendar lists, or even data from outside SharePoint. This article illustrates how you would migrate a SharePoint customization by using FullCalendar built with the Script Editor web part to the SharePoint Framework.
 
-## List of tasks displayed as a calendar built using the Script Editor Web Part
+## List of tasks displayed as a calendar built using the Script Editor web part
 
 To illustrate the process of migrating a SharePoint customization using FullCalendar to the SharePoint Framework, you will use the following solution that shows a calendar view of tasks retrieved from a SharePoint list.
 
 ![Calendar view of tasks displayed on a SharePoint page](../../../images/fullcalendar-sewp.png)
 
-The solution is built using the standard SharePoint Script Editor Web Part. Following is the code used by the customization.
+The solution is built using the standard SharePoint Script Editor web part. Following is the code used by the customization.
 
 ```html
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -164,17 +164,17 @@ Using the FullCalendar jQuery plug-in, with little effort users get rich solutio
 
 ![Dragging events in FullCalendar to reschedule underlying tasks](../../../images/fullcalendar-sewp-draganddrop.png)
 
-## Migrate the Tasks calendar solution from the Script Editor Web Part to the SharePoint Framework
+## Migrate the Tasks calendar solution from the Script Editor web part to the SharePoint Framework
 
 > [!NOTE] 
 > Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
-Transforming a Script Editor Web Part-based customization to the SharePoint Framework offers a number of benefits such as more user-friendly configuration and centralized management of the solution. Following is a step-by-step description of how you would migrate the solution to the SharePoint Framework. 
+Transforming a Script Editor web part-based customization to the SharePoint Framework offers a number of benefits such as more user-friendly configuration and centralized management of the solution. Following is a step-by-step description of how you would migrate the solution to the SharePoint Framework. 
 
 First, you migrate the solution to the SharePoint Framework with as few changes to the original code as possible. Later, you transform the solution's code to TypeScript to benefit from its development-time type safety features, and replace some of the code with the SharePoint Framework API to fully benefit from its capabilities and simplify the solution even further.
 
 > [!NOTE] 
-> The source code of the project in the different stages of migration is available at [Tutorial: Migrate jQuery and FullCalendar solution built using Script Editor Web Part to SharePoint Framework](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/tutorial-migrate-fullcalendar).
+> The source code of the project in the different stages of migration is available at [Tutorial: Migrate jQuery and FullCalendar solution built using Script Editor web part to SharePoint Framework](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/tutorial-migrate-fullcalendar).
 
 ### Create new SharePoint Framework project
 
@@ -218,7 +218,7 @@ First, you migrate the solution to the SharePoint Framework with as few changes 
 
 ### Load JavaScript libraries
 
-Similar to the original solution built by using the Script Editor Web Part, you first need to load the JavaScript libraries required by the solution. In SharePoint Framework, this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
+Similar to the original solution built by using the Script Editor web part, you first need to load the JavaScript libraries required by the solution. In SharePoint Framework, this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
 
 1. Specify the URLs from which libraries should be loaded. In the code editor, open the **./config/config.json** file, and change the **externals** section to:
 
@@ -392,7 +392,7 @@ The last step is to include the code that initiates the FullCalendar jQuery plug
   }
   ```
 
-  This code is almost identical to the original code of the Script Editor Web Part customization. The only difference is that where the original code retrieved the URL of the current web from the global **\_spPageContextInfo** variable set by SharePoint (lines 8, 45, 96 and 104), the code in the SharePoint Framework uses a custom variable that you have to set in the web part. 
+  This code is almost identical to the original code of the Script Editor web part customization. The only difference is that where the original code retrieved the URL of the current web from the global **\_spPageContextInfo** variable set by SharePoint (lines 8, 45, 96 and 104), the code in the SharePoint Framework uses a custom variable that you have to set in the web part. 
   
   SharePoint Framework client-side web parts can be used both on classic and modern pages. While the **_spPageContextInfo** variable is present on classic pages, it's not available on modern pages, which is why you can't rely on it and need a custom property that you can control yourself instead.
 
@@ -428,7 +428,7 @@ The last step is to include the code that initiates the FullCalendar jQuery plug
 
 ## Add support for configuring the web part through web part properties
 
-In the previous steps, you migrated the Tasks calendar solutions from the Script Editor Web Part to the SharePoint Framework. While the solution already works as expected, it doesn't use any of the SharePoint Framework benefits. The name of the list from which tasks are loaded is included in the code, and the code itself is plain JavaScript, which is harder to refactor than TypeScript. 
+In the previous steps, you migrated the Tasks calendar solutions from the Script Editor web part to the SharePoint Framework. While the solution already works as expected, it doesn't use any of the SharePoint Framework benefits. The name of the list from which tasks are loaded is included in the code, and the code itself is plain JavaScript, which is harder to refactor than TypeScript. 
 
 The following steps illustrate how to extend the existing solution to allow users to specify the name of the list to load the data from. Later, you transform the code to TypeScript to benefit from its type safety features.
 

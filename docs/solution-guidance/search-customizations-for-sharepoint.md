@@ -20,7 +20,7 @@ To create a site directory:
     
 3. Create the results page.
     
-4. Edit the Results Web Part properties.
+4. Edit the Results web part properties.
     
 To create the site directory display templates:
 
@@ -77,7 +77,7 @@ To create the results page:
     
 5. Choose  **Create**.
     
-To edit the Results Web Part properties:
+To edit the Results web part properties:
 
 1. On the  **Site Directory** page, choose **Settings** > **Edit Page**.
     

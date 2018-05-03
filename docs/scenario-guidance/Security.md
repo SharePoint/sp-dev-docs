@@ -60,7 +60,7 @@ _**Applies to:** Office 365 | SharePoint Server_
 - [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint)
 - [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly)
 - [How to provide add-in app only tenant administrative permissions in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online)
-- [App-only and elevated privileges in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
+- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
 - [Developing using Tenant permissions with App-Only in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online)
 - [Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 
@@ -78,7 +78,7 @@ If your solution allows users to perform actions for which they don't have adequ
 
 - [Elevated privileges in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/elevated-privileges-in-sharepoint-add-ins)
 - [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint#Scenario)
-- [App-only and elevated privileges in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
+- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
 
 ## Azure AD Authentication/Authorization
 

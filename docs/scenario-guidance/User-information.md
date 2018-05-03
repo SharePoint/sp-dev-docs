@@ -43,7 +43,7 @@ In SharePoint, user profiles represent SharePoint users. User profile properties
 ### Articles
 
 - [Work with user profiles in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/work-with-user-profiles-in-sharepoint)
-- [User profile manipulation in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/user%20profile%20manipulation-sharepoint-add-in)
+- [User profile manipulation in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/user%20profile%20manipulation-sharepoint-add-in)
 - [User profiles REST API reference](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx)
 - [Work with user profiles and organization profiles by using the server object model in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj)
 - [Get user identity and properties in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-user-identity-and-properties-in-sharepoint)

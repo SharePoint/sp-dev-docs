@@ -376,5 +376,5 @@ private static void MigrateContent(ClientContext clientContext, List listToBeRep
 ## See also
 <a name="bk_addresources"> </a>
 
-- [Transform farm solutions to the SharePoint add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
+- [Transform farm solutions to the SharePoint Add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
 - [SharePoint 2013](https://msdn.microsoft.com/library/office/jj162979.aspx)

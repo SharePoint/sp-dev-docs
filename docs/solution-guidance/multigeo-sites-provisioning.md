@@ -1,29 +1,38 @@
 ---
-title: Working with sites in a Multi-Geo environment
-ms.date: 11/03/2017
+title: Provision classic team sites in a Multi-Geo environment
+description: When your custom development (script, app, console application, node.js app) needs to provision sites, it's important to be aware of the geo locations in your Multi-Geo tenant. 
+ms.date: 4/27/2018
 ---
-# Working with sites in a Multi-Geo environment
 
-> **Important:** OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+# Provision classic team sites in a Multi-Geo environment
 
-SharePoint sites can be spread across the default and satellite geo locations of a Multi-Geo tenant. When your custom development (script, app, console application, node.js app,...) needs to provision sites then it's important to be aware of the geo locations in your Multi-Geo tenant. 
+> [!IMPORTANT] 
+> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
-### Provisioning classic team sites
-When provisioning classic team site collections (e.g. STS#0 based site collections) one has to use the [CSOM `CreateSite` method](https://msdn.microsoft.com/en-us/library/microsoft.online.sharepoint.tenantadministration.tenant.createsite(v=office.15).aspx) call as explained and shown in following articles and samples:
-- [Site provisioning in the SharePoint add-in model](site-provisioning-sharepoint-add-in.md)
+SharePoint sites can be spread across the default and satellite geo locations of a Multi-Geo tenant. When your custom development (script, app, console application, node.js app, and so on) needs to provision sites, it's important to be aware of the geo locations in your Multi-Geo tenant. 
+
+When provisioning classic team site collections (for example, STS#0-based site collections), you need to use the [CSOM CreateSite method](https://msdn.microsoft.com/en-us/library/microsoft.online.sharepoint.tenantadministration.tenant.createsite(v=office.15).aspx) call as explained and shown in following articles and samples:
+
+- [Site provisioning in the SharePoint Add-in model](site-provisioning-sharepoint-add-in.md)
 - [Provision sites in batches with the add-in model](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Batch)
-- [Create site collection or sub site using the PnP Sites Core library](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.CreateSite)
+- [Create site collection or subsite using the PnP Sites Core library](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.CreateSite)
 
-The `CreateSite` method call needs to be executed on an instantiated `Tenant` object...and a tenant object requires you to specify an SPO Admin center URL to be created. So to create a classic team site you follow these steps:
-- First determine the geo location that needs to host the site collection (e.g. the European satellite)
-- Use the guidance explained in the [Multi-Geo Discovery](multigeo-discovery.md) article to find the tenant admin site and SharePoint root url's for the geo location
-- Create a `Tenant` object using the found admin site url
-- Use the `CreateSite` method call to create the site collection
+The `CreateSite` method call needs to be executed on an instantiated `Tenant` object, and a tenant object requires you to specify an SPO Admin center URL to be created. 
 
-Below sample shows how to provision a site collection in the European geo location:
+To create a classic team site:
+
+1. Determine the geo location that needs to host the site collection (for example, the European satellite).
+
+2. Use the guidance explained in the article [Discover a Multi-Geo tenant configuration](multigeo-discovery.md) to find the tenant admin site and SharePoint root URLs for the geo location.
+
+3. Create a `Tenant` object by using the discovered admin site URL.
+
+4. Use the `CreateSite` method call to create the site collection.
+
+The following sample shows how to provision a site collection in the European geo location.
 
 ```csharp
-// Use the Multi-Geo discovery guidance to discover the tenant admin and root site urls for this geo location
+// Use the Multi-Geo discovery guidance to discover the tenant admin and root site URLs for this geo location.
 string tenantAdminSiteForMyGeoLocation = "https://contoso-europe-admin.sharepoint.com";
 string targetUrl = "https://contoso-europe.sharepoint.com/sites/demosite";
 string owner = "UserA@contoso.onmicrosoft.com";
@@ -34,7 +43,7 @@ using (var ctx = new ClientRuntimeContext(tenantAdminSiteForMyGeoLocation))
     
     var tenant = new Tenant(ctx);
     
-    //Create new site
+    //Create new site.
     var newsite = new SiteCreationProperties()
     {
         Url = targetUrl,
@@ -62,11 +71,10 @@ using (var ctx = new ClientRuntimeContext(tenantAdminSiteForMyGeoLocation))
 ```
 
 > [!NOTE] 
-> If you want to learn more about the needed permissions and how to configure your applications then please checkout the [Setting up the Multi-Geo sample applications](multigeo-sampleapplicationsetup.md) article.
+> To learn more about the needed permissions and how to configure your applications, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).
 
 ## See also
 
-- [Provisioning modern team sites](https://msdn.microsoft.com/en-us/pnp_articles/modern-experience-customizations-provisioning-sites)
-- [Site provisioning in the SharePoint add-in model](site-provisioning-sharepoint-add-in.md)
-- [Provision sites in batches with the add-in model](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Batch)
-- [Create site collection or sub site using the PnP Sites Core library](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.CreateSite)
+- [Provisioning "modern" team sites programmatically](modern-experience-customizations-provisioning-sites.md)
+- [Site provisioning in the SharePoint Add-in model](site-provisioning-sharepoint-add-in.md)
+- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)

@@ -1,34 +1,31 @@
 ---
 title: Customize a SharePoint page by using remote provisioning and CSS
-ms.date: 11/03/2017
+description: Use CSS to customize SharePoint rich text fields and web part zones.
+ms.date: 4/25/2018
 ---
+
 # Customize a SharePoint page by using remote provisioning and CSS
 
-Use CSS to customize SharePoint rich text fields and Web Part Zones.
+You can use cascading style sheets (CSS) to customize SharePoint rich text fields and web part zones. To customize rich text fields, you can do this right on the page you're editing. For web part zones, you can use the Script Editor web part to add HTML or scripts, or associate a CSS style sheet.
 
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-
-You can use cascading style sheets (CSS) to customize SharePoint rich text fields and Web Part Zones. To customize rich text fields, you can do this right in the page you're editing. For Web Part Zones, you can use the Script Editor Web Part to add HTML or scripts, or associate a CSS style sheet.
-For a code sample that is associated with this article, see  [Branding.AlternateCSSAndSiteLogo](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo) in [Office 365 Developer Patterns and Practices](https://github.com/SharePoint/PnP) on GitHub.
+For a code sample that is associated with this article, see [Branding.AlternateCSSAndSiteLogo](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo) in the Office 365 Developer Patterns and Practices project on GitHub.
 
 ## Customize rich text fields
-<a name="sectionSection0"> </a>
 
 You can customize rich text fields by using CSS right in the page editor:
 
-1. In your SharePoint page, choose  **Edit** to open the page editor.
+1. On your SharePoint page, choose **Edit** to open the page editor.
     
-2. From the ribbon, choose  **Insert** > **Embed Code**.
+2. From the ribbon, choose **Insert** > **Embed Code**.
     
 You can now add or modify CSS elements for a rich text field.
 
-## Customize Web Part Zones
-<a name="sectionSection1"> </a>
+## Customize web part zones
 
-To customize Web Part Zones by using CSS, you use the Script Editor Web Part. For more information, see  [How to Use the Script Editor Web Part in SharePoint 2013](http://community.bamboosolutions.com/blogs/sharepoint-2013/archive/2013/05/20/how-to-use-script-editor-web-part-in-sharepoint-2013.aspx).
+To customize web part zones by using CSS, you use the Script Editor web part.
 
 > [!NOTE] 
-> If you are using SharePoint Online and the NoScript feature, the Script Editor Web Part is disabled. 
+> If you are using SharePoint Online and the NoScript feature, the Script Editor web part is disabled. 
 
 The following code example uploads custom CSS to the Asset Library, applies a reference to the CSS URL with a custom action, and then creates a custom action to build a link to the new CSS file.
 
@@ -127,10 +124,7 @@ namespace AlternateCSSAppAutohostedWeb.Services
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)
-    
--  [How to Use the Script Editor Web Part in SharePoint 2013](http://community.bamboosolutions.com/blogs/sharepoint-2013/archive/2013/05/20/how-to-use-script-editor-web-part-in-sharepoint-2013.aspx)
-    
--  [ScriptEditorWebPart class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webpartpages.scripteditorwebpart.aspx)
+     
+- [ScriptEditorWebPart class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webpartpages.scripteditorwebpart.aspx)
+- [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
+- [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

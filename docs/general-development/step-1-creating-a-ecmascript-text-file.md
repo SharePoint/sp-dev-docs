@@ -122,7 +122,7 @@ function writelog(output, indentLevel)
     
      `http://` _myserver_ `/Docs/Documents/JSOM_FeedToContentEditor.txt`
     
-    In the next procedure, you will need this URL to feed to the Content Editor Web Part.
+    In the next procedure, you will need this URL to feed to the Content Editor web part.
     
   
 

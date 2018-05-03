@@ -12,7 +12,7 @@ ms.assetid: 78bf89d0-9965-4da8-abe4-4e1b5349974b
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies the transformer for the Web Part.
+Specifies the transformer for the web part.
 
 ## Definition
 
@@ -42,11 +42,11 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Assembly**</p></td>
-<td align="left"><p>Optional **string**. Specifies the assembly name of the Web Part transformer.</p></td>
+<td align="left"><p>Optional **string**. Specifies the assembly name of the web part transformer.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Namespace**</p></td>
-<td align="left"><p>Optional **string**. Specifies the namespace of the Web Part transformer.</p></td>
+<td align="left"><p>Optional **string**. Specifies the namespace of the web part transformer.</p></td>
 </tr>
 </tbody>
 </table>

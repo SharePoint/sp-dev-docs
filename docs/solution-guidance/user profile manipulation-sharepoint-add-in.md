@@ -1,8 +1,8 @@
 ---
-title: User profile manipulation in the SharePoint add-in model
+title: User profile manipulation in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-User profile manipulation in the SharePoint add-in model
+User profile manipulation in the SharePoint Add-in model
 ========================================================
 
 Summary

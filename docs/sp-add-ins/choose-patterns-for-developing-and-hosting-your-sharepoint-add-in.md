@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Choose patterns for developing and hosting your SharePoint Add-in
 
-The SharePoint add-in model introduces a wide range of hosting and development patterns. Some of these patterns can be used in combination with each other. For example, your add-ins can mix SharePoint-hosted and remotely hosted components. The most useful way to determine which patterns you'll want to use is to start with your own requirements, technologies, and goals and match them with the options and possibilities that are enabled by SharePoint Add-ins.
+The SharePoint Add-in model introduces a wide range of hosting and development patterns. Some of these patterns can be used in combination with each other. For example, your add-ins can mix SharePoint-hosted and remotely hosted components. The most useful way to determine which patterns you'll want to use is to start with your own requirements, technologies, and goals and match them with the options and possibilities that are enabled by SharePoint Add-ins.
 
 <a name="ChoosePattern"> </a>
 ## What to think about when choosing your development pattern
@@ -36,7 +36,7 @@ You can combine a SharePoint-hosted add-in with add-ins that have remotely hoste
 
 |**Get these benefits**|**But consider this**|
 |:-----|:-----|
-|Reuse common SharePoint items, like lists and Web Parts.|You can use only JavaScript in the add-in—you can't use any server-side code.|
+|Reuse common SharePoint items, like lists and web parts.|You can use only JavaScript in the add-in—you can't use any server-side code.|
 |Relatively easy to create and deploy, so they are good for small team productivity add-ins and business process automation, with lower complexity business rules.|Your add-in has only the authorization privileges of the signed-in user.|
 
 [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)

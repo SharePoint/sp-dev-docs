@@ -160,7 +160,7 @@ In the following steps, we define the needed structure to be provisioned.
   * Custom fields are being referenced in the introduced content type.
   * We use the **CustomSchema** attribute in the **ListInstance** element to define a provisioning time schema.xml file for the list. This way the list is still based on the out-of-the-box list template (normal custom list '100' in this case), but we can define an alternative provisioning definition during initial provisioning.
 
-  More details about the used schema structures can be found at [FUsing Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) on MSDN.
+  More details about the used schema structures can be found at [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) on MSDN.
 
 ### To add a schema.xml file for defining list structure
 
@@ -247,7 +247,7 @@ Now we have created the needed structures for provisioning SharePoint assets aut
       "features": [{
         "title": "asset-deployment-webpart-client-side-solution",
         "description": "asset-deployment-webpart-client-side-solution",
-        "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",
+        "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",     // <-- Update 'id' with a new GUID
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [
@@ -266,6 +266,8 @@ Now we have created the needed structures for provisioning SharePoint assets aut
   ```
 
 Note the following about the added json definitions:
+
+* Make sure you define a **unique GUID** for the id property inside the feature section
 
 * You can technically have multiple features in the package because **features** is a collection; however, this is not recommended.
 

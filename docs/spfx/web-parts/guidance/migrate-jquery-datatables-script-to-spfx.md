@@ -1,16 +1,16 @@
 ---
-title: Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework
+title: Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework
 description: Migrate a SharePoint customization using DataTables to build powerful data overviews of data coming from SharePoint and external APIs. 
 ms.date: 01/09/2018
 ms.prod: sharepoint
 ---
 
 
-# Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework
+# Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework
 
 One of the frequently used jQuery plug-ins is [DataTables](https://datatables.net/). With DataTables, you can easily build powerful data overviews of data coming from both SharePoint and external APIs.
 
-## List of IT requests built using the Script Editor Web Part
+## List of IT requests built using the Script Editor web part
 
 To illustrate the process of migrating a SharePoint customization using DataTables to the SharePoint Framework, use the following solution that shows an overview of IT support requests retrieved from a SharePoint list.
 
@@ -18,7 +18,7 @@ To illustrate the process of migrating a SharePoint customization using DataTabl
 
 <br/>
 
-The solution is built by using the standard SharePoint Script Editor Web Part. Following is the code used by the customization.
+The solution is built by using the standard SharePoint Script Editor web part. Following is the code used by the customization.
 
 ```html
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -131,7 +131,7 @@ Thanks to using DataTables, end users get a powerful solution where they can eas
 
 ![The list of IT support requests displayed using DataTables filtered by requests assigned to Lidia sorted descending by the due date](../../../images/datatables-sewp-filter.png)
 
-## Migrate the IT requests overview solution from the Script Editor Web Part to the SharePoint Framework
+## Migrate the IT requests overview solution from the Script Editor web part to the SharePoint Framework
 
 > [!NOTE] 
 > Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
@@ -139,7 +139,7 @@ Thanks to using DataTables, end users get a powerful solution where they can eas
 Transforming this customization to the SharePoint Framework offers a number of benefits such as more user-friendly configuration and centralized management of the solution. Following is a step-by-step description of how you would migrate the solution to the SharePoint Framework. First, you will migrate the solution to the SharePoint Framework with as few changes to the original code as possible. Later, you will transform the solution's code to TypeScript to benefit from its development-time type safety features.
 
 > [!NOTE] 
-> The source code of the project in the different stages of migration is available at [Tutorial: Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/tutorial-migrate-datatables).
+> The source code of the project in the different stages of migration is available at [Tutorial: Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/tutorial-migrate-datatables).
 
 ### Create new SharePoint Framework project
 
@@ -183,7 +183,7 @@ Transforming this customization to the SharePoint Framework offers a number of b
 
 ### Load JavaScript libraries
 
-Similar to the original solution built using the Script Editor Web Part, first you need to load the JavaScript libraries required by the solution. In SharePoint Framework this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
+Similar to the original solution built using the Script Editor web part, first you need to load the JavaScript libraries required by the solution. In SharePoint Framework this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
 
 1. Specify the URLs from which libraries should be loaded. In the code editor, open the **./config/config.json** file, and change the **externals** section to:
 
@@ -376,7 +376,7 @@ Because the web part loads its data from SharePoint, you have to test the web pa
 
 ## Add support for configuring the web part through web part properties
 
-In the previous steps, you migrated the IT requests solutions from the Script Editor Web Part to the SharePoint Framework. While the solution already works as expected, it doesn't use any of the SharePoint Framework benefits. The name of the list from which IT requests are loaded is included in the code, and the code itself is plain JavaScript, which is harder to refactor than TypeScript. 
+In the previous steps, you migrated the IT requests solutions from the Script Editor web part to the SharePoint Framework. While the solution already works as expected, it doesn't use any of the SharePoint Framework benefits. The name of the list from which IT requests are loaded is included in the code, and the code itself is plain JavaScript, which is harder to refactor than TypeScript. 
 
 The following steps illustrate how to extend the existing solution to allow users to specify the name of the list to load the data from. Later, you transform the code to TypeScript to benefit from its type safety features.
 

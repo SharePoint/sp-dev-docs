@@ -17,7 +17,7 @@ In this article you can find further details about the Multi-Geo Capabilities, a
 * [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://technet.microsoft.com/library/094e86f2-9ff0-40ac-af31-28fcaba00c1d)
     * [Permissions model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-permissions)
     * [Discover a Multi-Geo configuration for a SharePoint tenant](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-discovery)
-    * [Access Onedrive for Business in a Multi-Geo tenant](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-onedrive)
+    * [Access OneDrive for Business in a Multi-Geo tenant](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-onedrive)
     * [Work with SharePoint sites in a Multi-Geo tenant](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-sites)
     * [Managing Apps/Add-ins in a Multi-Geo tenant](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-apps)
     * [Multi-Geo user profile experience](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-userprofileexperience)

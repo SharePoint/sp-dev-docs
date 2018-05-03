@@ -12,7 +12,7 @@ ms.assetid: b55fc060-a472-4f9f-9528-731078d97ca0
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies the GUID map for a Web Part that was serialized to binary data.
+Specifies the GUID map for a web part that was serialized to binary data.
 
 ## Definition
 

@@ -27,7 +27,7 @@ The Remote provisioning technique relies on using remote technologies like CSOM 
 It can be used both in SharePoint 2013/2016 on-premises, and in SharePoint Online.
 
 ### Articles
-* [Site provisioning in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/site-provisioning-sharepoint-add-in)
+* [Site provisioning in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/site-provisioning-sharepoint-add-in)
 * [Site provisioning techniques and remote provisioning in SharePoint 2013](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/)
 * [Create SharePoint content types by using CSOM](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/create-sharepoint-content-types-by-using-csom)
 
@@ -103,7 +103,7 @@ List definitions allow you to define a list template that you can reuse to creat
 
 ### Articles
 * [How to: Create a Custom List Definition](https://msdn.microsoft.com/en-us/library/ms466023%28v=office.14%29.aspx)
-* [List instance in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/list-instance-sharepoint-add-in)
+* [List instance in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/list-instance-sharepoint-add-in)
 
 ### Samples
 * [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)
@@ -115,7 +115,7 @@ _**Applies to:** SharePoint Server 2016 | SharePoint Server 2013_
 List templates target on-premises only and leverage a .STP template file that you can upload into the *List Templates* gallery of a site, and use to create multiple instances of lists based on a common list template. The List templates are an old technique, which work on SharePoint on-premises only, and that shouldn't be used anymore, because could represent a road block for migrating to the cloud and to SharePoint Online.
 
 ### Articles
-* [List definition / list template in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/list-definition-template-sharepoint-add-in)
+* [List definition / list template in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/list-definition-template-sharepoint-add-in)
 
 ### Samples
 * [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)
@@ -131,7 +131,7 @@ The Feature stapling capability can be used on-premises to customize existing si
 
 ### Articles
 * [SharePoint 2010 and web templates](https://blogs.msdn.microsoft.com/vesku/2010/10/14/sharepoint-2010-and-web-templates)
-* [Feature Stapling in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/feature-stapling-sharepoint-add-in)
+* [Feature Stapling in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/feature-stapling-sharepoint-add-in)
 
 ### Samples
 * [Creating sub sites using an add-in for SharePoint](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SubSiteCreationApp)
@@ -147,4 +147,4 @@ Actually, very often the answer is "it depends". Nevertheless, here are some inf
 * Sub Sites of the same Site Collection, can share a common hierarchical navigation structure, which improves the overall User Experience.
 * From an on-premises perspective, every single Site Collection can be associated with a dedicate database file, which is not the case for a Sub Site, which can only stay in its parent Site Collection database. Thus, you can have more granular backup and maintenance policies at the Site Collection level, rather than at the Sub Site level, as long as you don't use third party management tools.
 * From an on-premises perspective, a Site Collection can be easily moved across different database files, while a Sub Site can just follow its parent Site Collection database.
-* Having multiple Sub Sites within a Site Collection allows you to leverage the Content Query Web Part (on-premises or in the classic UI of SharePoint Online) to achieve better data aggregation across sites.
+* Having multiple Sub Sites within a Site Collection allows you to leverage the Content Query web part (on-premises or in the classic UI of SharePoint Online) to achieve better data aggregation across sites.

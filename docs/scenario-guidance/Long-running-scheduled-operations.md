@@ -49,12 +49,12 @@ In this pattern, the Azure WebJob handles the scheduling aspects associated with
 
 ##### Articles
 
-- [Remote timer jobs in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/remote-timer-jobs-sharepoint-add-in)
+- [Remote timer jobs in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/remote-timer-jobs-sharepoint-add-in)
 - [Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 - [PnP remote timer job framework](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/timerjob-framework)
 - [Create remote timer jobs in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/create-remote-timer-jobs-in-sharepoint)
 - [Use Microsoft Azure WebJobs with Office 365](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-microsoft-azure-webjobs-with-office-365)
-- [Transform farm solutions to the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
+- [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 - [Transforming your SharePoint customizations to add-in model - Resources](https://dev.office.com/blogs/transforming-your-sharePoint-customizations)
 - [Use asynchronous operations in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-asynchronous-operations-in-sharepoint-add-ins)
 - [Azure WebJobs SDK](https://github.com/Azure/azure-webjobs-sdk/wiki)
@@ -117,11 +117,11 @@ In this pattern, the Windows Scheduler handles the scheduling aspects associated
 
 ##### Articles
 
-- [Remote timer jobs in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/remote-timer-jobs-sharepoint-add-in)
+- [Remote timer jobs in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/remote-timer-jobs-sharepoint-add-in)
 - [Building a SharePoint App as a Timer Job (MSDN Blog)](https://blogs.msdn.microsoft.com/kaevans/2014/03/02/building-a-sharepoint-app-as-a-timer-job/)
 - [PnP remote timer job framework](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/timerjob-framework)
 - [Create remote timer jobs in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/create-remote-timer-jobs-in-sharepoint)
-- [Transform farm solutions to the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
+- [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 - [Transforming your SharePoint customizations to add-in model - Resources](https://dev.office.com/blogs/transforming-your-sharePoint-customizations)
 - [Simulate Timer Job Solution for SharePoint 2013/Online using App Model & CSOM](https://blogs.msdn.microsoft.com/shariq/2013/12/09/simulate-timer-job-solution-for-sharepoint-2013online-using-app-model-csom/)
 
@@ -145,7 +145,7 @@ A timer job is a trigger to start to run a specific Windows service for one of t
 
 ##### Articles
 
-- [Transform farm solutions to the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
+- [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 - [How to: Run Code on All Web Servers](https://msdn.microsoft.com/library/1bbb11b4-a342-4bed-9e7a-b8b13edd0ccc(Office.15).aspx)
 
 ##### Samples

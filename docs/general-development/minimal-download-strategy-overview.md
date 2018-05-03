@@ -199,7 +199,7 @@ Thanks to the failover mechanism, your controls work seamlessly whether or not M
 - ASP.NET pages
     
   
-- Controls and Web Parts
+- Controls and web parts
     
   
 

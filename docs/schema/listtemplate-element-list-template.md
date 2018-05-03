@@ -109,7 +109,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**Catalog**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** to specify that the list definition is for a site gallery, a list gallery, or a Web Part gallery.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** to specify that the list definition is for a site gallery, a list gallery, or a web part gallery.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Category**</p></td>

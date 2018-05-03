@@ -227,7 +227,7 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
 
     ```
     
-2. Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder, and update the **onRednerCell** method as follows.
+2. Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder, and update the **onRenderCell** method as follows.
 
     ```typescript
         @override

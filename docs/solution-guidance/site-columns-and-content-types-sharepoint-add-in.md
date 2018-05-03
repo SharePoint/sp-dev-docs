@@ -1,8 +1,8 @@
 ---
-title: Site columns and content types in the SharePoint add-in model
+title: Site columns and content types in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Site columns and content types in the SharePoint add-in model
+Site columns and content types in the SharePoint Add-in model
 =============================================================
 
 Summary
@@ -63,7 +63,7 @@ Incorrect site column and content type provisioning can affect an entire line-of
 
 For example: If your company uses SharePoint sites to manage projects, you will most likely create a common list schema for all of them. This will require that you create site columns and content types.  When you search for information in these sites via the SharePoint search page, you filter the results by content type or tag (site column). If your site columns and content types are not perfectly consistent across all the project sites, you will not receive accurate search results.
 
-You could apply this example to Content By Search Web Parts, SharePoint add-ins, mobile SharePoint Add-ins, and any other systems that access the information in the SharePoint sites.
+You could apply this example to Content By Search web parts, SharePoint add-ins, mobile SharePoint Add-ins, and any other systems that access the information in the SharePoint sites.
 
 Options to create site columns and content types in SharePoint sites
 --------------------------------------------------------------------
@@ -98,7 +98,7 @@ This option works well in Dev-Ops scenarios. It allows you to create custom appl
 
 Related links
 =============
-- [Site provisioning in the SharePoint add-in model (O365 PnP Recipe)](site-provisioning-sharepoint-add-in.md)
+- [Site provisioning in the SharePoint Add-in model (O365 PnP Recipe)](site-provisioning-sharepoint-add-in.md)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")

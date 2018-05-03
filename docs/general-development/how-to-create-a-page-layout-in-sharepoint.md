@@ -176,7 +176,7 @@ Before you begin, you need to know which content type and master page the page l
 ## Determine where the styles for a page layout should go
 <a name="WhereStyles"> </a>
 
-When you create HTML mockups for your site, you may have HTML files that represent different classes of pages, such as an article page or an item details page that contains a Web Part to display the details of a single item from a catalog. After you create the page layout that represents that class of pages, you're ready to transfer the styles from your HTML mockup to the HTML version of your page layout.
+When you create HTML mockups for your site, you may have HTML files that represent different classes of pages, such as an article page or an item details page that contains a web part to display the details of a single item from a catalog. After you create the page layout that represents that class of pages, you're ready to transfer the styles from your HTML mockup to the HTML version of your page layout.
   
     
     

@@ -29,7 +29,7 @@ The articles in this section show you how to use the SharePoint Add-in model to 
 |[OneDrive for Business customization](onedrive-for-business-customization-sharepoint-add-in.md)|Customize OneDrive for Business sites.|
 |[Performance Considerations](performance-considerations-sharepoint-add-in.md)|Ensure optimal performance with SharePoint.|
 |[Remote Timer Jobs](remote-timer-jobs-sharepoint-add-in.md)|Implement timer jobs.|
-|[Remote Event Receivers](Use-remote-event-receivers-in-SharePoint.md)|Use remote event receivers to handle events in the SharePoint add-in model.|
+|[Remote Event Receivers](Use-remote-event-receivers-in-SharePoint.md)|Use remote event receivers to handle events in the SharePoint Add-in model.|
 |[Search API Usage](search-api-usage-sharepoint-add-in.md)|Execute searches with the SharePoint Search Service.|
 |[Search Configuration](search-configuration-sharepoint-add-in.md)|Configure search.|
 |[SharePoint change log](query-sharepoint-change-log-with-changequery-and-changeToken.md)|Use ChangeQuery and ChangeToken to query the SharePoint change log for changes made to a SharePoint content database, site collection, site, or list.|
@@ -40,12 +40,11 @@ The articles in this section show you how to use the SharePoint Add-in model to 
 |[User Profile Manipulation](user profile manipulation-sharepoint-add-in.md)|Perform Create, Read, Update. and Delete (CRUD) operations in the User Profile Service (UPS).|
 |[Variations](variations-sharepoint-add-in.md)|Configure variations.|
 |[Web Part](web-part-sharepoint-add-in.md)|Create portable page components.|
-|[Upload pre-configured web parts](upload-web-parts-in-sharepoint.md)|Deploy pre-configured, standard SharePoint Web Parts for your users.|
+|[Upload pre-configured web parts](upload-web-parts-in-sharepoint.md)|Deploy pre-configured, standard SharePoint web parts for your users.|
 |[Connected SharePoint app parts](Connect-SharePoint-app-parts-by-using-SignalR.md)|Implement real-time communication between SharePoint app parts by using SignalR.|
 |[Workflows, Actions (Activities), Events, and Forms](workflows-actions-events-and-forms-sharepoint-add-in.md)|Implement workflows and their associated components.|
 |[Yammer Integration](yammer-integration-sharepoint-add-in.md)|Integrate Yammer with SharePoint.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

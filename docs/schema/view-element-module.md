@@ -95,7 +95,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**FPModified**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** if the view has been altered through editing in a Web page editor, and the view is no longer customizable by the Microsoft Windows SharePoint Services UI.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** if the view has been altered through editing in a webpage editor, and the view is no longer customizable by the Microsoft Windows SharePoint Services UI.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FreeForm**</p></td>
@@ -197,11 +197,11 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**WebPartOrder**</p></td>
-<td align="left"><p>Optional **integer**. Specifies the order of the Web Part.</p></td>
+<td align="left"><p>Optional **integer**. Specifies the order of the web part.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**WebPartZoneID**</p></td>
-<td align="left"><p>Optional **string**. Specifies the zone for the Web Part.</p></td>
+<td align="left"><p>Optional **string**. Specifies the zone for the web part.</p></td>
 </tr>
 </tbody>
 </table>

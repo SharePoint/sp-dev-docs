@@ -33,8 +33,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**PermAddAndCustomizePages="Required"** <br/> |Add, change, or delete ASPX pages, HTML pages, or Web Part Pages, and edit the website using a SharePoint Foundation-compatible editor.  <br/> |
-|**PermAddDelPrivateWebParts="Required"** <br/> |Add or remove Web Parts on a personalized Web Part Page.  <br/> |
+|**PermAddAndCustomizePages="Required"** <br/> |Add, change, or delete ASPX pages, HTML pages, or web part pages, and edit the website using a SharePoint Foundation-compatible editor.  <br/> |
+|**PermAddDelPrivateWebParts="Required"** <br/> |Add or remove web parts on a personalized web part page.  <br/> |
 |**PermAddListItems="Required"** <br/> |Add items to lists, add documents to document libraries, and add Web discussion comments.  <br/> |
 |**PermApplyStyleSheets="Required"** <br/> |Apply a style sheet (.CSS file) to the website.  <br/> |
 |**PermApplyThemeAndBorder="Required"** <br/> |Apply a theme or borders to the entire website.  <br/> |
@@ -47,7 +47,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**PermCreateSSCSite="Required"** <br/> |Create a website using Self-Service Site Creation.  <br/> |
 |**PermDeleteListItems="Required"** <br/> |Delete items from a list, documents from a document library, and Web discussion comments in documents.  <br/> |
 |**PermDeleteVersions="Required"** <br/> |Delete versions.  <br/> |
-|**PermEditListItems="Required"** <br/> |Edit items in lists, edit documents in document libraries, edit Web discussion comments in documents, and customize Web Part Pages in document libraries.  <br/> |
+|**PermEditListItems="Required"** <br/> |Edit items in lists, edit documents in document libraries, edit Web discussion comments in documents, and customize web part pages in document libraries.  <br/> |
 |**PermEditMyUserInfo="Required"** <br/> |Edit personal user information.  <br/> |
 |**PermEnumeratePermissions="Required"** <br/> |View permissions.  <br/> |
 |**PermFullMask="Required"** <br/> |Has all permissions on the website. Not available through the user interface.  <br/> |
@@ -59,7 +59,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**PermManageWeb="Required"** <br/> |Manage a site, including the ability to perform all administration tasks for the site and manage contents and permissions  <br/> |
 |**PermOpen="Required"** <br/> |Open documents.  <br/> |
 |**PermOpenItems="Required"** <br/> |Open items.  <br/> |
-|**PermUpdatePersonalWebPar="Required"ts** <br/> |Update Web Parts to display personalized information.  <br/> |
+|**PermUpdatePersonalWebPar="Required"ts** <br/> |Update web parts to display personalized information.  <br/> |
 |**PermUseRemoteAPIs="Required"** <br/> |Use the APIs defined through remote applications.  <br/> |
 |**PermViewFormPages="Required"** <br/> |View list item form pages.  <br/> |
 |**PermViewListItems="Required"** <br/> |View items in lists, documents in document libraries, view Web discussion comments, and set up email alerts for lists.  <br/> |

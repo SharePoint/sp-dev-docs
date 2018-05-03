@@ -116,7 +116,7 @@ Composed looks are out-of-the-box themes that are included in SharePoint 2013 an
 
 - [Themes overview for SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/themes-overview-for-sharepoint)
 - [Use composed looks to brand SharePoint sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-composed-looks-to-brand-sharepoint-sites)
-- [Branding SharePoint sites in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 - [SharePoint site branding and page customization solutions](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sharepoint-site-branding-and-page-customization-solutions)
 - [Proven Practices for SharePoint Online portal branding](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-branding)
 
@@ -147,11 +147,11 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 
 - [Overview of the SharePoint page model](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model)
 - [Master pages, the Master Page Gallery, and page layouts in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
-- [Master pages in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/master-pages-sharepoint-add-in)
+- [Master pages in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/master-pages-sharepoint-add-in)
 - [SharePoint Page Layouts and Master Pages (ECM)](https://msdn.microsoft.com/en-us/library/office/ms543497(v=office.14).aspx)
 - [Master Pages](https://msdn.microsoft.com/en-us/library/office/ms443795(v=office.14).aspx)
 - [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/blob/master/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model/10-1%20Replacement%20of%20files%20deployed%20via%20Modules/Lab.md)
-- [Branding SharePoint sites in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 
 ### Videos
 
@@ -181,7 +181,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 - [Use a SharePoint website's style sheet in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins)
 - [Give your provider-hosted add-in the SharePoint look-and-feel](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
 - [Optimize page performance in SharePoint - JavaScript and CSS files](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint#compress-crunch-javascript-and-css-files)
-- [Branding SharePoint sites in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 - [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
 - [Controlling branding in SharePoint using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/03%20Branding%20with%20add-in%20model%20techniques)
 
@@ -208,11 +208,11 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 
 _**Applies to:** Classic sites_
 
-Script Embedding means a pattern where custom JavaScript is added on the page which then modifies the end user experiences by modifying the html DOM structure. Typical approaches for this model is to use either *User Custom Actions*, *JSLink*, *Content Editor Web Part* or *Script Editor Web Part*. Challenge of the DOM manipulation related model is dependency on the actual page structure. These kind of customizations are fragile and can easily break as new capabilities are released in SharePoint Online.
+Script Embedding means a pattern where custom JavaScript is added on the page which then modifies the end user experiences by modifying the html DOM structure. Typical approaches for this model is to use either *User Custom Actions*, *JSLink*, *Content Editor web part* or *Script Editor web part*. Challenge of the DOM manipulation related model is dependency on the actual page structure. These kind of customizations are fragile and can easily break as new capabilities are released in SharePoint Online.
 
 ### Articles
 
-- [Branding SharePoint sites in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 - [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
 - [Embedding JavaScript into SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/embedding-javascript-into-sharepoint)
 - [Migrating User CustomAction / ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)

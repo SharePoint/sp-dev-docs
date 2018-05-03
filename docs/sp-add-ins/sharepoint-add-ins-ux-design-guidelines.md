@@ -137,7 +137,7 @@ The first thing to do when you are styling your add-in is to use semantic HTML a
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
 |![ms-core-pagetitle](../images/AppUXGuidelines_ms-core-pagetitle.png)|Main title on the page.|.ms-core-pageTitle|
-|![h1](../images/AppUXGuidelines_h1.png)|Title for dialog boxes, forms, blogs, and discussion posts. It's an alternative "primary" title for special content types or add-ins that take up the entire page that you want to be different from a regular wiki or Web Parts page.|H1|
+|![h1](../images/AppUXGuidelines_h1.png)|Title for dialog boxes, forms, blogs, and discussion posts. It's an alternative "primary" title for special content types or add-ins that take up the entire page that you want to be different from a regular wiki or web parts page.|H1|
 |![h2](../images/AppUXGuidelines_h2.png)|Secondary heading in relation to H1. For example, Communities uses H1 Accent for the title of a post, and H2 Accent for the best "response" to the post.|H2|
 |![h3](../images/AppUXGuidelines_h3.png)|Generally a subheading under H2.|H3|
 |![h4](../images/AppUXGuidelines_h4.png)|Subheadings under H3.|H4|

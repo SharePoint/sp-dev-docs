@@ -246,7 +246,7 @@ Recall that when an add-in requests Read or Write permission with the scope of L
 ## Next steps
 <a name="Nextsteps"> </a>
 
-In the next article, you'll learn how to surface the remote Order Form as a Web Part on a SharePoint page: [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md).
+In the next article, you'll learn how to surface the remote Order Form as a web part on a SharePoint page: [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md).
  
 
  

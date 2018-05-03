@@ -99,7 +99,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Threaded** <br/> |xs:boolean  <br/> |Optional. Specifies whether the view is threaded.  <br/> |
 |**Type** <br/> |xs:string  <br/> |Optional. Represetns the type of the view.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. Represents the site-relative URL of the page that contains the view.  <br/> |
-|**WebPartZoneID** <br/> |xs:string  <br/> |Optional. Identifier of the Web Part zone in which the view is sited.  <br/> |
+|**WebPartZoneID** <br/> |xs:string  <br/> |Optional. Identifier of the web part zone in which the view is sited.  <br/> |
    
 ### Child elements
 

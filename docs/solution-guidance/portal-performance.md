@@ -61,7 +61,7 @@ Consider the following comparison of the page load sequence associated with each
 	- issue data requests (zero or more)
 	- execute more and more JavaScript
 
-A network monitor will show that a modern web page can easily cause an order-of-magnitude increase in network traffic as compared to that of a classic web page. A browser-based execution profiler will also show that a modern web page has a greater dependency upon the execution of client-side JavaScript.  Granted, these increases are a function of the design and implementation of the new solution, but the probability of a significant increase is high.
+A network monitor will show that a modern webpage can easily cause an order-of-magnitude increase in network traffic as compared to that of a classic webpage. A browser-based execution profiler will also show that a modern webpage has a greater dependency upon the execution of client-side JavaScript.  Granted, these increases are a function of the design and implementation of the new solution, but the probability of a significant increase is high.
 
 ## General Performance Guidelines for Client-Side Web Applications
 <a name="bk_performanceGuidelines"> </a>
@@ -72,7 +72,7 @@ Once you commit to building a custom client-side web application:
 - Acknowledge that the benefits of server-side rendering and caching are no longer available for your custom controls
 - Understand that your application must now provide well-performing, client-side equivalents
 
->**From a performance perspective**: The goal with modern web applications in general, and client-side web applications in particular, is to implement the client-side logic necessary to mimic the minimal network traffic patterns observed for *return* visits to classic web pages.
+>**From a performance perspective**: The goal with modern web applications in general, and client-side web applications in particular, is to implement the client-side logic necessary to mimic the minimal network traffic patterns observed for *return* visits to classic webpages.
 
 The following sections provide performance guidance for achieving this goal.
 
@@ -256,7 +256,7 @@ The need for a synchronous call usually arises due to an order dependency in the
 
 The JavaScript execution phase is the last portion of the overall page load sequence.  During this phase, the browser executes all of the JavaScript necessary to tie everything together and present the final, rendered page to the user.
 
-Poorly-implemented JavaScript can still result in a poor user experience, even if your client-side web application follows all of the guidance to request the web page, its resource files, and execute all of its data requests.
+Poorly-implemented JavaScript can still result in a poor user experience, even if your client-side web application follows all of the guidance to request the webpage, its resource files, and execute all of its data requests.
 
 Extensive performance guidelines for JavaScript are outside the scope of this article; however, we summarize several of the most important concepts here:
 
@@ -277,7 +277,7 @@ Pay special attention to the design and implementation of High-Volume Pages with
 
 A typical high-volume page is the portal home page.  Consider the scenario where the Corporate IT department of a large enterprise (50,000 users) decides to implement a Group Policy Object (GPO) that forces all desktop browsers to open the portal home page by default. The performance of the portal home page has now become a critical consideration.  If your initial design did not take this volume of traffic into account, the portal could encounter a significant performance degradation.
 
-- Avoid the use of Content-by-Query Web Parts on the page; favor Content-by-Search Web Parts instead
+- Avoid the use of Content-by-Query web parts on the page; favor Content-by-Search web parts instead
 - Limit, and optimize, the number of client-side data requests issued by the page
 - Ensure that proper client-side caching is in play for client-side data requests
 - "Chunk" the page

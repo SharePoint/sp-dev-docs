@@ -1,25 +1,23 @@
 ---
 title: Manage SharePoint users and groups
-ms.date: 11/03/2017
+description: Manage users, groups, and permissions within a SharePoint site collection.
+ms.date: 4/26/2018
 ---
+
 # Manage SharePoint users and groups
 
-Manage users, groups, and permissions within a SharePoint site collection. 
-
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
-
-This article shows you how to add or remove groups and users within a given site collection. The code examples in this article add users and groups, and then give them permission levels of access to SharePoint. These user and group permission level actions are implemented via extension methods in the [Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Scenarios/Core.GroupManagement) PnP sample.
+This article shows you how to add or remove groups and users within a given site collection. The code examples in this article add users and groups, and then give them permission levels of access to SharePoint. These user and group permission level actions are implemented via extension methods in the [Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.GroupManagement) PnP sample.
 
 ## Before you begin
 
-To get started, download the [Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Scenarios/Core.GroupManagement) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.GroupManagement) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ## Add and remove groups and users
 
 The following example shows you how to add groups and add users to groups.
-
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```csharp
 cc.Load(cc.Web, web => web.CurrentUser);
@@ -33,6 +31,8 @@ if (!cc.Web.GroupExists("Test"))
 }
 ```
 
+<br/>
+
 The next example removes a group.
 
 ```csharp
@@ -41,6 +41,8 @@ if (cc.Web.GroupExists("Test"))
   cc.Web.RemoveGroup("Test");
 }
 ```
+
+<br/>
 
 The next example removes users from groups.
 
@@ -68,6 +70,8 @@ if (cc.Web.GroupExists("Test"))
 }
 ```
 
+<br/>
+
 The next example adds a permission level to a user.
 
 ```csharp
@@ -88,6 +92,9 @@ if (cc.Web.GroupExists("Test"))
 }
 
 ```
+
+<br/>
+
 The next example removes a permission level from a user.
 
 ```csharp
@@ -98,8 +105,6 @@ cc.Web.RemovePermissionLevelFromUser(currentUser.LoginName, RoleType.Reader);
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)
-    
-- [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)
+

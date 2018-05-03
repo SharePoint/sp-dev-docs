@@ -11,14 +11,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: 50b282e2-269d-4533-bf34-0d9d4601536d
-description: Specifies a Web Part file (.dwp or .webpart) to include in the solution.
+description: Specifies a web part file (.dwp or .webpart) to include in the solution.
 ---
 
 # DwpFile element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Specifies a Web Part file (.dwp or .webpart) to include in the solution.
+Specifies a web part file (.dwp or .webpart) to include in the solution.
   
 ```XML
   <DwpFile
@@ -35,8 +35,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**FileName** <br/> |Optional **Text**. The name of the Web Part file.  <br/> |
-|**Location** <br/> |Optional **Text**. The relative path of the Web Part file.  <br/> |
+|**FileName** <br/> |Optional **Text**. The name of the web part file.  <br/> |
+|**Location** <br/> |Optional **Text**. The relative path of the web part file.  <br/> |
    
 ### Child elements
 

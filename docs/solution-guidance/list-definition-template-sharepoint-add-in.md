@@ -1,8 +1,8 @@
 ---
-title: List definition / list template in the SharePoint add-in model
+title: List definition / list template in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-List definition / list template in the SharePoint add-in model
+List definition / list template in the SharePoint Add-in model
 ==============================================================
 
 Summary

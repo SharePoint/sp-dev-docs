@@ -133,7 +133,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
 ## Atom Feed
 
-Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the Web page, you get the XML. An example from the charts in **sampleWorkbook.xlsx** is shown below.
+Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the webpage, you get the XML. An example from the charts in **sampleWorkbook.xlsx** is shown below.
   
     
     

@@ -44,13 +44,13 @@ This goal adheres perfectly to the cloud offering model and philosophy. Users ca
 * App-Parts: parts of a webpage, using a special kind of control called an add-in part, to surface an iframe element that contains the add-in.
 * UI Custom Actions: UI commands that extend ribbons and menus for lists, documents, and more.
 
-Moreover, a SharePoint Add-in can include classic SharePoint components such as lists, custom website pages, Web Parts, workflows, content types, and many other artifacts.
+Moreover, a SharePoint Add-in can include classic SharePoint components such as lists, custom website pages, web parts, workflows, content types, and many other artifacts.
 
 ### Articles
 
 * [SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins)
 * [SharePoint Add-ins compared with SharePoint solutions](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
-* [Transform farm solutions to the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
+* [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 
 ### Samples
 
@@ -93,14 +93,14 @@ _**Applies to:** SharePoint 2013 | SharePoint 2016_
 
 SharePoint Farm Solutions are trusted SharePoint extensions whose custom logic calls the SharePoint server object model and runs with full trust on the SharePoint servers. These solutions are primarily for custom administrative extensions of SharePoint, such as timer jobs, custom Windows PowerShell commands, and extensions of Central Administration. 
 
-Farm Solutions are distributed as SharePoint solution packages that farm administrators upload to a farm-wide storage location from which they can be deployed. Components in Farm Solutions can have farm, web application, site collection, or web site scope. The Farm Solutions are supported in SharePoint on-premises only.
+Farm Solutions are distributed as SharePoint solution packages that farm administrators upload to a farm-wide storage location from which they can be deployed. Components in Farm Solutions can have farm, web application, site collection, or website scope. The Farm Solutions are supported in SharePoint on-premises only.
 
 ### Articles
 
 * [Build farm solutions in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/build-farm-solutions-in-sharepoint)
 * [SharePoint Add-ins compared with SharePoint solutions](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
 
-## Script Editor or Content Editor Web Part
+## Script Editor or Content Editor web part
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -108,7 +108,7 @@ Script Editor or Content Editor web parts are quite popular way to embed any cus
 
 This however raises a security challenges as scripts can be deployed to SharePoint site without any coordination from the administrators. To address this security concern, SharePoint Online sites (both modern and classic) by default do not support adding scripts to to the sites. This is blocked by so called no-script setting, which can be controlled by SharePoint Online tenant administrators.
 
-Moreover any custom code hosted within the Script Editor Web Part does not have any kind of maintenance capability, governance, or life-cycle management. That's why starting from 2017 Microsoft introduced the [SharePoint Framework](#SharePointFramework) model, which is similar to the Script Editor Web Part, but works in the "modern" UI, supports the no-script flag and provides centralized governance and control for the SharePoint administrators.
+Moreover any custom code hosted within the Script Editor web part does not have any kind of maintenance capability, governance, or life-cycle management. That's why starting from 2017 Microsoft introduced the [SharePoint Framework](#SharePointFramework) model, which is similar to the Script Editor web part, but works in the "modern" UI, supports the no-script flag and provides centralized governance and control for the SharePoint administrators.
 
 ### Articles
-* [Migrate existing Script Editor Web Part customizations to the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
+* [Migrate existing Script Editor web part customizations to the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)

@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents one or more aggregate, or total, columns used in a specified Web Part.
+Represents one or more aggregate, or total, columns used in a specified web part.
 
 ## Definition
 

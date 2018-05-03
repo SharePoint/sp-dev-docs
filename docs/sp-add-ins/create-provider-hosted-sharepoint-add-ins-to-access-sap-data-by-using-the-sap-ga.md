@@ -51,7 +51,7 @@ The process involves an OAuth "flow" in which the application, which can be a Sh
 > If your SharePoint Add-in accesses SharePoint in addition to accessing SAP Gateway for Microsoft, it needs to use *both* systems: Azure AD to get an access token to SAP Gateway for Microsoft, and the ACS authorization system to get an access token to SharePoint. The tokens from the two sources are not interchangeable. For more information, see [Add SharePoint access to the ASP.NET application (optional)](#SharePoint).
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact SharePoint add-in model which is using `https://accounts.accesscontrol.windows.net` hostname, which is not impacted by this retirement. See more details on this from [Impact of Azure Access Control retirement for SharePoint add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Azure AD, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code). 
 
@@ -113,7 +113,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
  
 8. Select **Web Application And/Or Web API** as the application type, and then select the right arrow button.    
  
-9. On the second page of the dialog, use the SSL debugging URL from the ASP.NET project in the Visual Studio solution as the **SIGN-ON URL**. You can find the URL using the following steps. *(You need to register the add-in initially with the debugging URL so that you can run the Visual Studio debugger (F5). When your add-in is ready for staging, you will re-register it with its staging Azure Web Site URL. See [Modify the add-in and stage it to Azure and Office 365](#Stage).)*
+9. On the second page of the dialog, use the SSL debugging URL from the ASP.NET project in the Visual Studio solution as the **SIGN-ON URL**. You can find the URL using the following steps. *(You need to register the add-in initially with the debugging URL so that you can run the Visual Studio debugger (F5). When your add-in is ready for staging, you will re-register it with its staging Azure website URL. See [Modify the add-in and stage it to Azure and Office 365](#Stage).)*
     
   1. Highlight the ASP.NET project in **Solution Explorer**. 
 
@@ -164,7 +164,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
   ```
 
   > [!NOTE] 
-  > Your application is known to Azure AD by the "localhost" URL you used to register it. The client ID and client key are associated with that identity. When you are ready to stage your application to an Azure Web Site, you will re-register it with a new URL.
+  > Your application is known to Azure AD by the "localhost" URL you used to register it. The client ID and client key are associated with that identity. When you are ready to stage your application to an Azure website, you will re-register it with a new URL.
 
 4. Still in the **appSettings** section, add an **Authority** key and set its value to the Office 365 domain (*some_domain*.onmicrosoft.com) of your organizational account. In the continuing example, the organizational account is `Bob@<O365_domain>.onmicrosoft.com`, so the authority is `<O365_domain>.onmicrosoft.com`. 
     
@@ -465,7 +465,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
     </div>
     ```
 
-2. Optionally, give the web page the "look 'n' feel" of a SharePoint page with the SharePoint [chrome control](use-the-client-chrome-control-in-sharepoint-add-ins.md) and [the host SharePoint website's style sheet](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md).
+2. Optionally, give the webpage the "look 'n' feel" of a SharePoint page with the SharePoint [chrome control](use-the-client-chrome-control-in-sharepoint-add-ins.md) and [the host SharePoint website's style sheet](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md).
     
  
 ### To test the add-in with F5 in Visual Studio
@@ -483,7 +483,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 ## Add SharePoint access to the ASP.NET application (optional)
 
-Of course, your SharePoint Add-in doesn't have to expose only SAP data in a web page launched from SharePoint. It can also create, read, update, and delete (CRUD) SharePoint data. Your code-behind can do this by using either the SharePoint client object model (CSOM) or the REST APIs of SharePoint. The CSOM is deployed as a pair of assemblies that the Office Developer Tools for Visual Studio automatically included in the ASP.NET project and set to **Copy Local** in Visual Studio so that they are included in the ASP.NET application package. 
+Of course, your SharePoint Add-in doesn't have to expose only SAP data in a webpage launched from SharePoint. It can also create, read, update, and delete (CRUD) SharePoint data. Your code-behind can do this by using either the SharePoint client object model (CSOM) or the REST APIs of SharePoint. The CSOM is deployed as a pair of assemblies that the Office Developer Tools for Visual Studio automatically included in the ASP.NET project and set to **Copy Local** in Visual Studio so that they are included in the ASP.NET application package. 
 
 For information about using CSOM, start with [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md). For information about using the REST APIs, start with  [Understanding and Using the SharePoint REST Interface](https://msdn.microsoft.com/en-us/magazine/dn198245.aspx). 
 
@@ -523,7 +523,7 @@ The following procedure provides some basic guidance about how to do this, but w
         {
             clientContext.Load(clientContext.Web, web => web.Title);
             clientContext.ExecuteQuery();
-            SharePointTitle.Text = "SharePoint web site title is: " + clientContext.Web.Title;
+            SharePointTitle.Text = "SharePoint website title is: " + clientContext.Web.Title;
         }
     }
   ```
@@ -542,15 +542,15 @@ The following procedure provides some basic guidance about how to do this, but w
 
 ## Modify the add-in and stage it to Azure and Office 365
 
-When you have finished debugging the SharePoint Add-in using F5 in Visual Studio, you need to deploy the ASP.NET application to an actual Azure Web Site.
+When you have finished debugging the SharePoint Add-in using F5 in Visual Studio, you need to deploy the ASP.NET application to an actual Azure website.
 
-### To create the Azure Web Site
+### To create the Azure website
 
-1. In the Microsoft Azure portal, open **WEB SITES** on the left navigation bar.
+1. In the Microsoft Azure portal, open **websiteS** on the left navigation bar.
     
-2. Select **NEW** at the bottom of the page, and in the **NEW** dialog, select **WEB SITE** |**QUICK CREATE**.
+2. Select **NEW** at the bottom of the page, and in the **NEW** dialog, select **website** |**QUICK CREATE**.
     
-3. Enter a domain name and select **CREATE WEB SITE**. Make a copy of the new site's URL. It has the form  `my_domain.azurewebsites.net`.
+3. Enter a domain name and select **CREATE website**. Make a copy of the new site's URL. It has the form  `my_domain.azurewebsites.net`.
     
  
 
@@ -558,11 +558,11 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
 
 1. In Visual Studio, remove the line `ServicePointManager.ServerCertificateValidationCallback = (s, cert, chain, errors) => true;` from the Default.aspx.cs file.    
  
-2. Open the web.config file of the ASP.NET project and change the domain part of the value of the **AppRedirectUrl** key in the **appSettings** section to the domain of the Azure Web Site. For example, change `<add key="AppRedirectUrl" value="https://localhost:44322/Pages/Default.aspx" />` to `<add key="AppRedirectUrl" value="https://my_domain.azurewebsites.net/Pages/Default.aspx" />`.    
+2. Open the web.config file of the ASP.NET project and change the domain part of the value of the **AppRedirectUrl** key in the **appSettings** section to the domain of the Azure website. For example, change `<add key="AppRedirectUrl" value="https://localhost:44322/Pages/Default.aspx" />` to `<add key="AppRedirectUrl" value="https://my_domain.azurewebsites.net/Pages/Default.aspx" />`.    
  
 3. Right-click the AppManifest.xml file in the SharePoint Add-in project, and select **View Code**.    
  
-4. In the **StartPage** value, replace the string `~remoteAppUrl` with the full domain of the Azure Web Site including the protocol; for example `https://my_domain.azurewebsites.net`. The entire **StartPage** value should now be `https://my_domain.azurewebsites.net/Pages/Default.aspx` (usually, the **StartPage** value is exactly the same as the value of the **AppRedirectUrl** key in the web.config file).
+4. In the **StartPage** value, replace the string `~remoteAppUrl` with the full domain of the Azure website including the protocol; for example `https://my_domain.azurewebsites.net`. The entire **StartPage** value should now be `https://my_domain.azurewebsites.net/Pages/Default.aspx` (usually, the **StartPage** value is exactly the same as the value of the **AppRedirectUrl** key in the web.config file).
     
  
 
@@ -578,7 +578,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
  
 5. Open the application you created. In the continuing example, it is **ContosoAutomobileCollection**.    
  
-6. For each of the following values, change the "localhost:*port*" part of the value to the domain of your new Azure Web Site:
+6. For each of the following values, change the "localhost:*port*" part of the value to the domain of your new Azure website:
     
   - **SIGN-ON URL**
       
@@ -601,7 +601,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
 
 ### Publish the ASP.NET application to Azure and install the add-in to SharePoint
 
-1. There are several ways to publish an ASP.NET application to an Azure Web Site. For more information, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git).
+1. There are several ways to publish an ASP.NET application to an Azure website. For more information, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git).
     
 2. In Visual Studio, right-click the SharePoint Add-in project and select **Package**. On the **Publish your add-in** page that opens, select **Package the add-in**. File Explorer opens to the folder with the add-in package.    
  

@@ -11,7 +11,7 @@ ms.assetid: 09ad5d5e-1678-45e4-8159-23ef56f84215
 
 # Locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
 
-If you want to programmatically add an Excel Web Access Web Part to a SharePoint page and programmatically change the Excel Web Access Web Part, you must add a reference to the required SharePoint DLLs. For example: 
+If you want to programmatically add an Excel Web Access web part to a SharePoint page and programmatically change the Excel Web Access web part, you must add a reference to the required SharePoint DLLs. For example: 
   
     
     
@@ -254,7 +254,7 @@ C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI\\14.0.0.0__71e9bce
   
     
     
- [How to: Programmatically Add an Excel Web Access Web Part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md)
+ [How to: Programmatically Add an Excel Web Access web part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md)
   
     
     

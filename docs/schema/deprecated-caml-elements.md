@@ -71,6 +71,6 @@ The following Collaborative Application Markup Language (CAML) elements and attr
     
 ## Differences in page execution
 
-CAML islands cannot be directly used on pages within the site, which now depend on ASP.NET for execution. Web Parts replace CAML views in the display of list data on these pages. This behavior differs from the previous version of SharePoint Foundation.
+CAML islands cannot be directly used on pages within the site, which now depend on ASP.NET for execution. web parts replace CAML views in the display of list data on these pages. This behavior differs from the previous version of SharePoint Foundation.
   
 

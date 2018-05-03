@@ -11,14 +11,14 @@ localization_priority: Normal
 api_type:
 - schema
 ms.assetid: 48efc045-5b54-4332-abed-6813d011c803
-description: A solution manifest file defines the constituent parts of a solution, including its files, assemblies, code access security, Web Parts, Features, site definitions, and other resources.
+description: A solution manifest file defines the constituent parts of a solution, including its files, assemblies, code access security, web parts, Features, site definitions, and other resources.
 ---
 
 # Solution schema
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-A solution manifest file defines the constituent parts of a solution, including its files, assemblies, code access security, Web Parts, Features, site definitions, and other resources.
+A solution manifest file defines the constituent parts of a solution, including its files, assemblies, code access security, web parts, Features, site definitions, and other resources.
   
 [Solution](solution-element-solution.md) 
   

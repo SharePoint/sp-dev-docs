@@ -13,7 +13,7 @@ Learn how to create the renderer component in a custom report extension for Perf
 ## What are custom report renderers for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
-In PerformancePoint Services, custom report renderers are web server controls that render a custom report in a Web Part. A renderer writes the HTML for the report visualization (such as a table or chart), provides logic to handle report parameters, and retrieves the report object from the repository.
+In PerformancePoint Services, custom report renderers are web server controls that render a custom report in a web part. A renderer writes the HTML for the report visualization (such as a table or chart), provides logic to handle report parameters, and retrieves the report object from the repository.
   
     
     
