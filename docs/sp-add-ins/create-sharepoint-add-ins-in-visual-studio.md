@@ -41,7 +41,7 @@ Adds an Office Add-in to your SharePoint Add-in. You can add a task pane add-in,
 
 For more information, see [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
 
-### Client Web Part (Host Web)
+### Client web part (Host Web)
 
 Adds a client web part to your SharePoint Add-in. By adding a client web part, you can display add-ins on the pages of a host site. This template contains a single Elements.xml file, whose properties define the following elements of the client web part.
 

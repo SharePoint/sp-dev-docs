@@ -110,9 +110,9 @@ When you scaffold a new SharePoint Framework client-side web part, by default, i
 
 4. When you add the web part to a site, the colors used by the web part automatically adapt to the theme colors used by the current site.
 
-    ![Side-by-side view of the same web part displayed in two sites using different colors. The web part follows the color scheme of each web site](../images/themed-styles-side-by-side.png)
+    ![Side-by-side view of the same web part displayed in two sites using different colors. The web part follows the color scheme of each website](../images/themed-styles-side-by-side.png)
 
 ## See also
 
 - [SharePoint themes and colors](../design/themes-colors.md)
-- [How to use Theme Colors in SPFX Web Parts](https://n8d.at/blog/how-to-use-theme-colors-in-spfx-web-parts/) by Stefan Bauer (Office Development MVP)
+- [How to use Theme Colors in SPFX web parts](https://n8d.at/blog/how-to-use-theme-colors-in-spfx-web-parts/) by Stefan Bauer (Office Development MVP)

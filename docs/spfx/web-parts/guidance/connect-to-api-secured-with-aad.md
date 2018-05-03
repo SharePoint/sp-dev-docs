@@ -324,6 +324,9 @@ Following is how you would use Azure Functions to create an API secured with Azu
 
 Azure Functions are hosted in Azure App Service, which allows you to configure its Cross-Origin Resource Sharing (CORS) settings through the Azure Portal. While this is convenient, if configured through the portal, it cannot be used in combination with the **Access-Control-Allow-Credentials** header, which is required by the API to accept authentication cookies coming from another origin. For the client-side authentication to work correctly, CORS settings of the Azure App Service must be cleared.
 
+> [!IMPORTANT]
+> If you're authenticating with the API using the SharePoint Online cookie you have to clear all CORS settings or the authentication process will fail. If you're however authenticating using OAuth, you can use the Azure Portal, to configure CORS settings for your API.
+
 1. In the Function App, select your Azure Function, and navigate to the **Platform features** blade.
 
     ![The Platform features link highlighted in the Azure Function settings](../../../images/api-aad-platform-features.png)

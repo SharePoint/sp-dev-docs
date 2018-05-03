@@ -7,14 +7,14 @@ ms.assetid: 1a782bac-48ee-4baf-8751-0f943a306e0f
 
 
 # SharePoint Design Manager display templates
-Learn about display templates, including: how they relate to Search Web Parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
+Learn about display templates, including: how they relate to Search web parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
 ## Introduction to display templates
 <a name="bk_introduction"> </a>
 
-Display templates in SharePoint are templates used in Web Parts that use search technology (referred to in this article as Search Web Parts) to show the results of a query made to the search index. Display templates control which managed properties are shown in the search results, and how they appear in the Web Part. Each display template is made of two files: an HTML version of the display template that you can edit in your HTML editor, and a .js file that SharePoint uses.
+Display templates in SharePoint are templates used in web parts that use search technology (referred to in this article as Search web parts) to show the results of a query made to the search index. Display templates control which managed properties are shown in the search results, and how they appear in the web part. Each display template is made of two files: an HTML version of the display template that you can edit in your HTML editor, and a .js file that SharePoint uses.
   
 > [!NOTE]
-> Only Search Web Parts can use display templates. The Content Query Web Part is not search-driven, and so does not use display templates. 
+> Only Search web parts can use display templates. The Content Query web part is not search-driven, and so does not use display templates. 
   
     
     
@@ -62,7 +62,7 @@ When you create a display template by copying the HTML file for an existing disp
     
 
 
-## Understanding the relationship between display templates and Search Web Parts
+## Understanding the relationship between display templates and Search web parts
 <a name="bk_DTandSWP"> </a>
 
 There are two primary types of display templates:
@@ -80,12 +80,12 @@ For more information about these and other display templates, see  [Display temp
   
     
     
-After you add a Search Web Part (such as the Content Search Web Part) to a page, to configure the Web Part, you select both a control display template and an item display template, as shown in Figure 1.
+After you add a Search web part (such as the Content Search web part) to a page, to configure the web part, you select both a control display template and an item display template, as shown in Figure 1.
   
     
     
 
-**Figure 1. Tool pane of Content Search Web Part**
+**Figure 1. Tool pane of Content Search web part**
 
   
     
@@ -94,11 +94,11 @@ After you add a Search Web Part (such as the Content Search Web Part) to a page,
   
     
     
-![Tool pane of Content Search Web Part](../images/115_content_search_web_part_tool_pane.gif)
+![Tool pane of Content Search web part](../images/115_content_search_web_part_tool_pane.gif)
   
     
     
-The control display template provides HTML to structure the overall layout for how you want to present the search results. For example, the control display template might provide the HTML for a heading and the beginning and end of a list. The control display template is rendered only once in the Web Part.
+The control display template provides HTML to structure the overall layout for how you want to present the search results. For example, the control display template might provide the HTML for a heading and the beginning and end of a list. The control display template is rendered only once in the web part.
   
     
     
@@ -106,7 +106,7 @@ The item display template provides HTML that determines how each item in the res
   
     
     
-When used together in this way, the control display template and the item display template combine to create a cohesive block of HTML that is rendered in the Web Part, as shown in Figure 2.
+When used together in this way, the control display template and the item display template combine to create a cohesive block of HTML that is rendered in the web part, as shown in Figure 2.
   
     
     
@@ -139,7 +139,7 @@ The HTML file that is used for a display template is a fully-formed HTML documen
 
 ### Title tag
 
-The text in the **\<title\>** tag in a display template file is used as the display name in the **Display Templates** section of the Web Part edit pane when the Search Web Part is in edit mode. The following example is for the item display template named Item_Picture3Lines.html:
+The text in the **\<title\>** tag in a display template file is used as the display name in the **Display Templates** section of the web part edit pane when the Search web part is in edit mode. The following example is for the item display template named Item_Picture3Lines.html:
   
     
 
@@ -179,7 +179,7 @@ These elements and their properties provide important information to the SharePo
 
 |**Property**|**Description**|
 |:-----|:-----|
-|**TemplateHidden** <br/> |Boolean value that indicates whether to hide the display template from the list of available templates in the Web Part. This value can be changed in the display template file properties.  <br/> |
+|**TemplateHidden** <br/> |Boolean value that indicates whether to hide the display template from the list of available templates in the web part. This value can be changed in the display template file properties.  <br/> |
 |**ManagedPropertyMapping** <br/> |Maps fields exposed by search result items into properties available for JavaScript. Used only in item templates.  <br/> |
 |**MasterPageDescription** <br/> |Provides a friendly description of the display template. This is shown to users in the SharePoint editing environment. This value can be changed in the display template file properties.  <br/> |
 |**ContentTypeId** <br/> |The ID of the content type associated with the display template.  <br/> |
@@ -270,10 +270,10 @@ Let's look at the format in more detail:
     
     
 
--  _property display name_ is the property name that shows in the Web Part editing pane when the display template is selected.
+-  _property display name_ is the property name that shows in the web part editing pane when the display template is selected.
     
   
--  _property name_ is an identifier that uses localized string resources to look up the name of the managed property. It is also the value that appears in the **Property Mappings** section of the Web Part settings menu. When you edit the settings for a Web Part, you can change this value to change what managed property is associated with the field that appears in the Web Part.
+-  _property name_ is an identifier that uses localized string resources to look up the name of the managed property. It is also the value that appears in the **Property Mappings** section of the web part settings menu. When you edit the settings for a web part, you can change this value to change what managed property is associated with the field that appears in the web part.
     
   
 -  _managed property_ is a string of one or more managed properties, separated by semicolons. At run time, the list is evaluated from left to right, and the first value that matches the name of a managed property of the current search item will have its value mapped to this slot. This enables you to write a display template that can work with multiple item types and that can use consistent rendering if compatible properties are present.
@@ -352,9 +352,9 @@ Before you can create a display template by using the following procedure, you m
   - **Conversion successful**
 
     > [!NOTE]
-    > Unlike master pages and page layouts, you can't use the preview page to see a live server-side preview of your display template. To preview the display template, you must add a Content Search Web Part to a page, and then apply the display template in the Content Search Web Part edit pane. If there are any errors in the display template, the Content Search Web Part displays an error message. Errors must be fixed before the display template can display correctly. 
+    > Unlike master pages and page layouts, you can't use the preview page to see a live server-side preview of your display template. To preview the display template, you must add a Content Search web part to a page, and then apply the display template in the Content Search web part edit pane. If there are any errors in the display template, the Content Search web part displays an error message. Errors must be fixed before the display template can display correctly. 
 
-8. To fix any errors, edit the HTML file that resides on the server by using an HTML editor to open and edit the HTML file on the mapped drive. Save the display template, and then reload the page that contains the Content Search Web Part that uses the display template.
+8. To fix any errors, edit the HTML file that resides on the server by using an HTML editor to open and edit the HTML file on the mapped drive. Save the display template, and then reload the page that contains the Content Search web part that uses the display template.
     
   
 

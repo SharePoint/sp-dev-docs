@@ -35,4 +35,4 @@ We recommend the first two solutions, because information workers who don't know
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
     
--  [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
+-  [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)

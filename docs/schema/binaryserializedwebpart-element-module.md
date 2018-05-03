@@ -12,7 +12,7 @@ ms.assetid: 924e8a3f-0ec6-48c8-9337-6597c21dc7d1
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies a Web Part that has been serialized into binary data.
+Specifies a web part that has been serialized into binary data.
 
 ## Definition
 

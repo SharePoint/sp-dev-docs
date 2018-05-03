@@ -459,7 +459,7 @@ namespace UserProfilesSSOM
 
                     // Add a value to a multivalue user property.
                     userProfile[PropertyConstants.PastProjects].Add((object)"Team Feed App");
-                    userProfile[PropertyConstants.PastProjects].Add((object)"Social Ratings View Web Part");
+                    userProfile[PropertyConstants.PastProjects].Add((object)"Social Ratings View web part");
 
                     // Save the changes to the server.
                     userProfile.Commit();

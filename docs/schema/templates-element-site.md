@@ -78,10 +78,10 @@ The following example shows the templates defined in the default [WebTemp.xml](h
     <Configuration ID="4" Title="Multipage Meeting Workspace" Hidden="FALSE" ImageUrl="/_layouts/images/stmm.png" Description="A site to plan, organize, and capture the results of a meeting. It provides lists for managing the agenda and meeting attendees in addition to two blank pages for you to customize based on your requirements." DisplayCategory="Meetings" SupportsMultilingualUI="FALSE" >    </Configuration>
  </Template>
  <Template Name="CENTRALADMIN" ID="3">
-    <Configuration ID="0" Title="Central Admin Site" Hidden="TRUE" ImageUrl="" Description="A site for central administration. It provides Web pages and links for application and operations management." >   </Configuration>
+    <Configuration ID="0" Title="Central Admin Site" Hidden="TRUE" ImageUrl="" Description="A site for central administration. It provides webpages and links for application and operations management." >   </Configuration>
  </Template>
  <Template Name="WIKI" ID="4">
-    <Configuration ID="0" Title="Wiki Site" Hidden="TRUE" ImageUrl="/_layouts/images/wikiprev.png" Description="A site for a community to brainstorm and share ideas. It provides Web pages that can be quickly edited to record information and then linked together through keywords" DisplayCategory="Collaboration" >    </Configuration>
+    <Configuration ID="0" Title="Wiki Site" Hidden="TRUE" ImageUrl="/_layouts/images/wikiprev.png" Description="A site for a community to brainstorm and share ideas. It provides webpages that can be quickly edited to record information and then linked together through keywords" DisplayCategory="Collaboration" >    </Configuration>
  </Template>
  <Template Name="BLOG" ID="9">
     <Configuration ID="0" Title="Blog" Hidden="FALSE" ImageUrl="/_layouts/images/stbg.png" Description="A site for a person or team to post ideas, observations, and expertise that site visitors can comment on." DisplayCategory="Collaboration" SupportsMultilingualUI="FALSE" >    </Configuration>
@@ -90,7 +90,7 @@ The following example shows the templates defined in the default [WebTemp.xml](h
     <Configuration ID="0" Title="Group Work Site" Hidden="FALSE" ImageUrl="/_layouts/images/stgb.png" Description="This template provides a groupware solution that enables teams to create, organize, and share information quickly and easily. It includes Group Calendar, Circulation, Phone-Call Memo, the Document Library and the other basic lists." DisplayCategory="Collaboration" >    </Configuration>
  </Template>
  <Template Name="TENANTADMIN" SetupPath="SiteTemplates\tenantadmin" ID="16">
-    <Configuration ID="0" Title="Tenant Admin Site" Hidden="TRUE" ImageUrl="" Description="A site for tenant administration. It provides Web pages and links for self-serve administration." >   </Configuration>
+    <Configuration ID="0" Title="Tenant Admin Site" Hidden="TRUE" ImageUrl="" Description="A site for tenant administration. It provides webpages and links for self-serve administration." >   </Configuration>
  </Template>
 </Templates>
 ```

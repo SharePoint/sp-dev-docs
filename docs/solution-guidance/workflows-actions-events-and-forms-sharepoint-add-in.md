@@ -1,8 +1,8 @@
 ---
-title: Workflows, actions (activities), events, and forms in the SharePoint add-in model
+title: Workflows, actions (activities), events, and forms in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Workflows, actions (activities), events, and forms in the SharePoint add-in model
+Workflows, actions (activities), events, and forms in the SharePoint Add-in model
 =================================================================================
 
 Summary

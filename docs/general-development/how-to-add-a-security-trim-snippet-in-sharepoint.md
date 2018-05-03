@@ -13,7 +13,7 @@ You can use a Security Trim snippet to display content only to specific users, b
 ## Introduction to the Security Trim snippet
 <a name="Introduction"> </a>
 
-You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have, and whether those users are authenticated or anonymous. You can add a Security Trim panel to a master page or page layout. A Security Trim panel is a container that can include other components or snippets, such as Web Parts, in addition to static content.
+You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have, and whether those users are authenticated or anonymous. You can add a Security Trim panel to a master page or page layout. A Security Trim panel is a container that can include other components or snippets, such as web parts, in addition to static content.
   
     
     
@@ -22,13 +22,13 @@ For example, you can use a Security Trim panel to display the following content 
     
     
 
-- A Content by Search Web Part that displays which documents an authenticated user is currently working on.
+- A Content by Search web part that displays which documents an authenticated user is currently working on.
     
   
 - A list view of recently modified documents so that authenticated users can see what's new on the site.
     
   
-- A Content by Search Web Part that displays to non-authenticated visitors a list of recommended links based on the current article. Such a list of recommendations might be noise to authenticated content authors working in the site, but it's important for non-authenticated visitors.
+- A Content by Search web part that displays to non-authenticated visitors a list of recommended links based on the current article. Such a list of recommendations might be noise to authenticated content authors working in the site, but it's important for non-authenticated visitors.
     
   
 - A sign-in link separate from the ribbon, for non-authenticated users or users who have yet to be authenticated.

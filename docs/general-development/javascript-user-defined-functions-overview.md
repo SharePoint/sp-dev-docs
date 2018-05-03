@@ -35,7 +35,7 @@ To use a JavaScript UDF, you have to have the ability to modify the content of t
   
     
     
-When the webpage with the Excel Web Access Web Part or embedded workbook renders, you can invoke the JavaScript UDF in the workbook just like any other Excel workbook.
+When the webpage with the Excel Web Access web part or embedded workbook renders, you can invoke the JavaScript UDF in the workbook just like any other Excel workbook.
   
     
     
@@ -97,7 +97,7 @@ You could then call the JavaScript UDF, StockInfo, in a formula from a cell insi
 ## Where can I use JavaScript UDFs?
 <a name="xlsWhereUseJsUdfs"> </a>
 
-You can create and use JavaScript UDFs either on workbooks displayed in SharePoint Excel Web Access Web Parts or on a host webpage that has an embedded workbook. The workbook must be stored on Microsoft OneDrive. The main difference is that JavaScript UDFs added to Excel Web Access Web Parts require a SharePoint server. JavaScript UDFs added to host webpages that have embedded workbooks require only that the workbook be stored on OneDrive.
+You can create and use JavaScript UDFs either on workbooks displayed in SharePoint Excel Web Access web parts or on a host webpage that has an embedded workbook. The workbook must be stored on Microsoft OneDrive. The main difference is that JavaScript UDFs added to Excel Web Access web parts require a SharePoint server. JavaScript UDFs added to host webpages that have embedded workbooks require only that the workbook be stored on OneDrive.
   
     
     

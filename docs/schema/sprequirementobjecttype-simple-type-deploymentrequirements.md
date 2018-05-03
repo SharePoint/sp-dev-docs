@@ -36,7 +36,7 @@ Provides values for the **Type** attribute on the [Requirement Element](requirem
 |:-----|:-----|
 |**FeatureDefinition** <br/> |Specifies that the requirement object type is a Feature definition (**SPFeature**).  <br/> |
 |**WebTemplate** <br/> |Specifies that the requirement object type is a Web template (**SPWebTemplate**).  <br/> |
-|**WebPart** <br/> |Specifies that the requirement object type is a Web Part (**SPWebPart**).  <br/> |
+|**WebPart** <br/> |Specifies that the requirement object type is a web part (**SPWebPart**).  <br/> |
 |**Language** <br/> |Specifies that the requirement object type is a language pack.  <br/> |
    
 ## See also

@@ -1,8 +1,8 @@
 ---
-title: MMS manipulation in the SharePoint add-in model
+title: MMS manipulation in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-MMS manipulation in the SharePoint add-in model
+MMS manipulation in the SharePoint Add-in model
 ===============================================
 
 Summary

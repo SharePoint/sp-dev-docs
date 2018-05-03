@@ -154,7 +154,7 @@ The web part you are building shows list items from the selected SharePoint list
             <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
               <div className="ms-Grid-col ms-lg10 ms-xl8 ms-xlPush2 ms-lgPush1">
                 <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-                <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+                <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
                 <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
                 <a href="https://aka.ms/spfx" className={styles.button}>
                   <span className={styles.label}>Learn more</span>
@@ -254,7 +254,7 @@ When creating a custom property pane control that uses React in the SharePoint F
 
 4. Define the asynchronous dropdown React component. In the **src/controls/PropertyPaneAsyncDropdown/components** folder, create a new file named **AsyncDropdown.tsx**, and enter the following code:
 
-  ```typescriptx
+  ```tsx
   import * as React from 'react';
   import { Dropdown, IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
   import { Spinner } from 'office-ui-fabric-react/lib/components/Spinner';
@@ -685,7 +685,7 @@ export default class ListItems extends React.Component<IListItemsProps, {}> {
           <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
             <div className="ms-Grid-col ms-lg10 ms-xl8 ms-xlPush2 ms-lgPush1">
               <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
               <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
               <p className="ms-font-l ms-fontColor-white">{escape(this.props.item)}</p>
               <a href="https://aka.ms/spfx" className={styles.button}>

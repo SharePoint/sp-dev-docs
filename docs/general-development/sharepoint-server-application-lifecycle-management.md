@@ -141,34 +141,6 @@ Development teams creating separate features or applications that contain a larg
     
     
 
-#### NapaOffice 365 development tools
-<a name="NapaDevelopment"> </a>
-
-The Napadevelopment tools can be used by developers for the simpler creation of applications within an Office 365 developer site. The intention of the Napa tools is for developers, or power users who are proficient in client-side technologies, to quickly develop and deploy applications in a prototype, proof-of-concept or rapid business solution scenario. These tools provide a means of developing application functionality on SharePoint. However, during the lifecycle of an application, there may be points at which the application should be imported into Visual Studio. These conditions are outlined as follows"
-  
-    
-    
-
-- When more than one developer has to contribute or develop part of the solution
-    
-  
-- When an application reaches a level of dependence by users whom requires the application of lifecycle management practices
-    
-  
-- When functional requirements for the application change over time to require supplementary solution components (such as compiled services or data sources)
-    
-  
-- When the application requires integration with other applications or solution components
-    
-  
-- When developers have to use quality control measures such as automated builds and testing
-    
-  
-Once these or other similar conditions occur, developers must export the solution into a source controlled environment such as TFS and apply ALM design considerations and procedures to the application's future development.
-  
-    
-    
-
 ### Development sites (remote development)
 <a name="OnPremDevelopment"> </a>
 
@@ -380,7 +352,7 @@ To achieve continuous integration, the build definition can be triggered when de
   
     
     
-ForSharePoint applications, developers should use the  [Office/SharePoint Continuous Integration with TFS 2012](http://officesharepointci.codeplex.com/) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure Visual Studio Online or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint Continuous Integration with TFS 2012 documentation](http://officesharepointci.codeplex.com/documentation).
+ForSharePoint applications, developers should use the  [Office/SharePoint Continuous Integration with TFS 2012](http://officesharepointci.codeplex.com/) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure [Visual Studio Team Services](https://www.visualstudio.com/vso/) or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint Continuous Integration with TFS 2012 documentation](http://officesharepointci.codeplex.com/documentation).
   
     
     

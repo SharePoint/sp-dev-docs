@@ -116,7 +116,7 @@ You can customize the Search Box web part by editing properties in the web part 
     
 - Change the display template for the web part.
     
-For more information, see [Configure properties of the Search Box Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg576963%28v=office.15%29.aspx) and [How to change the text that is displayed in the Search Box Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794238%28v=office.15%29.aspx).
+For more information, see [Configure properties of the Search Box web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg576963%28v=office.15%29.aspx) and [How to change the text that is displayed in the Search Box web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn794238%28v=office.15%29.aspx).
 
 #### Search Results web part
 
@@ -134,7 +134,7 @@ You can edit the Search Results web part properties in the web part tool pane to
     
 - Change the display template.
     
-For more information about the Search Results web parts, see [Configure properties of the Search Results Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549987.aspx) and [How to configure the Search Results Web Part to use a new result source in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794200%28v=office.15%29.aspx).
+For more information about the Search Results web parts, see [Configure properties of the Search Results web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549987.aspx) and [How to configure the Search Results web part to use a new result source in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794200%28v=office.15%29.aspx).
 
 #### Search Navigation web part
 
@@ -164,7 +164,7 @@ The Refinement web part filters search results into categories called refiners. 
     
 - The appearance, layout, and behavior of the Refinement web part.
     
-By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. For more information about this feature, see [Add refiner counts to the Refinement Web Part in Configure properties of the Refinement Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549985%28v=office.15%29.aspx).
+By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. For more information about this feature, see [Add refiner counts to the Refinement web part in Configure properties of the Refinement web part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549985%28v=office.15%29.aspx).
 
 For more information about the Refinement web part and refiners, see [Plan to use refiners on a search results page in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794223%28v=office.15%29.aspx) and [How to add refiners to your search results page in SharePoint 2013](http://technet.microsoft.com/en-us/library/dn794243%28v=office.15%29.aspx).
 
@@ -292,7 +292,7 @@ The control display template provides HTML to structure the overall layout for h
 
 The item display template provides HTML that determines how each item in the result set is displayed. For example, the item display template might provide the HTML for a list item that contains a picture, and three lines of text that are mapped to different managed properties associated with the item. The item display template is rendered one time for each item in the result set. So, if the result set contains ten items, the item display template creates its section of HTML ten times.
 
-For details display templates and their structure, see [SharePoint 2013 Design Manager display templates](http://msdn.microsoft.com/en-us/library/jj945138.aspx) and [Search-driven Web Parts and display templates](http://msdn.microsoft.com/en-us/library/jj191506.aspx) in [Overview of the SharePoint 2013 page model](http://msdn.microsoft.com/en-us/library/jj191506.aspx).
+For details display templates and their structure, see [SharePoint 2013 Design Manager display templates](http://msdn.microsoft.com/en-us/library/jj945138.aspx) and [Search-driven web parts and display templates](http://msdn.microsoft.com/en-us/library/jj191506.aspx) in [Overview of the SharePoint 2013 page model](http://msdn.microsoft.com/en-us/library/jj191506.aspx).
 
 For more information about display templates available in SharePoint 2013, see [Display template reference in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj944947.aspx).
 
@@ -433,10 +433,8 @@ using (var clientContext = spContext.CreateUserClientContextForSPHost())
 - [Search customizations for SharePoint](search-customizations-for-sharepoint.md)
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
-    
-- [Search add-ins in SharePoint 2013](http://msdn.microsoft.com/library/21682e45-dd78-4f3c-8f1e-cdd48de3bde2%28Office.15%29.aspx)
-    
+- [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)   
+- [Search add-ins in SharePoint 2013](http://msdn.microsoft.com/library/21682e45-dd78-4f3c-8f1e-cdd48de3bde2%28Office.15%29.aspx)    
 - [Add search capabilities to your SharePoint Add-ins](http://blogs.msdn.com/b/officeapps/archive/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint.aspx)
+- [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

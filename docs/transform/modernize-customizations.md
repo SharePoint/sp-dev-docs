@@ -94,12 +94,12 @@ If you need the functionality of a classic web part as a modern client-side equi
 
 Following is a diagram showing a sample web part.
 
-![SPFX Web Part sample](media/modernize/spfx-react-image-magnifier.gif)
+![SPFX web part sample](media/modernize/spfx-react-image-magnifier.gif)
 
 To learn more about SharePoint Framework client-side web parts, see:
 
 - [Overview of SharePoint client-side web parts](../spfx/web-parts/overview-client-side-web-parts.md)
-- [Migrate existing Script Editor Web Part customizations to the SharePoint Framework](../spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md)
+- [Migrate existing Script Editor web part customizations to the SharePoint Framework](../spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md)
 - [SharePoint Framework client-side web part samples and tutorial materials](https://github.com/SharePoint/sp-dev-fx-webparts)
 
 ### Site or web-scoped user custom actions that embed JavaScript

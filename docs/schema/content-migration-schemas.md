@@ -61,7 +61,7 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 <tr class="even">
 <td align="left"><p><span sdata="link"><a href="deploymentrequirements-schema.md">DeploymentRequirements schema</a></span></p></td>
 <td align="left"><p>Provides validation for the Requirements.xml file exported into the content migration package.</p>
-<p>Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, Web Part assemblies, language packs, and so forth.</p></td>
+<p>Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, web part assemblies, language packs, and so forth.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="deploymentrootobjectmap-schema.md">DeploymentRootObjectMap schema</a></span></p></td>
@@ -85,7 +85,7 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 <tr class="even">
 <td align="left"><p><span sdata="link"><a href="deploymentviewformslist-schema.md">DeploymentViewFormsList schema</a></span></p></td>
 <td align="left"><p>Provides validation for the ViewFormsList.xml file exported into the content migration package.</p>
-<p>ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.</p></td>
+<p>ViewFormsList.xml maintains a list of web parts and tracks whether each is a view or form.</p></td>
 </tr>
 </tbody>
 </table>

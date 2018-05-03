@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents the means for displaying overflow data when a row limit on a specified instance of a Windows SharePoint Services 3.0 Web Part object is exceeded.
+Represents the means for displaying overflow data when a row limit on a specified instance of a Windows SharePoint Services 3.0 web part object is exceeded.
 
 ## Definition
 

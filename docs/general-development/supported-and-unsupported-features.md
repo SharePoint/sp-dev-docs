@@ -152,7 +152,7 @@ All other unsupported features continue to behave as they do in Office SharePoin
 > The  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx) topic contains more details about these unsupported features.
   
 > [!WARNING]
-> The information bar with the list of unsupported features is not displayed if the file is loaded from a Web Part. 
+> The information bar with the list of unsupported features is not displayed if the file is loaded from a web part. 
   
     
     

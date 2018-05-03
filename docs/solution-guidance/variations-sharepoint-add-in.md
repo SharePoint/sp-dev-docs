@@ -1,8 +1,8 @@
 ---
-title: Variations in the SharePoint add-in model
+title: Variations in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Variations in the SharePoint add-in model
+Variations in the SharePoint Add-in model
 =========================================
 
 Summary

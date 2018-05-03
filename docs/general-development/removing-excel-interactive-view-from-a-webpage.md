@@ -8,7 +8,7 @@ ms.assetid: 407b3aa3-7286-462b-905f-811a3b7f3f1c
 
 # Removing Excel Interactive View from a webpage
 
-The Excel Interactive View feature has been disabled. If you have inserted an Excel Interactive View into your web page, you can remove it by removing the  `<script>` tag and the placeholder `<a>` tags for the button from the HTML of your web page.
+The Excel Interactive View feature has been disabled. If you have inserted an Excel Interactive View into your webpage, you can remove it by removing the  `<script>` tag and the placeholder `<a>` tags for the button from the HTML of your webpage.
   
     
     
@@ -31,7 +31,7 @@ To remove the placeholder  `<a>` tags, find <a> tags that are located directly b
 
 ## Workarounds
 
-We encourage you to  [embed Excel into your web pages ](https://support.office.com/en-au/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU) as an alternative.
+We encourage you to  [embed Excel into your webpages ](https://support.office.com/en-au/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU) as an alternative.
   
     
     

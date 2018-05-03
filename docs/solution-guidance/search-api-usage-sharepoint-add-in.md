@@ -1,14 +1,14 @@
 ---
-title: Search API usage in the SharePoint add-in model
+title: Search API usage in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Search API usage in the SharePoint add-in model
+Search API usage in the SharePoint Add-in model
 ===============================================
 
 Summary
 -------
 
-The approach you take to execute searches with the SharePoint Search Service is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint server-side object model (Content By Query Web Part overrides) or the Search Web Services were used to execute searches with the SharePoint Search Service.
+The approach you take to execute searches with the SharePoint Search Service is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint server-side object model (Content By Query web part overrides) or the Search Web Services were used to execute searches with the SharePoint Search Service.
 
 In a SharePoint Add-in model scenario, you execute searches with the SharePoint Search Service via the CSOM or REST APIs.
 
@@ -40,7 +40,7 @@ In this option you use the .Net CSOM API to execute searches with the SharePoint
 **When is it a good fit?**
 
 - This API is a great fit for Provider-hosted Add-ins, long running operations, or other server-side scenarios that run on the .Net platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, ASP.NET Web API services, .Net console or Windows applications, and Azure Web Jobs.
+- Some examples of these scenarios are ASP.NET MVC websites, ASP.NET Web API services, .Net console or Windows applications, and Azure Web Jobs.
 
 **Getting Started**
 
@@ -130,7 +130,7 @@ In this option you use the JavaScript CSOM (JSOM) API to execute searches with t
 **When is it a good fit?**
 
 - This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-ins running on any web platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, PHP web sites, Python web sites, etc.
+- Some examples of these scenarios are ASP.NET MVC websites, PHP websites, Python websites, etc.
 
 **Getting Started**
 
@@ -177,7 +177,7 @@ In this option you use the REST API to execute searches with the SharePoint Sear
 **When is it a good fit?**
 
 This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-ins running on any web platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, PHP web sites, Python web sites, ASP.NET Web API services, .Net console or Windows applications, Azure Web Jobs, etc.
+- Some examples of these scenarios are ASP.NET MVC websites, PHP websites, Python websites, ASP.NET Web API services, .Net console or Windows applications, Azure Web Jobs, etc.
 
 **Getting Started**
 

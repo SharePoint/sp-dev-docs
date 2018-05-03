@@ -12,7 +12,7 @@ ms.assetid: fb0f93f5-1bb9-4c27-9d07-1dcd3872f908
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Contains a Web Part in a module of a site definition.
+Contains a web part in a module of a site definition.
 
 ## Definition
 
@@ -44,15 +44,15 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Optional **string**. Specifies the ID of the Web Part.</p></td>
+<td align="left"><p>Optional **string**. Specifies the ID of the web part.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**WebPartOrder**</p></td>
-<td align="left"><p>Required **integer**. Specifies the vertical positioning of the Web Part within a zone.</p></td>
+<td align="left"><p>Required **integer**. Specifies the vertical positioning of the web part within a zone.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**WebPartZoneID**</p></td>
-<td align="left"><p>Required **string**. Specifies the zone for the Web Part.</p></td>
+<td align="left"><p>Required **string**. Specifies the zone for the web part.</p></td>
 </tr>
 </tbody>
 </table>

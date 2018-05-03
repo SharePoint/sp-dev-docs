@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents formatting parameters for a Windows SharePoint Services 3.0 Web Part.
+Represents formatting parameters for a Windows SharePoint Services 3.0 web part.
 
 ## Definition
 

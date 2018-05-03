@@ -45,7 +45,7 @@ Except where specified otherwise, you can assume that each of these examples is 
 > [!NOTE] 
 > When you are making a provider-hosted SharePoint Add-in with an ASP.NET web application, and you add a reference to an assembly to the web application project in Visual Studio, set the **Copy Local** property of the assembly to **True**, unless you know that the assembly is already installed on the web server, or you can ensure that it is installed before you deploy your add-in. 
 
-> The .NET Framework is installed on Microsoft Azure Web Roles and Azure Web Sites. But the SharePoint client assemblies and the various Microsoft managed code extensions and foundations are not installed. Office Developer Tools for Visual Studio 2012 automatically adds references to some assemblies commonly used in SharePoint Add-ins and sets the **Copy Local** property.
+> The .NET Framework is installed on Microsoft Azure Web Roles and Azure websites. But the SharePoint client assemblies and the various Microsoft managed code extensions and foundations are not installed. Office Developer Tools for Visual Studio 2012 automatically adds references to some assemblies commonly used in SharePoint Add-ins and sets the **Copy Local** property.
 
 <a name="BasicOps_SPWebTasks"> </a>
 

@@ -83,7 +83,7 @@ Page layouts are used by individual pages of a certain type. They are populated 
 ## Client-side rendering controls
 <a name="SP15_BuildSitesForSP2013_ClientSideRendering"> </a>
 
-All new controls in SharePoint are rendered. Data is written to the controls in a client-side JSON array, and you can display content using JavaScript, CSS, and templates. As a designer or developer, you have control over how content is rendered on the page, and you can use various design techniques to get the look and behaviors you want on your published pages by using features like the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md) and display templates.
+All new controls in SharePoint are rendered. Data is written to the controls in a client-side JSON array, and you can display content using JavaScript, CSS, and templates. As a designer or developer, you have control over how content is rendered on the page, and you can use various design techniques to get the look and behaviors you want on your published pages by using features like the  [Content Search web part in SharePoint](content-search-web-part-in-sharepoint.md) and display templates.
   
     
     
@@ -114,7 +114,7 @@ SharePoint offers the following new content publishing features that enable you 
 
 ### Catalogs
 
-SharePoint introduces catalogs, which you can use to publish content across site collections. Cross-site publishing features depend on catalogs. You can use them to reuse content across your sites and across the boundary between your intranet sites and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md).
+SharePoint introduces catalogs, which you can use to publish content across site collections. Cross-site publishing features depend on catalogs. You can use them to reuse content across your sites and across the boundary between your intranet sites and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search web part in SharePoint](content-search-web-part-in-sharepoint.md).
   
     
     

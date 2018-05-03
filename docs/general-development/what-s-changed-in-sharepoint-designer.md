@@ -155,7 +155,7 @@ The following feature is not available in SharePoint.
 #### Design view and Split view
 <a name="WhatsChangedSharePointDesigner2013_DesignViewSplitView"> </a>
 
- **Description of the change.**SharePoint Designer 2010 has three views for editing HTML and ASPX pages: Code view, Design view, and Split view. Design view and Split view are removed from SharePoint Designer 2013. The removal of Design view and Split view affects the features of SharePoint Designer 2013 that are used for editing Web Parts and master pages. If you edit pages in SharePoint Designer 2013, you must use Code view.
+ **Description of the change.**SharePoint Designer 2010 has three views for editing HTML and ASPX pages: Code view, Design view, and Split view. Design view and Split view are removed from SharePoint Designer 2013. The removal of Design view and Split view affects the features of SharePoint Designer 2013 that are used for editing web parts and master pages. If you edit pages in SharePoint Designer 2013, you must use Code view.
   
     
     

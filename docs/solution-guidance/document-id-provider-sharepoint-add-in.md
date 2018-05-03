@@ -1,8 +1,8 @@
 ---
-title: Document ID provider in the SharePoint add-in model
+title: Document ID provider in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Document ID provider in the SharePoint add-in model
+Document ID provider in the SharePoint Add-in model
 ===================================================
 
 Summary

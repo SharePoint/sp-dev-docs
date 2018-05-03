@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents a parameter that determines what is displayed in a Windows SharePoint Services 3.0 Web Part when a query returns no list data for the Web Part.
+Represents a parameter that determines what is displayed in a Windows SharePoint Services 3.0 web part when a query returns no list data for the web part.
 
 ## Definition
 

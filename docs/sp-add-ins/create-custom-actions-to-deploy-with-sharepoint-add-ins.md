@@ -168,7 +168,7 @@ Following are the steps to create a custom action in the host web document libra
     ` <UrlAction Url= "~remoteAppUrl/CustomActionTarget.aspx?{StandardTokens}&amp;amp;SPListItemId={ItemId}&amp;amp;SPListId={ListId}&amp;amp;SPSource={Source}&amp;amp;SPListURLDir={ListUrlDir}&amp;amp;SPItemURL={ItemUrl}" />`
 
 > [!NOTE] 
-> In this example, the remote web page opens in a full window when the user selects the custom action from the menu. Custom menu actions can also open a remote webpage in a dialog box by using the **HostWebDialog** attribute. For more information, see [SharePoint-Add-in-Localization](https://github.com/OfficeDev/SharePoint-Add-in-Localization).
+> In this example, the remote webpage opens in a full window when the user selects the custom action from the menu. Custom menu actions can also open a remote webpage in a dialog box by using the **HostWebDialog** attribute. For more information, see [SharePoint-Add-in-Localization](https://github.com/OfficeDev/SharePoint-Add-in-Localization).
 
 ### To add a Ribbon custom action to the SharePoint Add-in project
 
@@ -274,7 +274,7 @@ Following are the steps to create a custom action in the host web document libra
 7. Select **My Custom Menu Action** in the context menu. You should see something like the following on the remote webpage that opens:
     
    **Remote webpage with parameters from the custom action**  
-   ![Web page with parameters from a custom action](../images/CustomActions_target.png)
+   ![webpage with parameters from a custom action](../images/CustomActions_target.png)
 
 8. Select the **Back** button on your browser to return to the library.
     
@@ -286,7 +286,7 @@ Following are the steps to create a custom action in the host web document libra
 
 10. Open the **File** tab on the ribbon.
 
-11. Select **My Custom Ribbon Button**. You see the same remote web page.
+11. Select **My Custom Ribbon Button**. You see the same remote webpage.
 
 <br/>
 

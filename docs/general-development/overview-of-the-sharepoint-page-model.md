@@ -162,7 +162,7 @@ Page layouts define regions or content areas that map to content placeholders on
 
 ### Page field controls
 
-The primary purpose of a page layout is to arrange page fields. When you design a page layout, you insert, position, and style elements called page field controls. These controls will eventually contain content when an author creates a page based on that page layout. In addition to page fields, page layouts can also contain Web Part zones, to which content authors can add Web Parts. (Master pages can't contain Web Part zones.)
+The primary purpose of a page layout is to arrange page fields. When you design a page layout, you insert, position, and style elements called page field controls. These controls will eventually contain content when an author creates a page based on that page layout. In addition to page fields, page layouts can also contain web part zones, to which content authors can add web parts. (Master pages can't contain web part zones.)
   
     
     
@@ -238,7 +238,7 @@ You can use one master page per channel per SharePoint site.
 
 ### Pages
 
-Authors can create pages and add content to the page fields, and they can add Web Parts to any Web Part zones or Rich Text Editors. Pages are structured so that content authors cannot make changes outside of page fields.
+Authors can create pages and add content to the page fields, and they can add web parts to any web part zones or Rich Text Editors. Pages are structured so that content authors cannot make changes outside of page fields.
   
     
     
@@ -297,10 +297,10 @@ The rendered page is what site visitors see. When a page is requested by the bro
     
     
 
-## Search-driven Web Parts and display templates
+## Search-driven web parts and display templates
 <a name="bk_SearchDriven"> </a>
 
-The previous section explains the SharePoint page model in terms of master pages, page layouts (with page fields), and pages. These elements are the most common in a publishing site in which authors regularly create and publish new content. When it comes to surfacing that content on your site, though, a couple more elements come into play. Whether you have connected to an external catalog or simply want to show a particular set of search results, search-driven Web Parts can help you achieve your goal.
+The previous section explains the SharePoint page model in terms of master pages, page layouts (with page fields), and pages. These elements are the most common in a publishing site in which authors regularly create and publish new content. When it comes to surfacing that content on your site, though, a couple more elements come into play. Whether you have connected to an external catalog or simply want to show a particular set of search results, search-driven web parts can help you achieve your goal.
   
     
     
@@ -323,10 +323,10 @@ In the search-driven pages scenario, a SharePoint page contains these main eleme
 - Pages
     
   
-- Search-driven Web Parts, such as the Content Search Web Part
+- Search-driven web parts, such as the Content Search web part
     
   
-- Display templates to control which managed properties appear in the search results of a search-driven Web Part, and control the styling and behavior of those search results:
+- Display templates to control which managed properties appear in the search results of a search-driven web part, and control the styling and behavior of those search results:
     
   - Control display templates, which control the layout of search results and any elements common to all results such as paging, sorting, and other links
     
@@ -335,7 +335,7 @@ In the search-driven pages scenario, a SharePoint page contains these main eleme
     
   
 
-**Figure 13. Master page, page layout, and page with Web Part**
+**Figure 13. Master page, page layout, and page with web part**
 
   
     
@@ -344,41 +344,23 @@ In the search-driven pages scenario, a SharePoint page contains these main eleme
   
     
     
-![Master page, page layout, and page with Web Part](../images/113_114_master_and_layout_and_page_and_web_part_closeup.gif)
+![Master page, page layout, and page with web part](../images/113_114_master_and_layout_and_page_and_web_part_closeup.gif)
   
     
     
 
-### Search-driven Web Parts
+### Search-driven web parts
 
-With search-driven Web Parts, you can dynamically present information stored in the search index. The presentation of data in the Content Search Web Part is controlled by display templates, which reside in the Master Page Gallery alongside master pages and page layouts.
+With search-driven web parts, you can dynamically present information stored in the search index. The presentation of data in the Content Search web part is controlled by display templates, which reside in the Master Page Gallery alongside master pages and page layouts.
   
     
     
-SharePoint includes several ready-to-use display templates such as lists and slideshows for your Content Search Web Parts. When you configure a Content Search Web Part in the browser, you choose which display templates to use.
-  
-    
-    
-
-**Figure 14. Tool pane of Content Search Web Part**
-
+SharePoint includes several ready-to-use display templates such as lists and slideshows for your Content Search web parts. When you configure a Content Search web part in the browser, you choose which display templates to use.
   
     
     
 
-  
-    
-    
-![Tool pane of Content Search Web Part](../images/115_content_search_web_part_tool_pane.gif)
-  
-    
-    
-Content Search Web Parts use two types of display templates, control and item. As part of the design or branding of your site, you can create custom display templates that use layouts, styles, and behaviors that you define.
-  
-    
-    
-
-**Figure 15. Two diagrams of Content Search Web Parts**
+**Figure 14. Tool pane of Content Search web part**
 
   
     
@@ -387,7 +369,25 @@ Content Search Web Parts use two types of display templates, control and item. A
   
     
     
-![Two diagrams of Content Search Web Parts](../images/116_117_control_templates_1_and_2.gif)
+![Tool pane of Content Search web part](../images/115_content_search_web_part_tool_pane.gif)
+  
+    
+    
+Content Search web parts use two types of display templates, control and item. As part of the design or branding of your site, you can create custom display templates that use layouts, styles, and behaviors that you define.
+  
+    
+    
+
+**Figure 15. Two diagrams of Content Search web parts**
+
+  
+    
+    
+
+  
+    
+    
+![Two diagrams of Content Search web parts](../images/116_117_control_templates_1_and_2.gif)
   
     
     
@@ -402,7 +402,7 @@ Content Search Web Parts use two types of display templates, control and item. A
 
 ### Control display template
 
-The control template determines the overall structure and layout of how you want to present the search results, such as a list with paging or a slideshow. Each Content Search Web Part uses one control template.
+The control template determines the overall structure and layout of how you want to present the search results, such as a list with paging or a slideshow. Each Content Search web part uses one control template.
   
     
     
@@ -411,7 +411,7 @@ The control template also includes functionality common to all the search result
     
     
 
-**Figure 16. Control template outlined on Web Part and webpage**
+**Figure 16. Control template outlined on web part and webpage**
 
   
     
@@ -420,7 +420,7 @@ The control template also includes functionality common to all the search result
   
     
     
-![Control template outlined on Web Part and webpage](../images/118_119_control_template_outlined_on_web_part_and_page.gif)
+![Control template outlined on web part and webpage](../images/118_119_control_template_outlined_on_web_part_and_page.gif)
   
     
     
@@ -439,12 +439,12 @@ The item template determines how each result in the set is displayed, and the te
   
     
     
-The item display template also determines which managed properties and values are displayed by the Content Search Web Part. In this example, the item template displays three managed properties: a small-sized image, a product name as a hyperlink, and a brief text description.
+The item display template also determines which managed properties and values are displayed by the Content Search web part. In this example, the item template displays three managed properties: a small-sized image, a product name as a hyperlink, and a brief text description.
   
     
     
 
-**Figure 17. Item templates outlined on Web Part and webpage**
+**Figure 17. Item templates outlined on web part and webpage**
 
   
     
@@ -453,7 +453,7 @@ The item display template also determines which managed properties and values ar
   
     
     
-![Item templates outlined on Web Part and webpage](../images/120_121_item_templates_outlined_on_web_part_and_page.gif)
+![Item templates outlined on web part and webpage](../images/120_121_item_templates_outlined_on_web_part_and_page.gif)
   
     
     
@@ -581,7 +581,7 @@ You can also use channel panels on master pages. For example, if you have a mast
   
     
     
-Or, you can use a channel panel inside the item display template of a Content Search Web Part, to display additional managed properties for that item from the catalog only for desktops and not for phones.
+Or, you can use a channel panel inside the item display template of a Content Search web part, to display additional managed properties for that item from the catalog only for desktops and not for phones.
   
     
     

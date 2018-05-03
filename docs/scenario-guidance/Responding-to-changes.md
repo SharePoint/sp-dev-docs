@@ -9,9 +9,7 @@ Before digging into the details of the various options that you have to handle c
 * If you are processing a synchronous event, try to avoid as much as you can blocking SharePoint. Rather refer to the asynchronous pattern described in the previous bullet.
 * Consider using an App-Only security model, whenever you need to do background processing of an event, so that you will not need to make the users' credentials flow into your event handling service/solution. Nevertheless, there are some activities which simply cannot be executed within an App-Only context. If that is the case, try to pass in a secure way an OAuth Access Token to the background job, rather than a set of user's credentials. The fact that an Access Token expires, and has a limited and pre-defined set of permission scopes associated, will keep the overall solution more secure.
 
-## Available options
-
-### Webhooks
+## Webhooks
 
 _**Applies to:** Office 365 | SharePoint Online_
 
@@ -36,7 +34,7 @@ For further details about Webhooks you can read the following articles, inspect 
 * [Introduction to SharePoint webhooks](https://www.youtube.com/watch?v=P4a1_EWokwM)
 * [Getting started with SharePoint Webhooks](https://www.youtube.com/watch?v=IbVlDkmsh8w)
 
-### Remote Event Receivers
+## Remote Event Receivers
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 
@@ -45,7 +43,7 @@ The Remote Event Receivers are a capability introduced with the SharePoint Add-I
 ### Articles
 * [Create a remote event receiver in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins)
 * [Use remote event receivers in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-remote-event-receivers-in-sharepoint)
-* [Event receivers and list event receivers in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in)
+* [Event receivers and list event receivers in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in)
 * [Handle events in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/handle-events-in-sharepoint-add-ins)
 * [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in)
 * [Sandbox solution transformation guidance - Event receivers](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance-event-receivers)
@@ -62,7 +60,7 @@ The Remote Event Receivers are a capability introduced with the SharePoint Add-I
 * [Introducing remote event receivers in SharePoint 2013](https://www.youtube.com/watch?v=jHoBgkUlK2M)
 * [Using appinstalled events to attach remote event receivers to SharePoint Host Webs](https://channel9.msdn.com/Blogs/Office-365-Dev/Using-appinstalled-events-to-attach-remote-event-receivers-to-SharePoint-Host-Webs-Office-365-Develo)
 
-### Event Receivers
+## Event Receivers
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016_
 
@@ -73,7 +71,7 @@ The Event Receivers are a server-side event handling model, available in SharePo
 * [How to: Create an Event Receiver for a Specific List Instance](https://msdn.microsoft.com/en-us/library/ff398052.aspx)
 * [Table of SharePoint Events, Event Receivers, and Event Hosts](https://msdn.microsoft.com/en-us/library/office/ff408183(v=office.14).aspx)
 
-### Workflows
+## Workflows
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 
@@ -87,7 +85,7 @@ One third and last option is using Microsoft Flow, which - at the time of this w
 
 ### Articles
 * [Workflows in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/workflows-in-sharepoint)
-* [Workflows, actions (activities), events, and forms in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in)
+* [Workflows, actions (activities), events, and forms in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in)
 * [Call web services from SharePoint workflows](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/call-web-services-from-sharepoint-workflows)
 * [Introducing Microsoft Flow integration for SharePoint Document Libraries](https://flow.microsoft.com/en-us/blog/flow-in-spo-document-libraries/)
 

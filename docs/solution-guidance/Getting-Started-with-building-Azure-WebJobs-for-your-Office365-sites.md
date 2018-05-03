@@ -230,9 +230,9 @@ Compress them so you’ll get a nice Zip file for your web job:
 
 ![A Windows Explorer view of a completed .zip file is displayed.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/7.Zip-File-Created.png)
 
-#### Find a web site where the job should be deployed ####
+#### Find a website where the job should be deployed ####
 
-Okay, so you’ve got your package. That’s easy enough. Next step is to head on to https://portal.azure.com and login to your Windows Azure Portal. From there you’ll need to either create a new web site, or use an existing one – this website will be the host for our web job.
+Okay, so you’ve got your package. That’s easy enough. Next step is to head on to https://portal.azure.com and login to your Windows Azure Portal. From there you’ll need to either create a new website, or use an existing one – this website will be the host for our web job.
 
 In my case, I already have an Azure WebSite for some of my Office 365 demos so I’ll just use that one.
 
@@ -348,7 +348,7 @@ While this can all be done with earlier versions of Visual Studio, I made everyt
 ### Exit code -2146232576 problem when running the job ###
 Since I started a Visual Studio 2015 (Preview) project, it started the project up as a Console Application based on **.NET Framework 4.5.3**.
 
-Running the job locally works fine, since .NET Framework 4.5.3 exist on my dev machine. However, once I deployed the job to My Windows Azure Web Site as a WebJob, it failed with "**exit code -2146232576**".
+Running the job locally works fine, since .NET Framework 4.5.3 exist on my dev machine. However, once I deployed the job to My Windows Azure website as a WebJob, it failed with "**exit code -2146232576**".
 
 #### Solution: Make sure you’re on the correct .NET version ####
 It took a while before I realized that Azure didn’t like .NET Framework version 4.5.3, but when I changed to **.NET Framework 4.5**, it works.

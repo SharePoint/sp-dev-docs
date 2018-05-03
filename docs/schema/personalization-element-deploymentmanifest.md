@@ -50,10 +50,10 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|**WebPartId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the Web Part for which the personalization is associated.  <br/> |
+|**WebPartId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Required. Unique identifier of the web part for which the personalization is associated.  <br/> |
 |**UserId** <br/> |xs:int  <br/> |Required. Identifier of the user for whom the personalization is associated.  <br/> |
-|**WebPartOrder** <br/> |xs:string  <br/> |Optional. The order of Web Parts ordered in a Web Part zone.  <br/> |
-|**WebPartZoneId** <br/> |xs:string  <br/> |Optional. Identifier of the Web Part zone in which the associated Web Part is located.  <br/> |
+|**WebPartOrder** <br/> |xs:string  <br/> |Optional. The order of web parts ordered in a web part zone.  <br/> |
+|**WebPartZoneId** <br/> |xs:string  <br/> |Optional. Identifier of the web part zone in which the associated web part is located.  <br/> |
 |**IsIncluded** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**FrameState** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**UserProperties** <br/> |xs:string  <br/> |Optional.  <br/> |

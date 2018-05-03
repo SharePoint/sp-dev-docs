@@ -227,7 +227,7 @@ Send
 
 For example, if your handler needs to take action on a SQL Server database, you can install a stored procedure on the SQL Server that uses a [TRY-CATCH](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/try-catch-transact-sql) block to implement installation-rollback logic with [IF-ELSE](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/if-else-transact-sql) blocks to implement "already done" logic.
 
-The SharePoint add-in model doesn't provide a way to store custom server-side code on SharePoint and invoke it from the CSOM (client-side object model). But the CSOM does provide a way to bundle try-catch and if-then-else logic and send it to the server for execution. 
+The SharePoint Add-in model doesn't provide a way to store custom server-side code on SharePoint and invoke it from the CSOM (client-side object model). But the CSOM does provide a way to bundle try-catch and if-then-else logic and send it to the server for execution. 
 
 For a detailed example of a add-in event handler that uses the handler delegation strategy to add a list to a host web, see [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md). For a code sample, see [SharePoint/PnP/Samples/Core.AppEvents.HandlerDelegation](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppEvents.HandlerDelegation).
 

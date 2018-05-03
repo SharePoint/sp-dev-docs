@@ -74,7 +74,7 @@ Next, you'll modify the HTML to provide a button to retrieve Office 365 groups. 
         <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
           <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
             <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-            <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+            <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
             <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
             <a href="https://aka.ms/spfx" class="${styles.button}">
               <span class="${styles.label}">Learn more</span>
@@ -189,7 +189,7 @@ The code needs to call the **GraphHttpClient** application that runs on SharePoi
   gulp serve --nobrowser
   ```
 
-4. Add the web part to a web page, or use the SharePoint Workbench.
+4. Add the web part to a webpage, or use the SharePoint Workbench.
 
   You should see the following on your page.
 
@@ -220,7 +220,7 @@ Again, you need to modify the HTML to add a button that creates a new group.
         <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
           <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
             <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-            <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+            <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
             <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
             <a href="https://aka.ms/spfx" class="${styles.button}">
               <span class="${styles.label}">Learn more</span>
@@ -293,7 +293,7 @@ Again, you need to modify the HTML to add a button that creates a new group.
   gulp serve --nobrowser
   ```
 
-4. Add the web part to a web page, or use the SharePoint Workbench.
+4. Add the web part to a webpage, or use the SharePoint Workbench.
 
   You should see the following on your page.
 

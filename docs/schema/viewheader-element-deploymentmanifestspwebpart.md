@@ -14,7 +14,7 @@ description: "Last modified: March 09, 2015"
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
   
-Represents a parameter that defines the view of the header area on an instance of a Windows SharePoint Services 3.0 Web Part object.
+Represents a parameter that defines the view of the header area on an instance of a Windows SharePoint Services 3.0 web part object.
 
 ## Definition
 

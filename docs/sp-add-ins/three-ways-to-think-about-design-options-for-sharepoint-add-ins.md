@@ -24,7 +24,7 @@ Three major categories of choices need to be made when a SharePoint Add-in is de
 
    - **Provider-hosted** add-ins have their primary data storage and business logic deployed and hosted by you—the developer—outside of SharePoint in servers or a cloud account that you provide. You are responsible for enforcing isolation between the accounts of the various customers who purchase your add-in. Such add-ins can have SharePoint components too. These are hosted in the customer's SharePoint farm. This type of add-in provides you with the most flexibility in the other categories of design choices. It also enables you to use non-Microsoft platforms for the external data, logic, and web user interface (UI). (Within the category of provider-hosted add-ins, you also need to distinguish between add-ins whose remote components are within the same corporate firewall as the SharePoint farm and those whose remote components are outside of that firewall. The authorization systems for these two scenarios are different, which, in turn, makes a difference in which programming language you use to access the SharePoint data.)
     
-   - **SharePoint-hosted** add-ins consist entirely of SharePoint components, such as lists, content types, workflows, and Web Parts. There are no external components. For more information about the kinds of SharePoint components that can be included in SharePoint Add-ins, see [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md).
+   - **SharePoint-hosted** add-ins consist entirely of SharePoint components, such as lists, content types, workflows, and web parts. There are no external components. For more information about the kinds of SharePoint components that can be included in SharePoint Add-ins, see [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md).
     
    For more detailed information about the hosting options of SharePoint Add-ins, see [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md).
 
@@ -38,7 +38,7 @@ Three major categories of choices need to be made when a SharePoint Add-in is de
 
    For more information about data storage and access in SharePoint Add-ins, see [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md#data-storage-in-sharepoint-add-ins), [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md), and [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md).
 
-- **UI:** There are three ways to surface a SharePoint Add-in in SharePoint: at a minimum, all add-ins are surfaced in a full web page. Optionally, an add-in can also be surfaced through an add-in part, and through a menu item or ribbon button. For more information, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md).
+- **UI:** There are three ways to surface a SharePoint Add-in in SharePoint: at a minimum, all add-ins are surfaced in a full webpage. Optionally, an add-in can also be surfaced through an add-in part, and through a menu item or ribbon button. For more information, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md).
     
 > [!NOTE]
 > SharePoint Add-ins can be installed by your customers to multiple site collections in a tenancy, or on a website-by-website basis. The former are called tenant-scoped add-ins. If you want your customers to have the tenant-scoped option, you may not include a custom ribbon button or an add-in part. For more information, see [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md).
@@ -54,7 +54,7 @@ Another way to think about your add-in architecture options is to think of the a
 |:-----|:-----|:-----|
 |UI|ASP.NET pages in an ASP.NET form or MVC application that is hosted in an Azure web role|Leveraging the skills of an ASP.NET development staff|
 ||HTML 5 page with JavaScript|Rich user interface|
-||PHP or other kind of web page hosted in a non-Microsoft cloud service|Integrating non-Microsoft applications into SharePoint|
+||PHP or other kind of webpage hosted in a non-Microsoft cloud service|Integrating non-Microsoft applications into SharePoint|
 ||Silverlight in a Windows Phone app|Mobile access to SharePoint data and integration with geolocation data and push notifications|
 |Business logic|Client-side JavaScript|UI logic and light business logic; accessing SharePoint data through the JavaScript client object model |
 ||A Microsoft Azure worker role|Processor-intensive functionality; accessing SharePoint data through the .NET Framework client object model|
@@ -70,8 +70,8 @@ Another way to think about your add-in architecture options is to think of the a
 
 |**Tier**|**Options**|**Good for**|
 |:-----|:-----|:-----|
-|UI|Custom views of SharePoint lists and libraries on add-in web pages |Maximizing integration with SharePoint appearance and behavior|
-||Silverlight application hosted in a Web Part (or within <object> tags) on an add-in web page|Leveraging existing Silverlight development experience; rich user interface|
+|UI|Custom views of SharePoint lists and libraries on add-in webpages |Maximizing integration with SharePoint appearance and behavior|
+||Silverlight application hosted in a web part (or within <object> tags) on an add-in webpage|Leveraging existing Silverlight development experience; rich user interface|
 |Business logic|A SharePoint workflow|Implementing business processes|
 ||Client-side JavaScript supplemented with the SharePoint cross-domain library|Accessing SharePoint data in the add-in web; accessing data in other websites within the tenancy|
 ||A remote event handler|Handling CRUD events in SharePoint lists and libraries using externally hosted logic|
