@@ -183,6 +183,9 @@ On the Azure AD application blade, copy the value of the **Application ID** prop
 
 The Function App will be called from JavaScript running on a SharePoint page. Because the API is hosted on a different domain than the SharePoint portal, cross-domain security constraints will apply to the API call. By default, APIs implemented using Azure Function Apps cannot be called from other domains. You can change this by adjusting the Function App's CORS settings.
 
+> [!IMPORTANT]
+> If you're authenticating with the API using the SharePoint Online cookie instead of OAuth, you cannot configure CORS settings through the Azure Portal. For the authentication to work, you have to clear all CORS settings in the Azure Portal and specify them in your API instead.
+
 In the Function App, switch to the **Platform features** tab.
 
 From the **API** group, select the **CORS** link:
