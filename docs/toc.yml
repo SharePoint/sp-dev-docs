@@ -1420,21 +1420,21 @@
     href: solution-guidance/enterprise-content-management-solutions-for-sharepoint.md
     items:
     - name: Document library templates
-      href: solution-guidance/Document-library-templates-sample-app-for-SharePoint.md
-    - name: Autotagging
-      href: solution-guidance/Autotagging-sample-app-for-SharePoint.md
+      href: solution-guidance/document-library-templates-sample-app-for-sharepoint.md
+    - name: Auto-tagging
+      href: solution-guidance/autotagging-sample-app-for-sharepoint.md
     - name: Information management
-      href: solution-guidance/Information-management-sample-app-for-SharePoint.md
+      href: solution-guidance/information-management-sample-app-for-sharepoint.md
     - name: Records management extensions
-      href: solution-guidance/Records-management-extensions-sample-app-for-SharePoint.md
+      href: solution-guidance/records-management-extensions-sample-app-for-sharepoint.md
     - name: Taxonomy operations
-      href: solution-guidance/Taxonomy-operations-sample-app-for-SharePoint.md
+      href: solution-guidance/taxonomy-operations-sample-app-for-sharepoint.md
     - name: Bulk upload documents
-      href: solution-guidance/Bulk-upload-documents-sample-app-for-SharePoint.md
+      href: solution-guidance/bulk-upload-documents-sample-app-for-sharepoint.md
     - name: Upload large files
-      href: solution-guidance/Upload-large-files-sample-app-for-SharePoint.md
+      href: solution-guidance/upload-large-files-sample-app-for-sharepoint.md
     - name: Synchronize term groups
-      href: solution-guidance/Synchronize-term-groups-sample-app-for-SharePoint.md
+      href: solution-guidance/synchronize-term-groups-sample-app-for-sharepoint.md
     - name: 'Support % and # in files and folders with ResourcePath API'
       href: solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
   - name: Localization solutions

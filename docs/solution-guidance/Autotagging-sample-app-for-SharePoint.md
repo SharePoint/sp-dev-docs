@@ -1,10 +1,10 @@
 ---
-title: AutoTagging sample SharePoint Add-in
+title: Auto-tagging sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can automatically tag documents with metadata when they are created or uploaded to SharePoint. 
 ms.date: 5/2/2018
 ---
 
-# AutoTagging sample SharePoint Add-in
+# Auto-tagging sample SharePoint Add-in
 
 The ECM.AutoTagging sample shows you how to use a provider-hosted add-in to automatically tag content added to a SharePoint library with data sourced from a custom user profile property. 
 
