@@ -1,6 +1,7 @@
 ---
 title: Replace SharePoint lists created from list definitions
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
 # Replace SharePoint lists created from list definitions
 Replace lists and libraries that were created by using list definitions in SharePoint. 
@@ -374,7 +375,5 @@ private static void MigrateContent(ClientContext clientContext, List listToBeRep
 > The previous code shows how to migrate files stored in the root folder of a list. If your list has subfolders, you will need to add additional code to migrate the subfolders and their contents. If your list uses workflows, additional code is required to associate the workflow to the new list.
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Transform farm solutions to the SharePoint Add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
-- [SharePoint 2013](https://msdn.microsoft.com/library/office/jj162979.aspx)
+- [Transform farm solutions to the SharePoint Add-in model](transform-farm-solutions-to-the-sharepoint-app-model.md)

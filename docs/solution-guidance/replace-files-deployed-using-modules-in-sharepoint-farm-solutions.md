@@ -1,6 +1,7 @@
 ---
 title: Replace files deployed using modules in SharePoint farm solutions
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
 # Replace files deployed using modules in SharePoint farm solutions
 
@@ -513,8 +514,5 @@ To replace page layouts that were deployed using modules in farm solutions, uplo
 	```
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Transform farm solutions to the SharePoint Add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
-    
-- [SharePoint 2013](https://msdn.microsoft.com/library/office/jj162979.aspx)
+- [Transform farm solutions to the SharePoint Add-in model](transform-farm-solutions-to-the-sharepoint-app-model.md)

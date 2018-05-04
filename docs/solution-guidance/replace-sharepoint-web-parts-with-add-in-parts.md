@@ -1,6 +1,7 @@
 ---
 title: Replace SharePoint web parts with add-in parts
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
 # Replace SharePoint web parts with add-in parts
 
@@ -241,8 +242,6 @@ private static void ReplaceWebPart(Web web, ListItem item, LimitedWebPartManager
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Transform farm solutions to the SharePoint Add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
-    
 - [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Scenarios/Provisioning.Pages)
+- [Transform farm solutions to the SharePoint Add-in model](transform-farm-solutions-to-the-sharepoint-app-model.md)
