@@ -62,9 +62,9 @@ Before running your code sample, enable the publishing features on the site coll
     
 3. Open settings.xml. Review and update the following attributes to meet your requirements:
     
-	- **masterpage** element - Uses the **file** attribute to specify the new master page to deploy to the Master Page Gallery, and the **replaces** attribute to specify the existing master page in the Master Page Gallery.
+	- **masterPage** element - Uses the **file** attribute to specify the new master page to deploy to the Master Page Gallery, and the **replaces** attribute to specify the existing master page in the Master Page Gallery.
     
-	- **pagelayout** element - Uses the **file** attribute to specify the new page layout file, the **replaces** attribute to specify the existing page layout file, and several other attributes to specify additional page layout information.
+	- **pageLayout** element - Uses the **file** attribute to specify the new page layout file, the **replaces** attribute to specify the existing page layout file, and several other attributes to specify additional page layout information.
 
 	```XML
 		<?xml version="1.0" encoding="utf-8" ?>
@@ -369,11 +369,11 @@ To replace page layouts that were deployed by using modules in farm solutions an
     
    2. For each page layout to replace:
     
-       1. Queries the site's content types by using [Web.ContentTypes](https://msdn.microsoft.com/library/microsoft.sharepoint.client.web.contenttypes.aspx) to find a matching content type where the name of the site's content type is equal to the **associatedContentTypeName** specified in settings.xml for the new page layout.
+       - Queries the site's content types by using [Web.ContentTypes](https://msdn.microsoft.com/library/microsoft.sharepoint.client.web.contenttypes.aspx) to find a matching content type where the name of the site's content type is equal to the **associatedContentTypeName** specified in settings.xml for the new page layout.
 	   
-	   2. Calls **UploadPageLayout**.
+	   - Calls **UploadPageLayout**.
 	   
-	   3. Calls **UpdatePages** to update existing pages to use the new page layouts.
+	   - Calls **UpdatePages** to update existing pages to use the new page layouts.
 
 			```csharp
 					private static void UploadPageLayoutsAndUpdateReferences(Web web, Folder folder, ClientContext clientContext, XDocument settings, string contentTypeId)
@@ -464,11 +464,11 @@ To replace page layouts that were deployed by using modules in farm solutions an
     
 	2. For each list item, uses the list item's **PublishingPageLayout** field to find a matching page layout to update, which was specified in settings.xml and is now stored in **pagelayouts** . If the list item's **PublishingPageLayout** field needs to be updated to refer to the new page layout:
     
-	   1. Checks out the list item's file by using **PublishingHelper.CheckOutFile**.
+	   - Checks out the list item's file by using **PublishingHelper.CheckOutFile**.
     
-	   2. Updates the URL of the page layout to refer to the new page layout file, and then updates the **PublishingPageLayout** field of the list item.
+	   - Updates the URL of the page layout to refer to the new page layout file, and then updates the **PublishingPageLayout** field of the list item.
     
-	   3. Checks in, publishes, and approves the file referenced by the list item.
+	   - Checks in, publishes, and approves the file referenced by the list item.
 
 			```csharp
 			private static void UpdatePages(Web web, ClientContext clientContext, IList<LayoutFile> pageLayouts)
@@ -502,7 +502,6 @@ To replace page layouts that were deployed by using modules in farm solutions an
 								f => f.Level,
 								f => f.CheckOutType);
 							clientContext.ExecuteQuery();
-			
 			
 							PublishingHelper.CheckInPublishAndApproveFile(file);
 						}
