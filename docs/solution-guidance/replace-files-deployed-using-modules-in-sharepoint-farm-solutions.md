@@ -1,29 +1,28 @@
 ---
 title: Replace files deployed using modules in SharePoint farm solutions
-description: 
+description: Replace files, such as master pages and page layouts in SharePoint, that were deployed using modules in farm solutions by uploading and updating references to use new files.
 ms.date: 5/4/2018
 ---
+
 # Replace files deployed using modules in SharePoint farm solutions
 
-Replace files, like master pages and page layouts in SharePoint, that were deployed using modules in farm solutions by uploading and updating references to use new files.
+If you deployed files declaratively by using modules in farm solutions, learn how to transform them into new solutions that update references to files and provide similar functionality by using the client object model (CSOM). In the past, modules were used to deploy files such as master pages and page layouts. 
 
-_**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
+This article describes how to use the transformation process to:
 
-If you deployed files declaratively using modules in farm solutions, learn how to transform them into new solutions that update references to files and provide similar functionality using the client object model (CSOM). In the past, modules were used to deploy files such as master pages and page layouts. This article describes how to use the transformation process to:
-
-1. Upload new master pages and page layouts.
-    
-2. Update references to use the new master pages and page layout files.
+- Upload new master pages and page layouts.   
+- Update references to use the new master pages and page layout files.
     
 Use this transformation process when:
 
-- Your existing farm solutions used modules to deploy files.
-    
--  You want to replace master pages and page layouts in farm solutions with new master pages and page layouts so that they can be migrated to SharePoint Online.
-    
+- Your existing farm solutions used modules to deploy files.  
+- You want to replace master pages and page layouts in farm solutions with new master pages and page layouts so that they can be migrated to SharePoint Online.
 - You have set document content types on master pages or page layouts in your farm solution declaratively.
 
-**Important:**  Farm solutions cannot be migrated to SharePoint Online. By applying the techniques and code described in this article, you can build a new solution with similar functionality that your farm solutions provide, update references to files, and then the new solution can be deployed to SharePoint Online. You can then disable the feature and retract the previous farm solution. The code in this article requires additional code to provide a fully working solution. For example, this article does not discuss how to authenticate with Office 365, how to implement required exception handling, and so on. For additional code samples, see the [Office 365 Developer Patterns and Practices project](https://github.com/SharePoint/PnP).
+> [!IMPORTANT] 
+> Farm solutions cannot be migrated to SharePoint Online. By applying the techniques and code described in this article, you can build a new solution with similar functionality that your farm solutions provide, update references to files, and then the new solution can be deployed to SharePoint Online. You can then disable the feature and retract the previous farm solution. 
+> 
+> The code in this article requires additional code to provide a fully working solution. For example, this article does not discuss how to authenticate with Office 365, how to implement required exception handling, and so on. For additional code samples, see the [Office 365 Developer Patterns and Practices project](https://github.com/SharePoint/PnP).
 
 ## Before you begin
 

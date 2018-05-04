@@ -16,7 +16,7 @@ This article describes the transformation process to use when replacing content 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-## Replace content types and site columns
+<br/>
 
 To replace content types and site columns by using CSOM:
 
@@ -67,7 +67,7 @@ In the following code, **GetContentTypeByName** gets a content type from the cur
     }
 ```
 
-<br/>
+## Create a new content type
 
 In the following code, **CreateContentType** creates a new content type by:
 
@@ -75,7 +75,11 @@ In the following code, **CreateContentType** creates a new content type by:
     
 2. Calling **GetContentTypeByName** to find a matching content type on the site.
     
-3. If the content type already exists, no further action is necessary and control passes back to **Main** when **return** is called. If the content type does not exist, content type properties are set by using a [ContentTypeCreationInformation](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttypecreationinformation.aspx) object called **newCt**. The new content type ID is assigned to **newCt.Id** by using the base document content type ID **0x0101**. For more information, see [Base Content Type Hierarchy](https://msdn.microsoft.com/library/office/ms452896%28v=office.14%29.aspx).
+3. If the content type already exists, no further action is necessary and control passes back to **Main** when **return** is called. 
+
+    If the content type does not exist, content type properties are set by using a [ContentTypeCreationInformation](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttypecreationinformation.aspx) object called **newCt**. 
+    
+    The new content type ID is assigned to **newCt.Id** by using the base document content type ID **0x0101**. For more information, see [Base Content Type Hierarchy](https://msdn.microsoft.com/library/office/ms452896%28v=office.14%29.aspx).
     
 4. Adding the new content type by using [ContentTypeCollection.Add](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttypecollection.add.aspx).
 
@@ -106,7 +110,7 @@ private static void CreateContentType(ClientContext cc, Web web)
 }
 ```
 
-<br/>
+## Create a new site column
 
 In the following code, **CreateSiteColumn** creates a new site column by:
 
@@ -146,11 +150,11 @@ private static void CreateSiteColumn(ClientContext cc, Web web)
 }
 ```
 
-<br/>
+## Add the new site columns to the new content type
 
 In the following code, **AddSiteColumnToContentType** creates a connection between the content type and field by:
 
-1. Loading the content type, and then the field references in that content type by using the [ContentType.FieldLinks](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttype.fieldlinks.aspx) property.
+1. Loading the content type, and then the field references that content type by using the [ContentType.FieldLinks](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttype.fieldlinks.aspx) property.
     
 2. Loading the field.
     
@@ -165,7 +169,7 @@ private static void AddSiteColumnToContentType(ClientContext cc, Web web)
 {
     // The name of the content type. 
     const string contentTypeName = "ContosoDocumentByCSOM";
-    // The field name
+    // The field name.
     const string fieldName = "ContosoStringCSOM";
 
     // Load the content type.
@@ -196,7 +200,7 @@ private static void AddSiteColumnToContentType(ClientContext cc, Web web)
 }
 ```
 
-<br/>
+## Replace old content type references with the new content type
 
 In the following code, **ReplaceContentType** checks all items in all libraries for content that references the old content type, and then replaces those references with the new content type (**ContosoDocumentByCSOM**) by:
 
@@ -227,7 +231,7 @@ private static void ReplaceContentType(ClientContext cc, Web web)
 {
     // The old content type. 
     const string oldContentTypeId = "0x010100C32DDAB6381C44868DCD5ADC4A5307D6";
-    // The new content type name
+    // The new content type name.
     const string newContentTypeName = "ContosoDocumentByCSOM";
 
     // Get the new content type and lists on the site.
