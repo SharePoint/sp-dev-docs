@@ -42,7 +42,7 @@ Analyze the functional and business requirements by:
 
 Design the new application by using the SharePoint Add-in model based on:
     
-- The requirements gathered in step 2.
+- The requirements gathered in the **Solution assessment** step.
     
 - Your analysis of the existing code. During your code analysis, consider identifying portions of the code that can be dropped (for example, the code is no longer being used, or the requirements have changed).
     
@@ -57,62 +57,76 @@ Depending on your requirements, you might decide to keep the farm solutions runn
 If your content in existing site collections depended on your farm solutions (for example, if content was created by using a content type), before you fully retract the farm solution, you need to transform your existing content to use your new SharePoint Add-in model solution. Ensure that you allow enough time to complete this task because it can be time-consuming and difficult.
 
 ## Transformation approaches to deploy your new SharePoint Add-in
-<a name="sectionSection1"> </a>
 
 After you finish development and unit testing of your new SharePoint Add-in, start transforming your farm solution to the new SharePoint Add-in by using one of the transformation approaches listed in the following table.
 
-|**Transformation approach**|**Description**|**Advantages**|**Disadvantages**|
+|*Transformation approach|Description|Advantages|Disadvantages|
 |:-----|:-----|:-----|:-----|
-|In-place|Deploy your new SharePoint Add-in into your existing SharePoint environment. You need to ensure your site is using the new SharePoint Add-in before retracting the farm solution.|<ul><li>Less overall user impact.</li><li>Less resources needed because you are using your existing SharePoint environment.</li><li>No need for third-party tools.</li><li>Minimal site downtime.</li><li>Upgrade one site collection at a time, rather than upgrading the entire farm all at once.</li><li>URLs do not change.</li></ul>|<ul><li>Difficult to track completion progress of all affected assets on a site.</li><li>Increased chance of creating orphans. When an asset points to a file on the file system which does not exist, this is referred to as an orphan.</li></ul>|
-|Swing or content migration|Extract your content from your existing site collections where your farm solutions are currently deployed, and deploy the content in a new site collection which uses the new SharePoint Add-in. When you migrate content to SharePoint Online, this process is normally used.|<ul><li>Clean SharePoint environment with no previous farm solution dependencies.</li><li>The new site collection is isolated from your production environment. Release the updated site collection when ready.</li.</ul>|<ul><li>Requires third-party tools to help with the content migration.</li><li>Requires an additional SharePoint environment.</li><li>Site downtime required.</li><li>URLs might change if you keep both sites running in parallel for a period of time.</li>|
+|In-place|Deploy your new SharePoint Add-in into your existing SharePoint environment.<br/><br/>You must ensure that your site is using the new SharePoint Add-in before retracting the farm solution.|<ul><li>Less overall user impact.</li><li>Fewer resources needed because you are using your existing SharePoint environment.</li><li>No need for third-party tools.</li><li>Minimal site downtime.</li><li>Upgrade one site collection at a time, rather than upgrading the entire farm all at once.</li><li>URLs do not change.</li></ul>|<ul><li>Difficult to track completion progress of all affected assets on a site.</li><li>Increased chance of creating orphans (when an asset points to a file on the file system that does not exist, this is referred to as an orphan).</li></ul>|
+|Swing or content migration|Extract your content from your existing site collections where your farm solutions are currently deployed, and deploy the content in a new site collection that uses the new SharePoint Add-in.<br/><br/>When you migrate content to SharePoint Online, this process is normally used.|<ul><li>Clean SharePoint environment with no previous farm solution dependencies.</li><li>The new site collection is isolated from your production environment. Release the updated site collection when ready.</li>.</ul>|<ul><li>Requires third-party tools to help with the content migration.</li><li>Requires an additional SharePoint environment.</li><li>Site downtime required.</li><li>URLs might change if you keep both sites running in parallel for a period of time.</li>|
 
 ## Best practices for specific farm solutions
-<a name="sectionSection2"> </a>
 
-Apply the following best practices when transforming specific solutions:
+Apply the following best practices when transforming specific solutions.
 
+### Page layouts and master pages
 
-- Page layouts and master pages. Custom page layouts and master pages might exist in publishing sites, or team sites with the publishing features turned on. To replace page layouts and master pages:
-    
-  1. Upload the new page layout or master page to your site. Upload new master pages and page layouts to your site collection either manually or by using remote APIs. Remote APIs include the client-side object model (CSOM) or REST. This ensures that the master pages and page layouts do not have dependencies on a farm solution. 
-    
-  2. Configure your site to use the new page layouts and master pages.
-    
-  3. Retract the previous version of the page layouts and master pages.
-    
-- Web parts and controls. To replace web parts and controls:
-    
-  1. Scan all your existing pages to determine which pages have web parts.
-    
-  2. (Optional) Review out-of-the-box web parts to determine if any can replace your custom web part.
-    
-  3. Replace existing web parts with app part instances, or using other techniques (such as embedded JavaScript in pages or page layouts) to achieve the same functionality.
+Custom page layouts and master pages might exist on publishing sites or team sites with the publishing features turned on. 
 
-  4. Use embedded JavaScript to manipulate UI elements.
+To replace page layouts and master pages:
     
-    > [!NOTE] 
-	> To replace your existing web parts with app parts, you need to:
+1. Upload the new page layout or master page to your site. Upload new master pages and page layouts to your site collection either manually or by using remote APIs. Remote APIs include the client-side object model (CSOM) or REST. This ensures that the master pages and page layouts do not have dependencies on a farm solution. 
+    
+2. Configure your site to use the new page layouts and master pages.
+    
+3. Retract the previous version of the page layouts and master pages.
+    
+### Web parts and controls
 
-	- Enable side loading of add-ins in your Office 365 subscription. Consult with your Office 365 administrator.
-	- Use CSOM to enable side loading of add-ins on your site. For more information, see the Core.SideLoading code sample.
-	- Install your app part on your site.
-	- Disable side loading of add-ins on your site.
-	- Disable side loading of add-ins on your Office 365 subscription. Consult with your Office 365 administrator.
+To replace web parts and controls:
+    
+1. Scan all your existing pages to determine which pages have web parts.
+    
+2. (Optional) Review out-of-the-box web parts to determine if any can replace your custom web part.
+    
+3. Replace existing web parts with app part instances or by using other techniques (such as embedded JavaScript in pages or page layouts) to achieve the same functionality.
 
-- Page manipulation. You might need to implement page manipulation during your custom site provisioning process. The  [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages) code sample shows page manipulation techniques, including creating a wiki page, adding HTML content to the page, creating a promoted links list, creating pages with different layouts, adding out-of-the-box web parts to the page, and removing the page.
+4. Use embedded JavaScript to manipulate UI elements.
     
-- Site columns, list definitions, and content types. If your site columns, list definitions, and content types were created using the Feature framework elements, which were deployed using farm solutions, then you must use the swing or content migration transformation approach. This does not apply to Feature framework elements deployed using sandbox solutions. To use the content migration transformation approach, you must use third-party tools to remove the farm solution dependencies.
-    
-- Modules or Feature framework. Modules use pointers to files, which means that the files are not customized and are deployed on the file system. If your farm solutions use modules, customize the files by deploying alternate versions of the same files to the content database, scan and update your solutions to point to the new files stored in the content database, and then retract the farm solution that pointed to files stored on the file system.
-    
-- Site templates and web templates. You should focus on transforming Feature framework elements deployed by the site template or web template. For example, ensure that the default.aspx page of the site is not replaced when retracting the farm solution.
-    
-- Timer jobs. If you are using SharePoint Online, you cannot create and manage timer jobs. Instead, you can create a console application that uses Windows Task Scheduler or an  [Azure Web Job](http://azure.microsoft.com/documentation/articles/web-sites-create-web-jobs/) to schedule and run the console application remotely. When creating a custom timer job, determine whether you need to use a specific account or an OAuth-based app-only token. The [Core.TimerJobs.Samples](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples) code sample shows how to create your own custom timer job.
-    
-    > [!NOTE] 
-	> If your timer job uses server-side code, you will have to redesign your timer job to use the CSOM or another method.
+> [!NOTE] 
+> To replace your existing web parts with app parts, you need to:
+> - Enable side loading of add-ins in your Office 365 subscription. Consult with your Office 365 administrator.
+> - Use CSOM to enable side loading of add-ins on your site. For more information, see the Core.SideLoading code sample.
+> - Install your app part on your site.
+> - Disable side loading of add-ins on your site.
+> - Disable side loading of add-ins on your Office 365 subscription. Consult with your Office 365 administrator.
 
-|**Article**|**Shows you how to**|
+### Page manipulation
+
+You might need to implement page manipulation during your custom site provisioning process. The  [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages) code sample shows page manipulation techniques, including creating a wiki page, adding HTML content to the page, creating a promoted links list, creating pages with different layouts, adding out-of-the-box web parts to the page, and removing the page.
+    
+### Site columns, list definitions, and content types
+
+If your site columns, list definitions, and content types were created using the Feature Framework elements, which were deployed using farm solutions, you must use the swing or content migration transformation approach. This does not apply to Feature Framework elements deployed by using sandbox solutions. To use the content migration transformation approach, you must use third-party tools to remove the farm solution dependencies.
+    
+### Modules or Feature Framework
+
+Modules use pointers to files, which means that the files are not customized and are deployed on the file system. If your farm solutions use modules, customize the files by deploying alternate versions of the same files to the content database, scan and update your solutions to point to the new files stored in the content database, and then retract the farm solution that pointed to files stored on the file system.
+    
+### Site templates and web templates
+
+You should focus on transforming Feature Framework elements deployed by the site template or web template. For example, ensure that the default.aspx page of the site is not replaced when retracting the farm solution.
+    
+### Timer jobs
+
+If you are using SharePoint Online, you cannot create and manage timer jobs. Instead, you can create a console application that uses Windows Task Scheduler or an [Azure WebJob](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs) to schedule and run the console application remotely. 
+
+When creating a custom timer job, determine whether you need to use a specific account or an OAuth-based app-only token. The [Core.TimerJobs.Samples](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples) code sample shows how to create your own custom timer job.
+    
+> [!NOTE] 
+> If your timer job uses server-side code, you must redesign your timer job to use the CSOM or another method.
+
+|Article|Shows you how to|
 |:-----|:-----|
 |[Replace content types and site columns](replace-sharepoint-content-types-and-site-columns.md)|Use CSOM to replace SharePoint content types and site columns, add site columns to new content types, and replace the content types with new content types.|
 |[Replace files deployed using modules in farm solutions](replace-files-deployed-using-modules-in-sharepoint-farm-solutions.md)|Replace files, like master pages and page layouts in SharePoint, that were deployed using modules in farm solutions by uploading and updating references to use new files.|
@@ -122,4 +136,3 @@ Apply the following best practices when transforming specific solutions:
 ## See also
 
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
-- [Build add-ins for SharePoint](https://msdn.microsoft.com/library/jj163230.aspx)

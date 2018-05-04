@@ -168,7 +168,7 @@ private static void SetListSettings(ClientContext clientContext, List listToBeRe
 7. Deleting the content type by calling [ContentType.DeleteObject](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttype.deleteobject.aspx).
 
 > [!NOTE] 
-> If you are using an in-place transformation approach, and your content types were deployed declaratively using the Feature framework, you need to: 
+> If you are using an in-place transformation approach, and your content types were deployed declaratively using the Feature Framework, you need to: 
 
  1. Create new content types.
 
