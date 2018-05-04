@@ -16,15 +16,13 @@ This article describes the transformation process to use when replacing content 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-<br/>
-
 To replace content types and site columns by using CSOM:
 
 1. Create a new content type. 
     
-2. Create new site columns (also referred to as fields).
+2. Create a new site column (also referred to as a field).
     
-3. Add the new site columns to the new content type.
+3. Add the new site column to the new content type.
     
 4. Replace old content type references with the new content type.
     
@@ -150,7 +148,7 @@ private static void CreateSiteColumn(ClientContext cc, Web web)
 }
 ```
 
-## Add the new site columns to the new content type
+## Add the new site column to the new content type
 
 In the following code, **AddSiteColumnToContentType** creates a connection between the content type and field by:
 

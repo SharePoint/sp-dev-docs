@@ -16,9 +16,8 @@ If you used list definitions to create lists in your farm solution, learn how to
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-Use the techniques described in this article to update only a few lists at a time. Also, when finding lists to update, you should not filter the lists by list type.
-
-<br/>
+> [!TIP] 
+> Use the techniques described in this article to update a only few lists at a time. Also, when finding lists to update, you should not filter the lists by list type.
 
 To replace lists created from list definitions by using CSOM:
 
@@ -49,7 +48,7 @@ Ideally, you should review your existing farm solutions, learn about the techniq
     
 <br/>
 
-
+## Find lists that were created using a specific base template
     
 In the following code, the method shows how to find lists that were created using a specific base template. This method:
 
@@ -109,6 +108,8 @@ private static void ReplaceList(ClientContext clientContext, ListCollection list
 }
 ```
 
+## Create a new list 
+ 
 To create a new list,  **CreateReplacementList** uses [ListCreationInformation](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.listcreationinformation.aspx). The title of the new list is set to the title of the existing list, with Add-in appended to it. The [ListTemplateType](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.listtemplatetype.aspx) enumeration is used to set the list's template type to a document library. If you are creating a list based on a different template type, make sure to use the correct template type. For example, if you are creating a calendar list, use **ListTemplateType.Events** instead of **ListTemplateType.DocumentLibrary**.
 
 ```csharp
@@ -124,6 +125,8 @@ private static List CreateReplacementList(ClientContext clientContext, ListColle
     return newList;
 }
 ```
+
+## Configure list settings
 
 **SetListSettings** applies the original list settings to the new list by:
 
@@ -151,6 +154,8 @@ private static void SetListSettings(ClientContext clientContext, List listToBeRe
 
 > [!NOTE] 
 > Based on your requirements, the list settings of your original lists might be different. Review your list settings and change  **SetListSettings** to ensure that your original list settings are applied to your new lists.
+
+## Set content types on the new list
 
 **SetContentTypes** sets the content types on the new list by:
 
@@ -228,7 +233,11 @@ private static void SetContentTypes(ClientContext clientContext, List listToBeRe
 > [!NOTE] 
 > At this point, the new list can accept content from the original list. You can also optionally add and remove views. 
 
-Users can add or remove views defined on a list to meet their business needs. For this reason, you might need to add or remove views on the new list.  **AddViews** adds views from the original list to the new list by:
+## Add or remove views (optional)
+
+Users can add or remove views defined on a list to meet their business needs. For this reason, you might need to add or remove views on the new list.  
+
+### **AddViews** adds views from the original list to the new list by:
 
 1. Using [List.Views](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.list.views.aspx) to get all views on the original list.
     
@@ -300,7 +309,7 @@ private static ViewType GetViewType(string viewType)
 }
 ```
 
-In the following code,  **RemoveViews** removes views from the new list by:
+### In the following code,  **RemoveViews** removes views from the new list by:
 
 1. Getting the list views on the new list using the  **List.Views** property.
     
@@ -332,6 +341,8 @@ private static void RemoveViews(ClientContext clientContext, List listToBeReplac
     clientContext.ExecuteQuery();
 }
 ```
+
+## Migrate content from the original list to the new list
 
 **MigrateContent** migrates the content from the original list to the new list by:
 
