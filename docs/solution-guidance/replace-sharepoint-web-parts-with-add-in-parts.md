@@ -1,29 +1,20 @@
 ---
 title: Replace SharePoint web parts with add-in parts
-description: 
+description: Use the transformation process to replace web parts with add-in parts by using the SharePoint client object model (CSOM).
 ms.date: 5/4/2018
 ---
+
 # Replace SharePoint web parts with add-in parts
-
-Use the transformation process to replace web parts with add-in parts by using the SharePoint client object model (CSOM).
-
-_**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
 You can use the transformation process to replace SharePoint web parts with add-in parts on pages by using CSOM to find and remove specific web parts, and then adding the new add-in parts.
 
-**Important:**  Farm solutions cannot be migrated to SharePoint Online. By applying the techniques and code described in this article, you can build a new solution with similar functionality that your farm solutions provide, which can then be deployed to SharePoint Online. After you apply these techniques, your pages will be updated to use add-in parts, which can then be migrated to SharePoint Online. The code in this article requires additional code to provide a fully working solution. For example, this article does not discuss how to authenticate to Office 365, how to implement required exception handling, and so on. For additional code samples, see the [Office 365 Developer Patterns and Practices project](https://github.com/SharePoint/PnP).
-
-## Before you begin
-
-Before performing the steps in this article to replace your web parts with add-in parts, make sure that you:
-
-- Are using a SharePoint environment that is configured to support add-ins. SharePoint Online is configured to support add-ins. If you are using SharePoint Server 2013 on-premises, see [Configure an environment for SharePoint Add-ins (SharePoint 2013)](https://technet.microsoft.com/library/fp161236%28v=office.15%29).
+> [!IMPORTANT] 
+> Farm solutions cannot be migrated to SharePoint Online. By applying the techniques and code described in this article, you can build a new solution with similar functionality that your farm solutions provide, which can then be deployed to SharePoint Online. After you apply these techniques, your pages will be updated to use add-in parts, which can then be migrated to SharePoint Online. 
+> 
+> The code in this article requires additional code to provide a fully working solution. For example, this article does not discuss how to authenticate to Office 365, how to implement required exception handling, and so on. For additional code samples, see the [Office 365 Developer Patterns and Practices project](https://github.com/SharePoint/PnP).
     
-- Have deployed your new add-in part to SharePoint.
-    
-- Have assigned your add-ins  **FullControl** permissions on the **Web**. For more information, see [Add-in permissions in SharePoint 2013](https://msdn.microsoft.com/library/office/fp142383.aspx).
-
-## Replace web parts with add-in parts
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 To replace web parts with new add-in parts:
 
@@ -32,31 +23,41 @@ To replace web parts with new add-in parts:
 2. Find all pages with web parts to be replaced, and then remove the web parts. 
     
 3. Create the new add-in part on the page by using the add-in part definition. 
+
+## Before you begin
+
+Before performing the steps in this article to replace your web parts with add-in parts, make sure that you:
+
+- Are using a SharePoint environment that is configured to support add-ins. SharePoint Online is configured to support add-ins. If you are using SharePoint Server on-premises, see [Configure an environment for apps for SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/administration/configure-an-environment-for-apps-for-sharepoint).
+    
+- Have deployed your new add-in part to SharePoint.
+    
+- Have assigned your add-ins **FullControl** permissions on the **Web**. For more information, see [Add-in permissions in SharePoint](../sp-add-ins/add-in-permissions-in-sharepoint.md).
+
+## Export the new add-in part
     
 To use CSOM to replace a web part with an add-in part, you need to get the add-in part definition by exporting the add-in part. To export the add-in part to get the add-in part's definition:
 
-1. Open your SharePoint site and choose  **Settings**, or the gear icon, and then choose  **Edit page**.
+1. Open your SharePoint site and choose **Settings**, or the gear icon, and then choose **Edit page**.
     
-2. On the ribbon, choose  **INSERT** > **Add-in Part**.
+2. On the ribbon, choose **INSERT** > **Add-in Part**.
     
-3. Choose your add-in part, and then choose  **Add**.
+3. Choose your add-in part, and then choose **Add**.
     
-4. When the add-in part is added to your page, choose the down arrow in the top-right corner of the add-in part, and then choose  **Edit web part**.
+4. When the add-in part is added to your page, choose the down arrow in the top-right corner of the add-in part, and then choose **Edit web part**.
     
-5. In  **Advanced**, in  **Export Mode** choose **Export all data**, and then choose  **OK**.
+5. In **Advanced**, in **Export Mode** choose **Export all data**, and then choose **OK**.
     
-6. When you return to the edit page with your add-in part displayed, choose the down arrow in the top-right corner of the add-in part, and then choose  **Export**.
+6. When you return to the edit page with your add-in part displayed, choose the down arrow in the top-right corner of the add-in part, and then choose **Export**.
     
-7. Choose  **Save**.
+7. Choose **Save**.
     
-8. After the download completes, choose  **Open folder**.
+8. After the download completes, choose **Open folder**.
     
-9. Open  **Notepad**, then choose  **File** > **Open**.
+9. Open **Notepad**, then choose **File** > **Open**.
     
-10. Choose the add-in part file that you downloaded, and then choose  **Open** to view the add-in part definition.
-    
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+10. Choose the add-in part file that you downloaded, and then choose **Open** to view the add-in part definition.
+
 
 ```XML
 <webParts>
@@ -96,6 +97,8 @@ To use CSOM to replace a web part with an add-in part, you need to get the add-i
   </webPart>
 </webParts>
 ```
+
+##Create the new add-in part on the page by using the add-in part definition
 
 To use the add-in part definition in your CSOM code:
 
@@ -142,13 +145,15 @@ private const string appPartXml = @"<webParts>
 </webParts>";
 ```
 
+## Find all pages with web parts to be replaced, and then remove the web parts
+
 **ReplaceWebPartsWithAppParts** starts the process of finding the web parts to be replaced by:
 
 1. Getting some properties from the [Web](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.web.aspx) to find the **Pages** library on the site.
     
-2. In the  **Pages** library, getting the list items and the file associated with the list item.
+2. In the **Pages** library, getting the list items and the file associated with the list item.
     
-3. For each list item returned from the  **Pages** library, calling **FindWebPartToReplace**.
+3. For each list item returned from the **Pages** library, calling **FindWebPartToReplace**.
 
 ```csharp
 protected void ReplaceWebPartsWithAppParts(object sender, EventArgs e)
@@ -184,7 +189,7 @@ protected void ReplaceWebPartsWithAppParts(object sender, EventArgs e)
 
 **FindWebPartToReplace** finds web parts that should be replaced with the new add-in part by:
 
-1. Setting  **page** to the file associated with the list item returned from the **Pages** library.
+1. Setting **page** to the file associated with the list item returned from the **Pages** library.
     
 2. Using [LimitedWebPartManager](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.aspx) to find all web parts on a specific page. The title of each web part is also returned in the lambda expression.
     
@@ -217,7 +222,7 @@ private static void FindWebPartToReplace(ListItem item, ClientContext clientCont
 
 1. Using [LimitedWebPartManager.ImportWebPart ](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.importwebpart.aspx) to convert the XML string in **appPartXml** into a [WebPartDefinition](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.webpartdefinition.aspx).
     
-2. Using [LimitedWebPartManager.AddWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.addwebpart.aspx) to add a web part to a page in a specific web part zone. Ensure you pass the **zoneId** to **AddWebPart**, otherwise an exception will be thrown when  **ExecuteQuery** runs.
+2. Using [LimitedWebPartManager.AddWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.limitedwebpartmanager.addwebpart.aspx) to add a web part to a page in a specific web part zone. Ensure you pass the **zoneId** to **AddWebPart**, otherwise an exception will be thrown when **ExecuteQuery** runs.
     
 3. Using [WebPartDefinition.DeleteWebPart](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.webparts.webpartdefinition.deletewebpart.aspx) to delete the old web part from the page.
 
