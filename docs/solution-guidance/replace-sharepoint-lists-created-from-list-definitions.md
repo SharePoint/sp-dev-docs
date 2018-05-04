@@ -230,9 +230,9 @@ private static void SetContentTypes(ClientContext clientContext, List listToBeRe
 
 ## Add or remove views (optional)
 
-Users can add or remove views defined on a list to meet their business needs. For this reason, you might need to add or remove views on the new list.  
+Users can add or remove views defined on a list to meet business needs. For this reason, you might need to add or remove views on the new list.  
 
-### Add views
+### Add views to the new list
 
 **AddViews** adds views from the original list to the new list by:
 
@@ -308,7 +308,7 @@ Users can add or remove views defined on a list to meet their business needs. Fo
     }
    ```
 
-### Remove views
+### Remove views from the new list
 
 In the following code, **RemoveViews** removes views from the new list by:
 
