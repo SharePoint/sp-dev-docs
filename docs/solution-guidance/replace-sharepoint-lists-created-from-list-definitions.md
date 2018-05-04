@@ -1,39 +1,26 @@
 ---
 title: Replace SharePoint lists created from list definitions
-description: 
+description: Use CSOM to find lists and libraries that were created by using list definitions, create and configure new lists, add and remove views from lists, and migrate content from the original list to the new list.
 ms.date: 5/4/2018
 ---
+
 # Replace SharePoint lists created from list definitions
-Replace lists and libraries that were created by using list definitions in SharePoint. 
 
-_**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
+If you used list definitions to create lists in your farm solution, learn how to transform them into new solutions that provide similar functionality by using the client object model (CSOM). 
 
-If you used list definitions to create lists in your farm solution, learn how to transform them into new solutions that provide similar functionality using the client object model (CSOM). This article describes how to use the client object model (CSOM) to:
+> [!IMPORTANT] 
+> Farm solutions cannot be migrated to SharePoint Online. By applying the techniques and code described in this article, you can build a new solution with similar functionality that your farm solutions provide, which can then be deployed to SharePoint Online. If you are using an in-place transformation approach, you may need to deploy the new solution to SharePoint Online. If you are using the Swing or content migration approach, the third-party tools may create the lists for you. For more information, see [Transformation approaches to deploy your new SharePoint Add-in](transform-farm-solutions-to-the-sharepoint-app-model.md#transformation-approaches-to-deploy-your-new-sharepoint-add-in). 
+> 
+> The code in this article requires additional code to provide a fully working solution. For example, this article does not discuss how to authenticate to Office 365, how to implement required exception handling, and so on. For additional code samples, see the [Office 365 Developer Patterns and Practices project](https://github.com/SharePoint/PnP).
 
-- Find lists and libraries that were created by using list definitions.
-    
-- Create and configure new lists.
-    
-- Add and remove views from lists.
-    
-- Migrate content from the original list to the new list.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-**Important** <p>Farm solutions cannot be migrated to SharePoint Online. By applying the techniques and code described in this article, you can build a new solution with similar functionality that your farm solutions provide, which can then be deployed to SharePoint Online. If you are using an in-place transformation approach, you may need to deploy the new solution to SharePoint Online. If you are using the Swing or content migration approach, the third-party tools may create the lists for you. For more information, see [Transformation approaches to deploy your new SharePoint Add-in](https://msdn.microsoft.com/library/dn986827.aspx#sectionSection1). The code in this article requires additional code to provide a fully working solution. For example, this article does not discuss how to authenticate to Office 365, how to implement required exception handling, and so on. For additional code samples, see the [Office 365 Developer Patterns and Practices project](https://github.com/SharePoint/PnP).</p><p>Use the techniques described in this article to update only a few lists at a time. Also, when finding lists to update, you should not filter the lists by list type.</p>
+Use the techniques described in this article to update only a few lists at a time. Also, when finding lists to update, you should not filter the lists by list type.
 
-## Before you begin
+<br/>
 
-Ideally, you should review your existing farm solutions, learn about the techniques described in this article, and then plan how to apply these techniques to your existing farm solutions. If you are unfamiliar with farm solutions or do not have an existing farm solution to work with, it might be helpful for you to:
-
-1. Download the [Contoso.Intranet solution](https://github.com/SharePoint/PnP/tree/master/Reference%20Material/Contoso.Intranet). Review [Examine the initial state of the site and library for replacement](https://github.com/SharePoint/TrainingContent/blob/master/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20app%20model/10-2%20Replacing%20Lists%20Created%20from%20Custom%20Templates/Lab.md#examine-the-initial-state-of-the-site-and-library-for-replacement) to get a quick understanding of how lists were created declaratively using list definitions.
-    
-    > [!NOTE] 
-    > In Contoso.Intranet, in the elements.xml file for SP\ListTemplate\LTContosoLibrary, the ID for the custom list template is 10003. You will use this to identify the template that was used to create the list. Also review the configuration settings and views that are defined on your list.
-
-2. Learn about farm solutions. For more information, see [SharePoint 2010 Architectures Overview](https://msdn.microsoft.com/en-us/library/office/gg552610%28v=office.14%29.aspx) and [Build farm solutions in SharePoint 2013](https://msdn.microsoft.com/library/jj163902.aspx).
-    
-## Replace lists created from list definitions
-
-To replace lists created from list definitions:
+To replace lists created from list definitions by using CSOM:
 
 1. Find lists that were created using a specific base template.
     
@@ -48,6 +35,21 @@ To replace lists created from list definitions:
 6. (Optional) Remove views.
     
 7. Migrate content from the original list to the new list.
+
+## Before you begin
+
+Ideally, you should review your existing farm solutions, learn about the techniques described in this article, and then plan how to apply these techniques to your existing farm solutions. If you are unfamiliar with farm solutions or do not have an existing farm solution to work with, it might be helpful for you to:
+
+1. Review [Replacing Lists Created from Custom Templates](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/AddIns/14%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model/02%20Replacing%20Lists%20Created%20from%20Custom%20Templates) to get a quick understanding of how lists were created declaratively using list definitions.
+    
+    > [!NOTE] 
+    > In Contoso.Intranet, in the elements.xml file for SP\ListTemplate\LTContosoLibrary, the ID for the custom list template is 10003. You will use this to identify the template that was used to create the list. Also review the configuration settings and views that are defined on your list.
+
+2. Learn about farm solutions. For more information, see [Build farm solutions in SharePoint](../general-development/build-farm-solutions-in-sharepoint.md).
+    
+<br/>
+
+
     
 In the following code, the method shows how to find lists that were created using a specific base template. This method:
 
@@ -55,8 +57,7 @@ In the following code, the method shows how to find lists that were created usin
     
 2. For each list in the collection of returned lists, if the  **List.BaseTemplate** is equal to 10003, adds the list to a collection of lists to be replaced, called **listsToReplace**. Remember that 10003 was the custom list template's identifier we reviewed in the Contoso.Intranet sample.
 
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 
 ```csharp
 static void Main(string[] args)
