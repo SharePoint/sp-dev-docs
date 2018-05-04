@@ -60,7 +60,7 @@ If your content in existing site collections depended on your farm solutions (fo
 
 After you finish development and unit testing of your new SharePoint Add-in, start transforming your farm solution to the new SharePoint Add-in by using one of the transformation approaches listed in the following table.
 
-|*Transformation approach|Description|Advantages|Disadvantages|
+|Transformation approach|Description|Advantages|Disadvantages|
 |:-----|:-----|:-----|:-----|
 |In-place|Deploy your new SharePoint Add-in into your existing SharePoint environment.<br/><br/>You must ensure that your site is using the new SharePoint Add-in before retracting the farm solution.|<ul><li>Less overall user impact.</li><li>Fewer resources needed because you are using your existing SharePoint environment.</li><li>No need for third-party tools.</li><li>Minimal site downtime.</li><li>Upgrade one site collection at a time, rather than upgrading the entire farm all at once.</li><li>URLs do not change.</li></ul>|<ul><li>Difficult to track completion progress of all affected assets on a site.</li><li>Increased chance of creating orphans (when an asset points to a file on the file system that does not exist, this is referred to as an orphan).</li></ul>|
 |Swing or content migration|Extract your content from your existing site collections where your farm solutions are currently deployed, and deploy the content in a new site collection that uses the new SharePoint Add-in.<br/><br/>When you migrate content to SharePoint Online, this process is normally used.|<ul><li>Clean SharePoint environment with no previous farm solution dependencies.</li><li>The new site collection is isolated from your production environment. Release the updated site collection when ready.</li>.</ul>|<ul><li>Requires third-party tools to help with the content migration.</li><li>Requires an additional SharePoint environment.</li><li>Site downtime required.</li><li>URLs might change if you keep both sites running in parallel for a period of time.</li>|
@@ -95,11 +95,11 @@ To replace web parts and controls:
     
 > [!NOTE] 
 > To replace your existing web parts with app parts, you need to:
-> - Enable side loading of add-ins in your Office 365 subscription. Consult with your Office 365 administrator.
-> - Use CSOM to enable side loading of add-ins on your site. For more information, see the Core.SideLoading code sample.
+> - Enable sideloading of add-ins in your Office 365 subscription. Consult with your Office 365 administrator.
+> - Use CSOM to enable sideloading of add-ins on your site. For more information, see the Core.SideLoading code sample.
 > - Install your app part on your site.
-> - Disable side loading of add-ins on your site.
-> - Disable side loading of add-ins on your Office 365 subscription. Consult with your Office 365 administrator.
+> - Disable sideloading of add-ins on your site.
+> - Disable sideloading of add-ins on your Office 365 subscription. Consult with your Office 365 administrator.
 
 ### Page manipulation
 
