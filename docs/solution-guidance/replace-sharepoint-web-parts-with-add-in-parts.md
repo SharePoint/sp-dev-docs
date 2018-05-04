@@ -18,9 +18,9 @@ You can use the transformation process to replace SharePoint web parts with add-
 
 To replace web parts with new add-in parts:
 
-1. Export the new add-in part. 
+1. Export the new add-in part to get the add-in part definition.
 
-2. Use the exported add-in part to get the add-in part definition. Create the new add-in part on the page by using the add-in part definition. 
+2. Create the new add-in part on the page by using the add-in part definition. 
     
 3. Find all pages with web parts to be replaced, and then remove the web parts. 
     
@@ -98,7 +98,7 @@ To use CSOM to replace a web part with an add-in part, you need to get the add-i
 </webParts>
 ```
 
-## Use the exported add-in part to get the add-in part definition
+## Create the new add-in part on the page by using the add-in part definition
 
 To use the add-in part definition in your CSOM code:
 
@@ -106,7 +106,7 @@ To use the add-in part definition in your CSOM code:
     
 - Assign the add-in part definition to a string that will be used in your CSOM code.
 
-```csharp
+```cs
 private const string appPartXml = @"<webParts>
   <webPart xmlns=""http://schemas.microsoft.com/WebPart/v3"">
     <metaData>
