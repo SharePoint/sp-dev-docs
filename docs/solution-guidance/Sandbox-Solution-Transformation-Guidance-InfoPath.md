@@ -1,16 +1,17 @@
 ---
 title: Sandbox solution transformation guidance - InfoPath
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
+
 # Sandbox solution transformation guidance - InfoPath
+
 When you're using InfoPath forms with code-behind then these InfoPath forms do depend on code-based sandbox solutions for executing the code-behind. This article will help you to either fix or transform your InfoPath forms so that there's no sandbox solution dependency anymore.
 
-_**Applies to:** InfoPath forms for SharePoint Online | SharePoint 2013 | SharePoint 2016_
-
-Code-based sandbox solutions [were deprecated](https://blogs.msdn.microsoft.com/sharepointdev/2014/01/14/deprecation-of-custom-code-in-sandboxed-solutions/) back in 2014 and SharePoint online has started the process to completely remove this capability. Code-based sandbox solutions are also deprecated in SharePoint 2013 and in SharePoint 2016.
+> [!NOTE] 
+> [Code-based sandbox solutions were deprecated](https://blogs.msdn.microsoft.com/sharepointdev/2014/01/14/deprecation-of-custom-code-in-sandboxed-solutions/) in 2014, and SharePoint Online has started the process to completely remove this capability. Code-based sandbox solutions are also deprecated in SharePoint 2013 and in SharePoint 2016.
 
 ## Analyze and if possible fix your InfoPath forms
-<a name="sectionSection1"> </a>
 
 In this section we show you an analysis and fixing model that you can apply to your InfoPath forms. Depending on your form you can simply **fix** the form and redeploy it or you need to **move away from InfoPath** and use an alternative approach to realize the needed functionality. However before taking those actions **it's important to assess the business need for your form**: we often see a lot of old forms which are not business relevant anymore and in those cases it's easier to simply drop the form. 
 
@@ -133,3 +134,6 @@ As soon as code based operations are disabled it means that no code can run anym
 	- Use InfoPath Client to open the forms
 	- Migrate the form data to plain SharePoint list data (see the **Migrating your InfoPath data** section above)
 
+## See also
+
+- [Transform sandbox solutions to the SharePoint Add-in model](sandbox-solution-transformation-guidance.md)

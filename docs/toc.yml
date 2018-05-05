@@ -1441,9 +1441,9 @@
     href: solution-guidance/localization-solutions-for-sharepoint.md
     items:
     - name: Use localization features
-      href: solution-guidance/Use-localization-features-in-Office-365-sample-app.md
+      href: solution-guidance/use-localization-features-in-office-365-sample-app.md
     - name: Localize UI elements
-      href: solution-guidance/Localize-UI-elements-sample-app-for-SharePoint.md
+      href: solution-guidance/localize-ui-elements-sample-app-for-sharepoint.md
   - name: Search solutions
     href: solution-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
     items:
@@ -1558,7 +1558,7 @@
     - name: Yammer integration
       href: solution-guidance/yammer-integration-sharepoint-add-in.md
   - name: Transforming farm solutions
-    href: solution-guidance/Transform-farm-solutions-to-the-SharePoint-app-model.md
+    href: solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model.md
     items:
     - name: Replace content types and site columns
       href: solution-guidance/replace-sharepoint-content-types-and-site-columns.md
@@ -1569,16 +1569,16 @@
     - name: Replace web parts with add-in parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
   - name: Transforming sandbox solutions
-    href: solution-guidance/Sandbox-Solution-Transformation-Guidance.md
+    href: solution-guidance/sandbox-solution-transformation-guidance.md
     items:
     - name: Web parts
-      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-WebParts.md
+      href: solution-guidance/sandbox-solution-transformation-guidance-webparts.md
     - name: Event receivers
-      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-Event-Receivers.md
+      href: solution-guidance/sandbox-solution-transformation-guidance-event-receivers.md
     - name: Feature receivers
-      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-Feature-Receivers.md
+      href: solution-guidance/sandbox-solution-transformation-guidance-feature-receivers.md
     - name: InfoPath forms with code
-      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-InfoPath.md
+      href: solution-guidance/sandbox-solution-transformation-guidance-infopath.md
   - name: User profile solutions
     href: solution-guidance/user-profile-solutions-for-sharepoint.md
     items:
