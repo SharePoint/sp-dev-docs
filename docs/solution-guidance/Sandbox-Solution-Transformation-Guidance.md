@@ -47,7 +47,7 @@ Learn about:
 Analyze the functional and business requirements by: 
     
 - Identifying deployed sandbox solutions in your current environment for which you can use either of the following tools provided as open source by the SharePoint PnP team: 
-	- The [SharePoint Sandbox Solution scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.SandBoxTool)code or [video](https://www.youtube.com/watch?v=pK4p2mGYXpU): A tool offering various options and a detailed inventory.
+	- The [SharePoint Sandbox Solution scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.SandBoxTool) or [video](https://www.youtube.com/watch?v=pK4p2mGYXpU): A tool offering various options and a detailed inventory.
 	- A [specific sandbox solution inventory script](https://github.com/SharePoint/PnP-Tools/tree/master/Scripts/SharePoint.Sandbox.ListSolutionsFromTenant): A PowerShell script that gives you a basic inventory. 
     
 - Reviewing requirements with your users. Consider asking your users to demonstrate how they use the existing sandbox solutions to perform their daily work.
@@ -94,7 +94,7 @@ When you deactivate your existing sandbox solution from sites, any assets or fil
 
 <a name="howremoved"> </a>
 
-## Removal of support for code-based sandbox solutions
+## Removing support for code-based sandbox solutions
 
 Support of code-based sandbox solutions will be removed from SharePoint Online by disabling code-based operations that execute from sandbox-solution-based code. This means that your sandbox solutions are not explicitly deactivated from the solution store, but any code-based operation will no longer be performed. Sandbox solutions will remain in activated status in the solution gallery. Features deployed by using sandbox solutions will not get deactivated automatically, which means that possible code associated to feature deactivation or uninstall handlers won't be run. 
 
