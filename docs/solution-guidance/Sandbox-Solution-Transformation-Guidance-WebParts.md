@@ -1,6 +1,7 @@
 ---
 title: Sandbox solution transformation guidance - web parts
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
 # Sandbox solution transformation guidance - web parts
 Transform or convert your code-based sandbox solutions to the SharePoint Add-in model. Learn about the options and strategies of converting existing functionality to SharePoint Add-in model or alternative solutions.
@@ -59,3 +60,5 @@ When you deactivate your existing sandbox solution from your sites, any assets o
 -  [Remove assembly reference from your Sandbox solution created in Visual Studio](https://support.microsoft.com/en-us/kb/3183084)
 -  [Build add-ins for SharePoint](https://msdn.microsoft.com/library/office/fp179930.aspx)
 -  [Office 365 development and SharePoint patterns and practices solution guidance](https://msdn.microsoft.com/en-us/pnp_articles/office-365-development-patterns-and-practices-solution-guidance)
+
+- [Transform sandbox solutions to the SharePoint Add-in model](sandbox-solution-transformation-guidance.md)

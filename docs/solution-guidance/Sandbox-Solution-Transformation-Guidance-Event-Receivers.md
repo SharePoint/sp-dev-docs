@@ -1,6 +1,7 @@
 ---
 title: Sandbox solution transformation guidance - Event receivers
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
 # Sandbox solution transformation guidance - Event receivers 
 This article will help you to identify options and strategies on replacing existing event receivers from your sandbox solutions.
@@ -57,3 +58,5 @@ When you deactivate your existing sandbox solution from your sites, any assets o
 -  [Remove assembly reference from your Sandbox solution created in Visual Studio](https://support.microsoft.com/en-us/kb/3183084)
 -  [Build add-ins for SharePoint](https://msdn.microsoft.com/library/office/fp179930.aspx)
 -  [Office 365 development and SharePoint patterns and practices solution guidance](https://msdn.microsoft.com/en-us/pnp_articles/office-365-development-patterns-and-practices-solution-guidance)
+
+- [Transform sandbox solutions to the SharePoint Add-in model](sandbox-solution-transformation-guidance.md)

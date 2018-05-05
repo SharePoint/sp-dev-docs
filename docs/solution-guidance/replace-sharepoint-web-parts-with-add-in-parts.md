@@ -27,13 +27,13 @@ To replace web parts with new add-in parts:
 
 ## Before you begin
 
-Before performing the steps in this article to replace your web parts with add-in parts, make sure that you:
+Before performing the steps in this article to replace your web parts with add-in parts, ensure that:
 
-- Are using a SharePoint environment that is configured to support add-ins. SharePoint Online is configured to support add-ins. If you are using SharePoint Server on-premises, see [Configure an environment for apps for SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/administration/configure-an-environment-for-apps-for-sharepoint).
+- You are using a SharePoint environment that is configured to support add-ins. SharePoint Online is configured to support add-ins. If you are using SharePoint Server on-premises, see [Configure an environment for apps for SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/administration/configure-an-environment-for-apps-for-sharepoint).
     
-- Have deployed your new add-in part to SharePoint.
+- You have deployed your new add-in part to SharePoint.
     
-- Have assigned your add-ins **FullControl** permissions on the **Web**. For more information, see [Add-in permissions in SharePoint](../sp-add-ins/add-in-permissions-in-sharepoint.md).
+- You have assigned your add-ins **FullControl** permissions on the **Web**. For more information, see [Add-in permissions in SharePoint](../sp-add-ins/add-in-permissions-in-sharepoint.md).
 
 ## Export the new add-in part
     

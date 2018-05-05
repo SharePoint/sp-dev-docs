@@ -1,6 +1,7 @@
 ---
 title: Sandbox solution transformation guidance - Feature receivers
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
 # Sandbox solution transformation guidance - Feature receivers 
 Transform or convert your code-based sandbox solutions to the SharePoint Add-in model. Learn about the options and strategies of converting existing functionality to SharePoint Add-in model or alternative solutions.
@@ -97,3 +98,5 @@ When you deactivate your existing sandbox solution from your sites, any assets o
 -  [Sandbox solution transformation guidance](https://msdn.microsoft.com/en-us/pnp_articles/sandbox-solution-transformation-guidance)
 -  [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/blob/master/README.md) - Script based customizations
 -  [PnP CSOM Core training](https://blogs.msdn.microsoft.com/vesku/2016/04/12/office-dev-pnp-core-componenttraining-package/) - For code based options
+
+- [Transform sandbox solutions to the SharePoint Add-in model](sandbox-solution-transformation-guidance.md)

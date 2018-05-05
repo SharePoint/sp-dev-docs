@@ -1,6 +1,7 @@
 ---
 title: Sandbox solution transformation guidance - InfoPath
-ms.date: 11/03/2017
+description: 
+ms.date: 5/4/2018
 ---
 # Sandbox solution transformation guidance - InfoPath
 When you're using InfoPath forms with code-behind then these InfoPath forms do depend on code-based sandbox solutions for executing the code-behind. This article will help you to either fix or transform your InfoPath forms so that there's no sandbox solution dependency anymore.
@@ -133,3 +134,4 @@ As soon as code based operations are disabled it means that no code can run anym
 	- Use InfoPath Client to open the forms
 	- Migrate the form data to plain SharePoint list data (see the **Migrating your InfoPath data** section above)
 
+- [Transform sandbox solutions to the SharePoint Add-in model](sandbox-solution-transformation-guidance.md)
