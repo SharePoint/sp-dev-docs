@@ -10,6 +10,9 @@ One of the reasons many developers have leveraged code-based sandbox solutions i
 
 Another option is to rewrite the web part as a client-side solution. This involves redesigning the solution to use JavaScript, HTML fragments, and one or more supporting frameworks. While this is net-new work, it has the added benefit of setting up your solution to easily integrate into the upcoming SharePoint Framework. This is a great choice for simple display or data entry web parts, and can scale up to full-page client applications.
 
+> [!NOTE] 
+> [Code-based sandbox solutions were deprecated](https://blogs.msdn.microsoft.com/sharepointdev/2014/01/14/deprecation-of-custom-code-in-sandboxed-solutions/) in 2014, and SharePoint Online has started the process to completely remove this capability. Code-based sandbox solutions are also deprecated in SharePoint 2013 and in SharePoint 2016.
+
 ## Options for replacing web parts
 
 |Approach|Design considerations|More information|

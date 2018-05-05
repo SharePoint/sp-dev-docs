@@ -3,12 +3,13 @@ title: Sandbox solution transformation guidance - InfoPath
 description: 
 ms.date: 5/4/2018
 ---
+
 # Sandbox solution transformation guidance - InfoPath
+
 When you're using InfoPath forms with code-behind then these InfoPath forms do depend on code-based sandbox solutions for executing the code-behind. This article will help you to either fix or transform your InfoPath forms so that there's no sandbox solution dependency anymore.
 
-_**Applies to:** InfoPath forms for SharePoint Online | SharePoint 2013 | SharePoint 2016_
-
-Code-based sandbox solutions [were deprecated](https://blogs.msdn.microsoft.com/sharepointdev/2014/01/14/deprecation-of-custom-code-in-sandboxed-solutions/) back in 2014 and SharePoint online has started the process to completely remove this capability. Code-based sandbox solutions are also deprecated in SharePoint 2013 and in SharePoint 2016.
+> [!NOTE] 
+> [Code-based sandbox solutions were deprecated](https://blogs.msdn.microsoft.com/sharepointdev/2014/01/14/deprecation-of-custom-code-in-sandboxed-solutions/) in 2014, and SharePoint Online has started the process to completely remove this capability. Code-based sandbox solutions are also deprecated in SharePoint 2013 and in SharePoint 2016.
 
 ## Analyze and if possible fix your InfoPath forms
 <a name="sectionSection1"> </a>
@@ -133,5 +134,7 @@ As soon as code based operations are disabled it means that no code can run anym
 	- Remove the code behind from your form and republish it (see the **Dropping code behind from InfoPath forms to fix them** section above)
 	- Use InfoPath Client to open the forms
 	- Migrate the form data to plain SharePoint list data (see the **Migrating your InfoPath data** section above)
+
+## See also
 
 - [Transform sandbox solutions to the SharePoint Add-in model](sandbox-solution-transformation-guidance.md)

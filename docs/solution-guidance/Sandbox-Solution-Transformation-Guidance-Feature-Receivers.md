@@ -3,7 +3,9 @@ title: Sandbox solution transformation guidance - Feature receivers
 description: 
 ms.date: 5/4/2018
 ---
+
 # Sandbox solution transformation guidance - Feature receivers 
+
 Transform or convert your code-based sandbox solutions to the SharePoint Add-in model. Learn about the options and strategies of converting existing functionality to SharePoint Add-in model or alternative solutions.
 
 _**Applies to:** Add-ins for SharePoint | SharePoint 2013 | SharePoint 2016 | SharePoint Online_
@@ -14,6 +16,8 @@ Feature receivers are typically used to apply different kind of configurations o
 
 The approach you take to handle feature receivers in SharePoint is slightly different in the SharePoint Add-in model than it was with Full Trust Code or in coded-sandbox solutions. You will need to re-design the solution in away that you use remote APIs (CSOM/REST) to apply the needed configurations to your sites, which previously existed in the feature receiver(s). 
 
+> [!NOTE] 
+> [Code-based sandbox solutions were deprecated](https://blogs.msdn.microsoft.com/sharepointdev/2014/01/14/deprecation-of-custom-code-in-sandboxed-solutions/) in 2014, and SharePoint Online has started the process to completely remove this capability. Code-based sandbox solutions are also deprecated in SharePoint 2013 and in SharePoint 2016.
 
 ## Options for replacing Feature Receivers
 <a name="sectionSection2"> </a>
@@ -89,14 +93,11 @@ When you are using code based approaches, we recommend using [PnP provisioning e
 <a name="sectionSection3"> </a>
 If your sandbox solution contains feature receivers logic for feature deactivation and it's important that those are being executed, before code-based support is completely removed, you should ensure that these kind of features are deactivated before the code-based support is disabled from SharePoint Online. You can uninstall sandbox solutions from SharePoint Online after the code-based support is disabled, but your faeture receiver code would not be executed even though features are getting moved from the site. 
 
-When you deactivate your existing sandbox solution from your sites, any assets or files deployed using declarative options will not be removed however, the feature will automatically be deactivated. Execution of the code in the feature receiver, is dependent on the timing when the sandbox solution is deactivated. 
+When you deactivate your existing sandbox solution from your sites, any assets or files deployed by using declarative options are not removed. However, the features in the sandbox solution are automatically deactivated and the event receiver is removed.
 
 
 ## See also
-<a name="bk_addresources"> </a>
--  [Removing Code-Based Sandbox Solutions in SharePoint Online](http://dev.office.com/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
--  [Sandbox solution transformation guidance](https://msdn.microsoft.com/en-us/pnp_articles/sandbox-solution-transformation-guidance)
--  [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/blob/master/README.md) - Script based customizations
--  [PnP CSOM Core training](https://blogs.msdn.microsoft.com/vesku/2016/04/12/office-dev-pnp-core-componenttraining-package/) - For code based options
 
+- [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/blob/master/README.md) - Script based customizations
+- [PnP CSOM Core training](https://blogs.msdn.microsoft.com/vesku/2016/04/12/office-dev-pnp-core-componenttraining-package/) - For code based options
 - [Transform sandbox solutions to the SharePoint Add-in model](sandbox-solution-transformation-guidance.md)
