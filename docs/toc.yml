@@ -1577,7 +1577,7 @@
       href: solution-guidance/sandbox-solution-transformation-guidance-event-receivers.md
     - name: Replace feature receivers
       href: solution-guidance/sandbox-solution-transformation-guidance-feature-receivers.md
-    - name: Fix InfoPath forms with code
+    - name: Fix code-based InfoPath forms
       href: solution-guidance/sandbox-solution-transformation-guidance-infopath.md
   - name: User profile solutions
     href: solution-guidance/user-profile-solutions-for-sharepoint.md

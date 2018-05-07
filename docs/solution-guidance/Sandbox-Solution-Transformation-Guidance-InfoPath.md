@@ -1,10 +1,10 @@
 ---
-title: Fix InfoPath in sandbox solutions
+title: Fix InfoPath forms in sandbox solutions
 description: Fix or transform your InfoPath forms so they are no longer dependent on sandbox solutions.
 ms.date: 5/7/2018
 ---
 
-# Fix InfoPath in sandbox solutions
+# Fix InfoPath forms in sandbox solutions
 
 When you're using InfoPath forms with code-behind, the forms depend on code-based sandbox solutions for executing the code-behind. This article helps you to either fix or transform your InfoPath forms so they are no longer dependent on sandbox solutions.
 

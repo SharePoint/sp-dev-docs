@@ -106,7 +106,7 @@ All declarative definitions in the sandbox solution will continue working after 
 - [Replace web parts](sandbox-solution-transformation-guidance-webparts.md)
 - [Replace event receivers](sandbox-solution-transformation-guidance-event-receivers.md)
 - [Replace feature receivers](sandbox-solution-transformation-guidance-feature-receivers.md)
-- [Fix InfoPath](sandbox-solution-transformation-guidance-infopath.md)
+- [Fix code-based InfoPath forms](sandbox-solution-transformation-guidance-infopath.md)
 
 ## See also
 
