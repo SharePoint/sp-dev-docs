@@ -1,6 +1,7 @@
 ---
-title: Personalize search results sample add-in for SharePoint
-ms.date: 11/03/2017
+title: Personalize search results sample SharePoint Add-in
+description: 
+ms.date: 5/7/2018
 ---
 # Personalize search results sample add-in for SharePoint
 
@@ -124,14 +125,9 @@ private ClientResult<ResultTableCollection> ProcessQuery(ClientContext ctx, stri
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
-
--  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)
-    
--  [Search.PersonalizedResults app](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults)
-    
--  [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
-    
--  [UserProfile.Manipulation.CSOM.Console](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM.Console)
-    
--  [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration)
+ 
+- [Search.PersonalizedResults app](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults) 
+- [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)  
+- [UserProfile.Manipulation.CSOM.Console](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM.Console)
+- [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration)
+- [User profile solutions for SharePoint](user-profile-solutions-for-sharepoint.md)

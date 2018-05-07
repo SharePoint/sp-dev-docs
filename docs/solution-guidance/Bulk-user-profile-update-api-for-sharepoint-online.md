@@ -1,6 +1,7 @@
 ---
 title: Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online
-ms.date: 11/03/2017
+description: 
+ms.date: 5/7/2018
 ---
 # Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online
 
@@ -427,3 +428,6 @@ msOnline-UserType | SPS-UserType
 GroupType | GroupType
 SPO-IsSharePointOnlineObject | SPO-IsSPO
 
+## See also
+
+- [User profile solutions for SharePoint](user-profile-solutions-for-sharepoint.md)

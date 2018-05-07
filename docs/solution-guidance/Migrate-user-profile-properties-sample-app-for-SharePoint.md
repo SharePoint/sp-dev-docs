@@ -1,6 +1,7 @@
 ---
-title: Migrate user profile properties sample add-in for SharePoint
-ms.date: 11/03/2017
+title: Migrate user profile properties sample SharePoint Add-in
+description: 
+ms.date: 5/7/2018
 ---
 # Migrate user profile properties sample add-in for SharePoint
 
@@ -380,12 +381,8 @@ static void SetSingleProfileProperty(string UserName, string PropertyName, strin
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)
-    
--  [Core.ProfilePictureUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfilePictureUploader)
-    
--  [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
-    
--  [UserProfile.Manipulation.CSOM.Console](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM.Console)
+- [Core.ProfilePictureUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfilePictureUploader) 
+- [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM) 
+- [UserProfile.Manipulation.CSOM.Console](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM.Console)
+- [User profile solutions for SharePoint](user-profile-solutions-for-sharepoint.md)

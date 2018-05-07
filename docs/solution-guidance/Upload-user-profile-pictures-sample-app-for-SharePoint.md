@@ -1,6 +1,7 @@
 ---
-title: Upload user profile pictures sample add-in for SharePoint
-ms.date: 11/03/2017
+title: Upload user profile pictures sample SharePoint Add-in
+description: 
+ms.date: 5/7/2018
 ---
 # Upload user profile pictures sample add-in for SharePoint
 
@@ -422,14 +423,9 @@ static void SetAdditionalProfileProperties(string UserName)
 ```
 
 ## See also
-<a name="bk_addresources"> </a>
 
--  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)
-    
--  [Core.ProfilePictureUploader app](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfilePictureUploader)
-    
--  [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
-    
--  [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration)
-    
--  [UserProfile.Manipulation.CSOM.Console](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM.Console)
+- [Core.ProfilePictureUploader app](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfilePictureUploader)  
+- [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)  
+- [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration) 
+- [UserProfile.Manipulation.CSOM.Console](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM.Console)
+- [User profile solutions for SharePoint](user-profile-solutions-for-sharepoint.md)

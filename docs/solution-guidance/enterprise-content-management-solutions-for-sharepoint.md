@@ -13,7 +13,7 @@ The Enterprise Content Management (ECM) solution pack includes code samples and 
 
 <br/>
 
-|Article|Sample|Shows you how to...|
+|Article|Sample|Shows you how to|
 |:-----|:-----|:-----|
 |[Document library templates](document-library-templates-sample-app-for-sharepoint.md)|[ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)|Implement a custom document library template when creating a document library.  |
 |[Autotagging](autotagging-sample-app-for-sharepoint.md)|[ECM.Autotagging](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.AutoTagging)|Automatically tag documents with metadata when documents are created or uploaded to SharePoint. |

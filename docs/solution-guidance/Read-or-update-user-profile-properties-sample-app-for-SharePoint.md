@@ -1,7 +1,9 @@
 ---
-title: Read or update user profile properties sample add-in for SharePoint
-ms.date: 11/03/2017
+title: Read or update user profile properties sample SharePoint Add-in
+description: 
+ms.date: 5/7/2018
 ---
+
 # Read or update user profile properties sample add-in for SharePoint
 
 You can use a provider-hosted add-in to read or update SharePoint single and multivalued user profile properties.
@@ -232,8 +234,6 @@ Choosing  **Run scenario 3** calls **btnScenario3_Click** in CodeSample3.aspx.cs
         }
 ```
 ## See also
-<a name="bk_addresources"> </a>
-
--  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)
     
--  [ Search.PersonalizedResults sample](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults)
+- [Search.PersonalizedResults sample](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults)
+- [User profile solutions for SharePoint](user-profile-solutions-for-sharepoint.md)
