@@ -1,10 +1,10 @@
 ---
-title: Sandbox solution transformation guidance - Feature receivers
+title: Replace feature receivers in sandbox solutions
 description: Learn about the options and strategies of converting existing functionality to the SharePoint Add-in model or alternative solutions.
 ms.date: 5/7/2018
 ---
 
-# Sandbox solution transformation guidance - Feature receivers 
+# Replace feature receivers in sandbox solutions 
 
 Feature receivers are typically used to apply different kinds of configurations or settings to SharePoint sites when the feature is activated or when the site is created (if the feature is associated to a site template or web template). Feature receivers have been deployed by using sandbox solutions in SharePoint Online; however, because code-based customizations can no longer be used, you must use an alternative design. 
 

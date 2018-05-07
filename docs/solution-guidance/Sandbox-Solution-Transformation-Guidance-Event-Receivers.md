@@ -1,10 +1,10 @@
 ---
-title: Sandbox solution transformation guidance - Event receivers
+title: Replace event receivers in sandbox solutions
 description: Identify options and strategies for replacing existing event receivers from your sandbox solutions.
 ms.date: 5/7/2018
 ---
 
-# Sandbox solution transformation guidance - Event receivers 
+# Replace event receivers in sandbox solutions 
 
 The approach you take to handle events in SharePoint is slightly different in the SharePoint Add-in model than it was with Full Trust Code or in coded-sandbox solutions. In typical previous solutions, event receivers were created by using the SharePoint Server-Side Object Model and deployed via solutions packages, which executed the code on the SharePoint servers. 
 

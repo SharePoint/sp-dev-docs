@@ -1562,22 +1562,22 @@
     items:
     - name: Replace content types and site columns
       href: solution-guidance/replace-sharepoint-content-types-and-site-columns.md
-    - name: Replace files deployed using modules in farm solutions
+    - name: Replace files
       href: solution-guidance/replace-files-deployed-using-modules-in-sharepoint-farm-solutions.md
-    - name: Replace lists created from list definitions
+    - name: Replace lists
       href: solution-guidance/replace-sharepoint-lists-created-from-list-definitions.md
-    - name: Replace web parts with add-in parts
+    - name: Replace web parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
   - name: Transforming sandbox solutions
     href: solution-guidance/sandbox-solution-transformation-guidance.md
     items:
-    - name: Web parts
+    - name: Replace web parts
       href: solution-guidance/sandbox-solution-transformation-guidance-webparts.md
-    - name: Event receivers
+    - name: Replace event receivers
       href: solution-guidance/sandbox-solution-transformation-guidance-event-receivers.md
-    - name: Feature receivers
+    - name: Replace feature receivers
       href: solution-guidance/sandbox-solution-transformation-guidance-feature-receivers.md
-    - name: InfoPath forms with code
+    - name: Fix InfoPath forms with code
       href: solution-guidance/sandbox-solution-transformation-guidance-infopath.md
   - name: User profile solutions
     href: solution-guidance/user-profile-solutions-for-sharepoint.md

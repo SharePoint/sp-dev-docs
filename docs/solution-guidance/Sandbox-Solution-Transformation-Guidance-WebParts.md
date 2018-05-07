@@ -1,10 +1,10 @@
 ---
-title: Sandbox solution transformation guidance - web parts
+title: Replace web parts in sandbox solutions
 description: Learn about the options and strategies of converting existing functionality to the SharePoint Add-in model or alternative solutions.
 ms.date: 5/7/2018
 ---
 
-# Sandbox solution transformation guidance - web parts
+# Replace web parts in sandbox solutions
 
 One of the reasons many developers have leveraged code-based sandbox solutions is a desire to utilize visual web parts. This provides a great way to separate code from layout as well as utilize the ASP.NET controls. You can continue to use visual web parts in a provider-hosted add-in via client web parts. This is a great approach and provides a direct migration path for many applications.
 
