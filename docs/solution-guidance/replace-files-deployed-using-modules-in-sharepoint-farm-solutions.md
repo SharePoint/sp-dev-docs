@@ -1,10 +1,10 @@
 ---
-title: Replace files deployed using modules in SharePoint farm solutions
+title: Replace SharePoint files deployed using modules in farm solutions
 description: Replace files, such as master pages and page layouts in SharePoint, that were deployed using modules in farm solutions by uploading and updating references to use new files.
 ms.date: 5/4/2018
 ---
 
-# Replace files deployed using modules in SharePoint farm solutions
+# Replace SharePoint files deployed using modules in farm solutions
 
 If you deployed files declaratively by using modules in farm solutions, learn how to transform them into new solutions that update references to files and provide similar functionality by using the client object model (CSOM). In the past, modules were used to deploy files such as master pages and page layouts. 
 
