@@ -24,7 +24,7 @@ To get started, download the [Core.ProfileProperty.Migration](https://github.com
 
 The code sample contains two projects.
 
-For the  **Contoso.ProfileProperty.Migration.Extract** project:
+For the **Contoso.ProfileProperty.Migration.Extract** project:
 
 - Because this code sample uses the server-side object model, be sure that you are running the project on a server with SharePoint Server 2010 or SharePoint Server 2013 installed.
     
@@ -32,15 +32,15 @@ For the  **Contoso.ProfileProperty.Migration.Extract** project:
     
 - Edit the App.config file using the configuration information listed in Table 1.
     
-- For all users, ensure that the  **Work email** user profile property is not empty. If the value of the **Work email** user profile property is empty, the extraction process will end prematurely.
+- For all users, ensure that the **Work email** user profile property is not empty. If the value of the **Work email** user profile property is empty, the extraction process will end prematurely.
     
 - This code sample extracts user profiles from SharePoint Server 2010. If you are extracting user profiles from SharePoint Server 2013, do the following:
     
-  a. Open the shortcut menu (right-click) for  **Contoso.ProfileProperty.Migration.Extract** > **Properties**.
+  a. Open the shortcut menu (right-click) for **Contoso.ProfileProperty.Migration.Extract** > **Properties**.
     
-  b. Under  **Application**, in  **Target framework** choose **.NET Framework 4**.
+  b. Under **Application**, in **Target framework** choose **.NET Framework 4**.
     
-  c. Choose  **Yes**, then  **Save**.
+  c. Choose **Yes**, then **Save**.
     
 **Table 1. Configuration settings for App.Config file**
 
@@ -53,13 +53,13 @@ For the  **Contoso.ProfileProperty.Migration.Extract** project:
 |**ENABLELOGGING** |Enable disk logging.|True|
 |**TESTRUN** |Performs a test extraction to confirm that your configuration settings in App.Config are correct.|Set `TESTRUN=true` if you are performing a test extraction. The test run extracts only one user from the user profile service.<br /> Set `TESTRUN=false` if you are extracting all users from the user profile service. |
 
-For the  **Contoso.ProfileProperty.Migration.Import** project
+For the **Contoso.ProfileProperty.Migration.Import** project
 
 - Ensure that user profiles exist in Office 365. 
     
-- Ensure that the user's  **Work email** address is the same in the SharePoint Server 2013 on-premises and Office 365 user profile service.
+- Ensure that the user's **Work email** address is the same in the SharePoint Server 2013 on-premises and Office 365 user profile service.
     
-- In the App.config file, change the  **value** element of the **Contoso_ProfileProperty_Migration_Import_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center, as shown in the following example.
+- In the App.config file, change the **value** element of the **Contoso_ProfileProperty_Migration_Import_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center, as shown in the following example.
 
 	```XML
 	<applicationSettings>
@@ -88,19 +88,19 @@ For the  **Contoso.ProfileProperty.Migration.Import** project
 ## Using the Core.ProfileProperty.Migration sample add-in
 <a name="sectionSection1"> </a>
 
-This code sample runs as a console application. When the code sample runs, the  **Main** function in Program.cs performs the following tasks:
+This code sample runs as a console application. When the code sample runs, the **Main** function in Program.cs performs the following tasks:
 
-- Connects to the My Site Host and uses  **UserProfileManager** to connect to the user profile service. **UserProfileManager** belongs to the **Microsoft.Office.Server.UserProfiles.dll** assembly.
+- Connects to the My Site Host and uses **UserProfileManager** to connect to the user profile service. **UserProfileManager** belongs to the **Microsoft.Office.Server.UserProfiles.dll** assembly.
     
-- Creates a list called  **pData** to store extracted user profile data.
+- Creates a list called **pData** to store extracted user profile data.
     
 - For all users in the user profile service it does the following:
     
-	- Uses  **GetSingleValuedProperty** to copy the **WorkEmail** and **AboutMe** user profile properties to a **UserProfileData** object called **userData**.
+	- Uses **GetSingleValuedProperty** to copy the **WorkEmail** and **AboutMe** user profile properties to a **UserProfileData** object called **userData**.
     
-	- Uses  **GetMultiValuedProperty** to copy the **SPS-Responsibility** user profile property to **userData**.
+	- Uses **GetMultiValuedProperty** to copy the **SPS-Responsibility** user profile property to **userData**.
     
-- Uses  **UserProfileCollection.Save** to serialize **userData** to an XML file. The XML file is saved at the file path you specified in App.config.
+- Uses **UserProfileCollection.Save** to serialize **userData** to an XML file. The XML file is saved at the file path you specified in App.config.
 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
@@ -175,11 +175,11 @@ static void Main(string[] args)
             }
 ```
 
-Note that the  **GetSingleValuedProperty** method uses userprofileservice.asmx to retrieve a single-valued user profile property. **GetSingleValuedProperty** does the following, as shown in the next code example:
+Note that the **GetSingleValuedProperty** method uses userprofileservice.asmx to retrieve a single-valued user profile property. **GetSingleValuedProperty** does the following, as shown in the next code example:
 
-- Gets the property object to extract data from using  **spuser[userProperty]**.
+- Gets the property object to extract data from using **spuser[userProperty]**.
     
-- Returns the first value in the  **UserProfileValueCollection** if the value is not **null**. 
+- Returns the first value in the **UserProfileValueCollection** if the value is not **null**. 
 
 ```csharp
 private static string GetSingleValuedProperty(UserProfile spUser,string userProperty)
@@ -209,11 +209,11 @@ private static string GetSingleValuedProperty(UserProfile spUser,string userProp
         }
 ```
 
-Note that the  **GetMultiValuedProperty** method uses userprofileservice.asmx to retrieve a multivalued user profile property. **GetMultiValuedProperty** does the following, as shown in the next code example:
+Note that the **GetMultiValuedProperty** method uses userprofileservice.asmx to retrieve a multivalued user profile property. **GetMultiValuedProperty** does the following, as shown in the next code example:
 
-- Gets the user profile property object to update using  **spuser[userProperty]**.
+- Gets the user profile property object to update using **spuser[userProperty]**.
     
-- Builds a string of user profile property values separated by the  **PROPERTYSEPARATOR** specified in the App.config file.
+- Builds a string of user profile property values separated by the **PROPERTYSEPARATOR** specified in the App.config file.
 
 ```csharp
 private static string GetMultiValuedProperty(UserProfile spUser, string userProperty)
@@ -254,19 +254,19 @@ private static string GetMultiValuedProperty(UserProfile spUser, string userProp
 ## Using Contoso.ProfileProperty.Migration.Import
 <a name="sectionSection2"> </a>
 
-This code sample runs as a console application. When the code sample runs, the  **Main** method in Program.cs does the following:
+This code sample runs as a console application. When the code sample runs, the **Main** method in Program.cs does the following:
 
-- Initializes the console application using  **InitializeConfiguration** and **InitializeWebService**. 
+- Initializes the console application using **InitializeConfiguration** and **InitializeWebService**. 
     
 - Deserializes the XML file containing the extracted user profile data.
     
 - For all users in the XML file it does the following:
     
-	- Extracts the  **UserName** property from the XML file.
+	- Extracts the **UserName** property from the XML file.
     
-	- Uses  **SetSingleMVProfileProperty** to set **SPS-Responsibility** on the user's profile.
+	- Uses **SetSingleMVProfileProperty** to set **SPS-Responsibility** on the user's profile.
     
-	- Uses  **SetSingleMVProfileProperty** to set **AboutMe** on the user's profile.
+	- Uses **SetSingleMVProfileProperty** to set **AboutMe** on the user's profile.
     
 **InitializeWebService** connects to SharePoint Online, and sets a reference of the user profile service to an instance variable. Other methods in this code sample use this instance variable to write values to user profile properties. To administer the user profile, this code sample uses the userprofileservice.asmx web service on the SharePoint Online admin center.
 
@@ -311,15 +311,15 @@ static bool InitializeWebService()
         }
 ```
 
-The  **SetSingleMVProfileProperty** method sets a multivalued user profile property, such as **SPS-Responsibility**, by doing the following:
+The **SetSingleMVProfileProperty** method sets a multivalued user profile property, such as **SPS-Responsibility**, by doing the following:
 
-- Splitting  **PropertyValue** into a string array called **arrs** to store user profile property values. The string is split using the **PROPERTYSEPERATOR** configuration setting specified in App.Config.
+- Splitting **PropertyValue** into a string array called **arrs** to store user profile property values. The string is split using the **PROPERTYSEPERATOR** configuration setting specified in App.Config.
     
-- Assigning the values of  **arrs** to a **ValueData** array on the user profile service.
+- Assigning the values of **arrs** to a **ValueData** array on the user profile service.
     
-- Creating a  **PropertyData** array on the user profile service. The name of the user profile property and the **ValueData** array are passed to properties on the **PropertyData** object. This array has one element only because only one multivalued user profile property will be imported.
+- Creating a **PropertyData** array on the user profile service. The name of the user profile property and the **ValueData** array are passed to properties on the **PropertyData** object. This array has one element only because only one multivalued user profile property will be imported.
     
-The data is written to the user profile service using  **ModifyUserPropertyByAccountName** on the **userprofileservice.asmx** web service on the SharePoint Online admin center. The user running this code sample must be an Office 365 administrator.
+The data is written to the user profile service using **ModifyUserPropertyByAccountName** on the **userprofileservice.asmx** web service on the SharePoint Online admin center. The user running this code sample must be an Office 365 administrator.
 
 ```csharp
 static void SetSingleMVProfileProperty(string UserName, string PropertyName, string PropertyValue)
@@ -355,7 +355,7 @@ static void SetSingleMVProfileProperty(string UserName, string PropertyName, str
 
 ```
 
-The  **SetSingleValuedProperty** method sets single-valued user profile properties, such as **AboutMe**.  **SetSingleValuedProperty** implements the same technique as **SetSingleMVProfileProperty**, but uses a  **ValueData** array with one element only.
+The **SetSingleValuedProperty** method sets single-valued user profile properties, such as **AboutMe**. **SetSingleValuedProperty** implements the same technique as **SetSingleMVProfileProperty**, but uses a **ValueData** array with one element only.
 
 ```csharp
 static void SetSingleProfileProperty(string UserName, string PropertyName, string PropertyValue)

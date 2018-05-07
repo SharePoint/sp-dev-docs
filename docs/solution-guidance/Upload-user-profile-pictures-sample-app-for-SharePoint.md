@@ -34,11 +34,11 @@ Before you run this code sample:
     
 - Edit the userlist.csv file to include the following:
     
-	- A header row containing the value  **UserPrincipalName**,  **SourceURL**.
+	- A header row containing the value **UserPrincipalName**, **SourceURL**.
     
 	- For each user, add a new row containing the user's organizational account (or user principal name) and the file path or URL of the image to upload. 
     
-- To run this sample from Visual Studio, configure the  **Core.ProfilePictureUploader** project with the following command-line arguments: `-SPOAdmin Username -SPOAdminPassword Password -Configuration filepath`
+- To run this sample from Visual Studio, configure the **Core.ProfilePictureUploader** project with the following command-line arguments: `-SPOAdmin Username -SPOAdminPassword Password -Configuration filepath`
     
   Where:
     
@@ -50,25 +50,25 @@ Before you run this code sample:
     
 - To set the command-line arguments on the Core.ProfilePictureUploader project:
     
-	- In Solution Explorer, open the shortcut menu (right click) for the  **Core.ProfilePictureUploader** project > **Properties**.
+	- In Solution Explorer, open the shortcut menu (right click) for the **Core.ProfilePictureUploader** project > **Properties**.
     
-	- Choose  **Debug**.
+	- Choose **Debug**.
     
-	- In  **Command line arguments**, enter the command-line arguments listed earlier.
+	- In **Command line arguments**, enter the command-line arguments listed earlier.
     
 - To configure the upload process to meet your requirements, edit the configuration.xml file by entering the following values:
     
-	- The name of your Office 365 tenant in the  **tenantName** element. For example: `<tenantName>contoso.onmicrosoft.com</tenantName>`
+	- The name of your Office 365 tenant in the **tenantName** element. For example: `<tenantName>contoso.onmicrosoft.com</tenantName>`
     
-	- The user mapping file path in the  **pictureSourceCsv** element. For example: `<pictureSourceCsv>C:\temp\userlist.csv</pictureSourceCsv>`
+	- The user mapping file path in the **pictureSourceCsv** element. For example: `<pictureSourceCsv>C:\temp\userlist.csv</pictureSourceCsv>`
     
-	- Image upload instructions using the  **thumbs** element. Edit the following attributes in the thumbs element:
+	- Image upload instructions using the **thumbs** element. Edit the following attributes in the thumbs element:
     
-		-  **aupload3Thumbs** - Set to **true** if you want to upload three images for each user, or set to **false** if you only want to upload one image.
+		- **aupload3Thumbs** - Set to **true** if you want to upload three images for each user, or set to **false** if you only want to upload one image.
     
-		-  **createSMLThumbs** - Set to **true** if you want to create three different sized images (small, medium, and large) of the source image, or set to **false** if you want to upload three images of the same size.
+		- **createSMLThumbs** - Set to **true** if you want to create three different sized images (small, medium, and large) of the source image, or set to **false** if you want to upload three images of the same size.
     
-	- Additional properties to set on the user's profile using the  **additionalProfilePropties** element. For example, the following XML specifies an additional user profile property called **SPS-PictureExchangeSyncState** that should be set to zero on the user's profile when the code sample runs.
+	- Additional properties to set on the user's profile using the **additionalProfilePropties** element. For example, the following XML specifies an additional user profile property called **SPS-PictureExchangeSyncState** that should be set to zero on the user's profile when the code sample runs.
 
 	```
 	<additionalProfileProperties>
@@ -76,11 +76,11 @@ Before you run this code sample:
 	</additionalProfileProperties>
 	```
 
-  - The log file path in the  **logfile** element, as shown in the following example. `<logFile path="C:\temp\log.txt" enableLogging="true" loggingLevel="verbose" />`
+  - The log file path in the **logfile** element, as shown in the following example. `<logFile path="C:\temp\log.txt" enableLogging="true" loggingLevel="verbose" />`
     
-  - The upload delay in milliseconds between the upload of different image files using the  **uploadDelay** element. The recommended setting for **uploadDelay** is 500 milliseconds.
+  - The upload delay in milliseconds between the upload of different image files using the **uploadDelay** element. The recommended setting for **uploadDelay** is 500 milliseconds.
     
-- In the App.config file, change the  **value** element of the **ProfilePictureUploader_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center. as shown in the following example.
+- In the App.config file, change the **value** element of the **ProfilePictureUploader_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center. as shown in the following example.
 
 ```XML  
 <Contoso.Core.ProfilePictureUploader.Properties.Settings>
@@ -96,21 +96,21 @@ Before you run this code sample:
 ## Using the Core.ProfilePictureUploader sample add-in
 <a name="sectionSection1"> </a>
 
-This code sample runs as a console application. When the code sample runs, the  **Main** method in Program.cs does the following:
+This code sample runs as a console application. When the code sample runs, the **Main** method in Program.cs does the following:
 
-- Initializes the console application using  **SetupArguments** and **InitializeConfiguration**. 
+- Initializes the console application using **SetupArguments** and **InitializeConfiguration**. 
     
-- Calls  **InitializeWebService** to connect to the user profile service in SharePoint Online.
+- Calls **InitializeWebService** to connect to the user profile service in SharePoint Online.
     
 - Iterates through the userlist.csv file to read the user principal name (UPN) for the user and the location of the user's image file. 
     
-- Fetches a user's image using  **WebRequest** and **WebResponse** objects in **GetImagefromHTTPUrl**.
+- Fetches a user's image using **WebRequest** and **WebResponse** objects in **GetImagefromHTTPUrl**.
     
-- Calls  **UploadImageToSpo** to upload the user's image to SharePoint Online.
+- Calls **UploadImageToSpo** to upload the user's image to SharePoint Online.
     
-- Calls  **SetMultipleProfileProperties** to set the **PictureURL** and **SPS-PicturePlaceholderState** user profile properties for the user.
+- Calls **SetMultipleProfileProperties** to set the **PictureURL** and **SPS-PicturePlaceholderState** user profile properties for the user.
     
-- Calls  **SetAdditionalProfileProperties** to set additional properties on the user profile after the image file is uploaded.
+- Calls **SetAdditionalProfileProperties** to set additional properties on the user profile after the image file is uploaded.
 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
@@ -240,7 +240,7 @@ static bool InitializeWebService()
 
 ```
 
-The  **Main** method in Program.cs calls **UploadImageToSpo** to upload the user's profile picture to SharePoint Online. All users' profile pictures are stored in a picture library on the My Site Host. **UploadImageToSpo** performs the following tasks:
+The **Main** method in Program.cs calls **UploadImageToSpo** to upload the user's profile picture to SharePoint Online. All users' profile pictures are stored in a picture library on the My Site Host. **UploadImageToSpo** performs the following tasks:
 
 - Connects to SharePoint Online.
     
@@ -248,7 +248,7 @@ The  **Main** method in Program.cs calls **UploadImageToSpo** to upload the user
     
 	- If you configured the application to upload one image per user, the image is uploaded to the picture library. 
     
-	- If you configured the application to upload three images per user, the application checks the value of  **createSMLThumbs** in the configuration file to determine whether three different sized images are required. If three different sized images are required, the application uses **ResizeImageSmall** and **ResizeImageLarge** to create three different sized images from the source image. The application then uploads the resized images to the picture library. If three different sized images are not required, the application uploads three images of the same size to the picture library.
+	- If you configured the application to upload three images per user, the application checks the value of **createSMLThumbs** in the configuration file to determine whether three different sized images are required. If three different sized images are required, the application uses **ResizeImageSmall** and **ResizeImageLarge** to create three different sized images from the source image. The application then uploads the resized images to the picture library. If three different sized images are not required, the application uploads three images of the same size to the picture library.
 
 ```csharp
 static string UploadImageToSpo(string PictureName, Stream ProfilePicture)
@@ -351,9 +351,9 @@ static string UploadImageToSpo(string PictureName, Stream ProfilePicture)
 
 **SetMultipleProfileProperties** sets multiple user profile properties in a single method call. In this code sample, **SetMultipleProfileProperties** sets the following user profile properties for a user:
 
--  **PictureURL** - Set to the URL of the medium-sized uploaded image in the picture library on the My Site Host.
+- **PictureURL** - Set to the URL of the medium-sized uploaded image in the picture library on the My Site Host.
     
--  **SPS-PicturePlaceholderState** - Set to zero to indicate that SharePoint Online should show the uploaded picture for the user.
+- **SPS-PicturePlaceholderState** - Set to zero to indicate that SharePoint Online should show the uploaded picture for the user.
 
 ```csharp
 static void SetMultipleProfileProperties(string UserName, string[] PropertyName, string[] PropertyValue)
