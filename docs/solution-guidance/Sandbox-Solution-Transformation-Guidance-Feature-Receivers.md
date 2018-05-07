@@ -18,12 +18,12 @@ The approach you take to handle feature receivers in SharePoint is slightly diff
 |Approach|Design considerations and more information|
 |:-----|:-----|
 |PowerShell-based customization|<ul><li>Uses PowerShell scripts to provision new site collections (and potentially subsites) where needed customizations are applied by using remote APIs. Typically this is done by using CSOM/REST directly in the PowerShell scripts or by using PnP PowerShell commands, which provides an easy way to modify sites and content remotely.</li><li>Works well if your site provisioning model is based on administrative actions.</li><li>Requires script to be executed that applies needed customizations to created sites.</li><li>Can be combined with site creation process, if performed as an administrative operation.</li><li>Does not require a hosting infrastructure.</li><li>Cannot be combined automatically as part of the subsite creation process.</li></ul><ul><li>[PnP provisioning engine (GitHub)](https://github.com/SharePoint/PnP-PowerShell)</li><li>[PnP PowerShell - Getting started with latest updates](http://dev.office.com/blogs/pnp-powershell-getting-started-with-latest-updates)</li></ul>|
-|Code-based customization|<ul><li>Applies the needed customizations by using managed code with remote APIs. This means that you either apply them as part of the administrative operation when the site is created, or you apply them to SharePoint, which hooks in your code to be part of the UI elements.</li><li>Can require a hosting infrastructure if combined with end-user operations.</li><li>Can use managed code that is executed anywhere by using CSOM/REST APIs for the needed operations.</li><li>Can be used to integrate to SharePoint by overriding subsite creation link.</li><li>Can automate site collection and subsite provisioning by using remote APIs.</li><ul><li>[Remote provisioning pattern for sub site creation](https://channel9.msdn.com/blogs/OfficeDevPnP/Using-remote-provisioning-pattern-for-sub-site-creation)</li><li>[PnP CSOM Core Component (GitHub)](https://github.com/SharePoint/PnP-sites-core)</li></ul>|
+|Code-based customization|<ul><li>Applies the needed customizations by using managed code with remote APIs. This means that you either apply them as part of the administrative operation when the site is created, or you apply them to SharePoint, which hooks in your code to be part of the UI elements.</li><li>Can require a hosting infrastructure if combined with end-user operations.</li><li>Can use managed code that is executed anywhere by using CSOM/REST APIs for the needed operations.</li><li>Can be used to integrate to SharePoint by overriding subsite creation link.</li><li>Can automate site collection and subsite provisioning by using remote APIs.</li></ul><ul><li>[Remote provisioning pattern for sub site creation](https://channel9.msdn.com/blogs/OfficeDevPnP/Using-remote-provisioning-pattern-for-sub-site-creation)</li><li>[PnP CSOM Core Component (GitHub)](https://github.com/SharePoint/PnP-sites-core)</li></ul>|
 
 > [!NOTE] 
 > If you want to provide an automatic way to apply needed remote code as part of the subsite creation logic, you must override the subsite link by using user custom actions. This option is only available for sites that use the classic model for libraries and lists. 
 
-## Applying needed customizations to sites
+## Applying customizations to sites
 
 ### Using PowerShell
 
@@ -72,9 +72,9 @@ web.SetComposedLookByUrl("Green");
 
 ## Removing sandbox solution containing feature receiver code from your site
 
-If your sandbox solution contains feature receivers logic for feature deactivation, and it's important that they are executed, before code-based support is completely removed, you should ensure that these features are deactivated before the code-based support is disabled from SharePoint Online. 
+If your sandbox solution contains feature receivers logic for feature deactivation, and it's important that they are executed, you should ensure that these features are deactivated before code-based support is disabled from SharePoint Online. 
 
-You can uninstall sandbox solutions from SharePoint Online after the code-based support is disabled, but your faeture receiver code would not be executed even though features are getting moved from the site. 
+You can uninstall sandbox solutions from SharePoint Online after the code-based support is disabled, but your feature receiver code would not be executed even though features are being moved from the site. 
 
 When you deactivate your existing sandbox solution from your sites, any assets or files deployed by using declarative options are not removed. However, the features in the sandbox solution are automatically deactivated and the event receiver is removed.
 
