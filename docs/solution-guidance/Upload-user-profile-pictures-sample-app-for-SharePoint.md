@@ -1,38 +1,32 @@
 ---
 title: Upload user profile pictures sample SharePoint Add-in
-description: 
+description: Use a provider-hosted add-in to do a bulk upload of user profile data from either a file share or SharePoint Online URL.
 ms.date: 5/7/2018
 ---
-# Upload user profile pictures sample add-in for SharePoint
 
-You can use a provider-hosted add-in to do a bulk upload of user profile data from either a file share or SharePoint Online URL.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-    
-The [Core.ProfilePictureUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfilePictureUploader) sample add-in shows how to do a bulk upload of user profile data from either a file share or SharePoint Online URL, and how to link user profile properties to uploaded images.
+# Upload user profile pictures sample SharePoint Add-in
+   
+The Core.ProfilePictureUploader sample shows you how to do a bulk upload of user profile data from either a file share or SharePoint Online URL, and how to link user profile properties to uploaded images.
     
 Use this sample to learn how to:
 
-- Migrate a user's profile pictures from SharePoint Server 2013 on-premises to SharePoint Online.
-    
-- Fix issues that occur when the Azure Active Directory Sync tool (dirsync) fails to synchronize user's profile pictures to SharePoint Online.
-    
+- Migrate a user's profile pictures from SharePoint Server on-premises to SharePoint Online.
+- Fix issues that occur when the Azure Active Directory Sync tool (dirsync) fails to synchronize user's profile pictures to SharePoint Online.  
 - Replace poor quality user profile pictures in SharePoint Online.
     
 This sample uses a console application to do the following:
 
-- Read the user names and image file paths or URLs from a user mapping file.
-    
-- Fetch and upload one or three images to a picture library on the My Site host. 
-    
-- Set user profile properties to link the uploaded images to a user's profile.
-    
+- Read the user names and image file paths or URLs from a user mapping file.  
+- Fetch and upload one or three images to a picture library on the My Site host.  
+- Set user profile properties to link the uploaded images to a user's profile. 
 - Update additional (optional) user profile properties.
     
 ## Before you begin
-<a name="sectionSection0"> </a>
 
-To get started, download the  [Core.ProfilePictureUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfilePictureUploader) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.ProfilePictureUploader](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfilePictureUploader) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 Before you run this code sample:
 
@@ -99,7 +93,7 @@ Before you run this code sample:
 
 **Important**  Connecting to the userprofileservice.asmx web service on the SharePoint Online admin center allows you to update the user profile properties of other users. When you run this code sample, use an Office 365 administrator account that has permissions to manage user profiles. 
 
-## Using the Core.ProfilePictureUploader app
+## Using the Core.ProfilePictureUploader sample add-in
 <a name="sectionSection1"> </a>
 
 This code sample runs as a console application. When the code sample runs, the  **Main** method in Program.cs does the following:

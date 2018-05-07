@@ -1,27 +1,28 @@
 ---
 title: Migrate user profile properties sample SharePoint Add-in
-description: 
+description: Use a provider-hosted add-in to migrate and import SharePoint user profile data.
 ms.date: 5/7/2018
 ---
-# Migrate user profile properties sample add-in for SharePoint
 
-You can use a provider-hosted add-in to migrate and import SharePoint user profile data.
-
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-    
-The [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration) sample add-in shows you how to migrate user profile data from SharePoint Server 2010 or SharePoint Server 2013 into SharePoint Online.
+# Migrate user profile properties sample SharePoint Add-in
+   
+The Core.ProfileProperty.Migration sample shows you how to migrate user profile data from SharePoint Server into SharePoint Online.
     
 This sample includes two console applications. Both use the userprofileservice.asmx web service to extract single and multivalued user profile data to an XML file, and to import the extracted data into the user profile service in SharePoint Online.
+
 Use this code sample if you want to:
 
-- Extract user profile data in SharePoint Server 2010 or SharePoint Server 2013.
-    
+- Extract user profile data in SharePoint Server. 
 - Import user profile data into SharePoint Online.
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
-To get started, download the  [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub. The code sample contains two projects.
+To get started, download the [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement. 
+
+The code sample contains two projects.
 
 For the  **Contoso.ProfileProperty.Migration.Extract** project:
 
@@ -84,7 +85,7 @@ For the  **Contoso.ProfileProperty.Migration.Import** project
 |**SPOAdminUserName** |An Office 365 administrator’s username.|Not applicable.|
 |**SPOAdminPassword** |An Office 365 administrator’s password.|Not applicable.|
 
-## Using the Core.ProfileProperty.Migration app
+## Using the Core.ProfileProperty.Migration sample add-in
 <a name="sectionSection1"> </a>
 
 This code sample runs as a console application. When the code sample runs, the  **Main** function in Program.cs performs the following tasks:

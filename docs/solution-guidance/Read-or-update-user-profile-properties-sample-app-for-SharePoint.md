@@ -1,36 +1,31 @@
 ---
 title: Read or update user profile properties sample SharePoint Add-in
-description: 
+description: Use a provider-hosted add-in to read or update SharePoint single and multivalued user profile properties.
 ms.date: 5/7/2018
 ---
 
-# Read or update user profile properties sample add-in for SharePoint
+# Read or update user profile properties sample SharePoint Add-in
 
-You can use a provider-hosted add-in to read or update SharePoint single and multivalued user profile properties.
-
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-    
-The [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM) sample shows you how to read and update user profile properties for a particular user. This sample uses a provider-hosted add-in to:
+The UserProfile.Manipulation.CSOM sample shows you how to read and update user profile properties for a particular user. This sample uses a provider-hosted add-in to:
 
 - Read and display all user profile properties for a user.
-    
-- Update a single-valued user profile property.
-    
+- Update a single-valued user profile property. 
 - Update a multivalued user profile property.
     
 Use this solution if you want to:
 
-- Read or write data to a user profile property for a user. 
-    
+- Read or write data to a user profile property for a user.   
 - Use user profile property values to personalize SharePoint.
 
 > [!NOTE] 
 > This code sample only runs on Office 365. 
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
-To get started, download the  [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 Before you run Scenario 1:
 
@@ -58,7 +53,7 @@ Before you run Scenario 3:
 
 ![Screenshot of the user's profile page with About me highlighted](media/692b9a82-45df-4c82-960b-42281be39f1c.png)
 
-## Using the UserProfile.Manipulation.CSOM app
+## Using the UserProfile.Manipulation.CSOM sample add-in
 <a name="sectionSection1"> </a>
 
 When you run this sample, a provider-hosted add-in starts, as shown in Figure 2.
@@ -89,8 +84,7 @@ Choosing  **Run scenario 1** calls the **btnScenario1_Click** method in CodeSamp
     
 - Iterate over  **PersonProperties.UserProfileProperties** to list the values of the user profile properties in a text box.
     
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 
 ```csharp
 protected void btnScenario1_Click(object sender, EventArgs e)

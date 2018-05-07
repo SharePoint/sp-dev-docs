@@ -1,36 +1,31 @@
 ---
 title: Personalize search results sample SharePoint Add-in
-description: 
+description: Personalize SharePoint by filtering information that is shown to the user based on the value of a user profile property.
 ms.date: 5/7/2018
 ---
-# Personalize search results sample add-in for SharePoint
 
-You can personalize SharePoint by filtering information that is shown to the user based on the value of a user profile property.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
-    
-The [Search.PersonalizedResults](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults) code sample shows how you can personalize SharePoint by filtering information based on the value of a user profile property. Some examples of pesonalization include:
+# Personalize search results sample SharePoint Add-in
+  
+The Search.PersonalizedResults sample shows you how to personalize SharePoint by filtering information based on the value of a user profile property. Some examples of pesonalization include:
 
 - News articles or other content filtered by country or location.
-    
-- Navigation links filtered based on the user's role or organization.
-    
+- Navigation links filtered based on the user's role or organization.  
 - Restaurants or retail outlet listings based on the location of your place of business.
     
 This code sample uses a provider-hosted add-in to display search results to the user that include either all sites or only team sites that the user has access to. To do this, the sample:
 
-- Checks the value of the  **AboutMe** user profile property.
-    
-- Builds a search query filter string associated with the value of the  **AboutMe** user profile property.
-    
+- Checks the value of the **AboutMe** user profile property.  
+- Builds a search query filter string associated with the value of the **AboutMe** user profile property.  
 - Runs the search query and displays the search query results.
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
-To get started, download the  [Search.PersonalizedResults](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Search.PersonalizedResults](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 
-## Using the Search.PersonalizedResults app
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
+## Using the Search.PersonalizedResults sample add-in
 <a name="sectionSection1"> </a>
 
 When you run this code sample, a provider-hosted application appears, as shown in Figure 1. 
@@ -80,9 +75,7 @@ Choosing  **Perform Personalized Search** calls the **btnPersonalizedSearch_Clic
 - Calls the  **ProcessQuery** method to retrieve the search results based on the supplied query string. **ProcessQuery** also demonstrates how to specify a list of properties to return with the search results.
     
 - Calls the  **FormatResults** method to format the search results into an HTML table.
-    
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+
 
 ```
 protected void btnPersonalizedSearch_Click(object sender, EventArgs e)
