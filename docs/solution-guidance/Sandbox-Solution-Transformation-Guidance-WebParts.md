@@ -1,7 +1,7 @@
 ---
 title: Sandbox solution transformation guidance - web parts
-description: Learn about the options and strategies of converting existing functionality to SharePoint Add-in model or alternative solutions.
-ms.date: 5/4/2018
+description: Learn about the options and strategies of converting existing functionality to the SharePoint Add-in model or alternative solutions.
+ms.date: 5/7/2018
 ---
 
 # Sandbox solution transformation guidance - web parts
@@ -17,11 +17,11 @@ Another option is to rewrite the web part as a client-side solution. This involv
 
 |Approach|Design considerations and more information|
 |:-----|:-----|
-|Provider-hosted add-in client web part|<ul><li>Requires hosting infrastructure.</li><li>Hosting infrastructure must be highly available.</li><li>Client part is displayed in an iframe limiting communication with the rest of the page.</li><li>Must use remote APIs either via CSOM or REST.</li></ul><ul><li>[Get started creating provider-hosted SharePoint Add-ins](../sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md)</li><li>[Create add-in parts to install with your SharePoint Add-in](../sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md)</li><li>[Client Web Part Definition Schema](https://msdn.microsoft.com/en-us/library/office/dn481208.aspx)</li><li>[Set up an on-premises development environment for SharePoint Add-ins](../sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)</li></ul>|
-|Client-side solution|<ul><li>Note that the ability to embed JavaScript in the prescribed way (through a UserCustomAction) does not work currently outside of the classic experience. For these cases you can link to the files by using a Script Editor web part.</li><li>Cannot elevate permissions, instead use a micro-service with add-in only permissions.</li><li>Limited by permissions of current user.</li></ul><ul><li>[Simple React Form Sample](https://github.com/SharePoint/PnP/tree/dev/Samples/SharePoint.React.SupportTicket)</li><li>[JavaScript Embedding Samples](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScript)</li><li>[Patterns and Practices JS Core](https://github.com/SharePoint/PnP-JS-Core/)</li></ul>|
+|Provider-hosted add-in client web part|<ul><li>Requires hosting infrastructure.</li><li>Hosting infrastructure must be highly available.</li><li>Client part is displayed in an iframe limiting communication with the rest of the page.</li><li>Must use remote APIs either via CSOM or REST.</li></ul><ul><li>[Get started creating provider-hosted SharePoint Add-ins](../sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md)</li><li>[Create add-in parts to install with your SharePoint Add-in](../sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md)</li><li>[Client Web Part Definition schema](../schema/client-web-part-definition-schema.md)</li><li>[Set up an on-premises development environment for SharePoint Add-ins](../sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)</li></ul>|
+|Client-side solution|<ul><li>The ability to embed JavaScript in the prescribed way (through a UserCustomAction) does not work currently outside of the classic experience. For these cases you can link to the files by using a Script Editor web part.</li><li>Cannot elevate permissions, instead use a micro-service with add-in only permissions.</li><li>Limited by permissions of current user.</li></ul><ul><li>[Simple React Form Sample](https://github.com/SharePoint/PnP/tree/dev/Samples/SharePoint.React.SupportTicket)</li><li>[JavaScript Embedding Samples](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScript)</li><li>[Patterns and Practices JS Core](https://github.com/SharePoint/PnP-JS-Core/)</li></ul>|
 
 
-## Removing your sandbox code from your site
+## Removing sandbox code from your site
 
 When you deactivate your existing sandbox solution from your sites, any assets or files deployed by using declarative options are not removed. However, the features in the sandbox solution are automatically deactivated and the event receiver is removed.
 
