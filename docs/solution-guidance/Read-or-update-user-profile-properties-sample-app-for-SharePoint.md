@@ -120,7 +120,6 @@ Choosing **Run scenario 2** calls the **btnScenario2_Click** method in CodeSampl
 - Use **PeopleManager** to get the user profile properties of the current user.
 - Format the text entered by the user in HTML.
 - Update the value of the **AboutMe** user profile property by using **SetSingleValueProfileProperty**, which accepts three parameters:
-    
 	- The account name of the user whose user profile you're updating.
 	- The user profile property name (**AboutMe** in this scenario).
 	- The property value, in HTML format (**I am a software engineer at Contoso** in this scenario).
@@ -173,9 +172,8 @@ To add new skills to the **SPS-Skills** user profile property from this add-in:
 Choosing **Run scenario 3** calls **btnScenario3_Click** in CodeSample3.aspx.cs to do the following:
 
 - Use **PeopleManager** to get the user profile properties of the current user.  
-- Read the list of skills shown in the list box. 
+- Read the list of skills shown in the list box.
 - Save the new skills to the **SPS-Skills** user profile property by using **SetMultiValuedProfileProperty**. **SetMultiValuedProfileProperty** accepts three parameters:
-    
 	- The account name of the user whose user profile is being updated.
 	- The user profile property name, which is **SPS-Skills**.
 	- The property values as a **List** of string objects.
