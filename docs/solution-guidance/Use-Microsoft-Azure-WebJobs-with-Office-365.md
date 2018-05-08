@@ -194,3 +194,5 @@ After completing all the previous steps, your Azure WebJob should be running and
 
 
 - [Deploying your SharePoint Add-ins](deploying-your-sharepoint-add-ins.md)
+
+This page assumes that you have a local working ASP.NET application that uses the Office 365 APIs. For reference, it uses the [Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites](https://github.com/SharePoint/sp-dev-docs/tree/master/docs/solution-guidance/media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites) project on GitHub.
