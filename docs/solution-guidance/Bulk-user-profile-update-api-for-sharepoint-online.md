@@ -112,7 +112,7 @@ The following are restrictions on individual source data files:
 
 ## User profile property import process
 
-Here’s the full process:
+Following is the full process:
 
 1. Create or synchronize users in an Office 365 tenant or to the Azure AD associated to it.
 	 - When users are synchronized to Azure AD, it also synchronizes a standardized set of attributes to the SharePoint Online user profile service.
@@ -212,7 +212,12 @@ ctx.ExecuteQuery();
 
 ### Check the status of an import job
 
-You can also check the status of the user profile service import jobs by using the CSOM APIs. There are two methods for this in the Tenant object.
+You can check the status of the user profile service import jobs by using the CSOM APIs. There are two methods for this in the Tenant object:
+
+- To check the status of an individual import job, use the **GetImportProfilePropertyJob** method.
+- To check the status of all import jobs, use the **GetImportProfilePropertyJobs** method.
+
+#### Individual import job
 
 You can check the status of an individual import job by using the [GetImportProfilePropertyJob](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjob.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. You must have the unique identifier of a specific import job provided as a parameter to this method. 
 
@@ -222,17 +227,17 @@ Following is the full signature of the method:
 public ImportProfilePropertiesJobInfo GetImportProfilePropertyJob(Guid jobId);
 ```
 
-#### Parameters
+##### Parameters
 
-**jobID**: System.Guid 
+- **jobID**: System.Guid 
 
-The ID of the job for which to get the high-level status.
+  The ID of the job for which to get the high-level status.
 
-#### Return value
+##### Return value
 
 An [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object with high level status information about the specified job.
 
-#### Example
+##### Example
 
 Following is an example that uses C# for retrieving the status of a specific import job by using a stored identifier:
 
@@ -244,7 +249,7 @@ ctx.Load(job);
 ctx.ExecuteQuery();
 ```
 
-<br/>
+#### All import jobs
 
 You can check the status of all import jobs by using the [GetImportProfilePropertyJobs](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjobs.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. 
 
@@ -254,11 +259,11 @@ Following is the full signature of the method:
 public ImportProfilePropertiesJobStatusCollection GetImportProfilePropertyJobs(); 
 ```
 
-#### Return value
+##### Return value
 
 An [ImportProfilePropertiesJobStatusCollection](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstatuscollection.aspx) object, which is a collection of [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) objects with high level status information about each of the jobs.
 
-#### Example
+##### Example
 
 Following is an example that uses C# for getting the status of all import jobs currently saved in the tenant. These could be already processed or queued jobs:
 
@@ -275,47 +280,47 @@ foreach (var item in jobs)
 }
 ```
 
-<br/>
+##### Parameters
 
 An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object returned with the import status information has the following properties. 
 
-**JobId**: System.Guid
+- **JobId**: System.Guid
 
-The ID of the import job.
+  The ID of the import job.
 
-**State**: [ImportProfilePropertiesJobState](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstate.aspx)
+- **State**: [ImportProfilePropertiesJobState](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstate.aspx)
 
-An enum with following values:
-- **Unknown** - We cannot determine the state of the job.
-- **Submitted** - The job has been submitted to the system.
-- **Processing** - The job is being processed.
-- **Queued** - The job has passed validation and is queued for import to UPA.
-- **Succeeded** - The job completed with no errors.
-- **Error** - The job completed with errors.
+  An enum with following values:
+  - **Unknown** - We cannot determine the state of the job.
+  - **Submitted** - The job has been submitted to the system.
+  - **Processing** - The job is being processed.
+  - **Queued** - The job has passed validation and is queued for import to UPA.
+  - **Succeeded** - The job completed with no errors.
+  - **Error** - The job completed with errors.
 
-**SourceUri**: System.String 
+- **SourceUri**: System.String 
 
-The URI to the data source file.
+  The URI to the data source file.
 
-**Error**: [ImportProfilePropertiesJobError](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjoberror.aspx)
+- **Error**: [ImportProfilePropertiesJobError](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjoberror.aspx)
 
-An enum representing the possible error:
+  An enum representing the possible error:
 
-- `NoError` - No error found.
-- `InternalError` - The error was caused by a failure in the service.
-- `DataFileNotExist` - The data source file could not be found.
-- `DataFileNotInTenant` - The data source file did not belong to the same tenant.
-- `DataFileTooBig` - The size of the data file was too big.
-- `InvalidDataFile` - The data source file did not pass validation (there may be additional details in the log file).
-- `ImportCompleteWithError` - The data has been imported, but there was an error encountered.
+  - `NoError` - No error found.
+  - `InternalError` - The error was caused by a failure in the service.
+  - `DataFileNotExist` - The data source file could not be found.
+  - `DataFileNotInTenant` - The data source file did not belong to the same tenant.
+  - `DataFileTooBig` - The size of the data file was too big.
+  - `InvalidDataFile` - The data source file did not pass validation (there may be additional details in the log file).
+  - `ImportCompleteWithError` - The data has been imported, but there was an error encountered.
 
-**ErrorMessage**: System.String
+- **ErrorMessage**: System.String
 
-The error message.
+  The error message.
 
-**LogFileUri**: System.String
+- **LogFileUri**: System.String
 
-The Uri to the folder where the logs have been written.
+  The Uri to the folder where the logs have been written.
 
 ## Calling the Import API from PowerShell
 <a name="sectionSection4"> </a>
