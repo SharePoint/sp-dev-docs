@@ -1,31 +1,43 @@
 ---
 title: Bulk update custom user profile properties for SharePoint Online
-description: 
+description: To replicate custom attributes to the SharePoint user profile service, use the UserProfile.BatchUpdate.API.
 ms.date: 5/7/2018
 ---
 
 # Bulk update custom user profile properties for SharePoint Online
 
-As part of the client-side object model (CSOM) version (4622.1208 or newer), SharePoint has the ability to bulk import custom user profile properties. Prior to this release, your only option was to take advantage of the user profile CSOM operations for updating specific properties for individual user profiles. However, this approach is inefficient and too time consuming (especially when dealing with thousands of profiles).
+As part of the client-side object model (CSOM) version (4622.1208 or later), SharePoint has the ability to bulk import custom user profile properties. Prior to this release, your only option was to take advantage of the user profile CSOM operations for updating specific properties for individual user profiles. However, this approach is inefficient and too time-consuming (especially when dealing with thousands of profiles).
 
-Many enterprises need to replicate custom attributes to the SharePoint user profile service and so a more performant user profile bulk API has been released.
+Many enterprises need to replicate custom attributes to the SharePoint user profile service, so a more performant user profile bulk API has been released, the [UserProfile.BatchUpdate.API](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.BatchUpdate.API).
 
-## An Overview of the Bulk User Profile Update Process
-<a name="sectionSection0"> </a>
+## Overview of the bulk user profile update process
 
 ![Bulk UPA update flow](media/bulkuserprofileupdateapi/UserProfileBulkAPIProcess.png)
 
-1. User attributes are synchronized from the corporate Active Directory to the Azure Active Directory. You can select which attributes are replicated across on-premises and Azure.
-2. A standardized set of attributes are replicated from Azure Active Directory to the SharePoint Online User Profile Store within Office 365. Unlke on-premises SharePoint, these attributes cannot be customized.
-3. A custom synchronization tool taking advantage of the new bulk update APIs. This tool uploads a JSON file to the Office 365 tenant and queues the import process. This tool can be implemented using managed code (.NET) or as a PowerShell script using the new CSOM APIs.
-4. A Line of Business (LOB) system, or any external system, which is the source of the information in the JSON file. This could also be a combination of data from Active Directory and any external system. Notice that from an API perspective, the LOB system could even be an on-premises SharePoint 2013 or 2016 farm.
-5. An out-of-the-box server side timer job running in SharePoint online which checks for queued import requests and will perform the actual import operation based on the API calls and the information within the provided JSON file.
-6. Extended user profile information is available within user profiles and can be used for any out-of-the-box or custom functionality in SharePoint online.
+The following list describes the flow of the bulk user profile update process:
+
+1. User attributes are synchronized from the corporate Active Directory to the Azure Active Directory (Azure AD). You can select which attributes are replicated across on-premises and Azure.
+
+2. A standardized set of attributes are replicated from Azure AD to the SharePoint Online User Profile Store within Office 365. Unlike on-premises SharePoint, these attributes cannot be customized.
+
+3. A custom synchronization tool takes advantage of the new bulk update APIs. This tool uploads a JSON file to the Office 365 tenant and queues the import process. This tool can be implemented by using managed code (.NET) or as a PowerShell script by using the CSOM APIs.
+
+4. A line-of-business (LOB) system, or any external system, is the source of the information in the JSON file. This could also be a combination of data from Active Directory and any external system. Notice that from an API perspective, the LOB system could even be an on-premises SharePoint farm.
+
+5. An out-of-the-box server-side timer job running in SharePoint Online that checks for queued import requests and performs the actual import operation based on the API calls and the information within the provided JSON file.
+
+6. Extended user profile information is available within user profiles and can be used for any out-of-the-box or custom functionality in SharePoint Online.
 
 > [!NOTE] 
-> The import only works for user profile properties which have **not** been set to be editable by end users. This is to prevent the user profile import process from overriding any information which an end user has already updated. Additionally, the import only allows custom properties that are not active directory core properties. These must be synchronized to Azure Active Directory. For the list of these core directory properties, see the table listed in the FAQ section below.
+> The import only works for user profile properties that have **not** been set to be editable by end users. This is to prevent the user profile import process from overriding any information that an end user has already updated. Additionally, the import only allows custom properties that are not Active Directory core properties. These must be synchronized to Azure AD. For the list of these core directory properties, see the table listed in the FAQ section later in this article.
 
-Below is a brief video that demonstrates using the new CSOM API from both managed code (.NET) and from PowerShell. You can find the sample code used, including the sample PowerShell script, in the [Office Dev PnP Code Gallery](http://dev.office.com/patterns-and-practices-detail/7202).
+Following is a brief video that demonstrates how to use the new CSOM API [UserProfile.BatchUpdate.API](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.BatchUpdate.API) from both managed code (.NET) and from PowerShell.
+
+<br/>
+
+> [!VIDEO https://www.youtube.com/embed/-X_2T0SRUBk]
+
+<br/>
 
 <iframe id="ytplayer" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/-X_2T0SRUBk?autoplay=0&origin=https://msdn.microsoft.com" frameborder="0"></iframe>
 
@@ -390,8 +402,8 @@ If your code/script defines a mapping which is not used or the data file does no
 **What if I have a need to update custom properties that are beyond the size limitations of this bulk API (i.e. >2 GB file or >500,000 properties)?**
 You would need to batch your jobs accordingly by triggering multiple jobs in sequence (i.e. finishing one job at a time with the maximum limit on this API). You should expect these high bandwidth imports will take a long time to complete. Also, you should optimize the import jobs only for delta changes in custom profile properties rather than importing a full set of values in all jobs.
 
-**Which Azure Active Directory attributes are being sync’d to SharePoint Online user profile by default?**
-See the following table for the official list of synchronized attributes and their mapping between Azure Active Directory and the SharePoint Online User Profile Service.
+**Which Azure AD attributes are being sync’d to SharePoint Online user profile by default?**
+See the following table for the official list of synchronized attributes and their mapping between Azure AD and the SharePoint Online User Profile Service.
 
 Azure Directory Attribute  | SharePoint Online Profile Property
 ---------|----------
