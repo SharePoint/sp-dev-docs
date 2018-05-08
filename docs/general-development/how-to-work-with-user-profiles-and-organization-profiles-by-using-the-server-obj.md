@@ -73,7 +73,7 @@ To create a console application that uses the server object model to work with u
   -  [Retrieve and change values for user properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangePropValues)
     
   
-7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service** page for the User Profile Service Application in Central Administration.
+7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service** page for the user profile service application in Central Administration.
     
   
 

@@ -74,16 +74,16 @@ Ensure that the App Management Service and user profile application are configur
    
 2. On the **Service Applications** page, ensure that the following services are started:
    
-   - User Profile Service Application
+   - User profile service application
    - App Management Service
     
 3. Under **Application Management**, select **Manage services on server**. 
    
 4. On the **Services on Server** page, ensure that the following services are started:
     
-   - User Profile Service 
+   - User profile service 
 
-Ensure that at least one profile is created in the **User Profile Service Application**. The steps are as follows:
+Ensure that at least one profile is created in the **User profile service application**. The steps are as follows:
     
 1. In **Central Administration**, under **Application Management**, select **Manage service applications**.
     
