@@ -1,6 +1,7 @@
 ---
 title: 'Deploying Development Office 365 Sites to Microsoft Azure #'
-ms.date: 11/03/2017
+description: 
+ms.date: 5/8/2018
 ---
 # Deploying Development Office 365 Sites to Microsoft Azure #
 
@@ -160,3 +161,6 @@ Version  | Date | Comments
 0.1  | January 2, 2015 | First draft
 
 
+## See also
+
+- [Deploying your SharePoint Add-ins](deploying-your-sharepoint-add-ins.md)

@@ -1,6 +1,7 @@
 ---
 title: Configure Office 365 API Projects for Distribution
-ms.date: 11/03/2017
+description: 
+ms.date: 5/8/2018
 ---
 
 # Configure Office 365 API Projects for Distribution
@@ -90,3 +91,6 @@ Version  | Date | Comments
 0.1  | December 31, 2014 | First draft
 
 
+## See also
+
+- [Deploying your SharePoint Add-ins](deploying-your-sharepoint-add-ins.md)

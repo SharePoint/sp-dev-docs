@@ -1,6 +1,7 @@
 ---
 title: Use Microsoft Azure WebJobs with Office 365
-ms.date: 11/03/2017
+description: 
+ms.date: 5/8/2018
 ---
 # Use Microsoft Azure WebJobs with Office 365
 
@@ -190,3 +191,6 @@ After completing all the previous steps, your Azure WebJob should be running and
 -  [Create a .NET WebJob in Azure App Service](http://azure.microsoft.com/documentation/articles/websites-dotnet-webjobs-sdk-get-started/).
     
 -  [Azure WebJobs resources](http://azure.microsoft.com/documentation/articles/websites-webjobs-resources/).
+
+
+- [Deploying your SharePoint Add-ins](deploying-your-sharepoint-add-ins.md)

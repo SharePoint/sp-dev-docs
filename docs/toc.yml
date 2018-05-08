@@ -1596,13 +1596,13 @@
     href: solution-guidance/deploying-your-sharepoint-add-ins.md
     items:
     - name: Deploy sites to Azure
-      href: solution-guidance/Move-O365Api-Project-from-Dev-To-Prod.md
+      href: solution-guidance/move-o365api-project-from-dev-to-prod.md
     - name: Use Azure WebJobs with Office 365
-      href: solution-guidance/Use-Microsoft-Azure-WebJobs-with-Office-365.md
+      href: solution-guidance/use-microsoft-azure-webjobs-with-office-365.md
     - name: Configure provider-hosted add-ins for distribution
-      href: solution-guidance/Configure-SP-Provider-Hosted-Apps-For-Distribution.md
+      href: solution-guidance/configure-sp-provider-hosted-apps-for-distribution.md
     - name: Configure Office 365 projects for distribution
-      href: solution-guidance/Configure-O365Api-Project-For-Distribution.md
+      href: solution-guidance/configure-o365api-project-for-distribution.md
   - name: PnP remote provisioning
     href: solution-guidance/pnp-remote-provisioning.md
     items:
