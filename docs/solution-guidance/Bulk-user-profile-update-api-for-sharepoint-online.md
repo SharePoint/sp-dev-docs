@@ -322,15 +322,15 @@ An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/en-us/library/off
 
   The Uri to the folder where the logs have been written.
 
-## Calling the Import API from PowerShell
-<a name="sectionSection4"> </a>
+## Calling the import API from PowerShell
 
-You can take advantage of the user profile service bulk import API with PowerShell. This means that you’ll use the CSOM code directly in a PowerShell script using the necessary parameters. This requires that the updated CSOM redistributable package has been installed on the computer where the script is executed.
+You can take advantage of the user profile service bulk import API by using PowerShell. This means that you use the CSOM code directly in a PowerShell script by using the necessary parameters. This requires that the updated CSOM redistributable package has been installed on the computer where the script is executed.
 
 By using PowerShell, you do not need to compile your code within Visual Studio, which may be a more suitable model for some customers.
 
 ### Sample PowerShell script
-Following is a sample PowerShell script which performs the same operations as the previous code: 
+
+Following is a sample PowerShell script that performs the same operations as the previous code: 
 
 ```powershell
 # Get needed information from the end user
@@ -353,7 +353,7 @@ $userIdType=[Microsoft.Online.SharePoint.TenantManagement.ImportProfilePropertie
 # Name of user identifier property in the JSON
 $userLookupKey="idName"
 
-# Create property mapping between the source file property name and the O365 property name
+# Create property mapping between the source file property name and the Office 365 property name
 # Notice that we have here 2 custom properties in UPA called 'City' and 'OfficeCode'
 $propertyMap = New-Object -type 'System.Collections.Generic.Dictionary[String,String]'
 $propertyMap.Add("City", "City")
@@ -369,69 +369,77 @@ $context.ExecuteQuery();
 Write-Host "Import job created with the following identifier:" $workItemId.Value 
 ```
 
-## Handling Exceptions
-<a name="sectionSection5"> </a>
-There are two levels of validation when this API is used. When you queue the import process with CSOM there will be an initial level of validation of the provided values. This includes confirmation that the provided mapping properties exist in the user profile service and that these properties are not editable by the end user. When the queue API is called, only an initial level of validation is applied and final validation of the provided information is performed when the import job is actually executed.
+## Handling exceptions
 
-If there are any exceptions during the actual import job execution, a logging file with additional details is generated in the same document library where the import file was located. Log files for specific import jobs are saved to sub folders named using the unique identifier of the specific import job.
+There are two levels of validation when this API is used. When you queue the import process with CSOM, there is an initial level of validation of the provided values. This includes confirmation that the provided mapping properties exist in the user profile service and that these properties are not editable by the end user. When the queue API is called, only an initial level of validation is applied, and final validation of the provided information is performed when the import job is actually executed.
 
-Following is an example of the results of running an import job. In the following image, you can see two sub folders for two different executions created in the document library where the import file is stored:
+If there are any exceptions during the actual import job execution, a logging file with additional details is generated in the same document library where the import file was located. Log files for specific import jobs are saved to sub folders named by using the unique identifier of the specific import job.
 
-![Job Exception Sub Folders](media/bulkuserprofileupdateapi/UserProfileBulkAPIProcess-folders.png)
+Following is an example of the results of running an import job. In the following image, you can see two sub folders for two different executions created in the document library where the import file is stored.
 
-The actual log file is saved in the sub folder and you can download that from Office 365 for detailed analysis:
+![Job exception sub folders](media/bulkuserprofileupdateapi/UserProfileBulkAPIProcess-folders.png)
 
-![Job Exception Log File](media/bulkuserprofileupdateapi/UserProfileBulkAPIProcess-LogFile.png)
+<br/>
 
-### Common Exceptions
+The actual log file is saved in the sub folder, and you can download that from Office 365 for detailed analysis.
 
-Following table contains typical exceptions which you could encounter when you start using the user profile service bulk API.
+![Job exception log file](media/bulkuserprofileupdateapi/UserProfileBulkAPIProcess-LogFile.png)
 
-Example Exception | Details
+### Common exceptions
+
+The following table contains typical exceptions that you could encounter when you start using the user profile service bulk API.
+
+Example exception | Details
 --- | ---
-_Property Names [AboutMe] are editable by user._ | This would be thrown by the CSOM API when you call the **ExecuteQuery** method when submitting the job to your tenant. The API will validate that all properties currently being mapped are NOT user editable. The exception will point out the property which cannot be used. In this example, we have tried to map a JSON property to the **AboutMe** property in the user profile service properties, but this is not allowed since **AboutMe** is a user editable property.
-_InvalidProperty - vesaj@contoso.com Property 'AboutMe' is not mapped to any property in the user profile application._ | The JSON data file contained a property which has not been mapped to the user profile service property in SharePoint Online. This means that the source data file contains properties for which you have not provided a mapping in the **propertyMap** parameter. You will need to have a mapping definition for each of the properties in the JSON data object.
+_Property Names [AboutMe] are editable by user._ | This would be thrown by the CSOM API when you call the **ExecuteQuery** method when submitting the job to your tenant. The API validates that all properties currently being mapped are NOT user editable. The exception points out the property that cannot be used.<br/><br/>In this example, we have tried to map a JSON property to the **AboutMe** property in the user profile service properties, but this is not allowed because **AboutMe** is a user editable property.
+_InvalidProperty - vesaj@contoso.com Property 'AboutMe' is not mapped to any property in the user profile application._ | The JSON data file contained a property that has not been mapped to the user profile service property in SharePoint Online. This means that the source data file contains properties for which you have not provided a mapping in the **propertyMap** parameter. You must have a mapping definition for each of the properties in the JSON data object.
 _MissingIdentity - The identity is missing for the user object_ | The identity property could not be found in the user object. The most likely cause is that the **sourceDataIdProperty** attribute is wrongly set for the **QueueImportProfileProperties** method. Ensure that you have the right property in the JSON source file and that your code/script is assigning this attribute accordingly.
 _IdentityNotResolvable unknown@contoso.com User identity cannot be resolved_ | The data file contained an identity, which could not be resolved or was not present in the user profile service. In this case, the user profile with email of _unknown@contoso.com_ could not be located in the user profile service.
 _DataFileNotJson - JsonToken EndObject is not valid for closing JsonType Array. Path 'value', line 8, position 10._ | Your import file format is not valid JSON and does not match the expected format. 
 
-## Frequently Asked Questions
-<a name="sectionSection6"> </a>
+## Frequently asked questions
 
-**Can I execute the code using app-only/add-in only permissions?**
+### Can I execute the code using app-only/add-in only permissions?
 
-Yes, you’ll need to register the client id and secret to be able to execute the APIs. Since the actual import of the file does not occur synchronously with the identity of the caller, this works without any issues.
+Yes, you need to register the client ID and secret to be able to execute the APIs. Because the actual import of the file does not occur synchronously with the identity of the caller, this works without any issues.
 
-**This API is updating properties in the user profile service, but how would I create those properties in the tenant?**
+### This API is updating properties in the user profile service, but how would I create those properties in the tenant?
 
 There’s no remote API to create custom user profile properties programmatically, so this is manual operation which needs to be completed once per given tenant. You can refer to [this article](https://support.office.com/en-us/article/Add-and-edit-user-profile-properties-85091402-737F-4BB9-99A7-BC5F194502A8) for instructions on how to create these custom properties.
 
-**Is this capability available in on-premises SharePoint?**
+### Is this capability available in on-premises SharePoint?
 
-Unfortunately, this capability is currently only for SharePoint Online. In on-premises SharePoint this capability would be useful but not as critical since you can modify the attribute mapping in the on-premises user profile service Application. You can also take advantage of importing user profile attributes using the Business Connectivity Service (BCS) in SharePoint 2013. However, this option is not available in SharePoint 2016, which means that for SharePoint 2016 the only option currently is to implement customizations which take advantage of the user profile web services.
+Unfortunately, this capability is currently only for SharePoint Online. In on-premises SharePoint, this capability would be useful but not as critical because you can modify the attribute mapping in the on-premises user profile service application. You can also take advantage of importing user profile attributes by using the Business connectivity service (BCS) in SharePoint 2013. However, this option is not available in SharePoint 2016, which means that for SharePoint 2016 the only option currently is to implement customizations that take advantage of the user profile web services.
 
-**Could I use this API for synchronizing user profile property values from my on-premises SharePoint 2013 or 2016 farm(s) to SharePoint Online?**
-Yes, on-premises SharePoint can be used just like any other source system. You'll need to export the user profile values from your on-premises SharePoint to the JSON file format and then the process would be exactly the same as importing values from any other system.
+### Could I use this API for synchronizing user profile property values from my on-premises SharePoint farms to SharePoint Online?
 
-**Can I import string based, multi-value properties?**
+Yes, on-premises SharePoint can be used just like any other source system. You must export the user profile values from your on-premises SharePoint to the JSON file format, and then the process would be exactly the same as importing values from any other system.
+
+### Can I import string based, multi-value properties?
+
 No, this is not currently supported with this API.
 
-**What permissions are required for executing this API??**
-You will need to have Global Admin permissions currently. SharePoint Admin is not sufficient.
+### What permissions are required for executing this API??
 
-**Can I import taxonomy based properties?**
+You must have Global Admin permissions currently. SharePoint Admin is not sufficient.
+
+### Can I import taxonomy based properties?
+
 No, this is not currently supported with this API.
 
-**What if I define a mapping in the code which is not used or have properties in the JSON file which are not mapped?**
-If your code/script defines a mapping which is not used or the data file does not contain properties for that mapping, execution will continue without any exceptions and the import will be applied based on the mapped properties. If you, however, have a property in the JSON file which is not mapped, the import process will be aborted and exception details will be provided in the log file for the specific job execution.
+### What if I define a mapping in the code that is not used or have properties in the JSON file that are not mapped?
 
-**What if I have a need to update custom properties that are beyond the size limitations of this bulk API (i.e. >2 GB file or >500,000 properties)?**
-You would need to batch your jobs accordingly by triggering multiple jobs in sequence (i.e. finishing one job at a time with the maximum limit on this API). You should expect these high bandwidth imports will take a long time to complete. Also, you should optimize the import jobs only for delta changes in custom profile properties rather than importing a full set of values in all jobs.
+If your code/script defines a mapping that is not used or the data file does not contain properties for that mapping, execution continues without any exceptions and the import is applied based on the mapped properties. However, if you have a property in the JSON file that is not mapped, the import process is aborted and exception details are provided in the log file for the specific job execution.
 
-**Which Azure AD attributes are being sync’d to SharePoint Online user profile by default?**
+### What if I need to update custom properties that are beyond the size limitations of this bulk API (that is, greater than a 2-GB file or 500,000 properties)?
+
+You must batch your jobs accordingly by triggering multiple jobs in sequence (that is, finishing one job at a time with the maximum limit on this API). You should expect that these high bandwidth imports will take a long time to complete. Also, you should optimize the import jobs only for delta changes in custom profile properties rather than importing a full set of values in all jobs.
+
+### Which Azure AD attributes are being synchronized to SharePoint Online user profiles by default?
+
 See the following table for the official list of synchronized attributes and their mapping between Azure AD and the SharePoint Online user profile service.
 
-Azure Directory Attribute  | SharePoint Online Profile Property
+Azure Directory attribute  | SharePoint Online profile property
 ---------|----------
 ObjectSid | SPS-SavedSID
 msonline-UserPrincipalName | UserName
