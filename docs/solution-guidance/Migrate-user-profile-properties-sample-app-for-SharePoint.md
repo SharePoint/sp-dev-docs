@@ -89,7 +89,7 @@ This code sample extracts user profiles from SharePoint Server 2010. If you are 
 
 This code sample runs as a console application. When the code sample runs, the **Main** function in Program.cs performs the following tasks:
 
-- Connects to the My Site Host and uses **UserProfileManager** to connect to the user profile service. **UserProfileManager** belongs to the **Microsoft.Office.Server.UserProfiles.dll** assembly.
+- Connects to the My Site host and uses **UserProfileManager** to connect to the user profile service. **UserProfileManager** belongs to the **Microsoft.Office.Server.UserProfiles.dll** assembly.
 - Creates a list called **pData** to store extracted user profile data.
 - For all users in the user profile service, it does the following:
 	- Uses **GetSingleValuedProperty** to copy the **WorkEmail** and **AboutMe** user profile properties to a **UserProfileData** object called **userData**.
@@ -109,10 +109,10 @@ static void Main(string[] args)
                     LogMessage(string.Format("******** RUNNING IN TEST RUN MODE **********"), LogLevel.Debug);
                 }
                 
-                LogMessage(string.Format("Connecting to My Site Host: '{0}'...", ConfigurationManager.AppSettings["MYSITEHOSTURL"]), LogLevel.Info);
+                LogMessage(string.Format("Connecting to My Site host: '{0}'...", ConfigurationManager.AppSettings["MYSITEHOSTURL"]), LogLevel.Info);
                 using (SPSite mySite = new SPSite(ConfigurationManager.AppSettings["MYSITEHOSTURL"]))
                 {
-                    LogMessage(string.Format("Connecting to My Site Host: '{0}'...Done!", ConfigurationManager.AppSettings["MYSITEHOSTURL"]), LogLevel.Info);
+                    LogMessage(string.Format("Connecting to My Site host: '{0}'...Done!", ConfigurationManager.AppSettings["MYSITEHOSTURL"]), LogLevel.Info);
 
                     LogMessage(string.Format("getting Service Context..."), LogLevel.Info);
                     SPServiceContext svcContext = SPServiceContext.GetContext(mySite);
@@ -168,7 +168,7 @@ static void Main(string[] args)
 
 <br/>
 
-Note that the **GetSingleValuedProperty** method uses userprofileservice.asmx to retrieve a single-valued user profile property. **GetSingleValuedProperty** does the following, as shown in the next code example:
+The **GetSingleValuedProperty** method uses userprofileservice.asmx to retrieve a single-valued user profile property. **GetSingleValuedProperty** does the following, as shown in the next code example:
 
 - Gets the property object to extract data from using **spuser[userProperty]**.
 - Returns the first value in the **UserProfileValueCollection** if the value is not **null**. 
@@ -203,7 +203,7 @@ private static string GetSingleValuedProperty(UserProfile spUser,string userProp
 
 <br/>
 
-Note that the **GetMultiValuedProperty** method uses userprofileservice.asmx to retrieve a multivalued user profile property. **GetMultiValuedProperty** does the following, as shown in the next code example:
+The **GetMultiValuedProperty** method uses userprofileservice.asmx to retrieve a multivalued user profile property. **GetMultiValuedProperty** does the following, as shown in the next code example:
 
 - Gets the user profile property object to update using **spuser[userProperty]**. 
 - Builds a string of user profile property values separated by the **PROPERTYSEPARATOR** specified in the App.config file.
