@@ -33,11 +33,14 @@ Because this code sample uses the server-side object model, be sure that you are
 - Use an account that has SharePoint farm administrator permissions.   
 - Edit the App.config file using the configuration information listed in Table 1.
 - For all users, ensure that the **Work email** user profile property is not empty. If the value of the **Work email** user profile property is empty, the extraction process will end prematurely.
-- This code sample extracts user profiles from SharePoint Server 2010. If you are extracting user profiles from SharePoint Server 2013, do the following:
-    
-  a. Open the shortcut menu (right-click) for **Contoso.ProfileProperty.Migration.Extract** > **Properties**.
-  b. Under **Application**, in **Target framework**, choose **.NET Framework 4**.
-  c. Choose **Yes**, and then choose **Save**.
+
+This code sample extracts user profiles from SharePoint Server 2010. If you are extracting user profiles from SharePoint Server 2013, do the following:
+
+1. Open the shortcut menu (right-click) for **Contoso.ProfileProperty.Migration.Extract** > **Properties**.
+
+2. Under **Application**, in **Target framework**, choose **.NET Framework 4**.
+
+3. Choose **Yes**, and then choose **Save**.
     
 **Table 1. Configuration settings for App.config file**
 
@@ -52,9 +55,11 @@ Because this code sample uses the server-side object model, be sure that you are
 
 ### Contoso.ProfileProperty.Migration.Import project
 
-- Ensure that user profiles exist in Office 365.    
-- Ensure that the user's **Work email** address is the same in the SharePoint Server on-premises and Office 365 user profile service.  
-- In the App.config file, change the **value** element of the **Contoso_ProfileProperty_Migration_Import_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center, as shown in the following example.
+- Ensure that user profiles exist in Office 365.
+
+- Ensure that the user's **Work email** address is the same in the SharePoint Server on-premises and Office 365 user profile service.
+
+- In the App.config file, change the **value** element of the **Contoso_ProfileProperty_Migration_Import_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center, as shown in the following example. 
 
 	```XML
 	<applicationSettings>

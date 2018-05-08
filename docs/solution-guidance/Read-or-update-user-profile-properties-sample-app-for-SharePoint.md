@@ -173,7 +173,7 @@ Choosing **Run scenario 3** calls **btnScenario3_Click** in CodeSample3.aspx.cs 
 
 - Use **PeopleManager** to get the user profile properties of the current user.  
 - Read the list of skills shown in the list box.
-- Save the new skills to the **SPS-Skills** user profile property by using **SetMultiValuedProfileProperty**. **SetMultiValuedProfileProperty** accepts three parameters:
+- Save the new skills to the **SPS-Skills** user profile property by using **SetMultiValuedProfileProperty**, which accepts three parameters:
 	- The account name of the user whose user profile is being updated.
 	- The user profile property name, which is **SPS-Skills**.
 	- The property values as a **List** of string objects.
