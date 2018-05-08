@@ -39,9 +39,7 @@ Following is a brief video that demonstrates how to use the CSOM API [UserProfil
 
 > [!VIDEO https://www.youtube.com/embed/-X_2T0SRUBk]
 
-
-
-## User profile property import process
+### User profile property import process
 
 Following is the full process:
 
