@@ -1,7 +1,7 @@
 ---
 title: Bulk update custom user profile properties for SharePoint Online
 description: To replicate custom attributes to the SharePoint user profile service, use the UserProfile.BatchUpdate.API.
-ms.date: 5/7/2018
+ms.date: 5/8/2018
 ---
 
 # Bulk update custom user profile properties for SharePoint Online
@@ -20,26 +20,23 @@ The following list describes the flow of the bulk user profile update process:
 
 2. A standardized set of attributes are replicated from Azure AD to the SharePoint Online User Profile Store within Office 365. Unlike on-premises SharePoint, these attributes cannot be customized.
 
-3. A custom synchronization tool takes advantage of the new bulk update APIs. This tool uploads a JSON file to the Office 365 tenant and queues the import process. This tool can be implemented by using managed code (.NET) or as a PowerShell script by using the CSOM APIs.
+3. A custom synchronization tool takes advantage of the bulk update APIs. This tool uploads a JSON file to the Office 365 tenant and queues the import process. This tool can be implemented by using managed code (.NET) or as a PowerShell script by using the CSOM APIs.
 
 4. A line-of-business (LOB) system, or any external system, is the source of the information in the JSON file. This could also be a combination of data from Active Directory and any external system. Notice that from an API perspective, the LOB system could even be an on-premises SharePoint farm.
 
-5. An out-of-the-box server-side timer job running in SharePoint Online that checks for queued import requests and performs the actual import operation based on the API calls and the information within the provided JSON file.
+5. An out-of-the-box server-side timer job running in SharePoint Online checks for queued import requests and performs the actual import operation based on the API calls and the information within the provided JSON file.
 
 6. Extended user profile information is available within user profiles and can be used for any out-of-the-box or custom functionality in SharePoint Online.
 
 > [!NOTE] 
 > The import only works for user profile properties that have **not** been set to be editable by end users. This is to prevent the user profile import process from overriding any information that an end user has already updated. Additionally, the import only allows custom properties that are not Active Directory core properties. These must be synchronized to Azure AD. For the list of these core directory properties, see the table listed in the FAQ section later in this article.
 
-Following is a brief video that demonstrates how to use the new CSOM API [UserProfile.BatchUpdate.API](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.BatchUpdate.API) from both managed code (.NET) and from PowerShell.
+Following is a brief video that demonstrates how to use the CSOM API [UserProfile.BatchUpdate.API](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.BatchUpdate.API) from both managed code (.NET) and from PowerShell.
 
 <br/>
 
 > [!VIDEO https://www.youtube.com/embed/-X_2T0SRUBk]
 
-<br/>
-
-<iframe id="ytplayer" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/-X_2T0SRUBk?autoplay=0&origin=https://msdn.microsoft.com" frameborder="0"></iframe>
 
 ## Import File Format
 <a name="sectionSection1"> </a>
@@ -204,7 +201,7 @@ ctx.ExecuteQuery();
 ```
 
 ### Check the Status of an Import Job
-You can also check the status of the User Profile Service import jobs by using the new CSOM APIs. There are two new methods for this in the Tenant object.
+You can also check the status of the User Profile Service import jobs by using the CSOM APIs. There are two methods for this in the Tenant object.
 
 You can check status of an individual import job by using the [`GetImportProfilePropertyJob`](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjob.aspx) method located in the [`Office365Tenant`](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. You will need to have the unique identifier of a specific import job provided as a parameter to this method. Here’s the full signature of the method:
 
