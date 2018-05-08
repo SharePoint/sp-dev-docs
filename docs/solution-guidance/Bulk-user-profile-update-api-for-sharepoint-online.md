@@ -1,14 +1,12 @@
 ---
-title: Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online
+title: Bulk update custom user profile properties for SharePoint Online
 description: 
 ms.date: 5/7/2018
 ---
-# Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online
 
+# Bulk update custom user profile properties for SharePoint Online
 
-_**Applies to:** SharePoint Online_
-
-As part of the new Client Side Object Model (CSOM) version (4622.1208 or newer), SharePoint has the ability to bulk import custom user profile properties. Prior to this release, your only option was to take advantage of the user profile CSOM operations for updating specific properties for individual user profiles. However, this approach is inefficient and too time consuming (especially when dealing with thousands of profiles).
+As part of the client-side object model (CSOM) version (4622.1208 or newer), SharePoint has the ability to bulk import custom user profile properties. Prior to this release, your only option was to take advantage of the user profile CSOM operations for updating specific properties for individual user profiles. However, this approach is inefficient and too time consuming (especially when dealing with thousands of profiles).
 
 Many enterprises need to replicate custom attributes to the SharePoint user profile service and so a more performant user profile bulk API has been released.
 

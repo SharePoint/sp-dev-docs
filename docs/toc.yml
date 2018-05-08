@@ -545,7 +545,7 @@
           href: general-development/create-a-sharepoint-workflow-app-using-visual-studio-2012.md
         - name: Create workflows
           href: general-development/how-to-create-sharepoint-workflows-using-visual-studio.md
-        - name: SharePoint Workflow Services Client Side Object Model
+        - name: SharePoint Workflow Services CSOM
           href: general-development/working-with-the-sharepoint-workflow-services-client-side-object-model.md
         - name: Web Services in workflows
           href: general-development/working-with-web-services-in-sharepoint-workflows-using-visual-studio-2012.md
@@ -1583,15 +1583,15 @@
     href: solution-guidance/user-profile-solutions-for-sharepoint.md
     items:
     - name: Read or update user profile properties
-      href: solution-guidance/Read-or-update-user-profile-properties-sample-app-for-SharePoint.md
-    - name: Bulk User Profile update API
+      href: solution-guidance/read-or-update-user-profile-properties-sample-app-for-sharepoint.md
+    - name: Bulk update custom user profile properties
       href: solution-guidance/bulk-user-profile-update-api-for-sharepoint-online.md
     - name: Migrate user profile properties
-      href: solution-guidance/Migrate-user-profile-properties-sample-app-for-SharePoint.md
+      href: solution-guidance/migrate-user-profile-properties-sample-app-for-sharepoint.md
     - name: Personalize search results
-      href: solution-guidance/Personalize-search-results-sample-app-for-SharePoint.md
+      href: solution-guidance/personalize-search-results-sample-app-for-sharepoint.md
     - name: Upload user profile pictures
-      href: solution-guidance/Upload-user-profile-pictures-sample-app-for-SharePoint.md
+      href: solution-guidance/upload-user-profile-pictures-sample-app-for-sharepoint.md
   - name: Deploying your SharePoint Add-ins
     href: solution-guidance/deploying-your-sharepoint-add-ins.md
     items:
