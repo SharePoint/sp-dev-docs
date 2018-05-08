@@ -65,7 +65,7 @@ Edit the configuration.xml file by entering the following values:
     
     - **createSMLThumbs** - Set to **true** if you want to create three different sized images (small, medium, and large) of the source image, or set to **false** if you want to upload three images of the same size.
     
-- Additional properties to set on the user's profile by using the **additionalProfilePropties** element. For example, the following XML specifies an additional user profile property called **SPS-PictureExchangeSyncState** that should be set to zero on the user's profile when the code sample runs.
+- Additional properties to set on the user's profile by using the **additionalProfileProperties** element. For example, the following XML specifies an additional user profile property called **SPS-PictureExchangeSyncState** that should be set to zero on the user's profile when the code sample runs.
 
 	```xml
 	<additionalProfileProperties>

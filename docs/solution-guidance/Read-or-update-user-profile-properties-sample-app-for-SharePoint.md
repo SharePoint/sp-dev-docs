@@ -169,7 +169,7 @@ To add new skills to the **SPS-Skills** user profile property from this add-in:
     
 5. Verify that the **SPS-Skills** user profile property for the user now shows the new list of skills.
     
-Choosing **Run scenario 3** calls **btnScenario3_Click** in CodeSample3.aspx.cs to do the following:
+Choosing **Run scenario 3** calls the **btnScenario3_Click** method in CodeSample3.aspx.cs to do the following:
 
 - Use **PeopleManager** to get the user profile properties of the current user.  
 - Read the list of skills shown in the list box.

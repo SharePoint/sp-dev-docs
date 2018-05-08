@@ -6,7 +6,7 @@ ms.date: 5/7/2018
 
 # Personalize search results sample SharePoint Add-in
   
-The Search.PersonalizedResults sample shows you how to personalize SharePoint by filtering information based on the value of a user profile property. Some examples of pesonalization include:
+The Search.PersonalizedResults sample shows you how to personalize SharePoint by filtering information based on the value of a user profile property. Some examples of personalization include:
 
 - News articles or other content filtered by country or location.
 - Navigation links filtered based on the user's role or organization.  
@@ -26,19 +26,14 @@ To get started, download the [Search.PersonalizedResults](https://github.com/Sha
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ## Using the Search.PersonalizedResults sample add-in
-<a name="sectionSection1"> </a>
 
-When you run this code sample, a provider-hosted application appears, as shown in Figure 1. 
+When you run this code sample, a provider-hosted application appears. 
 
-**Figure 1. Start page of the Search.PersonalizedResults app**
+![Screenshot that shows the start page of the Search.PersonalizedResults add-in](media/d5df9bb4-fa11-4bd6-91fd-c4d339687a8a.png)
 
-![Screenshot that shows the start page of the Search.PersonalizedResults app](media/d5df9bb4-fa11-4bd6-91fd-c4d339687a8a.png)
+This article describes the **Perform personalized search of all site templates using profile data** scenario. Choosing **Perform Personalized Search** returns filtered search results that contain team sites only, as shown in the following figure. Notice that the **Template** column contains sites of type **STS** only.
 
-This article describes the **Perform personalized search of all site templates using profile data** scenario. Choosing **Perform Personalized Search** returns filtered search results that contain team sites only, as shown in Figure 2. Notice that the **Template** column contains sites of type **STS** only.
-
-**Figure 2. Search results showing team sites only**
-
-![Screenshot of the earch results showing team sites only](media/dde71d9f-a296-4bee-b48b-964f81193404.png)
+![Screenshot of the search results showing team sites only](media/dde71d9f-a296-4bee-b48b-964f81193404.png)
 
 For handling personalization scenarios, you can change the search query by:
 
@@ -46,38 +41,36 @@ For handling personalization scenarios, you can change the search query by:
     
 - Taking a specific course of action based on the value of the user profile property. For example, if the value of the **About Me** user profile property is **AppTest**, this code sample removes the team site filter and returns search results that contain all sites.
 
-### To enter AppTest in the About Me user profile property
+### Enter AppTest in the About Me user profile property
 
-1. At the top of your Office 365 site, choose your profile picture, then choose **About Me**, as shown in Figure 3.
+1. At the top of your Office 365 site, choose your profile picture, and then choose **About Me**.
     
+   ![Screenshot of the user profile page with About me highlighted.](media/a7eccfcd-68f7-44b9-8f32-14a0d2f60398.png)
+
 2. On the **About me** page, choose **edit your profile**.
     
 3. In **About me**, enter **AppTest**.
     
 4. Choose **Save all and close**.
 
-**Figure 3. Navigating to a user's profile page by choosing About me**
+### Perform personalized search
 
-![Screenshot of the user profile page with About me highlighted.](media/a7eccfcd-68f7-44b9-8f32-14a0d2f60398.png)
+Return to the **Search.PersonalizedResults** provider-hosted add-in and choose **Perform Personalized Search** again. The add-in changes the filter on the search query to show all sites instead of team sites only, as shown in the following figure. The **Template** column now contains several different site template types.
 
-Return to the **Search.PersonalizedResults** provider-hosted add-in and choose **Perform Personalized Search** again. The add-in changes the filter on the search query to show all sites instead of team sites only, as shown in Figure 4. The **Template** column now contains several different site template types.
+<img alt="Screenshot of search results showing all sites" src="media/3af49550-cd2d-4e7e-af1d-5227a5603730.png" width="600">
 
-**Figure 4. Search results showing all sites**
-
-![Screenshot of search results showing all sites](media/3af49550-cd2d-4e7e-af1d-5227a5603730.png)
-
-Choosing **Perform Personalized Search** calls the **btnPersonalizedSearch_Click** method in default.aspx.cs. **btnPersonalizedSearch_Click** performs the following actions:
+In default.aspx.cs, choosing **Perform Personalized Search** calls the **btnPersonalizedSearch\_Click** method, which performs the following actions:
 
 - Uses **PeopleManager** to get all user profile properties for the user running this add-in.
     
-- Retrieves and checks the value of the **AboutMe** user profile property. If the value of the **AboutMe** property is **AppTest**, the search query retrieves all sites using the query string  `contentclass:"STS_Site"`. If the value of the **AboutMe** property is not **AppTest**, the team site filter is appended to the query string ( `WebTemplate=STS`), and the search query retrieves team sites only.
+- Retrieves and checks the value of the **AboutMe** user profile property. If the value of the **AboutMe** property is **AppTest**, the search query retrieves all sites by using the query string  `contentclass:"STS_Site"`. If the value of the **AboutMe** property is not **AppTest**, the team site filter is appended to the query string (`WebTemplate=STS`), and the search query retrieves team sites only.
     
 - Calls the **ProcessQuery** method to retrieve the search results based on the supplied query string. **ProcessQuery** also demonstrates how to specify a list of properties to return with the search results.
     
 - Calls the **FormatResults** method to format the search results into an HTML table.
 
 
-```
+```csharp
 protected void btnPersonalizedSearch_Click(object sender, EventArgs e)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -119,7 +112,6 @@ private ClientResult<ResultTableCollection> ProcessQuery(ClientContext ctx, stri
 
 ## See also
  
-- [Search.PersonalizedResults app](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults) 
 - [UserProfile.Manipulation.CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)  
 - [UserProfile.Manipulation.CSOM.Console](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM.Console)
 - [Core.ProfileProperty.Migration](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ProfileProperty.Migration)
