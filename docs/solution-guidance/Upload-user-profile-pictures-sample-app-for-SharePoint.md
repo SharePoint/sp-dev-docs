@@ -28,47 +28,44 @@ To get started, download the [Core.ProfilePictureUploader](https://github.com/Sh
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-Before you run this code sample:
+### Before you run this code sample
 
-- Store your user images that you intend to upload to SharePoint Online on a file share or web server. 
-    
+- Store your user images that you intend to upload to SharePoint Online on a file share or web server.  
 - Edit the userlist.csv file to include the following:
-    
-	- A header row containing the value **UserPrincipalName**, **SourceURL**.
-    
+    - A header row containing the value **UserPrincipalName**, **SourceURL**.
 	- For each user, add a new row containing the user's organizational account (or user principal name) and the file path or URL of the image to upload. 
     
-- To run this sample from Visual Studio, configure the **Core.ProfilePictureUploader** project with the following command-line arguments: `-SPOAdmin Username -SPOAdminPassword Password -Configuration filepath`
+### To run this sample from Visual Studio
+
+Configure the **Core.ProfilePictureUploader** project with the following command-line arguments: `-SPOAdmin Username -SPOAdminPassword Password -Configuration filepath` where:
     
-  Where:
+- **Username** is your Office 365 administrator's username.
+- **Password** is your Office 365 administrator's password.
+- **Filepath** is the file path of the configuration.xml file.
     
-	- *Username* is your Office 365 administrator's username.
+### To set the command-line arguments on the Core.ProfilePictureUploader project
     
-	- *Password* is your Office 365 administrator's password.
+1. In Solution Explorer, open the shortcut menu (right-click) for the **Core.ProfilePictureUploader** project > **Properties**.
     
-	- *Filepath* is the file path of the configuration.xml file.
+2. Choose **Debug**.
     
-- To set the command-line arguments on the Core.ProfilePictureUploader project:
+3. In **Command line arguments**, enter the command-line arguments listed earlier.
     
-	- In Solution Explorer, open the shortcut menu (right click) for the **Core.ProfilePictureUploader** project > **Properties**.
+### To configure the upload process to meet your requirements
+
+Edit the configuration.xml file by entering the following values:
     
-	- Choose **Debug**.
+- The name of your Office 365 tenant in the **tenantName** element. For example: `<tenantName>contoso.onmicrosoft.com</tenantName>`
     
-	- In **Command line arguments**, enter the command-line arguments listed earlier.
+- The user mapping file path in the **pictureSourceCsv** element. For example: `<pictureSourceCsv>C:\temp\userlist.csv</pictureSourceCsv>`
     
-- To configure the upload process to meet your requirements, edit the configuration.xml file by entering the following values:
+- Image upload instructions using the **thumbs** element. Edit the following attributes in the thumbs element:
     
-	- The name of your Office 365 tenant in the **tenantName** element. For example: `<tenantName>contoso.onmicrosoft.com</tenantName>`
+    - **aupload3Thumbs** - Set to **true** if you want to upload three images for each user, or set to **false** if you only want to upload one image.
     
-	- The user mapping file path in the **pictureSourceCsv** element. For example: `<pictureSourceCsv>C:\temp\userlist.csv</pictureSourceCsv>`
+    - **createSMLThumbs** - Set to **true** if you want to create three different sized images (small, medium, and large) of the source image, or set to **false** if you want to upload three images of the same size.
     
-	- Image upload instructions using the **thumbs** element. Edit the following attributes in the thumbs element:
-    
-		- **aupload3Thumbs** - Set to **true** if you want to upload three images for each user, or set to **false** if you only want to upload one image.
-    
-		- **createSMLThumbs** - Set to **true** if you want to create three different sized images (small, medium, and large) of the source image, or set to **false** if you want to upload three images of the same size.
-    
-	- Additional properties to set on the user's profile using the **additionalProfilePropties** element. For example, the following XML specifies an additional user profile property called **SPS-PictureExchangeSyncState** that should be set to zero on the user's profile when the code sample runs.
+- Additional properties to set on the user's profile using the **additionalProfilePropties** element. For example, the following XML specifies an additional user profile property called **SPS-PictureExchangeSyncState** that should be set to zero on the user's profile when the code sample runs.
 
 	```
 	<additionalProfileProperties>
@@ -76,11 +73,11 @@ Before you run this code sample:
 	</additionalProfileProperties>
 	```
 
-  - The log file path in the **logfile** element, as shown in the following example. `<logFile path="C:\temp\log.txt" enableLogging="true" loggingLevel="verbose" />`
+- The log file path in the **logfile** element, as shown in the following example. `<logFile path="C:\temp\log.txt" enableLogging="true" loggingLevel="verbose" />`
     
-  - The upload delay in milliseconds between the upload of different image files using the **uploadDelay** element. The recommended setting for **uploadDelay** is 500 milliseconds.
+- The upload delay in milliseconds between the upload of different image files using the **uploadDelay** element. The recommended setting for **uploadDelay** is 500 milliseconds.
     
-- In the App.config file, change the **value** element of the **ProfilePictureUploader_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center. as shown in the following example.
+In the App.config file, change the **value** element of the **ProfilePictureUploader_UPSvc_UserProfileService** setting to include a reference to the user profile service in your SharePoint Online admin center. as shown in the following example.
 
 ```XML  
 <Contoso.Core.ProfilePictureUploader.Properties.Settings>
@@ -91,10 +88,10 @@ Before you run this code sample:
  </Contoso.Core.ProfilePictureUploader.Properties.Settings>
 ```
 
-**Important**  Connecting to the userprofileservice.asmx web service on the SharePoint Online admin center allows you to update the user profile properties of other users. When you run this code sample, use an Office 365 administrator account that has permissions to manage user profiles. 
+> [!IMPORTANT] 
+> Connecting to the userprofileservice.asmx web service on the SharePoint Online admin center allows you to update the user profile properties of other users. When you run this code sample, use an Office 365 administrator account that has permissions to manage user profiles. 
 
 ## Using the Core.ProfilePictureUploader sample add-in
-<a name="sectionSection1"> </a>
 
 This code sample runs as a console application. When the code sample runs, the **Main** method in Program.cs does the following:
 
@@ -111,9 +108,6 @@ This code sample runs as a console application. When the code sample runs, the *
 - Calls **SetMultipleProfileProperties** to set the **PictureURL** and **SPS-PicturePlaceholderState** user profile properties for the user.
     
 - Calls **SetAdditionalProfileProperties** to set additional properties on the user profile after the image file is uploaded.
-
-> [!NOTE] 
-> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```csharp
 static void Main(string[] args)
@@ -184,9 +178,11 @@ static void Main(string[] args)
 
 ```
 
+<br/>
+
 **InitializeWebService** connects to SharePoint Online, and sets a reference of the user profile service to an instance variable. Other methods in this code sample use this instance variable to apply updates to user profile properties. To administer the user profile, this code sample uses the userprofileservice.asmx web service in the SharePoint Online admin center.
 
-```
+```csharp
 static bool InitializeWebService()
         {
             try
@@ -239,6 +235,8 @@ static bool InitializeWebService()
         }
 
 ```
+
+<br/>
 
 The **Main** method in Program.cs calls **UploadImageToSpo** to upload the user's profile picture to SharePoint Online. All users' profile pictures are stored in a picture library on the My Site Host. **UploadImageToSpo** performs the following tasks:
 
@@ -349,6 +347,8 @@ static string UploadImageToSpo(string PictureName, Stream ProfilePicture)
 
 ```
 
+<br/>
+
 **SetMultipleProfileProperties** sets multiple user profile properties in a single method call. In this code sample, **SetMultipleProfileProperties** sets the following user profile properties for a user:
 
 - **PictureURL** - Set to the URL of the medium-sized uploaded image in the picture library on the My Site Host.
@@ -387,6 +387,8 @@ static void SetMultipleProfileProperties(string UserName, string[] PropertyName,
         }
 
 ```
+
+<br/>
 
 **SetAdditionalProfileProperties** sets any additional user profile properties you want to update after uploading the image files. You can specify additional properties to update in the configuration.xml file.
 
