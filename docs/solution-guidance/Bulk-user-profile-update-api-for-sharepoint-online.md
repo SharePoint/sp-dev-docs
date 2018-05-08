@@ -40,7 +40,27 @@ Following is a brief video that demonstrates how to use the CSOM API [UserProfil
 > [!VIDEO https://www.youtube.com/embed/-X_2T0SRUBk]
 
 
-## Import file format
+
+## User profile property import process
+
+Following is the full process:
+
+1. Create or synchronize users in an Office 365 tenant or to the Azure AD associated to it.
+	 - When users are synchronized to Azure AD, it also synchronizes a standardized set of attributes to the SharePoint Online user profile service.
+2. Create any needed custom properties within the user profile service.
+	 - Because there are no remote APIs for creating custom properties in the user profile service, this step must be performed manually for each of the tenants where custom user profile properties are needed (this only needs to be done once per tenant).
+	 - Only user profile properties that are not “allowed to be edited by end users” can be imported. Trying to import a JSON object property to a user profile property that is marked as “editable by end users” results in an exception when the CSOM API is called.
+3. [Create and upload the JSON file](#create-and-upload-json-file) to the Office 365 tenant.
+	 - You must upload the JSON data file containing the information to be updated to the Office 365 tenant.
+	 - In the case of any exception during the import process, SharePoint provides additional logging information saved in the same document library where the file existed within a new sub folder.
+	 - Cleaning of the log files and JSON files is not done automatically and is the responsibility of the custom solution using the API. You should consider the life cycle of these files within your implementation. These files are stored in document libraries, so they consume a portion of the assigned storage for the site collection.
+4. Call the bulk UPA Import API for queuing the import job.
+	 - Use the CSOM API to [queue the import process](#queue-the-import-process). This can be achieved by executing CSOM code by using either managed code (.NET) or [PowerShell](#call-the-import-api-from-powershell).
+	 - The method to queue the job requires property mapping information and the location of the data file. This method quickly executes because it queues the actual import process, which later is executed as part of a back-end process in SharePoint Online.
+5. [Check the status of the import job](#check-the-status-of-an-import-job).
+	 - You can also use remote APIs to check the status of a specific import job or all the recent import jobs. To be able to check the status of a specific call, you should store the unique job identifier received as a return value when the job is queued.
+
+## Create and upload JSON file
 
 The import process uses a JSON file that contains the properties and their values. Following is the expected structure of that file:   
 
@@ -66,9 +86,9 @@ The import process uses a JSON file that contains the properties and their value
 }
 ```
 
-<br/>
+### Example
 
-Following is a simple example file that uses the format in the previous sample:
+Following is a simple example file that uses the format in the previous sample. In this example, identity resolution is based on the **IdName** property, and there are two properties that are being updated called **City** and **Office**. The file contains information for four different accounts within the tenant. Property names used in this source file are not necessarily the same as the names used within the SharePoint Online user profile service because we provide correct property mapping within our code. 
 
 ```json
 {
@@ -97,10 +117,6 @@ Following is a simple example file that uses the format in the previous sample:
 }
 ```
 
-<br/>
-
-In the previous example, identity resolution is based on the **IdName** property, and there are two properties that are being updated called **City** and **Office**. The file contains information for four different accounts within the tenant. Property names used in this source file are not necessarily the same as the names used within the SharePoint Online user profile service because we provide correct property mapping within our code. 
-
 ### Source data file restrictions
 
 The following are restrictions on individual source data files:
@@ -109,32 +125,9 @@ The following are restrictions on individual source data files:
 - Maximum number of properties: 500,000
 - The source file must be uploaded to the same SharePoint Online tenant where the process is started.
 
+## Queue the import process
 
-## User profile property import process
-
-Following is the full process:
-
-1. Create or synchronize users in an Office 365 tenant or to the Azure AD associated to it.
-	 - When users are synchronized to Azure AD, it also synchronizes a standardized set of attributes to the SharePoint Online user profile service.
-2. Create any needed custom properties within the user profile service.
-	 - Because there are no remote APIs for creating custom properties in the user profile service, this step must be performed manually for each of the tenants where custom user profile properties are needed (this only needs to be done once per tenant).
-	 - Only user profile properties that are not “allowed to be edited by end users” can be imported. Trying to import a JSON object property to a user profile property that is marked as “editable by end users” results in an exception when the CSOM API is called.
-3. Create and upload the JSON file to the Office 365 tenant.
-	 - You must upload the JSON data file containing the information to be updated to the Office 365 tenant.
-	 - In the case of any exception during the import process, SharePoint provides additional logging information saved in the same document library where the file existed within a new sub folder.
-	 - Cleaning of the log files and JSON files is not done automatically and is the responsibility of the custom solution using the API. You should consider the life cycle of these files within your implementation. These files are stored in document libraries, so they consume a portion of the assigned storage for the site collection.
-4. Call the bulk UPA Import API for queuing the import job.
-	 - Use the CSOM API to queue the import process. This can be achieved by executing CSOM code by using either managed code (.NET) or PowerShell.
-	 - The method to queue the job requires property mapping information and the location of the data file. This method quickly executes because it queues the actual import process, which later is executed as part of a back-end process in SharePoint Online.
-5. Check the status of the import job.
-	 - You can also use remote APIs to check the status of a specific import job or all the recent import jobs. To be able to check the status of a specific call, you should store the unique job identifier received as a return value when the job is queued.
-
-
-## CSOM API for the bulk import process
-
-### Queue import
-
-You can queue the import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later. 
+You can queue the CSOM API for the bulk import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later. 
 
 Following is the full signature of the method:
 
@@ -146,7 +139,7 @@ public ClientResult<Guid> QueueImportProfileProperties(
                           string sourceUri);
 ```
 
-#### Parameters
+### Parameters
 
 - **idType**: [ImportProfilePropertiesUserIdType](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesuseridtype.aspx)
 
@@ -172,11 +165,11 @@ public ClientResult<Guid> QueueImportProfileProperties(
 
   The URI of the source data file to import. The file should not be moved or deleted right away as it may not be downloaded for some time.
 
-#### Return value
+### Return value
 
 A GUID that identifies the import job that has been queued.
 
-#### Example
+### Example
 
 Following is an example that uses C# for starting the process by using the previous sample input file:
 
@@ -210,14 +203,14 @@ var workItemId = tenant.QueueImportProfileProperties(
 ctx.ExecuteQuery();
 ```
 
-### Check the status of an import job
+## Check the status of an import job
 
 You can check the status of the user profile service import jobs by using the CSOM APIs. There are two methods for this in the Tenant object:
 
 - To check the status of an individual import job, use the **GetImportProfilePropertyJob** method.
 - To check the status of all import jobs, use the **GetImportProfilePropertyJobs** method.
 
-#### Individual import job
+### Individual import job
 
 You can check the status of an individual import job by using the [GetImportProfilePropertyJob](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjob.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. You must have the unique identifier of a specific import job provided as a parameter to this method. 
 
@@ -227,17 +220,17 @@ Following is the full signature of the method:
 public ImportProfilePropertiesJobInfo GetImportProfilePropertyJob(Guid jobId);
 ```
 
-##### Parameters
+#### Parameters
 
 - **jobID**: System.Guid 
 
   The ID of the job for which to get the high-level status.
 
-##### Return value
+#### Return value
 
 An [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object with high level status information about the specified job.
 
-##### Example
+#### Example
 
 Following is an example that uses C# for retrieving the status of a specific import job by using a stored identifier:
 
@@ -249,7 +242,7 @@ ctx.Load(job);
 ctx.ExecuteQuery();
 ```
 
-#### All import jobs
+### All import jobs
 
 You can check the status of all import jobs by using the [GetImportProfilePropertyJobs](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjobs.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. 
 
@@ -259,28 +252,7 @@ Following is the full signature of the method:
 public ImportProfilePropertiesJobStatusCollection GetImportProfilePropertyJobs(); 
 ```
 
-##### Return value
-
-An [ImportProfilePropertiesJobStatusCollection](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstatuscollection.aspx) object, which is a collection of [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) objects with high level status information about each of the jobs.
-
-##### Example
-
-Following is an example that uses C# for getting the status of all import jobs currently saved in the tenant. These could be already processed or queued jobs:
-
-```cs
-// Load all import jobs – old and queued ones
-Office365Tenant tenant = new Office365Tenant(ctx);
-var jobs = tenant.GetImportProfilePropertyJobs();
-ctx.Load(jobs);
-ctx.ExecuteQuery();
-foreach (var item in jobs)
-{
-   // Check whatever properties needed
-   var state = item.State;
-}
-```
-
-##### Parameters
+#### Parameters
 
 An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object returned with the import status information has the following properties. 
 
@@ -322,7 +294,30 @@ An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/en-us/library/off
 
   The Uri to the folder where the logs have been written.
 
-## Calling the import API from PowerShell
+
+#### Return value
+
+An [ImportProfilePropertiesJobStatusCollection](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstatuscollection.aspx) object, which is a collection of [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) objects with high level status information about each of the jobs.
+
+#### Example
+
+Following is an example that uses C# for getting the status of all import jobs currently saved in the tenant. These could be already processed or queued jobs:
+
+```cs
+// Load all import jobs – old and queued ones
+Office365Tenant tenant = new Office365Tenant(ctx);
+var jobs = tenant.GetImportProfilePropertyJobs();
+ctx.Load(jobs);
+ctx.ExecuteQuery();
+foreach (var item in jobs)
+{
+   // Check whatever properties needed
+   var state = item.State;
+}
+```
+
+
+## Call the import API from PowerShell
 
 You can take advantage of the user profile service bulk import API by using PowerShell. This means that you use the CSOM code directly in a PowerShell script by using the necessary parameters. This requires that the updated CSOM redistributable package has been installed on the computer where the script is executed.
 
@@ -369,7 +364,7 @@ $context.ExecuteQuery();
 Write-Host "Import job created with the following identifier:" $workItemId.Value 
 ```
 
-## Handling exceptions
+## Handle exceptions
 
 There are two levels of validation when this API is used. When you queue the import process with CSOM, there is an initial level of validation of the provided values. This includes confirmation that the provided mapping properties exist in the user profile service and that these properties are not editable by the end user. When the queue API is called, only an initial level of validation is applied, and final validation of the provided information is performed when the import job is actually executed.
 
@@ -405,7 +400,7 @@ Yes, you need to register the client ID and secret to be able to execute the API
 
 ### This API is updating properties in the user profile service, but how would I create those properties in the tenant?
 
-There’s no remote API to create custom user profile properties programmatically, so this is manual operation which needs to be completed once per given tenant. You can refer to [this article](https://support.office.com/en-us/article/Add-and-edit-user-profile-properties-85091402-737F-4BB9-99A7-BC5F194502A8) for instructions on how to create these custom properties.
+There’s no remote API to create custom user profile properties programmatically, so this is a manual operation that needs to be completed once per given tenant. For instructions about how to create these custom properties, see [Add and edit user profile properties in SharePoint Online](https://support.office.com/en-us/article/add-and-edit-user-profile-properties-in-sharepoint-online-85091402-737f-4bb9-99a7-bc5f194502a8?ui=en-US&rs=en-US&ad=US).
 
 ### Is this capability available in on-premises SharePoint?
 
@@ -419,7 +414,7 @@ Yes, on-premises SharePoint can be used just like any other source system. You m
 
 No, this is not currently supported with this API.
 
-### What permissions are required for executing this API??
+### What permissions are required for executing this API?
 
 You must have Global Admin permissions currently. SharePoint Admin is not sufficient.
 
@@ -429,7 +424,7 @@ No, this is not currently supported with this API.
 
 ### What if I define a mapping in the code that is not used or have properties in the JSON file that are not mapped?
 
-If your code/script defines a mapping that is not used or the data file does not contain properties for that mapping, execution continues without any exceptions and the import is applied based on the mapped properties. However, if you have a property in the JSON file that is not mapped, the import process is aborted and exception details are provided in the log file for the specific job execution.
+If your code/script defines a mapping that is not used or the data file does not contain properties for that mapping, execution continues without any exceptions, and the import is applied based on the mapped properties. However, if you have a property in the JSON file that is not mapped, the import process is aborted, and exception details are provided in the log file for the specific job execution.
 
 ### What if I need to update custom properties that are beyond the size limitations of this bulk API (that is, greater than a 2-GB file or 500,000 properties)?
 
