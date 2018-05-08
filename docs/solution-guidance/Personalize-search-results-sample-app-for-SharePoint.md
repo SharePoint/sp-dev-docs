@@ -57,7 +57,7 @@ For handling personalization scenarios, you can change the search query by:
 
 Return to the **Search.PersonalizedResults** provider-hosted add-in and choose **Perform Personalized Search** again. The add-in changes the filter on the search query to show all sites instead of team sites only, as shown in the following figure. The **Template** column now contains several different site template types.
 
-<img alt="Screenshot of search results showing all sites" src="media/3af49550-cd2d-4e7e-af1d-5227a5603730.png" width="600">
+<img alt="Screenshot of search results showing all sites" src="media/3af49550-cd2d-4e7e-af1d-5227a5603730.png" width="800">
 
 In default.aspx.cs, choosing **Perform Personalized Search** calls the **btnPersonalizedSearch\_Click** method, which performs the following actions:
 
