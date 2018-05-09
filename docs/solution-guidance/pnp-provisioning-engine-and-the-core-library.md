@@ -52,15 +52,17 @@ While detailed instructions for using CSOM are in the provisioning console appli
 	> [!NOTE] 
   > Because the template provider and the serialization formatter objects can be customized, you can implement whatever persistence storage and serialization format you like. Out-of-the-box, the PnP provisioning engine provides support for file system, SharePoint, and Azure Blob storage template providers. It also supports XML and JSON serialization formatters.
 
-You can see an example of the XML serialization output and learn more about the XML serialization schema in the [PnP provisioning schema](pnp-provisioning-schema.md) article. You also can get the schema and its documentation on GitHub:[SharePoint/PnP-Provisioning-Schema](https://github.com/SharePoint/PnP-Provisioning-Schema/). There also is a [Channel 9](https://channel9.msdn.com/) video&mdash;[Deep dive into PnP provisioning engine schema](https://channel9.msdn.com/blogs/OfficeDevPnP/Deep-dive-to-PnP-provisioning-engine-schema)&mdash;that introduces and discusses the schema.
+You can see an example of the XML serialization output and learn more about the XML serialization schema in the [PnP provisioning schema](pnp-provisioning-schema.md) article. You also can get the schema and its documentation on GitHub: [SharePoint/PnP-Provisioning-Schema](https://github.com/SharePoint/PnP-Provisioning-Schema/). The Channel 9 video [Deep dive into PnP provisioning engine schema](https://channel9.msdn.com/blogs/OfficeDevPnP/Deep-dive-to-PnP-provisioning-engine-schema) introduces and discusses the schema.
 
-It is important to note, however, that the provisioning engine supports a serialization-format-independent domain model. In fact, the provisioning engine is completely decoupled from any serialization format. It is up to you to manually define the **ProvisioningTemplate** instance. Either point to a model site or compose an XML document that validates against the PnP provisioning schema, or write .NET code and construct the hierarchy of objects. You can even mix these approaches. You also can design the provisioning template using a model site, and then save it into an XML file and do some in-memory customizations while handling the **ProvisioningTemplate** instance in your code.
+It is important to note, however, that the provisioning engine supports a serialization-format-independent domain model. In fact, the provisioning engine is completely decoupled from any serialization format. It is up to you to manually define the **ProvisioningTemplate** instance. 
+
+Either point to a model site or compose an XML document that validates against the PnP provisioning schema, or write .NET code and construct the hierarchy of objects. You can even mix these approaches. You also can design the provisioning template by using a model site, and then save it into an XML file and do some in-memory customizations while handling the **ProvisioningTemplate** instance in your code.
 
 #### Example code to extract a template using GetProvisioningTemplate
 
-The sample presented in the article [Provisioning console application sample](provisioning-console-application-sample.md) illustrates using the **GetProvisioningTemplate** method. In the sample, the process of exporting the provisioning template takes place in the following code block.
+The [Provisioning console application sample](provisioning-console-application-sample.md) illustrates using the **GetProvisioningTemplate** method. In the sample, the process of exporting the provisioning template takes place in the following code block.
 
-```
+```csharp
 ProvisioningTemplateCreationInformation ptci = new ProvisioningTemplateCreationInformation(ctx.Web);
 
 // Create FileSystemConnector, so that we can store composed files somewhere temporarily 
@@ -83,7 +85,7 @@ As with extracting the provisioning template, you can apply your customized **Pr
 
 If applying the provisioning template by using extension methods of the Core library, you have a code block similar to the example here. In the example, the template is applied to the target site by using the **ApplyProvisioningTemplate** extension method of the **Web** type.
 
-```
+```csharp
 using (var context = new ClientContext(destinationUrl))
 {
   context.Credentials = new SharePointOnlineCredentials(userName, password);
@@ -112,49 +114,43 @@ using (var context = new ClientContext(destinationUrl))
 }
 ```
 
-Once you have created a connection to SharePoint Online using the Windows PowerShell commands, employ the **Apply-PnPProvisioningTemple** cmdlet as shown here.
+<br/>
 
-```
-Apply-PnProvisioningTemplate -Path "PnP-Provisioning-File.xml"
+After you have created a connection to SharePoint Online by using the Windows PowerShell commands, employ the **Apply-PnPProvisioningTemplate** cmdlet as shown here.
+
+```powershell
+Apply-PnPProvisioningTemplate -Path "PnP-Provisioning-File.xml"
 ```
 
-Note that the  `-Path` argument refers to the file path to the provisioning template file that you persisted to the file system. In the code block above, the persisted file is an XML file, but these template files can be persisted in any serialized format that you wish.
+Note that the `-Path` argument refers to the file path to the provisioning template file that you persisted to the file system. In the code block above, the persisted file is an XML file, but these template files can be persisted in any serialized format that you wish.
 
 ## PnP Core library
 
-The Core library (OfficeDevPnP.Core) is a CSOM/REST object model that supports the PnP provisioning framework and enables the PnP provisioning engine. It consists of several namespaces, including a set of [extension methods](https://msdn.microsoft.com/en-us/library/bb383977.aspx). These methods extend the SharePoint object model to support remote provisioning as well as objects for handling entities, timer jobs, provisioning templates, and the entirety of the provisioning framework. Table 1 lists namespaces in the Core library.
+The Core library (OfficeDevPnP.Core) is a CSOM/REST object model that supports the PnP provisioning framework and enables the PnP provisioning engine. It consists of several namespaces, including a set of [extension methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods). These methods extend the SharePoint object model to support remote provisioning as well as objects for handling entities, timer jobs, provisioning templates, and the entirety of the provisioning framework. Table 1 lists namespaces in the Core library.
+
+<br/>
 
 **Table 1. Namespaces in the OfficeDevPnP.Core library**
 
-|**Namespace**|**Description**|
+|Namespace|Description|
 |:-----|:-----|
 |OfficeDevPnP.Core||
 |OfficeDevPnP.Core.AppModelExtensions|.NET classes that extend an existing type with additional methods.|
 |OfficeDevPnP.Core.Entities|Classes that are used to provide and retrieve more complex objects from the extensions methods in AppModelExtensions.|
 |OfficeDevPnP.Core.Enums|A set of enumerations that support provisioning operations.|
 |OfficeDevPnP.Core.Extensions|Extension methods that are not SharePoint related, such as methods to help with string manipulations.|
-|OfficeDevPnP.Core.Framework.ObjectHandlers.TokenDefinitions|Tokens used to replace site specific content in the template object.|
+|OfficeDevPnP.Core.Framework.ObjectHandlers.TokenDefinitions|Tokens used to replace site-specific content in the template object.|
 |OfficeDevPnP.Core.Framework.Provisioning.Connectors|Connectors are used to connect different data sources where templates and assets are stored.|
-|OfficeDevPnP.Core.Framework.Provisioning.Extensibility|Extensibility provider code. Extensibility providers can be used to add functionality which is not natively supported by the engine.|
+|OfficeDevPnP.Core.Framework.Provisioning.Extensibility|Extensibility provider code. Extensibility providers can be used to add functionality that is not natively supported by the engine.|
 |OfficeDevPnP.Core.Framework.Provisioning.Model|Template data model objects. Templates are either extracted or de-serialized to actual C# code. This namespace contains classes for this structure.|
 |OfficeDevPnP.Core.Framework.Provisioning.ObjectHandlers|Handlers for different SharePoint elements supporting both template extraction and creation.|
 |OfficeDevPnP.Core.Framework.Provisioning.Providers|Namespace for template provider base. Template providers are used to serialize or de-serialize code-based models to a specific format.|
 |OfficeDevPnP.Core.Framework.Provisioning.Providers.Json|JSON template provider for serializing or de-serializing code-based templates to or from JSON format.|
 |OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml|XML template provider for serializing or de-serializing code-based templates to or from XML format.|
-|OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201503|Auto generated schema files for v201503 version of the schema.|
-|OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201505|Auto generated schema files for v201505 version of the schema.|
-|OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201508|Auto generated schema files for v201508 version of the schema.|
+|OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201503|Auto-generated schema files for v201503 version of the schema.|
+|OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201505|Auto-generated schema files for v201505 version of the schema.|
+|OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201508|Auto-generated schema files for v201508 version of the schema.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
-- [Provisioning console application sample](provisioning-console-application-sample.md)
-    
-- [SharePointPnP.PowerShell Commands](https://github.com/SharePoint/PnP-PowerShell)
-    
-- [Provisioning console application sample](provisioning-console-application-sample.md)
-    
-- [SharePoint/PnP-Provisioning-Schema](https://github.com/SharePoint/Pnp-Provisioning-Schema/)
-    
-- [Extension Methods](https://msdn.microsoft.com/en-us/library/bb383977.aspx)
 - [PnP remote provisioning](pnp-remote-provisioning.md)
