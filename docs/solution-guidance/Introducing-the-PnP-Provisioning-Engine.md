@@ -61,7 +61,7 @@ To use the CSOM extensions, you can create any kind of .NET software project (su
 
 Let's target SharePoint Online, which has been tested more, and is the main target of the PnP Core Team efforts. You need to connect to Office 365, create a **ClientContext** instance and retrieve a reference to a **Web** object. 
 
-Thanks to a new extension method, called **GetProvisioningTemplate**, you can retrieve a **ProvisioningTemplate** object that can be saved by using a template provider and a serialization formatter. Both the template provider and the serialization formatter objects can be customized so that you can implement whatever persistence storage and serialization format you like. Out-of-the-box, the PnP provisioning engine provides support for File System, SharePoint, and Azure Blob Storage template providers, as well as for XML and JSON serialization formatters. 
+Thanks to a new extension method, called **GetProvisioningTemplate**, you can retrieve a **ProvisioningTemplate** object that can be saved by using a template provider and a serialization formatter. Both the template provider and the serialization formatter objects can be customized so that you can implement whatever persistence storage and serialization format you like. Out-of-the-box, the PnP provisioning engine provides support for File System, SharePoint, and Azure Blob storage template providers, as well as for XML and JSON serialization formatters. 
 
 In the following figure, you can see an outline of the overall architecture of the PnP provisioning engine.
 

@@ -11,11 +11,11 @@ This article describes the [Core.DataStorageModels](https://github.com/SharePoin
 - SharePoint list on the add-in web
 - SharePoint list on the host web 
 - External web service
-- Azure Table Storage 
-- Azure Queue Storage   
+- Azure Table storage 
+- Azure Queue storage   
 - Azure SQL Database  
  
-The Core.DataStorageModels sample app is a provider-hosted add-in written in C# and JavaScript that deploys a number of SharePoint artifacts (lists, add-in part, web part) to both the host web and the add-in web. It interacts with SharePoint lists on the add-in web and host web, and also makes calls to Azure SQL Database, Azure Queue Storage, and Azure Table Storage, and a remote web service that implements OData. This sample uses the Model-View-Controller pattern.
+The Core.DataStorageModels sample app is a provider-hosted add-in written in C# and JavaScript that deploys a number of SharePoint artifacts (lists, add-in part, web part) to both the host web and the add-in web. It interacts with SharePoint lists on the add-in web and host web, and also makes calls to Azure SQL Database, Azure Queue storage, and Azure Table storage, and a remote web service that implements OData. This sample uses the Model-View-Controller pattern.
 
 The Core.DataStorageModels sample app applies each data storage option to a specific function for which the option is well-suited, as described in the following table.
 
@@ -24,8 +24,8 @@ The Core.DataStorageModels sample app applies each data storage option to a spec
 |SharePoint list add-in web|Customer notes|
 |SharePoint list host web|Support cases|
 |Northwind OData web service|Customers|
-|Azure Table Storage|CSR ratings|
-|Azure Queue Storage|Call queue|
+|Azure Table storage|CSR ratings|
+|Azure Queue storage|Call queue|
 |Azure SQL Northwind database|Orders, order details, products|
 
 The sample app implements a customer service dashboard and related interfaces that show recent orders, customer representative survey ratings, customer notes, support cases, and a customer representative call queue. 
@@ -351,20 +351,20 @@ $.get(url).done(getCustomersDone)
 
 <br/>
 
-## Azure Table Storage (Customer Service Survey scenario)
+## Azure Table storage (Customer Service Survey scenario)
 
-The Customer Service Survey scenario allows a customer service representative to see their rating based on customer surveys and uses Azure Table Storage and the **Microsoft.WindowsAzure.Storage.Table.CloudTable** API to store and interact with the data.
+The Customer Service Survey scenario allows a customer service representative to see their rating based on customer surveys and uses Azure Table storage and the **Microsoft.WindowsAzure.Storage.Table.CloudTable** API to store and interact with the data.
 
 The following are the advantages to using this approach:
 
-- Azure Table Storage supports more than one add-in.
-- You can update Azure Table Storage without having to update and redeploy your add-in.
-- Your SharePoint installation and Azure Table Storage have no effect on each other's performance.
-- Azure Table Storage scales easily.
-- You can back up and restore your Azure Table Storage separately from your SharePoint site.
+- Azure Table storage supports more than one add-in.
+- You can update Azure Table storage without having to update and redeploy your add-in.
+- Your SharePoint installation and Azure Table storage have no effect on each other's performance.
+- Azure Table storage scales easily.
+- You can back up and restore your Azure Table storage separately from your SharePoint site.
 - You don't lose data when you uninstall your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
-The add-in's interface displays the current user's survey rating in the center page. If that Azure Table Storage is empty, the add-in adds some information to the table before it displays it.
+The add-in's interface displays the current user's survey rating in the center page. If that Azure Table storage is empty, the add-in adds some information to the table before it displays it.
 
 The following code from the CSRInfoController.cs defines the **Home** method that retrieves the user's **nameId**.
 
@@ -404,7 +404,7 @@ public SurveyRatingsService(string storageConnectionStringConfigName =
 
 <br/>
 
-The following code from the same file defines the **GetUserScore** method, which retrieves the user's survey score from Azure Table Storage.
+The following code from the same file defines the **GetUserScore** method, which retrieves the user's survey score from Azure Table storage.
 
 ```csharp
 public float GetUserScore(string userName)
@@ -450,22 +450,22 @@ private float AddSurveyRatings(string userName)
 }
 ```
 
-## Azure Queue Storage (Customer Call Queue scenario)
+## Azure Queue storage (Customer Call Queue scenario)
 
-The Customer Call Queue scenario lists callers in the support queue and simulates taking calls. The scenario uses Azure Queue Storage to store data and the **Microsoft.WindowsAzure.Storage.Queue.CloudQueue** API with Model-View-Controller.
+The Customer Call Queue scenario lists callers in the support queue and simulates taking calls. The scenario uses Azure Queue storage to store data and the **Microsoft.WindowsAzure.Storage.Queue.CloudQueue** API with Model-View-Controller.
 
 The following are the advantages to using this approach:
 
-- Azure Queue Storage supports more than one add-in.
-- You can update Azure Queue Storage without having to update and redeploy your add-in.
-- Your SharePoint installation and Azure Queue Storage have no effect on each other's performance.
-- Azure Queue Storage scales easily.
-- You can back up and restore your Azure Queue Storage separately from your SharePoint site.
+- Azure Queue storage supports more than one add-in.
+- You can update Azure Queue storage without having to update and redeploy your add-in.
+- Your SharePoint installation and Azure Queue storage have no effect on each other's performance.
+- Azure Queue storage scales easily.
+- You can back up and restore your Azure Queue storage separately from your SharePoint site.
 - You don't lose data when you uninstall your add-in, unless the add-in uses the **AppUninstalled** event to delete the data.
     
 The add-in's interface displays a support call queue in the center pane when you choose the **Call Queue** link. You can simulate receiving calls (adding a call to the queue) by choosing **Simulate Calls**, and you can simulate taking the oldest call (removing a call from the queue) by choosing the **Take Call** action associated with a given call.
 
-This page is a Model-View-Controller view that is defined in the Views/CallQueue/Home.cshtml file. The Controllers/CallQueueController.cs file defines the **CallQueueController** class, which contains methods for retrieving all calls in the queue, adding a call to the queue (simulating a call), and removing a call from the queue (taking a call). Each of these methods calls methods defined in the Services/CallQueueService.cs file, which uses the Azure Queue Storage API to retrieve the underlying information in the storage queue.
+This page is a Model-View-Controller view that is defined in the Views/CallQueue/Home.cshtml file. The Controllers/CallQueueController.cs file defines the **CallQueueController** class, which contains methods for retrieving all calls in the queue, adding a call to the queue (simulating a call), and removing a call from the queue (taking a call). Each of these methods calls methods defined in the Services/CallQueueService.cs file, which uses the Azure Queue storage API to retrieve the underlying information in the storage queue.
 
 ```csharp
 public class CallQueueController : Controller
@@ -506,7 +506,7 @@ public class CallQueueController : Controller
 
 <br/>
 
-The CallQueueService.cs file defines the **CallQueueService** class, which establishes the connection to Azure Queue Storage. That class also contains the methods for adding, removing (dequeuing), and retrieving the calls from the queue.
+The CallQueueService.cs file defines the **CallQueueService** class, which establishes the connection to Azure Queue storage. That class also contains the methods for adding, removing (dequeuing), and retrieving the calls from the queue.
 
 ```csharp
 public class CallQueueService

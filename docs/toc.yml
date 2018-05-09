@@ -1610,7 +1610,7 @@
       href: solution-guidance/introducing-the-pnp-provisioning-engine.md
     - name: PnP provisioning framework
       href: solution-guidance/pnp-provisioning-framework.md
-    - name: PnP provisioning engine and the core library
+    - name: PnP provisioning engine and the Core library
       href: solution-guidance/pnp-provisioning-engine-and-the-core-library.md
     - name: PnP provisioning schema
       href: solution-guidance/pnp-provisioning-schema.md

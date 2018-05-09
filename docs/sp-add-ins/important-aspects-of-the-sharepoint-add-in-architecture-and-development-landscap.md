@@ -106,7 +106,7 @@ A SharePoint Add-in can use almost any kind of structured data storage, both ins
 
 Documents, images, videos, audio files, and other kinds of unstructured data that is produced or used by a SharePoint Add-in can be stored in or outside SharePoint. Document libraries are a good choice for documents and are searchable via SharePoint search. A site asset library is often a good choice for multimedia files. 
 
-Other options include blob storage in your Microsoft Azure account or on your own servers. You can also store files in some non-Microsoft platforms or cloud services.
+Other options include Blob storage in your Microsoft Azure account or on your own servers. You can also store files in some non-Microsoft platforms or cloud services.
 
 <a name="AppMetadata"> </a>
 ### Add-in settings and other metadata storage options
