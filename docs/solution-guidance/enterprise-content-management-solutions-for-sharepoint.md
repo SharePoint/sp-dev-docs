@@ -1,12 +1,12 @@
 ---
 title: Enterprise Content Management solutions for SharePoint
-description: The ECM solution pack includes code samples and documentation for transitioning your SharePoint Online and SharePoint ECM solutions from full-trust code to the add-in model.
+description: The ECM solution pack includes code samples and documentation for transitioning your SharePoint Online and SharePoint ECM solutions from full trust code to the add-in model.
 ms.date: 5/2/2018
 ---
 
 # Enterprise Content Management solutions for SharePoint
 
-The Enterprise Content Management (ECM) solution pack includes code samples and documentation that you can use to transition your SharePoint Online and SharePoint ECM solutions from full-trust code to the add-in model. 
+The Enterprise Content Management (ECM) solution pack includes code samples and documentation that you can use to transition your SharePoint Online and SharePoint ECM solutions from full trust code to the add-in model. 
 
 - The samples in this solution pack show you how to use provider-hosted add-ins to perform common ECM tasks such as setting site policies, uploading files, or synchronizing term groups. 
 - The documentation helps you get started with and walk you through the primary scenarios that each sample illustrates. 

@@ -123,7 +123,7 @@ In SharePoint Server 2013 or SharePoint Server 2016, you can use custom CSOM cod
 
 ### What can I do with the Cloud Add-in Model?
 
-Sometimes there is no correlation between features in full-trust code and the Cloud Add-in Model. When developing a customization based on SharePoint Add-ins and the Cloud Add-in Model, consider an alternative approach rather than a direct conversion, and strive to keep customizations as simple as possible. Here are some examples:
+Sometimes there is no correlation between features in full trust code and the Cloud Add-in Model. When developing a customization based on SharePoint Add-ins and the Cloud Add-in Model, consider an alternative approach rather than a direct conversion, and strive to keep customizations as simple as possible. Here are some examples:
 
 - Replace event receivers with remote event receivers (see [Create a remote event receiver in SharePoint Add-ins](../sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins.md)).
     
@@ -249,7 +249,7 @@ Most functionality that you need to meet your business needs is available out-of
 
 When working with an existing custom SharePoint solution and weighing whether and how to migrate it to the Cloud Add-in Model, first understand why the customization was done and what purpose it serves. 
 
-When considering moving an existing customization from full-trust code to the Cloud Add-in Model, there usually isn't a one-to-one relationship between features and functionality. Rather than trying to find a one-to-one match between server-side and client-side code, consider alternative approaches. Table 8 maps some commonly used concepts and functionality of SharePoint solutions to their equivalents in SharePoint Add-ins.
+When considering moving an existing customization from full trust code to the Cloud Add-in Model, there usually isn't a one-to-one relationship between features and functionality. Rather than trying to find a one-to-one match between server-side and client-side code, consider alternative approaches. Table 8 maps some commonly used concepts and functionality of SharePoint solutions to their equivalents in SharePoint Add-ins.
 
 **Table 8. Mapping SharePoint concepts to add-ins**
 
