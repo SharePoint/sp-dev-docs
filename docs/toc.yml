@@ -1619,9 +1619,9 @@
   - name: PnP remote timer job framework
     href: solution-guidance/pnp-remote-timer-job-framework.md
     items:
-    - name: The timer job framework
+    - name: PnP timer job framework
       href: solution-guidance/timerjob-framework.md
-    - name: Create remote timer jobs in SharePoint
+    - name: Create remote timer jobs
       href: solution-guidance/create-remote-timer-jobs-in-sharepoint.md
     - name: Get started with WebJobs (timer jobs)
       href: solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites.md

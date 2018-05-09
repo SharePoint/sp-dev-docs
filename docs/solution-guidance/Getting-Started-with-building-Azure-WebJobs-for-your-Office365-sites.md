@@ -1,7 +1,9 @@
 ---
-title: 'Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites #'
-ms.date: 11/03/2017
+title: Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites
+description:
+ms.date: 5/9/2018
 ---
+
 # Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites #
 
 ### Summary ###
@@ -371,3 +373,6 @@ While there’s not very much to building an Azure WebJob, you can make them qui
 -  Office 365 Multi Tenant (MT)
 -  Office 365 Dedicated (D)
 -  SharePoint 2013 on-premises 
+
+
+- [PnP remote timer job framework](pnp-remote-timer-job-framework.md)

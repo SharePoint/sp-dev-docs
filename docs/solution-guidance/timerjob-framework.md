@@ -1,21 +1,22 @@
 ---
-title: The Timer Job Framework
-ms.date: 11/03/2017
+title: Timer job framework
+description:
+ms.date: 5/9/2018
 ---
 
-# The Timer Job Framework
+# Timer job framework
 
-The PnP Timer Job Framework is a set of classes designed to ease the creation of background processes that operate against SharePoint sites. The Timer Job Framework is similar to on-premises full trust code Timer Jobs (`SPJobDefinition`). The primary difference with between the Timer Job Framework and the full trust code Timer Job is that the Timer Job Framework only uses client side APIs and therefore can (and should) be run outside of SharePoint. The Timer Job Framework makes it possible to build Timer Jobs that operate against SharePoint Online.
+The PnP timer job framework is a set of classes designed to ease the creation of background processes that operate against SharePoint sites. The timer job framework is similar to on-premises full trust code Timer Jobs (`SPJobDefinition`). The primary difference with between the timer job framework and the full trust code Timer Job is that the timer job framework only uses client side APIs and therefore can (and should) be run outside of SharePoint. The timer job framework makes it possible to build Timer Jobs that operate against SharePoint Online.
 
 Once a Timer Job has been created it needs to be scheduled and executed. The two most common options are:
 
 - When **Microsoft Azure** is the hosting platform, Timer Jobs can be deployed and run as **Azure WebJobs**.
 - When **Windows Server** is the hosting platform (e.g. for on-premises SharePoint) Timer Jobs can be deployed and run in **Windows scheduler**.
 
-For a video introduction to Timer Jobs, [this PnP video](http://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework) introduces the Timer Job Framework and demonstrates the Simple Timer Job example.
+For a video introduction to Timer Jobs, [this PnP video](http://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework) introduces the timer job framework and demonstrates the Simple Timer Job example.
 
 ## Simple Timer Job example ##
-In this chapter you'll see how to create a very simple Timer Job: the goal of this sample is to provide the reader a quick view, later on we'll provide a more detailed explanation of the Timer Job Framework. 
+In this chapter you'll see how to create a very simple Timer Job: the goal of this sample is to provide the reader a quick view, later on we'll provide a more detailed explanation of the timer job framework. 
 
 > [!NOTE] 
 > For a more extensive PnP solution with ten individual Timer Job examples, from "Hello world" samples to actual content expiration jobs, see https://github.com/SharePoint/PnP/tree/dev/Solutions/Core.TimerJobs.Samples
@@ -145,8 +146,8 @@ Schedule the execution of the Timer Job. It is recommended to use the built in [
 
 ![The Windows Task Scheduler](media/timerjob-framework/hkRc0Bo.png)
 
-## Timer Job Framework in-depth ##
-This section details how the Timer Job Framework features and how it works.
+## Timer job framework in-depth ##
+This section details how the timer job framework features and how it works.
 
 ### Structure ###
 The `TimerJob` class is an abstract base class which contains the following public properties, methods and events:
@@ -281,7 +282,7 @@ public override List<string> ResolveAddedSites(List<string> addedSites)
 ```
 
 ### TimerJobRun event ###
-The Timer Job Framework splits the list of sites into work batches. Each batch of sites will be run on its own thread. By default, the framework will create five batches and five threads to run those five batches. See the **Threading** section to learn more about Timer Job threading options. When a thread processes a batch the `TimerJobRun` event is triggered by the timer framework and will provide all the necessary information to run the Timer Job. Timer Jobs are run as events, so the code must connect an event handler to the `TimerJobRun` event:
+The timer job framework splits the list of sites into work batches. Each batch of sites will be run on its own thread. By default, the framework will create five batches and five threads to run those five batches. See the **Threading** section to learn more about Timer Job threading options. When a thread processes a batch the `TimerJobRun` event is triggered by the timer framework and will provide all the necessary information to run the Timer Job. Timer Jobs are run as events, so the code must connect an event handler to the `TimerJobRun` event:
 
 ```csharp
 public SimpleJob() : base("SimpleJob")
@@ -322,7 +323,7 @@ Several of the properties and all of the methods are used in the optional state 
 All `ClientContext`objects use the authentication information described in the **Authentication** section. If you've opted for user credentials please ensure that the used account has the needed permissions to operate against the specified sites. When using app-only, it is best to set tenant-scoped permissions to the app-only principal.
 
 ### State management ###
-When you write Timer Job logic you often need to persist state. For example, to record when a site was last processed, or to store data to support your Timer Job business logic. For this reason, the Timer Job Framework has state management capabilities. State management stores and retrieves a set of standard and custom properties as a JSON serialized string in the web property bag of the processed site (name = Timer Job name + "_Properties"). The following are the default properties of the `TimerJobRunEventArgs`object:
+When you write Timer Job logic you often need to persist state. For example, to record when a site was last processed, or to store data to support your Timer Job business logic. For this reason, the timer job framework has state management capabilities. State management stores and retrieves a set of standard and custom properties as a JSON serialized string in the web property bag of the processed site (name = Timer Job name + "_Properties"). The following are the default properties of the `TimerJobRunEventArgs`object:
 - **PreviousRun** property: Gets or sets the date and time of the previous run.
 - **PreviousRunSuccessful** property: Gets or sets a value indicating whether the previous run was successful. Note that the Timer Job author is responsible for flagging a job run as successful by setting the **CurrentRunSuccessful** property as part of your Timer Job implementation
 - **PreviousRunVersion** property: Gets or sets the Timer Job version of the previous run.
@@ -397,12 +398,12 @@ void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
 The state is stored as a single JSON serialized property which means it can be used by other customizations as well. For example, if the Timer Job wrote the state entry "SiteCompliant=false", a JavaScript routine could prompt the user to act because the Timer Job determined that the site was incompliant.
 
 ### Threading ###
-The Timer Job Framework by default uses threads to parallelize work. Threading is used for both the sub site expansion (when requested) and for the running the actual Timer Job logic (`TimerJobRun` event) for each site. The following properties can be used to control the threading implementation:
+The timer job framework by default uses threads to parallelize work. Threading is used for both the sub site expansion (when requested) and for the running the actual Timer Job logic (`TimerJobRun` event) for each site. The following properties can be used to control the threading implementation:
 - **UseThreading** property: Gets or sets a value indicating whether threading will be used. Defaults to **true**.  Set to **false** to perform all actions by using the main application thread.
 - **MaximumThreads** property: Gets or sets the number of threads to use for this Timer Job. Valid values are 2 to 100. The default is 5. Having lots of threads is not necessarily faster then having just few threads. The optimal number should be acquired via testing using a variety of thread counts. The default of 5 threads has been found to significantly boost performance in most scenarios. 
 
 #### Throttling ####
-Because Timer Job uses threading and Timer Job operations are typically resource intensive operations, a Timer Job run could be throttled. In order to correctly deal with throttling the Timer Job Framework and the whole of PnP Core uses the `ExecuteQueryRetry` method instead of the default `ExecuteQuery`method.
+Because Timer Job uses threading and Timer Job operations are typically resource intensive operations, a Timer Job run could be throttled. In order to correctly deal with throttling the timer job framework and the whole of PnP Core uses the `ExecuteQueryRetry` method instead of the default `ExecuteQuery`method.
 
 > [!NOTE] 
 > It is important to use `ExecuteQueryRetry` in your Timer Job implementation code.
@@ -446,7 +447,7 @@ public class SiteCollectionScopedJob: TimerJob
 ```
 
 ### Logging ###
-The Timer Job Framework uses the PnP Core logging components as it's part of the PnP Core library. To activate the built-in PnP Core logging, configure it using the appropriate config file (app.config or web.config). The following example shows the required syntax:
+The timer job framework uses the PnP Core logging components as it's part of the PnP Core library. To activate the built-in PnP Core logging, configure it using the appropriate config file (app.config or web.config). The following example shows the required syntax:
 
 ```XML
   <system.diagnostics>
@@ -459,13 +460,13 @@ The Timer Job Framework uses the PnP Core logging components as it's part of the
   </system.diagnostics>
 ```
 
-Using the above configuration file the Timer Job Framework will use the `System.Diagnostics.TextWriterTraceListener` to write logs to a file called trace.log in the same folder as the Timer Job .exe. Other trace listeners are available such as:
+Using the above configuration file the timer job framework will use the `System.Diagnostics.TextWriterTraceListener` to write logs to a file called trace.log in the same folder as the Timer Job .exe. Other trace listeners are available such as:
 - **ConsoleTraceListener** writes logs to the console.
 - The method described in [Cloud Diagnostics - Take Control of Logging and Tracing in Windows Azure](https://msdn.microsoft.com/en-us/magazine/ff714589.aspx). This method uses Microsoft.WindowsAzure.Diagnostics.**DiagnosticMonitorTraceListener**. Additional Azure resources can be found here:
     - [Enable diagnostic logging for Azure Websites](http://azure.microsoft.com/en-us/documentation/articles/web-sites-enable-diagnostic-log/)
     - [Troubleshooting Azure Websites in Visual Studio](http://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 
-It is strongly advised to use the same logging approach for your custom Timer Job code as you do for the Timer Job Framework. In your Timer Job code you can use the PnP Core `Log` class:
+It is strongly advised to use the same logging approach for your custom Timer Job code as you do for the timer job framework. In your Timer Job code you can use the PnP Core `Log` class:
 
 ```csharp
 void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
@@ -492,3 +493,7 @@ void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
     }
 }
 ```
+
+## See also
+
+- [PnP remote timer job framework](pnp-remote-timer-job-framework.md)

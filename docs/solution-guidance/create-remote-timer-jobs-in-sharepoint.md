@@ -1,6 +1,7 @@
 ---
 title: Create remote timer jobs in SharePoint
-ms.date: 11/03/2017
+description:
+ms.date: 5/9/2018
 ---
 # Create remote timer jobs in SharePoint
 
@@ -297,6 +298,8 @@ void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
     
-- [Guide to using the Timer Job Framework](https://github.com/SharePoint/PnP/blob/master/OfficeDevPnP.Core/TimerJob%20Framework.md)
+- [Guide to using the timer job framework](https://github.com/SharePoint/PnP/blob/master/OfficeDevPnP.Core/TimerJob%20Framework.md)
     
 - [Timer job framework](https://github.com/SharePoint/PnP/tree/dev/Solutions/Core.TimerJobs.Samples)
+
+- [PnP remote timer job framework](pnp-remote-timer-job-framework.md)

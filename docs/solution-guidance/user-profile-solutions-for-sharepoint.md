@@ -23,6 +23,6 @@ The user profiles solution pack includes code samples and documentation that you
 
 ## See also
 
-- [Patterns and Practices Developer Center](http://dev.office.com/patterns-and-practices)
+- [SharePoint Developer Community (SharePoint PnP) resources](../community/community.md)
 - [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
