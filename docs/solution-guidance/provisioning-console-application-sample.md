@@ -35,10 +35,8 @@ To begin, create a Visual Studio project. In this sample, for simplicity, we cre
     
 	> [!NOTE] 
 	> There are two versions of the Core library. One version is the **OfficeDevPnP.Core** library, which targets SharePoint Online and Office 365. The second version is **OfficeDevPnP.Core (on-premises)**, which targets SharePoint on-premises. Following is a screenshot of the available options. In this sample walkthrough, we're using the first option to target SharePoint Online.
-
-	<br/>
-
-	![Two Core library download choices](media/provisioning-console-application-sample/5b1adb8d-52e5-4c67-8792-6ef0ae41d655.png)
+	>
+	> ![Two Core library download choices](media/provisioning-console-application-sample/5b1adb8d-52e5-4c67-8792-6ef0ae41d655.png)
 
 	
 5. Install the NuGet client by going to the [NuGet client installer](http://docs.nuget.org/consume/installing-nuget).
@@ -198,12 +196,16 @@ To begin, we need to connect to the site that we wish to model as our provisioni
 	> [!NOTE] 
 	> This step is optional. It's not required that you serialize the provisioning template to XML. At this stage, the template is simply C# code. Not only is serialization optional, but you also can use whatever serialization format you wish.
 
-5. Execute the extraction of the provisioning template by using just this single line of code:  	`ProvisioningTemplate template = ctx.Web.GetProvisioningTemplate(ptci);`
+5. Execute the extraction of the provisioning template by using only this single line of code:  	
+
+   ```csharp
+   ProvisioningTemplate template = ctx.Web.GetProvisioningTemplate(ptci);
+   ```
     
 6. (Optional) Save and store a serialized version of the provisioning template so that you can reuse it. You can serialize the provisioning template in whichever format you prefer. In this sample, we serialized to an XML file named **PnPProvisioningDemo.xml**. The file itself is an **XMLFileSystemTemplateProvider** object for which we provided a file system location.
 
 
-### Apply the provisioning template to a new or existing site
+## Apply the provisioning template to a new or existing site
 
 After we extract, save, and persist the provisioning template, the next and final step is to apply the provisioning template to a new SharePoint site collection by using the **ApplyProvisioningTemplate** method.
 
