@@ -214,7 +214,11 @@ By default, the site will look like the following figure, which is the default l
 
 <br/>
 
-You can now apply a custom **ProvisioningTemplate** instance object either by utilizing PowerShell, or by writing .NET code. If you want to use PowerShell, the following excerpt shows how you can utilize the **Apply-SPOProvisioningTemplate** cmdlet: `Apply-SPOProvisioningTemplate -Path "PnP-Provisioning-File.xml"`.
+You can now apply a custom **ProvisioningTemplate** instance object either by utilizing PowerShell, or by writing .NET code. 
+
+### Using PowerShell
+
+If you want to use PowerShell, the following excerpt shows how you can utilize the **Apply-SPOProvisioningTemplate** cmdlet: `Apply-SPOProvisioningTemplate -Path "PnP-Provisioning-File.xml"`.
 
 The `–Path` argument refers to the source template file, which the cmdlet automatically applies to the currently connected site (implied by the **Connect-SPOnline** cmdlet). 
 
@@ -225,6 +229,8 @@ In the following figure you can see the final result.
 <br/>
 
 As you can see, the site has the same look as the original template, and it includes the Invoices library, with all of the same underlying structure and configuration (site columns, content types, etc.).
+
+### Using CSOM
 
 What about using .NET code? Following is an excerpt on how to use CSOM and the OfficeDev PnP Core Library extension methods to apply the template.
 
