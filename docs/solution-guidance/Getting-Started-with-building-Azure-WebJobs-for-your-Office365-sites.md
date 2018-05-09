@@ -214,13 +214,13 @@ static void Main(string[] args)
 The **TranslatorHelper** class is a helper class which calls a custom translation API but it will not be discussed in detail in this post since it's pretty far outside of the scope.
 
 > [!NOTE] 
-> As seen from the code this is a demo and definitely not for production use, please revise it and adjust according to your coding standards and security principles. However all the Console.WriteLine additions are added in order for us to review the execution of the jobs easily from the Azure Portal. More on logging and monitoring further down in this article.
+> As seen from the code this is a demo and definitely not for production use, please revise it and adjust according to your coding standards and security principles. However all the Console.WriteLine additions are added in order for us to review the execution of the jobs easily from the [Azure portal](https://ms.portal.azure.com/). More on logging and monitoring further down in this article.
 
 ## Publishing your WebJob to Azure ##
 When you’ve developed your WebJob and you’re ready to deploy it to your Azure environment (deploys to an Azure WebSite), you have two main options as described below.
 
-### Option 1: Upload a zip file with the WebJob binaries to your Azure Portal ###
-Using the Azure Portal where you keep all of your awesomeness in Azure, you can upload a zip-file containing the output from Visual Studio’s build. This is an easy way for compiling and shipping your code to someone else who will do the deployment for you.
+### Option 1: Upload a zip file with the WebJob binaries to your Azure portal ###
+Using the Azure portal where you keep all of your awesomeness in Azure, you can upload a zip-file containing the output from Visual Studio’s build. This is an easy way for compiling and shipping your code to someone else who will do the deployment for you.
 
 #### Create the zip file ####
 Simply grab all the output files from your Visual Studio build (normally in your bin/Debug or bin/Release folder):
@@ -232,13 +232,13 @@ Compress them so you’ll get a nice Zip file for your web job:
 
 #### Find a website where the job should be deployed ####
 
-Okay, so you’ve got your package. That’s easy enough. Next step is to head on to https://portal.azure.com and login to your Windows Azure Portal. From there you’ll need to either create a new website, or use an existing one – this website will be the host for our web job.
+Okay, so you’ve got your package. That’s easy enough. Next step is to head on to https://portal.azure.com and login to your Windows Azure portal. From there you’ll need to either create a new website, or use an existing one – this website will be the host for our web job.
 
 In my case, I already have an Azure WebSite for some of my Office 365 demos so I’ll just use that one.
 
 If you scroll down in the settings pane for your website, you’ll find a something called "**WebJobs**" under the "**Operations**" header:
 
-![The author's Azure Portal is displayed, with an arrow pointing to WebJobs.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/8.Find-WebJobs-in-Azure-Portal.png)
+![The author's Azure portal is displayed, with an arrow pointing to WebJobs.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/8.Find-WebJobs-in-Azure-Portal.png)
 **Click where the arrow points!**
 
 #### Upload your WebJob ####
@@ -256,7 +256,7 @@ Choose a Name, how the job should run and the actual zip file:
 
 *(Hint: In the next section for publishing directly from Azure, you can schedule it from inside VS).*
 
-Okay, done – you can now run your webjob from your Azure Portal:
+Okay, done – you can now run your webjob from your Azure portal:
 
 ![The WebJobs Azure portal is displayed with the new job list. A context menu appears above the job with the options of Run and Delete.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/11.Run-WebJob-from-Azure-Portal.png)
 
@@ -308,7 +308,7 @@ Right, we don’t need to bother with this file at the moment since we already d
 #### Select publishing/deployment target ####
 The next step in the dialog will be where to publish/deploy your WebJob. You can either import a publishing profile or select Microsoft Azure WebSites in order to authenticate and select one of your existing sites.
 
-Since I’ve got a habit of always downloading my publishing profiles from my Azure Portal, I’ll go ahead and select "**Import**" and simply specify the publishing profile file that I’ve downloaded from my Azure website:
+Since I’ve got a habit of always downloading my publishing profiles from my Azure portal, I’ll go ahead and select "**Import**" and simply specify the publishing profile file that I’ve downloaded from my Azure website:
 
 ![The dialog Publish Web is displayed with the Connection tab visible.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/15.Publish-Web-Dialog.png)
 
@@ -318,8 +318,8 @@ With that done, all we need to do is click the button called "Publish". Don’t 
 Once you hit Publish, the Web Publish Activity dialog will display the progress of your Web Job deployment:
 ![The dialog Web Publish Activity is displayed.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/16.Publish-Progress-Visual-Studio-2015.png)
 
-Once it’s done, you should see the WebJob in your Azure Portal:
-![The Azure Portal shows Zimmergren-O365-WebJobSample in the list of WebJobs with the status of, Completed 2 min ago.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/17.Web-Job-Published-as-seen-in-Azure-Portal.png)
+Once it’s done, you should see the WebJob in your Azure portal:
+![The Azure portal shows Zimmergren-O365-WebJobSample in the list of WebJobs with the status of, Completed 2 min ago.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/17.Web-Job-Published-as-seen-in-Azure-Portal.png)
 
 The WebJob status is now displayed as Completed. It would say failure/error if it would throw any unhandled exceptions or otherwise provide unhealthy behavior.
 

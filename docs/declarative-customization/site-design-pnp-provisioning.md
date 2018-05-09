@@ -70,7 +70,7 @@ In this section, you will use Azure Queue storage to receive messages from Micro
 
 To set up the Azure Queue storage:
 
-1. Go to the [Azure portal](https://portal.azure.com) and sign in. 
+1. Go to the [Azure portal](https://ms.portal.azure.com/) and sign in. 
 
 2. Choose **+ New**.
  
@@ -192,7 +192,7 @@ Copy the following provisioning template XML to a new file and save the file as 
 
 ## Create the Azure function
 
-1. Go to the [Azure Portal](https://portal.azure.com). 
+1. Go to the [Azure portal](https://ms.portal.azure.com/) . 
 
 2. Search for **Function App**, and create a new function app. In the **Storage** field, select **Use existing**, and then select the storage account that you created earlier. Set the other values as required. 
 
@@ -273,7 +273,7 @@ Next, upload the files so that your Azure function can use the module.
     Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTemplate\FlowDemoTemplate.xml
    ```
 
-4. Notice that you're using two environment variables: `SPO_AppId`and `SPO_AppSecret`. To set those variables, go to the main Function app page in the Azure Portal, select **Application settings**, and add two new application settings:
+4. Notice that you're using two environment variables: `SPO_AppId`and `SPO_AppSecret`. To set those variables, go to the main Function app page in the Azure portal, select **Application settings**, and add two new application settings:
 
    - `SPO_AppId` - Set the value to the Client ID you copied in the first step when you created your app on your tenant. 
 

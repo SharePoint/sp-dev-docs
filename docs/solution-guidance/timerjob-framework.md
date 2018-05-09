@@ -1,8 +1,9 @@
 ---
-title: 'The Timer Job Framework #'
+title: The Timer Job Framework
 ms.date: 11/03/2017
 ---
-# The Timer Job Framework #
+
+# The Timer Job Framework
 
 The PnP Timer Job Framework is a set of classes designed to ease the creation of background processes that operate against SharePoint sites. The Timer Job Framework is similar to on-premises full trust code Timer Jobs (`SPJobDefinition`). The primary difference with between the Timer Job Framework and the full trust code Timer Job is that the Timer Job Framework only uses client side APIs and therefore can (and should) be run outside of SharePoint. The Timer Job Framework makes it possible to build Timer Jobs that operate against SharePoint Online.
 
@@ -122,7 +123,7 @@ The actual deployment to Azure is based on Azure Web Jobs. To deploy this Timer 
 
 ![Azure management portal](media/timerjob-framework/4xDUvXv.png)
 
-Also, the timer job can be run from the new [Azure portal](https://portal.azure.com) by selecting the job and choosing **Run**. More details about how to work with WebJobs from the new portal can be found in the article, [Run Background tasks with WebJobs](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
+Also, the timer job can be run from the new [Azure portal](https://ms.portal.azure.com/) by selecting the job and choosing **Run**. More details about how to work with WebJobs from the new portal can be found in the article, [Run Background tasks with WebJobs](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
 
 ![Azure portal](media/timerjob-framework/n4wGS5x.png)
 

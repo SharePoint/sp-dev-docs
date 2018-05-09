@@ -546,7 +546,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
 
 ### To create the Azure website
 
-1. In the Microsoft Azure portal, open **websiteS** on the left navigation bar.
+1. In the Microsoft Azure portal, open **websites** on the left navigation bar.
     
 2. Select **NEW** at the bottom of the page, and in the **NEW** dialog, select **website** |**QUICK CREATE**.
     
