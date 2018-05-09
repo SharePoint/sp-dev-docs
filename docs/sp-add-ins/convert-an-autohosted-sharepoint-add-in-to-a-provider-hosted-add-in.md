@@ -81,7 +81,7 @@ The approach outlined in the following steps uses the data-tier application depl
 
 2. Right-click the database project **CustomerDb**, and then select **Build**. This generates the CustomerDb.dacpac file in the `[..]\bin\[debug | release]` folder.
  
-3. Create a new Azure SQL Database. Sign in to the [Azure Management Portal](https://manage.windowsazure.com), and after the dashboard loads, select the **SQL DATABASES** link in the margin.
+3. Create a new Azure SQL Database. Sign in to the [Azure portal](https://ms.portal.azure.com), and after the dashboard loads, select the **SQL DATABASES** link in the margin.
 
     ![Azure SQL Database listing](../images/ConvertAuto2ProviderFig3.jpg)
 
@@ -110,7 +110,7 @@ The approach outlined in the following steps uses the data-tier application depl
 
     <br/>
  
-2. To create a firewall rule, within the **Azure Management Portal**, select the Azure SQL Database previously created and then select the **CONFIGURE** link in the top navigation. 
+2. To create a firewall rule, within the Azure portal, select the Azure SQL Database previously created and then select the **CONFIGURE** link in the top navigation. 
 
 3. Under the **allowed IP addresses** section, your IP address is currently shown as it appears in the following figure. Select **ADD TO THE ALLOWED IP ADDRESSES** to add a firewall rule. Doing so allows connections to the Azure SQL Database and deployment of the database. Select **Save** in the footer.
 
@@ -151,13 +151,13 @@ The approach outlined in the following steps uses the data-tier application depl
 
 After the Azure SQL Database has been created, make a copy of the connection string used to establish a connection to the database. This can be obtained in two ways. 
 
-- One way is to sign in to the **Azure Management Portal** (https://manage.windowsazure.com) and go to the Azure SQL Database created in the last step: CustomerDb. On the **DASHBOARD** page for the database, select the link **Show Connection Strings** to see a list of connection strings. Make a copy of the **ADO.NET** connection string for later use.
+- One way is to sign in to the [Azure portal](https://ms.portal.azure.com) and go to the Azure SQL Database created in the last step: CustomerDb. On the **DASHBOARD** page for the database, select the link **Show Connection Strings** to see a list of connection strings. Make a copy of the **ADO.NET** connection string for later use.
 
     ![Azure SQL connection strings dialog](../images/ConvertAuto2Providerfig11.jpg)
 
     <br/>
  
-- The other way to get the connection string is from within Visual Studio, provided the Azure SDK v2.3 is installed. Within the **SQL Server Object Explorer** tool window in Visual Studio, select the database **CustomerDb**. After the database is selected, look at the **Properties** tool window to see the connection string. This is the same value found in the **Azure Management Portal**.
+- The other way to get the connection string is from within Visual Studio, provided the Azure SDK v2.3 is installed. Within the **SQL Server Object Explorer** tool window in Visual Studio, select the database **CustomerDb**. After the database is selected, look at the **Properties** tool window to see the connection string. This is the same value found in the Azure portal.
 
     ![Obtain SQL connection string in Visual Studio](../images/ConvertAuto2ProviderFig12.jpg)
 
@@ -169,7 +169,7 @@ The next step is to create a new Azure website where the remote web application 
  
 ### To create a new Azure website
 
-1. Sign in to the **Azure Management Portal** (https://manage.windowsazure.com). When the dashboard loads, click the **websiteS** navigation link in the left margin, and then select the **NEW** button in the footer as shown in the following figure.
+1. Sign in to the [Azure portal](https://ms.portal.azure.com). When the dashboard loads, click the **websiteS** navigation link in the left margin, and then select the **NEW** button in the footer as shown in the following figure.
 
     ![Azure websites dashboard](../images/ConvertAuto2Providerfig13.jpg)
 
@@ -222,15 +222,15 @@ In a SharePoint autohosted add-in, Office 365 fills in the values for these sett
 
 One option is to paste in the values for the three settings from the steps earlier in this article, but the disadvantage with this approach is that if they ever need to be changed, the web.config will need to be manually updated and redeployed to the Azure website.
 
-Another option is to simply clear these settings (leave the settings keys in place, just set the **value=""** attribute to an empty string) and instead define them in the Azure website settings through the **Azure Management Portal**. This approach means that the settings can be changed without updating the codebase. To do this:
+Another option is to simply clear these settings (leave the settings keys in place, just set the **value=""** attribute to an empty string) and instead define them in the Azure website settings through the Azure portal. This approach means that the settings can be changed without updating the codebase. To do this:
 
-1. Sign in to the **Azure Management Portal** (https://manage.windowsazure.com) and go to the Azure website created in the previous steps. 
+1. Sign in to the [Azure portal](https://ms.portal.azure.com) and go to the Azure website created in the previous steps. 
 
 2. On the Azure website dashboard page, select **CONFIGURE** in the top navigation menu, and then scroll down to the **add-in settings** section. 
 
 3. Add three new add-in settings by using the same setting names from the web.config file. Use the values obtained in the previous steps for **ClientId**, **ClientSecret**, and **SqlAzureConnectionString**.
  
-Make sure that the Azure SQL Database connection string is correct and valid because, when the connection string is exposed through the **Azure Management Portal** and Visual Studio, the password attribute is replaced with a mask. The masked password in the connection string should be changed to use the correct password defined when creating the sign-in for the Azure SQL Database.
+Make sure that the Azure SQL Database connection string is correct and valid because, when the connection string is exposed through the Azure portal and Visual Studio, the password attribute is replaced with a mask. The masked password in the connection string should be changed to use the correct password defined when creating the sign-in for the Azure SQL Database.
 
 
 ### To deploy the remote web application to the Azure website

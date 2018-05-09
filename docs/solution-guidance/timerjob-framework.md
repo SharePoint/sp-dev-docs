@@ -119,9 +119,9 @@ The actual deployment to Azure is based on Azure Web Jobs. To deploy this Timer 
 2. Provide a schedule for the Timer Job and click **OK**
 3. Select **Microsoft Azure Websites** as a publish target. You'll be asked to login to Azure and select the Azure website that will host the Timer Job (you can also create a new one if that would be needed)
 4. Press **Publish** to push the WebJob to Azure
-5. Once the Timer Job has been published you can trigger the job and check the job execution from Visual Studio or the [Azure management portal](https://manage.windowsazure.com).
+5. Once the Timer Job has been published you can trigger the job and check the job execution from Visual Studio or the [Azure portal](https://ms.portal.azure.com).
 
-![Azure management portal](media/timerjob-framework/4xDUvXv.png)
+![Azure portal](media/timerjob-framework/4xDUvXv.png)
 
 Also, the timer job can be run from the new [Azure portal](https://ms.portal.azure.com/) by selecting the job and choosing **Run**. More details about how to work with WebJobs from the new portal can be found in the article, [Run Background tasks with WebJobs](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
 

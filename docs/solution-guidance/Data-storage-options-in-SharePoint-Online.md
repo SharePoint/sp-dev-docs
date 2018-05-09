@@ -48,7 +48,7 @@ Also, you need to deploy the Northwind database to Microsoft Azure.
 
 ### To deploy the Northwind database
 
-1. Sign in to the Azure Management Portal and choose **SQL Databases** > **Servers**.
+1. Sign in to the [Azure portal](https://ms.portal.azure.com) and choose **SQL Databases** > **Servers**.
     
 2. Choose **Create a SQL Database Server**.
     
@@ -84,7 +84,7 @@ Also, you need to deploy the Northwind database to Microsoft Azure.
     
 16. Choose **Next**, and then choose **Finish**, and wait until the database is created. After it is created, choose **Close** to close the wizard.
     
-17. Return to the [Azure Management Portal](https://manage.windowsazure.com/) to verify that the Northwind database was created successfully. You should see it listed on the **sql databases** screen.
+17. Return to the [Azure portal](https://ms.portal.azure.com) to verify that the Northwind database was created successfully. You should see it listed on the **sql databases** screen.
 
     ![Shows a list of all SQL databases, including Northwind](media/036b4252-f57b-4f39-9f60-ddaa30daf23c.png)
 

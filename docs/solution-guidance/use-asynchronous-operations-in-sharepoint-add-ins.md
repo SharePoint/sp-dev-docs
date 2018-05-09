@@ -49,7 +49,7 @@ To get started, download the [Core.QueueWebJobUsage](https://github.com/SharePoi
 
 To create an Azure Storage account to access the Azure storage queue:
 
-1. Sign in to your Microsoft [Azure Management Portal](https://manage.windowsazure.com).
+1. Sign in to your [Microsoft Azure portal](https://ms.portal.azure.com).
     
 2. Choose  **New** > **Data Services** > **Storage** > **Quick Create**.
     
@@ -77,7 +77,7 @@ To add details to your newly created storage account:
     
 To verify that your Azure WebJob is running:
 
-1. Sign in to your [Azure Management Portal](https://manage.windowsazure.com).
+1. Sign in to your [Azure portal](https://ms.portal.azure.com).
     
 2. Choose  **web apps**, and then choose the Microsoft Azure Websites you entered. 
     
@@ -99,18 +99,18 @@ Use the information in the following table to apply configuration settings to th
 
 |**File location**|**Key to update**|**Value information to update**|
 |:-----|:-----|:-----|
-|Helper Project\Core.QueueWebJobUsage.Console.SendMessage\app.config| **StorageConnectionString**| Replace **[Your Account name]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[Your Account Key]** with the primary access key copied from the Azure Management Portal.|
-|Core.QueueWebJobUsageWeb\web.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourAccountKey]** with the primary access key copied from the Azure Management Portal.|
-|Core.QueueWebJobUsage.Job\app.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourAccountKey]** with the primary access key copied from the Azure Management Portal.|
+|Helper Project\Core.QueueWebJobUsage.Console.SendMessage\app.config| **StorageConnectionString**| Replace **[Your Account name]** with the storage account name copied from the Azure portal.|
+||| Replace **[Your Account Key]** with the primary access key copied from the Azure portal.|
+|Core.QueueWebJobUsageWeb\web.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourAccountKey]** with the primary access key copied from the Azure portal.|
+|Core.QueueWebJobUsage.Job\app.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourAccountKey]** with the primary access key copied from the Azure portal.|
 || **ClientId**| Replace **[Your Add-in ID]** with the client ID copied from the Core.QueueWebJobUsageWeb\web.config.|
 || **ClientSecret**| Replace **[Your Add-in Secret]** with the client secret copied from the Core.QueueWebJobUsageWeb\web.config.|
-|| **AzureWebJobsDashboard**| Replace **[YourAccount]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourKey]** with the primary access key copied from the Azure Management Portal.|
-|| **AzureWebJobsStorage**| Replace **[YourAccount]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourKey]** with the primary access key copied from the Azure Management Portal.|
+|| **AzureWebJobsDashboard**| Replace **[YourAccount]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourKey]** with the primary access key copied from the Azure portal.|
+|| **AzureWebJobsStorage**| Replace **[YourAccount]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourKey]** with the primary access key copied from the Azure portal.|
 
 > [!NOTE] 
 > If the  **ClientId** and the **ClientSecret** in Core.QueueWebJobUsageWeb gets updated, for example, when you increment the version number in the AppManifest.xml, make sure you update the **ClientId** and the **ClientSecret** in the Core.QueueWebJobUsage.Job\app.config.

@@ -179,7 +179,7 @@ After completing all the previous steps, your Azure WebJob should be running and
 
 - If your Azure WebJob updated a SharePoint item, like a list item, the **Modified By** field displays the organization account that the Azure WebJob used to access SharePoint.
     
-- Review the WebJob Details logs for your Azure WebJob. The WebJob Details logs let you review when a job ran, the success or failure of a job run, any output from the WebJob (for example, when Console.WriteLine was called), and other details of the job run. For more information, see the section [View the job history](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs#ViewJobHistory) on Run Background tasks with WebJobs.
+- Review the WebJob Details logs for your Azure WebJob. The WebJob Details logs let you review when a job ran, the success or failure of a job run, any output from the WebJob (for example, when Console.WriteLine was called), and other details of the job run. For more information, see the section [View the job history](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs#ViewJobHistory) in Run Background tasks with WebJobs.
 
 ## See also
 

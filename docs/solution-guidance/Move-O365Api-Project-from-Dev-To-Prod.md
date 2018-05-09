@@ -23,7 +23,7 @@ Deploying an Office 365 API web application to Azure from a local development en
 
 In this step, you create a web app that will be used to host the web application. 
 
-1. Go to the [Azure Management Portal](https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/dashboard/private/d4637e0c-85fa-4346-b9a3-7e06011b900d) and sign in by using your Organization ID account.
+1. Go to the [Azure portal](https://ms.portal.azure.com) and sign in by using your Organization ID account.
 
 2. After signing in, on the navigation sidebar, choose **WEBSITES**.
 
@@ -40,7 +40,7 @@ In this step, you create a web app that will be used to host the web application
 
 Give Azure a few moments to create the site. After creating the site, you can specify **app settings** through the web interface. This allows you to override any `<appSettings>` within the project's web.config file through the web administration interface for the website without deploying your site codebase for simple web.config changes.
 
-1. Choose the website that you just created within the **Azure Management Portal**.
+1. Choose the website that you just created within the [Azure portal](https://ms.portal.azure.com).
 
 2. Choose the **CONFIGURE** link in the top navigation.
 
@@ -61,7 +61,7 @@ At this point the Azure website is set up and configured to host the Office 365 
 
 In this step, you modify the Azure AD application used in the development and testing of the Office 365 application.
 
-1. Go to the [Azure Management Portal](https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/dashboard/private/d4637e0c-85fa-4346-b9a3-7e06011b900d) and sign in by using your Organization ID account.
+1. Go to the [Azure portal](https://ms.portal.azure.com) and sign in by using your Organization ID account.
 
 2. After signing in, on the navigation sidebar, choose **ACTIVE DIRECTORY**.
 
