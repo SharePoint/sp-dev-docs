@@ -1,6 +1,7 @@
 ---
 title: PnP provisioning schema
-ms.date: 11/03/2017
+description: 
+ms.date: 5/9/2018
 ---
 # PnP provisioning schema
 
@@ -58,3 +59,4 @@ The code block below displays the schema's root element and direct child element
 - [PnP provisioning schema](https://github.com/SharePoint/PnP-Provisioning-Schema)
     
 - [GitHub at PnP-Provisioning-Schema/Samples](https://github.com/SharePoint/PnP-Provisioning-Schema/tree/master/Samples)
+- [PnP remote provisioning](pnp-remote-provisioning.md)

@@ -1606,8 +1606,8 @@
   - name: PnP remote provisioning
     href: solution-guidance/pnp-remote-provisioning.md
     items:
-    - name: Introducing the PnP provisioning engine
-      href: solution-guidance/Introducing-the-PnP-Provisioning-Engine.md
+    - name: PnP provisioning engine
+      href: solution-guidance/introducing-the-pnp-provisioning-engine.md
     - name: PnP provisioning framework
       href: solution-guidance/pnp-provisioning-framework.md
     - name: PnP provisioning engine and the core library
@@ -1623,8 +1623,8 @@
       href: solution-guidance/timerjob-framework.md
     - name: Create remote timer jobs in SharePoint
       href: solution-guidance/create-remote-timer-jobs-in-sharepoint.md
-    - name: Get started with WebJobs ("timer jobs")
-      href: solution-guidance/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md
+    - name: Get started with WebJobs (timer jobs)
+      href: solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites.md
   - name: PnP Office 365 CLI
     href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
   - name: PnP PowerShell reference

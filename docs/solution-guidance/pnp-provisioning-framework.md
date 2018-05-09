@@ -1,6 +1,7 @@
 ---
 title: PnP provisioning framework
-ms.date: 11/03/2017
+description: 
+ms.date: 5/9/2018
 ---
 # PnP provisioning framework
 
@@ -64,11 +65,10 @@ You can use either a Windows PowerShell script or CSOM/REST code to apply your p
 
 ## See also
 <a name="bk_addresources"> </a>
-
-- [PnP remote provisioning](pnp-remote-provisioning.md)
     
 - [Provisioning console application sample](provisioning-console-application-sample.md)
     
 - [PnP provisioning engine and the core library](pnp-provisioning-engine-and-the-core-library.md)
     
 - [PnP provisioning schema](pnp-provisioning-schema.md)
+- [PnP remote provisioning](pnp-remote-provisioning.md)

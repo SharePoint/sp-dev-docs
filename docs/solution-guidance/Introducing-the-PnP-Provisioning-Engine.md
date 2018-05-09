@@ -1,6 +1,7 @@
 ---
 title: Introducing the PnP provisioning engine
-ms.date: 11/03/2017
+description: 
+ms.date: 5/9/2018
 ---
 # Introducing the PnP provisioning engine
 
@@ -249,3 +250,4 @@ Please, play with the PnP provisioning engine, give us feedback, and enjoy the f
 
 -  [Office 365 Development Patterns & Practices on GitHub](https://github.com/SharePoint/PnP/)
 -  [SharePoint Developer Group](http://aka.ms/sppnp-community) at Microsoft Tech Community
+- [PnP remote provisioning](pnp-remote-provisioning.md)

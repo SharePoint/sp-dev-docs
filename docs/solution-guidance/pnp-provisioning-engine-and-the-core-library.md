@@ -1,6 +1,7 @@
 ---
 title: PnP provisioning engine and the core library
-ms.date: 11/03/2017
+description: 
+ms.date: 5/9/2018
 ---
 # PnP provisioning engine and the core library
 
@@ -155,3 +156,4 @@ The Core library (OfficeDevPnP.Core) is a CSOM/REST object model that supports t
 - [SharePoint/PnP-Provisioning-Schema](https://github.com/SharePoint/Pnp-Provisioning-Schema/)
     
 - [Extension Methods](https://msdn.microsoft.com/en-us/library/bb383977.aspx)
+- [PnP remote provisioning](pnp-remote-provisioning.md)

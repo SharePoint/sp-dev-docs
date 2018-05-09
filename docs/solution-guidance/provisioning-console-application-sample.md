@@ -1,6 +1,7 @@
 ---
 title: Provisioning console application sample
-ms.date: 11/03/2017
+description: 
+ms.date: 5/9/2018
 ---
 # Provisioning console application sample
 
@@ -261,3 +262,5 @@ Once we extract, save, and persist the provisioning template, the next and final
 - [PnP provisioning framework](pnp-provisioning-framework.md)
     
 - [PnP provisioning engine and the core library](pnp-provisioning-engine-and-the-core-library.md)
+
+- [PnP remote provisioning](pnp-remote-provisioning.md)
