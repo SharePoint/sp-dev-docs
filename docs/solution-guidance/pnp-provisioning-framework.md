@@ -54,7 +54,7 @@ The easiest way is to make the desired modifications to an existing site page, a
 
 You also can manually create your provisioning template as an XML file or by using managed code (CSOM/REST) to create a hierarchy of objects to represent site artifacts and structure. If you're creating a schema file, you must validate the file against the provisioning XSD schema (see [PnP provisioning schema](pnp-provisioning-schema.md)).
 
-You'll find more detail about modeling your site in the [PnP provisioning engine and the core library](pnp-provisioning-engine-and-the-core-library.md) article.
+You'll find more detail about modeling your site in the [PnP provisioning engine and the Core library](pnp-provisioning-engine-and-the-core-library.md) article.
 
 ### 2. Create and persist your provisioning template in a serialized format
 
