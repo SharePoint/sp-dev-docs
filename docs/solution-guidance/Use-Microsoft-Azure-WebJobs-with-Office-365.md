@@ -164,9 +164,12 @@ In Program.cs, add the following code to the console application.
 
 When you are finished developing your console application, you need to deploy the console application as an Azure WebJob. To deploy your console application as an Azure WebJob, you can:
 
-- Upload your binaries to an Azure Web App, and create an Azure WebJob by using the [Microsoft Azure portal](https://ms.portal.azure.com/). The binaries for your Visual Studio project can be found in the bin/Debug or bin/Release folders of your Visual Studio project. To create the Azure Web App and upload the binaries, follow the steps in  [Create an ASP.NET web app in Azure App Service](http://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/). To create your on demand, continuous, or scheduled Azure WebJob, see  [Run Background tasks with WebJobs](http://azure.microsoft.com/documentation/articles/web-sites-create-web-jobs/).
+- Upload your binaries to an Azure Web App, and create an Azure WebJob by using the [Microsoft Azure portal](https://ms.portal.azure.com). 
+	- The binaries for your Visual Studio project can be found in the bin/Debug or bin/Release folders of your Visual Studio project. 
+	- To create the Azure Web App and upload the binaries, follow the steps in [Create an ASP.NET Core web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet). 
+	- To create your on-demand, continuous, or scheduled Azure WebJob, see [Run Background tasks with WebJobs in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs).
     
-- Publish your Azure WebJob from Visual Studio. For more information, see  [Enable WebJobs deployment without a web project](http://azure.microsoft.com/documentation/articles/websites-dotnet-deploy-webjobs/#convertnolink).
+- Publish your Azure WebJob from Visual Studio. For more information, see [Enable WebJobs deployment without a web project](https://docs.microsoft.com/en-us/azure/app-service/websites-dotnet-deploy-webjobs#convertnolink).
 
 <a name="runandverify"> </a>
 
@@ -176,17 +179,9 @@ After completing all the previous steps, your Azure WebJob should be running and
 
 - If your Azure WebJob updated a SharePoint item, like a list item, the **Modified By** field displays the organization account that the Azure WebJob used to access SharePoint.
     
-- Review the WebJob Details logs for your Azure WebJob. The WebJob Details logs lets you review when a job ran, the success or failure of a job run, any output from the WebJob (for example, when Console.WriteLine was called), and other details of the job run. For more information, see the section View the job history on  [Run Background tasks with WebJobs](http://azure.microsoft.com/documentation/articles/web-sites-create-web-jobs/).
+- Review the WebJob Details logs for your Azure WebJob. The WebJob Details logs let you review when a job ran, the success or failure of a job run, any output from the WebJob (for example, when Console.WriteLine was called), and other details of the job run. For more information, see the section [View the job history](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs#ViewJobHistory) on Run Background tasks with WebJobs.
 
 ## See also
 
--  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md).
-    
--  [Create a .NET WebJob in Azure App Service](http://azure.microsoft.com/documentation/articles/websites-dotnet-webjobs-sdk-get-started/).
-    
--  [Azure WebJobs resources](http://azure.microsoft.com/documentation/articles/websites-webjobs-resources/).
-
-
 - [Deploying your SharePoint Add-ins](deploying-your-sharepoint-add-ins.md)
 
-This page assumes that you have a local working ASP.NET application that uses the Office 365 APIs. For reference, it uses the [Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites](https://github.com/SharePoint/sp-dev-docs/tree/master/docs/solution-guidance/media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites) project on GitHub.
