@@ -6,7 +6,7 @@ ms.date: 5/9/2018
 
 # Introducing the PnP provisioning engine
 
-This article introduces the PnP provisioning engine, which was released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library.
+This article introduces the PnP provisioning engine, which was released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library. 
 
 > [!NOTE] 
 > This article was originally a white paper written by Paolo Pialorsi in April 2015.
