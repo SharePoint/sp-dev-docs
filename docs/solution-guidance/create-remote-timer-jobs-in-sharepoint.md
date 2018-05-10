@@ -1,8 +1,9 @@
 ---
 title: Create remote timer jobs in SharePoint
-description:
+description: Explains how to create remote timer jobs to manage SharePoint by monitoring and taking action on SharePoint data.
 ms.date: 5/9/2018
 ---
+
 # Create remote timer jobs in SharePoint
 
 Create remote timer jobs in SharePoint to perform background tasks to manage or govern your environment.

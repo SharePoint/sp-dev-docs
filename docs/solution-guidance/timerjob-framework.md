@@ -1,17 +1,17 @@
 ---
 title: PnP timer job framework
-description:
+description: Describes set of classes designed to ease the creation of background processes that operate against SharePoint sites.
 ms.date: 5/9/2018
 ---
 
 # PnP timer job framework
 
-The PnP timer job framework is a set of classes designed to ease the creation of background processes that operate against SharePoint sites. The timer job framework is similar to on-premises full trust code timer jobs (`SPJobDefinition`). The primary difference between the timer job framework and the full trust code timer job is that the timer job framework only uses client-side APIs and therefore can (and should) be run outside of SharePoint. The timer job framework makes it possible to build timer jobs that operate against SharePoint Online.
+The PnP timer job framework is a set of classes designed to ease the creation of background processes that operate against SharePoint sites. The timer job framework is similar to on-premises full trust code timer jobs (**SPJobDefinition**). The primary difference between the timer job framework and the full trust code timer job is that the timer job framework only uses client-side APIs and therefore can (and should) be run outside of SharePoint. The timer job framework makes it possible to build timer jobs that operate against SharePoint Online.
 
 After a timer job has been created, it needs to be scheduled and executed. The two most common options are:
 
 - When Microsoft Azure is the hosting platform, timer jobs can be deployed and run as Azure WebJobs.
-- When Windows Server is the hosting platform (for example, for on-premises SharePoint) timer jobs can be deployed and run in Windows scheduler.
+- When Windows Server is the hosting platform (for example, for on-premises SharePoint), timer jobs can be deployed and run in Windows Scheduler.
 
 For a video introduction to timer jobs, see the video [Introduction to the PnP timer job framework](http://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework), which introduces the timer job framework and demonstrates the simple timer job example.
 
@@ -114,7 +114,7 @@ A timer job is an .exe file that must be scheduled on a hosting platform. Depend
 
 ### Deploy timer jobs to Azure using Azure WebJobs
 
-Before deploying a timer job, ensure that the job can run without user interaction. The sample in this article prompts the user to provide a password or client secret (see more in **Authentication**) which works while testing but does not work when deployed. The existing samples all allow the user to provide a password or client secret by using the app.config file:
+Before deploying a timer job, ensure that the job can run without user interaction. The sample in this article prompts the user to provide a password or client secret (see more in the [Authentication](#authentication) section), which works while testing but does not work when deployed. The existing samples all allow the user to provide a password or client secret by using the app.config file:
 
 ```XML
   <appSettings>
@@ -162,7 +162,7 @@ When deployed to Windows Server, the timer job must run without user interaction
 
 3. Schedule the execution of the timer job. We recommend that you use the built-in [Windows Task Scheduler](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721871(v=ws.11)). To use the Windows Task Scheduler:
 
-    1. Open the task scheduler (**Control Panel** > **Task Scheduler**).
+    1. Open the Task Scheduler (**Control Panel** > **Task Scheduler**).
     2. Choose **Create Task** and specify a name and an account that will execute the task.
     3. Choose **Triggers** and add a new trigger. Specify the schedule you want for the timer job.
     4. Choose **Actions** and choose the action **Start a program**, select the timer job .exe file, and then set the start in folder.
@@ -195,9 +195,9 @@ To prepare for a timer job run, you must first configure it:
 
 From an execution perspective, the following overall steps are taken when a timer job run is started:
 
-1. **Resolve sites**: Wild card site urls (for example, `https://tenant.sharepoint.com/sites/d*`) are resolved into an actual list of existing sites. If subsite expanding was requested, the resolved sites list is expanded with all subsites.
+1. **Resolve sites**: Wild card site URLs (for example, `https://tenant.sharepoint.com/sites/d*`) are resolved into an actual list of existing sites. If subsite expanding was requested, the resolved sites list is expanded with all subsites.
 2. **Create batches of work** based on the current treading settings and create one thread per batch.
-3. The **threads execute work batches** and call the `TimerJobRun` event for each site in the list.
+3. The **threads execute work batches** and call the **TimerJobRun** event for each site in the list.
 
 Further details on each step can be found in the next sections.
 
@@ -205,7 +205,7 @@ Further details on each step can be found in the next sections.
 
 Before a timer job can be used, the timer job needs to know how to authenticate back to SharePoint. The framework currently supports the approaches in the **AuthenticationType** enum: **Office365**, **NetworkCredentials**, and **AppOnly**. Using the following methods also automatically sets the **AuthenticationType** property to the appropriate value of **Office365**, **NetworkCredentials**, and **AppOnly**. 
 
-The following flowchart shows the steps to take, followed by detailed explanations on each approach.
+The following flowchart shows the steps to take, followed by detailed explanations of each approach.
 
 ![Flowchart of the authentication steps](media/timerjob-framework/rt4dZa3.png)
 
@@ -245,14 +245,18 @@ public void UseAppOnlyAuthentication(string clientId, string clientSecret)
 public void UseAzureADAppOnlyAuthentication(string clientId, string clientSecret)
 ```
 
-The same method can be used for either Office 365 or SharePoint on-premises, which makes timer jobs using app-only authentication easily transportable between environments.
+The same method can be used for either Office 365 or SharePoint on-premises, which makes timer jobs that use app-only authentication easily transportable between environments.
 
 > [!NOTE] 
 > When you use app-only authentication, your timer job logic fails when APIs are used that do not work with **AuthenticationType.AppOnly**. Typical samples are the Search API, writing to the taxonomy store, and using the user profile API.
 
 ### Sites to operate on
 
-When a timer job runs, it needs one or more sites to run against. To add sites to a timer job, use the following set of methods.
+When a timer job runs, it needs one or more sites to run against. 
+
+#### Add sites to a timer job
+
+To add sites to a timer job, use the following set of methods:
 
 ```csharp
 public void AddSite(string site)
@@ -261,7 +265,7 @@ public void ClearAddedSites()
 
 To add a site, specify either a fully qualified URL (for example, `https://tenant.sharepoint.com/sites/dev`) or a wild card URL. 
 
-A wild card URL is a URL that ends with a `*` (only one single `*` is allowed and it must be the last character of the URL). A sample wild card URL is `https://tenant.sharepoint.com/sites/*`, which returns **all** the site collections under the managed path of that site. For another example, `https://tenant.sharepoint.com/sites/dev*` returns all site collections where the URL contains `dev`.
+A wild card URL is a URL that ends with an asterisk (`*`). Only one single `*` is allowed and it must be the last character of the URL. A sample wild card URL is `https://tenant.sharepoint.com/sites/*`, which returns **all** the site collections under the managed path of that site. For another example, `https://tenant.sharepoint.com/sites/dev*` returns all site collections where the URL contains `dev`.
 
 Typically the sites are added by the program that instantiates the timer job object, but if needed, the timer job can take control over the passed list of sites. Do this by adding a method override for the `UpdateAddedSites`virtual method as shown in the following sample:
 
@@ -279,11 +283,13 @@ public override List<string> UpdateAddedSites(List<string> addedSites)
 }
 ```
 
+#### Specify enumeration credentials
+
 After adding a wild card URL and setting authentication to app-only, specify the enumeration credentials. Enumeration credentials are used to fetch a list of site collections that are used in the site matching algorithm to return a real list of sites. 
 
 To acquire a list of site collections, the timer framework behaves differently between Office 365 (v16) and on-premises (v15):
-- Office 365: The `Tenant.GetSiteProperties` method is used to read the 'regular' site collections; the search API is used to read the OneDrive for Business site collections.
-- On-premises: The search API is used to read all site collections.
+- **Office 365**: The **Tenant.GetSiteProperties** method is used to read the 'regular' site collections; the search API is used to read the OneDrive for Business site collections.
+- **SharePoint on-premises**: The search API is used to read all site collections.
 
 Given that the search API doesn't work with a user context, the timer job falls back to the specified enumeration credentials. 
 
@@ -301,7 +307,7 @@ public void SetEnumerationCredentials(string samAccountName, string password, st
 public void SetEnumerationCredentials(string credentialName)
 ```
 
-The first method simply accepts a user name, password, and optionally domain (when in on-premises). The second specifies a generic credential stored in the Windows Credential Manager. See the **Authentication** section to learn more about the Credential Manager.
+The first method simply accepts a user name, password, and optionally domain (when in on-premises). The second specifies a generic credential stored in the Windows Credential Manager. See the [Authentication](#authentication) section to learn more about the Credential Manager.
 
 #### Subsite expanding
 
@@ -328,7 +334,7 @@ public override List<string> ResolveAddedSites(List<string> addedSites)
 
 ### TimerJobRun event
 
-The timer job framework splits the list of sites into work batches. Each batch of sites is run on its own thread. By default, the framework creates five batches and five threads to run those five batches. See the **Threading** section to learn more about timer job threading options. 
+The timer job framework splits the list of sites into work batches. Each batch of sites is run on its own thread. By default, the framework creates five batches and five threads to run those five batches. See the [Threading](#threading) section to learn more about timer job threading options. 
 
 When a thread processes a batch, the **TimerJobRun** event is triggered by the timer framework and provides all the necessary information to run the timer job. Timer jobs are run as events, so the code must connect an event handler to the **TimerJobRun** event:
 
@@ -359,6 +365,8 @@ public SimpleJob() : base("SimpleJob")
 }
 ```
 
+<br/>
+
 When the **TimerJobRun** event fires, you receive a **TimerJobRunEventArgs** object, which provides the necessary information to write the timer job logic. The following attributes and methods are available in this class:
 
 ![The TimerJobRunEventArgs class structure](media/timerjob-framework/CRFBdwS.png)
@@ -367,22 +375,22 @@ Several of the properties and all of the methods are used in the optional state 
 - **Url** property: Gets or sets the URL of the site for the timer job to operate against. This can be the root site of the site collection, but it can also be a subsite in case site expanding was done.
 - **ConfigurationData** property: Gets or sets additional timer job configuration data (optional). This configuration data is passed along as part of the **TimerJobRunEventArgs** object.
 - **WebClientContext** property: Gets or sets the **ClientContext** object for the current URL. This property is a **ClientContext** object for the site defined in the **Url** property. This is typically the **ClientContext** object that you would use in your timer job code.
-- **SiteClientContext** property: Gets or sets the **ClientContext** object for the root site of the site collection. This property provides access to the root site should the timer job require access to it. For example, the timer job can add a page layout to the master page gallery using the **SiteClientContext** property.
+- **SiteClientContext** property: Gets or sets the **ClientContext** object for the root site of the site collection. This property provides access to the root site should the timer job require access to it. For example, the timer job can add a page layout to the master page gallery by using the **SiteClientContext** property.
 - **TenantClientContext** property: Gets or sets the **ClientContext** object to work with the Tenant API. This property provides a **ClientContext** object constructed by using the tenant admin site URL. To use the Tenant API in the timer job **TimerJobRun** event handler, create a new **Tenant** object by using this **TenantClientContext** property.
 
-All **ClientContext** objects use the authentication information described in the **Authentication** section. If you've opted for user credentials, ensure that the used account has the needed permissions to operate against the specified sites. When using app-only, it is best to set tenant-scoped permissions to the app-only principal.
+All **ClientContext** objects use the authentication information described in the [Authentication](#authentication) section. If you've opted for user credentials, ensure that the used account has the needed permissions to operate against the specified sites. When using app-only, it is best to set tenant-scoped permissions to the app-only principal.
 
 ### State management
 
 When you write timer job logic, you often need to persist state; for example, to record when a site was last processed, or to store data to support your timer job business logic. For this reason, the timer job framework has state management capabilities. 
 
-State management stores and retrieves a set of standard and custom properties as a JSON serialized string in the web property bag of the processed site (name = timer job name + "_Properties"). The following are the default properties of the `TimerJobRunEventArgs`object:
+State management stores and retrieves a set of standard and custom properties as a JSON serialized string in the web property bag of the processed site (name = timer job name + "_Properties"). The following are the default properties of the **TimerJobRunEventArgs** object:
 
 - **PreviousRun** property: Gets or sets the date and time of the previous run.
 - **PreviousRunSuccessful** property: Gets or sets a value indicating whether the previous run was successful. Note that the timer job author is responsible for flagging a job run as successful by setting the **CurrentRunSuccessful** property as part of your timer job implementation.
 - **PreviousRunVersion** property: Gets or sets the timer job version of the previous run.
 
-Next to these standard properties, you also have the option to specify your own properties by adding keyword - value pairs to the Properties collection of the **TimerJobRunEventArgs** object. To make this easier, there are three methods to help you:
+Next to these standard properties, you also have the option to specify your own properties by adding keyword&ndash;value pairs to the Properties collection of the **TimerJobRunEventArgs** object. To make this easier, there are three methods to help you:
 - **SetProperty** adds or updates a property.
 - **GetProperty** returns the value of a property.
 - **DeleteProperty** removes a property from the property collection.

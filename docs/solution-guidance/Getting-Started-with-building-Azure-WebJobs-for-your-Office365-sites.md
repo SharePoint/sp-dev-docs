@@ -1,12 +1,11 @@
 ---
 title: Getting started with Azure WebJobs (timer jobs) for your Office 365 sites
-description:
+description: Describes how to build an Azure WebJob to act as a scheduled job for your SharePoint installation.
 ms.date: 5/9/2018
 ---
 
 # Getting started with Azure WebJobs (timer jobs) for your Office 365 sites
 
-### Summary ###
 In this post I’ll talk about how you can build an Azure WebJob to act as a scheduled job for your Office 365 (or on-prem, should you like) SharePoint installation. With Office 365, if you’re running and utilizing the SharePoint Online service, you’ll need to re-think the way you run the things that used to be *timer jobs* in your traditional Farm-solutions. Follow along while we walk through the basic concepts of getting started with building custom jobs for Office 365 sites.
 
 # Introduction to Azure WebJob as a Timer Job for your Office 365 sites #

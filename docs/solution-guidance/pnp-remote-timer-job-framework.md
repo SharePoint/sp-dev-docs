@@ -21,3 +21,4 @@ Timer jobs are background tasks that operate on a timed or recurrent basis to ma
 - [SharePoint Developer Community (SharePoint PnP) resources](../community/community.md)
 - [Office 365 Developer Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
+

@@ -16,7 +16,7 @@ The Enterprise Content Management (ECM) solution pack includes code samples and 
 |Article|Sample|Shows you how to|
 |:-----|:-----|:-----|
 |[Document library templates](document-library-templates-sample-app-for-sharepoint.md)|[ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)|Implement a custom document library template when creating a document library.  |
-|[Autotagging](autotagging-sample-app-for-sharepoint.md)|[ECM.Autotagging](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.AutoTagging)|Automatically tag documents with metadata when documents are created or uploaded to SharePoint. |
+|[Auto-tagging](autotagging-sample-app-for-sharepoint.md)|[ECM.Autotagging](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.AutoTagging)|Automatically tag documents with metadata when documents are created or uploaded to SharePoint. |
 |[Information management](information-management-sample-app-for-sharepoint.md) | [Core.InformationManagement](https://github.com/SharePoint/PnP/tree/master/Samples/Core.InformationManagement) |Get or set site policies to manage the site lifecycle (closure and deletion of sites after a period of time). |
 |[Records management extensions](records-management-extensions-sample-app-for-sharepoint.md)|[ECM.RecordsManagement](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.RecordsManagement) |Enable and change in-place records management settings on your sites and lists. |
 |[Taxonomy operations](taxonomy-operations-sample-app-for-sharepoint.md)| [Core.MMS](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS) |Create and read taxonomy data. |
