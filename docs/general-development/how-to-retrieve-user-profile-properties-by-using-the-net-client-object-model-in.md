@@ -91,7 +91,7 @@ To create a console application that uses the .NET client object model to retrie
     
 ```cs
 const string serverUrl = "http://serverName/";
-const string targetUser = "domainName\\\\userName";
+const string targetUser = "domainName\\userName";
 ```
 
    > Note: Remember to replace the  `http://serverName/` and `domainName\\\\userName` placeholder values before you run the code.
