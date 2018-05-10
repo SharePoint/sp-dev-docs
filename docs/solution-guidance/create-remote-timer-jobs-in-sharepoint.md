@@ -11,7 +11,7 @@ Create remote timer jobs to manage SharePoint by monitoring and taking action on
 Examples of how timer jobs are used include:
 
 - Performing governance tasks, such as displaying a message on the site when certain criteria are not met, or enforcing retention policies. 
-- Running scheduled processes that are processor intensive.
+- Running scheduled processes that are processor-intensive.
 
 ## Before you begin
 
@@ -20,7 +20,7 @@ To get started, download the [Core.TimerJobs.Samples](https://github.com/SharePo
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-To start using the Core.TimerJobs.Samples solution, you need to select a startup project, for example the SimpleJob project, by opening the shortcut menu for (right-clicking) the **Core.TimerJobs.Samples.SimpleJob**, and then choosing **Set as StartUp Project**.
+To start using the Core.TimerJobs.Samples solution, you need to select a startup project, for example the SimpleJob project, by opening the shortcut menu for (right-clicking) **Core.TimerJobs.Samples.SimpleJob**, and then choosing **Set as StartUp Project**.
 
 > [!NOTE] 
 > When you create a new project in Visual Studio, to start building your new remote timer job, add the OfficeDevPnP.Core NuGet package to your project. In Visual Studio, choose **TOOLS** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
@@ -31,7 +31,7 @@ A timer job can be scheduled to run once or can be a recurring job. To schedule 
 
 ## Using the Core.TimerJobs.Samples.SimpleJob add-in
 
-In Core.TimerJobs.Samples.SimpleJob, **Main** in Program.cs performs the following steps:
+In **Core.TimerJobs.Samples.SimpleJob**, **Main** in Program.cs performs the following steps:
 
 1. Creates a **SimpleJob** object, which inherits from the [OfficeDevPnP.Core.Framework.TimerJobs.TimerJob](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Framework/TimerJobs/TimerJob.cs) base class.
     
