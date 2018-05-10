@@ -561,7 +561,8 @@ You can specify whether the results that are returned should include or exclude 
 
 You use the **XRANK** operator to boost the dynamic rank of items based on certain term occurrences within the _match expression_, without changing which items match the query. An **XRANK** expression contains one component that must be matched, the _match expression_, and one or more components that contribute only to dynamic ranking, the  _rank expression_. At least **one** of the parameters, excluding _n_, must be specified for an **XRANK** expression to be valid.
   
-    
+ > [!NOTE]
+> Query latency (and probability of timeout) increases when using complex queries and especially when using xrank operators. The increase in query latency depends on the number of **XRANK** operators and the number of hits in the _match expression_ and _rank expression_ components in the query tree.   
     
  _Match expressions_ may be any valid KQL expression, including nested **XRANK** expressions. _Rank expressions_ may be any valid KQL expression without **XRANK** expressions. If your KQL queries have multiple **XRANK** operators, the final dynamic rank value is calculated as a sum of boosts across all **XRANK** operators.
   
