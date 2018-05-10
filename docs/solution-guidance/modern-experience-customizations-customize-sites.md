@@ -90,6 +90,9 @@ The following elements are ignored when a remote template is applied to a "moder
 
 ## Apply a custom theme to a "modern" team site
 
+> [!NOTE]
+> The following method was written before **Tenant Themes** came out, to read about the new way of theming "modern" read [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
+
 "Modern" team sites support custom themes even though you cannot upload a new gallery entry for end users. This can be achieved by uploading the needed assets to the site and then executing the **ApplyTheme** method. The following PowerShell script shows how to perform this for a "modern" team site.
 
 ```PowerShell
