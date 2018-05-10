@@ -1623,7 +1623,7 @@
       href: solution-guidance/timerjob-framework.md
     - name: Create remote timer jobs
       href: solution-guidance/create-remote-timer-jobs-in-sharepoint.md
-    - name: Get started with WebJobs (timer jobs)
+    - name: Get started with WebJobs
       href: solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites.md
   - name: PnP Office 365 CLI
     href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
