@@ -40,7 +40,7 @@ In Security Assertion Markup Language (SAML) passive sign-in, when a user signs 
   
     
     
-For SAML-based claims providers, like the Active Directory Federation Services (ADFS) claims provider and the Windows Live ID claims provider, signing in by using the SAML passive sign-in mode is the only supported way. The SAML passive sign-in is the SharePoint online identity model.
+For SAML-based claims providers, like the Active Directory Federation Services (ADFS) claims provider and the Windows Live ID claims provider, signing in by using the SAML passive sign-in mode is the only supported way. The SAML passive sign-in is the SharePoint Online identity model.
   
 > [!NOTE]
 > SAML passive sign-in describes the process of signing in. When a sign-in for a web application is configured to accept tokens from a trusted login provider, this type of sign-in is called SAML passive sign-in. A trusted login provider is an external (that is, external to SharePoint) security token service (STS) that SharePoint trusts. 

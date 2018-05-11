@@ -20,7 +20,7 @@ Start with creating an enterprise API secured with Azure Active Directory. While
 
 ### Create an Azure function
 
-In the Azure Portal (https://portal.azure.com), create a new Function App.
+In the [Azure portal](https://ms.portal.azure.com/), create a new Function App.
 
 > For more information on creating Function Apps in Azure see the [Create a function app from the Azure portal](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) help article.
 
@@ -184,7 +184,7 @@ On the Azure AD application blade, copy the value of the **Application ID** prop
 The Function App will be called from JavaScript running on a SharePoint page. Because the API is hosted on a different domain than the SharePoint portal, cross-domain security constraints will apply to the API call. By default, APIs implemented using Azure Function Apps cannot be called from other domains. You can change this by adjusting the Function App's CORS settings.
 
 > [!IMPORTANT]
-> If you're authenticating with the API using the SharePoint Online cookie instead of OAuth, you cannot configure CORS settings through the Azure Portal. For the authentication to work, you have to clear all CORS settings in the Azure Portal and specify them in your API instead.
+> If you're authenticating with the API using the SharePoint Online cookie instead of OAuth, you cannot configure CORS settings through the Azure portal. For the authentication to work, you have to clear all CORS settings in the Azure portal and specify them in your API instead.
 
 In the Function App, switch to the **Platform features** tab.
 

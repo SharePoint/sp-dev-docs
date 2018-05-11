@@ -94,7 +94,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 ### To register your web application with Azure AD
 
-1. Sign in to the [Azure Management portal](https://manage.windowsazure.com) with your Azure administrator account.
+1. Sign in to the [Azure portal](https://ms.portal.azure.com) with your Azure administrator account.
     
   > [!NOTE] 
   > For security purposes, we recommend against using an administrator account when developing add-ins.
@@ -546,7 +546,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
 
 ### To create the Azure website
 
-1. In the Microsoft Azure portal, open **websiteS** on the left navigation bar.
+1. In the Microsoft Azure portal, open **websites** on the left navigation bar.
     
 2. Select **NEW** at the bottom of the page, and in the **NEW** dialog, select **website** |**QUICK CREATE**.
     
@@ -568,7 +568,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
 
 ### To modify the Azure AD registration and register the add-in with ACS
 
-1. Sign in to the [Azure Management portal](https://manage.windowsazure.com) with your Azure administrator account.    
+1. Sign in to the [Azure portal](https://ms.portal.azure.com) with your Azure administrator account. 
  
 2. Select **Active Directory** on the left side.    
  

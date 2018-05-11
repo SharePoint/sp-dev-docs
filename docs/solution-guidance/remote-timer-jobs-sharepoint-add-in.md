@@ -158,7 +158,7 @@ In this pattern, you define an application in SharePoint or Azure Active Directo
 	}
 	```
 
-- When using an Azure Active Directory application to authenticate, you create an Azure Active Directory application in the Azure Management Portal and assign permissions to it.
+- When using an Azure Active Directory application to authenticate, you create an Azure Active Directory application in the [Azure portal](https://ms.portal.azure.com) and assign permissions to it.
 	+ In this pattern, timer jobs may be implemented via a Provider-hosted SharePoint Add-in or a console application.
 	+ In this pattern, you interact with the Active Directory Authentication Library or the Microsoft Graph API to retrieve an access token.
 	+ The access token is used to authenticate to SharePoint (and possibly other Office 365 services in an Office 365 tenancy).

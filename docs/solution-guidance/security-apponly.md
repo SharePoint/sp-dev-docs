@@ -1,7 +1,7 @@
 # Accessing SharePoint using an application context, also known as app-only
 
 There are two approaches for doing app-only for SharePoint: 
- - Using an **Azure AD application**: this is the preferred method when using SharePoint Online because you can also grant permissions to other Office 365 services (if needed) + you’ve a user interface (Azure management portal) to maintain your app principals.
+ - Using an **Azure AD application**: this is the preferred method when using SharePoint Online because you can also grant permissions to other Office 365 services (if needed) + you’ve a user interface (Azure portal) to maintain your app principals.
  - Using a **SharePoint App-Only principal**: this method is older and only works for SharePoint access, but is still relevant. This method is also the recommended model when you’re still working in SharePoint on-premises since this model works in both SharePoint on-premises as SharePoint Online.
 
 Both methods are detailed in following articles: 

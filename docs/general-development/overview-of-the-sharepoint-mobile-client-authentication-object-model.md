@@ -292,7 +292,7 @@ ClientContext ctx = new ClientContext("SiteUrl");
 
 ```
 
- **ADFS** is an optional property which will be effective only when it is used with Microsoft SharePoint Online. Using **ADFS** authentication with any other authentication scheme will not have any effect. With Microsoft SharePoint online, if **ADFS** is not set then default scheme will be used, i.e. server preference.
+ **ADFS** is an optional property which will be effective only when it is used with Microsoft SharePoint Online. Using **ADFS** authentication with any other authentication scheme will not have any effect. With Microsoft SharePoint Online, if **ADFS** is not set then default scheme will be used, i.e. server preference.
   
     
     

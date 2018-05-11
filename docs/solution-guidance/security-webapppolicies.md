@@ -27,7 +27,7 @@ Below flowchart is capturing these questions:
 
 ### Granting access using app principals
 For all non-human access, it’s advisable to use app principals as discussed previously. There are two approaches for doing so: 
- - Using an Azure AD application: this is the preferred method when using SharePoint Online because you can also grant permissions to other Office 365 services (if needed) + you’ve a user interface (Azure management portal) to maintain your app principals.
+ - Using an Azure AD application: this is the preferred method when using SharePoint Online because you can also grant permissions to other Office 365 services (if needed) and you have a user interface (Azure portal) to maintain your app principals.
  - Using a SharePoint App-Only principal: this method is older and only works for SharePoint access, but is still relevant. This method is also the recommended model when you’re still working in SharePoint on-premises since this model works in both SharePoint on-premises as SharePoint Online.
 
 Both models are explained in detail in the [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly) article.

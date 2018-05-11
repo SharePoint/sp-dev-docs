@@ -85,7 +85,7 @@ To assign metadata to the newly created document in the document library by usin
     
 2. The **ItemAdding** or **ItemAdded** method makes a call to the remove event receiver.
     
-3. The provider-hosted add-in fetches the value of a custom user profile property in the User Profile Service of SharePoint for that user. In this sample add-in, the Classification custom user profile property that was added previously is retrieved.
+3. The provider-hosted add-in fetches the value of a custom user profile property in the SharePoint user profile service for that user. In this sample add-in, the Classification custom user profile property that was added previously is retrieved.
     
 4. The remote event receiver updates the metadata on the new document with the value of the custom user profile property for that user. 
 

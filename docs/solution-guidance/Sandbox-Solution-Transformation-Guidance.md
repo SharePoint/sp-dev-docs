@@ -1,7 +1,7 @@
 ---
 title: Transform sandbox solutions to the SharePoint Add-in model
 description: Learn about the options and strategies for converting existing code-based functionalities to SharePoint Add-in model or alternative solutions.
-ms.date: 5/4/2018
+ms.date: 5/7/2018
 ---
 
 # Transform sandbox solutions to the SharePoint Add-in model
@@ -82,7 +82,7 @@ Following are typical customizations that are included in the sandbox solutions 
 |Customization|Transformation options|
 |:-----|:-----|
 |Declarative solution with empty assembly|<p>You can control assembly creation from Visual Studio solution project properties. For more information, see [Remove the assembly reference from your Sandbox solution created in Visual Studio](https://support.microsoft.com/en-us/help/3183084/remove-the-assembly-reference-from-your-sandbox-solution-created-in-vi). </p><br/><br/>**Important:** When you use the SharePoint Sandbox Solution scanner, the scan output lists which solutions have an empty assembly, and the tool creates updated sandbox solution packages for you in which the assembly is dropped. You can then simply replace the existing sandbox solution with the updated one.</p> |
-|InfoPath form with code|<p>If you have published an InfoPath form from the InfoPath client that contains code, it’s actually published to SharePoint as a sandbox solution. This means that the form code is actually executed by the sandbox engine in SharePoint.</p> <p>Moving away from the code-based InfoPath forms is dependent on the actual business use case. There are multiple options from generating custom UI as add-ins or utilizing other form techniques.</p><p>For more information, see [InfoPath transformation guidance](sandbox-solution-transformation-guidance-infopath.md).</p>|
+|InfoPath form with code|<p>If you have published an InfoPath form from the InfoPath client that contains code, it’s actually published to SharePoint as a sandbox solution. This means that the form code is actually executed by the sandbox engine in SharePoint.</p> <p>Moving away from the code-based InfoPath forms is dependent on the actual business use case. There are multiple options from generating custom UI as add-ins or utilizing other form techniques.</p><p>For more information, see [Fix InfoPath in sandbox solutions](sandbox-solution-transformation-guidance-infopath.md).</p>|
 |Web part|<p>Web parts are typically converted either to add-in parts or they are implemented with fully client-side technologies by using the JavaScript embed pattern. </p><p>For more information, see:<lu><li>[Customize your SharePoint site UI by using JavaScript](customize-your-sharepoint-site-ui-by-using-javascript.md)</li><li>[Create add-in parts to install with your SharePoint Add-in](../sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md)</li><li>[How to update your SharePoint pages via the embedding of JavaScript](https://channel9.msdn.com/blogs/OfficeDevPnP/JavaScript-embedding-demo)</li><li>[Cross site collection navigation](https://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)</li></lu></p>|
 |Visual web part|<p>Visual web parts are transformed in similar ways as normal web parts. User controls used in visual web parts must be replaced because in sandbox solution cases, it's included inside of the assembly.</p>|
 |Event receiver|<p>Event receivers can in many cases be replaced with the remote event receiver implementation. Remote event receivers do, however, need to hosted on some platform, typically on specific provider-hosted add-ins.</p><p>For more information, see:<lu><li>[Use remote event receivers in SharePoint](use-remote-event-receivers-in-sharepoint.md)</li><li>[How to use remote event receivers for your SharePoint add-ins](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-use-remote-event-receivers-for-your-SharePoint-add-ins)</li></lu></p>|
@@ -100,6 +100,13 @@ When you deactivate your existing sandbox solution from sites, any assets or fil
 Support of code-based sandbox solutions will be removed from SharePoint Online by disabling code-based operations that execute from sandbox-solution-based code. This means that your sandbox solutions are not explicitly deactivated from the solution store, but any code-based operation will no longer be performed. Sandbox solutions will remain in activated status in the solution gallery. Features deployed by using sandbox solutions will not get deactivated automatically, which means that possible code associated to feature deactivation or uninstall handlers won't be run. 
 
 All declarative definitions in the sandbox solution will continue working after this change is applied in SharePoint Online. 
+
+## In this section
+
+- [Replace web parts](sandbox-solution-transformation-guidance-webparts.md)
+- [Replace event receivers](sandbox-solution-transformation-guidance-event-receivers.md)
+- [Replace feature receivers](sandbox-solution-transformation-guidance-feature-receivers.md)
+- [Fix code-based InfoPath forms](sandbox-solution-transformation-guidance-infopath.md)
 
 ## See also
 

@@ -545,7 +545,7 @@
           href: general-development/create-a-sharepoint-workflow-app-using-visual-studio-2012.md
         - name: Create workflows
           href: general-development/how-to-create-sharepoint-workflows-using-visual-studio.md
-        - name: SharePoint Workflow Services Client Side Object Model
+        - name: SharePoint Workflow Services CSOM
           href: general-development/working-with-the-sharepoint-workflow-services-client-side-object-model.md
         - name: Web Services in workflows
           href: general-development/working-with-web-services-in-sharepoint-workflows-using-visual-studio-2012.md
@@ -1562,55 +1562,55 @@
     items:
     - name: Replace content types and site columns
       href: solution-guidance/replace-sharepoint-content-types-and-site-columns.md
-    - name: Replace files deployed using modules in farm solutions
+    - name: Replace files
       href: solution-guidance/replace-files-deployed-using-modules-in-sharepoint-farm-solutions.md
-    - name: Replace lists created from list definitions
+    - name: Replace lists
       href: solution-guidance/replace-sharepoint-lists-created-from-list-definitions.md
-    - name: Replace web parts with add-in parts
+    - name: Replace web parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
   - name: Transforming sandbox solutions
     href: solution-guidance/sandbox-solution-transformation-guidance.md
     items:
-    - name: Web parts
+    - name: Replace web parts
       href: solution-guidance/sandbox-solution-transformation-guidance-webparts.md
-    - name: Event receivers
+    - name: Replace event receivers
       href: solution-guidance/sandbox-solution-transformation-guidance-event-receivers.md
-    - name: Feature receivers
+    - name: Replace feature receivers
       href: solution-guidance/sandbox-solution-transformation-guidance-feature-receivers.md
-    - name: InfoPath forms with code
+    - name: Fix code-based InfoPath forms
       href: solution-guidance/sandbox-solution-transformation-guidance-infopath.md
   - name: User profile solutions
     href: solution-guidance/user-profile-solutions-for-sharepoint.md
     items:
     - name: Read or update user profile properties
-      href: solution-guidance/Read-or-update-user-profile-properties-sample-app-for-SharePoint.md
-    - name: Bulk User Profile update API
+      href: solution-guidance/read-or-update-user-profile-properties-sample-app-for-sharepoint.md
+    - name: Bulk update custom user profile properties
       href: solution-guidance/bulk-user-profile-update-api-for-sharepoint-online.md
     - name: Migrate user profile properties
-      href: solution-guidance/Migrate-user-profile-properties-sample-app-for-SharePoint.md
+      href: solution-guidance/migrate-user-profile-properties-sample-app-for-sharepoint.md
     - name: Personalize search results
-      href: solution-guidance/Personalize-search-results-sample-app-for-SharePoint.md
+      href: solution-guidance/personalize-search-results-sample-app-for-sharepoint.md
     - name: Upload user profile pictures
-      href: solution-guidance/Upload-user-profile-pictures-sample-app-for-SharePoint.md
+      href: solution-guidance/upload-user-profile-pictures-sample-app-for-sharepoint.md
   - name: Deploying your SharePoint Add-ins
     href: solution-guidance/deploying-your-sharepoint-add-ins.md
     items:
     - name: Deploy sites to Azure
-      href: solution-guidance/Move-O365Api-Project-from-Dev-To-Prod.md
+      href: solution-guidance/move-o365api-project-from-dev-to-prod.md
     - name: Use Azure WebJobs with Office 365
-      href: solution-guidance/Use-Microsoft-Azure-WebJobs-with-Office-365.md
+      href: solution-guidance/use-microsoft-azure-webjobs-with-office-365.md
     - name: Configure provider-hosted add-ins for distribution
-      href: solution-guidance/Configure-SP-Provider-Hosted-Apps-For-Distribution.md
+      href: solution-guidance/configure-sp-provider-hosted-apps-for-distribution.md
     - name: Configure Office 365 projects for distribution
-      href: solution-guidance/Configure-O365Api-Project-For-Distribution.md
+      href: solution-guidance/configure-o365api-project-for-distribution.md
   - name: PnP remote provisioning
     href: solution-guidance/pnp-remote-provisioning.md
     items:
-    - name: Introducing the PnP provisioning engine
-      href: solution-guidance/Introducing-the-PnP-Provisioning-Engine.md
+    - name: PnP provisioning engine
+      href: solution-guidance/introducing-the-pnp-provisioning-engine.md
     - name: PnP provisioning framework
       href: solution-guidance/pnp-provisioning-framework.md
-    - name: PnP provisioning engine and the core library
+    - name: PnP provisioning engine and the Core library
       href: solution-guidance/pnp-provisioning-engine-and-the-core-library.md
     - name: PnP provisioning schema
       href: solution-guidance/pnp-provisioning-schema.md
@@ -1619,12 +1619,12 @@
   - name: PnP remote timer job framework
     href: solution-guidance/pnp-remote-timer-job-framework.md
     items:
-    - name: The timer job framework
+    - name: PnP timer job framework
       href: solution-guidance/timerjob-framework.md
-    - name: Create remote timer jobs in SharePoint
+    - name: Create remote timer jobs
       href: solution-guidance/create-remote-timer-jobs-in-sharepoint.md
-    - name: Get started with WebJobs ("timer jobs")
-      href: solution-guidance/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md
+    - name: Get started with WebJobs
+      href: solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites.md
   - name: PnP Office 365 CLI
     href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
   - name: PnP PowerShell reference
