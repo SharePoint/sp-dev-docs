@@ -20,7 +20,7 @@ Start with creating a multi-tenant enterprise API secured with Azure Active Dire
 
 ### Create Azure function
 
-In the Azure Portal (https://portal.azure.com), create a new Function App.
+In the [Azure portal](https://ms.portal.azure.com/), create a new Function App.
 
 > For more information on creating Function Apps in Azure see the [Create a function app from the Azure portal](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) help article.
 

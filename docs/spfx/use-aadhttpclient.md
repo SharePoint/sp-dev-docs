@@ -35,9 +35,9 @@ All permissions are granted to the whole tenant and not to a specific applicatio
 
 The target Azure AD that secures your Office 365 tenant determines which applications you can request permissions for in your solution. The list of available applications might depend on the Office 365 license that the organization is using and which line-of-business applications they registered in Azure AD. If you have sufficient permissions, there are several ways that you can see which applications and permission scopes are available in your tenant.
 
-### Use Azure Portal or Azure AD admin center
+### Use Azure portal or Azure AD admin center
 
-One way to see the available applications in Azure AD is by navigating to the [Azure Portal](https://portal.azure.com) or to the [Azure AD admin center](https://aad.portal.azure.com).
+One way to see the available applications in Azure AD is by navigating to the [Azure portal](https://ms.portal.azure.com/) or to the [Azure AD admin center](https://aad.portal.azure.com).
 
 1. In the Azure AD admin center, in the left navigation, choose the **Enterprise applications** link.
 

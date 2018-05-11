@@ -1,6 +1,6 @@
 ---
 title: SharePoint site provisioning solutions
-description: Transition your SharePoint Online and SharePoint site provisioning solutions from full-trust code to the add-in model.
+description: Transition your SharePoint Online and SharePoint site provisioning solutions from full trust code to the add-in model.
 ms.date: 4/24/2018
 ---
 

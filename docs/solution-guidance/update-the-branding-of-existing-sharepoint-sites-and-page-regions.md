@@ -207,7 +207,7 @@ SharePoint Online introduces new master page markup for the **Suite Navigation**
 
 ### Use CSOM to customize the regions of a SharePoint page
 
-Generally, we recommend that you use the [UserCustomAction](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.usercustomaction.aspx) class to add or remove links and other elements. This is a variant of SharePoint using the [CustomAction](https://msdn.microsoft.com/en-us/library/office/ms460194.aspx) element, which you might recognize as part of the feature framework if you're familiar with the full-trust code model. Although the **CustomAction** element and feature framework provisioning pattern are not specifically supported in the client-side object model (CSOM), the same location identifiers available to the **CustomAction** element can be used in CSOM code.
+Generally, we recommend that you use the [UserCustomAction](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.usercustomaction.aspx) class to add or remove links and other elements. This is a variant of SharePoint using the [CustomAction](https://msdn.microsoft.com/en-us/library/office/ms460194.aspx) element, which you might recognize as part of the feature framework if you're familiar with the full trust code model. Although the **CustomAction** element and feature framework provisioning pattern are not specifically supported in the client-side object model (CSOM), the same location identifiers available to the **CustomAction** element can be used in CSOM code.
 
 ```cs
 <CustomAction

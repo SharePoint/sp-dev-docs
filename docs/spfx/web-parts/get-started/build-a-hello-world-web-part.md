@@ -13,7 +13,7 @@ Client-side web parts are client-side components that run inside the context of 
 Client-side web parts support:
 
 * Building with HTML and JavaScript.
-* Both SharePoint online and on-premises environments.
+* Both SharePoint Online and on-premises environments.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).

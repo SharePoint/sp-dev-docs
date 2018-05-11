@@ -18,7 +18,7 @@ High Level Guidelines
 As a rule of a thumb, we would like to provide the following high level guidelines to create and configure site collections and sub sites then deploy artifacts, configurations, and branding assets to them.
 
 - Using AppOnly authentication is not supported for any Search Service operations.
-	+ This is due to the fact that the Search Service accesses the User Profile Service (UPS) to search user profile information and the UPS does not support AppOnly authentication.
+	+ This is due to the fact that the Search Service accesses the user profile service to search user profile information and the UPS does not support AppOnly authentication.
 	+ Therefore, because search relevance and other search facets depend on a given user and their profile attributes the AppOnly authentication pattern will not work.
 
 Options to execute searches with the SharePoint Search Service

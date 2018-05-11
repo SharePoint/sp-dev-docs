@@ -1,7 +1,7 @@
 ---
 title: Customizing the "modern" experiences in SharePoint Online
 description: An overview to get you started using the "modern" experiences in SharePoint Online.
-ms.date: 11/08/2017
+ms.date: 5/10/2017
 ---
 
 # Customizing the "modern" experiences in SharePoint Online
@@ -36,14 +36,18 @@ If you have existing customizations that are business critical for your deployme
 
 Following are the key scenarios currently supported by the "modern" experiences. We will be updating the list of supported scenarios whenever new capabilities are introduced in SharePoint Online. 
 
-|**Customization/Article**|**Introduction to options**|
+<br/>
+
+|Customization/Article|Description|
 |:-----|:-----|
 |[Provisioning "modern" team sites programmatically](modern-experience-customizations-provisioning-sites.md)| "Modern" team sites can be provisioned by an end user, but you can also create these sites programmatically. | 
 |[Customizing "modern" team sites](modern-experience-customizations-customize-sites.md) | "Modern" team sites are sites that bring a fresh, new responsive user experience to SharePoint Online,<br/>showing relevant information on the home page. Typically, these sites also have an associated Office 365 group. | 
 |[Customizing "modern" lists and libraries](modern-experience-customizations-customize-lists-and-libraries.md) | "Modern" lists and document libraries bring a better user experience that is faster, more intuitive, and responsive.<br/>This article focuses on the extensibility options, such as user custom actions and branding, which are supported for the "modern" library and list experiences. | 
 |[Customizing "modern" site pages](modern-experience-customizations-customize-pages.md) | "Modern" team site pages are fast, easy to author, and support rich multimedia content. Additionally, these pages<br/>look great on any device, in a browser, or from within the SharePoint mobile app.<br/>This article focuses on the extensibility options available within the "modern" page experience. | 
+|[SharePoint "modern" sites classification](modern-experience-site-classification.md)|Configure out-of-the-box site classification for modern SharePoint sites. |
 
 <a name="convertingexisting"> </a>
+
 ## Converting existing sites to "modern" team sites
 
 Existing collaboration sites cannot, at least currently, be converted to "modern" team sites with an associated Office 365 group. However, you can start using "modern" experiences in the "classic" collaboration sites as well by enabling the new capabilities at the tenant level and then modifying the sites based on your functional requirements. 
@@ -53,6 +57,7 @@ Existing collaboration sites cannot, at least currently, be converted to "modern
 By default, "classic" SharePoint sites use "modern" pages for any newly added page, and you have the option to change the welcome page to a "modern" page. Setting a new "modern" page for a "classic" SharePoint site can be done programatically by using CSOM or REST APIs. 
 
 <a name="onpremisessupport"> </a>
+
 ## SharePoint "modern" experiences support for on-premises
 
 The SharePoint "modern" experiences are currently not available for SharePoint on-premises. As part of the SharePoint 2016 Feature Pack, "modern" experiences will be introduced within the OneDrive for Business experience, and you can take advantage of the SharePoint Framework client-side web parts in the classic page experience.

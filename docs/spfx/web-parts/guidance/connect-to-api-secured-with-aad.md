@@ -27,9 +27,9 @@ In this article, when discussing this option, you will use C# and the [ASP.NET W
 
 ### Secure the API using Azure App Service Authentication
 
-When deploying custom APIs to Azure App Service, you can benefit from the App Service Authentication option to secure the API with Azure AD. The biggest benefit of using App Service Authentication is its simplicity: by following the configuration steps available in the Azure Portal, you can have the wizard set up the authentication configuration for you. If you choose the basic setup, the wizard creates a new Azure AD application in Azure AD associated with the current subscription. In the advanced configuration, you can choose which Azure AD application should be used to secure the access to the App Service hosting the API.
+When deploying custom APIs to Azure App Service, you can benefit from the App Service Authentication option to secure the API with Azure AD. The biggest benefit of using App Service Authentication is its simplicity: by following the configuration steps available in the [Azure portal](https://ms.portal.azure.com/), you can have the wizard set up the authentication configuration for you. If you choose the basic setup, the wizard creates a new Azure AD application in Azure AD associated with the current subscription. In the advanced configuration, you can choose which Azure AD application should be used to secure the access to the App Service hosting the API.
 
-![App Service Authentication settings displayed in the Azure Portal](../../../images/api-aad-azure-app-service-authentication.png)
+![App Service Authentication settings displayed in the Azure portal](../../../images/api-aad-azure-app-service-authentication.png)
 
 After App Service Authentication has been configured, users trying to access your API are prompted to sign in with their organizational account that belongs to the same Azure AD as the Azure AD application used to secure the API. After signing in, you are able to access the information about the current user through the `HttpContext.Current.User` property. When using Azure App Service Authentication, there is no additional configuration required in your application.
 
@@ -57,7 +57,7 @@ When using ADAL JS, client-side applications have full access to the identity in
 
 Besides facilitating authentication against Azure AD, ADAL JS is capable of retrieving access tokens to specific resources. With these access tokens, applications can securely access APIs secured with Azure AD such as [Microsoft Graph](./call-microsoft-graph-from-your-web-part.md) or other custom APIs. Before a client-side application can use ADAL JS, it has to be registered as an application in Azure AD. In the registration process, developers specify a number of parameters such as the URL where the application is hosted and the resources to which the application requires access, either by itself or on behalf of the currently signed-in user.
 
-![Registering new Azure AD application in the Azure Portal](../../../images/api-aad-create-new-aad-app.png)
+![Registering new Azure AD application in the Azure portal](../../../images/api-aad-create-new-aad-app.png)
 
 The first time the application is used, it prompts the user to grant it the necessary permissions. This is often referred to as consent flow. After it's approved, the application can then request access tokens for the specific resources and communicate with them securely.
 
@@ -217,19 +217,19 @@ Both ADAL JS and the method that uses the SharePoint Online authentication cooki
 
 ## Build an API secured with Azure AD
 
-Securing the access to an API with Azure AD isn't complex and requires just a few steps. The exact process varies depending on the implementation of your API. If you choose to use Azure Functions, you are able to configure the security through the Azure Portal. If you built your API by using the ASP.NET Web API and want to host it somewhere else than in Azure App Service, you need to extend the Web API's code to add authentication to it. Following is a step-by-step description of how you would build and configure an API secured with Azure AD by using both Azure Functions and ASP.NET Web API.
+Securing the access to an API with Azure AD isn't complex and requires just a few steps. The exact process varies depending on the implementation of your API. If you choose to use Azure Functions, you are able to configure the security through the Azure portal. If you built your API by using the ASP.NET Web API and want to host it somewhere else than in Azure App Service, you need to extend the Web API's code to add authentication to it. Following is a step-by-step description of how you would build and configure an API secured with Azure AD by using both Azure Functions and ASP.NET Web API.
 
 ### Build the API using an Azure Function
 
-Building APIs using Azure Functions offers you a number of benefits. First and foremost, it significantly simplifies the development and deployment process of the API. Azure Functions offer a rich set of configuration options. The only thing that you need to take care of is the actual API code. For everything else, from authentication to supporting Cross-Origin Resource Sharing (CORS) and documenting the API, you can use the Azure Portal.
+Building APIs using Azure Functions offers you a number of benefits. First and foremost, it significantly simplifies the development and deployment process of the API. Azure Functions offer a rich set of configuration options. The only thing that you need to take care of is the actual API code. For everything else, from authentication to supporting Cross-Origin Resource Sharing (CORS) and documenting the API, you can use the Azure portal.
 
-Azure Functions are hosted in Azure App Service and benefit from many capabilities available in the underlying service. On top of securing the API by using a function or admin key, you can choose to enable Azure App Service security and protect your API by using Azure AD or one of the other available authentication providers. App Service Authentication can be configured via the Azure Portal and doesn't require any changes in the API code.
+Azure Functions are hosted in Azure App Service and benefit from many capabilities available in the underlying service. On top of securing the API by using a function or admin key, you can choose to enable Azure App Service security and protect your API by using Azure AD or one of the other available authentication providers. App Service Authentication can be configured via the Azure portal and doesn't require any changes in the API code.
 
 Following is how you would use Azure Functions to create an API secured with Azure AD and capable of being called from a cross-domain origin in a secured way.
 
 #### Create a new Azure Function
 
-1. In the Azure Portal, go to your Resource Group and add a Function App.
+1. In the Azure portal, go to your Resource Group and add a Function App.
 
     ![Function App highlighted in the list of available services that can be added to a Resource Group](../../../images/api-aad-create-new-function-app.png)
 
@@ -322,10 +322,10 @@ Following is how you would use Azure Functions to create an API secured with Azu
 
 #### Change CORS settings
 
-Azure Functions are hosted in Azure App Service, which allows you to configure its Cross-Origin Resource Sharing (CORS) settings through the Azure Portal. While this is convenient, if configured through the portal, it cannot be used in combination with the **Access-Control-Allow-Credentials** header, which is required by the API to accept authentication cookies coming from another origin. For the client-side authentication to work correctly, CORS settings of the Azure App Service must be cleared.
+Azure Functions are hosted in Azure App Service, which allows you to configure its Cross-Origin Resource Sharing (CORS) settings through the Azure portal. While this is convenient, if configured through the portal, it cannot be used in combination with the **Access-Control-Allow-Credentials** header, which is required by the API to accept authentication cookies coming from another origin. For the client-side authentication to work correctly, CORS settings of the Azure App Service must be cleared.
 
 > [!IMPORTANT]
-> If you're authenticating with the API using the SharePoint Online cookie you have to clear all CORS settings or the authentication process will fail. If you're however authenticating using OAuth, you can use the Azure Portal, to configure CORS settings for your API.
+> If you're authenticating with the API using the SharePoint Online cookie you have to clear all CORS settings or the authentication process will fail. If you're however authenticating using OAuth, you can use the Azure portal, to configure CORS settings for your API.
 
 1. In the Function App, select your Azure Function, and navigate to the **Platform features** blade.
 
@@ -366,7 +366,7 @@ Azure Functions are hosted in Azure App Service, which allows you to configure i
 6. On the **Active Directory Authentication** blade, set the **Management mode** to **Express**, and create a new Azure AD app.
 
     > [!IMPORTANT] 
-    > When using the Express configuration mode, the Azure Portal creates a new Azure AD application from the same directory where the Function App is located. If the Function App is hosted in a different Azure subscription with a different directory, you should use the advanced mode instead, and specify the ID of the directory and application that should be used to secure access to the API.
+    > When using the Express configuration mode, the Azure portal creates a new Azure AD application from the same directory where the Function App is located. If the Function App is hosted in a different Azure subscription with a different directory, you should use the advanced mode instead, and specify the ID of the directory and application that should be used to secure access to the API.
     >
     > When using existing Azure AD applications, configure the application to accept credentials from a single tenant only. Configuring the application as multi-tenant allows any user with a valid organization or personal account to connect to your API.
     >
@@ -613,11 +613,11 @@ At this point, the API is code complete and can be published to the Azure Web Ap
 
 #### Secure the API using Azure App Service
 
-1. To secure the API using Azure AD, go to the Azure Portal and open the Web App hosting your API. 
+1. To secure the API using Azure AD, go to the Azure portal and open the Web App hosting your API. 
 
 2. From the **Settings** group, select the **Authentication / Authorization** option.
 
-    ![Azure App Service Authentication / Authorization page displayed in the Azure Portal](../../../images/api-aad-webapi-authentication.png)
+    ![Azure App Service Authentication / Authorization page displayed in the Azure portal](../../../images/api-aad-webapi-authentication.png)
 
 3. To enable authentication for your Web App, set the **App Service Authentication** toggle to **On**.
 
@@ -634,7 +634,7 @@ At this point, the API is code complete and can be published to the Azure Web Ap
 6. On the **Active Directory Authentication** blade, set the **Management mode** to **Express** and create a new Azure AD app.
 
     > [!IMPORTANT] 
-    > When using the Express configuration mode, the Azure Portal creates a new Azure AD application from the same directory where the Function App is located. If the Function App is hosted in a different Azure subscription with a different directory, you should use the advanced mode instead, and specify the ID of the directory and application that should be used to secure access to the API.
+    > When using the Express configuration mode, the Azure portal creates a new Azure AD application from the same directory where the Function App is located. If the Function App is hosted in a different Azure subscription with a different directory, you should use the advanced mode instead, and specify the ID of the directory and application that should be used to secure access to the API.
     >
     > When using existing Azure AD applications, configure the application to accept credentials from a single tenant only. Configuring the application as multi-tenant allows any user with a valid organization or personal account to connect to your API.
     >
@@ -713,12 +713,12 @@ In the following steps, you extend the web application so that it redirects user
 
 To secure an API with Azure AD, you need to register an Azure AD application. This application is then referenced in the web application project and used by the OWIN middleware to secure the access to your API with Azure AD.
 
-1. If you don't have an existing Azure AD application yet, you can create one in the Azure Portal, by navigating to the **Azure Active Directory** blade.
+1. If you don't have an existing Azure AD application yet, you can create one in the Azure portal, by navigating to the **Azure Active Directory** blade.
 
     > [!IMPORTANT] 
     > The Azure AD application used to secure the API should be created in the same Azure Active Directory that is used by your organization to access Office 365.
 
-    ![Azure Active Directory blade open in the Azure Portal](../../../images/api-aad-webapi-azure-aad.png)
+    ![Azure Active Directory blade open in the Azure portal](../../../images/api-aad-webapi-azure-aad.png)
 
 2. On the **Azure Active Directory** blade, navigate to the **App registrations** blade.
 
@@ -734,7 +734,7 @@ To secure an API with Azure AD, you need to register an Azure AD application. Th
 
 5. After the application registration is successfully created, select it in the list to view its details.
 
-    ![Application registration information displayed in the Azure Portal](../../../images/api-aad-webapi-azure-app-details.png)
+    ![Application registration information displayed in the Azure portal](../../../images/api-aad-webapi-azure-app-details.png)
 
 6. From the application registration information, copy the **Application ID** and store it because you will need it when you configure Azure AD authentication for your web application.
 

@@ -37,7 +37,7 @@ The articles in this section show you how to use the SharePoint Add-in model to 
 |[Site Provisioning](site-provisioning-sharepoint-add-in.md)|Provision site collections and subsites.|
 |[Use asynchronous operations in SharePoint Add-ins](use-asynchronous-operations-in-sharepoint-add-ins.md)|Implement asynchronous operations in SharePoint Add-ins by using Microsoft Azure WebJobs.|
 |[User Controls and Web Controls](user-controls-and-web-controls-sharepoint-add-in.md)|Implement custom controls in your code.|
-|[User Profile Manipulation](user profile manipulation-sharepoint-add-in.md)|Perform Create, Read, Update. and Delete (CRUD) operations in the User Profile Service (UPS).|
+|[User Profile Manipulation](user profile manipulation-sharepoint-add-in.md)|Perform Create, Read, Update. and Delete (CRUD) operations in the user profile service.|
 |[Variations](variations-sharepoint-add-in.md)|Configure variations.|
 |[Web Part](web-part-sharepoint-add-in.md)|Create portable page components.|
 |[Upload pre-configured web parts](upload-web-parts-in-sharepoint.md)|Deploy pre-configured, standard SharePoint web parts for your users.|

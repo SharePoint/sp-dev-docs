@@ -36,11 +36,11 @@ If you have an MSDN subscription, you can quickly provision a virtual machine in
 If you haven't activated the Microsoft Azure benefit that comes with your MSDN subscription, you can learn more about it at  [Microsoft Azure Benefit for MSDN Subscribers](http://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits/).
   
 > [!NOTE]
-> The Microsoft Azure Image Gallery no longer provides images with SharePoint and Visual Studio preinstalled. But a Microsoft Azure VM is still a good option for a development machine. > Sign in to the  [Microsoft Azure management portal](https://manage.windowsazure.com). > Create a VM using one of the images in the gallery for Windows Server 2008 R2 Service Pack 1 x64, Windows Server 2012 (or later). Follow the instructions provided by the virtual machine creation wizard. We recommend an **X-Large** VM size for SharePoint development.> After the machine is provisioned and running, complete the setup using the same procedures in the section below **Create a SharePoint development environment on premises**. (Skip the section about installing the operating system.)> Once you've set up your development environment, you can access your source control from Visual Studio on the virtual machine by using an Azure Point-to-Site connection. See  [Configure a point-to-site VPN connection to an Azure Virtual Network](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-point-to-site-create/) for instructions on how to do this.
-  
-    
-    
-
+> The Microsoft Azure Image Gallery no longer provides images with SharePoint and Visual Studio preinstalled. But a Microsoft Azure virtual machine is still a good option for a development machine. 
+> Sign in to the [Microsoft Azure portal](https://ms.portal.azure.com). 
+> Create a VM using one of the images in the gallery for Windows Server 2008 R2 Service Pack 1 x64, Windows Server 2012 (or later). Follow the instructions provided by the virtual machine creation wizard. We recommend an **X-Large** VM size for SharePoint development.
+> After the machine is provisioned and running, complete the setup using the same procedures in the section below **Create a SharePoint development environment on premises**. (Skip the section about installing the operating system.)
+> Once you've set up your development environment, you can access your source control from Visual Studio on the virtual machine by using an Azure Point-to-Site connection. See [Configure a point-to-site VPN connection to an Azure Virtual Network](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-point-to-site-create/) for instructions on how to do this.
 
 ## Create a SharePoint development environment on premises
 <a name="SP15_bk_devenvazure"> </a>

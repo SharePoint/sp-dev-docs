@@ -1,10 +1,10 @@
 ---
-title: Replace SharePoint lists created from list definitions
+title: Replace SharePoint lists created from list definitions in farm solutions
 description: Use CSOM to find lists and libraries that were created by using list definitions, create and configure new lists, add and remove views from lists, and migrate content from the original list to the new list.
 ms.date: 5/4/2018
 ---
 
-# Replace SharePoint lists created from list definitions
+# Replace SharePoint lists created from list definitions in farm solutions
 
 If you used list definitions to create lists in your farm solution, learn how to transform them into new solutions that provide similar functionality by using the client object model (CSOM). 
 

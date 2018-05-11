@@ -78,22 +78,22 @@ In this pattern, the Azure WebJob handles the scheduling aspects associated with
 - [Asynchronous operations with Azure storage queues and WebJobs](https://dev.office.com/patterns-and-practices-detail/2254)
 - [Content Type Enforce Retention](https://dev.office.com/patterns-and-practices-detail/2266)
 
-### PnP Timer Job Framework
+### PnP timer job framework
 
 _**Applies to:** Office 365 and SharePoint Server_
 
-The PnP Timer Job Framework is a set of classes designed to ease the creation of background processes that operate against SharePoint sites. The Timer Job Framework is similar to on-premises full trust code Timer Jobs (`SPJobDefinition`). The primary difference with between the Timer Job Framework and the full trust code Timer Job is that the Timer Job Framework only uses client side APIs and therefore can (and should) be run outside of SharePoint. The Timer Job Framework makes it possible to build Timer Jobs that operate against SharePoint Online.
+The PnP timer job framework is a set of classes designed to ease the creation of background processes that operate against SharePoint sites. The timer job framework is similar to on-premises full trust code Timer Jobs (`SPJobDefinition`). The primary difference with between the timer job framework and the full trust code Timer Job is that the timer job framework only uses client side APIs and therefore can (and should) be run outside of SharePoint. The timer job framework makes it possible to build Timer Jobs that operate against SharePoint Online.
 
 #### Related resources
 
 ##### Articles
 
-- [The Timer Job Framework](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/timerjob-framework)
+- [PnP timer job framework](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/timerjob-framework)
 - [Create remote timer jobs in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/create-remote-timer-jobs-in-sharepoint)
 
 ##### Videos
 
-- [PnP Core Component - Remote Timer Job Framework](https://www.youtube.com/watch?v=nzL6jCv0dKQ)
+- [PnP Core Component - Remote timer job framework](https://www.youtube.com/watch?v=nzL6jCv0dKQ)
 - [Introduction to the PnP timer job framework](http://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework)
 - [Creating simple remote timer job](https://channel9.msdn.com/Blogs/Office-365-Dev/Simple-remote-timer-job-that-interacts-with-SharePoint-Online-Office-365-Developer-Patterns-and-Prac)
 

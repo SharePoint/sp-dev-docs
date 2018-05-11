@@ -45,7 +45,7 @@ The following are some examples of implementations of OData. These applications 
 - SQL Azure
     
   
-- Microsoft Azure Table Storage
+- Microsoft Azure Table storage
     
   
 - Microsoft Azure Marketplace

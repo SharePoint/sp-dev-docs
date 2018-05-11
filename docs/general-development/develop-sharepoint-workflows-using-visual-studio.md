@@ -167,7 +167,7 @@ To debug SharePoint Online workflows in Visual Studio, perform the following ste
     For information about how to register for a Microsoft Azure account, see  [Microsoft Azure](http://www.windowsazure.com).
     
   
-3. Create a Microsoft Azure Service Bus namespace, which you can use to debug remote workflows. You can do this on the  [Microsoft Azure management portal](http://manage.windowsazure.com).
+3. Create a Microsoft Azure Service Bus namespace, which you can use to debug remote workflows. You can do this on the [Microsoft Azure portal](https://ms.portal.azure.com).
     
     For more information about the Microsoft Azure Service Bus, see  [Managing Service Bus Service Namespaces](http://msdn.microsoft.com/en-us/library/windowsazure/hh690928.aspx).
     
