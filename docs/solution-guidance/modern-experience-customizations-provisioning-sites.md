@@ -87,7 +87,7 @@ As you can see, the extension method creates a new "modern" team site and return
 
 You can also create "modern" sites using [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/releases). The following script will create a "modern" team site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use CSOM (with the SharePoint PnP Core component) or SharePoint PnP-PowerShell to automate other operations on the created site.
 
-```ps
+```powershell
 # Connect to SharePoint Online
 # This command will prompt the sign-in UI to authenticate
 Connect-PnPOnline "https://[tenant].sharepoint.com/"
@@ -161,7 +161,7 @@ public static void ManipulateModernTeamSite(string accessToken)
 
 You can also create an Office 365 group using [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/releases), which will let you easily authenticate with the Microsoft Graph using Azure Active Directory. The following script will create an Office 365 group, together with a "modern" team site, and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use CSOM (with the SharePoint PnP Core component) or SharePoint PnP-PowerShell to automate other operations on the created site.
 
-```PowerShell
+```powershell
 # Connect to your SharePoint admin center, credentials will be asked
 Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 
@@ -172,7 +172,7 @@ New-PnPSite -Type Team -Title "Awesome Group" -Description "Awesome Group" -Alia
 > [!NOTE]
 > There is currently no support to provision "modern" team sites using [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
-## Provisioning "Modern" communication sites
+## Provisioning "modern" communication sites
 
 In this section you will learn how to provision a "modern" communication site, and what are the available options to do that.
 
@@ -224,7 +224,7 @@ As you can see, the extension method creates a new "modern" communication site a
 
 The following script will create a "modern" communication site and then return the actual SharePoint site URL for further manipulation, as like as it was in the previous example with "modern" team sites.
 
-```ps
+```powershell
 # Connect to SharePoint Online
 # This command will prompt the sign-in UI to authenticate
 Connect-PnPOnline "https://[tenant].sharepoint.com/"
@@ -244,13 +244,13 @@ Execute-PnPQuery
 $web.Title
 ```
 
-## Additional Considerations
+## Additional considerations
 
-### Sub sites use "classic" templates
+### Subsites use "classic" templates
 
-If you provision a sub site under the root site of a "modern" site collection, sub sites will use "classic" templates. There are currently no "modern" sub site templates available. You can transform a "classic" sub site to a "modern" team site by creating a "modern" page on the site and updating the welcome page to the newly created page.  
+If you provision a subsite under the root site of a "modern" site collection, subsites will use "classic" templates. There are currently no "modern" subsite templates available. You can transform a "classic" subsite to a "modern" team site by creating a "modern" page on the site and updating the welcome page to the newly created page.  
 
-If you don't want to allow users to create a "classic" sub site under a "modern" site collection, as an admin you can go to the SharePoint Admin Center, select the Settings page and configure the option for "Subsite Creation" to hide the "subsite" creation menu. You can see the "Subsite Creation" option in the following image.
+If you don't want to allow users to create a "classic" subsite under a "modern" site collection, as an admin you can go to the SharePoint Admin Center, select the Settings page and configure the option for **Subsite Creation** to hide the **subsite** creation menu. You can see the **Subsite Creation** option in the following image.
 
 ![Subsite Creation options from the SharePoint Online admin UI](media/modern-experiences/subsite-creation-admin-setting.png)
 
@@ -262,8 +262,8 @@ There is also an upcoming new SharePoint Admin UI, which supports managing the n
 
 ## See also
 
-- [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
 - [What is a SharePoint team site?](https://support.office.com/en-US/article/What-is-a-SharePoint-team-site-75545757-36c3-46a7-beed-0aaa74f0401e?ui=en-US&rs=en-US&ad=US)
 - [Create a team site in SharePoint Online](https://support.office.com/en-US/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d)
 - [Manage site creation in SharePoint Online](https://support.office.com/en-us/article/Manage-site-creation-in-SharePoint-Online-e72844a3-0171-47c9-befb-e98b23e2dcf9?ui=en-US&rs=en-US&ad=US)
 - [Manage your SharePoint team site settings](https://support.office.com/en-us/article/Manage-your-SharePoint-team-site-settings-8376034d-d0c7-446e-9178-6ab51c58df42?ui=en-US&rs=en-US&ad=US)
+- [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)

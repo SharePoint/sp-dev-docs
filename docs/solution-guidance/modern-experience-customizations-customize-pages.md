@@ -10,9 +10,7 @@ In 2016, the "modern" page experience was released by the SharePoint team. Moder
 
 SharePoint pages are built with web parts, which you can customize according to your needs. You can add documents, videos, images, site activities, Yammer feeds, and more. Just select the + sign and pick a web part from the toolbox to add content to your page. The new “highlighted content” web part lets you set criteria so that specific content automatically and dynamically populates in that area of the page. By using the SharePoint Framework, developers can build custom web parts that show up right in the toolbox.
 
-![](https://blogs.office.com/wp-content/uploads/2016/08/New-capabilities-in-SharePoint-Online-team-sites-including-integration-with-Office-365-Groups-1.gif)
-
-This article focuses on the extensibility options within the "modern" page experience. However, if you want to learn more about the functionalities offered by the "modern" experiences, see [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://blogs.office.com/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups).
+This article focuses on the extensibility options within the "modern" page experience. However, if you want to learn more about the functionalities offered by the "modern" experiences, see [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://www.microsoft.com/en-us/microsoft-365/blog/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/).
 
 In the remainder of this article, we'll use "modern" for the new user experience and "classic" for the legacy user experience. 
 
@@ -42,11 +40,12 @@ These customizations are currently not supported for "modern" pages:
 > - In May 2017, during the SharePoint Virtual Summit, we announced [communication sites with configurable page layouts](https://blogs.office.com/2017/05/16/new-sharepoint-and-onedrive-capabilities-accelerate-your-digital-transformation/).  
 
 <a name="themingimpact"> </a>
+
 ## Custom branding
 
 If your site happens to use a custom theme, this theme is respected in the "modern" page experience as shown in the following sample.
 
-*Figure 1. Modern page with custom branding coming from theme settings*
+**Modern page with custom branding coming from theme settings**
 
 <img src="media/modern-experiences/modern-page-with-custom-theme.png" alt="Modern page with custom branding coming from theme settings" width="600">
 
@@ -60,6 +59,7 @@ If a "classic" team site had a high count of web parts or wiki pages, the featur
 The previous paragraph talked about how the "modern" page feature was enabled on existing sites. When you create a new "modern" or "classic" team site (GROUP#0 or STS#0), the "modern" Site Pages feature is enabled at provisioning time. The "modern" Site Pages feature is not enabled on sites that are based on other templates.
 
 <a name="configuremodernpages"> </a>
+
 ## Configuring the end user experience
 
 You have multiple options to control whether the "modern" or "classic" page experience is used. 
@@ -68,7 +68,7 @@ You have multiple options to control whether the "modern" or "classic" page expe
 
 If you want to completely disable the "modern" experience, it's best to use the tenant setting for this. Go to your tenant admin center (for example, contoso-admin.sharepoint.com), go to Settings, and select the "classic" experience.
 
-*Figure 2. Site Pages section in the SharePoint tenant scoped settings in Admin UI*
+**Site Pages section in the SharePoint tenant scoped settings in Admin UI**
 
 ![Site Pages section in the SharePoint tenant scoped settings in Admin UI](media/modern-experiences/site-pages-setting-admin-ui.png)
 
@@ -82,7 +82,7 @@ You can prevent a web from using the "modern" page experience by disabling the w
 
 Use the following [PnP PowerShell](http://aka.ms/sppnp-powershell) to enable/disable the needed features:
 
-```PowerShell
+```powershell
 # Connect to a site
 $cred = Get-Credential
 Connect-PnPOnline -Url https://[tenant].sharepoint.com/sites/siteurl -Credentials $cred
@@ -100,7 +100,7 @@ Disable-PnPFeature -Identity B6917CB1-93A0-4B97-A84D-7CF49975D4EC -Scope Web
 
 By default, users can add comments (July 2017) on "modern" pages. If your organization does not want this feature, it can be disabled from the tenant Admin center on the Settings page.
 
-*Figure 3. Enable or disable comments*
+**Enable or disable comments**
 
 ![Enable or disable comments](http://i.imgur.com/atl91Vh.png)
 
@@ -187,6 +187,7 @@ page2.AddSection(CanvasSectionTemplate.TwoColumn, 10);
 ```
 
 #### Add an out-of-the-box web part 
+
 The following sample shows how you can add an out-of-the-box **image** client-side web part on a page. Note that we instantiate the web part object by using the `InstantiateDefaultWebPart` method call. After the web part is initiated, its properties are set to the default properties defined in the web part manifest. For most web parts, you need to update the properties as shown in this sample.
 
 ```csharp
@@ -229,6 +230,7 @@ p.Save("PnPRocks.aspx");
 ```
 
 #### Adjust control order
+
 You have different methods to control the order in which the controls appear on the page. The key aspect is the `Order` attribute on the actual control: the list of controls is sorted by the value of that `Order` attribute when the page HTML is generated, and the order in the HTML is also the order at page rendering time.
 
 ```csharp
@@ -266,7 +268,7 @@ p.Delete();
 
 The following figure shows the most important classes you'll be working with when using the PnP client-side page object model.
 
-*Figure 4. PnP client-side object model*
+**PnP client-side object model**
 
 ![PnP client-side object model](media/pnpclientsideobjectmodel.png)
 
@@ -276,5 +278,5 @@ We'll gradually introduce more customization options for the "modern" pages expe
 
 ## See also
 
-- [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
 - [Allow or prevent creation of modern site pages by end users](https://support.office.com/en-us/article/Allow-or-prevent-creation-of-modern-site-pages-by-end-users-c41d9cc8-c5c0-46b4-8b87-ea66abc6e63b?ui=en-US&rs=en-US&ad=US)
+- [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)

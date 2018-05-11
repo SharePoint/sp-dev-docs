@@ -26,6 +26,7 @@ This article concentrates on the available extensibility options within "modern"
 > We're not deprecating the "classic" experience; both "classic" and "modern" will coexist.
 
 <a name="supportedcustomizations"> </a>
+
 ## Supported customizations on "modern" team sites
 
 "Modern" sites have a different level of customization options compared to "classic" team sites. Over time we'll introduce additional customization options, mainly focusing on extensibility and branding. The following list gives a quick overview of the supported capabilities for "modern" team sites. You can:
@@ -41,6 +42,7 @@ This article concentrates on the available extensibility options within "modern"
 > By default, a "modern" team site has scripting capabilities turned off. You can still apply a custom theme, but you cannot introduce a custom theme to the theme gallery as an option for end users. If you want to add a theme to the theme gallery, you need to [enable scripting](https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f) on the site.
 
 <a name="notsupported"> </a>
+
 ### What's not supported on "modern" team sites
 
 In numerous areas on the "modern" team sites, the typical customizations are not currently available. Further support will be available for some of these topics when they are ready to be released. Following is a list of currently unsupported customizations on "modern" team sites:
@@ -69,6 +71,7 @@ When you design your solutions, consider these key areas related to the NoScript
 > You can find the full list of impacted capabilities from the Microsoft Support article [Allow or prevent custom script](https://support.office.com/en-us/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US) under the "Features affected when custom script is blocked" section.
 
 <a name="pnpprovisioningengine"> </a>
+
 ### Using PnP provisioning engine with "modern" team sites
 
 You can use the [PnP provisioning engine](https://msdn.microsoft.com/en-us/pnp_articles/pnp-provisioning-engine-and-the-core-library) with "modern" team sites. The PnP provisioning engine automatically detects if a site is a "modern" team site and adjusts its behavior based on the supported capabilities. The process is exactly the same as using the PnP provisioning engine with "classic" sites where the scripting capabilities are not disabled.
@@ -92,7 +95,7 @@ The following elements are ignored when a remote template is applied to a "moder
 
 "Modern" team sites support custom themes even though you cannot upload a new gallery entry for end users. This can be achieved by uploading the needed assets to the site and then executing the **ApplyTheme** method. The following PowerShell script shows how to perform this for a "modern" team site.
 
-```PowerShell
+```powershell
 
 # Connect to a previously created Modern Site
 $cred = Get-Credential
@@ -120,7 +123,7 @@ $web.Context.ExecuteQuery()
 
 <br/>
 
-*Figure 1. "Modern" team site with custom theme*
+**Modern" team site with custom theme**
 
 !["Modern" team site with custom theme](media/modern-experiences/modern-site-with-custom-theme.png)
 
@@ -164,6 +167,6 @@ We'll gradually introduce more customization options for "modern" team sites tha
 
 ## See also
 
+- [PnP remote provisioning](pnp-remote-provisioning.md)
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
-- [PnP Remote Provisioning](https://msdn.microsoft.com/en-us/pnp_articles/pnp-remote-provisioning)
 
