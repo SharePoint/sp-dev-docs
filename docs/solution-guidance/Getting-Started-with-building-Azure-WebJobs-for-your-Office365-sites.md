@@ -315,11 +315,11 @@ This brings you to a new dialog where you can configure the job. Because you wan
 
 5. Indicate the starting **date** and **time**, as well as the **time zone**. 
 
-6. Choose **OK**. Visual Studio sends the following message: **Installing WebJobs Publishing NuGet Package**.
+6. Choose **OK**. Visual Studio sends the following message: *Installing WebJobs Publishing NuGet Package*.
 
     ![The WebJobs NuGet Package Install dialog is displayed which displays a spinner and the text, Installing WebJobs Publishing NuGet Package.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/14.WebJobs-NuGet-Package-Install.png)
 
-    This actually adds a new file called **webjob-publish-settings.json** to your project, containing the configuration for the job.
+    This actually adds a new file called webjob-publish-settings.json to your project, containing the configuration for the job.
 
     The file looks like this:
 
