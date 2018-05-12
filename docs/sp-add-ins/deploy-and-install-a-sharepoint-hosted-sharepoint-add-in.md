@@ -18,25 +18,25 @@ You'll find it a lot easier to develop SharePoint-hosted SharePoint Add-ins if y
 
 ## Create an add-in catalog
 
-1. Sign in to your Office 365 subscription as an administrator. Select the add-in launcher icon, and then select the **Admin** add-in.
+1. Sign in to your Office 365 subscription as an administrator. Select the add-in launcher icon, and then select the **Admin** tile.
     
    *Figure 1. Office 365 add-in launcher*
 
    ![Office 365 App Launcher](../images/ec60797c-d329-4922-a811-70c64598f4d5.PNG)
  
-2. In the **Admin Center**, expand the **Admin** node in the task pane, and then select **SharePoint**.
+2. In the **Admin Center**, expand the **Admin centers** node in the task pane, and then select **SharePoint**.
      
-3. In the **SharePoint Admin Center**, select **add-ins** in the task pane.
+3. In the **SharePoint Admin Center**, select **apps** in the task pane.
      
-4. On the **add-ins** page, select **Add-in Catalog**. (If there is already an add-in catalog site collection in the subscription, it opens and you are finished. You cannot create more than one add-in catalog in a subscription.)    
+4. On the **apps** page, select **App Catalog**. (If there is already an add-in catalog site collection in the subscription, it opens and you are finished. You cannot create more than one add-in catalog in a subscription.)    
  
-5. On the **Add-in Catalog Site** page, select **OK** to accept the default option and create a new add-in catalog site.    
+5. On the **App Catalog Site** page, select **OK** to accept the default option and create a new app catalog site.    
  
-6. In the **Create Add-in Catalog Site Collection** dialog, specify the title and website address of your add-in catalog site. We recommend that you include "catalog" in the title and URL to make it memorable and distinguishable in the **SharePoint Admin Center**.   
+6. In the **Create App Catalog Site Collection** dialog, specify the title and website address of your app catalog site. We recommend that you include "catalog" in the title and URL to make it memorable and distinguishable in the **SharePoint Admin Center**.   
  
 7. Specify a **Time Zone** and set yourself as the **Administrator**.
     
-8. Set the **Storage Quota** to the lowest possible value (currently 110, but that can change), because the add-in packages you upload to this site collection are very small.
+8. Set the **Storage Quota** to the lowest possible value (currently 110, but that can change), because the packages you upload to this site collection are very small.
     
 9. Set the **Server Resource Quota** to 0 (zero), and then select **OK**. (The server resource quota is related to throttling poorly performing sandboxed solutions, but you won't be installing any sandboxed solutions on your add-in catalog site.) 
  
