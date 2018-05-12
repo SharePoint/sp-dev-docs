@@ -22,7 +22,7 @@ This sample uses Visual Studio to demonstrate creating a workflow that calls an 
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Call an external web service](http://code.msdn.microsoft.com/SharePoint-workflow-48ea87d4)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Call an external web service](http://code.msdn.microsoft.com/SharePoint-2013-workflow-48ea87d4)
   
     
     
@@ -33,7 +33,7 @@ This sample uses Visual Studio to demonstrate creating a workflow that calls an 
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-workflow-41e5c0f9)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9)
   
     
     
@@ -44,7 +44,7 @@ In this end-to-end sample, the workflow uses a web service to obtain the appropr
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Sales tax calculator](http://code.msdn.microsoft.com/SharePoint-workflow-f7a1a8ba)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Sales tax calculator](http://code.msdn.microsoft.com/SharePoint-2013-workflow-f7a1a8ba)
   
     
     
@@ -55,7 +55,7 @@ An extended walkthrough of the process of implementing task actions in a workflo
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Using a task action in SharePoint Designer](http://code.msdn.microsoft.com/SharePoint-workflow-942a5441)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Using a task action in SharePoint Designer](http://code.msdn.microsoft.com/SharePoint-2013-workflow-942a5441)
   
     
     
@@ -66,7 +66,7 @@ The **SharePoint workflow: Workflow OM in a SharePoint app** code sample is an e
   
     
     
-You can locate the sample code here:  [SharePoint workflow: Workflow OM in a SharePoint app](http://code.msdn.microsoft.com/SharePoint-workflow-050f5211).
+You can locate the sample code here:  [SharePoint workflow: Workflow OM in a SharePoint app](http://code.msdn.microsoft.com/SharePoint-2013-workflow-050f5211).
   
     
     
