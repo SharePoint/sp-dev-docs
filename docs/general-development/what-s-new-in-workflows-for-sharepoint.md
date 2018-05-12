@@ -6,8 +6,8 @@ ms.assetid: 1d51421b-61ac-46b6-a865-52f968ddc5b3
 ---
 
 
-# What's new in workflows for SharePoint
-Learn about the capabilities and features that are new to workflows in SharePoint.
+# What's new in workflows for SharePoint 2013
+Learn about the capabilities and features that are new to workflows in SharePoint Server 2013.
 The workflow framework in SharePoint is significantly changed from previous versions. The following sections provide brief summaries of the most significant updates and enhancements to the workflow infrastructure.
   
     
