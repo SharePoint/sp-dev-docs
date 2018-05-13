@@ -108,8 +108,7 @@ Execute-PnPQuery
 $web.WebTemplate + "#" + $web.Configuration
 ```
 
-### Provision an Office 365 group programmatically
-#### Provisioning a "modern" team site using the Office 365 CLI
+### Provision a "modern" team site using the Office 365 CLI
 
 Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" sites. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. 
 
@@ -132,7 +131,7 @@ echo $siteUrl
 o365 spo propertybag list -u $siteUrl
 ```
 
-### Provisioning an Office 365 group programmatically
+### Provision an Office 365 group programmatically
 
 "Modern" team sites can be created programmatically by creating an [Office 365 group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create an Office 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Office 365 group and has the following default structure. 
 
@@ -194,7 +193,7 @@ Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 New-PnPSite -Type Team -Title "Awesome Group" -Description "Awesome Group" -Alias "awesome-group"
 ```
 
-#### Provisioning an Office 365 Group using the Office 365 CLI
+#### Provision an Office 365 Group using the Office 365 CLI
 
 Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create an Office 365 Group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
 The example below shows how it can be done using the [Office 365 CLI immersive mode](https://sharepoint.github.io/office365-cli/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
@@ -287,7 +286,7 @@ Execute-PnPQuery
 $web.Title
 ```
 
-#### Provisioning a "modern" communication site using the Office 365 CLI
+#### Provision a "modern" communication site using the Office 365 CLI
 
 Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/cmd/spo/site/site-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" Communication site. The following bash script will create the site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL you can use it to automate other operations on the created site.
 
