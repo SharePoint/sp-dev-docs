@@ -5,7 +5,7 @@ ms.date: 4/16/2018
 
 # Commanding within a web part
 
-The commanding with in a web part consists of a single line of commands which sit below the web part title. These commands contain and icon and text, for example the <b>+ plus</b> icon and the text <b>Add</b>. The command bar can be extend to support multiple commands but be aware of overloading the web part with too many commands and how they reflow when the web part is placed in different columns or when the page reflows to smaller screen sizes.
+The commanding with in a web part consists of a single line of commands which sit below the web part title. These commands contain and icon and text, for example the <b>+ plus</b> icon and the text <b>Add</b>. The command bar can be extended to support multiple commands but be aware of overloading the web part with too many commands and how they reflow when the web part is placed in different columns or when the page reflows to smaller screen sizes.
 
 ![Single +Add command below the Title](../images/Commanding_Events_1column_01.png)
 
@@ -19,7 +19,7 @@ Many web part may need to support the overflow of content to a secondary page su
 
 # Command bar states
 
-A common command is Add for many web part that require content to be created. In the case of News and Event the Add command is only enabled in read mode as it takes user to a new page or form to create content. The desired web part user experience should determine if commands are active in both read and edit modes, only edit, or only read. Most likely this will be driven by wether or not the web part is designed to be configured by the author of the page and static to the viewer or if the viewer/reader web can interact with the web part.
+A common command is Add for many web part that require content to be created. In the case of News and Event the Add command is only enabled in read mode as it takes user to a new page or form to create content. The desired web part user experience should determine if commands are active in both read and edit modes, only edit, or only read. Most likely this will be driven by whether or not the web part is designed to be configured by the author of the page and static to the viewer or if the viewer/reader can interact with the web part.
 
 # Placement and accessibility of commands
 
