@@ -58,7 +58,7 @@ Let's analyze how a web part is configured in the page transformation model, whi
 
 For each web part the model defines the properties that might be useful to configure the target client side web part(s). If you miss certain properties you can simply extend them in the model. On some of the properties you'll see a Functions attribute: this attribute contains one or more functions (separate functions via a ;) that are executed when the source web part is mapped to a target client side web part. The anatomy of a function is the following:
 
-```C#
+```csharp
 {Output} = FunctionName({Input1}, {Input2})
 ```
 
@@ -124,7 +124,7 @@ Add-ons allow you to insert your custom logic into the mapping model by followin
 
 To create your own functions you'll need to reference the SharePoint.Modernization.Framework assembly in your project and then create a class inheriting the `SharePoint.Modernization.Framework.Functions.FunctionsBase` class:
 
-```C#
+```csharp
 using Microsoft.SharePoint.Client;
 using SharePoint.Modernization.Framework.Functions;
 using System;

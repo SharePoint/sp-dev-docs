@@ -35,7 +35,7 @@ The `webpartmapping.xml` and `webpartmapping_latestfrompackage.xml` represent th
 
 With the mapping file in place you now can use below snippet (coming from the [Modernization.PageTransformation sample on GitHub](https://github.com/SharePoint/PnP/tree/dev/Samples/Modernization.PageTransformation)) to transform all the pages in a given site:
 
-```C#
+```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestsite";
 string userName = "joe@contoso.onmicrosoft.com";
 AuthenticationManager am = new AuthenticationManager();
@@ -49,17 +49,8 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
         {
             // If target page exists, then overwrite it
             Overwrite = true,
-            // Migrated page gets the name of the original page (default = false)
-            //TargetPageTakesSourcePageName = false,
-            // Give the migrated page a specific prefix (default is Migrated_)
-            //TargetPagePrefix = "Yes_",
-            // Configure the page header, empty value means ClientSidePageHeaderType.None (default = null)
-            //PageHeader = new ClientSidePageHeader(cc, ClientSidePageHeaderType.None, null),
-            // If the page is a home page then replace with stock home page (default = false)
-            //ReplaceHomePageWithDefaultHomePage = true,
-            // Replace images and iframes embedded inside a list or table in the wiki text with a placeholder and add respective images and video web parts at the bottom of the page (default = true)
-            //HandleWikiImagesAndVideos = false,
         };
+
         try
         {
             Console.WriteLine($"Transforming page {page.FieldValues["FileLeafRef"]}");
