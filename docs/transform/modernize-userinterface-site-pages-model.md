@@ -10,7 +10,7 @@ ms.prod: sharepoint
 The heart of the page transformation solution is the model that feeds the transformation: the model tells the engine which web part properties are important, allows you to manipulate these properties and dynamically choose a mapping for your web part.The page transformation model is expressed in XMl and comes with a schema that's used to validate the correctness of the model.
 
 > [!IMPORTANT]
-> The SharePoint PnP Modernization framework is currently in preview. If you encounter issues please file a issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/PnP-Tools/issues).
+> The SharePoint PnP Modernization framework is currently in preview. If you encounter problems please file an issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/PnP-Tools/issues).
 
 ## Page transformation model structure
 

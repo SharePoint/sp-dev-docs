@@ -12,7 +12,7 @@ Classic SharePoint sites typically have classic pages being wiki pages or web pa
 The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline), [source code](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization/SharePointPnP.Modernization.Framework)) does bring page transformation capabilities which will be explained in the upcoming chapters.
 
 > [!IMPORTANT]
-> The SharePoint PnP Modernization framework is currently in preview. If you encounter issues please file a issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/PnP-Tools/issues).
+> The SharePoint PnP Modernization framework is currently in preview. If you encounter problems please file an issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/PnP-Tools/issues).
 
 ## Overview of the page transformation solution
 
