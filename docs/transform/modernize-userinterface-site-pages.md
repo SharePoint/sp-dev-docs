@@ -64,6 +64,12 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 }
 ```
 
+## Quick start to page transformation using PowerShell
+
+The page transformation engine can also be used from PowerShell. This allows it to be integrated in a site modernization script that besides page transformation also does other things like installing solution, connecting the site to an Office 365 group and applying tenant branding. Below script shows how to call the transformation engine using PowerShell:
+
+[!code-powershell[transformpages](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/PageTransformation/TransformPageSample.ps1 "Transform pages to modern pages using PowerShell")]
+
 ## See also
 
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
