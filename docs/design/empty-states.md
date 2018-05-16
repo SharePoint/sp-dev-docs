@@ -45,6 +45,6 @@ The following example shows an empty state with multiple items stacked verticall
 
 ## Empty state with pre-provisioned content
 
-The Hero web part is an example of an empty state with pre-provisioned content and text. The empty state is designed to help authors understand the options and the layout capabilites of the web part. The empty state in this case is a visual template for the web part.
+The Hero web part is an example of an empty state with pre-provisioned content and text. The empty state is designed to help authors understand the options and the layout capabilities of the web part. The empty state in this case is a visual template for the web part. When pre-provisioning content for an empty state make sure end users have rights to publish the content (images, illustrations, etc.) in their pages.
 
 ![Hero web part empty state with images and helpful text](../images/empty_state_unique_05.png)
