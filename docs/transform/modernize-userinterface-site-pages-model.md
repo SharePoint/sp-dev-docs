@@ -122,14 +122,14 @@ Add-ons allow you to insert your custom logic into the mapping model by followin
 
 ### Create your custom functions/selectors assembly
 
-To create your own functions you'll need to reference the SharePoint.Modernization.Framework assembly in your project and then create a class inheriting the `SharePoint.Modernization.Framework.Functions.FunctionsBase` class:
+To create your own functions you'll need to reference the SharePoint.Modernization.Framework assembly in your project and then create a class inheriting the `SharePointPnP.Modernization.Framework.Functions.FunctionsBase` class:
 
 ```csharp
 using Microsoft.SharePoint.Client;
-using SharePoint.Modernization.Framework.Functions;
+using SharePointPnP.Modernization.Framework.Functions;
 using System;
 
-namespace SharePoint.Modernization.Framework.SampleAddOn
+namespace Contoso.Modernization
 {
     public class MyCustomFunctions: FunctionsBase
     {
