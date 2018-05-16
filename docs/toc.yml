@@ -1296,6 +1296,11 @@
       items:
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
+      - name: Transform classic pages to modern client-side pages
+        href: transform/modernize-userinterface-site-pages.md
+        items:
+        - name: Page transformation model
+          href: transform/modernize-userinterface-site-pages-model.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md
     - name: Modernize site branding

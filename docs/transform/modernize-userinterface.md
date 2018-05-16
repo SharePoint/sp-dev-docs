@@ -44,7 +44,7 @@ Your tenant might contain thousands of site collections, so which of these site 
   - A list uses customizations (for example, JSLink) that are not compatible.
   - A list template (for example, an events list) is not yet built to work in the modern user interface.
 
-- **SharePoint Modernization scanner** - The [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) provides a detailed analysis of your site's readiness for connecting to an Office 365 group combined with a detailed analysis of the wiki and web part pages in your environment. These outcomes can be used initially to drive remediation work, followed later on by migration work. If your focus is to **transform your site pages** to use the modern user interface, use this scanner.
+- **SharePoint Modernization scanner** - The [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) provides a detailed analysis of your site's readiness for connecting to an Office 365 group combined with a detailed analysis of the wiki and web part pages in your environment to prepare you for a page modernization. These outcomes can be used initially to drive remediation work, followed later on by migration work. If your focus is to **transform your site pages**, to **connect your sites to an Office 365 group** then use this scanner.
 
 ## Step 3: Modernize your site collections
 
@@ -69,4 +69,4 @@ After you analyze the sites that you want to modernize, you can continue with th
 
 - [Maximize use of modern lists and libraries](modernize-userinterface-lists-and-libraries.md)
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
-<!-- [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md)-->
+- [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md)
