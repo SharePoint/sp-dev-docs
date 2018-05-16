@@ -10,7 +10,7 @@ Like the Microsoft brand palette, the SharePoint themes are designed to build on
 
 <br/>
 
-![SharePoint color palette, Red D13438, Orange CA5010, Green 10893E, Blue 0078D7, Purple 6B69D6, Gray 5D5A5B ](../images/design-theme-colors.png)
+![SharePoint color palette, Red D13438, Orange CA5010, Green 10893E, Blue 0078D7, Purple 6B69D6, Gray 5D5A5B ](../images/sharepoint-themes.png)
 
 ## Themes
 
