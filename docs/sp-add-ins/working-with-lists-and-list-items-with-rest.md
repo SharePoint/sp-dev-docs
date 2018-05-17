@@ -180,7 +180,7 @@ Headers:
 The following example shows how to  retrieve all of a list's items.
  
 > [!NOTE] 
-> The OData $skip query option does not work when querying list items. In may situations, you can use the [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
+> The OData $skip query option does not work when querying list items. In many situations, you can use the [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items
