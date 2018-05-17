@@ -65,7 +65,7 @@ Neutral colors recede into the background in order to let our products shine. Th
 
 ## Shades and tints
 
-Once a color is selected, light and dark shades of the accent color are created based on HSB values of color luminosity. Apps can use shade variations to create visual hierarchy and to provide an indication of interaction.
+Once a color is selected, light and dark shades of the accent color are created based on HSB values of color luminosity. Web parts and apps can use shade variations to create visual hierarchy and to provide an indication of interaction.
 
 <br/>
 
