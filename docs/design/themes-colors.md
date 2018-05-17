@@ -8,7 +8,7 @@ ms.date: 01/24/2018
 
 Like the Microsoft brand palette, the SharePoint themes are designed to build on the Microsoft brand, while at the same time allow for flexibility to enliven our partnerships without dominating them. They reveal our shared goals and personality, and reflect our diversity and ability to optimize the SharePoint experience.
 
-## Main Colors
+## Main colors
 
 The SharePoint color palette has been optimized for screens and devices, and to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
@@ -103,7 +103,7 @@ Once a color is selected, light and dark shades of the accent color are created 
 <br/>
 
 
-## Dark Themes
+## Dark themes
 
 SharePoint includes a palette that support dark themes. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
