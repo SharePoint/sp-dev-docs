@@ -18,12 +18,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 Neutral colors recede into the background in order to let our products shine. They allow brand colors to pop when we need to draw attention to content. When coupling neutrals with brand colors, make sure there is suitable contrast between them.
 
-![Neutral greys](../images/sharepoint-neutral-greys.png)
-
-<br/>
-
+<br/> 
 <table>
 <tr>
+<td rowspan="13" style=""><img src="../images/sharepoint-neutral-greys.png" alt="Neutral greys"height=766 width=375></img></td>
 <td style="color:white; background-color:#000000">black: #000000</td>
 </tr>
 <tr>
@@ -48,7 +46,7 @@ Neutral colors recede into the background in order to let our products shine. Th
 <td style="color:black; background-color:#d0d0d0">neutralQuaternary: #d0d0d0</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#dadada">neutralquaternaryAlt: #dadada</td>
+<td style="color:black; background-color:#dadada">neutralQuaternaryAlt: #dadada</td>
 </tr>
 <tr>
 <td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
@@ -63,19 +61,17 @@ Neutral colors recede into the background in order to let our products shine. Th
 <td style="color:black; background-color:#fff">white: #fff</td>
 </tr>
 </table>
-
 <br/>
 
 ## Shades and tints
 
 Once a color is selected, light and dark shades of the accent color are created based on HSB values of color luminosity. Apps can use shade variations to create visual hierarchy and to provide an indication of interaction.
 
-![Theme primary colors](../images/sharepoint-theme-primary.png)
-
 <br/>
 
 <table>
 <tr>
+<td rowspan="9" style=""><img src="../images/sharepoint-theme-primary.png" alt="Theme primary colors"height=531 width=375></img></td>
 <td style="color:white; background-color:#004578">themeDarker: #004578</td>
 </tr>
 <tr>
