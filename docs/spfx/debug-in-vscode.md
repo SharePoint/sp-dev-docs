@@ -102,7 +102,7 @@ When building SharePoint Framework solutions that communicate with SharePoint, y
 
 When building SharePoint Framework solutions, you will be doing such tests regularly, and it is a good idea to create a separate debug configuration for the hosted version of the SharePoint Workbench.
 
-### Debug solution using hosted workbench
+### Debug Web Part solution using hosted workbench
 
 1. Open launch.json, and update the `url` property under the *Hosted workbench* configuration to your SharePoint site URL.
 
@@ -121,6 +121,63 @@ When building SharePoint Framework solutions, you will be doing such tests regul
 4. After you sign in, add the web part to the canvas and refresh the workbench, just like you did with the local workbench. You will see the breakpoint in Visual Studio Code be hit, and you are able to inspect variables and step through the code.
 
     ![Breakpoint hit in Visual Studio Code when debugging a SharePoint Framework client-side web part in the hosted workbench](../images/vscode-debugging-breakpoint-hit-o365.png)
+
+### Debug Extension solution using hosted workbench
+
+Debuging an Extension in a hosted workbench is very similar to the steps for a Web Part with a few key differences.  
+
+
+1. Open launch.json, and update the `url` property under the *Hosted workbench* configuration to your SharePoint site URL.
+
+    ```json
+    "url": "https://enter-your-SharePoint-site/_layouts/workbench.aspx",
+    ```
+
+2. In Visual Studio Code, activate the **Debug** pane, and in the **Configurations** list, select the newly added **Hosted workbench** configuration.
+
+    ![The hosted workbench configuration selected in the debug configurations drop-down in Visual Studio Code](../images/vscode-debugging-debugging-hosted-workbench.png)
+
+3.  After initiating the gulp serve in the Terminal start debugging either by selecting F5 or by selecting the **Start Debugging** option on the **Debug** menu. Visual Studio Code switches into debug mode, indicated by the orange status bar, and the Debugger for Chrome extension opens a new instance of Google Chrome with the Office 365 sign-in page.
+
+    ![Office 365 login page displayed in Google Chrome after starting debugging in the hosted workbench](../images/vscode-debugging-o365-login.png)
+
+4.  In the workbench tab that was opened in your browser navigate to a SharePoint Online page that you wish to test your extension.
+
+5.  Append the following query string parameters to the URL. Notice that you need to update the ID to match your own extension identifier. This is available in the **HelloWorldApplicationCustomizer.manifest.json** file.
+
+    ```json
+        ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
+    ```
+
+    More detail about the URL query parameters:
+
+    * **loadSPFX=true**. Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
+
+    * **debugManifestsFile**. Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+
+    * **customActions**. Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it. 
+        * **Key**. Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.
+        * **Location**. The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.
+        * **Properties**. An optional JSON object that contains properties that are available via the **this.properties** member. In this HelloWorld example, it defined a `testMessage` property.
+
+    The full URL should look similar to the following:
+
+    ```json
+    contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
+    ```
+
+6. Select **Load debug scripts** to continue loading scripts from your local host.
+
+    ![Allow Debug Manifest question from the page](../images/ext-app-debug-manifest-message.png)
+
+    <br/>
+    When the page loads you should now be able to see the Extension on your page(in this case a list view command extension):
+
+    ![Hitting Breakpoints in the Visual Studio Code](../images/debug-Extension-Loaded.png)
+
+    In addition you can now toggle Breakpoints and step through the code:
+  
+    ![Hitting Breakpoints in the Visual Studio Code](../images/debug-Extension-Breakpoints.png)  
 
 ## Debugging with Microsoft Edge or older projects
 
