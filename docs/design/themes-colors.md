@@ -21,7 +21,7 @@ Neutral colors recede into the background to let our products shine. They allow 
 <br/> 
 <table>
 <tr>
-<td rowspan="13" style=""><img src="../images/sharepoint-neutral-greys.png" alt="Neutral greys" height="766" width="300"></img></td>
+<td rowspan="13" style=""><img src="../images/sharepoint-neutral-greys.png" alt="Neutral greys" height="766" width="375"></img></td>
 <td style="color:white; background-color:#000000">black: #000000</td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@ After you select a color, light and dark shades of the accent color are created 
 
 <table>
 <tr>
-<td rowspan="9" style=""><img src="../images/sharepoint-theme-primary.png" alt="Theme primary colors" height="531" width="300"></img></td>
+<td rowspan="9" style=""><img src="../images/sharepoint-theme-primary.png" alt="Theme primary colors" height="531" width="375"></img></td>
 <td style="color:white; background-color:#004578">themeDarker: #004578</td>
 </tr>
 <tr>
