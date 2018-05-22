@@ -1,22 +1,22 @@
 ---
 title:  SharePoint themes and colors
-description: Design principles that helped form the current SharePoint themes and color palette.
-ms.date: 01/24/2018
+description: Design principles that help form the current SharePoint themes and color palette.
+ms.date: 05/21/2018
 ---
 
 # SharePoint themes and colors
 
-Like the Microsoft brand palette, the SharePoint themes are designed to build on the Microsoft brand, while at the same time allow for flexibility to enliven our partnerships without dominating them. They reveal our shared goals and personality, and reflect our diversity and ability to optimize the SharePoint experience.
+Like the Microsoft brand palette, the SharePoint themes are designed to build on the Microsoft brand, while at the same time allow for flexibility to enliven our partnerships without dominating them. They reveal our shared goals and personality, and they reflect our diversity and ability to optimize the SharePoint experience.
 
 ## Main colors
 
-The SharePoint color palette has been optimized for screens and devices, and to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
+The SharePoint color palette is now optimized for screens and devices. In addition, it is optimized to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
 ![SharePoint color palette, Red A4262C, Orange CA5010, Gold 8F7034, Green 407855, Teal 038387, Blue 0078d4, Dark Blue 40587C, Indigo 4052AB, Plum 854085, Purple 8764B8, Cool Grey 737373, Warm Grey 867365](../images/sharepoint-themes.png)
 
 ## Neutral palette
 
-Neutral colors recede into the background in order to let our products shine. They allow brand colors to pop when we need to draw attention to content. When coupling neutrals with brand colors, make sure there is suitable contrast between them.
+Neutral colors recede into the background to let our products shine. They allow brand colors to pop when we need to draw attention to content. When coupling neutrals with brand colors, make sure there is suitable contrast between them.
 
 <br/> 
 <table>
@@ -28,7 +28,7 @@ Neutral colors recede into the background in order to let our products shine. Th
 <td style="color:white; background-color:#212121">neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td style="color:white; background-color:#333333">neutralPrimary: #333333</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
@@ -58,14 +58,14 @@ Neutral colors recede into the background in order to let our products shine. Th
 <td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td style="color:black; background-color:#ffffff">white: #ffffff</td>
 </tr>
 </table>
 <br/>
 
 ## Shades and tints
 
-Once a color is selected, light and dark shades of the accent color are created based on HSB values of color luminosity. Web parts and apps can use shade variations to create visual hierarchy and to provide an indication of interaction.
+After you select a color, light and dark shades of the accent color are created based on HSB values of color luminosity. Web parts and apps can use shade variations to create visual hierarchy and provide an indication of interaction.
 
 <br/>
 
@@ -105,7 +105,7 @@ Once a color is selected, light and dark shades of the accent color are created 
 
 ## Dark themes
 
-SharePoint includes a palette that support dark themes. The SharePoint-provided colors also guarantee accessible and legible experiences.
+SharePoint includes a palette that supports dark themes. The SharePoint-provided colors guarantee accessible and legible experiences.
 
 ![SharePoint dark theme color palette, Red EF6950, Yellow FFC83D, Green 40C5AF, Blue 409AE1, Purple b4a0ff, Grey b2b2b2](../images/sharepoint-themes-dark.png)
 
@@ -113,13 +113,17 @@ SharePoint includes a palette that support dark themes. The SharePoint-provided 
 
 The following design principles helped form the current SharePoint themes and color palette.
 
-**Guided**. Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly. Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
+### Guided
+Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly. Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
 
-**Smart and efficient**. Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
+### Smart and efficient
+Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
 
-**Professional**. Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
+### Professional
+Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
 
-**Accessible**. Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
+### Accessible
+Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
 
 ## See also
 
