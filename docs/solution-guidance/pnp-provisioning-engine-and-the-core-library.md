@@ -17,7 +17,7 @@ Comprised of extension methods on the SharePoint CSOM/REST object model, the Cor
 
 The PnP provisioning engine is the structured implementation of classes in the Core library for performing and automating remote provisioning tasks. In the new Microsoft landscape that features the SharePoint Add-in model, provisioning solutions for SharePoint Online, SharePoint, and Office 365 now use the client-side object model (CSOM) and the provisioning framework to provision site artifacts.
 
-The PnP provisioning engine allows you to model the design of site columns, content types, list definitions, composed looks, and pages. You can design those features and much more by pointing to existing site design features, by crafting the design my hand, or by using a mix of both approaches. You can then, optionally, persist the design as a provisioning template that you can save and reuse.
+The PnP provisioning engine allows you to model the design of site columns, content types, list definitions, composed looks, and pages. You can design those features and much more by pointing to existing site design features, by crafting the design by hand, or by using a mix of both approaches. You can then, optionally, persist the design as a provisioning template that you can save and reuse.
 
 You can use one of two approaches for extracting your site design as a provisioning template. Use Windows PowerShell scripts (SharePointPnP.PowerShell), or use CSOM/REST code that implements extension methods provided by the Core library (OfficeDevPnP.Core).
 
