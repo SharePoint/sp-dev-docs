@@ -180,14 +180,18 @@
         href: design/grid-and-responsive-design.md
       - name: Titles and descriptions
         href: design/web-part-titles-and-descriptions.md
+      - name: Commanding within a web part
+        href: design/web-part-commanding.md
       - name: UI text
         href: design/ui-text-for-web-parts.md
-      - name: Themes and colors
-        href: design/themes-colors.md
       - name: Placeholders and fallbacks
         href: design/placeholders-and-fallbacks.md
+      - name: Empty state of a web part
+        href: design/empty-states.md     
       - name: Accessibility
         href: design/accessibility.md
+      - name: Key web part examples
+        href: design/key-web-part-examples.md     
       - name: Web part showcase
         href: design/showcase-web-part.md
     - name: Authoring pages
@@ -198,6 +202,8 @@
       href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
     - name: Work with CSS
       href: spfx/css-recommendations.md
+    - name: Themes and colors
+      href: design/themes-colors.md      
     - name: Use themes
       href: spfx/use-theme-colors-in-your-customizations.md
     - name: Office UI Fabric integration
