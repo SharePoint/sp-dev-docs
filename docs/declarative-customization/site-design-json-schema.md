@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 04/20/2018
+ms.date: 05/25/2018
 ---
 
 # Site design JSON schema
@@ -300,6 +300,101 @@ In this example, we are formatting a number column as a data bar.
                 }
 ```
 
+### associateFieldCustomizer
+
+Registers field extension for a list field. For more information on these client-side extensions, see [Build field customizer](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) tutorial.
+
+#### JSON values
+
+- **internalName** &ndash; The display name of the field to operate on.
+- **clientSiteComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- **clientSiteComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the field customizer extension instance.
+
+#### Example 
+
+```json
+{
+    "verb": "createSPList",
+    "listName": "Custom List with Slider Extension",
+    "templateType": 100,
+    "subactions": [
+        {
+            "verb": "SetDescription",
+            "description": "Custom list to illustrate SharePoint site scripting"
+        },
+        {
+            "verb": "addSPField",
+            "fieldType": "Text",
+            "displayName": "Text Field",
+            "isRequired": false,
+            "addToDefaultView": true
+        },
+        {
+            "fieldType": "Number",
+            "displayName": "Number Field",
+            "internalName": "ElectricSlide",
+            "addToDefaultView": true,
+            "isRequired": true
+        },
+        {
+            "verb": "associateFieldCustomizer",
+            "internalName": "ElectricSlide",
+            "clientSideComponentId": "35944670-3111-4482-b152-9e9d1sean9f7",
+            "clientSideComponentProperties": "{\"sampleText\":\"Yes - added by a site design, what?\"}"
+        }
+    ]
+}
+```
+
+### associateListViewCommandSet
+
+Sets column formatting for a field. For more information, see [Use column formatting to customize SharePoint](column-formatting.md).
+
+#### JSON values
+
+- **title** &ndash; The title of the extension.
+- **location** &ndash; A required parameter to specify where the command is displayed. Options are: ContextMenu or CommandBar. 
+- **clientSiteComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- **clientSiteComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
+
+
+#### Example 
+
+```json
+{
+    "verb": "createSPList",
+    "listName": "CustomList",
+    "templateType": 100,
+    "subactions": [
+        {
+            "verb": "SetDescription",
+            "description": "Custom list to illustrate SharePoint site scripting"
+        },
+        {
+            "verb": "addSPField",
+            "fieldType": "Text",
+            "displayName": "Text Field",
+            "isRequired": false,
+            "addToDefaultView": true
+        },
+        {
+            "verb": "addSPField",
+            "fieldType": "Number",
+            "displayName": "Number Field",
+            "internalName": "ElectricSlide",
+            "addToDefaultView": true,
+            "isRequired": true
+        },
+        {
+            "verb": "associateListViewCommandSet",
+            "title": "HelloWorld",
+            "location": "CommandBar"
+            "clientSideComponentId": "13234283-d6c2-408f-a9ef-31a920c8ae78",
+            "clientSideComponentProperties": "{\"sampleText\":\"added by a site design\"}"
+        }
+    ]
+}
+```
 
 ## Define a new site column
 
@@ -538,11 +633,10 @@ Use the **joinHubSite** verb to join the site to a designated hub site.
 
 ## Install an add-in or solution
 
-Use the **installSPFXSolution** action to install a deployed add-in or SharePoint Framework solution from the tenant app catalog. 
+Use the **installSolution** action to install a deployed add-in or SharePoint Framework solution from the tenant app catalog. 
 
 #### JSON values
 
-- **id** &ndash; The id of the add-in or solution in the tenant app catalog. 
 
 #### Example
 
@@ -551,11 +645,39 @@ Use the **installSPFXSolution** action to install a deployed add-in or SharePoin
 
 ```json
 {
-    "verb": "installSPFXSolution",
+    "verb": "installSolution",
     "id": "d40e4edc-a6da-4cd8-b82d-bba970976803"
 }
 ```
 
+## Register an extension
+
+Use the **associateExtension** action to register a deployed SharePoint Framework extension from the tenant app catalog. 
+
+> [!NOTE]
+> For more details on how to create and configure a SharePoint Framework extension, check out: [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
+
+#### JSON values
+
+- **title** &ndash; The title of the extension in the app catalog. 
+- **location** &ndash; Used to specify the extension type. If it is used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
+- **clientSiteComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- **clientSiteComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
+- **registrationId** &ndash; An optional parameter, which indicates the type of the list the extension is associated to (if it is a list extension).
+- **registrationType** &ndash; An optional parameter, which should be specified if the extension is associated with a list. 
+- **scope** &ndash; Indicates whether the extension is associated with a Web or a Site. 
+
+#### Example
+
+```json
+{
+    "verb": "associateExtension",
+    "title": "SPFXApplicationCustomizer Example",
+    "location": "ClientSideExtension.ApplicationCustomizer",
+    "clientSideComponentId": "40d64749-a6e5-4691-b440-1e32fb6sean5",
+    "scope": "Web"
+}
+```
 
 ## Trigger a flow
 
@@ -602,6 +724,44 @@ Use the **setRegionalSettings** action to configure the regional settings of the
     "locale": 1050, /* Croatia */
     "sortOrder": 6, /* Croatian */
     "hourFormat": "24"
+}
+```
+
+
+## Add users (principals) to SharePoing Groups
+
+Use the **addPrincipalToGroup** action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/en-us/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Office 365 Groups.
+
+#### JSON values
+
+- **principal** &ndash; A required parameter to specify the name of the principal (user or group) to add to the SharePoint group. 
+- **group** &ndash; A required parameter to specify the SharePoint group to add the principal to.
+
+#### Example
+
+> [!NOTE]
+> This action currently only supports the Visitors (permission level: read), Members (permission level: contribute or edit, depending on the site template), and Owners (permission level: full control) groups. Principals must be added individually.
+
+```json
+{
+    "verb": "addPrincipalToSPGroup",
+    "principal": "sean@contosotravel.onmicrosoft.com", /* user */
+    "group": "Owners"
+},    
+{
+    "verb": "addPrincipalToSPGroup",
+    "principal": "travelops", /* sg */
+    "group": "Owners"
+},
+{
+    "verb": "addPrincipalToSPGroup",
+    "principal": "itexecutives", /* mail-enabled sg */
+    "group": "Members"
+},
+{
+    "verb": "addPrincipalToSPGroup",
+    "principal": "Adventure@contosotravel.onmicrosoft.com", /* o365 group */
+    "group": "Visitors"
 }
 ```
 
