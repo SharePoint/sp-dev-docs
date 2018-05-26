@@ -1,6 +1,6 @@
 ---
 title: Use the site collection app catalog
-ms.date: 12/14/2017
+ms.date: 05/18/2018
 ms.prod: sharepoint
 ms.assetid: fdf7ecb1-9951-475b-b058-3285fba77b68
 ---
@@ -41,10 +41,6 @@ SharePoint Framework solution packages that contain assets, can be deployed to s
 When deploying SharePoint Framework solutions that support tenant-wide deployment to a site collection app catalog, you will be prompted if you want to make this solution available to all sites in the organization. Despite the wording, if you check this box, the solution will be available immediately **only in the same site collection as where the app catalog is**. Other site collections in your organizations will not be able to use the solution. If you don't check this option, you will have to explicitly install the solution in your site, before you will be able to use it.
 
 ## Current limitations
-
-### Application Lifecycle Management (ALM) APIs are not yet supported
-
-At this moment, it's not possible to use the recently released ALM APIs to manage the lifecycle of solutions in site collection app catalogs. This is currently being worked on and should be available in the early 2018.
 
 ## Configure and manage site collection app catalogs
 
