@@ -42,6 +42,8 @@
         href: spfx/web-parts/basics/configure-web-part-icon.md         
       - name: Using full-width column
         href: spfx/web-parts/basics/use-web-parts-full-width-column.md        
+      - name: Hide from the toolbox
+        href: spfx/web-parts/basics/hide-web-part-from-toolbox.md        
       - name: Preconfigure web parts
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
