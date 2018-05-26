@@ -5,7 +5,7 @@ ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
-# Overview of the GraphHttpClient class (preview)
+# Overview of the GraphHttpClient class (deprecated)
 
 > [!IMPORTANT]
 > The **GraphHttpClient** has been **deprecated** and should no longer be used. It has been replaced with [MSGraphClient](use-msgraph.md)
