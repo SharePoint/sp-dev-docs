@@ -33,6 +33,7 @@ These customizations are currently not supported for "modern" pages:
  - Custom JavaScript embedded via user custom actions (see note on *SharePoint Framework Extensions*)
  - Custom master pages (more extensive branding will be supported later using alternative options)
  - Minimal Download Strategy (MDS)
+ - Modern pages inside of the a Site Template package (Save site as a template)
 
 > [!NOTE]
 > - We don't recommend combining "modern" page functionality with "classic" SharePoint publishing portals. By default, the "modern" page functionality is not enabled on "classic" SharePoint publishing portals.
