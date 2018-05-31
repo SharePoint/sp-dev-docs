@@ -216,7 +216,11 @@ The default solution takes advantage of a new Dialog API, which can be used to s
 
 3. Open **HelloWorldCommandSet.ts** from the **src\extensions\helloWorld** folder.
 
-4. Add the following import statement for the `Dialog` class from `@microsoft/sp-dialog` after the existing import statements. 
+4. Ensure at the top of the file the following import statement is present for the `Dialog` class from `@microsoft/sp-dialog`. It should already be there, if not, add it.
+
+```typescript
+import { Dialog } from '@microsoft/sp-dialog';
+```
 
 5. Update the **onExecute** method as follows:
     
