@@ -306,7 +306,7 @@ Registers field extension for a list field. For more information on these client
 
 #### JSON values
 
-- **internalName** &ndash; The display name of the field to operate on.
+- **internalName** &ndash; The internal name of the field to operate on.
 - **clientSiteComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
 - **clientSiteComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the field customizer extension instance.
 
