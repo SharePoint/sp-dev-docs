@@ -36,7 +36,7 @@ With the right teams looped in and educated, you can continue to the next step.
 
 Your tenant might contain thousands of site collections, so which of these site collections are good candidates to modernize and which aren't? To help you understand the readiness of your existing sites, Microsoft has built the following scanners:
 
-- **SharePoint "Modern" user interface experience scanner** - The [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) helps you get a deep understanding of the modern user interface compatibility of your lists and libraries. If your focus is to **transform your lists and libraries** to use the modern user interface, use this scanner. 
+- **SharePoint "Modern" user interface experience scanner** - The [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) helps you get a deep understanding of the modern user interface compatibility of your lists and libraries. If your focus is to **transform your lists and libraries** to use the modern user interface, use this scanner.
 
   Certain lists and libraries cannot be shown when using a modern user interface due to reasons such as:
 
@@ -44,7 +44,13 @@ Your tenant might contain thousands of site collections, so which of these site 
   - A list uses customizations (for example, JSLink) that are not compatible.
   - A list template (for example, an events list) is not yet built to work in the modern user interface.
 
+![SharePoint List and Library modern UI readiness report](media/modernize/modernuiscanner.png)
+
 - **SharePoint Modernization scanner** - The [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) provides a detailed analysis of your site's readiness for connecting to an Office 365 group combined with a detailed analysis of the wiki and web part pages in your environment to prepare you for a page modernization. These outcomes can be used initially to drive remediation work, followed later on by migration work. If your focus is to **transform your site pages**, to **connect your sites to an Office 365 group** then use this scanner.
+
+Office 365 Group connection readiness | Page transformation readiness
+---------|----------
+![SharePoint Group connection readiness report](media/modernize/groupifyscanner.png) | ![SharePoint Page Transformation readiness report](media/modernize/pagetransformationscanner.png)
 
 ## Step 3: Modernize your site collections
 
