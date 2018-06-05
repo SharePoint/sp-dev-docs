@@ -60,19 +60,18 @@ Option | Description
 --componentDescription|Description of the component.
 --componentName|Name of the component.
 --framework|Framework to use for the solution. Choose one from "none", "react", "knockout".
+--plusbeta| Use the beta packages. Scaffolding should be done with @plusbeta
 --extensionType|The type of extension: Currently ApplicationCustomizer, FieldCustomizer, ListViewCommandSet.
 --solutionName|Client-side solution name, as well as folder name.
 --environment|The target environment for the solution. Either "onprem" or "spo".
+--package-manager|The package manager for the solution. Options are: "npm", "pnpm", or "yarn". Default: *npm*
+--skip-feature-deployment|If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites. Default: *false*.
 
 <br/>
 
-**Available arguments**
 
-Argument | Description | Type | Required |
--- | -- | -- | -- |
-skipFeatureDeployment | If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites. | Boolean | false | 
-
-<br/>
+> [!WARNING]
+> *skip-feature-deployment* command line support was introduced with the SharePoint Framework v1.5. This option was previously a command line argument called *skipFeatureDeployment*.
 
 Following is an example of a command that creates a solution called "hello-world" with:
 - A web part "HelloWorld" 
@@ -89,7 +88,8 @@ yo @microsoft/sharepoint
 --componentName "HelloWorld" 
 --componentDescription "HelloWorld web part" 
 --skip-install 
---environment "spo" skipFeatureDeployment true
+--environment "spo" 
+--skip-feature-deployment true
 ```
 
 <br/>
