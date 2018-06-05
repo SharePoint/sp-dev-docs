@@ -286,7 +286,34 @@ Notice that we use a specific location value of `ClientSideExtension.ListViewCom
         Location="ClientSideExtension.ListViewCommandSet.CommandBar"
         ClientSideComponentId="5fc73e12-8085-4a4b-8743-f6d02ffe1240"
         ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    
+</Elements>
+```
 
+> [!NOTE]
+> While running from localhost the custom action will work on both lists and document libraries, but will not once deployed unless the `elements.xml` is updated. `RegistrationId=100` will only associate the custom action with lists and **NOT** document libraries. In order to associate the custom action with document libraries, the `RegistrationId` must be set to **101**. If you would like the action to work on both lists and document libraries, another `CustomAction` must be added to the `elements.xml` file
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <CustomAction 
+        Title="SPFxListViewCommandSet"
+        RegistrationId="100"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="5fc73e12-8085-4a4b-8743-f6d02ffe1240"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+
+    <CustomAction 
+        Title="SPFxListViewCommandSet"
+        RegistrationId="101"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="5fc73e12-8085-4a4b-8743-f6d02ffe1240"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
     </CustomAction>
 
 </Elements>
