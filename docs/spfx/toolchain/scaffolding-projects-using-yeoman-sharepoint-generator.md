@@ -1,7 +1,7 @@
 ---
 title: Scaffold projects by using Yeoman SharePoint generator
 description: Use the Yeoman SharePoint generator to scaffold new client-side solution projects to build, package, and deploy SharePoint solutions.
-ms.date: 01/12/2018
+ms.date: 06/05/2018
 ms.prod: sharepoint
 ---
 
@@ -56,9 +56,9 @@ Option | Description
 --help|Print the generator's options and usage.
 --skip-cache|Do not remember prompt answers. Default: *false*.
 --skip-install|Do not automatically install dependencies. Default: *false*.
---componentType|The type of component. Currently "webpart" or "extension" is supported.
---componentDescription|Description of the component.
---componentName|Name of the component.
+--component-type|The type of component. Currently "webpart" or "extension" is supported.
+--component-description|Description of the component.
+--component-name|Name of the component.
 --framework|Framework to use for the solution. Choose one from "none", "react", "knockout".
 --plusbeta| Use the beta packages. Scaffolding should be done with @plusbeta
 --extensionType|The type of extension: Currently ApplicationCustomizer, FieldCustomizer, ListViewCommandSet.
@@ -71,7 +71,7 @@ Option | Description
 
 
 > [!WARNING]
-> *skip-feature-deployment* command line support was introduced with the SharePoint Framework v1.5. This option was previously a command line argument called *skipFeatureDeployment*.
+> *skip-feature-deployment* command line support was introduced with the SharePoint Framework v1.5. This option was previously a command line argument called *skipFeatureDeployment*. Also *component-type*, *component-description* and *component-name* have been renamed.
 
 Following is an example of a command that creates a solution called "hello-world" with:
 - A web part "HelloWorld" 

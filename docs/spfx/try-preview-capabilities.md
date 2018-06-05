@@ -1,3 +1,10 @@
+---
+title: Try SharePoint Framework preview capabilities
+description: Details on how to use new "in preview" packages with SharePoint Framework or newer versions.
+ms.date: 06/05/2018
+ms.prod: sharepoint
+---
+
 # Try SharePoint Framework preview capabilities
 
 Starting from version 1.5.0, you can try preview capabilities in the SharePoint Framework. This article outlines how to create SharePoint Framework projects using preview capabilities and the considerations that you should take into account when working with the preview capabilities.
