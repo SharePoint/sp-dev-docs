@@ -348,14 +348,14 @@ Registers field extension for a list field. For more information on these client
 
 ### associateListViewCommandSet
 
-Sets column formatting for a field. For more information, see [Use column formatting to customize SharePoint](column-formatting.md).
+Associates a ListViewCommandSet to the list
 
 #### JSON values
 
 - **title** &ndash; The title of the extension.
 - **location** &ndash; A required parameter to specify where the command is displayed. Options are: ContextMenu or CommandBar. 
-- **clientSiteComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
-- **clientSiteComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
+- **clientSideComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- **clientSideComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
 
 
 #### Example 
@@ -661,8 +661,8 @@ Use the **associateExtension** action to register a deployed SharePoint Framewor
 
 - **title** &ndash; The title of the extension in the app catalog. 
 - **location** &ndash; Used to specify the extension type. If it is used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
-- **clientSiteComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
-- **clientSiteComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
+- **clientSideComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- **clientSideComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
 - **registrationId** &ndash; An optional parameter, which indicates the type of the list the extension is associated to (if it is a list extension).
 - **registrationType** &ndash; An optional parameter, which should be specified if the extension is associated with a list. 
 - **scope** &ndash; Indicates whether the extension is associated with a Web or a Site. 
@@ -728,7 +728,7 @@ Use the **setRegionalSettings** action to configure the regional settings of the
 ```
 
 
-## Add users (principals) to SharePoing Groups
+## Add users (principals) to SharePoint Groups
 
 Use the **addPrincipalToGroup** action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/en-us/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Office 365 Groups.
 
