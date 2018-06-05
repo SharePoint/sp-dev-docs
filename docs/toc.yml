@@ -113,6 +113,8 @@
       href: spfx/team-based-development-on-sharepoint-framework.md
     - name: Governance considerations
       href: spfx/web-parts/guidance/governance-considerations.md
+    - name: Connecting components
+      href: spfx/dynamic-data.md      
   - name: External libraries
     items:
     - name: Add external libraries
@@ -170,6 +172,8 @@
       href: spfx/web-parts/guidance/localize-web-parts.md 
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md        
+    - name: Use preview capabilities
+      href: spfx/try-preview-capabilities.md           
   - name: Design
     href: design/design-guidance-overview.md
     items:

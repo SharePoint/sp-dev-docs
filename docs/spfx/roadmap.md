@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 01/12/2018
+ms.date: 06/05/2018
 ms.prod: sharepoint
 ---
 
@@ -18,6 +18,10 @@ The first release of the SharePoint Framework contained only support for client-
 - [Asset packaging and site collection app catalog](../general-development/site-collection-app-catalog.md)
 - [Improved MS Graph integration with additional scopes](./use-msgraph.md)
 - [Call securely Azure AD secured applications from SharePoint Framework](./use-aadhttpclient.md)
+- [Connect SharePoint Framework components using dynamic data](./dynamic-data.md)
+- Support for Yarn and PNPM package managers
+- Relocating preview code to isolated packages
+- SPFx Yeoman package extensibility
 
 > [!NOTE]
 > This is a list of areas that SharePoint engineering has in the backlog and is looking into. This does **NOT** mean that all of them will be delivered, but we are looking into getting items and topics from this list gradually released with the future releases of SharePoint Framework.
@@ -27,11 +31,15 @@ The first release of the SharePoint Framework contained only support for client-
 - Site level WebHooks
 - Updated 'store' story with SharePoint Framework support
 - 'Store' story for SharePoint Framework solutions with easy distribution channel for ISVs 
+- React 16 support
+- Modern experiences in SharePoint 2019
+- Content Security Policy (CSP) support
+- Additional placeholder, like content header, content footer, navigation extensions, search extensions
+- "App pages" - developer defined pages which end users cannot edit
 
 ## Client-side web parts++ and add-ins
 
 - Support more complex scenarios and interactions with web parts
-    - Part-to-part communication
 	- JavaScript Framework isolation
     - "Citizen developer" model for lightweight development
 
@@ -39,6 +47,8 @@ The first release of the SharePoint Framework contained only support for client-
     - Azure AD registration
     - Native responsive support
     - Build add-ins with SharePoint Framework
+
+- Host SharePoint Framework web parts as Microsoft Teams tabs
 
 
 ## Application Lifecycle Management
@@ -48,12 +58,13 @@ The first release of the SharePoint Framework contained only support for client-
     - Tenant admin gets automatically notified.
     - Settings to control the default experience around approval process.
 
+- Tenant wide deployment of extensions
 
 ## Developer experience
 
 - SharePoint Framework Workbench 2.0: Development story for SharePoint Framework Extensions
 - Toolchain components
-- Additional Yeoman templates
+- Additional Yeoman templates - like Angular Elements
 
 ## Already shipped capabilities
 
