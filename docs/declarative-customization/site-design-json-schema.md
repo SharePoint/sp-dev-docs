@@ -348,7 +348,7 @@ Registers field extension for a list field. For more information on these client
 
 ### associateListViewCommandSet
 
-Sets column formatting for a field. For more information, see [Use column formatting to customize SharePoint](column-formatting.md).
+Associates a ListViewCommandSet to the list
 
 #### JSON values
 
