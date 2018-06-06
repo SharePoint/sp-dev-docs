@@ -72,7 +72,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
     A single process dramatically exceeds throttling limits, continually, over a long time period.
     
   - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
-  
+ 
   - You're running a load-testing script on SharePoint Online and you get throttled. Load testing is not allowed on SharePoint Online.
   
   - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
@@ -110,11 +110,11 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
  
 What is definition of undecorated traffic?
 
-- Traffic is undecorated if there is no AppID/AppTitle or User Agent string in CSOM or REST API call to SharePoint Online.
+- Traffic is undecorated if there is no AppID/AppTitle and User Agent string in CSOM or REST API call to SharePoint Online.  The User Agent string should be in a specific format as described below.
 
 What are the recommendation?
 
-- If you have created an application, recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+- If you have created an application, the recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
 
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 
