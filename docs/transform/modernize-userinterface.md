@@ -76,3 +76,4 @@ After you analyze the sites that you want to modernize, you can continue with th
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
 - [Maximize use of modern lists and libraries](modernize-userinterface-lists-and-libraries.md)
 - [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md)
+- [Connecting your site to an Office 365 group](modernize-connect-to-office365-group.md)

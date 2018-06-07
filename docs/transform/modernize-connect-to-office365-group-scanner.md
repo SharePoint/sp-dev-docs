@@ -90,3 +90,8 @@ With that filter applied let's have a look at why a site is not ready.
 - **PublishingFeatureEnabled**: Sites that have publishing enabled do not support modern pages and by default connecting to a group will result in switching the site home page to a modern page. If the publishing capabilities are not used on your site then you can disable them.
 - **SiteHasOffice365Group**: This site already has an Office 365 group connected and a site can only by connected to one Office 365 group.
 - **IncompatibleWebTemplate**: The used web template is not supported to be connected.
+
+## See also
+
+- [Modernize your classic SharePoint sites](modernize-classic-sites.md)
+- [Connecting your site to an Office 365 group](modernize-connect-to-office365-group.md)
