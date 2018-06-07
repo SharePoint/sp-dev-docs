@@ -54,7 +54,7 @@ To programmatically connect an Office 365 group, we recommend that you follow a 
 
 Getting familiar with what group-connection does to your site is important, and therefore we recommend that you do a manual group-connection for some test sites by using the user interface option. An important aspect to evaluate is whether you want to keep the newly created modern home page. As part of the modernization script, you'll be able to create a tailored home page, but if the default one serves your needs, that's the preferred option.
 
-### Step 2: Analyze your site environment
+### Step 2: Analyze your sites
 
 The user interface option shown in the previous section is not suitable if you want to group-connect hundreds of site collections. At that point, using an API to programmatically do this makes a lot of sense. But before doing that, it's best to verify which sites are ready to be group-connected because not all sites are suitable for this. 
 
