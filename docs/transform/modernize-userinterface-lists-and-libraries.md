@@ -61,6 +61,26 @@ Certain field types (BCS external data, Geolocation, OutcomeChoice in edit mode,
 
 Classic list view and edit pages are editable by users, so you could, for example, add additional web parts on a list view page. If you've done that, the list no longer shows in modern. To remediate this, the only approach you can take is to drop the added web parts from the list pages.
 
+### Modern and library user interface blocking at site or web level
+
+The modern list and library user interface can be blocked for a complete site collection (site level) or for one or more sites (web level). Remediating this can be done by disabling the respective site or web scoped features as shown in below PnP PowerShell snippet:
+
+```PowerShell
+$minimumVersion = New-Object System.Version("2.24.1803.0")
+if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
+{
+    Install-Module SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -Scope CurrentUser
+}
+Import-Module SharePointPnPPowerShellOnline -DisableNameChecking -MinimumVersion $minimumVersion
+
+Connect-PnPOnline -Url "<your site url>"
+
+# Disable the modern list site level blocking feature
+Disable-PnPFeature -Identity "E3540C7D-6BEA-403C-A224-1A12EAFEE4C4" -Scope Site -Force
+# Disable the modern list web level blocking feature
+Disable-PnPFeature -Identity "52E14B6F-B1BB-4969-B89B-C4FAA56745EF" -Scope Web -Force
+```
+
 ## See also
 
 - [Modernize the user interface](modernize-userinterface.md)
