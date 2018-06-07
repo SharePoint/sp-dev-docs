@@ -14,6 +14,24 @@ The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packag
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is currently in preview. If you encounter problems please file an issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/PnP-Tools/issues).
 
+## Before you start
+
+By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case either the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) or the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
+
+```PowerShell
+$minimumVersion = New-Object System.Version("2.24.1803.0")
+if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
+{
+    Install-Module SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -Scope CurrentUser
+}
+Import-Module SharePointPnPPowerShellOnline -DisableNameChecking -MinimumVersion $minimumVersion
+
+Connect-PnPOnline -Url "<your web url>"
+
+# Enable modern page feature
+Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web -Force
+```
+
 ## Overview of the page transformation solution
 
 Below picture explains the page transformation in 4 steps:
