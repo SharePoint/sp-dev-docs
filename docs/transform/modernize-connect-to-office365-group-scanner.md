@@ -32,11 +32,11 @@ To obtain the actual list of sites (e.g. for input towards the "bulk Office 365 
 - Right click the **Dashboard** tab in Excel, click **Unhide** and select the **ReadyForGroupify** sheet
 - Set the table filter of column B (ReadyForGroupify) to TRUE and you've the list of sites
 
-At this point you have a list of all sites which can be connected to an Office 365 Group, but you still might want to filter out some sites based upon the site template and possible warnings found. Let's start with the site template: the key site to connect to an Office 365 group is the "classic" team site, so let's filter on those first:
+At this point you have a list of all sites which can be connected to an Office 365 Group, but you still might want to filter out some sites based upon the web template and possible warnings found. Let's start with the web template: the key site to connect to an Office 365 group is the "classic" team site, so let's filter on those first:
 
 Filter | Validation
 ---------|----------
-![Site template filter on STS#1](media/modernize/groupifyscanner_ready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_ready_4.png)
+![Web template filter on STS#1](media/modernize/groupifyscanner_ready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_ready_4.png)
 
 With that filter applied let's have a look at the typical warnings:
 
@@ -75,11 +75,11 @@ Filter | Validation
 ---------|----------
 ![Sites not ready filter](media/modernize/groupifyscanner_notready_1.png) | ![Sites not ready graph](media/modernize/groupifyscanner_notready_2.png)
 
-At this point you have a list of all sites which are not ready to be connected to an Office 365 Group, so let's analyze why they're not. The key site to connect to an Office 365 group is the "classic" team site, so let's filter on those first:
+At this point you have a list of all sites which are **not ready** to be connected to an Office 365 Group, so let's analyze why they're not. The key sites to connect to an Office 365 group are the "classic" team sites, so let's filter on those first:
 
 Filter | Validation
 ---------|----------
-![Site template filter on STS#1](media/modernize/groupifyscanner_notready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_notready_4.png)
+![Web template filter on STS#1](media/modernize/groupifyscanner_notready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_notready_4.png)
 
 With that filter applied let's have a look at why a site is not ready.
 
