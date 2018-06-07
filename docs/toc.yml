@@ -1319,6 +1319,9 @@
       href: transform/modernize-branding.md
     - name: Connect to an Office 365 group
       href: transform/modernize-connect-to-office365-group.md
+        items:
+        - name: Analyze and use the scanner data
+          href: transform/modernize-connect-to-office365-group-scanner.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
