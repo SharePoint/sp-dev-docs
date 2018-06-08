@@ -159,6 +159,7 @@ In the following steps, we define the needed structure to be provisioned.
   * Definitions use standard Feature Framework schema, which is well known to SharePoint developers.
   * Custom fields are being referenced in the introduced content type.
   * We use the **CustomSchema** attribute in the **ListInstance** element to define a provisioning time schema.xml file for the list. This way the list is still based on the out-of-the-box list template (normal custom list '100' in this case), but we can define an alternative provisioning definition during initial provisioning.
+  * When provisioning list instances using Features you must provide the ID of the Feature associated with the particular list definition. Using the FeatureId attribute you are supposed to provide the ID of the Feature which contains the List Definition. In other words: if you’re provisioning an instance of a custom list the FeatureId attribute should be set to {00bfea71-de22-43b2-a848-c05709900100}. If you provide anything else as the value, you will get the strangest errors and you will spend hours debugging the whole problem.
 
   More details about the used schema structures can be found at [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) on MSDN.
 
