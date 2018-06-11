@@ -26,6 +26,7 @@ To open the view formatting pane, open the view dropdown, and choose **Format th
 The easiest way to use view formatting is to start from an example and edit it to apply to your specific view. The following sections contain examples that you can copy, paste, and edit for your scenarios. There are also several samples available in the [SharePoint/sp-dev-list-formatting repository](https://github.com/SharePoint/sp-dev-list-formatting).
 
 ## Apply conditional formatting
+
 You can use view formatting to apply a class to a list view row, depending on the value of one or more fields in the row.  These examples leave the content and structure of list view rows intact.
 
 For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#style-guidelines) in the [Column Formatting reference document.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md)
@@ -35,6 +36,7 @@ For a list of recommended classes to use inside view formats, please see the [St
 ### Conditional formatting based on the value in a text or choice field 
 
 ## Build custom row layouts
+
 You can use view formatting to define a totally custom layout of field values inside a row.
 
 ### Multi-line view
