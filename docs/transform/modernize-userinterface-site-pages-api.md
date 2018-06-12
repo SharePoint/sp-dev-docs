@@ -1,4 +1,4 @@
-# Office 365 Page transformation Functions and Selectors
+# Page Transformation Functions and Selectors
 
 ## Summary
 
