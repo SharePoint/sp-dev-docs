@@ -12,6 +12,7 @@ The default page transformation configuration (webpartmapping.xml) uses built-in
 ### HtmlEncode
 
 **Description:** Returns the html encoded value of this string.
+
 **Example:** `{EncodedText} = HtmlEncode({Text})`
 
 #### Input parameters
@@ -27,6 +28,7 @@ Name|Description
 ### HtmlEncodeForJson
 
 **Description:** Returns the json html encoded value of this string.
+
 **Example:** `{JsonEncodedText} = HtmlEncodeForJson({Text})`
 
 #### Input parameters
@@ -42,6 +44,7 @@ Name|Description
 ### ReturnTrue
 
 **Description:** Simply returns the string true.
+
 **Example:** `{UsePlaceHolders} = ReturnTrue()`
 
 #### Output parameters
@@ -52,6 +55,7 @@ Name|Description
 ### ReturnFalse
 
 **Description:** Simply returns the string false.
+
 **Example:** `{UsePlaceHolders} = ReturnFalse()`
 
 #### Output parameters
@@ -62,6 +66,7 @@ Name|Description
 ### ReturnServerRelativePath
 
 **Description:** Transforms the incoming path into a server relative path.
+
 **Example:** `{ServerRelativePath} = ReturnServerRelativePath({Path})`
 
 #### Input parameters
@@ -77,6 +82,7 @@ Name|Description
 ### ReturnFileName
 
 **Description:** Returns the filename of the given path.
+
 **Example:** `{FileName} = ReturnFileName({Path})`
 
 #### Input parameters
@@ -92,6 +98,7 @@ Name|Description
 ### Concatenate
 
 **Description:** Concatenates 2 strings.
+
 **Example:** `{CompleteString} = Concatenate({String1},{String2})`
 
 #### Input parameters
@@ -108,6 +115,7 @@ Name|Description
 ### TextCleanup
 
 **Description:** Rewrites wiki page html to be compliant with the html supported by the client side text part.
+
 **Example:** `{CleanedText} = TextCleanup({Text},{UsePlaceHolders})`
 
 #### Input parameters
@@ -124,6 +132,7 @@ Name|Description
 ### TextCleanUpSummaryLinks
 
 **Description:** Rewrites summarylinks web part html to be compliant with the html supported by the client side text part.
+
 **Example:** `{CleanedText} = TextCleanUpSummaryLinks({Text})`
 
 #### Input parameters
@@ -139,6 +148,7 @@ Name|Description
 ### ListAddServerRelativeUrl
 
 **Description:** Returns the server relative url of a list.
+
 **Example:** `{ListServerRelativeUrl} = ListAddServerRelativeUrl({ListId})`
 
 #### Input parameters
@@ -154,6 +164,7 @@ Name|Description
 ### ListAddWebRelativeUrl
 
 **Description:** Returns the web relative url of a list.
+
 **Example:** `{ListWebRelativeUrl} = ListAddWebRelativeUrl({ListId})`
 
 #### Input parameters
@@ -169,6 +180,7 @@ Name|Description
 ### ListDetectUsedView
 
 **Description:** Detects the list view id that was used by the webpart by mapping the web part xmldefinition to the list views. If no view found the list default view id is returned.
+
 **Example:** `{ListViewId} = ListDetectUsedView({ListId},{XmlDefinition})`
 
 #### Input parameters
@@ -185,6 +197,7 @@ Name|Description
 ### ImageLookup
 
 **Description:** Does lookup a file based on the given server relative path and return needed properties of the file. Returns null if file was not found.
+
 **Example:** `ImageLookup({ServerRelativeFileName})`
 
 #### Input parameters
@@ -201,6 +214,7 @@ Name|Description
 ### ExtractWebpartProperties
 
 **Description:** Extracts the client side web part properties so they can be reused.
+
 **Example:** `{JsonProperties} = ExtractWebpartProperties({ClientSideWebPartData})`
 
 #### Input parameters
@@ -216,6 +230,7 @@ Name|Description
 ### DocumentEmbedLookup
 
 **Description:** Does lookup a file based on the given server relative path and return needed properties of the file. Returns null if file was not found.
+
 **Example:** `DocumentEmbedLookup({ServerRelativeFileName})`
 
 #### Input parameters
@@ -234,6 +249,7 @@ Name|Description
 ### ContentByQueryToHighlightedContentProperties
 
 **Description:** Maps content by query web part data into a properties collection for the contentrollup (= Highlighted Content) web part
+
 **Example:** `{JsonProperties} = ContentByQueryToHighlightedContentProperties({WebUrl},{ListGuid},{ListName},{ServerTemplate},{ContentTypeBeginsWithId},{FilterField1},{Filter1ChainingOperator},{FilterDisplayValue1},{FilterOperator1},{FilterField2},{Filter2ChainingOperator},{FilterDisplayValue2},{FilterOperator2},{FilterField3},{FilterDisplayValue3},{FilterOperator3},{SortBy},{SortByDirection},{GroupBy},{GroupByDirection},{ItemLimit},{DisplayColumns},{DataMappings})`
 
 #### Input parameters
@@ -272,6 +288,7 @@ Name|Description
 ### TextSelector
 
 **Description:** Allows for option to include a spacer for empty text wiki text parts.
+
 **Example:** `TextSelector({CleanedText})`
 
 #### Input parameters
@@ -288,6 +305,7 @@ Spacer|Will be output if the provided wiki text was considered empty
 ### ListSelectorListLibrary
 
 **Description:** Analyzes a list and returns the list base type.
+
 **Example:** `ListSelectorListLibrary({ListId})`
 
 #### Input parameters
@@ -308,6 +326,7 @@ Undefined|The list base type is undefined
 ### ContentEmbedSelectorSourceType
 
 **Description:** Analyzes sourcetype and return recommended mapping.
+
 **Example:** `ContentEmbedSelectorSourceType({SourceType})`
 
 #### Input parameters
@@ -324,6 +343,7 @@ ServerFolderOrFile|The embedded content points to a server folder or file
 ### ContentEmbedSelectorContentLink
 
 **Description:** If ContentLink is set (content editor) then return Link, otherwise return Content.
+
 **Example:** `ContentEmbedSelectorContentLink({ContentLink})`
 
 #### Input parameters
