@@ -3,6 +3,7 @@ title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
 ms.date: 06/08/2018
 ---
+
 > [!NOTE]
 > The View Formatting feature is not currently in production.  This is draft documentation and is subject to change before the feature is released.
 
@@ -81,5 +82,3 @@ Optional element.  Specifies a CSS class that is applied to the row.
 ### rowFormatter
 
 Optional element.  Specifies a JSON object that describes a view format.  The schema of this JSON object is identical to the schema of a column format.  For details on this schema and its capabilities, see the [Column Format detailex syntax reference.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference)
-
-
