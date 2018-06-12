@@ -5,7 +5,7 @@ ms.date: 05/23/2018
 ms.prod: sharepoint
 ---
 
-# Hide a web parts from the toolbox
+# Hide a web part from the toolbox
 
 For scenarios where you automatically instantiate a custom web part on a modern page, you might want the web part not to be manually available for end-users. This could for example be a status web part on a home page.
 
