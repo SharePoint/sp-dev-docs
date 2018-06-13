@@ -118,7 +118,7 @@ SharePoint Workbench is a developer design surface that enables you to quickly p
 
 ### To use SharePoint Workbench to preview and test your web part
 
-1. To add the HelloWorld web part, select the **add** icon. This opens the toolbox where you can see a list of web parts available for you to add. The list includes the **HelloWorld** web part as well other web parts available locally in your development environment.
+1. To add the HelloWorld web part, select the **add** icon (*this icon appears when you mouse hovers over a section as shown in the previous image*). This opens the toolbox where you can see a list of web parts available for you to add. The list includes the **HelloWorld** web part as well other web parts available locally in your development environment.
    
   ![SharePoint Workbench toolbox in localhost](../../../images/sp-workbench-toolbox.png)
    
