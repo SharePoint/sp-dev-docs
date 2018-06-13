@@ -32,7 +32,7 @@ Install [NodeJS LTS version](https://nodejs.org).
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE] 
-> Current LTS version of NodeJS is 8.11.2. Notice that 9.x versions are currently not supported with SharePoint Framework development.
+> Current LTS version of NodeJS is 8.11.3. Notice that 9.x versions are currently not supported with SharePoint Framework development.
 
 ### Install a code editor
 
