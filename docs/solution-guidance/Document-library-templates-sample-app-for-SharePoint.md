@@ -293,5 +293,5 @@ After you create the document library, go to the **Library settings** on your do
 
 ## See also
     
-- [ECM.Autotagging sample add-in](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.Autotagging)
+- [ECM.Autotagging sample add-in](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.AutoTagging)
 - [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)
