@@ -34,18 +34,19 @@ To begin, create a Visual Studio project. In this sample, for simplicity, we cre
 4. Download and install the PnP Core library that is available as a NuGet package at [OfficeDevPnP.Core packages](https://www.nuget.org/profiles/officedevpnp).
     
 	> [!NOTE] 
-	> There are two versions of the Core library. One version is the **OfficeDevPnP.Core** library, which targets SharePoint Online and Office 365. The second version is **OfficeDevPnP.Core (on-premises)**, which targets SharePoint on-premises. Following is a screenshot of the available options. In this sample walkthrough, we're using the first option to target SharePoint Online.
+
+	> There are three versions of the library. One version is the **SharePointPnPCoreOnline** library, which targets SharePoint Online and Office 365. The other versions are **SharePointPnPCore2013** and **SharePointPnPCore2016** , which target SharePoint on-premise versions 2013 and 2016 respectively. Following is a screenshot of the available options. In this sample walkthrough, we're using the first option to target SharePoint Online.
 	>
-	> ![Two Core library download choices](media/provisioning-console-application-sample/5b1adb8d-52e5-4c67-8792-6ef0ae41d655.png)
+	> ![Three Core library download choices](media/provisioning-console-application-sample/2018-06-13_19-59-35.png)
 
 	
 5. Install the NuGet client by going to the [NuGet client installer](http://docs.nuget.org/consume/installing-nuget).
 
 6. After the NuGet client is installed, run the **NuGet Package manager**. Right-click the **References** node in the Visual Studio **Solution Explorer**, and then select **Manage NuGet Packages**.
 
-7. In the Package Manager, choose **Online** > **EntityFramework**, and then enter the search term **OfficeDev** to expose the OfficeDevPnP.Core library.
+7. In the Package Manager, choose **Browse**, and then enter the search term **SharePoint PnP** to expose the SharePointPnPCoreOnline library.
 
-8. Follow directions to download and install the **OfficeDevPnP.Core** library, following the given directions.
+8. Follow directions to download and install the **SharePointPnPCoreOnline** library, following the given directions.
 
    After the PnP Core library is referenced in your Visual Studio project, all library members are available to you as [extension methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) on existing object instances, for example, **web** and **list** instances.
 
