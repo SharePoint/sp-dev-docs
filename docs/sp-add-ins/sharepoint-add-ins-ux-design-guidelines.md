@@ -285,11 +285,11 @@ Use it when you want your add-in to have the look and feel of Office 365. It is 
 
 **4. How can Office UI Fabric be used in SharePoint Add-ins?**
 
-Just add the Office UI Fabric files to your development project, and include a reference to the fabric.css library to your HTML or ASPX page. For details, see [Getting started](https://github.com/OfficeDev/Office-UI-Fabric#get-started).
+Just add the Office UI Fabric files to your development project, and include a reference to the fabric.css library to your HTML or ASPX page. For details, see [Getting started](https://developer.microsoft.com/en-us/fabric#/get-started).
 
 **5. How can Office UI Fabric Components be used in SharePoint Add-ins?**
 
-Just add a reference to the fabric.components.css library to your HTML or ASPX page. For details, see [Getting started](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/GETTINGSTARTED).
+Just add a reference to the fabric.components.css library to your HTML or ASPX page. For details, see [Getting started](https://developer.microsoft.com/en-us/fabric#/get-started#core).
 
 **6. Can I use Office UI Fabric along with a SharePoint Add-in's host web CSS?**
 
