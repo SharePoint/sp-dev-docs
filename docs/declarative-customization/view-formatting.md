@@ -42,8 +42,6 @@ You can use view formatting to define a totally custom layout of field values in
 
 ### Multi-line view
 
-### Multi-line view with an image
-
 ## Creating custom JSON
 
 Creating custom view formatting JSON from scratch is simple if you understand the schema. To create your own custom column formatting:
@@ -67,18 +65,28 @@ Creating custom view formatting JSON from scratch is simple if you understand th
 
 ## Detailed syntax reference
 
-### hideColumnHeader
+### rowFormatter
 
-Optional element.  Specifies whether the column headers in the view are hidden or not.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
+Optional element.  Specifies a JSON object that describes a view format.  The schema of this JSON object is identical to the schema of a column format.  For details on this schema and its capabilities, see the [Column Format detailex syntax reference.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference)
 
-### hideSelection
+#### Differences in behavior between the rowFormatter element and column formatting
 
-Optional element.  Specifies whether the ability to select rows in the view is diabled or not.  *false* is the default behavior inside a list view.  *true* means that users will not be able to select list items.
+Despite sharing the same schema, there are some differences in behavior between elements inside a `rowFormatter` element and those same elements in a column formatting object.
+
+ * `@currentField` always resolves to the value of the Title field inside a `rowFormatter`.
 
 ### additionalRowClass
 
 Optional element.  Specifies a CSS class that is applied to the row.
 
-### rowFormatter
+`additionalRowClass` only takes effect when there is no `rowFormatter` element specified.  If a `rowFormatter` is specified, then `additionalRowClass` is ignored.
 
-Optional element.  Specifies a JSON object that describes a view format.  The schema of this JSON object is identical to the schema of a column format.  For details on this schema and its capabilities, see the [Column Format detailex syntax reference.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference)
+### hideSelection
+
+Optional element.  Specifies whether the ability to select rows in the view is diabled or not.  *false* is the default behavior inside a list view.  *true* means that users will not be able to select list items.  
+
+`hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
+
+### hideColumnHeader
+
+Optional element.  Specifies whether the column headers in the view are hidden or not.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
