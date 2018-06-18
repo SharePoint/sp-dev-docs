@@ -376,7 +376,7 @@ The logic in your application must get the authorization code from the query par
 
 ## JWT time values
 
-The `nbf` and `exp` claims are in the format specified by the [JWT specification](http://self-issued.info/docs/draft-goland-json-web-token-00l). They are written as the number of seconds since January 1, 1970. In C#, you can translate these values with the following code, where `jWTTimeStamp` is the value from the token, such as `1335822895`.
+The `nbf` and `exp` claims are in the format specified by the [JWT specification](https://tools.ietf.org/html/rfc7519). They are written as the number of seconds since January 1, 1970. In C#, you can translate these values with the following code, where `jWTTimeStamp` is the value from the token, such as `1335822895`.
 
 ```csharp
 DateTime exp = new DateTime(1970,1,1).AddSeconds(jWTTimeStamp);
