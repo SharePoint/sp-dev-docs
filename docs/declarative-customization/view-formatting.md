@@ -30,19 +30,124 @@ The easiest way to use view formatting is to start from an example and edit it t
 
 You can use view formatting to apply a class to a list view row, depending on the value of one or more fields in the row.  These examples leave the content and structure of list view rows intact.
 
+Any conditional formatting scenario 
+
 For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#style-guidelines) in the [Column Formatting reference document.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md)
 
-### Conditional formatting based on a number range
+### Conditional formatting based on a date range
+
+The following image shows a list view with conditional formatting applied based on a date range:
+
+This example applies the class `sp-field-severity--severeWarning` to a list view row when the item's DueDate is before the current date/time.
+
+```JSON
+{
+   "additionalRowClass": {
+         "operator": "?",
+         "operands": [
+            {
+               "operator": "<=",
+               "operands": [
+                  "[$DueDate]",
+                  "@now"
+               ]
+            },
+            "sp-field-severity--severeWarning",
+            ""
+         ]
+      }
+}
+```
 
 ### Conditional formatting based on the value in a text or choice field 
+
+The following image shows a list view with conditional formatting applied based on the value inside a choice field:
+
+This example was adopted from a column formatting example, [Conditional formatting based on the value in a text of choice field](https://github.com/ldemaris/sp-dev-docs/blob/patch-7/docs/declarative-customization/column-formatting.md#conditional-formatting-based-on-the-value-in-a-text-or-choice-field-advanced), with some important differences to apply the concept to list view rows.  The column formatting example applies both an icon and a class to a column based on the value of `@currentField`.  The `additionalRowClass` attribute in view formatting, however, only allows you to specify a class and not an icon.  Additionally, since `@currentField` always resolves to the value of the Title field when referenced inside a view format, this sample refers to the `$Status` field directly to determine which class to apply to the row.
+
+```JSON
+{
+  "additionalRowClass": {
+    "operator": "?",
+    "operands": [
+      {
+        "operator": "==",
+        "operands": [
+          {
+            "operator": "toString()",
+            "operands": [
+              "[$Status]"
+            ]
+          },
+          "Done"
+        ]
+      },
+      "sp-field-severity--good",
+      {
+        "operator": "?",
+        "operands": [
+          {
+            "operator": "==",
+            "operands": [
+              {
+                "operator": "toString()",
+                "operands": [
+                  "[$Status]"
+                ]
+              },
+              "In progress"
+            ]
+          },
+          "sp-field-severity--low",
+          {
+            "operator": "?",
+            "operands": [
+              {
+                "operator": "==",
+                "operands": [
+                  {
+                    "operator": "toString()",
+                    "operands": [
+                      "[$Status]"
+                    ]
+                  },
+                  "In review"
+                ]
+              },
+              "sp-field-severity--warning",
+              {
+                "operator": "?",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      {
+                        "operator": "toString()",
+                        "operands": [
+                          "[$Status]"
+                        ]
+                      },
+                      "Blocked"
+                    ]
+                  },
+                  "sp-field-severity--severeWarning",
+                  "sp-field-severity--blocked"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 ## Build custom row layouts
 
 You can use view formatting to define a totally custom layout of field values inside a row.
 
 ### Multi-line view
-
-### Multi-line view with an image
 
 ## Creating custom JSON
 
@@ -67,18 +172,28 @@ Creating custom view formatting JSON from scratch is simple if you understand th
 
 ## Detailed syntax reference
 
-### hideColumnHeader
+### rowFormatter
 
-Optional element.  Specifies whether the column headers in the view are hidden or not.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
+Optional element.  Specifies a JSON object that describes a view format.  The schema of this JSON object is identical to the schema of a column format.  For details on this schema and its capabilities, see the [Column Format detailex syntax reference.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference)
 
-### hideSelection
+#### Differences in behavior between the rowFormatter element and column formatting
 
-Optional element.  Specifies whether the ability to select rows in the view is diabled or not.  *false* is the default behavior inside a list view.  *true* means that users will not be able to select list items.
+Despite sharing the same schema, there are some differences in behavior between elements inside a `rowFormatter` element and those same elements in a column formatting object.
+
+ * `@currentField` always resolves to the value of the Title field inside a `rowFormatter`.
 
 ### additionalRowClass
 
 Optional element.  Specifies a CSS class that is applied to the row.
 
-### rowFormatter
+`additionalRowClass` only takes effect when there is no `rowFormatter` element specified.  If a `rowFormatter` is specified, then `additionalRowClass` is ignored.
 
-Optional element.  Specifies a JSON object that describes a view format.  The schema of this JSON object is identical to the schema of a column format.  For details on this schema and its capabilities, see the [Column Format detailex syntax reference.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference)
+### hideSelection
+
+Optional element.  Specifies whether the ability to select rows in the view is diabled or not.  *false* is the default behavior inside a list view.  *true* means that users will not be able to select list items.  
+
+`hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
+
+### hideColumnHeader
+
+Optional element.  Specifies whether the column headers in the view are hidden or not.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
