@@ -1313,6 +1313,8 @@
         items:
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
+        - name: Page transformation API
+          href: transform/modernize-userinterface-site-pages-api.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md
     - name: Modernize site branding

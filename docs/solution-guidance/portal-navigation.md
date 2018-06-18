@@ -25,6 +25,7 @@ Don't:
 - Use a custom navigation solution that requests all navigation nodes for all custom navigation controls as soon as the page loads, even for controls that are initially collapsed/hidden.
 - Use a custom navigation solution that does not cache the navigation nodes it receives.
 - Use a custom navigation solution that targets the legacy Lists (SOAP) web service; for extra trouble, pass it some poorly-formed CAML queries.
+- Get a term store by referencing if by name or ID (e.g. `var termStores = taxSession.get_termStores();var termStore = termStores.getByName("Taxonomy_Dmxzz8tIBzk8wNVKQpJ+xA==");`), recommended guidance is to get the default keyword or site collection term store (e.g. `var termStore = taxSession.getDefaultSiteCollectionTermStore();` or `var termStore = taxSession.DefaultKeywordsTermStore()`).
 
 <a name="bk_customNavRationale"> </a>
 

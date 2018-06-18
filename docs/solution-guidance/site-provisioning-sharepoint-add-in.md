@@ -195,7 +195,7 @@ This option works well in Dev-Ops scenarios. It allows you to create custom appl
 -   [Async provisioning for Office 365 with WebJobs (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2015/03/04/asynchronous-on-demand-site-collection-provisioning-to-office-365-with-azure-webjobs.aspx) 
 - [Provisioning.Cloud.Async.WebJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Async.WebJob)
 	+ Solution demonstrating how to build an asynchronous self-service site collection provisioning solution using Azure Storage Queues and Azure WebJobs.
--	[Provisioning.Framework.Console (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/samples/Provisioning.Framework.Console) – Site Provisioning Framework sample to show the power of the new engine.
+-	[Provisioning.Framework.Console (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console) – Site Provisioning Framework sample to show the power of the new engine.
 -	[Provisioning.Cloud.Async (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Async) - Demonstrates how to create site collections in Office 365/SharePoint asynchronously. Requests are saved in a list within the SharePoint host web. The console application included in this sample is deployed to Azure or an on-premises environment & scheduled. 
  
 

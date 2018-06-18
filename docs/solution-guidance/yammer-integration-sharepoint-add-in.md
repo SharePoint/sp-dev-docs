@@ -68,7 +68,7 @@ The following sample demonstrates how to provision sites with a Yammer feed asso
 
 - [Provisioning.Yammer (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Yammer)
 
-The **CreateYammerGroupDiscussionPartXml** method in the [YammerUtility.cs](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Utilities/YammerUtility.cs) class comes from the [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/OfficeDevPnP.Core) sample.  This method creates the XML for an Add-in Part definition that is added to a SharePoint page when a site is provisioned.  Notice the **feedType: 'group'** portion of the code.  Here you can see the feedType is set to use the out-of-the-box group feedType.
+The **CreateYammerGroupDiscussionPartXml** method in the [YammerUtility.cs](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Utilities/YammerUtility.cs) class comes from the [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core) sample.  This method creates the XML for an Add-in Part definition that is added to a SharePoint page when a site is provisioned.  Notice the **feedType: 'group'** portion of the code.  Here you can see the feedType is set to use the out-of-the-box group feedType.
 
 	public static string CreateYammerGroupDiscussionPartXml(string yammerNetworkName, int yammerGroupId, bool showHeader, bool showFooter, bool useSSO = true)
     {
