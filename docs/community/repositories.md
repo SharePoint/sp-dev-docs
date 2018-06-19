@@ -23,7 +23,7 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 | [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) | Samples and tutorial code around SharePoint Framework client-side web parts |
 | [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions) | Samples and tutorial code around SharePoint Framework extensions |
 | [sp-dev-solutions](https://github.com/SharePoint/sp-dev-solutions) | More polished and fine-tuned reusable solutions built with the SharePoint Framework |
-| [sp-dev-columnformatting](https://github.com/SharePoint/sp-dev-columnformatting) | Various [column formatting](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting) json files shared among the community |
+| [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) | Various [column formatting](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting) json files shared among the community |
 | [sp-dev-site-scripts](https://github.com/SharePoint/sp-dev-site-scripts) | Various [Site Script and Site Design](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview) json files shared among the community |
 | [sp-dev-fx-controls-react](https://github.com/SharePoint/sp-dev-fx-controls-react) | Reusable content controls for SharePoint Framework solutions built with React |
 | [sp-dev-fx-property-controls](https://github.com/SharePoint/sp-dev-fx-property-controls) | Reusable property pane controls for use in SharePoint Framework web parts |

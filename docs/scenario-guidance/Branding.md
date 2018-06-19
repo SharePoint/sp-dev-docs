@@ -150,7 +150,7 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 - [Master pages in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/master-pages-sharepoint-add-in)
 - [SharePoint Page Layouts and Master Pages (ECM)](https://msdn.microsoft.com/en-us/library/office/ms543497(v=office.14).aspx)
 - [Master Pages](https://msdn.microsoft.com/en-us/library/office/ms443795(v=office.14).aspx)
-- [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/blob/master/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model/10-1%20Replacement%20of%20files%20deployed%20via%20Modules/Lab.md)
+- [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model)
 - [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 
 ### Videos

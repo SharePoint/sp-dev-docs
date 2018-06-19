@@ -1324,6 +1324,8 @@
       items:
       - name: Analyze and use the scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
+      - name: Site permissions after Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-permissions.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
@@ -1368,8 +1370,6 @@
         href: solution-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
       - name: Create UX controls
         href: solution-guidance/create-ux-controls-by-using-sharepoint-provider-hosted-add-ins.md
-      - name: Display information from a host site
-        href: solution-guidance/display-information-from-a-host-site-by-using-office-web-widgets.md
       - name: Improve performance
         href: solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
   - name: Customizing the "modern" experiences in SharePoint Online

@@ -20,11 +20,11 @@ Learn how to publish your SharePoint Add-in by using Microsoft Visual Studio 201
 
  
 
--  [Microsoft Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=517284  )
+-  [Microsoft Visual Studio 2013](https://www.visualstudio.com/vs/)
     
     -or-
     
-     [Visual Studio 2012](https://www.microsoft.com/en-us/download/details.aspx?id=30682) and the Office Developer Tools for Visual Studio. To download the tools, see "Tools" on the [Download page](http://go.microsoft.com/fwlink/?LinkId=234393). (The new Publish Manager is not available in Visual Studio 2012 or earlier versions.)
+     [Visual Studio 2012](https://www.visualstudio.com/vs/) and the Office Developer Tools for Visual Studio. To download the tools, see "Tools" on the [Download page](http://go.microsoft.com/fwlink/?LinkId=234393). (The new Publish Manager is not available in Visual Studio 2012 or earlier versions.)
     
  
 - Microsoft SharePoint
@@ -127,10 +127,10 @@ Perform the following procedure if you want to submit your SharePoint Add-in to 
 
 1. On the  **Publish your add-in** page, choose the **Visit the Seller Dashboard** button, and then sign in to your Microsoft Seller Dashboard account.
     
-    See  [Submit Office and SharePoint Add-ins and Office 365 web apps to the Office Store](http://msdn.microsoft.com/library/submit-office-and-sharepoint-add-ins-and-office-365-web-apps-to-the-office-store%28Office.15%29.aspx).
+    See  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
     
  
-2. Choose  **add a new app**, fill out the information, and then submit the add-in to the Office Store. For details, see  [Use the Seller Dashboard to submit Office and SharePoint Add-ins and Office 365 apps to the Office Store](http://msdn.microsoft.com/library/use-the-seller-dashboard-to-submit-office-and-sharepoint-add-ins-and-office-365-apps-to-the-office-store%28Office.15%29.aspx).
+2. Choose  **add a new app**, fill out the information, and then submit the add-in to the Office Store. For details, see  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
     
  
 

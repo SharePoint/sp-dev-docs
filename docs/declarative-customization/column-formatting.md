@@ -1204,7 +1204,15 @@ This field can be used to display the current user's email address, but more lik
 
 #### "@now"
 
-This will evaluate to the current date and time. 
+This will evaluate to the current date and time.
+
+#### "@window.innerHeight"
+
+This will evaluate to a number equal to the height of the browser window (in pixels) when the list was rendered.
+
+#### "@window.innerWidth"
+
+This will evaluate to a number equal to the width of the browser window (in pixels) when the list was rendered.
 
 ## See also
 
