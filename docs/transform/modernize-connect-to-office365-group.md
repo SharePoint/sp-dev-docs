@@ -135,3 +135,4 @@ During script execution, a log file is generated, combined with an error file th
 
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
 - [Understand and process the scanner results](modernize-connect-to-office365-group-scanner.md)
+- [Connect a classic experience SharePoint team site to a new Office 365 Group](https://support.office.com/en-us/article/connect-a-classic-experience-sharepoint-team-site-to-a-new-office-365-group-469c6ee0-2139-4496-9914-7e39d07ac49d?ui=en-US&rs=en-US&ad=US)
