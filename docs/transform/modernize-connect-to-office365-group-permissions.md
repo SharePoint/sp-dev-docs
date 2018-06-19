@@ -1,11 +1,11 @@
 ---
-title: What about permissions after Office 365 group connection
-description: Connect an Office 365 group to an existing SharePoint site does have an impact on the SharePoint site permissions
+title: Site permissions after Office 365 group connection
+description: Connect an Office 365 group to an existing SharePoint site does have an impact on the SharePoint site permissions, which is explained in this article
 ms.date: 06/19/2018
 ms.prod: sharepoint
 ---
 
-# Impact on the SharePoint permissions after connecting your site to an Office 365 group
+# Site permissions after Office 365 group connection
 
 As part of the connection to an Office 365 Group the site's permissions will also be connected to the Office 365 group's permissions. This process **will not take away any granted permission on the SharePoint site**, but will allow the Office 365 group owners and members to have access to the connected SharePoint site.
 
@@ -26,8 +26,8 @@ Each Office 365 Group has an unique id represented as a guid (e.g e79452da-a8cf-
 
 These claims are added to the SharePoint site according to below logic:
 
-- The e79452da-a8cf-47c5-afbf-83c8704867c2 claim (so the Office 365 Group members) is added as a **visible** claim to the site's members group having as title your site's name
-- The e79452da-a8cf-47c5-afbf-83c8704867c2_o claim (so the Office 365 Group owners) are added as **hidden** claims to the site's owners group and site collection administrators
+- The e79452da-a8cf-47c5-afbf-83c8704867c2 claim (so the Office 365 Group members) is added as a **visible** principal to the site's members group having as title your site's name
+- The e79452da-a8cf-47c5-afbf-83c8704867c2_o claim (so the Office 365 Group owners) is added as **hidden** principal to the site's owners group and site collection administrators
 
 ## See also
 
