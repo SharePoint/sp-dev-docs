@@ -18,7 +18,9 @@ description: "This document is to give more in depth Information about how to us
 # SPO Migration API
 ## API Documention
 The following API description is based upon use of the SharePoint Client Side Object Model (CSOM), which is accessible via RESTful calls, but is easily accessed through the .Net based client side installable DLLs. The client side installable DLLs are avalilable within the SharePoint Online Client Components SDK.
-Note: For the initial alpha and beta releases of the import pipeline, the updated client side installable DLLs are being shipped as private releases. These must be installed over top of the existing client side installable DLLs. This will not be the plan of record for the shipping release of this pipeline, and will be included in a future updated SharePoint Online Client Components SDK release.
+
+> [!NOTE]
+> For the initial alpha and beta releases of the import pipeline, the updated client side installable DLLs are being shipped as private releases. These must be installed over top of the existing client side installable DLLs. This will not be the plan of record for the shipping release of this pipeline, and will be included in a future updated SharePoint Online Client Components SDK release.]
 
 ### Methods
 #### CreateMigrationJob

@@ -11,7 +11,7 @@ localization_priority: Priority
 ms.collection: 
 - IT_Sharepoint_Server_Top
 ms.assetid: 
-description: "Change for ship disk option."
+description: "Change to the ship disk option."
 ---
 # OneDrive for Business and SharePoint Online Migration API:  Change for "Ship Disk" option
 

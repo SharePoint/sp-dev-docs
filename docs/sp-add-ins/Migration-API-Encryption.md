@@ -10,7 +10,6 @@ ms.prod: sharepoint-server-itpro
 localization_priority: Priority
 ms.collection: 
 - IT_Sharepoint_Server_Top
-- Strat_SP_gtc
 ms.custom: 
 ms.assetid: 
 description: "How to pass encrypted content at rest to the API securely."

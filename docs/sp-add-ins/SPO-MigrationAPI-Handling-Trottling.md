@@ -23,7 +23,7 @@ Migration is critical for SPO and is prioritized alongside service availability.
 
 The number of 429s sent back is a function of the current load on the farm, as well as other tenant/farm level variables, so it is important for us to talk to customers about migration throughput rather than the number of 429s themselves.
 
-In other words, set expectations with customers in the following manner: expect to create and manage migration efforts at any time, and expect content migration throughput to be higher during off-peak times and lower during peak times.  Overall, throughput over the duration of a day still aligns with our public documentation here. 
+Set expectations with customers in the following manner: expect to create and manage migration efforts at any time, and expect content migration throughput to be higher during off-peak times and lower during peak times.  Overall, throughput over the duration of a day still aligns with our public documentation here. 
 
 ## Key Best Practices
  
@@ -31,7 +31,7 @@ Below are the key best practices we recommend migration vendors follow.  Keep in
 1.	Please include an ‘interactive flag’ in your user agent string for interactive calls (such as user login, launch jobs, etc.)
  
     a.  ISV|VendorName|AppName/Version|Interactive<br> 
-**Note:** Please allow a few days once you have implemented *Interactive flag* for the system to pick that cue, it may not be instantaneous. 
+**Note:**  Please allow a few days once you have implemented *Interactive flag* for the system to pick that cue, it may not be instantaneous. 
  
 2.	We also allow 300 calls every 5 minutes to have the Interactive flag, for handling small migrations and site management that customers expect to complete interactively 
  

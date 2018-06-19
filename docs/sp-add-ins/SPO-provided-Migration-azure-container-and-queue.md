@@ -13,13 +13,13 @@ ms.collection:
 - Strat_SP_gtc
 ms.custom: 
 ms.assetid: 
-description: "One of the Main requirement for using our Migration API is the usage of an Azure container as a temporary storage. With this change we are now providing a default container that can be used for using the migration API."
+description: "One of the Main requirement for using our Migration API is the usage of an Azure container as a temporary storage. We now provide a default container that can be used for using the migration API."
 ---
 ## SPO provided Migration Azure container and queue
 Microsoft’s Migration API requires the use of an Azure container for temporary storage. To simplify the process, you are now provided with a default container while using the migration API. If you choose, you can still provide your own Azure container.
 
 ### Encryption is required
-For the Migration API to accept a Migration Job coming from a SPO provided Azure container, the data needs to be encrypted at rest. We still allow the customer to provide their own Azure account if they prefer to not use encryption.
+For the Migration API to accept a Migration Job coming from a SPO provided Azure container, the data needs to be encrypted at rest. The customer is still allowed to provide their own Azure account if they prefer to not use encryption.
 
 ##  Advantages
 
@@ -39,7 +39,7 @@ For the Migration API to accept a Migration Job coming from a SPO provided Azure
 
 The call will return an object that contains two strings containing two SAS tokens for accessing the two required containers and a byte array for the AES256CBC encryption. 
 
-This key will need to be used when encrypting the data. We forget the key once we give it out, so you must keep it to pass it again for the Submit Migration Job call.
+This key will need to be used when encrypting the data. We forget the key once we give it out, therefore you must keep it to pass it again for the Submit Migration Job call.
 	
     Uri DataContainerUri 
 
