@@ -51,6 +51,7 @@ You can also follow the steps in this article by watching the video on the Share
 
     * Accept the default **HelloWorld** as your extension name, and select Enter.
     * Accept the default **HelloWorld description** as your extension description, and select Enter.
+    * For the fourth question **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites....**, ensure you select No (N) , and select Enter. If you select Yes (y), the scaffolding will not generate the Elements.xml featuer deployment file. This file is used in 'Deploy your extension to SharePoint' article.
 
     <br/>
 
