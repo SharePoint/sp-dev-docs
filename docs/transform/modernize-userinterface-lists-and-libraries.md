@@ -85,7 +85,7 @@ Disable-PnPFeature -Identity "52E14B6F-B1BB-4969-B89B-C4FAA56745EF" -Scope Web -
 
 A list can be defined to always run the classic experience at list level (ListExperienceOptions set to ClassicExperience). To undo this following code snippet can be used:
 
-```C#
+```csharp
 // Load the list you want to update
 var list = context.Web.Lists.GetByTitle(title);
 context.Load(list);

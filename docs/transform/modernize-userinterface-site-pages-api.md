@@ -4,7 +4,7 @@
 
 The default page transformation configuration (webpartmapping.xml) uses built-in functions and selectors to drive the mapping from classic web parts to modern 1st party and 3rd party web parts. This page lists all the available functions.
 
-> Note:
+> [!NOTE]
 > This page is auto-generated, if you see issues please create a PR against the respective Transformation framework code base.
 
 ## Functions
