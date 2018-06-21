@@ -81,6 +81,24 @@ Disable-PnPFeature -Identity "E3540C7D-6BEA-403C-A224-1A12EAFEE4C4" -Scope Site 
 Disable-PnPFeature -Identity "52E14B6F-B1BB-4969-B89B-C4FAA56745EF" -Scope Web -Force
 ```
 
+### Modern and library user interface blocking at list level
+
+A list can be defined to always run the classic experience at list level (ListExperienceOptions set to ClassicExperience). To undo this following code snippet can be used:
+
+```C#
+// Load the list you want to update
+var list = context.Web.Lists.GetByTitle(title);
+context.Load(list);
+context.ExecuteQuery();
+
+// Possible options are Auto (= what it's defined at tenant level), NewExperience (= "modern") and ClassicExperience
+list.ListExperienceOptions = ListExperience.Auto;
+
+// Persist the changes
+list.Update();
+context.ExecuteQuery();
+```
+
 ## See also
 
 - [Modernize the user interface](modernize-userinterface.md)
