@@ -1315,6 +1315,9 @@
       items:
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
+        items:
+        - name: Analyze and use the scanner data
+          href: transform/modernize-userinterface-lists-and-libraries-scanner.md
       - name: Transform classic pages to modern client-side pages
         href: transform/modernize-userinterface-site-pages.md
         items:
