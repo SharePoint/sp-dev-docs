@@ -1318,6 +1318,8 @@
         items:
         - name: Analyze and use the scanner data
           href: transform/modernize-userinterface-lists-and-libraries-scanner.md
+        - name: Rollout approaches
+          href: transform/modernize-userinterface-lists-and-libraries-rollout.md
       - name: Transform classic pages to modern client-side pages
         href: transform/modernize-userinterface-site-pages.md
         items:
