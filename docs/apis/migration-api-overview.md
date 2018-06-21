@@ -261,7 +261,7 @@ The import pipeline does not support compressed packages. The file content must 
 
 ### API supports import of multiple file versions
 
-Import packages can have references to multiple versions of a file, major and minor, up to regular limits imposed within SharePoint. It is important that each version of that file be included in the package even if some of the versions already exist in SPO. See [This is an overwrite API](migration-api-azure-container-and-queue.md#OverwriteAPI).
+Import packages can have references to multiple versions of a file, major and minor, up to regular limits imposed within SharePoint. It is important that each version of that file be included in the package even if some of the versions already exist in SPO.
 
 ### API supports preservation of identifiers
 
