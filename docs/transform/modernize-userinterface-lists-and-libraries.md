@@ -15,7 +15,7 @@ You can't yet transform all lists and libraries to the modern experience because
 
 - Certain types of lists and libraries can be shown in modern, but are blocked due to an incompatible configuration or customization; you can take action here.
 
-## List templates available in the modern user interface 
+## List templates available in the modern user interface
 
 Following are the most commonly used list template types that SharePoint can currently render in a modern user interface (as of March 2018):
 
@@ -97,6 +97,154 @@ list.ListExperienceOptions = ListExperience.Auto;
 // Persist the changes
 list.Update();
 context.ExecuteQuery();
+```
+
+### Investigate and fix the "MultipleWebParts" issue
+
+When the used list view page (e.g. AllItems.aspx) holds more than one web part the list will never show up using the modern user interface. You can manually check these cases by going to the list and appending `?ToolPaneView=2&pagemode=edit` to the list URL. This will bring the page in edit mode and should reveal the extra web parts and allow you to remove those. If you want to programmatically do the same then below code snippet is a good starting basis. This snippet depends on the PnP sites core library which you can install to your Visual Studio project via the [SharePointPnPCoreOnline nuget package](https://www.nuget.org/packages/SharePointPnPCoreOnline/).
+
+```csharp
+using Microsoft.SharePoint.Client;
+using Microsoft.SharePoint.Client.WebParts;
+using OfficeDevPnP.Core;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security;
+
+namespace MultipleWebPartFixer
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string siteUrl = "https://contoso.sharepoint.com/sites/demo";
+            string userName = "joe@contoso.onmicrosoft.com";
+            AuthenticationManager am = new AuthenticationManager();
+            using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+            {
+                // Grab the list
+                var list = cc.Web.Lists.GetByTitle("listtofix");
+                list.EnsureProperties(l => l.RootFolder, l => l.Id);
+
+                bool isNoScriptSite = cc.Web.IsNoScriptSite();
+
+                if (isNoScriptSite)
+                {
+                    throw new Exception("You don't have the needed permissions to apply this fix!");
+                }
+
+                // get the current (allitems) form
+                var files = list.RootFolder.FindFiles("allitems.aspx");
+                var allItemsForm = files.FirstOrDefault();
+                if (allItemsForm != null)
+                {
+                    // Load web part manager and web parts
+                    var limitedWPManager = allItemsForm.GetLimitedWebPartManager(PersonalizationScope.Shared);
+                    cc.Load(limitedWPManager);
+
+                    // Load the web parts on the page
+                    IEnumerable<WebPartDefinition> webParts = cc.LoadQuery(limitedWPManager.WebParts.IncludeWithDefaultProperties(wp => wp.Id, wp => wp.ZoneId, wp => wp.WebPart.ExportMode, wp => wp.WebPart.Title, wp => wp.WebPart.ZoneIndex, wp => wp.WebPart.IsClosed, wp => wp.WebPart.Hidden, wp => wp.WebPart.Properties));
+                    cc.ExecuteQueryRetry();
+
+                    List<WebPartDefinition> webPartsToDelete = new List<WebPartDefinition>();
+                    if (webParts.Count() > 1)
+                    {
+                        // List all except the XsltListView web part(s)
+                        foreach (var webPart in webParts)
+                        {
+                            if (GetTypeFromProperties(webPart.WebPart.Properties) != "XsltListView")
+                            {
+                                webPartsToDelete.Add(webPart);
+                            }
+                        }
+
+                        if (webPartsToDelete.Count == webParts.Count() - 1)
+                        {
+                            foreach(var webPart in webPartsToDelete)
+                            {
+                                webPart.DeleteWebPart();
+                            }
+                            cc.ExecuteQueryRetry();
+                            Console.WriteLine("List fixed!");
+                        }
+                        else
+                        {
+                            // Special case...investigation needed. Go to list and append ?ToolPaneView=2&pagemode=edit to the list url to check the page
+                            Console.WriteLine("Go to list and append ?ToolPaneView=2&pagemode=edit to the list url to check this page");
+                        }
+                    }
+                }
+            }
+
+            Console.WriteLine("Press enter to continue...");
+            Console.ReadLine();
+        }
+
+        public static string GetTypeFromProperties(PropertyValues properties)
+        {
+            // Check for XSLTListView web part
+            string[] xsltWebPart = new string[] { "ListUrl", "ListId", "Xsl", "JSLink", "ShowTimelineIfAvailable" };
+            if (CheckWebPartProperties(xsltWebPart, properties))
+            {
+                return "XsltListView";
+            }
+
+            return "";
+        }
+        private static bool CheckWebPartProperties(string[] propertiesToCheck, PropertyValues properties)
+        {
+            bool isWebPart = true;
+            foreach (var wpProp in propertiesToCheck)
+            {
+                if (!properties.FieldValues.ContainsKey(wpProp))
+                {
+                    isWebPart = false;
+                    break;
+                }
+            }
+
+            return isWebPart;
+        }
+
+        private static SecureString GetSecureString(string label)
+        {
+            SecureString sStrPwd = new SecureString();
+            try
+            {
+                Console.Write(String.Format("{0}: ", label));
+
+                for (ConsoleKeyInfo keyInfo = Console.ReadKey(true); keyInfo.Key != ConsoleKey.Enter; keyInfo = Console.ReadKey(true))
+                {
+                    if (keyInfo.Key == ConsoleKey.Backspace)
+                    {
+                        if (sStrPwd.Length > 0)
+                        {
+                            sStrPwd.RemoveAt(sStrPwd.Length - 1);
+                            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                            Console.Write(" ");
+                            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        }
+                    }
+                    else if (keyInfo.Key != ConsoleKey.Enter)
+                    {
+                        Console.Write("*");
+                        sStrPwd.AppendChar(keyInfo.KeyChar);
+                    }
+
+                }
+                Console.WriteLine("");
+            }
+            catch (Exception e)
+            {
+                sStrPwd = null;
+                Console.WriteLine(e.Message);
+            }
+
+            return sStrPwd;
+        }
+    }
+}
 ```
 
 ## See also
