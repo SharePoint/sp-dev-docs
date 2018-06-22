@@ -47,7 +47,13 @@ An incompatible customization is the most common reason for lists not rendering 
 - The use of JSLink
 - The use of a user custom action that embeds JavaScript
 
-To fix these blockers, you can either remove the customization (in case it's not business-relevant anymore) or create an alternative solution. For more information, see [Modernize customizations](modernize-customizations.md).
+To fix these blockers, you can either remove the customization (in case it's not business-relevant anymore) or create an alternative solution. For more information on building customizations that are compatible with the modern list and library experience see the [Modernize customizations](modernize-customizations.md) article. Since JSLink at web part level does prevent the page from using the modern list and library experience you need to remove this configuration. You can do this manually by bringing the page in edit mode via appending `?ToolPaneView=2&pagemode=edit` to the page URL and then updating the web part properties. To programmatically do this you can use get the web part via the `LimitedWebPartManager` class and then update the respective properties as shown in below snippet. You can combine this snippet with the more complete code shown later on this page to get a full solution.
+
+```csharp
+webPart.Properties["JSLink"] = "";
+webPart.SaveWebPartChanges();
+cc.ExecuteQuery();
+```
 
 ### Existence of certain field types
 
