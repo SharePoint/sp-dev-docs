@@ -57,10 +57,6 @@ Certain field types (BCS external data, Geolocation, OutcomeChoice in edit mode,
 - Migrate the field's data into a new field that is compatible with modern.
 - Completely drop the field if it's not being used.
 
-### Customized list view pages that contain more than the list XSLTListViewWebPart
-
-Classic list view and edit pages are editable by users, so you could, for example, add additional web parts on a list view page. If you've done that, the list no longer shows in modern. To remediate this, the only approach you can take is to drop the added web parts from the list pages.
-
 ### Modern and library user interface blocking at site or web level
 
 The modern list and library user interface can be blocked for a complete site collection (site level) or for one or more sites (web level). Remediating this can be done by disabling the respective site or web scoped features as shown in below PnP PowerShell snippet:
@@ -99,9 +95,9 @@ list.Update();
 context.ExecuteQuery();
 ```
 
-### Investigate and fix the "MultipleWebParts" issue
+### Customized list view pages that contain more than the list XSLTListViewWebPart
 
-When the used list view page (e.g. AllItems.aspx) holds more than one web part the list will never show up using the modern user interface. You can manually check these cases by going to the list and appending `?ToolPaneView=2&pagemode=edit` to the list URL. This will bring the page in edit mode and should reveal the extra web parts and allow you to remove those. If you want to programmatically do the same then below code snippet is a good starting basis. This snippet depends on the PnP sites core library which you can install to your Visual Studio project via the [SharePointPnPCoreOnline nuget package](https://www.nuget.org/packages/SharePointPnPCoreOnline/).
+Classic list view and edit pages are editable by users, so you could, for example, add additional web parts on a list view page. If you've done that, the list no longer shows in modern. To remediate this, the only approach you can take is to drop the added web parts from the list pages. You can manually check these cases by going to the list and appending `?ToolPaneView=2&pagemode=edit` to the list URL. This will bring the page in edit mode and should reveal the extra web parts and allow you to remove those. If you want to programmatically do the same then below code snippet is a good starting basis. This snippet depends on the PnP sites core library which you can install to your Visual Studio project via the [SharePointPnPCoreOnline nuget package](https://www.nuget.org/packages/SharePointPnPCoreOnline/).
 
 ```csharp
 using Microsoft.SharePoint.Client;
