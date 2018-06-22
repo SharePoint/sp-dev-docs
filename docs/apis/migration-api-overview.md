@@ -48,7 +48,7 @@ The required permissions are as follows in the Azure Storage API:
 	SharedAccessBlobPermissions.List)
 ```
 
-**Note:** The change to enforce Read and List permissions on the SAS token is coming in a future build, and until then will be not be enforced, however it is best practice to use these values.
+**Note:** The change to enforce Read and List permissions on the SAS token is coming in a future build. Until then it will not be enforced. However, it is a best practice to use these values.
 
 All files in the container must have at least a single snapshot applied to them to ensure that no file modification can occur from the customer during import. Any file that does not have a snapshot will be skipped during import and an error thrown, although the job will attempt to continue to import. The import pipeline will use the latest snapshot of the file available at the time of import. The following is an example of code that might be used to create a snapshot on a file after it is uploaded to Azure Blob Storage:
 
@@ -59,7 +59,7 @@ blob.CreateSnapshot();
 ```
 
 > [!NOTE]
-> The change to require and use latest SnapShots on all files is coming in a future build, and until then will be ignored.
+> The change to require and use the latest SnapShots on all files is coming in a future build, and until then will be ignored.
 
 ##### azureContainerManifestUri
 
@@ -133,8 +133,8 @@ SPMigrationJobState is an enumeration that tracks possible major states in the i
 |**Member name**|**Description**|
 |:-----|:-----|
 |None	|Migration job is currently unknown to the queue, either through completion and removal, or invalid job identifier. Value=0.|
-|Queued	|Migration job is currently known by the queue, and not being processed. Value=2.|
-|Processing	|Migration job is currently known by the queue, and is being actively processed. Value=4.|
+|Queued	|Migration job is currently known by the queue and not being processed. Value=2.|
+|Processing	|Migration job is currently known by the queue and is being actively processed. Value=4.|
  
 ## Import Package Structure
 
@@ -153,9 +153,9 @@ Package structure is based on a constrained version of the Content Deployment pa
 
 ### Content structure
 
-File content that is referenced within the manifest of the package structure must be stored in either a flat or hierarchical structure within the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerSourceUri` parameter. For example import packages generated form a legacy version export will not be hierarchical, and will instead have all files stored at the root level with a pattern like ########.dat where the # symbols are hexadecimal characters starting at 0 and no file names are repeated within a package. Alternately, a package generated from a file share can have the source folder hierarchy and file names preserved in the same hierarchy. 
+File content that is referenced within the manifest of the package structure must be stored in either a flat or hierarchical structure within the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerSourceUri` parameter. For example, import packages generated form a legacy version export will not be hierarchical, and will instead have all files stored at the root level with a pattern like ########.dat where the # symbols are hexadecimal characters starting at 0 and no file names are repeated within a package. Alternately, a package generated from a file share can have the source folder hierarchy and file names preserved in the same hierarchy. 
 
-The main requirement for the structure is that the FileValue references in the **Manifest.XML** file must refer to the exact name and physical hierarchy that the content is stored in within the Azure Blob Store location for import. The destination file names and folder hierarchy from the import operation are not directly related to the physical naming and hierarchy, and are instead defined through the **Manifest.XML** file.
+The main requirement for the structure is that the FileValue references in the **Manifest.XML** file must refer to the exact name and physical hierarchy that the content is stored in within the Azure Blob Store location for import. The destination file names and folder hierarchy from the import operation are not directly related to the physical naming and hierarchy and are instead defined through the **Manifest.XML** file.
 
 ### ExportSettings.XML
 
@@ -177,7 +177,7 @@ The **Manifest.XML** is the primary descriptor for metadata within the package, 
 
 The main requirements for **Manifest.XML** to be possible to successfully import through the pipeline is that the Web Id and Document Library ID/List ID be consistent with the target location. If a Web ID is used which doesn’t match the target location, errors will occur because the parent web for the import operation cannot be found. 
 
-Likewise an incorrect Document Library ID/List ID will prevent the importation into the target Document Library or List. IDs should never be reused within the same site collection, so same packages should not be imported to the same target site collection regardless of the destination web.
+Likewise, an incorrect Document Library ID/List ID will prevent the importation into the target Document Library or List. IDs should never be reused within the same site collection, so same packages should not be imported to the same target site collection regardless of the destination web.
 
 For individual files and folders within the document library or list, their identifiers should be consistent between import events to the same location. Specifically, performing an import of a package generated form a file share would initially require generating new GUIDs for each file and folder, along with matching GUIDs for the list items that represent them. Therefore, performing a second import against the same target using the same package would keep the same IDs, but performing a second import against the same target using a new package for the same content would result in ID conflicts and import errors for all items in conflict. 
 
@@ -229,7 +229,7 @@ Url="/personal/username/_catalog/users" />
 
 The **UserGroupMap.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentUserGroupMap.XSD**, which has no change from current published full 2013 package schema. 
 
-The **UserGroupMap.XML** file may not contain any User or Group entries, but doing so will prevent author or security information from being populated during import and warnings will be logged in this case. Login and SID values for users must be either adjusted to match the values in SharePoint Online, or if the account no longer should exist can be listed as `IsDeleted = “true”` to prevent lookup failures and additional slowdown during the import operation.
+The **UserGroupMap.XML** file may not contain any User or Group entries but doing so will prevent author or security information from being populated during import and warnings will be logged in this case. Login and SID values for users must be either adjusted to match the values in SharePoint Online, or if the account no longer should exist can be listed as `IsDeleted = “true”` to prevent lookup failures and additional slowdown during the import operation.
 
 ### ViewFormsList.XML
 
@@ -245,11 +245,43 @@ Upon completion, these logs will be copied to the `azureContainerManifestUri` lo
 
 Several log types can be included such as the full import log, along with warning and error files that contain only the subset of import warnings or errors respectively. Log files have unique `datetime` and `job id` stamps to allow each attempted import event to have a unique log for better debugging purposes.
  
+## Changes for those using the "Ship Disk" option
+
+To use the Migration API, you must have a temporary storage container in Azure. When uploading files into the temporary storage, an MD5 is required as a property on every file. However, when shipping the data on hard drives this MD5 property doesn’t get assigned automatically.  As a work around, we have adapted the Migration API to allow the MD5 to be passed for every file as part of the manifest. This also applies for IV values when encrypting the data.
+
+Since the MD5 is generated at the source instead of at the upload time in Azure, Microsoft can confirm the integrity of the file directly against the source MD5.   
+
+### What is stored in those Azure Blob Containers?
+
+The Migration API requires the Azure Container for content passing and also for log and queue reporting. It can be split down as a summary as follows:<br>
+
+|**Content**|**Manifest**|
+|:-----|:-----|
+|Files and folders|XML files|
+
+
+There are two new optional parameters in manifest.xml:
+
+- MD5Hash <br>
+- InitializationVector
+
+
+#### Preparing the package
+The method for calling the migration job doesn’t change; only the package generation needs to be changed. 
+
+In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *MD5Hash* and *InitializationVector*. <br>
+
+Example:
+
+```xml
+<File … MD5Hash="CXPP/MWYxY87NjjnLZrFg==" InitializationVector="4WlC5zQK0r9s39LoB2w==" />
+```
+
 ## Best Practices and Special Mentions
 
 ### Package size
 
-Even if the API support 15GB files, we recommend package sizes of up to 250 MB OR 250 items (depending which one comes first). If you have one large files larger than that recommended size limit you should send it in its own package.  Same goes for versions, each versions counts against the size limit and item count. Additionally all the versions of a file should be in the same package.
+Even if the API support 15GB files, we recommend package sizes of up to 250 MB OR 250 items (depending which one comes first). If you have one large files larger than that recommended size limit you should send it in its own package.  The same applies to versions; each version counts against the size limit and item count. Additionally all the versions of a file should be in the same package.
 
 ### File size
 
@@ -267,7 +299,7 @@ Import packages can have references to multiple versions of a file, major and mi
 
 The identifiers used within the import package explicitly are used during import to identify content. This allows preservation of existing identifiers for document library contents from a source environment. However, it also imposes a complexity during import package creation or transformation that mandates that the package explicitly reference the target web and list identifiers. Content type identifiers, file/folder item GUIDs, and list item integer identifiers are all preserved during import. If incorrect identifiers are specified in the package, import will fail.
 
-Additionally due to identifier preservation, import events can potentially be done in successive iterations using different packages, allowing items to potentially move in location if their identifiers have not changed.
+Additionally, due to identifier preservation, import events can potentially be done in successive iterations using different packages, allowing items to potentially move in location if their identifiers have not changed.
 
 <a name="OverwriteAPI"> </a>
 
@@ -289,11 +321,11 @@ To prevent unintended file modification of the source blobs, the import pipeline
 
 ### Security and encryption
 
-The import pipeline is using Azure Blob Storage security model as is. This means we will not do any special treatment for those azure containers that would differentiate from any other azure containers. Additionally the import pipeline currently does not accept encryption keys for content from the customer. Any encrypted content will be treated as opaque files that SharePoint may list, but be unable to index, the same as if encrypted files were uploaded through the UI to the environment.
+The import pipeline is using Azure Blob Storage security model as is. This means we will not do any special treatment for those azure containers that would differentiate from any other azure containers. Additionally, the import pipeline currently does not accept encryption keys for content from the customer. Any encrypted content will be treated as opaque files that SharePoint may list, but be unable to index, the same as if encrypted files were uploaded through the UI to the environment.
 
 ### Events and event handlers
 
-The import pipeline allows event handlers to be referenced on list items, but doesn’t allow defining event handlers at the list level at this time. The import pipeline does not fire events as items are imported, so existing event handlers will not fire due to the import event. 
+The import pipeline allows event handlers to be referenced on list items but doesn’t allow defining event handlers at the list level at this time. The import pipeline does not fire events as items are imported, so existing event handlers will not fire due to the import event. 
 
 ## Appendices
 
