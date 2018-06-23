@@ -100,14 +100,14 @@ Notice that you're requesting a well-known placeholder by using the correspondin
         }
       }
 	```
-5. Install the `@microsoft/sp-office-ui-fabric-core` package
+5. Install the `@microsoft/sp-office-ui-fabric-core` package to enable importing from SPFabricCore.scss
 
   ```
   npm install @microsoft/sp-office-ui-fabric-core
   ```
 
 
-5. In the **HelloWorldApplicationCustomizer.ts** file, update the **IHelloWorldApplicationCustomizerProperties** interface to add specific properties for Header and Footer, as follows.
+6. In the **HelloWorldApplicationCustomizer.ts** file, update the **IHelloWorldApplicationCustomizerProperties** interface to add specific properties for Header and Footer, as follows.
 
   > [!NOTE] 
   > If your Command Set uses the ClientSideComponentProperties JSON input, it is deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
@@ -119,7 +119,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
     }
   ```
 
-6. Add the following private variables inside the **HelloWorldApplicationCustomizer** class. In this scenario, these can just be local variables in an `onRender` method, but if you want to share them with other objects, define them as private variables. 
+7. Add the following private variables inside the **HelloWorldApplicationCustomizer** class. In this scenario, these can just be local variables in an `onRender` method, but if you want to share them with other objects, define them as private variables. 
 
   ```typescript
     export default class HelloWorldApplicationCustomizer
@@ -130,7 +130,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
       private _bottomPlaceholder: PlaceholderContent | undefined;
   ```
 
-7. Update the `onInit` method code as follows:
+8. Update the `onInit` method code as follows:
 
   ```typescript
       @override
@@ -146,7 +146,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
       }
   ```
 
-8. Create a new `_renderPlaceHolders` private method with the following code:
+9. Create a new `_renderPlaceHolders` private method with the following code:
 
 	```typescript
 	    private _renderPlaceHolders(): void {
@@ -226,7 +226,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 	* Notice that the code path for both the top and bottom placeholders is almost identical. The only differences are the variables used and the style definitions.
 	* It is possible to use the class names defined in the style sheet directly but it is not recommended. In case no style sheet reference defined in the ```styles``` variable is found in the code, the style sheet won't get added to the page. This is because unused references will get removed during bild process.
 
-9. Add the following method after the `_renderPlaceHolders` method. In this case, you simply output a console message when the extension is removed from the page. 
+10. Add the following method after the `_renderPlaceHolders` method. In this case, you simply output a console message when the extension is removed from the page. 
 
 	```typescript
 	    private _onDispose(): void {
