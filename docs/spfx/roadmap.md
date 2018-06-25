@@ -28,11 +28,10 @@ The first release of the SharePoint Framework contained only support for client-
 
 ## General improvements
 
-- Site level WebHooks
 - Updated 'store' story with SharePoint Framework support
 - 'Store' story for SharePoint Framework solutions with easy distribution channel for ISVs 
 - React 16 support
-- Modern experiences in SharePoint 2019
+- Modern experiences in SharePoint 2019 - End-to-end SharePoint Framework support for modern sites with web parts and extensions
 - Content Security Policy (CSP) support
 - Additional placeholder, like content header, content footer, navigation extensions, search extensions
 - "App pages" - developer defined pages which end users cannot edit
@@ -49,6 +48,7 @@ The first release of the SharePoint Framework contained only support for client-
     - Build add-ins with SharePoint Framework
 
 - Host SharePoint Framework web parts as Microsoft Teams tabs
+- Host Microsoft Team ISV solutions in SharePoint as "web parts"
 
 
 ## Application Lifecycle Management
@@ -64,7 +64,7 @@ The first release of the SharePoint Framework contained only support for client-
 
 - SharePoint Framework Workbench 2.0: Development story for SharePoint Framework Extensions
 - Toolchain components
-- Additional Yeoman templates - like Angular Elements
+- Additional Yeoman templates for different JavaScript frameworks
 
 ## Already shipped capabilities
 
