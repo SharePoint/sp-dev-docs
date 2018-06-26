@@ -35,6 +35,7 @@ For a list of recommended classes to use inside view formats, please see the [St
 ### Conditional formatting based on a date range
 
 The following image shows a list view with conditional formatting applied based on a date range:
+![SharePoint list with view formatted with conditional formatting](../images/listformatting-additionalrowclass.png)
 
 This example applies the class `sp-field-severity--severeWarning` to a list view row when the item's DueDate is before the current date/time.
 
@@ -146,8 +147,9 @@ You can use view formatting to define a totally custom layout of field values in
 ### Multi-line view style
 
 The following image shows a list with a custom multi-line view style applied:
+![SharePoint list with multi-line view customization](../images/listformatting-rowformatter.png)
 
-This example uses the `rowFormatter` element, which is used to totally override the rendering of a list view row.  The `rowFormatter` in this example creates e a bounding `<div />` for every list view row.  Inside this bounding box for every row, the `$Title` and `$Feedback` fields are displayed on separate lines.  Under those fields, a `button` element is displayed that, when clicked, does the same thing as clicking the list row in an uncustomized view, which is opening the property form for the item.  This `button` is displayed conditionally, when the value of the `$Assigned_x0020_To` field (assumed to be a person/group field) matches the current signed-in user.
+This example uses the `rowFormatter` element, which totally overrides the rendering of a list view row.  The `rowFormatter` in this example creates a bounding `<div />` box for every list view row.  Inside this bounding box, the `$Title` and `$Feedback` fields are displayed on separate lines.  Under those fields, a `button` element is displayed that, when clicked, does the same thing as clicking the list row in an uncustomized view, which is opening the property form for the item.  This `button` is displayed conditionally, when the value of the `$Assigned_x0020_To` field (assumed to be a person/group field) matches the current signed-in user.
 
 ```JSON
 {
@@ -269,6 +271,6 @@ Optional element.  Specifies whether the ability to select rows in the view is d
 
 `hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
-### hideColumnHeader
+### hideListHeader
 
 Optional element.  Specifies whether the column headers in the view are hidden or not.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
