@@ -11,12 +11,6 @@ ms.date: 06/08/2018
 
 You can use view formatting to customize how views in SharePoint lists and libraries are displayed.  To do this, you construct a JSON object that describes the elements that are displayed with a row is loaded in a list view, and styles to be applied to those elements.  View formatting does not change the data in list items of riles; it only changes how it's displayed to users who browse the list.  Anyone who can create and manage views in a list can use view formatting to configure how views are displayed.
 
-For example, a list with no view formats applied might look like this:
-
-A list with a view format that applies simple conditional formatting to the row based on the value of the Effort field might look like this:
-
-A list with a more complex view format that totally reorganizes the structure and layout of the rows in the view might look like this:
-
 > [!TIP]
 > Samples demonstrated in this article and numerous other community samples are available from a GitHub repository dedicated for open-sourced column formatting definitions. You can find these samples from the [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) repository at [SharePoint](https://github.com/SharePoint) GitHub organization.
 
