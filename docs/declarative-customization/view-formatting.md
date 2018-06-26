@@ -30,8 +30,6 @@ The easiest way to use view formatting is to start from an example and edit it t
 
 You can use view formatting to apply a class to a list view row, depending on the value of one or more fields in the row.  These examples leave the content and structure of list view rows intact.
 
-Any conditional formatting scenario 
-
 For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#style-guidelines) in the [Column Formatting reference document.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md)
 
 ### Conditional formatting based on a date range
@@ -60,8 +58,6 @@ This example applies the class `sp-field-severity--severeWarning` to a list view
 ```
 
 ### Conditional formatting based on the value in a text or choice field 
-
-The following image shows a list view with conditional formatting applied based on the value inside a choice field:
 
 This example was adopted from a column formatting example, [Conditional formatting based on the value in a text of choice field](https://github.com/ldemaris/sp-dev-docs/blob/patch-7/docs/declarative-customization/column-formatting.md#conditional-formatting-based-on-the-value-in-a-text-or-choice-field-advanced), with some important differences to apply the concept to list view rows.  The column formatting example applies both an icon and a class to a column based on the value of `@currentField`.  The `additionalRowClass` attribute in view formatting, however, only allows you to specify a class and not an icon.  Additionally, since `@currentField` always resolves to the value of the Title field when referenced inside a view format, this sample refers to the `$Status` field directly to determine which class to apply to the row.
 
@@ -147,7 +143,86 @@ This example was adopted from a column formatting example, [Conditional formatti
 
 You can use view formatting to define a totally custom layout of field values inside a row.
 
-### Multi-line view
+### Multi-line view style
+
+The following image shows a list with a custom multi-line view style applied:
+
+This example uses the `rowFormatter` element, which is used to totally override the rendering of a list view row.  The `rowFormatter` in this example creates e a bounding `<div />` for every list view row.  Inside this bounding box for every row, the `$Title` and `$Feedback` fields are displayed on separate lines.  Under those fields, a `button` element is displayed that, when clicked, does the same thing as clicking the list row in an uncustomized view, which is opening the property form for the item.  This `button` is displayed conditionally, when the value of the `$Assigned_x0020_To` field (assumed to be a person/group field) matches the current signed-in user.
+
+```JSON
+{
+  "hideSelection": "true",
+  "hideListHeader": "true",
+  "rowFormatter": {
+    "elmType": "div",
+    "style": {
+      "padding": "12px",
+      "overflow": "hidden",
+      "border-radius": "2px",
+      "box-shadow": "0 1.6px 3.6px 0 #dddddd, 0 0.3px 0.9px 0 #e3e3e3",
+      "margin-bottom": "12px"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "text-align": "left"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "style": {
+              "font-size": "16px",
+              "font-weight": "600",
+              "padding-bottom": "8px"
+            },
+            "txtContent": "[$Title]"
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$Feedback]",
+            "style": {
+              "padding-bottom": "4px"
+            }
+          },
+          {
+            "elmType": "button",
+            "customRowAction": {
+              "action": "defaultClick"
+            },
+            "txtContent": "Give feedback",
+            "style": {
+              "cursor": "pointer",
+              "font-weight": "600",
+              "background-color": "#f4f4f4",
+              "border": "1px solid transparent",
+              "margin-top": "4px",
+              "padding": "0 16 0 16px",
+              "height": "32px",
+              "border-radius": "2px",
+              "box-shadow": "0 0 0 0 #ffffff",
+              "display": {
+                "operator": "?",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "@me",
+                      "[$Assigned_x0020_To.email]"
+                    ]
+                  },
+                  "",
+                  "none"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 ## Creating custom JSON
 
@@ -174,7 +249,7 @@ Creating custom view formatting JSON from scratch is simple if you understand th
 
 ### rowFormatter
 
-Optional element.  Specifies a JSON object that describes a view format.  The schema of this JSON object is identical to the schema of a column format.  For details on this schema and its capabilities, see the [Column Format detailex syntax reference.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference)
+Optional element.  Specifies a JSON object that describes a list view row format.  The schema of this JSON object is identical to the schema of a column format.  For details on this schema and its capabilities, see the [Column Format detailex syntax reference.](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference)
 
 #### Differences in behavior between the rowFormatter element and column formatting
 
