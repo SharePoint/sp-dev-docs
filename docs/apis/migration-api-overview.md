@@ -1009,7 +1009,13 @@ processContents="skip" />
 		<xs:attribute name="LinkToItemAllowed" type="xs:string" use="optional" />
 		<xs:attribute name="CalloutMenu" type="xs:string" use="optional" />
 		<xs:attribute name="CalloutMenuAllowed" type="xs:string" use="optional" />
-
+		<!-- Label definition  -->	
+		<xs:attribute name="ListDefaultCompliancetagWrittenTime" type="xs:dateTime" use="optional" />
+		<xs:attribute name="ListDefaultComplianceTagUserId" type="xs:int" use="optional" />
+		<!-- ListDefaultComplianceFlags is a Flags dependes on the Label, if the Label has Keep or KeepAndDelete ( that will have the 0x01 bit set). If the Label is a record label, that will have 0x01 and 0x04 set -->
+		<xs:attribute name="ListDefaultComplianceFlags" type="xs:int" use="optional" />
+		<xs:attribute name="ListDefaultComplianceTag" type="xs:string" use="optional" />
+		<!-- end of Label definition  -->
 		<xs:anyAttribute namespace="##any" processContents="skip" />
 	</xs:complexType>
 
