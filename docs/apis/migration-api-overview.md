@@ -1,12 +1,12 @@
 ---
-title: "SPO Migration API Overview"
+title: "SharePoint Online Migration API Overview"
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 ms.date: 6/20/2018
 description: "This document is to give more in depth Information about how to use the SPO Migration API."
 ---
-# SPO Migration API
+# SharePoint Online Migration API
 
 ## API Documention
 
