@@ -183,7 +183,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 - [Optimize page performance in SharePoint - JavaScript and CSS files](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint#compress-crunch-javascript-and-css-files)
 - [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 - [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
-- [Controlling branding in SharePoint using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/03%20Branding%20with%20add-in%20model%20techniques)
+- [Controlling branding in SharePoint using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/AddIns/06%20Branding%20with%20add-in%20model%20techniques)
 
 ### Videos
 
