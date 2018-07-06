@@ -4,7 +4,7 @@
 
 The default page transformation configuration (webpartmapping.xml) uses built-in functions and selectors to drive the mapping from classic web parts to modern 1st party and 3rd party web parts. This page lists all the available functions.
 
-> [!NOTE]
+> [!Note]
 > This page is auto-generated, if you see issues please create a PR against the respective Transformation framework code base.
 
 ## Functions
@@ -313,6 +313,7 @@ Spacer|Will be output if the provided wiki text was considered empty
 Name|Description
 :-----|:----------
 {ListId}|Guid of the list to use
+{ViewXml}|Definition of the selected view
 #### Output values
 
 Name|Description
@@ -320,6 +321,7 @@ Name|Description
 Library|The list is a document library
 List|The list is a document list
 Issue|The list is an issue list
+TaskList|The list is an task list
 DiscussionBoard|The list is a discussion board
 Survey|The list is a survey
 Undefined|The list base type is undefined
