@@ -212,7 +212,7 @@ $keyCredentials =
       "value":  "' + $base64Cert + '"
      }
   ],'
-$keyCredentials
+Write-Host $keyCredentials
 
 Write-Host "Certificate Thumbprint:" $cert.Thumbprint
 ```
