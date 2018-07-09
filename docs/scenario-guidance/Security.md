@@ -31,7 +31,7 @@ _**Applies to:** Office 365 | SharePoint Server_
 - [Important aspects of the SharePoint Add-in architecture and development landscape](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap)
 - [Authorize provider-hosted add-in users at run time by using OAuth](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth)
 - [Build mobile apps for other platforms using SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/build-mobile-apps-for-other-platforms-using-sharepoint)
-- [Moving Full Trust Code to the Cloud](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3651/O3651-4%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices)
+- [Moving Full Trust Code to the Cloud](https://github.com/OfficeDev/TrainingContent/blob/master/SharePoint/AddIns/04%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices/Lab.md)
 - [A Series of Visual Studio Solutions to Accompany the MSDN Tutorial Series about Provider-hosted Add-ins](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials)
 
 ### Videos
