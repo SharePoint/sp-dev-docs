@@ -756,6 +756,38 @@ Specifies the type of element to create. Valid elements include:
 
 Any other value will result in an error.
 
+#### button elements
+
+`Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a requred property, `customRowAction`, that specifies an `action` that's taken when the button is clicked.  This action must be one of the following values:
+
+- defaultClick: buttons with this action will do the same thing as clicking the list item in an uncustomized view.  Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
+
+```JSON
+{
+  "elmType": "button",
+  "txtContent": "Open this item",
+  "customRowAction": {
+    "action": "defaultClick"
+  }
+}
+
+```
+- share:  Clicking the button will open the sharing dialog.  Below is an example of this type of button.
+
+```JSON
+{
+  "elmType": "button",
+  "txtContent": "Share this item",
+  "customRowAction": {
+    "action": "share"
+  }
+}
+
+```
+- delete: Clicking the button will open the delete confirmation dialog.
+- editProps:  Clicking the button will open the item properties page in edit mode.
+- executeFlow:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document.
+
 ### txtContent
 
 An optional property that specifies the text content of the element specified by `elmType`. The value of this property can either be a string (including special strings) or an Expression object. 
@@ -1204,7 +1236,15 @@ This field can be used to display the current user's email address, but more lik
 
 #### "@now"
 
-This will evaluate to the current date and time. 
+This will evaluate to the current date and time.
+
+#### "@window.innerHeight"
+
+This will evaluate to a number equal to the height of the browser window (in pixels) when the list was rendered.
+
+#### "@window.innerWidth"
+
+This will evaluate to a number equal to the width of the browser window (in pixels) when the list was rendered.
 
 ## See also
 

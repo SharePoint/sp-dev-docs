@@ -300,6 +300,17 @@
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
       - name: Make batch requests
         href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+    - name: Migration API
+      href: apis/migration-api-overview.md
+      items:
+      - name: Azure container and queue
+        href: apis/migration-api-azure-container-and-queue.md
+      - name: Encryption
+        href: apis/migration-api-encryption.md
+      - name: Throttling
+        href: apis/migration-api-handling-trottling.md        
+      - name: Sharing
+        href: apis/migration-api-shared.md           
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
@@ -1308,11 +1319,18 @@
       items:
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
+        items:
+        - name: Analyze and use the scanner data
+          href: transform/modernize-userinterface-lists-and-libraries-scanner.md
+        - name: Rollout approaches
+          href: transform/modernize-userinterface-lists-and-libraries-rollout.md
       - name: Transform classic pages to modern client-side pages
         href: transform/modernize-userinterface-site-pages.md
         items:
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
+        - name: Page transformation API
+          href: transform/modernize-userinterface-site-pages-api.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md
     - name: Modernize site branding
@@ -1322,6 +1340,8 @@
       items:
       - name: Analyze and use the scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
+      - name: Site permissions after Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-permissions.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
@@ -1366,8 +1386,6 @@
         href: solution-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
       - name: Create UX controls
         href: solution-guidance/create-ux-controls-by-using-sharepoint-provider-hosted-add-ins.md
-      - name: Display information from a host site
-        href: solution-guidance/display-information-from-a-host-site-by-using-office-web-widgets.md
       - name: Improve performance
         href: solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
   - name: Customizing the "modern" experiences in SharePoint Online

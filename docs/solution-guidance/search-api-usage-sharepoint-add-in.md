@@ -187,7 +187,7 @@ The following sample demonstrates how to execute searches with the SharePoint Se
 
 - [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/Capabilities/02%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
 
-The **Index** method in the [HomeController.cs class](https://github.com/SharePoint/TrainingContent/blob/master/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory/EmployeeDirectoryWeb/Controllers/HomeController.cs) executes a search for  all users whose last name begins with the text value the user clicks.
+The **Index** method in the [HomeController.cs class](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory/EmployeeDirectoryWeb/Controllers/HomeController.cs) executes a search for  all users whose last name begins with the text value the user clicks.
 
 	var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
 
@@ -214,7 +214,7 @@ The **Index** method in the [HomeController.cs class](https://github.com/SharePo
 	//Set the response
     string responseString = await response.Content.ReadAsStringAsync();
 
-The [How to build SharePoint add-ins that leverage search (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-build-SharePoint-add-ins-that-leverage-search) walks you through the [EmployeeDirectory (OfficeDev Training Content)](https://github.com/SharePoint/TrainingContent/tree/master/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory).
+The [How to build SharePoint add-ins that leverage search (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-build-SharePoint-add-ins-that-leverage-search) walks you through the [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory).
 
 **Client-side Option**
 
@@ -236,7 +236,7 @@ The following code example demonstrates how to execute searches with the SharePo
 Related links
 =============
 - [How to perform personalized search queries with CSOM (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-perform-personalized-search-queries-with-CSOM)
-- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/SharePoint/TrainingContent/tree/master/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
+- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
 - [How to build SharePoint add-ins that leverage search (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-build-SharePoint-add-ins-that-leverage-search)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")

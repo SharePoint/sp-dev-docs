@@ -1,6 +1,6 @@
 ---
 title: Authorization considerations for tenants hosted in the Germany, China or US Government environments
-ms.date: 11/03/2017
+ms.date: 6/19/2017
 ---
 # Authorization considerations for tenants hosted in the Germany, China or US Government environments
 
@@ -34,7 +34,7 @@ When your Azure AD application needs to authorize it needs to use the correct en
 | Production | https://login.windows.net |
 | Germany | https://login.microsoftonline.de |
 | China | https://login.chinacloudapi.cn |
-| US Government | https://login-us.microsoftonline.com |
+| US Government | https://login.microsoftonline.us |
 
 ### Using PnP to authorize using Azure AD
 <a name="adpnp"> </a>

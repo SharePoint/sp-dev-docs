@@ -20,7 +20,7 @@ The following information is required for creating a new subscription:
 
 - **Resource**. The resource endpoint URL you are creating the subscription for. For example, a SharePoint List API URL.
 - **Server notification UR**. Your service endpoint URL. SharePoint sends an HTTP POST to this endpoint when events occur in the specified resource.
-- **Expiration date**. The expiration date for your subscription. The expiration date should not be more than 6 months. By default, subscriptions are set to expire 6 months from when they are created. 
+- **Expiration date**. The expiration date for your subscription. The expiration date should not be more than 180 days. By default, subscriptions are set to expire 180 days from when they are created. 
 
 You can also include the following information if needed:
 
@@ -144,9 +144,9 @@ If an error occurs while sending the notification to your application, SharePoin
 
 ## Expiration
 
-Webhook subscriptions are set to expire after 6 months by default if an **expirationDateTime** value is not specified. 
+Webhook subscriptions are set to expire after 180 days by default if an **expirationDateTime** value is not specified. 
 
-You need to set an expiration date when creating the subscription. The expiration date should be less than 6 months. Your application is expected to handle the expiration date according to your application's needs by updating the subscription periodically. 
+You need to set an expiration date when creating the subscription. The expiration date should be less than 180 days. Your application is expected to handle the expiration date according to your application's needs by updating the subscription periodically. 
 
 ## Retry mechanism
 

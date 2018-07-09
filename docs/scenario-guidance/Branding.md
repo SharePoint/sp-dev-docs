@@ -150,7 +150,7 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 - [Master pages in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/master-pages-sharepoint-add-in)
 - [SharePoint Page Layouts and Master Pages (ECM)](https://msdn.microsoft.com/en-us/library/office/ms543497(v=office.14).aspx)
 - [Master Pages](https://msdn.microsoft.com/en-us/library/office/ms443795(v=office.14).aspx)
-- [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/blob/master/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model/10-1%20Replacement%20of%20files%20deployed%20via%20Modules/Lab.md)
+- [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model)
 - [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 
 ### Videos
@@ -183,7 +183,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 - [Optimize page performance in SharePoint - JavaScript and CSS files](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint#compress-crunch-javascript-and-css-files)
 - [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 - [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
-- [Controlling branding in SharePoint using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/03%20Branding%20with%20add-in%20model%20techniques)
+- [Controlling branding in SharePoint using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/AddIns/06%20Branding%20with%20add-in%20model%20techniques)
 
 ### Videos
 

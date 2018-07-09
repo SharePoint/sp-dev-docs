@@ -212,7 +212,7 @@ You also need to mark your controls and web parts as MDS compliant. The followin
 
 ```cs
 
-[assembly: Microsoft.SharePoint.WebControlsCompliantAttribute(IsCompliant = true)]
+[assembly: Microsoft.SharePoint.WebControls.MdsCompliantAttribute(IsCompliant = true)]
 namespace VisualWebPartProject2.VisualWebPart1
 {
     // Rest of your control logic

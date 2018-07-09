@@ -40,7 +40,7 @@ The command lists all the generators available on your machine. Select `@microso
 You can use the command-line options available with the Yeoman SharePoint generator to scaffold projects in one command instead of going through the prompts. Execute the following command to see the list of command-line options available for the SharePoint generator:
 
 ```
-yo @microsoft/generator-sharepoint --help
+yo @microsoft/sharepoint --help
 ```
 
 <br/>

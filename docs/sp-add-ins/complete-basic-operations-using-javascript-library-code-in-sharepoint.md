@@ -1118,7 +1118,7 @@ function onQueryFailed(sender, args) {
 
 ## Access objects in the host web
 
-While developing your add-in, you might need to access the host web to interact with items in it. Use the **AppContextSite** object to reference the host web or other SharePoint sites, as shown in the following example. For a full code sample, see [Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/office/SharePoint-Get-the-563f2a3d).
+While developing your add-in, you might need to access the host web to interact with items in it. Use the **AppContextSite** object to reference the host web or other SharePoint sites, as shown in the following example. For a full code sample, see [Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/office/SharePoint-2013-Get-the-563f2a3d).
 
 ```js
 function execCrossDomainRequest(appweburl, hostweburl) {
