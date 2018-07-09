@@ -47,14 +47,14 @@ The following are not yet supported in the package:
 - Animations
 - Icons
 
-Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new **@microsoft/sp-office-ui-fabric-core** package and consume core styles from the package instead of using global CSS styles. 
+Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new **@microsoft/sp-office-ui-fabric-core** package and consume core styles from the package instead of using global CSS styles.
 
 ### Update existing projects
 
-To use the Fabric Core package in your existing project, install the package as a dev dependency:
+To use the Fabric Core package in your existing project, install the package as a dependency:
 
 ```
-npm install @microsoft/sp-office-ui-fabric-core --save-dev
+npm install @microsoft/sp-office-ui-fabric-core --save
 ```
 
 After it's installed, you can then import the Fabric Core Sass declarations in your Sass definition file and use the mixins and variables as described in the following section. 
@@ -111,7 +111,7 @@ The Fabric React package includes the supported Fabric Core styles used in the F
 Because the **@microsoft/sp-office-ui-fabric-core** package is already installed in your solution by the Yeoman generator, we recommend that you uninstall that package if you decide to use Fabric components and reduce your component bundle size.
 
 ```
-npm uninstall @microsoft/sp-office-ui-fabric-core --save-dev
+npm uninstall @microsoft/sp-office-ui-fabric-core --save
 ```
 
 You can then import the core styles from the Sass declarations available in the Fabric React package.
