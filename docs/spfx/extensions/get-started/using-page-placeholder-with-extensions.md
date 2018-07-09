@@ -116,7 +116,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 			private _topPlaceholder: PlaceholderContent | undefined;
 			private _bottomPlaceholder: PlaceholderContent | undefined;
 
-  ```
+       ```
 
 7. Update the `onInit` method code as follows:
 
@@ -248,6 +248,8 @@ You're now ready to test your code in SharePoint Online.
 	```json
 		contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Top":"Top area of the page","Bottom":"Bottom area in the page"}}}
 	```
+
+> Alternatively, you can create serve configuration entries in the `config/serve.json` file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
 
 3. Select **Load debug scripts** to continue loading scripts from your local host.
 
