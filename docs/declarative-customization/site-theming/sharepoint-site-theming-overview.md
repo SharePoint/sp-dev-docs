@@ -62,9 +62,9 @@ When you select a classic theme, a modern theme is generated from the settings i
 
 For the simplest experience, we recommend that you use modern themes with modern pages. If you need to use classic themes with modern pages, test your site carefully to verify that your content is readable and accessible.
 
-## Change the default experience at the site collection level 
+## Troubleshoot custom theme issues 
 
-While the new client-side theming architecture is more performant, if you have customizations that aren’t rendering properly after you change the site’s theme, you can opt the site out of the new theming experience by disabling the feature.
+The modern site theming experience has been rolled out to classic site templates, too. While the new client-side theming architecture is more performant, if you have customizations on classic sites that aren’t rendering properly after you change the site’s theme, you can opt the site out of the new theming experience by disabling the feature. Please note, this opt-out only applies to classic sites where you have custom theme references that aren't rendering properly. By enabling this site-level opt-out you will disable the modern theming - and also lose the fast theming benefits it provides.
 
 To do this, you must use a Windows PowerShell script with a CSOM (client-side object model) wrapper. We recommend using the PnP enable feature command:
 
