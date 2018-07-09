@@ -185,7 +185,7 @@ This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-in
 
 The following sample demonstrates how to execute searches with the SharePoint Search Service with the REST API from managed .Net code.
 
-- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
+- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/Capabilities/02%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
 
 The **Index** method in the [HomeController.cs class](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory/EmployeeDirectoryWeb/Controllers/HomeController.cs) executes a search for  all users whose last name begins with the text value the user clicks.
 
