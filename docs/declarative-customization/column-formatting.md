@@ -95,7 +95,7 @@ This example uses the conditional operator `?` to apply a class (`sp-field-sever
 
 ```JSON
 {
-    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+    "$schema": " https://developer.microsoft.com/en-us/json-schemas/sp/column-formatting.schema.json",
     "debugMode": true,
     "elmType": "div",
     "attributes": {
@@ -158,7 +158,7 @@ This pattern is useful when you want different values to map to different levels
 
 ```JSON
 {
-    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/sp/column-formatting.schema.json",
     "debugMode": true,
     "elmType": "div",
     "attributes": {
@@ -643,7 +643,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 
 ```JSON
 {
-	"$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+	"$schema": "https://developer.microsoft.com/en-us/json-schemas/sp/column-formatting.schema.json",
 	"elmType": "span",
 	"style": {
 		"color": "#0078d7"
@@ -730,7 +730,7 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 
    ```JSON
     {
-    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json"
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/sp/column-formatting.schema.json"
     }
    ```
 
