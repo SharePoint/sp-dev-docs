@@ -97,18 +97,3 @@ namespace GetInstalledSharePointSku
     }
 }
 ```
-
-
-## See also
-<a name="bk_SP15DetectSKUaddresources"> </a>
-
--  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md)
-    
-  
--  [SharePoint Developer Blog](http://blogs.msdn.com/b/sharepointdev/)
-    
-  
--  [SharePoint Stack Exchange](http://sharepoint.stackexchange.com/)
-    
-  
-

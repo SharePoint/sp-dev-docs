@@ -12,9 +12,7 @@ SharePoint is a development platform for SharePoint Framework, SharePoint Add-in
 ## Introducing the SharePoint development platform
 <a name="bk_introduction"> </a>
 
-SharePoint is a versatile development platform for building client-side components, add-ins and solutions with varying scopes that address a wide range of needs. The SharePoint developer documentation guides you through the features, technologies, capabilities, and models for development that distinguish SharePoint as a development platform. 
-
-Our developer documentation walks you through the essentials of writing your first add-in, getting started working with the platform, and creating, using and interacting with SharePoint resources in your own code. We provide in-depth articles about SharePoint concepts, step-by-step how-to task guidance, and code samples to help you begin building SharePoint Framework components, SharePoint Add-ins and SharePoint solutions quickly and easily. 
+SharePoint is a versatile development platform for building client-side components, add-ins and solutions with varying scopes that address a wide range of needs. The SharePoint developer documentation guides you through the features, technologies, capabilities, and models for development that distinguish SharePoint as a development platform.
 
 ## What kinds of development can you do with SharePoint?
 <a name="bk_whatkinds"> </a>
@@ -70,7 +68,6 @@ Table 2 shows the resources for setting up a development environment and beginni
 |:-----|:-----|
 | [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint development environment.  <br/> |
 | [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md) <br/> |Describes the several sets of APIs that are provided in SharePoint, including the server object model and the various client-side object models, and the REST/OData web service.  <br/> |
-| [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md) <br/> |Provides a gateway to detailed information about new features and functionality in SharePoint.  <br/> |
 | [Programming models in SharePoint](programming-models-in-sharepoint.md) <br/> |Provides a quick overview of the different kinds of SharePoint development projects that you can create with SharePoint.  <br/> |
 | [Add SharePoint capabilities](add-sharepoint-capabilities.md) <br/> |Provides a gateway to detailed information about using the capabilities of SharePoint in your solutions.  <br/> |
 
