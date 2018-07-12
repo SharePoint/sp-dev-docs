@@ -8,7 +8,7 @@ ms.prod: sharepoint
 
 # Tutorials and training material for SharePoint Development
 
-The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
+These are the different tutorials and training assets available for you.
 
 ## Getting started tutorials for SharePoint Framework
 
