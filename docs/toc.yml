@@ -4820,3 +4820,5 @@
     href: https://twitter.com/officedev
   - name: SharePoint developer forum
     href: http://aka.ms/spdev-community
+- name: Tutorials
+  href: training/training.md

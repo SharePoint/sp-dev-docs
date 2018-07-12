@@ -132,9 +132,7 @@ Following are new workflow actions that are provided in SharePoint. For a full d
 
 -  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
-  
--  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md)
-    
+     
   
 -  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
