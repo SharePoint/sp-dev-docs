@@ -14,7 +14,8 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 
 * [Getting started with SharePoint Framework client-side web parts](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) - Tutorial series
 * [Getting started with SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension) - Tutorial series
-
+* [Build your first Field Customizer extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer)
+* [Build your first ListView Command Set extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-cmdset-with-dialog-api)
 
 ## Additional tutorials for SharePoint Framework
 
