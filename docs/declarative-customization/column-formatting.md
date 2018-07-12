@@ -1201,7 +1201,7 @@ The following example shows how a hyperlink field might be used on a current fie
 
 #### "[$FieldName]" 
 
-The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row. For example, to get the value of a field named "MarchSales", use `[$MarchSales]`.
+The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specififying the **internal name** of the field surrounded by square brackets and preceeded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
