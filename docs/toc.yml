@@ -370,8 +370,8 @@
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
-  - name: What's new for developers in SharePoint
-    href: general-development/what-s-new-for-developers-in-sharepoint.md  
+  - name: What's new for developers in SharePoint 2019
+    href: general-development/sharepoint-2019-development-platform.md  
   - name: SharePoint glossary
     href: general-development/sharepoint-glossary.md  
   - name: Protocol handler error in SharePoint 2016
