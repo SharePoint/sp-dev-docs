@@ -95,7 +95,7 @@ This example uses the conditional operator `?` to apply a class (`sp-field-sever
 
 ```JSON
 {
-    "$schema": " https://developer.microsoft.com/en-us/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/sp/column-formatting.schema.json",
     "debugMode": true,
     "elmType": "div",
     "attributes": {
