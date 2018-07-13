@@ -1329,6 +1329,8 @@
         items:
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
+        - name: Page layout mapping
+          href: transform/modernize-userinterface-site-pages-layout.md
         - name: Page transformation API
           href: transform/modernize-userinterface-site-pages-api.md
     - name: Modernize customizations
