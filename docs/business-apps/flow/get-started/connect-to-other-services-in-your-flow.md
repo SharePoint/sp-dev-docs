@@ -4,9 +4,9 @@ Connect your flow to 200+ services available in Microsoft Flow and build an inte
 
 ## Connect to Microsoft Teams
 
-In this article, we will connect to Microsoft Teams and post a message to one of the channels. 
+In this article, we will connect to Microsoft Teams and post a message to one of the channels.
 
-> While this article focusses on Microsoft Teams, you can connect to various other services as well in your flow. 
+> **Note:** While this article focusses on Microsoft Teams, you can connect to various other services as well in your flow.
 
 ### Edit the flow
 
@@ -32,7 +32,11 @@ In this article, we will connect to Microsoft Teams and post a message to one of
 8. In the available actions list, click on *Microsoft Teams - Post message*.
     > Click on the information icon to read more about the action and what it does.
 
+    ![Add Team connector actions in your flow](../../../images/gs02-microsoft-teams-connector.png)
+
 9. As soon as the action is added, Flow will try to create the Teams connection. Once the connection is created successfully, you should see the action with the available inputs.
+
+    ![Microsoft Teams post messsage action](../../../images/gs02-microsoft-teams-post-message-action.png)
 
 10. To see the connection information, click on the `...` button and check the *My connections* section to see the connection information the Teams action is using.
 
@@ -46,13 +50,17 @@ In this article, we will connect to Microsoft Teams and post a message to one of
     * Then type the text: * was added to the Projects list by *
     * In the dynamic content list, search and pick the following property: *Created By DisplayName.*
 
-* Click *Save* on the command bar to save your flow.
+    ![Microsoft Teams post messsage action with input values](../../../images/gs02-microsoft-teams-post-message-with-inputs.png)
+
+13. Click *Save* on the command bar to save your flow.
 
 ## Test your flow
 
 1. Click *Test* on the command bar.
 
 2. Click on Using data from previous runs*. Since* we already had previous runs of this flow in the previous article, we can select the same data for this flow run as well.
+
+    ![Test your flow using data from previous runs](../../../images/gs02-test-your-flow-previous-runs.png)
 
 3. Click on the flow run that says *Succeeded* and then click *Save & Test*.
 
