@@ -47,9 +47,6 @@ The following table shows SharePoint capabilities that you can add to your app, 
 <a name="bk_addresources"> </a>
 
 
--  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md)
-    
-  
 -  [SharePoint development overview](sharepoint-development-overview.md)
     
   

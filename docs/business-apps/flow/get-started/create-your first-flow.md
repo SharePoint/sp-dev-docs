@@ -21,9 +21,13 @@ Before following the steps in this artucle, make sure your SharePoint site is se
 
     > **Note:** You may see other options as well such as 'Request sign-off' and other flows if they are available for the list or library here.
 
+    ![Create a flow from Projects list](../../../images/gs01-create-a-flow-command-bar.png)
+
 4. Click on *Create a flow*.
 
 5. In the *Create a flow* panel, you can explore various templates available for your list.
+
+    ![Create a flow panel in lists](../../../images/gs01-create-a-flow-panel.png)
 
 6. Click on the template that reads:
     > Send a customized email when a new SharePoint list item is added.
@@ -37,9 +41,13 @@ Before following the steps in this artucle, make sure your SharePoint site is se
 8. Verify the connection information to ensure it uses your credentials.
     > A green checkmark icon indicates a connection to the service was succesfully made using your credentials.
 
+    ![Flow template - send email when an item is added in a list](../../../images/gs01-create-a-flow-when-item-is-added-template.png)
+
 9. Click *Continue* to create the flow. Any connections that requires a connection will also be attempted during this step.
 
 10. Once the flow is created successfully, you will be redirected to the flow designer where you can edit and modifify the flow if needed.
+
+    ![Flow designer - send email when an item is added in a list](../../../images/gs01-designer-when-item-is-added-template.png)
 
 11. Click on the name of the flow that reads *Send a customized email when a new SharePoint list item is added* and enter the following name for the flow:
     * Send an email for new projects
@@ -48,13 +56,15 @@ Before following the steps in this artucle, make sure your SharePoint site is se
 
 13. In the *When the new item is created* action, click on *Edit* to expand the action.
 
-14. Notice the input configured to the SharePoint site address and list name fromk where you created the flow.
+14. Notice the input configured to the SharePoint site address and list name from where you created the flow.
 
 15. In the *Send Email* action, click on *Edit* to expand the action.
 
 16. Notice all the input is filled in with dynamic values from the *Get my profile* and *When the new item is created* actions.
 
 17. Hover over the dynamic values to see what properties they refer. For example, hovering over the *Email* shows that the property is read from the *Get my profile*'s *Mail* property.
+
+    ![Flow designer - hover to see dynamic content](../../../images/gs01-designer-hover-dynamic-content.png)
 
 18. Click *Save* to save the flow.
 
@@ -68,7 +78,11 @@ In order to test your flow, you can test it by adding a new item in SharePoint l
 
 2. In the *Test Flow* panel, click on *I'll perform the trigger action* and then click on *Save & Test* button.
 
+    ![Flow designer - hover to see dynamic content](../../../images/gs01-designer-test-flow.png)
+
 3. You should see a message that instructs to add a new list item to the SharePoint list you selected.
+
+    ![Flow designer - test flow message](../../../images/gs01-designer-test-flow-message.png)
 
 4. You should have the browser tab with the *Projects* list opened already. If not, open a new browser tab and browse to the *Projects* list.
     > Do not close the flow designer. Make sure you keep the flow designer browser tab open.
@@ -80,6 +94,8 @@ In order to test your flow, you can test it by adding a new item in SharePoint l
 6. Switch to the flow designer tab.
 
 7. You should see the flow run history. If all of the actions were executed successfully, you will a green checkmark icon besides every action.
+
+    ![Flow designer - flow run history](../../../images/gs01-designer-test-flow-run.png)
 
 8. You can also click on the action to see the inputs and outputs used in the flow run. This is also a good place to see the actual values translated from those dynamic content properties used in that action.
 
@@ -100,9 +116,13 @@ In order to test your flow, you can test it by adding a new item in SharePoint l
 
 6. To add the owner information, search for *owner* in the search box in the *dynamic content* list.
 
+    ![Flow designer - add owner dynamic content](../../../images/gs01-designer-append-owner-dynamic-content.png)
+
 7. In the results, click on *Owner DisplayName*. As you can see, it also displays other information such as email, job title, picture and more. Since the *Owner* is a person column in SharePoint, SharePoint passes along the person details as individual properties to the flow.
 
 8. The modified *Body* input should now look like this with the included *Owner* information.
+
+    ![Flow designer - add owner dynamic content](../../../images/gs01-designer-email-body-with-owner.png)
 
 9. Repeat the steps to test the flow.
 

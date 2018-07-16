@@ -370,8 +370,8 @@
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
-  - name: What's new for developers in SharePoint
-    href: general-development/what-s-new-for-developers-in-sharepoint.md  
+  - name: What's new for developers in SharePoint 2019
+    href: general-development/sharepoint-2019-development-platform.md  
   - name: SharePoint glossary
     href: general-development/sharepoint-glossary.md  
   - name: Protocol handler error in SharePoint 2016
@@ -1329,6 +1329,8 @@
         items:
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
+        - name: Page layout mapping
+          href: transform/modernize-userinterface-site-pages-layout.md
         - name: Page transformation API
           href: transform/modernize-userinterface-site-pages-api.md
     - name: Modernize customizations
@@ -4820,3 +4822,5 @@
     href: https://twitter.com/officedev
   - name: SharePoint developer forum
     href: http://aka.ms/spdev-community
+- name: Tutorials
+  href: training/training.md
