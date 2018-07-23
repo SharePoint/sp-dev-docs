@@ -35,6 +35,7 @@ This example applies the class `sp-field-severity--severeWarning` to a list view
 
 ```JSON
 {
+  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
    "additionalRowClass": {
          "operator": "?",
          "operands": [
@@ -58,6 +59,7 @@ This example was adopted from a column formatting example, [Conditional formatti
 
 ```JSON
 {
+  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "additionalRowClass": {
     "operator": "?",
     "operands": [
@@ -147,16 +149,13 @@ This example uses the `rowFormatter` element, which totally overrides the render
 
 ```JSON
 {
+  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "hideSelection": "true",
   "hideListHeader": "true",
   "rowFormatter": {
     "elmType": "div",
-    "style": {
-      "padding": "12px",
-      "overflow": "hidden",
-      "border-radius": "2px",
-      "box-shadow": "0 1.6px 3.6px 0 #dddddd, 0 0.3px 0.9px 0 #e3e3e3",
-      "margin-bottom": "12px"
+    "attributes": {
+      "class": "sp-row-card"
     },
     "children": [
       {
@@ -167,19 +166,17 @@ This example uses the `rowFormatter` element, which totally overrides the render
         "children": [
           {
             "elmType": "div",
-            "style": {
-              "font-size": "16px",
-              "font-weight": "600",
-              "padding-bottom": "8px"
+            "attributes": {
+              "class": "sp-row-title"
             },
             "txtContent": "[$Title]"
           },
           {
             "elmType": "div",
-            "txtContent": "[$Feedback]",
-            "style": {
-              "padding-bottom": "4px"
-            }
+            "attributes": {
+              "class": "sp-row-listPadding"
+            },
+            "txtContent": "[$Feedback]"
           },
           {
             "elmType": "button",
@@ -187,16 +184,10 @@ This example uses the `rowFormatter` element, which totally overrides the render
               "action": "defaultClick"
             },
             "txtContent": "Give feedback",
+            "attributes": {
+              "class": "sp-row-button"
+            },
             "style": {
-              "cursor": "pointer",
-              "font-weight": "600",
-              "background-color": "#f4f4f4",
-              "border": "1px solid transparent",
-              "margin-top": "4px",
-              "padding": "0 16 0 16px",
-              "height": "32px",
-              "border-radius": "2px",
-              "box-shadow": "0 0 0 0 #ffffff",
               "display": {
                 "operator": "?",
                 "operands": [
@@ -232,7 +223,7 @@ Creating custom view formatting JSON from scratch is simple if you understand th
 
    ```JSON
     {
-    "$schema": "http://listformatting.sharepointpnp.com/viewFormattingSchema.json"
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json"
     }
    ```
 
