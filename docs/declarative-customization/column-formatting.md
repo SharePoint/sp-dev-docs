@@ -91,58 +91,32 @@ The following image shows an example of conditional formatting applied to a numb
 
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
-This example uses the conditional operator `?` to apply a class (`sp-field-severity--warning`) to the parent `<div />` element when the value in the current field is less than or equal to 70. This causes the field to be highlighted when the value is less than or equal to 70, and appear normally if it's greater than 70.
+This example uses an Excel-style conditional expression (`=if`) to apply a class (`sp-field-severity--warning`) to the parent `<div />` element when the value in the current field is less than or equal to 70. This causes the field to be highlighted when the value is less than or equal to 70, and appear normally if it's greater than 70.
 
 ```JSON
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-    "debugMode": true,
-    "elmType": "div",
-    "attributes": {
-       "class": {
-          "operator": "?",
-          "operands": [
-             {
-                "operator": "<=",
-                "operands": [
-                   "@currentField",
-                   70
-                ]
-             },
-             "sp-field-severity--warning",
-             ""
-          ]
-       }
+  "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+  "debugMode": true,
+  "elmType": "div",
+  "attributes": {
+    "class": "=if(@currentField <= 70,'sp-field-severity--warning', '')"
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "style": {
+        "display": "inline-block",
+        "padding": "0 4px"
+      },
+      "attributes": {
+        "iconName": "=if(@currentField <= 70,'Error', '')"
+      }
     },
-    "children": [
-        {
-            "elmType": "span",
-            "style": {
-                "display": "inline-block",
-                "padding": "0 4px"
-            },
-            "attributes": {
-                "iconName": {
-                    "operator": "?",
-                    "operands": [
-                        {
-                            "operator": "<=",
-                            "operands": [
-                                "@currentField",                  
-                                70
-                            ]
-                        },
-                        "Error",
-                        ""
-                    ]
-                }
-            }
-        },
-        {
-            "elmType": "span",
-            "txtContent": "@currentField"
-        }
-    ]
+    {
+      "elmType": "span",
+      "txtContent": "@currentField"
+    }
+  ]
 }
 ```
 
@@ -158,174 +132,29 @@ This pattern is useful when you want different values to map to different levels
 
 ```JSON
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-    "debugMode": true,
-    "elmType": "div",
-    "attributes": {
-        "class": {
-            "operator": "?",
-            "operands": [
-                {
-                    "operator": "==",
-                    "operands": [
-                        {
-                            "operator": "toString()",
-                            "operands": [
-                                "@currentField"
-                            ]
-                        },
-                        "Done"
-                    ]
-                },
-                "sp-field-severity--good",
-                {
-                    "operator": "?",
-                    "operands": [
-                        {
-                            "operator": "==",
-                            "operands": [
-                                {
-                                    "operator": "toString()",
-                                    "operands": [
-                                        "@currentField"
-                                    ]
-                                },
-                                "In progress"
-                            ]
-                        },
-                        "sp-field-severity--low",
-                        {
-                            "operator": "?",
-                            "operands": [
-                                {
-                                    "operator": "==",
-                                    "operands": [
-                                        {
-                                            "operator": "toString()",
-                                            "operands": [
-                                                "@currentField"
-                                            ]
-                                        },
-                                        "In review"
-                                    ]
-                                },
-                                "sp-field-severity--warning",
-                                {
-                                    "operator": "?",
-                                    "operands": [
-                                        {
-                                            "operator": "==",
-                                            "operands": [
-                                                {
-                                                    "operator": "toString()",
-                                                    "operands": [
-                                                        "@currentField"
-                                                    ]
-                                                },
-                                                "Blocked"
-                                            ]
-                                        },
-                                        "sp-field-severity--severeWarning",
-                                        "sp-field-severity--blocked"
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
+  "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+  "debugMode": true,
+  "elmType": "div",
+  "attributes": {
+    "class": "=if(@currentField == 'Done', 'sp-field-severity--good', if(@currentField == 'In progress', 'sp-field-severity--low' ,if(@currentField == 'In review','sp-field-severity--warning', if(@currentField == 'Blocked','sp-field-severity--severeWarning', 'sp-field-severity--blocked'))"
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "style": {
+        "display": "inline-block",
+        "padding": "0 4px"
+      },
+      "attributes": {
+        "iconName": "=if(@currentField == 'Done','CheckMark', if(@currentField == 'In progress', 'Forward', if(@currentField == 'In review', 'Error', if(@currentField == 'Has issues','Warning','ErrorBadge')"
+      }
     },
-    "children": [
-        {
-            "elmType": "span",
-            "style": {
-                "display": "inline-block",
-                "padding": "0 4px"
-            },
-            "attributes": {
-                "iconName": {
-                    "operator": "?",
-                    "operands": [
-                        {
-                            "operator": "==",
-                            "operands": [
-                                {
-                                    "operator": "toString()",
-                                    "operands": [
-                                        "@currentField"
-                                    ]
-                                },
-                                "Done"
-                            ]
-                        },
-                        "CheckMark",
-                        {
-                            "operator": "?",
-                            "operands": [
-                                {
-                                    "operator": "==",
-                                    "operands": [
-                                        {
-                                            "operator": "toString()",
-                                            "operands": [
-                                                "@currentField"
-                                            ]
-                                        },
-                                        "In progress"
-                                    ]
-                                },
-                                "Forward",
-                                {
-                                    "operator": "?",
-                                    "operands": [
-                                        {
-                                            "operator": "==",
-                                            "operands": [
-                                                {
-                                                    "operator": "toString()",
-                                                    "operands": [
-                                                        "@currentField"
-                                                    ]
-                                                },
-                                                "In review"
-                                            ]
-                                        },
-                                        "Error",
-                                        {
-                                            "operator": "?",
-                                            "operands": [
-                                                {
-                                                    "operator": "==",
-                                                    "operands": [
-                                                        {
-                                                            "operator": "toString()",
-                                                            "operands": [
-                                                                "@currentField"
-                                                            ]
-                                                        },
-                                                        "Has issues"
-                                                    ]
-                                                },
-                                                "Warning",
-                                                "ErrorBadge"
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "elmType": "span",
-            "txtContent": "@currentField"
-        }
-    ]
+    {
+      "elmType": "span",
+      "txtContent": "@currentField"
+    }
+  ]
 }
-
 ```
 
 ## Apply formatting based on date ranges
@@ -345,25 +174,13 @@ This example colors the current field red when the value inside an item's DueDat
 
 ```JSON
 {
-
-   "elmType": "div",
-   "txtContent": "@currentField",
-   "style": {
-      "color": {
-         "operator": "?",
-         "operands": [
-            {
-               "operator": "<=",
-               "operands": [
-                  "[$DueDate]",
-                  "@now"
-               ]
-            },
-            "#ff0000",
-            ""
-         ]
-      }
-   }
+  "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+  "elmType": "div",
+  "debugMode": true,
+  "txtContent": "@currentField",
+  "style": {
+    "color": "=if([$DueDate] <= @now, '#ff0000', ''"
+  }
 }
 ```
 
@@ -514,7 +331,7 @@ The following image shows a number column formatted as a data bar.
 
 ![Effort list with number list items shown as bars](../images/sp-columnformatting-databars.png)
 
-This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 20, and `(@currentField * 5)%` when the value is less than 10. This achieves a width of 5% for the data bar for values of 1, 10% for values of 2, and so on. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and the multiplier (`5`) to specify how much the bar should grow depending on the value inside the field.
+This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 95, and `(@currentField * 100 / 95)%` otherwise. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and change the equation to specify how much the bar should grow depending on the value inside the field.
 
 ```JSON
 {
@@ -522,40 +339,10 @@ This example applies `background-color` and `border-top` styles to create a data
   "elmType": "div",
   "txtContent": "@currentField",
   "attributes": {
-   "class": "sp-field-dataBars"
+    "class": "sp-field-dataBars"
   },
   "style": {
-    "width": {
-      "operator": "?",
-      "operands": [
-        {
-          "operator": ">",
-          "operands": [
-            "@currentField",
-            "20"
-          ]
-        },
-        "100%",
-        {
-          "operator": "+",
-          "operands": [
-            {
-              "operator": "toString()",
-              "operands": [
-                {
-                  "operator": "*",
-                  "operands": [
-                    "@currentField",
-                    5
-                  ]
-                }
-              ]
-            },
-            "%"
-          ]
-        }
-      ]
-    }
+    "width": "=if(@currentField > 95, '100%', toString(@currentField * 100 / 95) + '%'"
   }
 }
 ```
