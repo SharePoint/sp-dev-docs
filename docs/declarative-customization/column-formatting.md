@@ -993,9 +993,36 @@ An optional property that specifies child elements of the element specified by `
 
 An optional property that is meant for debugging. It outputs error messages and logs warnings to the console. 
 
-### Expression object
+### Expressions
 
 Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects. 
+
+#### Excel-style expressions
+
+All Excel-style expressions begin with an equal (`=`) sign.  
+
+This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to \`\` otherwise:
+```JSON
+=if(@me != [$Author.email], 'none', '') 
+```
+
+More complex if/else statements can be written like this:
+```JSON
+=if([$Sentiment] <= 0.3, 'sp-field-severity--blocked', if([$Sentiment] < 0.9,'sp-field-severity--warning','sp-field-severity--good')) 
+```
+
+Non-conditional operators that take one or two operands can be written like this:
+```JSON
+=[$foo] * -7 
+```
+```JSON
+=sin(@currentField) 
+```
+```JSON
+=toString(60 + (sin(6.2831853 * @currentField) * 60)) 
+```
+
+#### Abstract Syntax Tree expressions
 
 The following example shows an Expression object that performs the following expression:
 
