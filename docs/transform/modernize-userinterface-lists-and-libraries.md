@@ -17,17 +17,19 @@ You can't yet transform all lists and libraries to the modern experience because
 
 ## List templates available in the modern user interface
 
-Following are the most commonly used list template types that SharePoint can currently render in a modern user interface (as of March 2018):
+Following are the most commonly used list template types that SharePoint can currently render in a modern user interface (as of July 2018):
 
 - List (100)
 - Document Library (101)
 - Links list (103)
 - Announcements list (104)
+- Contacts list (105)
 - Picture library (109)
 - Form library (115)
 - Site pages library (119)
 - Promoted links list (170)
 - Assets library (851)
+- Issue tracking list (1100)
 
 > [!NOTE]
 > Microsoft is adding modern user interface support for more and more list template types. If your adoption of the modern list and library user interface is blocked due to a key missing list template type, let us know via [UserVoice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration).
