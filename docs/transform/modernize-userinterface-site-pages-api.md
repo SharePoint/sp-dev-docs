@@ -4,7 +4,7 @@
 
 The default page transformation configuration (webpartmapping.xml) uses built-in functions and selectors to drive the mapping from classic web parts to modern 1st party and 3rd party web parts. This page lists all the available functions.
 
-> [!Note]
+> [!NOTE]
 > This page is auto-generated, if you see issues please create a PR against the respective Transformation framework code base.
 
 ## Functions
@@ -359,3 +359,21 @@ Name|Description
 :-----|:----------
 Link|If the link was not empty
 Content|If no link was specified
+### ContentByQuerySelector
+
+**Description:** Analyzes a list and returns if the list can be transformed.
+
+**Example:** `ContentByQuerySelector({ListGuid},{ListName})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{ListGuid}|Guid of the list used by the CBQ web part
+{ListName}|Name of the list used by the CBQ web part
+#### Output values
+
+Name|Description
+:-----|:----------
+Default|Transform the list
+NoTransformation|Don't transform the list
