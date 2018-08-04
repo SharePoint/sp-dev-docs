@@ -171,6 +171,17 @@ Headers:
 
 <br/>
 
+### Lookup Column Changes
+
+When refering to a lookup column inside a list using REST API, use the display name of the lookup column instead of the internal name.
+
+```
+http://site url/_api/web/lists/getbytitle('ListName')/Items?&$filter=LookupColumnId eq 1
+
+```
+
+<br/>
+
 <a name="ListItems"> </a>
 
 ## Working with list items by using REST
