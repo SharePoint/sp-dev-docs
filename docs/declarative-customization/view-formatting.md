@@ -36,20 +36,7 @@ This example applies the class `sp-field-severity--severeWarning` to a list view
 ```JSON
 {
   "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
-   "additionalRowClass": {
-         "operator": "?",
-         "operands": [
-            {
-               "operator": "<=",
-               "operands": [
-                  "[$DueDate]",
-                  "@now"
-               ]
-            },
-            "sp-field-severity--severeWarning",
-            ""
-         ]
-      }
+   "additionalRowClass": "=if([$DueDate] <= @now, 'sp-field-severity--severeWarning', ''"
 }
 ```
 
@@ -60,79 +47,7 @@ This example was adopted from a column formatting example, [Conditional formatti
 ```JSON
 {
   "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
-  "additionalRowClass": {
-    "operator": "?",
-    "operands": [
-      {
-        "operator": "==",
-        "operands": [
-          {
-            "operator": "toString()",
-            "operands": [
-              "[$Status]"
-            ]
-          },
-          "Done"
-        ]
-      },
-      "sp-field-severity--good",
-      {
-        "operator": "?",
-        "operands": [
-          {
-            "operator": "==",
-            "operands": [
-              {
-                "operator": "toString()",
-                "operands": [
-                  "[$Status]"
-                ]
-              },
-              "In progress"
-            ]
-          },
-          "sp-field-severity--low",
-          {
-            "operator": "?",
-            "operands": [
-              {
-                "operator": "==",
-                "operands": [
-                  {
-                    "operator": "toString()",
-                    "operands": [
-                      "[$Status]"
-                    ]
-                  },
-                  "In review"
-                ]
-              },
-              "sp-field-severity--warning",
-              {
-                "operator": "?",
-                "operands": [
-                  {
-                    "operator": "==",
-                    "operands": [
-                      {
-                        "operator": "toString()",
-                        "operands": [
-                          "[$Status]"
-                        ]
-                      },
-                      "Blocked"
-                    ]
-                  },
-                  "sp-field-severity--severeWarning",
-                  "sp-field-severity--blocked"
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "additionalRowClass": "=if([$Status] == 'Done', 'sp-field-severity--good', if([$Status] == 'In progress', 'sp-field-severity--low' ,if([$Status] == 'In review','sp-field-severity--warning', if([$Status] == 'Blocked','sp-field-severity--blocked', ''))"
 }
 ```
 
@@ -151,7 +66,7 @@ This example uses the `rowFormatter` element, which totally overrides the render
 {
   "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "hideSelection": "true",
-  "hideListHeader": "true",
+  "hideColumnHeader": "true",
   "rowFormatter": {
     "elmType": "div",
     "attributes": {
@@ -256,6 +171,6 @@ Optional element.  Specifies whether the ability to select rows in the view is d
 
 `hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
-### hideListHeader
+### hideColumnHeader
 
 Optional element.  Specifies whether the column headers in the view are hidden or not.  *false* is the default behavior inside a list view.  *true* means that the view will not display column headers.
