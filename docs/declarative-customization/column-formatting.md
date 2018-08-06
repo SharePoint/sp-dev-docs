@@ -136,7 +136,7 @@ This pattern is useful when you want different values to map to different levels
   "debugMode": true,
   "elmType": "div",
   "attributes": {
-    "class": "=if(@currentField == 'Done', 'sp-field-severity--good', if(@currentField == 'In progress', 'sp-field-severity--low' ,if(@currentField == 'In review','sp-field-severity--warning', if(@currentField == 'Blocked','sp-field-severity--severeWarning', 'sp-field-severity--blocked'))"
+    "class": "=if(@currentField == 'Done', 'sp-field-severity--good', if(@currentField == 'In progress', 'sp-field-severity--low' ,if(@currentField == 'In review','sp-field-severity--warning', if(@currentField == 'Blocked','sp-field-severity--blocked', ''))"
   },
   "children": [
     {
@@ -146,7 +146,7 @@ This pattern is useful when you want different values to map to different levels
         "padding": "0 4px"
       },
       "attributes": {
-        "iconName": "=if(@currentField == 'Done','CheckMark', if(@currentField == 'In progress', 'Forward', if(@currentField == 'In review', 'Error', if(@currentField == 'Has issues','Warning','ErrorBadge')"
+        "iconName": "=if(@currentField == 'Done','CheckMark', if(@currentField == 'In progress', 'Forward', if(@currentField == 'In review', 'Error', if(@currentField == 'Has issues','Warning','')"
       }
     },
     {
@@ -266,13 +266,7 @@ This example shows how to turn a text field that contains stock ticker symbols i
    "txtContent": "@currentField",
    "attributes": {
       "target": "_blank",
-      "href": {
-         "operator": "+",
-         "operands": [
-            "http://finance.yahoo.com/quote/",
-            "@currentField"
-         ]
-      }
+      "href": "='http://finance.yahoo.com/quote/' + @currentField"
    }
 }
 ```
@@ -761,14 +755,8 @@ Any other attribute name will result in an error. Attribute values can either be
 
 ```JSON
 {
-   "target": "_blank",
-   "href": {
-      "operator": "+",
-      "operands": [
-         "http://finance.yahoo.com/quote/",
-         "@currentField"
-      ]
-   }
+	"target": "_blank",
+	"href": "='http://finance.yahoo.com/quote/' + @currentField"
 }
 ```
 
@@ -811,7 +799,7 @@ Non-conditional operators that take one or two operands can be written like this
 
 #### Abstract Syntax Tree expressions
 
-The following example shows an Expression object that performs the following expression:
+The following example contains an Expression object that performs the following expression:
 
 `(@currentField > 40) ? '100%' : (((@currentField * 2.5).toString() + '%')`
 
