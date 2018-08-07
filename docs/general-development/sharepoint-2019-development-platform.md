@@ -30,7 +30,7 @@ This article contains preliminary details around supported development capabilit
 * Site collection app catalog
 * "Tenant" properties
 
-Supported SharePoint Framework version for the SharePoint 2019 will be SharePoint Framework v1.4. SharePoint Framework Yeoman generator will be updated to have this option included in the version selection. 
+Supported SharePoint Framework version for the SharePoint 2019 will be SharePoint Framework v1.4.1. SharePoint Framework Yeoman generator will be updated to have this option included in the version selection. 
 
 > [!NOTE] 
-> If you need to write SharePoint Framework components for SharePoint 2019 before Yeoman generator is updated, you can install SharePoint Framework 1.4 and use that as the generator for your SharePoint 2019 components. 
+> If you need to write SharePoint Framework components for SharePoint 2019 before Yeoman generator is updated, you can install SharePoint Framework 1.4.1 and use that as the generator for your SharePoint 2019 components. You should use the 'Online' option in this case, when the environment question is asked in the Yeoman solution flow.
