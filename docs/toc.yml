@@ -87,12 +87,12 @@
         href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
       - name: Host extension from CDN
         href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
-      - name: Configure extension icon
-        href: spfx/extensions/basics/configure-extension-icon.md        
       - name: Build Field Customizer
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md        
     - name: Migrate existing customizations
       items:
       - name: Client Side Rendering (JSLink)
