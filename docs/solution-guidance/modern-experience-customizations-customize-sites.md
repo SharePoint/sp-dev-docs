@@ -51,7 +51,7 @@ In numerous areas on the "modern" team sites, the typical customizations are not
 - Changing "modern" site to use "classic" seattle.master or oslo.master.
 - Custom page layouts; we are looking to have support for multiple canvases in the future.
 - Enabling site or site collection scoped publishing features; technically, features can be currently activated, but this is not a supported configuration.
-- User custom actions / custom JavaScript; there will be a more controlled way to embed JavaScript on the pages through the SharePoint Framework Extensions (currently in dev preview).
+- User custom actions / custom JavaScript; there will be a more controlled way to embed JavaScript on the pages through [SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
 - "Modern" subsites; subsites created on "modern" team sites use the "classic" experience, but you can change the user experience to be similar to "modern" sites.
 - Ability to control available subsite template options.
 - "Classic" publishing features (WCM).
