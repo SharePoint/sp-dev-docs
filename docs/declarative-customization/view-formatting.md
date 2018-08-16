@@ -65,8 +65,8 @@ This example uses the `rowFormatter` element, which totally overrides the render
 ```JSON
 {
   "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
-  "hideSelection": "true",
-  "hideColumnHeader": "true",
+  "hideSelection": true,
+  "hideColumnHeader": true,
   "rowFormatter": {
     "elmType": "div",
     "attributes": {
