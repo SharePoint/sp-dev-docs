@@ -214,7 +214,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
 Now that we have successfully tested the out-of-the-box starting point of the Field Customizer, let's modify the logic slightly to have a more polished rendering of the field value. 
 
-1. Open the **HelloWorld.module.scss** file in the **src\extensions\helloWorld** folder, and update the styling definition as follows.
+1. Open the **HelloWorldFieldCustomizer.module.scss** file in the **src\extensions\helloWorld** folder, and update the styling definition as follows.
 
     ```
     .HelloWorld {
