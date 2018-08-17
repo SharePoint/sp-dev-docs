@@ -6,7 +6,7 @@ ms.date: 08/21/2018
 
 # Calling Microsoft Flow from a site script
 
-Site designs are a powerful extensibility mechanism for customizing - and standardizing - the look and feel of your site collections. One of the script actions - **triggerFlow** - can be used to call custom solutions to apply configurations we don't support natively.
+Site designs are a powerful extensibility mechanism for customizing - and standardizing - the look and feel of your site collections. One of the script actions - **triggerFlow** - can be used to call custom solutions to apply configurations we don't support natively. Flow can also be used for business automation - in this case, used with site designs to track the creation of sites!
 
 This article describes how to build a simple site directory using a site design and Microsoft Flow. Whenever a site is created using this site design, details of the site are captured and written to a list. 
 
