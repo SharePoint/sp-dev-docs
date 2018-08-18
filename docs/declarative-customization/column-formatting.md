@@ -477,6 +477,7 @@ The following are not currently supported:
 * Filename (in Document Libraries)
 * Calculated
 * Retention Label
+* Currency
 
 ## Style guidelines
 
@@ -496,6 +497,10 @@ You can use the following predefined classes for several common scenarios.
 | sp-field-trending--up |![Green arrow with number 500](../images/sp-columnformatting-trendingup.png) |
 | sp-field-trending--down |![Red arrow with number 100](../images/sp-columnformatting-trendingdown.png) |
 | sp-field-quickAction |![Name with mail icon](../images/sp-columnformatting-quickaction.png) |
+
+> Note - The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
+
+In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/icons). 
 
 ### Predefined icons
 
@@ -522,6 +527,8 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 > [!TIP]
 > At any point, select **Ctrl**+**Space** to have Visual Studio Code offer suggestions for properties and values. For more information, see [Editing JSON with Visual Studio Code](https://code.visualstudio.com/Docs/languages/json).
 
+> [!TIP]
+> SharePoint Patterns and Practices provides a free web part, [Column Formatter](https://github.com/SharePoint/sp-dev-solutions/blob/master/solutions/ColumnFormatter/docs/documentation/docs/getting-started.md), that can be used to edit and apply formats directly in the browser.
 
 ## Detailed syntax reference
 
