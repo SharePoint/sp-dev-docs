@@ -326,6 +326,8 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
+    - name: Calling Microsoft Flow from a site script
+      href: declarative-customization/site-design-trigger-flow-tutorial.md               
     - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md         
   - name: Site theming
