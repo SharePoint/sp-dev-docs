@@ -91,9 +91,9 @@ For more information about the Yeoman SharePoint generator, see [Scaffold projec
 
 ## Install the developer certificate
 
-The client-side tool chain uses HTTPS endpoint by default, which means that it will also host the 'localhost' with SSL certificate. This simplifies development process with SharePoint Online as it's also hosted using HTTPS endpoint. 
+The client-side toolchain uses HTTPS endpoint by default, which means that it will also host the 'localhost' with SSL certificate. This simplifies development process with SharePoint Online as it's also hosted using HTTPS endpoint. 
 
-The SharePoint Framework tool chain comes with a developer certificate that you can install for building your custom solutions easily with HTTPS endpoint. To install the developer certificate, enter following command:
+The SharePoint Framework toolchain comes with a developer certificate that you can install for building your custom solutions easily with HTTPS endpoint. To install the developer certificate, enter following command:
 
   ```
   gulp trust-dev-cert
