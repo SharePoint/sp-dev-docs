@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 01/08/2018
+ms.date: 08/20/2018
 ms.prod: sharepoint
 ---
 
@@ -73,6 +73,7 @@ When the scaffold is complete, you should see the following message indicating a
 For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
 ### Using your favorite Code Editor
+
 Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your web part, such as:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -83,23 +84,18 @@ SharePoint Framework documentation uses Visual Studio code in the steps and exam
    
 ## Preview the web part
 
-To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. However, because a default certificate is not configured for the local dev environment, your browser reports a certificate error. The SPFx toolchain comes with a developer certificate that you can install for building web parts.
+To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. This setting can be configured in the **serve.json** file located in the **config** folder, but we do recommend using the default values.
 
-### To install the developer certificate and preview your web part
-
-1. Switch to your console, ensure that you are still in the **helloworld-webpart** directory, and then enter the following command:
-
-  ```
-  gulp trust-dev-cert
-  ```
-
-2. Now that we have installed the developer certificate, enter the following command in the console to build and preview your web part:
+Switch to your console, ensure that you are still in the **helloworld-webpart** directory, and then enter the following command:
 
   ```
   gulp serve
   ```
 
 This command executes a series of gulp tasks to create a local, node-based HTTPS server on `localhost:4321` and launches your default browser to preview web parts from your local dev environment.
+
+> [!NOTE]
+> If you are seeing issues with the certificate in browser, please see details on installing a developer certificate from the [Set up your development environment](../../set-up-your-development-environment.md) article.
 
 ![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
 
@@ -142,7 +138,7 @@ One of the new capabilities available to the property pane is to configure its u
 
 ## Web part project structure
 
-### To use Visual Studio Code to explore the web part project structure 
+### To use Visual Studio Code to explore the web part project structure
 
 1. In the console, break the processing by selecting Ctrl+C (in Windows).
 
@@ -176,9 +172,10 @@ export interface IHelloWorldWebPartProps {
 }
 ```
 
-This property definition is used to define custom property types for your web part, which is described in the property pane section later. 
+This property definition is used to define custom property types for your web part, which is described in the property pane section later.
 
 #### Web part render method
+
 The DOM element where the web part should be rendered is available in the **render** method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any: 
 
 ```typescript
@@ -205,7 +202,7 @@ This model is flexible enough so that web parts can be built in any JavaScript f
 
 #### Configure the Web part property pane
 
-The property pane is defined in the **HelloWorldWebPart** class. The **propertyPaneSettings** property is where you need to define the property pane.
+The property pane is defined in the **HelloWorldWebPart** class. The **getPropertyPaneConfiguration** property is where you need to define the property pane.
 
 When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the **render** method:
 
@@ -328,8 +325,8 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "7d5437ee-afc2-4e66-914b-80be5ace4056",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "fbcf2c6a-7df9-414c-b3f5-37cab6bb1280",
   "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
 
@@ -375,7 +372,7 @@ SharePoint Workbench is also hosted in SharePoint to preview and test your local
 1. Go to the following URL: `https://your-sharepoint-tenant.sharepoint.com/_layouts/workbench.aspx`
 
   > [!NOTE]
-  > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running the `gulp serve`command again.
+  > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running the `gulp serve`command again. See details on installing a developer certificate from the [Set up your development environment](../../set-up-your-development-environment.md) article.
 
   ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
 
@@ -396,9 +393,9 @@ Because you are still developing and testing your web part, there is no need to 
 
 ## Next steps
 
-Congratulations on getting your first Hello World web part running! 
+Congratulations on getting your first Hello World web part running!
 
 Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you are using that as editor). You can continue to let it run while you go to the next article.
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.
