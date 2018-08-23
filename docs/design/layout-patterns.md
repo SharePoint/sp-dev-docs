@@ -1,7 +1,7 @@
 ---
 title:  Layout patterns
 description: Common web part layout types and responsive patterns
-ms.date: 08/13/2018
+ms.date: 08/24/2018
 ---
 
 # Web part layouts
