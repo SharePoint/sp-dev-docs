@@ -116,7 +116,7 @@ Set-AzureADDirectorySetting -Id $currentSettings.Id -DirectorySetting $currentSe
 ```
 
 > [!NOTE]
-> Consider that it takes a while (about 1 hour or more) to have the settings updated in the UI of Office 365. However, it shouldn't be a big issue, because you shouldn't update the site classification settings very often.
+> It may take an hour or more to have the settings updated in the UI of Office 365.
 
 As you can see, you simply need to search for the Directory Setting with a **DisplayName** value of **Group.Unified**, and then you can update its setting values and apply the changes by using the **Set-AzureADDirectorySetting** cmdlet.
 
