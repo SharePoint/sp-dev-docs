@@ -1,54 +1,36 @@
 ---
 title:  SharePoint themes and colors
-description: Design principles that helped form the current SharePoint themes and color palette.
-ms.date: 01/24/2018
+description: Design principles that help form the current SharePoint themes and color palette.
+ms.date: 05/21/2018
 ---
 
 # SharePoint themes and colors
 
-Like the Microsoft brand palette, the SharePoint themes are designed to build on the Microsoft brand, while at the same time allow for flexibility to enliven our partnerships without dominating them. They reveal our shared goals and personality and reflect our diversity and ability to optimize the SharePoint experience.
+Like the Microsoft brand palette, the SharePoint themes are designed to build on the Microsoft brand, while at the same time allow for flexibility to enliven our partnerships without dominating them. They reveal our shared goals and personality, and they reflect our diversity and ability to optimize the SharePoint experience.
 
-<br/>
+## Main colors
 
-![SharePoint color palette, Red D13438, Orange CA5010, Green 10893E, Blue 0078D7, Purple 6B69D6, Gray 5D5A5B ](../images/design-theme-colors.png)
+The SharePoint color palette is now optimized for screens and devices. In addition, it is optimized to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
-## Themes
+![SharePoint color palette, Red A4262C, Orange CA5010, Gold 986f0b, Green 498205, Teal 038387, Blue 0078d4, Dark Blue 004e8c, Indigo 4f6bed, Plum 881798, Purple 8764B8, Cool Grey 69797e, Warm Grey 7a7574](../images/sharepoint-themes.png)
 
-The following design principles helped form the current SharePoint themes and color palette.
+## Neutral palette
 
-**Guided**. Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly. Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
+Neutral colors recede into the background to let our products shine. They allow brand colors to pop when we need to draw attention to content. When coupling neutrals with brand colors, make sure there is suitable contrast between them.
 
-**Smart and efficient**. Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
-
-**Professional**. Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
-
-**Accessible**. Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
-
-## Colors
-
-The SharePoint color palette has been optimized for screens and devices, and to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
-
-### Red
-
-![SharePoint color palette Red D1343](../images/themes-colors-red-theme.png)
-
-<br/>
-
+<br/> 
 <table>
 <tr>
-<td style="color:white; background-color:#751b1e">themeDarker: #751b1e</td>
+<td rowspan="13" style=""><img src="../images/sharepoint-neutralgreys.png" alt="Neutral greys" height="766" width="375"></img></td>
 <td style="color:white; background-color:#000000">black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#952226">themeDark: #952226</td>
 <td style="color:white; background-color:#212121">neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#c02b30">themeDarkAlt: #c02b30</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td style="color:white; background-color:#333333">neutralPrimary: #333333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#d13438">themePrimary: #d13438</td>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
@@ -58,292 +40,90 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#d6494d">themeSecondary: #d6494d</td>
 <td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#ecaaac">themeTertiary: #ecaaac</td>
+<td style="color:black; background-color:#d0d0d0">neutralQuaternary: #d0d0d0</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#dadada">neutralQuaternaryAlt: #dadada</td>
+</tr>
+<tr>
 <td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#f6d6d8">themeLight: #f6d6d8</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td></tr>
-<tr>
-<td style="color:black; background-color:#faebeb">themeLighter: #faebeb</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#fdf5f5">themeLighterAlt: #fdf5f5</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
-</tr>
-</table>
-
-<br/>
-
-### Orange
-
-![SharePoint color palette Orange CA5010](../images/themes-colors-orange-theme.png)
-
-<br/>
-
-<table>
-<tr>
-<td style="color:white; background-color:#6f2d09">themeDarker: #6f2d09</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#8d390b">themeDark: #8d390b</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#b5490f">themeDarkAlt: #b5490f</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
-</tr>
-<tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#ca5010">themePrimary: #ca5010</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#e55c12">themeSecondary: #e55c12</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#f6b28d">themeTertiary: #f6b28d</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#fbdac9">themeLight: #fbdac9</td>
 <td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#fdede4">themeLighter: #fdede4</td>
 <td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#fef6f1">themeLighterAlt: #fef6f1</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td style="color:black; background-color:#ffffff">white: #ffffff</td>
 </tr>
 </table>
-
 <br/>
 
-### Green
+## Shades and tints
 
-![SharePoint color palette Green 10893E](../images/themes-colors-green-theme.png)
+After you select a color, light and dark shades of the accent color are created based on HSB values of color luminosity. Web parts and apps can use shade variations to create visual hierarchy and provide an indication of interaction.
 
 <br/>
 
 <table>
 <tr>
-<td style="color:white; background-color:#094c23">themeDarker: #094c23</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#0c602c">themeDark: #0c602c</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#0f7c39">themeDarkAlt: #0f7c39</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
-</tr>
-<tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#10893e">themePrimary: #10893e</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#14a94e">themeSecondary: #14a94e</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#7aefa7">themeTertiary: #7aefa7</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#bff7d5">themeLight: #bff7d5</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#dffbea">themeLighter: #dffbea</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#effdf4">themeLighterAlt: #effdf4</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
-</tr>
-</table>
-
-<br/>
-
-### Blue
-
-![SharePoint color palette Blue 0078D7](../images/themes-colors-blue-theme.png)
-
-<br/>
-
-<table>
-<tr>
+<td rowspan="9" style=""><img src="../images/sharepoint-theme-primary.png" alt="Theme primary colors" height="531" width="375"></img></td>
 <td style="color:white; background-color:#004578">themeDarker: #004578</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#005a9e">themeDark: #005a9e</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#106ebe">themeDarkAlt: #106ebe</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#0078d7">themePrimary: #0078d7</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td style="color:white; background-color:#0078d4">themePrimary: #0078d4</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#2b88d8">themeSecondary: #2b88d8</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td style="color:black; background-color:#2b88d8">themeSecondary: #2b88d8</td>
 </tr>
 <tr>
 <td style="color:black; background-color:#71afe5">themeTertiary: #71afe5</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
 </tr>
 <tr>
 <td style="color:black; background-color:#c7e0f4">themeLight: #c7e0f4</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
 </tr>
 <tr>
 <td style="color:black; background-color:#deecf9">themeLighter: #deecf9</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
 <td style="color:black; background-color:#eff6fc">themeLighterAlt: #eff6fc</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
 </tr>
 </table>
 
 <br/>
 
-### Purple
 
-![SharePoint color palette Purple 6B69D6](../images/themes-colors-purple-theme.png)
+## Dark themes
 
-<br/>
+SharePoint includes a palette that supports dark themes. The SharePoint-provided colors guarantee accessible and legible experiences.
 
-<table>
-<tr>
-<td style="color:white; background-color:#27268a">themeDarker: #27268a</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#3230b0">themeDark: #3230b0</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#5250cf">themeDarkAlt: #5250cf</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
-</tr>
-<tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#6b69d6">themePrimary: #6b69d6</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#7a78da">themeSecondary: #7a78da</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#c1c0ee">themeTertiary: #c1c0ee</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#e1e1f7">themeLight: #e1e1f7</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#f0f0fb">themeLighter: #f0f0fb</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#f8f7fd">themeLighterAlt: #f8f7fd</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
-</tr>
-</table>
+![SharePoint dark theme color palette, Red EF6950, Yellow FFC83D, Green 00b294, Blue 3a96dd, Purple 9c89e9, Grey b1adab](../images/sharepoint-themes-dark.png)
 
-<br/>
+## Principles
 
-### Gray
+The following design principles helped form the current SharePoint themes and color palette.
 
-![SharePoint color palette Gray 5D5A5B](../images/themes-colors-gray-theme.png)
+### Guided
+Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly. Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
 
-<br/>
+### Smart and efficient
+Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
 
-<table>
-<tr>
-<td style="color:white; background-color:#323130">themeDarker: #323130</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#403e3d">themeDark: #403e3d</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#53504e">themeDarkAlt: #53504e</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
-</tr>
-<tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#5d5a58">themePrimary: #5d5a58</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#6d6a67">themeSecondary: #6d6a67</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#bbb9b8">themeTertiary: #bbb9b8</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#dfdedd">themeLight: #dfdedd</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#efeeee">themeLighter: #efeeee</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#f7f7f7">themeLighterAlt: #f7f7f7</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
-</tr>
-</table>
+### Professional
+Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
 
-<br/>
+### Accessible
+Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
 
 ## See also
 
