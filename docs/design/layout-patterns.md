@@ -18,7 +18,14 @@ Grid and filmstrip layouts are very much alike, they both use cards to showcase 
 
 The Grid reflows from in rows and columns from top to bottom. The Filmstrip display multiple items in a single row and caroesels to a new set of items.
 
-![TBD](../images/layouts_animation_tiles.gif)
+### Grid layout
+
+![Animated gif showing the Grid layout reflowing across breakpoints](../images/tbd)
+
+### Filmstrip layout
+
+![Animated gif showing the Filmstrip layout reflowing across breakpoints](../images/TBD)
+
 
 ## List
 
@@ -34,7 +41,7 @@ Want to Showcase content featuring really nice visuals? Go with Carousel layout.
 
 The Compact layout is designed to show content in a smaller format and works the best in a 1/3rd column. This layout can support a small image or icon and a few rows of text for a title, description and/or metadata.
 
-![TBD](../images/tbd.png)
+![Animated gif showing the Carousel layout reflowing across breakpoints](../images/layouts_animation_carousel.gif)
 
 
 
