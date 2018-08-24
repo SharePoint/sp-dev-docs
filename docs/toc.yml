@@ -365,6 +365,8 @@
     href: apis/alm-api-for-spfx-add-ins.md         
   - name: Column formatting
     href: declarative-customization/column-formatting.md   
+  - name: View formatting
+    href: declarative-customization/view-formatting.md       
   - name: Communication site
     href: apis/communication-site-creation-rest.md     
   - name: Shorter share links
