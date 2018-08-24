@@ -18,7 +18,7 @@ Grid and filmstrip layouts are very much alike, they both use cards to showcase 
 
 The Grid reflows from in rows and columns from top to bottom. The Filmstrip display multiple items in a single row and caroesels to a new set of items.
 
-![TBD](../images/tbd.png)
+![TBD](../images/layouts_animation_tiles.gif)
 
 ## List
 
