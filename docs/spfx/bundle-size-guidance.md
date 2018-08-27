@@ -133,7 +133,7 @@ export default class MyClass {
 
 To verify that dynamic import is happening, open up the `dist` folder after build and look for the dynamically loaded part as a separate JavaScript file. In the below image the moment library is split out.
 
-![](C:\repos\sp-dev-docs\docs\images\dynamic-bundling.png)
+![Multiple bundles](..\images\dynamic-bundling.png)
 
 Not every single file or library has to be dynamically imported. Instead choose an abstraction where everything needed for a certain scenario or capability is bundled together.
 
