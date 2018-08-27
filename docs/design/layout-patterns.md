@@ -22,18 +22,6 @@ The Grid reflows in rows and columns from top to bottom and can contain a few to
 
 ![Animated gif showing the Grid layout reflowing across breakpoints](../images/layouts_animation_grid.gif)
 
-<img id="grid" src="../images/Grid.png"/>
-
- <script>
-   var grid = document.getElementById('grid'),
-     grid_gif = '../images/layouts_animation_grid.gif';
-
-   grid.onclick = function() {
-     grid.src = layouts_animation_grid.gif;
-   }
-</script>
-
-
 ### Filmstrip layout
 
 The Filmstrip display multiple items in a single row and caroesels to a new set of items.
