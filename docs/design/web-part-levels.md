@@ -8,7 +8,7 @@ ms.date: 08/13/2018
 
 When designing a web part sometimes there is a need to have a secondary interaction level, for example an item in a list or a individual photo in a gallery. This article goes deeper into how to use secondary state toolbars, default commands, scale, and interactions states to select an individual item.
 
-Secondary web part configuration and toolbars follow the same patterns as single state web parts, such as Image or File viewer. Second level items can have their own toolbars and respective property pane to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be clear separation between configuration options in web part that have two levels. It is recommended to keep Source, Filtering and layout configuration at the 1st level and any additional options that pair with the web part as a whole. 
+Secondary web part configuration and toolbars follow the same patterns as single state web parts, such as Image or File viewer. Second level items can have their own toolbars and respective property pane to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be clear separation between configuration options in web parts that have two levels. It is recommended to keep Source, Filtering and Layout configuration at the 1st level and any additional options that effect the web part as a whole. 
 
 Some example web part to use as reference are:
 Image gallery
@@ -19,7 +19,7 @@ Quick links
 
 ## Secondary toolbars
 
-Secondary toolbar are used on individual items in a web part layout that need to support item level configuration in the property pane and other commands like move, to re-arrange items in a layout or to remove/delete an item. Custom commands can also be added in this toolbar that fit the needs of your web part..
+Secondary toolbar are used on individual items in a web part layout that need to support item level configuration in the property pane and other commands like move, to re-arrange items in a layout, or to remove/delete an item. Custom commands can also be added in this toolbar that fit the needs of your web part..
 
 ![Edit state of Image Gallery web part with property pane open](../images/02_WebpartLevels_SecondLevel.png)
 
@@ -35,7 +35,7 @@ Below is an example from an individual 2nd level item in the Image gallery web p
 
 Edit Item Level – opens the property pane with specific item level configuration options. Note that the bounding box stays in the active/selected state.
 
-Move – The transparency of the item drops to 65% and a drop shadow surrounds the item
+Move – The transparency of the item drops to 65% and a drop shadow surrounds the item.
 
 Remove – When the X Remove icon is selected the toolbar hides and the item fades out making room for the specific layout to reflow.
 
