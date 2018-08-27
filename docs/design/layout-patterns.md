@@ -8,7 +8,7 @@ ms.date: 08/24/2018
 
 SharePoint uses a number of different layout types for web parts. The most commonly used are grid, list, filmstrip, carousel and compact. Each one of these five layouts serves a different purpose depending on a page layout, breakpoints and content density. 
 
-When selecting a layout that works best for your web part consider the type of content you are displaying. Is it highly visual or rich in text and data. Determine how much space is needed on the page for enough content to be displayed. Consider trucating descriptions that may be lengthy to optimize for displaying more itmes to the end user. Remember that the property pane can be leveraged to let authors have control of how much content is displayed.
+When selecting a layout that works best for your web part consider the type of content you are displaying. Is it highly visual or rich in text and data. Determine how much space is needed on the page for enough content to be displayed. Consider trucating descriptions that may be lengthy to optimize for displaying more itmes to the end user. Remember that the [property pane](reactive-and-nonreactive-web-parts.md) can be leveraged to let authors have control of how much content is displayed.
 
 ![Carousel with icons representing the common layouts](../images/01_Layouts_webparts.png)
 
