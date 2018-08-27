@@ -25,13 +25,14 @@ The Grid reflows in rows and columns from top to bottom and can contain a few to
 <img id="grid" src="../images/Grid.png"/>
 
  <script>
-   var grid = document.getElementById('gird'),
+   var grid = document.getElementById('grid'),
      grid_gif = '../images/layouts_animation_grid.gif';
 
    grid.onclick = function() {
-     grid.src = ../images/layouts_animation_grid.gif;
+     grid.src = layouts_animation_grid.gif;
    }
 </script>
+
 
 ### Filmstrip layout
 
