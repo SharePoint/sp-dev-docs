@@ -6,13 +6,13 @@ ms.date: 08/24/2018
 
 # Web part icons
 
-Web Part icons are designed to be simple, representative, and symbolic. Every icon is reduced to a minimalistic style to represent the essential attribute. Icons will display in the toolbox within SharePoint pages and optionally in the store.
+Web Part icons are designed to be simple, representative, and symbolic. Every icon is reduced to a minimalistic style to represent the most essential attributes. Icons will display in the toolbox within SharePoint pages and optionally in the store.
 
 ![Icon examples](../images/01_Icons_examples.png)
 
 ## Grid keyline shapes
 
-Web parts icons are displayed at 32x32 px. Create icons at 100% to ensure pixels are accurate. 
+Web parts icons are displayed at 32x32 px but designed at 2x the size or 64x64px. Create icons at 100% to ensure pixels are accurate. 
 
 ![Web part icon grid](../images/02_Icons_sizes.png)
 
