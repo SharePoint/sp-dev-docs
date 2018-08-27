@@ -111,8 +111,6 @@
       href: spfx/team-based-development-on-sharepoint-framework.md
     - name: Governance considerations
       href: spfx/web-parts/guidance/governance-considerations.md
-    - name: Bundle size guidance
-      href: spfx/bundle-size-guidance.md
   - name: External libraries
     items:
     - name: Add external libraries
