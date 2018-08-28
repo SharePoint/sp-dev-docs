@@ -286,6 +286,8 @@
         href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
       - name: Work with folders and files
         href: sp-add-ins/working-with-folders-and-files-with-rest.md
+      - name: Retrieve the URL of the tenant app catalog
+        href: sp-add-ins/retrieve-tenant-app-catalog-url-rest.md
       - name: Determine endpoint URIs
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
       - name: Use OData query operations
