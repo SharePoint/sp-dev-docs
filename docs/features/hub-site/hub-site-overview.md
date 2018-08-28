@@ -6,9 +6,6 @@ ms.date: 4/20/2018
 
 # SharePoint hub sites overview
 
-> [!IMPORTANT]
-> The SharePoint hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
-
 SharePoint hub sites connect and organize sites based on organizational attributes such as project, department, division, or region. You can use PowerShell cmdlets or the SharePoint REST API to automate tasks such as creating, removing, or controlling permissions for hub sites.
 
 For more information about SharePoint hub sites, see [What is a SharePoint hub site](https://go.microsoft.com/fwlink/?linkid=869149).

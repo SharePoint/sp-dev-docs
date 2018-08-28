@@ -7,7 +7,7 @@ ms.date: 4/27/2018
 # Work with sites in a Multi-Geo environment
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 SharePoint sites span the default and satellite geo locations of a Multi-Geo tenant. When your custom solution needs to work with SharePoint sites, and when you deploy applications, it's important to be aware of the geo locations in your Multi-Geo tenant. 
 

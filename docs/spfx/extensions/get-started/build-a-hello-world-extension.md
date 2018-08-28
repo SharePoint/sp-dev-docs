@@ -52,6 +52,7 @@ You can also follow the steps in this article by watching the video on the Share
     * Accept the default **HelloWorld** as your extension name, and select Enter.
     * Accept the default **HelloWorld description** as your extension description, and select Enter.
 
+
     <br/>
 
     ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-yeoman-app-prompts.png)
@@ -157,6 +158,8 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
     ```json
     contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
     ```
+
+> Alternatively, you can create serve configuration entries in the `config/serve.json` file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
 
 5. Select **Load debug scripts** to continue loading scripts from your local host.
 

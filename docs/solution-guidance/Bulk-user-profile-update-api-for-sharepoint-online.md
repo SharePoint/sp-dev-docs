@@ -123,6 +123,11 @@ The following are restrictions on individual source data files:
 - Maximum number of properties: 500,000
 - The source file must be uploaded to the same SharePoint Online tenant where the process is started.
 
+> [!NOTE] 
+> The update file must have the Byte Order Mark (BOM) specified if any characters are not part of the Western European encoding (iso-8859-1) which is the default. International characters may not be interpreted correctly with the default encoding, so it is recommended to use the UTF-8 encoding. This encoding has a BOM of 'EF BB BF' in hex. This would be placed at the beginning of the byte array of the file when creating the file stream. If using a text editor, select the endoding type as UTF-8 before saving.
+
+<br/>
+
 ## Queue the import process
 
 You can queue the CSOM API for the bulk import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later. 

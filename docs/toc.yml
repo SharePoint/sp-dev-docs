@@ -42,6 +42,8 @@
         href: spfx/web-parts/basics/configure-web-part-icon.md         
       - name: Using full-width column
         href: spfx/web-parts/basics/use-web-parts-full-width-column.md        
+      - name: Hide from the toolbox
+        href: spfx/web-parts/basics/hide-web-part-from-toolbox.md        
       - name: Preconfigure web parts
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
@@ -85,12 +87,12 @@
         href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
       - name: Host extension from CDN
         href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
-      - name: Configure extension icon
-        href: spfx/extensions/basics/configure-extension-icon.md        
       - name: Build Field Customizer
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md        
     - name: Migrate existing customizations
       items:
       - name: Client Side Rendering (JSLink)
@@ -113,6 +115,8 @@
       href: spfx/web-parts/guidance/governance-considerations.md
     - name: Guidance on dynamic loading of packages
       href: spfx/bundle-size-guidance.md
+    - name: Connecting components
+      href: spfx/dynamic-data.md      
   - name: External libraries
     items:
     - name: Add external libraries
@@ -170,6 +174,8 @@
       href: spfx/web-parts/guidance/localize-web-parts.md 
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md        
+    - name: Use preview capabilities
+      href: spfx/try-preview-capabilities.md           
   - name: Design
     href: design/design-guidance-overview.md
     items:
@@ -282,6 +288,8 @@
         href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
       - name: Work with folders and files
         href: sp-add-ins/working-with-folders-and-files-with-rest.md
+      - name: Retrieve the URL of the tenant app catalog
+        href: sp-add-ins/retrieve-tenant-app-catalog-url-rest.md
       - name: Determine endpoint URIs
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
       - name: Use OData query operations
@@ -296,6 +304,17 @@
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
       - name: Make batch requests
         href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+    - name: Migration API
+      href: apis/migration-api-overview.md
+      items:
+      - name: Azure container and queue
+        href: apis/migration-api-azure-container-and-queue.md
+      - name: Encryption
+        href: apis/migration-api-encryption.md
+      - name: Throttling
+        href: apis/migration-api-handling-trottling.md        
+      - name: Sharing
+        href: apis/migration-api-shared.md           
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
@@ -311,6 +330,8 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
+    - name: Calling Microsoft Flow from a site script
+      href: declarative-customization/site-design-trigger-flow-tutorial.md               
     - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md         
   - name: Site theming
@@ -348,6 +369,8 @@
     href: apis/alm-api-for-spfx-add-ins.md         
   - name: Column formatting
     href: declarative-customization/column-formatting.md   
+  - name: View formatting
+    href: declarative-customization/view-formatting.md       
   - name: Communication site
     href: apis/communication-site-creation-rest.md     
   - name: Shorter share links
@@ -355,8 +378,8 @@
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
-  - name: What's new for developers in SharePoint
-    href: general-development/what-s-new-for-developers-in-sharepoint.md  
+  - name: What's new for developers in SharePoint 2019
+    href: general-development/sharepoint-2019-development-platform.md  
   - name: SharePoint glossary
     href: general-development/sharepoint-glossary.md  
   - name: Protocol handler error in SharePoint 2016
@@ -1304,17 +1327,31 @@
       items:
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
+        items:
+        - name: Analyze and use the scanner data
+          href: transform/modernize-userinterface-lists-and-libraries-scanner.md
+        - name: Rollout approaches
+          href: transform/modernize-userinterface-lists-and-libraries-rollout.md
       - name: Transform classic pages to modern client-side pages
         href: transform/modernize-userinterface-site-pages.md
         items:
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
+        - name: Page layout mapping
+          href: transform/modernize-userinterface-site-pages-layout.md
+        - name: Page transformation API
+          href: transform/modernize-userinterface-site-pages-api.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md
     - name: Modernize site branding
       href: transform/modernize-branding.md
     - name: Connect to an Office 365 group
       href: transform/modernize-connect-to-office365-group.md
+      items:
+      - name: Analyze and use the scanner data
+        href: transform/modernize-connect-to-office365-group-scanner.md
+      - name: Site permissions after Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-permissions.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
@@ -1359,8 +1396,6 @@
         href: solution-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
       - name: Create UX controls
         href: solution-guidance/create-ux-controls-by-using-sharepoint-provider-hosted-add-ins.md
-      - name: Display information from a host site
-        href: solution-guidance/display-information-from-a-host-site-by-using-office-web-widgets.md
       - name: Improve performance
         href: solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
   - name: Customizing the "modern" experiences in SharePoint Online
@@ -4795,3 +4830,5 @@
     href: https://twitter.com/officedev
   - name: SharePoint developer forum
     href: http://aka.ms/spdev-community
+- name: Tutorials
+  href: training/training.md

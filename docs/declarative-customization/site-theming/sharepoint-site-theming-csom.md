@@ -79,7 +79,7 @@ public class SPOTheme 
 
 ## Applying a theme
 
-There's currently no supported API to programmatically apply a theme to a specific site.
+There's currently no supported CSOM API to programmatically apply a theme to a specific site. For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview)
 
 ## Methods/properties of the Microsoft.Online.SharePoint.TenantAdministration.Tenant class
 

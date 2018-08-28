@@ -188,6 +188,8 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
     contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
     ```
     
+> Alternatively, you can create serve configuration entries in the `config/serve.json` file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
+    
 10. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
     ![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)

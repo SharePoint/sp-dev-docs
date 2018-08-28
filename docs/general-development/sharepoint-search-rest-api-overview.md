@@ -499,8 +499,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;refiners='author,s
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'Refiners': {
-'results' : ['author,size']
+'Refiners': 'author,size',
 }
 }
 ```

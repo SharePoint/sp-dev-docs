@@ -55,6 +55,7 @@ The simplest column formatting is one that places the value of the field inside 
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField"
 }
@@ -66,6 +67,7 @@ Some field types require a bit of extra work to retrieve their values. Person fi
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.title"
 }
@@ -77,6 +79,7 @@ Lookup fields are also represented as objects; the display text is stored in the
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.lookupValue"
 }
@@ -91,58 +94,32 @@ The following image shows an example of conditional formatting applied to a numb
 
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
-This example uses the conditional operator `?` to apply a class (`sp-field-severity--warning`) to the parent `<div />` element when the value in the current field is less than or equal to 70. This causes the field to be highlighted when the value is less than or equal to 70, and appear normally if it's greater than 70.
+This example uses an Excel-style conditional expression (`=if`) to apply a class (`sp-field-severity--warning`) to the parent `<div />` element when the value in the current field is less than or equal to 70. This causes the field to be highlighted when the value is less than or equal to 70, and appear normally if it's greater than 70.
 
 ```JSON
 {
-    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
-    "debugMode": true,
-    "elmType": "div",
-    "attributes": {
-       "class": {
-          "operator": "?",
-          "operands": [
-             {
-                "operator": "<=",
-                "operands": [
-                   "@currentField",
-                   70
-                ]
-             },
-             "sp-field-severity--warning",
-             ""
-          ]
-       }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "debugMode": true,
+  "elmType": "div",
+  "attributes": {
+    "class": "=if(@currentField <= 70,'sp-field-severity--warning', '')"
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "style": {
+        "display": "inline-block",
+        "padding": "0 4px"
+      },
+      "attributes": {
+        "iconName": "=if(@currentField <= 70,'Error', '')"
+      }
     },
-    "children": [
-        {
-            "elmType": "span",
-            "style": {
-                "display": "inline-block",
-                "padding": "0 4px"
-            },
-            "attributes": {
-                "iconName": {
-                    "operator": "?",
-                    "operands": [
-                        {
-                            "operator": "<=",
-                            "operands": [
-                                "@currentField",                  
-                                70
-                            ]
-                        },
-                        "Error",
-                        ""
-                    ]
-                }
-            }
-        },
-        {
-            "elmType": "span",
-            "txtContent": "@currentField"
-        }
-    ]
+    {
+      "elmType": "span",
+      "txtContent": "@currentField"
+    }
+  ]
 }
 ```
 
@@ -158,174 +135,29 @@ This pattern is useful when you want different values to map to different levels
 
 ```JSON
 {
-    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
-    "debugMode": true,
-    "elmType": "div",
-    "attributes": {
-        "class": {
-            "operator": "?",
-            "operands": [
-                {
-                    "operator": "==",
-                    "operands": [
-                        {
-                            "operator": "toString()",
-                            "operands": [
-                                "@currentField"
-                            ]
-                        },
-                        "Done"
-                    ]
-                },
-                "sp-field-severity--good",
-                {
-                    "operator": "?",
-                    "operands": [
-                        {
-                            "operator": "==",
-                            "operands": [
-                                {
-                                    "operator": "toString()",
-                                    "operands": [
-                                        "@currentField"
-                                    ]
-                                },
-                                "In progress"
-                            ]
-                        },
-                        "sp-field-severity--low",
-                        {
-                            "operator": "?",
-                            "operands": [
-                                {
-                                    "operator": "==",
-                                    "operands": [
-                                        {
-                                            "operator": "toString()",
-                                            "operands": [
-                                                "@currentField"
-                                            ]
-                                        },
-                                        "In review"
-                                    ]
-                                },
-                                "sp-field-severity--warning",
-                                {
-                                    "operator": "?",
-                                    "operands": [
-                                        {
-                                            "operator": "==",
-                                            "operands": [
-                                                {
-                                                    "operator": "toString()",
-                                                    "operands": [
-                                                        "@currentField"
-                                                    ]
-                                                },
-                                                "Blocked"
-                                            ]
-                                        },
-                                        "sp-field-severity--severeWarning",
-                                        "sp-field-severity--blocked"
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "debugMode": true,
+  "elmType": "div",
+  "attributes": {
+    "class": "=if(@currentField == 'Done', 'sp-field-severity--good', if(@currentField == 'In progress', 'sp-field-severity--low' ,if(@currentField == 'In review','sp-field-severity--warning', if(@currentField == 'Blocked','sp-field-severity--blocked', ''))"
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "style": {
+        "display": "inline-block",
+        "padding": "0 4px"
+      },
+      "attributes": {
+        "iconName": "=if(@currentField == 'Done','CheckMark', if(@currentField == 'In progress', 'Forward', if(@currentField == 'In review', 'Error', if(@currentField == 'Has issues','Warning','')"
+      }
     },
-    "children": [
-        {
-            "elmType": "span",
-            "style": {
-                "display": "inline-block",
-                "padding": "0 4px"
-            },
-            "attributes": {
-                "iconName": {
-                    "operator": "?",
-                    "operands": [
-                        {
-                            "operator": "==",
-                            "operands": [
-                                {
-                                    "operator": "toString()",
-                                    "operands": [
-                                        "@currentField"
-                                    ]
-                                },
-                                "Done"
-                            ]
-                        },
-                        "CheckMark",
-                        {
-                            "operator": "?",
-                            "operands": [
-                                {
-                                    "operator": "==",
-                                    "operands": [
-                                        {
-                                            "operator": "toString()",
-                                            "operands": [
-                                                "@currentField"
-                                            ]
-                                        },
-                                        "In progress"
-                                    ]
-                                },
-                                "Forward",
-                                {
-                                    "operator": "?",
-                                    "operands": [
-                                        {
-                                            "operator": "==",
-                                            "operands": [
-                                                {
-                                                    "operator": "toString()",
-                                                    "operands": [
-                                                        "@currentField"
-                                                    ]
-                                                },
-                                                "In review"
-                                            ]
-                                        },
-                                        "Error",
-                                        {
-                                            "operator": "?",
-                                            "operands": [
-                                                {
-                                                    "operator": "==",
-                                                    "operands": [
-                                                        {
-                                                            "operator": "toString()",
-                                                            "operands": [
-                                                                "@currentField"
-                                                            ]
-                                                        },
-                                                        "Has issues"
-                                                    ]
-                                                },
-                                                "Warning",
-                                                "ErrorBadge"
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "elmType": "span",
-            "txtContent": "@currentField"
-        }
-    ]
+    {
+      "elmType": "span",
+      "txtContent": "@currentField"
+    }
+  ]
 }
-
 ```
 
 ## Apply formatting based on date ranges
@@ -345,25 +177,13 @@ This example colors the current field red when the value inside an item's DueDat
 
 ```JSON
 {
-
-   "elmType": "div",
-   "txtContent": "@currentField",
-   "style": {
-      "color": {
-         "operator": "?",
-         "operands": [
-            {
-               "operator": "<=",
-               "operands": [
-                  "[$DueDate]",
-                  "@now"
-               ]
-            },
-            "#ff0000",
-            ""
-         ]
-      }
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "div",
+  "debugMode": true,
+  "txtContent": "@currentField",
+  "style": {
+    "color": "=if([$DueDate] <= @now, '#ff0000', ''"
+  }
 }
 ```
 
@@ -371,8 +191,11 @@ This example colors the current field red when the value inside an item's DueDat
 
 To compare the value of a date/time field against a date that's not `@now`, follow the pattern in the following example. The following example colors the current field red if the due date was <= tomorrow. This is accomplished using date math. You can add milliseconds to any date and the result will be a new date. For example, to add a day to a date, you'd add (24\*60\*60\*1000 = 86,400,000). 
 
+This example demonstrates an alternate syntax to express a conditional expression, using the ternary (`?`) operator inside an abstract syntax tree.
+
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -407,6 +230,7 @@ To compare a date/time field value against another date constant, use the `Date(
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -445,17 +269,12 @@ This example shows how to turn a text field that contains stock ticker symbols i
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField",
    "attributes": {
       "target": "_blank",
-      "href": {
-         "operator": "+",
-         "operands": [
-            "http://finance.yahoo.com/quote/",
-            "@currentField"
-         ]
-      }
+      "href": "='http://finance.yahoo.com/quote/' + @currentField"
    }
 }
 ```
@@ -473,6 +292,7 @@ You can use column formatting to render quick action links next to fields. The f
 
 ```JSON
 {
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
     "elmType": "div",
     "children": [
         {
@@ -514,48 +334,18 @@ The following image shows a number column formatted as a data bar.
 
 ![Effort list with number list items shown as bars](../images/sp-columnformatting-databars.png)
 
-This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 20, and `(@currentField * 5)%` when the value is less than 10. This achieves a width of 5% for the data bar for values of 1, 10% for values of 2, and so on. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and the multiplier (`5`) to specify how much the bar should grow depending on the value inside the field.
+This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 95, and `(@currentField * 100 / 95)%` otherwise. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and change the equation to specify how much the bar should grow depending on the value inside the field.
 
 ```JSON
 {
-  "debugMode": true,
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
   "elmType": "div",
   "txtContent": "@currentField",
   "attributes": {
-   "class": "sp-field-dataBars"
+    "class": "sp-field-dataBars"
   },
   "style": {
-    "width": {
-      "operator": "?",
-      "operands": [
-        {
-          "operator": ">",
-          "operands": [
-            "@currentField",
-            "20"
-          ]
-        },
-        "100%",
-        {
-          "operator": "+",
-          "operands": [
-            {
-              "operator": "toString()",
-              "operands": [
-                {
-                  "operator": "*",
-                  "operands": [
-                    "@currentField",
-                    5
-                  ]
-                }
-              ]
-            },
-            "%"
-          ]
-        }
-      ]
-    }
+    "width": "=if(@currentField > 95, '100%', toString(@currentField * 100 / 95) + '%'"
   }
 }
 ```
@@ -570,7 +360,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 
 ```JSON
 {
-    "debugMode": true,
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
     "elmType": "div",
     "children": [
         {
@@ -643,7 +433,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 
 ```JSON
 {
-	"$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+	"$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
 	"elmType": "span",
 	"style": {
 		"color": "#0078d7"
@@ -694,6 +484,7 @@ The following are not currently supported:
 * Filename (in Document Libraries)
 * Calculated
 * Retention Label
+* Currency
 
 ## Style guidelines
 
@@ -714,6 +505,10 @@ You can use the following predefined classes for several common scenarios.
 | sp-field-trending--down |![Red arrow with number 100](../images/sp-columnformatting-trendingdown.png) |
 | sp-field-quickAction |![Name with mail icon](../images/sp-columnformatting-quickaction.png) |
 
+> Note - The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
+
+In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/icons). 
+
 ### Predefined icons
 
 You can use predefined icons from Office UI Fabric. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/icons). 
@@ -730,7 +525,7 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 
    ```JSON
     {
-    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json"
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json"
     }
    ```
 
@@ -739,6 +534,8 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 > [!TIP]
 > At any point, select **Ctrl**+**Space** to have Visual Studio Code offer suggestions for properties and values. For more information, see [Editing JSON with Visual Studio Code](https://code.visualstudio.com/Docs/languages/json).
 
+> [!TIP]
+> SharePoint Patterns and Practices provides a free web part, [Column Formatter](https://github.com/SharePoint/sp-dev-solutions/blob/master/solutions/ColumnFormatter/docs/documentation/docs/getting-started.md), that can be used to edit and apply formats directly in the browser.
 
 ## Detailed syntax reference
 
@@ -755,6 +552,40 @@ Specifies the type of element to create. Valid elements include:
 - button
 
 Any other value will result in an error.
+
+#### button elements
+
+`Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a requred property, `customRowAction`, that specifies an `action` that's taken when the button is clicked.  This action must be one of the following values:
+
+- defaultClick: buttons with this action will do the same thing as clicking the list item in an uncustomized view.  Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "Open this item",
+  "customRowAction": {
+    "action": "defaultClick"
+  }
+}
+
+```
+- share:  Clicking the button will open the sharing dialog.  Below is an example of this type of button.
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "Share this item",
+  "customRowAction": {
+    "action": "share"
+  }
+}
+
+```
+- delete: Clicking the button will open the delete confirmation dialog.
+- editProps:  Clicking the button will open the item properties page in edit mode.
+- executeFlow:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document.
 
 ### txtContent
 
@@ -905,6 +736,7 @@ The following example shows the value of a style object. In this example, two st
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "padding": "4px",
    "background-color": {
       "operator": "?",
@@ -942,14 +774,9 @@ Any other attribute name will result in an error. Attribute values can either be
 
 ```JSON
 {
-   "target": "_blank",
-   "href": {
-      "operator": "+",
-      "operands": [
-         "http://finance.yahoo.com/quote/",
-         "@currentField"
-      ]
-   }
+        "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+	"target": "_blank",
+	"href": "='http://finance.yahoo.com/quote/' + @currentField"
 }
 ```
 
@@ -961,16 +788,44 @@ An optional property that specifies child elements of the element specified by `
 
 An optional property that is meant for debugging. It outputs error messages and logs warnings to the console. 
 
-### Expression object
+### Expressions
 
 Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects. 
 
-The following example shows an Expression object that performs the following expression:
+#### Excel-style expressions
+
+All Excel-style expressions begin with an equal (`=`) sign.  
+
+This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to \`\` otherwise:
+```JSON
+=if(@me != [$Author.email], 'none', '') 
+```
+
+More complex if/else statements can be written like this:
+```JSON
+=if([$Sentiment] <= 0.3, 'sp-field-severity--blocked', if([$Sentiment] < 0.9,'sp-field-severity--warning','sp-field-severity--good')) 
+```
+
+Non-conditional operators that take one or two operands can be written like this:
+```JSON
+=[$foo] * -7 
+```
+```JSON
+=sin(@currentField) 
+```
+```JSON
+=toString(60 + (sin(6.2831853 * @currentField) * 60)) 
+```
+
+#### Abstract Syntax Tree expressions
+
+The following example contains an Expression object that performs the following expression:
 
 `(@currentField > 40) ? '100%' : (((@currentField * 2.5).toString() + '%')`
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "operator": "?",
    "operands": [
       {
@@ -1100,6 +955,7 @@ For example, the following JSON will display the current field (assuming it's a 
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": {
         "operator": "toLocaleString()",
@@ -1125,6 +981,7 @@ The following example shows how a lookup field might be used on a current field.
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField.lookupValue",
    "attributes": {
@@ -1158,6 +1015,7 @@ The following example shows how a hyperlink field might be used on a current fie
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField.desc",
    "attributes": {
@@ -1169,7 +1027,7 @@ The following example shows how a hyperlink field might be used on a current fie
 
 #### "[$FieldName]" 
 
-The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row. For example, to get the value of a field named "MarchSales", use `[$MarchSales]`.
+The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceeded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
@@ -1181,6 +1039,7 @@ This field can be used to display the current user's email address, but more lik
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.title",
    "style": {
@@ -1204,7 +1063,15 @@ This field can be used to display the current user's email address, but more lik
 
 #### "@now"
 
-This will evaluate to the current date and time. 
+This will evaluate to the current date and time.
+
+#### "@window.innerHeight"
+
+This will evaluate to a number equal to the height of the browser window (in pixels) when the list was rendered.
+
+#### "@window.innerWidth"
+
+This will evaluate to a number equal to the width of the browser window (in pixels) when the list was rendered.
 
 ## See also
 

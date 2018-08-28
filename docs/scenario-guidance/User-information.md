@@ -49,7 +49,7 @@ In SharePoint, user profiles represent SharePoint users. User profile properties
 - [Get user identity and properties in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-user-identity-and-properties-in-sharepoint)
 - [User segmentation in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/user-segmentation-in-sharepoint)
 - [Pattern: Retrieving user data](https://github.com/SharePoint/PnP-Transformation/blob/master/InfoPath/Guidance/Patterns/Retrieving%20user%20data.md)
-- [User Personalization and OneDrive for Business Operations Using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/07%20User%20Personalization%20and%20OneDrive%20for%20Business%20Operations%20Using%20add-in%20model)
+- [User Personalization and OneDrive for Business Operations Using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/07%20User%20Personalization%20and%20OneDrive%20for%20Business%20Operations%20Using%20add-in%20model)
 
 ### Videos
 

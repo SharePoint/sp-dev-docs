@@ -7,7 +7,7 @@ ms.date: 4/27/2018
 # Work with user profiles in a Multi-Geo tenant
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 In a Multi-Geo tenant, you can define a preferred data location for a user, detect a user's profile location and personal site URL, and read and update default and custom user profile properties.
 

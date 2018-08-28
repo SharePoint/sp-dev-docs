@@ -1,7 +1,7 @@
 ---
 title: Set up your Office 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up an Office 365 tenant.
-ms.date: 03/14/2018
+ms.date: 08/20/2018
 ms.prod: sharepoint
 ---
 
@@ -15,7 +15,7 @@ If you already have an Office 365 tenant, see the section [Create app catalog si
 If you don't have one, you can get an Office 365 developer subscription when you join the [Office 365 Developer Program](https://developer.microsoft.com/en-us/office/dev-program). See the [Office 365 Developer Program documentation](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.  
 
 > [!NOTE] 
-> Make sure that you are signed out of any existing Office 365 tenants before you sign up.
+> Make sure that you are signed out of any existing Office 365 tenants before you sign up for the Office 365 Developer Program.
 
 ## Create app catalog site
 
@@ -68,9 +68,13 @@ You also need a site collection and a site for your testing. You can create a ne
 
 SharePoint creates the developer site and you are able to see its progress in the SharePoint admin center. After the site is created, you can browse to your developer site collection.
 
+> Notice that technically you can use any SharePoint site for SharePoint Framework development. In this case we simply created an isolated developer site collection for initial testing.
+
 ## SharePoint Workbench
 
-SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Framework developer toolchain contains a version of the Workbench that works locally and helps you quickly test and validate solutions that you are building. It is also hosted in your tenancy to preview and test your local web parts in development. You can access the SharePoint Workbench from any SharePoint site in your tenancy by browsing to the following URL:
+SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Framework developer toolchain contains a version of the Workbench that works locally and helps you quickly test and validate solutions that you are building.
+
+It is also hosted in your tenant to preview and test your local web parts in development. You can access the SharePoint Workbench from any SharePoint site in your tenancy by browsing to the following URL:
 
 ```
 https://your-sharepoint-site/_layouts/workbench.aspx

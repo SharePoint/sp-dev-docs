@@ -167,6 +167,4 @@ For more information about CDNs, see:
 ## See also
 
 - [Branding SharePoint sites in the SharePoint Add-in model](branding-sharepoint-sites-sharepoint-add-in.md)
-- [Branding SharePoint Online](https://sharepointgurus.net/branding-sharepoint-online/)
-- [Review of Valo: Ready-to-go intranet on Office 365 and SharePoint](https://absolute-sharepoint.com/2017/01/review-of-valo-ready-to-go-intranet-on-office-365-and-sharepoint.html)
-- [Building SharePoint Online portals](portal-overview.md)
+- [SharePoint Site Theming](../declarative-customization/site-theming/sharepoint-site-theming-overview.md)
