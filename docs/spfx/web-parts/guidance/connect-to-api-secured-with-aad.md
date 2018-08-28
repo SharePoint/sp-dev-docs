@@ -1,7 +1,7 @@
 ---
 title: Connect to API secured with Azure Active Directory (Azure AD)
 description: A step-by-step process for building and connecting to an API secured with Azure AD.
-ms.date: 02/02/2018
+ms.date: 08/28/2018
 ms.prod: sharepoint
 ---
 
@@ -13,7 +13,7 @@ When building SharePoint Framework solutions, you might need to connect to your 
 This article discusses the different approaches and describes the step-by-step process of building and connecting to an API secured with Azure AD.
 
 > [!IMPORTANT]
-> When connecting to Azure AD-secured APIs, we recommend that you use the **GraphHttpClient** or **AadHttpClient** classes. These are new capabilities that are currently in preview and planned to be generally released during spring 2018. For more information about recommended models, see [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md).
+> When connecting to Azure AD-secured APIs, we recommend that you use the **MSGraphClient** and **AadHttpClient** classes, which are now generally available. For more information about the recommended models, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../../use-aadhttpclient.md) and [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md).
 
 ## Secure an API with Azure AD
 
@@ -21,7 +21,7 @@ If you're using Office 365, securing custom APIs using Azure AD is an architectu
 
 As the API developer, using Azure AD to secure your API frees you from managing a proprietary set of user credentials and implementing a custom security layer for your API. Additionally, Azure AD supports the OAuth protocol, which allows you to connect to the API from a range of application types varying from mobile apps to client-side solutions.
 
-When building custom APIs, there are two main ways in which you can secure your API with Azure AD. If you host the API in Microsoft Azure App Service, you can benefit from the App Service Authentication option. If you look for more hosting flexibility for your API, such as hosting it on your own infrastructure or in Docker containers, you need to secure it in code. In such cases, the implementation depends on your programming language and framework. 
+When building custom APIs, there are two main ways in which you can secure your API with Azure AD. If you host the API in Microsoft Azure App Service, you can benefit from the App Service Authentication option. If you look for more hosting flexibility for your API, such as hosting it on your own infrastructure or in Docker containers, you need to secure it in code. In such cases, the implementation depends on your programming language and framework.
 
 In this article, when discussing this option, you will use C# and the [ASP.NET Web API](https://www.asp.net/web-api) as the framework.
 
@@ -165,7 +165,7 @@ export default class LatestOrdersWebPart extends BaseClientSideWebPart<ILatestOr
 
 To support this method, the custom API requires some specific configurations as well. First, it requires support for receiving credentials from cross-domain calls. This is done by setting the **Access-Control-Allow-Credentials** response header to **true**.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > When using **Access-Control-Allow-Credentials**, you are allowed to specify only one origin.
 
 Next, it needs to specify what origin is allowed to call the API. This is configured in the **Access-Control-Allow-Origin** response header.
@@ -241,7 +241,7 @@ Following is how you would use Azure Functions to create an API secured with Azu
 
     ![The Custom function link highlighted on the Add new function screen](../../../images/api-aad-custom-function.png)
 
-4. From the list of templates, select **HttpTrigger-JavaScript**. 
+4. From the list of templates, select **HttpTrigger-JavaScript**.
 
 5. For the function name, enter **Orders**, and set the function authorization level to **Anonymous** because you will use Azure AD to secure access to the Azure Function. Confirm your selection by selecting **Create**.
 
@@ -256,54 +256,54 @@ Following is how you would use Azure Functions to create an API secured with Azu
         context.res = {
             body: [
                 {
-                id: 1,
-                orderDate: new Date(2016, 0, 6),
-                region: "east",
-                rep: "Jones",
-                item: "Pencil",
-                units: 95,
-                unitCost: 1.99,
-                total: 189.05
+                    id: 1,
+                    orderDate: new Date(2016, 0, 6),
+                    region: "east",
+                    rep: "Jones",
+                    item: "Pencil",
+                    units: 95,
+                    unitCost: 1.99,
+                    total: 189.05
                 },
                 {
-                id: 2,
-                orderDate: new Date(2016, 0, 23),
-                region: "central",
-                rep: "Kivell",
-                item: "Binder",
-                units: 50,
-                unitCost: 19.99,
-                total: 999.50
+                    id: 2,
+                    orderDate: new Date(2016, 0, 23),
+                    region: "central",
+                    rep: "Kivell",
+                    item: "Binder",
+                    units: 50,
+                    unitCost: 19.99,
+                    total: 999.50
                 },
                 {
-                id: 3,
-                orderDate: new Date(2016, 1, 9),
-                region: "central",
-                rep: "Jardine",
-                item: "Pencil",
-                units: 36,
-                unitCost: 4.99,
-                total: 179.64
+                    id: 3,
+                    orderDate: new Date(2016, 1, 9),
+                    region: "central",
+                    rep: "Jardine",
+                    item: "Pencil",
+                    units: 36,
+                    unitCost: 4.99,
+                    total: 179.64
                 },
                 {
-                id: 4,
-                orderDate: new Date(2016, 1, 26),
-                region: "central",
-                rep: "Gill",
-                item: "Pen",
-                units: 27,
-                unitCost: 19.99,
-                total: 539.73
+                    id: 4,
+                    orderDate: new Date(2016, 1, 26),
+                    region: "central",
+                    rep: "Gill",
+                    item: "Pen",
+                    units: 27,
+                    unitCost: 19.99,
+                    total: 539.73
                 },
                 {
-                id: 5,
-                orderDate: new Date(2016, 2, 15),
-                region: "west",
-                rep: "Sorvino",
-                item: "Pencil",
-                units: 56,
-                unitCost: 2.99,
-                total: 167.44
+                    id: 5,
+                    orderDate: new Date(2016, 2, 15),
+                    region: "west",
+                    rep: "Sorvino",
+                    item: "Pencil",
+                    units: 56,
+                    unitCost: 2.99,
+                    total: 167.44
                 }],
             headers: {
                 "Access-Control-Allow-Credentials" : "true",
@@ -345,7 +345,7 @@ Azure Functions are hosted in Azure App Service, which allows you to configure i
 
 #### Enable App Service Authentication
 
-1. In the Function App settings, go back to the **Platform features** blade. 
+1. In the Function App settings, go back to the **Platform features** blade.
 
 2. In the **Networking** section, select the **Authentication / Authorization** option.
 
@@ -365,7 +365,7 @@ Azure Functions are hosted in Azure App Service, which allows you to configure i
 
 6. On the **Active Directory Authentication** blade, set the **Management mode** to **Express**, and create a new Azure AD app.
 
-    > [!IMPORTANT] 
+    > [!IMPORTANT]
     > When using the Express configuration mode, the Azure portal creates a new Azure AD application from the same directory where the Function App is located. If the Function App is hosted in a different Azure subscription with a different directory, you should use the advanced mode instead, and specify the ID of the directory and application that should be used to secure access to the API.
     >
     > When using existing Azure AD applications, configure the application to accept credentials from a single tenant only. Configuring the application as multi-tenant allows any user with a valid organization or personal account to connect to your API.
@@ -396,7 +396,7 @@ Following are steps to build an API using the ASP.NET Web API, deploy it to Azur
 
 1. In Visual Studio, on the **File** menu, select the **New / Project** option. 
 
-2.  In the **New Project** dialog box, select the Visual C# Web templates, and from the list of available templates, select the **ASP.NET Web Application** template.
+2. In the **New Project** dialog box, select the Visual C# Web templates, and from the list of available templates, select the **ASP.NET Web Application** template.
 
     ![The 'ASP.NET Web Application' project template selected in the New Project dialog](../../../images/api-aad-webapi-vs-web-application.png)
 
@@ -422,7 +422,7 @@ Following are steps to build an API using the ASP.NET Web API, deploy it to Azur
 
 #### Add support for CORS
 
-By default, APIs created using the ASP.NET Web Application project template don't support CORS and cannot be called by client-applications hosted on different domains. 
+By default, APIs created using the ASP.NET Web Application project template don't support CORS and cannot be called by client-applications hosted on different domains.
 
 1. To add support for CORS to your Web API, right-click the project, and from the context menu, select the **Manage NuGet Packages** option.
 
@@ -432,43 +432,42 @@ By default, APIs created using the ASP.NET Web Application project template don'
 
     ![The 'Microsoft.AspNet.WebApi.Cors' package highlighted on the 'Manage NuGet Packages' tab](../../../images/api-aad-webapi-vs-cors-nuget.png)
 
-
 #### Add data model
 
 In the project, define a model that represents the data returned by the API. In the **Models** folder, add a new class and name it **Order**. Paste the following code into the newly created file:
 
 ```cs
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 
-    namespace PnP.Aad.Api.Models {
-        public class Order {
-            [JsonProperty(PropertyName = "id")]
-            public int Id { get; set; }
-            [JsonProperty(PropertyName = "orderDate")]
-            public DateTime OrderDate { get; set; }
-            [JsonConverter(typeof(StringEnumConverter))]
-            [JsonProperty(PropertyName = "region")]
-            public Region Region { get; set; }
-            [JsonProperty(PropertyName = "rep")]
-            public string Rep { get; set; }
-            [JsonProperty(PropertyName = "item")]
-            public string Item { get; set; }
-            [JsonProperty(PropertyName = "units")]
-            public uint Units { get; set; }
-            [JsonProperty(PropertyName = "unitCost")]
-            public double UnitCost { get; set; }
-            [JsonProperty(PropertyName = "total")]
-            public double Total { get; set; }
-        }
-
-        public enum Region {
-            East,
-            Central,
-            West
-        }
+namespace PnP.Aad.Api.Models {
+    public class Order {
+        [JsonProperty(PropertyName = "id")]
+        public int Id { get; set; }
+        [JsonProperty(PropertyName = "orderDate")]
+        public DateTime OrderDate { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "region")]
+        public Region Region { get; set; }
+        [JsonProperty(PropertyName = "rep")]
+        public string Rep { get; set; }
+        [JsonProperty(PropertyName = "item")]
+        public string Item { get; set; }
+        [JsonProperty(PropertyName = "units")]
+        public uint Units { get; set; }
+        [JsonProperty(PropertyName = "unitCost")]
+        public double UnitCost { get; set; }
+        [JsonProperty(PropertyName = "total")]
+        public double Total { get; set; }
     }
+
+    public enum Region {
+        East,
+        Central,
+        West
+    }
+}
 ```
 
 #### Add Orders API
@@ -613,7 +612,7 @@ At this point, the API is code complete and can be published to the Azure Web Ap
 
 #### Secure the API using Azure App Service
 
-1. To secure the API using Azure AD, go to the Azure portal and open the Web App hosting your API. 
+1. To secure the API using Azure AD, go to the Azure portal and open the Web App hosting your API.
 
 2. From the **Settings** group, select the **Authentication / Authorization** option.
 
@@ -623,7 +622,7 @@ At this point, the API is code complete and can be published to the Azure Web Ap
 
     ![The 'App Service Authentication' toggle set to On for the Web App hosting the WebAPI](../../../images/api-aad-webapi-authentication-on.png)
 
-4. To disallow anonymous access to the API, in the **Action to take when request is not authenticated** listn, select the **Log in with Azure Active Directory** option.
+4. To disallow anonymous access to the API, in the **Action to take when request is not authenticated** list, select the **Log in with Azure Active Directory** option.
 
     ![The 'Login with Azure Active Directory' option selected in the 'Action to take when request is not authenticated' drop-down in Web App Authentication settings](../../../images/api-aad-webapi-authentication-aad-login.png)
 
@@ -633,7 +632,7 @@ At this point, the API is code complete and can be published to the Azure Web Ap
 
 6. On the **Active Directory Authentication** blade, set the **Management mode** to **Express** and create a new Azure AD app.
 
-    > [!IMPORTANT] 
+    > [!IMPORTANT]
     > When using the Express configuration mode, the Azure portal creates a new Azure AD application from the same directory where the Function App is located. If the Function App is hosted in a different Azure subscription with a different directory, you should use the advanced mode instead, and specify the ID of the directory and application that should be used to secure access to the API.
     >
     > When using existing Azure AD applications, configure the application to accept credentials from a single tenant only. Configuring the application as multi-tenant allows any user with a valid organization or personal account to connect to your API.
@@ -705,7 +704,7 @@ If you want to deploy your ASP.NET Web API project to other location than Azure 
 
     ![Unauthorized response when trying to access the API](../../../images/api-aad-webapi-anonymous-unauthorized.png)
 
-At this point, the web application requires that all requests to its resources are authenticated, but it doesn't start the Azure AD sign-in flow. 
+At this point, the web application requires that all requests to its resources are authenticated, but it doesn't start the Azure AD sign-in flow.
 
 In the following steps, you extend the web application so that it redirects users to the Azure AD sign-in page, if they weren't previously authenticated.
 
@@ -715,7 +714,7 @@ To secure an API with Azure AD, you need to register an Azure AD application. Th
 
 1. If you don't have an existing Azure AD application yet, you can create one in the Azure portal, by navigating to the **Azure Active Directory** blade.
 
-    > [!IMPORTANT] 
+    > [!IMPORTANT]
     > The Azure AD application used to secure the API should be created in the same Azure Active Directory that is used by your organization to access Office 365.
 
     ![Azure Active Directory blade open in the Azure portal](../../../images/api-aad-webapi-azure-aad.png)
@@ -740,7 +739,7 @@ To secure an API with Azure AD, you need to register an Azure AD application. Th
 
 ##### Redirect anonymous requests to Azure AD sign-in page
 
-1. In Visual Studio, rightclick the project, and from the context menu, select the **Manage NuGet Packages** option. 
+1. In Visual Studio, right-click the project, and from the context menu, select the **Manage NuGet Packages** option.
 
 2. In the **Manage NuGet Packages** window, add the following packages to your project:
 
@@ -801,11 +800,13 @@ To secure an API with Azure AD, you need to register an Azure AD application. Th
     ```
 
     - The value of the **ida:Tenant** key is the name of the Azure AD where the Azure AD app used to secure the API is defined. 
-    - **ida:ClientId** specifies the ID of the Azure AD application used to secure the API. 
+    - **ida:ClientId** specifies the ID of the Azure AD application used to secure the API.
     - The URL specified in the **ida:PostLogoutRedirectUri** property is where Azure AD would redirect to after signing out of your application, which isn't used in this case.
 
 This concludes the configuration process. If you start your web application, before you are able to access any of its resources, you are prompted to sign in with your Azure AD account. To ensure that only authorized users are accessing the particular API, you should implement authorization in your custom APIs. You can do that by retrieving the user name from the `RequestContext.Principal.Identity` property, and verifying it against your security matrix.
 
 ## See also
 
+- [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../../use-aadhttpclient.md)
+- [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md)
 - [Call custom APIs secured with Azure Active Directory without ADAL JS (code sample)](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/aad-api-spo-cookie)

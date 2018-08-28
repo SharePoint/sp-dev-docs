@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 01/11/2018
+ms.date: 08/27/2018
 ms.prod: sharepoint
 ---
 
@@ -51,7 +51,7 @@ You can also follow the steps in this article by watching the video on the Share
 
     * Accept the default **HelloWorld** as your extension name, and select Enter.
     * Accept the default **HelloWorld description** as your extension description, and select Enter.
-
+    * For the next question **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites....**, ensure you select No (N) , and select Enter. If you select Yes (y), the scaffolding will not generate the Elements.xml feature deployment file.
 
     <br/>
 
@@ -68,13 +68,7 @@ You can also follow the steps in this article by watching the video on the Share
 
     For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-    ```sh
-    npm shrinkwrap
-    ```
-
-7. Next, type the following into the console to start Visual Studio Code.
+6. Next, type the following into the console to start Visual Studio Code.
 
     ```
     code .
@@ -110,58 +104,42 @@ The following are the contents of **onInit()** in the default solution. This def
 
 ![Default onInit method in the code](../../../images/ext-app-vscode-methods.png)
 
+> [!NOTE] 
+> **SharePoint Framework Dev Dashboard** is additional UI dashboard, which can be started with `ctrl+F12`. This is developer oriented logging information, which you can take advantage as developer. It also has plenty of oob logging in it.
+
 If your Application Customizer uses the **ClientSideComponentProperties** JSON input, it is deserialized into the **BaseExtension.properties** object. You can define an interface to describe it. The default template is looking for a property called **testMessage**. If that property is provided, it outputs it in an alert message.
 
 ## Debug your Application Customizer
 
-You cannot currently use the local Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. You don't have to deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient. 
+You cannot use the local Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. You don't have to however deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient.
 
-1. Compile your code and host the compiled files from your local computer by running the following command:
+1. Open the **server.json** file in the **config** folder.
+
+    Notice that this file has been updated with the default settings matching your project. Yuo can notice that there's a specific GUID mentioned under the customActions element. This is automatically updated to match your component when project was scaffold. If you will add new components or change the properties for the component, you will need to update this file for testing.
+
+2. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *This could be for example a welcome page of a new group associated team site, which would mean somewhat following URL:
+
+    `https://sppnp.sharepoint.com/sites/yoursite/SitePages/Home.aspx`
+
+    Your **serve.json** file should look somewhat following (updated with your tenant details):
+
+    ![Updated server json file](../../../images/ext-app-vscode-updated-serve-json.png)
+
+3. Compile your code and host the compiled files from your local computer by running the following command:
 
     ```
-    gulp serve --nobrowser
+    gulp serve
     ```
 
     > [!NOTE] 
-    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again.
+    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again. This process is documented in the [Set up your development environment](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment) article.
 
-    You use the `--nobrowser` option because you don't need to launch the local Workbench since you can't debug extensions locally.
-
-    When the code compiles without errors, it serves the resulting manifest from https://localhost:4321.
+    When the code compiles without errors, it serves the resulting manifest from https://localhost:4321 and also starts your default browser with needed query parameters.
 
     ![Gulp serve](../../../images/ext-app-gulp-serve.png)
 
-2. To test your extension, go to a modern list view page in your SharePoint environment and append the following query string parameters to the URL. Notice that you need to update the ID to match your own extension identifier. This is available in the **HelloWorldApplicationCustomizer.manifest.json** file.
 
-    ```json
-        ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
-    ```
-
-    More detail about the URL query parameters:
-
-    * **loadSPFX=true**. Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
-
-    * **debugManifestsFile**. Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
-
-    * **customActions**. Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it. 
-        * **Key**. Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.
-        * **Location**. The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.
-        * **Properties**. An optional JSON object that contains properties that are available via the **this.properties** member. In this HelloWorld example, it defined a `testMessage` property.
-
-
-3. Go to a modern list in SharePoint Online. This can be either a list or a library. Application Customizers are also supported in modern pages and on the Site Contents page. 
-
-4. Extend the URL with the additional query parameters described. Notice that you need to update the GUID to match the ID of your custom Application Customizer. 
-
-    The full URL should look similar to the following:
-
-    ```json
-    contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
-    ```
-
-> Alternatively, you can create serve configuration entries in the `config/serve.json` file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
-
-5. Select **Load debug scripts** to continue loading scripts from your local host.
+4. Move to your browser and select **Load debug scripts** to continue loading scripts from your local host.
 
     ![Allow Debug Manifest question from the page](../../../images/ext-app-debug-manifest-message.png)
 
@@ -174,7 +152,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
     This dialog is thrown by your SharePoint Framework Extension. Note that because you provided the `testMessage` property as part of the debug query parameters, it's included in the alert message. You can configure your extension instances based on the client component properties, which are passed for the instance in runtime mode.
 
 > [!NOTE] 
-> If you have issues with debugging, double-check the URL query parameters used for the query. Some browsers encode the parameters and in some scenarios this affects the behavior.
+> If you have issues with debugging, double-check the pageUrl setting in the **server.json** file.
 
 ## Next steps
 
@@ -183,4 +161,4 @@ Congratulations, you got your first SharePoint Framework Extension running!
 To continue building out your extension, see [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md). You use the same project and take advantage of specific content placeholders for modifying the UI of SharePoint. Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you are using the editor). You can continue to let it run while you go to the next article.
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.
