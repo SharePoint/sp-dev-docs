@@ -7,7 +7,7 @@ ms.date: 4/27/2018
 # Manage apps and add-ins in a Multi-Geo tenant
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 In a Multi-Geo tenant, you have an app catalog per geo location, which is something to consider if you want to deploy your apps across all geo locations.
 
