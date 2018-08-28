@@ -74,8 +74,10 @@
       - name: Use JSOM
         href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
   - name: Extensions
-    href: spfx/extensions/overview-extensions.md
+    href: spfx/extensions/overview-extensions.md    
     items:
+    - name: Tenant Wide Deployment
+      href: spfx/extensions/basics/tenant-wide-deployment-extensions.md  
     - name: Getting started
       href: spfx/extensions/get-started/build-a-hello-world-extension.md
       items:
