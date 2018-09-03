@@ -133,27 +133,25 @@
       href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
   - name: Connect to APIs
     items:
-    - name: Connect to APIs secured with Azure AD
-      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
-    - name: Call the Microsoft Graph API using OAuth
-      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Connect to SharePoint APIs
+      href: spfx/connect-to-sharepoint.md   
+    - name: Connect to Microsoft Graph 
+      href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD using the AadHttpClient
       href: spfx/use-aadhttpclient.md
+    - name: Connect to APIs secured with Azure AD
+      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md      
+    - name: Call the Microsoft Graph API using OAuth
+      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md      
       items:
-      - name: Consume enterprise APIs (tutorial)
-        href: spfx/use-aadhttpclient-enterpriseapi.md
-      - name: Consume multi-tenant enterprise APIs (tutorial)
-        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
-    - name: Microsoft Graph 
-      href: spfx/use-msgraph.md
-      items:
+    - name: Tutorials
+      items:        
       - name: Consume Microsoft Graph (tutorial)
-        href: spfx/use-aad-tutorial.md        
-    - name: Microsoft GraphHttpClient (Deprecated)
-      href: spfx/overview-graphhttpclient.md
-      items:
-      - name: Tutorial (Deprecated)
-        href: spfx/call-microsoft-graph-using-graphhttpclient.md          
+        href: spfx/use-aad-tutorial.md
+      - name: Consume enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi.md
+      - name: Consume multi-tenant enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
   - name: Setup and deployment
     items:
     - name: Package solution
