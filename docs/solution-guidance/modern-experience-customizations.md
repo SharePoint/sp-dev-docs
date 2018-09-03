@@ -50,17 +50,41 @@ Following are the key scenarios currently supported by the "modern" experiences.
 
 ## Converting existing sites to "modern" team sites
 
-Existing collaboration sites cannot, at least currently, be converted to "modern" team sites with an associated Office 365 group. However, you can start using "modern" experiences in the "classic" collaboration sites as well by enabling the new capabilities at the tenant level and then modifying the sites based on your functional requirements. 
+Existing collaboration sites cannot be converted to "modern" team sites with an associated Office 365 group, but you can however [associate a new Office 365 group](https://docs.microsoft.com/en-us/sharepoint/dev/transform/modernize-connect-to-office365-group) to existing collaboration site. You can also start using modern page and list experiences in the classic sites, which will make them look like a modern group associated team sites.
 
 "Modern" lists and library usage can be controlled at the tenant, site, web, and list/library level. You can find more details about the available options in our ["modern" list and libraries](modern-experience-customizations-customize-lists-and-libraries.md) article.
 
-By default, "classic" SharePoint sites use "modern" pages for any newly added page, and you have the option to change the welcome page to a "modern" page. Setting a new "modern" page for a "classic" SharePoint site can be done programatically by using CSOM or REST APIs. 
+By default, "classic" SharePoint sites use modern pages for any newly added page, and you have the option to change the welcome page to a modern page. Setting a new "modern" page for a "classic" SharePoint site can be done programatically by using CSOM or REST APIs.
+
+## Using modern experiences in the root site collection of a tenant
+
+Root site collection of Office 365 tenant is always using classic team site template and it's not supported to recreate this site collection using user interface, PowerShell or APIs. You can however start utilizing modern experiences on this root site by creating content using modern pages.
+
+It is also supported and possible programmatically enable home page layout in the root site collection. This will provide flexibility for the welcome page designs for this site.
+
+> [!CAUTION]
+> It is not supported to delete or replace existing site collection from the root URL of your tenant. You should not in any circumstances delete the root site collection. Technically this can be performed using APIs, but that can cause the tenant to move into inconsistent status. 
+
+### Enable home layout in collaboration site
+
+You can use CSOM, REST APIs or PnP PowerShell to enable home layout in the pages library. Following example uses PnP PowerShell from simplicity perspective, but other options are also supported.
+
+```ps
+# Connect to the site
+Connect-PnPOnline https://contoso.sharepoint.com/
+ 
+# List all pages, and find the id of the modern page which you want to change
+Get-PnPListItem -List SitePages
+ 
+# Change layout from "Article" to "Home" to remove top banner
+Set-PnPListItem -List SitePages –Identity <id> -Values @{"PageLayoutType"="Home"}
+```
 
 <a name="onpremisessupport"> </a>
 
 ## SharePoint "modern" experiences support for on-premises
 
-The SharePoint "modern" experiences are currently not available for SharePoint on-premises. As part of the SharePoint 2016 Feature Pack, "modern" experiences will be introduced within the OneDrive for Business experience, and you can take advantage of the SharePoint Framework client-side web parts in the classic page experience.
+The SharePoint "modern" experiences are supported in SharPoint 2019 in on-premises. Also as part of the SharePoint 2016 Feature Pack, "modern" experiences will be introduced within the OneDrive for Business experience, and you can take advantage of the SharePoint Framework client-side web parts in the classic page experience.
 
 
 ## See also

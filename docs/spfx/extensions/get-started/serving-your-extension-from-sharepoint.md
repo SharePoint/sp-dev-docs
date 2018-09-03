@@ -94,12 +94,11 @@ To ensure that the configuration matches updates performed in the Application Cu
 
 ### What about ClientSideInstance.xml file in assets folder?
 
-**ClientSideInstance.xml** file is used with [Tenant Wide deployment of SharePoint Framework extensions](../basics/tenant-wide-deployment-extensions.md). You can use this file to automatically add an entry to the centralized Tenant Wide Extensions list in the app catalog site of the tenant.
+**ClientSideInstance.xml** file is used with [Tenant Wide deployment of SharePoint Framework extensions](../basics/tenant-wide-deployment-extensions.md). You can use this file to automatically add an entry to the centralized Tenant Wide Extensions list in the app catalog site of the tenant if you use the tenant-scoped deployment option. In this tutorial case, we selected the solution to be installed on site level, which means that this file will be ignored when solution is activated in the app catalog.
 
 *Tenant Wide Extensions* list can be used to automatically activate extensions in tenant from a centralized location. Tenant wide deployment is supported for Application customizers and list view command sets. You can specific different target definitions, like activation based on the site type or list type.
 
-For this tutorial, we do not need this file as we will be activating solution in specific tenant using feature xml based provisioning.
-
+For this tutorial, we do not need this file as we will be activating solution in a specific site using feature xml based provisioning.
 
 ### Ensure that definitions are taken into account within the build pipeline
 
@@ -123,7 +122,8 @@ Your **package-slution.json** should look somewhat following after the needed ed
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [
-            "elements.xml"
+            "elements.xml",
+            "clientsideinstance.xml"
           ]
         }
       }
@@ -133,7 +133,6 @@ Your **package-slution.json** should look somewhat following after the needed ed
     "zippedPackage": "solution/app-extension.sppkg"
   }
 }
-
 ```
 
 <br/>

@@ -1,18 +1,15 @@
 ---
 title: Consume the Microsoft Graph in the SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to the Microsoft Graph in SharePoint Framework solutions.
-ms.date: 03/16/2018
+ms.date: 08/28/2018
 ms.prod: sharepoint
 ---
 
 # Consume the Microsoft Graph in the SharePoint Framework
 
-> [!IMPORTANT]
-> `AadHttpClient` and `MSGraphClient` client objects are currently in preview and are subject to change. Do not use them in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
-
 Consuming REST APIs secured with Azure Active Directory (Azure AD) and Open Authorization (OAuth 2.0) from within a SharePoint Framework client-side web part or extension is a common enterprise-level business scenario.
 
-You can use the SharePoint Framework (starting from v.1.4.1) to consume Microsoft Graph REST APIs, or any other REST API that's registered in Azure AD. 
+You can use the SharePoint Framework (starting from v.1.4.1) to consume Microsoft Graph REST APIs, or any other REST API that's registered in Azure AD.
 
 In this article, you'll learn how to create a SharePoint Framework solution that uses the Microsoft Graph API with a custom set of permissions. For a conceptual overview of this technology, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
@@ -278,8 +275,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
     SelectionMode
   } from 'office-ui-fabric-react';
 
-  import { AadHttpClient } from "@microsoft/sp-http";
-  import { MSGraphClient } from "@microsoft/sp-client-preview";
+  import { AadHttpClient, MSGraphClient } from "@microsoft/sp-http";
   ```
 
 5. After the imports, define the outline of the columns for the **DetailsList** component of Office UI Fabric. 
@@ -314,7 +310,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
   ];
   ```
 
-  This array is used in the settings of the **DetailsList** component, as you can see in the **render()** method of the React component. 
+  This array is used in the settings of the **DetailsList** component, as you can see in the **render()** method of the React component.
   
 6. Replace this component with the following code.
 
@@ -421,8 +417,8 @@ The **PrimaryButton** fires a **_search()** function, which determines what clie
         this._searchWithAad();
         break;
       case ClientMode.graph:
-      this._searchWithGraph();
-      break;
+        this._searchWithGraph();
+        break;
     }
   }
 ```
@@ -472,7 +468,6 @@ The *scope* can be the name of the permission, or the unique ID of that permissi
 > 
 > By default, the service principal has no explicit permissions granted to access Microsoft Graph. However, if you request an access token for Microsoft Graph, you get a token with the `user_impersonation` permission that you can use to read information about the users (User.Read.All). You can request additional permissions to be granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
-
 The User.ReadBasic.All permission is sufficient for searching for users and getting their **displayName**, **mail**, and **userPrincipalName**.
 
 When you package and deploy your solution, you (or an admin) will have to grant the requested permissions to your solution. For details, see [Deploy the solution and grant permissions](#DeploymentAndPermissionsGrant).
@@ -482,6 +477,7 @@ When you package and deploy your solution, you (or an admin) will have to grant 
 ## Consume Microsoft Graph
 
 You can now implement the methods to consume the Microsoft Graph. You have two options:
+
 * Use the **AadHttpClient** client object
 * Use the **MSGraphClient** client object
 
@@ -493,7 +489,7 @@ The **MSGraphClient** client object can consume the Microsoft Graph only. Intern
 
 ### Using AadHttpClient
 
-To consume any REST API using the **AadHttpClient** client object, create a new instance of the **AadHttpClient** type, and provide the *serviceScope* of the current context and the URI of the target service.
+To consume any REST API using the **AadHttpClient** client object, create a new instance of the **AadHttpClient** type by calling the `context.aadHttpClientFactory.getClient()` method and providing the URI of the target service.
 
 The object created provides methods to make the following requests:
 
@@ -512,17 +508,16 @@ The following example shows the **_searchWithAad()** method of the sample soluti
     console.log("Using _searchWithAad() method");
 
     // Using Graph here, but any 1st or 3rd party REST API that requires Azure AD auth can be used here.
-    const aadClient: AadHttpClient = new AadHttpClient(
-      this.props.context.serviceScope,
-      "https://graph.microsoft.com"
-    );
-
-    // Search for the users with givenName, surname, or displayName equal to the searchFor value
-    aadClient
-      .get(
-        `https://graph.microsoft.com/v1.0/users?$select=displayName,mail,userPrincipalName&$filter=(givenName%20eq%20'${escape(this.state.searchFor)}')%20or%20(surname%20eq%20'${escape(this.state.searchFor)}')%20or%20(displayName%20eq%20'${escape(this.state.searchFor)}')`,
-        AadHttpClient.configurations.v1
-      )
+    this.props.context.aadHttpClientFactory
+      .getClient('https://graph.microsoft.com')
+      .then((client: AadHttpClient) => {
+        // Search for the users with givenName, surname, or displayName equal to the searchFor value
+        return client
+          .get(
+            `https://graph.microsoft.com/v1.0/users?$select=displayName,mail,userPrincipalName&$filter=(givenName%20eq%20'${escape(this.state.searchFor)}')%20or%20(surname%20eq%20'${escape(this.state.searchFor)}')%20or%20(displayName%20eq%20'${escape(this.state.searchFor)}')`,
+            AadHttpClient.configurations.v1
+          );
+      })
       .then(response => {
         return response.json();
       })
@@ -536,7 +531,7 @@ The following example shows the **_searchWithAad()** method of the sample soluti
 
         // Map the JSON response to the output array
         json.value.map((item: any) => {
-          users.push( { 
+          users.push( {
             displayName: item.displayName,
             mail: item.mail,
             userPrincipalName: item.userPrincipalName,
@@ -572,46 +567,46 @@ The following example shows the implementation of the **_searchWithGraph()** met
     // Log the current operation
     console.log("Using _searchWithGraph() method");
 
-    const graphClient: MSGraphClient = this.props.context.serviceScope.consume(
-      MSGraphClient.serviceKey
-    );
+    this.props.context.msGraphClientFactory
+      .getClient()
+      .then((client: MSGraphClient): void => {
+        // From https://github.com/microsoftgraph/msgraph-sdk-javascript sample
+        client
+          .api("users")
+          .version("v1.0")
+          .select("displayName,mail,userPrincipalName")
+          .filter(`(givenName eq '${escape(this.state.searchFor)}') or (surname eq '${escape(this.state.searchFor)}') or (displayName eq '${escape(this.state.searchFor)}')`)
+          .get((err, res) => {  
 
-    // From https://github.com/microsoftgraph/msgraph-sdk-javascript sample
-    graphClient
-      .api("users")
-      .version("v1.0")
-      .select("displayName,mail,userPrincipalName")
-      .filter(`(givenName eq '${escape(this.state.searchFor)}') or (surname eq '${escape(this.state.searchFor)}') or (displayName eq '${escape(this.state.searchFor)}')`)
-      .get((err, res) => {  
+            if (err) {
+              console.error(err);
+              return;
+            }
 
-        if (err) {
-          console.error(err);
-          return;
-        }
+            // Prepare the output array
+            var users: Array<IUserItem> = new Array<IUserItem>();
 
-        // Prepare the output array
-        var users: Array<IUserItem> = new Array<IUserItem>();
+            // Map the JSON response to the output array
+            res.value.map((item: any) => {
+              users.push( { 
+                displayName: item.displayName,
+                mail: item.mail,
+                userPrincipalName: item.userPrincipalName,
+              });
+            });
 
-        // Map the JSON response to the output array
-        res.value.map((item: any) => {
-          users.push( { 
-            displayName: item.displayName,
-            mail: item.mail,
-            userPrincipalName: item.userPrincipalName,
+            // Update the component state accordingly to the result
+            this.setState(
+              {
+                users: users,
+              }
+            );
           });
-        });
-
-        // Update the component state accordingly to the result
-        this.setState(
-          {
-            users: users,
-          }
-        );
       });
   }
 ```
 
-You create an instance of the **MSGraphClient** type by providing its service key to the **consume()** method of the current context's *serviceScope*.
+You get an instance of the **MSGraphClient** type by calling the `context.msGraphClientFactory.getClient()` method.
 
 You then use the fluent API of the Microsoft Graph SDK to define the OData query that runs against the target Microsoft Graph endpoint.
 
@@ -645,31 +640,25 @@ You're now ready to build, bundle, package, and deploy the solution.
 
   A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the **webApiPermissionRequests** property in the *package-solution.json* file.
 
-4. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, choose **Try the new SharePoint admin center**.
+4. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, choose **Try the preview**.
 
-  ![Screenshot of the Try the new SharePoint admin center link](../images/graphconsumer-open-new-admin-center.png)
+  ![Screenshot of the Try the new SharePoint admin center link](../images/use-aadhttpclient-enterpriseapi-grant-trypreview.png)
 
-5. In the new Admin Center, in the left quick launch menu, choose the **WebApiPermission management** menu item (**API management**). You will see a page similar to the following.
+5. In the new Admin Center, in the left quick launch menu, choose the **API management** menu item. You will see a page similar to the following.
 
-  ![Screenshot of the WebApiPermission management page](../images/graphconsumer-webapipermission-management.png)
+  ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
   > [!NOTE]
   > Asterisks in the UI of the new Admin Center indicate that the features are in preview.
 
-  Using this page, you (or any other admin of your SharePoint Online tenant) can approve or deny any pending permission request. Note that you don't see which solution package is requesting which permission because the permissions are defined at the tenant level and for a unique application. 
+  Using this page, you (or any other admin of your SharePoint Online tenant) can approve or deny any pending permission request. Note that you don't see which solution package is requesting which permission because the permissions are defined at the tenant level and for a unique application.
 
   > [!NOTE]
   > For more information about how the tenant-level permission scopes work internally, see the articles in the [See also](#SeeAlso) section.
 
 6. Choose the permission that you requested in the *package-solution.json* file of your solution, choose **Approve or reject access**, and then choose **Approve**. The following screenshot shows the panel in the Admin UI.
 
-  ![Screenshot of the WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval.png)
-
-  <br/>
-
-7. You can also select the pending approval permission item, and choose **Approve or reject** on the toolbar.
-
-  ![Screenshot of the WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval-approve.png)
+  ![Screenshot of the WebApiPermission management page during the approval process](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
 
 <br/>
 
@@ -705,6 +694,7 @@ And that's it! Now you can build enterprise-level solutions that use Azure AD-se
 <a name="SeeAlso"></a>
 
 ## See also
+
 * [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md)
 * [Use the MSGraphClient to connect to Microsoft Graph](use-msgraph.md)
 * [Complete source code from this tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes)

@@ -1,7 +1,7 @@
 ---
 title: Connect to Azure AD-secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 03/16/2018
+ms.date: 02/28/2018
 ms.prod: sharepoint
 ---
 
@@ -9,12 +9,9 @@ ms.prod: sharepoint
 
 When building SharePoint Framework solutions, you might need to connect to an API secured by using Azure Active Directory (Azure AD). SharePoint Framework allows you to specify which Azure AD applications and permissions your solution requires, and a tenant administrator can grant the necessary permissions if they haven't yet been granted. By using the **AadHttpClient**, you can easily connect to APIs secured by using Azure AD without having to implement the OAuth flow yourself.
 
-> [!IMPORTANT]
-> `AadHttpClient` and `MSGraphClient` client objects are currently in preview and are subject to change. Do not use them in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
-
 ## Web API permissions overview
 
-Azure AD secures a number of resources, from Office 365 to custom line-of-business applications built by the organization. To connect to these resources, applications must obtain a valid access token that grants them access to a particular resource. Applications can obtain an access token as part of the [OAuth authorization flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code). 
+Azure AD secures a number of resources, from Office 365 to custom line-of-business applications built by the organization. To connect to these resources, applications must obtain a valid access token that grants them access to a particular resource. Applications can obtain an access token as part of the [OAuth authorization flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 Client-side applications that are incapable of storing a secret, such as SharePoint Framework solutions, use a specific type of OAuth flow named [OAuth implicit flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-dev-understanding-oauth2-implicit-grant).
 
@@ -108,11 +105,11 @@ Each Azure AD application exposes a number of permission scopes. These permissio
 
 ## Request permissions to an Azure AD application
 
-If your SharePoint Framework solution requires permissions to specific resources secured with Azure AD, such as Microsoft Graph or enterprise applications, you can specify these resources along with the necessary permissions in the configuration of your solution. 
+If your SharePoint Framework solution requires permissions to specific resources secured with Azure AD, such as Microsoft Graph or enterprise applications, you can specify these resources along with the necessary permissions in the configuration of your solution.
 
 1. In your SharePoint Framework project, open the **config/package-solution.json** file.
 
-2. To the **solution** property, add the **webApiPermissionRequests** property that lists all the resources and corresponding permissions that your solution needs. 
+2. To the **solution** property, add the **webApiPermissionRequests** property that lists all the resources and corresponding permissions that your solution needs.
 
   Following is an example of a SharePoint Framework solution requesting access to read user calendars by using the Microsoft Graph:
 
@@ -180,10 +177,7 @@ When deploying SharePoint Framework solutions that request permissions to Azure 
 
 ### Manage permissions in the Office 365 Admin portal
 
-> [!NOTE]
-> Screenshots included in this section are based on the prerelease version of this capability and will change when it becomes generally available. One of the limitations of the prerelease version of the administration UI is that it doesn't report errors. If you perform an action and the UI doesn't seem to respond to it, it is possible that an error has occurred. You can verify that by opening the developer tools in your web browser and examining the console and the issued web requests.
-
-Office 365 tenant administrators can manage permission grants and requests through the web UI from the modern SharePoint admin center. 
+Office 365 tenant administrators can manage permission grants and requests through the web UI from the modern SharePoint admin center.
 
 1. Open the modern SharePoint admin center by navigating to the [Office 365 portal landing page](https://portal.office.com).  Sign in with your organizational account.
 
@@ -221,7 +215,7 @@ Following are some ways that Office 365 tenant administrators can manage permiss
   After the request has been rejected, it is no longer visible in the list of web API permissions.
 
   > [!NOTE]
-  > Rejecting a permission request issued by a solution deployed in the app catalog doesn't affect that solution, and it remains deployed in the app catalog. Because the requested permissions have been denied, the solution won't be working as expected and you should remove it from the app catalog immediately after rejecting the permission request.
+  > Rejecting a permission request issued by a solution deployed in the app catalog doesn't affect that solution, and it remains deployed in the app catalog. Because the requested permissions have been denied, the solution might not be working as expected. Developers should never assume that all requested permissions have been granted and should fail gracefully if this is not the case.
 
 - To **revoke a previously granted set of permissions**, select the grant in the list of permissions, and on the toolbar, choose **Remove access**. In the **Remove access** pane, choose **Remove**.
 
@@ -230,7 +224,7 @@ Following are some ways that Office 365 tenant administrators can manage permiss
   After the grant has been removed, it is no longer visible in the list of web API permissions.
 
   > [!NOTE]
-  > Removing a previously granted set of permissions yields errors in all solutions used in your tenant that rely on those permissions. Before removing the specific permission grant, you should closely examine the impact that it will have on your tenant. If you accidentally removed a permission grant, you can restore it by issuing a new permission request with the same resource and scope.
+  > Removing a previously granted set of permissions could yield errors in all solutions used in your tenant that rely on those permissions unless they handle it gracefully. Before removing the specific permission grant, you should closely examine the impact that it will have on your tenant. If you accidentally removed a permission grant, you can restore it by issuing a new permission request with the same resource and scope.
   >
   > Revoking granted permissions doesn't invalidate previously issued access tokens. Instead, they remain valid until they expire.
 
@@ -304,7 +298,7 @@ SharePoint tenant administrators can use the [Office 365 CLI](https://aka.ms/o36
 
 ## Connect to Azure AD applications using the AadHttpClient
 
-Starting from version 1.4.1, SharePoint Framework simplifies connecting to APIs secured with Azure AD. Using the new **AadHttpClient**, you can easily connect to APIs secured with Azure AD without having to implement authentication and authorization yourself. 
+Starting from version 1.4.1, SharePoint Framework simplifies connecting to APIs secured with Azure AD. Using the new **AadHttpClient**, you can easily connect to APIs secured with Azure AD without having to implement authentication and authorization yourself.
 
 Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL JS by using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and is available in the Azure AD of all Office 365 tenants.
 
@@ -314,14 +308,18 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
   import { AadHttpClient, HttpClientResponse } from '@microsoft/sp-http';
   ```
 
-2. Create a new instance of the **AadHttpClient**, passing the current service scope and the resource to which you want to connect as parameters:
+2. Get a new instance of the **AadHttpClient**, passing the resource to which you want to connect as parameters:
 
   ```typescript
   export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
     public render(): void {
       // ...
 
-      const contosoApiClient: AadHttpClient = new AadHttpClient(this.context.serviceScope, 'https://contoso.onmicrosoft.com/orders');
+      this.context.aadHttpClientFactory
+        .getClient('09c4b84d-13c4-4451-9350-3baedf70aab4')
+        .then((client: AadHttpClient): void => {
+          // connect to the API
+        });
     }
 
     // ...
@@ -338,14 +336,17 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
     public render(): void {
       // ...
 
-      const contosoApiClient: AadHttpClient = new AadHttpClient(this.context.serviceScope, 'https://contoso.onmicrosoft.com/orders');
-      contosoApiClient
-        .get('https://contoso.azurewebsites.net/api/orders', AadHttpClient.configurations.v1)
-        .then((response: HttpClientResponse): Promise<Order[]> => {
-          return response.json();
-        })
-        .then((orders: Order[]): void => {
-          // process data
+      this.context.aadHttpClientFactory
+        .getClient('09c4b84d-13c4-4451-9350-3baedf70aab4')
+        .then((client: AadHttpClient): void => {
+          client
+            .get('https://contoso.azurewebsites.net/api/orders', AadHttpClient.configurations.v1)
+            .then((response: HttpClientResponse): Promise<Order[]> => {
+              return response.json();
+            })
+            .then((orders: Order[]): void => {
+              // process data
+            });
         });
     }
 
@@ -379,7 +380,7 @@ No matter if the administrator denies or approves permissions requested by the s
 
 ### Control the SharePoint Online Client service principal
 
-All permissions granted through web API requests are stored with the **SharePoint Online Client Extensibility** Azure AD application. If tenant administrators don't want developers to use the web API request model and the **MSGraphClient** and **AadHttpClient** in their solutions, they can disable the **SharePoint Online Client Extensibility** service principal through PowerShell by using the `Disable-SPOTenantServicePrincipal` cmdlet. 
+All permissions granted through web API requests are stored with the **SharePoint Online Client Extensibility** Azure AD application. If tenant administrators don't want developers to use the web API request model and the **MSGraphClient** and **AadHttpClient** in their solutions, they can disable the **SharePoint Online Client Extensibility** service principal through PowerShell by using the `Disable-SPOTenantServicePrincipal` cmdlet.
 
 The service principal can be re-enabled by using the `Enable-SPOTenantServicePrincipal` cmdlet. Alternatively, it's also possible to enable and disable the **SharePoint Online Client Extensibility** service principal through the Office 365 CLI by using the [spo serviceprincipal set](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-set/) command.
 

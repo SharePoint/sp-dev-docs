@@ -1,14 +1,11 @@
 ---
 title: Consume enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to an enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 03/21/2018
+ms.date: 08/28/2018
 ms.prod: sharepoint
 ---
 
 # Consume enterprise APIs secured with Azure AD in SharePoint Framework
-
-> [!IMPORTANT]
-> The `AadHttpClient` class is currently in preview and is subject to change. Do not use it in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
 
 This article illustrates how you would connect to an enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well as building the SharePoint Framework solution.
 
@@ -20,7 +17,7 @@ Start with creating an enterprise API secured with Azure Active Directory. While
 
 ### Create an Azure function
 
-In the [Azure portal](https://ms.portal.azure.com/), create a new Function App.
+In the [Azure portal](https://portal.azure.com/), create a new Function App.
 
 > For more information on creating Function Apps in Azure see the [Create a function app from the Azure portal](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) help article.
 
@@ -311,9 +308,14 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
   private ordersClient: AadHttpClient;
 
   protected onInit(): Promise<void> {
-    this.ordersClient = new AadHttpClient(this.context.serviceScope, '594e83da-9618-438f-a40a-4a977c03bc16');
-
-    return Promise.resolve();
+    return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
+      this.context.aadHttpClientFactory
+        .getClient('594e83da-9618-438f-a40a-4a977c03bc16')
+        .then((client: AadHttpClient): void => {
+          this.ordersClient = client;
+          resolve();
+        }, err => reject(err));
+    });
   }
 
   // shortened for brevity
@@ -329,9 +331,14 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
   private ordersClient: AadHttpClient;
 
   protected onInit(): Promise<void> {
-    this.ordersClient = new AadHttpClient(this.context.serviceScope, '594e83da-9618-438f-a40a-4a977c03bc16');
-
-    return Promise.resolve();
+    return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
+      this.context.aadHttpClientFactory
+        .getClient('594e83da-9618-438f-a40a-4a977c03bc16')
+        .then((client: AadHttpClient): void => {
+          this.ordersClient = client;
+          resolve();
+        }, err => reject(err));
+    });
   }
 
   public render(): void {
@@ -447,4 +454,4 @@ Select the **Orders** web part to add it to the page. You should see the list of
 
 ![List of recent orders retrieved from an enterprise API displayed on a SharePoint page](../images/use-aadhttpclient-enterpriseapi-webpart-orders.png)
 
->If you receive an error with the technical details of "Failed to open pop-up window", you have a pop-up blocker enabled. You will need to disable the browser's pop-up blocker for your site in order to show the page correctly.
+> If you receive an error with the technical details of "Failed to open pop-up window", you have a pop-up blocker enabled. You will need to disable the browser's pop-up blocker for your site in order to show the page correctly.

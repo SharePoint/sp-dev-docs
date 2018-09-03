@@ -88,6 +88,14 @@ To preview your web part, build and run it on a local web server. The client-sid
 
 Switch to your console, ensure that you are still in the **helloworld-webpart** directory, and then enter the following command:
 
+> [!NOTE]
+> Developer certificate has to be installed **ONLY once in your development environment**, so you can skip this step, if you have already executed that in your environment.
+  ```
+  gulp trust-dev-cert
+  ```
+
+Now that we have installed the developer certificate, enter the following command in the console to build and preview your web part:
+
   ```
   gulp serve
   ```

@@ -1,7 +1,7 @@
 ---
 title: Use the MSGraphClient to connect to Microsoft Graph
 description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
-ms.date: 03/16/2018
+ms.date: 08/28/2018
 ms.prod: sharepoint
 ---
 
@@ -9,12 +9,9 @@ ms.prod: sharepoint
 
 When building SharePoint Framework solutions, you can easily connect to the Microsoft Graph by using the **MSGraphClient**.
 
-> [!IMPORTANT]
-> `AadHttpClient` and `MSGraphClient` client objects are currently in preview and are subject to change. Do not use them in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
-
 ## MSGraphClient overview
 
-**MSGraphClient** is a new HTTP client introduced in SharePoint Framework v1.4.1 that simplifies connecting to the Microsoft Graph inside SharePoint Framework solutions. **MSGraphClient** wraps the existing [Microsoft Graph JavaScript Client Library](https://www.npmjs.com/package/@microsoft/microsoft-graph-client), offering developers the same capabilities as when using the client library in other client-side solutions. 
+**MSGraphClient** is a new HTTP client introduced in SharePoint Framework v1.4.1 that simplifies connecting to the Microsoft Graph inside SharePoint Framework solutions. **MSGraphClient** wraps the existing [Microsoft Graph JavaScript Client Library](https://www.npmjs.com/package/@microsoft/microsoft-graph-client), offering developers the same capabilities as when using the client library in other client-side solutions.
 
 While you could use the Microsoft Graph JavaScript Client Library in your solution directly, **MSGraphClient** handles authenticating against the Microsoft Graph for you, which allows you to focus on building your solution.
 
@@ -26,17 +23,21 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
 1. To use the **MSGraphClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
   ```typescript
-  import { MSGraphClient } from '@microsoft/sp-client-preview';
+  import { MSGraphClient } from '@microsoft/sp-http';
   ```
 
-2. **MSGraphClient** is provided as a service, which you have to consume from the service scope to get a reference. To do that, in your code add:
+2. **MSGraphClient** is exposed through the **MSGraphClientFactory** available on the web part context. To get a reference to MSGraphClient, in your code add:
 
   ```typescript
   export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
     public render(): void {
       // ...
 
-      const client: MSGraphClient = this.context.serviceScope.consume(MSGraphClient.serviceKey);
+      this.context.msGraphClientFactory
+        .getClient()
+        .then((client: MSGraphClient): void => {
+          // use MSGraphClient here
+        });
     }
 
     // ...
@@ -50,13 +51,16 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
     public render(): void {
       // ...
 
-      const client: MSGraphClient = this.context.serviceScope.consume(MSGraphClient.serviceKey);
-      // get information about the current user from the Microsoft Graph
-      client
-        .api('/me')
-        .get((error, response: any, rawResponse?: any) => {
-          // handle the response
-      });
+      this.context.msGraphClientFactory
+        .getClient()
+        .then((client: MSGraphClient): void => {
+          // get information about the current user from the Microsoft Graph
+          client
+            .api('/me')
+            .get((error, response: any, rawResponse?: any) => {
+              // handle the response
+          });
+        });
     }
 
     // ...
@@ -86,13 +90,16 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
     public render(): void {
       // ...
 
-      const client: MSGraphClient = this.context.serviceScope.consume(MSGraphClient.serviceKey);
-      // get information about the current user from the Microsoft Graph
-      client
-        .api('/me')
-        .get((error, user: MicrosoftGraph.User, rawResponse?: any) => {
-          // handle the response
-      });
+      this.context.msGraphClientFactory
+        .getClient()
+        .then((client: MSGraphClient): void => {
+          // get information about the current user from the Microsoft Graph
+          client
+            .api('/me')
+            .get((error, user: MicrosoftGraph.User, rawResponse?: any) => {
+              // handle the response
+          });
+        });
     }
 
     // ...
@@ -104,9 +111,6 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
 By default, the service principal has no explicit permissions granted to access the Microsoft Graph. However, if you request an access token for the Microsoft Graph, you get a token with the `user_impersonation` permission scope that can be used for reading information about the users (that is, `User.Read.All`).
 
 Additional permission scopes can be requested by developers and granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](./use-aadhttpclient.md).
-
-> [!IMPORTANT]
-> The behavior that uses `user_impersonation` is subject to change before general availability of this capability.  We recommend that you not take dependency on these default permissions.
 
 ## See also
 

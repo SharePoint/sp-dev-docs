@@ -89,16 +89,6 @@ npm install @microsoft/generator-sharepoint --save-dev
 For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
 
 
-## Install the developer certificate
-
-The client-side toolchain uses HTTPS endpoint by default, which means that it will also host the 'localhost' with SSL certificate. This simplifies development process with SharePoint Online as it's also hosted using HTTPS endpoint. 
-
-The SharePoint Framework toolchain comes with a developer certificate that you can install for building your custom solutions easily with HTTPS endpoint. To install the developer certificate, enter following command:
-
-  ```
-  gulp trust-dev-cert
-  ```
-
 ## Optional tools
 
 Following are some tools that might come in handy as well:

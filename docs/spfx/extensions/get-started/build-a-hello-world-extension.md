@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 08/27/2018
+ms.date: 08/30/2018
 ms.prod: sharepoint
 ---
 
@@ -124,6 +124,16 @@ You cannot use the local Workbench to test SharePoint Framework Extensions. You 
     Your **serve.json** file should look somewhat following (updated with your tenant details):
 
     ![Updated server json file](../../../images/ext-app-vscode-updated-serve-json.png)
+
+
+3. Switch to your console, ensure that you are still in the **app-extension** directory, and then enter the following command:
+
+> [!NOTE]
+> Developer certificate has to be installed **ONLY once in your development environment**, so you can skip this step, if you have already executed that in your environment.
+
+  ```
+  gulp trust-dev-cert
+  ```
 
 3. Compile your code and host the compiled files from your local computer by running the following command:
 

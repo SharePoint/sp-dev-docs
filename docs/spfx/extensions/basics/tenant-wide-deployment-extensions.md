@@ -1,7 +1,7 @@
 ---
 title: Tenant Wide Deployment of SharePoint Framework Extensions
 description: Activating SharePoint Framework extensions across tenant from centralized location.
-ms.date: 08/28/2018
+ms.date: 08/30/2018
 ms.prod: sharepoint
 ---
 
@@ -15,9 +15,9 @@ Tenant Wide Deployment option for SharePoint Framework Extensions is supported f
 When developers create a new SharePoint Framework extension solution using standard SharePoint Framework Yeoman packages, automation is included in the solution package to activate extension cross the tenant.
 
 > [!WARNING]
-> Starting from SharePoint Framework v1.6, default scaffolding will automatically create example files in SharePoint Solution to activate extension across the tenant.
+> Starting from SharePoint Framework v1.6, default scaffolding will automatically create example files in SharePoint Solution to activate extension across the tenant if you chose to use the tenant-scoped deployment option.
 
-SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality.
+SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality. This means that the `skipFeatureDeployment` attribute in the `package-solution.json` will need to be set as *true*. 
 
 # Controlling tenant wide deployment from app catalog site collection
 
@@ -83,6 +83,8 @@ Supported location values are following. These are specific for the the componen
 SharePoint Framework solutions default scaffolding creates an automation file to the SharePoint Framework solution when an extension component type is created with initial solution creation. Default deployment activation is located in **ClientSideInstance.xml** file in the `sharepoint\assets` folder.
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/ext-tenant-wide-clientsideinstance.png)
+
+**ClientSideInstance.xml** is taken into account in the solution activation at the app catalog if the `skipFeatureDeployment` attribute is set to *true* in the `package-solution.json` file. 
 
 This file contains by default following structure. **ClientSideComponentInstance** element instructs SharePoint to add automatically an entry to the Tenant Wide Deployment list when the solution package is added to the app catalog.
 
