@@ -128,14 +128,14 @@ You cannot use the local Workbench to test SharePoint Framework Extensions. You 
 
 3. Switch to your console, ensure that you are still in the **app-extension** directory, and then enter the following command:
 
-> [!NOTE]
-> Developer certificate has to be installed **ONLY once in your development environment**, so you can skip this step, if you have already executed that in your environment.
+    > [!NOTE]
+    > Developer certificate has to be installed **ONLY once in your development environment**, so you can skip this step, if you have already executed that in your environment.
 
-  ```
-  gulp trust-dev-cert
-  ```
+    ```
+    gulp trust-dev-cert
+    ```
 
-3. Compile your code and host the compiled files from your local computer by running the following command:
+4. Compile your code and host the compiled files from your local computer by running the following command:
 
     ```
     gulp serve
@@ -149,7 +149,7 @@ You cannot use the local Workbench to test SharePoint Framework Extensions. You 
     ![Gulp serve](../../../images/ext-app-gulp-serve.png)
 
 
-4. Move to your browser and select **Load debug scripts** to continue loading scripts from your local host.
+5. Move to your browser and select **Load debug scripts** to continue loading scripts from your local host.
 
     ![Allow Debug Manifest question from the page](../../../images/ext-app-debug-manifest-message.png)
 
