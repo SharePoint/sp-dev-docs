@@ -166,7 +166,7 @@ To create a site design, you first need to create a site script. A site design i
 
 To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. 
 
-Your new site design should show up as a design option. Notice that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
+Your new site design should show up as a design option. Notice that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly.
 
 
 ## See also
