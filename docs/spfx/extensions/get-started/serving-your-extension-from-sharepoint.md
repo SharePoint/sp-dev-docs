@@ -102,9 +102,30 @@ For this tutorial, we do not need this file as we will be activating solution in
 
 ### Ensure that definitions are taken into account within the build pipeline
 
-Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding adds needed configuration to define a feature framework feature definition for the solution package. Remove also the entry for **clientsideinstance.xml** under *elementManifests*, as we do not need that for this tutorial.
+Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding adds needed configuration to define a feature framework feature definition for the solution package. **Remove** also the entry for **clientsideinstance.xml** under *elementManifests*, as we do not need that for this tutorial.
 
-Your **package-slution.json** should look somewhat following after the needed edits, except for the id entries, which will be specific for your solution.
+Here's how the `elementManifests` section looked initially
+
+```json
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "clientsideinstance.xml"
+          ]
+        }
+```
+
+And here's how it looks after needed edit
+
+```json
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
+```
+
+Your **package-solution.json** should look somewhat following after the needed edits, except for the id entries, which will be specific for your solution.
 
 ```json
 {
@@ -122,8 +143,7 @@ Your **package-slution.json** should look somewhat following after the needed ed
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [
-            "elements.xml",
-            "clientsideinstance.xml"
+            "elements.xml"
           ]
         }
       }
