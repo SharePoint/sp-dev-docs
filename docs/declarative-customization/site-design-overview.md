@@ -9,6 +9,9 @@ ms.date: 04/20/2018
 > [!NOTE]
 > Site designs and site scripts have been released to production and are available for general use.
 
+> [!NOTE]
+> Site designs and site scripts are only supported by SharePoint Online today.
+
 Use site designs and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations. 
 
 When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created. 
