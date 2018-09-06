@@ -57,7 +57,7 @@ Office 365 CDN is the easiest way to host SharePoint Framework solutions directl
     Get-SPOTenantCdnOrigins -CdnType Public
     ```
     
-    Note that your newly added origin is listed as a valid CDN origin. Final configuration of the origin takes approximately 15 minutes, so we can continue creating your test extension, which is hosted from the origin after deployment is completed. Following picture shows status without the *pending* message. Notice that you will need to have ***/CLIENTSIDEASSETS** entry for public CDN to be able to use automatic hosting option.
+    Note that your newly added origin is listed as a valid CDN origin. Final configuration of the origin takes approximately 15 minutes, so we can continue creating your test extension, which is hosted from the origin after deployment is completed. Following picture shows status without the *pending* message. Notice that you will need to have __*/CLIENTSIDEASSETS__ entry for public CDN to be able to use automatic hosting option.
 
     ![List of public origins in tenant](../../../images/ext-app-cdn-origins.png)
 
