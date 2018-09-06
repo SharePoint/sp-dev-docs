@@ -142,8 +142,9 @@
     - name: Connect to APIs secured with Azure AD
       href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md      
     - name: Call the Microsoft Graph API using OAuth
-      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md      
-      items:
+      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Connect to anonymous APIs
+      href: spfx/connect-to-anonymous-apis.md
     - name: Tutorials
       items:        
       - name: Consume Microsoft Graph (tutorial)
