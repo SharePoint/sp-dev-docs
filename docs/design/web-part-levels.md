@@ -1,18 +1,19 @@
 ---
 title:  Web part levels
-description: Understanding web part levels and secondary state toolbars and selection model.
+description: Learn about SharePoint web part levels, secondary state toolbars, and the selection model.
 ms.date: 08/13/2018
 ---
 
-# Web part levels
+# SharePoint Web part levels
 
-When designing a web part sometimes there is a need to have a secondary interaction level, for example an item in a list or a individual photo in a gallery. This article goes deeper into how to use secondary state toolbars, default commands, scale, and interactions states to select an individual item.
+When designing a SharePoint web part, you sometimes need to have a secondary interaction level; for example, an item in a list or a individual photo in a gallery. This article explains how to use secondary state toolbars, default commands, scale, and interactions states to select an individual item.
 
-Secondary web part configuration and toolbars follow the same patterns as single state web parts, such as Image or File viewer. Second level items can have their own toolbars and respective property pane to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be clear separation between configuration options in web parts that have two levels. It is recommended to keep Source, Filtering and Layout configuration at the 1st level and any additional options that effect the web part as a whole. 
+Secondary web part configuration and toolbars follow the same patterns as single state web parts, such as image or file viewer. Second level items can have their own toolbars and respective property pane to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be a clear separation between configuration options in web parts that have two levels. We recommend that you keep the Source, Filtering, and Layout configuration, as well as any additional options that affect the web part as a whole, at the first level. 
 
-Some example web part to use as reference are:
-Image gallery
-Quick links
+Some example web parts to use as reference are:
+
+- Image gallery
+- Quick links
 
 ![Selection of an individual image in the Image Gallery web part with property pane open](../images/01_WebpartLevels_Overview.png)
 
