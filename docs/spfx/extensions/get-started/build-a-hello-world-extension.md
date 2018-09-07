@@ -14,7 +14,7 @@ You can also follow the steps in this article by watching the video on the Share
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/yrFNu6K7iuU]
+> [!Video https://www.youtube.com/embed/S3tG2DE8tR8]
 
 <br/> 
 
