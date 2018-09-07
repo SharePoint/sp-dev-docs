@@ -22,7 +22,8 @@ You can also see the tenant-wide deployment option demonstrated by watching the 
 
 
 > [!NOTE] 
-> You have to update to the latest SharePoint Framework Yeoman template version to be able to use this capability. You can update your global installation by executing `npm install -g @microsoft/generator-sharepoint`. 
+> You have to update to the latest SharePoint Framework Yeoman template version to be able to use this capability. You can update your global installation by executing `npm install -g @microsoft/generator-sharepoint`.
+> Tenant-wide deployment is not available for SharePoint 2016 Feature Pack 2 since it only supports SPFX 1.1, and this deployment option was released in version 1.4
 
 ## Solution-specific requirements
 
