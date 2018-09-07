@@ -17,7 +17,7 @@ You can also follow these steps by watching the video on the SharePoint PnP YouT
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/3LXuYBaJ1Lc]
+> [!Video https://www.youtube.com/embed/gVDOLGkr-ag]
 
 <br/> 
 

@@ -13,7 +13,7 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/4wgZy5tm4yo]
+> [!Video https://www.youtube.com/embed/q5gLIyhIkJo]
 
 <br/> 
 
