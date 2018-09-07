@@ -4,13 +4,13 @@ description: Learn about SharePoint web part levels, secondary state toolbars, a
 ms.date: 08/13/2018
 ---
 
-# SharePoint Web part levels
+# SharePoint web part levels
 
-When designing a SharePoint web part, you sometimes need to have a secondary interaction level; for example, an item in a list or a individual photo in a gallery. This article explains how to use secondary state toolbars, default commands, scale, and interactions states to select an individual item.
+When designing a SharePoint web part, you sometimes need to have a secondary interaction level; for example, an item in a list or an individual photo in a gallery. This article explains how to use secondary state toolbars, default commands, scale, and interaction states to select an individual item.
 
-Secondary web part configuration and toolbars follow the same patterns as single state web parts, such as image or file viewer. Second level items can have their own toolbars and respective property pane to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be a clear separation between configuration options in web parts that have two levels. We recommend that you keep the Source, Filtering, and Layout configuration, as well as any additional options that affect the web part as a whole, at the first level. 
+Secondary web part configurations and toolbars follow the same patterns as single state web parts, such as an image or file viewer. Second-level items can have their own toolbars and respective property pane, to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be a clear separation between configuration options in web parts that have two levels. We recommend that you keep the Source, Filtering, and Layout configuration, as well as any additional options that affect the web part as a whole, at the first level. 
 
-Some example web parts to use as reference are:
+The following are some web part examples to use as reference:
 
 - Image gallery
 - Quick links
@@ -20,17 +20,17 @@ Some example web parts to use as reference are:
 
 ## Secondary toolbars
 
-Secondary toolbar are used on individual items in a web part layout that need to support item level configuration in the property pane and other commands like move, to re-arrange items in a layout, or to remove/delete an item. Custom commands can also be added in this toolbar that fit the needs of your web part..
+Secondary toolbars are used on individual items in a web part layout that need to support item-level configuration in the property pane - and other commands like move - to rearrange items in a layout, or to remove/delete an item. You can also add custom commands in this toolbar that fit the needs of your web part.
 
 ![Edit state of Image Gallery web part with property pane open](../images/02_WebpartLevels_SecondLevel.png)
 
 ## Selection states
 
-There are 3 core commands on 2nd level toolbars within a web part. They are Edit, Move and Remove. It's important to consider the implementation of the selection states when building a web part with a secondary level. 
+Second-level toolbars within a web part have three core commands: Edit, Move, and Remove. It's important to consider the implementation of the selection states when building a web part with a secondary level. 
 
-The 2nd level toolbar should only display when the author selects (clicks/taps) an individual item. Do not show all the 2nd level toolbars for every items at once as this can overwhelm the user. Additionally, do not have the toolbar appear on hover, as this may cause usability issues with devices that support touch.
+The second-level toolbar should only display when the author selects (clicks/taps) an individual item. Do not show all the second-level toolbars for every items at once, as this can overwhelm the user. Additionally, do not have the toolbar appear on hover, as this might cause usability issues with devices that support touch.
 
-The bounding box and/or outline of each 2nd level item should change from its default state to the primary color on hover and remain the primary color on selection. It is important that the bounding box and icons keep their active states so the user understands what item is selected when using the property pane or while re-arranging items.
+The bounding box and/or outline of each second-level item should change from its default state to the primary color on hover and remain the primary color on selection. It is important that the bounding box and icons keep their active states so the user understands what item is selected when using the property pane or while re-arranging items.
 
 Below is an example from an individual 2nd level item in the Image gallery web part:
 
