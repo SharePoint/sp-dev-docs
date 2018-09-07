@@ -34,7 +34,10 @@ Following are the most commonly used list template types that SharePoint can cur
 > [!NOTE]
 > Microsoft is adding modern user interface support for more and more list template types. If your adoption of the modern list and library user interface is blocked due to a key missing list template type, let us know via [UserVoice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration).
 
-In this section you'll learn how to identify lists which are not showing up in modern, why that is and how to remediate those (if possible). However before jumping into this it's important to realize that for most tenants we see the majority of the lists being ready for modern. For the lists that are not ready for modern you'll see in below chart that the main reason is that Microsoft did not build a modern version for it. And then there's the small amount of lists that you can remediate as described in this article series. Since for most tenants there's not a lot of lists that you can fix our recommendation is to simply enable the modern list and library experience at tenant level.
+In this section you'll learn how to identify lists which are not showing up in modern, why that is and how to remediate those (if possible). However before jumping into this it's important to realize that for most tenants we see the majority of the lists being ready for modern. For the lists that are not ready for modern you'll see in below chart that the main reason is that Microsoft did not build a modern version for it. And then there's the small amount of lists that you can remediate as described in this article series.
+
+> [!IMPORTANT]
+> As for most tenants there's not a lot of lists that you can fix our recommendation is to simply enable the modern list and library experience at tenant level.
 
 ![Modern list readiness default](media/modernize/modernlistdefaultreadiness.png)
 
