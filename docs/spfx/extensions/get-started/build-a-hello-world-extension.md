@@ -113,9 +113,9 @@ If your Application Customizer uses the **ClientSideComponentProperties** JSON i
 
 You cannot use the local Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. You don't have to however deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient.
 
-1. Open the **server.json** file in the **config** folder.
+1. Open the **serve.json** file in the **config** folder.
 
-    Notice that this file has been updated with the default settings matching your project. Yuo can notice that there's a specific GUID mentioned under the customActions element. This is automatically updated to match your component when project was scaffold. If you will add new components or change the properties for the component, you will need to update this file for testing.
+    Notice that this file has been updated with the default settings matching your project. You can notice that there's a specific GUID mentioned under the customActions element. This is automatically updated to match your component when project was scaffold. If you will add new components or change the properties for the component, you will need to update this file for testing.
 
 2. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *This could be for example a welcome page of a new group associated team site, which would mean somewhat following URL:
 
