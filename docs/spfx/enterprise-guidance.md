@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework (SPFx) enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 01/25/2018
+ms.date: 09/07/2018
 ms.prod: sharepoint
 ---
 
@@ -209,6 +209,14 @@ What you cannot back up is the actual solution artifacts such as script bundles 
 The SharePoint Framework reached General Availability (GA) in February 2017. General Availability means that IT and developers can use SharePoint Framework in production in a supported manner. Beyond General Availability, we would expect that the set of scenarios where we would see SharePoint Framework-based components built and used will expand beyond web part scenarios, and into areas like list and site customizations. For more information about the SharePoint Framework, see the dedicated [SharePoint Framework Roadmap article](./roadmap.md).
 
 Major changes or introductions of new major features will be announced through the Office 365 Message Center, found in your tenant admin, something that an Office 365 administrator already should have on their daily routine to check. Another important resource is the [Office Developer blog](https://dev.office.com/blogs) where you will find even more details and updates.
+
+## Support and SLA
+
+Microsoft doesn't provide support for custom solutions built for SharePoint through the regular SharePoint Online support channels. All issues related to building SharePoint solutions should be logged on GitHub at [https://github.com/SharePoint/sp-dev-docs/issues](https://github.com/SharePoint/sp-dev-docs/issues). The SharePoint Engineering group triages issues in this repository regularly and strives to respond to the incoming requests as quickly as possible.
+
+If your organization has a Premier Support agreement, then it should be the default channel for you to request support with any issues related to building SharePoint solutions. Microsoft escalation engineers will handle your requests according to their urgency.
+
+SharePoint Framework is designed to be backwards-compatible. Microsoft guarantees that solutions built using any of the generally available versions of the SharePoint Framework will keep working until an explicit deprecation notice for the specific version has been given in advance.
 
 ## Summary
 
