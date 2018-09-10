@@ -12,7 +12,11 @@ Like the Microsoft brand palette, the SharePoint themes are designed to build on
 
 The SharePoint color palette is now optimized for screens and devices. In addition, it is optimized to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
+<<<<<<< HEAD
 ![SharePoint color palette, Red A4262C, Orange CA5010, Gold 8F7034, Green 407855, Teal 038387, Blue 0078d4, Dark Blue 40587C, Indigo 4052AB, Plum 854085, Purple 8764B8, Cool Grey 737373, Warm Grey 867365](../images/sharepoint-themes.png)
+=======
+![SharePoint color palette, Red A4262C, Orange CA5010, Gold 986f0b, Green 498205, Teal 038387, Blue 0078d4, Dark Blue 004e8c, Indigo 4f6bed, Plum 881798, Purple 8764B8, Cool Grey 69797e, Warm Grey 7a7574](../images/sharepoint-themes.png)
+>>>>>>> 1e1f6b68a15dfea7c622d0eb2e96ba39261966b8
 
 ## Neutral palette
 
@@ -21,7 +25,11 @@ Neutral colors recede into the background to let our products shine. They allow 
 <br/> 
 <table>
 <tr>
+<<<<<<< HEAD
 <td rowspan="13" style=""><img src="../images/sharepoint-neutral-greys.png" alt="Neutral greys" height="766" width="375"></img></td>
+=======
+<td rowspan="13" style=""><img src="../images/sharepoint-neutralgreys.png" alt="Neutral greys" height="766" width="375"></img></td>
+>>>>>>> 1e1f6b68a15dfea7c622d0eb2e96ba39261966b8
 <td style="color:white; background-color:#000000">black: #000000</td>
 </tr>
 <tr>
@@ -107,7 +115,11 @@ After you select a color, light and dark shades of the accent color are created 
 
 SharePoint includes a palette that supports dark themes. The SharePoint-provided colors guarantee accessible and legible experiences.
 
+<<<<<<< HEAD
 ![SharePoint dark theme color palette, Red EF6950, Yellow FFC83D, Green 40C5AF, Blue 409AE1, Purple b4a0ff, Grey b2b2b2](../images/sharepoint-themes-dark.png)
+=======
+![SharePoint dark theme color palette, Red EF6950, Yellow FFC83D, Green 00b294, Blue 3a96dd, Purple 9c89e9, Grey b1adab](../images/sharepoint-themes-dark.png)
+>>>>>>> 1e1f6b68a15dfea7c622d0eb2e96ba39261966b8
 
 ## Principles
 
