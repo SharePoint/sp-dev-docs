@@ -352,9 +352,6 @@ This article demonstrated how to customize the rendering process for a custom fi
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md)
-    
-  
 -  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   

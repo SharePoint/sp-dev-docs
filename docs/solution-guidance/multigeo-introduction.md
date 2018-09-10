@@ -1,20 +1,18 @@
 ---
-title: OneDrive and SharePoint Online Multi-Geo Preview
-description: This Preview allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 tenancy to satisfy data residency requirements.
+title: OneDrive Multi-Geo 
+description: This offering allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 tenancy to satisfy data residency requirements.
 ms.date: 4/27/2018
 ---
 
-# OneDrive and SharePoint Online Multi-Geo Preview
+# OneDrive Online Multi-Geo 
 
-> [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
-The OneDrive and SharePoint Online Multi-Geo Preview allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 ODSP tenancy to satisfy data residency requirements.
+OneDrive Online Multi-Geo allows multinational corporations that have one or more geographical locations, to expand their Office 365 ODSP tenancy to satisfy data residency requirements.
 
-In a OneDrive and SharePoint Online Multi-Geo Preview configuration, your Office 365 tenant consists of a central location (also known as a default location) and one or more satellite geo (geographical) locations. A single tenancy spans one or more additional geo locations. Your tenant information, including geo locations, is stored in Azure Active Directory (Azure AD).
+In a OneDrive Multi-Geo configuration, your Office 365 tenant consists of a central location (also known as a default location) and one or more satellite geo (geographical) locations. A single tenancy spans one or more additional geo locations. Your tenant information, including geo locations, is stored in Azure Active Directory (Azure AD).
 
 > [!NOTE] 
-> OneDrive and SharePoint Online Multi-Geo Preview features are not designed to optimize performance. They are designed to meet data residency requirements.
+> OneDrive Online Multi-Geo features are not designed to optimize performance. They are designed to meet data residency requirements.
 
 The following are key terms related to the OneDrive and SharePoint Online Multi-Geo Preview:
 

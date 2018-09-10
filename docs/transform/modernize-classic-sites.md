@@ -7,17 +7,17 @@ ms.prod: sharepoint
 
 # Modernize your classic SharePoint sites
 
-SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. 
+SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. To learn more about modern checkout the [SharePoint classic and modern experiences](https://support.office.com/en-us/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US) article.
 
-All of this is great, but you might ask yourself, *I have lots of classic (team) sites...how do I bring them into the modern SharePoint world?* 
+All of this is great, but you might ask yourself, *I have lots of classic (team) sites...how do I bring them into the modern SharePoint world?*
 
-You can transform (or "modernize") a classic site into a modern Office 365 group-connected site by following the guidance in this section. 
+You can transform (or "modernize") a classic site into a modern Office 365 group-connected site by following the guidance in this section.
 
 > [!TIP]
 > You can decide which steps to run and the order in which to run them. Although there's no one-size-fits-all process to modernize your site, the following is the recommended approach.
 
 > [!IMPORTANT]
-> It's not currently supported to start using the modern page experience on sites where classic publishing features have been activated.
+> For publishing portals (sites based upon BLANKINTERNET#0, ENTERWIKI#0, SRCHCEN#0, SRCHCENTERLITE#0, BICENTERSITE#0, POINTPUBLISHINGHUB#0, POINTPUBLISHINGTOPIC#0 or sites using the “Pages” library) it's not currently supported to connect these to an Office 365 group or to use modern pages. If you want to modernize your publishing portal it's recommended to start from a new communication site and configure that one accordingly.
 
 ## Enable your site to fully leverage the modern user interface
 
@@ -70,4 +70,5 @@ For more information about page transformation, see [Transform classic pages to 
 
 ## See also
 
+- [SharePoint classic and modern experiences](https://support.office.com/en-us/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US)
 - [Office 365 development and SharePoint PnP solution guidance](../solution-guidance/office-365-development-patterns-and-practices-solution-guidance.md)

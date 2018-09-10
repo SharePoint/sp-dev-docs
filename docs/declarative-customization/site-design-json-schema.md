@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 05/25/2018
+ms.date: 07/18/2018
 ---
 
 # Site design JSON schema
@@ -133,7 +133,7 @@ Deletes a default field that was provided by the selected template type.
 
 Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field).
 
-Currently these field constructs cannot be designated as site columns nor added to content types.
+Currently these field constructs cannot be designated as site columns nor added to content types. To create site columns with Field XML use the **createSiteColumnXml** action.
 
 #### JSON value
 
@@ -146,6 +146,27 @@ Currently these field constructs cannot be designated as site columns nor added 
 {
     "verb": "addSPFieldXml",
     "schemaXml": "<Field Type=\"Choice\" DisplayName=\"Project Category\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectCategory\" Name=\"ProjectCategory\"><Default>Operations</Default><CHOICES><CHOICE>Operations</CHOICE><CHOICE>IT</CHOICE><CHOICE>Legal</CHOICE><CHOICE>Engineering</CHOICE></CHOICES></Field>"
+}
+```
+
+### addSPLookupFieldXml
+
+Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field).
+
+#### JSON value
+
+- **schemaXml** &ndash; The CAML block to define the field.
+- **targetListName** &ndash; The name that identifies the list this lookup field is referencing. Provide either this or targetListUrl.
+- **targetListUrl** &ndash; A web-relative URL that identifies the list this lookup field is referencing. Provide either this or targetListName.
+- **addToDefaultView** &ndash; **True** if the field will be added to the default view; otherwise, **false**.
+
+#### Example
+
+```json
+{
+  "verb": "addSPLookupFieldXml",
+  "schemaXml": "<Field Type=\"Lookup\" DisplayName=\"Contoso Project Category\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" ShowField=\"Title\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{101f1f89-d667-4c7f-9ebc-76cb5831d0a2}\" StaticName=\"ContosoProjectCategory\" Name=\"ContosoProjectCategory\" />",
+  "targetListName": "Contoso Project Master"
 }
 ```
 
@@ -421,6 +442,23 @@ Use the **createSiteColumn** verb to define a new site column that can then be a
 }
 ```
 
+Use the **createSiteColumnXml** verb to define a new site column for those complex data types not supported by createSiteColumn. These columns can then be associated to a list directly or by using the addContentType action. 
+
+#### JSON value
+
+- **schemaXml** &ndash; The CAML block to define the field.
+- **pushChanges** &ndash; Indicates whether this change should be pushed to lists that already reference this field. Defaults to **true**.
+
+#### Example
+
+```json
+{
+    "verb": "createSiteColumnXml",
+    "schemaXml": "<Field Type=\"Choice\" DisplayName=\"Project Status\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectStatus\" Name=\"ProjectStatus\"><Default>In Progress</Default><CHOICES><CHOICE>In Progress</CHOICE><CHOICE>In Review</CHOICE><CHOICE>Done</CHOICE><CHOICE>Has Issues</CHOICE></CHOICES></Field>"
+}
+```
+
+
 ## Define a new content type
 
 Use **createContentType** to define a new content type that can then be associated to a list by using the addContentType action. 
@@ -502,8 +540,6 @@ Subaction to remove a site column from a list or content type.
  }
  ```
 
-
-
 ## Add a navigation link
 
 Use the **addNavLink** verb to add a new navigation link to the site. 
@@ -533,6 +569,46 @@ Use the **addNavLink** verb to add a new navigation link to the site.
    "displayName": "Project Activities",
    "isWebRelative": true
  }
+```
+
+## Remove a navigation link
+
+Use the **removeNavLink** verb to remove a navigation link from the site. 
+
+#### JSON values
+
+- **url** &ndash; The url of the link to add.
+- **displayName** &ndash; The display name of the link.
+- **isWebRelative** &ndash; **True** if the link is web relative; otherwise, **false**.
+
+#### Example
+
+> [!NOTE]
+> This action can be used to remove site links added by the collaboration and communication site templates (for example, "home", "documents", "pages", "conversations", etc.). 
+
+
+```json
+{
+    "verb": "removeNavLink",
+    "displayName": "Home",
+    "isWebRelative": true
+},
+{
+    "verb": "removeNavLink",
+    "displayName": "Pages",
+    "isWebRelative": true
+},
+{
+    "verb": "removeNavLink",
+    "displayName": "Conversations",
+    "isWebRelative": true
+},
+{
+    "verb": "removeNavLink",
+    "url": "/_layouts/15/groupstatus.aspx?Target=TEAM",
+    "displayName": "Teams",
+    "isWebRelative": true
+}
 ```
 
 ## Apply a theme

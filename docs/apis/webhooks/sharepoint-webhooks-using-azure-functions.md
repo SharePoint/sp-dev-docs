@@ -35,6 +35,7 @@ The first step you need to do is create an Azure Function App, which is a specia
     > [!NOTE]
     > - Using the **GenericWebHook** template does not yet work for SharePoint webhooks, but the SharePoint product team is aware of this problem and will address it.
     > - If you get "Failed to validate the notification URL" errors when using your Azure function-based webhook, you might be able to resolve this by setting the Authorization level to **Function** and defining your function for anonymous access.
+    > - Java language functions cannot currently validate the webhook callback due to lack of asynchronous support. This should be added by Azure Functions v2 general avalibility as seen [here](https://github.com/Azure/azure-functions-java-worker/issues/83)
 
     <br/>
 

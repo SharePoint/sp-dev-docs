@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 03/09/2018
+ms.date: 08/20/2018
 ms.prod: sharepoint
 ---
 
@@ -17,7 +17,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/-tXf8gxjmOI]
+> [!Video https://www.youtube.com/embed/B7vLIrm2XKY]
 
 <br/> 
 
@@ -32,7 +32,7 @@ Install [NodeJS LTS version](https://nodejs.org).
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE] 
-> Current LTS version of NodeJS is 8.11.3. Notice that 9.x versions are currently not supported with SharePoint Framework development.
+> Current LTS version of NodeJS is 8.11.4. Notice that 9.x or 10.x versions are currently not supported with SharePoint Framework development.
 
 ### Install a code editor
 
@@ -87,6 +87,7 @@ npm install @microsoft/generator-sharepoint --save-dev
 ```
 
 For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
+
 
 ## Optional tools
 

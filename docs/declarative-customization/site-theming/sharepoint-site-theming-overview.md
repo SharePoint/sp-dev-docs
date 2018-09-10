@@ -16,7 +16,7 @@ These new features include:
 * An updated color palette, with 12 light colors and 6 dark colors, as well as 16 supplementary themes.
 * Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
 
-These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the [SharePoint client-side object model (CSOM)](sharepoint-site-theming-csom.md) or the [SharePoint REST API](sharepoint-site-theming-rest-api.md).
+These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the [SharePoint client-side object model (CSOM)](sharepoint-site-theming-csom.md) or the [SharePoint REST API](sharepoint-site-theming-rest-api.md). For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview)
 
 For general information about working with themes to customize the look of your sites, see [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818).
 
@@ -62,9 +62,9 @@ When you select a classic theme, a modern theme is generated from the settings i
 
 For the simplest experience, we recommend that you use modern themes with modern pages. If you need to use classic themes with modern pages, test your site carefully to verify that your content is readable and accessible.
 
-## Change the default experience at the site collection level 
+## Troubleshoot custom theme issues 
 
-While the new client-side theming architecture is more performant, if you have customizations that aren’t rendering properly after you change the site’s theme, you can opt the site out of the new theming experience by disabling the feature.
+The modern site theming experience has been rolled out to classic site templates, too. While the new client-side theming architecture is more performant, if you have customizations on classic sites that aren’t rendering properly after you change the site’s theme, you can opt the site out of the new theming experience by disabling the feature. Please note, this opt-out only applies to classic sites where you have custom theme references that aren't rendering properly. By enabling this site-level opt-out you will disable the modern theming - and also lose the fast theming benefits it provides.
 
 To do this, you must use a Windows PowerShell script with a CSOM (client-side object model) wrapper. We recommend using the PnP enable feature command:
 
