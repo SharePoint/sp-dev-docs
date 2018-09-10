@@ -4,7 +4,7 @@ description: Learn how to design a web part icon that will look great in SharePo
 ms.date: 08/24/2018
 ---
 
-# Web part icons
+# Designing a web part icon
 
 Web Part icons are designed to be simple, representative, and symbolic. Every icon is reduced to a minimalistic style to represent the most essential attributes. Icons will display in the toolbox within SharePoint pages and optionally in the store.
 
