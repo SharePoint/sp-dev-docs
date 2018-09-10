@@ -230,6 +230,8 @@
       href: spfx/debug-in-vscode.md
     - name: Debug on modern pages
       href: spfx/debug-modern-pages.md
+    - name: Use the developer dashboard
+      href: spfx/use-developer-dashboard.md
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ
