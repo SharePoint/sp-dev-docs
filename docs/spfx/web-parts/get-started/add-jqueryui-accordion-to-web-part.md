@@ -1,7 +1,7 @@
 ---
 title: Add jQueryUI Accordion to your SharePoint client-side web part
 description: Adding the jQueryUI Accordion to your web part project involves creating a new web part.
-ms.date: 01/08/2018
+ms.date: 08/20/2018
 ms.prod: sharepoint
 ---
 
@@ -15,13 +15,12 @@ Adding the jQueryUI Accordion to your web part project involves creating a new w
 Ensure that you've completed the following steps before you start:
 
 * [Build your first web part](build-a-hello-world-web-part.md)
-* [Connect your web part to SharePoint](connect-to-sharepoint.md)
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/7UOxTbMMPrQ]
+> [!Video https://www.youtube.com/embed/PqPlsXwG6zU]
 
 <br/>
 
@@ -40,7 +39,7 @@ The developer toolchain uses Webpack, SystemJS, and CommonJS to bundle your web 
   ```
       
   > [!WARNING] 
-  > Make sure to create this directory in a new folder, not as a subdirectory of `helloworld-webpart`.
+  > Make sure to create this directory in a new folder, not as a subdirectory of `helloworld-webpart`, if you continue to this tutorial from the *hello world series*.
 
 2. Go to the project directory:
 
@@ -70,31 +69,19 @@ The developer toolchain uses Webpack, SystemJS, and CommonJS to bundle your web 
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **jQueryWebPart** as well.
 
-6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-  ```sh
-  npm shrinkwrap
-  ```
-
-7. Enter the following to open the web part project in Visual Studio Code:
-
-  ```
-  code .
-  ```
-
 
 ## Install jQuery and jQuery UI NPM Packages
 
 1. In the console, enter the following to install the jQuery npm package:
 
   ```
-  npm install --save jquery@2
+  npm install jquery@2
   ```
 
 2. Now enter the following to install the jQueryUI npm package:
 
   ```
-  npm install --save jqueryui
+  npm install jqueryui
   ```
 
   Next, we need to install the typings for our project. Starting from TypeScript 2.0, we can use npm to install needed typings.
@@ -102,15 +89,21 @@ The developer toolchain uses Webpack, SystemJS, and CommonJS to bundle your web 
 3. Open your console and install the needed types:
 
   ```
-  npm install --save @types/jquery@2
-  npm install --save @types/jqueryui
+  npm install @types/jquery@2
+  npm install @types/jqueryui
   ```
 
 ### To unbundle external dependencies from web part bundle
 
-By default, any dependencies you add are bundled into the web part bundle. In some cases, this is not ideal. You can choose to unbundle these dependencies from the web part bundle.
+By default, any dependencies you add are bundled into the web part bundle. In some cases, this is not ideal as it increases the file size. You can choose to unbundle these dependencies from the web part bundle.
 
-1. In Visual Studio Code, open the file **config\config.json**.
+1. Enter the following to open the web part project in Visual Studio Code:
+
+  ```
+  code .
+  ```
+
+2. In Visual Studio Code, open the file **config\config.json**.
 
   This file contains information about your bundle(s) and any external dependencies. 
 
@@ -129,13 +122,13 @@ By default, any dependencies you add are bundled into the web part bundle. In so
     },
   ```
 
-2. The `externals` section contains the libraries that are not bundled with the default bundle. 
+3. The `externals` section contains the libraries that are not bundled with the default bundle. 
 
   ```json
     "externals": {},
   ```
 
-3. To exclude `jQuery` and `jQueryUI` from the default bundle, add the modules to the `externals` section:
+4. To exclude `jQuery` and `jQueryUI` from the default bundle, add the modules to the `externals` section:
 
   ```json
   "jquery":"node_modules/jquery/dist/jquery.min.js",
@@ -355,5 +348,4 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 3. In the console where you have `gulp serve` running, select Ctrl+C to terminate the task.
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
-
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.

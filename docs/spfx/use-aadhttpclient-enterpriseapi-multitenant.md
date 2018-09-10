@@ -1,14 +1,11 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 03/21/2018
+ms.date: 08/28/2018
 ms.prod: sharepoint
 ---
 
 # Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
-
-> [!IMPORTANT]
-> The `AadHttpClient` class is currently in preview and is subject to change. Do not use it in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
 
 This article illustrates how you would connect to a multi-tenant enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well building the SharePoint Framework solution.
 
@@ -375,9 +372,14 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
   private ordersClient: AadHttpClient;
 
   protected onInit(): Promise<void> {
-    this.ordersClient = new AadHttpClient(this.context.serviceScope, '594e83da-9618-438f-a40a-4a977c03bc16');
-
-    return Promise.resolve();
+    return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
+      this.context.aadHttpClientFactory
+        .getClient('594e83da-9618-438f-a40a-4a977c03bc16')
+        .then((client: AadHttpClient): void => {
+          this.ordersClient = client;
+          resolve();
+        }, err => reject(err));
+    });
   }
 
   // shortened for brevity
@@ -393,9 +395,14 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
   private ordersClient: AadHttpClient;
 
   protected onInit(): Promise<void> {
-    this.ordersClient = new AadHttpClient(this.context.serviceScope, '594e83da-9618-438f-a40a-4a977c03bc16');
-
-    return Promise.resolve();
+    return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
+      this.context.aadHttpClientFactory
+        .getClient('594e83da-9618-438f-a40a-4a977c03bc16')
+        .then((client: AadHttpClient): void => {
+          this.ordersClient = client;
+          resolve();
+        }, err => reject(err));
+    });
   }
 
   public render(): void {

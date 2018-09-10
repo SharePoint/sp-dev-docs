@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. 
-ms.date: 07/27/2018
+ms.date: 09/06/2018
 ---
 
 # Get started creating site designs and site scripts
@@ -113,7 +113,7 @@ The REST API to add a new site design is **CreateSiteDesign**.
 
 ## Use the new site design
 
-Now that you've added a site script and site design, you can use it to create new sites through the self-service site creation experience or apply the site design to an existing site using the **Invoke-SPOSiteDesign** command in PowerShell.
+Now that you've added a site script and site design, you can use it to create new sites through the self-service site creation experience or apply the site design to an existing site using the **Invoke-SPOSiteDesign** command in PowerShell. If you are using hub sites you can even associate a site design to a hub so it gets applied to all joining sites.
 
 ### New site creation
 
@@ -140,6 +140,10 @@ Now that you've added a site script and site design, you can use it to create ne
 You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet. 
 
 You can already apply to Group-connected Team and Communication sites. By August 2018 you will also be able to apply site designs to the team site not connected to an Office 365 Group, a classic team site, or a classic publishing site.
+
+### Associate with a hub site
+
+You can also associate a published site design to a hub site in hub site settings so it can be applied to all joining sites. For details on how to associate the site design either through the UI or using the Set-SPOHubSite command please review the [Set up a site design for your hub site](https://docs.microsoft.com/en-us/sharepoint/set-up-site-design-hub-site) article.
 
 ## See also
 

@@ -55,6 +55,7 @@ The simplest column formatting is one that places the value of the field inside 
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField"
 }
@@ -66,6 +67,7 @@ Some field types require a bit of extra work to retrieve their values. Person fi
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.title"
 }
@@ -77,6 +79,7 @@ Lookup fields are also represented as objects; the display text is stored in the
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.lookupValue"
 }
@@ -95,7 +98,7 @@ This example uses an Excel-style conditional expression (`=if`) to apply a class
 
 ```JSON
 {
-  "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
   "debugMode": true,
   "elmType": "div",
   "attributes": {
@@ -132,7 +135,7 @@ This pattern is useful when you want different values to map to different levels
 
 ```JSON
 {
-  "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
   "debugMode": true,
   "elmType": "div",
   "attributes": {
@@ -174,7 +177,7 @@ This example colors the current field red when the value inside an item's DueDat
 
 ```JSON
 {
-  "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
   "elmType": "div",
   "debugMode": true,
   "txtContent": "@currentField",
@@ -192,6 +195,7 @@ This example demonstrates an alternate syntax to express a conditional expressio
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -226,6 +230,7 @@ To compare a date/time field value against another date constant, use the `Date(
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -264,6 +269,7 @@ This example shows how to turn a text field that contains stock ticker symbols i
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField",
    "attributes": {
@@ -286,6 +292,7 @@ You can use column formatting to render quick action links next to fields. The f
 
 ```JSON
 {
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
     "elmType": "div",
     "children": [
         {
@@ -331,7 +338,7 @@ This example applies `background-color` and `border-top` styles to create a data
 
 ```JSON
 {
-  "debugMode": true,
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
   "elmType": "div",
   "txtContent": "@currentField",
   "attributes": {
@@ -353,7 +360,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 
 ```JSON
 {
-    "debugMode": true,
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
     "elmType": "div",
     "children": [
         {
@@ -477,6 +484,7 @@ The following are not currently supported:
 * Filename (in Document Libraries)
 * Calculated
 * Retention Label
+* Currency
 
 ## Style guidelines
 
@@ -496,6 +504,10 @@ You can use the following predefined classes for several common scenarios.
 | sp-field-trending--up |![Green arrow with number 500](../images/sp-columnformatting-trendingup.png) |
 | sp-field-trending--down |![Red arrow with number 100](../images/sp-columnformatting-trendingdown.png) |
 | sp-field-quickAction |![Name with mail icon](../images/sp-columnformatting-quickaction.png) |
+
+> Note - The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
+
+In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/icons). 
 
 ### Predefined icons
 
@@ -522,6 +534,8 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 > [!TIP]
 > At any point, select **Ctrl**+**Space** to have Visual Studio Code offer suggestions for properties and values. For more information, see [Editing JSON with Visual Studio Code](https://code.visualstudio.com/Docs/languages/json).
 
+> [!TIP]
+> SharePoint Patterns and Practices provides a free web part, [Column Formatter](https://github.com/SharePoint/sp-dev-solutions/blob/master/solutions/ColumnFormatter/docs/documentation/docs/getting-started.md), that can be used to edit and apply formats directly in the browser.
 
 ## Detailed syntax reference
 
@@ -547,6 +561,7 @@ Any other value will result in an error.
 
 ```JSON
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
   "elmType": "button",
   "txtContent": "Open this item",
   "customRowAction": {
@@ -559,6 +574,7 @@ Any other value will result in an error.
 
 ```JSON
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
   "elmType": "button",
   "txtContent": "Share this item",
   "customRowAction": {
@@ -720,6 +736,7 @@ The following example shows the value of a style object. In this example, two st
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "padding": "4px",
    "background-color": {
       "operator": "?",
@@ -757,6 +774,7 @@ Any other attribute name will result in an error. Attribute values can either be
 
 ```JSON
 {
+        "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
 	"target": "_blank",
 	"href": "='http://finance.yahoo.com/quote/' + @currentField"
 }
@@ -807,6 +825,7 @@ The following example contains an Expression object that performs the following 
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "operator": "?",
    "operands": [
       {
@@ -936,6 +955,7 @@ For example, the following JSON will display the current field (assuming it's a 
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": {
         "operator": "toLocaleString()",
@@ -961,6 +981,7 @@ The following example shows how a lookup field might be used on a current field.
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField.lookupValue",
    "attributes": {
@@ -994,6 +1015,7 @@ The following example shows how a hyperlink field might be used on a current fie
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField.desc",
    "attributes": {
@@ -1005,7 +1027,7 @@ The following example shows how a hyperlink field might be used on a current fie
 
 #### "[$FieldName]" 
 
-The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specififying the **internal name** of the field surrounded by square brackets and preceeded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
+The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceeded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
@@ -1017,6 +1039,7 @@ This field can be used to display the current user's email address, but more lik
 
 ```JSON
 {
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.title",
    "style": {

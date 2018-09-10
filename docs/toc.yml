@@ -74,8 +74,10 @@
       - name: Use JSOM
         href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
   - name: Extensions
-    href: spfx/extensions/overview-extensions.md
+    href: spfx/extensions/overview-extensions.md    
     items:
+    - name: Tenant Wide Deployment
+      href: spfx/extensions/basics/tenant-wide-deployment-extensions.md  
     - name: Getting started
       href: spfx/extensions/get-started/build-a-hello-world-extension.md
       items:
@@ -113,6 +115,8 @@
       href: spfx/team-based-development-on-sharepoint-framework.md
     - name: Governance considerations
       href: spfx/web-parts/guidance/governance-considerations.md
+    - name: Dynamic loading of packages
+      href: spfx/dynamic-loading.md
     - name: Connecting components
       href: spfx/dynamic-data.md      
   - name: External libraries
@@ -129,27 +133,26 @@
       href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
   - name: Connect to APIs
     items:
-    - name: Connect to APIs secured with Azure AD
-      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
-    - name: Call the Microsoft Graph API using OAuth
-      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Connect to SharePoint APIs
+      href: spfx/connect-to-sharepoint.md   
+    - name: Connect to Microsoft Graph 
+      href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD using the AadHttpClient
       href: spfx/use-aadhttpclient.md
-      items:
-      - name: Consume enterprise APIs (tutorial)
-        href: spfx/use-aadhttpclient-enterpriseapi.md
-      - name: Consume multi-tenant enterprise APIs (tutorial)
-        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
-    - name: Microsoft Graph 
-      href: spfx/use-msgraph.md
-      items:
+    - name: Connect to APIs secured with Azure AD
+      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md      
+    - name: Call the Microsoft Graph API using OAuth
+      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Connect to anonymous APIs
+      href: spfx/connect-to-anonymous-apis.md
+    - name: Tutorials
+      items:        
       - name: Consume Microsoft Graph (tutorial)
-        href: spfx/use-aad-tutorial.md        
-    - name: Microsoft GraphHttpClient (Deprecated)
-      href: spfx/overview-graphhttpclient.md
-      items:
-      - name: Tutorial (Deprecated)
-        href: spfx/call-microsoft-graph-using-graphhttpclient.md          
+        href: spfx/use-aad-tutorial.md
+      - name: Consume enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi.md
+      - name: Consume multi-tenant enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
   - name: Setup and deployment
     items:
     - name: Package solution
@@ -228,6 +231,8 @@
       href: spfx/debug-in-vscode.md
     - name: Debug on modern pages
       href: spfx/debug-modern-pages.md
+    - name: Use the developer dashboard
+      href: spfx/use-developer-dashboard.md
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ
@@ -286,6 +291,8 @@
         href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
       - name: Work with folders and files
         href: sp-add-ins/working-with-folders-and-files-with-rest.md
+      - name: Retrieve the URL of the tenant app catalog
+        href: sp-add-ins/retrieve-tenant-app-catalog-url-rest.md
       - name: Determine endpoint URIs
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
       - name: Use OData query operations
@@ -326,6 +333,8 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
+    - name: Calling Microsoft Flow from a site script
+      href: declarative-customization/site-design-trigger-flow-tutorial.md               
     - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md         
   - name: Site theming
@@ -363,6 +372,8 @@
     href: apis/alm-api-for-spfx-add-ins.md         
   - name: Column formatting
     href: declarative-customization/column-formatting.md   
+  - name: View formatting
+    href: declarative-customization/view-formatting.md       
   - name: Communication site
     href: apis/communication-site-creation-rest.md     
   - name: Shorter share links
