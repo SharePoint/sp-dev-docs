@@ -92,16 +92,15 @@ Dim rangeCoordinates As New RangeCoordinates()
     > [!NOTE]
     > Make sure the workbook you want to open has a worksheet called "Sheet1" that contains values. Alternatively, you can change "Sheet1" in the code to the name of your worksheet. 
 
-4.  `Add the following code to point to the workbook you want to open`:
-    
-        ```cs
-        string targetWorkbookPath = "http://myserver02/example/Shared%20Documents/Book1.xlsx";
-        ```
+4.  Add the following code to point to the workbook you want to open:
 
+    ```cs
+    string targetWorkbookPath = "http://myserver02/example/Shared%20Documents/Book1.xlsx";
+    ```
 
-        ```VB.net
-        Dim targetWorkbookPath As String = "http://myserver02/example/Shared%20Documents/Book1.xlsx"
-        ```
+    ```VB.net
+    Dim targetWorkbookPath As String = "http://myserver02/example/Shared%20Documents/Book1.xlsx"
+    ```
 
 
     > [!IMPORTANT]
