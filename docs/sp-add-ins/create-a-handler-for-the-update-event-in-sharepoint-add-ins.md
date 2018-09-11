@@ -37,7 +37,7 @@ The following procedure assumes that you have added the add-in event receiver it
    
    The following is an example of the structure. The _properties_ object is an **SPRemoteEventProperties** object.
     
-    ```C#
+    ```csharp
        if (properties.EventType == SPRemoteEventType.AppUpgraded)
      {
      }
@@ -48,7 +48,7 @@ The following procedure assumes that you have added the add-in event receiver it
 
 3. If your handler needs to access non-SharePoint components, put that code outside any client context blocks. Your code should be structured similarly to the following:
     
-    ```C#
+    ```csharp
        if (properties.EventType == SPRemoteEventType.AppUpgraded)
      {
          using (ClientContext cc = TokenHelper.CreateAppEventClientContext(properties, true))
@@ -66,7 +66,7 @@ The following procedure assumes that you have added the add-in event receiver it
 
 4. To use the REST interface, your code uses other methods in the **TokenHelper** class to get an access token, which is then included in the requests it makes to SharePoint. For more information, see [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md). Your code should be structured similarly to the following.
     
-    ```C#
+    ```csharp
        if (properties.EventType == SPRemoteEventType.AppUpgraded)
      {
          string contextTokenString = TokenHelper.GetContextTokenFromRequest(Request);
@@ -86,7 +86,7 @@ The following procedure assumes that you have added the add-in event receiver it
 
 5. To access SharePoint, your REST code also needs to know the URL of the host web or add-in web or both. These URLs are both subproperties of the **SPRemoteEventProperties** object that is passed to the **ProcessEvent** method. The following code shows how to get them.
     
-    ```C#
+    ```csharp
        Uri hostWebURL = properties.AppEventProperties.HostWebFullUrl;
        Uri appWebURL = properties.AppEventProperties.AppWebFullUrl;
     ```
@@ -101,7 +101,7 @@ When you update an add-in for the second (or third, and so on) time, you may nee
 
 3. Add your new update logic (for the update from 2.0.0.0 to 3.0.0.0) under this structure. The following is an example.
     
-    ```C#
+    ```csharp
        Version ver2OOO = new Version("2.0.0.0");
      if (properties.AppEventProperties.PreviousVersion < ver2OOO)
      {
@@ -113,7 +113,7 @@ When you update an add-in for the second (or third, and so on) time, you may nee
 
 4. For each subsequent update, repeat these steps. For the update from 3.0.0.0 to 4.0.0.0, your code should have the following structure.
     
-    ```C#
+    ```csharp
      Version ver2OOO = new Version("2.0.0.0");
      if (properties.AppEventProperties.PreviousVersion < ver2OOO)
      {
@@ -151,7 +151,7 @@ Not everything your **UpgradedEventEndpoint** does needs to be explicitly revers
 
 On the second (or third, and so on) update, your exception handing logic has to take account of the fact that the add-in instance that is being updated is not necessarily the immediately previous version. If it isn't, there may be two or more blocks of update code that need to be reversed. For this reason, you need conditional logic that is based on the number of the previous version. The following is an example of the rollback logic for an update to version 4.0.0.0.
 
-```C#
+```csharp
 catch (Exception e)
 { 
     // Rollback of the 3.0.0.0 to 4.0.0.0 update logic goes here.
@@ -172,7 +172,7 @@ catch (Exception e)
 
 The last things your error handling should do is assign an error message and a cancel status to the **SPRemoteEventResult** object that the **ProcessEvent** method returns to the SharePoint update infrastructure. The following is an example. In this code, _result_ is an **SPRemoteEventResult** object that has been declared earlier in the **ProcessEvent** method.
 
-```C#
+```csharp
 catch (Exception e)
 {     
     result.ErrorMessage = "custom message " + e.Message;
@@ -198,7 +198,7 @@ Return to [Major steps in updating an add-in](update-sharepoint-add-ins.md#Major
 -  [Update host web components in SharePoint](update-host-web-components-in-sharepoint.md)
 -  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
 
-## Additional resources
+## See also
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
 -  [UpgradedEventEndpoint element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx)

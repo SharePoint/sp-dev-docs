@@ -161,7 +161,7 @@ Visual Studio 2012 has SharePoint workflow project types built in. To create a S
 
   
 
-## Additional resources
+## See also
 <a name="information"> </a>
 
 For more information about **SharePoint Add-ins**, see the following:

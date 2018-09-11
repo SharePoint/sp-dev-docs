@@ -27,7 +27,7 @@ Return to [Major steps in updating an add-in](update-sharepoint-add-ins.md#Major
 -  [Update host web components in SharePoint](update-host-web-components-in-sharepoint.md)
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
 
-## Additional resources
+## See also
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
 -  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md) 

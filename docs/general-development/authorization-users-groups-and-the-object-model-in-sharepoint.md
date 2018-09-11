@@ -68,7 +68,7 @@ In policy roles, the users and groups are identified by both their security iden
     
     
 
-> **Note:**
+> [!NOTE]
 > Central administration policy roles differ from the role definitions for a site collection. 
   
     
@@ -246,7 +246,7 @@ The only way to remove a user from all scopes is to delete that user from the si
     
     
 
-## Additional resources
+## See also
 <a name="SP15_AuthorizationUsersGroupsAndObjectModel_AdditionalResources"> </a>
 
 

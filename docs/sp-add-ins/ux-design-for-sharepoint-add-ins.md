@@ -65,7 +65,7 @@ The following UX resources are available to connect your add-in UX to the host w
 
 - **Custom actions**: You can use custom actions to connect the host web UX with your add-in. There are two types of custom actions: Ribbon or ECB. A custom action can send parameters such as the list or item on which it was invoked to a remote page. For more information, see [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).   
  
-- **Add-in parts:** You can include some of your add-in user experience in the host web by using add-in parts. The add-in part is available in the Web Part gallery in the host web when you deploy the add-in. Users can add the add-in part to a page by using the **Web Part Adder** control. For more information, see [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md).
+- **Add-in parts:** You can include some of your add-in user experience in the host web by using add-in parts. The add-in part is available in the Web Part Gallery in the host web when you deploy the add-in. Users can add the add-in part to a page by using the **Web Part Adder** control. For more information, see [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md).
     
 Figure 3 shows the resources in the model for SharePoint Add-ins to connect your add-in UX to the host web.
 
@@ -73,7 +73,7 @@ Figure 3 shows the resources in the model for SharePoint Add-ins to connect your
 
 ![App UX resources for the host web](../images/AppUX_hostweb.png)
 
-## Additional resources
+## See also
 <a name="SP15_UXdesignapps_addresources"> </a>
 
 -  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)

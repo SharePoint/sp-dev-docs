@@ -1,8 +1,8 @@
 ---
-title: List definition / list template in the SharePoint add-in model
+title: List definition / list template in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-List definition / list template in the SharePoint add-in model
+List definition / list template in the SharePoint Add-in model
 ==============================================================
 
 Summary
@@ -18,7 +18,7 @@ High Level Guidelines
 As a rule of a thumb, we would like to provide the following high level guidelines to implement list definitions / list templates.
 
 - Use the remote provisioning pattern to deploy list templates (.stp files) to SharePoint sites.
-- You can override the out of the box list creation behavior to apply standardized settings to all lists created in a SharePoint site.  See more details about this approach below.
+- You can override the out-of-the-box list creation behavior to apply standardized settings to all lists created in a SharePoint site.  See more details about this approach below.
 - You can create a SharePoint Add-in to create lists with standardized settings. See more details about this approach below.
 
 Options to ensure standardized settings (templates) are applied to SharePoint lists upon list creation
@@ -26,12 +26,12 @@ Options to ensure standardized settings (templates) are applied to SharePoint li
 
 You have a couple of options to ensure standardized settings (templates) are applied to SharePoint lists upon list creation.
 
-- Override the out of the box list creation behavior.	
+- Override the out-of-the-box list creation behavior.	
 - Create a SharePoint Add-in. 
 
-Override the out of the box list creation behavior
+Override the out-of-the-box list creation behavior
 --------------------------------------------------
-In this pattern you modify the out of the box list creation behavior by adding an event receiver to the ListAdded event.  Then, in the event receiver configured for the ListAdded event you use the remote provisioning pattern to apply standardized configurations to each list that is created.
+In this pattern you modify the out-of-the-box list creation behavior by adding an event receiver to the ListAdded event.  Then, in the event receiver configured for the ListAdded event you use the remote provisioning pattern to apply standardized configurations to each list that is created.
 
 These standardized configurations may include adding content types, setting the default content type, adding list columns, setting the version settings, and any other list type configurations that may be set. 
 	

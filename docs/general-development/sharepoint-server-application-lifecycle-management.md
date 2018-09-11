@@ -128,7 +128,7 @@ Figure 2 shows how developers can use Office 365 as a development environment an
   
     
     
-Developers with MSDN subscriptions can obtain a development tenant that contains aSharePointDeveloper Site. The SharePointDeveloper Site is preconfigured for developing applications. Users can use not only Visual Studio 2012 in developing applications, but with Office 365 developer sites, Napa can be used within the site to construct applications. For more information about getting started with anOffice 365 Developer Site, see  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx).
+Developers with MSDN subscriptions can obtain a development tenant that contains a SharePoint developer site. The SharePointDeveloper Site is preconfigured for developing applications. Users can use not only Visual Studio 2012 in developing applications, but with Office 365 developer sites, Napa can be used within the site to construct applications. For more information about getting started with an Office 365 developer site, see [Set up a development environment for SharePoint Add-ins on Office 365](../sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
   
     
     
@@ -137,34 +137,6 @@ Developers can start creating applications that will be hosted in Office 365, on
     
     
 Development teams creating separate features or applications that contain a larger solution will need a centralized deployment target to integration test components. Because each developer is creating features or applications on their own Office 365 developer site, a centralized site collection in a target tenant or on-premises environment should be provisioned so that each developer's application components can be deployed there. This approach will allow for a centralized place to conduct integration testing between solution components. The  [testing section of this document](#Testing) reviews this process in more detail.
-  
-    
-    
-
-#### NapaOffice 365 development tools
-<a name="NapaDevelopment"> </a>
-
-The Napadevelopment tools can be used by developers for the simpler creation of applications within an Office 365 developer site. The intention of the Napa tools is for developers, or power users who are proficient in client-side technologies, to quickly develop and deploy applications in a prototype, proof-of-concept or rapid business solution scenario. These tools provide a means of developing application functionality on SharePoint. However, during the lifecycle of an application, there may be points at which the application should be imported into Visual Studio. These conditions are outlined as follows"
-  
-    
-    
-
-- When more than one developer has to contribute or develop part of the solution
-    
-  
-- When an application reaches a level of dependence by users whom requires the application of lifecycle management practices
-    
-  
-- When functional requirements for the application change over time to require supplementary solution components (such as compiled services or data sources)
-    
-  
-- When the application requires integration with other applications or solution components
-    
-  
-- When developers have to use quality control measures such as automated builds and testing
-    
-  
-Once these or other similar conditions occur, developers must export the solution into a source controlled environment such as TFS and apply ALM design considerations and procedures to the application's future development.
   
     
     
@@ -380,7 +352,7 @@ To achieve continuous integration, the build definition can be triggered when de
   
     
     
-ForSharePoint applications, developers should use the  [Office/SharePoint Continuous Integration with TFS 2012](http://officesharepointci.codeplex.com/) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure Visual Studio Online or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint Continuous Integration with TFS 2012 documentation](http://officesharepointci.codeplex.com/documentation).
+ForSharePoint applications, developers should use the  [Office/SharePoint Continuous Integration with TFS 2012](http://officesharepointci.codeplex.com/) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure [Visual Studio Team Services](https://www.visualstudio.com/vso/) or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint Continuous Integration with TFS 2012 documentation](http://officesharepointci.codeplex.com/documentation).
   
     
     
@@ -660,7 +632,7 @@ The information in  [SharePoint Add-ins update process](http://msdn.microsoft.co
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

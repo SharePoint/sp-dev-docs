@@ -1,14 +1,14 @@
 ---
-title: Search API usage in the SharePoint add-in model
+title: Search API usage in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Search API usage in the SharePoint add-in model
+Search API usage in the SharePoint Add-in model
 ===============================================
 
 Summary
 -------
 
-The approach you take to execute searches with the SharePoint Search Service is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint server-side object model (Content By Query Web Part overrides) or the Search Web Services were used to execute searches with the SharePoint Search Service.
+The approach you take to execute searches with the SharePoint Search Service is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint server-side object model (Content By Query web part overrides) or the Search Web Services were used to execute searches with the SharePoint Search Service.
 
 In a SharePoint Add-in model scenario, you execute searches with the SharePoint Search Service via the CSOM or REST APIs.
 
@@ -18,7 +18,7 @@ High Level Guidelines
 As a rule of a thumb, we would like to provide the following high level guidelines to create and configure site collections and sub sites then deploy artifacts, configurations, and branding assets to them.
 
 - Using AppOnly authentication is not supported for any Search Service operations.
-	+ This is due to the fact that the Search Service accesses the User Profile Service (UPS) to search user profile information and the UPS does not support AppOnly authentication.
+	+ This is due to the fact that the Search Service accesses the user profile service to search user profile information and the UPS does not support AppOnly authentication.
 	+ Therefore, because search relevance and other search facets depend on a given user and their profile attributes the AppOnly authentication pattern will not work.
 
 Options to execute searches with the SharePoint Search Service
@@ -40,7 +40,7 @@ In this option you use the .Net CSOM API to execute searches with the SharePoint
 **When is it a good fit?**
 
 - This API is a great fit for Provider-hosted Add-ins, long running operations, or other server-side scenarios that run on the .Net platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, ASP.NET Web API services, .Net console or Windows applications, and Azure Web Jobs.
+- Some examples of these scenarios are ASP.NET MVC websites, ASP.NET Web API services, .Net console or Windows applications, and Azure Web Jobs.
 
 **Getting Started**
 
@@ -130,7 +130,7 @@ In this option you use the JavaScript CSOM (JSOM) API to execute searches with t
 **When is it a good fit?**
 
 - This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-ins running on any web platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, PHP web sites, Python web sites, etc.
+- Some examples of these scenarios are ASP.NET MVC websites, PHP websites, Python websites, etc.
 
 **Getting Started**
 
@@ -177,7 +177,7 @@ In this option you use the REST API to execute searches with the SharePoint Sear
 **When is it a good fit?**
 
 This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-ins running on any web platform.
-- Some examples of these scenarios are ASP.NET MVC web sites, PHP web sites, Python web sites, ASP.NET Web API services, .Net console or Windows applications, Azure Web Jobs, etc.
+- Some examples of these scenarios are ASP.NET MVC websites, PHP websites, Python websites, ASP.NET Web API services, .Net console or Windows applications, Azure Web Jobs, etc.
 
 **Getting Started**
 
@@ -185,9 +185,9 @@ This API is a great fit for SharePoint-hosted Add-ins and Provider-hosted Add-in
 
 The following sample demonstrates how to execute searches with the SharePoint Search Service with the REST API from managed .Net code.
 
-- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/SharePoint/TrainingContent/tree/master/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
+- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/Capabilities/02%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
 
-The **Index** method in the [HomeController.cs class](https://github.com/SharePoint/TrainingContent/blob/master/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory/EmployeeDirectoryWeb/Controllers/HomeController.cs) executes a search for  all users whose last name begins with the text value the user clicks.
+The **Index** method in the [HomeController.cs class](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory/EmployeeDirectoryWeb/Controllers/HomeController.cs) executes a search for  all users whose last name begins with the text value the user clicks.
 
 	var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
 
@@ -214,7 +214,7 @@ The **Index** method in the [HomeController.cs class](https://github.com/SharePo
 	//Set the response
     string responseString = await response.Content.ReadAsStringAsync();
 
-The [How to build SharePoint add-ins that leverage search (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-build-SharePoint-add-ins-that-leverage-search) walks you through the [EmployeeDirectory (OfficeDev Training Content)](https://github.com/SharePoint/TrainingContent/tree/master/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory).
+The [How to build SharePoint add-ins that leverage search (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-build-SharePoint-add-ins-that-leverage-search) walks you through the [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory).
 
 **Client-side Option**
 
@@ -236,7 +236,7 @@ The following code example demonstrates how to execute searches with the SharePo
 Related links
 =============
 - [How to perform personalized search queries with CSOM (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-perform-personalized-search-queries-with-CSOM)
-- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/SharePoint/TrainingContent/tree/master/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
+- [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
 - [How to build SharePoint add-ins that leverage search (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-build-SharePoint-add-ins-that-leverage-search)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")

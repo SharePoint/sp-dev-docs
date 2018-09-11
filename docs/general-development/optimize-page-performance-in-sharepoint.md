@@ -71,7 +71,7 @@ The object used for the AJAX navigation is **AjaxNavigate**. By default, there i
 ajaxNavigate.update(serverRelativeURL, null);
 ```
 
-If you want a control or Web Part to listen to the navigation events, you can use the **add\_navigate** handler. When the handler is called, your callback function receives a reference to the navigation object and the parsed hash values in a dictionary. The control or Web Part can retrieve the value for the parameter of interest from the dictionary, compare it to the current value, and decide what action it needs to take. A common action is to send an AJAX request to the server to retrieve some data or reorder the items in the view. When a control has finished listening to navigation events, it can use the **remove\_navigate** handler.
+If you want a control or web part to listen to the navigation events, you can use the **add\_navigate** handler. When the handler is called, your callback function receives a reference to the navigation object and the parsed hash values in a dictionary. The control or web part can retrieve the value for the parameter of interest from the dictionary, compare it to the current value, and decide what action it needs to take. A common action is to send an AJAX request to the server to retrieve some data or reorder the items in the view. When a control has finished listening to navigation events, it can use the **remove\_navigate** handler.
 
 MDS also supports multiple hash marks in key/value pairs. MDS appends the hash marks after the URL. The format of hash marks in the URL is: `http://server/_layouts/15/start.aspx#/SitePages/page.aspx#key1=value1#key2=value2`. The following code example shows how to update the hash marks.
 
@@ -90,7 +90,7 @@ A particular element in the page must make sure that the critical resources need
 - ASP.NET pages
 - Custom master pages for errors
 - JavaScript files
-- Controls and Web Parts
+- Controls and web parts
 
 ### Master pages
 
@@ -187,7 +187,7 @@ In previous versions of SharePoint, some pages write content by using the **Resp
 
 <br/>
 
-If a page, control, or Web Part directs its output to the **Response.Output** property, it causes MDS to fail back. When MDS fails back, it performs a full navigation to the requested page. You can find the offending control by using the **DeltaPage .\_shipRender** property while debugging the server component.
+If a page, control, or web part directs its output to the **Response.Output** property, it causes MDS to fail back. When MDS fails back, it performs a full navigation to the requested page. You can find the offending control by using the **DeltaPage .\_shipRender** property while debugging the server component.
 
 You should replace HTML inline script elements with **SharePoint:ScriptBlock** controls. The following shows an HTML inline script element and its MDS-compliant alternative **SharePoint:ScriptBlock** control.
 
@@ -235,9 +235,9 @@ The **ExecuteAndRegisterBeginEndFunctions** has the following parameters:
 -  _endFunc_: A function that is called after you retrieve the delta, but before the HTML and JavaScript for the new page are applied.
 -  _loadFunc_: A function that is called after the HTML and JavaScript for the new page is applied.
 
-### Controls and Web Parts
+### Controls and web parts
 
-To use MDS, controls and Web Parts have to register page resources by using the **SPPageContentManager** object. The most frequently registered resources using **SPPageContentManager** are JavaScript snippets (functions or JSON variables) and hidden fields. The following table shows common patterns for inserting hidden fields and JavaScript snippets, and how to do the same by using the **SPPageContentManager** object. 
+To use MDS, controls and web parts have to register page resources by using the **SPPageContentManager** object. The most frequently registered resources using **SPPageContentManager** are JavaScript snippets (functions or JSON variables) and hidden fields. The following table shows common patterns for inserting hidden fields and JavaScript snippets, and how to do the same by using the **SPPageContentManager** object. 
     
 <br/>    
 
@@ -259,13 +259,13 @@ The MDS engine uses the first parameter to filter the scripts. Here are the rule
 
 - If the first argument is not of type **Page** and the control falls under a **SharePoint:AsyncDelta**, the scripts will execute in the browser.
 
-- If the first argument is a Web Part, the scripts will execute in the browser.
+- If the first argument is a web part, the scripts will execute in the browser.
 
 Many APIs in previous versions of SharePoint did not provide the current control as an argument. The public object model in SharePoint was designed to provide an alternate method to register the resources. The methods that do not provide the current control as an argument are still in the API for backward compatibility.
 
-You can navigate between two pages by using a new function named **SPUpdatePage**. When a control or Web Part is rendered in MDS delta mode, the **HyperLink** controls must add the **onclick** handler and call **SPUpdatePage**.
+You can navigate between two pages by using a new function named **SPUpdatePage**. When a control or web part is rendered in MDS delta mode, the **HyperLink** controls must add the **onclick** handler and call **SPUpdatePage**.
  
-You must update the XSLT used by Web Parts because all the resources must be added by using the **SPPageContentManager** object to make them MDS-compliant. You can add JavaScript snippets to the XSLT by using the **RegisterScriptLink** and **RegisterScriptBlock** methods of the **SPPageContentManager** object.
+You must update the XSLT used by web parts because all the resources must be added by using the **SPPageContentManager** object to make them MDS-compliant. You can add JavaScript snippets to the XSLT by using the **RegisterScriptLink** and **RegisterScriptBlock** methods of the **SPPageContentManager** object.
 
 ## Optimize page downloads
 <a name="MDS"> </a>
@@ -525,7 +525,7 @@ There is also consideration for where the requests route or how they are distrib
 
 Much of the guidance for SharePoint 2010 page performance optimization applies to SharePoint. This article provides some of the elements of guidance for SharePoint 2010 while diving into new areas that would specifically benefit performance. We covered some obvious changes or enhancements, for example, MDS and the enhanced Developer Dashboard. We wrapped up with the classic guidance: crunch down JavaScript and cascading style sheets, use a CDN for common JavaScript libraries if possible for caching, combine and compress images as much as possible, limit or remove unnecessary data from view, and construct list views judiciously. The techniques and features discussed in this article contribute to supporting your performance goals.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)  

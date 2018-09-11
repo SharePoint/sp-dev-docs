@@ -30,12 +30,6 @@ Creates a SharePoint Add-in based on the information that you specify in a wizar
 
 For more information, see [SharePoint Add-ins](sharepoint-add-ins.md).
 
-### Cloud Business Add-in
-
-By using the **Cloud Business Add-in** template in Visual Studio, you can create a SharePoint-hosted add-in in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. 
-
-For more information, see [Create cloud business add-ins](create-cloud-business-add-ins.md).
-
 <a name="SP15Projecttemplates_items"> </a>
 ## Project item templates
 
@@ -47,7 +41,7 @@ Adds an Office Add-in to your SharePoint Add-in. You can add a task pane add-in,
 
 For more information, see [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
 
-### Client Web Part (Host Web)
+### Client web part (Host Web)
 
 Adds a client web part to your SharePoint Add-in. By adding a client web part, you can display add-ins on the pages of a host site. This template contains a single Elements.xml file, whose properties define the following elements of the client web part.
 
@@ -137,7 +131,7 @@ Adds a project item for a workflow custom activity to your SharePoint Add-in. By
 
 For more information, see [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
 
-## Additional resources
+## See also
 <a name="SP15Projecttemplates_addlresources"> </a>
 
 - [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)

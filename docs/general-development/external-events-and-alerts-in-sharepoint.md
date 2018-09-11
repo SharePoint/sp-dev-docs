@@ -57,10 +57,7 @@ Business Connectivity Services (BCS) uses remote event receivers attached to ext
     
 To accommodate this, two stereotypes have been added to the schema of the BDC model: **EventSubscriber** and **EventUnsubscriber**.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Event receivers are not supported in sandboxed solutions. 
   
     
@@ -440,9 +437,7 @@ In constructing the notification, the LOB system has to create an HTTP payload t
   
 - **Full item:** In this case, the payload is an entire record that has changed in the external system. In the customer example, the entire changed customer record is included.
     
-  
-
-> **Note:**
+> [!NOTE]
 > The full item is only supported when you use the OData connector. 
   
     
@@ -649,7 +644,7 @@ For more information about external events and alerts, see the following.
 | [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md) <br/> |Learn how to create an Internet-addressable Windows Communication Foundation (WCF) service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="Externalevents_Addres"> </a>
 
 

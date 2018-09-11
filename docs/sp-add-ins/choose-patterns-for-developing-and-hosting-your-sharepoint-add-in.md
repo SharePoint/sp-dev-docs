@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Choose patterns for developing and hosting your SharePoint Add-in
 
-The SharePoint add-in model introduces a wide range of hosting and development patterns. Some of these patterns can be used in combination with each other. For example, your add-ins can mix SharePoint-hosted and remotely hosted components. The most useful way to determine which patterns you'll want to use is to start with your own requirements, technologies, and goals and match them with the options and possibilities that are enabled by SharePoint Add-ins.
+The SharePoint Add-in model introduces a wide range of hosting and development patterns. Some of these patterns can be used in combination with each other. For example, your add-ins can mix SharePoint-hosted and remotely hosted components. The most useful way to determine which patterns you'll want to use is to start with your own requirements, technologies, and goals and match them with the options and possibilities that are enabled by SharePoint Add-ins.
 
 <a name="ChoosePattern"> </a>
 ## What to think about when choosing your development pattern
@@ -33,11 +33,10 @@ You can combine a SharePoint-hosted add-in with add-ins that have remotely hoste
 |How the add-in gets authorized|The privileges of the signed-in user|
 |What language the add-in can use|JavaScript (with the SharePoint JSOM library) + HTML|
 
-This pattern is the easiest to deploy, and you can use the [Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools](create-a-basic-sharepoint-hosted-add-in-by-using-napa-office-365-development-too.md). You'll want to consider the following before deciding to create a SharePoint-hosted add-in.
 
 |**Get these benefits**|**But consider this**|
 |:-----|:-----|
-|Reuse common SharePoint items, like lists and Web Parts.|You can use only JavaScript in the add-in—you can't use any server-side code.|
+|Reuse common SharePoint items, like lists and web parts.|You can use only JavaScript in the add-in—you can't use any server-side code.|
 |Relatively easy to create and deploy, so they are good for small team productivity add-ins and business process automation, with lower complexity business rules.|Your add-in has only the authorization privileges of the signed-in user.|
 
 [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
@@ -152,7 +151,7 @@ If you already have a provider-hosted SharePoint Add-in that you want to host on
 
 If you already have a web role in an Azure cloud service that you want to use as a host for a provider-hosted SharePoint Add-in, open the Azure cloud project in Visual Studio, and then, in **Solution Explorer**, choose the web role project. On the menu bar, select **Project** > **Add Add-in for SharePoint Project**. A project for a provider-hosted SharePoint Add-in is created called _NameOfTheWebAppProject_.Azure and added to the solution. Visual Studio references the Azure web role as the web project host for the SharePoint Add-in.
 
-## Additional resources
+## See also
 <a name="SPAppModelArch_AdditionalResources"> </a>
 
 -  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)

@@ -7,23 +7,21 @@ ms.assetid: bb4467e2-57f0-4cf1-91b8-4d3d8d2358cb
 
 
 # Build reusable components for SharePoint
-Learn about some of the most important reusable components you can build in SharePoint, including Web Parts, workflows, custom lists, and more.
+Learn about some of the most important reusable components you can build in SharePoint, including web parts, workflows, custom lists, and more.
 ## Reusable components in SharePoint
 <a name="SP15Reusecomp_Reusable"> </a>
 
-Using SharePoint, you can build a variety of components, such as lists, Web Parts, and content types, which you can reuse in various apps, sites, and solutions. This section summarizes some of the most common reusable components that you can build in SharePoint. Future updates to this documentation will contain information about additional components you can build.
+Using SharePoint, you can build a variety of components, such as lists, web parts, and content types, which you can reuse in various apps, sites, and solutions. This section summarizes some of the most common reusable components that you can build in SharePoint. Future updates to this documentation will contain information about additional components you can build.
   
     
-    
-
-> **Note:**
+> [!NOTE]
 > There are some restrictions on which components you can use in SharePoint Add-ins. For more information, see  [Host webs, add-in webs, and SharePoint components in SharePoint](http://msdn.microsoft.com/library/b791cdf5-8aa2-47fa-bc4c-aee437354759%28Office.15%29.aspx). 
   
     
     
 
 
-- **Web Parts** are the most common way to extend SharePoint. Learning to build Web Parts is a great way to start SharePoint development. For more information, see [SharePoint Developer Building Blocks: Technologies for Creating SharePoint Applications](http://msdn.microsoft.com/library/138422cf-c140-466a-bcd8-cacba51ef886%28Office.15%29.aspx#bb2_WebParts).
+- **Web Parts** are the most common way to extend SharePoint. Learning to build web parts is a great way to start SharePoint development. For more information, see [SharePoint Developer Building Blocks: Technologies for Creating SharePoint Applications](http://msdn.microsoft.com/library/138422cf-c140-466a-bcd8-cacba51ef886%28Office.15%29.aspx#bb2_WebParts).
     
   
 - **Custom lists** in SharePoint sites provide locations to store data. Data manipulation in SharePoint lists is a widely used practice. You can use lists to contain data that you access programmatically. For more information, see [Building Block: Lists and Document Libraries](http://msdn.microsoft.com/library/16da8f64-f53b-4490-8636-db0e4d7a6912%28Office.15%29.aspx).
@@ -48,7 +46,7 @@ Using SharePoint, you can build a variety of components, such as lists, Web Part
     
   
 
-## Additional resources
+## See also
 <a name="SP15Reusecomp_AddRes"> </a>
 
 

@@ -1,6 +1,7 @@
 ---
 title: Get subscriptions
-ms.date: 09/25/2017
+description: Gets one or more webhook subscriptions on a SharePoint list.
+ms.date: 02/08/2018
 ms.prod: sharepoint
 ---
 
@@ -13,9 +14,9 @@ Gets one or more webhook subscriptions on a SharePoint list.
 
 ### Get a single subscription
 
-The application must have at least edit permissions to the SharePoint list where the subscription will be retreived.
+The application must have at least edit permissions to the SharePoint list where the subscription will be retrieved.
 
-**If your application is a Microsoft Azure Active Directory (AD) application:**
+#### If your application is a Microsoft Azure Active Directory (Azure AD) application
 
 You must grant the Azure AD application the permissions specified in the following table. A subscription can only be retrieved by the Azure AD application that created it. 
 
@@ -23,11 +24,11 @@ Application | Permission
 ------------|------------
 Office 365 SharePoint Online|Read and write items and lists in all site collections.
 
-**If your application is a SharePoint add-in:**
+#### If your application is a SharePoint Add-in
 
-You must grant the SharePoint add-in the following permission(s) or higher. A subscription can only be retrieved by the SharePoint add-in that created it. 
+You must grant the SharePoint Add-in the following permission(s) or higher. A subscription can only be retrieved by the SharePoint Add-in that created it. 
 
-Scope | Permission Rights 
+Scope | Permission rights 
 ------|------------
 List|Manage
 
@@ -35,7 +36,7 @@ List|Manage
 
 The application must have manage list permissions to the SharePoint list where the subscription will be retrieved.
 
-**If your application is a Microsoft Azure Active Directory (AD) application:**
+#### If your application is an Azure AD application
 
 You must grant the Azure AD app the permissions specified in the following table. 
 
@@ -43,11 +44,11 @@ Application | Permission
 ------------|------------
 Office 365 SharePoint Online|Have full control of all site collections.
 
-**If your application is a SharePoint add-in:**
+#### If your application is a SharePoint Add-in
 
-You must grant the SharePoint add-in the following permission(s) or higher. 
+You must grant the SharePoint Add-in the following permission(s) or higher. 
 
-Scope | Permission Rights 
+Scope | Permission rights 
 ------|------------
 List|Full control
 
@@ -70,7 +71,7 @@ GET _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions('6D7703
 
 Do not supply a request body for this method.
 
-##### Response
+#### Response
 
 This returns the subscription viewable by the calling application.
 
@@ -107,7 +108,7 @@ GET _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions
 
 Do not supply a request body for this method.
 
-##### Response
+#### Response
 
 This returns a collection of all subscriptions on a SharePoint resource. 
 
@@ -131,3 +132,8 @@ Content-Type: application/json
   ]
 }
 ```
+
+## See also
+
+- [SharePoint list webhooks](overview-sharepoint-list-webhooks.md)
+- [Overview of SharePoint webhooks](../overview-sharepoint-webhooks.md)

@@ -1,56 +1,55 @@
 ---
 title: Provisioning console application sample
-ms.date: 11/03/2017
+description: Learn the fundamentals of using the PnP provisioning engine to create and persist, and then apply provisioning templates to new SharePoint site collections.
+ms.date: 5/9/2018
 ---
+
 # Provisioning console application sample
 
-Learn the fundamentals of using the PnP provisioning engine to create and persist, and then apply provisioning templates to new SharePoint site collections.
-
-To support the new add-in model, the Office 365 Developer Patterns and Practices program (PnP) has introduced a provisioning framework that allows users to create custom site templates by simply pointing at a site model, persist the model as a provisioning template, and then apply the custom template to new or existing site collections as needed.
+To support the new add-in model, the Office 365 Developer Patterns and Practices (PnP) program introduced a provisioning framework that allows users to:
+- Create custom site templates by simply pointing at a site model.
+- Persist the model as a provisioning template. 
+- Apply the custom template to new or existing site collections as needed.
 
 In this sample, we create a basic console application that implements classes in the provisioning PnP Core library to enable the PnP provisioning engine to complete these essential provisioning tasks: 
 
 - Design and model your site customization. This can be a new site design, or you can point to an existing site and save it as a provisioning template.
-    
 - Save and persist the site model as a provisioning template so that you can reuse it.
-    
 - Apply the provisioning template to a new or existing site collection.
     
-**Note:**  This sample walkthrough is a companion to a sample currently available on GitHub: [Getting Started with the PnP Provisioning Engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site: [Getting Started with the PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
+> [!NOTE] 
+> This sample walkthrough is a companion to a sample currently available on GitHub at [Getting Started with the PnP provisioning engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site, [Getting Started with the PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 
-## Remote provisioning walkthrough
 
-To begin, create a Visual Studio project. In this sample, for simplicity, we create a basic console application that implements the PnP provisioning engine by using the PnP Core library of the provisioning framework. To support the sample solution, however, we must download and install the provisioning framework PnP Core library. Instructions for doing so follow.
+## Create and prepare a Visual Studio project
 
-### Create and prepare a Visual Studio project
+To begin, create a Visual Studio project. In this sample, for simplicity, we create a basic console application that implements the PnP provisioning engine by using the PnP Core library of the provisioning framework. To support the sample solution, however, we must download and install the provisioning framework for the PnP Core library. 
 
-1. Launch Visual Studio, and then choose  **File** > **New** > **Project**.
+1. Open Visual Studio, and then choose **File** > **New** > **Project**.
     
-2. In the  **New Project** wizard, choose **Visual C#**, then choose  **Console Application**.
+2. In the New Project Wizard, choose **Visual C#**, and then choose **Console Application**.
     
-3. Name the project "Program," and then click  **OK**. (You can name the project anything you like, but be mindful that this walkthrough will reference the project name as "program.")
+3. Name the project **Program**, and then choose **OK**. (You can name the project anything you like, but be mindful that this walkthrough will reference the project name as **Program**.)
     
-4. Download and install the PnP Core library that is available as a NuGet package here: [OfficeDevPnP.Core packages](https://www.nuget.org/profiles/officedevpnp).
+4. Download and install the PnP Core library that is available as a NuGet package at [OfficeDevPnP.Core packages](https://www.nuget.org/profiles/officedevpnp).
     
-	**Note:**  There are two versions of the core library. One version is the **OfficeDevPnP.Core** library, which targets SharePoint Online and Office 365. The second version is **OfficeDevPnP.Core (on-premises)**, which targets SharePoint 2013 on-premises. Here is a screenshot of the available options.
+	> [!NOTE] 
+	> There are three versions of the library. One version is the **SharePointPnPCoreOnline** library, which targets SharePoint Online and Office 365. The other versions are **SharePointPnPCore2013** and **SharePointPnPCore2016** , which target SharePoint on-premise versions 2013 and 2016 respectively. 
 
-	![Two core library download choices](media/provisioning-console-application-sample/5b1adb8d-52e5-4c67-8792-6ef0ae41d655.png)
+	
+5. Install the NuGet client by going to the [NuGet client installer](http://docs.nuget.org/consume/installing-nuget).
 
-In this sample walkthrough, we're using the first option to target SharePoint Online.
+6. After the NuGet client is installed, run the **NuGet Package manager**. Right-click the **References** node in the Visual Studio **Solution Explorer**, and then select **Manage NuGet Packages**.
 
-1. First, install the NuGet client by going to the [NuGet client installer](http://docs.nuget.org/consume/installing-nuget).
+7. In the Package Manager, choose **Browse**, and then enter the search term **SharePoint PnP** to expose the SharePointPnPCoreOnline library.
 
-2. After the NuGet client is installed, run the  **NuGet Package manager**. Right-click the  **References** node in the Visual Studio **Solution Explorer**, and then select  **Manage NuGet Packages**.
+8. Follow directions to download and install the **SharePointPnPCoreOnline** library, following the given directions.
 
-3. In the Package Manager, choose **Online**, then  **EntityFramework**, and then enter the search term "OfficeDev" to expose the OfficeDevPnP.Core library.
+   After the PnP Core library is referenced in your Visual Studio project, all library members are available to you as [extension methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) on existing object instances, for example, **web** and **list** instances.
 
-4. Follow directions to download and install the  **OfficeDevPnP.Core** library, following the given directions.
+9. Ensure that your Program.cs file contains all of the following `using` statements.
 
-   After the PnP Core library is referenced in your Visual Studio project, all library members are available to you as [extension methods](https://msdn.microsoft.com/en-us/library/bb383977.aspx) on existing object instances, for example, **web** and **list** instances.
-
-5. Ensure that your Program.cs file contains all of the following  `using` statements.
-
-	```c#
+   ```csharp
 	using Microsoft.SharePoint.Client;
 	using OfficeDevPnP.Core.Framework.Provisioning.Connectors;
 	using OfficeDevPnP.Core.Framework.Provisioning.Model;
@@ -60,19 +59,18 @@ In this sample walkthrough, we're using the first option to target SharePoint On
 	using System.Net;
 	using System.Security;
 	using System.Threading;
-	```
+   ```
 
-**Once we have set up your project**
 
-Once your project is set up, you can create your site customizations. You can do this by hand or by pointing to a site whose design you wish to use. Simply save the chosen site design as a provisioning template. Or, you can use a mix of both approaches. For the purpose of this sample, we will simply point to an existing site and save its composed look and site artifacts (but not its content) as a provisioning template.
+## Create, extract, and persist the provisioning template
+
+After your project is set up, you can create your site customizations. You can do this manually or by pointing to a site whose design you wish to use. Simply save the chosen site design as a provisioning template, or you can use a mix of both approaches. For the purpose of this sample, we will simply point to an existing site and save its composed look and site artifacts (but not its content) as a provisioning template.
 
 To begin, we need to connect to the site that we wish to model as our provisioning template. Let's start by gathering connection information, including user name, password, and the source URL.
 
-### Create and extract and persist the provisioning template
-
-1. Collect connection information from the user. Note that in the program's  `Main` routine, we do three simple things: collect connection information, GET the provisioning template, and APPLY the provisioning template. The heavy lifting is done by the **GetProvisioningTemplate** and **ApplyProvisioningTemplate** methods that we define below.
+1. Collect connection information from the user. Note that in the program's `Main` routine, we do three simple things: collect connection information, GET the provisioning template, and APPLY the provisioning template. The heavy lifting is done by the **GetProvisioningTemplate** and **ApplyProvisioningTemplate** methods that we define next.
     
-	```C#
+   ```csharp
 	static void Main(string[] args)
 	    {
 	        ConsoleColor defaultForeground = Console.ForegroundColor;
@@ -97,11 +95,11 @@ To begin, we need to connect to the site that we wish to model as our provisioni
 	        Console.WriteLine("We're done. Press Enter to continue.");
 	        Console.ReadLine();
 	    }
-	```
+   ```
 
-2. Create and use a private  **GetInput** method to obtain the required user credentials.
+2. Create and use a private **GetInput** method to obtain the required user credentials.
     
-	```c#
+   ```csharp
 	private static string GetInput(string label, bool isPassword, ConsoleColor defaultForeground)
 	    {
 	        Console.ForegroundColor = ConsoleColor.Green;
@@ -141,11 +139,11 @@ To begin, we need to connect to the site that we wish to model as our provisioni
 	
 	        return value;
 	    }
-	```
+   ```
 
-3. Point to the site that's the model for our provisioning template. While doing the GET on the source site with a single line of code, look at  `GetProvisioningTemplate()`, the GET method we defined. 
+3. Point to the site that's the model for our provisioning template. While doing the GET on the source site with a single line of code, look at `GetProvisioningTemplate()`, which is the GET method we defined. 
     
-	```c#
+   ```csharp
 	private static ProvisioningTemplate GetProvisioningTemplate(ConsoleColor defaultForeground, string webUrl, string userName, SecureString pwd)
 	    {
 	        using (var ctx = new ClientContext(webUrl))
@@ -187,56 +185,60 @@ To begin, we need to connect to the site that we wish to model as our provisioni
 	            return template;
 	        }
 	    }
-	```
+   ```
 
-	In the above code snippet, we also defined a  **ProvisioningTemplateCreationInformation** variable, **pcti**. The variable gives us the option to store information about artifacts that we can save along with the template.
+   In the previous code snippet, we also defined a **ProvisioningTemplateCreationInformation** variable, **pcti**. The variable gives us the option to store information about artifacts that we can save along with the template.
     
 4. Create a file system connector object so that we can store a temporary copy of the provisioning template that we're going to apply to another site.
     
-	**Note:**  This step is optional. It's not required that you serialize the provisioning template to XML. At this stage, the template is simply C# code. Not only is serialization optional, but you also can use whatever serialization format you wish.
+	> [!NOTE] 
+	> This step is optional. It's not required that you serialize the provisioning template to XML. At this stage, the template is simply C# code. Not only is serialization optional, but you also can use whatever serialization format you wish.
 
-5. Execute the extraction of the provisioning template by using just this single line of code.  	`ProvisioningTemplate template = ctx.Web.GetProvisioningTemplate(ptci);`
+5. Execute the extraction of the provisioning template by using only this single line of code:  	
+
+   ```csharp
+   ProvisioningTemplate template = ctx.Web.GetProvisioningTemplate(ptci);
+   ```
     
-6. (Optional) Save and store a serialized version of the provisioning template so that you can reuse it. You can serialize the provisioning template in whichever format you prefer. In this sample, we've serialized to an XML file named  **PnPProvisioningDemo.xml**. The file itself is an **XMLFileSystemTemplateProvider** object for which we've provided a file system location.
-    
-**Once we extract, save and persist the provisioning template**
+6. (Optional) Save and store a serialized version of the provisioning template so that you can reuse it. You can serialize the provisioning template in whichever format you prefer. In this sample, we serialized to an XML file named **PnPProvisioningDemo.xml**. The file itself is an **XMLFileSystemTemplateProvider** object for which we provided a file system location.
 
-Once we extract, save, and persist the provisioning template, the next and final step is to apply the provisioning template to a new SharePoint site collection by using the  **ApplyProvisioningTemplate** method.
 
-### Apply the provisioning template to a new or existing site
+## Apply the provisioning template to a new or existing site
+
+After we extract, save, and persist the provisioning template, the next and final step is to apply the provisioning template to a new SharePoint site collection by using the **ApplyProvisioningTemplate** method.
 
 1. Obtain credentials to the target site.
     
-	```c#
+   ```csharp
 	// ctx.Credentials = new NetworkCredentials(userName, pwd);
 	            ctx.Credentials = new SharePointOnlineCredentials(userName, pwd);
 	            ctx.RequestTimeout = Timeout.Infinite;
-	```
+   ```
 
-2. Capture site artifacts that were stored using the  **ProvisioningTemplateCreationInformation** method by using the companion method, **ProvisioningTemplateApplyingInformation**.
+2. Capture site artifacts that were stored using the **ProvisioningTemplateCreationInformation** method by using the companion method, **ProvisioningTemplateApplyingInformation**.
     
-	```c#
+   ```csharp
 	ProvisioningTemplateApplyingInformation ptai
 	                    = new ProvisioningTemplateApplyingInformation();
 	            ptai.ProgressDelegate = delegate(String message, Int32 progress, Int32 total)
 	            {
 	                Console.WriteLine("{0:00}/{1:00} - {2}", progress, total, message);
 	            };
-	```
+   ```
 
 3. Get an association to the file connector for the assets.
     
-	```c#
+   ```csharp
 	// Associate file connector for assets
 	            FileSystemConnector connector = new FileSystemConnector(@"c:\temp\pnpprovisioningdemo", "");
 	            template.Connector = connector;
 	
-	```
+   ```
 
 4. (Optional) Because the provisioning template is an object instance, we can write code to customize site artifacts on the fly. In this instance, we're adding a new "contact" list.
     
-	```c#
-	// Since template is actual object, we can modify this using code as needed
+   ```csharp
+	// Because the template is actual object, we can modify this using code as needed
 	            template.Lists.Add(new ListInstance()
 	            {
 	                Title = "PnP Sample Contacts",
@@ -244,17 +246,14 @@ Once we extract, save, and persist the provisioning template, the next and final
 	                TemplateType = (Int32)ListTemplateType.Contacts,
 	                EnableAttachments = true
 	            });
-	```
+   ```
 
 5.  Apply the provisioning template to the new site, again using one line of code.
     
-	```c#
+   ```csharp
 		web.ApplyProvisioningTemplate(template, ptai);
-	```
+   ```
 
-## Additional resources
-<a name="bk_addresources"> </a>
+## See also
 
-- [PnP provisioning framework](pnp-provisioning-framework.md)
-    
-- [PnP provisioning engine and the core library](pnp-provisioning-engine-and-the-core-library.md)
+- [PnP remote provisioning](pnp-remote-provisioning.md)

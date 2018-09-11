@@ -66,7 +66,7 @@ The following are links to some of the documentation and guidelines on TechNet:
     
   
 
-> **Note:**
+> [!NOTE]
 > For information about Windows Identity Foundation (WIF), see the  [Windows Identity Foundation SDK](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=C148B2DF-C7AF-46BB-9162-2C9422208504&amp;amp;displaylang=en). 
   
     
@@ -108,7 +108,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 |.NET Framework Class Library  <br/> | [.NET Framework Class Library](http://msdn.microsoft.com/en-us/library/ms229335.aspx) <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

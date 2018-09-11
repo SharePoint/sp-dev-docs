@@ -74,7 +74,7 @@ This section introduces Excel Services — a server technology first introduced 
   
     
     
-> The Excel Web Access Web Part object model.
+> The Excel Web Access web part object model.
     
   
 

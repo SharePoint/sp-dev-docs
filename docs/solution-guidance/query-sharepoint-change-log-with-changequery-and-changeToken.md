@@ -78,9 +78,10 @@ In Program.cs,  **Main** calls **DoWork** to read and process SharePoint's chang
 	
 	3. Sets the new point in time to read changes from the change log. If there are changes to the list (which was returned in  **coll**), set **ChangeTokenStart** to the last change's date and time.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 private static void DoWork()
         {
             Console.WriteLine();
@@ -166,7 +167,7 @@ private static void DoWork()
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
@@ -175,4 +176,4 @@ private static void DoWork()
     
 - [ChangeQuery members](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.changequery_members.aspx)
     
-- [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices)
+- [SharePoint Developer Community (SharePoint PnP) resources](../community/community.md)

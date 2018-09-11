@@ -30,7 +30,7 @@ The following articles were written for SharePoint Server 2010 and SharePoint De
 | [Defining Associations in Business Connectivity Services Using SharePoint Designer](http://msdn.microsoft.com/en-us/library/gg607166.aspx) <br/> |Shows how to create advanced associations between external content types.  <br/> |
    
 
-## Additional resources
+## See also
 
 
 -  [External content types in SharePoint](external-content-types-in-sharepoint.md)

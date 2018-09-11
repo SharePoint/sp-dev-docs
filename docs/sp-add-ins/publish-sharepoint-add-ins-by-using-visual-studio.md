@@ -9,7 +9,6 @@ ms.prod: sharepoint
 Learn how to publish your SharePoint Add-in by using Microsoft Visual Studio 2013 or Visual Studio 2012. If the add-in has an associated web application, you deploy it first. Then, as for all SharePoint Add-ins, you package the SharePoint Add-in and then publish it. You can also optionally choose to submit your add-in for inclusion on the Office Store.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -21,11 +20,11 @@ Learn how to publish your SharePoint Add-in by using Microsoft Visual Studio 201
 
  
 
--  [Microsoft Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=517284  )
+-  [Microsoft Visual Studio 2013](https://www.visualstudio.com/vs/)
     
     -or-
     
-     [Visual Studio 2012](https://www.microsoft.com/en-us/download/details.aspx?id=30682) and the Office Developer Tools for Visual Studio. To download the tools, see "Tools" on the [Download page](http://go.microsoft.com/fwlink/?LinkId=234393). (The new Publish Manager is not available in Visual Studio 2012 or earlier versions.)
+     [Visual Studio 2012](https://www.visualstudio.com/vs/) and the Office Developer Tools for Visual Studio. To download the tools, see "Tools" on the [Download page](http://go.microsoft.com/fwlink/?LinkId=234393). (The new Publish Manager is not available in Visual Studio 2012 or earlier versions.)
     
  
 - Microsoft SharePoint
@@ -105,7 +104,8 @@ Your SharePoint Add-in typically has an associated host web application that you
     
     You must specify an address that starts with the "https" prefix. See  [Why do my add-ins have to be SSL-secured?](http://msdn.microsoft.com/library/jj591603#bk_q7).
     
-     **Note**  Azure web sites automatically provide an https endpoint. If you publish your add-in on an Office Store site or to the Office Store, the address must start with an https prefix. However, if you publish the add-in to an on-premises site, you can use an http prefix.
+    > [!NOTE] 
+    > Azure websites automatically provide an https endpoint. If you publish your add-in on an Office Store site or to the Office Store, the address must start with an https prefix. However, if you publish the add-in to an on-premises site, you can use an http prefix.
 
     In the  **What is the add-in's client ID?** text box, the client ID that you entered in the publishing profile should already appear.
     
@@ -127,10 +127,10 @@ Perform the following procedure if you want to submit your SharePoint Add-in to 
 
 1. On the  **Publish your add-in** page, choose the **Visit the Seller Dashboard** button, and then sign in to your Microsoft Seller Dashboard account.
     
-    See  [Submit Office and SharePoint Add-ins and Office 365 web apps to the Office Store](http://msdn.microsoft.com/library/submit-office-and-sharepoint-add-ins-and-office-365-web-apps-to-the-office-store%28Office.15%29.aspx).
+    See  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
     
  
-2. Choose  **add a new app**, fill out the information, and then submit the add-in to the Office Store. For details, see  [Use the Seller Dashboard to submit Office and SharePoint Add-ins and Office 365 apps to the Office Store](http://msdn.microsoft.com/library/use-the-seller-dashboard-to-submit-office-and-sharepoint-add-ins-and-office-365-apps-to-the-office-store%28Office.15%29.aspx).
+2. Choose  **add a new app**, fill out the information, and then submit the add-in to the Office Store. For details, see  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
     
  
 
@@ -199,7 +199,7 @@ To publish your SharePoint Add-in, upload the add-in manifest file (.app) of you
 
  
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

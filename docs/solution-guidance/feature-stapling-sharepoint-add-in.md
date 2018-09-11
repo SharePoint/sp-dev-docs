@@ -1,8 +1,8 @@
 ---
-title: Feature Stapling in the SharePoint add-in model
+title: Feature Stapling in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Feature Stapling in the SharePoint add-in model
+Feature Stapling in the SharePoint Add-in model
 ===============================================
 
 Summary
@@ -50,12 +50,12 @@ The following article describes how to staple features to a site definition.
 
 Staple Add-ins
 --------------
-In this pattern you deploy Add-ins stored in the App Catalog to specific site collections, managed paths, and site templates.
+In this pattern you deploy Add-ins stored in the app catalog to specific site collections, managed paths, and site templates.
 
 - See the [SharePoint 2013 App Deployment through 'App Stapling' (MSDN Blog Article - Richard DiZerega)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/09/18/10399333.aspx) for more details about the Add-in stapling model.
 - Because the add-in is pushed by an administrator, site owners will not be able to remove the add-in from a site that meets the deployment criteria.  Not even a site collection administrator can remove the add-in.
-- This centralized deployment also shares the same centralized add-in resources (Add-in Web and Remote Web).  Essentially, the Add-in is deployed, but not installed in the sites.  All sites will leverage the Add-in Web and Remote Web from the instance installed in the App Catalog.
-- Because of centralized deployment, remote events such as 'Handle App Installed', 'Handle App Uninstalled', and 'Handle App Upgrade' will only fire once (when the Add-In is installed in the App Catalog).
+- This centralized deployment also shares the same centralized add-in resources (Add-in Web and Remote Web).  Essentially, the Add-in is deployed, but not installed in the sites.  All sites will leverage the Add-in Web and Remote Web from the instance installed in the app catalog.
+- Because of centralized deployment, remote events such as 'Handle App Installed', 'Handle App Uninstalled', and 'Handle App Upgrade' will only fire once (when the Add-In is installed in the app catalog).
 	+ This can make it difficult to use the Add-in stapling pattern to automatically apply changes to sites where it is deployed because these events do not fire when it is deployed to sites.
 - Add-in parts are not supported when Add-ins are stapled to sites.
 - This pattern requires manual user actions to deploy the Add-ins.
@@ -66,7 +66,7 @@ Use the remote provisioning pattern
 In this pattern you use the SharePoint Client Side Object Model (CSOM) to create and configure site collections and sub sites then deploy artifacts, configurations, and branding assets to them.
 
 - This pattern does not require packaging artifacts, configurations, and branding assets in separate features, or Add-ins.  Everything may be packaged in a single Add-in.
-- When you use this pattern for site provisioning you typically override the out of the box page to create a new site.
+- When you use this pattern for site provisioning you typically override the out-of-the-box page to create a new site.
 - For more information about this pattern see the [Site Provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)
 - If you wish to deploy Add-ins to a SharePoint site, this can be done via CSOM.  Here is an example which loads an Office Add-in via a .app manifest file and installs it in a SharePoint site.
 

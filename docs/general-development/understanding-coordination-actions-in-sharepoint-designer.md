@@ -152,7 +152,7 @@ The SharePoint 2010 Workflow platform workflow instances that are coordinated fr
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

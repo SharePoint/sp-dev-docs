@@ -21,7 +21,7 @@ Instructions for installing and configuring SharePoint workflow components are m
     
   
 
-## Additional resources
+## See also
 
 
 -  [Installation and Deployment for SharePoint Resource Center](http://technet.microsoft.com/en-US/sharepoint/fp142376)

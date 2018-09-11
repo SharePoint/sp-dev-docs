@@ -45,7 +45,7 @@ The key concept is that a claim is not just a unique identifier that identifies 
     
     
 
-## Additional resources
+## See also
 <a name="SP15_RoleInheritance_AdditionalResources"> </a>
 
 

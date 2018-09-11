@@ -1,6 +1,6 @@
 ---
 title: Authorization considerations for tenants hosted in the Germany, China or US Government environments
-ms.date: 11/03/2017
+ms.date: 6/19/2017
 ---
 # Authorization considerations for tenants hosted in the Germany, China or US Government environments
 
@@ -8,6 +8,8 @@ When your Office 365 tenant is hosted in an specific environment like the German
 
 _**Applies to:** Office 365 hosted in the Germany, China or US Government environments_
 
+> [!IMPORTANT]
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 ## Introduction
 <a name="introduction"> </a>
@@ -32,7 +34,7 @@ When your Azure AD application needs to authorize it needs to use the correct en
 | Production | https://login.windows.net |
 | Germany | https://login.microsoftonline.de |
 | China | https://login.chinacloudapi.cn |
-| US Government | https://login-us.microsoftonline.com |
+| US Government | https://login.microsoftonline.us |
 
 ### Using PnP to authorize using Azure AD
 <a name="adpnp"> </a>
@@ -95,7 +97,7 @@ Using this model the ACS endpoint url to use is formatted like https:// + endpoi
 
 When you want to do SharePoint add-in authorization using Azure ACS then you're using `tokenhelper.cs` (or `tokenhelper.vb`). The default tokenhelper class will have hardcoded references to the Azure ACS endpoints and methods to acquire the ACS endpoint as shown below:
 
-```C#
+```csharp
 ...
 
 private static string GlobalEndPointPrefix = "accounts";
@@ -107,7 +109,7 @@ private static string AcsHostUrl = "accesscontrol.windows.net";
 #### Tokenhelper.cs updates for Germany
 Update the static variables `GlobalEndPointPrefix` and `AcsHostUrl` to the Germany Azure ACS values.
 
-```C#
+```csharp
 ...
 
 private static string GlobalEndPointPrefix = "login";
@@ -119,7 +121,7 @@ private static string AcsHostUrl = "microsoftonline.de";
 #### Tokenhelper.cs updates for China
 Update the static variables `GlobalEndPointPrefix` and `AcsHostUrl` to the China Azure ACS values:
 
-```C#
+```csharp
 ...
 
 private static string GlobalEndPointPrefix = "accounts";
@@ -157,7 +159,7 @@ ClientContext cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext(si
 ```
 
 
-### Additional resources
+### See also
 <a name="bk_addresources"> </a>
 
 - [Learn about Office 365 Germany](https://support.office.com/en-US/article/Learn-about-Office-365-Germany-8a5a4bbc-667a-4cac-8769-d8ac9015db4c) 

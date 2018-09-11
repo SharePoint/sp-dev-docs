@@ -10,11 +10,8 @@ ms.assetid: d73cf6c2-0677-4726-8a3e-2ad130e1a12c
 
 This topic explains how to construct the URI structure and path for REST service commands in Excel Services.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
+> 
 > The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   

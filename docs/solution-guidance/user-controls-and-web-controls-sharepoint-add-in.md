@@ -1,8 +1,8 @@
 ---
-title: User controls and Web controls in the SharePoint add-in model
+title: User controls and Web controls in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-User controls and Web controls in the SharePoint add-in model
+User controls and Web controls in the SharePoint Add-in model
 =============================================================
 
 Summary

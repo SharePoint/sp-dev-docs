@@ -30,7 +30,7 @@ The following are some of the benefits of using external content types:
 - **Encapsulate complexities of external systems:** External content types enable information workers to assemble business solutions without having to handle the complexities of the external systems, such as connectivity information and code interfaces. After someone creates an external content type, it is available to users for use in any way they need (provided they have the permissions to perform that operation and access the external data). However, the user does not need to know anything about the location of the external data or how to connect to it.
     
   
-- **Provide built-in Office and SharePoint behavior:** External content types provide Office item-type behaviors (such as Contacts, Tasks, Calendars in Outlook, documents in Word, and lists in SharePoint Workspace); SharePoint behaviors (such as lists, Web Parts, and profile pages); and capabilities (such as the ability to search or work offline) to external data and services. So users can work in their familiar work environments without having to hunt for data or learn and interact with different (and proprietary) user interfaces.
+- **Provide built-in Office and SharePoint behavior:** External content types provide Office item-type behaviors (such as Contacts, Tasks, Calendars in Outlook, documents in Word, and lists in SharePoint Workspace); SharePoint behaviors (such as lists, web parts, and profile pages); and capabilities (such as the ability to search or work offline) to external data and services. So users can work in their familiar work environments without having to hunt for data or learn and interact with different (and proprietary) user interfaces.
     
   
 - **Help provide more secure access:** External content types adhere to the security put in place by both the external system and SharePoint. You can have full control of who accesses what data by configuring security in SharePoint.
@@ -95,9 +95,9 @@ When SharePoint is configured to communicate with the external system, you can u
     The external data column enables users to add data from external content types to standard SharePoint lists. Just like an external list, external data columns can display data from any external content type that is modeled in Business Connectivity Services (BCS).
     
   
-- **Business Data Web Parts**
+- **Business Data web parts**
     
-    SharePoint provides five different Web Parts for working with external data: Business Data List, Business Data Item, Business Data Item Builder, Business Data Related List, and Business Data Actions.
+    SharePoint provides five different web parts for working with external data: Business Data List, Business Data Item, Business Data Item Builder, Business Data Related List, and Business Data Actions.
     
   
 - **External Content Type Picker**
@@ -112,7 +112,7 @@ When SharePoint is configured to communicate with the external system, you can u
   
 - **Profile Pages**
     
-    Profile Pages are SharePoint pages in SharePoint that display the details about an external item. Just like any other SharePoint Web Parts page, you can customize this page to show details of an external item.
+    Profile Pages are SharePoint pages in SharePoint that display the details about an external item. Just like any other SharePoint web parts page, you can customize this page to show details of an external item.
     
   
 - **Custom pages and applications**
@@ -134,7 +134,7 @@ Table 1 contains examples of tasks that illustrate working with external content
 | [How to: Create external content types for SQL Server in SharePoint](how-to-create-external-content-types-for-sql-server-in-sharepoint.md) <br/> |Learn how to create an external content type based on a SQL Server database.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15ectoverview_addres"> </a>
 
 

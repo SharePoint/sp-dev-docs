@@ -116,54 +116,21 @@ To do the following steps, you need a computer that has SharePoint Server 2010 i
 
 If the **AllowUdfs** value is **false** when a session is started on a workbook that has UDF calls, the UDF calls will fail.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option (see step 9 in the "Trusting a Location" section).
   
     
     
 
-If you change the **AllowUdfs** value to **true** after a session has started, the UDF calls will also fail. This is because changes in the **AllowUdfs** flag take effect on the next session. You can get around this by resetting Microsoft Internet Information Services (IIS). Resetting IIS will reload UDFs.
-  
-    
+If you change the **AllowUdfs** value to **true** after a session has started, the UDF calls will also fail. This is because changes in the **AllowUdfs** flag take effect on the next session. You can get around this by resetting Microsoft Internet Information Services (IIS). Resetting IIS will reload UDFs.  
     
 For more information about resetting IIS, see  [How to: Enable UDFs](how-to-enable-udfs.md).
   
-    
-    
-
 ## See also
 
-
-#### Tasks
-
-
-  
-    
-    
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
-  
-    
-    
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
-  
-    
-    
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
-  
-    
-    
- [How to: Enable UDFs](how-to-enable-udfs.md)
-#### Concepts
-
-
-  
-    
-    
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
-  
-    
-    
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
+- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
+- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
+- [How to: Enable UDFs](how-to-enable-udfs.md)
+- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

@@ -55,7 +55,7 @@ For intranet sites, use the following master page markup for the Suite Navigatio
 
 |**Web Control**|**Description**|
 |:-----|:-----|
-|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET web page.  <br/> |
+|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET webpage.  <br/> |
 |SharePoint:MenuItemTemplate  <br/> |Represents a control that creates an item in a drop-down menu.  <br/> |
    
 
@@ -181,7 +181,7 @@ For public-facing sites, use the following master page markup for the Suite Navi
 |:-----|:-----|
 |SharePoint:DelegateControl  <br/> |Renders an ASP.NET web control. Delegate controls make their candidate controls pluggable and traceable.  <br/> |
 |SharePoint:FeatureMenuTemplate  <br/> |Represents a control that creates a template for a drop-down menu.  <br/> |
-|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET web page.  <br/> |
+|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET webpage.  <br/> |
 |SharePoint:MenuItemTemplate  <br/> |Represents a control that creates an item in a drop-down menu.  <br/> |
 |SharePoint:ScriptBlock  <br/> |Represents a script block control on a page.  <br/> |
 |SharePoint:SiteActions  <br/> |Represents a template control for the Site Action menu.  <br/> |
@@ -300,7 +300,7 @@ var g_navBarHelpDefaultKey = "HelpHome";
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

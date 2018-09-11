@@ -18,7 +18,7 @@ There are two basic kinds of SharePoint Add-ins: SharePoint-hosted and provider-
 
 - **Business logic in a SharePoint Add-in can access SharePoint data through one of the several client APIs included in SharePoint**. Which API you use for your add-in depends on certain other design decisions you make.    
  
-- **Almost all major types of SharePoint components can be part of a SharePoint Add-in**, including pages, lists, workflows, custom content types, list templates, Web Parts, and more.
+- **Almost all major types of SharePoint components can be part of a SharePoint Add-in**, including pages, lists, workflows, custom content types, list templates, web parts, and more.
     
 - **The SharePoint websites where SharePoint Add-ins are installed, and from which users launch them, are called host webs.** The SharePoint components, however, are generally in a special child web of the host web called the add-in web.   
  
@@ -78,7 +78,7 @@ Like all SharePoint Add-ins, a user can run a SharePoint-hosted add-in from a ti
 |Custom pages| Workflows|Modules (sets of files)|
 |List templates|List and library instances|Custom list forms and views|
 |Custom content types|Web templates|Built-in columns (not custom columns)|
-|Built-in Web Parts (not custom Web Parts)|JavaScript files|Custom buttons and menu items for the add-in web|
+|Built-in web parts (not custom web parts)|JavaScript files|Custom buttons and menu items for the add-in web|
 
 All business logic in a SharePoint-hosted add-in uses JavaScript, either directly on a custom page or in a JavaScript file that is referenced from a custom page. A JavaScript version of the SharePoint object model (JSOM) is available to make it simple for the add-in to perform CRUD (create, read, update, and delete) operations on SharePoint data.
  
@@ -142,6 +142,7 @@ Ready to get started?
 > [!NOTE]
 > If you're a beginner at both SharePoint and web development, you'd benefit most by starting with the free course at Microsoft's Virtual Academy, or working through a book about SharePoint development.
 
-## Additional resources
+## See also
 
-[Developing Microsoft SharePoint Server 2013 Core Solutions Jump Start](http://www.microsoftvirtualacademy.com/training-courses/developing-microsoft-sharepoint-server-core-solutions-jump-start)
+- [Developing Microsoft SharePoint Server 2013 Core Solutions Jump Start](http://www.microsoftvirtualacademy.com/training-courses/developing-microsoft-sharepoint-server-core-solutions-jump-start)
+- [SharePoint glossary](../general-development/sharepoint-glossary.md) 

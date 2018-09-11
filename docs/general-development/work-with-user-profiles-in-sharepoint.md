@@ -39,10 +39,7 @@ User profiles and user profile properties provide information about SharePoint u
   
 As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET client object model, the JavaScript object model, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > Not all functionality that you find in the **Microsoft.Office.Server.UserProfiles** assembly is available from client APIs. For example, you have to use the server object model to create or change user profiles because they're read-only from client APIs (except the user profile picture). Also, there's no client-side access to some namespaces, such as [Microsoft.Office.Server.Audience](https://msdn.microsoft.com/library/Microsoft.Office.Server.Audience.aspx) , [Microsoft.Office.Server.ReputationModel](https://msdn.microsoft.com/library/Microsoft.Office.Server.ReputationModel.aspx) , or [Microsoft.Office.Server.SocialData](https://msdn.microsoft.com/library/Microsoft.Office.Server.SocialData.aspx) . To see what's supported functionality for the client APIs, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) and [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) .
   
     
@@ -50,10 +47,7 @@ As a best practice in SharePoint development, use client APIs when you can. Clie
 
 Each API includes a manager object that you use to perform core profile-related tasks. Table 1 shows the manager and other key objects (or REST resources) in the APIs and the class library (or access point) where you can find them.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The Silverlight and mobile client object models are not included in Table 1 or Table 2 because they provide the same core functionality as the .NET client object model and use the same signatures. The Silverlight client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll, and the mobile client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Phone.dll. 
   
     
@@ -113,16 +107,14 @@ SharePoint includes the following new objects that represent users and user prop
   
 - The  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object contains general user properties and its [UserProfileProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.UserProfileProperties.aspx) property contains user profile properties. [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) is the primary API for accessing user properties from client-side code.
     
-  
-
-> **Note:**
+> [!NOTE] 
 > Server object model versions are the  [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) object and the [PersonProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PersonProperties.aspx) object.
   
     
     
 
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

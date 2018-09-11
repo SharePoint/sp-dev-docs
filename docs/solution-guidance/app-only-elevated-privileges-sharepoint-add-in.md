@@ -1,14 +1,14 @@
 ---
-title: App-only and elevated privileges in the SharePoint add-in model
+title: App-only and elevated privileges in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-App-only and elevated privileges in the SharePoint add-in model
+App-only and elevated privileges in the SharePoint Add-in model
 ===============================================================
 
 Summary
 -------
 
-The approach you take to elevate privileges in your code is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, the RunWithElevatedPrivileges API is used with the SharePoint server-side object model code and deployed via Farm Solutions.
+The approach you take to elevate privileges in your code is different in the new SharePoint Add-in model than it was with full trust code. In a typical full trust code (FTC) / Farm Solution scenario, the RunWithElevatedPrivileges API is used with the SharePoint server-side object model code and deployed via Farm Solutions.
 
 In an SharePoint Add-in model scenario, the AllowAppOnlyPolicy permission or a service account is used to allow the current user to execute operations they are not authorize to perform.
 
@@ -21,7 +21,10 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 	+ Search - if target is SharePoint On-Premises. SharePoint Online support for it has been added ([blog post](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/))
 	+ User Profile CSOM operations, except that the User Profile Bulk Update API can be used with app-only permissions
 	+ Updating taxonomy service entries (write) - read works
-	**Note:** In these scenarios you need to use a specific service account.
+	
+	> [!NOTE] 
+	> In these scenarios you need to use a specific service account.
+
 - AllowAppOnlyPolicy is similar to RunWithElevatedPrivileges, but not exactly the same.
 	+ AllowAppOnlyPolicy executes code based on the permissions granted to the SharePoint Add-in, not on behalf of another user who has the appropriate permissions to perform an operation.
 
@@ -118,6 +121,9 @@ When you need to elevate privileges in a SharePoint ACS scenario this is a good 
 The following article demonstrates how to use AllowAppOnlyPolicy with ACS.
 
 - [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](http://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
+
+> [!IMPORTANT]
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 Service Account
 ---------------

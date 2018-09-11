@@ -137,7 +137,7 @@ The first thing to do when you are styling your add-in is to use semantic HTML a
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
 |![ms-core-pagetitle](../images/AppUXGuidelines_ms-core-pagetitle.png)|Main title on the page.|.ms-core-pageTitle|
-|![h1](../images/AppUXGuidelines_h1.png)|Title for dialog boxes, forms, blogs, and discussion posts. It's an alternative "primary" title for special content types or add-ins that take up the entire page that you want to be different from a regular wiki or Web Parts page.|H1|
+|![h1](../images/AppUXGuidelines_h1.png)|Title for dialog boxes, forms, blogs, and discussion posts. It's an alternative "primary" title for special content types or add-ins that take up the entire page that you want to be different from a regular wiki or web parts page.|H1|
 |![h2](../images/AppUXGuidelines_h2.png)|Secondary heading in relation to H1. For example, Communities uses H1 Accent for the title of a post, and H2 Accent for the best "response" to the post.|H2|
 |![h3](../images/AppUXGuidelines_h3.png)|Generally a subheading under H2.|H3|
 |![h4](../images/AppUXGuidelines_h4.png)|Subheadings under H3.|H4|
@@ -285,11 +285,11 @@ Use it when you want your add-in to have the look and feel of Office 365. It is 
 
 **4. How can Office UI Fabric be used in SharePoint Add-ins?**
 
-Just add the Office UI Fabric files to your development project, and include a reference to the fabric.css library to your HTML or ASPX page. For details, see [Getting started](https://github.com/OfficeDev/Office-UI-Fabric#get-started).
+Just add the Office UI Fabric files to your development project, and include a reference to the fabric.css library to your HTML or ASPX page. For details, see [Getting started](https://developer.microsoft.com/en-us/fabric#/get-started).
 
 **5. How can Office UI Fabric Components be used in SharePoint Add-ins?**
 
-Just add a reference to the fabric.components.css library to your HTML or ASPX page. For details, see [Getting started](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/GETTINGSTARTED).
+Just add a reference to the fabric.components.css library to your HTML or ASPX page. For details, see [Getting started](https://github.com/OfficeDev/Office-UI-Fabric#get-started).
 
 **6. Can I use Office UI Fabric along with a SharePoint Add-in's host web CSS?**
 
@@ -525,7 +525,7 @@ Due to upgrades or site maintenance, there might be times when SharePoint is in 
 
    `{hostWebUrl}/_api/site/ReadOnly`
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)

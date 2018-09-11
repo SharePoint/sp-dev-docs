@@ -46,7 +46,7 @@ This section provides information for working with BCS programmatically using a 
     
   
 
-## Additional resources
+## See also
 
 
 -  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)

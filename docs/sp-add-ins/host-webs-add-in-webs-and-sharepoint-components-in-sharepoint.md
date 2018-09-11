@@ -64,7 +64,7 @@ In general, a SharePoint Add-in can contain one or more of the components in the
 - Features (**Web**-scoped only)
 - Custom actions (including shortcut menu items and ribbon customizations)\*
 - Remote event receivers\*
-- Markup that references Web Parts, including add-in parts, that are included in SharePoint (but not custom Web Parts)\*
+- Markup that references web parts, including add-in parts, that are included in SharePoint (but not custom web parts)\*
 - Custom cascading style sheets (CSS) files for use by SharePoint pages
 - Custom JavaScript files for use by SharePoint pages
 - Modules (sets of files)
@@ -89,7 +89,7 @@ The following are some caveats and details concerning the deployment of certain 
 
 - **Custom actions:** In addition to adding custom actions to the add-in web, you can add them to the host web as well. To add the custom action to the add-in web, you include it in a **Web**-scoped Feature that is inside a .wsp file, just as you would include any other component you add to the add-in web. To add a custom action to the host web, you can include (even in an externally based add-in) **CustomAction** markup in a Feature that is in the add-in package but outside any .wsp file. Components in such a "loose" Feature apply to the host web, not the add-in web, so this type of Feature is called ahost web Feature. 
 
-- **Web Parts:** One kind of Web Part, an add-in part, can be deployed in an add-in, and an add-in part can go to either the add-in web or the host web. All other types of Web Parts can be referenced in add-ins, but not deployed by them. If an add-in part is deployed to the host web, it should be included in a host web Feature.
+- **Web Parts:** One kind of web part, an add-in part, can be deployed in an add-in, and an add-in part can go to either the add-in web or the host web. All other types of web parts can be referenced in add-ins, but not deployed by them. If an add-in part is deployed to the host web, it should be included in a host web Feature.
 
 - **Remote event receivers:** These are new in SharePoint. They resemble classic SharePoint event receivers except that the code runs in the cloud. These are not available in a SharePoint-hosted add-in.
 
@@ -117,7 +117,7 @@ The following are some caveats and details concerning the deployment of certain 
 
    For more information about site definition configurations and web templates, see  [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx).
     
-## Additional resources
+## See also
 <a name="SP15hostedwebs_bk_addlresources"> </a>
 
 - [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)

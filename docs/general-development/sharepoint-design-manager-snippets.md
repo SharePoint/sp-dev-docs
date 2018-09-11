@@ -7,7 +7,7 @@ ms.assetid: 68caef4c-5941-4a88-b34b-f88122801cef
 
 
 # SharePoint Design Manager snippets
-A snippet is an HTML representation of a SharePoint component or control such as a navigation bar or a Web Part. By using the Snippet Gallery in Design Manager, you can quickly add SharePoint functionality to your HTML master page or page layout.
+A snippet is an HTML representation of a SharePoint component or control such as a navigation bar or a web part. By using the Snippet Gallery in Design Manager, you can quickly add SharePoint functionality to your HTML master page or page layout.
 ## Introduction to snippets and the Snippet Gallery
 <a name="Introduction"> </a>
 
@@ -28,16 +28,13 @@ After you convert a master page or create a page layout, you have an HTML versio
 - Copy the HTML code snippet to the Clipboard so that you can paste the snippet at the location you want in the HTML file.
     
   
-The Snippet Gallery displays different options on the ribbon, depending on whether you're editing a master page or page layout—for example, navigation controls are displayed only for master pages, and Web Part zones and page field controls are displayed only for page layouts. Also, when you are editing a page layout, the page fields that are available depend on the content type of the page layout that you're editing.
+The Snippet Gallery displays different options on the ribbon, depending on whether you're editing a master page or page layout—for example, navigation controls are displayed only for master pages, and web part zones and page field controls are displayed only for page layouts. Also, when you are editing a page layout, the page fields that are available depend on the content type of the page layout that you're editing.
   
     
     
-After you paste a snippet into your HTML file, you get a design-time preview from the HTML provided in the snippet. You can also use the server-side preview in Design Manager to see how the control will appear on the live site. The design-time preview may include static sample data, but the server-side preview uses live data, if available. For example, a navigation control that draws navigation links from a term set will display those terms dynamically in the server-side preview, but the design-time preview will have a static snapshot of the terms at the time you created the snippet. Live data is not available in the server-side preview for some snippets, however, including many Web Parts. In this case, the server-side preview may say **Preview Not Available**.
+After you paste a snippet into your HTML file, you get a design-time preview from the HTML provided in the snippet. You can also use the server-side preview in Design Manager to see how the control will appear on the live site. The design-time preview may include static sample data, but the server-side preview uses live data, if available. For example, a navigation control that draws navigation links from a term set will display those terms dynamically in the server-side preview, but the design-time preview will have a static snapshot of the terms at the time you created the snippet. Live data is not available in the server-side preview for some snippets, however, including many web parts. In this case, the server-side preview may say **Preview Not Available**.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > A snippet contains HTML markup that gives you a design-time preview in your HTML editor, but the HTML markup contained in "start preview" and "end preview" comments should not be edited because it affects only the design-time preview, not how SharePoint ultimately renders that snippet. Instead, to style your snippet, you typically have to identify and override the default SharePoint styles that are applied to the snippet. 
   
     
@@ -83,10 +80,9 @@ The Snippet Gallery displays different options depending on the file that you're
     
     The properties that are most important for the core purpose of the snippet appear in the top section named Important. These are the key properties that you have to understand when using a snippet.
     
-    
-    
-    > **Note:**
-      > If the property grid has a header that ends with AjaxDelta, you should ignore those properties because they apply to the controls related to the Minimal Download Strategy, which is disabled for master pages and page layouts created through Design Manager. 
+    > [!NOTE]
+    > If the property grid has a header that ends with AjaxDelta, you should ignore those properties because they apply to the controls related to the Minimal Download Strategy, which is disabled for master pages and page layouts created through Design Manager. 
+
 8. After you configure any properties, choose **Update**. This updates both the preview and the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
@@ -182,10 +178,7 @@ As an example, the following is the default markup for an Edit Mode Panel, which
 
 The following is the default markup for a Top Navigation snippet, which is more complex because this snippet contains several different controls, with some nested inside each other, including a data source for the navigation terms, a delegate control, and a content placeholder.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Some of the controls, such as the content placeholder, contain empty tags for an HTML preview because that element does not require a visual representation on the page. 
   
     
@@ -401,7 +394,7 @@ Here is a breakdown of the types of markup that are included in a snippet.
 ```
 
 
-## Additional resources
+## See also
 <a name="Resources"> </a>
 
 

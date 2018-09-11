@@ -1,6 +1,6 @@
 ---
 title: Programming models in SharePoint
-ms.date: 09/25/2017
+ms.date: 04/13/2017
 ms.prod: sharepoint
 ms.assetid: 061985ec-6129-4e91-991b-a72488ce1d34
 ---
@@ -11,30 +11,32 @@ ms.assetid: 061985ec-6129-4e91-991b-a72488ce1d34
 
 You can develop applications for the SharePoint platform in many ways. These applications can be usefully categorized into the following groups based on the tools used to create them, the programming models used to develop them, the methods by which they are packaged and deployed, the methods by which they are marketed, and the devices on which they run.
   
-    
-    
 
+- SharePoint Framework
 
 - SharePoint Add-ins
     
-  
 - SharePoint publishing sites
     
-  
 - SharePoint farm solutions
     
-  
 - Mobile add-ins for SharePoint
     
-  
 - Reusable components for SharePoint
     
   
 These categories are  *not*  mutually exclusive. For example, you can develop a publishing site as an SharePoint Add-in. The following sections define these categories and guide you to the documentation for each.
+
+## SharePoint Framework
+<a name="SPFx"> </a>
+
+The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and support for open source tooling. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready from day one. The SharePoint Framework works for SharePoint Online and soon also for on-premises (SharePoint 2016 Feature Pack 2). For more information, see  [Overview of the SharePoint Framework](../spfx/sharepoint-framework-overview.md).
+  
+
 ## Add-ins for SharePoint
 <a name="Apps"> </a>
 
-A SharePoint Add-in is similar to an add-in on a mobile device. It is a stand-alone productivity solution that does a small number of related tasks, installs easily, and uninstalls cleanly. Users can discover and download SharePoint Add-ins from a public SharePoint add-in store or from their organization's corporate add-in catalog. A SharePoint Add-in can include classic SharePoint components such as lists, custom website pages, Web Parts, workflows, and content types. But an SharePoint Add-in can also surface a remote web application and remote data in SharePoint. A SharePoint Add-in can also include both SharePoint and remote components. SharePoint Add-ins are very safe applications whose custom logic is always shifted "up" to the cloud or "down" to the client computers. It never runs on the SharePoint servers.
+A SharePoint Add-in is similar to an add-in on a mobile device. It is a stand-alone productivity solution that does a small number of related tasks, installs easily, and uninstalls cleanly. Users can discover and download SharePoint Add-ins from a public SharePoint add-in store or from their organization's corporate add-in catalog. A SharePoint Add-in can include classic SharePoint components such as lists, custom website pages, web parts, workflows, and content types. But an SharePoint Add-in can also surface a remote web application and remote data in SharePoint. A SharePoint Add-in can also include both SharePoint and remote components. SharePoint Add-ins are very safe applications whose custom logic is always shifted "up" to the cloud or "down" to the client computers. It never runs on the SharePoint servers.
   
     
     
@@ -92,9 +94,10 @@ The SharePoint platform and Visual Studio 2012 enable encapsulation and reuse of
     
   
 
-## Additional resources
+## See also
 <a name="SP15devinSP_addlresources"> </a>
 
+-  [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md)
 
 -  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md)
     

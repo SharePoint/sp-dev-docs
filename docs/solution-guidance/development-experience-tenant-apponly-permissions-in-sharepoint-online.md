@@ -45,7 +45,7 @@ Supply the **Client ID** and **Client Secret **created in Step 1.
 Since you want to debug the add-in, ensure that you supply https://localhost.com including the port as depicted below.
 ![](http://i.imgur.com/nQmSbPC.png)
 
-Now deploy the add-in in the App Catalog site.
+Now deploy the add-in in the app catalog site.
 
 ### Step 5: Install your add-in in your developer site collection
 
@@ -55,7 +55,7 @@ Navigate to the developer site and add the app. Click on **App Details**.
 If you clicked on the app tile, you will have to click on "**Find out why**" and request your app
 ![](http://i.imgur.com/DwWUkG0.png)
 
-Once the request has been submitted the status will be in a pending state until the SharePoint Administrator or the App Catalog Administrator approves the request. To approve the request, navigate to the app catalog, App Requests and approve the request.
+Once the request has been submitted the status will be in a pending state until the SharePoint Administrator or the app catalog Administrator approves the request. To approve the request, navigate to the app catalog, App Requests and approve the request.
 
 ![](http://i.imgur.com/yZ8vNEc.png)
 
@@ -68,13 +68,14 @@ In Visual Studio right click your web project and select **Debug** Start new ins
 
 ![](http://i.imgur.com/Y5vAlDr.png)
 
->**Note**
+> [!NOTE] 
 > - If for some reason your app package file changes you'll need to redeploy it to the app catalog and re-install it to your development site collection
 > - If you're add-in has an appinstalled event receiver you'll need to ensure that you've done step 6 before you do step 5
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
+
 - [Add-in app only tenant administrative permissions in SharePoint Online](https://msdn.microsoft.com/en-us/pnp_articles/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online)
 - [Add-in permissions in SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/fp142383.aspx)
 - [Explore the app manifest structure and the package of a SharePoint Add-in](https://msdn.microsoft.com/en-us/library/office/fp179918.aspx)

@@ -212,10 +212,8 @@ The following XML shows an example of the list item properties that are returned
 
 The following example shows how to **create** a list item.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
+> 
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     
@@ -241,10 +239,7 @@ headers:
 
 The following example shows how to **update** a list item.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     
@@ -294,7 +289,7 @@ For more information, see  [Complete basic operations using SharePoint REST endp
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

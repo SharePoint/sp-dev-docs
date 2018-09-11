@@ -7,10 +7,7 @@ redirect_url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/add-a-custom-
 
 # Add a custom content type to a SharePoint-hosted SharePoint Add-in
 Learn how to include custom content types in an SharePoint Add-ins.
- 
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
- 
 
 This is the fourth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the other articles in this series:
  
@@ -25,7 +22,8 @@ This is the fourth in a series of articles about the basics of developing ShareP
     
  
 
- **Note**  If you have been working through this series about SharePoint-hosted add-ins, then you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at  [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeContentType.sln file.
+> [!NOTE] 
+> If you have been working through this series about SharePoint-hosted add-ins, then you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at  [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeContentType.sln file.
  
 
 In this article you add a custom content type to the Employee Orientation SharePoint Add-in.
@@ -196,4 +194,4 @@ In this article you add a custom content type to the Employee Orientation ShareP
 ## 
 <a name="Nextsteps"> </a>
 
-In the next article in this series, you'll add a list view Web Part to the default page of the SharePoint Add-in:  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md).
+In the next article in this series, you'll add a list view web part to the default page of the SharePoint Add-in:  [Add a web part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md).

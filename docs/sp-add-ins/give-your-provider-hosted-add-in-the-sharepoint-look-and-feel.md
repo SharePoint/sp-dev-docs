@@ -1,14 +1,14 @@
 ---
 title: Give your provider-hosted add-in the SharePoint look-and-feel
 description: Get to know the base add-in, configure Visual Studio to rebuild the corporate database, add SharePoint chrome and top bar to the start page, run the add-in, and test the new UI.
-ms.date: 11/02/2017
+ms.date: 12/04/2017
 ms.prod: sharepoint
 ---
 
 
 # Give your provider-hosted add-in the SharePoint look-and-feel
 
-This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
+This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the overview article in this series:
 
 -  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
@@ -187,7 +187,7 @@ In some scenarios, you want your remote pages to have their own branding, but in
     
    In the **Page_Load** method, a **using** statement writes the name of the SharePoint host web to the remote start page. This is sample code, so delete the entire **using** statement (but leave the line that initializes the `spContext` variable). The method should now look like the following.
 
-    ```C#
+    ```csharp
       protected void Page_Load(object sender, EventArgs e)
     {
         spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -213,13 +213,13 @@ In some scenarios, you want your remote pages to have their own branding, but in
 
 10. This step and the next one have already been done for the Order Form page and the Account page, so they apply only to the Contact page and Help page. To get the `spContext` object onto each of the pages, open the \*.aspx.cs code behind files for the three aspx pages. In each of them, add the following member to the **Page** class.
     
-    ```C#
+    ```csharp
       protected SharePointContext spContext;
     ```
 
 11. Replace the **Page_Load** method with the following version. The object is being retrieved from the Session cache. It was cached there when it was first created by the **Page_Load** method of the add-in's start page.
     
-    ```C#
+    ```csharp
       protected void Page_Load(object sender, EventArgs e)
     {
         spContext = Session["SPContext"] as SharePointContext;

@@ -11,7 +11,7 @@ ms.prod: sharepoint
 <a name="SPAppModelArch_SPCenteredVsCloudCentered"> </a>
 This article supplements the information in the article [SharePoint Add-ins](sharepoint-add-ins.md).
 
-The SharePoint add-in model provides the following ways to host the components of a SharePoint Add-in: 
+The SharePoint Add-in model provides the following ways to host the components of a SharePoint Add-in: 
 
 -  **Provider-hosted:** Add-ins that include at least one remote component and may also include SharePoint components. The non-SharePoint components are deployed by your logic on your hardware or cloud account, or deployed on the customer's hardware or cloud account using installation programs and instructions that you provide.
 
@@ -33,12 +33,12 @@ As a general rule, any SharePoint component that does not include custom code th
 
 When a SharePoint Add-in is installed on a website, the add-in is listed on the **Site Contents** page of the host web. Users can start the add-in from that page. When opened in this way, the add-in runs in full-screen mode.
 
-Another way that a SharePoint Add-in can be surfaced is through an add-in part, a type of Web Part that is represented by the **ClientWebPart** class. This kind of Web Part is essentially a wrapper for an IFrame that would host a page of the add-in. In the simplest case, the only significant property of the Web Part is a URL that points to the page. 
+Another way that a SharePoint Add-in can be surfaced is through an add-in part, a type of web part that is represented by the **ClientWebPart** class. This kind of web part is essentially a wrapper for an IFrame that would host a page of the add-in. In the simplest case, the only significant property of the web part is a URL that points to the page. 
 
-But Web Parts can have custom properties that users can set in a Tool Part. Such properties could be used, for example, to set context information such as the user's ZIP Code or Postal Code. To include such an add-in part in your add-in, you create a host web Feature in the add-in and add declarative Web Part markup. Like any other Web Part, it appears in the SharePoint UI from which users add Web Parts. You can have more than one add-in part deployed with your add-in if you need even more variability. For example, a weather add-in can have an add-in part that shows current weather and a second add-in part that shows a weekly forecast. The two parts can have different sizes and functionality.
+But web parts can have custom properties that users can set in a Tool Part. Such properties could be used, for example, to set context information such as the user's ZIP Code or Postal Code. To include such an add-in part in your add-in, you create a host web Feature in the add-in and add declarative web part markup. Like any other web part, it appears in the SharePoint UI from which users add web parts. You can have more than one add-in part deployed with your add-in if you need even more variability. For example, a weather add-in can have an add-in part that shows current weather and a second add-in part that shows a weekly forecast. The two parts can have different sizes and functionality.
 
 > [!NOTE]
-> You can also deploy add-in parts to the add-in web. To implement this, the markup for the Web Part would be part of a Feature inside a .wsp file in the add-in package, not in the host web Feature.
+> You can also deploy add-in parts to the add-in web. To implement this, the markup for the web part would be part of a Feature inside a .wsp file in the add-in package, not in the host web Feature.
 
 We recommend that you try to give your add-ins a SharePoint appearance to the extent possible, although that is not mandatory and may not always be the best choice. For more information about the user experience guidelines, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md). 
 
@@ -106,7 +106,7 @@ A SharePoint Add-in can use almost any kind of structured data storage, both ins
 
 Documents, images, videos, audio files, and other kinds of unstructured data that is produced or used by a SharePoint Add-in can be stored in or outside SharePoint. Document libraries are a good choice for documents and are searchable via SharePoint search. A site asset library is often a good choice for multimedia files. 
 
-Other options include blob storage in your Microsoft Azure account or on your own servers. You can also store files in some non-Microsoft platforms or cloud services.
+Other options include Blob storage in your Microsoft Azure account or on your own servers. You can also store files in some non-Microsoft platforms or cloud services.
 
 <a name="AppMetadata"> </a>
 ### Add-in settings and other metadata storage options
@@ -205,7 +205,7 @@ The following is an example of raw **AppPrerequisites** markup that registers th
 - [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)
 - [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)
 
-## Additional resources
+## See also
 <a name="SPAppModelArch_AdditionalResources"> </a>
 
 -  [SharePoint Add-ins](sharepoint-add-ins.md)

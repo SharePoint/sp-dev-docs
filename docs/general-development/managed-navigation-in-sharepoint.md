@@ -86,86 +86,84 @@ When you use the .NET client object model for taxonomy, you can create a new nav
 
 
 ```cs
-
-///Create a navigation term set.
 public class NavigationTermSetTests
+{
+    public void CreateNavigationTermSet()
     {
-      public void CreateNavigationTermSet()
-              {
-               ClientContext clientContext = new ClientContext(TestConfig.ServerUrl);
-            
-                 TaxonomySession taxonomySession = TaxonomySession.GetTaxonomySession(clientContext);
-                 taxonomySession.UpdateCache();
+        ClientContext clientContext = new ClientContext(TestConfig.ServerUrl);
 
-                 clientContext.Load(taxonomySession, ts => ts.TermStores);
-                 clientContext.ExecuteQuery();
+        TaxonomySession taxonomySession = TaxonomySession.GetTaxonomySession(clientContext);
+        taxonomySession.UpdateCache();
 
-                 if (taxonomySession.TermStores.Count == 0)
-                 throw new InvalidOperationException("The Taxonomy Service is offline or missing");
+        clientContext.Load(taxonomySession, ts => ts.TermStores);
+        clientContext.ExecuteQuery();
 
-                 TermStore termStore = taxonomySession.TermStores[0];
-                 clientContext.Load(termStore, 
-                 ts => ts.Name, 
-                 ts => ts.WorkingLanguage);
+        if (taxonomySession.TermStores.Count == 0)
+            throw new InvalidOperationException("The Taxonomy Service is offline or missing");
 
-                 // Does the TermSet object already exist?
-                 TermSet existingTermSet;
+        TermStore termStore = taxonomySession.TermStores[0];
+        clientContext.Load(termStore,
+        ts => ts.Name,
+        ts => ts.WorkingLanguage);
 
-                 // Handles an error that occurs if the return value is null.
-                 ExceptionHandlingScope exceptionScope = new ExceptionHandlingScope(clientContext);
-             using (exceptionScope.StartScope())
-                 {
-                 using (exceptionScope.StartTry())
-                 {
-                 existingTermSet = termStore.GetTermSet(TestConfig.NavTermSetId);
-                 }
-                 using (exceptionScope.StartCatch())
-                {
-                }
-                }
-                clientContext.ExecuteQuery();
+        // Does the TermSet object already exist?
+        TermSet existingTermSet;
 
-                if (!existingTermSet.ServerObjectIsNull.Value)
-                {
-                Log("CreateNavigationTermSet(): Deleting old TermSet");
-                existingTermSet.DeleteObject();
-                termStore.CommitAll();
-                clientContext.ExecuteQuery();
-                }
+        // Handles an error that occurs if the return value is null.
+        ExceptionHandlingScope exceptionScope = new ExceptionHandlingScope(clientContext);
+        using (exceptionScope.StartScope())
+        {
+            using (exceptionScope.StartTry())
+            {
+                existingTermSet = termStore.GetTermSet(TestConfig.NavTermSetId);
+            }
+            using (exceptionScope.StartCatch())
+            {
+            }
+        }
+        clientContext.ExecuteQuery();
 
-                Log("CreateNavigationTermSet(): Creating new TermSet");
-
-               // Creates a new TermSet object.
-            TermGroup siteCollectionGroup = termStore.GetSiteCollectionGroup(clientContext.Site, 
-                createIfMissing: true);
-            TermSet termSet = siteCollectionGroup.CreateTermSet("Navigation Demo", TestConfig.NavTermSetId, 
-                termStore.WorkingLanguage);
-
+        if (!existingTermSet.ServerObjectIsNull.Value)
+        {
+            Log("CreateNavigationTermSet(): Deleting old TermSet");
+            existingTermSet.DeleteObject();
             termStore.CommitAll();
             clientContext.ExecuteQuery();
+        }
 
-            NavigationTermSet navTermSet = NavigationTermSet.GetAsResolvedByWeb(clientContext,
-                termSet, clientContext.Web, "GlobalNavigationTaxonomyProvider");
+        Log("CreateNavigationTermSet(): Creating new TermSet");
 
-            navTermSet.IsNavigationTermSet = true;
-            navTermSet.TargetUrlForChildTerms.Value = "~site/Pages/Topics/Topic.aspx";
+        // Creates a new TermSet object.
+        TermGroup siteCollectionGroup = termStore.GetSiteCollectionGroup(clientContext.Site,
+            createIfMissing: true);
+        TermSet termSet = siteCollectionGroup.CreateTermSet("Navigation Demo", TestConfig.NavTermSetId,
+            termStore.WorkingLanguage);
 
-            termStore.CommitAll();
-            clientContext.ExecuteQuery();
+        termStore.CommitAll();
+        clientContext.ExecuteQuery();
 
-            NavigationTerm term1 = navTermSet.CreateTerm("Term 1", NavigationLinkType.SimpleLink, Guid.NewGuid());
-            term1.SimpleLinkUrl = "http://www.bing.com/";
+        NavigationTermSet navTermSet = NavigationTermSet.GetAsResolvedByWeb(clientContext,
+            termSet, clientContext.Web, "GlobalNavigationTaxonomyProvider");
 
-            Guid term2Guid = new Guid("87FAA433-4E3E-4500-AA5B-E04330B12ACD");
-            NavigationTerm term2 = navTermSet.CreateTerm("Term 2", NavigationLinkType.FriendlyUrl,
-                term2Guid);
+        navTermSet.IsNavigationTermSet = true;
+        navTermSet.TargetUrlForChildTerms.Value = "~site/Pages/Topics/Topic.aspx";
 
-            NavigationTerm childTerm = term2.CreateTerm("Term 2 child", NavigationLinkType.FriendlyUrl, Guid.NewGuid());
+        termStore.CommitAll();
+        clientContext.ExecuteQuery();
 
-            childTerm.GetTaxonomyTerm().TermStore.CommitAll();
-            clientContext.ExecuteQuery();
+        NavigationTerm term1 = navTermSet.CreateTerm("Term 1", NavigationLinkType.SimpleLink, Guid.NewGuid());
+        term1.SimpleLinkUrl = "http://www.bing.com/";
+
+        Guid term2Guid = new Guid("87FAA433-4E3E-4500-AA5B-E04330B12ACD");
+        NavigationTerm term2 = navTermSet.CreateTerm("Term 2", NavigationLinkType.FriendlyUrl,
+            term2Guid);
+
+        NavigationTerm childTerm = term2.CreateTerm("Term 2 child", NavigationLinkType.FriendlyUrl, Guid.NewGuid());
+
+        childTerm.GetTaxonomyTerm().TermStore.CommitAll();
+        clientContext.ExecuteQuery();
+    }
 }
-
 
 ```
 
@@ -185,72 +183,71 @@ You can use the .NET server taxonomy classes and methods in the  [Microsoft.Shar
 
 
 ```cs
-
 ///Create a navigation term set.
 using (SPSite site = new SPSite(TestConfig.ServerUrl))
-            {
-                using (SPWeb web = site.OpenWeb())
-                {
-                    TaxonomySession taxonomySession = new TaxonomySession(site, updateCache: true);
+{
+    using (SPWeb web = site.OpenWeb())
+    {
+        TaxonomySession taxonomySession = new TaxonomySession(site, updateCache: true);
 
-                    /// Use the first TermStore object in the list.
-                    if (taxonomySession.TermStores.Count == 0)
-                        throw new InvalidOperationException("The Taxonomy Service is offline or missing");
+        /// Use the first TermStore object in the list.
+        if (taxonomySession.TermStores.Count == 0)
+            throw new InvalidOperationException("The Taxonomy Service is offline or missing");
 
-                    TermStore termStore = taxonomySession.TermStores[0];
+        TermStore termStore = taxonomySession.TermStores[0];
 
-                    /// Does the TermSet object already exist?
-                    TermSet existingTermSet = termStore.GetTermSet(TestConfig.NavTermSetId);
-                    if (existingTermSet != null)
-                    {
-                        Log("CreateNavigationTermSet(): Deleting old TermSet");
-                        existingTermSet.Delete();
-                        termStore.CommitAll();
-                    }
+        /// Does the TermSet object already exist?
+        TermSet existingTermSet = termStore.GetTermSet(TestConfig.NavTermSetId);
+        if (existingTermSet != null)
+        {
+            Log("CreateNavigationTermSet(): Deleting old TermSet");
+            existingTermSet.Delete();
+            termStore.CommitAll();
+        }
 
-                    Log("CreateNavigationTermSet(): Creating new TermSet");
+        Log("CreateNavigationTermSet(): Creating new TermSet");
 
-                    /// Create a new TermSet object.
-                    Group siteCollectionGroup = termStore.GetSiteCollectionGroup(site);
-                    TermSet termSet = siteCollectionGroup.CreateTermSet("Navigation Demo", TestConfig.NavTermSetId);
+        /// Create a new TermSet object.
+        Group siteCollectionGroup = termStore.GetSiteCollectionGroup(site);
+        TermSet termSet = siteCollectionGroup.CreateTermSet("Navigation Demo", TestConfig.NavTermSetId);
 
-                    NavigationTermSet navTermSet = NavigationTermSet.GetAsResolvedByWeb(termSet, web,
-                        StandardNavigationProviderNames.GlobalNavigationTaxonomyProvider);
+        NavigationTermSet navTermSet = NavigationTermSet.GetAsResolvedByWeb(termSet, web,
+            StandardNavigationProviderNames.GlobalNavigationTaxonomyProvider);
 
-                    navTermSet.IsNavigationTermSet = true;
-                    navTermSet.TargetUrlForChildTerms.Value = "~site/Pages/Topics/Topic.aspx";
+        navTermSet.IsNavigationTermSet = true;
+        navTermSet.TargetUrlForChildTerms.Value = "~site/Pages/Topics/Topic.aspx";
 
-                    NavigationTerm term1 = navTermSet.CreateTerm("Term 1", NavigationLinkType.SimpleLink);
-                    term1.SimpleLinkUrl = "http://www.bing.com/";
+        NavigationTerm term1 = navTermSet.CreateTerm("Term 1", NavigationLinkType.SimpleLink);
+        term1.SimpleLinkUrl = "http://www.bing.com/";
 
-                    Guid term2Guid = new Guid("87FAA433-4E3E-4500-AA5B-E04330B12ACD");
-                    NavigationTerm term2 = navTermSet.CreateTerm("Term 2", NavigationLinkType.FriendlyUrl,
-                        term2Guid);
+        Guid term2Guid = new Guid("87FAA433-4E3E-4500-AA5B-E04330B12ACD");
+        NavigationTerm term2 = navTermSet.CreateTerm("Term 2", NavigationLinkType.FriendlyUrl,
+            term2Guid);
 
-                    /// Verify that the NavigationTermSetView is being applied correctly.
-                    Assert.AreEqual(web.ServerRelativeUrl + "/term-2", term2.GetResolvedDisplayUrl(null).ToString());
+        /// Verify that the NavigationTermSetView is being applied correctly.
+        Assert.AreEqual(web.ServerRelativeUrl + "/term-2", term2.GetResolvedDisplayUrl(null).ToString());
 
-                    string expectedTargetUrl = web.ServerRelativeUrl 
-                        + "/Pages/Topics/Topic.aspx?TermStoreId=" + termStore.Id.ToString() 
-                        + "&amp;TermSetId=" + TestConfig.NavTermSetId.ToString()
-                        + "&amp;TermId=" + term2Guid.ToString();
-                    Assert.AreEqual(expectedTargetUrl, term2.GetResolvedTargetUrl(null, null).ToString());
+        string expectedTargetUrl = web.ServerRelativeUrl
+            + "/Pages/Topics/Topic.aspx?TermStoreId=" + termStore.Id.ToString()
+            + "&amp;TermSetId=" + TestConfig.NavTermSetId.ToString()
+            + "&amp;TermId=" + term2Guid.ToString();
+        Assert.AreEqual(expectedTargetUrl, term2.GetResolvedTargetUrl(null, null).ToString());
 
-                    NavigationTerm childTerm = term2.CreateTerm("Term 2 child", NavigationLinkType.FriendlyUrl);
-                    Assert.AreEqual(web.ServerRelativeUrl + "/term-2/term-2-child", childTerm.GetResolvedDisplayUrl(null).ToString());
+        NavigationTerm childTerm = term2.CreateTerm("Term 2 child", NavigationLinkType.FriendlyUrl);
+        Assert.AreEqual(web.ServerRelativeUrl + "/term-2/term-2-child", childTerm.GetResolvedDisplayUrl(null).ToString());
 
-                    /// Commit changes.
-                    childTerm.GetTaxonomyTerm().TermStore.CommitAll();
-                }
-            }
+        /// Commit changes.
+        childTerm.GetTaxonomyTerm().TermStore.CommitAll();
+    }
+}
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_ManagedNav_AdditionalResources"> </a>
 
 
--  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md)
+-  [Content Search web part in SharePoint](content-search-web-part-in-sharepoint.md)
     
   
 

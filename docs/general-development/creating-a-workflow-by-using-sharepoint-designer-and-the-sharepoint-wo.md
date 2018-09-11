@@ -69,7 +69,7 @@ SharePoint Designer 2013 installs as an Office 2013 application. To open SharePo
   
     
     
-
+2013
 ### To open SharePoint Designer 2013 and connect to a SharePoint site
 
 
@@ -109,10 +109,11 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
 3. Select the list that you want to associate with the new workflow.
     
   
-4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint Workflow**, as shown in the figure.
+4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint 2013 Workflow**, as shown in the figure.
     
-    > **Note:**
-      > If you do not see SharePoint Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint farm. 
+    > [!NOTE]
+    > If you do not see SharePoint Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint farm. See [Configure Workflow Manager to work with the SharePoint Server 2013 Farm](https://technet.microsoft.com/library/jj658588.aspx#section5). 
+
 5. Click **OK** to create the workflow.
     
   
@@ -176,12 +177,8 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
     
 ![Workflow items in the ribbon.](../images/SPD15-install-connect-4.png)
   
-    
-    
-
-    
-> **Note:**
-> The above procedure is used to create a List workflow. A Reusable workflow or Site workflow can be created using the same procedure with the following modification. Instead of selecting the List Workflow button in the ribbon select the **Reusable Workflow** or **Site Workflow** button when creating the workflow.
+> [!NOTE]
+> The previous procedure is used to create a List workflow. A Reusable workflow or Site workflow can be created using the same procedure with the following modification. Instead of selecting the List Workflow button in the ribbon select the **Reusable Workflow** or **Site Workflow** button when creating the workflow.
   
     
     
@@ -191,7 +188,7 @@ To learn more about the available components of workflow development, see  [Work
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

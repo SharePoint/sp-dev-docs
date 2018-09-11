@@ -1,8 +1,8 @@
 ---
-title: Yammer integration in the SharePoint add-in model
+title: Yammer integration in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Yammer integration in the SharePoint add-in model
+Yammer integration in the SharePoint Add-in model
 =================================================
 
 Summary
@@ -34,7 +34,7 @@ You have a few options to integrate Yammer with SharePoint.
 Embed
 -----
 
-In this option you embed a Yammer feed in a SharePoint web page.
+In this option you embed a Yammer feed in a SharePoint webpage.
 	
 - This option is quickly and easily implemented.
 - This option allows you to control limited aspects of the feed and how it appears.
@@ -68,7 +68,7 @@ The following sample demonstrates how to provision sites with a Yammer feed asso
 
 - [Provisioning.Yammer (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Yammer)
 
-The **CreateYammerGroupDiscussionPartXml** method in the [YammerUtility.cs](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Utilities/YammerUtility.cs) class comes from the [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/OfficeDevPnP.Core) sample.  This method creates the XML for an Add-in Part definition that is added to a SharePoint page when a site is provisioned.  Notice the **feedType: 'group'** portion of the code.  Here you can see the feedType is set to use the out-of-the-box group feedType.
+The **CreateYammerGroupDiscussionPartXml** method in the [YammerUtility.cs](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Utilities/YammerUtility.cs) class comes from the [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core) sample.  This method creates the XML for an Add-in Part definition that is added to a SharePoint page when a site is provisioned.  Notice the **feedType: 'group'** portion of the code.  Here you can see the feedType is set to use the out-of-the-box group feedType.
 
 	public static string CreateYammerGroupDiscussionPartXml(string yammerNetworkName, int yammerGroupId, bool showHeader, bool showFooter, bool useSSO = true)
     {
@@ -78,7 +78,7 @@ The **CreateYammerGroupDiscussionPartXml** method in the [YammerUtility.cs](http
         wp.Append("	<webPart xmlns='http://schemas.microsoft.com/WebPart/v3'>");
         wp.Append("		<metaData>");
         wp.Append("			<type name='Microsoft.SharePoint.WebPartPages.ScriptEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' />");
-        wp.Append("			<importErrorMessage>Cannot import this Web Part.</importErrorMessage>");
+        wp.Append("			<importErrorMessage>Cannot import this web part.</importErrorMessage>");
         wp.Append("		</metaData>");
         wp.Append("		<data>");
         wp.Append("			<properties>");
@@ -119,7 +119,7 @@ The **CreateYammerOpenGraphDiscussionPartXml** method in the [YammerUtility.cs](
             wp.Append("	<webPart xmlns='http://schemas.microsoft.com/WebPart/v3'>");
             wp.Append("		<metaData>");
             wp.Append("			<type name='Microsoft.SharePoint.WebPartPages.ScriptEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' />");
-            wp.Append("			<importErrorMessage>Cannot import this Web Part.</importErrorMessage>");
+            wp.Append("			<importErrorMessage>Cannot import this web part.</importErrorMessage>");
             wp.Append("		</metaData>");
             wp.Append("		<data>");
             wp.Append("			<properties>");
@@ -175,7 +175,7 @@ For more information about Yammer OpenGraph see the [Open Graph Introduction & F
 Yammer OpenGraph API & Yammer REST API with Yammer SDKs
 -------------------------------------------------------
 
-In this option you use the Yammer OpenGraph API and/or Yammer REST API with Yammer SDKs to integrate Yammer with SharePoint.  These APIs may also be used to integrate Yammer with processes outside of web pages.  Examples of such scenarios include services and long running operations. 
+In this option you use the Yammer OpenGraph API and/or Yammer REST API with Yammer SDKs to integrate Yammer with SharePoint.  These APIs may also be used to integrate Yammer with processes outside of webpages.  Examples of such scenarios include services and long running operations. 
 	
 - This option takes longer to implement.
 - This option allows you to control all aspects of the feed and how it appears and how you interact with it.

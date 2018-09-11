@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint-hosted SharePoint Add-ins
 description: Set up a development environment and create your first SharePoint-hosted SharePoint Add-in.
-ms.date: 11/02/2017
+ms.date: 03/14/2018
 ms.prod: sharepoint
 ---
 
@@ -9,82 +9,59 @@ ms.prod: sharepoint
 
 SharePoint-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see [SharePoint Add-ins](sharepoint-add-ins.md). Here's a summary of SharePoint-hosted add-ins:
 
-- They contain SharePoint lists, Web Parts, workflows, custom pages, and other components, all of which are installed on a subweb, called the add-in web, of the SharePoint website where the add-in is installed.
-
+- They contain SharePoint lists, web parts, workflows, custom pages, and other components, all of which are installed on a subweb, called the add-in web, of the SharePoint website where the add-in is installed.
 - The only code they have is JavaScript on custom SharePoint pages.
 
-- Step 1 - Set up your dev environment 
+In this article, you'll complete the following steps:
 
-- Step 2 - Create the app project 
-
-- Step 3 - Code your app
+- Set up your dev environment
+- Create the add-in project
+- Code your add-in
+- Run the add-in and test the list
 
 <a name="Setup"> </a>
+
 ## Set up your dev environment
 
 There are many ways to set up a development environment for SharePoint Add-ins. This section explains the simplest way.
 
 ### Get the tools
 
-- If you don't already have **Visual Studio** 2013 or later installed, install it using the instructions at [Install Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
-
+- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+ 
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
+Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/).
+
 <a name="o365_signup"> </a>
-### Sign up for an Office 365 Developer Site
+
+### Sign up for an Office 365 developer subscription
 
 > [!NOTE]
-> You might already have access to an Office 365 Developer Site:
-> - **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) 
-> - **Do you have one of the following Office 365 subscription plans?** If so, an administrator of the Office 365 subscription can create a Developer Site by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more information, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
+> You might already have access to an Office 365 developer subscription: 
+> - **Are you a Visual Studio (MSDN) subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 developer subscription as a benefit. [Redeem your benefit today](https://msdn.microsoft.com/subscriptions/manage/default.aspx). 
+> - **Do you have one of the following Office 365 subscription plans?** If so, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
 
-There are three ways to get an Office 365 plan: 
+To get an Office 365 plan: 
 
-- Start with a  [free 30-day trial](https://portal.microsoftonline.com/Signup/MainSignUp.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&amp;DL=DEVELOPERPACK) with one user license.
+- [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/en-us/office/dev-program).
 
-- Buy an [Office 365 developer subscription](https://portal.microsoftonline.com/Signup/MainSignUp.aspx?OfferId=C69E7747-2566-4897-8CBA-B998ED3BAB88&amp;DL=DEVELOPERPACK). 
+- See the [Office 365 Developer Program documentation](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
-- Sign up for a free, one-year Office 365 developer account through the Office 365 Developer Program. [Get more information](http://dev.office.com/devprogram), or go straight to [the sign-up form](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170). You'll get an email after you sign up for the developer program with a link to sign up for the developer account. Use the following instructions.
-
-> [!TIP]
-> Open these links in another window or tab to keep the following instructions handy.
-
-1. The first page of the sign-up form is self-explanatory; supply the requested information, and then select **Next**.
-
-2. On the second page, shown in Figure 1, specify a user ID for the administrator of the subscription.
-   
-   *Figure 1. Office 365 Developer Site domain name*
-
-   ![Page 2 of Sign-up form for Office 365 account](../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
-   
-3. Create a subdomain of **.onmicrosoft.com**; for example, contoso.onmicrosoft.com.
-    
-   After you sign up, you use the resulting credentials (in the format *UserID@yourdomain.onmicrosoft.com*) to sign in to your Office 365 portal site where you administer your account. Your SharePoint Online Developer Site is set up at your new domain: `http://yourdomain.sharepoint.com`.
-    
-4. Select **Next** and fill out the final page of the form. If you choose to provide a telephone number to get a confirmation code, you can provide a mobile or landline number, but *not* a VoIP (Voice over Internet Protocol) number.
-    
-   > [!NOTE]
-   > If you're signed in to another Microsoft account when you try to sign up for a developer account, you might see this message: "Sorry, that user ID you entered didn't work. It looks like it's not valid. Be sure you enter the user ID that your organization assigned to you. Your user ID usually looks like *someone@example.com* or *someone@example.onmicrosoft.com*." 
-
-   > If you see that message, sign out of the Microsoft account you were using and try again. If you still get the message, clear your browser cache or switch to **InPrivate Browsing** and then fill out the form.
-
-   After you finish the sign-up process, your browser opens the Office 365 installation page. Select the Admin icon to open the admin center page.
-
-   *Figure 2. Office 365 admin center page*
-
-   ![Screenshot that shows the Office 365 admin center.](../images/SP15_Office365AdminInset_border.png)
+### Open your developer site 
  
-5. Wait for your Developer Site to finish setting up. After provisioning is complete, refresh the admin center page in your browser.
+Select the **Build Add-ins** link in the upper-left corner of the page to open your developer site. You should see a site that looks like the one in the following figure. The **Add-ins in Testing** list on the page confirms that the website was made with the SharePoint Developer Site template. If you see a regular team site instead, wait a few minutes and then restart your site.
+    
+> [!NOTE]
+> Make a note of the site's URL; it's used when you create SharePoint Add-in projects in Visual Studio.
 
-6. Select the **Build Add-ins** link in the upper-left corner of the page to open your Developer Site. You should see a site that looks like the one in Figure 3. The **Add-ins in Testing** list on the page confirms that the website was made with the SharePoint Developer Site template. If you see a regular team site instead, wait a few minutes and then restart your site.
+**Your developer site home page with the Add-ins in Testing list**
 
-7. Make a note of the site's URL; it's used when you create SharePoint Add-ins projects in Visual Studio.
+![Screenshot that shows the developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
 
-   *Figure 3. Your Developer Site home page with the Add-ins in Testing list*
-
-   ![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
 
 <a name="Create"> </a>
+
 ## Create the add-in project
 
 1. Start Visual Studio by using the **Run as administrator** option.
@@ -95,9 +72,9 @@ There are three ways to get an Office 365 plan:
 
 4. Name the project **EmployeeOrientation**, and then select **OK**.
 
-5. In the **Specify the Add-in for SharePoint Settings** dialog box, provide the full URL of the SharePoint site that you want to use to debug your add-in. This is the URL of the Developer Site. (Use HTTPS, not HTTP in the URL.) Under **How do you want to host your SharePoint Add-in**, select  **SharePoint-hosted**, and then select **Finish**.
+5. In the **Specify the Add-in for SharePoint Settings** dialog box, provide the full URL of the SharePoint site that you want to use to debug your add-in. This is the URL of the developer site. (Use HTTPS, not HTTP in the URL.) Under **How do you want to host your SharePoint Add-in**, select  **SharePoint-hosted**, and then select **Finish**.
 
-6. You may be prompted to sign in to your Developer Site. If so, use your subscription administrator's credentials.
+6. You may be prompted to sign in to your developer site. If so, use your subscription administrator's credentials.
 
 7. After the project is created, open the file **/Pages/Default.aspx** from the root of the project. Among other things, this generated file loads one or both of two scripts that are hosted on SharePoint: sp.runtime.js and sp.js. The markup for loading these files is in the **Content** control near the top of the file that has the ID **PlaceHolderAdditionalPageHead**. The markup varies depending on the version of **Microsoft Office Developer Tools for Visual Studio** that you are using. This series of tutorials requires that both files be loaded and that they be loaded with ordinary HTML **\<script\>** tags, not **\<SharePoint:ScriptLink\>** tags. 
 
@@ -132,8 +109,6 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 8. The wizard creates a **NewEmployeeOrientation** list template with a child list instance named **NewEmployeeOrientationInstance**. A list designer may open. It is used in a later step.
 
 9. Expand the **NewEmployeeOrientationInstance** node in **Solution Explorer**, if it isn't already, so that you can clearly distinguish the elements.xml file that is a child of the list *instance* from the elements.xml file that is a child of the list *template*.
-    
-    *Figure 4. Lists node in Solution Explorer*
 
     ![List folder with child NewEmployeeOrientation template, which itself has three children; a NewEmployeeOrientationInstance, an elements.xml file, and a schema.xml file. The instance itself has a child named elements.xml.](../images/10e5d116-d24b-4a44-bfff-cfbf2f971b1e.PNG)
 
@@ -226,8 +201,6 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 1. Use the F5 key to deploy and run your add-in. Visual Studio makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. (To find out how end users run an installed SharePoint Add-in, see [Next Steps](#Nextsteps).)
 
 2. When the add-in's default page opens, select the **New Employees in Seattle** link to open the custom list instance.
-    
-    *Figure 5. Default page and list view page*
 
     ![The add-in's default page is shown with its title New Employees by Location. There is a link labeled New Employees in Seattle. An arrow from this link points to the list view page for the list. It is titled New Employees in Seattle, with the list below.](../images/9dc5cefe-083a-4807-bee6-473001f23db9.png)
 
@@ -237,13 +210,20 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 
 5. You will work with this add-in and Visual Studio solution in other articles, and it's a good practice to retract the add-in one last time when you are finished working with it for a while. Right-click the project in **Solution Explorer**, and select **Retract**.
 
-## Additional resources
-
-- [Install earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx)
-- [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/)
-
-## Next steps
 <a name="Nextsteps"> </a>
+## Next steps
 
-So far, there isn't much orientation information in the list. We'll add some in later articles in this series. But first, take a brief break from coding to learn about deploying SharePoint Add-ins in [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md).
- 
+To create your add-ins, walk through the following steps in this order:
+
+1.  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md)
+2.  [Add custom columns to a SharePoint-hosted SharePoint Add-in](add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md)
+3.  [Add a custom content type to a SharePoint-hosted SharePoint Add-in](add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md)
+4.  [Add a web part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md)
+5.  [Add a workflow to a SharePoint-hosted SharePoint Add-in](add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md)
+6.  [Add a custom page and style to a SharePoint-hosted SharePoint Add-in](add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md)
+7.  [Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in](add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md)
+8.  [Create a custom ribbon button in the host web of a SharePoint Add-in](create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md)
+9.  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md)
+10. [Work with host web data from JavaScript in the add-in web](work-with-host-web-data-from-javascript-in-the-add-in-web.md)
+
+

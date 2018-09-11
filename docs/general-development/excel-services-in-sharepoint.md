@@ -19,7 +19,7 @@ SharePoint brings new technologies to Excel Services─such as ECMAScript (JavaS
 ### JavaScript UDFs
 <a name="xlsJsUdfs"> </a>
 
-Excel Services already lets you create user-defined functions (UDFs) using managed code. Excel Services in SharePoint introduces a new kind of UDF—ECMAScript (JavaScript, JScript) UDFs. JavaScript UDFs run in the context of the browser: either in a Excel workbook that is hosted in an Excel Web Access Web Part on SharePoint, or in a workbook that is embedded on a host webpage. 
+Excel Services already lets you create user-defined functions (UDFs) using managed code. Excel Services in SharePoint introduces a new kind of UDF—ECMAScript (JavaScript, JScript) UDFs. JavaScript UDFs run in the context of the browser: either in a Excel workbook that is hosted in an Excel Web Access web part on SharePoint, or in a workbook that is embedded on a host webpage. 
   
     
     
@@ -35,9 +35,8 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 ### 
 <a name="xlsOdata"> </a>
 
-
-> **Note:**
-> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
+> [!NOTE]
+> he Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
   
     
     
@@ -72,7 +71,7 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

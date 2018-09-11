@@ -95,7 +95,7 @@ Use this procedure to return to the preview page.
     
   
 
-## Additional resources
+## See also
 <a name="addresources"> </a>
 
 

@@ -385,10 +385,7 @@ Even if you don't provide conversion logic in your app for **Text** fields, such
     
 Assume you are creating a Windows Phone app based on a SharePoint list named Product Identifiers, which includes a field with a **Guid** data type. For the purpose of the following code sample, assume the list has a Product (or Title) field (of type **Text**) and an Identifier field (of type **Guid**).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > SharePoint lists with **Guid** fields must be created programmatically or from a list template that includes **Guid** fields.
   
     
@@ -603,7 +600,7 @@ Now the Identifier field is shown on the Display form as well as on the List for
     
     
 
-## Additional resources
+## See also
 <a name="SP15Supportwinphone_addlresources"> </a>
 
 

@@ -1,23 +1,14 @@
 ---
 title: Programmatically deploy a custom button in the provider-hosted add-in
 description: Register a custom ribbon button with a custom list in the same provider-hosted SharePoint Add-in.
-ms.date: 11/02/2017
+ms.date: 12/04/2017
 ms.prod: sharepoint
 ---
 
 
 # Programmatically deploy a custom button in the provider-hosted add-in
 
-This is the ninth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
-
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
--  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
--  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md)
--  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in.md)
--  [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in.md)
+This is the ninth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps). 
 
 > [!NOTE]
 > If you have been working through this series about provider-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeProgrammaticButton.sln file.
@@ -75,13 +66,13 @@ The following procedure shows how to implement this strategy.
 
 2. In the file SharePointComponentDeployer.cs, add the following line to the **DeployChainStoreComponentsToHostWeb** method, just under the line that calls `CreateLocalEmployeesList` (you create this method in the next step).
     
-    ```C#
+    ```csharp
       ChangeCustomActionRegistration();
     ```
 
 3. Add the following method to the `SharePointComponentDeployer` class. 
 
-    ```C#
+    ```csharp
 	  private static void ChangeCustomActionRegistration()
 	{
 	    using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -122,7 +113,7 @@ The following procedure shows how to implement this strategy.
 
 4. Replace `TODO8` with the following code. Note that when you retract an add-in, components created by the add-in are not removed. After your first-run logic executes, there will be a custom action in the list's **UserCustomActions** collection, and it will not be retracted the next time you select F5. To avoid confusion, the last line in this code `listActions.Clear();` empties the collection.
 
-    ```C#
+    ```csharp
 	var queryForList = from list in clientContext.Web.Lists
 			   where list.Title == "Local Employees"
 			   select list;
@@ -137,13 +128,13 @@ The following procedure shows how to implement this strategy.
 
 5. Replace `TODO9` with the following line, which adds an undefined custom action to the **Local Employees** list.
     
-    ```C#
+    ```csharp
       var listScopedEmployeeAction = listActions.Add();
     ```
 
 6. Replace `TODO10` with the following code. 
 
-    ```C#
+    ```csharp
 	listScopedEmployeeAction.Title = webScopedEmployeeAction.Title;
 	listScopedEmployeeAction.Location = webScopedEmployeeAction.Location;
 	listScopedEmployeeAction.Sequence = webScopedEmployeeAction.Sequence;
@@ -159,13 +150,13 @@ The following procedure shows how to implement this strategy.
 
 7. Replace `TODO11` with the following line, which deletes the original descriptively-defined button. If we did not have this line, every list on the website that uses list template "100" would have the custom button on it. Because the button's functionality is closely tied to the **Local Employees** list, it would make no sense to have the button on any other list. Also, without this line, the button would appear *twice*  on the **Local Employees** list, because that list uses template "100".
     
-    ```C#
+    ```csharp
       webScopedEmployeeAction.DeleteObject();
     ```
     
 8. The entire method should now look like the following (except there should be a GUID in place of the placeholder).
     
-    ```C#
+    ```csharp
 	  private static void ChangeCustomActionRegistration()
 	{
 	    using (var clientContext = SPContext.CreateUserClientContextForSPHost())

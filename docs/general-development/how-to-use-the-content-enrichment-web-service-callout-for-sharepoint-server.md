@@ -116,8 +116,8 @@ In this step, you will create the service implementation project and then add th
   
 2. Choose **Browse** and locate the **Microsoft.Office.Server.Search.ContentProcessingEnrichment** assembly in your SharePoint installation folder under _Installation Path_\\Microsoft Office Servers\\15.0\\Search\\Applications\\External. 
     
-    > **Note:**
-      > If SharePoint is installed on a machine other than your development machine, copy the assembly over to your development machine and reference it from there. 
+    > [!NOTE]
+    > If SharePoint is installed on a machine other than your development machine, copy the assembly over to your development machine and reference it from there. 
 
 ## Create a content enrichment service
 <a name="SP15ContentEnrich_createservice"> </a>
@@ -132,7 +132,8 @@ The implementation requires two managed properties for each item received via th
     
 The **IContentProcessingEnrichmentService** implementation writes the raw binary data to a temporary location on disk, with **Filename** as the name of the file. Then, a new name is added to the list of authors and returned to the content processing component.
   
-    
+    > [!NOTE]
+    > If the data source for the crawl is an external data source, the ItemRawData property will not have a data stream, but will be null. The string representation of the raw data will be returned in the Item.Body property. This is a limitation of the BCS data source crawler. 
     
 
 ### To create the class file for the content enrichment service
@@ -332,7 +333,7 @@ Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15ContentEnrich_addresources"> </a>
 
 

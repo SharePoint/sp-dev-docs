@@ -27,7 +27,7 @@ Table 1 lists the difference between the two scenarios available when you write 
 |**Location**|**Description**|
 |:-----|:-----|
 |**OneDrive** <br/> |In this scenario, you embed a workbook that is stored on OneDrive into the host webpage using an HTML <div> element. Then you include code in the page that interacts with the embedded workbook.  <br/> |
-|**SharePoint** <br/> |In this scenario, you have a SharePoint page served by SharePoint. You insert an Web Part into the SharePoint page that contains a workbook that is stored in an trusted location. Then you include code in the SharePoint page that interacts with the Web Part.  <br/> |
+|**SharePoint** <br/> |In this scenario, you have a SharePoint page served by SharePoint. You insert an web part into the SharePoint page that contains a workbook that is stored in an trusted location. Then you include code in the SharePoint page that interacts with the web part.  <br/> |
    
 The main difference between writing code for the two scenarios is how you get a reference to the  [Ewa.EwaControl](http://msdn.microsoft.com/library/6e441406-d67a-0da9-f996-71f4e4b4c144%28Office.15%29.aspx) object. Because the **[Ewa.EwaControl]** is the entry point to the JavaScript object model, you must get a reference to it to work with the JSOM.
   
@@ -36,7 +36,7 @@ The main difference between writing code for the two scenarios is how you get a 
 
 ### Getting a reference to the EwaControl object (SharePoint)
 
-When writing code that interacts with an Web Part on a SharePoint page, you get a reference to the **[Ewa.EwaControl]** object by using the method, [Ewa.EwaControlCollection.getItem(index)](http://msdn.microsoft.com/library/11dd3a65-f914-4b34-bbaf-0206c8153d2b%28Office.15%29.aspx), as shown in the following code example.
+When writing code that interacts with an web part on a SharePoint page, you get a reference to the **[Ewa.EwaControl]** object by using the method, [Ewa.EwaControlCollection.getItem(index)](http://msdn.microsoft.com/library/11dd3a65-f914-4b34-bbaf-0206c8153d2b%28Office.15%29.aspx), as shown in the following code example.
   
     
     
@@ -71,7 +71,7 @@ alert("Error - the EWA is not loaded.");
 
 function ewaApplicationReady()
 {
-    // Get a reference to the Excel Services Web Part.
+    // Get a reference to the Excel Services web part.
     ewa = Ewa.EwaControl.getInstances().getItem(0);
 
     // Add other initialization logic here.
@@ -160,7 +160,7 @@ Writing a solution that uses the JavaScript object model is basically the same w
     
     
 
-## Additional resources
+## See also
 <a name="SP15DevKitchenCon_AnatomyofanappSignupsheets_Additionalresources"> </a>
 
 

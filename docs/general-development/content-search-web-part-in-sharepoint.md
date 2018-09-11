@@ -1,12 +1,12 @@
 ---
-title: Content Search Web Part in SharePoint
+title: Content Search web part in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
 ---
 
 
-# Content Search Web Part in SharePoint
+# Content Search web part in SharePoint
 
   
     
@@ -23,19 +23,19 @@ ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
   
     
     
-Learn about the Content Search Web Part (CSWP) in SharePoint.
-## Introducing the Content Search Web Part (CSWP)
+Learn about the Content Search web part (CSWP) in SharePoint.
+## Introducing the Content Search web part (CSWP)
 <a name="SP15_CSWP_IntroducingCSWP"> </a>
 
-The Content Search Web Part (CSWP) is a Web Part introduced in SharePoint that uses various styling options to display dynamic content on SharePoint pages.
+The Content Search web part (CSWP) is a web part introduced in SharePoint that uses various styling options to display dynamic content on SharePoint pages.
   
     
     
 
-## How the Content Search Web Part works
+## How the Content Search web part works
 <a name="SP15_CSWP_HowCSWPWorks"> </a>
 
-Content Search Web Part displays search results in a way that you can easily format. Each Content Search Web Part is associated with a search query and shows the results for that search query.
+Content Search web part displays search results in a way that you can easily format. Each Content Search web part is associated with a search query and shows the results for that search query.
   
     
     
@@ -44,14 +44,14 @@ You can use display templates to change how search results appear on the page. D
     
     
 
-## When to use the Content Search Web Part (CSWP) or the Content Query Web Part (CQWP)
+## When to use the Content Search web part (CSWP) or the Content Query web part (CQWP)
 <a name="SP15_CSWP_WhenToUseCSWPorCQWP"> </a>
 
 The CSWP can return any content from the search index. Use it on your SharePoint sites when you are connecting to a search service and want to return indexed search results in your pages. 
   
     
     
-The CSWP returns content that is as fresh as the latest crawl of your content, so if you crawl often, the content that the CSWP returns is more up-to-date than if you crawl infrequently. If you need to display instant content or the refreshed version of content, use the Content Query Web Part (CQWP) instead.
+The CSWP returns content that is as fresh as the latest crawl of your content, so if you crawl often, the content that the CSWP returns is more up-to-date than if you crawl infrequently. If you need to display instant content or the refreshed version of content, use the Content Query web part (CQWP) instead.
   
     
     
@@ -64,7 +64,7 @@ Some site collection administrators mark sites to not be indexed. Content marked
     
     
 
-## Additional resources
+## See also
 <a name="SP15_CSWP_AdditionalResources"> </a>
 
 

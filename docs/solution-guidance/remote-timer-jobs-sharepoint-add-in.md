@@ -1,14 +1,14 @@
 ---
-title: Remote timer jobs in the SharePoint add-in model
+title: Remote timer jobs in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Remote timer jobs in the SharePoint add-in model
+Remote timer jobs in the SharePoint Add-in model
 ================================================
 
 Summary
 -------
 
-The approach you take to implement timer jobs is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration web site. SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
+The approach you take to implement timer jobs is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration website. SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
 
 In the SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
 
@@ -83,7 +83,7 @@ When you have access to an Azure subscription to schedule timer jobs with Azure 
 
 The following articles describe the Azure WebJob pattern and provide code samples to get you started.
 
-- [Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites (O365 PnP Article)](https://github.com/SharePoint/PnP-Guidance/blob/master/articles/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md)
+- [Getting Started with Azure WebJobs ("timer jobs") for your Office 365 Sites (O365 PnP Article)](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 	+ Describes how to build an Azure WebJob to act as a scheduled job for your Office 365 or on-premises SharePoint environment. Includes publishing and monitoring information.
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
 	+ Excellent code samples encompassing 10 different examples. *Note: Not all ten code examples are applicable to the Azure WebJob pattern.*
@@ -158,7 +158,7 @@ In this pattern, you define an application in SharePoint or Azure Active Directo
 	}
 	```
 
-- When using an Azure Active Directory application to authenticate, you create an Azure Active Directory application in the Azure Management Portal and assign permissions to it.
+- When using an Azure Active Directory application to authenticate, you create an Azure Active Directory application in the [Azure portal](https://ms.portal.azure.com) and assign permissions to it.
 	+ In this pattern, timer jobs may be implemented via a Provider-hosted SharePoint Add-in or a console application.
 	+ In this pattern, you interact with the Active Directory Authentication Library or the Microsoft Graph API to retrieve an access token.
 	+ The access token is used to authenticate to SharePoint (and possibly other Office 365 services in an Office 365 tenancy).

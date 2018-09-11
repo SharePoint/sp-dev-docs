@@ -58,7 +58,7 @@ Search in SharePoint includes a client object model that enables access to searc
   
     
     
-For the .NET managed CSOM, get a **ClientContext** instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the **Microsoft.SharePoint.Search.Client.Query** namespace in the Microsoft.SharePoint.Search.Client.dll.
+For the .NET managed CSOM, get a **ClientContext** instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the **Microsoft.SharePoint.Client.Search.Query** namespace in the Microsoft.SharePoint.Client.Search.dll.
   
     
     
@@ -169,7 +169,7 @@ To download an example, see the following code sample posted by SharePoint MVP  
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

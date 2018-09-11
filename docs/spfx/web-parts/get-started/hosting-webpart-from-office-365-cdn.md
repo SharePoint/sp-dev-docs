@@ -1,167 +1,182 @@
 ---
-title: Hosting client-side web part from Office 365 CDN
-ms.date: 09/25/2017
+title: Host your client-side web part from Office 365 CDN (Hello World part 4)
+description: An easy solution to host your assets directly from your own Office 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online. 
+ms.date: 08/20/2018
 ms.prod: sharepoint
 ---
 
 
-# Hosting client-side web part from Office 365 CDN
+# Host your client-side web part from Office 365 CDN (Hello World part 4)
 
-This article describes how to host your client-side web part from Office 365 CDN. Office 365 CDN provide you easy solution to host your assets directly from your own Office 365 tenant. It can be used for hosting any static assets, which are used in SharePoint Online. You can find more details around the Office 365 CDN capability from following blog post.
+Office 365 Content Delivery Network (CDN) provides you an easy solution to host your assets directly from your own Office 365 tenant. It can be used for hosting any static assets that are used in SharePoint Online. 
 
-* [General availability of Office 365 CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn)
+> [!NOTE]
+> There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Office 365 CDN option, but you could also use the [Azure CDN](./deploy-web-part-to-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location that end users can access using HTTP(S) would be technically suitable for hosting the assets for end users.
+
+> [!IMPORTANT]
+> This article uses the `includeClientSideAssets` attribute, which was introduced in the SPFx v1.4. This version is not supported with **SharePoint 2016 Feature Pack 2**. If you are using an on-premises setup, you need to decide the CDN hosting location separately. You can also simply host the JavaScript files from a centralized library in your on-premises SharePoint to which your users have access. Please see additional considerations in the [SharePoint 2016 specific guidance](../../sharepoint-2016-support.md).
+
+Make sure that you have completed the following tasks before you begin:
+
+* [Build your first client-side web part](./build-a-hello-world-web-part.md)
+* [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
+* [Deploy your client-side web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md)
+
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+
+<br/>
+
+> [!Video https://www.youtube.com/embed/GNukiGIQZfk]
+
+<br/>
 
 ## Enable CDN in your Office 365 tenant
-Ensure that you have latest version of the SharePoint Online Management Shell by downloading it from [Microsoft Download site](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
-Connect to your SharePoint Online tenant with PowerShell session.
-```
-Connect-SPOService -Url https://contoso-admin.sharepoint.com
-```
+1. Ensure that you have the latest version of the SharePoint Online Management Shell by downloading it from the [Microsoft Download site](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
-Get current status of public CDN settings from tenant level by executing following commands one-by-one. 
-```
-Get-SPOTenantCdnEnabled -CdnType Public
-Get-SPOTenantCdnOrigins -CdnType Public
-Get-SPOTenantCdnPolicies -CdnType Public
-```
-Enable public CDN in the tenant
-```
-Set-SPOTenantCdnEnabled -CdnType Public
-```
-Now public CDN has been enabled in the tenant using the default file type configuration allowed. This means that the following file type extensions are supported: "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF".
+  > [!TIP]
+  > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
 
-Open up a browser and move to a site collection where you'd like to host your CDN library. This could be any site collection in your tenant. In this tutorial, we create a specific library to act as your CDN library, but you can also use a specific folder in any existing document library as the CDN endpoint.
+2. Connect to your SharePoint Online tenant with a PowerShell session.
 
-Create a new document library on your site collection called **CDN** and add a folder called **helloworld** to it.
+  ```powershell
+  Connect-SPOService -Url https://contoso-admin.sharepoint.com
+  ```
 
-![helloworld-webpart folder in CDN library](../../../images/cdn-helloworld-folder.png) 
+3. Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one. 
 
-Move back to your PowerShell console and add a new CDN origin. Update the provided URL below to match your own environment. 
-```
-Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/cdn/cdn
-```
-Execute the following command to get the list of CDN origins from your tenant
-```
-Get-SPOTenantCdnOrigins -CdnType Public
-```
-Notice that your newly added origin is listed as a valid CDN origin. Final configuration of the origin will take a while (approximately 15 minutes), so we can continue by creating your test web part, which will be hosted from the origin, when the deployment is completed. 
 
-![List of public origins in tenant](../../../images/cdn-public-origins.png)
+  ```powershell
+  Get-SPOTenantCdnEnabled -CdnType Public
+  Get-SPOTenantCdnOrigins -CdnType Public
+  Get-SPOTenantCdnPolicies -CdnType Public
+  ```
 
-> When origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and CDN system. 
+  SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
-## Creating a new Web Part project
+4. Enable public CDN in the tenant.
 
-Create a new project directory in your preferred location:
+  ```powershell
+  Set-SPOTenantCdnEnabled -CdnType Public
+  ```
 
-```
-md sphosted-webpart
-```
-    
-Go to the project directory:
+5. Confirm settings by selecting `Y` and then Enter.
 
-```
-cd sphosted-webpart
-```
+  ![Enable public CDN in tenant](../../../images/cdn-enable-o365-public-cdn.png)
 
-Create a new SharePoint Framework solution by running Yeoman SharePoint Generator:
+  Now public CDN has been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
 
-```
-yo @microsoft/sharepoint
-```
-    
-When prompted:
+  SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, the `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
-* Accept the default **sphosted-webpart** as your solution name and choose **Enter**.
-* Choose **SharePoint Online only (latest)**, and press **Enter**.
-* Select **Use the current folder** for where to place the files.
-* Choose **N** to require the extension to be installed on each site explicitly when it's being used. 
-* Choose **WebPart** as the client-side component type to be created. 
-* Accept the default **HelloWorld** as your web part name and choose **Enter**.
-* Accept the default **HelloWorld description** as your web part description and choose **Enter**.
-* Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
+  > [!NOTE]
+  > If you have previously enabled Office 365 CDN, you should re-enable the public CDN so that you have the `*/CLIENTSIDEASSETS`entry added as a valid CDN origin for public CDN. If this entry is not present and the public CDN is enabled in your tenant, bundle requests will contain the token hostname `spclientsideassetlibrary` in their URL, causing the requests to fail. You can add this missing entry by using `Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */CLIENTSIDEASSETS` command.
 
-![Yeoman generator questions around the newly created web part](../../../images/cdn-create-webpart-yo.png)
+6. You can double-check the current setup of your end-points. Execute the following command to get the list of CDN origins from your tenant:
 
-At this point, Yeoman will scaffold the solution files and install the required dependencies. This might take a few minutes. Yeoman will scaffold the project to include your custom web part as well.
+  ```powershell
+  Get-SPOTenantCdnOrigins -CdnType Public
+  ```
 
-Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+  Notice that when you enable CDN first time, default configuration to enable default origins will take a while (approximately 15 minutes). Configuration is completed when there's no **(configuration pending)** messages when you execute `Get-SPOTenantCdnOrigins -CdnType Public` command.
 
-```sh
-npm shrinkwrap
-```
+  ![List of public origins in tenant](../../../images/cdn-public-origins.png)
 
-Next, type the following to open the web part project in Visual Studio Code:
+  > [!NOTE]
+  > When the origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and the CDN system.
 
-```
-code .
-```
-Update the *write-manifests.json* file (under *config* folder) as follow to point to your CDN endpoint. 
-- You will need to use the publiccdn.sharepointonline.com as the prefix and then extend the URL with the actual path in your tenant
-* Format of the CDN URL is as follows
-```
-https://publiccdn.sharepointonline.com/<tenant host name>/sites/site/library/folder
-```
 
-![Updated write manifest content with path to CDN endpoint](../../../images/cdn-write-manifest-json.png)
+## Finalize solution for deployment
 
-Save your changes.
+1. Switch to the console and make sure you are still in the project directory that you used to set up your web part project.
 
-Execute the following tasks to bundle your solution
-* This will execute a release build of your project using CDN URL specified in the **writer-manifest.json** file. Output of the execution will be located in the **./temp/deploy** folder. These are the files which you will need to upload to the SharePoint folder acting as your CDN endpoint. 
+2. End the possible `gulp serve` task by selecting Ctrl+C, and ensure that you are in your project directory:
 
-```
-gulp bundle --ship
-```
+  ```
+  cd helloworld-webpart
+  ```
 
-Execute the following task to package your solution
+## Review solution settings 
 
-```
-gulp package-solution --ship
-```
+1. Open the **HelloWorldWebPart** web part project in Visual Studio Code or your preferred IDE.
 
-This command will create a **sphosted-webpart.sppkg** package on the **sharepoint/solution** folder and also prepare the assets on the **temp/deploy folder** to be deployed to the CDN.
+2. Open **package-solution.json** from the **config** folder.
 
-Upload or drag & drop the newly created client-side solution package to the app catalog in your tenant. 
+  The **package-solution.json** file defines the package metadata as shown in the following code:
 
-![Installation popup from app catalog for the SPFx solution](../../../images/cdn-upload-solution-to-app-catalog.png)
+  ```json
+  {
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+      "name": "helloword-webpart-client-side-solution",
+      "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
+      "version": "1.0.0.0",
+      "includeClientSideAssets": true
+    },
+    "paths": {
+      "zippedPackage": "solution/helloword-webpart.sppkg"
+    }
+  }
+  ```
 
-Choose **Deploy**
+The default value for the **includeClientSideAssets** is `true`, which means that static assets are packaged automatically inside of the *.sppkg* files, and you do not need to separately host your assets from an external system.
 
-Move to the site collection where the **CDN** library was created earlier in this tutorial.
+Do **not** change this setting for this exerice, so that assets are automatically hosted when solution is deployed to your tenant.
 
-Upload all files from **temp/deploy** folder to the **CDN/helloworld** folder in your site collection. 
+If *Office 365 CDN* is enabled, it is used automatically with default settings. If *Office 365 CDN* is not enabled, assets are served from the app catalog site collection. This means that if you leave the **includeClientSideAssets** setting `true`, your solution assets are automatically hosted in the tenant.
 
-![helloworld folder in SPO tenant with the web part assets copied from the temp/deploy folder](../../../images/cdn-web-part-files-in-folder.png)
+## Prepare web part assets to deploy
 
-At this point the web part is ready to be used on a page
+1. Execute the following task to bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets. This URL is automatically updated based on your tenant CDN settings.
 
-Open a site where you want to test the web part and go the **Site contents** page of the site.
+  ```
+  gulp bundle --ship
+  ```
 
-Choose **Add – App** from the toolbar and choose the **sphosted-webpart-client-side-solution** app to be installed on the site
+2. Execute the following task to package your solution. This creates an updated **helloworld-webpart.sppkg** package on the **sharepoint/solution** folder.
 
-![Adding web part solution to site](../../../images/cdn-add-webpart-to-site.png)
+  ```
+  gulp package-solution --ship
+  ```
 
-After the solution has been installed, chose **Add a page** from the *gear* menu and pick **HelloWorld** from the modern page web part picker
+  > [!NOTE]
+  > If you are interested in what actually got packaged inside of the sppkg file, you can look in the content of the **sharepoint/solution/debug** folder.
 
-![HelloWorld web part visible in web part picker for modern page](../../../images/cdn-web-part-picker.png)
+3. Upload or drag and drop the newly created client-side solution package to the app catalog in your tenant.
 
-Notice how the web part is rendered even though you are not running the node.js service locally. 
+4. Because you already deployed the package, you are prompted as to whether to replace the existing package. Select **Replace It**.
 
-![HelloWorld web part rendering on a modern page, which is in edit mode](../../../images/cdn-web-part-rendering.png)
+  ![Override existing solution](../../../images/cdn-override-helloworld-webpart-package.png)
 
-Save changes on the page with web part on it.
+5. Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the app catalog, depending on the tenant settings. Select **Deploy**.
 
-Press **F12** to open up developer tools.
+  ![Installation popup from app catalog for the SPFx solution](../../../images/cnd-trust-helloworld-webpart-solution.png)
 
-Extend **publiccdn.sharepointonline.com** under the source and notice how the **hello-world.bundle** file is loaded from the CDN endpoint which we defined earlier in this tutorial.
+6. Open the site where you previously installed the **helloworld-webpart-client-side-solution** or install the solution to a new site.
 
-![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../images/cdn-web-part-f12-source.png)
+7. After the solution has been installed, select **Add a page** from the *gear* menu, and select **HelloWorld** from the modern page web part picker to add your custom web part to page.
 
-Now you have deployed your custom web part to SharePoint Online and it's being hosted from the Office 365 CDN. 
+  ![HelloWorld web part visible in web part picker for modern page](../../../images/cdn-web-part-picker.png)
 
-## Additional resources
+8. Notice how the web part is rendered even though you are not running the node.js service locally. 
 
-- [General availability of Office 365 CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn)
-- [Automate publishing of your SharePoint Framework scripts to Office 365 public CDN](https://www.eliostruyf.com/automate-publishing-of-your-sharepoint-framework-scripts-to-office-365-public-cdn)
+  ![HelloWorld web part rendering on a modern page, which is in edit mode](../../../images/cdn-web-part-rendering.png)
+
+9. Save changes on the page with the web part.
+
+10. Select **F12** to open up developer tools.
+
+11. Extend **publiccdn.sharepointonline.com** under the source and notice how the **hello-world-web-part** file is loaded from the Public CDN URL pointing dynamically to a library located under the app catalog site collection.
+
+  ![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../images/cdn-web-part-f12-source.png)
+
+> [!NOTE]
+> If you would not have CDN enabled in your tenant, and the `includeClientSideAssets` setting would be `true`in the **package-solution.json**, the loading URL for the assets would be dynamically updated and pointing directly to the ClientSideAssets folder located in the app catalog site collection. In this example case, the URL would be `https://sppnp.microsoft.com/sites/apps/ClientSideAssets/`. This change is automatic depending on your tenant settings and it does not require any changes in the actual solution package.
+
+Now you have deployed your custom web part to SharePoint Online and it's being hosted automatically from the Office 365 CDN.
+
+## Next steps
+
+You can load jQuery and jQuery UI and build a jQuery Accordion web part. To continue, see [Add jQueryUI Accordion to your client-side web part](./add-jqueryui-accordion-to-web-part.md).
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.

@@ -1,30 +1,40 @@
+---
+title: Overview of SharePoint Framework (SPFx) Extensions
+description: Use SPFx Extensions to customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views.
+ms.date: 03/14/2018
+ms.prod: sharepoint
+---
+
 # Overview of SharePoint Framework Extensions
 
-You can use SharePoint Framework Extensions to extend the SharePoint user experience. With SharePoint Framework Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views. SharePoint Framework Extensions are available in all Office 365 tenants for production usage. 
+You can use SharePoint Framework (SPFx) Extensions to extend the SharePoint user experience. With SharePoint Framework Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views. SharePoint Framework Extensions are available in all Office 365 subscriptions for production usage. 
 
-> **Note:** You can get a free Office 365 developer tenant when you subscribe to the [Office 365 Developer Program](http://dev.office.com/devprogram).
+> [!NOTE] 
+> You can get an Office 365 developer subscription when you join the [Office 365 Developer Program](https://developer.microsoft.com/en-us/office/dev-program). 
+> See the [Office 365 Developer Program documentation](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 SharePoint Framework Extensions enable you to extend the SharePoint user experience within modern pages and document libraries, while using the familiar SharePoint Framework tools and libraries for client-side development. Specifically, the SharePoint Framework includes three new extension types:
 
-- **ApplicationCustomizers** - Adds scripts to the page, as well as access well-known HTML element placeholders and extend them with custom renderings.
-- **FieldCustomizers** - Provides modified views to data for fields within a list.
-- **CommandSets** -  Extends the SharePoint command surfaces to add new actions, and provides client-side code that you can use to implement behaviors.
+- **Application Customizers**. Adds scripts to the page, and accesses well-known HTML element placeholders and extends them with custom renderings.
+- **Field Customizers**. Provides modified views to data for fields within a list.
+- **Command Sets**. Extends the SharePoint command surfaces to add new actions, and provides client-side code that you can use to implement behaviors.
 
 You can build extensions alongside common scripting frameworks, such as AngularJS and React, in addition to plain JavaScript projects. For example, you can use React along with components from Office UI Fabric React to create experiences based on the same components used in Office 365.
 
 > [!NOTE]
-> There is a known bug with list and library extension support in the classic experiences. These only work currently in context of modern team sites aka. group associated team sites. Work is being done to address this issue. 
+> There is a known bug with list and library extension support in the classic experiences. These only work currently in context of modern team sites, also known as group associated team sites. Work is being done to address this issue. 
 
 ## Get started
-If you haven't installed the SharePoint Framework, follow the steps to [Set up your development environment](../set-up-your-development-environment.md).
 
-After you install the SharePoint Framework, run the following command to update your Yeoman templates with the latest version:
+1. If you haven't installed the SharePoint Framework, follow the steps to [Set up your development environment](../set-up-your-development-environment.md).
 
-```
-npm install -g @microsoft/generator-sharepoint
-```
+2. After you install the SharePoint Framework, run the following command to update your Yeoman templates with the latest version:
 
-Next, you can [Build your first SharePoint Framework Extension (Hello World part 1)](get-started/build-a-hello-world-extension.md).
+    ```
+    npm install -g @microsoft/generator-sharepoint
+    ```
+
+3. Next, you can [Build your first SharePoint Framework Extension (Hello World part 1)](get-started/build-a-hello-world-extension.md).
 
 ## Stay up to date
 To keep track of improvements to the SharePoint Framework, including updates to extensions, see the following:
@@ -41,7 +51,7 @@ We invite you to give us your feedback on the SharePoint Framework General Avail
 * [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform) - Request new capabilities and features.
 
 
-## Additional resources
+## See also
 
 - [Overview of the SharePoint Framework](../sharepoint-framework-overview.md)
 - [SharePoint Framework development tools and libraries](../tools-and-libraries.md)

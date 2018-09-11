@@ -42,11 +42,7 @@ To support the VSS, SharePoint Foundation includes the SPF-VSS Writer. The SPF-V
     
 During a recovery, the backup/restore application instructs the SPF-VSS Writer to coordinate with the SharePoint Foundation store (operating on behalf of the requestor) to dismount the storage group, replace the database files, and mount the storage group.
   
-    
-    
-
-    
-> **Note:**
+> [!NOTE]
 > See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md) for important information about restorations.
   
     
@@ -92,7 +88,7 @@ The following is the high-level sequence of events during backup or restore oper
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

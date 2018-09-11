@@ -14,7 +14,8 @@ The  [Core.ExternalSharing](https://github.com/SharePoint/PnP/tree/master/Sample
     
 - Prepare your site collection for sharing with external users.
 
-**Note:** External sharing settings are only available in Office 365.
+> [!NOTE] 
+> External sharing settings are only available in Office 365.
 
 ## Before you begin
 <a name="sectionSection0"> </a>
@@ -28,11 +29,11 @@ Verify that your Office 365 subscription allows external sharing. To do this:
 
 1. Open your  **Office 365 admin center**.
     
-2. On the left navigation menu, choose  **EXTERNAL SHARING**.
+2. On the left navigation menu, choose **SharePoint**.
     
-3. Choose  **Sharing Overview**.
+3. On the left navigation menu, choose  **Sharing**.
     
-4. In  **Sites**, ensure that  **Let external people access your sites** is **On**.
+4. In  **Sharing outside your organization**, ensure that  **Allow users to invite and share with authenticated external users** is **On**.
     
 Verify your external site settings on your SharePoint site collection. To do this:
 
@@ -40,7 +41,7 @@ Verify your external site settings on your SharePoint site collection. To do thi
     
 2. On the left navigation menu, choose  **SharePoint** to open your **SharePoint admin center**.
     
-3. Select the check box next to the site collection URL that you want to verify your external sharing settings on.
+3. In the Site Collection List, select the check box next to the site collection URL that you want to verify your external sharing settings on.
     
 4. On the ribbon, choose  **Sharing**.
     
@@ -48,7 +49,7 @@ Verify your external site settings on your SharePoint site collection. To do thi
     
 When you run this code sample,  **Main** in Program.cs performs the following tasks:
 
-- Gets the Office 365 admin center URL.
+- Gets the SharePoint admin center URL.
     
 - Gets the site collection URL to configure external sharing settings on.
     
@@ -64,9 +65,10 @@ When you run this code sample,  **Main** in Program.cs performs the following ta
     
 - Calls  **SetSiteSharing**.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
  static void Main(string[] args)
         {
            
@@ -129,7 +131,7 @@ When you run this code sample,  **Main** in Program.cs performs the following ta
     
 -  If sharing is enabled in your Office 365 subscription, sets the **SiteProperties.SharingCapability** to the external sharing settings the user entered.
 
-```C#
+```csharp
 public static void SetSiteSharing(ClientContext adminCC, string siteCollectionURl, SharingCapabilities shareSettings)
         {
             var _tenantAdmin = new Tenant(adminCC);
@@ -176,7 +178,7 @@ public static void SetSiteSharing(ClientContext adminCC, string siteCollectionUR
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

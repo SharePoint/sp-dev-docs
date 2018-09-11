@@ -202,7 +202,7 @@ CMIS supports the development of a broad range of applications that consume data
 - Graphical user interfaces (GUIs) in apps that read data from multiple content repositories.
     
   
-- A SharePoint Web Part that uses CMIS to roll up personnel data from multiple legacy content management systems within an enterprise.
+- A SharePoint web part that uses CMIS to roll up personnel data from multiple legacy content management systems within an enterprise.
     
   
 - A mobile application that can access documents from any ECM system.
@@ -220,7 +220,7 @@ CMIS supports the development of a broad range of applications that consume data
 
 ### Example: Contoso Finances app
 
-Consider as an app a SharePoint Server Web Part that consumes data from multiple CMIS data providers—the Contoso Finances app. The Contoso Finances app gathers and tabulates financial data that is distributed across three servers: an IBM server, a server running SharePoint Server, and an in-house Contoso server. The SharePoint Server app uses a Web Part to display data from all three data sources within any SharePoint Server page . The app does not require any custom code that is specific to any implementation of the CMIS repository (the SharePoint Server document library).
+Consider as an app a SharePoint Server web part that consumes data from multiple CMIS data providers—the Contoso Finances app. The Contoso Finances app gathers and tabulates financial data that is distributed across three servers: an IBM server, a server running SharePoint Server, and an in-house Contoso server. The SharePoint Server app uses a web part to display data from all three data sources within any SharePoint Server page . The app does not require any custom code that is specific to any implementation of the CMIS repository (the SharePoint Server document library).
   
     
     
@@ -286,7 +286,7 @@ CMIS 1.1 is not supported in SharePoint, but the newer version of the CMIS speci
     
   
 
-## Additional resources
+## See also
 <a name="SP15CMIS_AdditionalResources"> </a>
 
 

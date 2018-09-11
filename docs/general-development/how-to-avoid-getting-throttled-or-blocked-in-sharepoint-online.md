@@ -72,7 +72,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
     A single process dramatically exceeds throttling limits, continually, over a long time period.
     
   - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
-  
+ 
   - You're running a load-testing script on SharePoint Online and you get throttled. Load testing is not allowed on SharePoint Online.
   
   - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
@@ -110,11 +110,11 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
  
 What is definition of undecorated traffic?
 
-- Traffic is undecorated if there is no AppID/AppTitle or User Agent string in CSOM or REST API call to SharePoint Online.
+- Traffic is undecorated if there is no AppID/AppTitle and User Agent string in CSOM or REST API call to SharePoint Online.  The User Agent string should be in a specific format as described below.
 
 What are the recommendation?
 
-- If you have created an application, recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+- If you have created an application, the recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
 
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 
@@ -127,6 +127,9 @@ What are the recommendation?
 
 > [!NOTE]
 > Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. It is also fine to append existing user agent string with the requested information.
+
+> [!NOTE]
+> If you are developing front end components executing in the browser, most of modern browsers don't allow overwritting the user agent string and you don't need to implement this.
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
@@ -294,11 +297,11 @@ Blocking is the most extreme form of throttling. We rarely ever block a tenant, 
   
 If we block your subscription, you'll see HTTP status code 503, and we'll notify you of the block in the Office 365 Message Center. The message describes what caused the block, provides guidance on how to resolve the offending issue, and tells you who to contact to get the block removed.
   
-## Additional resources
+## See also
 <a name="BKMK_Additionalresources"> </a>
 
 -  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
   
--  [Capacity planning and load testing SharePoint Online](http://msdn.microsoft.com/library/22fa7e7e-7554-4987-b56f-b39bbf303a0a.aspx)
+-  [Capacity planning and load testing SharePoint Online](https://support.office.com/en-us/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
   
 -  [GitHub: SharePoint Online Throttling code sample](https://github.com/OfficeDev/PnP/tree/dev/Samples/Core.Throttling)

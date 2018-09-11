@@ -28,7 +28,7 @@ Depending on your specific requirements and budget, you can choose from the foll
 - Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or a Windows Server 2012 guest operating system. For guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint, see [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](http://technet.microsoft.com/en-US/library/ff621103%28v=office.15%29.aspx). 
     
 > [!NOTE]
-> Installation of SharePoint is supported only on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012. If you want to develop SharePoint Add-ins for SharePoint on Windows 7 or Windows 8, you can sign up for an Office 365 Developer Site and develop add-ins remotely. 
+> Installation of SharePoint is supported only on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012. If you want to develop SharePoint Add-ins for SharePoint on Windows 7 or Windows 8, you can sign up for an Office 365 developer site and develop add-ins remotely. 
 
 <a name="bk_prereqsOS"> </a>
 ## Install the prerequisites for the operating system and SharePoint
@@ -57,7 +57,7 @@ Depending on your specific requirements and budget, you can choose from the foll
    > [!NOTE]
    > The SharePoint Products and Technologies Configuration Wizard may fail if you're using a computer that is joined to a domain but that is not connected to a domain controller. If you see this failure, connect to a domain controller either directly or through a Virtual Private Network (VPN) connection, or sign in with a local account that has administrative privileges on the computer.
 
-7. After the configuration wizard is complete, you see the **Template Selection** page of the new SharePoint site. On this page, select the **Developer Site** template. You can only deploy SharePoint Add-ins from Visual Studio to a Developer Site.
+7. After the configuration wizard is complete, you see the **Template Selection** page of the new SharePoint site. On this page, select the **Developer Site** template. You can only deploy SharePoint Add-ins from Visual Studio to a developer site.
     
    *Figure 2. Select the site template page*
 
@@ -74,16 +74,16 @@ Ensure that the App Management Service and user profile application are configur
    
 2. On the **Service Applications** page, ensure that the following services are started:
    
-   - User Profile Service Application
+   - User profile service application
    - App Management Service
     
 3. Under **Application Management**, select **Manage services on server**. 
    
 4. On the **Services on Server** page, ensure that the following services are started:
     
-   - User Profile Service 
+   - User profile service 
 
-Ensure that at least one profile is created in the **User Profile Service Application**. The steps are as follows:
+Ensure that at least one profile is created in the **User profile service application**. The steps are as follows:
     
 1. In **Central Administration**, under **Application Management**, select **Manage service applications**.
     
@@ -218,10 +218,10 @@ Perform the steps in the following procedure to create an isolated add-in domain
 For information about your options for deploying your add-ins, see [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md).
  
 > [!TIP]
-> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a Web site that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](http://support.microsoft.com/kb/896861).
+> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a website that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](http://support.microsoft.com/kb/896861).
  
 
-## Additional resources
+## See also
 <a name="SP15SetupSPO365_bk_addlresources"> </a>
 
 - [SharePoint Add-ins](sharepoint-add-ins.md)

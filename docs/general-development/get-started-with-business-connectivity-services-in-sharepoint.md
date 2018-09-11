@@ -76,7 +76,7 @@ The following table highlights the core concepts that you will need to be famili
 | [WCF Data Services](http://msdn.microsoft.com/en-us/data/odata.aspx) <br/> |WCF Data Services, formerly known as ADO.NET Data Services, enable the creation and consumption of OData services for the web.  <br/> |
 | [Open Data Protocol (OData)](http://www.odata.org) <br/> |OData is an industry standard protocol for accessing data through URLs. It basically sits on top of the HTTP protocol to provide read and write functions using existing HTTP verbs.  <br/> |
 | [Internet Information Services](http://www.iis.net/) <br/> |Internet Information Services (IIS) is the platform that SharePoint runs on. You should understand how to create websites, virtual directories, web services, URLs, web security, and other technologies related to IIS.  <br/> |
-| [External content types in SharePoint](external-content-types-in-sharepoint.md) <br/> |External content types are descriptions of the external systems that they represent. They are reusable when imported into SharePoint and can be used to create complex code-free solutions using SharePoint Designer 2013, Outlook 2013, Web Parts, external lists, and custom client applications.  <br/> |
+| [External content types in SharePoint](external-content-types-in-sharepoint.md) <br/> |External content types are descriptions of the external systems that they represent. They are reusable when imported into SharePoint and can be used to create complex code-free solutions using SharePoint Designer 2013, Outlook 2013, web parts, external lists, and custom client applications.  <br/> |
 | [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md) <br/> |SharePoint provides the ability to access all objects through a carefully constructed URL. BCS has been extended to provide this same functionality.  <br/> |
    
 
@@ -119,7 +119,7 @@ When you master the basic concepts of BCS, you can use the more advanced feature
 | [BCS REST API reference for SharePoint](bcs-rest-api-reference-for-sharepoint.md) <br/> |Find reference information for constructing Representational State Transfer (REST) URIs used for accessing and manipulating OData sources.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15GettingStartedBCS_LearnMore"> </a>
 
 

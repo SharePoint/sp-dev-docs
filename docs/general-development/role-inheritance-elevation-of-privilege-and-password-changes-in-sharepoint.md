@@ -210,7 +210,7 @@ For more information about the managed account API, see the following links:
     
   
 
-## Additional resources
+## See also
 <a name="SP15_RoleInheritance_AdditionalResources"> </a>
 
 

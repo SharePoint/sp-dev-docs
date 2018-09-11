@@ -1,19 +1,14 @@
 ---
 title: Add SharePoint write operations to the provider-hosted add-in
 description: Write data to SharePoint in a provider-hosted SharePoint Add-in - change a column value on a list item, request Write permission, create a new custom list and insert an item into the list, and check for deleted components.
-ms.date: 11/02/2017
+ms.date: 12/04/2017
 ms.prod: sharepoint
 ---
 
 
 # Add SharePoint write operations to the provider-hosted add-in
 
-This is the fifth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
-
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
+This is the fifth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps). 
 
 > [!NOTE]
 > If you have been working through this series about provider-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeSharePointWriteOps.sln file.
@@ -34,14 +29,14 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong s
 
 2. Add the following line to the **Page_Load** method between the call of `AddLocalEmployeeToCorpDB` and the call of `Response.Redirect`. In the next step, you create the **SetLocalEmployeeSyncStatus** method.
     
-    ```C#
+    ```csharp
        // Write to SharePoint 
      SetLocalEmployeeSyncStatus();
     ```
 
 3. Add the following new method to the `EmployeeAdder` class. 
 
-    ```C#
+    ```csharp
        private void SetLocalEmployeeSyncStatus()
      {
          using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -147,13 +142,13 @@ Now you add a function to the add-in that creates an item in the **Expected Ship
 
 3. In the **btnCreateOrder_Click** method, add the following line just under the call to `CreateOrder`. You'll create the **CreateExpectedShipment** method in the next step.
     
-    ```C#
+    ```csharp
       CreateExpectedShipment(txtBoxSupplier.Text, txtBoxItemName.Text, quantity);
     ```
 
 4. Add the following method to the `OrderForm` class. 
 
-    ```C#
+    ```csharp
       private void CreateExpectedShipment(string supplier, string product, UInt16 quantity)
     {
         using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -194,7 +189,7 @@ Instead, you need to use a special CSOM class called **ConditionalScope**. The r
 
 An alternative way to check for the existence of a list is as follows: instead of using the **GetByTitle** method to get a reference to the list, you can check to see if a list with the specified name is in the website's "list of lists" with code like the following.
 
-```C#
+```csharp
 var query = from list in clientContext.Web.Lists 
              where list.Title == "Expected Shipments" 
              select list; 
@@ -251,7 +246,7 @@ Recall that when an add-in requests Read or Write permission with the scope of L
 ## Next steps
 <a name="Nextsteps"> </a>
 
-In the next article, you'll learn how to surface the remote Order Form as a Web Part on a SharePoint page: [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md).
+In the next article, you'll learn how to surface the remote Order Form as a web part on a SharePoint page: [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md).
  
 
  

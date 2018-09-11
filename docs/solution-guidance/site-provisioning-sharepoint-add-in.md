@@ -1,8 +1,8 @@
 ---
-title: Site provisioning in the SharePoint add-in model
+title: Site provisioning in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-Site provisioning in the SharePoint add-in model
+Site provisioning in the SharePoint Add-in model
 ================================================
 
 Summary
@@ -14,7 +14,7 @@ In an SharePoint Add-in model scenario, you can use the SharePoint Client Side O
 
 At a high level, the remote provisioning pattern looks like this:
 
-![1) A remote timer job, goes to 2) Initial provisioning based on the out of the box site. Usually either team site or publishing site. Assets are uploaded from the provisioning engine using CSOM/REST. 3) Apply the needed changes (configurations etc.) on top of the out of the box site based on the user selection to create the Project site, Organizational site, or Workgroup site. This is the specialization part, but since we start from OOB site, we always get the latest improvements to it as a base line.](media/Recipes/SiteProvisioning/overview.png)
+![1) A remote timer job, goes to 2) Initial provisioning based on the out-of-the-box site. Usually either team site or publishing site. Assets are uploaded from the provisioning engine using CSOM/REST. 3) Apply the needed changes (configurations etc.) on top of the out-of-the-box site based on the user selection to create the Project site, Organizational site, or Workgroup site. This is the specialization part, but since we start from OOB site, we always get the latest improvements to it as a base line.](media/Recipes/SiteProvisioning/overview.png)
 
 High Level Guidelines
 ---------------------
@@ -69,7 +69,7 @@ Incorrect site collection and sub site provisioning can affect an entire line-of
 
 For example: If you have SharePoint sites used to manage projects in your company, you will most likely create a common list scheme for all of them. This will require creating site columns and content types. When you search for information in these sites via the SharePoint search page, you filter the results by content type or tag (site column). If your site columns and content types are not perfectly consistent across all the project sites, you will not receive accurate search results.
 
-This example may also be applied to Content By Search Web Parts, SharePoint Add-ins, mobile apps, and any other systems that access the information in the SharePoint sites.
+This example may also be applied to Content By Search web parts, SharePoint Add-ins, mobile apps, and any other systems that access the information in the SharePoint sites.
 
 Options to create site collections and sub sites
 ------------------------------------------------
@@ -168,7 +168,7 @@ This option works well when you need to provide your end users with a self-servi
 
 - [Async provisioning with hybrid scenarios (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2015/03/05/hybrid-site-collection-provisioning-from-azure-to-on-premises-sharepoint.aspx)
 - [Provisioning.Hybrid.Simple (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Hybrid.Simple)
-	+ This sample demonstrates the simplest possible hybrid setup with Azure storage queues, WebJobs and Service Bus relay. This is a demonstration of hosting a provider SharePoint Add-in in the Azure web site, which can be used to provision new custom branded site collections to on-premises farm without any SharePoint Add-in infrastructure requirements on-premises.
+	+ This sample demonstrates the simplest possible hybrid setup with Azure storage queues, WebJobs and Service Bus relay. This is a demonstration of hosting a provider SharePoint Add-in in the Azure website, which can be used to provision new custom branded site collections to on-premises farm without any SharePoint Add-in infrastructure requirements on-premises.
 - [Provisioning.Services.SiteManager (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Services.SiteManager)
 	+ This sample shows how to extend on-premises farm to support site collection creation from a Provider-hosted SharePoint Add-in.
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
@@ -195,7 +195,7 @@ This option works well in Dev-Ops scenarios. It allows you to create custom appl
 -   [Async provisioning for Office 365 with WebJobs (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2015/03/04/asynchronous-on-demand-site-collection-provisioning-to-office-365-with-azure-webjobs.aspx) 
 - [Provisioning.Cloud.Async.WebJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Async.WebJob)
 	+ Solution demonstrating how to build an asynchronous self-service site collection provisioning solution using Azure Storage Queues and Azure WebJobs.
--	[Provisioning.Framework.Console (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/samples/Provisioning.Framework.Console) – Site Provisioning Framework sample to show the power of the new engine.
+-	[Provisioning.Framework.Console (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console) – Site Provisioning Framework sample to show the power of the new engine.
 -	[Provisioning.Cloud.Async (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Async) - Demonstrates how to create site collections in Office 365/SharePoint asynchronously. Requests are saved in a list within the SharePoint host web. The console application included in this sample is deployed to Azure or an on-premises environment & scheduled. 
  
 

@@ -1,70 +1,72 @@
 ---
-title: Taxonomy operations sample app for SharePoint
-ms.date: 11/03/2017
+title: Taxonomy operations sample SharePoint Add-in
+description: As part of your Enterprise Content Management (ECM) strategy, you can create and read taxonomy data on a SharePoint list.
+ms.date: 5/2/2018
 ---
-# Taxonomy operations sample app for SharePoint
 
-As part of your Enterprise Content Management (ECM) strategy, you can create and read taxonomy data on a SharePoint list.
-    
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
+# Taxonomy operations sample SharePoint Add-in
 
-The Core.MMS sample console application shows you how to interact with the SharePoint managed metadata service to create and retrieve terms, term sets, and groups. This sample will also run in a provider-hosted app, such as an ASP.NET MVC web application. Use this solution if you want to migrate terms between SharePoint farms or display terms in your custom app.   
+The Core.MMS sample console application shows you how to interact with the SharePoint managed metadata service to create and retrieve terms, term sets, and groups. This sample also runs in a provider-hosted add-in, such as an ASP.NET MVC web application. 
+
+Use this solution if you want to migrate terms between SharePoint farms or display terms in your custom add-in.   
 
 ## Before you begin
-<a name="sectionSection0"> </a>
 
-To get started, download the  [Core.MMS](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS) sample app from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.MMS](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+    
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-Before you run this app, you'll need:
+Before you run this add-in, you'll need:
 
 - The URL of your SharePoint site.
-    
-- Permission to access the term store in the managed metadata service. Figure 1 shows the Office 365 admin center where these permissions are assigned. 
-    
-    **Figure 1. Assigning permissions to the term store in the SharePoint admin center**
+- Permission to access the term store in the managed metadata service. 
 
-    ![Screenshot of the SharePoint admin center with the term store, taxonomy term store search box, and term store administrators boxes highlighted.](media/5a9d8c07-afce-4d9e-b0d1-10b28e089278.png)
+The following figure shows the Office 365 admin center where these permissions are assigned. 
+
+![Screenshot of the SharePoint admin center with the term store, taxonomy term store search box, and term store administrators boxes highlighted.](media/5a9d8c07-afce-4d9e-b0d1-10b28e089278.png)
     
 To assign permissions to the term store:
 
-  1. From the Office 365 admin center, choose  **term store**.
+1. From the Office 365 admin center, choose **term store**.
     
-  2. In  **TAXONOMY TERM STORE**, choose the term set that you want to assign an administrator to.
+2. In **TAXONOMY TERM STORE**, choose the term set that you want to assign an administrator to.
     
-  3. In  **Term Store Administrators**, enter the organizational account that requires term store administrator permissions.
+3. In **Term Store Administrators**, enter the organizational account that requires term store administrator permissions.
 
-## Using the Core.MMS sample app
-<a name="sectionSection1"> </a>
+## Using the Core.MMS sample add-in
 
-When you start the app, you see a console application similar to Figure 2. You are prompted to enter the URL of your SharePoint 2013 or SharePoint Online site and your credentials. 
+When you start the add-in, you see a console application similar to that in the following figure. You are prompted to enter the URL of your SharePoint or SharePoint Online site and your credentials. 
 
-**Figure 2. Core.MMS console application**
+![Screenshot of the Core.MMS sample add-in console, prompting for the SharePoint user name and password.](media/5ddaf3f1-2d7c-4818-9a9a-b0e905226db5.png)
 
-![Screenshot of the Core.MMS sample app console, prompting for the SharePoint user name and password.](media/5ddaf3f1-2d7c-4818-9a9a-b0e905226db5.png)
+After you supply the SharePoint URL and your credentials, user authentication occurs. 
 
-After you supply the SharePoint URL and your credentials, user authentication occurs. The following code performs user authentication in SharePoint Online.
-    
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+The following code performs user authentication in SharePoint Online.
 
-```C#
+```csharp
 ClientContext cc = new ClientContext(siteUrl);
 cc.AuthenticationMode = ClientAuthenticationMode.Default;
 // For SharePoint Online.
 cc.Credentials = new SharePointOnlineCredentials(userName, pwd);
 ```
 
-The following code performs user authentication in SharePoint Online Dedicated or in an on-premises SharePoint 2013 farm.
+<br/>
 
-```C#
+The following code performs user authentication in SharePoint Online Dedicated or in an on-premises SharePoint farm.
+
+```csharp
 ClientContext cc = new ClientContext(siteUrl);
 cc.AuthenticationMode = ClientAuthenticationMode.Default;
 // For SharePoint Online Dedicated or on-premises .
 cc.Credentials = new NetworkCredential(userName, pwd);
 ```
 
-The  **CreateNecessaryMMSTermsToCloud** method creates a group, term set, and several terms in the managed metadata service. The code first gets a reference to the **TaxonomySession** object, then the **TermStore** object, before creating the custom **TermGroup**,  **TermSet**, and new terms. 
+<br/>
 
-```C#
+The **CreateNecessaryMMSTermsToCloud** method creates a group, term set, and several terms in the managed metadata service. The code first gets a reference to the **TaxonomySession** object, and then the **TermStore** object, before creating the custom **TermGroup**,  **TermSet**, and new terms. 
+
+```csharp
 private static void CreateNecessaryMMSTermsToCloud(ClientContext cc)
         {
             // Get access to taxonomy CSOM.
@@ -95,9 +97,11 @@ private static void CreateNecessaryMMSTermsToCloud(ClientContext cc)
         }
 ```
 
-After creating the new terms, the  **GetMMSTermsFromCloud()** method retrieves all term groups, term sets, and terms from the managed metadata service. Similar to the **CreateNecessaryMMSTermsToCloud()** method, the code first gets a reference to the **TaxonomySession** object, then the **TermStore** object, before retrieving and displaying the term information.
+<br/>
 
-```C#
+After creating the new terms, the **GetMMSTermsFromCloud()** method retrieves all term groups, term sets, and terms from the managed metadata service. Similar to the **CreateNecessaryMMSTermsToCloud()** method, the code first gets a reference to the **TaxonomySession** object, and then the **TermStore** object, before retrieving and displaying the term information.
+
+```csharp
 private static void GetMMSTermsFromCloud(ClientContext cc)
         {
             //
@@ -145,21 +149,18 @@ private static void GetMMSTermsFromCloud(ClientContext cc)
         }
 ```
 
-You will see your term data from your managed metadata service displayed in the console application, as shown in Figure 3, and in the term store in your managed metadata service, as shown in Figure 4.
+<br/>
 
-**Figure 3. Console application showing Groups, TermSets, and Terms in the managed metadata service**
+You will see your term data from your managed metadata service displayed in the console application as shown in the following figure, and in the term store in your managed metadata service, as shown in the second figure.
 
 ![Screenshot of the console application with term data output.](media/a8907a10-8b4d-463f-89bc-811f9af4b34e.png)
 
-**Figure 4. SharePoint admin center showing Groups, TermSets, and Terms in the managed metadata service**
+<br/>
 
 ![Screenshot of the SharePoint admin center with the taxonomy term store expanded.](media/9e623deb-569b-457a-ad1c-fa6d0d4d0a38.png)
 
-## Additional resources
-<a name="bk_addresources"> </a>
-
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)
+## See also
     
--  [Core.MMSSync sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
-    
--  [Core.ContentTypesAndFields sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ContentTypesAndFields)
+- [Core.MMSSync sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)   
+- [Core.ContentTypesAndFields sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ContentTypesAndFields)
+- [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)

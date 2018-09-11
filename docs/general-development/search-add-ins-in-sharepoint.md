@@ -8,7 +8,7 @@ ms.assetid: 21682e45-dd78-4f3c-8f1e-cdd48de3bde2
 
 # Search add-ins in SharePoint
 Learn about search SharePoint Add-ins and how you can create your own search add-ins. The add-ins you create can be added to the SharePoint add-ins catalog so that they can be used in both on-premises deployment and Office 365. Search add-ins only work with data that is stored in the search index and not with the original source documents.
-SharePoint Add-ins are self-contained pieces of functionality that extend the capabilities of a SharePoint website. These add-ins solve specific business and end-user needs by integrating the best of the web and SharePoint. An add-in can contain various SharePoint elements like Lists, Remote Event Receivers, Content Types, Workflows, Workflow Custom Activities, Site Columns, Modules, Menu Item Custom Actions, Client Web Parts, and Search Configurations. For more information, see  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx).
+SharePoint Add-ins are self-contained pieces of functionality that extend the capabilities of a SharePoint website. These add-ins solve specific business and end-user needs by integrating the best of the web and SharePoint. An add-in can contain various SharePoint elements like Lists, Remote Event Receivers, Content Types, Workflows, Workflow Custom Activities, Site Columns, Modules, Menu Item Custom Actions, Client web parts, and Search Configurations. For more information, see  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx).
   
     
     
@@ -38,16 +38,13 @@ There are two ways to deploy your search add-in:
 ## Search add-in development environment
 <a name="SP15_Search_app_dev_environment"> </a>
 
-To create a search add-in, use one of these two environments:
+To create a search add-in, use following environment:
   
     
     
 
 - Microsoft Visual Studio 2012 or Microsoft Visual Studio 2013 or Visual Studio 2015
-    
-  
-- Napa Office 365 Development Tools
-    
+        
   
 With Visual Studio 2013 and later, you can publish your search add-ins to both on-premises or in Office 365. For more information about the development environments and how to use them to create search add-ins, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
@@ -222,7 +219,7 @@ The add-in manifest file is in XML format and can be edited directly. To get per
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_Search_app_addresources"> </a>
 
 

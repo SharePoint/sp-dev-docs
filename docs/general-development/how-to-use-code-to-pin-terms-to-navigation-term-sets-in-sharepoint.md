@@ -139,7 +139,7 @@ using (SPSite site = new SPSite(TestConfig.ServerUrl))
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_H2UseCodeToPinTerms_AdditionalResources"> </a>
 
 

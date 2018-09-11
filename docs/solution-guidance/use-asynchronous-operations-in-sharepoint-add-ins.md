@@ -40,7 +40,8 @@ To implement asynchronous operations in your provider-hosted add-in by using Azu
     
 4. The Azure WebJob runs custom business logic against your SharePoint Online site. 
     
-**Note:**  Adding a message to the Azure Storage queue uses a different process from the process that runs the Azure WebJob. Therefore, your add-in can implement asynchronous operations by adding new messages to the queue using one process, and then by using the Azure WebJob to handle those messages in another process. 
+> [!NOTE] 
+> Adding a message to the Azure Storage queue uses a different process from the process that runs the Azure WebJob. Therefore, your add-in can implement asynchronous operations by adding new messages to the queue using one process, and then by using the Azure WebJob to handle those messages in another process. 
 
 ## Before you begin
 
@@ -48,7 +49,7 @@ To get started, download the [Core.QueueWebJobUsage](https://github.com/SharePoi
 
 To create an Azure Storage account to access the Azure storage queue:
 
-1. Sign in to your Microsoft [Azure Management Portal](https://manage.windowsazure.com).
+1. Sign in to your [Microsoft Azure portal](https://ms.portal.azure.com).
     
 2. Choose  **New** > **Data Services** > **Storage** > **Quick Create**.
     
@@ -76,7 +77,7 @@ To add details to your newly created storage account:
     
 To verify that your Azure WebJob is running:
 
-1. Sign in to your [Azure Management Portal](https://manage.windowsazure.com).
+1. Sign in to your [Azure portal](https://ms.portal.azure.com).
     
 2. Choose  **web apps**, and then choose the Microsoft Azure Websites you entered. 
     
@@ -98,20 +99,21 @@ Use the information in the following table to apply configuration settings to th
 
 |**File location**|**Key to update**|**Value information to update**|
 |:-----|:-----|:-----|
-|Helper Project\Core.QueueWebJobUsage.Console.SendMessage\app.config| **StorageConnectionString**| Replace **[Your Account name]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[Your Account Key]** with the primary access key copied from the Azure Management Portal.|
-|Core.QueueWebJobUsageWeb\web.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourAccountKey]** with the primary access key copied from the Azure Management Portal.|
-|Core.QueueWebJobUsage.Job\app.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourAccountKey]** with the primary access key copied from the Azure Management Portal.|
+|Helper Project\Core.QueueWebJobUsage.Console.SendMessage\app.config| **StorageConnectionString**| Replace **[Your Account name]** with the storage account name copied from the Azure portal.|
+||| Replace **[Your Account Key]** with the primary access key copied from the Azure portal.|
+|Core.QueueWebJobUsageWeb\web.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourAccountKey]** with the primary access key copied from the Azure portal.|
+|Core.QueueWebJobUsage.Job\app.config| **StorageConnectionString**| Replace **[YourAccountName]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourAccountKey]** with the primary access key copied from the Azure portal.|
 || **ClientId**| Replace **[Your Add-in ID]** with the client ID copied from the Core.QueueWebJobUsageWeb\web.config.|
 || **ClientSecret**| Replace **[Your Add-in Secret]** with the client secret copied from the Core.QueueWebJobUsageWeb\web.config.|
-|| **AzureWebJobsDashboard**| Replace **[YourAccount]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourKey]** with the primary access key copied from the Azure Management Portal.|
-|| **AzureWebJobsStorage**| Replace **[YourAccount]** with the storage account name copied from the Azure Management Portal.|
-||| Replace **[YourKey]** with the primary access key copied from the Azure Management Portal.|
+|| **AzureWebJobsDashboard**| Replace **[YourAccount]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourKey]** with the primary access key copied from the Azure portal.|
+|| **AzureWebJobsStorage**| Replace **[YourAccount]** with the storage account name copied from the Azure portal.|
+||| Replace **[YourKey]** with the primary access key copied from the Azure portal.|
 
-**Note:**  If the  **ClientId** and the **ClientSecret** in Core.QueueWebJobUsageWeb gets updated, for example, when you increment the version number in the AppManifest.xml, make sure you update the **ClientId** and the **ClientSecret** in the Core.QueueWebJobUsage.Job\app.config.
+> [!NOTE] 
+> If the  **ClientId** and the **ClientSecret** in Core.QueueWebJobUsageWeb gets updated, for example, when you increment the version number in the AppManifest.xml, make sure you update the **ClientId** and the **ClientSecret** in the Core.QueueWebJobUsage.Job\app.config.
 
 ## Using the Core.QueueWebJobUsage add-in
 
@@ -133,9 +135,10 @@ When you run the Core.QueueWebJobUsage code sample, the provider-hosted add-in a
     
 3. Calls  **SiteManager().AddAsyncOperationRequestToQueue** to add the message to the Azure Storage queue.
     
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 protected void btnAsync_Click(object sender, EventArgs e)
         {
 
@@ -171,7 +174,7 @@ In Core.QueueWebJobUsage.Common, in SiteManager.cs,  **AddAsyncOperationRequestT
     
 5. Uses [CloudQueue.AddMessage](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueue.addmessage.aspx) to add a new message to the Azure Storage queue. The **modifyRequest** business object is serialized into a [CloudQueueMessage](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueuemessage.aspx) object, which is added to the Azure Storage queue.
 
-```C#
+```csharp
 public void AddAsyncOperationRequestToQueue(SiteModifyRequest modifyRequest, 
                                                     string storageConnectionString)
         {
@@ -190,7 +193,7 @@ public void AddAsyncOperationRequestToQueue(SiteModifyRequest modifyRequest,
 
 After the message is added to the Azure Storage Queue, a continuously running Azure WebJob waits for and then processes the new message. The Azure WebJob is defined in Core.QueueWebJobUsage.Job. When the Azure WebJob runs, Main in Core.QueueWebJobUsage.Job\Program.cs creates a new  **JobHost**, and then calls **RunAndBlock**. The **JobHost** coordinates calls to methods marked with the **QueueTrigger** attribute, and watches for messages on a specific queue. **RunAndBlock** ensures that the Azure WebJob runs continuously and calls **ProcessQueueMessage**, which is the method to trigger when a new message is added to the Azure Storage Queue. The Azure WebJobs SDK associates the **Main** thread with **ProcessQueueMessage**. For more information, see [Create a .NET WebJob in Azure Add-in Service](https://azure.microsoft.com/documentation/articles/websites-dotnet-webjobs-sdk-get-started/).
 
-```C#
+```csharp
 static void Main()
         {
             var host = new JobHost();
@@ -207,7 +210,7 @@ static void Main()
     
 3. Calling  **SiteManager().PerformSiteModification** to perform a long-running business process on the site. In this code sample, the thread is put to sleep for 10 seconds, and then a document library is created.
 
-```C#
+```csharp
 public static void ProcessQueueMessage(
             [QueueTrigger(SiteManager.StorageQueueName)] 
             SiteModifyRequest modifyRequest, TextWriter log)
@@ -249,7 +252,7 @@ public static void ProcessQueueMessage(
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md).

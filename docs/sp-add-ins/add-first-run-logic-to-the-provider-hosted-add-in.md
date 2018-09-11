@@ -1,22 +1,14 @@
 ---
 title: Add first-run logic to the provider-hosted add-in
 description: Include "first run" code in a provider-hosted SharePoint Add-in by creating the basic class for deploying components, adding the basic startup logic, and programmatically deploying a SharePoint list. 
-ms.date: 11/02/2017
+ms.date: 12/04/2017
 ms.prod: sharepoint
 ---
 
 
 # Add first-run logic to the provider-hosted add-in
 
-This is the eighth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
-
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
--  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
--  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md)
--  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in.md)
+This is the eighth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps). 
 
 > [!NOTE]
 > If you have been working through this series about provider-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeFirstRunLogic.sln file.
@@ -40,7 +32,7 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
 
 5. Add the following **using** statements to the top of the file.
     
-    ```C#
+    ```csharp
       using System.Web;
       using System.Linq;
       using System.Collections.Generic;
@@ -49,7 +41,7 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
 
 6. At the top of the `SharePointComponentDeployer` class, add the following two static fields. Both of these are initialized in the **Page_Load** method of the add-in's start page (you add that code in a later step). 
 
-    ```C#
+    ```csharp
       internal static SharePointContext sPContext;
       internal static Version localVersion;
     ```
@@ -62,7 +54,7 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
 
 7. Create the following static property to hold the version of the add-in that is currently recorded in the corporate **Tenants** table. It uses the two methods that were already in the file to get and set this value.
     
-    ```C#
+    ```csharp
       internal static Version RemoteTenantVersion
     {
         get
@@ -78,7 +70,7 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
 
 8. Now create the following `IsDeployed` property. 
 
-    ```C#
+    ```csharp
       public static bool IsDeployed
     {
         get
@@ -99,7 +91,7 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
  
 9. Add the following method to the `SharePointComponentDeployer` class. Note that the last thing the method does is update the registered tenant version in the corporate database (**0000.0000.0000.0000**) to match the actual version of the add-in on the host web (**1.0.0.0**). You will complete this method in a later step.
     
-    ```C#
+    ```csharp
       internal static void DeployChainStoreComponentsToHostWeb(HttpRequest request)
     {
         // TODO4: Deployment code goes here.
@@ -129,7 +121,7 @@ The SharePoint host web needs to tell the remote web application what version of
 
 2. Open the CorporateDataViewer.aspx.cs file and add the following code to the **Page_Load** method, just under the line that initializes the `spContext` object. 
 
-    ```C#
+    ```csharp
      SharePointComponentDeployer.sPContext = spContext;
      SharePointComponentDeployer.localVersion = new Version(Request.QueryString["SPAddInVersion"]);
 
@@ -149,13 +141,13 @@ The SharePoint host web needs to tell the remote web application what version of
 
 1. In the SharePointComponentDeployer.cs file, replace the `TODO4` with the following line (you create this method in the next step).
     
-    ```C#
+    ```csharp
       CreateLocalEmployeesList();
     ```
 
 2. Add the following method to the `SharePointComponentDeployer` class. 
 
-    ```C#
+    ```csharp
       private static void CreateLocalEmployeesList()
     {
         using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -188,7 +180,7 @@ The SharePoint host web needs to tell the remote web application what version of
 
 3. Replace `TODO5` with the following code. 
 
-    ```C#
+    ```csharp
       ListCreationInformation listInfo = new ListCreationInformation();
       listInfo.Title = "Local Employees";
       listInfo.TemplateType = (int)ListTemplateType.GenericList;
@@ -206,7 +198,7 @@ The SharePoint host web needs to tell the remote web application what version of
 
 4. Replace `TODO6` with the following code, which changes the public name of the "Title" field (column) from "Title" to "Name." This is what you did on the **List Settings** page when you created the list manually.
     
-    ```C#
+    ```csharp
       Field field = localEmployeesList.Fields.GetByInternalNameOrTitle("Title");
       field.Title = "Name";
       field.Update();
@@ -214,7 +206,7 @@ The SharePoint host web needs to tell the remote web application what version of
 
 5. You also manually created a field named **Added to Corporate DB**. To do that programmatically, add the following code in place of  `TODO7`. 
 
-    ```C#
+    ```csharp
           localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'"
                                                  +"Type='Boolean'>"
                                                  + "<Default>FALSE</Default></Field>",
@@ -233,7 +225,7 @@ The SharePoint host web needs to tell the remote web application what version of
 
 6. Recall that the **Added to Corporate DB** is **No** (that is, false) by default, but the custom ribbon button in the add-in sets it to **Yes** after it adds the employee to the corporate database. This system works best only if users cannot manually change the value of the field. To ensure that they don't, make the field invisible in the forms for creating and editing items on the **Local Employees** list. We do this by adding two more attributes to the first parameter, as shown in the following code.
     
-     ```C#
+     ```csharp
        localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
                                               + " Type='Boolean'"  
                                               + " ShowInEditForm='FALSE' "
@@ -246,7 +238,7 @@ The SharePoint host web needs to tell the remote web application what version of
      
 7. The entire `CreateLocalEmployeesList` should now look like the following.
 
-    ```C#
+    ```csharp
            private static void CreateLocalEmployeesList()
          {
              using (var clientContext = sPContext.CreateUserClientContextForSPHost())

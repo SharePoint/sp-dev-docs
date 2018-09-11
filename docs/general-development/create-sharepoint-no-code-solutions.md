@@ -15,7 +15,7 @@ A SharePoint Composite is a no-code, do-it-yourself business solution that you c
   
     
     
-Think of a SharePoint Composite as a mashup — a web application that you can use to incorporate data quickly into a simple, visual, and interactive solution. And because it's built on the SharePoint platform, you get the breadth and depth of a SharePoint solution. A SharePoint Composite can be as simple as a custom webpage that uses a site list and several connected Web Parts to track mileage in a small business. Or, a SharePoint Composite can be as sophisticated as a corporate-wide absence reporting system that's connected to a Human Resource database by using Business Connectivity Services (BCS).
+Think of a SharePoint Composite as a mashup — a web application that you can use to incorporate data quickly into a simple, visual, and interactive solution. And because it's built on the SharePoint platform, you get the breadth and depth of a SharePoint solution. A SharePoint Composite can be as simple as a custom webpage that uses a site list and several connected web parts to track mileage in a small business. Or, a SharePoint Composite can be as sophisticated as a corporate-wide absence reporting system that's connected to a Human Resource database by using Business Connectivity Services (BCS).
   
     
     
@@ -36,7 +36,7 @@ The following articles describe how to create no-code solutions and provide link
 | [Save, download, and upload a SharePoint site as a template](save-download-and-upload-a-sharepoint-site-as-a-template.md) <br/> |Explains how to create site templates without using code so you can easily deploy no-code solutions.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

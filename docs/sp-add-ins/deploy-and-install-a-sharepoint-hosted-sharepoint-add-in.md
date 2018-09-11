@@ -1,13 +1,13 @@
 ---
 title: Deploy and install a SharePoint-hosted SharePoint Add-in
 description: Create an add-in catalog, package and upload the add-in to the catalog, install and remove the add-in.
-ms.date: 11/02/2017
+ms.date: 12/04/2017
 ms.prod: sharepoint
 ---
 
 # Deploy and install a SharePoint-hosted SharePoint Add-in
 
-This is the second in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
+This is the second in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the overview article in this series:
 
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
     
@@ -18,25 +18,25 @@ You'll find it a lot easier to develop SharePoint-hosted SharePoint Add-ins if y
 
 ## Create an add-in catalog
 
-1. Sign in to your Office 365 subscription as an administrator. Select the add-in launcher icon, and then select the **Admin** add-in.
+1. Sign in to your Office 365 subscription as an administrator. Select the add-in launcher icon, and then select the **Admin** tile.
     
    *Figure 1. Office 365 add-in launcher*
 
    ![Office 365 App Launcher](../images/ec60797c-d329-4922-a811-70c64598f4d5.PNG)
  
-2. In the **Admin Center**, expand the **Admin** node in the task pane, and then select **SharePoint**.
+2. In the **Admin Center**, expand the **Admin centers** node in the task pane, and then select **SharePoint**.
      
-3. In the **SharePoint Admin Center**, select **add-ins** in the task pane.
+3. In the **SharePoint Admin Center**, select **apps** in the task pane.
      
-4. On the **add-ins** page, select **Add-in Catalog**. (If there is already an add-in catalog site collection in the subscription, it opens and you are finished. You cannot create more than one add-in catalog in a subscription.)    
+4. On the **apps** page, select **App Catalog**. (If there is already an add-in catalog site collection in the subscription, it opens and you are finished. You cannot create more than one add-in catalog in a subscription.)    
  
-5. On the **Add-in Catalog Site** page, select **OK** to accept the default option and create a new add-in catalog site.    
+5. On the **App Catalog Site** page, select **OK** to accept the default option and create a new app catalog site.    
  
-6. In the **Create Add-in Catalog Site Collection** dialog, specify the title and website address of your add-in catalog site. We recommend that you include "catalog" in the title and URL to make it memorable and distinguishable in the **SharePoint Admin Center**.   
+6. In the **Create App Catalog Site Collection** dialog, specify the title and website address of your app catalog site. We recommend that you include "catalog" in the title and URL to make it memorable and distinguishable in the **SharePoint Admin Center**.   
  
 7. Specify a **Time Zone** and set yourself as the **Administrator**.
     
-8. Set the **Storage Quota** to the lowest possible value (currently 110, but that can change), because the add-in packages you upload to this site collection are very small.
+8. Set the **Storage Quota** to the lowest possible value (currently 110, but that can change), because the packages you upload to this site collection are very small.
     
 9. Set the **Server Resource Quota** to 0 (zero), and then select **OK**. (The server resource quota is related to throttling poorly performing sandboxed solutions, but you won't be installing any sandboxed solutions on your add-in catalog site.) 
  
@@ -77,7 +77,7 @@ To continue enhancing the same SharePoint Add-in in Visual Studio (see [Next ste
 ## Next steps
 <a name="Nextsteps"></a>
 
-We strongly recommend that you continue with this series about SharePoint-hosted add-ins before you go on to the more advanced topics. Next we get back to coding in [Add custom columns to a SharePoint-hosted SharePoint Add-in](add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md).
+We strongly recommend that you continue with this series about SharePoint-hosted add-ins before you go on to the more advanced topics. Next, we get back to coding in [Add custom columns to a SharePoint-hosted SharePoint Add-in](add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md).
  
 
  

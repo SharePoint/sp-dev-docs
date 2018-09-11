@@ -197,7 +197,7 @@ The **Start a task process** action takes two inputs: the users that will partic
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

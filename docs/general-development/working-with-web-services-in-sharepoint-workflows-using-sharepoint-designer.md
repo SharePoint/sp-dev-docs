@@ -22,7 +22,7 @@ One of the more significant changes to the workflow architecture is that now all
 For those customers who have created workflows using SharePoint Designer in the past, this is nothing new. Workflows authored using SharePoint Designer have always been fully declarative. This change does benefit customers who create workflows using SharePoint Designer 2013, however, because SharePoint Designer 2013 workflows now support calling and consuming web services.
 ## Why are web services important for SharePoint workflows
 
-Let's start by understanding scenarios in which using web services makes sense. In the days of SharePoint 2007 or SharePoint 2010, writing custom code was common when using Visual Studio to author workflows because that was the best way to perform calculations or implement custom business logic. Any time you encountered a situation in which the out-of-box actions and activities didn't meet your needs, you could fall back on custom code in a managed assembly.
+Let's start by understanding scenarios in which using web services makes sense. In the days of SharePoint 2007 or SharePoint 2010, writing custom code was common when using Visual Studio to author workflows because that was the best way to perform calculations or implement custom business logic. Any time you encountered a situation in which the out-of-the-box actions and activities didn't meet your needs, you could fall back on custom code in a managed assembly.
   
     
     
@@ -376,7 +376,7 @@ SharePointintroduced a new workflow architecture facilitated by a new product, W
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

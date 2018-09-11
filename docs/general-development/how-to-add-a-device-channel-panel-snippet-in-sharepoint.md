@@ -30,10 +30,10 @@ There are two limitations to using a Device Channel Panel:
     
     
 
-- **Display templates** Because display templates are rendered on the client side and Device Channel Panels run on the server side, you cannot use a Device Channel Panel within a display template. Instead, you should use two different Content Search Web Parts within Device Channel Panels on your page layout, or use the JavaScript variable to trigger the behavior you want within the display template itself.
+- **Display templates** Because display templates are rendered on the client side and Device Channel Panels run on the server side, you cannot use a Device Channel Panel within a display template. Instead, you should use two different Content Search web parts within Device Channel Panels on your page layout, or use the JavaScript variable to trigger the behavior you want within the display template itself.
     
   
-- **Web Part zones** You cannot insert a Web Part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a Web Part zone).
+- **Web part zones** You cannot insert a web part zone inside a Device Channel Panel. If you want to allow authors to add web parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add web parts there. You can add web parts directly to a Device Channel Panel (without a web part zone).
     
   
 
@@ -70,8 +70,9 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
     
     The section named **Important** contains the properties that are key to how this particular snippet works. For a Device Channel Panel, the **IncludedChannels** property is the most important. For this property, enter the alias of each Device Channel that you want to display the content contained in this Device Channel Panel. If you enter more than one alias, separate each with a comma.
     
-    > **Note:**
-      > If you edit the alias of a channel in the Device Channels list, you must manually find and update that alias wherever it appears in your design files, including updating the **IncludedChannels** property for every Device Channel Panel that uses that alias
+    > [!NOTE]
+    > If you edit the alias of a channel in the Device Channels list, you must manually find and update that alias wherever it appears in your design files, including updating the **IncludedChannels** property for every Device Channel Panel that uses that alias.
+
 8. After you configure any other properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
@@ -104,10 +105,7 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
 
 The two most important parts of a Device Channel Panel snippet are the **IncludedChannels** property and the **<div>** where `class="DefaultContentBlock"`. By default, the **IncludedChannels** property is empty. In the **Important** section of the property grid, you should enter the aliases, separated by commas, of the device channels that you want to display the content in this panel.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > If you change an alias in the Device Channels list, you must also change that alias wherever it appears in your markup, including in the **IncludedChannels** property for every Device Channel Panel that uses that alias.
   
     
@@ -138,7 +136,7 @@ The **<div>** where `class="DefaultContentBlock"` should be replaced with whatev
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

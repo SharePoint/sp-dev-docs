@@ -190,7 +190,7 @@ struct AccessorInitParameters
     
     
 
-## Additional Resources
+## See also
 <a name="bk_addresources"> </a>
 
 For more information, see  [Enterprise Search Protocol Handlers](https://msdn.microsoft.com/en-us/library/office/aa981260%28v=office.12%29.aspx).

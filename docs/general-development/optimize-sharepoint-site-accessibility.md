@@ -30,12 +30,12 @@ Landmarks are programmatically determined markers in your published pages that a
 
 ## Alternative text
 
-Alternative text is required for screen readers to read non-text content on the page. Provide alternative text (ALT text) for graphics and figures that includes a clear and useful description of the diagram or screen image. When you upload an image, the Site Image Web Part includes a field to enter custom alternative text. When you add images to the picture library, you can define custom ALT text for each image. Add alternative text to links and images that open in a new window. This way, screen readers can indicate to users that a new window will open.
+Alternative text is required for screen readers to read non-text content on the page. Provide alternative text (ALT text) for graphics and figures that includes a clear and useful description of the diagram or screen image. When you upload an image, the Site Image web part includes a field to enter custom alternative text. When you add images to the picture library, you can define custom ALT text for each image. Add alternative text to links and images that open in a new window. This way, screen readers can indicate to users that a new window will open.
   
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

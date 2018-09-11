@@ -1,14 +1,14 @@
 ---
-title: Upload Web Parts in SharePoint
+title: Upload web parts in SharePoint
 ms.date: 11/03/2017
 ---
-# Upload Web Parts in SharePoint
+# Upload web parts in SharePoint
 
-Deploy pre-configured, standard SharePoint Web Parts for your users.
+Deploy pre-configured, standard SharePoint web parts for your users.
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
-You can upload pre-configured, standard SharePoint Web Parts for users to add to their SharePoint sites. For example, you can upload a pre-configured:
+You can upload pre-configured, standard SharePoint web parts for users to add to their SharePoint sites. For example, you can upload a pre-configured:
 
 - Script Editor Web Part that uses JavaScript files on the remote web.
     
@@ -16,13 +16,13 @@ You can upload pre-configured, standard SharePoint Web Parts for users to add to
     
 This article discusses pre-configuring the Script Editor Web Part to use JavaScript files on the remote web to perform UI customization. Use this solution to:
 
-- Use script files from the remote web in your Web Parts rather than referencing scripts from the **Site Assets** list on the host web.
+- Use script files from the remote web in your web parts rather than referencing scripts from the **Site Assets** list on the host web.
     
-- Deploy pre-configured Web Parts in your custom site provisioning process. For example, as part of your custom site provisioning process, you might want to display site usage policy information to the user when a new site is created. 
+- Deploy pre-configured web parts in your custom site provisioning process. For example, as part of your custom site provisioning process, you might want to display site usage policy information to the user when a new site is created. 
     
-- Automatically load filtered content in your Web Parts for your users. For example, your script file can display local news information read from an external system.
+- Automatically load filtered content in your web parts for your users. For example, your script file can display local news information read from an external system.
     
-- Allow users to add additional functionality to their site by using Web Parts from the **Web Part Gallery**.
+- Allow users to add additional functionality to their site by using web parts from the **Web Part Gallery**.
 
 ## Before you begin
 
@@ -48,7 +48,8 @@ When you run the code sample and choose **Run Scenario**:
     
     Notice that the  **src** attribute links to a JavaScript file on the remote web. The **&lt;SCRIPT&gt;** element is set by the **Content** property in the Core.AppScriptPartWeb\userprofileinformation.webpart, as shown in the following example. The JavaScript file linked to by the **src** attribute is Core.AppScriptPartWeb\Scripts\userprofileinformation.js. Userprofileinformation.js reads the current user's profile information from the user profile service, and then displays this information in the Web Part.
     
-     **Note:** The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+    > [!NOTE] 
+    > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
   ```XML
   <property name="Content" type="string">&amp;lt;script type="text/javascript" src="https://localhost:44361/scripts/userprofileinformation.js"&amp;gt;&amp;lt;/script&amp;gt;
@@ -60,7 +61,8 @@ When you run the code sample and choose **Run Scenario**:
     
 9. Choose **Save**.
 
-**Note:** If your user profile image does not display, open your OneDrive for Business site, and then return to the host web.
+> [!NOTE] 
+> If your user profile image does not display, open your OneDrive for Business site, and then return to the host web.
 
 In Core.AppScriptPartWeb\Pages\Default.aspx, **Run Scenario** runs **btnScenario_Click**, which does the following:
 
@@ -72,7 +74,7 @@ In Core.AppScriptPartWeb\Pages\Default.aspx, **Run Scenario** runs **btnScenario
     
 4. When userprofileinformation.webpart is found, assigns the Web Part to a custom group named **Add-in Script Part**.
 
-```C#
+```csharp
 protected void btnScenario_Click(object sender, EventArgs e)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -116,7 +118,7 @@ protected void btnScenario_Click(object sender, EventArgs e)
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

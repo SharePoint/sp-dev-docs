@@ -4,7 +4,7 @@ ms.date: 11/03/2017
 ---
 # Use remote event receivers in SharePoint
 
-Use remote event receivers to handle events in the SharePoint add-in model. Use AppInstalled and AppUninstalling events to set up or remove SharePoint objects and other event receivers your add-in needs.
+Use remote event receivers to handle events in the SharePoint Add-in model. Use AppInstalled and AppUninstalling events to set up or remove SharePoint objects and other event receivers your add-in needs.
 
 _**Applies to:** add-ins for SharePoint | SharePoint 2013 | SharePoint Online_
 
@@ -15,13 +15,14 @@ The  [Core.EventReceivers](https://github.com/SharePoint/PnP/tree/master/Samples
 
 - Configure your add-in on first run using the AppInstalled event to set up various SharePoint objects or additional event receivers that your add-in works with.
     
-- Replace event receivers implemented using fully trusted code solutions. In fully trusted code solutions, you can run event receivers on the SharePoint server. In the new SharePoint add-in model, because you cannot run the event receiver on the SharePoint server, you need to implement a remote event receiver on a web server.
+- Replace event receivers implemented using fully trusted code solutions. In fully trusted code solutions, you can run event receivers on the SharePoint server. In the new SharePoint Add-in model, because you cannot run the event receiver on the SharePoint server, you need to implement a remote event receiver on a web server.
     
 - Receive notifications of changes occuring in SharePoint. For example, when a new item is added to a list, you want to perform a task.
 
 - Complement your change log solution. Using the remote event receiver pattern with a change log pattern provides a more reliable architecture for handling all changes made to SharePoint content databases, site collections, sites, or lists. Remote event receivers run immediately, but because they run on a remote server, you might encounter a communication failure. The change log pattern ensures that all changes are available for processing, but the application processing the changes usually runs on a schedule (for example, a timer job). This means that changes are not processed immediately. If you use these two patterns together, ensure you use a mechanism to prevent processing the same change twice. For more information, see [Query SharePoint change log with ChangeQuery and ChangeToken](query-sharepoint-change-log-with-changequery-and-changeToken.md).
 
-**Note**  SharePoint-hosted add-ins do not support remote event receivers. To use remote event receivers, you need to use a provider-hosted add-in. You should not use remote event receivers for synchronization scenarios, or for long running processes. For more information, see  [How to: Create an add-in event receiver](https://msdn.microsoft.com/library/office/jj220052.aspx).
+> [!NOTE] 
+> SharePoint-hosted add-ins do not support remote event receivers. To use remote event receivers, you need to use a provider-hosted add-in. You should not use remote event receivers for synchronization scenarios, or for long running processes. For more information, see  [How to: Create an add-in event receiver](https://msdn.microsoft.com/library/office/jj220052.aspx).
 
 ## Before you begin
 <a name="sectionSection0"> </a>
@@ -40,46 +41,23 @@ Before you run this add-in, do the following:
     
 	3. Verify that  **Scope** is set to **Web**, and  **Permission** is set to **Manage**.
     
-3. To run this code sample, you need an Azure subscription. To sign up for a trial, see  [Free one-month trial](http://azure.microsoft.com/en-us/pricing/free-trial/).
+3. To run this code sample, you need an Azure subscription. To sign up for a trial, see [Free one-month trial](http://azure.microsoft.com/en-us/pricing/free-trial/).
     
-4. Create an Azure Service Bus Namespace with ACS Support.
+4. Create an Azure Service Bus Namespace.
     
-	1. Install Azure PowerShell. For more information, see  [How to: Install Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/#Install).
-    
-	2. Start  **Azure PowerShell**.
+	1. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-create-namespace-portal).
+
+    2. Copy **Primary Connection String** from the just created Service Bus Namespace
 	
-	3. Enter  **Add-AzureAccount**.
+	3. Return to Visual Studio.
 	
-	4. Enter your email address in the  **Sign in to Windows Azure** dialog, and then choose **Continue**.
+	4. Right-click Core.EventReceivers >  **Properties** > **SharePoint**.
 	
-	5. Enter your password, and then choose  **Sign in**.
+	5. Select  **Enable debugging via Microsoft Azure Service Bus**.
 	
-	6. Create a new service bus namespace using the following PowerShell cmdlet.
+	6. In  **Microsoft Azure Service Bus connection string**, paste the Connection String.
 	
-		```powershell
-		New-AzureSBNamespace NamespaceNameRegion -CreateACSNamespace $true -NamespaceType Messaging
-		
-		```
-	
-       Where:
-	
-       -  _NamespaceName_ is the name of your Azure Service Bus namespace.
-	
-       -  _Region_ is the region closest to you. For example, you may enter **"West US"**. You must include the region name in double quotes.
-	
-	7. Return to your Azure Management Portal. Choose  **SERVICE BUS**, and then choose the namespace name you entered.
-	
-	8. Choose  **Manage Connection Strings**, and then in  **ACS CONNECTION STRING**, choose the copy button.
-	
-	9. Return to Visual Studio.
-	
-	10. Right-click Core.EventReceivers >  **Properties** > **SharePoint**.
-	
-	11. Select  **Enable debugging via Microsoft Azure Service Bus**.
-	
-	12. In  **Microsoft Azure Service Bus connection string**, paste the ACS Connection String.
-	
-	13. Choose  **Save**.
+	7. Choose  **Save**.
     
 5. Run the code sample, and perform the following additional steps:
     
@@ -120,11 +98,13 @@ The  **ProcessEvent** handles the following **SPRemoteEventType** remote events:
     
 -  **ItemAdded** events when an item is added to a list. When an **ItemAdded** event occurs, **ProcessEvent** calls **HandleItemAdded**.
 
-**Note**  In the Core.EventReceiver project properties, only  **Handle App Installed** and **Handle App Uninstalling** properties are available. This code sample shows how you can add the **ItemAdded** event handler to a list on the host web by using the **AppInstalled** event during add-in installation.
+> [!NOTE] 
+> In the Core.EventReceiver project properties, only  **Handle App Installed** and **Handle App Uninstalling** properties are available. This code sample shows how you can add the **ItemAdded** event handler to a list on the host web by using the **AppInstalled** event during add-in installation.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```C#
+```csharp
 public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
         {
 
@@ -150,7 +130,7 @@ public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
 
 **HandleAppInstalled** calls **RemoteEventReceiverManager.AssociateRemoteEventsToHostWeb** in RemoteEventReceiverManager.cs.
 
-```C#
+```csharp
  private void HandleAppInstalled(SPRemoteEventProperties properties)
         {
             using (ClientContext clientContext =
@@ -178,7 +158,7 @@ public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
     
 	- Adds a new event receiver to the list using  **List.EventReceivers.Add**.
 
-```C#
+```csharp
 public void AssociateRemoteEventsToHostWeb(ClientContext clientContext)
         {
             // Add Push Notification feature to host web.
@@ -245,7 +225,7 @@ public void AssociateRemoteEventsToHostWeb(ClientContext clientContext)
 
 When an item is added to the  **Remote Event Receiver Jobs** list, **ProcessEvent** in AppEventReceiver.svc.cs handles the **ItemAdded** event, and then calls **HandleItemAdded**.  **HandleItemAdded** calls **RemoteEventReceiverManager.ItemAddedToListEventHandler**.  **ItemAddedToListEventHandler** fetches the list item that was added, and adds the string **Updated by ReR** to the list item's description.
 
-```C#
+```csharp
  public void ItemAddedToListEventHandler(ClientContext clientContext, Guid listId, int listItemId)
         {
             try
@@ -268,7 +248,7 @@ When an item is added to the  **Remote Event Receiver Jobs** list, **ProcessEven
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

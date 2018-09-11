@@ -179,7 +179,7 @@ Where possible, instead of creating multiple **Approval** actions, it is more ef
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

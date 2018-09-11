@@ -6,8 +6,8 @@ ms.assetid: 1d51421b-61ac-46b6-a865-52f968ddc5b3
 ---
 
 
-# What's new in workflows for SharePoint
-Learn about the capabilities and features that are new to workflows in SharePoint.
+# What's new in workflows for SharePoint 2013
+Learn about the capabilities and features that are new to workflows in SharePoint Server 2013.
 The workflow framework in SharePoint is significantly changed from previous versions. The following sections provide brief summaries of the most significant updates and enhancements to the workflow infrastructure.
   
     
@@ -126,15 +126,13 @@ Following are new workflow actions that are provided in SharePoint. For a full d
 |Set this field in the project to this value [Microsoft Project]  <br/> |Sets the value for the enterprise custom field for a specified project.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15Whatsnewinworflow_Addresources"> </a>
 
 
 -  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
-  
--  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md)
-    
+     
   
 -  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     

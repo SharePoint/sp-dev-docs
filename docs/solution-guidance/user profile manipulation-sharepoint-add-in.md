@@ -1,14 +1,14 @@
 ---
-title: User profile manipulation in the SharePoint add-in model
+title: User profile manipulation in the SharePoint Add-in model
 ms.date: 11/03/2017
 ---
-User profile manipulation in the SharePoint add-in model
+User profile manipulation in the SharePoint Add-in model
 ========================================================
 
 Summary
 -------
 
-The approach you take to perform Create, Read, Update and Delete (CRUD) operations in the User Profile Service (UPS) is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, UPS CRUD operations were performed with the SharePoint server-side object model code or the User Profile web service and deployed via Farm Solutions. 
+The approach you take to perform Create, Read, Update and Delete (CRUD) operations in the user profile service is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, UPS CRUD operations were performed with the SharePoint server-side object model code or the User Profile web service and deployed via Farm Solutions. 
 
 In a SharePoint Add-in model scenario, UPS CRUD operations are performed with the client-side object model (CSOM) or the User Profile web service.  
 
@@ -34,7 +34,7 @@ As a rule of a thumb, we recommend the following high-level guidelines for perfo
 	+ See the [Remote timer jobs (SharePoint Add-in Model Recipe)](remote-timer-jobs-sharepoint-add-in.md) for more information about these technologies and how to use them in the SharePoint Add-in model.
 - Using AppOnly authentication is not supported for any User Profile service operations.
 - Execute the CSOM code with an account that has the appropriate permissions to perform UPS CRUD operations.
-- When synchronizing Active Directory to the User Profile Service some attributes are synchronized by default.
+- When synchronizing Active Directory to the user profile service some attributes are synchronized by default.
 	+ The [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/en-us/library/hh147510.aspx) contains a list of the attributes synchronized by default.
 	+ If you need to synchronize additional attributes you will need to create a custom tool using one of the approaches described in this article.
 
@@ -111,7 +111,7 @@ When you have an Office 365 environment and you are synchronizing UPS data betwe
 
 **Getting started**
 
-The [Core.UserProfiles.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfiles.Sync) demonstrates how to build a synchronization tool for User Profile Service data.
+The [Core.UserProfiles.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfiles.Sync) demonstrates how to build a synchronization tool for user profile service data.
 
 Hybrid Environments
 -------------------

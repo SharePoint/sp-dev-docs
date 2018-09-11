@@ -73,7 +73,7 @@ The topics in this section describe the ways in which development of SharePoint 
     
   
 
-## Additional resources
+## See also
 <a name="SP15buildfarm_addlresources"> </a>
 
 

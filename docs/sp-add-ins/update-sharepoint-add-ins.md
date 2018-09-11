@@ -31,8 +31,6 @@ Before you update a SharePoint Add-in, you need:
 
 Review the concepts in the following table before updating your add-in.
 
-**Table 1. Core concepts for updating a SharePoint Add-in**
-
 |**Article title**|**Description**|
 |:-----|:-----|
 | [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)|Learn about the different types of SharePoint Add-ins. The updating process varies depending on the type.|
@@ -141,7 +139,7 @@ Continue with the next bullet in the section [Major steps in updating an add-in]
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
 -  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
     
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)

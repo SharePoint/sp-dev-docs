@@ -10,11 +10,7 @@ ms.assetid: e3a8e057-f803-446d-81c9-4eb8ef3691e1
 
 This topic discusses the discovery mechanisms built into the Excel Services REST API.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -137,7 +133,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
 ## Atom Feed
 
-Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the Web page, you get the XML. An example from the charts in **sampleWorkbook.xlsx** is shown below.
+Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the webpage, you get the XML. An example from the charts in **sampleWorkbook.xlsx** is shown below.
   
     
     

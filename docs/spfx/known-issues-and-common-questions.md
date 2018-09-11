@@ -1,44 +1,49 @@
 ---
-title: Known issues and frequently asked questions
-ms.date: 09/25/2017
+title: SharePoint Framework known issues and frequently asked questions
+description: Find answers to issues and FAQ about the SharePoint Framework.
+ms.date: 01/12/2018
 ms.prod: sharepoint
 ---
 
 
-# Known issues and frequently asked questions
+# SharePoint Framework known issues and frequently asked questions
 
-This page is for listing any known issues or to answer any frequently asked questions around SharePoint Framework. 
+This page is for listing any known issues or to answer any frequently asked questions about SharePoint Framework. 
 
 ## Known issues
 
-**Dev certificate issue with Chrome (v58-)**
+### Dev certificate issue with Chrome (v58-)
 
-- *Date - 28th of April*
-- *Updated - 2nd of May*
+- *Date - April 28, 2017*
+- *Updated - May 2, 2017*
 
-If you are using Chrome as your development browser, you might have challenges with the developer certificate regardless of executing `gulp trust-dev-cert` command. Chrome has changed its model for certificate validation starting from version 58 and you might see "Your connection is not private" warning when you are accessing the local workbench.
+If you are using Chrome as your development browser, you might have challenges with the developer certificate regardless of executing the `gulp trust-dev-cert` command. Chrome has changed its model for certificate validation starting from version 58, and you might see a "Your connection is not private" warning when you are accessing the local workbench.
 
-You should update your Yeoman template packages. We have updated certification creation logic in the *@microsoft/gulp-core-build-serve* package. In existing solutions, you can simply delete this folder and run `npm install` to get the updated package. You will also need to execute `untrust-dev-cert` and `trust-dev-cert` commands in your machine to address the certification creation logic issue. 
+You should update your Yeoman template packages. We have updated certification creation logic in the [*@microsoft/gulp-core-build-serve* package](https://www.npmjs.com/package/@microsoft/gulp-core-build-serve). 
+
+In existing solutions, you can simply delete this folder and run `npm install` to get the updated package. You also need to execute `untrust-dev-cert` and `trust-dev-cert` commands on your machine to address the certification creation logic issue. 
 
 ## Frequently asked questions
 
-**When will custom actions and JSLink be available in the SharePoint Framework?**
+### When will custom actions and JSLink be available in the SharePoint Framework?
 
-- *Date - 6th of June*
+- *Date - June 6, 2017*
 
-SharePoint Extensions with additional customizations capabilities for the SharePoint Online is now available in SharePoint Online. You can find more details on the SharePoint Framework extensions from our documentation.
+SharePoint Framework Extensions with additional customization capabilities is now available in SharePoint Online. You can find more information about SharePoint Framework Extensions from our documentation:
 
 - [SharePoint Framework Extensions Overview](./extensions/overview-extensions.md)
 - [SharePoint Framework Extensions Tutorials](./extensions/get-started/build-a-hello-world-extension.md)
 
-**Will SharePoint Framework be available in on-premises?**
+### Will SharePoint Framework be available in on-premises?
 
-- *Date - 6th of June*
+- *Date - June 6, 2017*
 
-SharePoint Framework client-side web parts on classic pages were released to SharePoint 2016 as part of the Feature Pack 2 (FP2). There are no plans currently to provide SharePoint Framework capabilities to SharePoint 2013. There's no specific list of SharePoint Framework capabilities which will be included in the SharePoint 2019 release.
+SharePoint Framework client-side web parts on classic pages were released to SharePoint 2016 as part of the Feature Pack 2 (FP2). There are no plans currently to provide SharePoint Framework capabilities to SharePoint 2013. There's no specific list of SharePoint Framework capabilities that will be included in the SharePoint 2019 release.
 
-## Additional resources
-Please use following resources to provide feedback, comments and questions towards SharePoint engineering. 
+## See also
 
-* [sp-dev-docs GitHub issue list](https://github.com/SharePoint/sp-dev-docs/issues)
-* [SharePoint Developer MS Tech Community space](https://aka.ms/sppnp-community)
+Please use following resources to provide feedback, comments, and questions to SharePoint engineering. 
+
+- [GitHub sp-dev-docs issues](https://github.com/SharePoint/sp-dev-docs/issues)
+- [SharePoint Developer Microsoft Tech Community space](https://aka.ms/sppnp-community)
+

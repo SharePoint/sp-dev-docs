@@ -32,7 +32,8 @@ The connected app parts and chat hub architecture includes the following compone
     
 3. The chat hub, which uses the SignalR library to route messages from sending to receiving app parts. In this code sample, all app parts receive messages from the chat hub, including the app part that sent the message.
     
-**Note**  Because app parts run in an IFRAME, you cannot use JavaScript only to communicate between app parts. 
+> [!NOTE] 
+> Because app parts run in an IFRAME, you cannot use JavaScript only to communicate between app parts. 
 
 ## Use the Core.ConnectedAppParts app
 <a name="sectionSection2"> </a>
@@ -59,7 +60,7 @@ To see a demo of two app parts communicating by using SignalR:
     
 10. Verify that the message  **Hello World from App Part 1** appears in both **Connected Part - One** and **Connected Part - Two** app parts.
     
-In this code sample, the Core.ConnectedAppParts project contains two app parts (ConnectedPartOne and ConnectedPartTwo) that are deployed to the host web. ConnectedPartOne and ConnectedPartTwo run in an IFRAME. The web page contents for ConnectedPartOne and ConnectedPartTwo are defined in the Core.ConnectedAppPartsWeb project in Pages\ConnectedPartOne.aspx and Pages\ConnectedPartTwo.aspx. Both pages run in the provider-hosted app with the chat hub (ChatHub.cs) and use inline JavaScript to:
+In this code sample, the Core.ConnectedAppParts project contains two app parts (ConnectedPartOne and ConnectedPartTwo) that are deployed to the host web. ConnectedPartOne and ConnectedPartTwo run in an IFRAME. The webpage contents for ConnectedPartOne and ConnectedPartTwo are defined in the Core.ConnectedAppPartsWeb project in Pages\ConnectedPartOne.aspx and Pages\ConnectedPartTwo.aspx. Both pages run in the provider-hosted app with the chat hub (ChatHub.cs) and use inline JavaScript to:
 
 1. Include the SignalR jQuery library.
     
@@ -69,7 +70,8 @@ In this code sample, the Core.ConnectedAppParts project contains two app parts (
     
 4. Start the connection to the chat hub using  **$.connection.hub.start().done**. When the connection is established, an event handler is defined on the  **sendmessage** button's click event. This event handler calls **chat.server.send** to send the name of the app part and the message entered by the user to the chat hub.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```
     <!--Script references. -->
@@ -110,7 +112,7 @@ In this code sample, the Core.ConnectedAppParts project contains two app parts (
 
 When the inline JavaScript code in ConnectedPartOne.aspx runs  **chat.server.send**, a call is made to the  **Send** method in ChatHub.cs. The **Send** method in ChatHub.cs receives the broadcasting app part's name and the message, and then broadcasts the information to all connected app parts by using **Clients.All.broadcastMessage**.  **Clients.All.broadcastMessage** calls the JavaScript function (in all connected app parts) that was defined by using **chat.client.broadcastMessage**.
 
-```C#
+```csharp
  public void Send(string name, string message)
         {
             // Call the broadcastMessage method to update the app parts.
@@ -120,7 +122,7 @@ When the inline JavaScript code in ConnectedPartOne.aspx runs  **chat.server.sen
 
 **Important**  In this code sample, all app parts connected to the chat hub receive all messages sent through the chat hub. Consider filtering messages based on session ID to determine which app parts should receive which messages.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

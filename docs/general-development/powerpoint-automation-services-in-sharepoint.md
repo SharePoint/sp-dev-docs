@@ -18,10 +18,7 @@ Many businesses, large and small, use their Microsoft SharePoint Server librarie
     
 Using PowerPoint Automation Services, you can convert from the PowerPoint binary file format (.ppt) and the PowerPoint Open XML file format (.pptx) to other formats. For example, you may want to upgrade a batch of PowerPoint 97-2003 files to Open XML presentation files. You could also create a custom action in the **Edit** menu to allow users to create a PDF version of presentations on demand.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > PowerPoint Automation Services takes advantage of facilities of SharePoint and is a feature of it. You must have SharePoint installed to use PowerPoint Automation Services. If you are using SharePoint in a server farm, you must explicitly enable PowerPoint Automation Services. 
   
     
@@ -96,10 +93,7 @@ To use PowerPoint Automation Services, you use its programming interface to send
     
 PowerPoint Automation Services uses the asynchronous pattern method for sending and receiving conversion requests. Thus, you can write code that continues to execute after a conversion request has been sent. If you need to provide notification to users after a conversion request has been completed, you can specify a delegate that references a callback method to execute when the operation completes. 
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For more information about how to work with the asynchronous design pattern, see the  [Asynchronous Programming Overview](http://msdn.microsoft.com/en-us/library/ms228963.aspx). 
   
     
@@ -205,12 +199,9 @@ The **PictureRequest** class does not have any overloads for its constructor met
 ## Building a PowerPoint Automation Services application
 <a name="PAS_Build"> </a>
 
-The easiest way to show how to write code that uses PowerPoint Automation Services is to build a console application. You must build and run the console application on the SharePoint Server, not on a client computer. The code to start conversion requests is similar whether the conversion request code is incorporated into a Web Part, a workflow, or an event handler. By using PowerPoint Automation Services from a console application, the following procedure shows how to use the API without adding the complexities of a Web Part, an event handler, or a workflow.
+The easiest way to show how to write code that uses PowerPoint Automation Services is to build a console application. You must build and run the console application on the SharePoint Server, not on a client computer. The code to start conversion requests is similar whether the conversion request code is incorporated into a web part, a workflow, or an event handler. By using PowerPoint Automation Services from a console application, the following procedure shows how to use the API without adding the complexities of a web part, an event handler, or a workflow.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Because PowerPoint Automation Services is a service of SharePoint, you can use it only in an application that runs directly on a SharePoint Server. You must build the application as a farm solution. You cannot use PowerPoint Automation Services from a sandboxed solution. 
   
     
@@ -234,8 +225,9 @@ The easiest way to show how to write code that uses PowerPoint Automation Servic
   
 5. Be sure that the project in Visual Studio targets .NET Framework 4.
     
-    > **Note:**
-      > Previous versions of SharePoint Server required that you target .NET Framework 3.5. The Microsoft.SharePoint libraries now reference assemblies in .NET Framework 4. Also make sure that your project targets the full .NET Framework 4 and not the .NET Framework 4 Client Profile. 
+    > [!NOTE]
+    > Previous versions of SharePoint Server required that you target .NET Framework 3.5. The Microsoft.SharePoint libraries now reference assemblies in .NET Framework 4. Also make sure that your project targets the full .NET Framework 4 and not the .NET Framework 4 Client Profile. 
+
 6. In the **Name** box, type the name that you want to use for your project, such as PAS_Sample.
     
   
@@ -463,11 +455,8 @@ End Namespace
   
 PowerPoint Automation Services on SharePoint provides businesses with advanced capabilities for managing their presentation files. This high-performance solution allows scalable, server-side presentation manipulation and generation, as a batch or on-demand. 
   
-    
-    
-
-> **Note:**
->  Before you run the example, make sure that PowerPoint Automation Services has been enabled in the SharePoint Central Administration console.<br/>  To verify that PowerPoint Automation Services is enabled, do the following: <ul><li>In the Central Administration console, under **System Settings**, choose **Manage services on server**, and then make sure that the **PowerPoint Conversion Service** is set to **Started**. </li><li>Also in the Central Administration console, under **Application Management**, choose **Manage service applications**, and then make sure that the **PowerPoint Conversion Service Application** and **PowerPoint Conversion Service Application Proxy** are set to Started.</li></ul>
+> [!NOTE]
+> Before you run the example, make sure that PowerPoint Automation Services has been enabled in the SharePoint Central Administration console.<br/>  To verify that PowerPoint Automation Services is enabled, do the following: <ul><li>In the Central Administration console, under **System Settings**, choose **Manage services on server**, and then make sure that the **PowerPoint Conversion Service** is set to **Started**. </li><li>Also in the Central Administration console, under **Application Management**, choose **Manage service applications**, and then make sure that the **PowerPoint Conversion Service Application** and **PowerPoint Conversion Service Application Proxy** are set to Started.</li></ul>
   
     
     
@@ -481,7 +470,7 @@ PowerPoint Automation Services on SharePoint provides businesses with advanced c
     
     
 
-## Additional Resources
+## See also
 <a name="PAS_Additional"> </a>
 
 

@@ -86,9 +86,7 @@ In the master page preview file:
 
 -  _HTML_ is the HTML section that defines the HTML structure of the preview.
     
-  
-
-> **Note:**
+> [!NOTE]
 > All dimension values should be specified as relative units in the master page preview file. For example, dimension values can be specified as a percent or as an em measurement. For more information about em measurements, see section  [5.1.1. Font-relative lengths: the 'em', 'ex', 'ch', 'rem' units](http://www.w3.org/TR/2012/WD-css3-values-20120308/#font-relative-lengths) in the W3C CSS Values and Units Module Level 3 Working Draft.
   
     
@@ -226,13 +224,14 @@ To create a master page preview file, use an existing master page preview as a s
   
 5. Use the **Change the look** wizard to test the master page preview with your site content.
     
-    > **Note:**
-      > You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look** wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint.md#section2) procedure in [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md). 
+    > [!NOTE]
+    > You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look** wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint.md#section2) procedure in [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md). 
+
 6. Repeat steps 3 to 5, as necessary.
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

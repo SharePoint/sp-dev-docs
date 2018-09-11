@@ -8,7 +8,7 @@ ms.assetid: e9175863-ddb4-4750-847d-d53cb59b33cb
 
 # Step 2: Adding a Web Reference
 
-Web service discovery is the process by which a client locates a Web service and obtains its service description. The process of Web service discovery in Visual Studio involves interrogating a Web site following a predetermined algorithm. The goal of the process is to locate the service description, which is an XML document that uses the Web Services Description Language (WSDL).
+Web service discovery is the process by which a client locates a Web service and obtains its service description. The process of Web service discovery in Visual Studio involves interrogating a website following a predetermined algorithm. The goal of the process is to locate the service description, which is an XML document that uses the Web Services Description Language (WSDL).
   
     
     
@@ -28,8 +28,9 @@ Your application must have a means to communicate with the Web service and to lo
   
 2. In the **URL** box of the **Add Web Reference** dialog box, type the URL to obtain the service description of the Excel Web Services, such as `http://<server>/<customsite>/_vti_bin/excelservice.asmx` or `http://<server>/_vti_bin/excelservice.asmx`. Then click **Go** to retrieve information about the Web service.
     
-    > **Note:**
-      > You can also open the **Add Web Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Web Reference**. 
+    > [!NOTE]
+    > You can also open the **Add Web Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Web Reference**. 
+    
 3. In the **Web reference name** box, rename the Web reference toExcelWebService.
     
   

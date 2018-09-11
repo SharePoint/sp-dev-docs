@@ -17,7 +17,7 @@ After you convert an HTML file into a SharePoint master page, or after you creat
   
     
     
-The preview in Design Manager is a live server-side preview, so any snippets or controls on your page, such as a navigation control or a search-driven Web Part, use live data. Also, when you preview a master page or page layout, you can choose a generic preview of just that file, or you can choose to preview how a specific page in your site renders with that master page or page layout. The server-side preview is a highly useful tool that complements the design-time preview in an HTML editor. For more information, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
+The preview in Design Manager is a live server-side preview, so any snippets or controls on your page, such as a navigation control or a search-driven web part, use live data. Also, when you preview a master page or page layout, you can choose a generic preview of just that file, or you can choose to preview how a specific page in your site renders with that master page or page layout. The server-side preview is a highly useful tool that complements the design-time preview in an HTML editor. For more information, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
   
     
     
@@ -63,7 +63,7 @@ If you want an HTML **\<form\>** tag in the page layout, you should put the form
 <!--CE: End Create Snippets From Custom ASP.NET Markup Snippet-->
 ```
 
-You can also add the HTML Form Web Part or the InfoPath Form Web Part to your page from the Snippet Gallery. For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
+You can also add the HTML Form web part or the InfoPath Form web part to your page from the Snippet Gallery. For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
   
     
     
@@ -83,10 +83,7 @@ You can also add the HTML Form Web Part or the InfoPath Form Web Part to your pa
 
 For an HTML file to be converted into the corresponding ASP.NET file, the HTML file must be XML-compliant. This error identifies specific markup in your HTML file that is not XML-compliant. Run the HTML file through an XML validator, fix any issues in your HTML editor, save the file, and then refresh the preview.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > This requirement overrides some HTML 5 standards. For example, in HTML 5 you can specify the doctype in lowercase, but in XML the doctype must be uppercase. 
   
     
@@ -169,7 +166,7 @@ You see this message when you aren't using a live SharePoint page with which to 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

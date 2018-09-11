@@ -13,7 +13,7 @@ With Design Manager, you can convert an .html file into a SharePoint master page
 ## Introduction to converting a master page
 <a name="Introduction"> </a>
 
- With Design Manager, you can convert an.html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
+ With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
   
     
     
@@ -37,9 +37,7 @@ When you convert an HTML file into a master page:
   
 - The HTML file and master page are associated, so that any later edits to the HTML file are synced to the .master file when the HTML file is saved.
     
-  
-
-> **Note:**
+> [!NOTE]
 > The syncing goes in one direction only. Changes to the HTML master page are synced to the associated .master file, but if you choose to edit the .master file directly the changes are not synced to the HTML file. Every HTML master page (and every HTML page layout) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.
   
     
@@ -62,7 +60,7 @@ Before you convert your HTML file, here are some best practices and guidance to 
     
     
 
-- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains Web Parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
+- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains web parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
     
   
 - Make sure your HTML file is XML-compliant. For the conversion to work, the HTML file must be XML-compliant. Unfortunately, this requirement overrides some HTML 5 standards—for example, in HTML 5 you can specify the **doctype** in lowercase, but in XML the **doctype** must be uppercase. Also, you should remove any **\<form\>** tags from your HTML file. Consider running your HTML file through an external XML validator to identify XML errors before conversion.
@@ -137,8 +135,8 @@ Before you convert an HTML file, you first have to upload all of your design fil
   
 5. In the **Select an Asset** dialog box, browse to and select the HTML file that you want to convert.
     
-    > **Note:**
-      > When you upload your design files, you should keep all files that are related to a single design in their own folder in the Master Page Gallery. When you copy your design folder into the mapped network drive, the Master Page Gallery retains whatever folder structure you created. 
+    > [!NOTE]
+    > When you upload your design files, you should keep all files that are related to a single design in their own folder in the Master Page Gallery. When you copy your design folder into the mapped network drive, the Master Page Gallery retains whatever folder structure you created. 
 6. Choose **Insert**.
     
     At this point, SharePoint converts your HTML file into a .master file with the same name.
@@ -496,7 +494,7 @@ The following is an example of markup added to an HTML file after it is converte
 ```
 
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 
