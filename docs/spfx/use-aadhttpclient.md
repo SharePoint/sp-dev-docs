@@ -269,29 +269,29 @@ SharePoint tenant administrators can use the SharePoint Online Management Shell 
 
 SharePoint tenant administrators can use the [Office 365 CLI](https://aka.ms/o365cli) to manage permissions and permission requests in SharePoint Online.
 
-- To **view all pending permission requests**, use the [spo serviceprincipal permissionrequest list](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-list/) command. For each permission request, the command lists its ID (required to either approve or deny the request), the resource for which permissions have been requested, and the requested permissions.
+- To **view all pending permission requests**, use the [spo serviceprincipal permissionrequest list](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-list/) command. For each permission request, the command lists its ID (required to either approve or deny the request), the resource for which permissions have been requested, and the requested permissions.
 
   > [!NOTE]
   > SharePoint doesn't verify if the requested permissions have already been granted or not, so before approving or rejecting a permission request, check which permissions have already been granted in your tenant.
 
-- To **approve a specific permission request**, use the [spo serviceprincipal permissionrequest approve](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-approve/) command, specifying the ID of the permission request that you want to approve.
+- To **approve a specific permission request**, use the [spo serviceprincipal permissionrequest approve](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-approve/) command, specifying the ID of the permission request that you want to approve.
 
   > [!NOTE]
   > If you try to approve a request for a permission that has already been granted, you get an error.
 
-- To **deny a permission request** (if the requested permission has already been granted, or the request is against your organizational policies), use the [spo serviceprincipal permissionrequest deny](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-deny/) command, specifying the ID of the permission request that you want to deny.
+- To **deny a permission request** (if the requested permission has already been granted, or the request is against your organizational policies), use the [spo serviceprincipal permissionrequest deny](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-deny/) command, specifying the ID of the permission request that you want to deny.
 
   > [!NOTE]
   > Denying a permission request issued by a SharePoint Framework application doesn't prevent that application from being deployed in the app catalog and installed on sites.
 
-- To **view which permissions have been granted** in your tenant, use the [spo serviceprincipal grant list](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-list/) command. For each grant, the command displays the following information:
+- To **view which permissions have been granted** in your tenant, use the [spo serviceprincipal grant list](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-list/) command. For each grant, the command displays the following information:
 
   - **ObjectId**: The unique identifier for the permission grant.
   - **Resource**: The resource to which access has been granted.
   - **ResourceId**: The objectId of the resource service principal to which access has been granted.
   - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 
-- To **revoke a previously granted permission**, use the [spo serviceprincipal grant revoke](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-revoke/) command. In the `grantId` parameter, specify the objectId of the grant that you want to revoke, which you can obtain by using the `spo serviceprincipal grant list` command.
+- To **revoke a previously granted permission**, use the [spo serviceprincipal grant revoke](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-revoke/) command. In the `grantId` parameter, specify the objectId of the grant that you want to revoke, which you can obtain by using the `spo serviceprincipal grant list` command.
 
   > [!NOTE]
   > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.
@@ -382,7 +382,7 @@ No matter if the administrator denies or approves permissions requested by the s
 
 All permissions granted through web API requests are stored with the **SharePoint Online Client Extensibility** Azure AD application. If tenant administrators don't want developers to use the web API request model and the **MSGraphClient** and **AadHttpClient** in their solutions, they can disable the **SharePoint Online Client Extensibility** service principal through PowerShell by using the `Disable-SPOTenantServicePrincipal` cmdlet.
 
-The service principal can be re-enabled by using the `Enable-SPOTenantServicePrincipal` cmdlet. Alternatively, it's also possible to enable and disable the **SharePoint Online Client Extensibility** service principal through the Office 365 CLI by using the [spo serviceprincipal set](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-set/) command.
+The service principal can be re-enabled by using the `Enable-SPOTenantServicePrincipal` cmdlet. Alternatively, it's also possible to enable and disable the **SharePoint Online Client Extensibility** service principal through the Office 365 CLI by using the [spo serviceprincipal set](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-set/) command.
 
 ### Access to the Microsoft Graph
 
