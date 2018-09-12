@@ -31,10 +31,10 @@ Following are the most commonly used list template types that SharePoint can cur
 - Assets library (851)
 - Issue tracking list (1100)
 
-In this section you'll learn how to identify lists which are not showing as a modern list, why that is and how to remediate those (if possible). However before jumping into this it's important to realize that for most tenants we see the majority of the lists presenting themselves in modern. For the lists that are not ready for modern you'll see in below chart that the main reason is that Microsoft did not build a modern version for it. Lists which do not have a modern version are 100% fine to use, fully supported and they should not be a reason to enable the modern list and library experience on your tenant. Finally there's the small amount of lists that you can remediate as described in this article series.
+In this section you'll learn how to identify lists which are not showing as a modern list, why that is and how to remediate those (if possible). However before jumping into this it's important to realize that for most tenants we see the majority of the lists presenting themselves in modern. For the lists that are not ready for modern you'll see in below chart that the main reason is that Microsoft did not build a modern version for it. Lists which do not have a modern version are 100% fine to use, fully supported and they should not be a reason to not enable the modern list and library experience on your tenant. Finally there's the small amount of lists that you can remediate as described in this article series.
 
 > [!IMPORTANT]
-> For most tenants there are not that many lists that you can fix and as such our recommendation is to simply enable the modern list and library experience at tenant level. This will ensure that all lists than can use modern present themselves as a modern list while lists that cannot simply switch to classic when you use them.
+> For most tenants there are not that many lists that you can fix and as such our recommendation is to simply enable the modern list and library experience at tenant level. This will ensure that all lists that can use modern present themselves as a modern list while lists that cannot simply switch to classic when you use them.
 
 ![Modern list readiness default](media/modernize/modernlistdefaultreadiness.png)
 
