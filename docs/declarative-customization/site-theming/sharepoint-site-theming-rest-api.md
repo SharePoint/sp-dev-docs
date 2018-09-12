@@ -22,13 +22,13 @@ Before you get started, make sure that you're familiar with the following:
 The following REST commands are available for working with site themes:
 
 * __AddTenantTheme__ &ndash; create a new theme; similar to the Add-SPOTheme SharePoint cmdlet
-* __RemoveTenantTheme__ &ndash; remove a theme from the tenant store; similar to the Remove-SPOTheme PowerShell cmdlet
+* __DeleteTenantTheme__ &ndash; remove a theme from the tenant store; similar to the Remove-SPOTheme PowerShell cmdlet
 * __GetTenantThemingOptions__ &ndash; read theme settings
 
 The URL for theme management REST commands is based on _api/thememanager. For example, the following are the endpoints for the commands:
 
 * `http://<site url>/_api/thememanager/AddTenantTheme`
-* `http://<site url>/_api/thememanager/RemoveTenantTheme`
+* `http://<site url>/_api/thememanager/DeleteTenantTheme`
 * `http://<site url>/_api/thememanager/GetTenantThemingOptions`
 
 ## AddTenantTheme
@@ -87,7 +87,7 @@ RestRequest("/_api/thememanager/AddTenantTheme", {name:"Sounders Rave Green", th
 
 <br/>
 
-## RemoveTenantTheme
+## DeleteTenantTheme
 
 The following JavaScript sample code shows how to remove a theme.
 
