@@ -65,6 +65,45 @@ When working with JavaScript libraries that have their own services for executin
 > [!NOTE]
 > It's recommended to regularly update your SharePoint Framework solutions to the most recent version of the SharePoint Framework to benefit of the improvements and new capabilities added by Microsoft.
 
+#### Request permissions to API secured with Azure AD  
+
+If your SharePoint Framework solution requires permissions to specific resources secured with Azure AD, such as enterprise API, you should specify these resources along with the necessary permissions in the configuration of your solution.
+
+1. In your SharePoint Framework project, open the **config/package-solution.json** file.
+
+2. To the **solution** property, add the **webApiPermissionRequests** property that lists all the resources and corresponding permissions that your solution needs.
+
+  Following is an example of a SharePoint Framework solution requesting access to enterprise API:
+
+  ```json
+  {
+    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+      "name": "spfx-client-side-solution",
+      "id": "5d16587c-5e87-44d7-b658-1148988f212a",
+      "version": "1.0.0.0",
+      "includeClientSideAssets": true,
+      "skipFeatureDeployment": true,
+      "webApiPermissionRequests": [
+        {
+          "resource": "Enterprise-API-Name",
+          "scope": "user_impersonation"
+        }
+      ]
+    },
+    "paths": {
+      "zippedPackage": "solution/spfx-api.sppkg"
+    }
+  }
+  ```
+
+  > [!NOTE]
+  > For the value of the **resource** property, you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the displayName not only is more readable but also allows you to build your solution once and reuse it across multiple tenants. While the objectId of an Azure AD application is different on each tenant, the displayName stays the same.
+
+3. When this solution is deployed to the SharePoint app catalog, it prompts the administrator to verify the requested permissions and either grant or deny them. Read [Manage permission requests](../../use-aadhttpclient.md#manage-permission-requests) article to learn more about different ways of managing permission requests.
+
+#### Acquire an access token
+
 Following is how you would use the AadTokenProvider to retrieve an access token for an enterprise API secured with Azure AD and use it to perform a web request using jQuery:
 
 ```ts

@@ -17,7 +17,7 @@ You can transform (or "modernize") a classic site into a modern Office 365 group
 > You can decide which steps to run and the order in which to run them. Although there's no one-size-fits-all process to modernize your site, the following is the recommended approach.
 
 > [!IMPORTANT]
-> It's not currently supported to start using the modern page experience on sites where classic publishing features have been activated.
+> For publishing portals (sites based upon BLANKINTERNET#0, ENTERWIKI#0, SRCHCEN#0, SRCHCENTERLITE#0, BICENTERSITE#0, POINTPUBLISHINGHUB#0, POINTPUBLISHINGTOPIC#0 or sites using the “Pages” library) it's not currently supported to connect these to an Office 365 group or to use modern pages. If you want to modernize your publishing portal it's recommended to start from a new communication site and configure that one accordingly.
 
 ## Enable your site to fully leverage the modern user interface
 

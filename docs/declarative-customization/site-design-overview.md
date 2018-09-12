@@ -1,13 +1,13 @@
 ---
 title: SharePoint site design and site script overview
 description: Use SharePoint site scripts and site designs to provide custom configurations to apply when new sites are created.
-ms.date: 04/20/2018
+ms.date: 09/10/2018
 ---
 
 # SharePoint site design and site script overview
 
 > [!NOTE]
-> Site designs and site scripts have been released to production and are available for general use.
+> Site designs and site scripts are currently only supported by SharePoint Online.
 
 Use site designs and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations. 
 
