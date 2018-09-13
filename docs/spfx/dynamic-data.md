@@ -1,7 +1,7 @@
 ---
 title: Connect SharePoint Framework components using dynamic data
 description: High level description on how to use dynamic data concept for connecting different SharePoint Framework components
-ms.date: 06/05/2018
+ms.date: 09/13/2018
 ms.prod: sharepoint
 ---
 
@@ -16,10 +16,10 @@ Using the dynamic data capability, you can connect SharePoint Framework client-s
 
 Dynamic data in the SharePoint Framework is based on the source-notification model. Component designated as a dynamic data source, provides data and notifies about its changes. Other components on the page can subscribe to notifications issued by a dynamic data source. When handling notifications, dynamic data consumers can retrieve the current value of the dynamic data set exposed by the data source.
 
-Each data source implements the `IDynamicDataController` interface. Following, is an example of a web part that displays a list of upcoming events. For each event, it includes some information such as its name, description and location. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
+Each data source implements the `IDynamicDataCallables` interface. Following, is an example of a web part that displays a list of upcoming events. For each event, it includes some information such as its name, description and location. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
 
 ```ts
-export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartProps> implements IDynamicDataController {
+export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartProps> implements IDynamicDataCallables {
   private _selectedEvent: IEvent;
 
   private _eventSelected = (event: IEvent): void => {
@@ -80,9 +80,9 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
 ```
 
 > [!IMPORTANT]
-> The `IDynamicDataController` interface can be implemented by any class, not just web parts and extensions. If the dynamic data source requires complex logic, you should consider moving it into a separate class rather than implementing it directly inside a web part or extension.
+> The `IDynamicDataCallables` interface can be implemented by any class, not just web parts and extensions. If the dynamic data source requires complex logic, you should consider moving it into a separate class rather than implementing it directly inside a web part or extension.
 
-The class implementing the `IDynamicDataController` interface must define two methods: `getPropertyDefinitions` and `getPropertyValue`. The `getPropertyDefinitions` method returns an array of types of data that the particular dynamic data source returns. In the previous example, the web part exposes detailed information about an event and its location. Even though the information comes from a single object (`_selectedEvent`), by exposing it in two different shapes, the web part is more reusable and could be used in combination with other web parts that aren't specific to events, such as a map web part that can show a map for the specified address. The list of the data types exposed by the data source is displayed to end-users when connecting web parts to the data source.
+The class implementing the `IDynamicDataCallables` interface must define two methods: `getPropertyDefinitions` and `getPropertyValue`. The `getPropertyDefinitions` method returns an array of types of data that the particular dynamic data source returns. In the previous example, the web part exposes detailed information about an event and its location. Even though the information comes from a single object (`_selectedEvent`), by exposing it in two different shapes, the web part is more reusable and could be used in combination with other web parts that aren't specific to events, such as a map web part that can show a map for the specified address. The list of the data types exposed by the data source is displayed to end-users when connecting web parts to the data source.
 
 > [!IMPORTANT]
 > The object returned by the `getPropertyValue` method should be flat, for example:
@@ -119,7 +119,7 @@ The class implementing the `IDynamicDataController` interface must define two me
 
 The `getPropertyValue` method returns the value for the particular type of data. The value of the `propertyId` argument corresponds to the `id` of the definition specified in the `getPropertyDefinitions` method.
 
-To register a component as a dynamic data source, call the `this.context.dynamicDataSourceManager.initializeSource()` method, passing the instance of the dynamic data source as a parameter. In the previous example, the web part itself implements the `IDynamicDataController` interface, which is why the `initializeSource` method is called with `this` as its argument.
+To register a component as a dynamic data source, call the `this.context.dynamicDataSourceManager.initializeSource()` method, passing the instance of the dynamic data source as a parameter. In the previous example, the web part itself implements the `IDynamicDataCallables` interface, which is why the `initializeSource` method is called with `this` as its argument.
 
 In the example code, the web part displays upcoming events in a list. Each time, the user selects an event from the list, the web part calls the `_eventSelected` method. In that method, the web part assigns the selected event to the `_selectedEvent` class variable and issues a notification that the information about the selected event and location has changed by calling the `this.context.dynamicDataSourceManager.notifyPropertyChanged()` method passing the `id` of the definition that represents the changed data set.
 
