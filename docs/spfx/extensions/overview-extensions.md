@@ -21,9 +21,6 @@ SharePoint Framework Extensions enable you to extend the SharePoint user experie
 
 You can build extensions alongside common scripting frameworks, such as AngularJS and React, in addition to plain JavaScript projects. For example, you can use React along with components from Office UI Fabric React to create experiences based on the same components used in Office 365.
 
-> [!NOTE]
-> There is a known bug with list and library extension support in the classic experiences. These only work currently in context of modern team sites, also known as group associated team sites. Work is being done to address this issue. 
-
 ## Get started
 
 1. If you haven't installed the SharePoint Framework, follow the steps to [Set up your development environment](../set-up-your-development-environment.md).
