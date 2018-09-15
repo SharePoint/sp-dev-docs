@@ -151,10 +151,27 @@ The next and last step is to deploy the application to the app catalog to make i
 ![Deploying the package to the catalog](../../images/azure-devops-spfx-17.png)
 
 ### Setting the variables for the environment
+The tasks you configured right before rely on Azure DevOps process variables (easily identified with the `$(variableName)` syntax). You need to define those variables before being able to run the build definition. To do so, click on the `Variables` tab.  
+Add the following variables
+| Name | Value |
+| ------ | ------ |
+| catalogsite | Server relative Path of the App Catalog Site eg `sites/appcatalog` |
+| password | Password of the user with administrative permissions on the tenant, do not forget to check the lockpad to mask it to other users |
+| username | Username of the user with administrative permissions on the tenant |
+| tenant | Tenant name in https://tenant.sharepoint.com eg `tenant` |
+![Variables setup](../../images/azure-devops-spfx-18.png)
 
+ > [!NOTE] Make sure you save your release definition.
 
 ## Testing
+Go back to the `Builds` section in Azure DevOps, select your build definition and click on `Queue`. Select your branch, and click on `Queue`. Your build is created and will start building. 
+![Queuing a build](../../images/azure-devops-spfx-19.png)
+After a couple of minutes, your build should complete and show a result page like this one.  
+![Results of a build](../../images/azure-devops-spfx-20.png)
+If you navigate to the `Release` section of Azure DevOps, a new release should have started automatically. After a few minutes your release should complete and your SharePoint Framework solution is deployed to your tenant.  
+![Results of a release](../../images/azure-devops-spfx-21.png)
 
+Your DevOps pipeline for your SharePoint Framework solution in Azure DevOps is now set up and ready to be customized further to your scenario. 
 
 ## See Also
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)
