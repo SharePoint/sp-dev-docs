@@ -105,6 +105,57 @@ Now that you have collected all the files needed for deployment in a special art
 ![publishing the artifacts](../../images/azure-devops-spfx-09.png)
 
 
+## Continuous Deployment
+Continuous deployment helps you deploy your package to different environments and keep tracks of which versions are deployed to which environments.
+
+### Creating the Release Definition
+Start by creating a new release definition with an empty template. A release defition is a process model that defines which environments you are working with, as well at the deployment tasks to executes and which artifacts (from the builds) will be used.
+![creating the release definition](../../images/azure-devops-spfx-10.png)
+
+### Linking the build artifact
+Click on `Add an artifact` and select the build definition you previously created, write down the `Source Alias` name you set as it will impact paths for the tasks later on.
+![linking the artifacts](../../images/azure-devops-spfx-11.png)
+
+### Creating the environment
+You can give a name to your environment, set up pre-deployment approvals, artificats filters (deploy only if the build comes from this or that branch) an much more by clicking on the buttons around the environment box or directly on the title.
+![creating the environment](../../images/azure-devops-spfx-12.png)
+
+### Installing node 10
+By click on `1 job, 0 tasks` you can access on the tasks configuration view, which works similarly to the build definition. That set of tasks will run only for this specific environment. 
+Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. 
+![installing node 10](../../images/azure-devops-spfx-13.png)
+
+### Installing the Office 365 CLI
+The Office 365 CLI is an open source project built by the PnP Community. This Release Definition will take advantage of commands available as part of the CLI to handle deployement, you need to install it first. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
+![installing office 365 cli](../../images/azure-devops-spfx-14.png)
+> [!NOTE] 
+> Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
+
+### Connecting to the App Catalog
+You first need to authenticate against the App Catalog of your tenant, add a `Command Line` task and paste in the following command into the `script` field `o365 spo connect https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
+`
+![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
+
+### Adding the solution package to the app catalog
+Upload the solution package to your app catalog by adding another `Command Line` task and pasting the following command line in the `Script` field `o365 spo app add -p $(System.DefaultWorkingDirectory)/SpFxDevOps/drop/SharePoint/solution/sp-fx-devops.sppkg --overwrite`
+> [!NOTE] 
+> The path of the package depends on your solution name (see your project configuration) as well as the `Source Alias` you defined earlier, make sure they match.
+
+![uploading the package to the catalog](../../images/azure-devops-spfx-16.png)
+
+### Deploying the application
+The next and last step is to deploy the application to the app catalog to make it available to all site collection within the tenant as it's latest version. Add another `Command Line` taks and paste the follwing command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
+> [!NOTE] 
+> Make sure you update the package name.
+
+![Deploying the package to the catalog](../../images/azure-devops-spfx-17.png)
+
+### Setting the variables for the environment
+
+
+## Testing
+
+
 ## See Also
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)
 - [Sample Project on GitHub](https://github.com/SharePoint/sp-dev-build-extensions/tree/master/samples/azure-devops-ci-cd-spfx)
