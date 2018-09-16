@@ -19,12 +19,12 @@ Start by creating a new build definition and link it to your repository.
 > [!NOTE] 
 > Build definitions can be described as a process template. It is a set of configured task that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
 
-### Installing NodeJS version 10
-For this first task you will begin by installing NodeJS version 10, the main reason for this it so spead up the modules installation process and benefit significant performance improvements the community has made.
-![installing node 10](../../images/azure-devops-spfx-02.png)
+### Installing NodeJS version 8
+For this first task you will begin by installing NodeJS version 8 because it is the version currently supported by the SharePoint Framework.
+![installing node 8](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE] 
-> Make sure you specify `10.x` in the `Version Spec` field.
+> Make sure you specify `8.x` in the `Version Spec` field.
 
 ### Restoring dependencies
 Because third party dependencies are not stored in the source control, you need to restore those before starting to build the project. To do so add a `npm` task and set the command to `install`.
@@ -124,6 +124,7 @@ You can give a name to your environment, set up pre-deployment approvals, artifi
 By click on `1 job, 0 tasks` you can access on the tasks configuration view, which works similarly to the build definition. That set of tasks will run only for this specific environment. 
 Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. 
 ![installing node 10](../../images/azure-devops-spfx-13.png)
+> [!NOTE] Only NodeJS version 8 is supported by the SharePoint Framework. However the version 10 includes significant performance improvements and during this set of tasks you will not be directly using the SharePoint Framework tooling as you already created the solution during the build phase.
 
 ### Installing the Office 365 CLI
 The Office 365 CLI is an open source project built by the PnP Community. This Release Definition will take advantage of commands available as part of the CLI to handle deployment, you need to install it first. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
