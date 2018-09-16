@@ -160,9 +160,10 @@ Add the following variables
 | password | Password of the user with administrative permissions on the tenant, do not forget to check the lockpad to mask it to other users |
 | username | Username of the user with administrative permissions on the tenant |
 | tenant | Tenant name in https://tenant.sharepoint.com eg `tenant` |
-![Variables setup](../../images/azure-devops-spfx-18.png)
+![Variables setup](../../images/azure-devops-spfx-18.png)  
 
-> [!NOTE] Make sure you save your release definition.
+> [!NOTE]
+> Make sure you save your release definition.
 
 ## Testing
 Go back to the `Builds` section in Azure DevOps, select your build definition and click on `Queue`. Select your branch, and click on `Queue`. Your build is created and will start building. 
