@@ -11,7 +11,7 @@ Azure DevOps (Visual Studio Team Services / Team Foundation Server)  consists of
 When building SharePoint Framework solutions you can easily leverage Azure DevOps to automate builds, unit tests and deployment.  
 
 ## Continuous Integration
-Continuous integration (CI) will help you do things like build, run unit tests and package the solution every time code changes are detected.  
+Continuous integration (CI) is the notion of automating things like building the source code, running unit tests and packaging the solution every time code changes are detected.  
 
 ### Creating the build definition
 Start by creating a new build definition and link it to your repository.
@@ -126,7 +126,7 @@ Add a `Node tool installer` task and define `10.X` in the `Version Spec` field.
 ![installing node 10](../../images/azure-devops-spfx-13.png)
 
 ### Installing the Office 365 CLI
-The Office 365 CLI is an open source project built by the PnP Community. This Release Definition will take advantage of commands available as part of the CLI to handle deployement, you need to install it first. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
+The Office 365 CLI is an open source project built by the PnP Community. This Release Definition will take advantage of commands available as part of the CLI to handle deployment, you need to install it first. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
 ![installing office 365 cli](../../images/azure-devops-spfx-14.png)
 > [!NOTE] 
 > Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
@@ -161,7 +161,7 @@ Add the following variables
 | tenant | Tenant name in https://tenant.sharepoint.com eg `tenant` |
 ![Variables setup](../../images/azure-devops-spfx-18.png)
 
- > [!NOTE] Make sure you save your release definition.
+> [!NOTE] Make sure you save your release definition.
 
 ## Testing
 Go back to the `Builds` section in Azure DevOps, select your build definition and click on `Queue`. Select your branch, and click on `Queue`. Your build is created and will start building. 
