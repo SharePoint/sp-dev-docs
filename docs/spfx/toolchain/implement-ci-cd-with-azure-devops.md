@@ -1,13 +1,13 @@
 ---
-title: Implement Continuous Integration and Continuous deployment using Azure Devops
-description: Automate most of the repetitive steps when building a solution to save time and focus on important tasks.
+title: Implement Continuous Integration and Continuous deployment using Azure DevOps
+description: Streamlining the build and deployment process by automating manual steps.
 ms.date: 09/06/2018
 ms.prod: sharepoint
 ---
 
 
-# Implement Continuous Integration and Continuous deployment using Azure Devops
-Azure DevOps (Visual Studio Team Services / Team Foundation Server)  is a set of tools and services that will help a developer, or a team of developers, implement DevOps processes, Continuous Integration and Continuous Deployment for their development projects.  
+# Implement Continuous Integration and Continuous deployment using Azure DevOps
+Azure DevOps (Visual Studio Team Services / Team Foundation Server)  consists of a set of tools and services that help developers implement DevOps, Continuous Integration, and Continuous Deployment processes for their development projects.  
 When building SharePoint Framework solutions you can easily leverage Azure DevOps to automate builds, unit tests and deployment.  
 
 ## Continuous Integration
