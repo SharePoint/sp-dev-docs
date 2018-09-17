@@ -135,7 +135,7 @@ You can use the variations feature in SharePoint to create multilingual sites or
 
 ### Accessible sites
 
-You can use the variations feature in SharePoint to create accessible sites or other sites where you want to adapt the presentation of your content for users who have a variety of accessability needs. SharePointprovides a "More Accessible Mode", which can be activated by opening a SharePoint webpage, and pressing the TAB key until you find the "Turn on More Accessible Mode" link. This feature recreates the webpage in standard HTML, making it friendlier for screen-readers. By ensuring that users are able to press the TAB key to focus on this link, you are able to create a more accessible version of your SharePoint webpage. This includes JavaScript-based drop-down menus being converted to hyperlink lists and objects are converted to simpler HTML to allow screen-readers to understand the content. 
+You can use the variations feature in SharePoint to create accessible sites or other sites where you want to adapt the presentation of your content for users who have a variety of accessability needs. SharePoint provides a "More Accessible Mode", which can be activated by opening a SharePoint webpage, and pressing the TAB key until you find the "Turn on More Accessible Mode" link. This feature recreates the webpage in standard HTML, making it friendlier for screen-readers. By ensuring that users are able to press the TAB key to focus on this link, you are able to create a more accessible version of your SharePoint webpage. This includes JavaScript-based drop-down menus being converted to hyperlink lists and objects are converted to simpler HTML to allow screen-readers to understand the content. 
   
     
     
