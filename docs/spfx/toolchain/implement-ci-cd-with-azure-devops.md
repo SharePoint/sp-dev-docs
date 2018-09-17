@@ -7,20 +7,32 @@ ms.prod: sharepoint
 
 
 # Implement Continuous Integration and Continuous deployment using Azure DevOps
-Azure DevOps (Visual Studio Team Services / Team Foundation Server)  consists of a set of tools and services that help developers implement DevOps, Continuous Integration, and Continuous Deployment processes for their development projects.  
-When building SharePoint Framework solutions you can easily leverage Azure DevOps to automate builds, unit tests and deployment.  
+Azure DevOps (Visual Studio Team Services / Team Foundation Server) consists of a set of tools and services that help developers implement DevOps, Continuous Integration, and Continuous Deployment processes for their development projects.
+
+This article explains the steps involved in setting up your Azure DevOps environment with with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
 ## Continuous Integration
-Continuous integration (CI) is the notion of automating things like building the source code, running unit tests and packaging the solution every time code changes are detected.  
+Continuous Integration (CI) helps developers integrate code into a shared repository by automatically verifying the build using unit tests and packaging the solution each time new code changes are submitted.  
 
-### Creating the build definition
-Start by creating a new build definition and link it to your repository.
+Setting up Azure DevOps for Continuous Integration requires the following steps:
+1. Creating the Build Definition
+2. Installing NodeJS
+3. Restoring dependencies
+4. Executing Unit Tests
+5. Importing code coverage information
+6. Bundling the solution
+7. Packaging the solution
+8. Preparing the artifacts
+9. Publishing the artifacts
+
+### Creating the Build Definition
+The Build Definition, as its name suggests, includes all the definitions and their configurations for the build.  Start setting up your Continuous Integration by creating a new build definition and link it to your repository.
 ![linking the build definition to the repository](../../images/azure-devops-spfx-01.png)
 > [!NOTE] 
 > Build definitions can be described as a process template. It is a set of configured task that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
 
 ### Installing NodeJS version 8
-For this first task you will begin by installing NodeJS version 8 because it is the version currently supported by the SharePoint Framework.
+Once the Build Definition has been created, the first thing you need to do is instal NodeJS.  Make sure to install version 8 or newer, as SharePoint Framework depends on it.
 ![installing node 8](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE] 
@@ -31,17 +43,18 @@ Because third party dependencies are not stored in the source control, you need 
 ![installing dependencies](../../images/azure-devops-spfx-03.png)
 
 ### Executing Unit Tests
-The SharePoint Framework supports writing units tests using KarmaJS, Mocha, Chai and Sinon. These modules are already referenced for you and it is highly recommended to at least test the business logic of your code to get feedback on any potential issue or regression as soon as possible. To have Azure DevOps execute your unit tests, add a `gulp` task. Set the path to the `gulpfile` file and set the `Gulp Tasks` option to `test`.
+The SharePoint Framework supports writing units tests using KarmaJS, Mocha, Chai and Sinon. These modules are already referenced for you and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issue or regression as soon as possible. To have Azure DevOps execute your unit tests, add a `gulp` task. Set the path to the `gulpfile` file and set the `Gulp Tasks` option to `test`.
 ![executing unit tests](../../images/azure-devops-spfx-04.png)
 > [!NOTE] 
 > Make sure you check `Publish to TFS/Team Services` under the `JUnit Test Results` section and set the `Test Result Files` to `**/test-*.xml`. This will instruct the task to report results with the build status in Azure DevOps.
 
+#### Configuring KarmaJS
 By default SharePoint Framework projects do not include a reporter for JUnit. Reporters are plugins for KarmaJS that export the test results in a certain format. To install the necessary reporters, run the following commands in your project.
 
 ```shell
 npm i karma-junit-reporter@1.X -D
 ```
-You also need to configure karma to load an use the reporter, to do so create a file `config/karma.config.js` and add the following content.
+You also need to configure KarmaJS to load an use the reporter, to do so create a file `config/karma.config.js` and add the following content.
 ```JS
 "use strict";
 var existingKarmaConfig = require('@microsoft/sp-build-web/lib/karma/karma.config');
@@ -84,19 +97,19 @@ var karmaTask = _.find(buildConfig.uniqueTasks, (t) => t.name === 'karma');
 karmaTask.taskConfig.configPath = './config/karma.config.js';
 ```
 ### Importing code coverage information
-In order to get code coverage reported with the build status you need to add a task to import that information. Add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/temp/coverage/cobertura/cobertura.xml` and `Report Directory` to `$(Build.SourcesDirectory)/temp/coverage/cobertura`.
+In order to get code coverage reported with the build status you need to add a task to import that information. To configure the code coverage information, add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/temp/coverage/cobertura/cobertura.xml` and `Report Directory` to `$(Build.SourcesDirectory)/temp/coverage/cobertura`.
 ![importing coverage information](../../images/azure-devops-spfx-05.png)
 
 ### Bundling the solution
-You first need to bundle your solution in order to get static assets that can be understood by a web browser. For that add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to bundle and add `--ship` in the `Arguments`.
+You first need to bundle your solution in order to get static assets that can be understood by a web browser.  Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to bundle and add `--ship` in the `Arguments`.
 ![bundling the assets](../../images/azure-devops-spfx-06.png)
 
 ### Packaging the solution
-Now that you have static assets, the next step is to package those into a package SharePoint will be able to deploy. Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to `package-solution` and add `--ship` in the `Arguments`.
+Now that you have static assets, the next step is to combine the assets into a package SharePoint will be able to deploy. Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to `package-solution` and add `--ship` in the `Arguments`.
 ![packaging the solution](../../images/azure-devops-spfx-07.png)
 
 ### Preparing the artifacts
-By default a Azure DevOps build does not retain any files, you have to explicitly tell it to keep the files you will be needing for the release.  
+By default a Azure DevOps build does not retain any files.  To ensure that the required files needed for the release are retained, , you need to explicitly indicate which files should be kept.  
 Add a `Copy Files` task and set the `Contents` to `**\*.sppkg` (the SharePoint Package created with the previous task) and the target folder to `$(build.artifactstagingdirectory)/drop`.
 ![grabbing the artifacts](../../images/azure-devops-spfx-08.png)
 
