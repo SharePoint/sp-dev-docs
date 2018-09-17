@@ -162,7 +162,7 @@ You cannot use the local Workbench to test SharePoint Framework Extensions. You 
     This dialog is thrown by your SharePoint Framework Extension. Note that because you provided the `testMessage` property as part of the debug query parameters, it's included in the alert message. You can configure your extension instances based on the client component properties, which are passed for the instance in runtime mode.
 
 > [!NOTE] 
-> If you have issues with debugging, double-check the pageUrl setting in the **server.json** file.
+> If you have issues with debugging, double-check the pageUrl setting in the **serve.json** file.
 
 ## Next steps
 

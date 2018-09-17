@@ -145,7 +145,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     Because our ListView Command Set is hosted from localhost and is running, we can use specific debug query parameters to execute the code in the list view.
 
-2. Open **serve.json** file from **config** folder. Update **pageUrl** attribute to match an URL of the list where you want to test the solution. After edits your server.json should look somewhat following.
+2. Open **serve.json** file from **config** folder. Update **pageUrl** attribute to match an URL of the list where you want to test the solution. After edits your serve.json should look somewhat following.
 
     ```json
     {
@@ -189,7 +189,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     When the code compiles without errors, it serves the resulting manifest from https://localhost:4321.
 
-    This will also start your default browser within the URL defined in **server.json** file. Notice that at least in Windows, you can control which browser window is used by activating the preferred one before executing this command.
+    This will also start your default browser within the URL defined in **serve.json** file. Notice that at least in Windows, you can control which browser window is used by activating the preferred one before executing this command.
 
 4. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
     
