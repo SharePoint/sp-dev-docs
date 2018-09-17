@@ -133,13 +133,10 @@ Click on `Add an artifact` and select the build definition you previously create
 You can give a name to your environment, set up pre-deployment approvals, artificats filters (deploy only if the build comes from this or that branch) an much more by clicking on the buttons around the environment box or directly on the title.
 ![creating the environment](../../images/azure-devops-spfx-12.png)
 
-### Installing node 10
+### Installing node 8
 By click on `1 job, 0 tasks` you can access on the tasks configuration view, which works similarly to the build definition. That set of tasks will run only for this specific environment. 
-Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. 
-![installing node 10](../../images/azure-devops-spfx-13.png)  
-
-> [!NOTE]
-> Only NodeJS version 8 is supported by the SharePoint Framework. However the version 10 includes significant performance improvements and during this set of tasks you will not be directly using the SharePoint Framework tooling as you already created the solution during the build phase.
+Add a `Node tool installer` task and define `8.X` in the `Version Spec` field. 
+![installing node 8](../../images/azure-devops-spfx-13.png)
 
 ### Installing the Office 365 CLI
 The Office 365 CLI is an open source project built by the PnP Community. This Release Definition will take advantage of commands available as part of the CLI to handle deployment, you need to install it first. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
