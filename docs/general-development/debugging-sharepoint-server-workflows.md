@@ -419,7 +419,7 @@ PS C:\\> New-SPTrustedRootAuthority -Name "Fiddler" -Certificate $fiddlerCertifi
 
 ### Walkthrough: Debugging a SharePoint workflow with Fiddler
 
-This simple walkthrough demonstrates using Fiddler to debug a SharePoint workflow authored using Visual Studio 2012. When the workflow starts, it retrieves a customer ID from a field in a custom list. This customer ID is used to query a publically accessible service to retrieve additional details about the customer. It then uses these values to update the original list item. The workflow can be found in the following MSDN code sample:  [SharePoint Workflow: Call an External Web Service](http://code.msdn.microsoft.com/officeapps/SharePoint-workflow-48ea87d4.aspx).
+This simple walkthrough demonstrates using Fiddler to debug a SharePoint workflow authored using Visual Studio 2012. When the workflow starts, it retrieves a customer ID from a field in a custom list. This customer ID is used to query a publically accessible service to retrieve additional details about the customer. It then uses these values to update the original list item. The workflow can be found in the following MSDN code sample:  [SharePoint Workflow: Call an External Web Service](https://code.msdn.microsoft.com/office/SharePoint-2013-workflow-48ea87d4).
   
     
     
