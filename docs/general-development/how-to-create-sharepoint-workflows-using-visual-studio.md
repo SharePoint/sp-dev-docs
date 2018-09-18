@@ -59,7 +59,7 @@ The stage construct within a SharePoint Designer 2013 based workflow is based on
 ![Figure 1. Flowchart workflow](../images/ngWfFig01.png)
   
 > [!NOTE]
-> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Approval workflow that uses a custom initiation form](http://code.msdn.microsoft.com/officeapps/SharePoint-Approval-f5ac5eb2). 
+> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Approval workflow that uses a custom initiation form](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Approval-f5ac5eb2). 
   
     
     
@@ -84,7 +84,7 @@ State machine workflows, like flowchart workflows, do not typically follow a spe
 ![Figure 2. State machine workflow](../images/ngWfFig02.png)
   
 > [!NOTE]
-> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Route workflows to states depending on actions and events](http://code.msdn.microsoft.com/officeapps/SharePoint-Route-25a25d87). 
+> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Route workflows to states depending on actions and events](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Route-25a25d87). 
   
     
     
