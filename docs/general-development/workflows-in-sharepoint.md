@@ -53,7 +53,7 @@ For information about setting up Workflow Manager Client 1.0 and pairing it to f
   
 -  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
     
-    For more information about SharePoint site workflows, see  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-site-workflow-part-1-introduction)
+    For more information about SharePoint site workflows, see  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](https://sympmarc.com/series/looping-through-content-in-a-sharepoint-2013-site-workflow/)
     
   
 
