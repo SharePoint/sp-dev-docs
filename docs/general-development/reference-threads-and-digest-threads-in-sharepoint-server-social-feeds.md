@@ -34,11 +34,11 @@ You can identify a reference thread by its  [ThreadType](https://msdn.microsoft.
 
 |**Reference type**|**Description**|
 |:-----|:-----|
-| [LikeReference](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadType.LikeReference.aspx) **** <br/> |A reference to a post that a user likes.  <br/> |
-| [MentionReference](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadType.MentionReference.aspx) <br/> |A reference to a post that mentions a user.  <br/> |
-| [ReplyReference](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadType.ReplyReference.aspx) <br/> |A reference to a reply.  <br/> |
-| [TagReference](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadType.TagReference.aspx) <br/> |A reference to a post that contains a tag.  <br/> |
-| [Normal](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadType.Normal.aspx) <br/> |Not a reference thread.  <br/> |
+| [LikeReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) **** <br/> |A reference to a post that a user likes.  <br/> |
+| [MentionReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) <br/> |A reference to a post that mentions a user.  <br/> |
+| [ReplyReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) <br/> |A reference to a reply.  <br/> |
+| [TagReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) <br/> |A reference to a post that contains a tag.  <br/> |
+| [Normal](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) <br/> |Not a reference thread.  <br/> |
    
 The  [PostReference](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.PostReference.aspx) property returns a [SocialPostReference](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostReference.aspx) object that contains information about the thread that triggered the event. At a minimum, it contains the ID of the source thread, which you can then use with the [SocialFeedManager.GetFullThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFullThread.aspx) method to retrieve the thread if it still exists.
   
