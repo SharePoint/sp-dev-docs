@@ -60,7 +60,7 @@ Client-side web applications are similar to web applications but are implemented
 
 ### Use the AadTokenProvider to retrieve access token
 
-When working with JavaScript libraries that have their own services for executing web requests, the recommended way to obtain an access token to an API secured with Azure AD is by using the **AadTokenProvider** available from SharePoint Framework v1.6.0. Comparing to other solution, the AadTokenProvider takes always all intricacies of implementing OAuth implicit flow in SharePoint Framework solutions allowing you to focus on building your application.
+When working with JavaScript libraries that have their own services for executing web requests, the recommended way to obtain an access token to an API secured with Azure AD is by using the **AadTokenProvider** available from SharePoint Framework v1.6.0. Comparing to other solutions, the AadTokenProvider takes away all intricacies of implementing OAuth implicit flow in SharePoint Framework solutions allowing you to focus on building your application.
 
 > [!NOTE]
 > It's recommended to regularly update your SharePoint Framework solutions to the most recent version of the SharePoint Framework to benefit of the improvements and new capabilities added by Microsoft.
