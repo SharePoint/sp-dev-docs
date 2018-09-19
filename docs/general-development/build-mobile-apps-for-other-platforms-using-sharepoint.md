@@ -296,7 +296,7 @@ For more information, see  [Complete basic operations using SharePoint REST endp
 -  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Using the SharePoint REST service](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx)
+-  [Using the SharePoint REST service](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service)
     
   
 -  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
