@@ -63,7 +63,7 @@ The following code example publishes a post that contains links to a website, a 
 - Add the link objects to the  [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
 > [!NOTE]
-> Currently, SharePoint handles links to websites, SharePoint sites, and documents in the same way, but as a best practice, choose the  [Site](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Site.aspx) type and the [Document](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Document.aspx) type for SharePoint sites and documents.
+> Currently, SharePoint handles links to websites, SharePoint sites, and documents in the same way, but as a best practice, choose the  [Site](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) type and the [Document](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) type for SharePoint sites and documents.
   
     
     
@@ -170,7 +170,7 @@ The following code example publishes a post that mentions a user. It shows how t
     
     
 
-- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent a mention, which is a link to a user. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.User](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.User.aspx) field and the mentioned person's account name. You can set the account name by using either the person's login or email address.
+- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent a mention, which is a link to a user. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.User](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) field and the mentioned person's account name. You can set the account name by using either the person's login or email address.
     
   
 - Add a placeholder to the post text to indicate where the mentioned person's display name should appear.
@@ -259,7 +259,7 @@ The following code example publishes a post that includes a tag. It shows how to
     
     
 
-- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Tag.aspx) field and the tag name, which must include a **#** character.
+- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) field and the tag name, which must include a **#** character.
     
   
 - Add a placeholder to the post text to indicate where the tag should appear.
