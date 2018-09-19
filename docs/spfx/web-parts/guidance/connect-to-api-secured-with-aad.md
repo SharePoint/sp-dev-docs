@@ -60,7 +60,7 @@ Client-side web applications are similar to web applications but are implemented
 
 ### Use the AadTokenProvider to retrieve access token
 
-When working with JavaScript libraries that have their own services for executing web requests, the recommended way to obtain an access token to an API secured with Azure AD is by using the **AadTokenProvider** available from SharePoint Framework v1.6.0. Comparing to other solutions, the AadTokenProvider takes away all intricacies of implementing OAuth implicit flow in SharePoint Framework solutions allowing you to focus on building your application.
+When working with JavaScript libraries that have their own services for executing web requests, the recommended way to obtain an access token to an API secured with Azure AD is by using the **AadTokenProvider** available from SharePoint Framework v1.6.0. Compared to other solutions, the AadTokenProvider takes away all intricacies of implementing OAuth implicit flow in SharePoint Framework solutions, allowing you to focus on building your application.
 
 > [!NOTE]
 > It's recommended to regularly update your SharePoint Framework solutions to the most recent version of the SharePoint Framework to benefit of the improvements and new capabilities added by Microsoft.
@@ -444,4 +444,4 @@ Because client-side applications are incapable of securely storing secrets, and 
 - [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../../use-aadhttpclient.md)
 - [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md)
 - [Call custom APIs secured with Azure Active Directory without ADAL JS (code sample)](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/aad-api-spo-cookie)
-- [Authentication Scenarios for Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
+- [Authentication scenarios for Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
