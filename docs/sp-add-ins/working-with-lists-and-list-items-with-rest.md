@@ -171,9 +171,9 @@ Headers:
 
 <br/>
 
-### Lookup Column Changes
+### Lookup column changes
 
-When refering to a lookup column inside a list using REST API, use the display name of the lookup column instead of the internal name.
+When referring to a lookup column inside a list using REST API, use the display name of the lookup column instead of the internal name.
 
 ```
 http://site url/_api/web/lists/getbytitle('ListName')/Items?&$filter=LookupColumnId eq 1
@@ -219,7 +219,7 @@ headers:
 
 The following XML shows an example of the list item properties that are returned when you request the XML content type.
 
-```XML
+```xml
 <content type="application/xml">
 <m:properties> 
 <d:FileSystemObjectType m:type="Edm.Int32">0</d:FileSystemObjectType>
@@ -246,7 +246,7 @@ Retrieves information about the list and its data. Using this API you can retrie
 POST /_api/web/GetList(@listUrl)/RenderListDataAsStream?@listUrl=%27%2Fsites%2Fteam-a%2Flists%2FList%27
 ```
 
-#### URI Parameters
+#### URI parameters
 
 Following properties can be added as query string parameters to manipulate the returned data.
 
@@ -524,7 +524,7 @@ The following example shows how to create a list item in a folder.
 POST /_api/web/lists/GetByTitle('Test')/AddValidateUpdateItemUsingPath
 ```
 
-#### URI Parameters
+#### URI parameters
 
 None
 
