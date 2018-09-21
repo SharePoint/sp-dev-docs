@@ -29,7 +29,7 @@ Setting up Azure DevOps for Continuous Integration with a SharePoint Framework s
 The Build Definition, as its name suggests, includes all the definitions and their configurations for the build.  Start setting up your Continuous Integration by creating a new build definition and link it to your repository.
 ![linking the build definition to the repository](../../images/azure-devops-spfx-01.png)
 > [!NOTE] 
-> Build definitions can be described as a process template. It is a set of configured task that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
+> Build definitions can be described as a process template. It is a set of configured tasks that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
 
 ### Installing NodeJS version 8
 Once the Build Definition has been created, the first thing you need to do is instal NodeJS.  Make sure to install version 8, as SharePoint Framework depends on it.
@@ -43,7 +43,7 @@ Because third party dependencies are not stored in the source control, you need 
 ![installing dependencies](../../images/azure-devops-spfx-03.png)
 
 ### Executing Unit Tests
-The SharePoint Framework supports writing units tests using KarmaJS, Mocha, Chai and Sinon. These modules are already referenced for you and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issue or regression as soon as possible. To have Azure DevOps execute your unit tests, add a `gulp` task. Set the path to the `gulpfile` file and set the `Gulp Tasks` option to `test`.
+The SharePoint Framework supports writing units tests using KarmaJS, Mocha, Chai and Sinon. These modules are already referenced for you and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issues or regressions as soon as possible. To have Azure DevOps execute your unit tests, add a `gulp` task. Set the path to the `gulpfile` file and set the `Gulp Tasks` option to `test`.
 ![executing unit tests](../../images/azure-devops-spfx-04.png)
 > [!NOTE] 
 > Make sure you check `Publish to TFS/Team Services` under the `JUnit Test Results` section and set the `Test Result Files` to `**/test-*.xml`. This will instruct the task to report results with the build status in Azure DevOps.
@@ -109,7 +109,7 @@ Now that you have static assets, the next step is to combine the assets into a p
 ![packaging the solution](../../images/azure-devops-spfx-07.png)
 
 ### Preparing the artifacts
-By default a Azure DevOps build does not retain any files.  To ensure that the required files needed for the release are retained, you need to explicitly indicate which files should be kept.  
+By default, an Azure DevOps build does not retain any files.  To ensure that the required files needed for the release are retained, you need to explicitly indicate which files should be kept.  
 Add a `Copy Files` task and set the `Contents` to `**\*.sppkg` (the SharePoint Package created with the previous task) and the target folder to `$(build.artifactstagingdirectory)/drop`.
 ![grabbing the artifacts](../../images/azure-devops-spfx-08.png)
 
