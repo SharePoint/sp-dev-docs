@@ -119,52 +119,66 @@ Now that you have collected all the files needed for deployment in a special art
 
 
 ## Continuous Deployment
-Continuous deployment helps you deploy your package to different environments and keep tracks of which versions are deployed to which environments.
+Continuous Deployment (CD) takes validated code packages from the various development environments and deploys them into a staging or production environment.  Developers are able to track which deployments were successful or not and narrow down the issues to the particular package versions.    
+
+Setting up Azure DevOps for Continuous Deployments with a SharePoint Framework solution requires the following steps:
+1. Creating the Release Definition
+2. Linking the Build Artifact
+3. Creating the Environment
+4. Installing NodeJS
+5. Installing the Office 365 CLI
+6. Connecting to the App Catalog
+7. Adding the Solution Package to the App Catalog
+8. Deploying the Application
+9. Setting the Variables for the Environment
 
 ### Creating the Release Definition
-Start by creating a new release definition with an empty template. A release defition is a process model that defines which environments you are working with, as well at the deployment tasks to executes and which artifacts (from the builds) will be used.
+Start by creating a new Release Definition with an empty template. A Release Defition is a process that is used to identify the following elements for the deployment:
+- Environment
+- Deployment tasks
+- Build artifacts
 ![creating the release definition](../../images/azure-devops-spfx-10.png)
 
-### Linking the build artifact
-Click on `Add an artifact` and select the build definition you previously created, write down the `Source Alias` name you set as it will impact paths for the tasks later on.
+### Linking the Build Artifact
+Click on `Add an artifact` and select the build definition you previously created.  Write down the `Source Alias` name you set, as you will need to use it in subsequent tasks.
 ![linking the artifacts](../../images/azure-devops-spfx-11.png)
 
-### Creating the environment
-You can give a name to your environment, set up pre-deployment approvals, artificats filters (deploy only if the build comes from this or that branch) an much more by clicking on the buttons around the environment box or directly on the title.
+### Creating the Environment
+When you create your continuous deployment environment, you can give a name and configure pre-deployment approvals, artificats filters (i.e. deploy only if the build comes from this or that branch), and much more by clicking on the buttons around the environment box or directly on the title.
 ![creating the environment](../../images/azure-devops-spfx-12.png)
 
-### Installing node 8
-By click on `1 job, 0 tasks` you can access on the tasks configuration view, which works similarly to the build definition. That set of tasks will run only for this specific environment. 
+### Installing NodeJS
+By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 8 or later.
 Add a `Node tool installer` task and define `8.X` in the `Version Spec` field. 
 ![installing node 8](../../images/azure-devops-spfx-13.png)
 
 ### Installing the Office 365 CLI
-The Office 365 CLI is an open source project built by the PnP Community. This Release Definition will take advantage of commands available as part of the CLI to handle deployment, you need to install it first. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
+The Office 365 Common Language Interface (CLI) is an open source project built by the OfficeDev PnP Community. In order to leverage the  CLI as part of your Release Definition, you first need to install it.  Then, you will be able to take advantage of commands available  to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
 ![installing office 365 cli](../../images/azure-devops-spfx-14.png)
 > [!NOTE] 
 > Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
 
 ### Connecting to the App Catalog
-You first need to authenticate against the App Catalog of your tenant, add a `Command Line` task and paste in the following command into the `script` field `o365 spo connect https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
+Before using the App Catalog in you deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo connect https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
 `
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
-### Adding the solution package to the app catalog
-Upload the solution package to your app catalog by adding another `Command Line` task and pasting the following command line in the `Script` field `o365 spo app add -p $(System.DefaultWorkingDirectory)/SpFxDevOps/drop/SharePoint/solution/sp-fx-devops.sppkg --overwrite`
+### Adding the Solution Package to the App Catalog
+Upload the solution package to your App Catalog by adding another `Command Line` task and pasting the following command line in the `Script` field `o365 spo app add -p $(System.DefaultWorkingDirectory)/SpFxDevOps/drop/SharePoint/solution/sp-fx-devops.sppkg --overwrite`
 > [!NOTE] 
 > The path of the package depends on your solution name (see your project configuration) as well as the `Source Alias` you defined earlier, make sure they match.
 
 ![uploading the package to the catalog](../../images/azure-devops-spfx-16.png)
 
-### Deploying the application
-The next and last step is to deploy the application to the app catalog to make it available to all site collection within the tenant as it's latest version. Add another `Command Line` taks and paste the follwing command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
+### Deploying the Application
+The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as it's latest version. Add another `Command Line` taks and paste the follwing command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
 > [!NOTE] 
 > Make sure you update the package name.
 
 ![Deploying the package to the catalog](../../images/azure-devops-spfx-17.png)
 
-### Setting the variables for the environment
-The tasks you configured right before rely on Azure DevOps process variables (easily identified with the `$(variableName)` syntax). You need to define those variables before being able to run the build definition. To do so, click on the `Variables` tab.  
+### Setting the Variables for the Environment
+The tasks you configured in the last step rely on Azure DevOps process variables (easily identified with the `$(variableName)` syntax). You need to define those variables before being able to run the build definition. To do so, click on the `Variables` tab.  
 Add the following variables
 | Name | Value |
 | ------ | ------ |
@@ -178,7 +192,7 @@ Add the following variables
 > Make sure you save your release definition.
 
 ## Testing
-Go back to the `Builds` section in Azure DevOps, select your build definition and click on `Queue`. Select your branch, and click on `Queue`. Your build is created and will start building. 
+To test your newly created Continuous Deployment process, return to the `Builds` section in Azure DevOps, select your build definition and click on `Queue`. Select your branch, and click on `Queue`. A new build will be created and will start building. 
 ![Queuing a build](../../images/azure-devops-spfx-19.png)
 After a couple of minutes, your build should complete and show a result page like this one.  
 ![Results of a build](../../images/azure-devops-spfx-20.png)
