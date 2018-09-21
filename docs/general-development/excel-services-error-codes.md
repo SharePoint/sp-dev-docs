@@ -1,5 +1,5 @@
 ---
-title: Excel Services Error Codes
+title: Excel Services error codes
 ms.date: 09/25/2017
 keywords: alerts
 f1_keywords:
@@ -9,28 +9,17 @@ ms.assetid: ff128d67-f3ac-4a8f-ae8e-1e19e343014e
 ---
 
 
-# Excel Services Error Codes
+# Excel Services error codes
 
 Excel Services generates errors and error messages in the SOAP exception based on errors that occur in Excel Services. The following table shows the errors that are accessible when calls to the Excel Web Services methods throw a SOAP exception. 
-  
-    
-    
 
-You use the  [SubCode](http://msdn.microsoft.com/library/frlrfSystemWebServicesProtocolsSoapExceptionClassSubCodeTopic.aspx) property of the **SoapException** class to capture the error codes. For more information about using the **SubCode** property to capture error codes, see [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
-For more information about Excel Services alerts, see  [Excel Services Alerts](excel-services-alerts.md). 
-  
-    
-    
+You use the [SubCode](https://docs.microsoft.com/dotnet/api/system.web.services.protocols.soapexception.subcode?view=netframework-4.7.2) property of the **SoapException** class to capture the error codes. For more information about using the **SubCode** property to capture error codes, see [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
+For more information about Excel Services alerts, see  [Excel Services Alerts](excel-services-alerts.md).
 
-
-## Error Codes
+## Error codes
 
 The following table lists the error codes for Excel Web Services alerts and the associated messages, explanation, and resolutions. 
-  
-    
-    
-
-
+ 
 |**Error Code**|**Message**|**Explanation**|**Resolution**|
 |:-----|:-----|:-----|:-----|
 |ApiInvalidArgument  <br/> |Invalid value to argument: {0}  <br/> |An invalid value for an argument was passed into the API call.  <br/> 0 = name of the argument. Its value is invalid.  <br/> |Use a valid value for the argument.  <br/> |
@@ -52,38 +41,19 @@ The following table lists the error codes for Excel Web Services alerts and the 
 |NotMemberOfRole  <br/> |Access denied. You do not have permission to perform this action or access this resource.  <br/> |The caller does not have permission to access the server.  <br/> |Contact your administrator.  <br/> |
 |ObjectTypeNotSupported  <br/> |One or more object types provided are not supported by Excel Services. The operation was rolled back.  <br/> |The caller tried to write unsupported object type values into a range.  <br/> |Try the operation again using one of the supported object types.  <br/> |
 |OperationCanceled  <br/> |The operation has been canceled.  <br/> |The operation that is currently taking place is canceled because the user calls the **CancelRequest** method. <br/> |Call the **CancelRequest** method only if you want to cancel the current operation. <br/> |
-|RangeParseError  <br/> |Excel Services was unable to parse the range request.  <br/> |The range that was passed into a method with the A1 suffix ( **SetCellA1**, **SetRangeA1**, **GetCellA1**, and **GetRangeA1**) could not be parsed.  <br/> |Enter a range reference using A1 notation such as "Sheet1!Range("A6:A15")" or a valid structured reference such as "[ShipCity].[#Headers]".  <br/> |
+|RangeParseError  <br/> |Excel Services was unable to parse the range request.  <br/> |The range that was passed into a method with the A1 suffix (**SetCellA1**, **SetRangeA1**, **GetCellA1**, and **GetRangeA1**) could not be parsed.  <br/> |Enter a range reference using A1 notation such as "Sheet1!Range("A6:A15")" or a valid structured reference such as "[ShipCity].[#Headers]".  <br/> |
 |RangeRequestAreaExceeded  <br/> |The area of the requested range exceeds 1,000,000 cells.  <br/> |The requested range exceeds the 1,000,000 cell limit.  <br/> |To return ranges that contain more than 1,000,000 cells, use multiple calls.  <br/> |
 |RetryError  <br/> |Excel Services is unable to process the request.  <br/> |Excel Services might at times reach a state where its resources are low. When this happens, it might start denying requests.  <br/> |Wait a few minutes and try to perform this operation again.  <br/> |
 |SaveFailed  <br/> |An error occurred while saving the file.  <br/> |A call to the **GetWorkbook** method failed. <br/> |Try to save the file again.  <br/> |
 |SetRangeFailure  <br/> |The requested operation attempted to overwrite the contents of cells that cannot be edited.  <br/> |The caller tried to write values into a range that has protected cells. For example, the cell contains a formula.  <br/> |Only empty cells or cells that contain values can be edited by Excel Services.  <br/> |
 |SheetRangeMismatch  <br/> |The sheet provided as the sheet argument is not the same as the sheet specified in the range argument.  <br/> |The name of the sheet passed in for a  _sheetName_ parameter does not match the sheet location specified in the _rangeName_ parameter. <br/> |When specifying a sheet in both the range and sheet arguments, ensure that the sheet names are the same. For example,  `Calculate(Sheet1, Sheet1!Range("A1"))`.  <br/> |
-|SpecifiedRangeNotFound  <br/> |The requested range does not exist in the sheet.  <br/> |The range that was passed into a method with the A1 suffix ( **SetCellA1**, **SetRangeA1**, **GetCellA1**, and **GetRangeA1**) could not be found.  <br/> |Make sure the range specified exists in the sheet.  <br/> |
+|SpecifiedRangeNotFound  <br/> |The requested range does not exist in the sheet.  <br/> |The range that was passed into a method with the A1 suffix (**SetCellA1**, **SetRangeA1**, **GetCellA1**, and **GetRangeA1**) could not be found.  <br/> |Make sure the range specified exists in the sheet.  <br/> |
 |WorkbookNotSupported  <br/> |The file you selected cannot be opened because it contains feature(s) that are not supported by Excel Services. One or more of the following unsupported features were detected in the workbook:  <br/> {0}  <br/> |The workbook contains unsupported features.  <br/> 0 = a \\n separated list of unsupported feature names.  <br/> |Make sure the workbook does not contain features that are not supported by Excel Services.  <br/> |
    
 
 ## See also
-
-
-#### Tasks
-
-
-  
     
-    
- [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
-#### Concepts
-
-
-  
-    
-    
- [Excel Services Alerts](excel-services-alerts.md)
-  
-    
-    
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
-  
-    
-    
- [Excel Services Best Practices](excel-services-best-practices.md)
+- [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
+- [Excel Services Alerts](excel-services-alerts.md)
+- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+- [Excel Services Best Practices](excel-services-best-practices.md)

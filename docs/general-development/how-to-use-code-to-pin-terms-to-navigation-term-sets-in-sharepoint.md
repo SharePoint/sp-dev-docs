@@ -42,7 +42,7 @@ You can use custom code from the .NET server, .NET client (CSOM), Silverlight, o
 ### To pin terms to navigation term sets
 
 
-- The following sample tests pinning terms to navigation term sets. It uses the  [NavigationTermSet](https://msdn.microsoft.com/library/Microsoft.SharePoint.SharePoint.NavigationTermSet.aspx) object, which contains methods and properties that are handy in managed navigation scenarios, such as creating taxonomy-driven site navigation menus.
+- The following sample tests pinning terms to navigation term sets. It uses the  [NavigationTermSet](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.NavigationTermSet.aspx) object, which contains methods and properties that are handy in managed navigation scenarios, such as creating taxonomy-driven site navigation menus.
     
     The sample first checks whether a **NavigationTermSet** object exists. If one doesn't exist, then the code creates a **NavigationTermSet**. (If one already exists, the code deletes the old one before it creates a new one). Then, after the code creates some **Term** objects to pick from, it creates a publishing page (.aspx) file for demonstration purposes, sets it as the custom target page for pinned terms, and then pins some navigation properties to the page.
     

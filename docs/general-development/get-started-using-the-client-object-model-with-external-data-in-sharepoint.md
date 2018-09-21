@@ -223,6 +223,6 @@ For more information about using the client object model in SharePoint, see the 
 -  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
--  [SharePoint: Access complex external content types with CSOM](http://code.msdn.microsoft.com/office/SharePoint-Accessing-ccbc24cf)
+-  [SharePoint: Access complex external content types with CSOM](https://code.msdn.microsoft.com/office/SharePoint-2013-Accessing-ccbc24cf)
     
   

@@ -154,7 +154,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     ![Creating items in the newly created list with different values in the Percent field](../../../images/ext-field-create-items-to-list.png)
 
-8. Move back to Visual Studio Code and open **serve.json** file from **config** folder. Update **InternalFieldName** attribute as **Percent** based on the field name, which we just created. Update also **pageUrl** attribute to match an URL of the list which we just created in preview steps. After edits your server.json should look somewhat following.
+8. Move back to Visual Studio Code and open **serve.json** file from **config** folder. Update **InternalFieldName** attribute as **Percent** based on the field name, which we just created. Update also **pageUrl** attribute to match an URL of the list which we just created in preview steps. After edits your serve.json should look somewhat following.
 
     ```json
     {
@@ -197,7 +197,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     ![gulp serve](../../../images/ext-field-gulp-serve.png)
 
-    This will also start your default browser within the URL defined in **server.json** file. Notice that at least in Windows, you can control which browser window is used by activating the preferred one before executing this command.
+    This will also start your default browser within the URL defined in **serve.json** file. Notice that at least in Windows, you can control which browser window is used by activating the preferred one before executing this command.
     
 10. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
