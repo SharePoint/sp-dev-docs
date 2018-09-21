@@ -119,7 +119,7 @@ Now that you have collected all the files needed for deployment in a special art
 
 
 ## Continuous Deployment
-Continuous Deployment (CD) takes validated code packages from the various development environments and deploys them into a staging or production environment.  Developers are able to track which deployments were successful or not and narrow down the issues to the particular package versions.    
+Continuous Deployment (CD) takes validated code packages from build process and deploys them into a staging or production environment.  Developers are able to track which deployments were successful or not and narrow down the issues to the particular package versions.    
 
 Setting up Azure DevOps for Continuous Deployments with a SharePoint Framework solution requires the following steps:
 1. Creating the Release Definition
