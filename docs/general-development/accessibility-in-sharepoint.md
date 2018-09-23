@@ -36,7 +36,7 @@ Users who have site administrator responsibilities typically use the SharePoint 
   
     
     
-Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](http://msdn.microsoft.com/en-us/library/windows/desktop/cc872774.aspx) on MSDN, and the [Office Touch Guide](http://office.microsoft.com/en-us/support/office-touch-guide-HA102823845.aspx) on Office.com.
+Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](https://docs.microsoft.com/windows/desktop/uxguide/inter-touch) on MSDN, and the [Office Touch Guide](http://office.microsoft.com/en-us/support/office-touch-guide-HA102823845.aspx) on Office.com.
   
     
     
