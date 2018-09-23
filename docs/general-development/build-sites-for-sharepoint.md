@@ -31,11 +31,7 @@ If you want to see a summary of what's new for designers and developers of publi
 <a name="SP15_BuildSitesForSP2013_AuthoringDesignBranding"> </a>
 ## Authoring, design, and branding in SharePoint
 
-SharePoint provides a new approach for designing websites. The content-creation workflow is revised so that you can create content using any —and author great content. To brand your site without having to write custom .NET code, use the  [Design Manager](overview-of-design-manager-in-sharepoint.md) to import design elements. With Design Manager, you can also create an HTML-based master page to define the chrome shared by all of your site's pages and create page layouts to design templates for pages. If you choose to write custom code, you can use .NET server, .NET client (CSOM.md), Silverlight, and JavaScript libraries.
-
-SharePoint also provides a new approach to content and authoring. The content-creation workflow is revised so that you can create content using any authoring and branding tool and author great content. To brand your site without having to write custom ASP.NET code, use the Design Manager. You can import design elements and create an HTML-based master page to define the shared framing elements—the chrome—that all of your site's pages and page layouts share. If you choose to write custom code when branding your site, you can use the publishing and taxonomy libraries.
-  
-    
+SharePoint provides a new approach for designing websites. The content-creation workflow is revised so that you can create content using any authoring and branding tool to author great content. To brand your site without having to write custom .NET code, use the  [Design Manager](overview-of-design-manager-in-sharepoint.md) to import design elements. With Design Manager, you can also create an HTML-based master page to define the chrome shared by all of your site's pages and create page layouts to design templates for pages. If you choose to write custom code, you can use .NET server, .NET client (CSOM.md), Silverlight, and JavaScript libraries.    
     
 <a name="SP15_BuildSitesForSP2013_PublishingSites"> </a>
 ## Publishing sites, client object model programming, and the new SharePoint app model
