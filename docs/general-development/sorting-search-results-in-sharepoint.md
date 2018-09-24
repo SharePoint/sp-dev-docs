@@ -1,6 +1,6 @@
-﻿---
+---
 title: Sorting search results in SharePoint
-ms.date: 09/25/2017
+ms.date: 09/24/2018
 ms.prod: sharepoint
 ---
 
@@ -8,46 +8,26 @@ ms.prod: sharepoint
 
 # Sorting search results in SharePoint
 
-  
-    
-    
 ![Conceptual overview topic](../images/mod_icon_badge_conoverview.png)
-  
     
-    
+Sort search results programmatically—by rank, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint.
 
-  
-    
-    
-
-  
-    
-    
-Sort search results programmatically—by rank, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint. 
 You can sort the search results for SharePoint in four ways:
-  
-    
-    
 
-
--  [Sort search results by rank](#SP15_Sort_search_resuilts_by_rank): Enables you to sort the search result by relevance rank.
+- [Sort search results by rank](#SP15_Sort_search_resuilts_by_rank): Enables you to sort the search result by relevance rank.
     
   
--  [Sort search results by managed property value](#SP15_Sort_search_results_by_managed_property_value): Enables you to sort the search result based on the value of one or more managed properties.
+- [Sort search results by managed property value](#SP15_Sort_search_results_by_managed_property_value): Enables you to sort the search result based on the value of one or more managed properties.
     
   
--  [Sort search results by a formula expression](#SP15_Sort_search_results_by_formula): Enables you to sort the search result by a formula specified in the query request.
+- [Sort search results by a formula expression](#SP15_Sort_search_results_by_formula): Enables you to sort the search result by a formula specified in the query request.
     
   
--  [Sort search results in random order](#SP15_Sort_search_results_in_random_order): Enables you to sort the query result in random order, or add a random component to the sort order.
+- [Sort search results in random order](#SP15_Sort_search_results_in_random_order): Enables you to sort the query result in random order, or add a random component to the sort order.
     
   
 
 This article focuses on sorting search results programmatically. To learn how to sort search results using SharePoint query rules, see the following articles:
-  
-    
-    
-
 
 -  [Change ranked search results in Manage query rules](http://technet.microsoft.com/en-us/library/jj871676.aspx#BKMK_ChangeRankedSearchResults)
     
@@ -55,19 +35,19 @@ This article focuses on sorting search results programmatically. To learn how to
 -  [Change ranked search results in Create query rules for web content management](http://technet.microsoft.com/en-us/library/jj871014.aspx#BKMK_ChangeRankedSearchResults)
     
   
-
-## How to specify sorting in a query request
 <a name="SP15_Specify_sorting_in_query_request"> </a>
 
-When you use the Query object model, you can choose the sort criteria by providing a sort specification through the  [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx) property of the [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.aspx) class. The [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx) property is of type [SortCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortCollection.aspx) , which represents a collection of [Sort](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.aspx) objects.
+## How to specify sorting in a query request
+
+When you use the Query object model, you can choose the sort criteria by providing a sort specification through the  [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx) property of the [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.aspx) class. The [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx) property is of type [SortCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortCollection.aspx), which represents a collection of [Sort](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.aspx) objects.
   
     
     
-A  [Sort](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.aspx) object defines a way to sort search results; it consists of a value you want to order search results on ( [Property](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.Property.aspx) ) and a direction in which you want to order the results ( [Direction](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.Direction.aspx) ). The direction is of type [SortDirection()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortDirection.aspx) and can be ascending or descending.
+A  [Sort](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.aspx) object defines a way to sort search results; it consists of a value you want to order search results on ([Property](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.Property.aspx)) and a direction in which you want to order the results ([Direction](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Sort.Direction.aspx)). The direction is of type [SortDirection()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortDirection.aspx) and can be ascending or descending.
   
     
     
-If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx) , the sorting is performed based on the sequence in which the values appear. This means that every **Sort** object represents a sort order level. Any succeeding level does not change the ordering of results that were differentiated by previous ones, but it may affect the internal ordering of results that have the same sort values for the previous levels.
+If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx), the sorting is performed based on the sequence in which the values appear. This means that every **Sort** object represents a sort order level. Any succeeding level does not change the ordering of results that were differentiated by previous ones, but it may affect the internal ordering of results that have the same sort values for the previous levels.
   
     
     
@@ -75,18 +55,15 @@ Apart from the Query object model, SharePoint also provides a Search REST servic
   
     
     
-
-## Sort search results by rank
 <a name="SP15_Sort_search_resuilts_by_rank"> </a>
 
-By default, search results are sorted by relevance rank. This means that SharePoint places the most relevant results on top in the search result set. If you sort by rank, the results are always sorted in descending order. But you can change the sort order to ascending by using  [SortDirection()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortDirection.aspx) .
+## Sort search results by rank
+
+By default, search results are sorted by relevance rank. This means that SharePoint places the most relevant results on top in the search result set. If you sort by rank, the results are always sorted in descending order. But you can change the sort order to ascending by using  [SortDirection()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortDirection.aspx).
   
     
     
 You can also influence the rank calculation in the query string, in one of two ways:
-  
-    
-    
 
 - By using the **XRANK** operator available in [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md). You can use **XRANK** to apply a conditional rank boosting if a specific query condition is met.
     
@@ -94,15 +71,13 @@ You can also influence the rank calculation in the query string, in one of two w
 - By choosing a relevance weight for dynamic ranking. When using FQL, you can specify an individual relevance weight for each **STRING** operator.
     
   
-
-## Sort search results by managed property value
 <a name="SP15_Sort_search_results_by_managed_property_value"> </a>
 
+## Sort search results by managed property value
+
 You can specify search result sorting based on the value of one or more managed properties. This means that SharePoint performs the sorting based on all results that match the query.
-  
-    
-    
-You can sort based on text and numeric properties. For text properties, the sorting is based on standard text string sorting. In contrast, for numeric properties (including managed properties of type  [DateTime](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) ), the sorting is based on numeric value.
+
+You can sort based on text and numeric properties. For text properties, the sorting is based on standard text string sorting. In contrast, for numeric properties (including managed properties of type [DateTime](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14))), the sorting is based on numeric value.
   
     
     
@@ -148,9 +123,10 @@ Alternatively, you could use the Search REST API to sort search results by using
 http://localhost/_api/search/query?querytext='home'&amp;sortlist='size:descending'
 ```
 
+<a name="SP15_Sort_search_results_by_formula"> </a>
 
 ## Sort search results by a formula expression
-<a name="SP15_Sort_search_results_by_formula"> </a>
+
 
 You can specify search result sorting based on a sort specification that uses a mathematical formula to create the sorting value.
   
@@ -184,10 +160,7 @@ The sort by formula feature does not include control of statistical dynamic rank
     
 The formula is evaluated left to right and uses standard mathematical-operator precedence. That is, functions and parenthetical groups are evaluated first, multiplication and division operations are performed next, and addition and subtraction operations are performed last.
   
-    
-    
-
-> **Important:**
+> [!IMPORTANT] 
 > The final result of a formula must be in the value range of a 32-bit signed integer. Otherwise, the sorting may be incorrect. 
   
     
@@ -260,15 +233,15 @@ http://localhost/_api/search/query?querytext='home'&amp;sortlist='[formula:abs(2
 
 ### Using managed properties in the sort formula
 
-You can apply a sort formula on the value of managed properties of type  [Integer](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) , [Decimal](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) , and [Datetime()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Datetime.aspx) . You must enable sorting for the specified managed property in the search schema.
+You can apply a sort formula on the value of managed properties of type [Integer](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), [Decimal](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), and [Datetime()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Datetime.aspx). You must enable sorting for the specified managed property in the search schema.
   
     
     
-For more managed properties of type  [Decimal](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) , the value is multiplied by 10^(decimal digits) before being used in the formula evaluation.
+For more managed properties of type  [Decimal](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is multiplied by 10^(decimal digits) before being used in the formula evaluation.
   
     
     
-For managed properties of type  [Datetime()](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) , the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
+For managed properties of type  [Datetime()](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
   
     
     
@@ -342,9 +315,7 @@ For example, you can use one of the following standard formulas:
   
 - Haversine formula
     
-  
-
-> **Important:**
+> [!IMPORTANT] 
 > Use managed properties of type **Decimal** or **Float** to represent the latitude and longitude values.
   
     
@@ -398,7 +369,7 @@ Alternatively, you could use the Search REST API to place the items that have th
 http://localhost/_api/search/query?querytext='home'&amp;sortlist='[formula:abs(20-height)]:ascending
 ```
 
- **Example 2.** Sort by true 3-D Euclidean distance from a given position (for example, user's position) based on position information that is provided in the managed properties **latitude**, **longitude** and **height**. The following formula provides the 3-D Euclidean distance, given that the base position is 50/100/200 (latitude/longitude/height).
+**Example 2.** Sort by true 3-D Euclidean distance from a given position (for example, user's position) based on position information that is provided in the managed properties **latitude**, **longitude** and **height**. The following formula provides the 3-D Euclidean distance, given that the base position is 50/100/200 (latitude/longitude/height).
   
     
     
@@ -434,7 +405,7 @@ using (var context = new ClientContext("http://localhost"))
 }
 ```
 
- **Example 3.** Round the values of size into buckets, rounding values down to one of the following: 0, 5, 15, 50, 100; sort with largest values first.
+**Example 3.** Round the values of size into buckets, rounding values down to one of the following: 0, 5, 15, 50, 100; sort with largest values first.
   
     
     
@@ -490,7 +461,7 @@ Table 2 explains the parameters to the random sort specification.
 |**Parameter**|**Description**|**Required**|
 |:-----|:-----|:-----|
 | _Seed_ <br/> |The seed for the random value generation.  <br/> The seed value is input to a function that generates a random number. This random number is used in the final sorting.Using only the  _seed_ option will give you a randomly sorted query result set. The sorting order for the same query (when using the same seed) may change after an index update. <br/> |Yes  <br/> |
-| _Hashfield_ <br/> |A managed property that is used as the hash value for the random generation. You can use this parameter to ensure that the sorting order for the same query (when using the same seed) does not change after an index update.  <br/> The managed property must be of type  [Integer]https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) and must be [Sortable()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedPropertyInfo.Sortable.aspx) . You may fill this managed property with random or unique values (for example a sequence number populated by an item processing stage). <br/> |No  <br/> |
+| _Hashfield_ <br/> |A managed property that is used as the hash value for the random generation. You can use this parameter to ensure that the sorting order for the same query (when using the same seed) does not change after an index update.  <br/> The managed property must be of type  [Integer]https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) and must be [Sortable()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedPropertyInfo.Sortable.aspx). You may fill this managed property with random or unique values (for example a sequence number populated by an item processing stage). <br/> |No  <br/> |
    
 By providing the same seed for equal queries, items will be presented in the same order. This enables you to preserve the same random order when paging through search results. Use the  _hashfield_ parameter if you want to preserve the same random order when an index update accidentally occurs between the queries.
   
@@ -574,22 +545,12 @@ using (var context = new ClientContext("http://localhost"))
 
 
 ## See also
-<a name="bk_addresources"> </a>
 
-
--  [Search in SharePoint](search-in-sharepoint.md)
-    
-  
--  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
-    
-  
--  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
-    
-  
--  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
-    
-  
--  [Overview of crawled and managed properties in SharePoint](http://technet.microsoft.com/en-us/library/jj219630%28office.15%29.aspx)
+- [Search in SharePoint](search-in-sharepoint.md) 
+- [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) 
+- [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
+- [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md) 
+- [Overview of crawled and managed properties in SharePoint](http://technet.microsoft.com/en-us/library/jj219630%28office.15%29.aspx)
     
   
 
