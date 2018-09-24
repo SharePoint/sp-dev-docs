@@ -61,7 +61,7 @@ Have a solid design for your add-in? Get ready to build your add-in and publish 
 -  [Reimagine SharePoint development](http://msdn.microsoft.com/en-US/office/apps/dn133840)
 -  [SharePoint Add-ins](sharepoint-add-ins.md)
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
--  [Blog for add-ins](http://blogs.msdn.com/b/spoffapps)
+-  [Blog for add-ins](https://developer.microsoft.com/en-us/office/blogs/technology/add-ins/)
     
  
 
