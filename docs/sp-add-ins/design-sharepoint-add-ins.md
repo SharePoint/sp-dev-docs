@@ -1,7 +1,7 @@
 ---
 title: Design SharePoint Add-ins
 description: An overview of the design and architecture options available in SharePoint Add-ins, and how to make the right decisions to ease your add-in's development.
-ms.date: 11/02/2017
+ms.date: 09/24/2018
 ms.prod: sharepoint
 ---
 
