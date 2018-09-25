@@ -1338,11 +1338,13 @@
       - name: Transform classic pages to modern client-side pages
         href: transform/modernize-userinterface-site-pages.md
         items:
+        - name: Page transformation configuration options
+          href: transform/modernize-userinterface-site-pages-configuration.md
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
-        - name: Page transformation API
+        - name: Page transformation Functions and Selectors
           href: transform/modernize-userinterface-site-pages-api.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md

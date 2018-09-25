@@ -4,7 +4,7 @@ description: This offering allows multinational corporations that are part of th
 ms.date: 4/27/2018
 ---
 
-# OneDrive Online Multi-Geo 
+# OneDrive and SharePoint Online Multi-Geo 
 
 
 OneDrive Online Multi-Geo allows multinational corporations that have one or more geographical locations, to expand their Office 365 ODSP tenancy to satisfy data residency requirements.
