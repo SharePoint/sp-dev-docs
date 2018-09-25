@@ -21,6 +21,7 @@ There are numerous open-source projects that are coordinated by the SharePoint P
 | [PnP PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) | Allow you to perform complex provisioning and artifact management actions for SharePoint. The commands use CSOM and can work against both SharePoint Online as well as SharePoint on-premises. |
 | [PnP remote provisioning schema](https://github.com/SharePoint/PnP-provisioning-schema) | Designed to be used as remote creation instructions for the remote provisioning engine for Office 365. |
 | [PnPJS](https://pnp.github.io/pnpjs/) | A fluent JavaScript API for consuming SharePoint and Office 365 REST APIs in a type-safe way. |
+| [PnP SPFx Yeoman Generator](https://pnp.github.io/generator-spfx/) | Open-source Yeoman generator which extends out-of-the-box Yeoman generator. |
 | [SharePoint Framework reusable property pane controls](https://sharepoint.github.io/sp-dev-fx-property-controls) | Can be used in SharePoint Framework (SPFx) solutions. |
 | [SharePoint Framework reusable react controls](https://sharepoint.github.io/sp-dev-fx-controls-react) | Can be used in SharePoint Framework (SPFx) solutions. |
 | [Visual Studio extension for SharePoint Framework](https://github.com/SharePoint/sp-dev-fx-vs-extension) | Projects that you can use with Visual Studio 2015 or 2017. |
