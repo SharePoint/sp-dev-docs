@@ -71,7 +71,7 @@ If you've set `TargetPageTakesSourcePageName = true` then the original page gets
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
 {
-    SourcePagePrefix = "New_",
+    SourcePagePrefix = "Old_",
 };
 ```
 
