@@ -136,7 +136,7 @@ If your SharePoint Framework solution requires permissions to specific resources
   ```
 
   > [!NOTE]
-  > For the value of the **resource** property, you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the displayName not only is more readable but also allows you to build your solution once and reuse it across multiple tenants. While the objectId of an Azure AD application is different on each tenant, the displayName stays the same.
+  > For the value of the **resource** property, you need to specify the **displayName** of the application to which you want to request permissions. If you specify the resource using its **objectId**, you will get an error when trying to approve the permission request.
 
 3. If you want to request multiple permission scopes for the given resource, specify each scope in a separate entry, for example:
 
