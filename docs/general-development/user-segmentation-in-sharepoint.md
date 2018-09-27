@@ -291,7 +291,7 @@ A query rule transforms queries to improve the relevance of search results by re
   
     
     
-When implementing user segmentation, you use query rules to define conditions and actions for the defined user segments. When an end-user is part of a particular user segment, the query rule will activate and the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebConrols.ContentBySearchWebPart.aspx) will display content that is tailored for that particular user segment.
+When implementing user segmentation, you use query rules to define conditions and actions for the defined user segments. When an end-user is part of a particular user segment, the query rule will activate and the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) will display content that is tailored for that particular user segment.
   
     
     
@@ -324,7 +324,7 @@ When implementing user segmentation, you use query rules to define conditions an
   
 8. Under **Query Conditions**, choose **Remove Condition**. 
     
-    This specifies that the query configured in the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebConrols.ContentBySearchWebPart.aspx) will act as the query condition.
+    This specifies that the query configured in the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) will act as the query condition.
     
   
 9. Set the corresponding actions that your query rule will perform. Under the **Actions** section, select a corresponding action that you want to take as a result of -your query rule. You can select to either **Add Promoted Result** or **Add a Result Block**.
