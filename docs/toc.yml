@@ -191,6 +191,10 @@
         href: design/web-part-titles-and-descriptions.md
       - name: Commanding within a web part
         href: design/web-part-commanding.md
+      - name: Web part layouts
+        href: design/layout-patterns
+      - name: Web part levels
+        href: design/web-part-levels
       - name: UI text
         href: design/ui-text-for-web-parts.md
       - name: Placeholders and fallbacks
@@ -203,6 +207,8 @@
         href: design/key-web-part-examples.md     
       - name: Web part showcase
         href: design/showcase-web-part.md
+      - name: Designing a web part icon
+        href: design/designing-a-web-part-icon
     - name: Authoring pages
       href: design/authoring-pages.md          
     - name: Design considerations
