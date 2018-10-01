@@ -205,11 +205,11 @@ When a site visitor browses a page that uses this page layout, this additional p
   
     
     
-In this way, each page layout can have its own style sheet. For example, you can have a **<div>** with `id="xyz"` in one page layout that appears on the left, and in another page layout appears on the right.
+In this way, each page layout can have its own style sheet. For example, you can have a `<div>` with `id="xyz"` in one page layout that appears on the left, and in another page layout appears on the right.
   
     
     
-Each page layout can also have one or more device channel-specific style sheets. For example, you might want a page layout to have a layout for phones that is different from the desktop layout. To do this, you can include one or more device channel panels inside **PlaceHolderAdditionalPageHead**, where each channel panel includes a link to a style sheet with channel-specific styles. This way, for example, a **<div>** with `id="abc"` can display large text in one channel and small text in a different channel.
+Each page layout can also have one or more device channel-specific style sheets. For example, you might want a page layout to have a layout for phones that is different from the desktop layout. To do this, you can include one or more device channel panels inside **PlaceHolderAdditionalPageHead**, where each channel panel includes a link to a style sheet with channel-specific styles. This way, for example, a `<div>` with `id="abc"` can display large text in one channel and small text in a different channel.
   
     
     
