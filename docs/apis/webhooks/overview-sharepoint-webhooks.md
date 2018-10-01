@@ -36,13 +36,13 @@ When a new subscription is created, SharePoint sends an HTTP POST request to the
 
 
 ```http
-POST https://contoso.azurewebsites.net/your/webhook/service?validationToken={randomString}
+POST https://contoso.azurewebsites.net/your/webhook/service?validationtoken={randomString}
 Content-Length: 0
 ```
 
 ### Response
 
-For the subscription to be created successfully, your service must respond to the request by returning the value of the **validationToken** query string parameter as a plain-text response.
+For the subscription to be created successfully, your service must respond to the request by returning the value of the **validationtoken** query string parameter as a plain-text response.
 
 ```http
 HTTP/1.1 200 OK
@@ -51,7 +51,7 @@ Content-Type: text/plain
 {randomString}
 ```
 
-If your application returns a status code other than `200`, or fails to respond with the value of the **validationToken** parameter, the request to create a new subscription fails.
+If your application returns a status code other than `200`, or fails to respond with the value of the **validationtoken** parameter, the request to create a new subscription fails.
 
 ## Receiving notifications
 
