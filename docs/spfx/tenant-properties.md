@@ -9,7 +9,7 @@ ms.prod: sharepoint
 
 Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/en-us/library/fp161372.aspx), which is a PowerShell module to manage your SharePoint Online subscription in Office 365.
 
-Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) can be used to manage the tenant properties. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
+Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) can be used to manage the tenant properties. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
 
 ## Manage tenant properties
 
@@ -39,13 +39,13 @@ Before running the following script, connect to your SharePoint Online tenant us
 
 ## Office 365 CLI commands to get, set, remove and list tenant properties cross-platform
 
-Using the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties), tenant administrators can use shell commands to manage tenant properties.
+Using the [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties), tenant administrators can use shell commands to manage tenant properties.
 
 Before using the commands, connect to a SharePoint Online site, using the `spo connect` command.
 
 ### Get details for the specified tenant property
 
-The [spo storageentity get](https://sharepoint.github.io/office365-cli/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to get details for Office 365, SharePoint Online tenant property
+The [spo storageentity get](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to get details for Office 365, SharePoint Online tenant property
 
 ```shell
 spo storageentity get --key <key>
@@ -53,7 +53,7 @@ spo storageentity get --key <key>
 
 ### List tenant properties stored on the specified SharePoint Online app catalog
 
-The [spo storageentity list](https://sharepoint.github.io/office365-cli/cmd/spo/storageentity/storageentity-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to list all the tenant properties.
+The [spo storageentity list](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to list all the tenant properties.
 
 ```shell
 spo storageentity list --appCatalogUrl <appCatalogUrl>
@@ -61,7 +61,7 @@ spo storageentity list --appCatalogUrl <appCatalogUrl>
 
 ### Set tenant property on a specified SharePoint Online app catalog
 
-The [spo storageentity set](https://sharepoint.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to set tenant property
+The [spo storageentity set](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to set tenant property
 
 ```shell
 spo storageentity set --appCatalogUrl <appCatalogUrl> --key <key> --value <value>
@@ -69,7 +69,7 @@ spo storageentity set --appCatalogUrl <appCatalogUrl> --key <key> --value <value
 
 ### Remove tenant property stored on the specified SharePoint Online app catalog
 
-The [spo storageentity remove](https://sharepoint.github.io/office365-cli/cmd/spo/storageentity/storageentity-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to remove tenant property
+The [spo storageentity remove](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to remove tenant property
 
 ```shell
 spo storageentity remove --appCatalogUrl <appCatalogUrl> --key <key>
@@ -120,4 +120,4 @@ Content-Type: application/json
 ## See also
 
 - [Overview of the SharePoint Framework](sharepoint-framework-overview.md)
-- [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
+- [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
