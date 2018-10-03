@@ -1129,7 +1129,7 @@ Special rules for reordering search results. These rules can specify that docume
   
     
     
-In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ReorderingRuleMatchType.aspx) . In the following example, `'MatchType' : '0'` specifies [ResultContainsKeyword](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ReorderingRuleMatchType.ResultContainsKeyword.aspx) .
+In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ReorderingRuleMatchType.aspx) . In the following example, `'MatchType' : '0'` specifies [ResultContainsKeyword](https://msdn.microsoft.com/zh-cn/library/office/microsoft.office.server.search.query.reorderingrulematchtype.aspx) .
   
     
     
@@ -1656,7 +1656,7 @@ When an anonymous Search REST query is submitted, the query object is constructe
 -  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
+-  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d)
     
   
 -  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
