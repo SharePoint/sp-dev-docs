@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 07/18/2018
+ms.date: 10/03/2018
 ---
 
 # Site design JSON schema
@@ -22,6 +22,8 @@ The overall JSON structure is specified as follows:
         "version": 1
 };
 ```
+
+You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
 ## Create a new SharePoint list
 
@@ -863,3 +865,4 @@ Use the **setSiteExternalSharingCapability** action to manage guest access. For 
 ## See also
 
 - [SharePoint site design and site script overview](site-design-overview.md)
+
