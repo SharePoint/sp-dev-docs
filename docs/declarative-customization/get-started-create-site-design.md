@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. 
-ms.date: 09/06/2018
+ms.date: 10/03/2018
 ---
 
 # Get started creating site designs and site scripts
@@ -20,7 +20,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
 
 2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
 
-3. Create and assign the JSON that describes the new script to a variable as shown in the following PowerShell code.
+3. Create - and assign the JSON that describes the new script - to a variable as shown in the following PowerShell code. You can view and reference the latest JSON schema file here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
    ```powershell
     $site_script = @'
