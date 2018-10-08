@@ -70,7 +70,7 @@ Here are the components you need. It is important that you install these items i
   
 3. **Install the Visual Studio 2012 development environment**
     
-  -  [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/downloads#vs)
+  -  [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
     
   
   -  [Visual Studio 2012 Update 2 (KB2797912)](http://support.microsoft.com/kb/2797912)
