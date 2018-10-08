@@ -28,7 +28,7 @@ For information about how to use the other client APIs, see:
 
 The endpoints in the SharePoint REST service correspond to the types and members in the SharePoint client object models. By using HTTP requests, you can use these REST endpoints to perform typical CRUD (**Create**, **Read**, **Update**, and **Delete**) operations against SharePoint entities, such as lists and sites. 
 
-Typically, endpoints that represent **Read** operations map to HTTP **GET** commands, endpoints that represent update operations map to HTTP **POST** commands, and endpoints that represent update or insert operations map to HTTP **PUT** commands.
+Typically, endpoints that represent **Read** operations map to HTTP **GET** commands, endpoints that represent create operations map to HTTP **POST** commands, and endpoints that represent update or insert operations map to HTTP **PUT** commands.
  
 In SharePoint, use **POST** to create entities such as lists and sites. The SharePoint REST service supports sending **POST** commands that include object definitions to endpoints that represent collections. For example, you could send a **POST** command that included a new list object definition in ATOM to the following URL, to create a SharePoint list:
  
