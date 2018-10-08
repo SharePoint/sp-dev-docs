@@ -1357,6 +1357,8 @@
         href: transform/modernize-connect-to-office365-group-scanner.md
       - name: Site permissions after Office 365 group connection
         href: transform/modernize-connect-to-office365-group-permissions.md
+    - name: Modernize publishing portals
+      href: transform/modernize-publishing-portal.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:

@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 07/18/2018
+ms.date: 10/04/2018
 ---
 
 # Site design JSON schema
@@ -22,6 +22,8 @@ The overall JSON structure is specified as follows:
         "version": 1
 };
 ```
+
+You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
 ## Create a new SharePoint list
 
@@ -548,7 +550,10 @@ Use the **addNavLink** verb to add a new navigation link to the site.
 
 - **url** &ndash; The url of the link to add.
 - **displayName** &ndash; The display name of the link.
-- **isWebRelative** &ndash; **True** if the link is web relative; otherwise, **false**.
+- **isWebRelative** &ndash; **true** if the link is web relative; otherwise, **false**. The default is **false**.
+- **parentDisplayName** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
+- **parentUrl** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this url. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
+- **isParentUrlWebRelative** &ndash; An optional parameter. **true** if the link is web relative; otherwise, **false**. The default is **false**.
 
 #### Example
 
@@ -568,6 +573,12 @@ Use the **addNavLink** verb to add a new navigation link to the site.
    "url": "/Lists/Project Activities",
    "displayName": "Project Activities",
    "isWebRelative": true
+ },
+ {
+    "verb": "addNavLink",
+    "url": "https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview",
+    "displayName": "SharePoint Site Design Overview",
+    "parentDisplayName": "Documents"
  }
 ```
 
@@ -863,3 +874,4 @@ Use the **setSiteExternalSharingCapability** action to manage guest access. For 
 ## See also
 
 - [SharePoint site design and site script overview](site-design-overview.md)
+
