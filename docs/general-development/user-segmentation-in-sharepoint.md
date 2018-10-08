@@ -88,7 +88,7 @@ You can create a term set programmatically by using the types exposed via  [Micr
   
     
     
-Each term you add to your term set receives a unique identifier. This identifier is the key to making the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) aware of your user segments.
+Each term you add to your term set receives a unique identifier. This identifier is the key to making the  [ContentBySearchWebPart](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/content-search-web-part-in-sharepoint) aware of your user segments.
   
     
     
@@ -135,7 +135,7 @@ static void CreateNavigationTermSet(string siteUrl)
 ## Create a custom web part for user segmentation
 <a name="SP15_Create_a_custom_web_part_user_segmentation"> </a>
 
-In Visual Studio 2012, create a custom web part by using the Visual web parts template from the SharePoint category. Your custom web part must inherit from the  [ContentBySearchWebPart](https://msdn.microsoft.com/en-us/library/office/microsoft.office.server.search.webcontrols.contentbysearchwebpart.aspx) object.
+In Visual Studio 2012, create a custom web part by using the Visual web parts template from the SharePoint category. Your custom web part must inherit from the  [ContentBySearchWebPart](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/content-search-web-part-in-sharepoint) object.
   
 > [!NOTE] 
 > This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](http://msdn.microsoft.com/en-us/library/ee535520%28v=office.14%29.aspx)
@@ -147,14 +147,14 @@ In Visual Studio 2012, create a custom web part by using the Visual web parts te
 ## Configure a custom web part with user segmentation logic
 <a name="SP15_Configure_custom_web_part_user_segmentation_logic"> </a>
 
-In your custom web part, you can re-implement either the  [OnLoad()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnLoad.aspx) method or the [OnInit()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnInit.aspx) method to carry out your custom logic. Both these methods are useful to set or customize properties of the [ContentBySearchWebPart](https://msdn.microsoft.com/en-us/library/office/microsoft.office.server.search.webcontrols.contentbysearchwebpart.aspx) object.
+In your custom web part, you can re-implement either the  `OnLoad()` method or the `OnInit()` method to carry out your custom logic. Both these methods are useful to set or customize properties of the [ContentBySearchWebPart](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/content-search-web-part-in-sharepoint) object.
   
     
     
 
 ### Example 1: Add Male and Female user segments to your SharePoint site
 
-To add **Male** and **Female** user segments, you can re-implement the [OnLoad()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnLoad.aspx) method as shown in the following code.
+To add **Male** and **Female** user segments, you can re-implement the `OnLoad()` method as shown in the following code.
   
     
     
@@ -291,7 +291,7 @@ A query rule transforms queries to improve the relevance of search results by re
   
     
     
-When implementing user segmentation, you use query rules to define conditions and actions for the defined user segments. When an end-user is part of a particular user segment, the query rule will activate and the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebConrols.ContentBySearchWebPart.aspx) will display content that is tailored for that particular user segment.
+When implementing user segmentation, you use query rules to define conditions and actions for the defined user segments. When an end-user is part of a particular user segment, the query rule will activate and the  [ContentBySearchWebPart](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/content-search-web-part-in-sharepoint) will display content that is tailored for that particular user segment.
   
     
     
@@ -324,7 +324,7 @@ When implementing user segmentation, you use query rules to define conditions an
   
 8. Under **Query Conditions**, choose **Remove Condition**. 
     
-    This specifies that the query configured in the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebConrols.ContentBySearchWebPart.aspx) will act as the query condition.
+    This specifies that the query configured in the  [ContentBySearchWebPart](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/content-search-web-part-in-sharepoint) will act as the query condition.
     
   
 9. Set the corresponding actions that your query rule will perform. Under the **Actions** section, select a corresponding action that you want to take as a result of -your query rule. You can select to either **Add Promoted Result** or **Add a Result Block**.
