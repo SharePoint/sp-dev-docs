@@ -238,7 +238,7 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fprefixmatchallt
 -  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
+-  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d)
     
   
 -  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)

@@ -13,7 +13,7 @@ SharePoint includes preinstalled themes. You can create custom themes by creatin
   
     
 > [!NOTE]
-> This article only applies in the context of classic SharePoint site experience. If you are looking details around modern SharePoint sites and their theme support, please have a look on the following article - [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
+> This article only applies in the context of classic SharePoint site experience. If you are looking for details around modern SharePoint sites and their theme support, please have a look on the following article - [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
 
 
 ## Core concepts to know to deploy a theme

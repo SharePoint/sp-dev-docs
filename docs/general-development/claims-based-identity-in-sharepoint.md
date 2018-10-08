@@ -36,7 +36,7 @@ The word claim is used, instead of the wordattributes that is more commonly used
 
 ### Tokens: Information about an identity
 
-A token is a set of bytes that expresses information about an identity. This information consists of one or more claims, each of which contains some information about the subject to which this token applies. The claims in a token commonly contain information such as the name of the user who presents it. They can also contain many sorts of other information—claims are not limited to, and do not even need to include, a subject's name. And, as the word claims suggests, an application that receives a token does not automatically accept the information that it contains. Instead, a received token is usually validated in some way before an application uses any claims that it contains.
+A token is a set of bytes that expresses information about an identity. This information consists of one or more claims, each of which contains some information about the subject to which this token applies. The claims in a token commonly contain information such as the name of the user who presents it. They can also contain many sorts of other information—claims are not limited to, and do not even need to include, a subject's name. And, as the word claims suggest, an application that receives a token does not automatically accept the information that it contains. Instead, a received token is usually validated in some way before an application uses any claims that it contains.
   
     
     

@@ -163,12 +163,9 @@ The **<div>** where `class="DefaultContentBlock"` is what you replace with your 
 
 ## See also
 <a name="AdditionalResources"> </a>
-
-
--  [Introduction: Control user access with permissions](http://office.microsoft.com/en-us/sharepoint-foundation-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=1)
-    
+   
   
--  [Understanding permission levels](http://office.microsoft.com/en-us/products/default-permission-levels-HA102772313.aspx?CTT=5&amp;origin=HA102771919)
+-  [Understanding permission levels](https://support.office.com/en-us/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)
     
   
 -  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
