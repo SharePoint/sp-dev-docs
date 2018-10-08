@@ -64,7 +64,7 @@ Reply, like, and mention references are stored indefinitely in the user's person
 ## What are digest threads in SharePoint social feeds?
 <a name="bk_whatAreDigests"> </a>
 
-A digest thread represents a compact version of a conversation—it contains the thread's root post and two most recent replies. You can identify a digest thread by checking whether the thread has the  [IsDigest](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadAttributes.IsDigest.aspx) attribute applied in its [Attributes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.Attributes.aspx) property. To see whether a thread has more than two threads, check the [TotalReplyCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.TotalReplyCount.aspx) property.
+A digest thread represents a compact version of a conversation—it contains the thread's root post and two most recent replies. You can identify a digest thread by checking whether the thread has the  [IsDigest](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.social.socialthreadattributes.aspx) attribute applied in its [Attributes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.Attributes.aspx) property. To see whether a thread has more than two threads, check the [TotalReplyCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.TotalReplyCount.aspx) property.
   
     
     

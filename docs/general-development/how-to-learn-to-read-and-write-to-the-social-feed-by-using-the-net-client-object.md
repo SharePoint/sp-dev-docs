@@ -85,7 +85,7 @@ Table 1 contains links to articles that describe core concepts you should know b
     
      - **Microsoft.SharePoint.Client.UserProfiles**  
 
-   If you are developing on the computer that is running SharePoint, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](http://www.microsoft.com/downloads/details.aspx?FamilyID=66da4a3e-e3b0-45d9-9e84-a84946fbf239)).
+   If you are developing on the computer that is running SharePoint, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585)).
     
   
 7. In the Program.cs file, add the following **using** statements.
@@ -138,14 +138,14 @@ using Microsoft.SharePoint.Client.Social;
     clientContext.ExecuteQuery();
     ```
 
-    [GetFeedFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeedFor.aspx) returns a **ClientResult<T>** object that stores the collection of threads in its [Value](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientResult`1.Value.aspx) property.
+    [GetFeedFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeedFor.aspx) returns a **ClientResult<T>** object that stores the collection of threads in its [Value]( https://msdn.microsoft.com/EN-US/library/ee543385.aspx ) property.
     
   
 
 ## Iterate through and read from the social feed by using the SharePoint .NET client object model
 <a name="bkmk_ReadFeed"> </a>
 
-The following code iterates through the threads in the feed. It checks whether each thread has the  [CanReply](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadAttributes.CanReply.aspx) attribute and then gets the thread identifier and the text of the root post. The code also creates a dictionary to store the thread identifier (which is used to reply to a thread) and writes the text of the root post to the console.
+The following code iterates through the threads in the feed. It checks whether each thread has the  [CanReply](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.social.socialthreadattributes.aspx) attribute and then gets the thread identifier and the text of the root post. The code also creates a dictionary to store the thread identifier (which is used to reply to a thread) and writes the text of the root post to the console.
 
 ```cs
 Dictionary<int, string> idDictionary = new Dictionary<int, string>();
