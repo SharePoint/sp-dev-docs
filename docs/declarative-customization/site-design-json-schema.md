@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 10/04/2018
+ms.date: 10/10/2018
 ---
 
 # Site design JSON schema
@@ -31,8 +31,25 @@ Use the **createSPList** verb to create a new SharePoint list.
 
 #### JSON values
 
-- **listName** &ndash; The name of the list for users to identify it with.
-- **templateType** &ndash; Which template to apply to the list. Typically you would use value 100. Template type values are documented in [SPListTemplateType enumeration](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splisttemplatetype.aspx).
+- **listName** &ndash; The name of the list.
+- **templateType** &ndash; Which template to apply to the list. Typically you would use value 100. The full list of template type values are documented in [SPListTemplateType enumeration](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splisttemplatetype.aspx) - but the ones we currently support include:
+
+  | List Template Name | Enum |
+  |--------------|---------|
+   Generic List | 100 
+   Document Library | 101
+   Survey | 102
+   Links | 103
+   Announcements | 104
+   Contacts | 105
+   Events | 106
+   Tasks | 107
+   Discussion Board | 108
+   PictureLibrary | 109
+   Site Pages | 119
+   Issue Tracking | 1100
+
+  If you use 101 or 119 and reference the default names ("Documents" or "Site Pages") you can modify the library created with the template. See example below.
 - **subactions** &ndash; An array of actions that run in the order listed to create your list.
 
 #### Example
@@ -46,7 +63,18 @@ Use the **createSPList** verb to create a new SharePoint list.
         {
             "verb": "setDescription",
             "description": "List of Customers and Orders"
-         }
+        }
+    ]
+},
+{
+    "verb": "createSPList",
+    "listName": "Documents",
+    "templateType": 101,
+    "subactions": [
+        {
+            "verb": "setDescription",
+            "description": "This is a modified default document library"
+        }
     ]
 }
 ```
