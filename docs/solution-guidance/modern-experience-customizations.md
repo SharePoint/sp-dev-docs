@@ -26,7 +26,7 @@ If you have existing customizations that are business critical for your deployme
 
 1. **Readiness**: Understand the "modern" experiences, know what features they offer, but equally important, understand which features are not (yet) available.
 
-2. **Assess**: Assess to what extent your current customizations can work within the "modern" experience. Also assess which of your sites have customizations or features that will not work within the "modern" experiences. These sites and their customizations should be updated or need to stay in "classic". However, other sites should work just fine using the "modern" experiences. The best way to assess your compatibility with the "modern" experiences is by using the [SharePoint "Modern" user interface experience scanner](https://aka.ms/sppnp-modernuiscanner).
+2. **Assess**: Assess to what extent your current customizations can work within the "modern" experience. Also assess which of your sites have customizations or features that will not work within the "modern" experiences. These sites and their customizations should be updated or need to stay in "classic". However, other sites should work just fine using the "modern" experiences. The best way to assess your compatibility with the "modern" experiences is by using the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernuiscanner).
 
 3. **Solution planning**: Plan the work required for both custom solutions and sites to prepare them to be used with the "modern" experiences.
 
