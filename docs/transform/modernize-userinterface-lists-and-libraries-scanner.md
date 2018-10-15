@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Analyze and use the scanner data
 
-To help you understand which lists are not ready to use the modern list and library user interface, you can use the  [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) to analyze your environment. Use this article to understand how you can use the scanner output to prepare your lists for getting the most out of the modern list and library experience. The scanner, as of version 1.6, will generate an Excel report plus several CSV files. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
+To help you understand which lists are not ready to use the modern list and library user interface, you can use the  [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) to analyze your environment. Use this article to understand how you can use the scanner output to prepare your lists for getting the most out of the modern list and library experience. The scanner will generate an Excel report plus several CSV files. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
 
 ## Using the "Modern UI List readiness" report
 

@@ -16,7 +16,7 @@ The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packag
 
 ## Before you start
 
-By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case either the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) or the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
+By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
 
 ```PowerShell
 $minimumVersion = New-Object System.Version("2.24.1803.0")

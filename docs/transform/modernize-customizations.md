@@ -15,15 +15,15 @@ This article gives an overview of the customizations that are not compatible wit
 
 ## Customizations in lists and libraries
 
-This section focuses on customizations that you might have implemented in your lists and libraries. SharePoint automatically falls back to the classic list and library user interface when it detects an incompatible customization. Therefore, it's important to address these customizations if you want to get a 100% modern experience. 
+This section focuses on customizations that you might have implemented in your lists and libraries. SharePoint automatically falls back to the classic list and library user interface when it detects an incompatible customization. Therefore, it's important to address these customizations if you want to get a 100% modern experience.
 
-To get an understanding of the modern user interface compatibility of your lists and libraries, use the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner).
+To get an understanding of the modern user interface compatibility of your lists and libraries, use the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization).
 
 ### JSLink
 
-A very common model to control how a field is represented in the SharePoint user interface is by using JSLink. Essentially, JSLink allows you to plug in JavaScript, which then takes over the rendering of the field. In the modern user interface, similar customization capabilities are available for the list view pages, although customizing the list edit pane currently is not possible. 
+A very common model to control how a field is represented in the SharePoint user interface is by using JSLink. Essentially, JSLink allows you to plug in JavaScript, which then takes over the rendering of the field. In the modern user interface, similar customization capabilities are available for the list view pages, although customizing the list edit pane currently is not possible.
 
-If you're replacing JSLink, you can consider two alternative approaches; which one works best depends on the complexity of the existing solution: 
+If you're replacing JSLink, you can consider two alternative approaches; which one works best depends on the complexity of the existing solution:
 - If it's merely about how to display the data, using column formatting is often the best choice.
 - If more behavior is needed, using a SharePoint Framework Field Customizer extension is often the best choice.
 
