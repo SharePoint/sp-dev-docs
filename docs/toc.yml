@@ -1365,6 +1365,8 @@
         href: transform/modernize-connect-to-office365-group-subsites.md
       - name: Site permissions after Office 365 group connection
         href: transform/modernize-connect-to-office365-group-permissions.md
+      - name: External sharing after Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-externalsharing.md
     - name: Modernize publishing portals
       href: transform/modernize-publishing-portal.md
   - name: Branding and site provisioning solutions
