@@ -1361,6 +1361,8 @@
       items:
       - name: Analyze and use the scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
+      - name: Subsites versus Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-subsites.md
       - name: Site permissions after Office 365 group connection
         href: transform/modernize-connect-to-office365-group-permissions.md
     - name: Modernize publishing portals
