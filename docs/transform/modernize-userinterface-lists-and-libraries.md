@@ -105,6 +105,10 @@ list.Update();
 context.ExecuteQuery();
 ```
 
+### Lists that show up with BaseTemplate = 0
+
+Each list does have a base template but sometimes you might see lists with a base template value of 0 in the scanner output. This is due to the fact that for these lists there's either no view marked as default or sometimes there's no view at all. The fix for these lists is to navigate to the lists settings page (`_layouts/15/listedit.aspx?List=%7B<list id>%7D`) and give the list a view.
+
 ### Customized list view pages that contain more than the list XSLTListViewWebPart
 
 Classic list view and edit pages are editable by users, so you could, for example, add additional web parts on a list view page. If you've done that, the list no longer shows in modern. To remediate this, the only approach you can take is to drop the added web parts from the list pages. You can manually check these cases by going to the list and appending `?ToolPaneView=2&pagemode=edit` to the list URL. This will bring the page in edit mode and should reveal the extra web parts and allow you to remove those. If you want to programmatically do the same then below code snippet is a good starting basis. This snippet depends on the PnP sites core library which you can install to your Visual Studio project via the [SharePointPnPCoreOnline nuget package](https://www.nuget.org/packages/SharePointPnPCoreOnline/).
