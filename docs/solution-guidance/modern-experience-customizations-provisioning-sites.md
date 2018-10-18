@@ -169,9 +169,21 @@ Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 # Create a new modern team site
 New-PnPSite -Type Team -Title "Awesome Group" -Description "Awesome Group" -Alias "awesome-group"
 ```
+#### Provision a modern teamsite using SharePoint Online Management Shell or PnP PowerShell
 
-> [!NOTE]
-> There is currently no support to provision "modern" team sites using [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
+It is now also possible to create a modern site which is not connected to a Group using PowerShell. Either by using the PnP PowerShell cmdlets or the SharePoint Online Management Shell. 
+
+```powershell
+$title = "Awesome ModernTeamsite"
+$url = "https://contoso.sharepoint.com/sites/awesomemodernteamsite"
+$owner = "denisd@contoso.com"
+
+// SharePoint Online Management Shell
+New-SPOSite -Title $_title -Url $_url -Owner $owner -StorageQuota 512 -Template "STS#3"
+
+// PnP
+New-PnPTenantSite -Url $_url -Description $_title -Title $_title -Template STS#3 -Owner $owner
+```
 
 ## Provisioning "modern" communication sites
 
