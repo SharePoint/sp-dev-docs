@@ -159,7 +159,7 @@ The Office 365 Common Language Interface (CLI) is an open source project built b
 > Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
 
 ### Connecting to the App Catalog
-Before using the App Catalog in you deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo connect https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
+Before using the App Catalog in you deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo login https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
 `
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
