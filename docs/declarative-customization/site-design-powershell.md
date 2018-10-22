@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - PowerShell cmdlets
 description: Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 04/20/2018
+ms.date: 10/23/2018
 ---
 
 # SharePoint site design: PowerShell cmdlets
@@ -26,18 +26,23 @@ To verify your setup, try using the [Get-SPOSiteScript](https://docs.microsoft.c
 The following cmdlets are available for managing site designs and site scripts from PowerShell:
 
 - [Add-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Add-SPOSiteDesign?view=sharepoint-ps)
+- [Add-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Add-SPOSiteDesignTask?view=sharepoint-ps)
 - [Add-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Add-SPOSiteScript?view=sharepoint-ps)
 - [Get-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesign?view=sharepoint-ps)
 - [Get-SPOSiteDesignRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesignRights?view=sharepoint-ps)
+- [Get-SPOSiteDesignRun](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesignRun?view=sharepoint-ps)
+- [Get-SPOSiteDesignRunStatus](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesignRunStatus?view=sharepoint-ps)
+- [Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesignTask?view=sharepoint-ps)
 - [Get-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteScript?view=sharepoint-ps)
+- [Get-SPOSiteScriptFromList](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList?view=sharepoint-ps)
 - [Grant-SPOSiteDesignRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Grant-SPOSiteDesignRights?view=sharepoint-ps)
 - [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps)
 - [Remove-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Remove-SPOSiteDesign?view=sharepoint-ps)
+- [Remove-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Remove-SPOSiteDesignTask?view=sharepoint-ps)
 - [Remove-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Remove-SPOSiteScript?view=sharepoint-ps)
 - [Revoke-SPOSiteDesignRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Revoke-SPOSiteDesignRights?view=sharepoint-ps)
 - [Set-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteDesign?view=sharepoint-ps)
 - [Set-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteScript?view=sharepoint-ps)
-
 
 
 ## See also
