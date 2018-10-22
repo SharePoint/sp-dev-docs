@@ -7,6 +7,15 @@ ms.prod: sharepoint
 
 # SharePoint Search REST API overview
 Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
+
+When you query in the context of a SharePoint Online user, you get results from: 
+- Content in SharePoint Online site collections 
+- Content in Office 365 Groups 
+- Shared OneDrive for Business content (content that's accessible for others than the owner of the OneDrive for Business) 
+- Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](https://docs.microsoft.com/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint) 
+
+If your users also expect results from OneDrive for Business content that only they have access to, you can use the [ContentSetting](#bk_ContentSetting) parameter to achieve this.
+
 ## Querying with the Search REST service
 <a name="bk_queryrest"> </a>
 
@@ -1525,6 +1534,41 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;summarylength=150
 }
 ```
 
+### ContentSetting
+<a name="bk_ContentSetting"> </a>
+A string value that specifies an alternative scope of content for the query. The parameter is formatted as a string, but represents a numeric value. The default value is 0. You apply this property via the query property bag (Properties).
+
+**0** : The scope for the query is all shared content that's been indexed in SharePoint Online. With this value of the parameter, private results aren't returned. In this context *private* means OneDrive for Business content that only the owner of the OneDrive for Business has access to. 
+
+**3** : The scope for the query is all shared content that's been indexed in SharePoint Online plus the user's private OneDrive for Business content. Two result blocks are returned. The main result block contains results from shared content, excluding any results from the user’s own OneDrive for Business. The second result block contains results from the user’s own OneDrive for Business (private and shared). This value of the parameter enables the search experience to present results from the user’s own OneDrive separate from the main shared results. 
+
+ The values 1 and 2 are reserved for future use. 
+
+**Sample GET request** 
+
+http://server/_api/search/query?querytext='sharepoint'&properties='ContentSetting:3' 
+
+**Sample POST request** 
+
+```
+
+{ 
+'__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'}, 
+'Querytext':'sharepoint', 
+'Properties' : { 
+     'results' : [ 
+          { 
+               'Name' : 'ContentSetting', 
+               'Value' : 
+               { 
+                    'IntVal' : '3', 
+                    'QueryPropertyValueTypeIndex' : 2 
+               } 
+          }, 
+     ] 
+} 
+} 
+```
 
 ## Enabling anonymous Search REST queries
 <a name="bk_AnonymousREST"> </a>
