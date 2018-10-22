@@ -32,7 +32,7 @@ You can choose any one of a number of JavaScript frameworks to develop client-si
 
 Because client-side web parts are components that are dropped into a SharePoint page, we recommend that you choose a JavaScript framework that supports a similar component model. Lightweight frameworks such as React, Handlebars, and Angular 2 all support a component model and are well suited to building client-side web parts. 
 
-We also recommend that you look at the [SharePoint PnP JavaScript Core library](https://github.com/SharePoint/PnP-JS-Core), which is a community driven effort targeted for providing easy access on SharePoint REST APIs. 
+We also recommend that you look at the [SharePoint PnP JavaScript Core library](https://github.com/pnp/pnpjs), which is a community driven effort targeted for providing easy access on SharePoint REST APIs. 
 
 ## Node Package Manager (npm)
 
