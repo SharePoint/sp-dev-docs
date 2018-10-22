@@ -142,12 +142,11 @@ Notice that you're requesting a well-known placeholder by using the correspondin
       public onInit(): Promise<void> {
         Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-        // Added to handle possible changes on the existence of placeholders.
-          this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
-
-        // Call render method for generating the HTML elements.
-          this._renderPlaceHolders();
-          return Promise.resolve<void>();
+        // Wait for the placeholders to be created (or handle them being changed) and then
+	// render.
+        this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
+	
+        return Promise.resolve<void>();
       }
   ```
 
