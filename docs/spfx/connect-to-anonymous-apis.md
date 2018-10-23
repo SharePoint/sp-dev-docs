@@ -1,7 +1,7 @@
 ---
 title: Connect to anonymous APIs
 description: Different approaches of connecting to anonymous APIs from your SharePoint Framework solutions
-ms.date: 07/06/2018
+ms.date: 10/23/2018
 ms.prod: sharepoint
 ---
 
@@ -18,7 +18,7 @@ The easiest way, to connect to anonymous APIs in your SharePoint Framework solut
 
 ```ts
 this.context.httpClient
-  .get('https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22', HttpClient.configurations.v1)
+  .get('https://jsonplaceholder.typicode.com/todos/1', HttpClient.configurations.v1)
   .then((res: HttpClientResponse): Promise<any> => {
     return res.json();
   })
@@ -31,10 +31,10 @@ Similarly to the SPHttpClient you use for connecting to SharePoint APIs, the Htt
 
 ```ts
 this.context.httpClient
-  .get('https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22', HttpClient.configurations.v1,
+  .get('https://jsonplaceholder.typicode.com/todos/1', HttpClient.configurations.v1,
     {
       headers: [
-        ['accept', 'text/xml']
+        ['accept', 'application/json']
       ]
     })
   .then((res: HttpClientResponse): Promise<any> => {
