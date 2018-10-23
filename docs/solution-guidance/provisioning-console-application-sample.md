@@ -31,7 +31,7 @@ To begin, create a Visual Studio project. In this sample, for simplicity, we cre
     
 3. Name the project **Program**, and then choose **OK**. (You can name the project anything you like, but be mindful that this walkthrough will reference the project name as **Program**.)
     
-4. Download and install the PnP Core library that is available as a NuGet package at [OfficeDevPnP.Core packages](https://www.nuget.org/profiles/officedevpnp).
+4. Download and install the PnP Core library that is available as a NuGet package at [OfficeDevPnP.Core packages](https://www.nuget.org/packages?q=SharePointPnPCore*).
     
 	> [!NOTE] 
 	> There are three versions of the library. One version is the **SharePointPnPCoreOnline** library, which targets SharePoint Online and Office 365. The other versions are **SharePointPnPCore2013** and **SharePointPnPCore2016** , which target SharePoint on-premise versions 2013 and 2016 respectively. 

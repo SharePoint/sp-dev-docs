@@ -26,7 +26,9 @@ The AppPartConfigDefinition schema specifies the XML that can be used in the con
 
 ## See also
 
-- [Create add-in parts to install with your SharePoint Add-in](/docs/sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
+- [Create add-in parts to install with your SharePoint Add-in](../sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
+
+
 
 
 
