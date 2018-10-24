@@ -77,7 +77,7 @@ From the result, obtain the odata.type value, such as SP.Data.Shared_x0020_Docum
 
 
 ```
-url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')
+url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/ListItemAllFields
 method: POST
 body: { '__metadata': { 'type': '(odata.type from previous call)' }, 'Title': 'New name', 'FileLeafRef': 'New name' }
 Headers: 
