@@ -41,7 +41,7 @@ There are numerous community calls for SharePoint development, and you can choos
 
 
 > [!NOTE]
-> Currently these are recurring invites until the end of June 2018. They will be renewed after that for the next 12 months.
+> Currently these are recurring invites until the end of June 2019. They will be renewed after that for the next 12 months.
 
 ## See also
 
