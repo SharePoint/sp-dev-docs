@@ -178,6 +178,6 @@ Optional element. Specifies whether the ability to select rows in the view is di
 
 `hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
-### hideListHeader
+### hideColumnHeader
 
 Optional element. Specifies whether the column headers in the view are hidden or not. *false* is the default behavior inside a list view (meaning column headers will be visible). *true* means that the view will not display column headers.
