@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design and site script overview
 description: Use SharePoint site scripts and site designs to provide custom configurations to apply when new sites are created.
-ms.date: 09/10/2018
+ms.date: 11/01/2018
 ---
 
 # SharePoint site design and site script overview
@@ -221,7 +221,7 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPO-SiteDesign** cmdlet or **CreateSiteDesign** REST API.
 
-The **WebTemplate** parameter set to the value 64 indicates registering this site design with the Team site template. The value 68 would indicate registering with the Communication site template. The **Title** and **Description** parameters are displayed when a user views site designs as they create a new Team site.
+The **WebTemplate** parameter set to the value 64 indicates registering this site design with the Team site template (if you have disabled modern Group creation publish your site designs using WebTemplate 1 so they display for that "Group-less" Team site template). The value 68 would indicate registering with the Communication site template. The **Title** and **Description** parameters are displayed when a user views site designs as they create a new Team site.
 
 > [!NOTE]
 > A site design can run multiple scripts. The script IDs are passed in an array, and they run in the order listed.
