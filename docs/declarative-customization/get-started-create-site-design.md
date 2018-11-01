@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. 
-ms.date: 10/03/2018
+ms.date: 11/01/2018
 ---
 
 # Get started creating site designs and site scripts
@@ -105,7 +105,7 @@ C:\> Add-SPOSiteDesign
  -Description "Tracks key customer data in a list"
 ```
 
-The previous cmdlet creates a new site design named Contoso customer tracking. The `-WebTemplate` value selects which base template to associate with. The value `"64"` indicates Team site template, and the value `"68"` indicates the Communication site template.
+The previous cmdlet creates a new site design named Contoso customer tracking. The `-WebTemplate` value selects which base template to associate with. The value `"64"` indicates Team site template, and the value `"68"` indicates the Communication site template. If you have disabled modern Group creation (or restricted to a subset of users) and wish to still allow your users to apply site designs to the "group-less" modern Team site template, publish your site designs using the `-WebTemplate` value `"1"`.
 
 The JSON response displays the **ID** of the new site design. You can use it in subsequent cmdlets to update or modify the site design.
 
