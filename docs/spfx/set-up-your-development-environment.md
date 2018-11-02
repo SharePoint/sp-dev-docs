@@ -25,14 +25,14 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ### Install NodeJS
 
-Install [NodeJS LTS version](https://nodejs.org). 
+Install [NodeJS 8.x LTS version](https://nodejs.org/dist/latest-v8.x/). 
 
 - If you are in Windows, you can use the msi installers in this link for the easiest way to set up NodeJS.
-- If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
+- If you have NodeJS already installed, check that you have the latest release of the 8.x version by using `node -v`. It should return the latest [LTS 8.x version](https://nodejs.org/en/download/releases/). 
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE] 
-> Current LTS version of NodeJS is 8.12.0. Notice that 9.x or 10.x versions are currently not supported with SharePoint Framework development.
+> There is currently two LTS versions of NodeJSs, 8.x and 10.x. Notice that only 8.x is currently supported with SharePoint Framework development.
 
 ### Install a code editor
 
