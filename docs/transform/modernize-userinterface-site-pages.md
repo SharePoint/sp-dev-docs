@@ -38,6 +38,9 @@ The page transformation engine is built using .Net and is distributed as a [nuge
 
 ![page transformation solution files](media/modernize/pagetransformation_2.png)
 
+> [!Note]
+> The minimal .Net Framework version for this solution to work is 4.5.1.
+
 The `webpartmapping.xml` and `webpartmapping_latestfrompackage.xml` represent the transformation model that describes how the transformation will happen. You typically will tweak the `webpartmapping.xml` file to your needs by for example adding additional mappings to your own web parts. If you later on install an updated version of the nuget package your `webpartmapping.xml` will not be overwritten by default but the `webpartmapping_latestfrompackage.xml` will be. You can use this latter file to compare the latest out-the-box mapping with your mapping and take over the changes you need.
 
 With the mapping file in place you now can use below snippet (coming from the [Modernization.PageTransformation sample on GitHub](https://github.com/SharePoint/PnP/tree/dev/Samples/Modernization.PageTransformation)) to transform all the pages in a given site:
@@ -75,7 +78,12 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 ## Quick start to page transformation using PowerShell
 
-The page transformation engine can also be used from PowerShell. This allows it to be integrated in a site modernization script that besides page transformation also does other things like installing solution, connecting the site to an Office 365 group and applying tenant branding. Below script shows how to call the transformation engine using PowerShell:
+The page transformation engine can also be used from PowerShell. This allows it to be integrated in a site modernization script that besides page transformation also does other things like installing solution, connecting the site to an Office 365 group and applying tenant branding.
+
+> [!IMPORTANT]
+> To use PowerShell it's important to have all the needed binaries together in one folder. The easiest solution is to download the latest version and all dependencies from the shared [SharePointPnP.Modernization binary package](https://github.com/SharePoint/PnP-Tools/blob/master/Solutions/SharePoint.Modernization/Scripts/PageTransformation/SharePointPnP.Modernization.v1.0.1811.0%20binaries.zip?raw=true). Another way to get this list of binaries is to use Visual Studio, add the [SharePointPnPModernizationOnline](https://www.nuget.org/packages/SharePointPnPModernizationOnline) package and build the solution. Once that's done you can find the needed binaries in the solution's bin folder.
+
+Below script shows how to call the transformation engine using PowerShell:
 
 [!code-powershell[transformpages](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/PageTransformation/TransformPageSample.ps1 "Transform pages to modern pages using PowerShell")]
 
