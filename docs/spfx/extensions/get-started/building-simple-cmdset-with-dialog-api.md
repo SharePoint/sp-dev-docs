@@ -1,7 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 08/27/2018
+ms.date: 11/8/2018
 ms.prod: sharepoint
 ---
 
@@ -42,7 +42,8 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
     * Accept the default value of **command-extension** as your solution name, and then select Enter.
     * Select **SharePoint Online only (latest)**, and select Enter.
     * Select **Use the current folder**, and select Enter.
-    * Select **N** to require the extension to be installed on each site explicitly when it's being used.
+    * Select **N** to allow solution to be deployed to all sites immediately.
+    * Select **N** on the question if solution contains unique permissions.
     * Select **Extension** as the client-side component type to be created. 
     * Select **ListView Command Set** as the extension type to be created.
 
@@ -346,6 +347,7 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
     "id": "0abe5c73-1655-49d3-922b-7a47dd70e151",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
+    "isDomainIsolated": false,
     "features": [
       {
         "title": "Application Extension - Deployment of custom action.",

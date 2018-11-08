@@ -1,10 +1,9 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 08/20/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
-
 
 # Build your first SharePoint client-side web part (Hello World part 1)
 
@@ -53,8 +52,9 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   - Accept the default **helloworld-webpart** as your solution name, and then select Enter.
   - Select **SharePoint Online only (latest)**, and select Enter.
   - Select **Use the current folder** for where to place the files.
-  - Select **N** to require the extension to be installed on each site explicitly when it's being used. 
-  - Select **WebPart** as the client-side component type to be created. 
+  - Select **N** to allow solution to be deployed to all sites immediately.
+  - Select **N** on the question if solution contains unique permissions.
+  - Select **WebPart** as the client-side component type to be created.
 
 5. The next set of prompts ask for specific information about your web part:
 
@@ -380,7 +380,7 @@ SharePoint Workbench is also hosted in SharePoint to preview and test your local
 1. Go to the following URL: `https://your-sharepoint-tenant.sharepoint.com/_layouts/workbench.aspx`
 
   > [!NOTE]
-  > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running the `gulp serve`command again.
+  > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running the `gulp serve`command again. See details on installing a developer certificate from the [Set up your development environment](../../set-up-your-development-environment.md) article.
 
   ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
-ms.date: 08/20/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
@@ -96,6 +96,7 @@ Note, however, that you have not yet deployed the files.
   * Select **SharePoint Online only (latest)**, and select Enter.
   * Select **Use the current folder** for where to place the files.
   * Select **y** to use the tenant-scoped deployment option, which makes the web part available across sites immediately when it's deployed. 
+  * Select **N** on the question if solution contains unique permissions.  
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
