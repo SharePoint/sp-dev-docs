@@ -17,7 +17,7 @@ You can't yet transform all lists and libraries to the modern experience because
 
 ## List templates available in the modern user interface
 
-Following are the most commonly used list template types that SharePoint can currently render in a modern user interface (as of July 2018):
+Following are the most commonly used list template types that SharePoint can currently render in a modern user interface (as of October 2018):
 
 - List (100)
 - Document Library (101)
@@ -28,6 +28,7 @@ Following are the most commonly used list template types that SharePoint can cur
 - Form library (115)
 - Site pages library (119)
 - Promoted links list (170)
+- Publishing pages library (850)
 - Assets library (851)
 - Issue tracking list (1100)
 
