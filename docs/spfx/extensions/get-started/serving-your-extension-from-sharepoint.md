@@ -1,7 +1,7 @@
 ---
 title: Deploy your extension to SharePoint (Hello World part 3)
 description: Deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages.
-ms.date: 08/27/2018
+ms.date: 11/8/2018
 ms.prod: sharepoint
 ---
 
@@ -135,6 +135,7 @@ Your **package-solution.json** should look somewhat following after the needed e
     "id": "98a9fe4f-175c-48c1-adee-63fb927faa70",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
+    "isDomainIsolated": false,
     "features": [
       {
         "title": "Application Extension - Deployment of custom action.",

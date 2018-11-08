@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 08/30/2018
+ms.date: 11/8/2018
 ms.prod: sharepoint
 ---
 
@@ -43,7 +43,8 @@ You can also follow the steps in this article by watching the video on the Share
     * Accept the default **app-extension** as your solution name, and select Enter.
     * Select **SharePoint Online only (latest)**, and select Enter.
     * Select **Use the current folder**, and select Enter.
-    * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
+    * Select **N** to allow solution to be deployed to all sites immediately.
+    * Select **N** on the question if solution contains unique permissions.
     * Select **Extension** as the client-side component type to be created. 
     * Select **Application Customizer** as the extension type to be created.
 
@@ -51,7 +52,6 @@ You can also follow the steps in this article by watching the video on the Share
 
     * Accept the default **HelloWorld** as your extension name, and select Enter.
     * Accept the default **HelloWorld description** as your extension description, and select Enter.
-    * For the next question **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites....**, ensure you select No (N) , and select Enter. If you select Yes (y), the scaffolding will not generate the Elements.xml feature deployment file.
 
     <br/>
 
@@ -117,7 +117,7 @@ You cannot use the local Workbench to test SharePoint Framework Extensions. You 
 
     Notice that this file has been updated with the default settings matching your project. You can notice that there's a specific GUID mentioned under the customActions element. This is automatically updated to match your component when project was scaffold. If you will add new components or change the properties for the component, you will need to update this file for testing.
 
-2. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *This could be for example a welcome page of a new group associated team site, which would mean somewhat following URL:
+2. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *This could be for example a welcome page of a new group associated team site, which would mean somewhat following URL:*
 
     `https://sppnp.sharepoint.com/sites/yoursite/SitePages/Home.aspx`
 

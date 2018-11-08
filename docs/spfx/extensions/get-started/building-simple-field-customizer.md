@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 08/28/2018
+ms.date: 11/8/2018
 ms.prod: sharepoint
 ---
 
@@ -42,7 +42,8 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
     * Accept the default value of **field-extension** as your solution name, and then select Enter.
     * Select **SharePoint Online only (latest)**, and select Enter.
     * Select **Use the current folder**, and select Enter.
-    * Select **N** to require the extension to be installed on each site explicitly when it's being used.
+    * Select **N** to allow solution to be deployed to all sites immediately.
+    * Select **N** on the question if solution contains unique permissions.
     * Select **Extension** as the client-side component type to be created. 
     * Select **Field Customizer** as the extension type to be created.
     
@@ -328,6 +329,7 @@ Notice also that by default **includeClientSideAssets** attribute is set to true
     "id": "80c04d1b-dca7-4d0a-86c0-9aedf904704f",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
+    "isDomainIsolated": false,
     "features": [
       {
         "title": "Application Extension - Deployment of custom action.",

@@ -1,10 +1,9 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and are deployed to SharePoint sites when the solution is installed on it. 
-ms.date: 08/20/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
-
 
 # Provision SharePoint assets from your SharePoint client-side web part
 
@@ -49,6 +48,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   * Select **SharePoint Online only (latest)**, and then select Enter.
   * Select **Use the current folder** as the location for the files.
   * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
+  * Select **N** on the question if solution contains unique permissions.  
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:

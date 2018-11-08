@@ -1,7 +1,7 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
 description: Build a simple web part that uses the DocumentCard component of Office UI Fabric React.
-ms.date: 08/20/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
@@ -46,7 +46,8 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   * Accept the default **documentcardexample-webpart** as your solution name, and select Enter.
   * Select **SharePoint Online only (latest)**, and select Enter.
   * Select **Use the current folder** for where to place the files.
-  * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
+  * Select **N** to require the extension to be installed on each site explicitly when it's being used.
+  - Select **N** on the question if solution contains unique permissions.  
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:

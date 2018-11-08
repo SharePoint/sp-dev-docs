@@ -106,7 +106,7 @@ However, in the code below the moment library is loaded asynchronous when the `G
 
 ```typescript
 export default class MyClass {
-    public GetTime(dateString:string){
+    public async GetTime(dateString:string){
          const moment = await import(
                 /* webpackChunkName: 'my-moment' */
                 'moment'
@@ -122,7 +122,7 @@ export default class MyClass {
 declare var System: any;
 
 export default class MyClass {
-    public GetTime(dateString:string){
+    public async GetTime(dateString:string){
          const moment = await System.import(
                 /* webpackChunkName: 'my-moment' */
                 'moment'

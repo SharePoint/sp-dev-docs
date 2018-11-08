@@ -32,6 +32,8 @@
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Deploy your web part to an Azure CDN
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
+      - name: Building Microsoft Teams tab using SharePoint Framework
+        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md        
     - name: Basics
       items:
       - name: Integrate properties with SharePoint
@@ -48,6 +50,10 @@
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
         href: spfx/web-parts/guidance/validate-web-part-property-values.md
+      - name: Isolated web parts
+        href: spfx/web-parts/isolated-web-parts.md
+      - name: Single Part App Pages
+        href: spfx/web-parts/single-part-app-pages.md
       - name: Share data between web parts
         href: spfx/web-parts/guidance/share-data-between-web-parts.md
         items:
@@ -118,7 +124,11 @@
     - name: Dynamic loading of packages
       href: spfx/dynamic-loading.md
     - name: Connecting components
-      href: spfx/dynamic-data.md      
+      href: spfx/dynamic-data.md    
+    - name: Building Microsoft Teams Tabs
+      href: spfx/integrate-with-teams-introduction.md      
+    - name: Hosting Microsoft Teams Tabs in SharePoint
+      href: spfx/using-teams-solutions-in-sharepoint.md            
   - name: External libraries
     items:
     - name: Add external libraries
@@ -145,6 +155,8 @@
       href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
     - name: Connect to anonymous APIs
       href: spfx/connect-to-anonymous-apis.md
+    - name: Subscribe to list notifications
+      href: spfx/subscribe-to-list-notifications.md      
     - name: Tutorials
       items:        
       - name: Consume Microsoft Graph (tutorial)

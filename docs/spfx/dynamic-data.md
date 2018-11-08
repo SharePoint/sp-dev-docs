@@ -1,7 +1,7 @@
 ---
 title: Connect SharePoint Framework components using dynamic data
-description: High level description on how to use dynamic data concept for connecting different SharePoint Framework components
-ms.date: 09/13/2018
+description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
@@ -9,31 +9,47 @@ ms.prod: sharepoint
 
 Using the dynamic data capability, you can connect SharePoint Framework client-side web parts and extensions to each other and exchange information between the components. This allows you to build rich experiences and compelling end-user solutions.
 
-> [!IMPORTANT]
-> The dynamic data capability is currently in preview and using it in production solutions is not supported.
+![Three SharePoint Framework web parts connected to each other showing information about events](../images/dynamic-data-webparts.png)
 
 ## Expose data using dynamic data source
 
 Dynamic data in the SharePoint Framework is based on the source-notification model. Component designated as a dynamic data source, provides data and notifies about its changes. Other components on the page can subscribe to notifications issued by a dynamic data source. When handling notifications, dynamic data consumers can retrieve the current value of the dynamic data set exposed by the data source.
 
-Each data source implements the `IDynamicDataCallables` interface. Following, is an example of a web part that displays a list of upcoming events. For each event, it includes some information such as its name, description and location. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
+Every dynamic data source implements the `IDynamicDataCallables` interface. Following, is an example of a web part that displays a list of upcoming events. For each event, it includes some information such as its name, description and location. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
 
 ```ts
+import { IDynamicDataPropertyDefinition, IDynamicDataCallables } from '@microsoft/sp-dynamic-data';
+
 export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartProps> implements IDynamicDataCallables {
+  /**
+   * Currently selected event
+   */
   private _selectedEvent: IEvent;
 
+  /**
+   * Event handler for selecting an event in the list
+   */
   private _eventSelected = (event: IEvent): void => {
+    // store the currently selected event in the class variable. Required
+    // so that connected component will be able to retrieve its value
     this._selectedEvent = event;
+    // notify subscribers that the selected event has changed
     this.context.dynamicDataSourceManager.notifyPropertyChanged('event');
+    // notify subscribers that the selected location has changed
     this.context.dynamicDataSourceManager.notifyPropertyChanged('location');
   }
 
   protected onInit(): Promise<void> {
+    // register this web part as dynamic data source
     this.context.dynamicDataSourceManager.initializeSource(this);
 
     return Promise.resolve();
   }
 
+  /**
+   * Return list of dynamic data properties that this dynamic data source
+   * returns
+   */
   public getPropertyDefinitions(): ReadonlyArray<IDynamicDataPropertyDefinition> {
     return [
       {
@@ -47,6 +63,10 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
     ];
   }
 
+  /**
+   * Return the current value of the specified dynamic data set
+   * @param propertyId ID of the dynamic data set to retrieve the value for
+   */
   public getPropertyValue(propertyId: string): IEvent | ILocation {
     switch (propertyId) {
       case 'event':
@@ -123,49 +143,70 @@ To register a component as a dynamic data source, call the `this.context.dynamic
 
 In the example code, the web part displays upcoming events in a list. Each time, the user selects an event from the list, the web part calls the `_eventSelected` method. In that method, the web part assigns the selected event to the `_selectedEvent` class variable and issues a notification that the information about the selected event and location has changed by calling the `this.context.dynamicDataSourceManager.notifyPropertyChanged()` method passing the `id` of the definition that represents the changed data set.
 
-## Consume dynamic data
+## Consume dynamic data in web parts
 
-Components on the page can subscribe to data notifications exposed by dynamic data sources. The subscription is recorded using the ID of the data source and the ID of the data set it exposes.
-
-Following is the code of a web part showing detailed information about the event selected in the events list web part showed previously. The displayed data is retrieved from the events data source configured in web part properties.
+Web parts can consume data exposed by dynamic data sources present on the page. Following is the code of a web part showing on a map the location of the event selected in the events list web part showed previously.
 
 ```ts
-export default class EventDetailsWebPart extends BaseClientSideWebPart<IEventDetailsWebPartProps> {
-  protected onInit(): Promise<void> {
-    this.render = this.render.bind(this);
+import { DynamicProperty } from '@microsoft/sp-component-base';
 
-    return Promise.resolve();
+/**
+ * Map web part properties
+ */
+export interface IMapWebPartProps {
+  /**
+   * The address to display on the map
+   */
+  address: DynamicProperty<string>;
+  /**
+   * Bing maps API key to use with the Bing maps API
+   */
+  bingMapsApiKey: string;
+  /**
+   * The city where the address is located
+   */
+  city: DynamicProperty<string>;
+  /**
+   * Web part title
+   */
+  title: string;
+}
+
+/**
+ * Map web part. Shows the map of the specified location. The location can be
+ * specified either directly in the web part properties or via a dynamic data
+ * source connection.
+ */
+export default class MapWebPart extends BaseClientSideWebPart<IMapWebPartProps> {
+  /**
+   * Event handler for clicking the Configure button on the Placeholder
+   */
+  private _onConfigure = (): void => {
+    this.context.propertyPane.open();
   }
 
   public render(): void {
-    let event: IEvent = undefined;
-    const needsConfiguration: boolean = !this.properties.sourceId || !this.properties.propertyId;
+    // Get the location to show on the map. The location will be retrieved
+    // either from the event selected in the connected data source or from the
+    // address entered in web part properties
+    const address: string | undefined = this.properties.address.tryGetValue();
+    const city: string | undefined = this.properties.city.tryGetValue();
+    const needsConfiguration: boolean = !this.properties.bingMapsApiKey || (!address && !this.properties.address.tryGetSource()) || 
+    (!city && !this.properties.city.tryGetSource());
 
-    if (this.renderedOnce === false && !needsConfiguration) {
-      try {
-        this.context.dynamicDataProvider.registerPropertyChanged(this.properties.sourceId, this.properties.propertyId, this.render);
-        this._lastSourceId = this.properties.sourceId;
-        this._lastPropertyId = this.properties.propertyId;
-      }
-      catch (e) {
-        this.context.statusRenderer.renderError(this.domElement, `An error has occurred while connecting to the data source. Details: ${e}`);
-        return;
-      }
-    }
-
-    if (!needsConfiguration) {
-      const source: IDynamicDataSource = this.context.dynamicDataProvider.tryGetSource(this.properties.sourceId);
-      event = source ? source.getPropertyValue(this.properties.propertyId) : undefined;
-    }
-
-    const element: React.ReactElement<IEventDetailsProps> = React.createElement(
-      EventDetails,
+    const element: React.ReactElement<IMapProps> = React.createElement(
+      Map,
       {
         needsConfiguration: needsConfiguration,
-        event: event,
+        httpClient: this.context.httpClient,
+        bingMapsApiKey: this.properties.bingMapsApiKey,
+        dynamicAddress: !!this.properties.address.tryGetSource(),
+        address: `${address} ${city}`,
         onConfigure: this._onConfigure,
-        displayMode: this.displayMode,
+        width: this.domElement.clientWidth,
+        height: this.domElement.clientHeight,
         title: this.properties.title,
+        displayMode: this.displayMode,
         updateProperty: (value: string): void => {
           this.properties.title = value;
         }
@@ -175,133 +216,272 @@ export default class EventDetailsWebPart extends BaseClientSideWebPart<IEventDet
     ReactDom.render(element, this.domElement);
   }
 
-  // ... omitted for brevity
-}
-```
+  protected get dataVersion(): Version {
+    return Version.parse('1.0');
+  }
 
-Dynamic data consumer subscribes to notifications issues by the dynamic data source by calling the `this.context.dynamicDataProvider.registerPropertyChanged(sourceId, propertyId, handler);` method. The first argument, `sourceId` refers to the ID of the dynamic data source which issues notifications. The second argument, `propertyId` refers to the ID of the data set exposed by the data source. The last arguments points to the handler method which is called whenever the data source issued a notification.
-
-When the data source notifies the data consumer that its data is changed, the specified handler method is called. In that method, you should retrieve the latest data from the data source. You do this, by first retrieving the source using the `this.context.dynamicDataProvider.tryGetSource(sourceId)` method. Once you have the reference to the data source, you can retrieve the data by calling the `source.getPropertyValue(propertyId)` method, specifying the id of the data set.
-
-```ts
-const source: IDynamicDataSource = this.context.dynamicDataProvider.tryGetSource(this.properties.sourceId);
-event = source ? source.getPropertyValue(this.properties.propertyId) : undefined;
-```
-
-> [!IMPORTANT]
-> Depending on the order in which components on the page are loaded, it could happen that the particular dynamic data source is not available when retrieving it using the `tryGetSource` method. Before calling the `getPropertyValue` method to retrieve the current value for the dynamic data, you should first check if the source is available to avoid runtime errors.
-
-## Connect to a dynamic data source
-
-Dynamic data consumers subscribe to notifications issued by dynamic data sources by specifying the unique ID of the dynamic data source. Because these IDs are generated on runtime, the easiest way to allow users to connect components is by using the web part property pane enumerating all available dynamic data sources and their data sets. Following code shows how to provide configuration interface for end-users to connect web part to a dynamic data source on the page:
-
-```ts
-import * as React from 'react';
-import * as ReactDom from 'react-dom';
-import { Version } from '@microsoft/sp-core-library';
-import {
-  BaseClientSideWebPart,
-  IPropertyPaneConfiguration,
-  PropertyPaneTextField,
-  IPropertyPaneDropdownOption,
-  PropertyPaneDropdown
-} from '@microsoft/sp-webpart-base';
-
-import * as strings from 'EventDetailsWebPartStrings';
-import { EventDetails, IEventDetailsProps } from './components';
-import { IDynamicDataSource } from '@microsoft/sp-dynamic-data';
-import { IEvent } from '../../data';
-
-export interface IEventDetailsWebPartProps {
-  propertyId: string;
-  sourceId: string;
-  title: string;
-}
-
-export default class EventDetailsWebPart extends BaseClientSideWebPart<IEventDetailsWebPartProps> {
-  private _lastSourceId: string = undefined;
-  private _lastPropertyId: string = undefined;
-
-  // ... omitted for brevity
+  protected get propertiesMetadata(): IWebPartPropertiesMetadata {
+    return {
+      // Specify the web part properties data type to allow the address
+      // information to be serialized by the SharePoint Framework.
+      'address': {
+        dynamicPropertyType: 'string'
+      },
+      'city': {
+        dynamicPropertyType: 'string'
+      }
+    };
+  }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
-    const sourceOptions: IPropertyPaneDropdownOption[] =
-      this.context.dynamicDataProvider.getAvailableSources().map(source => {
-        return {
-          key: source.id,
-          text: source.metadata.title
-        };
-      });
-    const selectedSource: string = this.properties.sourceId;
-
-    let propertyOptions: IPropertyPaneDropdownOption[] = [];
-    if (selectedSource) {
-      const source: IDynamicDataSource = this.context.dynamicDataProvider.tryGetSource(selectedSource);
-      if (source) {
-        propertyOptions = source.getPropertyDefinitions().map(prop => {
-          return {
-            key: prop.id,
-            text: prop.title
-          };
-        });
-      }
-    }
-
     return {
       pages: [
         {
           groups: [
             {
+              groupName: strings.BingMapsGroupName,
               groupFields: [
-                PropertyPaneDropdown('sourceId', {
-                  label: strings.SourceIdFieldLabel,
-                  options: sourceOptions,
-                  selectedKey: this.properties.sourceId
+                PropertyPaneTextField('bingMapsApiKey', {
+                  label: strings.BingMapsApiKeyFieldLabel
                 }),
-                PropertyPaneDropdown('propertyId', {
-                  label: strings.PropertyIdFieldLabel,
-                  options: propertyOptions,
-                  selectedKey: this.properties.propertyId
+                PropertyPaneLink('', {
+                  href: 'https://www.bingmapsportal.com/',
+                  text: strings.GetBingMapsApiKeyLinkText,
+                  target: '_blank'
                 })
               ]
-            }
+            },
+            // Web part properties group for specifying the information about
+            // the address to show on the map.
+            {
+              // Primary group is used to provide the address to show on the map
+              // in a text field in the web part properties
+              primaryGroup: {
+                groupName: strings.DataGroupName,
+                groupFields: [
+                  PropertyPaneTextField('address', {
+                    label: strings.AddressFieldLabel
+                  }),
+                  PropertyPaneTextField('city', {
+                    label: strings.CityFieldLabel
+                  })
+                ]
+              },
+              // Secondary group is used to retrieve the address from the
+              // connected dynamic data source
+              secondaryGroup: {
+                groupName: strings.DataGroupName,
+                groupFields: [
+                  PropertyPaneDynamicFieldSet({
+                    label: 'Address',
+                    fields: [
+                      PropertyPaneDynamicField('address', {
+                        label: strings.AddressFieldLabel
+                      }),
+                      PropertyPaneDynamicField('city', {
+                        label: strings.CityFieldLabel
+                      })
+                    ],
+                    sharedConfiguration: {
+                      depth: DynamicDataSharedDepth.Property
+                    }
+                  })
+                ]
+              },
+              // Show the secondary group only if the web part has been
+              // connected to a dynamic data source
+              showSecondaryGroup: !!this.properties.address.tryGetSource()
+            } as IPropertyPaneConditionalGroup
           ]
         }
       ]
     };
   }
 
-  protected onPropertyPaneFieldChanged(propertyPath: string): void {
-    if (propertyPath === 'sourceId') {
-      this.properties.propertyId =
-        this.context.dynamicDataProvider.tryGetSource(this.properties.sourceId).getPropertyDefinitions()[0].id;
-    }
-
-    if (this._lastSourceId && this._lastPropertyId) {
-      this.context.dynamicDataProvider.unregisterPropertyChanged(this._lastSourceId, this._lastPropertyId, this.render);
-    }
-
-    this.context.dynamicDataProvider.registerPropertyChanged(this.properties.sourceId, this.properties.propertyId, this.render);
-    this._lastSourceId = this.properties.sourceId;
-    this._lastPropertyId = this.properties.propertyId;
+  protected get disableReactivePropertyChanges(): boolean {
+    // set property changes mode to reactive, so that the Bing Maps API is not
+    // called on each keystroke when typing in the address to show on the map
+    // in web part properties
+    return true;
   }
 }
 ```
 
-The `this.context.dynamicDataProvider.getAvailableSources()` method returns information about all dynamic data source available on the current page. For each dynamic data source you get the information about its unique ID as well as other information included in its component manifest. Additionally, for each data source you can call the `IDynamicDataSource.getPropertyDefinitions()` method to get information about all data sets it exposes.
+SharePoint Framework offers standard UI for connecting web parts to dynamic data sources. This UI simplifies working with dynamic data by discovering available dynamic data sources and their properties and persisting the configured connection. To use this UI, a web part that consumes dynamic data must include a few specific building blocks.
 
-When using the web part property pane to allow users to connect components, it's important that you remove the previously configured event handler, before registering the new handler by calling the `this.context.dynamicDataProvider.unregisterPropertyChanged(sourceId, propertyId, handler)` method.
+### Define dynamic web part properties
+
+Each web part property, for which the data can be retrieved from a dynamic data source, should be defined as `DynamicProperty<T>` where the `T` type denotes the type of data stored in the property, for example:
+
+```ts
+/**
+ * Map web part properties
+ */
+export interface IMapWebPartProps {
+  /**
+   * The address to display on the map
+   */
+  address: DynamicProperty<string>;
+  
+  // ... omitted for brevity
+}
+```
+
+In this example, the address is a string, but other types of data such as boolean, numbers or objects are supported as well. Web part properties defined as `DynamicProperty` can retrieve their data from dynamic data sources or values provided directly in the web part properties. Because the same web part property can be used for both dynamic data sources and static values configured in web part properties, you don't need to define multiple web part properties what simplifies building versatile web parts.
+
+### Define the type of data stored in dynamic properties
+
+For each dynamic property you have to specify the type of data it holds. This is necessary, so that the instance of the web part added to a page can be properly serialized. For each dynamic web part property, in the `propertiesMetadata` getter, specify the `dynamicPropertyType` value:
+
+```ts
+protected get propertiesMetadata(): IWebPartPropertiesMetadata {
+  return {
+    // Specify the web part properties data type to allow the address
+    // information to be serialized by the SharePoint Framework.
+    'address': {
+      dynamicPropertyType: 'string'
+    },
+    'city': {
+      dynamicPropertyType: 'string'
+    }
+  };
+}
+```
+
+Possible values for the `dynamicPropertyType` property are: `boolean`, `number`, `string`, `array` and `object`.
+
+### Use the standard UI for connecting web part to dynamic data sources
+
+To allow users to connect web parts to dynamic data sources available on the page, SharePoint Framework provides a standard UI which can be accessed from the web part property pane.
+
+![Standard UI for connecting SharePoint Framework web parts to dynamic data sources available on the page](../images/dynamic-data-connect-ui.png)
+
+> [!IMPORTANT]
+> When using the standard UI to connect a web part to a dynamic data source, ensure, that the dynamic data source returns a value for the given dynamic property (in the previous example, there is an event selected in the list of events). If it doesn't, the UI will not be able to determine the type of data returned by the data source and setting up the connection will fail.
+
+In its simplest form, the UI could be defined as follows:
+
+```ts
+protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+  return {
+    pages: [
+      {
+        groups: [
+          {
+            groupFields: [
+              PropertyPaneDynamicFieldSet({
+                label: 'Select event source',
+                fields: [
+                  PropertyPaneDynamicField('event', {
+                    label: 'Event source'
+                  })
+                ]
+              })
+            ]
+          }
+        ]
+      }
+    ]
+  };
+}
+```
+
+For each set of dynamic properties, add a new group using the `PropertyPaneDynamicFieldSet` method. For each dynamic web part property, add a `PropertyPaneDynamicField`, which will allow users to select from which property, the web part property specified in the `PropertyPaneDynamicField` should retrieve its data.
+
+If your dynamic data field set consists of multiple dynamic properties, you can specify how the connection data is shared using the `sharedConfiguration.depth`  property:
+
+```ts
+groupFields: [
+  PropertyPaneDynamicFieldSet({
+    label: 'Address',
+    fields: [
+      PropertyPaneDynamicField('address', {
+        label: strings.AddressFieldLabel
+      }),
+      PropertyPaneDynamicField('city', {
+        label: strings.CityFieldLabel
+      })
+    ],
+    sharedConfiguration: {
+      depth: DynamicDataSharedDepth.Property
+    }
+  })
+]
+```
+
+In this example, all dynamic properties share the selected connection and property. This is useful in cases, where the selected property exposed by the data source is an object and you want to connect your dynamic properties to the different properties of the selected object. If you want to use the same data source, but connect each web part property to a different property exposed by the selected data source, you can use `DynamicDataSharedDepth.Source` instead. Finally, if you want each property to retrieve its data from a different data source, you can set the `sharedConfiguration.depth` property to `DynamicDataSharedDepth.None`.
+
+### Allow users to choose if they want to use dynamic data or specify the value themselves
+
+When building web parts, you can allow users to connect web parts to other components on the page, or specify values of web part properties themselves. This requires very little additional effort and allows you to build web parts that are more versatile and suitable for a broader range of use cases.
+
+To allow users to be able to choose if they want to load data from a dynamic property or enter the value themselves in the web part properties, you can define the web part properties group as a `IPropertyPaneConditionalGroup` group.
+
+```ts
+protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+  return {
+    pages: [
+      {
+        groups: [
+          // Web part properties group for specifying the information about
+          // the address to show on the map.
+          {
+            // Primary group is used to provide the address to show on the map
+            // in a text field in the web part properties
+            primaryGroup: {
+              groupName: strings.DataGroupName,
+              groupFields: [
+                PropertyPaneTextField('address', {
+                  label: strings.AddressFieldLabel
+                }),
+                PropertyPaneTextField('city', {
+                  label: strings.CityFieldLabel
+                })
+              ]
+            },
+            // Secondary group is used to retrieve the address from the
+            // connected dynamic data source
+            secondaryGroup: {
+              groupName: strings.DataGroupName,
+              groupFields: [
+                PropertyPaneDynamicFieldSet({
+                  label: 'Address',
+                  fields: [
+                    PropertyPaneDynamicField('address', {
+                      label: strings.AddressFieldLabel
+                    }),
+                    PropertyPaneDynamicField('city', {
+                      label: strings.CityFieldLabel
+                    })
+                  ],
+                  sharedConfiguration: {
+                    depth: DynamicDataSharedDepth.Property
+                  }
+                })
+              ]
+            },
+            // Show the secondary group only if the web part has been
+            // connected to a dynamic data source
+            showSecondaryGroup: !!this.properties.address.tryGetSource()
+          } as IPropertyPaneConditionalGroup
+        ]
+      }
+    ]
+  };
+}
+```
+
+A conditional web part property pane group consists of a **primary** and a **secondary** group. Using the `showSecondaryGroup` property, you can specify when the secondary group should be visible and the primary group should be hidden. In the example above, the secondary group, which is used for connecting the web part to a dynamic data source, will be visible when the user selected to connect the web part to a dynamic data source by clicking the ellipsis (...).
+
+![Mouse pointer hovering over the ellipsis in the web part property pane used to connect a SharePoint Framework web part to a dynamic data source](../images/dynamic-data-conditional-group.png)
 
 ## Considerations
 
 - each page can have multiple dynamic data sources and consumers
 - each component can both provide dynamic data to other components and consume dynamic data from other components
 - components can consume data from multiple dynamic data sources
-- to persist subscriptions to dynamic data sources, store the subscription information in web part properties
-
+- SharePoint Framework offers standard UI for connecting web parts to data sources and automatically persists connection information
 
 ## See also
 
- [Dynamic Data sample code](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-events-dynamicdata)
-  
-    
+- [Dynamic Data sample code](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-events-dynamicdata)

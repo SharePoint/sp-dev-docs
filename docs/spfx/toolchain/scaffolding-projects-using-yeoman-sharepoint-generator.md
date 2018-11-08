@@ -1,7 +1,7 @@
 ---
 title: Scaffold projects by using Yeoman SharePoint generator
 description: Use the Yeoman SharePoint generator to scaffold new client-side solution projects to build, package, and deploy SharePoint solutions.
-ms.date: 06/05/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
@@ -63,9 +63,10 @@ Option | Description
 --plusbeta| Use the beta packages. Scaffolding should be done with @plusbeta
 --extension-type|The type of extension: Currently ApplicationCustomizer, FieldCustomizer, ListViewCommandSet.
 --solution-name|Client-side solution name, as well as folder name.
---environment|The target environment for the solution. Either "onprem" or "spo".
+--environment|The target environment for the solution. Either "onprem", "onprem19" or "spo".
 --package-manager|The package manager for the solution. Options are: "npm", "pnpm", or "yarn". Default: *npm*
 --skip-feature-deployment|If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites. Default: *false*.
+--is-domain-isolated|If 'y', web part will be rendered in isolated domain using IFrame. If set to "y", sets the component type as web part.
 
 <br/>
 
