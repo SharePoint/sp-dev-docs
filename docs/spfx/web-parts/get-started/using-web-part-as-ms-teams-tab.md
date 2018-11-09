@@ -281,6 +281,9 @@ Now we have confirmed that the side-loading is enabled, and we can package our M
 
     ![Add a tab](../../../images/sp-teams-configure-tab.png)
 
+> [!IMPORTANT]
+> There is a known **bug** related on the property configuration, which will be addressed. You cannot change default property values or the web part is not successfully added on the tab. Fix for this issue will be rolling out in upcoming days.
+
 Your custom tab has been added on the Microsoft Teams channel and you can see how the code is reacting that it's in Microsoft Teams context. Theme of the web part is by default coming from the underlaying SharePoint site.
 
 ![Custom tab added](../../../images/sp-teams-custom-tab-added.png)

@@ -19,6 +19,9 @@ There are following benefits on using SharePoint Framework as the platform for y
 > [!IMPORTANT]
 > This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
+> [!IMPORTANT]
+> There is a known **bug** related on the property configuration, which will be addressed. You cannot change default property values or the web part is not successfully added on the tab. Fix for this issue will be rolling out in upcoming days.
+
 ## Development process
 
 You can start developing Microsoft Teams tabs simply by using the `with beta` version of the SharePoint Framework 1.7 packages. High level steps to get started are as follows.

@@ -12,6 +12,9 @@ Single part app pages provides a capability to host SharePoint Framework web par
 > [!IMPORTANT]
 > This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
+> [!IMPORTANT]
+> This capability has been temporarely blocked due a **bug**. Fix for this issue will be rolling out in upcoming days.
+
 App pages have following characterers:
 
 * Single Part App Pages cannot be edited by end users using browser
