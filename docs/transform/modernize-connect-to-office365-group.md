@@ -55,7 +55,7 @@ Getting familiar with what group-connection does to your site is important, and 
 
 The user interface option shown in the previous section is not suitable if you want to group-connect hundreds of site collections. At that point, using an API to programmatically do this makes a lot of sense. But before doing that, it's best to verify which sites are ready to be group-connected because not all sites are suitable for this.
 
-To help you understand which sites are ready to be group-connected, you can use the [SharePoint Modernization Scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) to analyze your environment. This link contains all the details needed to run the scanner. After you've run the scanner go the [Understand and process the scanner results](modernize-connect-to-office365-group-scanner.md) article to analyze the scan results.
+To help you understand which sites are ready to be group-connected, you can use the [SharePoint Modernization Scanner](https://aka.ms/sppnp-modernizationscanner) to analyze your environment. This link contains all the details needed to run the scanner. After you've run the scanner go the [Understand and process the scanner results](modernize-connect-to-office365-group-scanner.md) article to analyze the scan results.
 
 ### Step 3: Modernize your sites
 
