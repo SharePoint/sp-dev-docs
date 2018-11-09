@@ -13,7 +13,7 @@ Next to these master pages and alternate CSS settings, you could have used a cla
 
 ## Detect sites that use master pages or alternate CSS
 
-The recommended approach to find out which sites use a custom master page or use the alternate CSS option is to run the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization). This tool performs a deep analysis of all the sites in your tenant and creates reports that give you details about sites that still have incompatible master pages or alternate CSS settings. Based on the scanner output, you can remediate these sites.
+The recommended approach to find out which sites use a custom master page or use the alternate CSS option is to run the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner). This tool performs a deep analysis of all the sites in your tenant and creates reports that give you details about sites that still have incompatible master pages or alternate CSS settings. Based on the scanner output, you can remediate these sites.
 
 ### Revert back to the default configuration
 

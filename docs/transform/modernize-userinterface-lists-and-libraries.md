@@ -39,7 +39,7 @@ In this section you'll learn how to identify lists which are not showing as a mo
 
 ## Detect lists and libraries not available in the modern user interface
 
-The recommended approach to detect which lists and libraries are not available in the modern user interface is to run the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization). This tool performs a deep analysis of all the lists and libraries in your tenant, and creates reports that give you details about which lists and libraries do not show in modern, and more importantly, why that happens. Based on the scanner output, you can unblock lists and libraries by remediating them, which is covered in the next section.
+The recommended approach to detect which lists and libraries are not available in the modern user interface is to run the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner). This tool performs a deep analysis of all the lists and libraries in your tenant, and creates reports that give you details about which lists and libraries do not show in modern, and more importantly, why that happens. Based on the scanner output, you can unblock lists and libraries by remediating them, which is covered in the next section.
 
 ## Unblock lists and libraries
 
