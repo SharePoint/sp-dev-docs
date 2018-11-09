@@ -5,7 +5,7 @@ ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
-# Surfacing your SharePoint Framework solution as a Microsoft Teams tab - Tutorial
+# Building Microsoft Teams tab using SharePoint Framework - Tutorial
 
 Starting with the SharePoint Framework v1.7, you can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies  Teams tab development process as  SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services.
 
