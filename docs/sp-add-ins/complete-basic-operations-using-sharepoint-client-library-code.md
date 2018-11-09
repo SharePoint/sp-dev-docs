@@ -658,7 +658,8 @@ When a value object is returned from a method or property, you cannot use that o
 ClientContext context = new ClientContext("http://SiteUrl"); 
 
 Web web = context.Web; 
-ListCreationInformation creationInfo = new ListCreationInformation(); 
+ListCreationInformation creationInfo = new ListCreationInformation();
+creationInfo.TemplateType = (int)ListTemplateType.Announcements;
 creationInfo.Description = web.Title; 
 creationInfo.Title = web.Title; 
 List newList = web.Lists.Add(creationInfo);  
@@ -676,11 +677,12 @@ ClientContext context = new ClientContext("http://SiteUrl");
 
 Web web = context.Web; 
 
-context.Load(web, w => w.Title); 
+context.Load(web, w => w.Title, w => w.Description);
 
 context.ExecuteQuery(); 
 
-ListCreationInformation creationInfo = new ListCreationInformation(); 
+ListCreationInformation creationInfo = new ListCreationInformation();
+creationInfo.TemplateType = (int)ListTemplateType.Announcements;
 creationInfo.Description = web.Description; 
 creationInfo.Title = web.Title; 
 SP.List newList = web.Lists.Add(creationInfo); 
@@ -694,7 +696,7 @@ context.ExecuteQuery();
 The difference is the following three lines:
 
 ```csharp
-context.Load(web, w => w.Title); 
+context.Load(web, w => w.Title, w => w.Description);
 context.ExecuteQuery(); 
 ...
 context.ExecuteQuery(); 
