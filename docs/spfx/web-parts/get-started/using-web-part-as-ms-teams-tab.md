@@ -12,7 +12,6 @@ Starting with the SharePoint Framework v1.7, you can also implement your Microso
 > [!IMPORTANT]
 > This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
-
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom client-side web part:
 
 * [Build your first web part](build-a-hello-world-web-part.md)
@@ -21,6 +20,14 @@ Before you start, complete the procedures in the following articles to ensure th
 
 > [!IMPORTANT]
 > This lab requires that you are using plusbeta version of the SharePoint Framework 1.7 as the capabilities are not yet ready for production usage. You can install latest SharePoint Framwork version to your development machine by using following command: `npm install -g @microsoft/sharepoint`.
+
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+
+<br/>
+
+> [!Video https://www.youtube.com/embed/4kSRmetB4vA]
+
+<br/>
 
 ## Create a new web part project
 
