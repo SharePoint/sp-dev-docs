@@ -5,7 +5,7 @@ ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
-# Building Microsoft Teams tab using SharePoint Framework - Tutorial
+# Surfacing your SharePoint Framework solution as Microsoft Teams tab - Tutorial
 
 Starting with the SharePoint Framework v1.7, you can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies  Teams tab development process as  SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services.
 
@@ -20,7 +20,7 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 > [!IMPORTANT]
-> This lab requires that you are using plusbeta version of the SharePoint Framework 1.7 as the capabilities are not yet ready for production usage. You can install plus-beta version to your development machine by using following command: `@microsoft/sharepoint --plusbeta`.
+> This lab requires that you are using plusbeta version of the SharePoint Framework 1.7 as the capabilities are not yet ready for production usage. You can install latest SharePoint Framwork version to your development machine by using following command: `npm install -g @microsoft/sharepoint`.
 
 ## Create a new web part project
 
@@ -36,10 +36,10 @@ Before you start, complete the procedures in the following articles to ensure th
   cd teams-tab-webpart
   ```
     
-3. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
+3. Create a new client-side web part solution by running the Yeoman SharePoint Generator. Notice that we are using the `plusbeta` switch as the capability in still in **preview**:
 
   ```
-  yo @microsoft/sharepoint
+  yo @microsoft/sharepoint --plusbeta
   ```
 
 4. When prompted:
