@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Analyze and use the scanner data
 
-To help you with the modernization of your classic publishing portals, you can use the [SharePoint Modernization Scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) to analyze your environment. Use this article to understand how you can use the scanner output to help with the modernization of your publishing portals. The scanner, as of version 1.6, will generate an Excel report plus several CSV files containing classic publishing portal information. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
+To help you with the modernization of your classic publishing portals, you can use the [SharePoint Modernization Scanner](https://aka.ms/sppnp-modernizationscanner) to analyze your environment. Use this article to understand how you can use the scanner output to help with the modernization of your publishing portals. The scanner, as of version 1.6, will generate an Excel report plus several CSV files containing classic publishing portal information. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
 
 ## Using the "Office 365 Publishing Portal Transformation Readiness" report
 

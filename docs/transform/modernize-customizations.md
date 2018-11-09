@@ -17,7 +17,7 @@ This article gives an overview of the customizations that are not compatible wit
 
 This section focuses on customizations that you might have implemented in your lists and libraries. SharePoint automatically falls back to the classic list and library user interface when it detects an incompatible customization. Therefore, it's important to address these customizations if you want to get a 100% modern experience.
 
-To get an understanding of the modern user interface compatibility of your lists and libraries, use the [SharePoint Modernization scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization).
+To get an understanding of the modern user interface compatibility of your lists and libraries, use the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner).
 
 ### JSLink
 
