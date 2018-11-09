@@ -19,7 +19,7 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 > [!IMPORTANT]
-> This lab requires that you are using plusbeta version of the SharePoint Framework 1.7 as the capabilities are not yet ready for production usage. You can install latest SharePoint Framwork version to your development machine by using following command: `npm install -g @microsoft/sharepoint`. Capability is ONLY available in targeted release tenants.
+> This lab requires that you are using plusbeta version of the SharePoint Framework 1.7 as the capabilities are not yet ready for production usage. You can install latest SharePoint Framwork version to your development machine by using following command: `npm install -g @microsoft/generator-sharepoint`. Capability is ONLY available in targeted release tenants.
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
