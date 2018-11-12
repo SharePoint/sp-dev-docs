@@ -46,6 +46,9 @@ interface ISolution {
 
 Each solution file must have a **name** that identifies the package in the SharePoint UI. Additionally, each package must contain a globally unique identifier (**id**), which is used internally by SharePoint. Optionally, you may also specify a **version** number in the format "X.X.X.X", which is used to identify various versions of the package when upgrading.
 
+> [!NOTE]
+> The versioning system only applies to Feature Framework and SharePoint Feature definitions included in the package. Code and assets from the new version of the package are available as soon as new version of the package is added to App Catalog with no need to update the app on sites.
+
 The solution definition also optionally contains a list of SharePoint Feature definitions.
 
 > [!NOTE] 
