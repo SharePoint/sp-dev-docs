@@ -36,7 +36,7 @@ Getting SharePoint Framework client-side web parts deployed to on-premises requi
 
 You can host the JavaScript files in the location that best fits your environment. For example, these files can be hosted in any of the following locations:
 
-- **Azure CDN**. Similar setup as with SharePoint Online. Requires en-users to have Internet connectivity.
+- **Azure CDN**. Similar setup as with SharePoint Online. Requires end-users to have Internet connectivity.
 - **Local server in your network**. A server hosting the JavaScript files for your corporate network. This can be using whatever technology is desired as long as the files are accessible through HTTP requests.
 - **SharePoint 2016**. You can also host your files in the local SharePoint farm itself. You can, for example, define a standardized site in your farm where all the SharePoint Framework assets are being hosted. Take note, however, that by default, .json files are not allowed to be uploaded to SharePoint 2016 libraries, so farm level settings must be adjusted for this option.
 
