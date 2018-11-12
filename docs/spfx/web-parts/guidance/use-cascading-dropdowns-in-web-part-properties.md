@@ -89,7 +89,7 @@ You will build a web part that displays list items from a selected SharePoint li
   }
   ```
 
-4. Update **propertyPaneSettings** to:
+4. Update **getPropertyPaneConfiguration** to:
 
   ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
@@ -223,12 +223,12 @@ At this point, a user specifies which list the web part should use by manually e
   }
   ```
 
-4. Change the **propertyPaneSettings** getter to use the dropdown control to render the **listName** property:
+4. Change the **getPropertyPaneConfiguration** method to use the dropdown control to render the **listName** property:
 
   ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
-    protected get propertyPaneSettings(): IPropertyPaneSettings {
+    protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
       return {
         pages: [
           {
@@ -477,7 +477,7 @@ Similar to how users can select a list by using a dropdown, they should be able 
   }
   ```
 
-3. Change the **propertyPaneSettings** getter to use the dropdown control to render the **itemName** property.
+3. Change the **getPropertyPaneConfiguration** method to use the dropdown control to render the **itemName** property.
 
   ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
