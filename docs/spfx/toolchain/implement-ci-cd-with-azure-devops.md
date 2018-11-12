@@ -198,6 +198,9 @@ Before using the App Catalog in you deployment environment, you first need to au
 `
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
+> [!NOTE] 
+> If you are using Office CLI to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by Office CLI to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on Office 365 CLI [User Guide](https://pnp.github.io/office365-cli/user-guide/connecting-office-365/)
+
 ### Adding the Solution Package to the App Catalog
 
 Upload the solution package to your App Catalog by adding another `Command Line` task and pasting the following command line in the `Script` field `o365 spo app add -p $(System.DefaultWorkingDirectory)/SpFxDevOps/drop/SharePoint/solution/sp-fx-devops.sppkg --overwrite`
