@@ -59,12 +59,27 @@ Headers:
 
 <br/>
 
-The following example shows how to **update a folder by using the MERGE method**.
+The following example shows how to **rename a folder by using the MERGE method**.
+
+First, obtain the folder's OData type with a GET request.
 
 ```
-url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')
+url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/ListItemAllFields
+method: GET
+Headers: 
+     Authorization: "Bearer " + accessToken
+    "IF-MATCH": etag or "*"
+    accept: "application/json;odata=verbose"
+    content-type: "application/json;odata=verbose"
+```
+
+From the result, obtain the odata.type value, such as SP.Data.Shared_x0020_DocumentsItem (the value may be different depending on your library configuration). Then issue a MERGE
+
+
+```
+url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/ListItemAllFields
 method: POST
-body: { '__metadata': { 'type': 'SP.Folder' }, 'Name': 'New name' }
+body: { '__metadata': { 'type': '(odata.type from previous call)' }, 'Title': 'New name', 'FileLeafRef': 'New name' }
 Headers: 
      Authorization: "Bearer " + accessToken
     X-RequestDigest: form digest value
