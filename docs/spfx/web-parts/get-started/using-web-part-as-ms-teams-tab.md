@@ -94,7 +94,7 @@ Teams folder contains following three files:
 
 ## Updating code to be aware of the Microsoft Teams context
 
-1. Open **src\webparts\helloWorld\HelloWorldWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
+1. Open **src\webparts\myFirstTeamTab\MyFirstTeamTabWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
 
 1. Add the following private variable inside the **MyFirstTeamsTabWebPart** class. We will be storing information around the Microsoft Teams context in this variable.
 
