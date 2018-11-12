@@ -22,7 +22,7 @@ SharePoint provides three types of authorization policies:
     An expense approval add-in is an example of an add-in that could be designed to use this policy. The add-in allows users who wouldn't otherwise be able to approve expenses to approve expenses below a certain amount. For an example, see the [scenario](#Scenario) in the next section.
     
     > [!NOTE] 
-    > Certain APIs require a user context and can't be executed with an add-in-only policy. These include many APIs for interacting with Project Server 2013 and for performing search queries.
+    > Certain APIs require a user context and can't be executed with an add-in-only policy. These include many APIs for interacting with Project Server and Project Online and for performing search queries.
 
 - **User-only policy**. When the user-only policy is used, SharePoint checks only the permissions for the user. SharePoint uses this policy when the user is accessing resources directly without using an add-in, such as when a user first opens a SharePoint website's home page or accesses SharePoint APIs from PowerShell.
 
