@@ -212,7 +212,7 @@ This model is flexible enough so that web parts can be built in any JavaScript f
 
 The property pane is defined in the **HelloWorldWebPart** class. The **getPropertyPaneConfiguration** property is where you need to define the property pane.
 
-When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the **render** method:
+When the properties are defined, you can access them in your web part by using `this.properties.<property-name>`, as shown in the **render** method:
 
 ```typescript
 <p class="${styles.description}">${escape(this.properties.description)}</p>
