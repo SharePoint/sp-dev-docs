@@ -15,7 +15,7 @@ External event receivers are classes that enable SharePoint Add-ins to respond t
     
     
 
-This article accompanies the code sample  [SharePoint: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications.
+This article accompanies the code sample  [SharePoint: Create a remote event receiver for external data](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications.
 In this example, you will do the following:
   
     
@@ -101,7 +101,7 @@ However, if you don't have Northwind installed, see  [Installing the Northwind S
   
     
     
-The database is also included with the code sample:  [SharePoint: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c).
+The database is also included with the code sample:  [SharePoint: Create a remote event receiver for external data](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-095c594c).
   
     
     
