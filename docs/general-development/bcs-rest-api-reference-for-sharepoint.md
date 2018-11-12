@@ -102,8 +102,9 @@ In order to limit the amount of data returned, or make it more relevant to the u
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
     
   
--  [SharePoint: Perform basic data access operations by using REST in apps](http://code.msdn.microsoft.com/SharePoint-Perform-335d925b)
-    
+-  [SharePoint 2013: Perform basic data access operations by using REST in apps](https://code.msdn.microsoft.com/officeapps/sharepoint-2013-perform-335d925b)
+  
+-  [Basic CRUD operations in SharePoint Add-ins using the REST/OData APIs](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
   
 -  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
     
