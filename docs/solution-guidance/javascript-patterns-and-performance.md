@@ -54,7 +54,7 @@ There are several ways to reduce requests and reduce request size.
 - Shrink file sizes. Minimize your production JavaScript files by removing line breaks, white space, and comments. There are several JavaScript minify programs and websites that you can use to greatly reduce your JavaScript file sizes.
 - Use browser file caching to reduce requests. The updated [Loader Pattern](#LoaderPattern) below is a good way to expand upon this idea.
 
-### <a name"RetrieveOnlyTheDataYouNeed"></a> Retrieve only the data you need
+### <a name="RetrieveOnlyTheDataYouNeed"></a> Retrieve only the data you need
 
 When requesting data, remember to focus your requests to what you actually need. Downloading an entire article to obtain the title, for example, will reduce performance quite a bit.
 

@@ -123,7 +123,7 @@
       href: spfx/web-parts/guidance/governance-considerations.md
     - name: Dynamic loading of packages
       href: spfx/dynamic-loading.md
-    - name: Connecting components
+    - name: Connecting components with Dynamic Data
       href: spfx/dynamic-data.md    
     - name: Building Microsoft Teams Tabs
       href: spfx/integrate-with-teams-introduction.md      

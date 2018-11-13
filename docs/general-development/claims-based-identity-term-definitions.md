@@ -54,7 +54,7 @@ Table 1 contains definitions of key terms related to claims-based identity.
 <a name="bk_addresources"> </a>
 
 
--  [Web Services Federation Language (WS-Federation) Version 1.2](http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-osl#_Toc223175002)
+-  [Web Services Federation Language (WS-Federation) Version 1.2](http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html#_Toc223175002)
     
   
 -  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
