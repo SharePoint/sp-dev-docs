@@ -48,7 +48,7 @@ When a site design is selected, SharePoint creates the new site, and runs site s
 ![Progress pane listing completed actions from a site design](images/progress-pane.png)
 
 > [!NOTE]
-> Site designs can now be applied to previously created modern site collections. For mor information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
+> Site designs can now be applied to previously created modern site collections. For more information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
 
 ## Anatomy of a site script
 
