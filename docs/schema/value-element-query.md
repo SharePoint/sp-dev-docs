@@ -23,7 +23,7 @@ Contains the value against which the value returned by the [FieldRef](fieldref-e
 ```XML
 <Value
   Type = "Text"
-  IncludeTimeValue = "TRUE" | "FALSE>
+  IncludeTimeValue = "TRUE" | "FALSE">
 </Value>
 ```
 
