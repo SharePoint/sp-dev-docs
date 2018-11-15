@@ -225,13 +225,9 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
 The default solution takes advantage of a new Dialog API, which can be used to show modal dialogs easily from your code. In the following steps, we'll slightly modify the default experience to demonstrate Dialog API use cases.
 
-1. Return to the console, and execute the following command to include the Dialog API in our solution.
+1. Open **HelloWorldCommandSet.ts** from the **src\extensions\helloWorld** folder in Visual Studio Code (or your preferred editor).
 
-2. Return to Visual Studio Code (or your preferred editor).
-
-3. Open **HelloWorldCommandSet.ts** from the **src\extensions\helloWorld** folder.
-
-4. Update the **onExecute** method as follows:
+2. Update the **onExecute** method as follows:
     
     ```typescript
       @override
@@ -251,13 +247,13 @@ The default solution takes advantage of a new Dialog API, which can be used to s
       }
     ``` 
     
-5. In your console window, ensure that you do not have any exceptions. If you do not already have the solution running in localhost, execute the following command:
+3. In your console window, ensure that you do not have any exceptions. If you do not already have the solution running in localhost, execute the following command:
 
     ```
     gulp serve
     ```
 
-6. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
+4. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
     ![Accept loading debug scripts](../../../images/ext-com-accept-debug-scripts.png)
 
