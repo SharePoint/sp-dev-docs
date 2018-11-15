@@ -314,7 +314,7 @@ The following sections describe attributes, child elements, and parent elements.
 <li><p>**ISO8601Basic**   Use the abbreviated form of 8601 date/time formats: YYYYMMDDTHHMMSSZ. This is the format used for vCard/iCal.</p></li>
 </ul>
 <p>For Choice fields, this attribute can be set to **Dropdown** (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink** (default), which displays the URL as a normal <A> tag, or to **Image**, which displays the URL as `<IMG SRC="URL" ALT="Description"`.</p></td>
+<p>For URL fields, this attribute can be set to **Hyperlink** (default), which displays the URL as a normal `<A>` tag, or to **Image**, which displays the URL as `<IMG SRC="URL" ALT="Description" />`.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FromBaseType**</p></td>
