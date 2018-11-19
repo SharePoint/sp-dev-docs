@@ -1372,6 +1372,8 @@
           href: transform/modernize-userinterface-site-pages-api.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
+    - name: The SharePoint Modernization scanner
+      href: transform/modernize-scanner.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md
     - name: Modernize site branding
