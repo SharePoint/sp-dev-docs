@@ -7,10 +7,7 @@ ms.assetid: e0602381-ae11-41be-6a7e-9e47e9f246d6
 
 # SharePoint Server 2019 development platform
 
-This article contains preliminary details around supported development capabilities in the SharePoint 2019.
-
-> [!IMPORTANT] 
-> This list is still subject to change until actual official release of SharePoint 2019. This page will be updated accordingly when there are changes in the supportability statements.
+This article contains details around supported development capabilities in the SharePoint 2019.
 
 **Supported capabilities**
 
@@ -33,12 +30,10 @@ This article contains preliminary details around supported development capabilit
 * "Tenant" properties
 * Custom modern themes for communication site or modern team site
 
-Supported SharePoint Framework version for the SharePoint 2019 will be SharePoint Framework v1.4.1 (except Microsoft Graph APIs). SharePoint Framework Yeoman generator will be updated to have this option included in the version selection. 
+Supported SharePoint Framework version for the SharePoint 2019 will be SharePoint Framework v1.4.1 (except Microsoft Graph APIs). If you use the SharePoint Framework v1.7, you can target scaffolded solution to SharePoint 2019, which will ensure that packages are correct for your target environment.
 
-> [!NOTE] 
-> If you need to write SharePoint Framework components for SharePoint 2019 before Yeoman generator is updated, you can install SharePoint Framework 1.4.1 and use that as the generator for your SharePoint 2019 components. You should use the 'Online' option in this case, when the environment question is asked in the Yeoman solution flow.
+Visual Studio 2017 v15.9 or includes SharePoint 2019 tooling extensions for SharePoint add-ins, farm solutions and sandbox solutions. 
 
 ## See also
 
-- [Introduction to SharePoint Server 2019 Preview development platform](https://developer.microsoft.com/en-us/sharepoint/blogs/introduction-to-sharepoint-server-2019-preview-development-platform/)
-- [Introduction to SharePoint Server 2019 Preview development platform](https://www.youtube.com/watch?v=IAirEcf_DFc) YouTube video
+- [Community call where SharePoint 2019 developer platform is covered]https://www.youtube.com/watch?v=qPmr7c2B0uk) YouTube video

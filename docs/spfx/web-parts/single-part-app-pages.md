@@ -27,8 +27,10 @@ App pages have following characterers:
 You will need to perform following steps to enable Signle Part App Page layout in your SharePoint site. 
 
 1. Create a new page
-1. Add a web part on the page
+1. Add a web part on the page and configure that as needed
 1. Change the page layout type as `SingleWebPartAppPage`
+
+If you need to further modify the page, you can change the page layout back as as `Article` to enable content editing.
 
 ## Changing page layout using JavaScript in browser console
 
