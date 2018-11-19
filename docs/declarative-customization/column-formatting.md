@@ -182,7 +182,7 @@ This example colors the current field red when the value inside an item's DueDat
   "debugMode": true,
   "txtContent": "@currentField",
   "style": {
-    "color": "=if([$DueDate] <= @now, '#ff0000', ''"
+    "color": "=if([$DueDate] <= @now, '#ff0000', '')"
   }
 }
 ```
