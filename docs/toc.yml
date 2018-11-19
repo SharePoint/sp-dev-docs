@@ -204,9 +204,9 @@
       - name: Commanding within a web part
         href: design/web-part-commanding.md
       - name: Web part layouts
-        href: design/layout-patterns
+        href: design/layout-patterns.md
       - name: Web part levels
-        href: design/web-part-levels
+        href: design/web-part-levels.md
       - name: UI text
         href: design/ui-text-for-web-parts.md
       - name: Placeholders and fallbacks
@@ -220,7 +220,7 @@
       - name: Web part showcase
         href: design/showcase-web-part.md
       - name: Designing a web part icon
-        href: design/designing-a-web-part-icon
+        href: design/designing-a-web-part-icon.md
     - name: Authoring pages
       href: design/authoring-pages.md          
     - name: Design considerations
