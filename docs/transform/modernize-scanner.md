@@ -39,6 +39,8 @@ The easiest approach is to simply launch SharePoint.Modernization.Scanner.exe as
 
 ### Page 1: Scanner authentication configuration
 
+#### Authenticate via Azure AD app-only
+
 The first page of the modernization scanner wizard asks you for authentication information. The scanner supports three options, select the one you need and fill in the needed information as described below. Note that ideally you use an app-only model as that will ensure the scanner has access to all sites it needs to scan.
 
 ![Azure AD App-Only](media/modernize/scanner_p1_1.png)
@@ -50,6 +52,8 @@ If you've [setup access via Azure AD App-Only](../solution-guidance/security-app
 - **Certificate file**: the certificate that you granted app-only access to the Azure AD app, this needs to be presented as a password protected PFX file
 - **Password for the PFX file**: the password used to secure the previously provided PFX file
 
+#### Authenticate via SharePoint AD app-only
+
 ![SharePoint App-only](media/modernize/scanner_p1_2.png)
 
 In case you used the "classic" [SharePoint App-Only](../solution-guidance/security-apponly-azureacs.md) approach then you need to specify:
@@ -57,16 +61,22 @@ In case you used the "classic" [SharePoint App-Only](../solution-guidance/securi
 - **Azure ACS Client ID**: the ID of the created app-only principal
 - **Azure ACS Client Secret**: the secret that you got when you created the app principal
 
+#### Authenticate via credentials
+
 ![Credentials](media/modernize/scanner_p1_3.png)
 Using a regular user/password combo works fine as well, assuming the provided user does have the needed permissions
 
 ### Page 2: Scanner site scope configuration
+
+#### Scan full tenant
 
 This page allows you to define which sites are being scanned. The scanner supports scanning the full tenant up to individually selected site collections.
 
 ![Full tenant](media/modernize/scanner_p2_1.png)
 
 Scanning the complete tenant is often the recommended approach as that will give you modernization reports for all. If that's your choice then simply fill your tenant name. Note that this approach does not work if you're tenant is **using URL's that do not end on sharepoint.com**, if that's the case you need to use one of the two below options.
+
+#### Scan a defined list of site collections
 
 ![Wildcard urls](media/modernize/scanner_p2_2.png)
 
@@ -76,6 +86,8 @@ This option makes it possible to select one or more site collections by either p
 - **A wildcard URL**: by adding an URL that ends on an star you'll include all sites that match that filter. Only ending on an star is a supported wildcard
 
 If you're using URL's that do not end on sharepoint.com (so called vanity URL's) you'll also need to specify the URL of your tenant admin center site (e.g. https://admin-sharepoint.contoso.com).
+
+#### Scan a list of site collections defined in a CSV file
 
 ![CSV file](media/modernize/scanner_p2_3.png)
 
