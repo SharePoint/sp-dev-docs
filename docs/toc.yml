@@ -1361,7 +1361,7 @@
         - name: Page transformation via the SharePoint UI
           href: transform/modernize-userinterface-site-pages-ui.md
         - name: Page transformation via the PowerShell
-          href: transform/modernize-userinterface-site-pages-shell.md
+          href: transform/modernize-userinterface-site-pages-powershell.md
         - name: Page transformation via the .Net
           href: transform/modernize-userinterface-site-pages-dotnet.md
         - name: Page transformation configuration options
