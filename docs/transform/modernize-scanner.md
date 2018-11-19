@@ -20,7 +20,7 @@ This scanner is a key tool to use if you want to prepare for modernizing your cl
 
 Since SharePoint Online continuously evolves and more and more modern capabilities are added it's important to always download the latest version of the scanner. Downloading is as simple as:
 
-- Going the [scanner download page](https://aka.ms/sppnp-modernizationscanner)
+- Going the [scanner download page](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization)
 - Download the zip file mentioned in the "Quick start guide" section
 - **Unpacking the zip file to folder on your computer**. Once you've downloaded the tool, unzip it to a local folder which will contain the SharePoint.Modernization.Scanner.exe and webpartmapping.xml files
 
