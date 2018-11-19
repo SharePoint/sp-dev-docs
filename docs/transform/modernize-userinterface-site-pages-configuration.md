@@ -27,6 +27,25 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 };
 ```
 
+## AddPageAcceptBanner option
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+Setting this option will make the page transformation framework put the configured PageAcceptBanner web part on top of the created modern page. Using this web part the users accessing the page can decide whether they want to keep or discard the created modern page. See the [Page Transformation UI](modernize-userinterface-site-pages-ui.md) article to learn more on how to install and configure the default page banner web part.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    // Modernization center setup
+    ModernizationCenterInformation = new ModernizationCenterInformation()
+    {
+        AddPageAcceptBanner = true,
+    },
+};
+```
+
 ## TargetPagePrefix option
 
 Type | Default value if not specified

@@ -12,6 +12,17 @@ The heart of the page transformation solution is the model that feeds the transf
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/PnP-Tools/blob/master/Solutions/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/PnP-Tools/issues).
 
+## Page transformation high level architecture
+
+Below picture explains the page transformation in 4 steps:
+
+1. At the start you need to tell the transformation engine how you want to transform pages and that's done by providing a page transformation model. This model is an XML file which describes how each classic web part needs to be mapped to a modern equivalent. Per classic web part the model contains a list of relevant properties and mapping information. See the [Understanding and configuring the page transformation model](modernize-userinterface-site-pages-model.md) article to learn more. If you want to understand how classic web parts compare to modern web parts it's recommended to checkout the [Classic and modern web part experiences](https://support.office.com/en-us/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64) article.
+2. Next step is analyzing the page you want to transform: the transformation engine will break down the page in a collection of web parts (wiki text is broken down in one or more wiki text web parts) and it will try to detect the used layout.
+3. The information retrieved from the analysis in step 2 is often not sufficient to map the web part to a modern equivalent and therefor in step 3 we'll enhance the information by calling functions: these functions take properties retrieved in step 2 and generate new properties based upon the inputted properties from step 2. After step 3 we have all the needed information to map the web part...except we optionally need to call the defined selector to understand which mapping we'll need in case one classic web part can be mapped to multiple client side configurations.
+4. The final step is creating and configuring the client side page followed by adding the mapped modern client side web parts to it.
+
+![page transformation](media/modernize/pagetransformation_1.png)
+
 ## Page transformation model structure
 
 When you open the page transformation model the following top level elements are present:
