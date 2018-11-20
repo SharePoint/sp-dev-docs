@@ -38,9 +38,7 @@ In this article, you add a workflow in the Employee Orientation SharePoint Add-i
    The Office Developer Tools for Visual Studio then does the following:
       - Creates an HR_Intake workflow in the **Workflow** folder, with a child Workflow.xaml file that is open in the workflow designer.
       - Creates a **WorkflowTaskList** list instance where tasks that are part of the workflow are created and updated.
-      - Creates a **WorkflowHistoryList** list instance, which is a log of the various steps in each execution of the workflow as they occur.
-    
-8. Drag the two new list instances into the **Lists** folder.
+      - Creates a **WorkflowHistoryList** list instance, which is a log of the various steps in each execution of the workflow as they occur. 
     
 ## Design the workflow
 
