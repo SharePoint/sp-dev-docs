@@ -11,9 +11,9 @@ Starting with SharePoint Framework v1.7, you can build your Microsoft Team tabs 
 
 There are following benefits on using SharePoint Framework as the platform for your Microsoft Teams tabs:
 
-- Development model is similar as for SharePoint Framework web parts
-- Technically any web part can be exposed as a tab in the Microsoft
-- You have difference scoping options on exposing your custom tab as a web part and tab in your tenant
+- Development model is similar as for SharePoint Framework web parts.
+- Technically any web part can be exposed as a tab in Microsoft Teams.
+- You have different scoping options on exposing your custom tab as a web part and tab in your tenant.
 - Your tab will be executed in the context of the underlaying SharePoint site behind of the specific team. This means that you can take advantage of any SharePoint specific APIs or functionalities in your web part.
 
 > [!IMPORTANT]
@@ -32,10 +32,10 @@ You can start developing Microsoft Teams tabs simply by using the `with beta` ve
         yo @microsoft/sharepoint --plusbeta
     ```
 
-1. Create a solution with a client-side web part 
-1. Deploy web part using tenant-scoped deployment option to your SharePoint app catalog
-1. Package `manifest.json` located in the `/teams` folder in your solution as a zip file . This file was automatically configured with default settings when your solution was created
-1. Deploy your zip file (application) to the Microsoft Teams and start add a new tab in the preferred channel
+1. Create a solution with a client-side web part.
+1. Deploy web part using tenant-scoped deployment option to your SharePoint app catalog.
+1. Package `manifest.json` located in the `/teams` folder in your solution as a zip file . This file was automatically configured with default settings when your solution was created.
+1. Deploy your zip file (application) to the Microsoft Teams and start add a new tab in the preferred channel.
 
 > [!NOTE]
 > You can also follow the detailed steps to get started from the [Building Microsoft Teams tab using SharePoint Framework](web-parts/get-started/using-web-part-as-ms-teams-tab.md) tutorial.
