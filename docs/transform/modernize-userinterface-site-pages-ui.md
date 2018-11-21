@@ -20,7 +20,7 @@ A second key feature is that the UI integration also allows your end users to ac
 
 ## Installing the Page Transformation UI in your tenant
 
-The page transformation UI will be **released really soon now**...it's a matter of days...stay tuned and check back by end of November.
+The page transformation UI will be **released really soon now**...it's a matter of days...stay tuned and check back by end of November but if you want to experiment then checkout this: https://github.com/SharePoint/sp-dev-modernization/tree/dev/Solutions/PageTransformationUI/docs
 
 ## See also
 
