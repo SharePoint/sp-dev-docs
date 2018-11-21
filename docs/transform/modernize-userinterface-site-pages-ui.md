@@ -7,6 +7,9 @@ ms.prod: sharepoint
 
 # Transforming to modern site pages from inside the SharePoint UI
 
+> [!IMPORTANT]
+> **The SharePoint Page Transformation UI is currently in preview**. The solution is continuously evolving, checkout [the sp-dev-modernization GitHub repository](https://github.com/SharePoint/sp-dev-modernization/tree/dev) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
+
 If you want to give your end users the option to self-service modernize pages then using the SharePoint Page Transformation UI makes a lot of sense as it offers your end users UI extensions (ribbon buttons) to launch page transformation:
 
 ![page transformation UI extensions](media/modernize/pagetransformation_ui_1.png)
@@ -14,9 +17,6 @@ If you want to give your end users the option to self-service modernize pages th
 A second key feature is that the UI integration also allows your end users to accept or discard the generated pages:
 
 ![page transformation feedback](media/modernize/pagetransformation_ui_2.png)
-
-> [!IMPORTANT]
-> The SharePoint Page Transformation UI is continuously evolving, checkout [the sp-dev-modernization GitHub repository](https://github.com/SharePoint/sp-dev-modernization/tree/dev) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
 ## Installing the Page Transformation UI in your tenant
 
