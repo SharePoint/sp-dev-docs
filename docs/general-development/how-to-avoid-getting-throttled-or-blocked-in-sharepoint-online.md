@@ -45,7 +45,7 @@ When a user exceeds usage limits, SharePoint Online throttles any further reques
   
 - For requests that a user performs directly in the browser, SharePoint Online redirects you to the throttling information page, and the requests fail.
   
-- For all other requests, including CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests"), and the requests fail.
+- For all other requests, including CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
   
 If the offending process continues to exceed usage limits, SharePoint Online might completely block the process; in this case, you will not see any successful requests and we will notify you of the block in the Office 365 Message Center. 
 
@@ -57,12 +57,12 @@ In these cases, SharePoint Online will attempt to prioritize interactive user re
 ## Common throttling scenarios in SharePoint Online
 <a name="BKMK_Commonthrottlingscenarios"> </a>
 
-The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.
+The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.  
     
 
 - **Sporadic traffic**
     
-    Constant load or repetitive complex queries against SharePoint Online must be optimized for low impact.  Failing to follow [best practices for scanning applications](https://aka.ms/ScanGuidance) that process files in bulk will likely result in throttling.
+    Constant load or repetitive complex queries against SharePoint Online must be optimized for low impact.  Failing to follow [best practices for scanning applications](https://aka.ms/ScanGuidance) that process files in bulk will likely result in throttling.  These apps include sync engines, backup providers, search indexers, classification engines, data loss prevention tools, and any other which attempts to reason over the entirety of data and change. 
     
   - For example, after migrating files to SharePoint Online, you run a custom CSOM or REST script to update metadata on the files. The CSOM/REST script is updating a large number of files at a very high frequency, which triggers throttling. Similarly, an autocomplete UI widget using REST services, making too many calls to lists during each end user operation, may also cause throttling, depending on what other operations are consuming resources at the same time.
     
