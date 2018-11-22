@@ -68,9 +68,6 @@ The following is an overview of which links are automatically rewritten by the S
   - When extending pages, you can temporarily disable auto-rewriting URLs on a page by:
     - checking out the page
     - providing the query string parameter `?NoAutoReWrites=true`
-- Content By Search WebPart assets
-  - Display template JavaScript files
-  - Images in query results - URLs in the following standard Managed Properties are automatically replaced: _PictureUrl_, _PictureThumbnailUrl_, _PublishingImage_
 - Picture Library SlideShow webpart image URLs
 - Image fields in SPList REST API (RenderListDataAsStream) results
   - Use the new property ImageFieldsToTryRewriteToCdnUrls to provide a comma separated list of Fields.
