@@ -99,7 +99,6 @@ This example uses an Excel-style conditional expression (`=if`) to apply a class
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-  "debugMode": true,
   "elmType": "div",
   "attributes": {
     "class": "=if(@currentField <= 70,'sp-field-severity--warning', '')"
@@ -129,17 +128,16 @@ The following image shows an example of conditional formatting applied to a text
 
 ![Status field with done colored green, blocked colored red, and in review colored orange](../images/sp-columnformatting-conditionaladvanced.png)
 
-You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Blocked, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. It then outputs a `<span />` element with an `IconName` attribute. This attribute applies another CSS class to that `<span />` that shows an [Office UI Fabric](https://dev.office.com/fabric#/) icon inside that element. Finally, another `<span />` element is output that contains the value inside the field.
+You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Has Issues, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--severeWarning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. It then outputs a `<span />` element with an `IconName` attribute. This attribute automatically applies another CSS class to that `<span />` that shows an [Office UI Fabric](https://dev.office.com/fabric#/) icon inside that element. Finally, another `<span />` element is output that contains the value inside the field.
 
 This pattern is useful when you want different values to map to different levels of urgency or severity. You can start from this example and edit it to specify your own field values and the styles and icons that should map to those values.
 
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-  "debugMode": true,
   "elmType": "div",
   "attributes": {
-    "class": "=if(@currentField == 'Done', 'sp-field-severity--good', if(@currentField == 'In progress', 'sp-field-severity--low' ,if(@currentField == 'In review','sp-field-severity--warning', if(@currentField == 'Blocked','sp-field-severity--blocked', ''))"
+    "class": "=if(@currentField == 'Done', 'sp-field-severity--good', if(@currentField == 'In progress', 'sp-field-severity--low', if(@currentField == 'In review', 'sp-field-severity--warning', if(@currentField == 'Has issues', 'sp-field-severity--severeWarning', 'sp-field-severity--blocked')))) + ' ms-fontColor-neutralSecondary'"
   },
   "children": [
     {
@@ -149,7 +147,7 @@ This pattern is useful when you want different values to map to different levels
         "padding": "0 4px"
       },
       "attributes": {
-        "iconName": "=if(@currentField == 'Done','CheckMark', if(@currentField == 'In progress', 'Forward', if(@currentField == 'In review', 'Error', if(@currentField == 'Has issues','Warning','')"
+        "iconName": "=if(@currentField == 'Done', 'CheckMark', if(@currentField == 'In progress', 'Forward', if(@currentField == 'In review', 'Error', if(@currentField == 'Has issues', 'Warning', 'ErrorBadge'))))"
       }
     },
     {
@@ -182,7 +180,7 @@ This example colors the current field red when the value inside an item's DueDat
   "debugMode": true,
   "txtContent": "@currentField",
   "style": {
-    "color": "=if([$DueDate] <= @now, '#ff0000', ''"
+    "color": "=if([$DueDate] <= @now, '#ff0000', '')"
   }
 }
 ```
@@ -345,7 +343,7 @@ This example applies `background-color` and `border-top` styles to create a data
     "class": "sp-field-dataBars"
   },
   "style": {
-    "width": "=if(@currentField > 95, '100%', toString(@currentField * 100 / 95) + '%'"
+    "width": "=if(@currentField > 95, '100%', toString(@currentField * 100 / 95) + '%')"
   }
 }
 ```
@@ -505,9 +503,10 @@ You can use the following predefined classes for several common scenarios.
 | sp-field-trending--down |![Red arrow with number 100](../images/sp-columnformatting-trendingdown.png) |
 | sp-field-quickActions |![Name with mail icon](../images/sp-columnformatting-quickaction.png) |
 
-> Note - The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
+> [!NOTE]
+> The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
 
-In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/icons). 
+In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/colors). 
 
 ### Predefined icons
 
@@ -557,7 +556,7 @@ Any other value will result in an error.
 
 `Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a requred property, `customRowAction`, that specifies an `action` that's taken when the button is clicked.  This action must be one of the following values:
 
-- defaultClick: buttons with this action will do the same thing as clicking the list item in an uncustomized view.  Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
+- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view.  Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
 
 ```JSON
 {
@@ -570,7 +569,7 @@ Any other value will result in an error.
 }
 
 ```
-- share:  Clicking the button will open the sharing dialog.  Below is an example of this type of button.
+- **share**:  Clicking the button will open the sharing dialog.  Below is an example of this type of button.
 
 ```JSON
 {
@@ -583,9 +582,9 @@ Any other value will result in an error.
 }
 
 ```
-- delete: Clicking the button will open the delete confirmation dialog.
-- editProps:  Clicking the button will open the item properties page in edit mode.
-- executeFlow:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document.
+- **delete**: Clicking the button will open the delete confirmation dialog.
+- **editProps**:  Clicking the button will open the item properties page in edit mode.
+- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document.
 
 ### txtContent
 
@@ -638,6 +637,7 @@ An optional property that specifies style attributes to apply to the element spe
     'rotation-point'
 
     'opacity'
+    'cursor'
 
     'height'
     'max-height'
@@ -646,7 +646,15 @@ An optional property that specifies style attributes to apply to the element spe
     'min-width'
     'width'
 
+    'flex-grow'
+    'flex-shrink'
+    'flex-flow'
+    'flex-direction'
+    'flex-wrap'
+    'flex'
+    'justify-content'
     'align-items'
+    
     'box-align'
     'box-direction'
     'box-flex'
