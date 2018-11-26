@@ -94,7 +94,7 @@ For more information about the Yeoman SharePoint generator, see [Scaffold projec
 Following are some tools that might come in handy as well:
 
 * [Fiddler](https://www.telerik.com/fiddler)
-* [Postman plug-in for Chrome](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
+* [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
 * [Cmder for Windows](http://cmder.net/)
 * [Oh My Zsh for Mac](http://ohmyz.sh/)
 * [Git source control tools](https://git-scm.com/)
