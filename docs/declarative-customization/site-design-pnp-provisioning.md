@@ -1,7 +1,7 @@
 ---
-title: Build a complete SharePoint site design using the PnP provisioning engine
+title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 01/08/2018
+ms.date: 11/27/2018
 ---
 
 # Calling the PnP provisioning engine from a site script
@@ -15,7 +15,7 @@ The steps in this article use the following components:
 - A site design and a site script
 - Microsoft Flow
 - Azure Queue storage
-- An Azure Function
+- Azure Functions
 - A SharePoint Framework (SPFx) solution
 - A PnP provisioning template
 - A PnP PowerShell script
@@ -25,18 +25,25 @@ You'll use these components to trigger the PnP provisioning code after you creat
 
 ## Set up app-only access to your tenant
 
-To set up app-only access, you need to have two different pages on your tenant - one on the regular site, and the other on your SharePoint administration site.
+To set up app-only access, you need to have two different pages on your tenant&mdash;one on the regular site, and the other on your SharePoint administration site.
 
-1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx` (you can go to any site, but for now pick the root site).
-1. Choose the **Generate** button next to the **Client Id** and **Client Secret** fields.
-1. Enter a title for your app, such as "Site Provisioning".
-1. In the **App Domain** box, enter **localhost**.
-1. In the **Redirect URI** box, enter **https://localhost**.
+1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/15/appregnew.aspx` (you can go to any site, but for now pick the root site). 
+
+2. Next to the **Client Id** and **Client Secret** fields, choose the **Generate** button. 
+
+3. Enter a title for your app, such as **Site Provisioning**. 
+
+4. In the **App Domain** box, enter **localhost**. 
+
+5. In the **Redirect URI** box, enter **https://localhost**. 
 
     ![Create app page, showing the Client Id, Client Secret, Title, App Domain, and Redirect URI fields](images/pnpprovisioning-createapponly.png)
 
-1. Choose **Create**. 
-1. Copy the values for **Client Id** and **Client Secret** - you will need them later.
+6. Choose **Create**. 
+
+7. Copy the values for **Client Id** and **Client Secret** because you will need them later. 
+
+<br/>
 
 Next, trust the app, so that it has the appropriate access to your tenant:
 
