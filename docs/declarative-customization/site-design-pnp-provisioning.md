@@ -161,12 +161,17 @@ Copy the following provisioning template XML to a new file and save the file as 
 
 1. Go to the [Azure Portal](https://portal.azure.com).
 1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
-1. Open the Function app and select **Functions** > **New function**.
+1. A Function App is by default created based on the V2 Runtime, which does not support PowerShell functions. You will have to change the runtime to V1. To do this, open the Function app and select the **Platform Features** tab. On that tab, select **Function app settings**. Change the runtime version from **~2** to **~1**. 
+1. Now select **Functions** > **New function**.
 
     ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
 
-1. From the Language drop-down box, select **PowerShell**.
-1. Select **QueueTrigger - PowerShell**.
+1. Turn on Experimental Features
+
+    ![Screenshot of the Azure portal with the Experimental Features switch turned on](images/pnpprovisioning-experimental-features.png)
+1. Create a new Queue triggered function based upon PowerShell
+
+    ![Screenshot of the Azure portal with the PowerShell option highlighted](images/pnpprovisioning-create-function-queue.png)
 1. Name the function **ApplyPnPProvisioningTemplate**. 
 1. Enter the name of the queue you created earlier.
 1. Choose **Create**. An editor where you can enter PowerShell cmdlets will open. 
