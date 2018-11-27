@@ -325,7 +325,18 @@ The import pipeline is using Azure Blob Storage security model as is. This means
 
 ### Events and event handlers
 
-The import pipeline allows event handlers to be referenced on list items but doesn’t allow defining event handlers at the list level at this time. The import pipeline does not fire events as items are imported, so existing event handlers will not fire due to the import event. 
+The import pipeline allows event handlers to be referenced on list items but doesn’t allow defining event handlers at the list level at this time. The import pipeline does not fire events as items are imported, so existing event handlers will not fire due to the import event.
+
+### Resolving Users
+
+If the Migration API was unable to resolve a user using the login provided in the UserGroup.xml and no System ID is provided, then:
+a)       This user will be replaced by “System Account” in the associated metadata within the package ( author, editor etc.).
+b)      A warning will be reported in the ImportLogs –  “Failed to ensure user 'user@contoso.com'”
+ 
+If the migration API was unable to resolve a user using the login provided in the UserGroup.xml and the System ID is provided (which is the SID for the user in the on-prem AD), then:
+a)       A new deleted user with the provided login and SystemId is created and is used in the associated metadata within the package.
+b)      A warning will be reported in the ImportLogs- “Failed to retrieve user 'user@contoso.com' attributes from the SiteUsers; falling back to passed in values”
+
 
 ## Appendices
 
