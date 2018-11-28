@@ -7,11 +7,9 @@ ms.prod: sharepoint
 
 # Modernize your classic SharePoint sites
 
-SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. To learn more about modern checkout the [SharePoint classic and modern experiences](https://support.office.com/en-us/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US) article.
+SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Office 365 group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. To learn more about modern checkout the [SharePoint classic and modern experiences](https://support.office.com/en-us/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US) article and get inspired by the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
 
-All of this is great, but you might ask yourself, *I have lots of classic (team) sites...how do I bring them into the modern SharePoint world?*
-
-You can transform (or "modernize") a classic site into a modern Office 365 group-connected site by following the guidance in this section.
+All of this is great, but you might ask yourself, *I have lots of classic (team) sites...how do I bring them into the modern SharePoint world?* The answer is **in-place modernization**: you can fully transform (or "modernize") a classic site into a modern Office 365 group-connected site by following the guidance in this section.
 
 > [!TIP]
 > You can decide which steps to run and the order in which to run them. Although there's no one-size-fits-all process to modernize your site, the following is the recommended approach.
@@ -71,4 +69,5 @@ For more information about page transformation, see [Transform classic pages to 
 ## See also
 
 - [SharePoint classic and modern experiences](https://support.office.com/en-us/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US)
+- [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/)
 - [Office 365 development and SharePoint PnP solution guidance](../solution-guidance/office-365-development-patterns-and-practices-solution-guidance.md)

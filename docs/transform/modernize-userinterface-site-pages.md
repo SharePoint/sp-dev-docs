@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Transform classic pages to modern client-side pages
 
-Classic SharePoint sites typically have classic pages being wiki pages or web part pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern client side pages and this is the solution here. After you've maximized the use of the modern list and library user interface and connected your site to an Office 365 Group transforming the pages to modern client side pages is the last task to fully transform your classic site into a modern group connected site.
+Classic SharePoint sites typically have classic pages being wiki pages or web part pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern client side pages and this is the solution here. After you've maximized the use of the modern list and library user interface and connected your site to an Office 365 Group transforming the pages to modern client side pages is the last task to fully transform your classic site into a modern group connected site. Get inspired by the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
 
 The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline), [source code](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization/SharePointPnP.Modernization.Framework)) does bring page transformation capabilities which will be explained in the upcoming chapters.
 
@@ -30,4 +30,5 @@ Approach | Audience | Description
 - [Using SharePoint Page Transformation from PowerShell](modernize-userinterface-site-pages-powershell.md)
 - [Using SharePoint Page Transformation from .Net](modernize-userinterface-site-pages-dotnet.md)
 - [Understanding and configuring the page transformation model](modernize-userinterface-site-pages-model.md)
+- [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/)
 - [Classic and modern web part experiences](https://support.office.com/en-us/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64)
