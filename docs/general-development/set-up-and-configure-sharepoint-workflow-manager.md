@@ -1,14 +1,14 @@
 ---
-title: Set up and configure SharePoint Workflow Manager
+title: Set up and configure Workflow Manager with SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 4cd68a3e-9c3b-4fb9-bb66-e96cf0faec69
 ---
 
 
-# Set up and configure SharePoint Workflow Manager
+# Set up and configure Workflow Manager with SharePoint
 Find instructions for setting up and configuring Workflow Manager Client 1.0 and pairing it to function properly with SharePoint. 
-Instructions for installing and configuring SharePoint workflow components are maintained on Microsoft TechNet:
+Instructions for installing and configuring SharePoint workflow components are maintained on Microsoft Docs:
   
     
     
