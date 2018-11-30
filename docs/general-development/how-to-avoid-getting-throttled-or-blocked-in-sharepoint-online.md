@@ -202,7 +202,7 @@ public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientCon
             else
             {
                 // retry the previous request
-                if (wrapper.Value != null)
+                if (wrapper != null && wrapper.Value != null)
                 {
                     clientContext.RetryQuery(wrapper.Value);
                     return;
