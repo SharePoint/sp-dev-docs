@@ -65,8 +65,8 @@ Option | Description
 --solution-name|Client-side solution name, as well as folder name.
 --environment|The target environment for the solution. Either "onprem", "onprem19" or "spo".
 --package-manager|The package manager for the solution. Options are: "npm", "pnpm", or "yarn". Default: *npm*
---skip-feature-deployment|If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites. Default: *false*.
---is-domain-isolated|If 'y', web part will be rendered in isolated domain using IFrame. If set to "y", sets the component type as web part.
+--skip-feature-deployment|If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites.
+--is-domain-isolated|If specified, web part will be rendered in isolated domain using IFrame and sets the component type as web part.
 
 <br/>
 
@@ -90,7 +90,7 @@ yo @microsoft/sharepoint
 --component-description "HelloWorld web part" 
 --skip-install 
 --environment "spo" 
---skip-feature-deployment true
+--skip-feature-deployment
 ```
 
 <br/>
