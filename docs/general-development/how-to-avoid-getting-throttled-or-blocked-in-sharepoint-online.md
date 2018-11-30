@@ -130,7 +130,7 @@ What are the recommendations?
 > Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. It is also fine to append existing user agent string with the requested information.
 
 > [!NOTE]
-> If you are developing front end components executing in the browser, most of modern browsers don't allow overwritting the user agent string and you don't need to implement this.
+> If you are developing front end components executing in the browser, most of modern browsers don't allow overwriting the user agent string and you don't need to implement this.
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
@@ -148,7 +148,7 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
     {
         e.WebRequestExecutor.WebRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
     };
-                
+
     // Normal CSOM Call with custom User-Agent information
     Web site = ctx.Web;
     ctx.Load(site);
@@ -169,62 +169,94 @@ endpointRequest.Headers.Add("Authorization", "Bearer " + accessToken);
 HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse();
 ```
 
+### CSOM Code sample: ExecuteQueryWithIncrementalRetry extension method
 
-### CSOM Code sample: ExecuteQueryWithIncrementalRetry method
+> [!NOTE]
+> You'll need to use SharePoint Online CSOM version 16.1.8316.1200 (December 2018 version) or higher.
 
+Add this extension method in a static class and use `ExecuteQueryWithIncrementalRetry` instead of `ExecuteQuery` to make your code handle throttling requests.
 
-```
+```cs
+public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount, int delay)
+{
+    int retryAttempts = 0;
+    int backoffInterval = delay;
+    int retryAfterInterval = 0;
+    bool retry = false;
+    ClientRequestWrapper wrapper = null;
+    if (retryCount <= 0)
+        throw new ArgumentException("Provide a retry count greater than zero.");
+    if (delay <= 0)
+        throw new ArgumentException("Provide a delay greater than zero.");
 
-public static void ExecuteQueryWithIncrementalRetry(this ClientContext context, int retryCount, int delay)
+    // Do while retry attempt is less than retry count
+    while (retryAttempts < retryCount)
+    {
+        try
         {
-            int retryAttempts = 0;
-            int backoffInterval = delay;
-            if (retryCount <= 0)
-                throw new ArgumentException("Provide a retry count greater than zero.");
-           if (delay <= 0)
-                throw new ArgumentException("Provide a delay greater than zero.");
-           while (retryAttempts < retryCount)
+            if (!retry)
             {
-                try
+                clientContext.ExecuteQuery();
+                return;
+            }
+            else
+            {
+                // retry the previous request
+                if (wrapper.Value != null)
                 {
-                    context.ExecuteQuery();
+                    clientContext.RetryQuery(wrapper.Value);
                     return;
                 }
-                catch (WebException wex)
+            }
+        }
+        catch (WebException ex)
+        {
+            var response = ex.Response as HttpWebResponse;
+            // Check if request was throttled - http status code 429
+            // Check is request failed due to server unavailable - http status code 503
+            if (response != null && (response.StatusCode == (HttpStatusCode)429 || response.StatusCode == (HttpStatusCode)503))
+            {
+                wrapper = (ClientRequestWrapper)ex.Data["ClientRequest"];
+                retry = true;
+
+                // Determine the retry after value - use the retry-after header when available
+                string retryAfterHeader = response.GetResponseHeader("Retry-After");
+                if (!string.IsNullOrEmpty(retryAfterHeader))
                 {
-                    var response = wex.Response as HttpWebResponse;
-                    if (response != null &amp;&amp; response.StatusCode == (HttpStatusCode)429)
+                    if (!Int32.TryParse(retryAfterHeader, out retryAfterInterval))
                     {
-                       int retryAfterInMs = DefaultRetryAfterInMs;
-                        string retryAfter = response.GetResponseHeader(RetryAfterHeaderName);
-                        if (!string.IsNullOrEmpty(retryAfter * 1000))
-                        {
-                            if (!int.TryParse(retryAfter, out retryAfterInMs))
-                            {
-                                retryAfterInMs = DefaultRetryAfterInMs;
-                            }
-                        }
-
-                        Console.WriteLine(string.Format("CSOM request exceeded usage limits. Sleeping for {0} milliseconds before retrying.", retryAfterInMs));
-                        //Add delay.
-                        System.Threading.Thread.Sleep(retryAfterInMs);
-                        //Add to retry count.
-                        retryAttempts++;
-                    }
-
-                    else
-                    {
-                        throw;
+                        retryAfterInterval = backoffInterval;
                     }
                 }
-            }
-            throw new MaximumRetryAttemptedException(string.Format("Maximum retry attempts {0}, have been attempted.", retryCount));
-       }
+                else
+                {
+                    retryAfterInterval = backoffInterval;
+                }
 
+                // Delay for the requested milliseconds
+                Thread.Sleep(retryAfterInterval);
+
+                // Increase counters
+                retryAttempts++;
+                backoffInterval = backoffInterval * 2;
+            }
+            else
+            {
+                throw;
+            }
+        }
+    }
+    throw new MaximumRetryAttemptedException($"Maximum retry attempts {retryCount}, has be attempted.");
+}
+
+[Serializable]
+public class MaximumRetryAttemptedException : Exception
+{
+    public MaximumRetryAttemptedException(string message) : base(message) { }
+}
 ```
 
-
-## What should you do if you get blocked in SharePoint Online?
+# What should you do if you get blocked in SharePoint Online?
 <a name="BKMK_Whatshouldyoudoifyougetblocked"> </a>
 
 Blocking is the most extreme form of throttling. We rarely ever block a tenant, unless we detect long-term, extremely excessive traffic that may threaten the overall health of the SharePoint Online service. We apply blocks to prevent excessive traffic from degrading the performance and reliability of SharePoint Online. A block - which is usually placed at the app or user level - prevents the offending process from running until you fix the problem. If we block your subscription, you must take action to modify the offending processes before the block can be removed.
