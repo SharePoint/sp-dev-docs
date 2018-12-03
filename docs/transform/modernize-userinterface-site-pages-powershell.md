@@ -17,7 +17,7 @@ The page transformation engine can also be used from PowerShell. This allows it 
 
 Below script shows how to call the transformation engine using [PnP PowerShell](http://aka.ms/sppnp-powershell):
 
-[!code-powershell[transformpages](../../sp-dev-modernization/blob/master/Scripts/PageTransformation/TransformPageSampleBasic.ps1 "Transform pages to modern pages using PowerShell")]
+[!code-powershell[transformpages](../../sp-dev-modernization/Scripts/PageTransformation/TransformPageSampleBasic.ps1 "Transform pages to modern pages using PowerShell")]
 
 ## Options for the Invoke-PnPModernizationPageTransformation cmdlet
 
