@@ -22,6 +22,7 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 | [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at http://docs.microsoft.com/sharepoint/dev/ |
 | [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) | Samples and tutorial code around SharePoint Framework client-side web parts |
 | [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions) | Samples and tutorial code around SharePoint Framework extensions |
+| [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization) | Solutions, tools and script to help you modernize your sites |
 | [sp-dev-solutions](https://github.com/SharePoint/sp-dev-solutions) | More polished and fine-tuned reusable solutions built with the SharePoint Framework |
 | [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) | Various [column formatting](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting) json files shared among the community |
 | [sp-dev-site-scripts](https://github.com/SharePoint/sp-dev-site-scripts) | Various [Site Script and Site Design](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview) json files shared among the community |
