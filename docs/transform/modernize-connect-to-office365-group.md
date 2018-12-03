@@ -105,7 +105,7 @@ Error | Description
 
 During script execution, a log file is generated, combined with an error file that contains a subset of the log file (only the errors).
 
-[!code-powershell[validategroupifyinput](../../sp-dev-modernization/tree/master/Scripts/O365GroupConnect/ValidateInput.ps1 "Validate group-connect input file")]
+[!code-powershell[validategroupifyinput](../../sp-dev-modernization/Scripts/O365GroupConnect/ValidateInput.ps1 "Validate group-connect input file")]
 
 #### Run the bulk group-connect process
 
@@ -132,7 +132,7 @@ Running the following PowerShell script requires that you update the tenant admi
 
 During script execution, a log file is generated, combined with an error file that contains a subset of the log file (only the errors).
 
-[!code-powershell[bulkgroupify](../../sp-dev-modernization/tree/master/Scripts/O365GroupConnect/O365GroupConnectSite.ps1 "Bulk group-connect sites")]
+[!code-powershell[bulkgroupify](../../sp-dev-modernization/Scripts/O365GroupConnect/O365GroupConnectSite.ps1 "Bulk group-connect sites")]
 
 ## See also
 
