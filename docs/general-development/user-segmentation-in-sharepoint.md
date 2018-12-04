@@ -79,7 +79,7 @@ Figure 1 shows the basic steps to add user segmentation functionality to your Sh
 A term is a word or a phrase that can be associated with an item in SharePoint. Aterm set is a collection of related terms. For more information, see [Overview of managed metadata in SharePoint](http://technet.microsoft.com/en-us/library/ee424402.aspx). You can create term sets either through the SharePoint Term Store Management Tool, or programmatically. 
   
 > [!NOTE] 
-> See the following topics for detailed instructions on how to use the Term Store Management Tool to create your term set:>  [Set up a new term set](http://office.microsoft.com/en-us/sharepoint-help/set-up-a-new-term-set-HA102922634.aspx)>  [Create and manage terms in a term set](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/create-and-manage-terms-in-a-term-set-HA102771989.aspx)
+> See the following topics for detailed instructions on how to use the Term Store Management Tool to create your term set:>  [Set up a new term set](https://docs.microsoft.com/en-us/sharepoint/set-up-new-term-set)>  [Create and manage terms in a term set](https://docs.microsoft.com/en-us/sharepoint/create-and-manage-terms)
   
     
     
