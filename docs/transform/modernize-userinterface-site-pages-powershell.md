@@ -60,17 +60,17 @@ To install the default banner web part follow these steps:
 When the page transformation engine puts the banner web part on a page it gets it's definition from the webpartmapping.xml file. Check if you find a web part of type **SharePointPnP.Modernization.PageAcceptanceBanner** in your mapping file. Below sample shows the default configuration using the default web part uploaded in the previous step.
 
 ```xml
-<WebPart Type="SharePointPnP.Modernization.PageAcceptanceBanner">
-  <Properties>
-    <Property Name="SourcePage" Type="string"/>
-    <Property Name="TargetPage" Type="string"/>
-  </Properties>
-  <Mappings>
-    <Mapping Default="true" Name="default">
-      <ClientSideWebPart Type="Custom" ControlId="d462a7c4-b2e1-4e80-867a-7b46d279c161" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;modernizationPageDemo&quot;,&quot;sourcePage&quot;:&quot;ePage}&quot;,&quot;targetPage&quot;:&quot;{TargetPage}&quot;&#125;&#125;"/>
-    </Mapping>
-  </Mappings>
-</WebPart>
+      <WebPart Type="SharePointPnP.Modernization.PageAcceptanceBanner">
+        <Properties>
+          <Property Name="SourcePage" Type="string"/>
+          <Property Name="TargetPage" Type="string"/>
+        </Properties>
+        <Mappings>
+          <Mapping Default="true" Name="default">
+            <ClientSideWebPart Type="Custom" ControlId="d462a7c4-b2e1-4e80-867a-7b46d279c161" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;modernizationPageDemo&quot;,&quot;sourcePage&quot;:&quot;{SourcePage}&quot;,&quot;targetPage&quot;:&quot;{TargetPage}&quot;&#125;&#125;"/>
+          </Mapping>
+        </Mappings>
+      </WebPart>
 ```
 
 > [!NOTE]
