@@ -52,6 +52,65 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 }
 ```
 
+## FAQ
+
+### I choose the "AddPageAcceptBanner" option but don't see the banner web part on the created pages
+
+In order to make the banner webpart work there are 2 requirements that have to be met:
+
+- The banner web part must have been installed in your tenant app catalog
+- The banner web part must have been referenced in the used webpartmapping.xml file
+
+#### Installing the banner web part
+
+To install the default banner web part follow these steps:
+
+- Open your tenant app catalog site collection and go to the **Apps for SharePoint** list
+- Download the banner web part solution (**sharepointpnp-pagetransformation-client.sppkg**) from the [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization/blob/master/Solutions/PageTransformationUI/assets/sharepointpnp-pagetransformation-client.sppkg?raw=true) repository
+- Drag and drop the sppkg file in the **Apps for SharePoint** list. Doing so will ask to **make this solution available to all sites in your organization**. Check the box and click on **Deploy**.
+
+> [!NOTE]
+> The page banner web part is configured to **not** be visible in the web part picker...so even if you've deployed it to all sites in your tenant it will still not be visible for your users. It can only programmatically be added to a page
+
+#### Checking your webpartmapping.xml file
+
+When the page transformation engine puts the banner web part on a page it gets it's definition from the webpartmapping.xml file. Check if you find a web part of type **SharePointPnP.Modernization.PageAcceptanceBanner** in your mapping file. Below sample shows the default configuration using the default web part uploaded in the previous step.
+
+```xml
+<WebPart Type="SharePointPnP.Modernization.PageAcceptanceBanner">
+  <Properties>
+    <Property Name="SourcePage" Type="string"/>
+    <Property Name="TargetPage" Type="string"/>
+  </Properties>
+  <Mappings>
+    <Mapping Default="true" Name="default">
+      <ClientSideWebPart Type="Custom" ControlId="d462a7c4-b2e1-4e80-867a-7b46d279c161" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;modernizationPageDemo&quot;,&quot;sourcePage&quot;:&quot;ePage}&quot;,&quot;targetPage&quot;:&quot;{TargetPage}&quot;&#125;&#125;"/>
+    </Mapping>
+  </Mappings>
+</WebPart>
+```
+
+> [!NOTE]
+> You can use your own custom banner web part by simply deploying it and then updating the mapping in the used webpartmapping.xml file.
+
+### Modern site pages don't work on the site I want to transform pages in
+
+By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
+
+```PowerShell
+$minimumVersion = New-Object System.Version("2.24.1803.0")
+if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
+{
+    Install-Module SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -Scope CurrentUser
+}
+Import-Module SharePointPnPPowerShellOnline -DisableNameChecking -MinimumVersion $minimumVersion
+
+Connect-PnPOnline -Url "<your web url>"
+
+# Enable modern page feature
+Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web -Force
+```
+
 ## See also
 
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
