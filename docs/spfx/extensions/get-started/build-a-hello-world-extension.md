@@ -117,11 +117,11 @@ You cannot use the local Workbench to test SharePoint Framework Extensions. You 
 
     Notice that this file has been updated with the default settings matching your project. You can notice that there's a specific GUID mentioned under the customActions element. This is automatically updated to match your component when project was scaffold. If you will add new components or change the properties for the component, you will need to update this file for testing.
 
-2. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *This could be for example a welcome page of a new group associated team site, which would mean somewhat following URL:*
+2. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *This could be for example a welcome page of a new group associated team site, which would mean something like the following URL:*
 
     `https://sppnp.sharepoint.com/sites/yoursite/SitePages/Home.aspx`
 
-    Your **serve.json** file should look somewhat following (updated with your tenant details):
+    Your **serve.json** file should look similar to the following (updated with your tenant details):
 
     ![Updated server json file](../../../images/ext-app-vscode-updated-serve-json.png)
 
