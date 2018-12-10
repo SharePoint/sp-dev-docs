@@ -121,7 +121,7 @@ The full set of values for SiteStatus are as follows:
 + `0` - Not Found.  The site doesn't exist.
 + `1` - Provisioning.  The site is currently being provisioned.
 + `2` - Ready.  The site has been created.
-+ `3` - Error.  An error occured while provisioning the site.
++ `3` - Error.  An error occurred while provisioning the site.
 
 ## See also
 
