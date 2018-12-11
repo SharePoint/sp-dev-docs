@@ -356,11 +356,9 @@ b)      A warning will be reported in the ImportLogs- “Failed to retrieve user
  
 * [Azure Windows Azure SDK for .NET - 2.4](http://www.microsoft.com/en-us/download/details.aspx?id=43709)
 
-* [Bulk Creation of OneDrive for Business sites](http://msdn.microsoft.com/en-us/library/office/jj163783(v=office.15).aspx)
+* [Bulk Creation of OneDrive for Business sites](http://msdn.microsoft.com/en-us/library/office/jj163783(v=office.15).aspx) 
 
-* [So you want to programmatically provision personal sites in OneDrive for Business in Office 365](http://blogs.msdn.com/b/frank_marasco/archive/2014/03/25/so-you-want-to-programmatically-provision-personal-sites-one-drive-for-business-in-office-365.aspx)
-
-* [Restrictions and limitations when you sync SharePoint libraries to your computer through OneDrive for Business](http://support.microsoft.com/kb/2933738)
+* [Restrictions and limitations when you sync SharePoint libraries to your computer through OneDrive for Business](https://support.office.com/en-us/article/restrictions-and-limitations-when-you-sync-files-and-folders-7787566e-c352-4bd4-9409-fd100a0165f6)
 
 * [Types of files that cannot be added to a list or library](https://support.office.com/en-US/Article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3?ui=en-US&rs=en-US&ad=US)
 
