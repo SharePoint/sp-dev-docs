@@ -42,7 +42,7 @@ In the table below, you can see all eight palette colors defined for the bodyTe
 </tr>
 <tr>
 <td>Neutral</td>
-<td bgcolor="#000000">neutralPrimary #333333</td>
+<td style="background-color:red;">neutralPrimary #333333</td>
 <td bgcolor="#3c3c3c">neutralPrimary #ffffff</td>
 </tr>
 <tr>
@@ -59,7 +59,7 @@ In the table below, you can see all eight palette colors defined for the bodyTe
 <br/>
 
 ! Note
-Avoid creating case-specific semantic slots. Fabric's policy is that semantic slots may never be removed from the list, so any additions are permanent. The current semantic slot list is defined by commonly used design patterns in SharePoint. When designing a new web part, consider aligning to an existing design pattern.
+The current semantic slot list is defined by commonly used design patterns in SharePoint. We want to avoid creating case-specific semantic slots. When designing a new web part, consider aligning to an existing design pattern. Fabric's policy is that semantic slots may never be removed from the list, so any additions are permanent.
 
 ## Identifying semantic slots in your designs
 
