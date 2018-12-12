@@ -41,11 +41,11 @@ Ensure the following before you begin:
   - From the remainder, it filters out non-SharePoint add-ins and add-ins that use asymmetric keys, such as workflows.
 
   ```powershell
-$applist = Get-MsolServicePrincipal -all  |Where-Object -FilterScript { ($_.DisplayName -notlike "*Microsoft*") -and ($_.DisplayName -notlike "autohost*") -and  ($_.ServicePrincipalNames -notlike "*localhost*") }
+    $applist = Get-MsolServicePrincipal -all  |Where-Object -FilterScript { ($_.DisplayName -notlike "*Microsoft*") -and ($_.DisplayName -notlike "autohost*") -and  ($_.ServicePrincipalNames -notlike "*localhost*") }
 
-foreach ($appentry in $applist) {
-    $principalId = $appentry.AppPrincipalId
-    $principalName = $appentry.DisplayName
+    foreach ($appentry in $applist) {
+        $principalId = $appentry.AppPrincipalId
+        $principalName = $appentry.DisplayName
     
     Get-MsolServicePrincipalCredential -AppPrincipalId $principalId -ReturnKeyValues $false | ? { $_.Type -eq "Password" } | % { "$principalName;$principalId;" + $_.KeyId.ToString() +";" + $_.StartDate.ToString() + ";" + $_.EndDate.ToString() } | out-file -FilePath c:\temp\appsec.txt -append
 }
