@@ -37,23 +37,23 @@ In the table below, you can see all eight palette colors defined for the bodyTe
 </tr>
 <tr>
 <td>None</td>
-<td bgcolor="#000000">neutralPrimary #333333</td>
-<td bgcolor="#3c3c3c">neutralPrimary #ffffff</td>
+<td>neutralPrimary #333333</td>
+<td>neutralPrimary #ffffff</td>
 </tr>
 <tr>
 <td>Neutral</td>
-<td style="background-color:red;">neutralPrimary #333333</td>
-<td bgcolor="#3c3c3c">neutralPrimary #ffffff</td>
+<td style="background-color:red">neutralPrimary #333333</td>
+<td>neutralPrimary #ffffff</td>
 </tr>
 <tr>
 <td>Soft</td>
-<td bgcolor="#000000">neutralPrimary #333333</td>
-<td bgcolor="#3c3c3c">neutralPrimary #ffffff</td>
+<td>neutralPrimary #333333</td>
+<td>neutralPrimary #ffffff</td>
 </tr>
 <tr>
 <td>Strong</td>
-<td bgcolor="#000000">white #ffffff</td>
-<td bgcolor="#3c3c3c">white #1f1f1f</td>
+<td>white #ffffff</td>
+<td>white #1f1f1f</td>
 </tr>
 </table>
 <br/>
