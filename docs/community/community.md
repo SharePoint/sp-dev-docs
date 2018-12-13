@@ -31,7 +31,9 @@ Found an issue related to SharePoint development around the APIs, documentation,
 There are numerous community calls for SharePoint development, and you can choose which of them you'd like to join based on your interest and availability. Each call has live demos from SharePoint Engineering, MVPs, or other community members. 
 
 > [!TIP]
-> If you are interested in doing a live demo in any of our community calls, please reach out and we'll get you a spot for 10-15 minutes for demonstrating your SharePoint development topic(s).
+> If you are interested in doing a live demo in any of our community calls, please reach out by leaving a comment on this page and we'll get you a spot for 10-15 minutes for demonstrating your SharePoint development topic(s).
+> 
+> **Do's & Dont's**: Interested in presenting during one of the community calls? Keep in mind these are community calls. The focus of these demos should be on learning and topics beneficial to the community. Please refrain from commercial activities such as selling or promoting products or services. Commercial activities in the community calls are not well received by the community and in certain instances may result in stopping the demo early. In your request to present, please descriptive what you intend to show to avoid any confusion. If you are not sure if what you want to present is appropriate, just ask in the submission.
 
 | Community call | When | Description | Skype |
 |--------|--------|--------|--------|
@@ -39,6 +41,9 @@ There are numerous community calls for SharePoint development, and you can choos
 | [Special interest group call for SharePoint Framework](https://aka.ms/spdev-spfx-call) | Bi-weekly on Thursdays at 7:00 AM PT / 3:00 PM GMT | SharePoint Engineering updates, SharePoint Framework, PnPJS, Office 365 CLI, and reusable SPFx controls  |  [Direct Skype link to meeting](https://aka.ms/spdev-spfx-call-join) |
 | [Special interest group call for general SharePoint development](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7:00 AM PT / 3:00 PM GMT | SharePoint Engineering updates, end-to-end solution designs, provisioning, PnP CSOM, and PnP PowerShell |  [Direct Skype link to meeting](https://aka.ms/spdev-sig-call-join) |
 
+### Interested in Presenting in a Community Call? Do's & Don'ts
+
+Are you interested in presenting during one of the community calls listed above? We welcome demos by the community! Please feel free
 
 > [!NOTE]
 > Currently these are recurring invites until the end of June 2019. They will be renewed after that for the next 12 months.
