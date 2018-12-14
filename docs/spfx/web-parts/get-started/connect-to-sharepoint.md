@@ -40,15 +40,15 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
 
 ### To get access to the page context
 
-1. Use the following variable in your web part class:
+To access contextual information in your web part, you'll be using the following object in your code:
 
   ```typescript
   this.context.pageContext
   ```
 
-2. Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\helloWorld\HelloWorldWebPart.ts**.
+1. Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\helloWorld\HelloWorldWebPart.ts**.
 
-3. Inside the **render** method, replace the **innerHTML** code block with the following code:
+2. Inside the **render** method, replace the **innerHTML** code block with the following code:
 
   ```HTML
       this.domElement.innerHTML = `
@@ -70,9 +70,9 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
         </div>`;
   ```
 
-4. Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Because this web part loads from the local environment, the title is **Local Workbench**.
+3. Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Because this web part loads from the local environment, the title is **Local Workbench**.
 
-5. Save the file. The `gulp serve` running in your console detects this save operation and:
+4. Save the file. The `gulp serve` running in your console detects this save operation and:
 
   - Builds and bundles the updated code automatically.
   - Refreshes your local Workbench page (as the web part code needs to be reloaded).
@@ -80,13 +80,13 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
   > [!NOTE]
   > Keep the console window and Visual Studio Code side-by-side to see gulp automatically compile as you save changes in Visual Studio Code.
 
-6. In your browser, switch to the local **SharePoint Workbench** tab. If you have already closed the tab, the URL is `https://localhost:4321/temp/workbench.html`.
+5. In your browser, switch to the local **SharePoint Workbench** tab. If you have already closed the tab, the URL is `https://localhost:4321/temp/workbench.html`.
 
   You should see the following in the web part:
 
   ![SharePoint page context in localhost](../../../images/sp-mock-localhost-wp.png)
 
-7. Navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that on the SharePoint Online side, you need to refresh the page to see the changes.
+6. Navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that on the SharePoint Online side, you need to refresh the page to see the changes.
 
   You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
