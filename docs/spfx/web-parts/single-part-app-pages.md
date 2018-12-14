@@ -12,7 +12,7 @@ Single part app pages provides a capability to host SharePoint Framework web par
 > [!IMPORTANT]
 > This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
-App pages have following characterers:
+App pages have following characteristics:
 
 * Single Part App Pages cannot be edited by end users using browser
 * Currently supports hosting only single web part or Microsoft Teams application
@@ -21,7 +21,7 @@ App pages have following characterers:
 
 ## How to use the Single Part App page in your tenant?
 
-You will need to perform following steps to enable Signle Part App Page layout in your SharePoint site. 
+You will need to perform following steps to enable Single Part App Page layout in your SharePoint site. 
 
 1. Create a new page
 1. Add a web part on the page and configure that as needed
