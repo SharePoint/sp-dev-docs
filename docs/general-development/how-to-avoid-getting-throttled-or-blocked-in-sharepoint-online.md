@@ -233,8 +233,8 @@ public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientCon
                     retryAfterInterval = backoffInterval;
                 }
 
-                // Delay for the requested milliseconds
-                Thread.Sleep(retryAfterInterval);
+                // Delay for the requested seconds
+                Thread.Sleep(retryAfterInterval * 1000);
 
                 // Increase counters
                 retryAttempts++;
