@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Opting out of the modern list and library experience
 
-In 2016, we introduced a new “modern” experience for SharePoint, bringing extensibility, accessibility, and responsive design to a complete overhaul of the user experience. Since then, modern has been the basis for innovation throughout SharePoint and OneDrive, although classic mode remains supported and available. Although the majority of lists and libraries work perfect in the modern experience, there are also lists which don't work as expected or miss functionality when used in modern. Often this is due to customizations on the list (e.g. JSLink) or on the list form page (e.g. multiple web parts used). SharePoint will detect most incompatible customizations and will at present the impacted lists and libraries using the classic experience, while the other lists and libraries in the site will work using the modern experience. If switching between the modern and classic experiences is not acceptable then you do have the option to opt out lists and libraries from the modern experience. In this article you'll learn about the available opt out options, how to detect lists and libraries that could benefit from opting out of modern and finally how to best handle the opt out.
+In 2016, we introduced a new “modern” experience for SharePoint, bringing extensibility, accessibility, and responsive design to a complete overhaul of the user experience. Since then, modern has been the basis for innovation throughout SharePoint and OneDrive, although classic mode remains supported and available. The majority of lists and libraries work perfect in the modern experience, but there are also lists which don't work as expected or miss functionality when used in modern. Often this is due to customizations on the list (e.g. JSLink) or on the list form page (e.g. multiple web parts used). SharePoint will detect most incompatible customizations and will show the impacted lists and libraries using the classic experience, while the other lists and libraries in the site will be shown using the modern experience. If switching between the modern and classic experiences is not acceptable, then you do have the option to opt out lists and libraries from the modern experience. In this article you'll learn about the available opt out options, how to detect lists and libraries that could benefit from opting out of modern and finally how to best handle the opt out.
 
 ## Options to opt out lists and libraries from the modern experience
 
@@ -20,7 +20,7 @@ You can opt out a site collection from using the "modern" experience by enabling
 $cred = Get-Credential
 Connect-PnPOnline -Url https://[tenant].sharepoint.com/sites/siteurl -Credentials $cred
 
-# Prevent modern lists and libraries at site collection level
+# Opt out from modern lists and libraries at site collection level
 Enable-PnPFeature -Identity E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 -Scope Site
 # And again enable modern lists and libraries at site collection level
 #Disable-PnPFeature -Identity E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 -Scope Site
@@ -35,7 +35,7 @@ You can opt out a web from using the "modern" experience by enabling a feature w
 $cred = Get-Credential
 Connect-PnPOnline -Url https://[tenant].sharepoint.com/sites/siteurl -Credentials $cred
 
-# Prevent modern lists and libraries at web level
+# Opt out from modern lists and libraries at web level
 Enable-PnPFeature -Identity 52E14B6F-B1BB-4969-B89B-C4FAA56745EF  -Scope Web
 # And again enable modern lists and libraries at web level
 #Disable-PnPFeature -Identity 52E14B6F-B1BB-4969-B89B-C4FAA56745EF  -Scope Web
@@ -72,11 +72,13 @@ Invoke-PnPQuery
 
 Opting out of the modern experience is only needed in certain cases, as described in this article's introduction. Previous chapter showed you how to perform an opt out, but how do know which lists and libraries are candidates to be opted out from the modern experience?
 
-The [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will give you the needed answers: if you run the scanner in "Full scan" or in "Modern list experience readiness" mode the scanner will collect all the data about your lists. Using the generated **Modern UI List Readiness** Excel report you can find the lists having customizations as explain in the [Analyze and use the scanner data](modernize-userinterface-lists-and-libraries-scanner.md) article.
+The [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will give you the needed answers: if you run the scanner in "Full scan" or in "Modern list experience readiness" mode the scanner will collect all the data about your lists. Using the generated **Modern UI List Readiness** Excel report you can find the lists having customizations as explained in the [Analyze and use the scanner data](modernize-userinterface-lists-and-libraries-scanner.md) article.
 
-The found lists will already present themselves in classic, due to SharePoint's classic fallback mechanism. If you however want to offer a full classic user experience than you might want to opt out the complete site collection from modern lists and libraries. To help you with that the scanner generates a CSV file named **SitesWithCustomizations.csv**. This CSV file is simple list of site collection URL's without a header as shown in below sample:
+The found lists will already present themselves in classic, due to SharePoint's classic fallback mechanism. If you however want to offer a full classic user experience, than you might want to opt out the complete site collection from modern lists and libraries. To make that easy, the scanner generates a CSV file named **SitesWithCustomizations.csv** listing all site collections hat contain one or more lists that could be opted out. 
 
-```text
+This CSV file is a simple list of site collection URL's without a header as shown in below sample:
+
+```CSV
 "https://contoso.sharepoint.com/sites/siteA"
 "https://contoso.sharepoint.com/sites/siteB"
 "https://contoso.sharepoint.com/sites/siteC"
