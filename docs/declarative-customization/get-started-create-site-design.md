@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. 
-ms.date: 11/01/2018
+ms.date: 12/19/2018
 ---
 
 # Get started creating site designs and site scripts
@@ -74,7 +74,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
 
 <br/>
 
-The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design).
+The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design) if applied programmatically using the Invoke-SPOSiteDesign command. If they are applied through the UX or using the Add-SPOSiteDesignTask command then the limit is 300 cumulative actions (or 100K characters) .
 
 ## Add the site script
 
@@ -131,7 +131,7 @@ Now that you've added a site script and site design, you can use it to create ne
 
 7. Choose **Finish**. 
 
-8. A pane indicates that your script is being applied. When it is done, choose **View updated site**. 
+8. A notification bar will be displayed indicating that your script is being applied. To invoke the site design information panel, click the **View progress** link. Once the script(s) have completed the notification banner message will change to **Site Design applied. Refresh this site to see the changes.**, allowing you to either invoke the panel or refresh the page.  
 
 9. You will see the custom list on the page. 
 
@@ -139,7 +139,12 @@ Now that you've added a site script and site design, you can use it to create ne
 
 You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet. 
 
-You can already apply to Group-connected Team and Communication sites. By August 2018 you will also be able to apply site designs to the team site not connected to an Office 365 Group, a classic team site, or a classic publishing site.
+You can apply a published site design to: 
+1. Group-connected Team site
+2. Team site not connected to an Office 365 Group
+3. Communication site
+4. Classic team site
+5. Classic publishing site
 
 ### Associate with a hub site
 
