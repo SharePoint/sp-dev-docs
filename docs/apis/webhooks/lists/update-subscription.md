@@ -1,6 +1,12 @@
-# Update a subscription
+---
+title: Update a subscription
+description: Updates a webhook subscription on a SharePoint list.
+ms.date: 02/08/2018
+ms.prod: sharepoint
+---
 
->**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
+
+# Update a subscription
 
 Updates a webhook subscription on a SharePoint list.
 
@@ -8,7 +14,7 @@ Updates a webhook subscription on a SharePoint list.
 
 The application must have at least edit permissions to the SharePoint list where the subscription will be updated.  
 
-**If your application is an Microsoft Azure Active Directory (AD) application:**
+### If your application is a Microsoft Azure Active Directory (Azure AD) application
 
 You must grant the Azure AD application the permissions specified in the following table. A subscription can only be updated by the Azure AD application that created it.
 
@@ -16,11 +22,11 @@ Application | Permission
 ------------|------------
 Office 365 SharePoint Online|Read and write items and lists in all site collections. 
 
-**If your application is a SharePoint add-in:**
+### If your application is a SharePoint Add-in
 
-You must grant the SharePoint add-in the following permission(s) or higher. A subscription can only be updated by the SharePoint add-in that created it.
+You must grant the SharePoint Add-in the following permission(s) or higher. A subscription can only be updated by the SharePoint Add-in that created it.
 
-Scope | Permission Rights 
+Scope | Permission rights 
 ------|------------
 List|Manage
 
@@ -50,15 +56,20 @@ Name | Type | Description
 -----|------|------------
 notificationUrl|string|The service URL to send notifications to.
 expirationDateTime|date|The date the notification will expire and be deleted.
-client-clientState|string|Optional. Opaque string passed back to the client on all notifications. You can use this for validating notifications, or tagging different subscriptions.
+client-clientState|string|Optional. Opaque string passed back to the client on all notifications.<br/>You can use this for validating notifications or tagging different subscriptions.
 
 
 ## Response
 
-If the subscription is found and successfully updated, then a `204 No Content` response is returned:
+If the subscription is found and successfully updated, a `204 No Content` response is returned.
 
 ### Example
 
 ```http
 HTTP/1.1 204 No Content
 ```
+
+## See also
+
+- [SharePoint list webhooks](overview-sharepoint-list-webhooks.md)
+- [Overview of SharePoint webhooks](../overview-sharepoint-webhooks.md)

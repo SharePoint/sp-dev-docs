@@ -20,7 +20,7 @@ docs
 ```
 At this time, contributions are accepted for:
 
-* SharePoint Framework Developer Preview
+* SharePoint Framework
 * SharePoint Webhooks
 
 ### SPFx Folder
@@ -105,14 +105,14 @@ remove: Total 10 (delta 1), reused 10 (delta 1)
 Unpacking objects: 100% (10/10), done.
 ```
 
-## Switch to `staging` branch
+## Switch to `master` branch
 
-In order to add your changes, you will need to do those in the `staging` branch.
+In order to add your changes, you will need to do those in the `master` branch.
 
-Type the following command in the console to switch to `staging` branch:
+Type the following command in the console to switch to `master` branch:
 
 ```
-git checkout staging
+git checkout master
 ```
 
 Now, you can update existing docs or add new docs to the docs repo.
@@ -130,13 +130,13 @@ Depending on the doc's intent, you can choose to add your doc into  `basics` or 
 
 Once you have completed adding your changes, you can submit a pull request. 
 
-Navigate to the forked sp-dev-docs repo in your account. Make sure your current branch is `staging` branch.
+Navigate to the forked sp-dev-docs repo in your account. Make sure your current branch is `master` branch.
 
-Once you are in the staging branch, you should see a message to `Compare & pull request`
+Once you are in the `master` branch, you should see a message to `Compare & pull request`
 
 ![Submit a pull request to sp-dev-docs repo](../images/contribute-docs-submit-pr.png)
 
-This will start a new pull request. Make sure you use the following [template]() to fill in your changes. Make sure you are creating this pull request against the `staging` branch.
+This will start a new pull request. Make sure you use the following [template]() to fill in your changes. Make sure you are creating this pull request against the `master` branch.
 
 Once you have all the information, click the `Create pull request` to submit your pull request.
 
