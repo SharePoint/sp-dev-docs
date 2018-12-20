@@ -33,7 +33,7 @@ There are numerous community calls for SharePoint development, and you can choos
 > [!TIP]
 > If you are interested in doing a live demo in any of our community calls, please reach out by leaving a comment on this page and we'll get you a spot for 10-15 minutes for demonstrating your SharePoint development topic(s).
 > 
-> **Do's & Dont's**: Interested in presenting during one of the community calls? Keep in mind these are community calls. The focus of these demos should be on learning and topics beneficial to the community. Please refrain from commercial activities such as selling or promoting products or services. Commercial activities in the community calls are not well received by the community and in certain instances may result in stopping the demo early. In your request to present, please descriptive what you intend to show to avoid any confusion. If you are not sure if what you want to present is appropriate, just ask in the submission.
+> **Do's & Dont's**: Interested in presenting during one of the community calls? Keep in mind these are community calls. The focus of these demos should be on learning and topics beneficial to the community. Please refrain from commercial activities such as selling or promoting products or services. Commercial activities in the community calls are not well received by the community and in certain instances may result in stopping the demo early. In your request to present, please be descriptive about what you intend to show to avoid any confusion. If you are not sure if what you want to present is appropriate, just ask in the submission.
 
 | Community call | When | Description | Skype |
 |--------|--------|--------|--------|
