@@ -31,8 +31,18 @@ Migration tutorials from classic customizations to SharePoint Framework
 * [Migrating from JSLink to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions)
 * [Migrating from UserCustomAction to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
 
+## Getting started training modules for SharePoint Framework
+
+These are "presentations in a box" that include slides, demos, videos & hands on labs for self-paced learning or for user group presentations.
+
+* [Getting Started with the SharePoint Framework](https://github.com/SharePoint/sp-dev-training-spfx-getting-started)
+* [Developing with the SharePoint Framework: Web Parts](https://github.com/SharePoint/sp-dev-training-spfx-web-parts)
+* [Working with the Web Part Property Pane](https://github.com/SharePoint/sp-dev-training-spfx-webpart-proppane)
+* [Getting Started with SharePoint Framework Extensions](https://github.com/SharePoint/sp-dev-training-spfx-extensions)
+* [Working with SharePoint Content](https://github.com/SharePoint/sp-dev-training-spfx-spcontent)
+* [Leverage the Microsoft Graph & 3rd Party APIs](https://github.com/SharePoint/sp-dev-training-spfx-graph-3rdpartyapis)
 
 ## Other resources and assets
 
-- [SharePoint Development YouTube channel](http://aka.ms/spdev-videos)
-- [SharePoint developer samples](http://aka.ms/spdev-samples)
+* [SharePoint Development YouTube channel](http://aka.ms/spdev-videos)
+* [SharePoint developer samples](http://aka.ms/spdev-samples)
