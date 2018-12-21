@@ -45,9 +45,7 @@ Enable-PnPFeature -Identity 52E14B6F-B1BB-4969-B89B-C4FAA56745EF  -Scope Web
 
 To control the experience at the library level, you can go to **List settings** > **Advanced settings**, and change the behavior.
 
-**List experience configuration in the SharePoint tenant level settings in Admin UI**
-
-![List experience configuration in the SharePoint tenant level settings in Admin UI](media/modernize/list-experience-setting.png)
+![List experience configuration](media/modernize/list-experience-setting.png)
 
 The same can also be done by using [PnP PowerShell](http://aka.ms/sppnp-powershell) as shown in this snippet:
 
