@@ -54,7 +54,7 @@ When you view the file, you'll notice many comments in this format: `/* [Replace
 
 1. Make a copy of corev15.css and name it contosov15.css.
     
-2. Open contosov15.css and modify the CssRegistration line to point to contosov15.css from corev15.css, as shown in the following example.
+2. Open the relevant masterpage (in this example, contoso.masterpage) and modify the CssRegistration line to point to contosov15.css from corev15.css, as shown in the following example.
     
   ```XML
   <SharePoint:CssRegistration Name="Themable/contoso.css" runat="server" />
