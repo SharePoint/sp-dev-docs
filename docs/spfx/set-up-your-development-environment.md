@@ -34,6 +34,9 @@ Install [NodeJS LTS version 8](https://nodejs.org/dist/latest-v8.x/).
 > [!NOTE] 
 > NodeJS has two LTS versions - 8 and 10. The current supported LTS version of NodeJS for the SharePoint Framework is 8.x and can be downloaded from https://nodejs.org/en/download/releases/. Notice that 9.x or 10.x versions are currently not supported with SharePoint Framework development.
 
+> [!NOTE] 
+> I case you develop web parts for on-premises environments especially for SharePoint 2016 make sure you define the enviromental variable NODE_NO_HTTP2 = 1 otherwise the local workbench might not load.
+
 ### Install a code editor
 
 You can use any code editor or IDE that supports client-side development to build your web part, such as:
