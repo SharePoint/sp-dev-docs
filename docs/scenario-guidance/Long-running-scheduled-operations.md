@@ -72,7 +72,7 @@ In this pattern, the Azure WebJob handles the scheduling aspects associated with
 ##### Samples
 
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
-- [Using Remote Event Receivers and Remote Timer Jobs (training)](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/05%20Using%20Remote%20Event%20Receivers%20and%20Remote%20Timer%20Jobs)
+- [Using Remote Event Receivers and Remote Timer Jobs (training)](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/05%20Using%20Remote%20Event%20Receivers%20and%20Remote%20Timer%20Jobs)
 - [External Sharing Expiration Service](https://dev.office.com/patterns-and-practices-detail/1944)
 - [Sample Office 365 Application](https://dev.office.com/patterns-and-practices-detail/10980)
 - [Asynchronous operations with Azure storage queues and WebJobs](https://dev.office.com/patterns-and-practices-detail/2254)
@@ -105,7 +105,7 @@ The PnP timer job framework is a set of classes designed to ease the creation of
 
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
 - [Transformation Tool - CSOM](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM)
-- [Using Remote Event Receivers and Remote Timer Jobs (training)](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/05%20Using%20Remote%20Event%20Receivers%20and%20Remote%20Timer%20Jobs)
+- [Using Remote Event Receivers and Remote Timer Jobs (training)](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/05%20Using%20Remote%20Event%20Receivers%20and%20Remote%20Timer%20Jobs)
 
 ### Windows scheduled tasks
 
@@ -132,8 +132,8 @@ In this pattern, the Windows Scheduler handles the scheduling aspects associated
 ##### Samples
 
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SimpleTimerJob) - End-to-end article about this pattern with accompanying video.
-- [Using Remote Event Receivers and Remote Timer Jobs (training)](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/05%20Using%20Remote%20Event%20Receivers%20and%20Remote%20Timer%20Jobs)
-- [Moving Full Trust Code to the Cloud](https://github.com/OfficeDev/TrainingContent/blob/master/O3651/O3651-4%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices/Lab.md)
+- [Using Remote Event Receivers and Remote Timer Jobs (training)](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/05%20Using%20Remote%20Event%20Receivers%20and%20Remote%20Timer%20Jobs)
+- [Moving Full Trust Code to the Cloud](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3651/O3651-4%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices)
 
 ### SharePoint TimerJobs
 
@@ -151,4 +151,4 @@ A timer job is a trigger to start to run a specific Windows service for one of t
 ##### Samples
 
 - [Transformation Tool - CSOM](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM)
-- [Moving Full Trust Code to the Cloud](https://github.com/OfficeDev/TrainingContent/blob/master/O3651/O3651-4%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices/Lab.md)
+- [Moving Full Trust Code to the Cloud](hhttps://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3651/O3651-4%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices)

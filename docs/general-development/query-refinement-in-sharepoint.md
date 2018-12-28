@@ -37,7 +37,7 @@ The following sections describe these steps in detail, and provide code examples
 ## Adding refiners to the end-user's query by using refiner specs
 <a name="SP15_Adding_refiners"> </a>
 
-You can specify the requested query refiners by using the  [Refiners](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.Refiners.aspx) property of the [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.KeywordQuery.aspx) class. Use the following syntax to specify the requested query refiners:
+You can specify the requested query refiners by using the  [Refiners](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.Refiners.aspx) property of the [KeywordQuery](https://msdn.microsoft.com/en-us/library/microsoft.office.server.search.query.keywordquery.aspx) class. Use the following syntax to specify the requested query refiners:
   
     
     

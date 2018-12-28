@@ -6,9 +6,6 @@ ms.date: 4/23/2018
 
 # Connect to new Office 365 group: CSOM development
 
-> [!IMPORTANT]
-> The option to connect an Office 365 group to an existing site is **not** yet available and will be released during Q2 of calendar year 2018.
-
 The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.    
 
 ## Prerequisites

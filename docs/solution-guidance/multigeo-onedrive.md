@@ -7,7 +7,7 @@ ms.date: 4/27/2018
 # Access OneDrive for Business in a Multi-Geo tenant
 
 > [!IMPORTANT] 
-> OneDrive and SharePoint Online Multi-Geo is currently in preview and is subject to change.
+> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 Accessing a user's OneDrive for Business site, also known as a personal site or my site, is a common scenario in custom applications. This article describes how to work with OneDrive for Business sites in a Multi-Geo tenant.
 

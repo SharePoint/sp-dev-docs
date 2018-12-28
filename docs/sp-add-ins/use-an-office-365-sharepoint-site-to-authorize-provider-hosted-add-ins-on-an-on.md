@@ -28,6 +28,8 @@ Be sure that you have the following:
     
 Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/). 
 
+[!IMPORTANT] ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
+
 <a name="Certificate"> </a>
 
 ## Create a certificate and make it the security token service (STS) certificate of your on-premises installation of SharePoint

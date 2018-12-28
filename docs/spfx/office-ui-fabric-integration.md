@@ -47,14 +47,14 @@ The following are not yet supported in the package:
 - Animations
 - Icons
 
-Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new **@microsoft/sp-office-ui-fabric-core** package and consume core styles from the package instead of using global CSS styles. 
+Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new **@microsoft/sp-office-ui-fabric-core** package and consume core styles from the package instead of using global CSS styles.
 
 ### Update existing projects
 
-To use the Fabric Core package in your existing project, install the package as a dev dependency:
+To use the Fabric Core package in your existing project, install the package as a dependency:
 
 ```
-npm install @microsoft/sp-office-ui-fabric-core --save-dev
+npm install @microsoft/sp-office-ui-fabric-core --save
 ```
 
 After it's installed, you can then import the Fabric Core Sass declarations in your Sass definition file and use the mixins and variables as described in the following section. 
@@ -85,7 +85,7 @@ Now you can use the core styles as mixins and variables.
 
 ## Office UI Fabric React
 
-We recommend that you install the latest Office UI Fabric React package and place an explicit dependency on that specific version of the package. This includes the components used in your SharePoint Framework solution in your component bundle, either the web part or extension depending on where you use the Fabric React components. 
+We recommend that you use the versions of the Office UI Fabric React package included in the project in the SharePoint Framework's Yeoman genereator. For instance, the SharePoint Framework v1.7.0 release uses Fabric React v5.131.0
 
 > [!NOTE] 
 > Fabric React versions 2.x or older are not supported in SharePoint Framework.
@@ -111,7 +111,7 @@ The Fabric React package includes the supported Fabric Core styles used in the F
 Because the **@microsoft/sp-office-ui-fabric-core** package is already installed in your solution by the Yeoman generator, we recommend that you uninstall that package if you decide to use Fabric components and reduce your component bundle size.
 
 ```
-npm uninstall @microsoft/sp-office-ui-fabric-core --save-dev
+npm uninstall @microsoft/sp-office-ui-fabric-core --save
 ```
 
 You can then import the core styles from the Sass declarations available in the Fabric React package.

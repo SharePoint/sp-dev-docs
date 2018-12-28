@@ -32,6 +32,8 @@
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Deploy your web part to an Azure CDN
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
+      - name: Building Microsoft Teams tab using SharePoint Framework
+        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md        
     - name: Basics
       items:
       - name: Integrate properties with SharePoint
@@ -42,10 +44,16 @@
         href: spfx/web-parts/basics/configure-web-part-icon.md         
       - name: Using full-width column
         href: spfx/web-parts/basics/use-web-parts-full-width-column.md        
+      - name: Hide from the toolbox
+        href: spfx/web-parts/basics/hide-web-part-from-toolbox.md        
       - name: Preconfigure web parts
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
         href: spfx/web-parts/guidance/validate-web-part-property-values.md
+      - name: Isolated web parts
+        href: spfx/web-parts/isolated-web-parts.md
+      - name: Single Part App Pages
+        href: spfx/web-parts/single-part-app-pages.md
       - name: Share data between web parts
         href: spfx/web-parts/guidance/share-data-between-web-parts.md
         items:
@@ -72,8 +80,10 @@
       - name: Use JSOM
         href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
   - name: Extensions
-    href: spfx/extensions/overview-extensions.md
+    href: spfx/extensions/overview-extensions.md    
     items:
+    - name: Tenant Wide Deployment
+      href: spfx/extensions/basics/tenant-wide-deployment-extensions.md  
     - name: Getting started
       href: spfx/extensions/get-started/build-a-hello-world-extension.md
       items:
@@ -85,12 +95,12 @@
         href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
       - name: Host extension from CDN
         href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
-      - name: Configure extension icon
-        href: spfx/extensions/basics/configure-extension-icon.md        
       - name: Build Field Customizer
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md        
     - name: Migrate existing customizations
       items:
       - name: Client Side Rendering (JSLink)
@@ -111,6 +121,14 @@
       href: spfx/team-based-development-on-sharepoint-framework.md
     - name: Governance considerations
       href: spfx/web-parts/guidance/governance-considerations.md
+    - name: Dynamic loading of packages
+      href: spfx/dynamic-loading.md
+    - name: Connecting components with Dynamic Data
+      href: spfx/dynamic-data.md    
+    - name: Building Microsoft Teams Tabs
+      href: spfx/integrate-with-teams-introduction.md      
+    - name: Hosting Microsoft Teams Tabs in SharePoint
+      href: spfx/using-teams-solutions-in-sharepoint.md            
   - name: External libraries
     items:
     - name: Add external libraries
@@ -125,27 +143,28 @@
       href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
   - name: Connect to APIs
     items:
-    - name: Connect to APIs secured with Azure AD
-      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
-    - name: Call the Microsoft Graph API using OAuth
-      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Connect to SharePoint APIs
+      href: spfx/connect-to-sharepoint.md   
+    - name: Connect to Microsoft Graph 
+      href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD using the AadHttpClient
       href: spfx/use-aadhttpclient.md
-      items:
-      - name: Consume enterprise APIs (tutorial)
-        href: spfx/use-aadhttpclient-enterpriseapi.md
-      - name: Consume multi-tenant enterprise APIs (tutorial)
-        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
-    - name: Microsoft Graph 
-      href: spfx/use-msgraph.md
-      items:
+    - name: Connect to APIs secured with Azure AD
+      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md      
+    - name: Call the Microsoft Graph API using OAuth
+      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Connect to anonymous APIs
+      href: spfx/connect-to-anonymous-apis.md
+    - name: Subscribe to list notifications
+      href: spfx/subscribe-to-list-notifications.md      
+    - name: Tutorials
+      items:        
       - name: Consume Microsoft Graph (tutorial)
-        href: spfx/use-aad-tutorial.md        
-    - name: Microsoft GraphHttpClient (Deprecated)
-      href: spfx/overview-graphhttpclient.md
-      items:
-      - name: Tutorial (Deprecated)
-        href: spfx/call-microsoft-graph-using-graphhttpclient.md          
+        href: spfx/use-aad-tutorial.md
+      - name: Consume enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi.md
+      - name: Consume multi-tenant enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
   - name: Setup and deployment
     items:
     - name: Package solution
@@ -168,6 +187,8 @@
       href: spfx/web-parts/guidance/localize-web-parts.md 
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md        
+    - name: Use preview capabilities
+      href: spfx/try-preview-capabilities.md           
   - name: Design
     href: design/design-guidance-overview.md
     items:
@@ -180,16 +201,26 @@
         href: design/grid-and-responsive-design.md
       - name: Titles and descriptions
         href: design/web-part-titles-and-descriptions.md
+      - name: Commanding within a web part
+        href: design/web-part-commanding.md
+      - name: Web part layouts
+        href: design/layout-patterns.md
+      - name: Web part levels
+        href: design/web-part-levels.md
       - name: UI text
         href: design/ui-text-for-web-parts.md
-      - name: Themes and colors
-        href: design/themes-colors.md
       - name: Placeholders and fallbacks
         href: design/placeholders-and-fallbacks.md
+      - name: Empty state of a web part
+        href: design/empty-states.md     
       - name: Accessibility
         href: design/accessibility.md
+      - name: Key web part examples
+        href: design/key-web-part-examples.md     
       - name: Web part showcase
         href: design/showcase-web-part.md
+      - name: Designing a web part icon
+        href: design/designing-a-web-part-icon.md
     - name: Authoring pages
       href: design/authoring-pages.md          
     - name: Design considerations
@@ -198,6 +229,8 @@
       href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
     - name: Work with CSS
       href: spfx/css-recommendations.md
+    - name: Themes and colors
+      href: design/themes-colors.md      
     - name: Use themes
       href: spfx/use-theme-colors-in-your-customizations.md
     - name: Office UI Fabric integration
@@ -209,6 +242,8 @@
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator
       href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: CI and CD
+      href: spfx/toolchain/implement-ci-cd-with-azure-devops.md
   - name: Debugging
     href: spfx/debug-in-vscode.md
     items:
@@ -216,6 +251,8 @@
       href: spfx/debug-in-vscode.md
     - name: Debug on modern pages
       href: spfx/debug-modern-pages.md
+    - name: Use the developer dashboard
+      href: spfx/use-developer-dashboard.md
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ
@@ -274,6 +311,8 @@
         href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
       - name: Work with folders and files
         href: sp-add-ins/working-with-folders-and-files-with-rest.md
+      - name: Retrieve the URL of the tenant app catalog
+        href: sp-add-ins/retrieve-tenant-app-catalog-url-rest.md
       - name: Determine endpoint URIs
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
       - name: Use OData query operations
@@ -288,6 +327,17 @@
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
       - name: Make batch requests
         href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+    - name: Migration API
+      href: apis/migration-api-overview.md
+      items:
+      - name: Azure container and queue
+        href: apis/migration-api-azure-container-and-queue.md
+      - name: Encryption
+        href: apis/migration-api-encryption.md
+      - name: Throttling
+        href: apis/migration-api-handling-trottling.md        
+      - name: Sharing
+        href: apis/migration-api-shared.md           
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
@@ -303,6 +353,8 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
+    - name: Calling Microsoft Flow from a site script
+      href: declarative-customization/site-design-trigger-flow-tutorial.md               
     - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md         
   - name: Site theming
@@ -340,6 +392,8 @@
     href: apis/alm-api-for-spfx-add-ins.md         
   - name: Column formatting
     href: declarative-customization/column-formatting.md   
+  - name: View formatting
+    href: declarative-customization/view-formatting.md       
   - name: Communication site
     href: apis/communication-site-creation-rest.md     
   - name: Shorter share links
@@ -347,8 +401,8 @@
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
-  - name: What's new for developers in SharePoint
-    href: general-development/what-s-new-for-developers-in-sharepoint.md  
+  - name: What's new for developers in SharePoint 2019
+    href: general-development/sharepoint-2019-development-platform.md  
   - name: SharePoint glossary
     href: general-development/sharepoint-glossary.md  
   - name: Protocol handler error in SharePoint 2016
@@ -1296,12 +1350,57 @@
       items:
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
+        items:
+        - name: Analyze and use the scanner data
+          href: transform/modernize-userinterface-lists-and-libraries-scanner.md
+        - name: Rollout approaches
+          href: transform/modernize-userinterface-lists-and-libraries-rollout.md
+        - name: Opting out from modern
+          href: transform/modernize-userinterface-lists-and-libraries-optout.md
+      - name: Transform classic pages to modern client-side pages
+        href: transform/modernize-userinterface-site-pages.md
+        items:
+        - name: Page transformation via the SharePoint UI
+          href: transform/modernize-userinterface-site-pages-ui.md
+          items:
+          - name: User manual
+            href: transform/modernize-userinterface-site-pages-ui-guide.md
+        - name: Page transformation via PowerShell
+          href: transform/modernize-userinterface-site-pages-powershell.md
+        - name: Page transformation via .Net
+          href: transform/modernize-userinterface-site-pages-dotnet.md
+        - name: Page transformation configuration options
+          href: transform/modernize-userinterface-site-pages-configuration.md
+        - name: Page transformation model
+          href: transform/modernize-userinterface-site-pages-model.md
+        - name: Page transformation Functions and Selectors
+          href: transform/modernize-userinterface-site-pages-api.md
+        - name: Page layout mapping
+          href: transform/modernize-userinterface-site-pages-layout.md
+    - name: The SharePoint Modernization scanner
+      href: transform/modernize-scanner.md
+    - name: Modernization scripts
+      href: transform/modernize-sample-scripts.md
     - name: Modernize customizations
       href: transform/modernize-customizations.md
     - name: Modernize site branding
       href: transform/modernize-branding.md
     - name: Connect to an Office 365 group
       href: transform/modernize-connect-to-office365-group.md
+      items:
+      - name: Analyze and use the scanner data
+        href: transform/modernize-connect-to-office365-group-scanner.md
+      - name: Subsites versus Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-subsites.md
+      - name: Site permissions after Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-permissions.md
+      - name: External sharing after Office 365 group connection
+        href: transform/modernize-connect-to-office365-group-externalsharing.md
+    - name: Modernize publishing portals
+      href: transform/modernize-publishing-portal.md
+      items:
+      - name: Analyze and use the scanner data
+        href: transform/modernize-publishing-portal-scanner.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
@@ -1346,8 +1445,6 @@
         href: solution-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
       - name: Create UX controls
         href: solution-guidance/create-ux-controls-by-using-sharepoint-provider-hosted-add-ins.md
-      - name: Display information from a host site
-        href: solution-guidance/display-information-from-a-host-site-by-using-office-web-widgets.md
       - name: Improve performance
         href: solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
   - name: Customizing the "modern" experiences in SharePoint Online
@@ -4782,3 +4879,5 @@
     href: https://twitter.com/officedev
   - name: SharePoint developer forum
     href: http://aka.ms/spdev-community
+- name: Tutorials
+  href: training/training.md

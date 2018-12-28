@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 03/09/2018
+ms.date: 08/20/2018
 ms.prod: sharepoint
 ---
 
@@ -17,7 +17,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/-tXf8gxjmOI]
+> [!Video https://www.youtube.com/embed/B7vLIrm2XKY]
 
 <br/> 
 
@@ -25,14 +25,14 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ### Install NodeJS
 
-Install [NodeJS LTS version](https://nodejs.org). 
+Install [NodeJS LTS version 8](https://nodejs.org/dist/latest-v8.x/). 
 
 - If you are in Windows, you can use the msi installers in this link for the easiest way to set up NodeJS.
-- If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
+- If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org/dist/latest-v8.x/). 
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE] 
-> Current LTS version of NodeJS is 8.9.4. Notice that 9.x versions are currently not supported with SharePoint Framework development.
+> NodeJS has two LTS versions - 8 and 10. The current supported LTS version of NodeJS for the SharePoint Framework is 8.x and can be downloaded from https://nodejs.org/en/download/releases/. Notice that 9.x or 10.x versions are currently not supported with SharePoint Framework development.
 
 ### Install a code editor
 
@@ -88,12 +88,13 @@ npm install @microsoft/generator-sharepoint --save-dev
 
 For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
 
+
 ## Optional tools
 
 Following are some tools that might come in handy as well:
 
 * [Fiddler](https://www.telerik.com/fiddler)
-* [Postman plug-in for Chrome](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
+* [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
 * [Cmder for Windows](http://cmder.net/)
 * [Oh My Zsh for Mac](http://ohmyz.sh/)
 * [Git source control tools](https://git-scm.com/)

@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework (SPFx) enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 01/25/2018
+ms.date: 09/07/2018
 ms.prod: sharepoint
 ---
 
@@ -22,7 +22,10 @@ This new model is built from the ground-up by using a modern web stack that uses
 
 ## Current status of SharePoint Framework
 
-The SharePoint Framework reached the [General Available (GA) milestone](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/), with version 1.0.0, in February 2017.
+The SharePoint Framework reached the [General Available (GA) milestone](
+https://www.microsoft.com/en-us/microsoft-365/blog/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/), with version 1.0.0, in February 2017.
+
+Latest release news about the SharePoint Framework: https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.7-release-notes with version 1.7
 
 ## From a developer's point of view
 
@@ -165,7 +168,7 @@ On the other hand, there are advantages of allowing more than one framework sinc
 
 Out-of-the-box, the SharePoint Framework Yeoman generator has templates for two client-side frameworks: React and Knockout. Over time, one can expect that the community adds more generators or sub-generators to use other client-side frameworks. Choosing React as your preferred client-side framework has an advantage because Microsoft has created a React version of the Office UI Fabric, so you will get the Office and Office 365 look and feel of your customization if that is something your organization prefers.
 
-The fourth thing to plan for is how and where you deploy your solution artifacts, that is in what CDN are your generated script bundles and assets stored. Out-of-the-box, in the Gulp tasks included in the toolchain, only Azure Blob storage and Azure CDN is supported. This might be a very good option if you can manage an Azure subscription and share your assets between multiple tenants. Another very common scenario is to use SharePoint Online, and its CDN feature, as a host for the artifacts. This, however, requires that you modify the toolchain and optionally create custom Gulp tasks to manage.
+The fourth thing to plan for is how and where you deploy your solution artifacts, that is in what CDN are your generated script bundles and assets stored. Out-of-the-box, in the Gulp tasks included in the toolchain, only Azure Blob storage and Azure CDN is supported. This might be a very good option if you can manage an Azure subscription and share your assets between multiple tenants. Another very common scenario is to use SharePoint Online, and its CDN feature, as a host for the artifacts. Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the SharePoint Framework package. When this package is deployed in the app catalog, they are automatically hosted either from Office 365 CDN (if enabled) or from an app catalog URL.
 
 Finally, developers will need to think about application life cycle management (ALM): the way you manage source code and versioning, automatic build, testing, and deployment etc. Most common source code versioning systems can be used such as Git, GitHub, or Visual Studio Team Systems. 
 
@@ -209,6 +212,14 @@ What you cannot back up is the actual solution artifacts such as script bundles 
 The SharePoint Framework reached General Availability (GA) in February 2017. General Availability means that IT and developers can use SharePoint Framework in production in a supported manner. Beyond General Availability, we would expect that the set of scenarios where we would see SharePoint Framework-based components built and used will expand beyond web part scenarios, and into areas like list and site customizations. For more information about the SharePoint Framework, see the dedicated [SharePoint Framework Roadmap article](./roadmap.md).
 
 Major changes or introductions of new major features will be announced through the Office 365 Message Center, found in your tenant admin, something that an Office 365 administrator already should have on their daily routine to check. Another important resource is the [Office Developer blog](https://dev.office.com/blogs) where you will find even more details and updates.
+
+## Support and SLA
+
+Microsoft doesn't provide support for custom solutions built for SharePoint through the regular SharePoint Online support channels. All issues related to building SharePoint solutions should be logged on GitHub at [https://github.com/SharePoint/sp-dev-docs/issues](https://github.com/SharePoint/sp-dev-docs/issues). The SharePoint Engineering group triages issues in this repository regularly and strives to respond to the incoming requests as quickly as possible.
+
+If your organization has a Premier Support agreement, then it should be the default channel for you to request support with any issues related to building SharePoint solutions. Microsoft escalation engineers will handle your requests according to their urgency.
+
+SharePoint Framework is designed to be backwards-compatible. Microsoft guarantees that solutions built using any of the generally available versions of the SharePoint Framework will keep working until an explicit deprecation notice for the specific version has been given in advance.
 
 ## Summary
 

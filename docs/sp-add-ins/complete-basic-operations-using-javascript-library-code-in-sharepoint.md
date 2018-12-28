@@ -1,7 +1,7 @@
 ---
 title: Complete basic operations using JavaScript library code in SharePoint
 description: Write code to perform basic operations using the JavaScript client object model in SharePoint.
-ms.date: 4/19/2018
+ms.date: 11/4/2018
 ms.prod: sharepoint
 ---
 
@@ -20,7 +20,7 @@ For more information about the sets of APIs that are available for SharePoint, s
 > [!NOTE] 
 > For a "Hello World" level sample SharePoint Add-in that uses the JavaScript library, see [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md).
  
-This article shows how to perform basic operations using the JavaScript object model. You can add a reference to the object model by using HTML &lt;script&gt; tags. For information about how to use the other client APIs, see the following:
+This article shows how to perform basic operations using the JavaScript object model. You can add a reference to the object model by using HTML `<script>` tags. For information about how to use the other client APIs, see the following:
 
 - [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)
 - [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
@@ -33,7 +33,7 @@ This article shows how to perform basic operations using the JavaScript object m
 
 The following sections describe tasks that you can complete programmatically, and they include JavaScript code examples that demonstrate the operations.
 
-When you create a cloud-hosted add-in, you can add a reference to the object model by using HTML &lt;script&gt; tags. We recommend that you reference the host web because the add-in web may not exist in every scenario in cloud-hosted add-ins. You can retrieve the host web URL from the _SPHostUrl_ query string parameter if you are using the **{StandardTokens}** token. You can also use your custom defined query string parameter if you are using the **{HostUrl}** token. After you have the host web URL, you must use JavaScript code to dynamically create the reference to the object model.
+When you create a cloud-hosted add-in, you can add a reference to the object model by using HTML `<script>` tags. We recommend that you reference the host web because the add-in web may not exist in every scenario in cloud-hosted add-ins. You can retrieve the host web URL from the _SPHostUrl_ query string parameter if you are using the **{StandardTokens}** token. You can also use your custom defined query string parameter if you are using the **{HostUrl}** token. After you have the host web URL, you must use JavaScript code to dynamically create the reference to the object model.
  
 The following code example performs these tasks to add a reference to the JavaScript object model:
 
@@ -104,7 +104,7 @@ The following code example performs these tasks to add a reference to the JavaSc
 
 <br/>
 
-When you create a SharePoint-hosted add-in, you can add a reference to the object model by using HTML &lt;script&gt; tags. The add-in web in a SharePoint-hosted add-in allows you to use relative paths to reference the required files to use the JavaScript object model.
+When you create a SharePoint-hosted add-in, you can add a reference to the object model by using HTML `<script>` tags. The add-in web in a SharePoint-hosted add-in allows you to use relative paths to reference the required files to use the JavaScript object model.
 
 The following markup performs these tasks to add a reference to the JavaScript object model:
 
@@ -971,7 +971,7 @@ The **loadQuery(clientObjectCollection, exp)** method of the JavaScript object m
 
 ## Create, update, and delete list items
 
-Creating, updating, or deleting list items through the client object model works similarly to performing these tasks through the server object model. You create a list item object, set its properties, and then update the object. To modify or delete a list item object, use the **getById(id)** function of the **ListItemCollection** object to return the object, and then either set properties and call update on the object that this method returns, or call the object's own method for deletion. Unlike the server object model, each of these operations in the client object model must conclude with a call **to executeQueryAsync(succeededCallback, failedCallback)** for changes to take effect on the server.
+Creating, updating, or deleting list items through the client object model works similarly to performing these tasks through the server object model. You create a list item object, set its properties, and then update the object. To modify or delete a list item object, use the **getById(id)** function of the **ListItemCollection** object to return the object, and then either set properties and call update on the object that this method returns, or call the object's own method for deletion. Unlike the server object model, each of these operations in the client object model must conclude with a call to **executeQueryAsync(succeededCallback, failedCallback)** for changes to take effect on the server.
 
 ### Create a list item
 
@@ -1118,7 +1118,7 @@ function onQueryFailed(sender, args) {
 
 ## Access objects in the host web
 
-While developing your add-in, you might need to access the host web to interact with items in it. Use the **AppContextSite** object to reference the host web or other SharePoint sites, as shown in the following example. For a full code sample, see [Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/office/SharePoint-Get-the-563f2a3d).
+While developing your add-in, you might need to access the host web to interact with items in it. Use the **AppContextSite** object to reference the host web or other SharePoint sites, as shown in the following example. For a full code sample, see [Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/office/SharePoint-2013-Get-the-563f2a3d).
 
 ```js
 function execCrossDomainRequest(appweburl, hostweburl) {

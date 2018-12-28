@@ -8,7 +8,7 @@ Provide authorized access to SharePoint resources by using OAuth in provider-hos
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
-Normally, your users access SharePoint add-ins by opening a SharePoint site, choosing  **Site Contents**, and then choosing the add-in. SharePoint redirects users to the remote web where your provider-hosted add-in runs. Because users access the add-in from SharePoint, users are authorized by SharePoint before they can access the add-in.
+Your users can access SharePoint add-ins by opening a SharePoint site, choosing  **Site Contents**, and then choosing the add-in. SharePoint redirects users to the remote web where your provider-hosted add-in runs. Because users access the add-in from SharePoint, users are authorized by SharePoint before they can access the add-in.
 
 Alternatively, if your users go directly to the URL of your provider-hosted add-in, that add-in must authorize them at run time by using OAuth. In this scenario, the provider-hosted add-in must handle authorization because your user wasn't authorized by SharePoint first. The [Core.DynamicPermissions ](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.DynamicPermissions) sample shows you how to dynamically request permissions from a website by using OAuth.
 Use this solution to:

@@ -116,6 +116,13 @@ If the site does not exist, the response returns a site status of 0 with no URL.
 }
 ```
 
+The full set of values for SiteStatus are as follows:
+
++ `0` - Not Found.  The site doesn't exist.
++ `1` - Provisioning.  The site is currently being provisioned.
++ `2` - Ready.  The site has been created.
++ `3` - Error.  An error occurred while provisioning the site.
+
 ## See also
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)

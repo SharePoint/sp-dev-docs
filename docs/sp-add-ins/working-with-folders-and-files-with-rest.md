@@ -59,12 +59,27 @@ Headers:
 
 <br/>
 
-The following example shows how to **update a folder by using the MERGE method**.
+The following example shows how to **rename a folder by using the MERGE method**.
+
+First, obtain the folder's OData type with a GET request.
 
 ```
-url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')
+url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/ListItemAllFields
+method: GET
+Headers: 
+     Authorization: "Bearer " + accessToken
+    "IF-MATCH": etag or "*"
+    accept: "application/json;odata=verbose"
+    content-type: "application/json;odata=verbose"
+```
+
+From the result, obtain the odata.type value, such as SP.Data.Shared_x0020_DocumentsItem (the value may be different depending on your library configuration). Then issue a MERGE
+
+
+```
+url: http://site url/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/ListItemAllFields
 method: POST
-body: { '__metadata': { 'type': 'SP.Folder' }, 'Name': 'New name' }
+body: { '__metadata': { 'type': '(odata.type from previous call)' }, 'Title': 'New name', 'FileLeafRef': 'New name' }
 Headers: 
      Authorization: "Bearer " + accessToken
     X-RequestDigest: form digest value
@@ -333,7 +348,7 @@ headers:
 - [REST API reference and samples](https://msdn.microsoft.com/library)
 - [Upload a file by using the REST API and jQuery](upload-a-file-by-using-the-rest-api-and-jquery.md)
 - [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
-- [SharePoint: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-Perform-ab9c4ae5)
+- [SharePoint: Perform basic data access operations on files and folders by using REST](https://code.msdn.microsoft.com/sharepoint-2013-perform-ab9c4ae5)
 - [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
 - [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)  

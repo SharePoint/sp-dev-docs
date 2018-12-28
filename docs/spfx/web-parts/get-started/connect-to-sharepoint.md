@@ -1,7 +1,7 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
-ms.date: 01/08/2018
+ms.date: 08/20/2018
 ms.prod: sharepoint
 ---
 
@@ -14,7 +14,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/hYrP6D4FaaU]
+> [!Video https://www.youtube.com/embed/zHYJ5SZsCLc]
 
 <br/>
 
@@ -40,15 +40,15 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
 
 ### To get access to the page context
 
-1. Use the following variable in your web part class:
+To access contextual information in your web part, you'll be using the following object in your code:
 
   ```typescript
   this.context.pageContext
   ```
 
-2. Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\helloWorld\HelloWorldWebPart.ts**.
+1. Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\helloWorld\HelloWorldWebPart.ts**.
 
-3. Inside the **render** method, replace the **innerHTML** code block with the following code:
+2. Inside the **render** method, replace the **innerHTML** code block with the following code:
 
   ```HTML
       this.domElement.innerHTML = `
@@ -70,9 +70,9 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
         </div>`;
   ```
 
-4. Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Because this web part loads from the local environment, the title is **Local Workbench**.
+3. Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Because this web part loads from the local environment, the title is **Local Workbench**.
 
-5. Save the file. The `gulp serve` running in your console detects this save operation and:
+4. Save the file. The `gulp serve` running in your console detects this save operation and:
 
   - Builds and bundles the updated code automatically.
   - Refreshes your local Workbench page (as the web part code needs to be reloaded).
@@ -80,16 +80,13 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
   > [!NOTE]
   > Keep the console window and Visual Studio Code side-by-side to see gulp automatically compile as you save changes in Visual Studio Code.
 
-6. In your browser, switch to the local **SharePoint Workbench** tab. If you have already closed the tab, the URL is `https://localhost:4321/temp/workbench.html`.
+5. In your browser, switch to the local **SharePoint Workbench** tab. If you have already closed the tab, the URL is `https://localhost:4321/temp/workbench.html`.
 
   You should see the following in the web part:
 
   ![SharePoint page context in localhost](../../../images/sp-mock-localhost-wp.png)
 
-7. Navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that on the SharePoint Online side, you need to refresh the page to see the changes.
-
-  > [!NOTE]
-  > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
+6. Navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that on the SharePoint Online side, you need to refresh the page to see the changes.
 
   You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
@@ -283,7 +280,30 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
   } from '@microsoft/sp-core-library';
   ```
 
-2. Add the following private method inside the **HelloWorldWebPart** class to call the respective methods to retrieve list data:
+2. Add the following private method inside the **HelloWorldWebPart** class:
+
+  ```typescript
+    private _renderList(items: ISPList[]): void {
+      let html: string = '';
+      items.forEach((item: ISPList) => {
+        html += `
+      <ul class="${styles.list}">
+        <li class="${styles.listItem}">
+          <span class="ms-font-l">${item.Title}</span>
+        </li>
+      </ul>`;
+      });
+
+      const listContainer: Element = this.domElement.querySelector('#spListContainer');
+      listContainer.innerHTML = html;
+    }
+  ```
+
+  This method references the new CSS styles added earlier by using the **styles** variable and is used to render list information which will be received from REST API.
+
+3. Save the file.
+
+4. Add the following private method inside the **HelloWorldWebPart** class to call the respective methods to retrieve list data:
 
   ```typescript
     private _renderListAsync(): void {
@@ -308,33 +328,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
   - The `Environment.type` property helps you check if you are in a local or SharePoint environment.
   - The correct method is called depending on where your Workbench is hosted.
 
-3. Save the file.
-
-  Now you need to render the list data with the value fetched from the REST API.
-
-4. Add the following private method inside the **HelloWorldWebPart** class:
-
-  ```typescript
-    private _renderList(items: ISPList[]): void {
-      let html: string = '';
-      items.forEach((item: ISPList) => {
-        html += `
-      <ul class="${styles.list}">
-        <li class="${styles.listItem}">
-          <span class="ms-font-l">${item.Title}</span>
-        </li>
-      </ul>`;
-      });
-
-      const listContainer: Element = this.domElement.querySelector('#spListContainer');
-      listContainer.innerHTML = html;
-    }
-  ```
-
-  The previous method references the new CSS styles added earlier by using the **styles** variable. 
-
 5. Save the file.
-
 
 ## Retrieve list data
 
@@ -388,4 +382,4 @@ Congratulations on connecting your web part to SharePoint list data!
 You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md). You will learn how to deploy and preview the Hello World web part in a SharePoint page.
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.

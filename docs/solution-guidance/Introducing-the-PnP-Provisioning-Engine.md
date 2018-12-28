@@ -51,7 +51,7 @@ To export that site as a provisioning template, you can either use PowerShell or
 
 To use the PowerShell extensions for SharePoint Online or SharePoint, go to [PnP PowerShell overview](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps),and install the OfficeDev PnP Core PowerShell extensions. 
 
-After you have connected your PowerShell environment to Office 365 by using the **Connect-SPOnline** cmdlet, you can use the following PowerShell cmdlet: `Get-SPOProvisioningTemplate -Out "PnP-Provisioning-File.xml"`.
+After you have connected your PowerShell environment to Office 365 by using the **Connect-PnPOnline** cmdlet, you can use the following PowerShell cmdlet: `Get-PnPProvisioningTemplate -Out "PnP-Provisioning-File.xml"`.
 
 The `–Out` argument instructs the cmdlet about where to save the provisioning template.
 
@@ -218,9 +218,9 @@ You can now apply a custom **ProvisioningTemplate** instance object either by ut
 
 ### Using PowerShell
 
-If you want to use PowerShell, the following excerpt shows how you can utilize the **Apply-SPOProvisioningTemplate** cmdlet: `Apply-SPOProvisioningTemplate -Path "PnP-Provisioning-File.xml"`.
+If you want to use PowerShell, the following excerpt shows how you can utilize the **Apply-PnPProvisioningTemplate** cmdlet: `Apply-PnPProvisioningTemplate -Path "PnP-Provisioning-File.xml"`.
 
-The `–Path` argument refers to the source template file, which the cmdlet automatically applies to the currently connected site (implied by the **Connect-SPOnline** cmdlet). 
+The `–Path` argument refers to the source template file, which the cmdlet automatically applies to the currently connected site (implied by the **Connect-PnPnline** cmdlet).
 
 In the following figure you can see the final result.
 
@@ -256,7 +256,7 @@ What about using .NET code? Following is an excerpt on how to use CSOM and the O
       // Apply the template to another site
       Console.WriteLine("Start: {0:hh.mm.ss}", DateTime.Now);
     
-      // We can also use Apply-SPOProvisioningTemplate
+      // We can also use Apply-PnPProvisioningTemplate
       web.ApplyProvisioningTemplate(template);
      
       Console.WriteLine("End: {0:hh.mm.ss}", DateTime.Now);

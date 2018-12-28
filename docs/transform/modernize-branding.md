@@ -7,13 +7,13 @@ ms.prod: sharepoint
 
 # Modernize site branding
 
-The SharePoint modern user interface handles branding differently from classic SharePoint; in particular, it simply ignores custom master pages or alternate CSS configurations (which are incompatible in the modern user interface). You can opt to leave these configurations in place in your modernized site so that it still applies to a page being shown in a classic user interface, but it's cleaner to switch back the OOB master pages and remove the alternate CSS configuration. 
+The SharePoint modern user interface handles branding differently from classic SharePoint; in particular, it simply ignores custom master pages or alternate CSS configurations (which are incompatible in the modern user interface). You can opt to leave these configurations in place in your modernized site so that it still applies to a page being shown in a classic user interface, but it's cleaner to switch back the OOB master pages and remove the alternate CSS configuration.
 
 Next to these master pages and alternate CSS settings, you could have used a classic custom theme. These classic custom themes work on both classic and modern pages, but the more future-proof model is the new tenant-controlled SharePoint theme, which obviously applies to both classic and modern pages.
 
 ## Detect sites that use master pages or alternate CSS
 
-The recommended approach to find out which sites use a custom master page or use the alternate CSS option is to run the [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner). This tool performs a deep analysis of all the sites in your tenant and creates reports that give you details about sites that still have incompatible master pages or alternate CSS settings. Based on the scanner output, you can remediate these sites. 
+The recommended approach to find out which sites use a custom master page or use the alternate CSS option is to run the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner). This tool performs a deep analysis of all the sites in your tenant and creates reports that give you details about sites that still have incompatible master pages or alternate CSS settings. Based on the scanner output, you can remediate these sites.
 
 ### Revert back to the default configuration
 

@@ -31,6 +31,8 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
  
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
+For **Visual Studio** 2017, installing the Microsoft Office Developer Tools should be done through the **Visual Studio** 2017 Installer, which can be accessed from the New Project window.
+
 Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/).
 
 <a name="o365_signup"> </a>

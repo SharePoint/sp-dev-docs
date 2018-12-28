@@ -1,7 +1,7 @@
 ---
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
-ms.date: 01/08/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
@@ -16,6 +16,9 @@ Create a new sample web part and deploy its assets to an Azure Content Delivery 
 ## Configure an Azure storage account
 
 To configure an Azure storage account and integrate it with the CDN, follow the instructions at [Integrate an Azure storage account with Azure CDN](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-a-storage-account-with-cdn), along with the detailed steps in this article. 
+
+> [!NOTE]
+> As Azure UIs are evolving fast, some of the pictures and steps might be out of date, but high level process is still valid.
 
 ### Storage account name
 
@@ -93,6 +96,7 @@ Note, however, that you have not yet deployed the files.
   * Select **SharePoint Online only (latest)**, and select Enter.
   * Select **Use the current folder** for where to place the files.
   * Select **y** to use the tenant-scoped deployment option, which makes the web part available across sites immediately when it's deployed. 
+  * Select **N** on the question if solution contains unique permissions.  
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
@@ -105,13 +109,7 @@ Note, however, that you have not yet deployed the files.
 
   At this point, Yeoman scaffolds the solution files and installs the required dependencies. This might take a few minutes. Yeoman scaffolds the project to include your custom web part as well.
 
-6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-  ```sh
-  npm shrinkwrap
-  ```
-
-7. Enter the following to open the web part project in Visual Studio Code:
+6. Enter the following to open the web part project in Visual Studio Code:
 
   ```
   code .
@@ -123,11 +121,11 @@ Note, however, that you have not yet deployed the files.
 
   This is where we control the solution packaging.
 
-2. Update `includeClientSideAssets` value as **false** so that client-side assets are NOT packaged inside of the sppkg file, which is the default behavior. Because we are hosting assets from an external CDN, we do not want them to be included in the solution package. Your configuration should look somewhat like the following.
+2. Update `includeClientSideAssets` value as **false** so that client-side assets are NOT packaged inside of the sppkg file, which is the default behavior. As we are hosting assets from an external CDN, we do not want them to be included in the solution package. Your configuration should look somewhat like the following.
 
   ``` json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
       "name": "azurehosted-webpart-client-side-solution",
       "id": "a4e95ed1-d096-4573-8a57-d0cc3b52da6a",
@@ -290,7 +288,7 @@ gulp bundle --ship
 As long as you are updating the **cdnBasePath** accordingly, your files are being properly loaded.
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.
 
 ## See also
 

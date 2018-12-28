@@ -254,5 +254,5 @@ private const string appPartXml = @"<webParts>
 
 ## See also
 
-- [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Scenarios/Provisioning.Pages)
+- [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages)
 - [Transform farm solutions to the SharePoint Add-in model](transform-farm-solutions-to-the-sharepoint-app-model.md)

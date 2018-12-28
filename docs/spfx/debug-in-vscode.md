@@ -20,11 +20,15 @@ You can also see the required steps to enable debugging in Visual Studio Code in
 
 ## Prerequisites
 
-The easiest way to configure Visual Studio Code to debug SharePoint Framework solutions is by using Google Chrome and the Debugger for Chrome Visual Studio Code extension. Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come set up with the prerequisites and prompt for the required Visual Studio Code extensions to install. In this case, it prompts to install Debugger for Chrome Visual Studio Code extension.
+The easiest way to configure Visual Studio Code to debug SharePoint Framework solutions is by using the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) or [Debugger for Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) Visual Studio Code extensions. 
+
+Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come set up with the prerequisites and prompt for the required Visual Studio Code extensions to install. In this case, it prompts to install Debugger for Chrome Visual Studio Code extension.
 
 You also need the Google Chrome browser. [Download and install the latest version of Google Chrome](https://www.google.com/chrome/browser/desktop/index.html).
 
 If you are using a version of SharePoint Framework Yeoman generator that is older than version 1.3.4, you can [install the Chrome debugger extension for Visual Studio Code from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome).
+
+In case you want to debug your projects with Microsoft Edge, you need to [install the Debugger for Edge extension for Visual Studio Code from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) and follow the steps in [Debugging with Microsoft Edge or older projects](#debugging-with-microsoft-edge-or-older-projects).
 
 ## Debug configurations
 
@@ -98,7 +102,7 @@ When building SharePoint Framework solutions that communicate with SharePoint, y
 
 When building SharePoint Framework solutions, you will be doing such tests regularly, and it is a good idea to create a separate debug configuration for the hosted version of the SharePoint Workbench.
 
-### Debug solution using hosted workbench
+### Debug Web Part solution using hosted workbench
 
 1. Open launch.json, and update the `url` property under the *Hosted workbench* configuration to your SharePoint site URL.
 
@@ -118,9 +122,69 @@ When building SharePoint Framework solutions, you will be doing such tests regul
 
     ![Breakpoint hit in Visual Studio Code when debugging a SharePoint Framework client-side web part in the hosted workbench](../images/vscode-debugging-breakpoint-hit-o365.png)
 
-## For older projects
+### Debug Extension solution using hosted workbench
 
-If you are using an older version of SharePoint Framework Yeoman generator, follow these steps to create the launch.json file manually.
+Debuging an Extension in a hosted workbench is very similar to the steps for a Web Part with a few key differences.  
+
+
+1. Open launch.json, and update the `url` property under the *Hosted workbench* configuration to your SharePoint site URL.
+
+    ```json
+    "url": "https://enter-your-SharePoint-site/_layouts/workbench.aspx",
+    ```
+
+2. In Visual Studio Code, activate the **Debug** pane, and in the **Configurations** list, select the newly added **Hosted workbench** configuration.
+
+    ![The hosted workbench configuration selected in the debug configurations drop-down in Visual Studio Code](../images/vscode-debugging-debugging-hosted-workbench.png)
+
+3.  After initiating the gulp serve in the Terminal start debugging either by selecting F5 or by selecting the **Start Debugging** option on the **Debug** menu. Visual Studio Code switches into debug mode, indicated by the orange status bar, and the Debugger for Chrome extension opens a new instance of Google Chrome with the Office 365 sign-in page.
+
+    ![Office 365 login page displayed in Google Chrome after starting debugging in the hosted workbench](../images/vscode-debugging-o365-login.png)
+
+4.  In the workbench tab that was opened in your browser navigate to a SharePoint Online page that you wish to test your extension.
+
+5.  Append the following query string parameters to the URL. Notice that you need to update the ID to match your own extension identifier. This is available in the **HelloWorldApplicationCustomizer.manifest.json** file.
+
+    ```json
+        ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
+    ```
+
+    More detail about the URL query parameters:
+
+    * **loadSPFX=true**. Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
+
+    * **debugManifestsFile**. Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+
+    * **customActions**. Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it. 
+        * **Key**. Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.
+        * **Location**. The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.
+        * **Properties**. An optional JSON object that contains properties that are available via the **this.properties** member. In this HelloWorld example, it defined a `testMessage` property.
+
+    The full URL should look similar to the following:
+
+    ```json
+    contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
+    ```
+
+6. Select **Load debug scripts** to continue loading scripts from your local host.
+
+    ![Allow Debug Manifest question from the page](../images/ext-app-debug-manifest-message.png)
+
+    <br/>
+    When the page loads you should now be able to see the Extension on your page(in this case a list view command extension):
+
+    ![Hitting Breakpoints in the Visual Studio Code](../images/debug-Extension-Loaded.png)
+
+    In addition you can now toggle Breakpoints and step through the code:
+  
+    ![Hitting Breakpoints in the Visual Studio Code](../images/debug-Extension-Breakpoints.png)  
+
+## Debugging with Microsoft Edge or older projects
+
+If you are using an older version of SharePoint Framework Yeoman generator or want to debug with Microsoft Edge, follow these steps to create the launch.json file manually.
+
+> [!NOTE] 
+> In order for you to debug with Microsoft Edge, you will have to install the **Windows 10 April 2018 Update** which includes the Microsoft Edge DevTools Protocol.
 
 ### Create debug configuration for local workbench
 
@@ -132,11 +196,36 @@ If you are using an older version of SharePoint Framework Yeoman generator, foll
 
     ![The Add Configuration option highlighted in the debug configurations drop-down](../images/vscode-debugging-add-debug-configuration.png)
 
-3. In the list of debug environments, select **Chrome**.
+3. In the list of debug environments, select **Edge** or **Chrome**.
 
-    ![Chrome highlighted as the debug environment for the new configuration](../images/vscode-debugging-chrome-debug-environment.png)
+    ![Chrome highlighted as the debug environment for the new configuration](../images/vscode-debugging-edge-chrome-environment.png)
 
-4. Replace the contents of the generated **launch.json** file with:
+4. For **Edge**, replace the contents of the generated **launch.json** file with:
+
+    ```json
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Local workbench",
+                "type": "edge",
+                "request": "launch",
+                "url": "https://localhost:4321/temp/workbench.html",
+                "webRoot": "${workspaceRoot}",
+                "sourceMaps": true,
+                "sourceMapPathOverrides": {
+                    "webpack:///../../../src/*": "${webRoot}/src/*",
+                    "webpack:///../../../../src/*": "${webRoot}/src/*",
+                    "webpack:///../../../../../src/*": "${webRoot}/src/*"
+                }
+            }
+        ]
+    }
+    ```
+
+    This configuration uses the **Edge** debugger provided with the **Debugger for Edge** extension. It points to the URL of the local workbench as the starting point. What is essential in debugging TypeScript code is the configuration of source maps that the debugger uses to map the JavaScript running in the browser to the original TypeScript code.
+
+5. For **Chrome**, replace the contents of the generated **launch.json** file with:
 
     ```json
     {
@@ -166,9 +255,45 @@ If you are using an older version of SharePoint Framework Yeoman generator, foll
 
 ### Create debug configuration for hosted workbench
 
-1. In Visual Studio Code, open the **./.vscode/launch.json** file. 
+1. In Visual Studio Code, open the **./.vscode/launch.json** file.
 
-2. Copy the existing debug configuration and use the URL of the hosted workbench:
+2. For **Edge**, copy the existing debug configuration and use the URL of the hosted workbench:
+
+    ```json
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Local workbench",
+                "type": "edge",
+                "request": "launch",
+                "url": "https://localhost:4321/temp/workbench.html",
+                "webRoot": "${workspaceRoot}",
+                "sourceMaps": true,
+                "sourceMapPathOverrides": {
+                    "webpack:///../../../src/*": "${webRoot}/src/*",
+                    "webpack:///../../../../src/*": "${webRoot}/src/*",
+                    "webpack:///../../../../../src/*": "${webRoot}/src/*"
+                }
+            },
+            {
+                "name": "Hosted workbench",
+                "type": "edge",
+                "request": "launch",
+                "url": "https://contoso.sharepoint.com/_layouts/workbench.aspx",
+                "webRoot": "${workspaceRoot}",
+                "sourceMaps": true,
+                "sourceMapPathOverrides": {
+                    "webpack:///../../../src/*": "${webRoot}/src/*",
+                    "webpack:///../../../../src/*": "${webRoot}/src/*",
+                    "webpack:///../../../../../src/*": "${webRoot}/src/*"
+                }
+            }
+        ]
+    }
+    ```
+
+3. For **Chrome**, copy the existing debug configuration and use the URL of the hosted workbench:
 
     ```json
     {

@@ -1,14 +1,17 @@
 ---
 title: Call the Microsoft Graph API using OAuth from your web part
 description: Add functionality such as email, documents, and a calendar to your web part by integrating with Microsoft Graph.
-ms.date: 02/02/2018
+ms.date: 08/28/2018
 ms.prod: sharepoint
 ---
 
 
 # Call the Microsoft Graph API using OAuth from your web part
 
-You can add a lot of great functionality such as email, documents, and a calendar to your web part by integrating with Microsoft Graph. To call APIs on Microsoft Graph, you need to use the Active Directory Authentication Library (ADAL) for JavaScript library and authenticate by using the OAuth flow. 
+You can add a lot of great functionality such as email, documents, and a calendar to your web part by integrating with Microsoft Graph. To call APIs on Microsoft Graph, you need to use the Active Directory Authentication Library (ADAL) for JavaScript library and authenticate by using the OAuth flow.
+
+> [!IMPORTANT]
+> When connecting to Azure AD-secured APIs, we recommend that you use the **MSGraphClient** and **AadHttpClient** classes, which are now generally available. For more information about the recommended models, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../../use-aadhttpclient.md) and [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md).
 
 To use ADAL JS and call Microsoft Graph APIs correctly and securely, consider your design and any potential code modifications that you need to make for your web part.
 
@@ -20,7 +23,7 @@ There are different types of OAuth flows depending on the kind of application. W
 
 Client applications, such as Android and iOS apps, do not have a URL and cannot use a redirect. So they complete the OAuth flow without the redirect. Both web applications and client applications use a publicly known client ID and a privately held client secret known only to Azure AD and the application.
 
-Client-side web applications are similar to web applications but are implemented using JavaScript and run in the context of a browser. These applications are incapable of using a client secret without revealing it to users. Therefore these applications use an authorization flow called OAuth implicit flow to access resources secured with Azure AD. In this flow, the contract between the application and Azure AD is established based on the publicly-known client ID and the URL where the application is hosted. This is the flow that SharePoint Framework client-side web parts must use in order to connect to resources secured with Azure AD. 
+Client-side web applications are similar to web applications but are implemented using JavaScript and run in the context of a browser. These applications are incapable of using a client secret without revealing it to users. Therefore these applications use an authorization flow called OAuth implicit flow to access resources secured with Azure AD. In this flow, the contract between the application and Azure AD is established based on the publicly-known client ID and the URL where the application is hosted. This is the flow that SharePoint Framework client-side web parts must use in order to connect to resources secured with Azure AD.
 
 To implement Azure AD-based authentication and authorization in your web part, you can use the [Active Directory Authentication Library (ADAL) for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js) provided by Microsoft.
 
@@ -46,7 +49,7 @@ ADAL JS is designed to work as a singleton service registered in the global scop
 
 By default, the ADAL JS library stores information such as the current access token or its expiration time in a set of keys associated with the particular resource, for example Microsoft Graph or SharePoint. If there are multiple components on one page accessing the same resource with different permissions, the first retrieved token is served by ADAL JS to all components. If different components require access to the same resource, they might fail. To illustrate this limitation, consider the following example.
 
-Imagine that there are two web parts on the page: one that lists upcoming meetings, and one that creates a new meeting. To get upcoming meetings, the upcoming meetings web part uses a Microsoft Graph access token with permissions to read users' calendars. The web part that creates new meetings, on the other hand, requires a Microsoft Graph access token with permissions to write to users' calendars. 
+Imagine that there are two web parts on the page: one that lists upcoming meetings, and one that creates a new meeting. To get upcoming meetings, the upcoming meetings web part uses a Microsoft Graph access token with permissions to read users' calendars. The web part that creates new meetings, on the other hand, requires a Microsoft Graph access token with permissions to write to users' calendars.
 
 If the upcoming meetings web part loads first, ADAL JS retrieves its token with only the read permission. The same token is then served by ADAL JS to the web part creating new meetings. As you can see, when the web part attempts to create a new meeting, the web part fails with an access denied error. Because of the resource-based storage, ADAL JS wouldn't retrieve a new token for Microsoft Graph until the previously retrieved token expired.
 
@@ -62,7 +65,7 @@ After the authentication completes, Azure AD redirects you back to your applicat
 
 You can overcome the limitations in ADAL JS to implement OAuth successfully in your SharePoint Framework client-side web part.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > The following guidance is based on ADAL JS v1.0.12. When adding ADAL JS to your SharePoint Framework projects, ensure that you're installing ADAL JS v1.0.12, or the guidance mentioned in this article will not work as expected.
 
 ### Load ADAL JS in your web part
@@ -175,13 +178,14 @@ window.AuthenticationContext = function() {
 ```
 
 The patch applies the following changes to ADAL JS:
+
 - All information is stored in a key specific to the web part (see the override of the `_getItem` and `_saveItem` functions).
 - Callbacks are processed only by web parts that initiated them (see the override of the `handleWindowCallback` function).
 - When verifying data from callbacks, the instance of the `AuthenticationContext` class of the specific web part is used instead of the globally registered singleton (see `_renewToken`, `getRequestInfo` and the empty registration of the `window.AuthenticationContext` function).
 
 ### Use the ADAL JS patch in SharePoint Framework web parts
 
-For ADAL JS to work correctly in SharePoint Framework web parts, you have to configure it in a specific way. 
+For ADAL JS to work correctly in SharePoint Framework web parts, you have to configure it in a specific way.
 
 1. Define a custom interface that extends the standard ADAL JS `Config` interface to expose additional properties on the configuration object.
 
@@ -237,11 +241,11 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
   }
   ```
 
-The code first retrieves the standard ADAL JS configuration object and casts it to the type of the newly defined configuration interface. 
+The code first retrieves the standard ADAL JS configuration object and casts it to the type of the newly defined configuration interface.
 
-It then passes the ID of the web part instance so that all ADAL JS values can be stored in a way that they won't collide with other web parts on the page. 
+It then passes the ID of the web part instance so that all ADAL JS values can be stored in a way that they won't collide with other web parts on the page.
 
-Next, it enables the pop-up-based authentication and defines a callback function that runs when authentication completes to update the component. 
+Next, it enables the pop-up-based authentication and defines a callback function that runs when authentication completes to update the component.
 
 Finally, it creates a new instance of the `AuthenticationContext` class and resets the `_singletonInstance` set in the constructor of the `AuthenticationContext` class. This is required in order to allow every web part to use its own version of the ADAL JS authentication context.
 
@@ -273,4 +277,6 @@ Because client-side applications are incapable of securely storing secrets, and 
 
 ## See also
 
+- [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../../use-aadhttpclient.md)
+- [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md)
 - [Authentication Scenarios for Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)

@@ -15,6 +15,21 @@ We’ll also monitor [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#
 You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@officedevpnp](https://twitter.com/officedevpnp).
 
 ## SharePoint Framework Releases
+
+* **December 18, 2018**
+   * **SPFx v1.7.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.7.1)
+
+* **November 8, 2018**
+   * **SPFx v1.7** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.7-release-notes)
+* **September 5, 2018**
+   * **SPFx v1.6** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.6-release-notes)
+
+* **June 26, 2018**
+   * **SPFx v1.5.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.5.1)
+   
+* **June 5, 2018**
+   * **SPFx v1.5** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SharePoint-Framework-Package-v1.5)
+
 * **February 15, 2018**
    * **SPFx v1.4.1** [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.4.1)
 

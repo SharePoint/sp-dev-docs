@@ -1,10 +1,9 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and are deployed to SharePoint sites when the solution is installed on it. 
-ms.date: 01/08/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
-
 
 # Provision SharePoint assets from your SharePoint client-side web part
 
@@ -19,7 +18,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/qAqNk_X82QM]
+> [!Video https://www.youtube.com/embed/_oHjmahz4B8]
 
 <br/>
 
@@ -49,6 +48,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   * Select **SharePoint Online only (latest)**, and then select Enter.
   * Select **Use the current folder** as the location for the files.
   * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
+  * Select **N** on the question if solution contains unique permissions.  
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
@@ -61,13 +61,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **AssetDeployment** web part as well.
 
-6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-  ```sh
-  npm shrinkwrap
-  ```
-
-7. Next, enter the following to open the web part project in Visual Studio Code:
+6. Next, enter the following to open the web part project in Visual Studio Code:
 
   ```
   code .
@@ -159,6 +153,7 @@ In the following steps, we define the needed structure to be provisioned.
   * Definitions use standard Feature Framework schema, which is well known to SharePoint developers.
   * Custom fields are being referenced in the introduced content type.
   * We use the **CustomSchema** attribute in the **ListInstance** element to define a provisioning time schema.xml file for the list. This way the list is still based on the out-of-the-box list template (normal custom list '100' in this case), but we can define an alternative provisioning definition during initial provisioning.
+  * When provisioning list instances using Features you must provide the ID of the Feature associated with the particular list definition. Using the FeatureId attribute you are supposed to provide the ID of the Feature which contains the List Definition. As an example: if you’re provisioning an instance of a custom list the FeatureId attribute should be set to `{00bfea71-de22-43b2-a848-c05709900100}`.
 
   More details about the used schema structures can be found at [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) on MSDN.
 
@@ -220,7 +215,7 @@ Now we have created the needed structures for provisioning SharePoint assets aut
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
       "name": "asset-deployment-webpart-client-side-solution",
       "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
@@ -389,7 +384,7 @@ Next we need to update both the solution version and the feature version respons
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
       "name": "asset-deployment-webpart-client-side-solution",
       "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
@@ -475,7 +470,7 @@ Now that the package has been updated in the app catalog, we can move to the act
   ![App status updated to updating in the site contents page](../../../images/tutorial-feature-solution-updating-app-classic.png)
 
   > [!NOTE]
-  > Because the SharePoint Framework uses the same app infrastructure as SharePoint Add-ins, the status for the upgrade indicates that the update can happen for an add-in or an app. 
+  > Because the SharePoint Framework uses the same app infrastructure as SharePoint Add-ins, the status for the upgrade indicates that the update can happen for an add-in or an app.
 
   The update can take a while, but when the solution status changes to normal again, you can select **F5** to refresh the site contents page to confirm that a new list called *New List* has been successfully provisioned as part of the update process.
 
@@ -484,7 +479,7 @@ Now that the package has been updated in the app catalog, we can move to the act
   Now we have successfully upgraded this instance to the latest version. This Feature Framework option for SharePoint asset provisioning is pretty much the same as it is for the SharePoint Add-in model. The key difference is that the assets are being provisioned directly to a normal SharePoint site, because there's no concept called app or add-in web with SharePoint Framework solutions.
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.
 
 ## See also
 

@@ -6,7 +6,7 @@ ms.date: 04/20/2018
 
 # Scoping access to site designs
 
-Site designs are available to everyone by default. You can also scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. 
+Site designs are available to everyone by default. You can also scope site designs so that they are only available to specific users or groups. For example, the accounting department may have specific site designs they use, but it may not make sense to share those site designs with everyone. 
 
 This article explains how you can control which users and groups can see specific site designs.
 

@@ -200,7 +200,7 @@ export interface IDocument {
   import styles from './RecentDocuments.module.scss';
   import { IRecentDocumentsProps } from './IRecentDocumentsProps';
 
-  export default class RecentDocuments extends React.Component<IRecentDocumentsProps, void> {
+  export default class RecentDocuments extends React.Component<IRecentDocumentsProps, any> {
     public render(): React.ReactElement<IRecentDocumentsProps> {
       const documents: JSX.Element[] = this.props.documents.map((document: IDocument, index: number, array: IDocument[]): JSX.Element => {
         return (
@@ -515,7 +515,7 @@ The Recent Document web part displays information about the most recently modifi
   import styles from './RecentDocument.module.scss';
   import { IRecentDocumentProps } from './IRecentDocumentProps';
 
-  export default class RecentDocument extends React.Component<IRecentDocumentProps, void> {
+  export default class RecentDocument extends React.Component<IRecentDocumentProps, any> {
     public render(): React.ReactElement<IRecentDocumentProps> {
       const document: IDocument = this.props.document;
 

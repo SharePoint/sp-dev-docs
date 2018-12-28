@@ -1,7 +1,7 @@
 ---
 title: Scaffold projects by using Yeoman SharePoint generator
 description: Use the Yeoman SharePoint generator to scaffold new client-side solution projects to build, package, and deploy SharePoint solutions.
-ms.date: 01/12/2018
+ms.date: 11/08/2018
 ms.prod: sharepoint
 ---
 
@@ -40,7 +40,7 @@ The command lists all the generators available on your machine. Select `@microso
 You can use the command-line options available with the Yeoman SharePoint generator to scaffold projects in one command instead of going through the prompts. Execute the following command to see the list of command-line options available for the SharePoint generator:
 
 ```
-yo @microsoft/generator-sharepoint --help
+yo @microsoft/sharepoint --help
 ```
 
 <br/>
@@ -56,23 +56,23 @@ Option | Description
 --help|Print the generator's options and usage.
 --skip-cache|Do not remember prompt answers. Default: *false*.
 --skip-install|Do not automatically install dependencies. Default: *false*.
---componentType|The type of component. Currently "webpart" or "extension" is supported.
---componentDescription|Description of the component.
---componentName|Name of the component.
+--component-type|The type of component. Currently "webpart" or "extension" is supported.
+--component-description|Description of the component.
+--component-name|Name of the component.
 --framework|Framework to use for the solution. Choose one from "none", "react", "knockout".
---extensionType|The type of extension: Currently ApplicationCustomizer, FieldCustomizer, ListViewCommandSet.
---solutionName|Client-side solution name, as well as folder name.
---environment|The target environment for the solution. Either "onprem" or "spo".
+--plusbeta| Use the beta packages. Scaffolding should be done with @plusbeta
+--extension-type|The type of extension: Currently ApplicationCustomizer, FieldCustomizer, ListViewCommandSet.
+--solution-name|Client-side solution name, as well as folder name.
+--environment|The target environment for the solution. Either "onprem", "onprem19" or "spo".
+--package-manager|The package manager for the solution. Options are: "npm", "pnpm", or "yarn". Default: *npm*
+--skip-feature-deployment|If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites.
+--is-domain-isolated|If specified, web part will be rendered in isolated domain using IFrame and sets the component type as web part.
 
 <br/>
 
-**Available arguments**
 
-Argument | Description | Type | Required |
--- | -- | -- | -- |
-skipFeatureDeployment | If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites. | Boolean | false | 
-
-<br/>
+> [!WARNING]
+> *skip-feature-deployment* command line support was introduced with the SharePoint Framework v1.5. This option was previously a command line argument called *skipFeatureDeployment*. Also *solution-name*, *extension-type*, *component-type*, *component-description* and *component-name* have been renamed.
 
 Following is an example of a command that creates a solution called "hello-world" with:
 - A web part "HelloWorld" 
@@ -83,13 +83,14 @@ Notice that some of the options have dependencies between each other. You cannot
 
 ```
 yo @microsoft/sharepoint 
---solutionName "hello-world" 
+--solution-name "hello-world" 
 --framework "react" 
---componentType "webpart" 
---componentName "HelloWorld" 
---componentDescription "HelloWorld web part" 
+--component-type "webpart" 
+--component-name "HelloWorld" 
+--component-description "HelloWorld web part" 
 --skip-install 
---environment "spo" skipFeatureDeployment true
+--environment "spo" 
+--skip-feature-deployment
 ```
 
 <br/>

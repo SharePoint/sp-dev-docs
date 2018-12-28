@@ -179,6 +179,13 @@ In the extension manifest, configure the extension to have only one button. In t
         isBlocking: false
       };
     }
+    
+    protected onAfterClose(): void {
+      super.onAfterClose();
+      
+      // Clean up the element for the next dialog
+      ReactDOM.unmountComponentAtNode(this.domElement);
+    }
 
     @autobind
     private _submit(color: string): void {

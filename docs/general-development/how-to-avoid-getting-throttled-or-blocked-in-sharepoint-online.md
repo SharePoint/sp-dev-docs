@@ -45,23 +45,24 @@ When a user exceeds usage limits, SharePoint Online throttles any further reques
   
 - For requests that a user performs directly in the browser, SharePoint Online redirects you to the throttling information page, and the requests fail.
   
-- For all other requests, including CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests"), and the requests fail.
+- For all other requests, including CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
   
-If the offending process continues to exceed usage limits, SharePoint Online might completely block the process; in this case, you may see HTTP status code 503 ("Service unavailable"), and we'll notify you of the block in the Office 365 Message Center. The error message is shown below:
-      
-![The 503 Server unavailable message](../images/e70a43c1-43ba-4f5c-b25f-e3995f18dd16.png)
-      
-503 Server unavailable message.
+If the offending process continues to exceed usage limits, SharePoint Online might completely block the process; in this case, you will not see any successful requests and we will notify you of the block in the Office 365 Message Center. 
+
+### Application Throttling
+
+In addition to throttling by user account, limits are also applied to each application.  Every application in SharePoint Online has its own available resources, but multiple applications running against the same tenant ultimately share from the same resource bucket and in rare occurrences can cause rate limiting. 
+In these cases, SharePoint Online will attempt to prioritize interactive user requests over background activities.  
 
 ## Common throttling scenarios in SharePoint Online
 <a name="BKMK_Commonthrottlingscenarios"> </a>
 
-The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.
+The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.  
     
 
 - **Sporadic traffic**
     
-    Not a lot of traffic at any one time, but enough over time that you run in and out of throttling in an episodic way.
+    Constant load or repetitive complex queries against SharePoint Online must be optimized for low impact.  Failing to follow [best practices for scanning applications](https://aka.ms/ScanGuidance) that process files in bulk will likely result in throttling.  These apps include sync engines, backup providers, search indexers, classification engines, data loss prevention tools, and any other which attempts to reason over the entirety of data and change. 
     
   - For example, after migrating files to SharePoint Online, you run a custom CSOM or REST script to update metadata on the files. The CSOM/REST script is updating a large number of files at a very high frequency, which triggers throttling. Similarly, an autocomplete UI widget using REST services, making too many calls to lists during each end user operation, may also cause throttling, depending on what other operations are consuming resources at the same time.
     
@@ -72,7 +73,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
     A single process dramatically exceeds throttling limits, continually, over a long time period.
     
   - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
-  
+ 
   - You're running a load-testing script on SharePoint Online and you get throttled. Load testing is not allowed on SharePoint Online.
   
   - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
@@ -82,7 +83,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 ## Why can't you just tell me the exact throttling limits?
 <a name="BKMK_Whycantyoujusttellmetheexactthrottlinglimits"> </a>
 
-Setting and publishing exact throttling limits sounds very straightforward, but in fact, it's not the best way to go. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online. That's why it's so important for your CSOM or REST code to include incremental back off to handle throttling; this lets your code run as fast as possible on any given day, and it lets your code back off "just enough" if it hits throttling limits. The code samples later in this article show you how to use incremental back off.
+Setting and publishing exact throttling limits sounds very straightforward, but in fact it would result in more restrictive limits. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online. That's why it's so important for your CSOM or REST code to honor the retry-after header value; this lets your code run as fast as possible on any given day, and it lets your code back off "just enough" if it hits throttling limits. The code samples later in this article show you how to use the retry-after header.
 
 ## Best practices to handle throttling
 <a name="BKMK_Bestpracticestohandlethrottling"> </a>
@@ -92,12 +93,12 @@ Setting and publishing exact throttling limits sounds very straightforward, but 
 - Reduce the frequency of calls
     
 - Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
-    
-If you do run into throttling, we recommend incremental back off to reduce the number and frequency of calls until no more throttling occurs.
 
-Incremental back off uses progressively longer waits between retries before trying again to run the code that was throttled. You can use the GitHub code samples, later in this article, written as extension methods, to add incremental back off to your code.
+- Leverage the retry-after header
     
-Backing off is the fastest way to handle being throttled because SharePoint Online continues to log resource usage while a user is being throttled. In other words, aggressive retries work against you because even though the calls fail, they still accrue against your usage limits. The faster you back off, the faster you'll stop exceeding usage limits. 
+If you do run into throttling, we require leveraging the retry-after header to ensure minimum delay till the throttle is removed.
+
+Retry after is the fastest way to handle being throttled because SharePoint Online dynamically determines the right time to try again. In other words, aggressive retries work against you because even though the calls fail, they still accrue against your usage limits.  Following the retry header will ensure the shortest delay. 
 
 For information about ways to monitor your SharePoint Online activity, see  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86).
 
@@ -110,11 +111,11 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
  
 What is definition of undecorated traffic?
 
-- Traffic is undecorated if there is no AppID/AppTitle or User Agent string in CSOM or REST API call to SharePoint Online.
+- Traffic is undecorated if there is no AppID/AppTitle and User Agent string in CSOM or REST API call to SharePoint Online.  The User Agent string should be in a specific format as described below.
 
-What are the recommendation?
+What are the recommendations?
 
-- If you have created an application, recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+- If you have created an application, the recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
 
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 
@@ -129,7 +130,7 @@ What are the recommendation?
 > Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. It is also fine to append existing user agent string with the requested information.
 
 > [!NOTE]
-> If you are developing front end components executing in the browser, most of modern browsers don't allow overwritting the user agent string and you don't need to implement this.
+> If you are developing front end components executing in the browser, most of modern browsers don't allow overwriting the user agent string and you don't need to implement this.
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
@@ -147,7 +148,7 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
     {
         e.WebRequestExecutor.WebRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
     };
-                
+
     // Normal CSOM Call with custom User-Agent information
     Web site = ctx.Web;
     ctx.Load(site);
@@ -168,135 +169,100 @@ endpointRequest.Headers.Add("Authorization", "Bearer " + accessToken);
 HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse();
 ```
 
+### CSOM Code sample: ExecuteQueryWithIncrementalRetry extension method
 
-## GitHub CSOM code samples: SharePoint Online Throttling
-<a name="BKMK_GitHubCSOMandRESTcodesamplesSharePointOnlineThrottling"> </a>
+> [!NOTE]
+> You'll need to use SharePoint Online CSOM version 16.1.8316.1200 (December 2018 version) or higher.
 
- [CoreThrottling](https://github.com/OfficeDev/PnP/tree/dev/Samples/Core.Throttling) in the [Office 365 Developer Patterns and Practices repository ](http://github.com/OfficeDev/PnP) is a code sample that demonstrates the incremental back off technique. The technique requires minimal changes to your code.
-  
-    
-    
-Before you run this code sample:
-  
-    
-    
+Add this extension method in a static class and use `ExecuteQueryWithIncrementalRetry` instead of `ExecuteQuery` to make your code handle throttling requests.
 
-- Open **Program.cs** and enter the following information in the **Main** method:
-    
-  - Your Office 365 Developer account credentials.
-    
-  
-  - The URL of your Office 365 Developer Site.
-    
-  
-  - The name of a test document library on your Office 365 Developer Site.
-    
-  
-- If you receive an error stating that the **App.Config** file is invalid, go to **Solution Explorer**, right click **App.config**, and choose **Exclude From Project**.
-    
-  
- **Core.Throttling** runs as a console application using a user-only authorization policy, which means this code sample uses the permissions of the current user. In the **Main** method in Program.cs, a while loop repeatedly creates new folders in the test document library. A call is then made to **ctx.ExecuteQueryWithExponentialRetry**, which uses CSOM to perform the **ExecuteQuery** method. **ExecuteQueryWithExponentialRetry** is an extension method on the [ClientContext](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.clientcontext%28v=office.15%29.aspx) object, and is defined in **ClientContextExtension.cs**.
-  
+```cs
+public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount, int delay)
+{
+    int retryAttempts = 0;
+    int backoffInterval = delay;
+    int retryAfterInterval = 0;
+    bool retry = false;
+    ClientRequestWrapper wrapper = null;
+    if (retryCount <= 0)
+        throw new ArgumentException("Provide a retry count greater than zero.");
+    if (delay <= 0)
+        throw new ArgumentException("Provide a delay greater than zero.");
 
-If SharePoint Online throttles the **ExecuteQuery** statement, **ExecuteQueryWithIncrementalRetry** starts the incremental back off technique by:
-
-- Catching a **WebException** and checking the **HttpWebResponse.StatusCode**. If SharePoint Online throttled the **ExecuteQuery** statement, the **HttpWebResponse.StatusCode** is 429.
-
-- The current thread is suspended for the period specified in **backoffInterval**.
-
-- When the current thread resumes, the **backoffInterval** is doubled and the number of retries performed ( **retryAttempts** ) is incremented. By doubling **backoffInterval** your code suspends activity for a longer period of time before retrying the code that was throttled by SharePoint Online.
-
-- The process is repeated until either the **ExecuteQuery** statement is successful, or the number of allowed retries ( **retryCount** ) is exceeded.
-
-### CSOM Code sample: Incremental back off and retry (calls ExecuteQueryWithIncrementalRetry method, later in this article)
-
-```
-
-using (var ctx = new ClientContext(serverUrl))
-       {
-           //Provide account and pwd for connecting to the source
-           var passWord = new SecureString();
-           foreach (char c in password.ToCharArray()) passWord.AppendChar(c);
-           ctx.Credentials = new SharePointOnlineCredentials(login, passWord);
-            try
-           {
-               int number = 0;
-               // This loop will be executed 1000 times, which will cause throttling to occur
-               while (number < 1000)
-               {
-                   // Try to create new folder based on Ticks to the given list as an example process
-                   var folder = ctx.Site.RootWeb.GetFolderByServerRelativeUrl(listUrlName);
-                   ctx.Load(folder);
-                   folder = folder.Folders.Add(DateTime.Now.Ticks.ToString());
-                   // Extension method for executing query with throttling checks
-                   ctx.ExecuteQueryWithIncrementalRetry(5, 30000); //5 retries, with a base delay of 30 secs.
-                   // Status indication for execution.
-                   Console.WriteLine("CSOM request successful.");
-                   // For loop handling.
-                   number = number + 1;
-               }
-           }
-           catch (MaximumRetryAttemptedException mex)
-           {
-               // Exception handling for the Maximum Retry Attempted
-               Console.WriteLine(mex.Message);
-           }
-       }
-
-```
-
-
-### CSOM Code sample: ExecuteQueryWithIncrementalRetry method
-
-
-```
-
-public static void ExecuteQueryWithIncrementalRetry(this ClientContext context, int retryCount, int delay)
+    // Do while retry attempt is less than retry count
+    while (retryAttempts < retryCount)
+    {
+        try
         {
-            int retryAttempts = 0;
-            int backoffInterval = delay;
-            if (retryCount <= 0)
-                throw new ArgumentException("Provide a retry count greater than zero.");
-           if (delay <= 0)
-                throw new ArgumentException("Provide a delay greater than zero.");
-           while (retryAttempts < retryCount)
+            if (!retry)
             {
-                try
+                clientContext.ExecuteQuery();
+                return;
+            }
+            else
+            {
+                // retry the previous request
+                if (wrapper != null && wrapper.Value != null)
                 {
-                    context.ExecuteQuery();
+                    clientContext.RetryQuery(wrapper.Value);
                     return;
                 }
-                catch (WebException wex)
+            }
+        }
+        catch (WebException ex)
+        {
+            var response = ex.Response as HttpWebResponse;
+            // Check if request was throttled - http status code 429
+            // Check is request failed due to server unavailable - http status code 503
+            if (response != null && (response.StatusCode == (HttpStatusCode)429 || response.StatusCode == (HttpStatusCode)503))
+            {
+                wrapper = (ClientRequestWrapper)ex.Data["ClientRequest"];
+                retry = true;
+
+                // Determine the retry after value - use the retry-after header when available
+                string retryAfterHeader = response.GetResponseHeader("Retry-After");
+                if (!string.IsNullOrEmpty(retryAfterHeader))
                 {
-                    var response = wex.Response as HttpWebResponse;
-                    if (response != null &amp;&amp; response.StatusCode == (HttpStatusCode)429)
+                    if (!Int32.TryParse(retryAfterHeader, out retryAfterInterval))
                     {
-                        Console.WriteLine(string.Format("CSOM request exceeded usage limits. Sleeping for {0} seconds before retrying.", backoffInterval));
-                        //Add delay.
-                        System.Threading.Thread.Sleep(backoffInterval);
-                        //Add to retry count and increase delay.
-                        retryAttempts++;
-                        backoffInterval = backoffInterval * 2;
-                    }
-                    else
-                    {
-                        throw;
+                        retryAfterInterval = backoffInterval;
                     }
                 }
-            }
-            throw new MaximumRetryAttemptedException(string.Format("Maximum retry attempts {0}, have been attempted.", retryCount));
-       }
+                else
+                {
+                    retryAfterInterval = backoffInterval;
+                }
 
+                // Delay for the requested seconds
+                Thread.Sleep(retryAfterInterval * 1000);
+
+                // Increase counters
+                retryAttempts++;
+                backoffInterval = backoffInterval * 2;
+            }
+            else
+            {
+                throw;
+            }
+        }
+    }
+    throw new MaximumRetryAttemptedException($"Maximum retry attempts {retryCount}, has be attempted.");
+}
+
+[Serializable]
+public class MaximumRetryAttemptedException : Exception
+{
+    public MaximumRetryAttemptedException(string message) : base(message) { }
+}
 ```
 
-
-## What should you do if you get blocked in SharePoint Online?
+# What should you do if you get blocked in SharePoint Online?
 <a name="BKMK_Whatshouldyoudoifyougetblocked"> </a>
 
-Blocking is the most extreme form of throttling. We rarely ever block a tenant, unless we detect long-term, extremely excessive traffic that may threaten the overall health of the SharePoint Online service. We apply blocks to prevent excessive traffic from degrading the performance and reliability of SharePoint Online. A block - which is usually placed at the tenancy level - prevents the offending process from running until you fix the problem. If we block your subscription, you must take action to modify the offending processes before the block can be removed.
+Blocking is the most extreme form of throttling. We rarely ever block a tenant, unless we detect long-term, extremely excessive traffic that may threaten the overall health of the SharePoint Online service. We apply blocks to prevent excessive traffic from degrading the performance and reliability of SharePoint Online. A block - which is usually placed at the app or user level - prevents the offending process from running until you fix the problem. If we block your subscription, you must take action to modify the offending processes before the block can be removed.
   
-If we block your subscription, you'll see HTTP status code 503, and we'll notify you of the block in the Office 365 Message Center. The message describes what caused the block, provides guidance on how to resolve the offending issue, and tells you who to contact to get the block removed.
-  
+If we block your subscription we will notify you of the block in the Office 365 Message Center. The message describes what caused the block, provides guidance on how to resolve the offending issue, and tells you who to contact to get the block removed.
+
 ## See also
 <a name="BKMK_Additionalresources"> </a>
 

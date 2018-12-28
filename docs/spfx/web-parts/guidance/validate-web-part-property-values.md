@@ -178,7 +178,8 @@ In this step, you implement validation logic that checks if the list with the na
       "description": { "default": "Shows information about the selected list" },
       "officeFabricIconFontName": "Page",
       "properties": {
-        "description": "List info"
+        "description": "List info",
+        "listName": ""
       }
     }]
   }

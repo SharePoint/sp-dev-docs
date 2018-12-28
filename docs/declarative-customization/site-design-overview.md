@@ -1,13 +1,13 @@
 ---
 title: SharePoint site design and site script overview
 description: Use SharePoint site scripts and site designs to provide custom configurations to apply when new sites are created.
-ms.date: 04/20/2018
+ms.date: 12/19/2018
 ---
 
 # SharePoint site design and site script overview
 
 > [!NOTE]
-> Site designs and site scripts have been released to production and are available for general use.
+> Site designs and site scripts are currently only supported by SharePoint Online.
 
 Use site designs and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations. 
 
@@ -43,12 +43,26 @@ Had you chosen the Team site template, it contains only one default site design 
 
 For more information about how you can change the default site designs, see [Customize a default site design](customize-default-site-design.md).
 
-When a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
+When a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists or applying a theme. These script actions are run in the background. A notification bar will be displayed, which the site creator can click to view the status of the actions being applied. 
 
-![Progress pane listing completed actions from a site design](images/progress-pane.png)
+![Notification bar showing application of script actions in progress](images/site-design-notification-bar-in-progress-state.png)
+
+When the scripts are complete the notification bar message will change - allowing the site creator to either refresh the page to see the results of the applied scripts or to view the site script details.
+
+![Notification bar showing application of script actions is complete](images/site-design-notification-bar-completed-state.png)
+
+The site design information panel can be invoked by a site owner at any time to see what site designs have been applied to the site (and their script details) as well as to apply new or updated site designs. 
+
 
 > [!NOTE]
-> Site designs can now be applied to previously created modern site collections. For mor information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
+> The site design information panel started rolling out to Target Release customers in December 2018 - and will complete WW rollout in early 2019.
+
+When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
+
+![Site Design Information Panel](images/site-design-information-panel-applied-site-designs.png)
+
+> [!NOTE]
+> Site designs can now be applied to previously created modern site collections. For more information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
 
 ## Anatomy of a site script
 
@@ -121,13 +135,18 @@ Available actions include:
 - Triggering a Microsoft Flow
 - Installing a deployed solution from the app catalog
 - Setting regional settings for the site
+- Adding principals (users and groups) to SharePoint roles
 - Setting external sharing capability for the site
 
 For a complete list of available actions and their parameters, see the [JSON schema](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema).
 
-Site scripts can be run again on the same site after provisioning. This can only be done programmatically. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
+Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
 
-For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list. Also, please note that site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design). This includes subactions.
+For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list. 
+
+We'd previously capped the limit of site script actions to 30. This remains the limit for scripts applied synchronously using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps)  command, but based on customer feedback and support for additional actions we have bumped this limit to 300 actions (or 100,000 characters) when the scripts are applied asynchronously (either through the UI or using the [Add-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Add-SPOSiteDesignTask?view=sharepoint-ps) command).
+
+There is also a limit of 100 site scripts and 100 site designs per tenant.
 
 ## Using PowerShell or REST to work with site designs and site scripts
 
@@ -221,7 +240,7 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPO-SiteDesign** cmdlet or **CreateSiteDesign** REST API.
 
-The **WebTemplate** parameter set to the value 64 indicates registering this site design with the Team site template. The value 68 would indicate registering with the Communication site template. The **Title** and **Description** parameters are displayed when a user views site designs as they create a new Team site.
+The **WebTemplate** parameter set to the value 64 indicates registering this site design with the Team site template. If you have disabled modern Group creation, then publish your site designs using WebTemplate 1 so that they display for the "Group-less" Team site template. The value 68 would indicate registering with the Communication site template. The **Title** and **Description** parameters are displayed when a user views site designs as they create a new Team site.
 
 > [!NOTE]
 > A site design can run multiple scripts. The script IDs are passed in an array, and they run in the order listed.
