@@ -17,7 +17,7 @@ When working with the full-width column layout, however, things become a bit mor
 
 ## Enable support for the full-width column
 
-By default, SharePoint Framework client-side web parts cannot be placed in full-width column layouts. To allow users to add your web part to full-width columns, in the web part manifest set the `supportsFullBleed` property to `true`.
+By default, SharePoint Framework client-side web parts cannot be placed in full-width column layouts. To allow users to add your web part to full-width columns, in the web part manifest (*the `*.manifest.json` file adjacent to the web part `*.ts` file*) set the `supportsFullBleed` property to `true`.
 
 ```json
 {
