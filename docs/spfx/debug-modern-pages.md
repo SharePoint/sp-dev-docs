@@ -178,16 +178,18 @@ SharePoint Framework workbench conveniently mimics the canvas of modern SharePoi
 Using the SharePoint workbench, you can only test web parts from your solution. But what if you wanted to see how your web part works with other web parts on the page? Testing your local solution on modern pages using the approach outlined in this article, is way more efficient than packaging your project, deploying it to the app catalog and adding the web part to the page.
 
 ## Debug SharePoint Framework web parts -- an alternative approach
-If you build your spfx webpart solution without the --ship parameter
+
+If you build your spfx webpart solution without the --ship parameter as following
 
 ```sh
 gulp bundle
 gulp package-solution
 ```
 
-the packages generated will reference the code froom your local server (https://localhost:4321). You can deploy the solution to the app catalog as you normally would. 
+the packages generated will reference the code from your local computer (https://localhost:4321). You can deploy the solution to the app catalog as you normally would. 
 
 You can then start your local server  by running 
+
 ```sh
 gulp serve --nobrowser
 ```
