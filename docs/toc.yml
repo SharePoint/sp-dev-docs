@@ -221,6 +221,8 @@
         href: design/showcase-web-part.md
       - name: Designing a web part icon
         href: design/designing-a-web-part-icon.md
+      - name: Using semantic slots
+        href: design/semantic_slots.md        
     - name: Authoring pages
       href: design/authoring-pages.md          
     - name: Design considerations
