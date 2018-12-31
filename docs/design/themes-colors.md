@@ -6,7 +6,7 @@ ms.date: 05/21/2018
 
 # SharePoint themes and colors
 
-Like the Microsoft brand palette, the SharePoint themes are designed to build on the Microsoft brand, while at the same time allow for flexibility to enliven our partnerships without dominating them. They reveal our shared goals and personality, and they reflect our diversity and ability to optimize the SharePoint experience.
+Like the Microsoft brand palette, the SharePoint themes are designed to build on the Microsoft brand, while at the same time allowing for flexibility to enliven our partnerships without dominating them. They reveal our shared goals and personality, and they reflect our diversity and ability to optimize the SharePoint experience.
 
 ## Main colors
 
