@@ -4,7 +4,7 @@ description: Learn how to design your web part to take advantage of section back
 ms.date: 12/06/2018
 ---
 
-# Overview
+# Designing for section backgrounds using semantic slots
 
 When designing web parts for section backgrounds, you can use Office UI Fabric’s semantic slot system to guarantee accessibility and to enforce consistency across SharePoint sites. Semantic slots target customizations of specific page elements in order to align color usage and interaction patterns. They also allow you the flexibility to add or assign multiple palette colors for your components so they look great on all section backgrounds. This article will provide examples for semantic slots and how to incorporate them into your web part designs. Before getting started, you should be familiar with [how to design a SharePoint web part](https://docs.microsoft.com/en-us/sharepoint/dev/design/design-a-web-part) in order to understand the basic structure of web parts. You should also be familiar with [themes and colors in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/design/themes-colors).
 
