@@ -352,7 +352,7 @@ Notice also that by default **includeClientSideAssets** attribute is set to true
 ```
 
 
-## Deploy the field to SharePoint Online and host JavaScript from local host
+## Deploy the field to SharePoint Online
 
 Now you are ready to deploy the solution to a SharePoint site and get the field association automatically included in a field. We will use the `ship` option with this packaging, so that all assets are packaged automatically inside of the solution package.
 
