@@ -82,7 +82,7 @@ In order to get an overview of where to start optimize, see the article [Optimiz
 
 ## Loading third party components dynamically
 
-When a SharePoint Framework project is packaged up it, it is using webpack behind the scenes to create the bundle(s). One of the features of webpack is the ability to dynamically import parts of an application. Taking advantage of this in SharePoint Framework requires only a small refactoring.
+When a SharePoint Framework project is packaged up, it is using webpack behind the scenes to create the bundle(s). One of the features of webpack is the ability to dynamically import parts of an application. Taking advantage of this in SharePoint Framework requires only a small refactoring.
 
 **Normal import**
 
