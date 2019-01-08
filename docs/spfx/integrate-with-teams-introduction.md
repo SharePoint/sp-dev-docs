@@ -14,7 +14,7 @@ There are following benefits on using SharePoint Framework as the platform for y
 - Development model is similar as for SharePoint Framework web parts.
 - Technically any SharePoint Framework web part can be exposed as a tab in Microsoft Teams.
 - You have different scoping options on exposing your custom tab as a web part and tab in your tenant.
-- Your tab will be executed in the context of the underlaying SharePoint site behind of the specific team. This means that you can take advantage of any SharePoint specific APIs or functionalities in your web part.
+- Your tab will be executed in the context of the underlying SharePoint site behind of the specific team. This means that you can take advantage of any SharePoint specific APIs or functionalities in your web part.
 
 > [!IMPORTANT]
 > This feature is currently in preview and is subject to change. It is not currently supported for usage in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
