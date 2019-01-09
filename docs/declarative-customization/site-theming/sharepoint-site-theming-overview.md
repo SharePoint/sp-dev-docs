@@ -52,7 +52,7 @@ The following image shows how the default themes are presented in the theme pick
 
 When you choose a theme in the list, those color settings are instantly applied to the page so that you can see what the selected theme will look like.
 
-After you've found a theme that you want to use, choose **Save** to save your selection, or choose **Cancel** to revert to your current theme.
+After you've found a theme that you want to use, choose **Apply** to save your selection, or choose **Cancel** to revert to your current theme.
 
 ## Work with classic themes
 
