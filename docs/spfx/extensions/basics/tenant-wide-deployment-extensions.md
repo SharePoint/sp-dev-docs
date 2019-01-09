@@ -27,7 +27,7 @@ App catalog site collection contains a **Tenant Wide Extensions** list, which ca
 
 Specific SharePoint Framework extensions can be activated in the tenant level by adding entries to the **Tenant Wide Extension** list. Each entry can be targeted to specific web template or a list type, depending on the functional requirements.
 
-These list specific configurations are resolved runtime when end users are accessing pages in content site collections. This means that the changes applied to this list are available for both existing and new sites in the tenant.
+These list specific configurations are resolved at runtime when end users are accessing pages in content site collections. This means that the changes applied to this list are available for both existing and new sites in the tenant.
 
 SharePoint Framework solutions can contain automation which will add automatically entry to the Tenant Wide Extension list, when the solution is added
 
