@@ -6,7 +6,10 @@ ms.date: 4/23/2018
 
 # Connect to new Office 365 group: CSOM development
 
-The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.    
+The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.
+
+> [!IMPORTANT]
+> It is **not** supported to connect a Communication site to Office 365 group.
 
 ## Prerequisites
 

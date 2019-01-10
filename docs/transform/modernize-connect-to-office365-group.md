@@ -16,6 +16,9 @@ In this article, you'll learn how to prepare for such a bulk operation for assoc
 > [!IMPORTANT]
 > For publishing portals (sites based upon BLANKINTERNET#0, ENTERWIKI#0, SRCHCEN#0, SRCHCENTERLITE#0, BICENTERSITE#0, POINTPUBLISHINGHUB#0, POINTPUBLISHINGTOPIC#0 or sites using the “Pages” library) it's not currently supported to connect these to an Office 365 group or to use modern pages. If you want to modernize your publishing portal it's recommended to start from a new communication site and configure that one accordingly.
 
+> [!IMPORTANT]
+> It is **not** supported to connect a Communication site to Office 365 group.
+
 ## What connecting to a new Office 365 group does to your site
 
 When you connect your site to a new Office 365 group, a number of things happen:
