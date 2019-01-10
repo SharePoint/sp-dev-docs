@@ -28,6 +28,7 @@ The following REST commands are available for working with site designs and site
 - **DeleteSiteScript** &ndash; Deletes a site script.
 - **CreateSiteDesign** &ndash; Creates a site design.
 - **ApplySiteDesign** &ndash; Applies a site design to an existing site collection.
+- **AddSiteDesignTaskToCurrentWeb** &ndash; Adds a site design task on the current web.
 - **GetSiteDesigns** &ndash; Gets a list of information on existing site designs.
 - **GetSiteDesignMetadata** &ndash; Gets information about a specific site design.
 - **UpdateSiteDesign** &ndash; Updates a site design with new values.
@@ -315,7 +316,7 @@ Applies a site design to an existing site collection.
 
 |Parameter   | Description  |
 |------------|--------------|
-| id         | The ID of the site design to apply. |
+| siteDesignId         | The ID of the site design to apply. |
 | webUrl         | The URL of the site collection where you want to apply the site design. |
 
 ### Examples
@@ -325,6 +326,26 @@ Here's an example of applying a site design to the ProjectGo site collection.
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.microsoft.com/sites/projectgo"});
 ```
+
+## AddSiteDesignTaskToCurrentWeb
+
+Adds a site design task on the current web to be invoked asynchronously.
+
+### Parameters
+
+|Parameter   | Description  |
+|------------|--------------|
+| siteDesignId         | The ID of the site design to apply. |
+
+
+### Examples
+
+Here's an example of adding a site design task to the ProjectGo site collection.
+
+```javascript
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.AddSiteDesignTaskToCurrentWeb", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca"});
+```
+<br/>
 
 ## GetSiteDesigns
 
@@ -413,6 +434,7 @@ Here is an example of the JSON returned after calling **GetSiteDesignMetadata**.
   "Version": 1
 }
 ```
+<br/>
 
 ## UpdateSiteDesign
 
