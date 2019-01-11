@@ -1039,6 +1039,10 @@ The column is formatted within the context of the entire row. You can use this c
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
+#### "@currentWeb"
+
+This will evaluate to the absolute url for the site. This is equivalent to the `webAbsoluteUrl` value within the page context.
+
 #### "@me"
 
 This will evaluate to the email address of the current logged in user.
