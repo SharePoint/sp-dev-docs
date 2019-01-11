@@ -3,6 +3,7 @@ title: Read and write to the social feed by using the .NET client object model i
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3c15ede5-8a59-47e6-a0b2-c17ec6bf4ae1
+localization_priority: Normal
 ---
 
 

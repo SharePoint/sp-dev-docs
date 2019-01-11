@@ -6,6 +6,7 @@ f1_keywords:
 - how to,howdoi,howto,WebUI DLL
 ms.prod: sharepoint
 ms.assetid: 09ad5d5e-1678-45e4-8159-23ef56f84215
+localization_priority: Normal
 ---
 
 

@@ -3,6 +3,7 @@ title: Working with Tasks in SharePoint Workflows using Visual Studio 2012
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
+localization_priority: Normal
 ---
 
 

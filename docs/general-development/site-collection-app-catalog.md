@@ -3,6 +3,7 @@ title: Use the site collection app catalog
 ms.date: 05/18/2018
 ms.prod: sharepoint
 ms.assetid: fdf7ecb1-9951-475b-b058-3285fba77b68
+localization_priority: Priority
 ---
 
 # Use the site collection app catalog

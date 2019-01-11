@@ -3,6 +3,7 @@ title: Office 2013 documentation copyright notice
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a9c2f3d9-cea2-49a3-b709-40dc614b9f86
+localization_priority: Normal
 ---
 
 

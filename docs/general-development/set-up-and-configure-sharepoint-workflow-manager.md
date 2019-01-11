@@ -3,6 +3,7 @@ title: Set up and configure Workflow Manager with SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 4cd68a3e-9c3b-4fb9-bb66-e96cf0faec69
+localization_priority: Priority
 ---
 
 

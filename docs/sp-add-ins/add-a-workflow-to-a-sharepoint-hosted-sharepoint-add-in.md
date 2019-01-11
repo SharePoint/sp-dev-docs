@@ -3,6 +3,7 @@ title: Add a workflow to a SharePoint-hosted SharePoint Add-in
 description: Add a workflow to an add-in, design the workflow, and run and test the add-in.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

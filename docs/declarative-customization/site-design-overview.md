@@ -2,6 +2,7 @@
 title: SharePoint site design and site script overview
 description: Use SharePoint site scripts and site designs to provide custom configurations to apply when new sites are created.
 ms.date: 12/19/2018
+localization_priority: Priority
 ---
 
 # SharePoint site design and site script overview

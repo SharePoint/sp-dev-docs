@@ -1,6 +1,7 @@
 ---
 title: App-only and elevated privileges in the SharePoint Add-in model
 ms.date: 11/03/2017
+localization_priority: Priority
 ---
 App-only and elevated privileges in the SharePoint Add-in model
 ===============================================================

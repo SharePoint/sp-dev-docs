@@ -3,6 +3,7 @@ title: Connect to API secured with Azure Active Directory (Azure AD)
 description: Guidance about connecting to APIs secured with Azure AD.
 ms.date: 08/30/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Connect to API secured with Azure Active Directory

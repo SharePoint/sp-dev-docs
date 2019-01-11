@@ -2,6 +2,7 @@
 title: SharePoint grid and responsive design
 description: The underlying page grid system and the breakpoints, or key screen sizes where the layout of the pages will change. 
 ms.date: 01/23/2018
+localization_priority: Priority
 ---
 
 # SharePoint grid and responsive design

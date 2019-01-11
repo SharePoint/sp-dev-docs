@@ -2,6 +2,7 @@
 title: Role, inheritance, elevation of privilege, and password changes in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

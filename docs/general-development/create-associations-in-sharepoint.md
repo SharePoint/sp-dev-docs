@@ -3,6 +3,7 @@ title: Create associations in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 202599e3-232e-4b3a-9da5-c11f6e972283
+localization_priority: Normal
 ---
 
 

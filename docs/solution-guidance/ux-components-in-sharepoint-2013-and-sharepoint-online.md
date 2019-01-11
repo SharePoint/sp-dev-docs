@@ -2,6 +2,7 @@
 title: UX components in SharePoint and SharePoint Online
 description: Use provider-hosted SharePoint Add-ins to control user experience (UX) components in SharePoint and SharePoint Online. 
 ms.date: 4/24/2018
+localization_priority: Normal
 ---
 
 # UX components in SharePoint and SharePoint Online

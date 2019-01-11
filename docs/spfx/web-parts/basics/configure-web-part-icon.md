@@ -3,6 +3,7 @@ title: Configure web part icon
 description: The available options for configuring the icon for your SharePoint client-side web parts.
 ms.date: 01/09/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Configure web part icon

@@ -3,6 +3,7 @@ title: Workflow actions quick reference (SharePoint 2010 Workflow platform)
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: b033f79f-2179-4cfd-9d1c-7c04f83d4a4b
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: Workflow actions available using the workflow interop bridge
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a8903440-ff8f-41a4-8c2a-5dbe12c07cfb
+localization_priority: Normal
 ---
 
 

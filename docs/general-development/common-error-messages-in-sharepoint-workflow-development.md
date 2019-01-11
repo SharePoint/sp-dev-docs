@@ -1,8 +1,9 @@
-﻿---
+---
 title: Common error messages in SharePoint workflow development
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e9bf6878-c722-4b1f-b5b5-b302ae0ea4da
+localization_priority: Priority
 ---
 
 

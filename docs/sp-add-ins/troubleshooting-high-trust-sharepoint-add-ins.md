@@ -3,6 +3,7 @@ title: Troubleshooting high-trust SharePoint Add-ins
 description: Use the Fiddler tool and other guidance for resolving high-trust issues.
 ms.date: 12/29/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

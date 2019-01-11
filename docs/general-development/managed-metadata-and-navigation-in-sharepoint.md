@@ -3,6 +3,7 @@ title: Managed metadata and navigation in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
+localization_priority: Normal
 ---
 
 

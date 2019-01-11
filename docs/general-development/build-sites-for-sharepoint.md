@@ -3,6 +3,7 @@ title: Build sites for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3b372a63-7cdf-462a-abb4-750e611e967d
+localization_priority: Priority
 ---
 
 

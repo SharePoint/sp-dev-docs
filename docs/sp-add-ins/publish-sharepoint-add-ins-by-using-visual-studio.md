@@ -1,7 +1,8 @@
-﻿---
+---
 title: Publish SharePoint Add-ins by using Visual Studio
 ms.date: 09/25/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

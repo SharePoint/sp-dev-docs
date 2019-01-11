@@ -3,6 +3,7 @@ title: Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in
 description: Customize the rendering and validation of controls in add-in pages, create and register the JavaScript, and run and test the add-in.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in

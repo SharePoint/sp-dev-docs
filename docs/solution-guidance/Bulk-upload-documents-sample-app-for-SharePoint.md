@@ -2,6 +2,7 @@
 title: Bulk upload documents sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can bulk upload documents to document libraries, including OneDrive for Business.
 ms.date: 5/2/2018
+localization_priority: Priority
 ---
 
 # Bulk upload documents sample SharePoint Add-in

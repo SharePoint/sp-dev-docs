@@ -2,6 +2,7 @@
 title: Use remote provisioning to brand SharePoint pages
 description: Use remote provisioning to interact with themes in SharePoint.
 ms.date: 4/25/2018
+localization_priority: Normal
 ---
 
 # Use remote provisioning to brand SharePoint pages

@@ -3,6 +3,7 @@ title: Custom security trimming for Search in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
+localization_priority: Normal
 ---
 
 

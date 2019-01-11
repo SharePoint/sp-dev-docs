@@ -3,6 +3,7 @@ title: Modernize your classic SharePoint sites
 description: Steps to transform your SharePoint classic site into a modern Office 365 group-connected team site or communication site.
 ms.date: 04/23/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Modernize your classic SharePoint sites

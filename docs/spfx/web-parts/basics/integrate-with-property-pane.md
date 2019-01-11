@@ -3,6 +3,7 @@ title: Make your SharePoint client-side web part configurable
 description: Configure custom properties in your web part by using the property pane.
 ms.date: 01/09/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

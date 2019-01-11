@@ -1,6 +1,7 @@
 ---
 title: Security
 ms.date: 02/07/2018
+localization_priority: Normal
 ---
 # Security
 

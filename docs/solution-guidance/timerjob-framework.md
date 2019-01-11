@@ -2,6 +2,7 @@
 title: PnP timer job framework
 description: Describes set of classes designed to ease the creation of background processes that operate against SharePoint sites.
 ms.date: 5/9/2018
+localization_priority: Normal
 ---
 
 # PnP timer job framework

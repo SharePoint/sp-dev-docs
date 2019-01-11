@@ -2,6 +2,7 @@
 title: HubSiteData REST method
 description: Gets hub site data for the current web.
 ms.date: 4/20/2018
+localization_priority: Normal
 ---
 
 # HubSiteData

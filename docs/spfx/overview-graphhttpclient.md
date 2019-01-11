@@ -3,6 +3,7 @@ title: Overview of the GraphHttpClient class (preview)
 description: Use Microsoft Graph to build powerful solutions that access data from Office 365 and other Microsoft services.
 ms.date: 02/02/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Overview of the GraphHttpClient class (deprecated)

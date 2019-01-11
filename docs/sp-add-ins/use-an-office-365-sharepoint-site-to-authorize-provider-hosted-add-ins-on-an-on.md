@@ -3,6 +3,7 @@ title: Use an Office 365 SharePoint site to authorize provider-hosted add-ins on
 description: Create an environment where you can use ACS to establish trust between a provider-hosted add-in and an on-premises SharePoint farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
 ms.date: 12/28/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

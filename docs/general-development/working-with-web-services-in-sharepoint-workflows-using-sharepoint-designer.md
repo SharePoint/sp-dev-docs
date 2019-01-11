@@ -3,6 +3,7 @@ title: Working with Web Services in SharePoint Workflows using SharePoint Design
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bc8769c6-ae71-4519-abf3-c1b6fb071059
+localization_priority: Priority
 ---
 
 

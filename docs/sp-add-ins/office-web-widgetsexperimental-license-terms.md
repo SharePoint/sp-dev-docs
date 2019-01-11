@@ -3,6 +3,7 @@ title: Office Web Widgets - Experimental license terms
 description: License terms for using the Office Web Widgets - Experimental.
 ms.date: 12/20/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

@@ -3,6 +3,7 @@ title: Create and delete posts and retrieve the social feed by using the .NET cl
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c8d68632-1b55-454c-961a-f3ddad731bf6
+localization_priority: Normal
 ---
 
 

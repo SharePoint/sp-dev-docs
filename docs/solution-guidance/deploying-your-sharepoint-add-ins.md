@@ -2,6 +2,7 @@
 title: Deploying your SharePoint Add-ins
 description: How to deploy your SharePoint Add-ins.
 ms.date: 5/8/2018
+localization_priority: Normal
 ---
 
 # Deploying your SharePoint Add-ins

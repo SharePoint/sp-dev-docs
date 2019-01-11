@@ -1,6 +1,7 @@
 ---
 title: User information
 ms.date: 01/18/2018
+localization_priority: Normal
 ---
 # User information
 

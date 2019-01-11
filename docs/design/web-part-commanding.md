@@ -1,6 +1,7 @@
 ---
 title: Commanding within a web part
 ms.date: 4/16/2018 
+localization_priority: Normal
 ---
 
 # Commanding within a web part

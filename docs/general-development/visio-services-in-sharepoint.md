@@ -3,6 +3,7 @@ title: Visio Services in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ed8c5d12-e17d-4ceb-b195-601c26824370
+localization_priority: Normal
 ---
 
 

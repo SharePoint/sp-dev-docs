@@ -1,8 +1,9 @@
-﻿---
+---
 title: SharePoint webhooks sample reference implementation
 description: This SharePoint Patterns and Practices (PnP) reference implementation shows how you can use SharePoint webhooks in your application. 
 ms.date: 02/08/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

@@ -2,6 +2,7 @@
 title: Work with user profiles in a Multi-Geo tenant
 description: Define a preferred data location for a user, detect a user's profile location and personal site URL, and read and update default and custom user profile properties.
 ms.date: 4/27/2018
+localization_priority: Normal
 ---
 
 # Work with user profiles in a Multi-Geo tenant

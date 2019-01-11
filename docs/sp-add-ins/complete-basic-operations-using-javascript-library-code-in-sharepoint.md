@@ -3,6 +3,7 @@ title: Complete basic operations using JavaScript library code in SharePoint
 description: Write code to perform basic operations using the JavaScript client object model in SharePoint.
 ms.date: 11/4/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Complete basic operations using JavaScript library code in SharePoint

@@ -7,6 +7,7 @@ layout: LandingPage
 ms.audience: Developer
 ms.topic: landing-page
 description: "Build apps, add-ins, and solutions for SharePoint for your enterprise or customer needs."
+localization_priority: Priority
 ---
 
 # SharePoint development

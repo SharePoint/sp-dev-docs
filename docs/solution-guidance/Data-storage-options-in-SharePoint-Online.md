@@ -2,6 +2,7 @@
 title: Data storage options in SharePoint Online
 description: When you develop SharePoint Online add-ins, you have a number of different options for data storage. You can use the sample described in this article to explore the differences between each option, and to learn about the advantages to using remote data storage. 
 ms.date: 5/1/2018
+localization_priority: Priority
 ---
 
 # Data storage options in SharePoint Online

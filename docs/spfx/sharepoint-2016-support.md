@@ -2,6 +2,7 @@
 title: SharePoint Framework development with SharePoint 2016 Feature Pack 2
 description: SharePoint 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted in classic SharePoint pages.
 ms.date: 02/02/2018
+localization_priority: Priority
 ---
 
 # SharePoint Framework development with SharePoint 2016 Feature Pack 2

@@ -3,6 +3,7 @@ title: Create tabular data source editors for PerformancePoint Services in Share
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3136420a-f8a2-4677-8b69-1d5d9705d96f
+localization_priority: Normal
 ---
 
 

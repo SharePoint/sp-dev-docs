@@ -2,6 +2,7 @@
 title: Upload large files sample SharePoint Add-in
 description: Upload files larger than 2 MB to SharePoint and SharePoint Online by using SaveBinaryDirect, ContentStream, StartUpload, ContinueUpload, and FinishUpload. 
 ms.date: 5/2/2018
+localization_priority: Priority
 ---
 
 # Upload large files sample SharePoint Add-in

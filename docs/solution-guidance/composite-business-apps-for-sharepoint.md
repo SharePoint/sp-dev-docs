@@ -2,6 +2,7 @@
 title: Composite business SharePoint Add-ins
 description: Use composite business add-ins to integrate your SharePoint solutions with your business processes and technologies. Decide whether a SharePoint-hosted or provider-hosted add-in is the right choice for your solution.
 ms.date: 5/1/2018
+localization_priority: Normal
 ---
 
 # Composite business SharePoint Add-ins

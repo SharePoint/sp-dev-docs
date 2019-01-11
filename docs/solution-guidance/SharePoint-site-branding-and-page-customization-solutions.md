@@ -2,6 +2,7 @@
 title: SharePoint site branding and page customization solutions
 description: Use the SharePoint page model and composed looks, the SharePoint theming engine, and CSS to brand your SharePoint site and pages.
 ms.date: 4/24/2018
+localization_priority: Priority
 ---
 
 # SharePoint site branding and page customization solutions

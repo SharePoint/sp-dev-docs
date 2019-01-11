@@ -2,6 +2,7 @@
 title: Taxonomy operations sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can create and read taxonomy data on a SharePoint list.
 ms.date: 5/2/2018
+localization_priority: Priority
 ---
 
 # Taxonomy operations sample SharePoint Add-in

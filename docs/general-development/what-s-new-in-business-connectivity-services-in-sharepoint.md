@@ -1,8 +1,9 @@
-﻿---
+---
 title: What's new in Business Connectivity Services in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3c96be6a-a8ff-43ad-8361-999293aff71f
+localization_priority: Normal
 ---
 
 

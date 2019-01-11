@@ -3,6 +3,7 @@ title: Work with user profiles in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7437a7a8-85cb-4233-84af-1eec30dd54b2
+localization_priority: Priority
 ---
 
 

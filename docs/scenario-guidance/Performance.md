@@ -1,6 +1,7 @@
 ---
 title: Performance
 ms.date: 02/01/2018
+localization_priority: Normal
 ---
 # Performance
 

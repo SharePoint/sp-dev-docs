@@ -3,6 +3,7 @@ title: Basic URI Structure and Path
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d73cf6c2-0677-4726-8a3e-2ad130e1a12c
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: Overview of the SharePoint Framework (SPFx)
 description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and support for open source tooling.
 ms.date: 01/08/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

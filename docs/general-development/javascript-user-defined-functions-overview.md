@@ -3,6 +3,7 @@ title: JavaScript user-defined functions overview
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: fee38837-1985-4319-ba4e-b99c6ec66336
+localization_priority: Normal
 ---
 
 

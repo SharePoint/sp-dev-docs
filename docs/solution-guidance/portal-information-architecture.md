@@ -2,6 +2,7 @@
 title: Information architecture guidance for SharePoint Online portals
 description: Describes site organization patterns, and guidelines for incorporating permissions, search, taxonomy, and large media in your SharePoint Online portal.
 ms.date: 4/30/2018
+localization_priority: Priority
 ---
 
 # Information architecture guidance for SharePoint Online portals

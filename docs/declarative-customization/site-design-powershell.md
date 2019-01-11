@@ -2,6 +2,7 @@
 title: SharePoint site design - PowerShell cmdlets
 description: Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
 ms.date: 10/23/2018
+localization_priority: Priority
 ---
 
 # SharePoint site design: PowerShell cmdlets

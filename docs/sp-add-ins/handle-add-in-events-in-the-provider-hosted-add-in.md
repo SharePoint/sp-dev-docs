@@ -3,6 +3,7 @@ title: Handle add-in events in the provider-hosted add-in
 description: Customize the installation of a provider-hosted SharePoint Add-in by configuring the solution for event receiver debugging, creating the installation and uninstallation handlers, running the add-in, and testing the handlers.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Handle add-in events in the provider-hosted add-in

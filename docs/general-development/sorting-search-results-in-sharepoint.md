@@ -2,6 +2,7 @@
 title: Sorting search results in SharePoint
 ms.date: 09/24/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

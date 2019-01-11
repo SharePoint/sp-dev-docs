@@ -2,6 +2,7 @@
 title: SharePoint site theming - REST API
 description: Use the the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site themes.
 ms.date: 04/19/2018
+localization_priority: Priority
 ---
 
 # SharePoint site theming: REST API

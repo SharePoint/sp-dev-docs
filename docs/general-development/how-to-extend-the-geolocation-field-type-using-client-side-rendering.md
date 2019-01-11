@@ -3,6 +3,7 @@ title: Extend the Geolocation field type by using client-side rendering
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7360633a-a7cf-4194-8bbd-8dd7c323e80b
+localization_priority: Normal
 ---
 
 

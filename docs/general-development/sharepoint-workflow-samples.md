@@ -3,6 +3,7 @@ title: SharePoint workflow samples
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ffaccd6b-426d-4ca0-b62f-bc7b14641a49
+localization_priority: Priority
 ---
 
 

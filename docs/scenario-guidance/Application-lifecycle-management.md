@@ -2,6 +2,7 @@
 title: Scenario Guidance - Application Lifecycle Management
 description: Scenario guidance on application lifecycle management topics with SharePoint Framework and SharePoint add-ins.
 ms.date: 03/26/2018
+localization_priority: Normal
 ---
 
 # Application Lifecycle Management

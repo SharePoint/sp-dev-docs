@@ -3,6 +3,7 @@ title: Analyze and use the scanner data
 description: Understand and process the scanner results to help your sites be in optimal shape for connecting an Office 365 group to them.
 ms.date: 06/07/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Analyze and use the scanner data

@@ -2,6 +2,7 @@
 title: Work with sites in a Multi-Geo environment
 description: When your custom solution needs to work with SharePoint sites, and when you deploy applications, it's important to be aware of the geo locations in your Multi-Geo tenant. 
 ms.date: 4/27/2018
+localization_priority: Normal
 ---
 
 # Work with sites in a Multi-Geo environment

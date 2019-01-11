@@ -3,6 +3,7 @@ title: Understanding Coordination actions in SharePoint Designer 2013
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 33fbcf91-0a5d-47ab-85a9-9d2d556a204d
+localization_priority: Normal
 ---
 
 

@@ -3,6 +3,7 @@ title: Create a custom proxy page for the cross-domain library in SharePoint
 description: Create a custom proxy page to access data in a remote service from a SharePoint webpage by using the cross domain library in SharePoint.
 ms.date: 12/22/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

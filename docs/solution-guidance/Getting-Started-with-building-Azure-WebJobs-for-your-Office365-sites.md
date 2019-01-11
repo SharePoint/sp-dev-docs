@@ -2,6 +2,7 @@
 title: Get started with Azure WebJobs (timer jobs) for Office 365 sites
 description: Describes how to build an Azure WebJob to act as a scheduled job for your SharePoint installation.
 ms.date: 5/9/2018
+localization_priority: Priority
 ---
 
 # Get started with Azure WebJobs for Office 365 sites

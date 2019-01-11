@@ -1,8 +1,9 @@
-﻿---
+---
 title: Getting Started with Excel Services
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 392e4734-5ca0-4647-8f6d-e671daa45a4d
+localization_priority: Normal
 ---
 
 

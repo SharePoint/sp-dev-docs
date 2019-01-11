@@ -2,6 +2,7 @@
 title: Access OneDrive for Business in a Multi-Geo tenant
 description: Accessing a user's OneDrive for Business site, also known as a personal site or my site, is a common scenario in custom applications.
 ms.date: 4/27/2018
+localization_priority: Normal
 ---
 
 # Access OneDrive for Business in a Multi-Geo tenant

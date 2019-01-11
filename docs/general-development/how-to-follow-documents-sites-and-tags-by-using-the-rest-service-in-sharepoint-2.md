@@ -3,6 +3,7 @@ title: Follow documents, sites, and tags by using the REST service in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
+localization_priority: Priority
 ---
 
 

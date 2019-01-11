@@ -3,6 +3,7 @@ title: Optimize SharePoint site accessibility
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0a3fbfb3-1a0b-4902-9317-525cf2f63d98
+localization_priority: Normal
 ---
 
 

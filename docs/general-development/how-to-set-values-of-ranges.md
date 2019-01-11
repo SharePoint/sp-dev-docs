@@ -6,6 +6,7 @@ f1_keywords:
 - how to,howdoi,howto,set range
 ms.prod: sharepoint
 ms.assetid: ccc7e204-f857-45a9-81ec-3a8484e6d454
+localization_priority: Normal
 ---
 
 

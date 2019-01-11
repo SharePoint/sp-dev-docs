@@ -3,6 +3,7 @@ title: Sample modernization scripts
 description: Scripts that you can use to automate the modernization of your sites
 ms.date: 11/26/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Scripting your modernization tasks

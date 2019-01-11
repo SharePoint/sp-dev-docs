@@ -3,6 +3,7 @@ title: Content Search web part in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
+localization_priority: Priority
 ---
 
 

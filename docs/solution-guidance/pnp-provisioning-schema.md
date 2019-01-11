@@ -2,6 +2,7 @@
 title: PnP provisioning schema
 description: PnP resources and sample XML schema.
 ms.date: 5/9/2018
+localization_priority: Priority
 ---
 
 # PnP provisioning schema

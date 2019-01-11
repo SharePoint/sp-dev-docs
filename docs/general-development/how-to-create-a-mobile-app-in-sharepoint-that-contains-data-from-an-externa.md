@@ -3,6 +3,7 @@ title: Create a mobile app in SharePoint that contains data from an external dat
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f1d62256-aca0-4a59-8145-0add9e68a449
+localization_priority: Normal
 ---
 
 

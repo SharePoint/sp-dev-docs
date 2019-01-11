@@ -3,6 +3,7 @@ title: Search in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 59220f81-0e5e-4945-8056-cf0a116446cb
+localization_priority: Priority
 ---
 
 

@@ -2,6 +2,7 @@
 title: Placeholders and fallbacks in SharePoint web parts
 description: Add placeholders to SharePoint web parts as a fallback if an issue occurs loading content or data.
 ms.date: 01/23/2018 
+localization_priority: Normal
 ---
 
 # Placeholders and fallbacks in SharePoint web parts

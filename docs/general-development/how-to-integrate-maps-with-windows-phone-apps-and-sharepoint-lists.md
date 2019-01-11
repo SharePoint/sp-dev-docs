@@ -3,6 +3,7 @@ title: Integrate maps with Windows Phone apps and SharePoint lists
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7e0550bc-92d1-407f-b8ba-1371c63bd16e
+localization_priority: Normal
 ---
 
 

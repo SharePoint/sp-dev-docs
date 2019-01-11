@@ -3,6 +3,7 @@ title: Use SAP Reporting with Duet Enterprise 2.0
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a54c6cd2-2283-440d-af55-e98e3212caa1
+localization_priority: Normal
 ---
 
 

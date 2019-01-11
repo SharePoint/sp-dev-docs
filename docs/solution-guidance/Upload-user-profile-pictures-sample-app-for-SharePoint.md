@@ -2,6 +2,7 @@
 title: Upload user profile pictures sample SharePoint Add-in
 description: Use a provider-hosted add-in to do a bulk upload of user profile data from either a file share or SharePoint Online URL.
 ms.date: 5/7/2018
+localization_priority: Normal
 ---
 
 # Upload user profile pictures sample SharePoint Add-in

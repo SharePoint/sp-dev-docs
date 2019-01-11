@@ -3,6 +3,7 @@ title: Context Token OAuth flow for SharePoint Add-ins
 description: The OAuth authentication and authorization flow for low-trust, provider-hosted add-ins in SharePoint.
 ms.date: 12/28/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Context Token OAuth flow for SharePoint Add-ins

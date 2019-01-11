@@ -3,6 +3,7 @@ title: Walkthrough Developing Using the Content Editor web part
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0b5e74b7-405c-43c5-b2dd-1dff77280856
+localization_priority: Normal
 ---
 
 

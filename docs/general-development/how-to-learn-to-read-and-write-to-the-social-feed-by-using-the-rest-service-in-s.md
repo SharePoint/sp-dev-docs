@@ -3,6 +3,7 @@ title: Read and write to the social feed by using the REST service in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1da8d484-3666-42c3-8a8f-8b3ef93e96e9
+localization_priority: Normal
 ---
 
 

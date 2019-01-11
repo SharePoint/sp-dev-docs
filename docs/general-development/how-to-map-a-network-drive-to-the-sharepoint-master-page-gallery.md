@@ -3,6 +3,7 @@ title: Map a network drive to the SharePoint Master Page Gallery
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7d416f6e-2471-4d03-97ae-4e8d907784c6
+localization_priority: Priority
 ---
 
 

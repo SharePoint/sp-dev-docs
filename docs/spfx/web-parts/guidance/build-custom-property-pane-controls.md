@@ -3,6 +3,7 @@ title: Build custom controls for the property pane
 description: Build a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface of the SharePoint client-side web part.
 ms.date: 01/10/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: Validation issues in Visio (SharePoint 2010 Workflow platform)
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 416c8269-3c4e-40f4-bc20-a625f07a4dac
+localization_priority: Normal
 ---
 
 

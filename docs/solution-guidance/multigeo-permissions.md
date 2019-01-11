@@ -2,6 +2,7 @@
 title: Permission model in a Multi-Geo tenant
 description: The permission model in a OneDrive and SharePoint Online Multi-Geo Preview tenant is the same as that for a single geo tenant.
 ms.date: 4/27/2018
+localization_priority: Normal
 ---
 
 # Permission model in a Multi-Geo tenant

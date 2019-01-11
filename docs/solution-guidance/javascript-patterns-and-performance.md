@@ -1,6 +1,7 @@
 ---
 title: JavaScript Patterns and Performance
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # JavaScript Patterns and Performance
 

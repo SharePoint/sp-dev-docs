@@ -3,6 +3,7 @@ title: Get started developing with social features in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8852ce36-8309-45a7-a141-2e10ac17a123
+localization_priority: Normal
 ---
 
 

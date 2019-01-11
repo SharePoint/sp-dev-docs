@@ -2,6 +2,7 @@
 title: Replace SharePoint web parts with add-in parts in farm solutions
 description: Use the transformation process to replace web parts with add-in parts by using the SharePoint client object model (CSOM).
 ms.date: 5/4/2018
+localization_priority: Normal
 ---
 
 # Replace SharePoint web parts with add-in parts in farm solutions

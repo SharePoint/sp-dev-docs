@@ -1,6 +1,7 @@
 ---
 title: Authorize provider-hosted add-in users at run time by using OAuth
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # Authorize provider-hosted add-in users at run time by using OAuth
 

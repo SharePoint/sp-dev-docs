@@ -3,6 +3,7 @@ title: SharePoint Framework known issues and frequently asked questions
 description: Find answers to issues and FAQ about the SharePoint Framework.
 ms.date: 01/12/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

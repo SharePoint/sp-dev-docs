@@ -2,6 +2,7 @@
 title:  Layout patterns
 description: Find common SharePoint web part layout types and responsive patterns.
 ms.date: 08/24/2018
+localization_priority: Priority
 ---
 
 # SharPoint web part layouts

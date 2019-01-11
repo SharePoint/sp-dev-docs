@@ -3,6 +3,7 @@ title: Retrieve the URL of a Pages library
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d9922e4b-4948-4c4a-a8ca-1623168143a3
+localization_priority: Normal
 ---
 
 

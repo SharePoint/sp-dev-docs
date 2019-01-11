@@ -3,6 +3,7 @@ title: Maintenance mode for client-side web parts
 ms.date: 12/18/2017
 ms.prod: sharepoint
 ms.assetid: 3ebd2a11-8291-4228-add0-9e0cd899dd3c
+localization_priority: Normal
 ---
 
 # Maintenance mode for client-side web parts

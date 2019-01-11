@@ -3,6 +3,7 @@ title: Workflows in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e0602371-ae22-44be-8a7e-9e47e9f046d6
+localization_priority: Priority
 ---
 
 

@@ -2,6 +2,7 @@
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
 ms.date: 10/10/2018
+localization_priority: Priority
 ---
 
 # Site design JSON schema

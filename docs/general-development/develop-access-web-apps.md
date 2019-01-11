@@ -3,6 +3,7 @@ title: Develop Access web apps
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 41131b27-d750-4d11-b3c7-c17ad4d666e2
+localization_priority: Normal
 ---
 
 

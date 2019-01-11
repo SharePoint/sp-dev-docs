@@ -3,6 +3,7 @@ title: Create a master page preview file in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
+localization_priority: Normal
 ---
 
 

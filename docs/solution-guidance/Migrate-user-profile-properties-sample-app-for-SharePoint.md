@@ -2,6 +2,7 @@
 title: Migrate user profile properties sample SharePoint Add-in
 description: Use a provider-hosted add-in to migrate and import SharePoint user profile data.
 ms.date: 5/7/2018
+localization_priority: Normal
 ---
 
 # Migrate user profile properties sample SharePoint Add-in

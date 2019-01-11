@@ -3,6 +3,7 @@ title: SharePoint Add-ins compared with SharePoint solutions
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
+localization_priority: Priority
 ---
 
 

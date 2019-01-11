@@ -3,6 +3,7 @@ title: Optimize page performance in SharePoint
 ms.date: 11/01/2017
 ms.prod: sharepoint
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
+localization_priority: Priority
 ---
 
 # Optimize page performance in SharePoint

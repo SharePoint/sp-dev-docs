@@ -2,6 +2,7 @@
 title: Scenario Guidance - Custom configurations
 description: Scenario guidance on where and how to store configuration values.
 ms.date: 03/26/2018
+localization_priority: Normal
 ---
 
 # Custom configurations

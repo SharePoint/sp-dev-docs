@@ -3,6 +3,7 @@ title: Analyze and use the scanner data
 description: Understand and process the scanner results to help your sites to get the most out of the modern list and library experience
 ms.date: 21/06/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Analyze and use the scanner data
