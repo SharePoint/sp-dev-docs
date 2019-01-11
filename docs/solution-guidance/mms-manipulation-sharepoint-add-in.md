@@ -75,7 +75,7 @@ The following sample demonstrates how to build a synchronization tool for MMS da
 
 Related links
 =============
-- [Synchronize term sets using CSOM (MSDN Blog Article Documentation)](http://blogs.msdn.com/b/frank_marasco/archive/2014/06/29/synchronize-term-sets-with-the-term-store-csom.aspx)
+- [SharePoint 2013: Synchronize term sets with the term store (CSOM)](https://code.msdn.microsoft.com/office/SharePoint-2013-Synchronize-d40638d1)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")

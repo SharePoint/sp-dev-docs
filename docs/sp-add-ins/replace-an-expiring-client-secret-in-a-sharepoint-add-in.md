@@ -19,7 +19,7 @@ Ensure the following before you begin:
 
 - [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=39267) is installed on the development computer.
 
-- Microsoft Online Services PowerShell Module ([32-bit](http://go.microsoft.com/fwlink/p/?linkid=236298);  [64-bit](http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185)) is installed on the development computer.
+- You can connect to Office 365 with PowerShell: [Connect to Office 365 PowerShell](https://docs.microsoft.com/en-us/office365/enterprise/powershell/connect-to-office-365-powershell)
 
 - You are a tenant administrator for the Office 365 tenant (or a farm administrator on the farm) where the add-in was registered with the AppRegNew.aspx page.
 

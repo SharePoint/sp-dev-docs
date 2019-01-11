@@ -46,7 +46,7 @@ When you are migrating legacy code in an on-premises SharePoint environment and 
 
 The following article describes how to staple features to a site definition.
 
-- [Feature Stapling In SharePoint 2010 (MSDN Blog Article)](http://blogs.msdn.com/b/kunal_mukherjee/archive/2011/01/11/feature-stapling-in-sharepoint-2010.aspx)
+- [Feature Stapling in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/feature-stapling-sharepoint-add-in)
 
 Staple Add-ins
 --------------

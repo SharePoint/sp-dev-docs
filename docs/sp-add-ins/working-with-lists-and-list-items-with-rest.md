@@ -633,7 +633,7 @@ headers:
 
 ## Using ETag values to determine document and list item versioning
 
-The SharePoint REST service, which follows the [OData standard](http://www.odata.org/developers/protocols/operations), uses [HTML ETags for concurrency control](http://www.odata.org/developers/protocols/operations#ConcurrencycontrolandETags) of SharePoint lists and list items. To check on an item's version when you perform a **PUT**, **MERGE**, or **DELETE** request, specify an **ETag** in the **If-Match** HTTP request header.
+The SharePoint REST service, which follows the [OData standard](http://www.odata.org/developers/protocols/operations), uses [Header ETags](http://docs.oasis-open.org/odata/odata/v4.01/cs01/part1-protocol/odata-v4.01-cs01-part1-protocol.html#sec_HeaderETag) of SharePoint lists and list items. To check on an item's version when you perform a **PUT**, **MERGE**, or **DELETE** request, specify an **ETag** in the **If-Match** HTTP request header.
 
 If the **ETag** you specify in your request does not match the **ETag** of the document or list item on the server, the REST service returns a 412 exception, per the OData specification.
 
@@ -653,7 +653,7 @@ Within SharePoint, ETags apply only to SharePoint lists and list items.
 - [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
 - [REST API reference and samples](https://msdn.microsoft.com/library)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)  
-- [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md) 
+- [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 
  
 
