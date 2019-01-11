@@ -7,24 +7,24 @@ ms.prod: sharepoint
 
 # Building Microsoft Teams Tabs using SharePoint Framework
 
-Starting with SharePoint Framework v1.7, you can build your Microsoft Team tabs using SharePoint Framework tooling and use SharePoint as a host for your solutions.
+Starting with SharePoint Framework v1.7, you can build tabs for Microsoft Teams using SharePoint Framework tooling and use SharePoint as a host for your solutions.
 
 There are following benefits on using SharePoint Framework as the platform for your Microsoft Teams tabs:
 
 - Development model is similar as for SharePoint Framework web parts.
-- Technically any web part can be exposed as a tab in Microsoft Teams.
+- Technically any SharePoint Framework web part can be exposed as a tab in Microsoft Teams.
 - You have different scoping options on exposing your custom tab as a web part and tab in your tenant.
-- Your tab will be executed in the context of the underlaying SharePoint site behind of the specific team. This means that you can take advantage of any SharePoint specific APIs or functionalities in your web part.
+- Your tab will be executed in the context of the underlying SharePoint site behind of the specific team. This means that you can take advantage of any SharePoint specific APIs or functionalities in your web part.
 
 > [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
+> This feature is currently in preview and is subject to change. It is not currently supported for usage in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
 > [!IMPORTANT]
 > There is a known **bug** related on the property configuration, which will be addressed. You cannot change default property values or the web part is not successfully added on the tab. Fix for this issue will be rolling out in upcoming days.
 
 ## Development process
 
-You can start developing Microsoft Teams tabs simply by using the `with beta` version of the SharePoint Framework 1.7 packages. High level steps to get started are as follows.
+You can start developing Microsoft Teams tabs simply by using the `plusbeta` version of the SharePoint Framework 1.7 packages that enables usage of preview functionality in the solution that you will create. High level steps to get started are as follows.
 
 1. Start SharePoint Framework Yeoman generator with the `plusbeta` switch, so that the created solution will use the preview packages.
 
