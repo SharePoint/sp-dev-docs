@@ -242,7 +242,7 @@ The following list contains information for developing with Community Site featu
     
     
 
-- Community Sites use the **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ListTemplateType.DiscussionBoard.aspx) (value = **108**).
+- Community Sites use the **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-server/ee541191(v=office.15)) (value = **108**).
     
   
 - Activating the **Community Site** feature activates the **CommunityEventReceiver** event receiver.
