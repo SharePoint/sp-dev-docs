@@ -114,7 +114,7 @@ The following procedures are performed on the remote web server hosting the remo
     
 Skip the next procedure if you are using ISS Manager 8.
 
-### Additional steps for ISS Manager 7 to get the certificate into the Windows Certificate Store
+### Additional steps for IIS Manager 7 to get the certificate into the Windows Certificate Store
 
 1. Create a folder on the server file system to be used as a very temporary storage place for the certificate.    
  
