@@ -2,6 +2,7 @@
 title: Transform farm solutions to the SharePoint Add-in model
 description: Learn how to convert web parts, page layouts, master pages, timer jobs, and more to the SharePoint Add-in model.
 ms.date: 5/4/2018
+localization_priority: Priority
 ---
 
 # Transform farm solutions to the SharePoint Add-in model

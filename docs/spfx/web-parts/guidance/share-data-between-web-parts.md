@@ -3,6 +3,7 @@ title: Share data between client-side web parts
 description: Approaches you can use to share data and store retrieved data across multiple web parts in SharePoint.
 ms.date: 01/10/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

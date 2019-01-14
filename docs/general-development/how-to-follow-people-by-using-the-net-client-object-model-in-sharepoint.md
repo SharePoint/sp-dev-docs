@@ -3,6 +3,7 @@ title: Follow people by using the .NET client object model in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
+localization_priority: Normal
 ---
 
 

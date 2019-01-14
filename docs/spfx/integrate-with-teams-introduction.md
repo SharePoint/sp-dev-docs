@@ -3,6 +3,7 @@ title: Building Microsoft Teams Tabs using SharePoint Framework
 description: You can build your Microsoft Teams tabs using SharePoint Framework and utilize the tooling
 ms.date: 11/08/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Building Microsoft Teams Tabs using SharePoint Framework

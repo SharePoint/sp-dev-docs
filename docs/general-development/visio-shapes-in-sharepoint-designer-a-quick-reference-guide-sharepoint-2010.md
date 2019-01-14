@@ -3,6 +3,7 @@ title: Visio shapes in SharePoint Designer 2013 A quick reference guide (SharePo
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 51bc37fd-37de-4ad0-a75a-bdf7333bc80c
+localization_priority: Normal
 ---
 
 

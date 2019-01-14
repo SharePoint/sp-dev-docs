@@ -3,6 +3,7 @@ title: Consume the Microsoft Graph in the SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to the Microsoft Graph in SharePoint Framework solutions.
 ms.date: 08/28/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Consume the Microsoft Graph in the SharePoint Framework

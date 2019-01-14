@@ -2,6 +2,7 @@
 title: Search in a Multi-Geo tenant
 description: In a Multi-Geo tenant, each geo location has its own search index, as well as its own independent search center. When a user searches, the query is fanned out to all the indexes, and the returned results are merged.
 ms.date: 4/27/2018
+localization_priority: Normal
 ---
 
 # Search in a Multi-Geo tenant

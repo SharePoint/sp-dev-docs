@@ -3,6 +3,7 @@ title: Work with host web data from JavaScript in the add-in web
 description: Prepare the host web calendar, create JavaScript and a button to invoke it, specify the permissions the add-in needs, and run and test the add-in.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Work with host web data from JavaScript in the add-in web

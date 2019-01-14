@@ -2,6 +2,7 @@
 title: Call web services from SharePoint workflows
 description: Deploy a SharePoint workflow to the host web from a SharePoint Add-in, and call web services from SharePoint workflows.
 ms.date: 5/1/2018
+localization_priority: Priority
 ---
 
 # Call web services from SharePoint workflows

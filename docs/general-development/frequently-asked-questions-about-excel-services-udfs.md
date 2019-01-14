@@ -6,6 +6,7 @@ f1_keywords:
 - faqs
 ms.prod: sharepoint
 ms.assetid: 3d94d040-eecf-4f8e-a316-6d1cca95e7eb
+localization_priority: Normal
 ---
 
 

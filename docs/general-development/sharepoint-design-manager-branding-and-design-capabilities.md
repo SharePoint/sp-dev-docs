@@ -3,6 +3,7 @@ title: SharePoint Design Manager branding and design capabilities
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 2f81acbb-1263-4f9d-8865-36eb7a3f907b
+localization_priority: Priority
 ---
 
 

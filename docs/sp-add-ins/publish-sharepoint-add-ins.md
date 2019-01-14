@@ -3,6 +3,7 @@ title: Publish SharePoint Add-ins
 description: Decide where to publish your SharePoint Add-ins.
 ms.date: 11/02/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Publish SharePoint Add-ins

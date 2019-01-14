@@ -2,6 +2,7 @@
 title: Customizing "modern" lists and libraries
 description: Get a faster, more intuitive, and responsive SharePoint Online experience by customizing your lists and libraries to the "modern" experience using user custom actions and custom branding.
 ms.date: 11/09/2017
+localization_priority: Priority
 ---
 
 # Customizing "modern" lists and libraries

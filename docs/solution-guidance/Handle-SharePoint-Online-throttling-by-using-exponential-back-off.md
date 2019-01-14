@@ -1,6 +1,7 @@
 ---
 title: Handle SharePoint Online throttling by using exponential back off
 ms.date: 11/03/2017
+localization_priority: Priority
 ---
 # Handle SharePoint Online throttling by using exponential back off
 

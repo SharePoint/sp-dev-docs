@@ -3,6 +3,7 @@ title: Step 3 Deploying and Enabling UDFs
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1e5e2a0a-041a-481c-a18b-578562a60e24
+localization_priority: Normal
 ---
 
 

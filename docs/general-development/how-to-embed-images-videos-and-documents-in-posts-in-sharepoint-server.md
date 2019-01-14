@@ -3,6 +3,7 @@ title: Embed images, videos, and documents in posts in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 9927b9e7-daea-4261-80fa-4cc25f489e22
+localization_priority: Normal
 ---
 
 

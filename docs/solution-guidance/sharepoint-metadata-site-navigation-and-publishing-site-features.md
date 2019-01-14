@@ -2,6 +2,7 @@
 title: SharePoint metadata, site navigation, and publishing site features
 description: Use SharePoint Online metadata management features, site navigation, and publishing site features to support SharePoint publishing sites.
 ms.date: 4/24/2018
+localization_priority: Normal
 ---
 
 # SharePoint metadata, site navigation, and publishing site features

@@ -3,6 +3,7 @@ title: Setting up a development environment for BCS in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d83c8a43-49dd-47eb-94d4-23aa2cf71a9a
+localization_priority: Normal
 ---
 
 

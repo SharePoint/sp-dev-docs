@@ -1,6 +1,7 @@
 ---
 title: Transformation
 ms.date: 01/26/2018
+localization_priority: Normal
 ---
 # Transformation
 

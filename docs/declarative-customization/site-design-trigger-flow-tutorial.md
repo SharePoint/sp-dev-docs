@@ -2,6 +2,7 @@
 title: Using site designs and Microsoft Flow to track site creation requests
 description: Invoke a Microsoft Flow using the site script triggerFlow action to capture the site creation event and build a site directory. This tutorial is intended to illustrate a simple example of using site designs and Microsoft Flow.
 ms.date: 08/21/2018
+localization_priority: Priority
 ---
 
 # Calling Microsoft Flow from a site script

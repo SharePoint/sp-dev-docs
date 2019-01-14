@@ -3,6 +3,7 @@ title: Create and delete posts and retrieve the social feed by using the JavaScr
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e8c21960-6ea0-43c0-821e-2db2a0ecec90
+localization_priority: Normal
 ---
 
 

@@ -2,6 +2,7 @@
 title: UI text guidelines for SharePoint web parts
 description: Use simple, understandable, and concise UI text to create effective web parts in SharePoint.
 ms.date: 01/23/2018 
+localization_priority: Normal
 ---
 
 # UI text guidelines for SharePoint web parts

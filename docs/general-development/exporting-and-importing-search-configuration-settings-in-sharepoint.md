@@ -3,6 +3,7 @@ title: Exporting and importing search configuration settings in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d00679a3-ffa2-4281-ad8b-70fc2c4a14e2
+localization_priority: Normal
 ---
 
 

@@ -3,6 +3,7 @@ title: Shorter share link format in OneDrive and SharePoint
 description: Links to shared files and folders in OneDrive and SharePoint are now shorter and have a new format. 
 ms.date: 4/19/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Shorter share link format in OneDrive and SharePoint

@@ -3,6 +3,7 @@ title: Using the pairing cmdlet Register-SPWorkflowService
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 91fca6c2-60ca-4177-8560-2b310dac0e2c
+localization_priority: Normal
 ---
 
 

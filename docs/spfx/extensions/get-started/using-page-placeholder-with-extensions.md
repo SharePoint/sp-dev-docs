@@ -3,6 +3,7 @@ title: Use page placeholders from Application Customizer (Hello World part 2)
 description: Extend your Hello World extension to take advantage of page placeholders by using SharePoint Framework (SPFx) Extensions. 
 ms.date: 08/27/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Use page placeholders from Application Customizer (Hello World part 2)

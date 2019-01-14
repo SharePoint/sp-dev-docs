@@ -2,6 +2,7 @@
 title: Fix InfoPath forms in sandbox solutions
 description: Fix or transform your InfoPath forms so they are no longer dependent on sandbox solutions.
 ms.date: 5/7/2018
+localization_priority: Normal
 ---
 
 # Fix InfoPath forms in sandbox solutions

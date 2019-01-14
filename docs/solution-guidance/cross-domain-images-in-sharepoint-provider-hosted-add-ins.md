@@ -1,6 +1,7 @@
 ---
 title: Cross-domain images in SharePoint provider-hosted add-ins
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # Cross-domain images in SharePoint provider-hosted add-ins
 

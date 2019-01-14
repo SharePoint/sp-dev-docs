@@ -3,6 +3,7 @@ title: Choose the right API set in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f36645da-77c5-47f1-a2ca-13d4b62b320d
+localization_priority: Priority
 ---
 
 

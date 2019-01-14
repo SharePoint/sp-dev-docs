@@ -3,6 +3,7 @@ title: SharePoint list webhooks
 description: List webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library.
 ms.date: 02/08/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

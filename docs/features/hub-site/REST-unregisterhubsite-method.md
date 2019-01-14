@@ -2,6 +2,7 @@
 title: UnRegisterHubSite REST method
 description: Unregisters a hub site so that it is no longer a hub site.
 ms.date: 4/20/2018
+localization_priority: Normal
 ---
 
 # UnRegisterHubSite

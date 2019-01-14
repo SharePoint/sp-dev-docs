@@ -1,8 +1,9 @@
-﻿---
+---
 title: Add-in authorization policy types in SharePoint
 description: Overview of add-in-only policy, user-only policy, and user+add-in policy, and guidelines for using the add-in-only policy.
 ms.date: 12/26/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

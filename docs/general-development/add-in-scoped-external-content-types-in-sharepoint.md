@@ -3,6 +3,7 @@ title: Add-in-scoped external content types in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a34cbbba-dc38-4d3d-b796-d54b5848bdfb
+localization_priority: Normal
 ---
 
 

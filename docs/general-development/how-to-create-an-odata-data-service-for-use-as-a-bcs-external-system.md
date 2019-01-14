@@ -3,6 +3,7 @@ title: Create an OData data service for use as a BCS external system
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7d7b3aa6-85b7-400d-8ea5-50bebac56a1d
+localization_priority: Normal
 ---
 
 

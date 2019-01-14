@@ -4,6 +4,7 @@ description: Create SharePoint workflows that access objects in SharePoint that 
 ms.date: 12/29/2017
 ms.prod: sharepoint
 ms.assetid: 4656f6a0-36fd-4b7d-898e-8cd4bdbbda57
+localization_priority: Priority
 ---
 
 

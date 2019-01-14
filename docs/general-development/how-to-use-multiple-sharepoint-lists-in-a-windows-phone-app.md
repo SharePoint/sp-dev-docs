@@ -3,6 +3,7 @@ title: Use multiple SharePoint lists in a Windows Phone app
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5251d35a-d659-49b3-8e0d-dfd4a7faee6b
+localization_priority: Normal
 ---
 
 

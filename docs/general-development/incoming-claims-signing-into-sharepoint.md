@@ -3,6 +3,7 @@ title: Incoming claims Signing into SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 08c687aa-e485-4269-aea8-4333da3588a5
+localization_priority: Normal
 ---
 
 

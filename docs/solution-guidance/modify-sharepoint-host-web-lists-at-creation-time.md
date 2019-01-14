@@ -2,6 +2,7 @@
 title: Modify SharePoint host web lists at creation time
 description: When you create a new list in the host web, you can use a ListAdded remote event receiver to modify that list.
 ms.date: 4/26/2018
+localization_priority: Normal
 ---
 
 # Modify SharePoint host web lists at creation time

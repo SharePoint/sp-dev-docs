@@ -3,6 +3,7 @@ title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
 ms.date: 08/20/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

@@ -2,6 +2,7 @@
 title: Transform sandbox solutions to the SharePoint Add-in model
 description: Learn about the options and strategies for converting existing code-based functionalities to SharePoint Add-in model or alternative solutions.
 ms.date: 5/7/2018
+localization_priority: Priority
 ---
 
 # Transform sandbox solutions to the SharePoint Add-in model

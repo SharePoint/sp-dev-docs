@@ -3,6 +3,7 @@ title: Step 3 Accessing the Web Service
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d27f654d-242f-4f34-8385-be857c170532
+localization_priority: Priority
 ---
 
 

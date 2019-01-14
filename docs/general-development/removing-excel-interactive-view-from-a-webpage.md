@@ -3,6 +3,7 @@ title: Removing Excel Interactive View from a webpage
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 407b3aa3-7286-462b-905f-811a3b7f3f1c
+localization_priority: Normal
 ---
 
 

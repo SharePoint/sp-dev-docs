@@ -3,6 +3,7 @@ title: Build search-driven mobile apps with the Navigation and Event Logging RES
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
+localization_priority: Normal
 ---
 
 

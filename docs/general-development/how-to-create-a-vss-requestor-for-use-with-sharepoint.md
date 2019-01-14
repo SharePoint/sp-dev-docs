@@ -3,6 +3,7 @@ title: Create a VSS requestor for use with SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 63b3145b-ece2-4acf-b58a-fd8b50303030
+localization_priority: Normal
 ---
 
 

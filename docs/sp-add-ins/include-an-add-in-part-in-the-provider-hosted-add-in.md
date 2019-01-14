@@ -3,6 +3,7 @@ title: Include an add-in part in the provider-hosted add-in
 description: Surface a remote web form in a SharePoint page in a provider-hosted SharePoint Add-in.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

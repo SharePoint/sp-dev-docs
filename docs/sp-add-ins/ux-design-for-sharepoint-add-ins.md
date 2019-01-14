@@ -3,6 +3,7 @@ title: UX design for SharePoint Add-ins
 description: User experience (UX) options when you build add-ins in SharePoint, including UX scenarios in cloud-hosted add-ins and SharePoint-hosted add-ins.
 ms.date: 11/02/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # UX design for SharePoint Add-ins

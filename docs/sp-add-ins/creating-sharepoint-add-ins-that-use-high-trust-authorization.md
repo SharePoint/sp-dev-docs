@@ -3,6 +3,7 @@ title: Creating SharePoint Add-ins that use high-trust authorization
 description: A provider-hosted add-in can establish trust with SharePoint by using digital certificates to establish trust between SharePoint and the on-premises remote components that access SharePoint.  
 ms.date: 12/27/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

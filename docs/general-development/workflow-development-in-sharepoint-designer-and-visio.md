@@ -3,6 +3,7 @@ title: Workflow development in SharePoint Designer and Visio
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 496780d5-47d6-4a43-bf14-70aefb8d820c
+localization_priority: Priority
 ---
 
 

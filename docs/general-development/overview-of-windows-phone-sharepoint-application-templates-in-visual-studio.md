@@ -1,8 +1,9 @@
-﻿---
+---
 title: Overview of Windows Phone SharePoint application templates in Visual Studio
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 6ae27957-fa41-4e6f-92e3-db11dae1f6c2
+localization_priority: Normal
 ---
 
 

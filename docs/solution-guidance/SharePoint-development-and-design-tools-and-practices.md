@@ -2,6 +2,7 @@
 title: SharePoint development and design tools and practices
 description: Use SharePoint design and development tools to apply branding to your SharePoint sites.
 ms.date: 4/24/2018
+localization_priority: Priority
 ---
 
 # SharePoint development and design tools and practices

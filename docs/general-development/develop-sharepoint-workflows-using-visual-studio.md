@@ -1,8 +1,9 @@
-﻿---
+---
 title: Develop SharePoint workflows using Visual Studio
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 28f5d3b1-6fe8-4b1f-8c4e-b11105fe6f46
+localization_priority: Priority
 ---
 
 

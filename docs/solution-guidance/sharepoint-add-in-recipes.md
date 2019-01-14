@@ -1,6 +1,7 @@
 ---
 title: SharePoint Add-in recipes
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # SharePoint Add-in recipes
 

@@ -3,6 +3,7 @@ title: Extending Webpack in the SharePoint Framework toolchain
 description: Extend the Webpack configuration with custom loaders and plug-ins. Webpack is a JavaScript module bundler.
 ms.date: 02/02/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

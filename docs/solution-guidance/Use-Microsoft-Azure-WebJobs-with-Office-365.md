@@ -2,6 +2,7 @@
 title: Use Microsoft Azure WebJobs with Office 365
 description: Use Azure WebJobs to implement timer jobs that can access SharePoint Online.
 ms.date: 5/8/2018
+localization_priority: Normal
 ---
 
 # Use Microsoft Azure WebJobs with Office 365

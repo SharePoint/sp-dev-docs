@@ -2,6 +2,7 @@
 title: Branding and site provisioning solutions for SharePoint
 description: The remote provisioning pattern shows you how to create custom SharePoint Add-ins that provision site branding and perform other site provisioning tasks.
 ms.date: 4/23/2018
+localization_priority: Priority
 ---
 
 # Branding and site provisioning solutions for SharePoint

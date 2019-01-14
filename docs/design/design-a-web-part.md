@@ -2,6 +2,7 @@
 title: Designing a SharePoint web part
 description: Use three types of property panes to design and develop web parts that fit your business or customer needs.
 ms.date: 01/23/2018
+localization_priority: Priority
 ---
 
 # Designing a SharePoint web part

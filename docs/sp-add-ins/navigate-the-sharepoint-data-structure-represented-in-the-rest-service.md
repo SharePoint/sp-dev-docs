@@ -1,8 +1,9 @@
-﻿---
+---
 title: Navigate the SharePoint data structure represented in the REST service
 description: Start from a REST endpoint for a given SharePoint item, and navigate to and access related items, such as parent sites or the library structure where that item resides. 
 ms.date: 12/14/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Navigate the SharePoint data structure represented in the REST service

@@ -3,6 +3,7 @@ title: Debugging SharePoint workflows
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a5adf39b-8640-4871-be60-b786dcf9fafc
+localization_priority: Priority
 ---
 
 

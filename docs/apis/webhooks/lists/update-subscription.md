@@ -3,6 +3,7 @@ title: Update a subscription
 description: Updates a webhook subscription on a SharePoint list.
 ms.date: 02/08/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

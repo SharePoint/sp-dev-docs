@@ -1,6 +1,7 @@
 ---
 title: MMS manipulation in the SharePoint Add-in model
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 MMS manipulation in the SharePoint Add-in model
 ===============================================

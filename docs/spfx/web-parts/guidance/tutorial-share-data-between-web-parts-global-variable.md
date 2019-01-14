@@ -3,6 +3,7 @@ title: Share data between web parts by using a global variable (tutorial)
 description: Step-by-step instructions for sharing data between SharePoint client-side web parts.
 ms.date: 01/10/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

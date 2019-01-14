@@ -2,6 +2,7 @@
 title: SharePoint VSS Writer
 ms.date: 09/25/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

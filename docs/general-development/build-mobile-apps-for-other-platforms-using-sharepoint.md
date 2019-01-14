@@ -3,6 +3,7 @@ title: Build mobile apps for other platforms using SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 017df869-44fb-4ffe-82fb-4654e01329ad
+localization_priority: Priority
 ---
 
 

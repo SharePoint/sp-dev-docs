@@ -3,6 +3,7 @@ title: Improve performance in SharePoint provider-hosted add-ins
 description: Improve the performance of your SharePoint provider-hosted add-in by limiting remote calls.
 
 ms.date: 4/26/2018
+localization_priority: Normal
 ---
 # Improve performance in SharePoint provider-hosted add-ins
 

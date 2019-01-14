@@ -3,6 +3,7 @@ title: Retrieve user profile properties by using the .NET client object model in
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 236ebaf8-f92e-4192-9b51-0a9de0210885
+localization_priority: Priority
 ---
 
 

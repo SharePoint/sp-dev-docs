@@ -3,6 +3,7 @@ title: Follow content in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 30e68cd6-6e55-4cf9-afd6-7139b0a97288
+localization_priority: Normal
 ---
 
 

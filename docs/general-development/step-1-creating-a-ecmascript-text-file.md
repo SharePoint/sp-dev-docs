@@ -3,6 +3,7 @@ title: Step 1 Creating a ECMAScript Text File
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f1c2b359-5b0d-467d-a863-6732e23863b9
+localization_priority: Normal
 ---
 
 

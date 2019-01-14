@@ -3,6 +3,7 @@ title: Query a remote service using the web proxy in SharePoint
 description: Access data in a remote domain from a page that is hosted in SharePoint by using the web proxy.
 ms.date: 12/22/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Query a remote service using the web proxy in SharePoint

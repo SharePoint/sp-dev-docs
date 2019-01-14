@@ -2,6 +2,7 @@
 title: Discover a Multi-Geo tenant configuration
 description: When you're working with a SharePoint tenant, you'll need to be able to detect whether it's a Multi-Geo tenant and identify the default and satellite geo locations. 
 ms.date: 4/27/2018
+localization_priority: Normal
 ---
 
 # Discover a Multi-Geo tenant configuration

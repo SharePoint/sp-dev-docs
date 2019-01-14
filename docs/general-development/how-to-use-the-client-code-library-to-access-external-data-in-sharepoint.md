@@ -3,6 +3,7 @@ title: Use the client code library to access external data in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c280ae92-c52b-4658-b0f3-805fb215ef8e
+localization_priority: Normal
 ---
 
 

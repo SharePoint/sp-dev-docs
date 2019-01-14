@@ -3,6 +3,7 @@ title: Configure extension icon in SharePoint Framework (SPFx) Extensions
 description: Options for configuring the icon for your commands in SharePoint Framework (SPFx) Extensions.
 ms.date: 01/11/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Configure extension icon

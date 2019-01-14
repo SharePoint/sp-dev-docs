@@ -6,6 +6,7 @@ f1_keywords:
 - blogger
 ms.prod: sharepoint
 ms.assetid: c0b137cd-126d-4c74-a3f7-eb9debe3c35f
+localization_priority: Normal
 ---
 
 

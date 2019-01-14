@@ -3,6 +3,7 @@ title: Host extension from Office 365 CDN (Hello World part 4)
 description: Deploy your SharePoint Framework Application Customizer to be hosted from an Office 365 CDN and deploy that to SharePoint for end users. 
 ms.date: 08/27/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Host extension from Office 365 CDN (Hello World part 4)

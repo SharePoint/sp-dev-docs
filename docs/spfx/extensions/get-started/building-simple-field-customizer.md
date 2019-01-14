@@ -3,6 +3,7 @@ title: Build your first Field Customizer extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
 ms.date: 11/8/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Build your first Field Customizer extension

@@ -1,8 +1,9 @@
-﻿---
+---
 title: Cross-site publishing in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 33f49e69-c1d3-4a6e-8887-5df683cba022
+localization_priority: Normal
 ---
 
 

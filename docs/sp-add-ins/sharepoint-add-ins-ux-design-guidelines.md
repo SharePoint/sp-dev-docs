@@ -3,6 +3,7 @@ title: SharePoint Add-ins UX design guidelines
 description: User experience (UX) design guidelines for add-ins in SharePoint, including choosing the chrome, using CSS, managing user licenses, and other design tasks.
 ms.date: 11/02/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # SharePoint Add-ins UX design guidelines

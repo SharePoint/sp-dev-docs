@@ -3,6 +3,7 @@ title: Loop-Back SOAP Calls and Direct Linking
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bffc6565-636f-40d4-ba17-2511070ba5db
+localization_priority: Normal
 ---
 
 

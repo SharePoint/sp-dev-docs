@@ -1,6 +1,7 @@
 ---
 title: Event receivers and list event receivers in the SharePoint Add-in model
 ms.date: 11/03/2017
+localization_priority: Priority
 ---
 Event receivers and list event receivers in the SharePoint Add-in model
 =======================================================================

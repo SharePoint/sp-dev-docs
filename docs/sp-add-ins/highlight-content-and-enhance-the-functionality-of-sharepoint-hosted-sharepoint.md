@@ -3,6 +3,7 @@ title: Highlight content and enhance the functionality of SharePoint-hosted Shar
 description: Construct the SharePoint callout control, add it to your page, and customize its appearance and behavior to provide a flexible way to engage your user and showcase your add-in's functionality. 
 ms.date: 12/20/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control
