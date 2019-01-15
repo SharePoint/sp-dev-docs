@@ -264,6 +264,9 @@ Now we have confirmed that the side-loading is enabled, and we can package our M
 > [!NOTE]
 > If this setting is not available, side loading is not enabled in the tenant which you are using. Double check the settings from the tenant admin UIs.
 
+> [!NOTE]
+> The setting might be hidden behind a message notification or the notification requesting to turn on desktop notifications.
+
 - Upload **MyFirstSPFxTab.zip** from the **Teams** folder under your newly created solution and ensure that it's properly visible in the list of Apps. Notice how the custom image is visible with the description of the solution.
 
     ![Manage Team](../../../images/sp-teams-app-uploaded.png)
