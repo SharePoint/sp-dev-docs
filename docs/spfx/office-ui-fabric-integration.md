@@ -86,7 +86,7 @@ Now you can use the core styles as mixins and variables.
 
 ## Office UI Fabric React
 
-We recommend that you use the versions of the Office UI Fabric React package included in the project in the SharePoint Framework's Yeoman genereator. For instance, the SharePoint Framework v1.7.0 release uses Fabric React v5.131.0
+We recommend that you use the versions of the Office UI Fabric React package included in the project in the SharePoint Framework's Yeoman generator. For instance, the SharePoint Framework v1.7.0 release uses Fabric React v5.131.0
 
 > [!NOTE] 
 > Fabric React versions 2.x or older are not supported in SharePoint Framework.
