@@ -69,7 +69,7 @@ In this section, you will use Azure Queue storage to receive messages from Micro
 To set up the Azure Queue storage:
 
 1. Go to the [Azure portal](https://portal.azure.com) and sign in.
-1. Choose **+ New**.
+1. Choose **+ Create a resource**.
 1. From the Azure Marketplace listings, select **Storage**, and in the Featured column, choose **Storage account - blob, file, table, queue**.
 1. Provide values for the required fields. Select **Pin to dashboard**, and choose **Create**. It can take a few minutes for the storage account to be created.
 1. Open the storage account and go to **Queues**.
@@ -168,6 +168,7 @@ Copy the following provisioning template XML to a new file and save the file as 
 ## Create the Azure Function
 
 1. Go to the [Azure Portal](https://portal.azure.com).
+1. Choose **+ Create a resource**.
 1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
 1. Currently Function apps a created with the V2 runtime which does not support PowerShell functions. Change the runtime of the function app to V1 by navigating selecting **Platform features**, **Function app settings** and change the Runtime version from **~2** to **~1**.
 1. Create a new function: **Functions** > **New function**.
