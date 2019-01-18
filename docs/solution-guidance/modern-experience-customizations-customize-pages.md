@@ -104,7 +104,7 @@ By default, users can add comments (July 2017) on "modern" pages. If your organi
 
 **Enable or disable comments**
 
-![Enable or disable comments](http://i.imgur.com/atl91Vh.png)
+![Enable or disable comments](https://i.imgur.com/atl91Vh.png)
 
 > [!NOTE]
 > You can also programmatically manage the commenting behavior by using site and tenant level APIs (requires SharePoint Client-Side Object Model (CSOM) version 16.1.6621.1200 or later):
