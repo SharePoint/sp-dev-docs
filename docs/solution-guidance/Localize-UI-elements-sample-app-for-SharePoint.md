@@ -10,7 +10,10 @@ localization_priority: Normal
 The [Core.JavaScriptCustomization](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization) sample add-in shows you how to use JavaScript to replace the text value of a SharePoint UI element with a translated text value, which is read from a JavaScript resource file. 
 
 > [!NOTE] 
-> You are responsible for maintaining the translated text values in the JavaScript resource file. 
+> You are responsible for maintaining the translated text values in the JavaScript resource file.
+
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
 
 This code sample uses a provider-hosted add-in to:
 

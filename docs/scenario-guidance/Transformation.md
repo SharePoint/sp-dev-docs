@@ -123,6 +123,9 @@ JSLink is a JavaScript file which will override the default view of your list wi
 
 JSLink works only with the classic SharePoint experience and cannot be reused with the modern SharePoint UI.
 
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
+
 ### Articles
 
 - [Migrating JSLink customizations to SharePoint Framework Field Customizers](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-jslink-to-spfx-extensions)

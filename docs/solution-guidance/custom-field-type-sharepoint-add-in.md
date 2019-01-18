@@ -15,6 +15,9 @@ In a SharePoint Add-ins model scenario, customized end user experiences are impl
 
 From an end user's perspective the capability/result looks the same.
 
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
+
 Here are some examples of custom field type that implements a Google map. These come from the [Branding.JSLink](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.JSLink) Office 365 PnP Sample.
 
 **Thumbnail Google map images displayed in a list view:**

@@ -13,6 +13,9 @@ localization_priority: Normal
 Learn how to customize a field type by using the client-side rendering technology in SharePoint.
 Client-side rendering provides a mechanism that you can use to produce your own output for a set of controls that are hosted in a SharePoint page. This mechanism enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of custom field types. In client-side rendering you can specify your own JavaScript resources and host them in the data storage options available to your farm solution, such as the _layouts folder.
 
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
+
 ## Prerequisites for using the examples in this article
 <a name="SP15CustomizeafieldtypeusingCSR_Prereq"> </a>
 
