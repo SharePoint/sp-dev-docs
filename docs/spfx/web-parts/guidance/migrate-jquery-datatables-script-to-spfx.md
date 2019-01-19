@@ -338,6 +338,9 @@ The last step is to include the code that initiates the data table and loads the
         });
     });
     ```
+    
+> [!NOTE] 
+> Make sure to use internal name (or static name) of columns in $select and $expend parameters.
 
 2. To reference this file in the web part, in the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and change the **render** method to:
 
