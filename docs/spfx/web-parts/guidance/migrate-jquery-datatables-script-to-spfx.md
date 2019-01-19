@@ -217,7 +217,7 @@ In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** 
     public render(): void {
         this.domElement.innerHTML = `
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
-        <table id="requests" class="display ${styles.helloWorld}" cellspacing="0" width="100%">
+        <table id="requests" class="display ${styles.itRequests}" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -349,7 +349,7 @@ The last step is to include the code that initiates the data table and loads the
     public render(): void {
         this.domElement.innerHTML = `
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
-        <table id="requests" class="display ${styles.helloWorld}" cellspacing="0" width="100%">
+        <table id="requests" class="display ${styles.itRequests}" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -473,7 +473,7 @@ Initially, the name of the list from which the data should be loaded was embedde
     public render(): void {
         this.domElement.innerHTML = `
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
-        <table class="display ${styles.helloWorld}" cellspacing="0" width="100%">
+        <table class="display ${styles.itRequests}" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -617,7 +617,7 @@ Now that you have type definitions for all libraries installed in the project, y
     public render(): void {
         this.domElement.innerHTML = `
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
-        <table class="display ${styles.helloWorld}" cellspacing="0" width="100%">
+        <table class="display ${styles.itRequests}" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th>ID</th>
