@@ -349,7 +349,6 @@ headers:
 - [REST API reference and samples](https://msdn.microsoft.com/library)
 - [Upload a file by using the REST API and jQuery](upload-a-file-by-using-the-rest-api-and-jquery.md)
 - [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
-- [SharePoint: Perform basic data access operations on files and folders by using REST](https://code.msdn.microsoft.com/sharepoint-2013-perform-ab9c4ae5)
 - [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
 - [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)  
