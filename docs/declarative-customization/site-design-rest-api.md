@@ -24,6 +24,7 @@ The following REST commands are available for working with site designs and site
 
 - **CreateSiteScript** &ndash; Creates a new site script.
 - **GetSiteScripts** &ndash; Gets a list of information on existing site scripts.
+- **GetSiteScriptFromList** &ndash; Creates site script syntax from an existing SharePoint list.
 - **GetSiteScriptMetadata** &ndash; Gets information about a specific site script.
 - **UpdateSiteScript** &ndash; Updates a site script with new values.
 - **DeleteSiteScript** &ndash; Deletes a site script.
@@ -150,6 +151,59 @@ Here is an example of the JSON returned after calling **GetSiteScripts**.
     }
   ]
 }
+```
+
+## GetSiteScriptFromList
+
+Gets the site script syntax for a specific list
+
+### Parameters
+
+|Parameter   | Description  |
+|------------|--------------|
+| listUrl         | The url of the list to retrieve site script |
+
+
+### Examples
+
+Here's an example of retrieving a site script JSON object from the Contoso customer list.
+
+```javascript
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromList", {listUrl: "https://consoso.sharepoint.com/sites/projectgo/Lists/Contoso%20customer%20list"});
+```
+<br/>
+
+Here is an example of the JSON returned after calling **GetSiteScriptFromList**.
+
+```json
+{"@odata.context":"https://constoso.sharepoint.com/sites/projectgo/_api/$metadata#Edm.String","value":"{
+  "actions": [
+    {
+      "verb": "createSPList",
+      "listName": "Contoso customer list",
+      "templateType": 100,
+      "subactions": [
+        {
+          "verb": "addSPView",
+          "name": "All Items",
+          "viewFields": [
+            "LinkTitle"
+          ],
+          "query": "",
+          "rowLimit": 30,
+          "isPaged": true,
+          "makeDefault": true
+        }
+      ]
+    },
+    {
+      "verb": "addNavLink",
+      "url": "Lists/Contoso customer list/AllItems.aspx",
+      "displayName": "Contoso customer list",
+      "isWebRelative": true
+    }
+  ]
+}"}
 ```
 
 ## GetSiteScriptMetadata
@@ -325,7 +379,7 @@ Applies a site design to an existing site collection.
 Here's an example of applying a site design to the ProjectGo site collection.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.microsoft.com/sites/projectgo"});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.sharepoint.com/sites/projectgo"});
 ```
 
 ## AddSiteDesignTaskToCurrentWeb
