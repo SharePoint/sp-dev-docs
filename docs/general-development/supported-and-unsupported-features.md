@@ -38,13 +38,13 @@ Most of the new features in Microsoft Excel 2010 work in some way in Excel Servi
 - Sparklines
     
   
--  [Icon set](http://blogs.msdn.com/excel/archive/2009/08/05/icon-set-improvements-in-excel-2010.aspx) and [data bar improvements](http://blogs.msdn.com/excel/archive/2009/08/07/data-bar-improvements-in-excel-2010.aspx)
+-  [Icon set](https://www.microsoft.com/en-us/microsoft-365/blog/2009/08/06/icon-set-improvements-in-excel-2010/) and [data bar improvements](https://www.microsoft.com/en-us/microsoft-365/blog/2009/08/07/data-bar-improvements-in-excel-2010/)
     
   
--  [PivotTable named sets](http://blogs.msdn.com/excel/archive/2009/10/05/pivottable-named-sets-in-excel-2010.aspx)
+-  [PivotTable named sets](https://www.microsoft.com/en-us/microsoft-365/blog/2009/10/05/pivottable-named-sets-in-excel-2010/)
     
   
--  [PivotTable improvements](http://blogs.msdn.com/excel/archive/2009/10/15/a-few-more-pivottable-improvements-in-excel-2010.aspx)
+-  [PivotTable improvements](https://www.microsoft.com/en-us/microsoft-365/blog/2009/10/15/a-few-more-pivottable-improvements-in-excel-2010/)
     
   
  **Following are new features that can be viewed and interacted with:**
@@ -202,3 +202,5 @@ Unlike workbooks with external links, charts with external links are blocked fro
     
     
  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+
+

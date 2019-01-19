@@ -20,19 +20,19 @@ Use the following guidelines to associate and launch (initiate) your workflows u
     
     
 
-- To create an association for a **list** workflow, use the [PublishSubscriptionForList](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionService.PublishSubscriptionForList.aspx) method.
+- To create an association for a **list** workflow, use the [PublishSubscriptionForList](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowsubscriptionservice.publishsubscriptionforlist) method.
     
   
-- To create an association for a **site** workflow, use the [PublishSubscription](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionService.PublishSubscription.aspx) method.
+- To create an association for a **site** workflow, use the [PublishSubscription](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowsubscriptionservice.publishsubscription) method.
     
   
-- To initiate a **list** workflow, use the [StartWorkflowOnListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInstanceService.StartWorkflowOnListItem.aspx) method.
+- To initiate a **list** workflow, use the [StartWorkflowOnListItem](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowinstanceservice.startworkflowonlistitem) method.
     
   
-- To initiate a **site** workflow, use the [StartWorkflow](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInstanceService.StartWorkflow.aspx) method.
+- To initiate a **site** workflow, use the [StartWorkflow](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowinstanceservice.startworkflow) method.
     
 > [!NOTE] 
-> The two methods for **associating** workflows are found on the [WorkflowSubscriptionService](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionService.aspx) class, while the two methods for **launching** workflows are found on the [WorkflowInstanceService](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInstanceService.aspx) class.
+> The two methods for **associating** workflows are found on the [WorkflowSubscriptionService](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowsubscriptionservice) class, while the two methods for **launching** workflows are found on the [WorkflowInstanceService](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowinstanceservice) class.
   
     
     
@@ -40,22 +40,22 @@ Use the following guidelines to associate and launch (initiate) your workflows u
 
 ## Association properties
 
-The values of association properties are set when you call  [PublishSubscription](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionService.PublishSubscription.aspx) . The association property values are association-level properties, meaning that all workflow instances with a given association share the same property value. You can retrieve an association property value within the workflow itself by using the **GetConfigurationValue** activity.
+The values of association properties are set when you call  [PublishSubscription](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowsubscriptionservice.publishsubscription) . The association property values are association-level properties, meaning that all workflow instances with a given association share the same property value. You can retrieve an association property value within the workflow itself by using the **GetConfigurationValue** activity.
   
     
     
-Following is a list of association properties that are set by default for both **list** and **site** workflows when you call [PublishSubscription](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionService.PublishSubscription.aspx) .
+Following is a list of association properties that are set by default for both **list** and **site** workflows when you call [PublishSubscription](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowsubscriptionservice.publishsubscription) .
   
     
     
 
--  [AssociationTitle](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowConfigurationPropertyName.AssociationTitle.aspx)
+-  [AssociationTitle](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowconfigurationpropertyname.associationtitle)
     
   
--  [AssociatorUserId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowConfigurationPropertyName.AssociatorUserId.aspx)
+-  [AssociatorUserId](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowconfigurationpropertyname.associatoruserid)
     
   
--  [LayoutsFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowConfigurationPropertyName.LayoutsFolder.aspx)
+-  [LayoutsFolder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowconfigurationpropertyname.layoutsfolder)
     
   
 -  ParentContentTypeId()
@@ -95,15 +95,15 @@ Following is a list of association properties that are set by default for both *
     
     
 
-In the case of **list** workflows, there are four additional association properties that are set by default when you call [PublishSubscriptionForList(WorkflowSubscription, Guid)](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionService.PublishSubscriptionForList.aspx) .
+In the case of **list** workflows, there are four additional association properties that are set by default when you call [PublishSubscriptionForList(WorkflowSubscription, Guid)](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowsubscriptionservice.publishsubscriptionforlist) .
   
     
     
 
--  [ListId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowConfigurationPropertyName.ListId.aspx)
+-  [ListId](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowconfigurationpropertyname.listid)
     
   
--  [ListName](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowConfigurationPropertyName.ListName.aspx)
+-  [ListName](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowconfigurationpropertyname.listname)
     
   
 - **StatusColumnCreated***
@@ -125,7 +125,7 @@ In the case of **list** workflows, there are four additional association propert
 
 ## Initiation properties
 
-Initiation properties are external variables whose values are set when the workflow is initiated - that is, when you call **StartWorkflow**. Note, however, that the property values can be updated at runtime from within the workflow instance by using the **ExternalVariableValue** activity. You can retrieve the values of external variables from *outside*  the workflow by using [Properties](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInstance.Properties.aspx) .
+Initiation properties are external variables whose values are set when the workflow is initiated - that is, when you call **StartWorkflow**. Note, however, that the property values can be updated at runtime from within the workflow instance by using the **ExternalVariableValue** activity. You can retrieve the values of external variables from *outside*  the workflow by using [Properties](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowinstance.properties) .
   
     
     
@@ -138,33 +138,33 @@ All workflow instances (both list and site) have some external variables that ar
     
     
 
--  [InitiatorUserId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.InitiatorUserId.aspx)
+-  [InitiatorUserId](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.initiatoruserid)
     
   
--  [RetryCode](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.RetryCode.aspx)
+-  [RetryCode](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.retrycode)
     
   
--  [RelatedItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.RelatedItems.aspx)
+-  [RelatedItems](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.relateditems)
     
   
-List workflows instances have some additional external variables that are set by default when you call  [StartWorkflowOnListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInstanceService.StartWorkflowOnListItem.aspx) :
+List workflows instances have some additional external variables that are set by default when you call  [StartWorkflowOnListItem](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.workflowinstanceservice.startworkflowonlistitem) :
   
     
     
 
--  [CurrentItemUrl](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.CurrentItemUrl.aspx)
+-  [CurrentItemUrl](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.currentitemur)
     
   
--  [ItemId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.ItemId.aspx)
+-  [ItemId](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.itemid)
     
   
--  [ItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.ItemGuid.aspx)
+-  [ItemGuid](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.itemguid)
     
   
--  [ContextListId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.ContextListId.aspx)
+-  [ContextListId](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.contextlistid)
     
   
--  [UniqueId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.UniqueId.aspx)
+-  [UniqueId](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.uniqueid)
     
 > [!NOTE] 
 > You can add custom initiation properties by using an initiation form. 
@@ -182,6 +182,4 @@ List workflows instances have some additional external variables that are set by
   
 
   
-    
-    
-
+   

@@ -13,9 +13,8 @@ Learn how to customize the SharePoint Geolocation field type programmatically us
 
 SharePoint introduces a new field type named Geolocation that enables you to annotate SharePoint lists with location information. In columns of type Geolocation, you can enter location information as a pair of latitude and longitude coordinates in decimal degrees, or retrieve the coordinates of the user's current location from the browser if it implements the W3C Geolocation API. For more information about the Geolocation field, see  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md). 
 The Geolocation field type is not available in the default content type of any list or document library in SharePoint. The Geolocation field type is included in SharePoint but isn't visible on the create column page for the list; you must add the Geolocation field type programmatically. For more information, see  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md). 
-
-> [!IMPORTANT]
-> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
+  
+    
     
 
 After you add the Geolocation field type to SharePoint, you can use it to render maps by using Bing Maps. The built-in Geolocation field can render only with Bing Maps. However, you can create a custom field by using the Geolocation field as a parent field type. Custom rendering can be provided through the **JSLink** property in the client-side rendering framework. The client-side rendering framework is introduced in SharePoint. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
@@ -548,13 +547,13 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 -  [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md)
     
   
--  [SharePoint: Create a Geolocation field that renders maps using Nokia Maps](http://code.msdn.microsoft.com/SharePoint-Create-a-d9a91551)
+-  [SharePoint: Create a Geolocation field that renders maps using Nokia Maps](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-d9a91551)
     
   
 -  [How to: Create a Custom Field Type](http://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f%28Office.15%29.aspx)
     
   
--  [Deploying files using Mapped Folders](http://blogs.msdn.com/b/vssharepointtoolsblog/archive/2010/03/12/deploying-files-using-mapped-folders.aspx)
+-  [Add and Remove Mapped Folders](https://docs.microsoft.com/en-us/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders?view=vs-2017)
     
   
 

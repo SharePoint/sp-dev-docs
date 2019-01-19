@@ -65,7 +65,8 @@ For more information about the Office 365 Enterprise offerings, see [Plans &amp;
 <a name="bk_addresources"> </a>
 
 -  [SharePoint Add-ins](sharepoint-add-ins.md)
--  [Create or delete a site collection](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/create-or-delete-a-site-collection-HA102772354.aspx?CTT=1)
+-  [Create site collection](https://docs.microsoft.com/en-us/sharepoint/create-site-collection)
+-  [Delete site collection](https://docs.microsoft.com/en-us/sharepoint/delete-site-collection)
     
  
 

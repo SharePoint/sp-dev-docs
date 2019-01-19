@@ -27,7 +27,7 @@ When you upload your add-in for publication on AppSource, you can choose the ter
 - Whether you are offering your add-in for free, trial, or for purchase.
 - Whether your add-in can be acquired on a per-user or site basis.
 
-SharePoint does not enforce license terms for add-in usage. Instead, it provides a licensing framework that lets you include code logic in your add-in to enforce whatever licensing restrictions you choose. For example, you can include code logic in your add-in that enables users to access certain add-in features if they have a paid license, but not if they have a trial license. For more information, see [License your Office and SharePoint Add-ins](http://msdn.microsoft.com/library/license-your-office-and-sharepoint-add-ins%28Office.15%29.aspx).
+SharePoint does not enforce license terms for add-in usage. Instead, it provides a licensing framework that lets you include code logic in your add-in to enforce whatever licensing restrictions you choose. For example, you can include code logic in your add-in that enables users to access certain add-in features if they have a paid license, but not if they have a trial license. For more information, see [License your Office and SharePoint Add-ins](https://docs.microsoft.com/en-us/office/dev/store/license-your-add-ins).
 
 ## Publishing to an add-in catalog
 
@@ -56,9 +56,12 @@ The following table offers a comparison of publishing to AppSource or to an add-
 -  [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/en-us/office/dev/store/create-or-update-client-ids-and-secrets)
 -  [Use the Seller Dashboard to submit Office and SharePoint Add-ins and Office 365 apps to the Office Store](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store)
 -  [Validation policies for apps and add-ins submitted to AppSource](https://docs.microsoft.com/en-us/office/dev/store/validation-policies)
--  [Start building Office and SharePoint Add-ins](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins)
 -  [License your Office and SharePoint Add-ins](https://docs.microsoft.com/en-us/office/dev/store/license-your-add-ins)
 -  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
 -  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md)
 -  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md)
 -  [Submit your solutions to AppSource](https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store)
+
+
