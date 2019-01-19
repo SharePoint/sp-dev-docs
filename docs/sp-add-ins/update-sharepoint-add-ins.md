@@ -3,6 +3,7 @@ title: Update SharePoint Add-ins
 description: Create and deploy an update for a SharePoint Add-in.
 ms.date: 11/02/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Update SharePoint Add-ins

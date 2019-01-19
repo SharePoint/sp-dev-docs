@@ -3,6 +3,7 @@ title: Themes overview for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ae585dd3-82fe-46bb-ac93-065edc0a16f4
+localization_priority: Priority
 ---
 
 

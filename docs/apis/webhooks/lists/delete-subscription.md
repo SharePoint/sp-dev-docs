@@ -3,6 +3,7 @@ title: Delete a subscription
 description: Deletes a webhook subscription from a SharePoint list. After deleting the subscription, notifications are no longer delivered.
 ms.date: 02/08/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

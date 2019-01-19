@@ -1,6 +1,7 @@
 ---
 title: Developing using Tenant permissions with App-Only in SharePoint Online
 ms.date: 11/03/2017
+localization_priority: Priority
 ---
 # Developing using Tenant permissions with App-Only in SharePoint Online
 

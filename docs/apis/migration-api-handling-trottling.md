@@ -6,6 +6,7 @@ manager: pamgreen
 ms.date: 6/10/2018
 ms.topic: article
 description: "Migration is critical for SPO and is prioritized alongside service availability."
+localization_priority: Normal
 ---
 
 # Running Migrations into OneDrive and SharePoint Online: Throttling

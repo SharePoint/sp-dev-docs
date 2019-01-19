@@ -3,6 +3,7 @@ title: FAST Query Language (FQL) syntax reference
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bd98a41b-623c-41d4-a15d-26c0d4ba4311
+localization_priority: Priority
 ---
 
 

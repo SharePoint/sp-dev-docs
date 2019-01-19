@@ -3,6 +3,7 @@ title: Step 1 Creating the Web Service Client Project
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1f0fc9fc-0db4-47bb-8204-a06777b84e76
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: Use web parts with the full-width column
 description: Build web parts that can be used in the full-width column
 ms.date: 03/23/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Use web parts with the full-width column

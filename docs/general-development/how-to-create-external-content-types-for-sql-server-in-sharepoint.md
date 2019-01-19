@@ -3,6 +3,7 @@ title: Create external content types for SQL Server in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7fe2fbf0-546b-4a16-b02e-a0960bfb3842
+localization_priority: Priority
 ---
 
 

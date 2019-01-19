@@ -3,6 +3,7 @@ title: BCS client object model reference for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: fe7d12a3-6ea9-47f9-b69e-f66da9e661dc
+localization_priority: Normal
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: Customize your SharePoint site UI by using JavaScript
 ms.date: 11/03/2017
+localization_priority: Priority
 ---
 # Customize your SharePoint site UI by using JavaScript
 

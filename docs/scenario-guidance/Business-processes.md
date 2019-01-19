@@ -2,6 +2,7 @@
 title: Scenario Guidance - Business Processes
 description: Scenario guidance on business process options in SharePoint Online and in on-premises.
 ms.date: 03/26/2018
+localization_priority: Normal
 ---
 
 # Business Processes

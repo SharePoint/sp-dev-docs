@@ -3,6 +3,7 @@ title: Add an Edit Mode Panel snippet in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 39fa1e32-9129-407d-914f-96f4c6e66dc8
+localization_priority: Normal
 ---
 
 

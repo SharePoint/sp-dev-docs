@@ -3,6 +3,7 @@ title: Add a Security Trim snippet in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 4beaab08-760b-408a-b768-906312779379
+localization_priority: Priority
 ---
 
 

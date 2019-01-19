@@ -3,6 +3,7 @@ title: Create SharePoint Communication site using REST
 description: Create and get the status of a new modern SharePoint Communication site by using the REST interface.
 ms.date: 4/19/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Create SharePoint Communication site using REST

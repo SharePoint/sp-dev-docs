@@ -3,6 +3,7 @@ title: Get user identity and properties in SharePoint
 description: Retrieve website user identity by using the Web object, the ResolvePrincipal method, and the OAuth token and social features APIs.
 ms.date: 12/26/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

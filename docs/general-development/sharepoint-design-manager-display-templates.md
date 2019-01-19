@@ -1,8 +1,9 @@
-﻿---
+---
 title: SharePoint Design Manager display templates
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1a782bac-48ee-4baf-8751-0f943a306e0f
+localization_priority: Priority
 ---
 
 

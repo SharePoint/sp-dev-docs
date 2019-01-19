@@ -3,6 +3,7 @@ title: Retrieving query suggestions using the Search REST service
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a64c5bec-64a8-4752-9c72-433d1c864aed
+localization_priority: Priority
 ---
 
 

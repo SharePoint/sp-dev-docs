@@ -2,6 +2,7 @@
 title: Migrate InfoPath forms to SharePoint
 description: Migrate InfoPath forms in your SharePoint Add-ins to other supported solutions, such as Access applications, sandbox solutions, or the add-in model.
 ms.date: 5/1/2018
+localization_priority: Priority
 ---
 
 # Migrate InfoPath forms to SharePoint

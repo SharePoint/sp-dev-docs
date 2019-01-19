@@ -3,6 +3,7 @@ title: Apply a master page to a site in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 04861390-84d5-40ea-b0db-6c0748eff196
+localization_priority: Priority
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: Yammer integration in the SharePoint Add-in model
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 Yammer integration in the SharePoint Add-in model
 =================================================
@@ -228,3 +229,5 @@ Applies to
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises
+
+

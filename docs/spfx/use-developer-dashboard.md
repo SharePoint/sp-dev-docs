@@ -3,6 +3,7 @@ title: Use the developer dashboard
 description: Use the developer dashboard to get more information about the SharePoint Framework components on the page
 ms.date: 08/29/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Use the developer dashboard

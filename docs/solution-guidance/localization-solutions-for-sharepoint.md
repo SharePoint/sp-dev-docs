@@ -2,6 +2,7 @@
 title: Localization solutions for SharePoint
 description: Localize content in your SharePoint site.
 ms.date: 4/24/2018
+localization_priority: Normal
 ---
 
 # Localization solutions for SharePoint

@@ -2,6 +2,7 @@
 title: Configure Office 365 API projects for distribution
 description: 
 ms.date: 5/8/2018
+localization_priority: Normal
 ---
 
 # Configure Office 365 API projects for distribution

@@ -1,8 +1,9 @@
-﻿---
+---
 title: Reference threads and digest threads in SharePoint social feeds
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 58e68fb2-ba40-4861-912f-355e119a1c41
+localization_priority: Normal
 ---
 
 

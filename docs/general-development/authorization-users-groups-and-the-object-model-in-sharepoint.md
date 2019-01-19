@@ -1,8 +1,9 @@
-﻿---
+---
 title: Authorization, users, groups, and the object model in SharePoint
 ms.date: 11/15/2018
 ms.prod: sharepoint
 ms.assetid: aacf3398-f0b5-48cb-9071-440b4c3a9dd1
+localization_priority: Priority
 ---
 
 

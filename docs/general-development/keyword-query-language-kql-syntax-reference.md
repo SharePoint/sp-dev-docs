@@ -1,8 +1,9 @@
-﻿---
+---
 title: Keyword Query Language (KQL) syntax reference
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
+localization_priority: Priority
 ---
 
 

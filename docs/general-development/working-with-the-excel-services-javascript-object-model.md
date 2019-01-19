@@ -3,6 +3,7 @@ title: Working with the Excel Services JavaScript object model
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 06219071-a7c1-4f54-b07f-7b7001592330
+localization_priority: Normal
 ---
 
 

@@ -3,6 +3,7 @@ title: SharePoint Framework (SPFx) enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
 ms.date: 09/07/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

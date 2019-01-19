@@ -1,7 +1,8 @@
-﻿---
+---
 title: User segmentation in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

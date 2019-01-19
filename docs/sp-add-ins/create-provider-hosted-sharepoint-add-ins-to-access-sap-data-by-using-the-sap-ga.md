@@ -3,6 +3,7 @@ title: Create provider-hosted SharePoint Add-ins to access SAP data
 description: Design a SharePoint Add-in to get authorized access to SAP by using the SAP Gateway for Microsoft.
 ms.date: 12/27/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

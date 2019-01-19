@@ -3,6 +3,7 @@ title: Set the Bing Maps key at the web and farm level in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
+localization_priority: Normal
 ---
 
 

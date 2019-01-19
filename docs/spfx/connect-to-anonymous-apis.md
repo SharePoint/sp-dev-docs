@@ -3,6 +3,7 @@ title: Connect to anonymous APIs
 description: Different approaches of connecting to anonymous APIs from your SharePoint Framework solutions
 ms.date: 10/23/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Connect to anonymous APIs

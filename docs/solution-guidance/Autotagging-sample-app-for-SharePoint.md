@@ -2,6 +2,7 @@
 title: Auto-tagging sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can automatically tag documents with metadata when they are created or uploaded to SharePoint. 
 ms.date: 5/2/2018
+localization_priority: Priority
 ---
 
 # Auto-tagging sample SharePoint Add-in

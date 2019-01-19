@@ -3,6 +3,7 @@ title: VSS requestors and SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0b2e5a4e-40f0-4ccf-a21a-7274921f2169
+localization_priority: Normal
 ---
 
 

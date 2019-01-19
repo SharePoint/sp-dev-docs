@@ -3,6 +3,7 @@ title: Apply styles to page fields in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e227613d-0e4d-4312-924d-bb55e1fe4293
+localization_priority: Priority
 ---
 
 

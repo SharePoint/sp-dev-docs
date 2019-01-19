@@ -3,6 +3,7 @@ title: Make custom CSS files themable in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: Customize list item queries and filter data for Windows Phone apps
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 32f89b97-8274-4cb0-9164-7898735a18aa
+localization_priority: Normal
 ---
 
 

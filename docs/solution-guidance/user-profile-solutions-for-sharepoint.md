@@ -2,6 +2,7 @@
 title: User profile solutions for SharePoint
 description: Code samples and documentation that you can use to work with user profile properties and personalize your SharePoint solution.
 ms.date: 5/7/2018
+localization_priority: Normal
 ---
 
 # User profile solutions for SharePoint

@@ -2,6 +2,7 @@
 title: Customize the UX by using SharePoint provider-hosted add-ins
 description: Samples that show best practices for customizing SharePoint UX components.
 ms.date: 4/26/2018
+localization_priority: Normal
 ---
 
 # Customize the UX by using SharePoint provider-hosted add-ins

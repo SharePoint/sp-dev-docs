@@ -3,6 +3,7 @@ title: Transform classic pages to modern client-side pages
 description: Explains how to transform classic wiki and web part pages into modern client side pages
 ms.date: 03/23/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Transform classic pages to modern client-side pages

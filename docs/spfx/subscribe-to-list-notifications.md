@@ -3,6 +3,7 @@ title: Subscribe to list notifications
 description: Get notified and respond to changes to files in SharePoint Document Libraries
 ms.date: 11/08/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Subscribe to list notifications

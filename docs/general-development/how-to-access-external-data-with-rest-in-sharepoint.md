@@ -3,6 +3,7 @@ title: Access external data by using REST in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0663cc8c-a736-434d-9858-6ce12ce7f748
+localization_priority: Priority
 ---
 
 
@@ -219,4 +220,5 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
+
 

@@ -3,6 +3,7 @@ title: Transform classic pages to modern client-side pages using UI
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint UI
 ms.date: 11/19/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Transforming to modern site pages from inside the SharePoint UI

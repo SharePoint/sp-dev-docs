@@ -3,6 +3,7 @@ title: Team-based development on the SharePoint Framework
 description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
 ms.date: 01/25/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

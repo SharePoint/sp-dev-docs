@@ -3,6 +3,7 @@ title: Customize a list view in SharePoint Add-ins using client-side rendering
 description: Customize a list view in a SharePoint-hosted add-in by using the client-side rendering technology in SharePoint.
 ms.date: 12/20/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

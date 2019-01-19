@@ -2,6 +2,7 @@
 title: PnP remote provisioning
 description: Remote provisioning for your Office 365, SharePoint, and SharePoint Online site collections using features of the add-in model.
 ms.date: 5/9/2018
+localization_priority: Priority
 ---
 
 # PnP remote provisioning

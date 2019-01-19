@@ -3,6 +3,7 @@ title: Office 2013 and SharePoint application services
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f962922c-2967-492f-9a89-5ad10a1a6dd3
+localization_priority: Normal
 ---
 
 

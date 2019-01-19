@@ -2,6 +2,7 @@
 title: Minimal Download Strategy overview
 ms.date: 09/25/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

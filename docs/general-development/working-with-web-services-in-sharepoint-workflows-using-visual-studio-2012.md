@@ -3,6 +3,7 @@ title: Working with Web Services in SharePoint Workflows using Visual Studio 201
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5ffaa585-a872-4e14-bc0e-4a38c6a16b04
+localization_priority: Normal
 ---
 
 

@@ -6,6 +6,7 @@ f1_keywords:
 - vs.sharepointtools.workflow4.workflowlist,VS.SharePointTools.Workflow4.WorkflowName
 ms.prod: sharepoint
 ms.assetid: a2643cd7-474d-4e4c-85bb-00f0b6685a1d
+localization_priority: Priority
 ---
 
 

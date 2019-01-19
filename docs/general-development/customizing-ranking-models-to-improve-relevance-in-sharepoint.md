@@ -3,6 +3,7 @@ title: Customizing ranking models to improve relevance in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
+localization_priority: Priority
 ---
 
 

@@ -2,6 +2,7 @@
 title: Introducing the PnP provisioning engine
 description: 
 ms.date: 5/9/2018
+localization_priority: Priority
 ---
 
 # Introducing the PnP provisioning engine

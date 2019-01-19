@@ -2,6 +2,7 @@
 title: Localize UI elements sample SharePoint Add-in
 description: Localize SharePoint UI elements by using JavaScript to replace the text value of a UI element value with a translated text value loaded from a JavaScript resource file. 
 ms.date: 4/25/2018
+localization_priority: Normal
 ---
 
 # Localize UI elements sample SharePoint Add-in
@@ -9,7 +10,10 @@ ms.date: 4/25/2018
 The [Core.JavaScriptCustomization](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization) sample add-in shows you how to use JavaScript to replace the text value of a SharePoint UI element with a translated text value, which is read from a JavaScript resource file. 
 
 > [!NOTE] 
-> You are responsible for maintaining the translated text values in the JavaScript resource file. 
+> You are responsible for maintaining the translated text values in the JavaScript resource file.
+
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
 
 This code sample uses a provider-hosted add-in to:
 

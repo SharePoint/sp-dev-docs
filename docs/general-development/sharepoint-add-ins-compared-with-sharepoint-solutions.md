@@ -3,6 +3,7 @@ title: SharePoint Add-ins compared with SharePoint solutions
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
+localization_priority: Priority
 ---
 
 
@@ -195,4 +196,5 @@ Another way to use the SharePoint client object model -- or its REST APIs -- to 
 -  [Using Solutions in SharePoint Foundation](http://msdn.microsoft.com/library/0da0518c-24eb-48e0-89bd-21282fdeef94%28Office.15%29.aspx)
     
   
+
 

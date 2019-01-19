@@ -3,6 +3,7 @@ title: Workflow initiation and configuration properties
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7386bbf9-3ed6-4732-bcdb-b27baed7397e
+localization_priority: Normal
 ---
 
 
@@ -181,6 +182,4 @@ List workflows instances have some additional external variables that are set by
   
 
   
-    
-    
-
+   

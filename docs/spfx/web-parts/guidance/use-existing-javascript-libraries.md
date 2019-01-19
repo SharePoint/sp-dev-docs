@@ -3,6 +3,7 @@ title: Use existing JavaScript libraries in SharePoint Framework client-side web
 description: Ensure that your web parts won't negatively impact the performance of SharePoint pages that they are being used on.
 ms.date: 01/29/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

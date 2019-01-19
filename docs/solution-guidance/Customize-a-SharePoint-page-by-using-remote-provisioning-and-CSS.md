@@ -2,6 +2,7 @@
 title: Customize a SharePoint page by using remote provisioning and CSS
 description: Use CSS to customize SharePoint rich text fields and web part zones.
 ms.date: 4/25/2018
+localization_priority: Priority
 ---
 
 # Customize a SharePoint page by using remote provisioning and CSS

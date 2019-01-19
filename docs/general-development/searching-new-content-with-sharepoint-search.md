@@ -1,8 +1,9 @@
-﻿---
+---
 title: Searching new content with SharePoint Search
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 2a3a7d23-775a-4d95-9066-ebbd18c92ad4
+localization_priority: Normal
 ---
 
 

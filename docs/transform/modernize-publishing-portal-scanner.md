@@ -3,6 +3,7 @@ title: Analyze and use the publishing portal scanner data
 description: Understand and process the publishing portal scanner results to help you prepare the modernization of these portals
 ms.date: 10/24/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Analyze and use the scanner data

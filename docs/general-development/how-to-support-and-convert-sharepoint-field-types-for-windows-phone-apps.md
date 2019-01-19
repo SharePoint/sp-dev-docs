@@ -3,6 +3,7 @@ title: Support and convert SharePoint field types for Windows Phone apps
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 301e6e58-5153-4ca9-a419-8ae0535ebbed
+localization_priority: Normal
 ---
 
 

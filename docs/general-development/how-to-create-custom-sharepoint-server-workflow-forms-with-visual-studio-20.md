@@ -3,6 +3,7 @@ title: Create custom SharePoint workflow forms with Visual Studio 2012
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 26873259-330c-493f-b935-297a7a5a086d
+localization_priority: Normal
 ---
 
 

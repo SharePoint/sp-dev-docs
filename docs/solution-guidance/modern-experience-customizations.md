@@ -2,6 +2,7 @@
 title: Customizing the "modern" experiences in SharePoint Online
 description: An overview to get you started using the "modern" experiences in SharePoint Online.
 ms.date: 5/10/2017
+localization_priority: Priority
 ---
 
 # Customizing the "modern" experiences in SharePoint Online

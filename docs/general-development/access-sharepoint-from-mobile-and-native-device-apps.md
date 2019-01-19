@@ -3,6 +3,7 @@ title: Access SharePoint from mobile and native device apps
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 42014171-5ee5-421d-9cde-413efc3aecef
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: Include a custom button in the provider-hosted add-in
 description: Create a custom list on the host website, add a custom button, request Read permissions, run the add-in, and test the button.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

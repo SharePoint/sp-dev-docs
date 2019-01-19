@@ -2,6 +2,7 @@
 title:  Web part levels
 description: Learn about SharePoint web part levels, secondary state toolbars, and the selection model.
 ms.date: 08/13/2018
+localization_priority: Normal
 ---
 
 # SharePoint web part levels

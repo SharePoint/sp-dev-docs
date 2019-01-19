@@ -2,6 +2,7 @@
 title: Corporate event add-in integration with SharePoint
 description: Integrate SharePoint Add-ins into your business operations by using a provider-hosted add-in that can implement multiple complex business tasks.
 ms.date: 5/1/2018
+localization_priority: Priority
 ---
 
 # Corporate event add-in integration with SharePoint

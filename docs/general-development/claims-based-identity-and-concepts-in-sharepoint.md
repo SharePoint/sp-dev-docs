@@ -3,6 +3,7 @@ title: Claims-based identity and concepts in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d96c7cf4-2e48-4223-a3c0-42368d079b74
+localization_priority: Normal
 ---
 
 

@@ -1,8 +1,9 @@
-﻿---
+---
 title: SharePoint Design Manager snippets
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 68caef4c-5941-4a88-b34b-f88122801cef
+localization_priority: Priority
 ---
 
 

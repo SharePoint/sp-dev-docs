@@ -3,6 +3,7 @@ title: SharePoint Online Suite Navigation control
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ba93e5c0-e591-48d0-a716-a08ec7ef6cea
+localization_priority: Normal
 ---
 
 

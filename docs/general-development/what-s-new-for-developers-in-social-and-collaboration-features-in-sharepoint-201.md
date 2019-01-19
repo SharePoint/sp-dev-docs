@@ -3,6 +3,7 @@ title: What's new for developers in social and collaboration features in SharePo
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 65365b1d-cde5-47cd-8b04-1b76be0e3490
+localization_priority: Normal
 ---
 
 
@@ -290,3 +291,4 @@ while (retries <= 10)
     
 -  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29)
     
+

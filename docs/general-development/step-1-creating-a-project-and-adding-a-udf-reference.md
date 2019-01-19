@@ -3,6 +3,7 @@ title: Step 1 Creating a Project and Adding a UDF Reference
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 4c6f1279-28df-45af-8488-42a6573d526d
+localization_priority: Normal
 ---
 
 

@@ -2,6 +2,7 @@
 title: Replace web parts in sandbox solutions
 description: Learn about the options and strategies of converting existing functionality to the SharePoint Add-in model or alternative solutions.
 ms.date: 5/7/2018
+localization_priority: Normal
 ---
 
 # Replace web parts in sandbox solutions

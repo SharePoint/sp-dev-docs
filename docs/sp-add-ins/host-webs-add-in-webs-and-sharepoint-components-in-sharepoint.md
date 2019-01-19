@@ -3,6 +3,7 @@ title: Host webs, add-in webs, and SharePoint components in SharePoint
 description: Which SharePoint components can be included in a SharePoint Add-in, which are deployed to the host web or the add-in web, and how the add-in web is deployed in an isolated domain.
 ms.date: 11/02/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

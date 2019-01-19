@@ -3,6 +3,7 @@ title: Upgrade custom themes and CSS to SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8d1a4e3a-ae6f-41a5-bd80-3398ba541207
+localization_priority: Normal
 ---
 
 

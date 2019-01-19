@@ -2,6 +2,7 @@
 title: GetById REST method
 description: Gets or updates information about a hub site.
 ms.date: 4/20/2018
+localization_priority: Normal
 ---
 
 # GetById

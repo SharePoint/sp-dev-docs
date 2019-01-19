@@ -1,8 +1,9 @@
-﻿---
+---
 title: What's new in Access
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 625bc1d0-55db-4420-a02e-aee04028b215
+localization_priority: Normal
 ---
 
 

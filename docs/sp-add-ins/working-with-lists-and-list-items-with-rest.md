@@ -3,6 +3,7 @@ title: Working with lists and list items with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
 ms.date: 4/19/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Working with lists and list items with REST

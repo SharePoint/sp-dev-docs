@@ -3,6 +3,7 @@ title: Code samples for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e6b52c6c-32f8-4689-8c1a-7b50039dcbe8
+localization_priority: Priority
 ---
 
 

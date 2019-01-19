@@ -2,6 +2,7 @@
 title: Content aggregation guidance for SharePoint Online portals
 description: Describes best practices and techniques for content aggregation, and the cons of using real-time content aggregation.
 ms.date: 4/30/2018
+localization_priority: Priority
 ---
 
 # Content aggregation guidance for SharePoint Online portals

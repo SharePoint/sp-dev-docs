@@ -3,6 +3,7 @@ title: Get a quick overview of the SharePoint object model
 description: Get introduced to the content hierarchy, and client-side runtime and batching. 
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

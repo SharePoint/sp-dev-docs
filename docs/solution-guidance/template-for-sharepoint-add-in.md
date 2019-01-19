@@ -1,6 +1,7 @@
 ---
 title: XYZ in the SharePoint Add-in model
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 XYZ in the SharePoint Add-in model
 ==================================

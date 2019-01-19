@@ -1,8 +1,9 @@
-﻿---
+---
 title: Upload a file by using the REST API and jQuery
 description: Upload a local file to a SharePoint folder by using the REST API and jQuery AJAX requests.
 ms.date: 4/19/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Upload a file by using the REST API and jQuery

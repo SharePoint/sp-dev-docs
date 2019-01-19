@@ -3,6 +3,7 @@ title: Retrieve the URL of the tenant app catalog
 description: Use the SharePoint REST API to retrieve the URL of the tenant app catalog
 ms.date: 8/24/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Retrieve the URL of the tenant app catalog

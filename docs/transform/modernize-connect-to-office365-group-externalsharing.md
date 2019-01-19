@@ -3,6 +3,7 @@ title: External sharing after Office 365 group connection
 description: Connect an Office 365 group to an existing SharePoint site can result in different external sharing settings between the Office 365 Group and the SharePoint site
 ms.date: 06/19/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Impact of Office 365 Group connection on external sharing

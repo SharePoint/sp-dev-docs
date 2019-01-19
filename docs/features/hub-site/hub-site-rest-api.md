@@ -2,6 +2,7 @@
 title: Hub site REST API
 description: Overview of hub site REST API for creating hub sites and associating existing sites with hub sites.
 ms.date: 4/20/2018
+localization_priority: Priority
 ---
 
 # Hub site REST API

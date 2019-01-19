@@ -5,6 +5,7 @@ author: JoanneHendrickson
 manager: pamgreen
 ms.date: 6/20/2018
 description: "This document is to give more in depth Information about how to use the SPO Migration API."
+localization_priority: Priority
 ---
 # SharePoint Online Migration API
 

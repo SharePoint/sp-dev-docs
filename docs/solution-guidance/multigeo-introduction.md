@@ -2,6 +2,7 @@
 title: OneDrive Multi-Geo 
 description: This offering allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 tenancy to satisfy data residency requirements.
 ms.date: 4/27/2018
+localization_priority: Priority
 ---
 
 # OneDrive and SharePoint Online Multi-Geo 

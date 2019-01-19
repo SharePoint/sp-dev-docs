@@ -1,8 +1,9 @@
-﻿---
+---
 title: Determine SharePoint REST service endpoint URIs
 description: Guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.
 ms.date: 12/14/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

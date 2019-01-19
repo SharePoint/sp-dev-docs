@@ -3,6 +3,7 @@ title: Modernize site branding
 description: Guidance on moving to modern customization experiences within SharePoint, including how to handle the custom master pages and alternate CSS configurations.
 ms.date: 04/17/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Modernize site branding

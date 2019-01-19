@@ -3,6 +3,7 @@ title: Social feed REST API reference for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f1cb914f-1e91-4e23-bf53-d2ab323eac13
+localization_priority: Priority
 ---
 
 

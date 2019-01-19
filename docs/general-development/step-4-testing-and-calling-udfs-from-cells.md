@@ -1,8 +1,9 @@
-﻿---
+---
 title: Step 4 Testing and Calling UDFs from Cells
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d3e6aa72-2eb8-4b4b-a0eb-273486890d00
+localization_priority: Normal
 ---
 
 

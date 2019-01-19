@@ -3,6 +3,7 @@ title: Search add-ins in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 21682e45-dd78-4f3c-8f1e-cdd48de3bde2
+localization_priority: Normal
 ---
 
 

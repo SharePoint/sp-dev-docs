@@ -3,6 +3,7 @@ title: Create a developer site on an existing Office 365 subscription
 description: Set up an Office 365 developer site for SharePoint Add-ins.
 ms.date: 03/09/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 
@@ -68,3 +69,4 @@ For more information about the Office 365 Enterprise offerings, see [Plans &amp;
 -  [Delete site collection](https://docs.microsoft.com/en-us/sharepoint/delete-site-collection)
     
  
+

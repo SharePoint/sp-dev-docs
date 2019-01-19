@@ -2,6 +2,7 @@
 title: Customize OneDrive for Business sites
 description: The actual patterns that you can use with the add-in model to customize OneDrive for Business sites. 
 ms.date: 4/25/2018
+localization_priority: Priority
 ---
 
 # Customize OneDrive for Business sites

@@ -3,6 +3,7 @@ title: Migrate jQuery and FullCalendar solution built using Script Editor web pa
 description: Migrate a SharePoint customization by using FullCalendar built with the Script Editor web part to the SharePoint Framework.
 ms.date: 01/09/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

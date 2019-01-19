@@ -2,6 +2,7 @@
 title: SharePoint pages and the page model
 description: Introduction to the SharePoint page model, including master pages, content pages, parts of a SharePoint page, and default page file types.
 ms.date: 4/23/2018
+localization_priority: Priority
 ---
 
 # SharePoint pages and the page model

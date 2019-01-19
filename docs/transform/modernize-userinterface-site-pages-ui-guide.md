@@ -3,6 +3,7 @@ title: End user guide for the page transformation UI
 description: Explains how end users can use the page transformation UI 
 ms.date: 11/21/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # User guide for page transformation UI

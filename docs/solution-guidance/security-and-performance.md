@@ -1,6 +1,7 @@
 ---
 title: Security and Performance
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # Security and Performance
 

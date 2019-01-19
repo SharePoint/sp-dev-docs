@@ -2,6 +2,7 @@
 title: Key web part examples
 description: A visual overview of Communication site and Team site templates. 
 ms.date: 5/08/2018 
+localization_priority: Priority
 ---
 
 # Key web part examples

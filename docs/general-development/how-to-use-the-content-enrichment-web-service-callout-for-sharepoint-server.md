@@ -3,6 +3,7 @@ title: Use the Content Enrichment web service callout for SharePoint Server
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d4e44498-9a3d-4f2f-b5ba-6ebef9971dcb
+localization_priority: Normal
 ---
 
 

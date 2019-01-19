@@ -2,6 +2,7 @@
 title: Building SharePoint Online portals
 description: Guidelines for developing well-performing SharePoint Online portals. 
 ms.date: 4/30/2018
+localization_priority: Priority
 ---
 
 # Building SharePoint Online portals

@@ -5,6 +5,7 @@ author: JoanneHendrickson
 manager: pamgreen
 ms.date: 6/20/2018
 description: "How to pass encrypted content at rest to the API securely."
+localization_priority: Normal
 ---
 
 # OneDrive for Business and SharePoint Online Migration API encryption

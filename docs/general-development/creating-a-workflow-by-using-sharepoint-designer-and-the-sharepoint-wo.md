@@ -3,6 +3,7 @@ title: Creating a workflow by using SharePoint Designer 2013 and the SharePoint 
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c05e0127-c6f5-48b8-b8f2-cbcc30149c8b
+localization_priority: Priority
 ---
 
 

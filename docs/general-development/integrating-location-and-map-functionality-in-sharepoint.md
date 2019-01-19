@@ -3,6 +3,7 @@ title: Integrating location and map functionality in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 10d4a904-ed27-4513-8c20-d2098aebf22c
+localization_priority: Priority
 ---
 
 
@@ -13,6 +14,9 @@ Learn how to integrate location information and maps in SharePoint lists and loc
 <a name="SP15Integrateloc_what"> </a>
 
 SharePoint introduces a new field type named Geolocation that enables you to annotate SharePoint lists with location information. In columns of type Geolocation, you can enter location information as a pair of latitude and longitude coordinates in decimal degrees or retrieve the coordinates of the user's current location from the browser if it implements the W3C Geolocation API. In the list, SharePoint displays the location on a map powered by Bing Maps. In addition, a new view named Map View displays the list items as pushpins on a Bing Maps Ajax control V7 with the list items as cards on the left pane. Figure 1 summarizes the default location and map features in SharePoint. Together, the Geolocation field and the Map View enable you to give a spatial context to any information by integrating data from SharePoint into a mapping experience, and let your users engage in new ways in your web and mobile apps and solutions.
+
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
   
 > [!NOTE]
 > An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint front-end web server to view the geolocation field value or data in a list. This package installs components that implement the new geometry, geography, and hierarchy ID types in SQL Server 2008. By default, this file is installed for SharePoint Online. However, it is not for an on-premises deployment of SharePoint. You must be a member of the Farm Administrators group to perform this operation. To download SQLSysClrTypes.msi, see  [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=26728) for SQL Server 2008, or [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=29065)for SQL Server 2012 in the Microsoft Download Center. 

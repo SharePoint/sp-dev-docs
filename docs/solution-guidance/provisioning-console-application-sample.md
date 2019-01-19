@@ -2,6 +2,7 @@
 title: Provisioning console application sample
 description: Learn the fundamentals of using the PnP provisioning engine to create and persist, and then apply provisioning templates to new SharePoint site collections.
 ms.date: 5/9/2018
+localization_priority: Priority
 ---
 
 # Provisioning console application sample

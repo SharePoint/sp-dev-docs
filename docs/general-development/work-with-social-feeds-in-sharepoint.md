@@ -3,6 +3,7 @@ title: Work with social feeds in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 39f2163e-15cc-43bc-b131-041d5afdcd90
+localization_priority: Normal
 ---
 
 

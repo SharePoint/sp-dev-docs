@@ -2,6 +2,7 @@
 title: Branding guidance for SharePoint Online portals
 description: Describes branding requirements and general principles when branding portals in a SharePoint Online environment.
 ms.date: 4/30/2018
+localization_priority: Priority
 ---
 
 # Branding guidance for SharePoint Online portals

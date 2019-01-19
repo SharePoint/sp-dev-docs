@@ -3,6 +3,7 @@ title: Build reusable components for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bb4467e2-57f0-4cf1-91b8-4d3d8d2358cb
+localization_priority: Normal
 ---
 
 
