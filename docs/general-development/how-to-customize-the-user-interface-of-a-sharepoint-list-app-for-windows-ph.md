@@ -3,6 +3,7 @@ title: Customize the user interface of a SharePoint list app for Windows Phone
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 09ed59af-5e2b-4716-a9e4-a015e4793d85
+localization_priority: Normal
 ---
 
 

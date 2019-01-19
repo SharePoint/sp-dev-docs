@@ -3,6 +3,7 @@ title: Use a SharePoint website's style sheet in SharePoint Add-ins
 description: Reference a style sheet of a SharePoint website in your SharePoint Add-in and use it to style your webpages.
 ms.date: 12/14/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

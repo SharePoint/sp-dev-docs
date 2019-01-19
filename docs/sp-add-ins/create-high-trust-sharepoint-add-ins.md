@@ -1,8 +1,9 @@
-﻿---
+---
 title: Create high-trust SharePoint Add-ins
 description: Use a high-trust add-in to establish a trust between the remote web application and SharePoint. Primarily intended for use with an on-premises, rather than cloud-based, web application.
 ms.date: 12/29/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

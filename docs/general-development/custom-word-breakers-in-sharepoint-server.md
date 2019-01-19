@@ -3,6 +3,7 @@ title: Custom word breakers in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d18b48d4-987c-4228-9932-30d5b30f86a2
+localization_priority: Normal
 ---
 
 

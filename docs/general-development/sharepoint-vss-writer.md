@@ -3,6 +3,7 @@ title: SharePoint VSS Writer
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f83577e4-ebb8-44e5-8dec-a3ca5878b7fd
+localization_priority: Normal
 ---
 
 

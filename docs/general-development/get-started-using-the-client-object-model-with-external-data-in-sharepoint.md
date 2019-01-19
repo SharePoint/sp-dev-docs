@@ -3,6 +3,7 @@ title: Get started using the client object model with external data in SharePoin
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8ed91929-fdb6-4fde-ba2a-7942870575f3
+localization_priority: Normal
 ---
 
 

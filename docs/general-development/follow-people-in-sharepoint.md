@@ -3,6 +3,7 @@ title: Follow people in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0fa2e235-63d0-41b1-9eed-4aeb2f59a14d
+localization_priority: Normal
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: Use remote event receivers in SharePoint
 ms.date: 11/03/2017
+localization_priority: Priority
 ---
 # Use remote event receivers in SharePoint
 

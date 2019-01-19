@@ -2,6 +2,7 @@
 title: Document library templates sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can implement a custom document library template and customize site columns, site content types, taxonomy fields, version settings, and the default document content type.
 ms.date: 5/2/2018
+localization_priority: Priority
 ---
 
 # Document library templates sample SharePoint Add-in

@@ -3,6 +3,7 @@ title:  SharePoint Developer GitHub repositories
 description: List of different SharePoint Developer GitHub repositories and their description
 ms.date: 03/29/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # SharePoint Developer GitHub repositories

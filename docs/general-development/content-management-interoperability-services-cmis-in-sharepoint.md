@@ -1,8 +1,9 @@
-﻿---
+---
 title: Content Management Interoperability Services (CMIS) in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a1def24c-b2db-4bf9-8d2c-02f5628832f8
+localization_priority: Priority
 ---
 
 

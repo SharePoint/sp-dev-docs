@@ -3,6 +3,7 @@ title: Implement Continuous Integration and Continuous deployment using Azure De
 description: Streamlining the build and deployment process by automating manual steps.
 ms.date: 11/02/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Implement Continuous Integration and Continuous deployment using Azure DevOps

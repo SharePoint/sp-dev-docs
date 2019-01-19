@@ -3,6 +3,7 @@ title: Overview of SharePoint webhooks
 description: Build applications that subscribe to receive notifications on specific events that occur in SharePoint.
 ms.date: 02/08/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

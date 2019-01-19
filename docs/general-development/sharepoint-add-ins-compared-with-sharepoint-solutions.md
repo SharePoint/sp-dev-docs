@@ -3,6 +3,7 @@ title: SharePoint Add-ins compared with SharePoint solutions
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
+localization_priority: Priority
 ---
 
 
@@ -124,7 +125,7 @@ The following table lists the SharePoint components that cannot be deployed in a
 |:-----|:-----|
 |Custom web parts  <br/> |A SharePoint Add-in can have remote pages that contain custom web parts. Another option is to expose a page from a remote web application in an add-in part on a SharePoint site page. The remote page can have basically the same UI controls and functionality as a web part. For more information, see  [Create add-in parts to install with your SharePoint Add-in](http://msdn.microsoft.com/library/a2664289-6c56-4cb1-987a-22367fad55eb%28Office.15%29.aspx).  <br/> |
 |Event receivers and Feature receivers  <br/> |A SharePoint Add-in can contain functionally equivalent remote event receivers. For more information, see  [Handle events in SharePoint Add-ins](http://msdn.microsoft.com/library/c050d056-8548-4496-a053-016779d723d9%28Office.15%29.aspx).  <br/> |
-|Custom field (column) types  <br/> |An add-in can deploy a new field (column) that is based on one of the  [existing field types](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldtype.aspx%28Office.15%29.aspx). The  [Calculated](http://msdn.microsoft.com/library/8703373d-bb55-4132-8c5f-37a41c383f81%28Office.15%29.aspx) and [Computed](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldcomputed.aspx%28Office.15%29.aspx) field types are especially flexible. Another option is to present your data in a remote webpage by using customized controls or grids. <br/> |
+|Custom field (column) types  <br/> |An add-in can deploy a new field (column) that is based on one of the  [existing field types](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.spfieldtype). The  [Calculated](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.spfieldcalculated) and [Computed](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.spfieldcomputed) field types are especially flexible. Another option is to present your data in a remote webpage by using customized controls or grids. <br/> |
 |Custom web services built on the SharePoint  [Service Application Framework](http://msdn.microsoft.com/library/6d0300d2-5b5c-4477-a9e2-17594aea5a7d%28Office.15%29.aspx) <br/> |You can develop your custom web services as remote services.  <br/> |
 |Application pages  <br/> |A SharePoint Add-in can include remote webpages that are available from every website on which the add-in is installed. An add-in can also use any of the built-in SharePoint web parts on site pages.  <br/> |
    
@@ -180,7 +181,7 @@ For more information about add-in event handlers, see the SDK node  [Handle even
 ### Add-ins that create extensions
 <a name="ExtensionFactories"> </a>
 
-Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning** section of [Site provisioning techniques and remote provisioning in SharePoint](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint.aspx), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web.
+Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning** section of [Site provisioning techniques and remote provisioning in SharePoint](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web.
   
     
     
@@ -195,4 +196,5 @@ Another way to use the SharePoint client object model -- or its REST APIs -- to 
 -  [Using Solutions in SharePoint Foundation](http://msdn.microsoft.com/library/0da0518c-24eb-48e0-89bd-21282fdeef94%28Office.15%29.aspx)
     
   
+
 

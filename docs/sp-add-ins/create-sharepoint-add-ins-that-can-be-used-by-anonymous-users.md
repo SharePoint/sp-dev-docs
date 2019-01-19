@@ -3,6 +3,7 @@ title: Create SharePoint Add-ins that can be used by anonymous users
 description: Create SharePoint-hosted and provider-hosted add-ins that are anonymously accessible on public-facing SharePoint sites.
 ms.date: 12/27/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Create SharePoint Add-ins that can be used by anonymous users

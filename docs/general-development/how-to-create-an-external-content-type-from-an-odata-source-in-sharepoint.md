@@ -3,6 +3,7 @@ title: Create an external content type from an OData source in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bc60ea49-c44e-4531-af62-06b8cf77d35d
+localization_priority: Priority
 ---
 
 

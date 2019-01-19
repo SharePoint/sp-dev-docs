@@ -2,6 +2,7 @@
 title: "SharePoint web part design showcase: Create a To-Do list property pane"
 description: Create a To-Do list web part that uses a single pane and is reactive.
 ms.date: 01/23/2018 
+localization_priority: Priority
 ---
 
 # SharePoint web part design showcase: Create a To-Do list property pane

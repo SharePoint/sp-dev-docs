@@ -3,6 +3,7 @@ title: Integrate web part properties with SharePoint
 description: Use capabilities that simplify managing web part properties' values and integrate them with SharePoint Search when building SharePoint Framework client-side web parts.
 ms.date: 01/10/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

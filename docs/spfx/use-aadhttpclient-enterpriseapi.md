@@ -3,6 +3,7 @@ title: Consume enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to an enterprise API secured with Azure AD in SharePoint Framework solutions.
 ms.date: 08/28/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Consume enterprise APIs secured with Azure AD in SharePoint Framework

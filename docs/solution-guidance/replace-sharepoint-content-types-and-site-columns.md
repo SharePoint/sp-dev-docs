@@ -2,6 +2,7 @@
 title: Replace SharePoint content types and site columns in farm solutions
 description: Use CSOM to replace content types and site columns, add site columns to new content types, and replace the content types with new content types.
 ms.date: 5/4/2018
+localization_priority: Normal
 ---
 
 # Replace SharePoint content types and site columns in farm solutions

@@ -1,6 +1,7 @@
 ---
 title: Use asynchronous operations in SharePoint Add-ins
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # Use asynchronous operations in SharePoint Add-ins
 

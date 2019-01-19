@@ -1,8 +1,9 @@
-﻿---
+---
 title: Save, download, and upload a SharePoint site as a template
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
+localization_priority: Priority
 ---
 
 

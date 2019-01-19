@@ -3,6 +3,7 @@ title: Three authorization systems for SharePoint Add-ins
 description: SharePoint Add-ins can use low-trust or high-trust systems or the cross-domain library to get authorization to SharePoint resources.
 ms.date: 12/27/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

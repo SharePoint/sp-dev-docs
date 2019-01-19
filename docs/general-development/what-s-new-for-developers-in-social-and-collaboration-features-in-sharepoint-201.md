@@ -3,6 +3,7 @@ title: What's new for developers in social and collaboration features in SharePo
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 65365b1d-cde5-47cd-8b04-1b76be0e3490
+localization_priority: Normal
 ---
 
 
@@ -242,7 +243,7 @@ The following list contains information for developing with Community Site featu
     
     
 
-- Community Sites use the **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ListTemplateType.DiscussionBoard.aspx) (value = **108**).
+- Community Sites use the **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-server/ee541191(v=office.15)) (value = **108**).
     
   
 - Activating the **Community Site** feature activates the **CommunityEventReceiver** event receiver.
@@ -290,3 +291,4 @@ while (retries <= 10)
     
 -  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29)
     
+

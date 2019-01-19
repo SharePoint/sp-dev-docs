@@ -2,6 +2,7 @@
 title: Read or update user profile properties sample SharePoint Add-in
 description: Use a provider-hosted add-in to read or update SharePoint single and multivalued user profile properties.
 ms.date: 5/7/2018
+localization_priority: Priority
 ---
 
 # Read or update user profile properties sample SharePoint Add-in

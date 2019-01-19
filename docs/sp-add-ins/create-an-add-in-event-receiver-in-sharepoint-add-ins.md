@@ -3,6 +3,7 @@ title: Create an add-in event receiver in SharePoint Add-ins
 description: Create handlers for the SharePoint Add-in install and uninstall events in SharePoint Add-ins.
 ms.date: 12/22/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

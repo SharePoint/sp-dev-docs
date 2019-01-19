@@ -1,6 +1,7 @@
 ---
 title: Elevated privileges in SharePoint Add-ins
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # Elevated privileges in SharePoint Add-ins
 

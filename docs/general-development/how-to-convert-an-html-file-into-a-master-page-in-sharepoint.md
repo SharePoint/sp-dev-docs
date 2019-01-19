@@ -3,6 +3,7 @@ title: Convert an HTML file into a master page in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a76ab289-3256-45de-ac63-d5112a74e3c7
+localization_priority: Priority
 ---
 
 

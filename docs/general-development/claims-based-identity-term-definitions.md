@@ -3,6 +3,7 @@ title: Claims-based identity term definitions
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0f3decb5-dcd8-432f-9bb8-533f2d01bef7
+localization_priority: Normal
 ---
 
 

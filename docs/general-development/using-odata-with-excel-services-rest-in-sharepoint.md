@@ -3,6 +3,7 @@ title: Using OData with Excel Services REST in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8a20225a-323c-4420-bbb4-eef60aed4b42
+localization_priority: Priority
 ---
 
 

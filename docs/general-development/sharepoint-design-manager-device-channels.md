@@ -1,8 +1,9 @@
-﻿---
+---
 title: SharePoint Design Manager device channels
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a924bd7b-a5e3-41bf-b0a7-3e43945fa951
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: Include mentions, tags, and links to sites and documents in posts in Shar
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 975da333-372b-4bf6-a3f4-7452db369f04
+localization_priority: Normal
 ---
 
 

@@ -3,6 +3,7 @@ title: Tenancies and deployment scopes for SharePoint Add-ins
 description: Deploy SharePoint Add-ins to tenant scope and web scope SharePoint tenants. 
 ms.date: 11/02/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Tenancies and deployment scopes for SharePoint Add-ins

@@ -1,6 +1,7 @@
 ---
 title: Transformation
 ms.date: 01/26/2018
+localization_priority: Normal
 ---
 # Transformation
 
@@ -121,6 +122,9 @@ Client-side rendering or JSLink is a concept introduced with SharePoint 2013.  W
 JSLink is a JavaScript file which will override the default view of your list with the help of logically defined in your custom JSLink file. You can include the JSLink JavaScript file under the Miscellaneous section of your list view web part.
 
 JSLink works only with the classic SharePoint experience and cannot be reused with the modern SharePoint UI.
+
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
 
 ### Articles
 

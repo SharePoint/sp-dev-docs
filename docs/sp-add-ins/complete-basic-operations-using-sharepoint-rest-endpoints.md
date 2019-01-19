@@ -3,6 +3,7 @@ title: Complete basic operations using SharePoint REST endpoints
 description: Perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.
 ms.date: 4/19/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Complete basic operations using SharePoint REST endpoints
@@ -370,7 +371,6 @@ The SharePoint Online (and on-premises SharePoint 2016 and later) REST service s
 ## See also
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
-- [SharePoint: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-Perform-ab9c4ae5)
 - [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
 - [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)

@@ -3,6 +3,7 @@ title: Implement business logic and data validation in a Windows Phone app for S
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: fbbedc38-9651-4cd6-b523-d93cbf1cd39d
+localization_priority: Normal
 ---
 
 

@@ -1,8 +1,9 @@
-﻿---
+---
 title: What's new in workflows for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1d51421b-61ac-46b6-a865-52f968ddc5b3
+localization_priority: Priority
 ---
 
 

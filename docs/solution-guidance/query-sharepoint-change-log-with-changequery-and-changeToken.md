@@ -1,6 +1,7 @@
 ---
 title: Query SharePoint change log with ChangeQuery and ChangeToken
 ms.date: 11/03/2017
+localization_priority: Priority
 ---
 # Query SharePoint change log with ChangeQuery and ChangeToken
 

@@ -2,6 +2,7 @@
 title: PnP provisioning framework
 description: Get a high-level overview of remote provisioning features available for your Office 365 and SharePoint Online site collections as well as an understanding about why creating sandboxed and full-trust solutions is no longer recommended.
 ms.date: 5/9/2018
+localization_priority: Priority
 ---
 
 # PnP provisioning framework

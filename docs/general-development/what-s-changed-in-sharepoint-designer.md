@@ -3,6 +3,7 @@ title: What's changed in SharePoint Designer 2013
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f1cd30c9-9a73-428d-9151-f1813b43b020
+localization_priority: Priority
 ---
 
 

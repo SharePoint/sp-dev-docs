@@ -4,6 +4,7 @@ description: The SharePoint Development Community (also known as the SharePoint 
 ms.date: 06/18/2018
 ms.prod: sharepoint
 
+localization_priority: Priority
 ---
 
 # SharePoint Developer Community (SharePoint PnP) resources

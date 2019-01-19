@@ -3,6 +3,7 @@ title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
 ms.date: 01/12/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 
@@ -14,7 +15,7 @@ You can also see the required steps to enable debugging in Visual Studio Code in
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/watch?v=oNChcluMrm8?list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG]
+> [!Video https://www.youtube.com/watch?v=oNChcluMrm8]
 
 <br/> 
 

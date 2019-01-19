@@ -3,6 +3,7 @@ title: Create a remote event receiver in SharePoint Add-ins
 description: Create a remote event receiver (RER) that handles list and list item events in a SharePoint Add-in.
 ms.date: 12/22/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

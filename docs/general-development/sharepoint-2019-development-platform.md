@@ -3,6 +3,7 @@ title: SharePoint Server 2019 development platform
 ms.date: 07/12/2018
 ms.prod: sharepoint
 ms.assetid: e0602381-ae11-41be-6a7e-9e47e9f246d6
+localization_priority: Priority
 ---
 
 # SharePoint Server 2019 development platform

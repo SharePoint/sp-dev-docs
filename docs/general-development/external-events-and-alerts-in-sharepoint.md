@@ -3,6 +3,7 @@ title: External events and alerts in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e48e4812-a185-43c5-b243-04b1d79b88ee
+localization_priority: Normal
 ---
 
 

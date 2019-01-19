@@ -3,6 +3,7 @@ title: SharePoint Online Suite Navigation control
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ba93e5c0-e591-48d0-a716-a08ec7ef6cea
+localization_priority: Normal
 ---
 
 
@@ -310,7 +311,7 @@ var g_navBarHelpDefaultKey = "HelpHome";
 -  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   
--  [Menu control overview (ASP.NET)](http://msdn.microsoft.com/en-us/library/ecs0x9w5%28v=vs.90%29.aspx.aspx)
+-  [Menu control overview (ASP.NET)](https://technet.microsoft.com/en-us/ecs0x9w5(v=vs.94))
     
   
 

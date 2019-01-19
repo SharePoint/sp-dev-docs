@@ -3,6 +3,7 @@ title: Change the preview page in SharePoint Design Manager
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e5dfd8df-65de-44fc-aa97-23b4685d33ee
+localization_priority: Priority
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: OneDrive for Business customization in the SharePoint Add-in model
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 OneDrive for Business customization in the SharePoint Add-in model
 ==================================================================

@@ -1,6 +1,7 @@
 ---
 title: Connect SharePoint app parts by using SignalR
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 # Connect SharePoint app parts by using SignalR
 

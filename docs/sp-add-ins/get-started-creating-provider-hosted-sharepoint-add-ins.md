@@ -3,6 +3,7 @@ title: Get started creating provider-hosted SharePoint Add-ins
 description: Set up a development environment and create your first provider-hosted SharePoint Add-in.
 ms.date: 03/14/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

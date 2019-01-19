@@ -2,6 +2,7 @@
 title:  SharePoint themes and colors
 description: Design principles that help form the current SharePoint themes and color palette.
 ms.date: 05/21/2018
+localization_priority: Priority
 ---
 
 # SharePoint themes and colors

@@ -3,6 +3,7 @@ title: Call the Microsoft Graph API using OAuth from your web part
 description: Add functionality such as email, documents, and a calendar to your web part by integrating with Microsoft Graph.
 ms.date: 08/28/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

@@ -3,6 +3,7 @@ title: SharePoint Framework guidance on dynamic loading of packages
 description: Techniques to optimize the run-time size and execution speed of your SharePoint Framework component.
 ms.date: 08/27/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Dynamic loading of packages in SharePoint Framework

@@ -3,6 +3,7 @@ title: Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in
 description: Customize the rendering and validation of controls in add-in pages, create and register the JavaScript, and run and test the add-in.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in
@@ -12,6 +13,9 @@ This is the eighth in a series of articles about the basics of developing ShareP
 > [!NOTE]
 > If you have been working through this series about SharePoint-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeClientRenderedControl.sln file.
  
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
+
 You can use a little client-side JavaScript to customize the rendering of web parts, most types of fields (columns), and some other controls, by assigning a JavaScript file to the **JSLink** property of the control, such as **SPField.JSLink**. You can also add client-side validation logic in this way. In this article, you customize the rendering of a field in a list of the Employee Orientation SharePoint Add-in by using client-side rendering.
  
 > [!NOTE]

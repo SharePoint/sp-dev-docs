@@ -3,6 +3,7 @@ title: What's new in SharePoint search for developers
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: b8d69685-3612-421e-b011-50b4d580d461
+localization_priority: Normal
 ---
 
 

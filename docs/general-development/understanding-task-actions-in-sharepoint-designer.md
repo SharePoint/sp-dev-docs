@@ -3,6 +3,7 @@ title: Understanding Task Actions in SharePoint Designer 2013
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 6fd69e94-ebe1-4d5d-98db-b2f3ce16f098
+localization_priority: Priority
 ---
 
 

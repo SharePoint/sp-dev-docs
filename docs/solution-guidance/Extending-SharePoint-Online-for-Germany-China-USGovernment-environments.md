@@ -1,6 +1,7 @@
 ---
 title: Authorization considerations for tenants hosted in the Germany, China or US Government environments
 ms.date: 6/19/2017
+localization_priority: Normal
 ---
 # Authorization considerations for tenants hosted in the Germany, China or US Government environments
 

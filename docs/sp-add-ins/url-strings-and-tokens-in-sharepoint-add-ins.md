@@ -3,6 +3,7 @@ title: URL strings and tokens in SharePoint Add-ins
 description: The URL tokens that can be used at the beginning of a URL and inside a URL in a SharePoint Add-in.
 ms.date: 12/13/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

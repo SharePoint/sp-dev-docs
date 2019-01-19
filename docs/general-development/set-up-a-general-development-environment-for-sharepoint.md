@@ -6,6 +6,7 @@ f1_keywords:
 - install SharePoint,set up SharePoint,setup SharePoint
 ms.prod: sharepoint
 ms.assetid: 08e4e4e1-d960-43fa-85df-f3c279ed6927
+localization_priority: Priority
 ---
 
 

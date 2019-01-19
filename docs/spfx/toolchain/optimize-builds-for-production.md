@@ -3,6 +3,7 @@ title: Optimize SharePoint Framework builds for production
 description: The differences between debug and release builds and how you can optimize your bundle for use in production environments.
 ms.date: 02/02/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

@@ -2,6 +2,7 @@
 title: Enterprise Content Management solutions for SharePoint
 description: The ECM solution pack includes code samples and documentation for transitioning your SharePoint Online and SharePoint ECM solutions from full trust code to the add-in model.
 ms.date: 5/2/2018
+localization_priority: Priority
 ---
 
 # Enterprise Content Management solutions for SharePoint

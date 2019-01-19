@@ -3,6 +3,7 @@ title: Prepare to set up and configure a SharePoint workflow development environ
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: b6a3321f-4131-4a8e-9cb7-7a1b4ab9e26b
+localization_priority: Normal
 ---
 
 

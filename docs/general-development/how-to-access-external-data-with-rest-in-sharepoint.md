@@ -3,6 +3,7 @@ title: Access external data by using REST in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0663cc8c-a736-434d-9858-6ce12ce7f748
+localization_priority: Priority
 ---
 
 
@@ -53,7 +54,7 @@ The SharePoint REST service provides a way to access external data using a speci
 |:-----|:-----|
 | [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx) <br/> |Learn how to use the SharePoint REST service, which provides a REST programming interface comparable to the existing client object model.  <br/> |
 | [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx) <br/> |Get the basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.  <br/> |
-| [Using the SharePoint REST service](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx) <br/> |Learn how to navigate the SharePoint data structure as it is represented in the REST service, perform common CRUD (create, read, update, and delete) operations on SharePoint items via the REST service, synchronize SharePoint items across applications, and control item concurrency.  <br/> |
+| [Complete basic operations using SharePoint REST endpoints](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) <br/> |Learn how to navigate the SharePoint data structure as it is represented in the REST service, perform common CRUD (create, read, update, and delete) operations on SharePoint items via the REST service, synchronize SharePoint items across applications, and control item concurrency.  <br/> |
    
 
 ## Create an SharePoint Add-in to access external data using REST
@@ -67,7 +68,7 @@ The following procedures guide you through setting up an SharePoint Add-in and c
 ### To create an SharePoint Add-in
 
 
-1. Open Visual Studio 2012.
+1. Open Visual Studio 2012 or later.
     
   
 2. Create an **App for SharePoint** project.
@@ -210,7 +211,7 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
     
   
--  [Using the SharePoint REST service](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx)
+-  [Complete basic operations using SharePoint REST endpoints](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints)
     
   
 -  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint.md)
@@ -219,4 +220,5 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
+
 

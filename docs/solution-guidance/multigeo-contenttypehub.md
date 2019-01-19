@@ -2,6 +2,7 @@
 title: Define and publish content types in a Multi-Geo tenant
 description: Explains how the content type hub works in a SharePoint Multi-Geo tenant.
 ms.date: 4/27/2018
+localization_priority: Normal
 ---
 
 # Define and publish content types in a Multi-Geo tenant

@@ -2,6 +2,7 @@
 title: Configure SharePoint provider-hosted add-ins for distribution
 description: Issues that may arise when sharing a SharePoint provider-hosted add-in with other developers or when obtaining a copy from a source control system such as Team Foundation Server, Git, or Visual Studio Team Services.
 ms.date: 5/8/2018
+localization_priority: Normal
 ---
 
 #  Configure SharePoint provider-hosted add-ins for distribution

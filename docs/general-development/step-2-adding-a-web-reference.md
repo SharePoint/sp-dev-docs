@@ -3,6 +3,7 @@ title: Step 2 Adding a Web Reference
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e9175863-ddb4-4750-847d-d53cb59b33cb
+localization_priority: Priority
 ---
 
 

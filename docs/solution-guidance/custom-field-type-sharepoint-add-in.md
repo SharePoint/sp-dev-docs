@@ -1,6 +1,7 @@
 ---
 title: Custom field type in the SharePoint Add-in model
 ms.date: 11/03/2017
+localization_priority: Normal
 ---
 Custom field type in the SharePoint Add-in model
 ================================================
@@ -13,6 +14,9 @@ The approach you take to provide customized end user experiences is different in
 In a SharePoint Add-ins model scenario, customized end user experiences are implemented via client-side rendering. In this approach, JavaScript files are used to implement customized end user experiences. The remote provisioning pattern deploys the JavaScript files and registers them with SharePoint fields via the JSLink property.
 
 From an end user's perspective the capability/result looks the same.
+
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
 
 Here are some examples of custom field type that implements a Google map. These come from the [Branding.JSLink](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.JSLink) Office 365 PnP Sample.
 

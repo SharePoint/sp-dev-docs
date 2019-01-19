@@ -3,6 +3,7 @@ title: Authentication, authorization, and security in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8734790c-eb75-4d78-9604-7cc23b33b693
+localization_priority: Priority
 ---
 
 

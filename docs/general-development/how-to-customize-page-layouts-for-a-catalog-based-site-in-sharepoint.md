@@ -3,6 +3,7 @@ title: Customize page layouts for a catalog-based site in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 21d8db99-73b3-4429-b6cb-04e375af9f55
+localization_priority: Priority
 ---
 
 

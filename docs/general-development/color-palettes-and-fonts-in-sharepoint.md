@@ -3,6 +3,7 @@ title: Color palettes and fonts in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c17d375b-151f-48ae-ac32-f2ce9e68d63f
+localization_priority: Priority
 ---
 
 

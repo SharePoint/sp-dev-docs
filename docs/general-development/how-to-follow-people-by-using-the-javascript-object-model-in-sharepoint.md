@@ -3,6 +3,7 @@ title: Follow people by using the JavaScript object model in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 2643c286-47c9-4a7a-9273-7474394477d6
+localization_priority: Normal
 ---
 
 

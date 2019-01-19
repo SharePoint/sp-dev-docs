@@ -3,6 +3,7 @@ title: Three ways to think about design options for SharePoint Add-ins
 description: Overview of the design and architecture options available with SharePoint Add-ins. 
 ms.date: 11/02/2017
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 # Three ways to think about design options for SharePoint Add-ins

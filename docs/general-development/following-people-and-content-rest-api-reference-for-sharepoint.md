@@ -3,6 +3,7 @@ title: Following people and content REST API reference for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c05755df-846d-4a39-941d-950d066cc6d4
+localization_priority: Priority
 ---
 
 

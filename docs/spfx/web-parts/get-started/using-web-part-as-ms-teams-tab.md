@@ -3,6 +3,7 @@ title: Building Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framweork. Capability was released to preview in SharePoint Framework v1.7.
 ms.date: 11/08/2018
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Building Microsoft Teams tab using SharePoint Framework - Tutorial
@@ -94,7 +95,7 @@ Teams folder contains following three files:
 
 ## Updating code to be aware of the Microsoft Teams context
 
-1. Open **src\webparts\myFirstTeamTab\MyFirstTeamTabWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
+1. Open **src\webparts\myFirstTeamsTab\MyFirstTeamsTabWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
 
 1. Add the following private variable inside the **MyFirstTeamsTabWebPart** class. We will be storing information around the Microsoft Teams context in this variable.
 
@@ -122,7 +123,7 @@ Teams folder contains following three files:
       }
     ```
 
-1. Update the **render** method as follows. Notice how we are rendering different content dependent if the code is rendered as a tab in Microsoft Team or as a web part in SharePoint.
+1. Update the **render** method as follows. Notice how we are rendering different content dependent if the code is rendered as a tab in Microsoft Teams or as a web part in SharePoint.
 
     ```typescript
     public render(): void {
@@ -132,17 +133,17 @@ Teams folder contains following three files:
       let siteTabTitle: string = '';
 
       if (this._teamsContext) {
-        // We have teams context for the web part
+        // We have Teams context for the web part
         title = "Welcome to Teams!";
         subTitle = "Building custom enterprise tabs for your business.";
-        siteTabTitle = "We are in the context of following Team: " + this._teamsContext.teamName;
+        siteTabTitle = "We are in the context of following Teams team: " + this._teamsContext.teamName;
       }
       else
       {
         // We are rendered in normal SharePoint context
         title = "Welcome to SharePoint!";
         subTitle = "Customize SharePoint experiences using Web Parts.";
-        siteTabTitle = "We are in the context of following site: " + this.context.pageContext.web.title;
+        siteTabTitle = "We are in the context of following SharePoint site: " + this.context.pageContext.web.title;
       }
 
       this.domElement.innerHTML = `

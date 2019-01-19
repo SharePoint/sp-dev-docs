@@ -3,6 +3,7 @@ title: Retrieve user profile properties by using the JavaScript object model in 
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c6e1ca38-134f-428a-8d21-b8b2615b161b
+localization_priority: Priority
 ---
 
 

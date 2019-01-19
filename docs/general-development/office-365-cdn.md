@@ -3,6 +3,7 @@ title: Use the Office 365 content delivery network
 ms.date: 1/11/2018
 ms.prod: sharepoint
 ms.assetid: 21ac1941-6a8b-4f33-8408-0c1f36295893
+localization_priority: Priority
 ---
 
 # Use the Office 365 content delivery network (CDN)

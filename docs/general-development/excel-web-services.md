@@ -3,6 +3,7 @@ title: Excel Web Services
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e30ef4e3-72ff-43de-beba-b377141d4d19
+localization_priority: Priority
 ---
 
 

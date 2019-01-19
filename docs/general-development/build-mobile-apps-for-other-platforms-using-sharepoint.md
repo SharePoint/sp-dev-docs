@@ -3,6 +3,7 @@ title: Build mobile apps for other platforms using SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 017df869-44fb-4ffe-82fb-4654e01329ad
+localization_priority: Priority
 ---
 
 
@@ -309,13 +310,7 @@ For more information, see  [Complete basic operations using SharePoint REST endp
     
   
 -  [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
-    
-  
--  [Making REST calls with C# and JavaScript for SharePoint](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)
-    
-  
--  [Making REST calls with C# and JavaScript for SharePoint demo](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=b1e7c9c5-0f62-4a78-bb7b-8e283c86145c)
-    
+       
   
 -  [Open Data Protocol](http://www.odata.org/)
     

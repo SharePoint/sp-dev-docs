@@ -3,6 +3,7 @@ title: SharePoint Framework solutions governance considerations
 description: To get the most benefit from SharePoint Framework solutions, your organization should have an actionable governance plan covering the most important project management considerations.
 ms.date: 01/26/2018
 ms.prod: sharepoint
+localization_priority: Normal
 ---
 
 

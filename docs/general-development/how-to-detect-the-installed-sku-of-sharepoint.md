@@ -3,6 +3,7 @@ title: Detect the installed SKU of SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d5d84d6f-6a8e-4ead-9296-7025baf1e154
+localization_priority: Normal
 ---
 
 

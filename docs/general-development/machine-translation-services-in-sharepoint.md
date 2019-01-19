@@ -3,6 +3,7 @@ title: Machine Translation Services in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 15a81428-da94-40b8-8ed4-6a12f05661e2
+localization_priority: Priority
 ---
 
 

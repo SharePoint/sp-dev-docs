@@ -3,6 +3,7 @@ title: Access SharePoint data from add-ins using the cross-domain library
 description: Access data in a SharePoint website from your add-in by using the cross domain library in SharePoint.
 ms.date: 12/29/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

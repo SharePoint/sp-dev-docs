@@ -3,6 +3,7 @@ title: Add a custom page and style to a SharePoint-hosted SharePoint Add-in
 description: Add a custom page, add a style class to a stylesheet, and run and test the add-in.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 # Add a custom page and style to a SharePoint-hosted SharePoint Add-in

@@ -3,6 +3,7 @@ title: Extend the fixed-format export feature in Word Automation Services
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d8375505-432e-438e-971b-221a1d9bb601
+localization_priority: Normal
 ---
 
 

@@ -3,6 +3,7 @@ title: Give your provider-hosted add-in the SharePoint look-and-feel
 description: Get to know the base add-in, configure Visual Studio to rebuild the corporate database, add SharePoint chrome and top bar to the start page, run the add-in, and test the new UI.
 ms.date: 12/04/2017
 ms.prod: sharepoint
+localization_priority: Priority
 ---
 
 

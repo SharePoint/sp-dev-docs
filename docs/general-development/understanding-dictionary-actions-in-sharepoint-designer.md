@@ -3,6 +3,7 @@ title: Understanding Dictionary actions in SharePoint Designer 2013
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 73df233e-bad8-4ea1-b05d-61ecab597924
+localization_priority: Priority
 ---
 
 

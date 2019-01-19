@@ -2,6 +2,7 @@
 title:  Designing a web part icon
 description: Learn how to design a web part icon that will look great in SharePoint.
 ms.date: 08/24/2018
+localization_priority: Normal
 ---
 
 # Designing a SharePoint web part icon

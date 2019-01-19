@@ -6,6 +6,7 @@ f1_keywords:
 - functions
 ms.prod: sharepoint
 ms.assetid: 27dd8024-7e00-40de-a688-afc67c880603
+localization_priority: Normal
 ---
 
 
