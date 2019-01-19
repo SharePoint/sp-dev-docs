@@ -275,7 +275,10 @@ Now we have confirmed that the side-loading is enabled, and we can package our M
 
     ![Channel activated](../../../images/sp-teams-channel-activated.png)
 
-- Click `+` to add a new tab on the channel
+- Click `+` w tab on the channel
+
+> [!NOTE] 
+> In order to being able to add a custom teams tab built with SharePoint Framework, you need to have an already existing SharePoint Online site created under the cover of the target Team. If you have just created the target Team, you should first open the its SharePoint Online site by clicking on the "..." just beside the channel title and selecting the "Open in SharePoint" menu item. If the SharePoint Online site has not yet been created, you will see a message static something like "We are setting up your file directory." Once the site will be created, you will be able to add the custom teams tab.
 
 - Click your custom Tab called **MyFirstTeamTab** in the list
 
