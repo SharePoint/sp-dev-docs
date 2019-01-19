@@ -56,7 +56,7 @@ function RestRequest(url,params) {
   req.setRequestHeader("ODATA-VERSION","4.0");
   req.send(params ? JSON.stringify(params) : void 0);
 }
-RestRequest("/_api/thememanager/GetTenantThemingOptions");
+RestRequest("/_api/thememanager/AddTenantTheme");
 
 var pal = {
     "palette" : {
