@@ -52,7 +52,7 @@ To debug event receivers you need to configure a few different things in Azure a
 - [Debug and troubleshoot a remote event receiver in an add-in for SharePoint MSDN Blog Post)](https://msdn.microsoft.com/en-us/library/office/dn275975.aspx) 
 - [Debugging Remote Event Receivers with Visual Studio (MSDN Blog Post)](http://blogs.msdn.com/b/officeapps/archive/2013/01/03/debugging-remote-event-receivers-with-visual-studio.aspx)
 - [Update to debugging SharePoint 2013 remote events using Visual Studio 2012 (MSDN Blog Post)](http://blogs.msdn.com/b/officeapps/archive/2013/03/21/update-to-debugging-sharepoint-2013-remote-events-using-visual-studio-2012.aspx)
-- [Creating and Debugging Remote Event Receiver “Installer Apps” in SharePoint Online (Scott Hillier)](http://www.itunity.com/article/create-debug-remote-event-receiver-installer-apps-sharepoint-online-775)
+
 
 More Examples
 -------------
