@@ -124,7 +124,6 @@ In this pattern, the Windows Scheduler handles the scheduling aspects associated
 - [Create remote timer jobs in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/create-remote-timer-jobs-in-sharepoint)
 - [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 - [Transforming your SharePoint customizations to add-in model - Resources](https://dev.office.com/blogs/transforming-your-sharePoint-customizations)
-- [Simulate Timer Job Solution for SharePoint 2013/Online using App Model & CSOM](https://blogs.msdn.microsoft.com/shariq/2013/12/09/simulate-timer-job-solution-for-sharepoint-2013online-using-app-model-csom/)
 
 ##### Videos
 
