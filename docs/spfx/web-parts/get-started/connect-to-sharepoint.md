@@ -218,7 +218,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 
 ### To add new styles
 
-1. Open **HelloWorld.module.scss**. This is the SCSS file where you define your styles.
+1. Open **HelloWorldWebPart.module.scss**. This is the SCSS file where you define your styles.
 
   By default, the styles are scoped to your web part. You can see that as the styles are defined under **.helloWorld**.
 
@@ -256,7 +256,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 
 3. Save the file.
 
-  Gulp rebuilds the code in the console as soon as you save the file. This generates the corresponding typings in the **HelloWorld.module.scss.ts** file. After compiled to TypeScript, you can then import and reference these styles in your web part code.
+  Gulp rebuilds the code in the console as soon as you save the file. This generates the corresponding typings in the **HelloWorldWebPart.module.scss.ts** file. After compiled to TypeScript, you can then import and reference these styles in your web part code.
 
   You can see that in the **render** method of the web part:
 
