@@ -14,7 +14,7 @@ In a typical Full Trust Code (FTC) / Farm Solution scenario, Event Receivers and
 Server Side Object Model code and deployed via Solutions.  In this scenario, the event receiver code runs on the SharePoint server.
 
 In an SharePoint Add-in model scenario, event receivers are created outside of SharePoint inside a web service and registered with SharePoint.  
-These are called as *Remote Event Recivers (RER)*. In this scenario, the event receiver code runs on the web server where the web service is hosted.
+These are called as *Remote Event Receivers (RER)*. In this scenario, the event receiver code runs on the web server where the web service is hosted.
 
 >**Important**
 >As of January 2017 SharePoint Online does support list webhooks which you can use instead of "-ed" remote event receivers. Checkout [Overview of SharePoint webhooks](https://dev.office.com/sharepoint/docs/apis/webhooks/overview-sharepoint-webhooks) to learn more about webhooks. Also note that several webhook samples are available from the [sp-dev-samples](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples) GitHub repository.
