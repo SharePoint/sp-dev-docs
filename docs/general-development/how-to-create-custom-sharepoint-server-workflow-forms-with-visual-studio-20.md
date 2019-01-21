@@ -51,7 +51,7 @@ To alleviate this limitation, Microsoft extended CSOM to include an API for inte
   
     
     
-How, then, does this benefit SharePoint workflow forms? Well, when authoring SharePoint workflows using Visual Studio 2012, you create workflow forms using ASP.NET Web Forms. You can deploy these forms as a SharePoint solution or (and this is the important part) within . This gives you access to all the server controls that are already deployed to the server, such as the ASP.NET Web Controls and other useful (and required at times) SharePoint controls. You can also use the new Workflow Services CSOM to perform all necessary tasks from association and initiation forms including, but not limited to, the following:
+How, then, does this benefit SharePoint workflow forms? Well, when authoring SharePoint workflows using Visual Studio 2012, you create workflow forms using ASP.NET Web Forms. You can deploy these forms as a SharePoint solution or within existing solutions. This gives you access to all the server controls that are already deployed to the server, such as the ASP.NET Web Controls and other useful (and required at times) SharePoint controls. You can also use the new Workflow Services CSOM to perform all necessary tasks from association and initiation forms including, but not limited to, the following:
   
     
     
