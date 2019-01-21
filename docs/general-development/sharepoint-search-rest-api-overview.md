@@ -1139,7 +1139,7 @@ Special rules for reordering search results. These rules can specify that docume
   
     
     
-In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ReorderingRuleMatchType.aspx) . In the following example, `'MatchType' : '0'` specifies [ResultContainsKeyword](https://msdn.microsoft.com/zh-cn/library/office/microsoft.office.server.search.query.reorderingrulematchtype.aspx) .
+In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](/previous-versions/office/sharepoint-server/jj276975(v=office.15)) . In the following example, `'MatchType' : '0'` specifies `ResultContainsKeyword`.
   
     
     
