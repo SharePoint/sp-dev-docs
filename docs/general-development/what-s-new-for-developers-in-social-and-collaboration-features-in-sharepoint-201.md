@@ -152,7 +152,7 @@ $loader.CreatePersonalSiteEnqueueBulk(@("user1@domain.com"))
 $loader.Context.ExecuteQuery()
 ```
 
-For more information, see  [So you want to programmatically provision Personal Sites (OneDrive for Business) in Office 365?](http://blogs.msdn.com/b/frank_marasco/archive/2014/03/25/so-you-want-to-programmatically-provision-personal-sites-one-drive-for-business-in-office-365.aspx) and [Use Windows PowerShell to administer SharePoint](http://technet.microsoft.com/en-us/library/ee806878%28v=office.15%29.aspx).
+For more information, see [Use Windows PowerShell to administer SharePoint](http://technet.microsoft.com/en-us/library/ee806878%28v=office.15%29.aspx).
   
     
     

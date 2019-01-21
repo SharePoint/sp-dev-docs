@@ -18,11 +18,6 @@ Workbooks that you want to access must be placed in a trusted location. If they 
     
 
 You can also trust a location by using Windows PowerShell. For more information, see the Microsoft SharePoint Server 2010 IT Pro and administration documentation on  [TechNet](http://technet.microsoft.com/en-us/library/ee428287%28office.14%29.aspx). 
-> **Tip:**
-> For more information about administration improvement and to view screen shots of the Trusted File Locations page, see the blog post  [Excel Services in SharePoint 2010 Administration Improvements](http://blogs.msdn.com/excel/archive/2009/11/16/excel-services-in-sharepoint-2010-administration-improvements.aspx). 
-  
-    
-    
 
 
 ### To trust a location
