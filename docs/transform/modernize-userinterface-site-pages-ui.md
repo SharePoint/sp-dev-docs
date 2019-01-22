@@ -27,7 +27,9 @@ The Page Transformation UI installation consists out of 3 steps:
 - Installing and configuring the SharePoint Modernization center site
 - Enabling the page transformation UI for the site collections that need it
 
-These steps are semi-automated via scripts and PnP site templates: checkout the [Page Transformation UI deployment guide](https://aka.ms/sppnp-pagetransformationui-deployment) for step-by-step guidance.
+These steps are semi-automated via scripts and PnP site templates: checkout the [Page Transformation UI deployment guide](https://aka.ms/sppnp-pagetransformationui-deployment) for step-by-step guidance and check out below video to learn how to set up the page transformation UI solution.
+
+> [!Video https://www.youtube.com/embed/DK8YMRRyPgw]
 
 ## Page Transformation UI high level architecture
 
