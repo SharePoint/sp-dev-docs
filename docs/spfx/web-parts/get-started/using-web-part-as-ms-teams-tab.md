@@ -112,7 +112,7 @@ Teams folder contains following three files:
       protected onInit(): Promise<any> {
         let retVal: Promise<any> = Promise.resolve();
         if (this.context.microsoftTeams) {
-          retVal = new Promise((resolve, reject) => {
+          retVal = new Promise((resolve, _reject) => {
             this.context.microsoftTeams.getContext(context => {
               this._teamsContext = context;
               resolve();
