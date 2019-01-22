@@ -397,7 +397,9 @@
   - name: View formatting
     href: declarative-customization/view-formatting.md       
   - name: Communication site
-    href: apis/communication-site-creation-rest.md     
+    href: apis/communication-site-creation-rest.md
+  - name: Site Footer
+    href: features/site-footer.md    
   - name: Shorter share links
     href: spfx/shorter-share-link-format.md
 - name: SharePoint development overview
