@@ -521,7 +521,7 @@ This example uses the `length` operator to detect the number of members of the f
 ```
 
 ### Simple HTML elements formatting
-The following image showsn an example of constructing a simple sentence from the values of a multi-value Lookup field.
+The following image shows an example of constructing a simple sentence from the values of a multi-value Lookup field.
 
 ![Screenshot of a field reads "North America, APAC, and Europe"](../images/sp-columnformatting-multi-value-1.png)
 
@@ -541,16 +541,16 @@ This examples uses operator `loopIndex` and `length` to identify the last member
             "txtContent": {
                 "operator": "?",
                 "operands": [
-                    "=loopIndex('region') + 1 == length(@currentField)",
-                    "=', and ' + [$region.lookupValue]",
+                    "=loopIndex('region') + 1 != length(@currentField)",
                     {
-                        "operator": "?",
+                       "operator": "?",
                         "operands": [
-                            "=loopIndex('region') == 0",
+                           "=loopIndex('region') == 0",
                             "[$region.lookupValue]",
                             "=', ' + [$region.lookupValue]"
                         ]
-                    }
+                    },
+                    "=', and ' + [$region.lookupValue]"
                 ]
             }
         }
@@ -559,7 +559,7 @@ This examples uses operator `loopIndex` and `length` to identify the last member
 ```
 
 ### Complex HTML elements formatting
-The following image showsn an example of building a list of users with pictures, email addresses and a simple counter at the top.
+The following image shows an example of building a list of users with pictures, email addresses and a simple counter for the number of members at the top.
 
 ![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](../images/sp-columnformatting-multi-value-2.png)
 
