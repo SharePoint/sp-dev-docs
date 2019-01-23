@@ -539,19 +539,19 @@ This examples uses operator `loopIndex` and `length` to identify the last member
             "elmType": "span",
             "forEach": "region in @currentField",
             "txtContent": {
-                "operator": "?",
-                "operands": [
-                    "=loopIndex('region') + 1 != length(@currentField)",
-                    {
-                       "operator": "?",
-                        "operands": [
-                           "=loopIndex('region') == 0",
-                            "[$region.lookupValue]",
-                            "=', ' + [$region.lookupValue]"
-                        ]
-                    },
-                    "=', and ' + [$region.lookupValue]"
-                ]
+               "operator": "?",
+               "operands": [
+                  "=loopIndex('region') == 0",
+                  "[$region.lookupValue]",
+                  {
+                     "operator": "?",
+                     "operands": [
+                        "=loopIndex('region') + 1 == length(@currentField)",
+                        "=', and ' + [$region.lookupValue]",
+                        "=', ' + [$region.lookupValue]"
+                     ]
+                  }
+               ]
             }
         }
     ]
