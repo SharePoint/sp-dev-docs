@@ -200,6 +200,26 @@ Enables defining lookup fields and their dependent lists element using Collabora
   "targetListName": "Contoso Project Master"
 }
 ```
+### addSiteColumn
+
+Subaction to add a previously defined site column directly to a list (existing or created through the site script).
+
+#### JSON value
+
+- **internalName** &ndash; The internal name of the site column to add.
+- **addToDefaultView** &ndash; Optional attribute that defaults to false. If true, the newly added field will also be added to the default view.
+
+
+#### Example
+
+```json
+ {
+    "verb": "addSiteColumn",
+    "internalName": "siteColumnUser",
+    "addToDefaultView": true
+ }
+ ```
+
 
 ### addSPView
 
@@ -536,10 +556,7 @@ Use **createContentType** to define a new content type that can then be associat
 
 ### addSiteColumn
 
-Subaction to add a previously defined site column directly to a list or content type (existing or created through the site script).
-
-> [!NOTE]
-> This action can be used to add created site columns to a list or content type.  
+Subaction to add a previously defined site column directly to a content type (existing or created through the site script).
 
 #### JSON value
 
