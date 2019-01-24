@@ -33,9 +33,13 @@ After requesting a modern version of your page you'll see a spinner indicating a
 
 The created modern page will have a banner on top of it and this banner has a specific function: it will allow you as the user requesting the page to keep the preview as being the final page you want to use in the future. Obviously it also allows you to decline the page.
 
-![page transformation process](media/modernize/pagetransformation_ui_6.png)
+![page banner on modern page](media/modernize/pagetransformation_ui_6.png)
 
-Let's have a look at both options.
+Also the classic page will get a banner to indicate the site users that there's a modern version of this page available:
+
+![page banner on classic page](media/modernize/pagetransformation_ui_9.png)
+
+Let's have a look at the options of the modern page banner.
 
 ### Keep this page
 
