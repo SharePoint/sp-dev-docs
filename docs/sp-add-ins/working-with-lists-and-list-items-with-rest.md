@@ -189,10 +189,11 @@ http://site url/_api/web/lists/getbytitle('ListName')/Items?&$filter=LookupColum
 
 ### Retrieve all list items
 
-The following example shows how to  retrieve all of a list's items.
+The following example shows how to retrieve all of a list's items.  
  
 > [!NOTE] 
-> The OData $skip query option does not work when querying list items. In may situations, you can use the [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
+> * The OData $skip query option does not work when querying list items. In many situations, you can use the [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
+> * By default, this will return the first 100 items.  More information on controlling the # of items, paging, etc. see the documentation on [OData Query options](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests)
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items
