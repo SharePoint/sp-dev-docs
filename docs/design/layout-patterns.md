@@ -5,7 +5,7 @@ ms.date: 08/24/2018
 localization_priority: Priority
 ---
 
-# SharPoint web part layouts
+# SharePoint web part layouts
 
 SharePoint uses a number of different layout types for web parts. The most common are grid, list, filmstrip, carousel, and compact. Each one of these five layouts serves a different purpose, depending on the layout, breakpoints, and content density of a page. 
 
