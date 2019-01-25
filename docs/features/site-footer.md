@@ -16,7 +16,7 @@ Footers are a common branding / navigation control in websites and portals. Shar
 > Site footers are current supported only in modern pages of communication sites. This feature is scheduled to start production roll out in January 2019.
 
 > [!IMPORTANT]
-> Footer will be enabled by default for all new and existing communication sites when the faeture is initially rolled out.
+> Footer will be enabled by default for all new and existing communication sites when the feature is initially rolled out.
 
 ## Footer with a logo
 
