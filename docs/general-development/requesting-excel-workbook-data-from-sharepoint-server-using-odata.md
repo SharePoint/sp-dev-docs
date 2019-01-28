@@ -92,9 +92,6 @@ The Excel Services implementation of OData supports a number of the standard ODa
 -  [Using OData with Excel Services REST in SharePoint](using-odata-with-excel-services-rest-in-sharepoint.md)
     
   
--  [What's new in Excel Services for developers](http://msdn.microsoft.com/library/09e96c8b-cb55-4fd1-a797-b50fbf0f9296.aspx)
-    
-  
 -  [OData specification documentation](http://www.odata.org)
     
   

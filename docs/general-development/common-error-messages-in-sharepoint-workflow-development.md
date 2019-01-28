@@ -139,10 +139,6 @@ Review the following to ensure that you have correctly configured incoming and o
 -  [Deployment guide for Microsoft SharePoint](http://download.microsoft.com/download/1/F/6/1F6D3BE4-1174-4320-A1D1-C0E2681CCCF3/Deployment-guide-for-SharePoint-2013.pdf)
     
   
--  [How to configure Incoming and Outgoing emails in SharePoint Server](http://blogs.msdn.com/b/pareshg/archive/2010/04/23/how-to-configure-incoming-and-outgoing-emails-in-sharepoint-server-2010.aspx)
-    
-  
-
 ### The workflow could not update the item, possibly because one or more columns for the item require a different type of information
 <a name="bkmk_error08"> </a>
 

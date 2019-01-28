@@ -94,7 +94,6 @@ In this pattern you use the SharePoint Client Side Object Model (CSOM) to create
 
 Related links
 =============
-- [Feature Stapling In SharePoint 2010 (MSDN Blog Article)](http://blogs.msdn.com/b/kunal_mukherjee/archive/2011/01/11/feature-stapling-in-sharepoint-2010.aspx)
 - [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
 - [SharePoint 2013 App Deployment through 'App Stapling' (MSDN Blog Article - Richard DiZerega)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/09/18/10399333.aspx)
 - [Site Provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)

@@ -1139,7 +1139,7 @@ Special rules for reordering search results. These rules can specify that docume
   
     
     
-In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ReorderingRuleMatchType.aspx) . In the following example, `'MatchType' : '0'` specifies [ResultContainsKeyword](https://msdn.microsoft.com/zh-cn/library/office/microsoft.office.server.search.query.reorderingrulematchtype.aspx) .
+In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](/previous-versions/office/sharepoint-server/jj276975(v=office.15)) . In the following example, `'MatchType' : '0'` specifies `ResultContainsKeyword`.
   
     
     
@@ -1701,17 +1701,11 @@ When an anonymous Search REST query is submitted, the query object is constructe
 -  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d)
+-  [Using the SharePoint search Query APIs](/sharepoint/dev/general-development/using-the-sharepoint-search-query-apis)
     
   
 -  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
--  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
+-  [Use OData query operations in SharePoint REST requests](/sharepoint/dev/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests)
     
-  
-
-  
-    
-    
-

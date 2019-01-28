@@ -21,15 +21,14 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 |**Blog Name**|**Links**|
 |:-----|:-----|
-|Cum Grano Salis  <br/> | [Home page](http://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](http://blogs.msdn.com/cumgranosalis/archive/category/12700.aspx) <br/> |
-|Microsoft Excel 2010: The official blog of the Microsoft Excel product team  <br/> | [Home page](http://blogs.msdn.com/excel) <br/>  [Excel Online page](http://blogs.msdn.com/excel/archive/2010/01/21/collaborative-editing-using-excel-web-app.aspx) <br/> |
-|Microsoft Office Web Apps: The official blog of the Microsoft Office Online team  <br/> | [Home page](http://blogs.msdn.com/officewebapps/default.aspx) <br/> |
+|Cum Grano Salis  <br/> | [Home page](http://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](https://blogs.msdn.microsoft.com/cumgranosalis/tag/excel-services/) <br/> |
+|Microsoft Excel: The official blog of the Microsoft Excel product team  <br/> | [Home page](https://www.microsoft.com/microsoft-365/blog/excel) <br/>  |
    
 
 
 |**Forum Name**|**Links**|
 |:-----|:-----|
-|SharePoint - Excel Services  <br/> | [Excel Services forum home page](http://social.msdn.microsoft.com/Forums/en-US/sharepointexcel/threads) <br/> |
+|SharePoint - Excel Services  <br/> | [Excel Services forum home page](/sharepoint/dev/general-development/excel-services-blogs-forums-and-resources) <br/> |
 |SharePoint Products and Technologies  <br/> | [List of SharePoint Products and Technologies forums](http://social.msdn.microsoft.com/forums/en-US/category/sharepoint) <br/> |
    
 

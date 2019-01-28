@@ -146,7 +146,7 @@ using Microsoft.SharePoint.Client.Social;
 ## Iterate through and read from the social feed by using the SharePoint .NET client object model
 <a name="bkmk_ReadFeed"> </a>
 
-The following code iterates through the threads in the feed. It checks whether each thread has the  [CanReply](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.social.socialthreadattributes.aspx) attribute and then gets the thread identifier and the text of the root post. The code also creates a dictionary to store the thread identifier (which is used to reply to a thread) and writes the text of the root post to the console.
+The following code iterates through the threads in the feed. It checks whether each thread has the  [CanReply](https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-csom/jj163554(v=office.15)) attribute and then gets the thread identifier and the text of the root post. The code also creates a dictionary to store the thread identifier (which is used to reply to a thread) and writes the text of the root post to the console.
 
 ```cs
 Dictionary<int, string> idDictionary = new Dictionary<int, string>();
