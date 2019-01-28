@@ -305,7 +305,7 @@ You can use column formatting to render quick action links next to fields. The f
             "elmType": "a",
             "attributes": {
                 "iconName": "Mail",
-                "class": "sp-field-quickActions",
+                "class": "sp-field-quickAction",
                 "href": {
                     "operator": "+",
                     "operands": [
@@ -690,7 +690,7 @@ You can use the following predefined classes for several common scenarios.
 | sp-field-dataBars |![Blue bar with number 4](../images/sp-columnformatting-databar.png) |
 | sp-field-trending--up |![Green arrow with number 500](../images/sp-columnformatting-trendingup.png) |
 | sp-field-trending--down |![Red arrow with number 100](../images/sp-columnformatting-trendingdown.png) |
-| sp-field-quickActions |![Name with mail icon](../images/sp-columnformatting-quickaction.png) |
+| sp-field-quickAction |![Name with mail icon](../images/sp-columnformatting-quickaction.png) |
 
 > [!NOTE]
 > The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
