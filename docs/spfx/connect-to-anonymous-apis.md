@@ -15,7 +15,7 @@ When building SharePoint Framework solutions, you might want to consume public A
 
 ## Connect to anonymous APIs using the HttpClient
 
-The easiest way, to connect to anonymous APIs in your SharePoint Framework solutions, is by using the HttpClient provided as a part of the SharePoint Framework. For example, to get weather information for London from the public OpenWeatherMap service, you would execute:
+The easiest way, to connect to anonymous APIs in your SharePoint Framework solutions, is by using the HttpClient provided as a part of the SharePoint Framework. For example, to get dummy information from the Typicode service, you would execute:
 
 ```ts
 this.context.httpClient
