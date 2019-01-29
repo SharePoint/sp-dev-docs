@@ -23,8 +23,8 @@ this.context.httpClient
   .then((res: HttpClientResponse): Promise<any> => {
     return res.json();
   })
-  .then((weather: any): void => {
-    console.log(weather);
+  .then((response: any): void => {
+    console.log(response);
   });
 ```
 
@@ -41,8 +41,8 @@ this.context.httpClient
   .then((res: HttpClientResponse): Promise<any> => {
     return res.json();
   })
-  .then((weather: any): void => {
-    console.log(weather);
+  .then((response: any): void => {
+    console.log(response);
   });
 ```
 
