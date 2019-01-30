@@ -10,7 +10,7 @@ localization_priority: Priority
 
 Azure DevOps (Visual Studio Team Services / Team Foundation Server) consists of a set of tools and services that help developers implement DevOps, Continuous Integration, and Continuous Deployment processes for their development projects.
 
-This article explains the steps involved in setting up your Azure DevOps environment with with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
+This article explains the steps involved in setting up your Azure DevOps environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
 ## Continuous Integration
 
@@ -36,7 +36,7 @@ The Build Definition, as its name suggests, includes all the definitions and the
 
 ### Installing NodeJS version 8
 
-Once the Build Definition has been created, the first thing you need to do is instal NodeJS.  Make sure to install version 8, as SharePoint Framework depends on it.
+Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 8, as SharePoint Framework depends on it.
 ![installing node 8](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE] 
@@ -49,7 +49,7 @@ Because third party dependencies are not stored in the source control, you need 
 
 ### Executing Unit Tests
 
-The SharePoint Framework supports writing units tests using KarmaJS, Mocha, Chai and Sinon. These modules are already referenced for you and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issues or regressions as soon as possible. To have Azure DevOps execute your unit tests, add a `gulp` task. Set the path to the `gulpfile` file and set the `Gulp Tasks` option to `test`.
+The SharePoint Framework supports writing unit tests using KarmaJS, Mocha, Chai and Sinon. These modules are already referenced for you and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issues or regressions as soon as possible. To have Azure DevOps execute your unit tests, add a `gulp` task. Set the path to the `gulpfile` file and set the `Gulp Tasks` option to `test`.
 
 ![executing unit tests](../../images/azure-devops-spfx-04.png)
 
@@ -64,7 +64,7 @@ By default SharePoint Framework projects do not include a reporter for JUnit. Re
 npm i karma-junit-reporter@1.X -D
 ```
 
-You also need to configure KarmaJS to load an use the reporter, to do so create a file `config/karma.config.js` and add the following content.
+You also need to configure KarmaJS to load and use the reporter, to do so create a file `config/karma.config.js` and add the following content.
 
 ```JS
 "use strict";
@@ -135,14 +135,13 @@ Add a `Copy Files` task and set the `Contents` to `**\*.sppkg` (the SharePoint P
 
 ### Publishing the artifacts
 
-Now that you have collected all the files needed for deployment in a special artifacts folder, you still need to instruct Azure DevOps to keep these files after the execution of the build. To do so add a `Publis
-h artifacts` task and set the `Path to publish` to `$(build.artifactstagingdirectory)/drop` and the `Artifact name` to `drop`.
+Now that you have collected all the files needed for deployment in a special artifacts folder, you still need to instruct Azure DevOps to keep these files after the execution of the build. To do so add a `Publish artifacts` task and set the `Path to publish` to `$(build.artifactstagingdirectory)/drop` and the `Artifact name` to `drop`.
 ![publishing the artifacts](../../images/azure-devops-spfx-09.png)
 
 
 ## Continuous Deployment
 
-Continuous Deployment (CD) takes validated code packages from build process and deploys them into a staging or production environment.  Developers are able to track which deployments were successful or not and narrow down the issues to the particular package versions.    
+Continuous Deployment (CD) takes validated code packages from build process and deploys them into a staging or production environment.  Developers can track which deployments were successful or not and narrow down issues to specific package versions.    
 
 Setting up Azure DevOps for Continuous Deployments with a SharePoint Framework solution requires the following steps:
 
@@ -158,7 +157,7 @@ Setting up Azure DevOps for Continuous Deployments with a SharePoint Framework s
 
 ### Creating the Release Definition
 
-Start by creating a new Release Definition with an empty template. A Release Defition is a process that is used to identify the following elements for the deployment:
+Start by creating a new Release Definition with an empty template. A Release Definition is a process that is used to identify the following elements for the deployment:
 
 - Environment
 - Deployment tasks
@@ -174,7 +173,7 @@ Click on `Add an artifact` and select the build definition you previously create
 
 ### Creating the Environment
 
-When you create your continuous deployment environment, you can give a name and configure pre-deployment approvals, artificats filters (i.e. deploy only if the build comes from this or that branch), and much more by clicking on the buttons around the environment box or directly on the title.
+When you create your continuous deployment environment, you can give a name and configure pre-deployment approvals, artifact filters (i.e. deploy only if the build comes from this or that branch), and much more by clicking on the buttons around the environment box or directly on the title.
 
 ![creating the environment](../../images/azure-devops-spfx-12.png)
 
@@ -195,7 +194,7 @@ The Office 365 Common Language Interface (CLI) is an open source project built b
 > Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
 
 ### Connecting to the App Catalog
-Before using the App Catalog in you deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo login https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
+Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo login https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
 `
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
@@ -213,7 +212,7 @@ Upload the solution package to your App Catalog by adding another `Command Line`
 
 ### Deploying the Application
 
-The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as it's latest version. Add another `Command Line` taks and paste the follwing command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
+The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
 
 > [!NOTE] 
 > Make sure you update the package name.
@@ -238,7 +237,7 @@ Add the following variables
 
 ## Testing
 
-To test your newly created Continuous Deployment process, return to the `Builds` section in Azure DevOps, select your build definition and click on `Queue`. Select your branch, and click on `Queue`. A new build will be created and will start building. 
+To test your newly created Continuous Deployment process, return to the `Builds` section in Azure DevOps, select your build definition and click on `Queue`. Select your branch and click on `Queue`. A new build will be created and will start building. 
 
 ![Queuing a build](../../images/azure-devops-spfx-19.png)
 
@@ -246,7 +245,7 @@ After a couple of minutes, your build should complete and show a result page lik
 
 ![Results of a build](../../images/azure-devops-spfx-20.png)
 
-If you navigate to the `Release` section of Azure DevOps, a new release should have started automatically. After a few minutes your release should complete and your SharePoint Framework solution is deployed to your tenant.  
+If you navigate to the `Release` section of Azure DevOps, a new release should have started automatically. After a few minutes your release should complete, and your SharePoint Framework solution is deployed to your tenant.  
 
 ![Results of a release](../../images/azure-devops-spfx-21.png)
 
