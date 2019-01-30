@@ -44,18 +44,22 @@ The following JavaScript sample code shows how to add a new theme to a tenant.
 function RestRequest(url,params) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = function ()
-        {
-            if (req.readyState != 4) // Loaded
-                return;
-            console.log(req.responseText);
-        };
-  req.open("POST",url,true); 
+  {
+    if (req.readyState != 4) // Loaded
+      return;
+    console.log(req.responseText);
+  };
+  // Prepend web URL to url and remove duplicated slashes.
+  var webBasedUrl = (_spPageContextInfo.webServerRelativeUrl + "//" + url).replace(/\/{2,}/,"/");
+  req.open("POST",webBasedUrl,true);
   req.setRequestHeader("Content-Type", "application/json;charset=utf-8");
   req.setRequestHeader("ACCEPT", "application/json; odata.metadata=minimal");
   req.setRequestHeader("x-requestdigest", _spPageContextInfo.formDigestValue);
   req.setRequestHeader("ODATA-VERSION","4.0");
   req.send(params ? JSON.stringify(params) : void 0);
 }
+
+
 RestRequest("/_api/thememanager/AddTenantTheme");
 
 var pal = {
@@ -100,18 +104,21 @@ The following JavaScript sample code shows how to remove a theme.
 function RestRequest(url,params) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = function ()
-        {
-            if (req.readyState != 4) // Loaded
-                return;
-            console.log(req.responseText);
-        };
-  req.open("POST",url,true);
+  {
+    if (req.readyState != 4) // Loaded
+      return;
+    console.log(req.responseText);
+  };
+  // Prepend web URL to url and remove duplicated slashes.
+  var webBasedUrl = (_spPageContextInfo.webServerRelativeUrl + "//" + url).replace(/\/{2,}/,"/");
+  req.open("POST",webBasedUrl,true);
   req.setRequestHeader("Content-Type", "application/json;charset=utf-8");
   req.setRequestHeader("ACCEPT", "application/json; odata.metadata=minimal");
   req.setRequestHeader("x-requestdigest", _spPageContextInfo.formDigestValue);
   req.setRequestHeader("ODATA-VERSION","4.0");
   req.send(params ? JSON.stringify(params) : void 0);
 }
+
  
 RestRequest("/_api/thememanager/DeleteTenantTheme", { name:"themeName.DarkYellow" });
  
@@ -129,12 +136,14 @@ The following JavaScript sample code shows how to read theme settings.
 function RestRequest(url,params) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = function ()
-        {
-            if (req.readyState != 4) // Loaded
-                return;
-            console.log(req.responseText);
-        };
-  req.open("POST",url,true);
+  {
+    if (req.readyState != 4) // Loaded
+      return;
+    console.log(req.responseText);
+  };
+  // Prepend web URL to url and remove duplicated slashes.
+  var webBasedUrl = (_spPageContextInfo.webServerRelativeUrl + "//" + url).replace(/\/{2,}/,"/");
+  req.open("POST",webBasedUrl,true);
   req.setRequestHeader("Content-Type", "application/json;charset=utf-8");
   req.setRequestHeader("ACCEPT", "application/json; odata.metadata=minimal");
   req.setRequestHeader("x-requestdigest", _spPageContextInfo.formDigestValue);
@@ -153,18 +162,21 @@ The following JavaScript sample code shows how to apply theme to the site.
 function RestRequest(url,params) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = function ()
-        {
-            if (req.readyState != 4) // Loaded
-                return;
-            console.log(req.responseText);
-        };
-  req.open("POST",url,true); 
+  {
+    if (req.readyState != 4) // Loaded
+      return;
+    console.log(req.responseText);
+  };
+  // Prepend web URL to url and remove duplicated slashes.
+  var webBasedUrl = (_spPageContextInfo.webServerRelativeUrl + "//" + url).replace(/\/{2,}/,"/");
+  req.open("POST",webBasedUrl,true);
   req.setRequestHeader("Content-Type", "application/json;charset=utf-8");
   req.setRequestHeader("ACCEPT", "application/json; odata.metadata=minimal");
   req.setRequestHeader("x-requestdigest", _spPageContextInfo.formDigestValue);
   req.setRequestHeader("ODATA-VERSION","4.0");
   req.send(params ? JSON.stringify(params) : void 0);
 }
+
 var pal = {
     "palette" : {
         "themePrimary": "#1BF242",
@@ -205,18 +217,22 @@ The following JavaScript sample code shows how to update tenant theme.
 function RestRequest(url,params) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = function ()
-        {
-            if (req.readyState != 4) // Loaded
-                return;
-            console.log(req.responseText);
-        };
-  req.open("POST",url,true); 
+  {
+    if (req.readyState != 4) // Loaded
+      return;
+    console.log(req.responseText);
+  };
+  // Prepend web URL to url and remove duplicated slashes.
+  var webBasedUrl = (_spPageContextInfo.webServerRelativeUrl + "//" + url).replace(/\/{2,}/,"/");
+  req.open("POST",webBasedUrl,true);
   req.setRequestHeader("Content-Type", "application/json;charset=utf-8");
   req.setRequestHeader("ACCEPT", "application/json; odata.metadata=minimal");
   req.setRequestHeader("x-requestdigest", _spPageContextInfo.formDigestValue);
   req.setRequestHeader("ODATA-VERSION","4.0");
   req.send(params ? JSON.stringify(params) : void 0);
 }
+
+
 var pal = {
     "palette" : {
 			"themePrimary": "#008cff",
