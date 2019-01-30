@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 09/25/2018
+ms.date: 01/30/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -11,7 +11,7 @@ localization_priority: Normal
 When you use the page transformation framework you do have a lot of control on how the page transformation is done. The model to control this is by specifying the correct configuration as part of the `PageTransformationInformation` instance that you use to launch page transformation. In this article you'll learn more about the available options.
 
 > [!IMPORTANT]
-> The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
+> The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
 ## Overwrite option
 
@@ -122,6 +122,21 @@ The default behavior is to copy over any item level permissions that might exist
 PageTransformationInformation pti = new PageTransformationInformation(page)
 {
     KeepPageSpecificPermissions = false,
+};
+```
+
+## CopyPageMetadata option (as of February 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+If you've extended your wiki page library with additional columns to collect page metadata and you want to copy this metadata to the created modern client side page then set this option to true
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    CopyPageMetadata = true,
 };
 ```
 

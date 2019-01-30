@@ -1375,6 +1375,8 @@
           href: transform/modernize-userinterface-site-pages-dotnet.md
         - name: Page transformation configuration options
           href: transform/modernize-userinterface-site-pages-configuration.md
+        - name: Page transformation security
+          href: transform/modernize-userinterface-site-pages-security.md
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
         - name: Page transformation Functions and Selectors

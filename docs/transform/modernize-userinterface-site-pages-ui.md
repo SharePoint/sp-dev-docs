@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using UI
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint UI
-ms.date: 01/24/2019
+ms.date: 01/30/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,7 +9,7 @@ localization_priority: Priority
 # Transforming to modern site pages from inside the SharePoint UI
 
 > [!IMPORTANT]
-> **The SharePoint Page Transformation UI is currently in preview**. The solution is continuously evolving, checkout [the sp-dev-modernization GitHub repository](https://github.com/SharePoint/sp-dev-modernization/tree/dev) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
+> **The SharePoint Page Transformation UI is currently a beta release**. The solution is continuously evolving, checkout [the sp-dev-modernization GitHub repository](https://github.com/SharePoint/sp-dev-modernization/tree/dev) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
 If you want to give your end users the option to self-service modernize pages then using the SharePoint Page Transformation UI makes a lot of sense as it offers your end users UI extensions (ribbon buttons) to launch page transformation:
 

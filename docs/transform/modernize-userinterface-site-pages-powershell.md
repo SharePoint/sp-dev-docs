@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint PowerShell
-ms.date: 11/19/2018
+ms.date: 01/30/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,7 +9,7 @@ localization_priority: Priority
 # Transforming to modern site pages using PowerShell
 
 > [!IMPORTANT]
-> The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP Tools GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
+> The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
 The page transformation engine can also be used from PowerShell. This allows it to be integrated in a site modernization script that besides page transformation also does other things like installing solution, connecting the site to an Office 365 group and applying tenant branding. A good example of an all-up modernization script can be found [in the Office 365 Group connect article](modernize-connect-to-office365-group.md).
 
@@ -30,6 +30,8 @@ Overwrite | $false | When you add `-Overwrite` then the page transformation fram
 AddPageAcceptBanner | $false | Using `-AddPageAcceptBanner` will make the page transformation framework put the configured PageAcceptBanner web part on top of the created modern page. Using this web part the users accessing the page can decide whether they want to keep or discard the created modern page. See the [Page Transformation UI](modernize-userinterface-site-pages-ui.md) article to learn more on how to install and configure the default page banner web part.
 ReplaceHomePageWithDefault | $false | The default behavior is to transform your site's home page to a modern page like any other regular page. If you use `-ReplaceHomeWithDefault` then a site's home page will be transformed to a 'default' out-of-the-box modern home page, so the one you would get with a newly created modern team site.
 TakeSourcePageName | $false | The default behavior is to give the created modern page a name that starts with the prefix Migrated_ and let the original page keep it's existing name. When `-TakeSourcePageName` is specified the newly created page gets the name of the original page and the original page is renamed with a prefix Previous_. Set this option if you're sure you want to move forward with the modern page as it will ensure that all links pointing the original page now result in the new modern page being loaded.
+ClearCache (as of January 2019 release) | $false | To optimize performance certain data (list of available client side web parts, calculated list of fields to copy metadata for) is cached after the first execution. This cache will stay valid during the complete PowerShell session unless you use the `-ClearCache` switch. Restarting your PowerShell session also clears the cache.
+CopyPageMetadata (as of February 2019 release) | $false | The default behavior is to not copy page metadata (so additional columns added to the site pages library). When `-CopyPageMetadata` is specified the values of the custom metadata fields of the page to transform are copied to the newly created page
 
 (*) Mandatory command line parameter
 
