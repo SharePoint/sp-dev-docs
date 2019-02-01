@@ -135,8 +135,7 @@ Add a `Copy Files` task and set the `Contents` to `**\*.sppkg` (the SharePoint P
 
 ### Publishing the artifacts
 
-Now that you have collected all the files needed for deployment in a special artifacts folder, you still need to instruct Azure DevOps to keep these files after the execution of the build. To do so add a `Publis
-h artifacts` task and set the `Path to publish` to `$(build.artifactstagingdirectory)/drop` and the `Artifact name` to `drop`.
+Now that you have collected all the files needed for deployment in a special artifacts folder, you still need to instruct Azure DevOps to keep these files after the execution of the build. To do so add a `Publish artifacts` task and set the `Path to publish` to `$(build.artifactstagingdirectory)/drop` and the `Artifact name` to `drop`.
 ![publishing the artifacts](../../images/azure-devops-spfx-09.png)
 
 
