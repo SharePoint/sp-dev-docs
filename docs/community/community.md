@@ -49,6 +49,19 @@ Are you interested in presenting during one of the community calls listed above?
 > [!NOTE]
 > Currently these are recurring invites until the end of June 2019. They will be renewed after that for the next 12 months.
 
+
+## What’s the supportability statement around PnP open-source components and solutions?
+
+Following statements apply across all of the SharePoint PnP assets, including samples, controls, component and solutions, like SharePoint Starter Kit or the PnP Provisioning Service.
+
+- PnP assets are created by the Microsoft & the community
+- PnP assets are maintained by the Microsoft & the community
+- PnP uses supported and recommended techniques defined by Microsoft
+- PnP implementations are reviewed and approved by Microsoft engineering
+- PnP is NOT a product and therefore it’s not supported by Premier Support or other official support channels, but if the experienced issue(s) is caused by out-of-the-box API, it falls on the normal support patterns from Microsoft side.
+- PnP is supported in similar ways as other open source projects done by Microsoft with support from the community by the community
+- There are numerous partners that utilize PnP within their solutions for customers. Support for this is provided by the Partner. When PnP material is used in deployments, we recommend being clear with your customer/deployment owner on the support model
+
 ## See also
 
 - [SharePoint developer portal](http://aka.ms/spdev)
