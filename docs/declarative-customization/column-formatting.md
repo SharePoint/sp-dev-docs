@@ -892,8 +892,12 @@ Operators specify the type of operation to perform. The following operators are 
 - toLocaleString()
 - toLocaleDateString()
 - toLocaleTimeString()
+- indexOf
+- toLowerCase
+- join
+- length
 
-**Binary operators** - The following are the standard arithmetic binary operators that expect two operands: 
+**Binary arthmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
 - \+
 - \-
@@ -906,20 +910,59 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Unary operators** - The following are standard unary operators that expect only one operand: 
 
-- toString()
-- Number()
-- Date()
-- cos
-- sin
-- toLocaleString()
-- toLocaleDateString()
-- toLocaleTimeString()
+- **toString()**: returns a string representing the object
+  - `"txtContent": "=toString(45)"` results in _"45"_
+  
+- **Number()**: returns the numeric value, if the operand is not a number, NaN is returned
+  - `"txtContent": "=Number('365')"` results in _365_
+  - `"txtContent": "=Number('Wowee')"` results in _NaN_
+  - `"txtContent": "=Number(Date('12/26/1981'))"` results in _378190800000_
+  
+- **Date()**: returns a datetime object from the parameter (converts strings or numbers to dates, sensitive to locale)
+  - `"txtContent": "=Date('12/26/1981')"` results in _12/26/1981, 12:00:00 AM_
+  
+- **cos**: returns the cosine of the specified angle which should be specified in radians
+  - `"txtContent": "=cos(5)"` results in _0.28366218546322625_
+  
+- **sin**: returns the sine of a number
+  - `"txtContent": "=sin(90)"` results in _0.8939966636005579_
+  
+- **toLocaleString()**: returns a language sensitive representation of a date
+  - `"txtContent":"=toLocaleString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019, 1:22:24 PM"_
+  
+- **toLocaleDateString()**: returns a language sensitive representation of just the date portion of a date
+  - `"txtContent":"=toLocaleDateString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019"_
+  
+- **toLocaleTimeString()**: returns a language sensitive representation of just the time portion of a date
+  - `"txtContent":"=toLocaleTimeString(@now)"` results vary based on user's locale, but en-us looks like _"1:22:24 PM"_
+  
+- **toLowerCase**: returns the value converted to lower case (only works on strings)
+  - `"txtContent":"=toLowerCase('DogFood')"` results in _"dogfood"_
+  
+- **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value.
+  - `"txtContent":"=length(@currentField)"` might result in _2_ if there are 2 selected values
+  - `"txtContent":"=length('Some Text')"` results in _1_
+  - `"txtContent":"=length('')"` results in _0_
+  - `"txtContent":"=length(45)"` results in _1_
+  - `"txtContent":"=length(0)"` results in _0_
+
+**Binary operators** - The following are operators that expect two operands:
+
+- **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive.
+  - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
+  - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
+  - `"txtContent": "=indexOf('DogFood', 'Cat')"` results in _-1_
+  - `"txtContent": "=indexOf('DogFood', 'f')"` results in _-1_
+  
+- **join**: takes 2 operands. The first is an array (multi-select person or choice field) and the second is the separating string. Returns a string concatenation of the array values separated by the separating string.
+  - `"txtContent": "=join(@currentField, ', ')"` might result in _"Apple, Orange, Cherry"_ (depending on the selected values)
+  - `"txtContent": "=join(@currentField.title, '|')"` might result in _"Chris Kent|Vesa Juvonen|Jeff Teper"_ (depending on the selected persons)
 
 **Conditional operator** - The conditional operator is:
 
-- ?
-
-This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c.
+- **?**: Conditional operations written in Abstract Tree Syntax use `?` as the operator. This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c. For Excel style expressions you write these with an `if` statement. Regardless, there are 3 operands. The first is the condition to evaluate. The second is the result when the condition is true. The third is the result when the condition is false.
+  - `"txtContent":"=if(4 < 5, 'yes', 'no')"` results in _"yes"_
+  - `"txtContent":"=if(4 > 5, 'yes', 'no')"` results in _"no"_
 
 ### operands
 
