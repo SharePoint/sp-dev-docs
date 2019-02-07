@@ -333,11 +333,14 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
                     />
                 </p>
                 <p className={ styles.form }>
-                  <PrimaryButton 
-                      text='Search' 
-                      title='Search' 
-                      onClick={ this._search } 
+                  {this.props.clientMode ? 
+                    <PrimaryButton
+                      text='Search'
+                      title='Search'
+                      onClick={this._search}
                     />
+                    : <p>Configure client mode by editing the web part.</p>
+                  }
                 </p>
                 {
                   (this.state.users != null && this.state.users.length > 0) ?
