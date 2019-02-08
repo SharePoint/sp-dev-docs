@@ -12,14 +12,14 @@ When building SharePoint Framework solutions, you can easily connect to the Micr
 
 ## MSGraphClient overview
 
-**MSGraphClient** is a new HTTP client introduced in SharePoint Framework v1.4.1 that simplifies connecting to the Microsoft Graph inside SharePoint Framework solutions. **MSGraphClient** wraps the existing [Microsoft Graph JavaScript Client Library](https://www.npmjs.com/package/@microsoft/microsoft-graph-client), offering developers the same capabilities as when using the client library in other client-side solutions.
+**MSGraphClient** is a new HTTP client introduced in SharePoint Framework v1.6.0 that simplifies connecting to the Microsoft Graph inside SharePoint Framework solutions. **MSGraphClient** wraps the existing [Microsoft Graph JavaScript Client Library](https://www.npmjs.com/package/@microsoft/microsoft-graph-client), offering developers the same capabilities as when using the client library in other client-side solutions.
 
 While you could use the Microsoft Graph JavaScript Client Library in your solution directly, **MSGraphClient** handles authenticating against the Microsoft Graph for you, which allows you to focus on building your solution.
 
 ## Use the MSGraphClient in your solution
 
 > [!NOTE]
-> The **MSGraphClient** is available only in projects built using SharePoint Framework v1.4.1 and later. While the **MSGraphClient** is explained in this article by using a client-side web part, you can also use it in SharePoint Framework Extensions.
+> The **MSGraphClient** is available only in projects built using SharePoint Framework v1.6.0 and later. While the **MSGraphClient** is explained in this article by using a client-side web part, you can also use it in SharePoint Framework Extensions.
 
 1. To use the **MSGraphClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
