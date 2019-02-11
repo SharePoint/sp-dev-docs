@@ -2240,7 +2240,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the parameter.  <br/> |
 | [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the parameter.  <br/> |
-| [TypeDescriptor](http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) <br/> |The root type descriptor of the parameter.  <br/> |
+| [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor?view=netframework-4.7.2) <br/> |The root type descriptor of the parameter.  <br/> |
    
  **Parent element**
   
