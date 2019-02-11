@@ -1085,7 +1085,7 @@ This ranking model with one linear stage contains these four rank features:
 -  [Overview of search result ranking in SharePoint](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
     
   
--  [Create a custom ranking model by using the Ranking Model Tuning App](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/create-a-custom-ranking-model-by-using-the-ranking-model-tuning-app-HA104104860.aspx?CTT=1)
+-  [Create a custom ranking model by using the Ranking Model Tuning App](https://docs.microsoft.com/sharepoint/search/create-custom-ranking-model)
     
   
 
