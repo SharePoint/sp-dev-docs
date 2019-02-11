@@ -52,8 +52,8 @@ To get an Office 365 plan:
 - See the [Office 365 Developer Program documentation](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 ### Open your developer site 
- 
-Select the **Build Add-ins** link in the upper-left corner of the page to open your developer site. You should see a site that looks like the one in the following figure. The **Add-ins in Testing** list on the page confirms that the website was made with the SharePoint Developer Site template. If you see a regular team site instead, wait a few minutes and then restart your site.
+
+In a browser, navigate to the SharePoint site collection you created when you setup your Office 365 developer subscription. (*If you don't have a site, follow the instructions here*). You should see a site that looks like the one in the following figure. The **Add-ins in Testing** list on the page confirms that the website was made with the SharePoint Developer Site template. If you see a regular team site instead, wait a few minutes and then restart your site.
     
 > [!NOTE]
 > Make a note of the site's URL; it's used when you create SharePoint Add-in projects in Visual Studio.

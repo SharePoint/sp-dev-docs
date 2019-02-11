@@ -225,7 +225,7 @@ IEnumerable<SP.List> result = context.LoadQuery(web.Lists.Include( // For each l
 context.ExecuteQuery(); 
 
 // Enumerate the result. 
-foreach (List list in web.Lists) 
+foreach (List list in result) 
 { 
     label1.Text = label1.Text + ", " + list.Title; 
 } 
