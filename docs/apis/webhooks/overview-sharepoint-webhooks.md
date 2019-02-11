@@ -20,7 +20,7 @@ To create a new SharePoint webhook, you add a new subscription to the specific S
 The following information is required for creating a new subscription:
 
 - **Resource**. The resource endpoint URL you are creating the subscription for. For example, a SharePoint List API URL.
-- **Server notification UR**. Your service endpoint URL. SharePoint sends an HTTP POST to this endpoint when events occur in the specified resource.
+- **Server notification URL**. Your service endpoint URL. SharePoint sends an HTTP POST to this endpoint when events occur in the specified resource.
 - **Expiration date**. The expiration date for your subscription. The expiration date should not be more than 180 days. By default, subscriptions are set to expire 180 days from when they are created. 
 
 You can also include the following information if needed:
