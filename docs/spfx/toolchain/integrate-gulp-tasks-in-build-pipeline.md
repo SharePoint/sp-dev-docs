@@ -56,7 +56,8 @@ To add your custom gulp task, add a new subtask to the SharePoint Framework buil
 ```js
 let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, buildOptions, done) {
   this.log('Hello, World!');   
-  // use functions from gulp task here  
+  // use functions from gulp task here
+  done();
 });
 ```
 
@@ -93,6 +94,30 @@ gulp hello-world
 > [!NOTE] 
 > You cannot execute the subtask registered by using the `build.subTask` function directly from the command line. You can only execute the task registered by using the `build.task` function.
 
+### Logging to the SharePoint Framework build process
+
+To add your own logging messages to the SharePoint Framework build process, you can make use of the following methods within the custom task:
+
+- `log(message: string)`: logs a message;
+-	`logWarning(message: string)`: Logs a warning, and it also adds it to the warnings list which will lead the build fail;
+-	`logError(message: string)`: Logs an error, and it also adds it to the errors list which will lead the build to fail.
+-	`fileWarning(filePath: string, line: number, column: number, warningCode: string: message: string)`: This logs a warning related to a specific file and causes the build to fail
+-	`fileError(filePath: string, line: number, column: number, warningCode: string: message: string)`: This logs an error related to a specific file and causes the build to fail.
+
+Example:
+
+```javascript
+let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, buildOptions, done) {
+  this.log('Logs message'); 
+  this.logWarning('Logs a warning'); 
+  this.logError('Logs an error'); 
+
+  done();
+});
+```
+
+![Gulp logging](../../images/gulp-custom-logging.png)
+
 ### Execute your custom task before or after available tasks
 You can also add this custom task to be executed before or after certain available gulp tasks. The following gulp tasks allow you to inject your custom task before or after the task:
 
@@ -126,13 +151,13 @@ var imageResize = require('gulp-image-resize');
  
 gulp.task('default', function () {
   gulp.src('test.png')
-    .pipe(imageResize({
-      width : 100,
-      height : 100,
-      crop : true,
-      upscale : false
-    }))
-    .pipe(gulp.dest('dist'));
+      .pipe(imageResize({
+        width : 100,
+        height : 100,
+        crop : true,
+        upscale : false
+      }))
+      .pipe(gulp.dest('dist'));
 });
 ```
 
