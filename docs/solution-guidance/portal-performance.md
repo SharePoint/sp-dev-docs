@@ -90,7 +90,7 @@ From a performance perspective, the goal with modern web applications in general
 
 The following sections provide performance guidance for achieving this goal.
 
-<a name="bk_Telemetry"> </a>
+<a name="bk_features"> </a>
 
 ### Disable the Device Channels and Search Engine Optimization features
 
