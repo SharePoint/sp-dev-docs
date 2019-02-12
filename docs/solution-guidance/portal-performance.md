@@ -1,7 +1,7 @@
 ---
 title: Performance guidance for SharePoint Online portals
 description: Describes the evolution of the SharePoint Online customization model, general performance guidelines for client-side web applications, and the Client-Side Data Access Layer (DAL) Framework.
-ms.date: 4/30/2018
+ms.date: 42/12/2019
 localization_priority: Priority
 ---
 
@@ -89,6 +89,21 @@ After you commit to building a custom client-side web application:
 From a performance perspective, the goal with modern web applications in general, and client-side web applications in particular, is to implement the client-side logic necessary to mimic the minimal network traffic patterns observed for *return* visits to classic webpages.
 
 The following sections provide performance guidance for achieving this goal.
+
+<a name="bk_Telemetry"> </a>
+
+### Disable the Device Channels and Search Engine Optimization features
+
+If you create a new classic publishing portal then both the Device Channels as the Search Engine Optimization features are turned on with their default settings. If you keep these default settings there's no impact on your page rendering, but in SharePoint Online the presence of these two features does impact performance and therefore it's recommended to disable these features if you're no using them. See below [PnP PowerShell](https://aka.ms/sppnp-powershell) script to make this happen:
+
+```PowerShell
+Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yourportal
+
+# Device channels
+Disable-PnPFeature -Scope Site -Identity 57cc6207-aebf-426e-9ece-45946ea82e4a -Force
+# SEO
+Disable-PnPFeature -Scope Site -Identity 17415b1d-5339-42f9-a10b-3fef756b84d1 -Force
+```
 
 <a name="bk_Telemetry"> </a>
 
