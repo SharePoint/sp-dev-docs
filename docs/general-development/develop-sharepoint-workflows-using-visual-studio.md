@@ -170,7 +170,7 @@ To debug SharePoint Online workflows in Visual Studio, perform the following ste
   
 3. Create a Microsoft Azure Service Bus namespace, which you can use to debug remote workflows. You can do this on the [Microsoft Azure portal](https://ms.portal.azure.com).
     
-    For more information about the Microsoft Azure Service Bus, see  [Managing Service Bus Service Namespaces](http://msdn.microsoft.com/en-us/library/windowsazure/hh690928.aspx).
+    For more information about the Microsoft Azure Service Bus, see  [Create a Service Bus namespace using the Azure portal](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-create-namespace-portal).
     
     > [!NOTE]
     > SharePoint Online workflow debugging uses the Relay Service component of the Microsoft Azure Service Bus, so you'll be charged for using the Service Bus. See  [Service Bus Pricing FAQ](http://msdn.microsoft.com/library/hh667438.aspx). You get free access to Microsoft Azure each month that you subscribe to Visual Studio Professional with MSDN, Visual Studio Premium with MSDN, or Visual Studio Ultimate with MSDN. With this access, you can use the Service Bus relay for 1,500, 3,000, or 3,000 hours, depending on your MSDN subscription. See  [Get some amount of Microsoft Azure Services each month at no additional charge](http://www.windowsazure.com/en-us/pricing/member-offers/msdn-benefits/). 
