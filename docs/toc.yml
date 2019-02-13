@@ -1301,8 +1301,6 @@
             href: sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md
           - name: Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins
             href: sp-add-ins/work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md
-    - name: Create add-ins that can be used by anonymous users
-      href: sp-add-ins/create-sharepoint-add-ins-that-can-be-used-by-anonymous-users.md
     - name: Convert an autohosted add-in to a provider-hosted add-in
       href: sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md
     - name: Create add-ins for the SAP Gateway for Microsoft
