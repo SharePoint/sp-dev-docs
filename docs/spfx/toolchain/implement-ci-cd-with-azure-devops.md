@@ -69,7 +69,6 @@ You also need to configure KarmaJS to load and use the reporter, to do so create
 ```JS
 "use strict";
 var existingKarmaConfig = require('@microsoft/sp-build-web/lib/karma/karma.config');
-var _ = require('lodash');
 var junitReporter = require('karma-junit-reporter');
 
 module.exports = function (config) {
@@ -103,10 +102,12 @@ module.exports = function (config) {
 Finally you need to modify the gulpfile to instruct it to leverage this new configuration. To do so edit `gulpfile.js` and add these lines after `build.initialize(gulp);`.
 
 ```JS
-const _ = require('lodash');
 var buildConfig = build.getConfig();
-var karmaTask = _.find(buildConfig.uniqueTasks, (t) => t.name === 'karma');
-karmaTask.taskConfig.configPath = './config/karma.config.js';
+var karmaTaskCandidates = buildConfig.uniqueTasks.filter((t) => t.name === 'karma');
+if(karmaTaskCandidates && karmaTaskCandidates.length > 0) {
+  var karmaTask = karmaTaskCandidates[0];
+  karmaTask.taskConfig.configPath = './config/karma.config.js';
+}
 ```
 
 ### Importing code coverage information
