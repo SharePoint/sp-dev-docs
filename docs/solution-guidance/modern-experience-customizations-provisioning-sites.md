@@ -233,8 +233,8 @@ New-PnPTenantSite -Url $_url -Description $_title -Title $_title -Template STS#3
 
 #### Provision an Office 365 Group using the Office 365 CLI
 
-Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create an Office 365 Group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
-The example below shows how it can be done using the [Office 365 CLI immersive mode](https://sharepoint.github.io/office365-cli/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
+Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create an Office 365 Group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
+The example below shows how it can be done using the [Office 365 CLI immersive mode](https://pnp.github.io/office365-cli/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
 
 ```bash
 # Use the Office 365 CLI immersive mode by typing o365 in the terminal
@@ -324,7 +324,7 @@ $web.Title
 
 #### Provision a "modern" communication site using the Office 365 CLI
 
-Alternatively, the [Office 365 CLI](https://sharepoint.github.io/office365-cli/cmd/spo/site/site-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" Communication site. The following bash script will create the site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL you can use it to automate other operations on the created site.
+Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/spo/site/site-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" Communication site. The following bash script will create the site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL you can use it to automate other operations on the created site.
 
 ```bash
 #!/usr/bin/env bash

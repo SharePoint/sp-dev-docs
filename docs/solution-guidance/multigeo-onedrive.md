@@ -73,7 +73,7 @@ public string GetUserPersonalUrlCSOM(ClientContext ctx, string userPrincipalName
 
 ## See also
 
-- [Reading files using the Microsoft Graph API](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/item_list_children)
+- [Working with files in Microsoft Graph](https://docs.microsoft.com/en-us/graph/api/resources/onedrive?view=graph-rest-1.0)
 - [Uploading files using REST](https://github.com/SharePoint/PnP/tree/master/Samples/Core.RestFileUpload)
 - [File upload CSOM SharePoint Add-in](https://github.com/SharePoint/PnP/tree/master/Samples/Core.FileUpload)
 - [Large file upload with CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)

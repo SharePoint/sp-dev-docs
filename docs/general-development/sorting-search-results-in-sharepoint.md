@@ -242,7 +242,7 @@ For more managed properties of type  [Decimal](https://docs.microsoft.com/en-us/
   
     
     
-For managed properties of type  [Datetime()](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
+For managed properties of type  Datetime()](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
   
     
     

@@ -30,7 +30,7 @@ For more information about accessibility features in SharePoint, see the followi
 -  [Accessibility features in SharePoint products](http://office.microsoft.com/en-us/sharepoint-foundation-help/accessibility-features-in-sharepoint-products-HA102772892.aspx?CTT=1)
     
   
--  [Keyboard shortcuts for SharePoint products](http://office.microsoft.com/en-us/sharepoint-foundation-help/keyboard-shortcuts-for-sharepoint-products-HA102772894.aspx?CTT=5&amp;origin=HA102772892)
+-  [Keyboard shortcuts in SharePoint Online](https://support.office.com/en-us/article/keyboard-shortcuts-in-sharepoint-online-466e33ee-613b-4f47-96bb-1c20f20b1015)
     
   
 Users who have site administrator responsibilities typically use the SharePoint Central Administration site to manage deployments. A mouse and keyboard are the typical devices that you use to interact with Central Administration. For more information about accessibility for administrators and other IT pros in SharePoint, see  [Accessibility for SharePoint](http://technet.microsoft.com/en-us/library/jj219681.aspx).

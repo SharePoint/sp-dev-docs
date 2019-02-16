@@ -22,7 +22,7 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
 ### To install SharePoint Designer 2013
 
 
-1. Open your web browser and navigate to the Microsoft Download Center:  [http://www.microsoft.com/download](http://www.microsoft.com/download.aspx). 
+1. Open your web browser and navigate to the Microsoft Download Center:  [http://www.microsoft.com/download](http://www.microsoft.com/download). 
     
   
 2. Type SharePoint Designer 2013 in the search field.
