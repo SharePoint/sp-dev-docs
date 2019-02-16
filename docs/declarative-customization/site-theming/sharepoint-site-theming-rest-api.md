@@ -120,10 +120,7 @@ function RestRequest(url,params) {
 }
 
  
-RestRequest("/_api/thememanager/DeleteTenantTheme", { name:"themeName.DarkYellow" });
- 
-RestRequest("/_api/thememanager/UpdateTenantTheme", { name:"themeName",
-     themeJson:""});
+RestRequest("/_api/thememanager/DeleteTenantTheme", { name:"Sounders Rave Green" });
 ```
 
 <br/>
