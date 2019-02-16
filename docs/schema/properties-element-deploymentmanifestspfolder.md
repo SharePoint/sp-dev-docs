@@ -33,7 +33,7 @@ USAGE
 
 ## Type
 
-[Dictionary](https://msdn.microsoft.com/library/System.Collections.Generic.Dictionary.aspx)
+[Dictionary](https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2)
   
 ## Elements and attributes
 
@@ -54,6 +54,6 @@ None
 ## See also
 
 - [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
-- [Dictionary](https://msdn.microsoft.com/library/System.Collections.Generic.Dictionary.aspx)
+- [Dictionary](https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

@@ -152,7 +152,7 @@ List workflows instances have some additional external variables that are set by
     
     
 
--  [CurrentItemUrl](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.currentitemur)
+-  [CurrentItemUrl](https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.currentitemurl)
     
   
 -  [ItemId](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.workflowservices.externalvariablename.itemid)

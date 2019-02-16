@@ -60,7 +60,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**DefaultUnit** <br/> |Optional. The name or abbreviation for the default [Unit](unit-element-spinner.md).  <br/> |
 |**DefaultValue** <br/> |Optional. Specifies the initial numeric value that is displayed in the control.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control.  <br/> |
-|**ImeEnabled** <br/> |Optional. **TRUE** to set the [Input Method Editor (IME)](http://msdn.microsoft.com/library/a595a28f-7a9d-4135-ad5c-d66ae45ec682.aspx) to the **active** state. The default is **FALSE**.  <br/> |
+|**ImeEnabled** <br/> |Optional. **TRUE** to set the [Input Method Editor (IME)](https://docs.microsoft.com/windows/desktop/dxtecharts/installing-and-using-input-method-editors) to the **active** state. The default is **FALSE**.  <br/> |
 |**MultiplierInterval** <br/> |Optional. Specifies a factor by which to increase the speed of incrementing or decrementing the value when focus is maintained on the up or down arrow.  <br/> |
 |**QueryCommand** <br/> |Optional. The name of the command to execute when polling for state information.  <br/> |
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |

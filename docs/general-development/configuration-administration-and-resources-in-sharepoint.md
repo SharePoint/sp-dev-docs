@@ -79,8 +79,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 
 |**Blog Name**|**Links**|
 |:-----|:-----|
-|Share-n-dipity  <br/> | [Blog home page](http://blogs.technet.com/speschka/) <br/> |
-|Microsoft SharePoint Developer Team Blog  <br/> | [Blog home page](http://blogs.msdn.com/b/sharepointdev/) <br/> |
+|Microsoft SharePoint Developer Team Blog  <br/> | [Blog home page](https://developer.microsoft.com/en-us/office/blogs/) <br/> |
 |||
    
 

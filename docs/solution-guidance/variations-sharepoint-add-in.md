@@ -25,7 +25,7 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 - You can go beyond what the CSOM API Variations classes listed above provide and configure some variations settings.  To do this, you set the values for variations settings stored in site property bags and/or modify list items in the lists associated with variations.
 	+ The [VariationsExtensions.cs class (O365 PnP Sample)](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core/Extensions/VariationExtensions.cs) contains several examples that modify property bag and list item values to configure variations settings.
 	+ The [VariationsExtensions.cs class (O365 PnP Sample)](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/VariationExtensions.cs) illustrates how to configure ***all of the settings*** that you can set in the variations settings page.
-	+ The [Turn on variations settings so you can create variations of your site (O365 Support Article)](https://support.office.com/en-za/article/Turn-on-variations-settings-so-you-can-create-variations-of-your-site-fc021610-bdb5-4b5c-9d59-ce8af6699b4b) lists  the items you can configure in the variations settings page and describes what they do.
+	+ The [Choose the languages you want to make available for a site’s user interface (O365 Support Article)](https://support.office.com/article/choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) addresses some of the multilingual capabilities of Office 365.
 
 Related links
 =============

@@ -494,7 +494,7 @@ The Developer Dashboard is rebuilt for SharePoint to provide more information, i
  
 To learn more about the Developer Dashboard:
 
--  [Overview of the SharePoint renewed developer dashboard](http://www.microsoft.com/resources/technet/en-us/office/media/video/videol?cid=stc&amp;amp;from=mscomstc&amp;amp;VideoID=505bdd61-1fcc-4125-97fc-b5f0dda72cbc) (video).
+-  [Use the developer dashboard](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-developer-dashboard).
 -  [Renewed Developer Dashboard](http://download.microsoft.com/download/7/7/3/773CA2C2-579B-408C-808E-A6F561194E20/Ig15_SP_IT_M10V3_devdash.pptx) (PowerPoint slide deck).
      
 To enable the Developer Dashboard, use the following Windows PowerShell snippet code.
