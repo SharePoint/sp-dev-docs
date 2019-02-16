@@ -28,6 +28,7 @@ Following are the most commonly used list template types that SharePoint can cur
 - Picture library (109)
 - Form library (115)
 - Site pages library (119)
+- Custom grid (120)
 - Promoted links list (170)
 - Publishing pages library (850)
 - Assets library (851)
