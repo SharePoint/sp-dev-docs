@@ -61,7 +61,7 @@ Token|Default value on a modern team site using the red palette|Remarks
 `themeLightAlt`|`#fd969b`|
 `themeLighter`|`#fecacd`|
 `themeLighterAlt`|`#fecacd`|
-`themePrimary`|`#ee0410`st|Primary theme color. Used for icons and default buttons.
+`themePrimary`|`#ee0410`|Primary theme color. Used for icons and default buttons.
 `themeSecondary`|`#fc6169`|
 `themeTertiary`|`#fd969b`|
 
