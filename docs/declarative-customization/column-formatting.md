@@ -968,6 +968,7 @@ Operators specify the type of operation to perform. The following operators are 
 - toLowerCase
 - join
 - length
+- abs
 
 **Binary arthmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1010,6 +1011,9 @@ Operators specify the type of operation to perform. The following operators are 
   
 - **toLowerCase**: returns the value converted to lower case (only works on strings) - _Only available in SharePoint Online_
   - `"txtContent":"=toLowerCase('DogFood')"` results in _"dogfood"_
+  
+- **abs**: returns the absolute value for a given number - _Only available in SharePoint Online_
+  - `"txtContent":"=abs(-45)"` results in _45_
   
 - **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value. - _Only available in SharePoint Online_
   - `"txtContent":"=length(@currentField)"` might result in _2_ if there are 2 selected values
@@ -1166,7 +1170,7 @@ If the value of a field is an object, the object's properties can be accessed. F
 
 #### "@currentWeb"
 
-This will evaluate to the absolute url for the site. This is equivalent to the `webAbsoluteUrl` value within the page context.
+This will evaluate to the absolute url for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
 
 #### "@me"
 
@@ -1213,6 +1217,18 @@ Here's the same sample from above, using the Excel-style expression syntax:
 #### "@now"
 
 This will evaluate to the current date and time.
+
+#### "@rowIndex"
+
+This will evaluate to the rendered index of a row within a view. This value is based on render position and will remain consistent based on position even as views are sorted and filtered. Indexes start at 0. This value is only available in SharePoint Online.
+
+Here's an example of using the value within a view format to apply alternating styles to rows:
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "additionalRowClass": "=if(@rowIndex % 2 == 0,'ms-bgColor-themeLighter ms-bgColor-themeLight--hover','')"
+}
+```
 
 #### "@window.innerHeight"
 
