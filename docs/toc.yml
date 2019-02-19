@@ -1373,6 +1373,8 @@
           href: transform/modernize-userinterface-site-pages-dotnet.md
         - name: Page transformation configuration options
           href: transform/modernize-userinterface-site-pages-configuration.md
+        - name: Classic web part to modern mapping
+          href: transform/modernize-userinterface-site-pages-webparts.md
         - name: Page transformation security
           href: transform/modernize-userinterface-site-pages-security.md
         - name: Page transformation model
