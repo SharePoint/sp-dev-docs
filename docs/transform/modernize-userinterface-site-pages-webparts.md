@@ -15,6 +15,8 @@ When a page is transformed from a classic page into a modern client side page th
 
 ## Web part transformation list (updated for Feb 2018 release)
 
+The page transformation uses a default web part mapping when it transforms classic pages to modern pages. The used mapping in this default modern is described here, but do know that you can update the mapping to for example add your own custom 3rd party web parts as a transformation target. How to extend the web part mapping model is described in the [Page transformation model](modernize-userinterface-site-pages-model.md) article.
+
 Classic web part | Modern web part | Comments
 -----------------|-----------------|--------------------------------------
 Microsoft.SharePoint.WebPartPages.XsltListViewWebPart (viewing list data) | [List](https://support.office.com/en-us/article/use-the-list-and-other-web-parts-on-classic-pages-03044488-c0e4-4226-a8fb-4cd8364424fa), [Library](https://support.office.com/en-us/article/use-the-document-library-web-part-a9dfecc3-2050-4528-9f00-2c5afc5731b0) or [Events](https://support.office.com/en-us/article/use-the-events-web-part-5fe4da93-5fa9-4695-b1ee-b0ae4c981909) web part | See next chapter for more details
