@@ -1346,7 +1346,7 @@ This will evaluate to a number equal to the height of the browser window (in pix
 
 This will evaluate to a number equal to the width of the browser window (in pixels) when the list was rendered.
 
-#### Thumnails
+#### Thumbnails
 
 In a document library, there is a series of tokens that can be used to retrieve the URL to the thumbnail of a file, including:
 
