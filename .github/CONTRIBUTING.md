@@ -1,5 +1,5 @@
 # Contribute to SharePoint developer documentation
-Below instructions explain how you can prepare your environment to contribute to SharePoint Developer Documentation.
+These instructions explain how you can prepare your environment to contribute to SharePoint Developer Documentation.
 
 ## Docs repo structure
 
@@ -7,8 +7,10 @@ Before you decide to contribute, it is important to understand the `sp-dev-docs`
 
 ```
 sp-dev-docs
---images
+--assets
 --docs
+--general-development
+--images
 ```
 
 The `docs` folder contains the key developer topics:
@@ -30,20 +32,20 @@ The `spfx` folder contains documentation for SharePoint Framework. It is further
 ```
 docs
 --spfx
----webparts
+---web-parts
 -----basics
 -----get-started
------developer-guide
+-----guidance
 ```
 
 #### Component folder
 Every component folder contains the following folders:
 * basics
-    * `basics` folder contains concept docs that are helpful in building that particular component, for example: `web parts`. 
+    * `basics` folder contains concept docs that are helpful in building that particular component, for example: `web-parts`. 
 * get-started
-    * `get-started` folder contains walkthroughs and tutorials on how to get started building that particular component, for example: `web parts`.
-* developer-guide
-    * `developer-guide` folder contains guides, best practices and reference implementations for that particular component, for example: `web parts`.
+    * `get-started` folder contains walkthroughs and tutorials on how to get started building that particular component, for example: `web-parts`.
+* guidance
+    * `guidance` folder contains guides, best practices and reference implementations for that particular component, for example: `web-parts`.
     * 
 Any images associated with the docs should be uploaded into the `sp-dev-docs\images` folder.
 
@@ -80,9 +82,10 @@ Now that you have forked the docs repository, to sync this forked repository to 
 
 ![Clone the forked SharePoint developer docs repository](../images/contribute-docs-clone-options.png)
 
-If you have any Git Desktop or any git source control installed, you can click the `Open is Desktop`, else follow the steps below:
+If you have any Git Desktop or any git source control installed, you can click the `Open in Desktop` or follow the steps below:
 
-In the Clone with HTTPs section, click  to copy the clone URL for the repository.
+In the `Clone with HTTPs` section, click ![](../images/contribute-clone-icon.png)
+ to copy the clone URL for the repository.
 
 * Open your favorite console terminal.
 
@@ -136,12 +139,12 @@ Once you are in the `master` branch, you should see a message to `Compare & pull
 
 ![Submit a pull request to sp-dev-docs repo](../images/contribute-docs-submit-pr.png)
 
-This will start a new pull request. Make sure you use the following [template]() to fill in your changes. Make sure you are creating this pull request against the `master` branch.
+This will start a new pull request. Make sure you use the following [template](PULL_REQUEST_TEMPLATE.md) to fill in your changes. Make sure you are creating this pull request against the `master` branch.
 
-Once you have all the information, click the `Create pull request` to submit your pull request.
+Once you have all the information, click the `Create pull request` button to submit your pull request.
 
 ## Syncing your forked repository to keep it up-to-date with the upstream repository
 
 In order to keep your forked sp-dev-docs repo up-to-date with the parent repository, you will need to first [configure a remote that points to upstream repository](https://help.github.com/articles/configuring-a-remote-for-a-fork).
 
-Once you have configured the upstream repository, follow the steps [here](https://help.github.com/articles/configuring-a-remote-for-a-fork) to sync your fork to keep it up-to-date with the upstream repository.
+Once you have configured the upstream repository, follow the steps [here](https://help.github.com/en/articles/syncing-a-fork) to sync your fork to keep it up-to-date with the upstream repository.
