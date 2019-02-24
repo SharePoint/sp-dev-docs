@@ -135,7 +135,7 @@ Once you have completed adding your changes, you can submit a pull request.
 
 Navigate to the forked sp-dev-docs repo in your account. Make sure your current branch is `master` branch.
 
-Once you are in the `master` branch, you should see a message stating  `This branch is 1 commit ahead of SharePoint:master` and next to it will be a `Pull request` link.
+Once you are in the `master` branch, you should see a message stating `This branch is 1 commit ahead of SharePoint:master` and next to it will be a `Pull request` link.
 
 ![Submit a pull request to sp-dev-docs repo](../images/contribute-docs-submit-pr.png)
 
