@@ -36,7 +36,7 @@
     "globalMetadata": {
       "extendBreadcrumb": "true",
       "breadcrumb_path":"/sharepoint/dev/breadcrumb/toc.json",
-      "ms.suite": "office365",
+      "ms.suite": "office",
       "ms.author": "spdevdocs",
       "author": "spdevdocs",
       "ms.topic": "conceptual",
