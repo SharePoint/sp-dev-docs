@@ -31,18 +31,35 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
     > **Important:**
       > Please note that you are responsible for compliance with terms and conditions applicable to your use of the Bing Maps key, and any necessary disclosures to users of your application regarding data passed to the Bing Maps service. 
 - Visual Studio 2010.
+- SharePoint Online Management Shell - https://www.microsoft.com/en-us/download/details.aspx?id=35588 
+- SharePoint PnP PowerShell - https://github.com/SharePoint/PnP-PowerShell/ 
     
   
 
-## Code example: Add a Geolocation column to a list programmatically
+## Code example: Add a Geolocation column to an existing list programmatically
 <a name="SP15addgeo_addcolumn"> </a>
 
-Follow these steps to add the Geolocation column to a list using the SharePoint client object model.
+Follow these steps to add the Geolocation column to a list. This must be done programmatically with CSOM or PowerShell
   
-    
+### To add the Geolocation column to a list using PnP PowerShell
+1. Open the SharePoint Online Management Shell
+2. Connect to the site you wish to add the column to
+```cs
+Connect-PnPOnline -url "https://TENANT.sharepoint.com/sites/SITEURL"
+``` 
+3. Open the list you wish to add the column to
+```cs
+$list = Get-PnPList -Identity "LISTNAME"
+``` 
+4. #Add the Geolocation field - Change parameters as necessary
+```cs
+Add-PnPField -List $list -Type GeoLocation -DisplayName "GeoLocationField" -InternalName "GeoLocationField" -AddToDefaultView -Required
+``` 
+
+
     
 
-### To add the Geolocation column to a list using the client object model
+### To add the Geolocation column to a list using the client object model in Visual Studio
 
 
 1. Start Visual Studio.
