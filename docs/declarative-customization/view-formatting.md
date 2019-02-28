@@ -25,7 +25,7 @@ You can use view formatting to apply one or more classes to the entire list view
 For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#style-guidelines) in the [Column Formatting reference document](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting).
 
 > [!TIP]
-> Using the `additionalRowClass` property to apply classes to list view rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some really powerful visualizations.
+> Using the `additionalRowClass` property to apply classes to list view rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
 
 ### Conditional classes based on a date field
 
@@ -175,7 +175,7 @@ Optional element. Specifies a CSS class(es) that is applied to the entire row. S
 
 ### hideSelection
 
-Optional element. Specifies whether the ability to select rows in the view is diabled or not. *false* is the default behavior inside a list view (meaning selection is visiable and enabled). *true* means that users will not be able to select list items.  
+Optional element. Specifies whether the ability to select rows in the view is disabled or not. *false* is the default behavior inside a list view (meaning selection is visible and enabled). *true* means that users will not be able to select list items.  
 
 `hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
