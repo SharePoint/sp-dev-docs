@@ -1,16 +1,16 @@
 ---
 title: Create SharePoint hub sites using PowerShell
-description: Example code for creating a SharePoint hub site using PowerShell.
+description: Example code for creating a SharePoint hub site by using PowerShell.
 ms.date: 4/20/2018
 localization_priority: Priority
 ---
 
-# Create SharePoint hub sites using PowerShell
+# Create SharePoint hub sites by using PowerShell
 
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
-If you're a global or SharePoint admin in Office 365, you can convert any existing site to a hub site by using Windows PowerShell. In this example, you'll learn how to create a SharePoint hub site and to associate another site with it. In this scenario, you are setting up sites for the Contoso marketing department:
+If you're a global or SharePoint admin in Office 365, you can convert any existing site to a hub site by using Microsoft PowerShell. In this example, you'll learn how to create a SharePoint hub site and to associate another site with it. In this scenario, you are setting up sites for the Contoso marketing department:
 - You will create a hub site that all other marketing sites will be associated with.
 - You will then specify settings and permissions for the hub site.
 - Finally, you will create a second site and associate it with the hub site. 
@@ -20,7 +20,7 @@ If you're a global or SharePoint admin in Office 365, you can convert any existi
 
 ## Connect to SPO
 
-First, you need to connect to SharePoint Online by using Windows PowerShell. The commands use both the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) (-SPO) and the [SharePoint PnP PowerShell Online module](https://www.powershellgallery.com/packages/SharePointPnPPowerShellOnline) (-PnP).
+First, you need to connect to SharePoint Online by using PowerShell. The commands use both the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) (-SPO) and the [SharePoint PnP PowerShell Online module](https://www.powershellgallery.com/packages/SharePointPnPPowerShellOnline) (-PnP).
 
 1. Start Windows PowerShell.
 
