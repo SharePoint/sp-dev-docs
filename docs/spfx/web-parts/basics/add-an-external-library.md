@@ -26,7 +26,7 @@ By default, the web part bundler automatically includes any library that is a de
     ```
 
     > [!NOTE] 
-    > Because you're using TypeScript, you need typings for the package you add. This is essential when you are writing code because TypeScript is just a superset of JavaScript. All the TypeScript code is still converted to JavaScript code when you compile. You can search for and find typings by using **npm**, for example: `npm install @types/{package} --save`
+    > Because you're using TypeScript, you need typings for the package you add. This is essential when you are writing code because TypeScript is just a superset of JavaScript. All the TypeScript code is still converted to JavaScript code when you compile. You can search for and find typings by using **npm**, for example: `npm install @types/{package} --save-dev`
 
 3. Create a file in the your web part's folder called `validator.d.ts` and add the following:
 
@@ -69,7 +69,7 @@ In this example, you will share the [marked](https://www.npmjs.com/package/marke
 2. Download the typings:
 
     ```sh
-    npm install @types/marked --save
+    npm install @types/marked --save-dev
     ```
 
 3. Edit the **config/config.json**, and add an entry to the **externals** map. This is what tells the bundler to put this in a separate file. This prevents the bundler from bundling this library:
@@ -101,7 +101,7 @@ In this example, you will load jQuery from CDN. You don't need to install the np
 1. Install the typings for jQuery:
 
     ```sh
-    npm install --save @types/jquery
+    npm install --save-dev @types/jquery
     ```
 
 2. Update the `config.json` in the `config` folder to load jQuery from CDN. Add an entry to the `externals` field:
@@ -279,13 +279,13 @@ Loading SharePoint JSOM is essentially the same scenario as loading non-AMD scri
 1. Install typings for Microsoft Ajax, which is a dependency for JSOM typings:
 
     ```sh
-    npm install @types/microsoft-ajax --save
+    npm install @types/microsoft-ajax --save-dev
     ```
 
 2. Install typings for the JSOM:
 
     ```sh
-    npm install @types/sharepoint --save
+    npm install @types/sharepoint --save-dev
     ```
 
 3. Add entries to the `config.json`:
