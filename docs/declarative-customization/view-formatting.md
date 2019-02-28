@@ -175,7 +175,7 @@ Optional element. Specifies a CSS class(es) that is applied to the entire row. S
 
 ### hideSelection
 
-Optional element. Specifies whether the ability to select rows in the view is diabled or not. *false* is the default behavior inside a list view (meaning selection is visiable and enabled). *true* means that users will not be able to select list items.  
+Optional element. Specifies whether the ability to select rows in the view is disabled or not. *false* is the default behavior inside a list view (meaning selection is visible and enabled). *true* means that users will not be able to select list items.  
 
 `hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
