@@ -33,6 +33,8 @@ The following REST commands are available for working with site designs and site
 - **AddSiteDesignTaskToCurrentWeb** &ndash; Adds a site design task on the current web.
 - **GetSiteDesigns** &ndash; Gets a list of information on existing site designs.
 - **GetSiteDesignMetadata** &ndash; Gets information about a specific site design.
+- **GetSiteDesignRun** &ndash; Gets a list of site designs invoked against a site.
+- **GetSiteDesignRunStatusAndSchema** &ndash; Gets information on a site design task run.
 - **UpdateSiteDesign** &ndash; Updates a site design with new values.
 - **DeleteSiteDesign** &ndash; Deletes a site design.
 - **GetSiteDesignRights** &ndash; Gets a list of principals that have access to a site design.
@@ -487,6 +489,113 @@ Here is an example of the JSON returned after calling **GetSiteDesignMetadata**.
   "WebTemplate": "64",
   "Id": "614f9b28-3e85-4ec9-a961-5971ea086cca",
   "Version": 1
+}
+```
+<br/>
+
+## GetSiteDesignRun
+
+Gets a list of site designs invoked on a site.
+
+### Parameters
+
+None
+
+### Examples
+
+Here's an example of getting information on site designs invoked on a site.
+
+```javascript
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRun");
+```
+<br/>
+
+Here is an example of the JSON returned after calling **GetSiteDesignRun**.
+
+```json
+{
+  "@odata.context": "https://contoso.sharepoint.com/_api/$metadata#SiteDesignRuns",
+  "value": [
+    {
+      "@odata.type": "#Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteDesignRun",
+      "@odata.id": "https://contoso.sharepoint.com/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteDesignRun7512c6f0-4633-424e-99d8-f9cdc62ca9ea",
+      "@odata.editLink": "Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteDesignRun7512c6f0-4633-424e-99d8-f9cdc62ca9ea",
+      "ID": "66a3f68c-f7c9-45d9-b519-871ce296dfeb",
+      "SiteDesignID": "bbbd5740-ed97-461b-8b8e-e682f3fa167b",
+      "SiteDesignTitle": "Customer Orders",
+      "SiteDesignVersion": 1,
+      "SiteID": "42cbfa4c-be0f-42f3-848d-7ee8794b5fef",
+      "StartTime": 1551457664000,
+      "WebID": "6141af7a-856d-4dc6-a418-8a5daf99edcf"
+    },
+    {
+      "@odata.type": "#Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteDesignRun",
+      "@odata.id": "https://contoso.sharepoint.com/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteDesignRund2d3bdb7-b6f9-4bca-aaa6-c6ff4842cdb3",
+      "@odata.editLink": "Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteDesignRund2d3bdb7-b6f9-4bca-aaa6-c6ff4842cdb3",
+      "ID": "8ad868d9-402e-43e7-ba1a-2e6940e3dfdc",
+      "SiteDesignID": "614f9b28-3e85-4ec9-a961-5971ea086cca",
+      "SiteDesignTitle": "Contoso customer tracking",
+      "SiteDesignVersion": 1,
+      "SiteID": "42cbfa4c-be0f-42f3-848d-7ee8794b5fef",
+      "StartTime": 1544749830000,
+      "WebID": "6141af7a-856d-4dc6-a418-8a5daf99edcf"
+    }
+  ]
+}
+```
+<br/>
+
+## GetSiteDesignRunStatusAndSchema
+
+Gets information on an invoked site design task run. Response includes site scripts actions and outcomes.
+
+### Parameters
+
+|Parameter   | Description  |
+|------------|--------------|
+| runId         | The ID of the site design run. Can be found from GetSiteDesignRun endpoint |
+
+### Examples
+
+Here's an example of getting information about a specific site design task run by runId.
+
+```javascript
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRunStatusAndSchema",{runId:"8ad868d9-402e-43e7-ba1a-2e6940e3dfdc"});
+```
+<br/>
+
+Here is an example of the JSON returned after calling **GetSiteDesignRunStatusAndSchema**.
+
+```json
+{
+  "@odata.context": "https://contoso.sharepoint.com/_api/$metadata#Microsoft.SharePoint.Utilities.WebTemplateExtensions.SPSiteScriptStatusAndSchema",
+  "ActionStatus": [
+    {
+      "ActionIndex": 0,
+      "ActionKey": "00000000-0000-0000-0000-000000000000",
+      "ActionTitle": "Apply Theme Contoso Theme",
+      "LastModified": 1549469792000,
+      "OrdinalIndex": 0,
+      "OutcomeCode": 0,
+      "OutcomeText": null,
+      "SiteScriptID": "03ad5b1c-f861-4179-8803-90cebb848d8c",
+      "SiteScriptIndex": 0,
+      "SiteScriptTitle": "Trigger Flow Provision Assets"
+    },
+    {
+      "ActionIndex": 1,
+      "ActionKey": "00000000-0000-0000-0000-000000000000",
+      "ActionTitle": "Trigger Flow Provision Assets",
+      "LastModified": 1549469793000,
+      "OrdinalIndex": 1,
+      "OutcomeCode": 0,
+      "OutcomeText": null,
+      "SiteScriptID": "03ad5b1c-f861-4179-8803-90cebb848d8c",
+      "SiteScriptIndex": 0,
+      "SiteScriptTitle": "Trigger Flow Provision Assets"
+    }
+  ],
+  "Schema": "{\"recipes\":[{\"actions\":[{\"stages\":[\"Apply Theme Contoso theme\"]},{\"stages\":[\"Trigger Flow Provision Assets\"]}],\"recipeGuid\":\"03ad5b1c-f861-4179-8803-90cebb848d8c\",\"recipeName\":\"Apply Theme Contoso\"}],\"siteDesignTitle\":\"Contoso Customer Site\",\"siteDesignVersion\":1}"
 }
 ```
 <br/>
