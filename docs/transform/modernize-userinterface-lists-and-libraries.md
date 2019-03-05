@@ -1,7 +1,7 @@
 ---
 title: Maximize use of modern lists and libraries
 description: Get the maximum number of lists and libraries when using the SharePoint modern user interface.
-ms.date: 04/23/2018
+ms.date: 03/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
