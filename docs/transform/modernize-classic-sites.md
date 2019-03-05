@@ -1,7 +1,7 @@
 ---
 title: Modernize your classic SharePoint sites
 description: Steps to transform your SharePoint classic site into a modern Office 365 group-connected team site or communication site.
-ms.date: 04/23/2018
+ms.date: 03/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -22,7 +22,7 @@ All of this is great, but you might ask yourself, *I have lots of classic (team)
 
 ## Enable your site to fully leverage the modern user interface
 
-The most visible aspect of a modern site is its modern user interface. If you haven't turned off the modern experience at the tenant level (the **SharePoint Lists and Libraries experience** setting in the tenant admin center), certain pages appear in the modern user interface:
+The most visible aspect of a modern site is its modern user interface. If you haven't turned off the modern experience, certain pages appear in the modern user interface:
 
 - List and library pages for most lists and libraries
 - Site contents page
@@ -33,8 +33,6 @@ However, if you navigate your site, you will notice that the following pages sti
 
 - Home page and all other site pages (wiki pages and/or web part pages)
 - List and library pages for certain lists and libraries
-
-You probably already have the out-of-the-box modern user interface for lists and libraries enabled at the tenant level, so it makes sense to further maximize its use. SharePoint tries to show your lists and libraries by using the modern user interface, but you might have customizations or configurations that prevent this.
 
 To maximize the use of the modern user interface for your site pages and list and library pages, see [Modernize the user interface](modernize-userinterface.md).
 

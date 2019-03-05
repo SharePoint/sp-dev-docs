@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" lists and libraries
 description: Get a faster, more intuitive, and responsive SharePoint Online experience by customizing your lists and libraries to the "modern" experience using user custom actions and custom branding.
-ms.date: 11/09/2017
+ms.date: 03/04/2019
 localization_priority: Priority
 ---
 
@@ -270,72 +270,7 @@ If your site happens to use a custom theme, this custom theme is respected in th
 <a name="configuremodernlibrariesandlists"> </a>
 ## Configure the end user experience
 
-You have multiple options to control whether the "modern" or "classic" library and list experience is used. 
-
-### Tenant level configuration
-If you want to completely disable the "modern" experience, it's best to use the tenant setting for this. Go to your tenant admin center (for example, contoso-admin.sharepoint.com), go to Settings, and select the "classic" experience.
-
-**SharePoint lists and libraries experience settings in the SharePoint Admin UI**
-
-![SharePoint lists and libraries experience settings in the SharePoint Admin UI](media/modern-experiences/lists-libraries-tenant-settings.png)
-
-> [!NOTE]
-> - When you switch between **New experience (auto detect)** and **Classic experience**, the change is not immediately visible.
-> - When you select **New experience (auto detect)**, you always see the **Return to classic SharePoint** option. This is by design given that today not all functionalities of "classic" lists and libraries are implemented in the "modern" lists and libraries. There's no option to change this behavior.
-
-### Site/Web level configuration
-You can prevent a site collection or web from using the "modern" experience by enabling a feature:
-
-- For site collection control, use the site collection scoped feature with ID **E3540C7D-6BEA-403C-A224-1A12EAFEE4C4**. 
-- For web control, use the web scoped feature with ID **52E14B6F-B1BB-4969-B89B-C4FAA56745EF**. 
-
-Use the following [PnP PowerShell](http://aka.ms/sppnp-powershell) to enable/disable the needed features:
-
-```powershell
-# Connect to a site
-$cred = Get-Credential
-Connect-PnPOnline -Url https://[tenant].sharepoint.com/sites/siteurl -Credentials $cred
-
-# Prevent modern lists and libraries at site collection level
-Enable-PnPFeature -Identity E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 -Scope Site 
-# And again enable modern lists and libraries at site collection level
-#Disable-PnPFeature -Identity E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 -Scope Site 
-
-# Prevent modern lists and libraries at web level
-#Enable-PnPFeature -Identity 52E14B6F-B1BB-4969-B89B-C4FAA56745EF  -Scope Web 
-# And again enable modern lists and libraries at web
-#Disable-PnPFeature -Identity 52E14B6F-B1BB-4969-B89B-C4FAA56745EF  -Scope Web 
-```
-
-### List/Library configuration
-If you want to control the experience at the library level, you can go to **List settings** > **Advanced settings**, and change the behavior.
-
-**List experience configuration in the SharePoint tenant level settings in Admin UI**
-
-![List experience configuration in the SharePoint tenant level settings in Admin UI](media/modern-experiences/list-experience-setting.png)
-
-The same can also be done by using CSOM as shown in this snippet:
-
-```csharp
-// Load the list you want to update
-var list = context.Web.Lists.GetByTitle(title);
-context.Load(list);
-context.ExecuteQuery();
-
-// Possible options are Auto (= what it's defined at tenant level), NewExperience (= "modern") and ClassicExperience
-list.ListExperienceOptions = ListExperience.ClassicExperience;
-
-// Persist the changes
-list.Update();
-context.ExecuteQuery();
-```
-
-> [!NOTE]
-> - The settings at the library level *override* the settings at the web, site, or tenant level. This also implies that you could pilot the "modern" list and library experience to a subsite of sites by having the "modern" experience turned off at the tenant level but enabled at the list level on the pilot sites.
-> - When you've manually chosen "classic" (that is, not due to list, site, web, or tenant "classic" enforcement), you'll see the link **Exit classic experience** appearing under the left navigation (as of July 2017). Selecting this brings you back to the "modern" experience.
-> - If you're not able to get the "modern" experience to appear, inspect the cookies being passed to SharePoint because it is possible that the opt out of "modern" experiences cookie (splnu with value set to 0) is still present. Clearing the browser cookies should fix this.
-
-<a name="autodetect"> </a>
+You have multiple options to control whether the "modern" or "classic" library and list experience is used. Check out the [Opting out of the modern list and library experience](../transform/modernize-userinterface-lists-and-libraries-optout.md) article for more details.
 
 ## When does the built-in auto-detect automatically switch rendering back to "classic"?
 
