@@ -222,6 +222,18 @@ This example demonstrates an alternate syntax to express a conditional expressio
 }
 ```
 
+Here's the same sample from above, using the Excel-style expression syntax:
+```JSON
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "elmType": "div",
+   "txtContent": "@currentField",
+   "style": {
+      "color": "=if([$DueDate] <= @now + 86400000, '#ff0000', '')"
+   }
+}
+```
+
 <br/>
 
 
@@ -252,6 +264,18 @@ To compare a date/time field value against another date constant, use the `Date(
             ""
          ]
       }
+   }
+}
+```
+
+Here's the same sample from above, using the Excel-style expression syntax:
+```JSON
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "elmType": "div",
+   "txtContent": "@currentField",
+   "style": {
+      "color": "=if([$DueDate] <= Date('3/22/2017'), '#ff0000', '')"
    }
 }
 ```
@@ -333,7 +357,7 @@ The following image shows a number column formatted as a data bar.
 
 ![Effort list with number list items shown as bars](../images/sp-columnformatting-databars.png)
 
-This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 95, and `(@currentField * 100 / 95)%` otherwise. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and change the equation to specify how much the bar should grow depending on the value inside the field.
+This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 20, and `(@currentField * 5)%` otherwise. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and change the equation to specify how much the bar should grow depending on the value inside the field.
 
 ```JSON
 {
@@ -406,6 +430,27 @@ This example relies on two number fields, `Before` and `After`, for which the va
                         }
                     ]
                 }
+            }
+        },
+        {
+            "elmType": "span",
+            "txtContent": "[$After]"
+        }
+    ]
+}
+```
+
+Here's the same sample from above, using the Excel-style expression syntax:
+```JSON
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "div",
+    "children": [
+        {
+            "elmType": "span",
+            "attributes": {
+                "class": "=if([$After] > [$Before], 'sp-field-trending--up', 'sp-field-trending--down')",
+                "iconName": "=if([$After] > [$Before], 'SortUp', "=if([$After] < [$Before], 'SortDown', ''))"
             }
         },
         {
@@ -934,20 +979,35 @@ The following example shows the value of a style object. In this example, two st
 ```JSON
 {
    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-   "padding": "4px",
-   "background-color": {
-      "operator": "?",
-      "operands": [
-         {
-            "operator": "<",
-            "operands": [
-               "@currentField",
-               40
-            ]
-         },
-         "#ff0000",
-         "#00ff00"
-      ]
+   "elmType": "div",
+   "style": {
+      "padding": "4px",
+      "background-color": {
+         "operator": "?",
+         "operands": [
+            {
+               "operator": "<",
+               "operands": [
+                  "@currentField",
+                  40
+               ]
+            },
+            "#ff0000",
+            "#00ff00"
+         ]
+      }
+   }
+}
+```
+
+Here's the same sample from above, using the Excel-style expression syntax:
+```JSON
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "elmType": "div",
+   "style": {
+      "padding": "4px",
+      "background-color": "=if(@currentField < 40, '#ff0000', '#00ff00')"
    }
 }
 ```
@@ -1001,11 +1061,13 @@ See [here](#formatting-multi-value-fields) for examples.
 
 ### Expressions
 
-Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects. 
+Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects.
+
+Expressions can be written using Excel-style expressions in SharePoint Online, or by using Abstract Syntax Tree expressions in SharePoint Online and SharePoint 2019.
 
 #### Excel-style expressions
 
-All Excel-style expressions begin with an equal (`=`) sign.  
+All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online (not SharePoint 2019).
 
 This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to \`\` otherwise:
 ```JSON
@@ -1099,6 +1161,7 @@ Operators specify the type of operation to perform. The following operators are 
 - join
 - length
 - loopIndex
+- abs
 
 **Binary arthmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1139,10 +1202,13 @@ Operators specify the type of operation to perform. The following operators are 
 - **toLocaleTimeString()**: returns a language sensitive representation of just the time portion of a date
   - `"txtContent":"=toLocaleTimeString(@now)"` results vary based on user's locale, but en-us looks like _"1:22:24 PM"_
   
-- **toLowerCase**: returns the value converted to lower case (only works on strings)
+- **toLowerCase**: returns the value converted to lower case (only works on strings) - _Only available in SharePoint Online_
   - `"txtContent":"=toLowerCase('DogFood')"` results in _"dogfood"_
   
-- **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value.
+- **abs**: returns the absolute value for a given number - _Only available in SharePoint Online_
+  - `"txtContent":"=abs(-45)"` results in _45_
+  
+- **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value. - _Only available in SharePoint Online_
   - `"txtContent":"=length(@currentField)"` might result in _2_ if there are 2 selected values
   - `"txtContent":"=length('Some Text')"` results in _1_
   - `"txtContent":"=length('')"` results in _0_
@@ -1151,13 +1217,13 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Binary operators** - The following are operators that expect two operands:
 
-- **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive.
+- **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
   - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
   - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
   - `"txtContent": "=indexOf('DogFood', 'Cat')"` results in _-1_
   - `"txtContent": "=indexOf('DogFood', 'f')"` results in _-1_
   
-- **join**: takes 2 operands. The first is an array (multi-select person or choice field) and the second is the separating string. Returns a string concatenation of the array values separated by the separating string.
+- **join**: takes 2 operands. The first is an array (multi-select person or choice field) and the second is the separating string. Returns a string concatenation of the array values separated by the separating string. - _Only available in SharePoint Online_
   - `"txtContent": "=join(@currentField, ', ')"` might result in _"Apple, Orange, Cherry"_ (depending on the selected values)
   - `"txtContent": "=join(@currentField.title, '|')"` might result in _"Chris Kent|Vesa Juvonen|Jeff Teper"_ (depending on the selected persons)
 
@@ -1233,6 +1299,15 @@ For example, the following JSON will display the current field (assuming it's a 
 }
 ```
 
+Here's the same sample from above, using the Excel-style expression syntax:
+```JSON
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "elmType": "div",
+   "txtContent": "=toLocaleString(@currentField)"
+}
+```
+
 **Lookup fields**
 
 The lookup field object has the following properties (with example values):
@@ -1302,7 +1377,7 @@ If the value of a field is an object, the object's properties can be accessed. F
 
 #### "@currentWeb"
 
-This will evaluate to the absolute url for the site. This is equivalent to the `webAbsoluteUrl` value within the page context.
+This will evaluate to the absolute url for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
 
 #### "@me"
 
@@ -1334,9 +1409,33 @@ This field can be used to display the current user's email address, but more lik
 }
 ```
 
+Here's the same sample from above, using the Excel-style expression syntax:
+```JSON
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "elmType": "div",
+   "txtContent": "@currentField.title",
+   "style": {
+      "color": "=if(@me == @currentField.email, 'red', 'blue')"
+   }
+}
+```
+
 #### "@now"
 
 This will evaluate to the current date and time.
+
+#### "@rowIndex"
+
+This will evaluate to the rendered index of a row within a view. This value is based on render position and will remain consistent based on position even as views are sorted and filtered. Indexes start at 0. This value is only available in SharePoint Online.
+
+Here's an example of using the value within a view format to apply alternating styles to rows:
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "additionalRowClass": "=if(@rowIndex % 2 == 0,'ms-bgColor-themeLighter ms-bgColor-themeLight--hover','')"
+}
+```
 
 #### "@window.innerHeight"
 

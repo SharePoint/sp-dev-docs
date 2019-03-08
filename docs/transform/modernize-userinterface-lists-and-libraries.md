@@ -1,7 +1,7 @@
 ---
 title: Maximize use of modern lists and libraries
 description: Get the maximum number of lists and libraries when using the SharePoint modern user interface.
-ms.date: 04/23/2018
+ms.date: 03/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -37,7 +37,7 @@ Following are the most commonly used list template types that SharePoint can cur
 In this section you'll learn how to identify lists which are not showing as a modern list, why that is and how to remediate those (if possible). However before jumping into this, it's important to realize that for most tenants we see the majority of the lists loading in modern without any caveats. Lists that don't load in modern either stay in classic (like the calendar or tasks list) or can be unblocked by remediating them, which is the scope of this article series. Lists which do not load as modern list are 100% fine to use, fully supported and they should not hold you back from enabling the modern list and library experience for your tenant.
 
 > [!IMPORTANT]
-> For most tenants there are not that many lists that require remediation and as such **our recommendation is to enable the modern list and library experience at tenant level**. This will ensure that all lists that can use modern present themselves as a modern list while lists that cannot simply switch to classic when you use them.
+> SharePoint will automatically default to modern lists and libraries, but will also automatically fallback when needed. This will ensure that all lists that can use modern present themselves as a modern list while lists that cannot simply switch to classic when you use them.
 
 ## Detect lists and libraries not available in the modern user interface
 
@@ -100,7 +100,7 @@ var list = context.Web.Lists.GetByTitle(title);
 context.Load(list);
 context.ExecuteQuery();
 
-// Possible options are Auto (= what it's defined at tenant level), NewExperience (= "modern") and ClassicExperience
+// Possible options are Auto (= defaults to modern), NewExperience (= "modern") and ClassicExperience
 list.ListExperienceOptions = ListExperience.Auto;
 
 // Persist the changes
