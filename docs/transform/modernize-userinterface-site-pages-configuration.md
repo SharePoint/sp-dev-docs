@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 01/30/2019
+ms.date: 03/06/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -138,6 +138,41 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 {
     CopyPageMetadata = true,
 };
+```
+
+## RemoveEmptySectionsAndColumns option (as of March 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | true
+
+The default behavior is to remove all empty sections and columns (e.g. you transform from a 3 column layout and only have one web part in the middle column) as that will result in better use of the screen real estate, if you don't want this then set this option to false
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    RemoveEmptySectionsAndColumns = false,
+};
+```
+
+## MappingProperties dictionary (as of March 2019 release)
+
+Type | Default value if not specified
+-----|----
+Dictionary<string,string> | empty
+
+The default mapping file can be configured by setting mapping properties
+
+```csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    // If target page exists, then overwrite it
+    Overwrite = true,
+};
+
+pti.MappingProperties["SummaryLinksToQuickLinks"] = "false";
+
+pageTransformator.Transform(pti);
 ```
 
 ## HandleWikiImagesAndVideos option

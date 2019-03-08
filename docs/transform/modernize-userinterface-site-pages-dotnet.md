@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using .Net
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .Net
-ms.date: 01/30/2019
+ms.date: 03/06/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -16,7 +16,7 @@ The page transformation engine is built using .Net and is distributed as a [nuge
 ![page transformation solution files](media/modernize/pagetransformation_2.png)
 
 > [!Note]
-> The minimal .Net Framework version for this solution to work is 4.5.1.
+> The minimal .Net Framework version for this solution to work is 4.5.
 
 The `webpartmapping.xml` and `webpartmapping_latestfrompackage.xml` represent the transformation model that describes how the transformation will happen. You typically will tweak the `webpartmapping.xml` file to your needs by for example adding additional mappings to your own web parts. If you later on install an updated version of the nuget package your `webpartmapping.xml` will not be overwritten by default but the `webpartmapping_latestfrompackage.xml` will be. You can use this latter file to compare the latest out-the-box mapping with your mapping and take over the changes you need.
 
@@ -55,6 +55,64 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 ## FAQ
 
+### I want to set mapping properties (as of March 2019 release, version 1.0.1903.*)
+
+Mapping properties are set to drive mapping behavior (e.g. configure the use of the community script editor). You can configure mapping properties like shown in below sample code:
+
+```csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    // If target page exists, then overwrite it
+    Overwrite = true,
+};
+
+pti.MappingProperties["UseCommunityScriptEditor"] = "true";
+
+pageTransformator.Transform(pti);
+```
+
+Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more on the possible mapping properties.
+
+### I want to transform pages into another site collection (as of March 2019 release, version 1.0.1903.*)
+
+The default transformation behavior is doing an in-place transformation, meaning the modern client side page is created in the same location as the classic page was. You can however also create the modern version of the page in another site collection by providing a client context object for the target site collection.
+
+```csharp
+string siteUrl = "https://contoso.sharepoint.com/sites/mytestsite";
+string targetSiteUrl = "https://contoso.sharepoint.com/sites/mytargetsite";
+string userName = "joe@contoso.onmicrosoft.com";
+AuthenticationManager am = new AuthenticationManager();
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+{
+    using (var ccTarget = cc.Clone(targetSiteUrl))
+    {  
+      var pageTransformator = new PageTransformator(cc, ccTarget);
+      var pages = cc.Web.GetPages();
+      foreach (var page in pages)
+      {
+          PageTransformationInformation pti = new PageTransformationInformation(page)
+          {
+              // If target page exists, then overwrite it
+              Overwrite = true,
+          };
+
+          try
+          {
+              Console.WriteLine($"Transforming page {page.FieldValues["FileLeafRef"]}");
+              pageTransformator.Transform(pti);
+          }
+          catch(ArgumentException ex)
+          {
+              Console.WriteLine($"Page {page.FieldValues["FileLeafRef"]} could not be transformed: {ex.Message}");
+          }
+      }
+    }
+}
+```
+
+> [!Note]
+> Not all web parts lend themselves well for a cross site transfer, check the **Cross site support** column in [web part transformation list](modernize-userinterface-site-pages-webparts.md) to learn more.
+
 ### I choose the "AddPageAcceptBanner" option but don't see the banner web part on the created pages
 
 In order to make the banner webpart work there are 2 requirements that have to be met:
@@ -92,7 +150,8 @@ When the page transformation engine puts the banner web part on a page it gets i
 ```
 
 > [!NOTE]
-> You can use your own custom banner web part by simply deploying it and then updating the mapping in the used webpartmapping.xml file.
+> - The default mapping file already contains the correct configuration
+> - You can use your own custom banner web part by simply deploying it and then updating the mapping in the used webpartmapping.xml file.
 
 ### Modern site pages don't work on the site I want to transform pages in
 
