@@ -317,6 +317,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
 
   ```typescript
     public render(): React.ReactElement<IGraphConsumerProps> {
+      const { clientMode } = this.props;
       return (
         <div className={ styles.graphConsumer }>
           <div className={ styles.container }>
@@ -332,13 +333,17 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
                       onGetErrorMessage={ this._getSearchForErrorMessage }
                     />
                 </p>
-                <p className={ styles.form }>
-                  <PrimaryButton 
-                      text='Search' 
-                      title='Search' 
-                      onClick={ this._search } 
-                    />
-                </p>
+                {
+                  (clientMode === ClientMode.aad || clientMode === ClientMode.graph) ?
+                    <p className={styles.form}>
+                      <PrimaryButton
+                        text='Search'
+                        title='Search'
+                        onClick={this._search}
+                      />
+                    </p>
+                    : <p>Configure client mode by editing web part properties.</p>
+                }
                 {
                   (this.state.users != null && this.state.users.length > 0) ?
                     <p className={ styles.form }>
