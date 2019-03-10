@@ -18,7 +18,7 @@ Next step is granting permissions to the newly created principal. Since we're gr
 
 To grant permissions, you'll need to provide the permission XML that describes the needed permissions. Since this application needs to be able to access all sites + also uses search with app-only it needs below permissions:
 
-```
+```XML
 <AppPermissionRequests AllowAppOnlyPolicy="true">
   <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
 </AppPermissionRequests>
@@ -48,10 +48,11 @@ using (var cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext(siteU
 
 ## Using this principal in your application without using the PnP Sites Core library
 Once the principal is created and consented you can use the principal's id and secret to request an access. The TokenHelper.cs class will grab the id and secret from the application's configuration file.
+
+```csharp
 using Microsoft.SharePoint.Client;
 using System;
 
-```csharp
 namespace AzureACSAuth
 {
     class Program
