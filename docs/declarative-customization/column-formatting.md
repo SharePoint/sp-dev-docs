@@ -1067,7 +1067,9 @@ The people field object has the following properties (with example values):
    "title": "Kalya Tucker",
    "email": "kaylat@contoso.com",
    "sip": "kaylat@contoso.com",
-   "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822"
+   "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
+   "department":"Human Resources",
+   "jobTitle":"HR Manager"
 }
 ```
 
