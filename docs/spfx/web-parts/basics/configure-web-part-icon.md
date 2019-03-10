@@ -72,7 +72,7 @@ The big benefit of this approach is that you don't need to deploy the icon image
 
 ## Use an external icon image
 
-Although Office UI Fabric offers many images, when building web parts you might want to use something specific to your organization to clearly separate your web parts from other first- and third-party web parts visible in the toolbox.
+Although Office UI Fabric offers many images, when building web parts you might want to use something specific to your organization to clearly separate your web parts from other first and third-party web parts visible in the toolbox.
 
 In addition to using Office UI Fabric icons, SharePoint Framework also allows you to use images. 
 
