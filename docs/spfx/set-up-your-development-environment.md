@@ -81,12 +81,6 @@ To install the SharePoint Framework Yeoman generator globally, enter the followi
 npm install -g @microsoft/generator-sharepoint
 ```
 
-If you need to switch between the different projects created by using different versions of the SharePoint Framework Yeoman generator, you can install the generator locally as a development dependency in the project folder by executing the following command:
-
-```sh
-npm install @microsoft/generator-sharepoint --save-dev
-```
-
 For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
 
 ## Trusting the self-signed developer certificate
