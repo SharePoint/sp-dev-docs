@@ -516,6 +516,193 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
    ]
 }
 ```
+## Formatting multi-value fields
+You can use column formatting to apply styles to each member of a multi-value field of type Person, Lookup and Choice.
+
+### Basic text formatting
+The following image shows an example of multi-value field formatting applied to a Person field.
+
+![List of buttons that notifies all assignees of each item, first row is empty, second row reads "Send email to Loyd Barham", third row reads "Send email to all 3 members"](../images/sp-columnformatting-multi-value-0.png)
+
+This example uses the `length` operator to detect the number of members of the field, and used `join` operator to concatenate the email addresses of all members. This example hides the button when no member is found, and takes care of plurals in the text.
+
+```json
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "a",
+    "style": {
+        "display": "=if(length(@currentField) > 0, 'flex', 'none')"
+    },
+    "attributes": {
+        "href": {
+            "operator": "+",
+            "operands": [
+                "mailto:",
+                "=join(@currentField.email, ';')"
+            ]
+        }
+    },
+    "children": [
+        {
+            "elmType": "span",
+            "style": {
+                "display": "inline-block",
+                "padding": "0 4px"
+            },
+            "attributes": {
+                "iconName": "Mail"
+            }
+        },
+        {
+            "elmType": "span",
+            "txtContent": {
+                "operator": "+",
+                "operands": [
+                    "Send email to ",
+                    {
+                        "operator": "?",
+                        "operands": [
+                            "=length(@currentField) == 1",
+                            "@currentField.title",
+                            "='all ' + length(@currentField) + ' members'"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
+### Simple HTML elements formatting
+The following image shows an example of constructing a simple sentence from the values of a multi-value Lookup field.
+
+![Screenshot of a field reads "North America, APAC, and Europe"](../images/sp-columnformatting-multi-value-1.png)
+
+This examples uses operator `loopIndex` and `length` to identify the last member of the field, and attribute `forEach` to duplicate HTML elements.
+
+```json
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "display": "block"
+    },
+    "children": [
+        {
+            "elmType": "span",
+            "forEach": "region in @currentField",
+            "txtContent": {
+               "operator": "?",
+               "operands": [
+                  "=loopIndex('region') == 0",
+                  "[$region.lookupValue]",
+                  {
+                     "operator": "?",
+                     "operands": [
+                        "=loopIndex('region') + 1 == length(@currentField)",
+                        "=', and ' + [$region.lookupValue]",
+                        "=', ' + [$region.lookupValue]"
+                     ]
+                  }
+               ]
+            }
+        }
+    ]
+}
+```
+
+### Complex HTML elements formatting
+The following image shows an example of building a list of users with pictures, email addresses and a simple counter for the number of members at the top.
+
+![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](../images/sp-columnformatting-multi-value-2.png)
+
+This examples uses operator `loopIndex` to control the margins all rows but the first one, and attribute `forEach` to build the list of members.
+
+```json
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "min-height": "1.5em",
+        "flex-direction": "column",
+        "align-items": "start"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "txtContent": "=length(@currentField)",
+            "style": {
+                "border-radius": "1.5em",
+                "height": "1.5em",
+                "min-width": "1.5em",
+                "color": "white",
+                "text-align": "center",
+                "position": "absolute",
+                "top": "0",
+                "right": "1em",
+                "background-color": "=if(length(@currentField) == 0, '#ddd', '#aaa'"
+            }
+        },
+        {
+            "elmType": "div",
+            "forEach": "person in @currentField",
+            "style": {
+                "justify-content": "center",
+                "margin-top": "=if(loopIndex('person') == 0, '0', '1em')"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "style": {
+                        "display": "flex",
+                        "flex-direction": "row",
+                        "justify-content": "center"
+                    },
+                    "children": [
+                        {
+                            "elmType": "img",
+                            "attributes": {
+                                "src": "=[$person.picture]"
+                            },
+                            "style": {
+                                "width": "3em",
+                                "height": "3em",
+                                "border-radius": "3em"
+                            }
+                        },
+                        {
+                            "elmType": "a",
+                            "attributes": {
+                                "href": "='mailto:' + [$person.email]"
+                            },
+                            "style": {
+                                "margin-left": "0.5em"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "div",
+                                    "txtContent": "[$person.title]",
+                                    "style": {
+                                        "font-size": "1.2em"
+                                    }
+                                },
+                                {
+                                    "elmType": "div",
+                                    "txtContent": "[$person.email]",
+                                    "style": {
+                                        "color": "gray"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
 
 ## Supported column types
 
@@ -867,6 +1054,20 @@ An optional property that specifies child elements of the element specified by `
 
 An optional property that is meant for debugging. It outputs error messages and logs warnings to the console. 
 
+### forEach
+
+An optional property that allows an element to duplicate itself for each member of a specific multi-value field. The value of `"forEach"` property should be in the format of either `"iteratorName in @currentField"` or `"iteratatorName in [$FieldName]"`.
+
+`iteratorName` represents the name of iterator variable that is used to represent the current member of the multi-value field. The name of the iterator can be any combination of alphanumeric characters and underscore (`_`) that does not start with a digit.
+
+The field used in the loop must be in a supported field type with multi-value option enabled: Person, Lookup, and Choice.
+
+In the element with `forEach` or its childern elements, the iterator variable can be referred as if it is a new field. The index of the iterator can be accessed with `loopIndex` operator.
+
+`forEach` cannot be applied to the root element, and will render no element if there is no value in the field.
+
+See [here](#formatting-multi-value-fields) for examples.
+
 ### Expressions
 
 Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects.
@@ -969,6 +1170,7 @@ Operators specify the type of operation to perform. The following operators are 
 - join
 - length
 - abs
+- loopIndex
 
 **Binary arthmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1039,6 +1241,20 @@ Operators specify the type of operation to perform. The following operators are 
 - **?**: Conditional operations written in Abstract Tree Syntax use `?` as the operator. This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c. For Excel style expressions you write these with an `if` statement. Regardless, there are 3 operands. The first is the condition to evaluate. The second is the result when the condition is true. The third is the result when the condition is false.
   - `"txtContent":"=if(4 < 5, 'yes', 'no')"` results in _"yes"_
   - `"txtContent":"=if(4 > 5, 'yes', 'no')"` results in _"no"_
+
+**Multi-value field-related operators** - The following operators are only used in a context with multi-value field of type Person, Lookup, or Choice.
+
+- length
+- join
+- loopIndex
+
+`length`, when provided with a field name, returns the number of members in a multi-valued field. When a single-value field is provided, `length` will return 1 when there is a value in that field.
+
+`join` concatenates values in a multi-value field with a specified separator. The first operand shall point to a value in a multi-value field, e.g. `"@currentField.lookupValue"`, `"[$AssignedTo.title]"`.  The second operand shall be a string literal that is the separator that joins the values together.
+
+`loopIndex`, when provided with a name of iterator variable, returns the current index (starting from 0) of the iterator. The name of iterator must be provided as a string literal. `loopIndex` would only work within the element with respective `forEach` enabled or its children elements.
+
+See [here](#formatting-multi-value-fields) for examples.
 
 ### operands
 
