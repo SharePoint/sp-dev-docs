@@ -128,11 +128,11 @@ This example uses the `rowFormatter` element, which totally overrides the render
   }
 }
 ```
-
+You can find this sample with additional details here: [Multi-line view rendering](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/multi-line-view)
 ### Alternate Row Formatting based on Modulus 
 
 The following image shows a list view with a "%" applied:
-![SharePoint list with view formatted with Alternate row coloring](.https://github.com/SharePoint/sp-dev-docs/tree/master/docs/declarative-customization/images/Alternate-Rows.png)
+![SharePoint list with view formatted with Alternate row coloring](https://github.com/SharePoint/sp-dev-docs/tree/master/docs/declarative-customization/images/Alternate-Rows.png)
 
 This example applies `% (Mod)` to a list view row with alternate coloring the rows:
 
@@ -142,8 +142,6 @@ This example applies `% (Mod)` to a list view row with alternate coloring the ro
   "additionalRowClass": "=if(@rowIndex%2==0,'ms-bgColor-themeLight','')"
 }
 ```
-
-You can find this sample with additional details here: [Multi-line view rendering](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/multi-line-view)
 
 ## Creating custom JSON
 
