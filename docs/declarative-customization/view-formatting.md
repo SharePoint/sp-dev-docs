@@ -128,8 +128,18 @@ This example uses the `rowFormatter` element, which totally overrides the render
   }
 }
 ```
-
 You can find this sample with additional details here: [Multi-line view rendering](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/multi-line-view)
+
+### Alternate Row Formatting based on Modulus 
+
+This example applies `% (Mod)` to a list view row with alternate coloring the rows:
+
+```JSON
+{
+  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "additionalRowClass": "=if(@rowIndex%2==0,'ms-bgColor-themeLight','')"
+}
+```
 
 ## Creating custom JSON
 
