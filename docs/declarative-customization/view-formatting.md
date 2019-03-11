@@ -133,7 +133,7 @@ You can find this sample with additional details here: [Multi-line view renderin
 ### Alternate Row Formatting based on Modulus 
 
 The following image shows a list view with a "%" applied:
-![SharePoint list with view formatted with Alternate row coloring](../images/Alternate-Rows.png)
+(../images/Alternate-Rows.png)
 
 This example applies `% (Mod)` to a list view row with alternate coloring the rows:
 
