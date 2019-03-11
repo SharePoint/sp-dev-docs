@@ -1283,8 +1283,8 @@ The people field object has the following properties (with example values):
    "title": "Kalya Tucker",
    "email": "kaylat@contoso.com",
    "sip": "kaylat@contoso.com",
-   "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
-   "department":"Human Resources",
+    "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
+    "department":"Human Resources",
    "jobTitle":"HR Manager"
 }
 ```
@@ -1455,6 +1455,37 @@ This will evaluate to a number equal to the height of the browser window (in pix
 #### "@window.innerWidth"
 
 This will evaluate to a number equal to the width of the browser window (in pixels) when the list was rendered.
+
+#### Thumbnails
+
+In a document library, there is a series of tokens that can be used to retrieve the URL to the thumbnail of a file, including:
+
+- `@thumbnail.small`, `@thumbnail.medium`, and `@thumbnail.large` evaluate to the thumbnail URL in 3 different predefined sizes.
+- `@thumbnail.<bounding size>` evaluates to the URL to the largest thumbnails that is not larger than the bounding size in both width and height. For example, `@thumbnail.150` evaluates to the URL to a thumbnail not larger than 150×150 pixels.
+- `@thumbnail.<bounding width>x<bounding height>` evaluates to the URL to the largest thumbnail that is not larger than the bounding width and bounding height. For example, `@thumbnail.100x200` evaluates to the URL to a thumbnail not wider than 100 pixels and not higher than 200 pixels.
+
+These tokens will yield no value on non-file items including folders.
+
+> [!NOTE]
+> The aspect ratio of thumbnail generated is the same as how the file looks like, changing the bounding sizes will not affect the aspect ratio of the thumbnail.
+
+> [!TIP]
+> Thumbnails are only available for a list of supported file formats. It means that sometimes the URL generated is not accessible due to lack of support on certain formats. However, if a valid thumbnail token is set as the _only_ `src` attribute of an `img` tag, we will take care of it and hide the image when it is not available.
+
+```json
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "elmType": "img",
+   "attributes": {
+      "src": "@thumbnail.200x150",
+      "alt": "='Thumbnail of file ' + [$FileLeafRef]"
+   },
+   "style": {
+      "width": "100%",
+      "max-width": "100%"
+   }
+}
+```
 
 ## See also
 
