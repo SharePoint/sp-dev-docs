@@ -72,8 +72,7 @@ Set-PnPPropertyBagValue -Key "BING_MAPS_KEY" -Value "YOURKEYVALUE"
 Set-SPOsite <SiteURL> -DenyAddAndCustomizePages 0
 ```
     
-   > [!NOTE] 
-    > Ensure you understand the implications of changing a site's NoScript Policy - https://docs.microsoft.com/en-us/sharepoint/allow-or-prevent-custom-script?redirectSourcePath=%252fen-us%252farticle%252fTurn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+   > [!NOTE] Ensure you understand the implications of changing a site's NoScript Policy - https://docs.microsoft.com/en-us/sharepoint/allow-or-prevent-custom-script?redirectSourcePath=%252fen-us%252farticle%252fTurn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
 
 
 ### To set the Bing Maps key at the farm or web level using the client object model with Visual Studio
