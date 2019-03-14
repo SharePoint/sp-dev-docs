@@ -16,6 +16,9 @@ You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@off
 
 ## SharePoint Framework Releases
 
+* **March 14, 2018**
+   * **SPFx v1.8** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes)
+
 * **December 18, 2018**
    * **SPFx v1.7.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.7.1)
 
