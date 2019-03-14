@@ -20,7 +20,7 @@ There are following benefits on using SharePoint Framework as the platform for y
 ## Development process
 
 > [!IMPORTANT]
-> **Sync to Teams** functionality does not currently work and will be fixed within upcoming days. Please refer to [Creating a team manifest manually for a web part](./guidance/creating-team-manifest-manually-for-webpart.md) to proceed for now and follow the steps in the 'Alternative deployment options' section of this article.
+> **Sync to Teams** functionality does not currently work and will be fixed within upcoming days. Please refer to [Creating a team manifest manually for a web part](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) to proceed for now and follow the steps in the 'Alternative deployment options' section of this article.
 
 You can start developing Microsoft Teams tabs simply by using the SharePoint Framework 1.8 or later packages. High level steps to get started are as follows.
 
@@ -58,13 +58,13 @@ The easiest way to deploy a SharePoint Framework solution is by following the st
 
 ### Alternative deployment options
 
-There is an alternative way to deploy your solution which will for instance allow you to make a solution available only to one specific team in your tenant. Please refer to [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/creating-team-manifest-manually-for-webpart.md) how to create the manifest.
+There is an alternative way to deploy your solution which will for instance allow you to make a solution available only to one specific team in your tenant. Please refer to [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/web-parts/creating-team-manifest-manually-for-webpart.md) how to create the manifest.
 
 1. Locate the Teams folder in your project folder:
 
     ![Solution structure](../images/sp-teams-solution-structure.png)
 
-1. Notice that there are 2 image files in there. Add the manifest file you created as described in [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/creating-team-manifest-manually-for-webpart.md) to this folder and call it ```manifest.json```. 
+1. Notice that there are 2 image files in there. Add the manifest file you created as described in [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/web-parts/creating-team-manifest-manually-for-webpart.md) to this folder and call it ```manifest.json```. 
 
 1. In the JSON above we inserted some placeholders. Replace them as follows (notice that placeholders can occur several times):
 
