@@ -1,9 +1,8 @@
 ---
 title: Build your first Field Customizer extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 11/8/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 # Build your first Field Customizer extension
@@ -156,7 +155,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     ![Creating items in the newly created list with different values in the Percent field](../../../images/ext-field-create-items-to-list.png)
 
-8. Move back to Visual Studio Code and open **serve.json** file from **config** folder. Update **InternalFieldName** attribute as **Percent** based on the field name, which we just created. Update also **pageUrl** attribute to match an URL of the list which we just created in preview steps. After edits your serve.json should look somewhat following.
+8. Move back to Visual Studio Code and open **serve.json** file from **config** folder. Update **InternalFieldName** attribute as **Percent** based on the field name, which we just created. Update also the **pageUrl** attributes to match a URL of the list which we just created in the preview steps. After edits your serve.json should look like:
 
     ```json
     {
@@ -353,7 +352,7 @@ Notice also that by default **includeClientSideAssets** attribute is set to true
 ```
 
 
-## Deploy the field to SharePoint Online
+## Deploy the field to SharePoint Online and host JavaScript from local host
 
 Now you are ready to deploy the solution to a SharePoint site and get the field association automatically included in a field. We will use the `ship` option with this packaging, so that all assets are packaged automatically inside of the solution package.
 
@@ -418,7 +417,7 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
 The process for publishing your app is identical among the different extension types.
 
 > [!NOTE]
-> This was relatively simple field customizer with functionality, which could have been also achieved with [column formatting capability](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting). Column formatting does not however supporting actual custom script. Field customizers cannot be also be modified by end users from the user interface, which enables also different use cases.
+> This was a relatively simple field customizer with functionality that could also have been achieved with [column formatting capability](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.

@@ -1,7 +1,7 @@
 ---
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
-ms.date: 11/08/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,15 +10,49 @@ localization_priority: Priority
 
 Single part app pages provides a capability to host SharePoint Framework web parts or Teams applications in SharePoint Online with locked layout. End users cannot modify or configure the page which is using Single Part App Page layout.
 
-> [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
-
 App pages have following characteristics:
 
 * Single Part App Pages cannot be edited by end users using browser
 * Currently supports hosting only single web part or Microsoft Teams application
 * Page layout can only be changed programatically from normal page layout to a Single Page App Page
 * End-users cannot parametrize exposed web part or Teams application
+
+> [!NOTE]
+> App pages will be exposed as an option in the upcoming modern page creation capability. This feature will be released to targeted release tenants after the SharePoint Framework 1.8 release. You can however enable app pages starting with 1.8 release using the code as demonstrated later in this document.
+
+Web part can be configured to be exposed as an app page. This configuration is performed in the web part manifest file by adjusting the `supportedHosts` value. Web part will be exposed as an option in the upcoming app pages picker user interface, if the `supportedHosts` value contains `"SharePointFullPage"` value.
+
+Following web part manifest demonstrates scenario where the web part is included to be in all supported platforms by updating all different values for the `supportedHosts` parameter.
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "eb7ac2da-d8eb-4118-9f4f-19ce595d3ad3",
+  "alias": "AllPlatformsWebPart",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "SharePointFullPage", "TeamsTab"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "All Platforms" },
+    "description": { "default": "This web part is visible in all platforms" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "allPlatforms"
+    }
+  }]
+}
+``` 
 
 ## How to use the Single Part App page in your tenant?
 

@@ -1,9 +1,8 @@
 ---
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
-ms.date: 11/08/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 
@@ -43,7 +42,8 @@ Select the **+ Container** and create a new container with the following:
 * Name: **azurehosted-webpart**
 * Access type: Container
 
-![Image that shows the option to create blob container](../../../images/deploy-option-blob-container.png)
+![Image that shows the option to create blob container - step 1](../../../images/deploy-option-blob-container1.png)
+![Image that shows the option to create blob container - step 2](../../../images/deploy-option-blob-container2.png)
 
 ### Storage account access key
 
@@ -132,7 +132,8 @@ Note, however, that you have not yet deployed the files.
       "id": "a4e95ed1-d096-4573-8a57-d0cc3b52da6a",
       "version": "1.0.0.0",
       "includeClientSideAssets": false,
-      "skipFeatureDeployment": true
+      "skipFeatureDeployment": true,
+      "isDomainIsolated": false
     },
     "paths": {
       "zippedPackage": "solution/azurehosted-webpart.sppkg"

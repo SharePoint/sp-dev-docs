@@ -1,10 +1,10 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and are deployed to SharePoint sites when the solution is installed on it. 
-ms.date: 11/08/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
+
 
 # Provision SharePoint assets from your SharePoint client-side web part
 
@@ -221,7 +221,8 @@ Now we have created the needed structures for provisioning SharePoint assets aut
       "name": "asset-deployment-webpart-client-side-solution",
       "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
       "version": "1.0.0.0",
-      "includeClientSideAssets": true
+      "includeClientSideAssets": true,
+      "isDomainIsolated": false
     },
     "paths": {
       "zippedPackage": "solution/asset-deployment-webpart.sppkg"
@@ -240,6 +241,7 @@ Now we have created the needed structures for provisioning SharePoint assets aut
       "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
       "version": "1.0.0.0",
       "includeClientSideAssets": true,
+      "isDomainIsolated": false,
       "features": [{
         "title": "asset-deployment-webpart-client-side-solution",
         "description": "asset-deployment-webpart-client-side-solution",
@@ -391,6 +393,7 @@ Next we need to update both the solution version and the feature version respons
       "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
       "version": "2.0.0.0",
       "includeClientSideAssets": true,
+      "isDomainIsolated": false,
       "features": [{
         "title": "asset-deployment-webpart-client-side-solution",
         "description": "asset-deployment-webpart-client-side-solution",

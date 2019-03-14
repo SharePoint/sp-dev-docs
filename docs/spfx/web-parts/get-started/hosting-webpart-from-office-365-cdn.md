@@ -1,9 +1,8 @@
 ---
 title: Host your client-side web part from Office 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Office 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online. 
-ms.date: 08/20/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 
@@ -65,12 +64,14 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
   ![Enable public CDN in tenant](../../../images/cdn-enable-o365-public-cdn.png)
 
-  Now public CDN has been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
+  Now the public CDN has been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
 
-  SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, the `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
+  SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it is enabled in your tenant. When the CDN is enabled, the `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
   > [!NOTE]
-  > If you have previously enabled Office 365 CDN, you should re-enable the public CDN so that you have the `*/CLIENTSIDEASSETS`entry added as a valid CDN origin for public CDN. If this entry is not present and the public CDN is enabled in your tenant, bundle requests will contain the token hostname `spclientsideassetlibrary` in their URL, causing the requests to fail. You can add this missing entry by using `Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */CLIENTSIDEASSETS` command.
+  > If you have previously enabled Office 365 CDN, you should re-enable the public CDN so that you have the `*/CLIENTSIDEASSETS`entry added as a valid CDN origin for public CDN. If this entry is not present and the public CDN is enabled in your tenant, bundle requests will contain the token hostname `spclientsideassetlibrary` in their URL, causing the requests to fail. You can add this missing entry by using
+  >
+  >`Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */CLIENTSIDEASSETS`
 
 6. You can double-check the current setup of your end-points. Execute the following command to get the list of CDN origins from your tenant:
 
@@ -78,7 +79,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   Get-SPOTenantCdnOrigins -CdnType Public
   ```
 
-  Notice that when you enable CDN first time, default configuration to enable default origins will take a while (approximately 15 minutes). Configuration is completed when there's no **(configuration pending)** messages when you execute `Get-SPOTenantCdnOrigins -CdnType Public` command.
+  Notice that when you enable the CDN for the first time, the default configuration to enable default origins will take a while (approximately 15 minutes). Configuration is completed when there is no **(configuration pending)** messages when you execute the `Get-SPOTenantCdnOrigins -CdnType Public` command.
 
   ![List of public origins in tenant](../../../images/cdn-public-origins.png)
 
@@ -111,7 +112,8 @@ You can also follow these steps by watching this video on the SharePoint PnP You
       "name": "helloword-webpart-client-side-solution",
       "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
       "version": "1.0.0.0",
-      "includeClientSideAssets": true
+      "includeClientSideAssets": true,
+      "isDomainIsolated": false
     },
     "paths": {
       "zippedPackage": "solution/helloword-webpart.sppkg"
@@ -121,7 +123,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 The default value for the **includeClientSideAssets** is `true`, which means that static assets are packaged automatically inside of the *.sppkg* files, and you do not need to separately host your assets from an external system.
 
-Do **not** change this setting for this exercise, so that assets are automatically hosted when solution is deployed to your tenant.
+Do **not** change this setting for this exerice, so that assets are automatically hosted when solution is deployed to your tenant.
 
 If *Office 365 CDN* is enabled, it is used automatically with default settings. If *Office 365 CDN* is not enabled, assets are served from the app catalog site collection. This means that if you leave the **includeClientSideAssets** setting `true`, your solution assets are automatically hosted in the tenant.
 

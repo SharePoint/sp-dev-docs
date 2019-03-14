@@ -1,9 +1,8 @@
 ---
 title: Use page placeholders from Application Customizer (Hello World part 2)
 description: Extend your Hello World extension to take advantage of page placeholders by using SharePoint Framework (SPFx) Extensions. 
-ms.date: 08/27/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 # Use page placeholders from Application Customizer (Hello World part 2)
@@ -112,6 +111,9 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 	```
 
 	You use `escape` to escape Application Customizer properties. You'll create style definitions for the output in the following steps.  
+
+> [!NOTE] 
+> After pasting in the code snippet above you might be presented with an error if you use Visual Studio Code. These errors will disappear after you build the solution when the scss file is compiled into a class.
 
 6. In the **HelloWorldApplicationCustomizer.ts** file, update the **IHelloWorldApplicationCustomizerProperties** interface to add specific properties for Header and Footer, as follows.
 

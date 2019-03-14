@@ -1,17 +1,13 @@
 ---
 title: Building Microsoft Teams tab using SharePoint Framework - Tutorial
-description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framweork. Capability was released to preview in SharePoint Framework v1.7.
-ms.date: 11/08/2018
+description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framweork. Capability was released to general availability in SharePoint Framework v1.8.
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 # Building Microsoft Teams tab using SharePoint Framework - Tutorial
 
-Starting with the SharePoint Framework v1.7, you can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies  Teams tab development process as  SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services.
-
-> [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
+Starting with the SharePoint Framework v1.8, you can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies Teams tab development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services.
 
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom client-side web part:
 
@@ -20,15 +16,7 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 > [!IMPORTANT]
-> This lab requires that you are using plusbeta version of the SharePoint Framework 1.7 as the capabilities are not yet ready for production usage. You can install latest SharePoint Framwork version to your development machine by using following command: `npm install -g @microsoft/generator-sharepoint`. Capability is ONLY available in targeted release tenants.
-
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
-
-<br/>
-
-> [!Video https://www.youtube.com/embed/4kSRmetB4vA]
-
-<br/>
+> This lab requires that you are using at least version 1.8 of the SharePoint Framework as these capabilities are not available in earlier versions.
 
 ## Create a new web part project
 
@@ -44,10 +32,10 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   cd teams-tab-webpart
   ```
     
-3. Create a new client-side web part solution by running the Yeoman SharePoint Generator. Notice that we are using the `plusbeta` switch as the capability in still in **preview**:
+3. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
 
   ```
-  yo @microsoft/sharepoint --plusbeta
+  yo @microsoft/sharepoint
   ```
 
 4. When prompted:
@@ -74,28 +62,60 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     ```
     code .
     ```
-Starting with the SharePoint Framework v1.7, scaffolding will also include additional **Teams** folder in the solution structure, with default configuration for your web parts, so that you can get started with Teams tab development as easily as possible.
+Starting with the SharePoint Framework v1.8, scaffolding will also include additional **Teams** folder in the solution structure, with default configuration for your web parts, so that you can get started with Teams tab development as easily as possible.
 
   ![Solution structure](../../../images/sp-teams-solution-structure.png)
 
-Teams folder contains following three files:
+Teams folder contains the following two files:
 
-- **manifest.json** - Manifest file for the Teams applications
-- **tab20x20.png** - Default small picture for a tab
-- **tab96x96.png** - Default large picture for a tab
+- **[webpartid]_color.png** - Default small picture for a tab
+- **[webpartid]_outline.png** - Default large picture for a tab
 
-**manifest.json** file was automatically updated with the entries which you provided in the Yeoman questions. Let's open this file and see most important elements in it for exposing the web part in the Teams.
+These images will be used as icons in Microsoft Teams.
 
-- `"packageName"`- Scaffolding updated this value based on the web part title you provided.
-- `"icons"`- This is a section which you would update for your custom images.
-- `"configurationUrl"` - This is the URL automatically updated to match unique web part ID of the web part, which you just created.
+## Updating the web part manifest to make it available for Microsoft Teams
 
-> [!NOTE]
-> You find more detailed description of the Microsoft Teams manifest file options and content from the [Microsoft Teams developer documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
+Locate the manifest json file for the web part you want to make available to Teams and modify the ```supportedHosts``` properties to include ```"TeamsTab"``` as in the following example.
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "8eb36405-e408-4578-8340-faf16d647d83",
+  "alias": "MyFirstTeamsTab",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart","TeamsTab"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "MyFirstTeamsTab" },
+    "description": { "default": "MyFirstTeamsTab description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "MyFirstTeamsTab"
+    }
+  }]
+}
+```
 
 ## Updating code to be aware of the Microsoft Teams context
 
-1. Open **src\webparts\myFirstTeamsTab\MyFirstTeamsTabWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
+1. Open **src\webparts\helloWorld\HelloWorldWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
+
+1. Add the following import statement at the top of your file:
+
+    ```typescript
+    import * as microsoftTeams from '@microsoft/teams-js';
+    ```
 
 1. Add the following private variable inside the **MyFirstTeamsTabWebPart** class. We will be storing information around the Microsoft Teams context in this variable.
 
@@ -112,7 +132,7 @@ Teams folder contains following three files:
       protected onInit(): Promise<any> {
         let retVal: Promise<any> = Promise.resolve();
         if (this.context.microsoftTeams) {
-          retVal = new Promise((resolve, _reject) => {
+          retVal = new Promise((resolve, reject) => {
             this.context.microsoftTeams.getContext(context => {
               this._teamsContext = context;
               resolve();
@@ -123,7 +143,7 @@ Teams folder contains following three files:
       }
     ```
 
-1. Update the **render** method as follows. Notice how we are rendering different content dependent if the code is rendered as a tab in Microsoft Teams or as a web part in SharePoint.
+1. Update the **render** method as follows. Notice how we are rendering different content dependent if the code is rendered as a tab in Microsoft Team or as a web part in SharePoint.
 
     ```typescript
     public render(): void {
@@ -133,17 +153,17 @@ Teams folder contains following three files:
       let siteTabTitle: string = '';
 
       if (this._teamsContext) {
-        // We have Teams context for the web part
+        // We have teams context for the web part
         title = "Welcome to Teams!";
         subTitle = "Building custom enterprise tabs for your business.";
-        siteTabTitle = "We are in the context of following Teams team: " + this._teamsContext.teamName;
+        siteTabTitle = "We are in the context of following Team: " + this._teamsContext.teamName;
       }
       else
       {
         // We are rendered in normal SharePoint context
         title = "Welcome to SharePoint!";
         subTitle = "Customize SharePoint experiences using Web Parts.";
-        siteTabTitle = "We are in the context of following SharePoint site: " + this.context.pageContext.web.title;
+        siteTabTitle = "We are in the context of following site: " + this.context.pageContext.web.title;
       }
 
       this.domElement.innerHTML = `
@@ -212,73 +232,29 @@ Now the web part is deployed and is automatically available cross the SharePoint
 > [!NOTE]
 > In this tutorial case, we are using tenant wide deployment option of the SharePoint Framework solution. This will ensure that the development and usage experience is as easy as possible. You could also deploy the solution as site scope, but in that case you'd need to ensure that the solution is deployed on the SharePoint site behind of the Microsoft Teams, before you can use it.
 
-## Packaging and deploying your web part as a Microsoft Teams tab
+## Making the web part available in Microsoft Teams
 
-As part of the Developer Preview of SharePoint Framework Teams Tabs, you will need to explicitly deploy the Microsoft Teams app to a Team in Microsoft Team. Your tenant will also need to support **Side loading of external apps** for the Microsoft Teams, so that you can deploy the app to a specific Team and use it.
+> [!IMPORTANT]
+> **Sync to Teams** functionality does not currently work and will be fixed within upcoming days. Please refer to [Creating a team manifest manually for a web part](../guidance/creating-team-manifest-manually-for-webpart.md) to proceed for now.
 
-Following setting must be performed only **once** in a tenant to enable side-loading of the apps in Microsoft Teams.
+In order to make your web part available in Microsoft Teams you will have synchronize your solution with teams. 
 
-Move to the Microsoft 365 admin center by selecting **Admin** from the app launcher.
+- Locate the solution you just uploaded and deployed in your appcatalog. Highlight the entry and switch to the "Files" tab in the ribbon.
 
-![Moving to admin UI](../../../images/sp-teams-move-to-admin.png)
+- Click the 'Sync To Teams' ribbon button to make your web part available in Microsoft Teams:
 
-Choose **Settings** and **Services & add-ins** from the left menu
+![Sync To Teams](../../../images/using-web-part-as-ms-teams-tab-sync-to-team.png)
 
-Select **Microsoft Teams** from the list of services you want to manage
-
-![Moving to admin UI](../../../images/sp-teams-admin-select-teams.png)
-
-Extend the **Apps** section under Tenant-wide settings
-
-![Moving to admin UI](../../../images/sp-teams-admin-extend-apps.png)
-
-Ensure that **Allow sideloading of external apps** setting is enabled
-
-![Moving to admin UI](../../../images/sp-teams-admin-allow-side-loading.png)
-
-Click **Save**.
-
+ 
 > [!NOTE]
-> This setting has to be done only once in a tenant which you are using. More content on preparing your Office 365 tenant for Microsoft Teams development from the [Microsoft Teams developer documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-tenant#turn-on-microsoft-teams-for-your-organization).
+> If this button is not enable, make sure that you added ```"TeamsTab"``` to the ```supportedHosts``` property in your web part manifest.
 
-Now we have confirmed that the side-loading is enabled, and we can package our Microsoft Teams application to get our SharePoint Framework tab visible in the Microsoft Teams.
 
-- Move to the **Teams** folder under your previously created solution using File Explorer.
-
-- Create a zip file which contains the **manifest.json** file and the image files in the root of the zip file. You can for example call the Zip file as a **MyFirstSPFxTab.zip**. Notice that you will need to ensure that manifest.json and images are in the *root of the zip file* or deployment will not work.
-
-    ![Zip file in explorer](../../../images/sp-teams-zip-file-generated.png)
-
-- Move to your Microsoft Teams instance by selecting **Teams** in the app launcher.
-
-    ![Zip file in explorer](../../../images/sp-teams-move-to-teams.png)
-
-- Choose a Team which you want to use for testing the capability and select **Manage team** from the `...` menu.
-
-    ![Manage Team](../../../images/sp-teams-manage-team.png)
-
-- Move to **Apps** tab
-
-- Choose **Upload a custom app** from the bottom right corner
-
-> [!NOTE]
-> If this setting is not available, side loading is not enabled in the tenant which you are using. Double check the settings from the tenant admin UIs.
-
-> [!NOTE]
-> The setting might be hidden behind a message notification or the notification requesting to turn on desktop notifications.
-
-- Upload **MyFirstSPFxTab.zip** from the **Teams** folder under your newly created solution and ensure that it's properly visible in the list of Apps. Notice how the custom image is visible with the description of the solution.
-
-    ![Manage Team](../../../images/sp-teams-app-uploaded.png)
-
-- Move to a channel in the Team where you just uploaded the solution. In below picture we have activated **General** channel in **Team**
+- Move to a channel in a Team. In the below picture we have activated **General** channel in **Team**
 
     ![Channel activated](../../../images/sp-teams-channel-activated.png)
 
-- Click `+` w tab on the channel
-
-> [!NOTE] 
-> In order to being able to add a custom teams tab built with SharePoint Framework, you need to have an already existing SharePoint Online site created under the cover of the target Team. If you have just created the target Team, you should first open the its SharePoint Online site by clicking on the "..." just beside the channel title and selecting the "Open in SharePoint" menu item. If the SharePoint Online site has not yet been created, you will see a message static something like "We are setting up your file directory." Once the site will be created, you will be able to add the custom teams tab.
+- Click `+` to add a new tab on the channel
 
 - Click your custom Tab called **MyFirstTeamTab** in the list
 
@@ -288,15 +264,9 @@ Now we have confirmed that the side-loading is enabled, and we can package our M
 
     ![Add a tab](../../../images/sp-teams-configure-tab.png)
 
-> [!IMPORTANT]
-> There is a known **bug** related on the property configuration, which will be addressed. You cannot change default property values or the web part is not successfully added on the tab. Fix for this issue will be rolling out in upcoming days.
-
 Your custom tab has been added on the Microsoft Teams channel and you can see how the code is reacting that it's in Microsoft Teams context. Theme of the web part is by default coming from the underlaying SharePoint site.
 
 ![Custom tab added](../../../images/sp-teams-custom-tab-added.png)
-
-> [!NOTE]
-> In the first preview version, there is an issue around the default fonts used in the Microsoft Teams Tabs. This will be fixed after the initial preview release and we do not recommend applying workaround until that happens.
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.

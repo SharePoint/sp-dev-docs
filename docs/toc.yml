@@ -56,6 +56,8 @@
         href: spfx/web-parts/single-part-app-pages.md
       - name: Share data between web parts
         href: spfx/web-parts/guidance/share-data-between-web-parts.md
+      - name: Supporting section backgrounds
+        href: spfx/web-parts/guidance/supporting-section-backgrounds.md        
         items:
         - name: Tutorial
           href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
@@ -124,11 +126,17 @@
     - name: Dynamic loading of packages
       href: spfx/dynamic-loading.md
     - name: Connecting components with Dynamic Data
-      href: spfx/dynamic-data.md    
+      href: spfx/dynamic-data.md
     - name: Building Microsoft Teams Tabs
-      href: spfx/integrate-with-teams-introduction.md      
+      href: spfx/integrate-with-teams-introduction.md
+    - name: Creating Teams manifest manually
+      href: spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md
     - name: Hosting Microsoft Teams Tabs in SharePoint
-      href: spfx/using-teams-solutions-in-sharepoint.md            
+      href: spfx/using-teams-solutions-in-sharepoint.md
+    - name: Library component overview
+      href: spfx/library-component-overview.md      
+    - name: Library component tutorial
+      href: spfx/library-component-tutorial.md                  
   - name: External libraries
     items:
     - name: Add external libraries

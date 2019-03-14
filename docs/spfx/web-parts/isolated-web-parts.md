@@ -1,7 +1,7 @@
 ---
 title: Isolated web parts
 description: Overview of the isolated web parts capability in the SharePoint Framework
-ms.date: 11/08/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,9 +9,6 @@ localization_priority: Priority
 # Isolated web parts
 
 Using this capability you can build web parts that securely communicate with APIs secured with Azure AD without exposing the access token to other components on the page or even scripts in the tenant.
-
-> [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
 ## Why isolated web parts
 
@@ -22,7 +19,7 @@ Isolated web parts introduce a new way to isolate access to APIs secured with Az
 ## How isolated web parts work
 
 > [!IMPORTANT]
-> The isolated web parts capability is available only in SharePoint Framework v1.7.0 and later.
+> The isolated web parts capability is available only in SharePoint Framework v1.8.0 and later.
 
 ![Architectural overview illustrating how isolated web parts work](../../images/isolated-web-parts.png)
 
@@ -57,7 +54,7 @@ When added to the page, isolated web parts are displayed using an iframe. This i
 
 ### Upgrading existing project to use isolated permissions
 
-If you're upgrading an existing SharePoint Framework project to v1.7.0 and want to use the isolated permissions capability, you can do it, by setting in the `config/package-solution.json` file, the `isDomainIsolated` property to `true`. You should ensure, that your project contains only web parts.
+If you're upgrading an existing SharePoint Framework project to v1.8.0 and want to use the isolated permissions capability, you can do it, by setting in the `config/package-solution.json` file, the `isDomainIsolated` property to `true`. You should ensure, that your project contains only web parts.
 
 After changing the project to use isolated permissions, you should redeploy your project. This will issue new API permission requests, isolated to your solution, which will need to be approved by the tenant admin.
 

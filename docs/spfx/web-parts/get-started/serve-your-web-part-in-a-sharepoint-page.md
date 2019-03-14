@@ -1,9 +1,8 @@
 ---
 title: Deploy your client-side web part to a SharePoint page (Hello World part 3)
 description: Deploy your client-side web part to SharePoint and see it working on a modern SharePoint page. 
-ms.date: 08/20/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 # Deploy your client-side web part to a SharePoint page (Hello World part 3)
@@ -70,7 +69,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 The package uses SharePoint Feature to package your web part. By default, the gulp task creates a feature for your web part.
 
-You can view the raw package contents in the **sharepoint/solution/debug** folder. 
+You can view the raw package contents in the **sharepoint/debug** folder. 
 
 The contents are then packaged into an **.sppkg** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution.
 

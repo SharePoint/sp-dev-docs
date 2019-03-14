@@ -1,9 +1,8 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 11/8/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 # Build your first ListView Command Set extension
@@ -147,7 +146,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     Because our ListView Command Set is hosted from localhost and is running, we can use specific debug query parameters to execute the code in the list view.
 
-2. Open **serve.json** file from **config** folder. Update **pageUrl** attribute to match an URL of the list where you want to test the solution. After edits your serve.json should look somewhat following.
+2. Open **serve.json** file from **config** folder. Update the **pageUrl** attributes to match a URL of the list where you want to test the solution. After edits your serve.json should look somewhat like:
 
     ```json
     {
@@ -226,9 +225,13 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
 The default solution takes advantage of a new Dialog API, which can be used to show modal dialogs easily from your code. In the following steps, we'll slightly modify the default experience to demonstrate Dialog API use cases.
 
-1. Open **HelloWorldCommandSet.ts** from the **src\extensions\helloWorld** folder in Visual Studio Code (or your preferred editor).
+1. Return to the console, and execute the following command to include the Dialog API in our solution.
 
-2. Update the **onExecute** method as follows:
+2. Return to Visual Studio Code (or your preferred editor).
+
+3. Open **HelloWorldCommandSet.ts** from the **src\extensions\helloWorld** folder.
+
+4. Update the **onExecute** method as follows:
     
     ```typescript
       @override
@@ -248,13 +251,13 @@ The default solution takes advantage of a new Dialog API, which can be used to s
       }
     ``` 
     
-3. In your console window, ensure that you do not have any exceptions. If you do not already have the solution running in localhost, execute the following command:
+5. In your console window, ensure that you do not have any exceptions. If you do not already have the solution running in localhost, execute the following command:
 
     ```
     gulp serve
     ```
 
-4. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
+6. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
     ![Accept loading debug scripts](../../../images/ext-com-accept-debug-scripts.png)
 

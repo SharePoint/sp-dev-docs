@@ -1,9 +1,8 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 11/08/2018
+ms.date: 03/14/2019
 ms.prod: sharepoint
-localization_priority: Priority
 ---
 
 # Build your first SharePoint client-side web part (Hello World part 1)
@@ -213,7 +212,7 @@ This model is flexible enough so that web parts can be built in any JavaScript f
 
 The property pane is defined in the **HelloWorldWebPart** class. The **getPropertyPaneConfiguration** property is where you need to define the property pane.
 
-When the properties are defined, you can access them in your web part by using `this.properties.<property-name>`, as shown in the **render** method:
+When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the **render** method:
 
 ```typescript
 <p class="${styles.description}">${escape(this.properties.description)}</p>
@@ -347,6 +346,7 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
   // Components that allow authors to embed arbitrary script code should set this to true.
   // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
 
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
