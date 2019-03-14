@@ -54,10 +54,10 @@
         href: spfx/web-parts/isolated-web-parts.md
       - name: Single Part App Pages
         href: spfx/web-parts/single-part-app-pages.md
+      - name: Supporting section backgrounds
+        href: spfx/web-parts/guidance/supporting-section-backgrounds.md                
       - name: Share data between web parts
         href: spfx/web-parts/guidance/share-data-between-web-parts.md
-      - name: Supporting section backgrounds
-        href: spfx/web-parts/guidance/supporting-section-backgrounds.md        
         items:
         - name: Tutorial
           href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
