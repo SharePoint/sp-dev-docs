@@ -14,7 +14,7 @@ Modern SharePoint pages support layouts that allow users to organize the informa
 
 One thing that regular layouts in modern SharePoint pages share, is the maximum width. To guarantee the ease of readability and usability, the body of a modern page doesn't expand beyond a certain width. When building web parts that will be used in regular layouts, you test your web part's width against the known maximum and minimum width constraints to ensure that they are displayed properly.
 
-When working with the full-width column layout, however, things become a bit more complicated as that layout expands to the full width of the page. When displayed on an ultra-wide monitor, the full-width column can even become a few thousands pixels wide. This introduces additional testing requirements that you should take into account when building web parts that can be used in the full-width column.
+When working with the full-width column layout, however, things become a bit more complicated as that layout expands to the full width of the page. When displayed on an ultra-wide monitor, the full-width column can even become a few thousand pixels wide. This introduces additional testing requirements that you should take into account when building web parts that can be used in the full-width column.
 
 ## Enable support for the full-width column
 
