@@ -279,6 +279,42 @@ namespace AzureADCertAuth
     }
 }
 ```
+## Using this principal in your Powershell script using the PnP Sites core library
+When making use of Azure Automation Runbooks, first add the certificate (.pfx) using the Certificates option (under Shared Resources), then use the Get-AutomationCertificate cmdlet to retrieve the certificate to be used in the script.
+
+> [!NOTE]
+> You need to add the SharePointPnPPowerShellOnline module to your Automation Account first. This module contains the OfficeDevPnP.Core.dll assembly needed to make the authentication call.
+
+```powershell
+# path to installed modules
+$path = "C:\Modules\User\SharePointPnPPowerShellOnline"
+
+# reference to needed assemblies
+Add-Type -Path "$path\Microsoft.SharePoint.Client.dll"
+Add-Type -Path "$path\Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type -Path "$path\OfficeDevPnP.Core.dll"
+
+# reference to the certificate
+$cert = Get-AutomationCertificate -Name 'NameOfCertificate'
+
+# set the variables
+$siteUrl = "https://<tenant>.sharepoint.com"
+$appId = "<guid of the App>"
+$domain = "<tenant>.onmicrosoft.com"
+$azureEnv = [OfficeDevPnP.Core.AzureEnvironment]::Production
+
+# instantiate the objects
+$clientContext = new-object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+$authManager = new-object OfficeDevPnP.Core.AuthenticationManager
+
+# configure the object
+$clientContext = $authManager.GetAzureADAppOnlyAuthenticatedContext($siteUrl, $appId, $domain, $cert, $azureEnv)
+
+# do some stuff
+$clientContext.Load($clientContext.Web)
+$clientContext.ExecuteQuery()
+$clientContext.Web.Title
+```
 
 ## FAQ
 ### Can I use other means besides certificates for realizing app-only access for my Azure AD app?
