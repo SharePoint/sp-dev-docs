@@ -67,7 +67,18 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 	
   You now have a web part project with the React framework.
 
-8. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
+8. Open **package.json** from the root folder
+
+  You will need to add a reference to the office-ui-fabric-react package.  In the dependencies section, add the following line:
+  
+  ```
+  "office-ui-fabric-react": "6.143.0",
+  ```
+  
+  run `npm install`
+  restart VS code.
+  
+9. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
 
   As you can see, the `render` method creates a react element and renders it in the web part DOM.
 
@@ -81,7 +92,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
       );
   ```
 	
-9. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
+10. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
 	
   This is the main react component that Yeoman added to your project that renders in the web part DOM.
 
