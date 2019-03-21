@@ -222,7 +222,7 @@ Notice that we are performing an HTML escape on the property's value to ensure a
 
 Let's now add a few more properties to the property pane: a check box, a drop-down list, and a toggle. We first start by importing the respective property pane fields from the framework.
 
-1. Scroll to the top of the file and add the following to the import section from `@microsoft/sp-webpart-base`:
+1. Scroll to the top of the file and add the following to the import section from `@microsoft/sp-property-pane`:
 
   ```typescript
   PropertyPaneCheckbox,
@@ -234,13 +234,12 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
 
   ```typescript
   import {
-    BaseClientSideWebPart,
     IPropertyPaneConfiguration,
     PropertyPaneTextField,
     PropertyPaneCheckbox,
     PropertyPaneDropdown,
     PropertyPaneToggle
-  } from '@microsoft/sp-webpart-base';
+  } from '@microsoft/sp-property-pane';
   ```
 
 2. Update the web part properties to include the new properties. This maps the fields to typed objects.
