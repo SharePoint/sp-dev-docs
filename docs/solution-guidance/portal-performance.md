@@ -92,9 +92,15 @@ The following sections provide performance guidance for achieving this goal.
 
 <a name="bk_features"> </a>
 
-### Disable the Device Channels and Search Engine Optimization features
+### Disable unnecessary features
 
-If you create a new classic publishing portal then both the Device Channels as the Search Engine Optimization features are turned on with their default settings. If you keep these default settings there's no impact on your page rendering, but in SharePoint Online the presence of these two features does impact performance and therefore it's recommended to disable these features if you're no using them. See below [PnP PowerShell](https://aka.ms/sppnp-powershell) script to make this happen:
+When the Publishing features are activated on a portal, both the Device Channels and the Search Engine Optimization (SEO) features are turned on with their default settings. The SEO feature is designed to boost search relevance and ranking in a publicly consumed portal. Since SharePoint Online no longer offers public websites, this feature has no value on a portal. It does, however, add additional costs to your page rendering. 
+
+The Device Channels feature was originally designed to facilitate mobile rendering of Publishing Portals, however, much of this functionality has been supplanted by modern features like the Mobile Apps and the Modern UI. If you have not designed custom mobile masterpages for your portal, this feature should be disabled. Similar to the SEO feature, it adds additional cost and complexity to the server rendering of the page, which will ultimately degrade performance. 
+
+Both of these features are hidden from the site UI, so they must be deactivated with code. See the [PnP PowerShell](https://aka.ms/sppnp-powershell) script at the bottom of this section to forcibly disable these features:
+
+The Metadata Navigation and Filtering feature, not to be confused with Managed Navigation, provides a way to dynamically filter list views based on metadata. While this may be useful for content authors to locate specific content requiring changes, it adds additional costs to each page render on sites where the feature is active. This is true not just of list views, but Publishing Pages as well. It is recommended to disable this feature on any portal where performance is of importance.
 
 ```PowerShell
 Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yourportal
@@ -103,8 +109,9 @@ Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yourportal
 Disable-PnPFeature -Scope Site -Identity 57cc6207-aebf-426e-9ece-45946ea82e4a -Force
 # SEO
 Disable-PnPFeature -Scope Site -Identity 17415b1d-5339-42f9-a10b-3fef756b84d1 -Force
+# MetadataNav
+Disable-PnPFeature -Scope Web -Identity 7201D6A4-A5D3-49A1-8C19-19C4BAC6E668 -Force
 ```
-
 <a name="bk_Telemetry"> </a>
 
 ### Use telemetry
