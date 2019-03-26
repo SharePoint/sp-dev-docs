@@ -92,9 +92,9 @@ The following sections provide performance guidance for achieving this goal.
 
 <a name="bk_features"> </a>
 
-### Disable unnecessary features
+### Disable unnecessary features in classic portals
 
-When the Publishing features are activated on a portal, both the Device Channels and the Search Engine Optimization (SEO) features are turned on with their default settings. The SEO feature is designed to boost search relevance and ranking in a publicly consumed portal. Since SharePoint Online no longer offers public websites, this feature has no value on a portal. It does, however, add additional costs to your page rendering. 
+When the Publishing features are activated on a portal, both the Device Channels and the Search Engine Optimization (SEO) features are turned on with their default settings. The SEO feature is designed to boost search relevance and ranking in a publicly consumed portal. Since SharePoint Online no longer offers public websites, this feature is no longer required. It does, however, still add additional costs to your page rendering. 
 
 The Device Channels feature was originally designed to facilitate mobile rendering of Publishing Portals, however, much of this functionality has been supplanted by modern features like the Mobile Apps and the Modern UI. If you have not designed custom mobile masterpages for your portal, this feature should be disabled. Similar to the SEO feature, it adds additional cost and complexity to the server rendering of the page, which will ultimately degrade performance. 
 
