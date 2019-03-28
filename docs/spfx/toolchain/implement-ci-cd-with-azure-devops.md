@@ -19,14 +19,15 @@ Continuous Integration (CI) helps developers integrate code into a shared reposi
 Setting up Azure DevOps for Continuous Integration with a SharePoint Framework solution requires the following steps:
 
 1. Creating the Build Definition
-2. Installing NodeJS
-3. Restoring dependencies
-4. Executing Unit Tests
-5. Importing code coverage information
-6. Bundling the solution
-7. Packaging the solution
-8. Preparing the artifacts
-9. Publishing the artifacts
+1. Installing NodeJS
+1. Restoring dependencies
+1. Executing Unit Tests
+1. Importing test results
+1. Importing code coverage information
+1. Bundling the solution
+1. Packaging the solution
+1. Preparing the artifacts
+1. Publishing the artifacts
 
 ### Creating the Build Definition
 The Build Definition, as its name suggests, includes all the definitions and their configurations for the build.  Start setting up your Continuous Integration by creating a new build definition and link it to your repository.
@@ -49,70 +50,77 @@ Because third party dependencies are not stored in the source control, you need 
 
 ### Executing Unit Tests
 
-The SharePoint Framework supports writing unit tests using KarmaJS, Mocha, Chai and Sinon. These modules are already referenced for you and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issues or regressions as soon as possible. To have Azure DevOps execute your unit tests, add a `gulp` task. Set the path to the `gulpfile` file and set the `Gulp Tasks` option to `test`.
+The SharePoint Framework does not provide a testing framework by default (since 1.8.0), we will leverage Jest with this sample. These modules will be installed in a later step and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issues or regressions as soon as possible. To have Azure DevOps execute your unit tests, add a `npm` task. Set the `command` to `custom` and `custom command` field, enter `test`. Then set the `Working Directory` option to `$(Build.SourcesDirectory)`.
 
 ![executing unit tests](../../images/azure-devops-spfx-04.png)
 
-> [!NOTE] 
-> Make sure you check `Publish to TFS/Team Services` under the `JUnit Test Results` section and set the `Test Result Files` to `**/test-*.xml`. This will instruct the task to report results with the build status in Azure DevOps.
 
-#### Configuring KarmaJS
+#### Configuring Jest
 
-By default SharePoint Framework projects do not include a reporter for JUnit. Reporters are plugins for KarmaJS that export the test results in a certain format. To install the necessary reporters, run the following commands in your project.
+By default SharePoint Framework projects does not include a testing Framework. We will leverage Jest in this sample.
 
 ```shell
-npm i karma-junit-reporter@1.X -D
+npm i chai@4.X jest jest-junit @voitanos/jest-preset-spfx-react16 -D
 ```
 
-You also need to configure KarmaJS to load and use the reporter, to do so create a file `config/karma.config.js` and add the following content.
+You also need to configure Jest, to do so create a file `config/jest.config.json` and add the following content.
 
-```JS
-"use strict";
-var existingKarmaConfig = require('@microsoft/sp-build-web/lib/karma/karma.config');
-var junitReporter = require('karma-junit-reporter');
-
-module.exports = function (config) {
-  existingKarmaConfig(config);
-  config.reporters.push('junit');
-
-  config.set({
-    basePath: './..',
-  });
-
-  config.junitReporter = {
-    outputDir: 'temp/', // results will be saved as $outputDir/$browserName.xml
-    outputFile: 'test-results.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
-    suite: 'karma', // suite will become the package name attribute in xml testsuite element
-    useBrowserName: true, // add browser name to report and classes names
-  };
-  var coberturaSubDir = 'cobertura';
-  var coverageSubDir = 'lcov';
-  var coberturaFileName = 'cobertura.xml';
-  config.coverageReporter.reporters.push({type: 'cobertura', subdir: './' + coberturaSubDir, file: coberturaFileName});
-  config.coverageReporter.reporters.push({
-    type: 'lcov',
-    subdir: './' + coverageSubDir + '/',
-    file: 'lcov.info'
-  });
-  config.browserNoActivityTimeout = 60000;
-  config.plugins.push(junitReporter);
-};
-```
-
-Finally you need to modify the gulpfile to instruct it to leverage this new configuration. To do so edit `gulpfile.js` and add these lines after `build.initialize(gulp);`.
-
-```JS
-var buildConfig = build.getConfig();
-var karmaTaskCandidates = buildConfig.uniqueTasks.filter((t) => t.name === 'karma');
-if(karmaTaskCandidates && karmaTaskCandidates.length > 0) {
-  var karmaTask = karmaTaskCandidates[0];
-  karmaTask.taskConfig.configPath = './config/karma.config.js';
+```JSON
+{
+  "preset": "@voitanos/jest-preset-spfx-react16",
+  "rootDir": "../src",
+  "coverageReporters": [
+    "text",
+    "json",
+    "lcov",
+    "text-summary",
+    "cobertura"
+  ],
+  "reporters": [
+    "default",
+    "jest-junit"
+  ]
 }
 ```
+You also need to configure your project to leverage jest when typing commands. To do so edit the `package.json` file and add/replace these two `scripts` with the following values:
+```JSON
+    "test": "./node_modules/.bin/jest --config ./config/jest.config.json",
+    "test:watch": "./node_modules/.bin/jest --config ./config/jest.config.json --watchAll"
+```
+Finally you need to modify the `package.json` to configure the reporter. Reporters are plugins that provide new export formats for test results to test runners. To do so edit `package.json` and add these lines after the `scripts` property.
+
+```JSON
+  "jest-junit": {
+    "output": "temp/test/junit/junit.xml",
+    "usePathForSuiteName": "true"
+  }
+```
+#### Writing a unit test
+To write your first unit test, create a new file `src/webparts/webPartName/tests/webPartName.spec.ts` and add the following content:
+```TS
+/// <reference types="mocha" />
+import {assert, expect} from 'chai';
+
+describe("webPartName", () => {
+  it("should do something", () => {
+    assert.ok(true, 'should be true');
+  });
+  it("should add numbers Sync fluent", () => {
+    const result:number = 1 + 3;
+    expect(result).to.eq(4); // fluent API
+  });
+});
+```
+> [!NOTE] 
+> You can learn more about writing unit tests using Jest and Chai [here](https://jestjs.io/docs/en/getting-started.html).
+
+### Importing test results
+In order to get test results information attached with the build results, you need to import these test results from the test runner into Azure DevOps. To do so, add a new `Publish Test Results` task. Set the `Test results files` field to `temp/test/junit/junit.xml` and the `Search folder` to `$(Build.SourcesDirectory)`.  
+![importing test results](../../images/azure-devops-spfx-04b.png)
 
 ### Importing code coverage information
 
-In order to get code coverage reported with the build status you need to add a task to import that information. To configure the code coverage information, add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/temp/coverage/cobertura/cobertura.xml` and `Report Directory` to `$(Build.SourcesDirectory)/temp/coverage/cobertura`.
+In order to get code coverage reported with the build status you need to add a task to import that information. To configure the code coverage information, add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/temp/test/cobertura-coverage.xml` and `Report Directory` to `$(Build.SourcesDirectory)/temp/test`.
 
 ![importing coverage information](../../images/azure-devops-spfx-05.png)
 
@@ -147,14 +155,14 @@ Continuous Deployment (CD) takes validated code packages from build process and 
 Setting up Azure DevOps for Continuous Deployments with a SharePoint Framework solution requires the following steps:
 
 1. Creating the Release Definition
-2. Linking the Build Artifact
-3. Creating the Environment
-4. Installing NodeJS
-5. Installing the Office 365 CLI
-6. Connecting to the App Catalog
-7. Adding the Solution Package to the App Catalog
-8. Deploying the Application
-9. Setting the Variables for the Environment
+1. Linking the Build Artifact
+1. Creating the Environment
+1. Installing NodeJS
+1. Installing the Office 365 CLI
+1. Connecting to the App Catalog
+1. Adding the Solution Package to the App Catalog
+1. Deploying the Application
+1. Setting the Variables for the Environment
 
 ### Creating the Release Definition
 
