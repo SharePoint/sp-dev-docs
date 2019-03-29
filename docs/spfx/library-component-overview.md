@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Using library component type in SharePoint Framework
 
-Library component type enables you to have independently versioned and deployed code, which is served automatically for the SharePoint Framweork components with a deployment through app catalog. Library component provides you alternative option to create shared code, which can be then used and referenced cross all the components in the tenant.
+Library component type enables you to have independently versioned and deployed code, which is served automatically for the SharePoint Framework components with a deployment through app catalog. Library component provides you alternative option to create shared code, which can be then used and referenced cross all the components in the tenant.
 
 > [!IMPORTANT]
 > This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
