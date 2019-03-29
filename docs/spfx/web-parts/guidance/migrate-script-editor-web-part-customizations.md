@@ -191,7 +191,7 @@ public render(): void {
   this.domElement.innerHTML = `
     <input type="button" value="Click me"/>`;
 
-  const myScript = require('./my-script.js');
+  const myScript = <any> require('./my-script.js');
   this.domElement.querySelector('input').addEventListener('click', myScript.greeting);
 }
 ```
