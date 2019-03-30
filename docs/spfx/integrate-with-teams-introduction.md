@@ -64,7 +64,7 @@ There is an alternative way to deploy your solution which will for instance allo
 
     ![Solution structure](../images/sp-teams-solution-structure.png)
 
-1. Notice that there are 2 image files in there. Add the manifest file you created as described in [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/web-parts/creating-team-manifest-manually-for-webpart.md) to this folder and call it ```manifest.json```. 
+1. Notice that there are 2 image files in there. Add the manifest file you created as described in [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) to this folder and call it ```manifest.json```. 
 
 1. In the JSON above we inserted some placeholders. Replace them as follows (notice that placeholders can occur several times):
 
