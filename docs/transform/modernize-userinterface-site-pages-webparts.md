@@ -91,9 +91,9 @@ pageTransformator.Transform(pti);
 These web parts are quite flexible in classic and therefore are replaced by more specific modern web parts. The replacement works as follows:
 
 - Document library: [Library](https://support.office.com/en-us/article/use-the-document-library-web-part-a9dfecc3-2050-4528-9f00-2c5afc5731b0) web part
-- List: [List]([List](https://support.office.com/en-us/article/use-the-list-and-other-web-parts-on-classic-pages-03044488-c0e4-4226-a8fb-4cd8364424fa)) web part
+- List: [List]([List](https://support.office.com/en-us/article/use-the-list-web-part-ef0a1b80-f8b3-443d-b04a-1e76c70b5537)) web part
 - Calendar: [Events](https://support.office.com/en-us/article/use-the-events-web-part-5fe4da93-5fa9-4695-b1ee-b0ae4c981909) web part
-- Issue list: [List]([List](https://support.office.com/en-us/article/use-the-list-and-other-web-parts-on-classic-pages-03044488-c0e4-4226-a8fb-4cd8364424fa)) web part
+- Issue list: [List]([List](https://support.office.com/en-us/article/use-the-list-web-part-ef0a1b80-f8b3-443d-b04a-1e76c70b5537)) web part
 - Task list: [Text](https://support.office.com/en-us/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part explaining this could not be mapped
 - Discussion board: [Text](https://support.office.com/en-us/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part explaining this could not be mapped
 - Survey list: [Text](https://support.office.com/en-us/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part explaining this could not be mapped
