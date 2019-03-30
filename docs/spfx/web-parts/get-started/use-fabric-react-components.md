@@ -72,7 +72,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   You will need to add a reference to the office-ui-fabric-react package.  In the dependencies section, add the following line:
   
   ```
-  "office-ui-fabric-react": "6.143.0",
+  "office-ui-fabric-react": "5.132.0",
   ```
   
   run `npm install`
