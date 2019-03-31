@@ -16,7 +16,7 @@ The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packag
 > - Page transformation today works for wiki and web part pages. Publishing pages is something we're evaluating for a future release.
 > - The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
-Page transformation can be used in one ore more models and these models can used together:
+Page transformation can be used in one or more models and these models can used together:
 
 Model | Technique | DevOps/Developer/ISV | End user | Keep/Discard option | Comments
 ------|---------- |----------------------|----------|---------------------|---------
