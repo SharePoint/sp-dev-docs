@@ -59,26 +59,25 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your DocumentCardExample web part as well.
 
-6. Next, enter the following to open the web part project in Visual Studio Code:
+6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version fo the Office UI Fabric to your solution:
+
+  ```
+  npm install office-ui-fabric-react@5.132.0
+  ```
+
+> [!NOTE]
+> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.143.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.
+
+
+7. Next, enter the following to open the web part project in Visual Studio Code:
 
   ```
   code .
   ```
 	
   You now have a web part project with the React framework.
-
-8. Open **package.json** from the root folder
-
-  You will need to add a reference to the office-ui-fabric-react package.  In the dependencies section, add the following line:
   
-  ```
-  "office-ui-fabric-react": "5.132.0",
-  ```
-  
-  run `npm install`
-  restart VS code.
-  
-9. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
+8. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
 
   As you can see, the `render` method creates a react element and renders it in the web part DOM.
 
@@ -92,7 +91,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
       );
   ```
 	
-10. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
+9. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
 	
   This is the main react component that Yeoman added to your project that renders in the web part DOM.
 
