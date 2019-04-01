@@ -42,13 +42,13 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   {
     "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
-      "name": "helloword-webpart-client-side-solution",
+      "name": "helloworld-webpart-client-side-solution",
       "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
       "version": "1.0.0.0",
       "includeClientSideAssets": true
     },
     "paths": {
-      "zippedPackage": "solution/helloword-webpart.sppkg"
+      "zippedPackage": "solution/helloworld-webpart.sppkg"
     }
   }
   ```
