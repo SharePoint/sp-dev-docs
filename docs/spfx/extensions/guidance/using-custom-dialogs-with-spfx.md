@@ -60,11 +60,14 @@ To create a custom dialog box, you need to follow the steps in [Set up your deve
 
   ![SharePoint client-side solution scaffolded successfully](../../../images/ext-com-dialog-yeoman-complete.png)
 
-6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
+6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version fo the Office UI Fabric to your solution:
 
   ```sh
-  npm shrinkwrap
+  npm install office-ui-fabric-react@5.132.0
   ```
+
+> [!NOTE]
+> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.143.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.
 
 7. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer. To open the folder in Visual Studio Code, use the following command in the console:
 
