@@ -20,6 +20,12 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 * [OfficeDev Facebook](https://www.facebook.com/OfficeDev/) - Official communication channel for SharePoint and Office 365 developer topics
 * [OfficeDevPnP Facebook](https://www.facebook.com/OfficeDevPnP/) - Community account for SharePoint and Office 365 developer topics
 
+## GitHub
+
+There are numerous diferent repositories related on the provided samples and [open-source projects](open-source-projects.md) available in the following GitHub organizations.
+
+* [SharePoint GitHub organization](https://github.com/SharePoint)
+* [PnP GitHub organization](https://github.com/PnP)
 
 ## Issues with SharePoint development
 
