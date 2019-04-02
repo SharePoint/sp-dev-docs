@@ -56,6 +56,3 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 | Repository | Description |
 |--------|--------|
 | [pnpjs](https://github.com/pnp/pnpjs) | [PnPJS](https://pnp.github.io/pnpjs/) is a fluent JavaScript API for consuming SharePoint and Office 365 REST APIs in a type-safe way; this repository contains the library's source code |
-
-
-

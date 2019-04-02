@@ -1,7 +1,7 @@
 ---
 title:  SharePoint Developer Community (SharePoint PnP) resources
 description: The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. 
-ms.date: 06/18/2018
+ms.date: 04/02/2019
 ms.prod: sharepoint
 
 localization_priority: Priority
@@ -22,7 +22,7 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 
 ## GitHub
 
-There are numerous diferent repositories related on the provided samples and [open-source projects](open-source-projects.md) available in the following GitHub organizations.
+There are numerous different repositories related on the provided samples and [open-source projects](open-source-projects.md) available in the following GitHub organizations.
 
 * [SharePoint GitHub organization](https://github.com/SharePoint)
 * [PnP GitHub organization](https://github.com/PnP)
@@ -35,7 +35,7 @@ Found an issue related to SharePoint development around the APIs, documentation,
 
 ## Community calls
 
-There are numerous community calls for SharePoint development, and you can choose which of them you'd like to join based on your interest and availability. Each call has live demos from SharePoint Engineering, MVPs, or other community members. 
+There are numerous community calls for SharePoint development, and you can choose which of them you'd like to join based on your interest and availability. Each call has live demos from SharePoint Engineering, MVPs, or other community members.
 
 > [!TIP]
 > If you are interested in doing a live demo in any of our community calls, please reach out by leaving a comment on this page and we'll get you a spot for 10-15 minutes for demonstrating your SharePoint development topic(s).
@@ -48,13 +48,11 @@ There are numerous community calls for SharePoint development, and you can choos
 | [Special interest group call for SharePoint Framework](https://aka.ms/spdev-spfx-call) | Bi-weekly on Thursdays at 7:00 AM PT / 3:00 PM GMT | SharePoint Engineering updates, SharePoint Framework, PnPJS, Office 365 CLI, and reusable SPFx controls  |  [Direct Skype link to meeting](https://aka.ms/spdev-spfx-call-join) |
 | [Special interest group call for general SharePoint development](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7:00 AM PT / 3:00 PM GMT | SharePoint Engineering updates, end-to-end solution designs, provisioning, PnP CSOM, and PnP PowerShell |  [Direct Skype link to meeting](https://aka.ms/spdev-sig-call-join) |
 
-### Interested in Presenting in a Community Call? Do's & Don'ts
-
-Are you interested in presenting during one of the community calls listed above? We welcome demos by the community! Please feel free
-
 > [!NOTE]
 > Currently these are recurring invites until the end of June 2019. They will be renewed after that for the next 12 months.
 
+> [!NOTE]
+> These calls will be changed to use Microsoft Teams immediately when it will support differences between attendees and presenters. Team broadcast is not also yet suitable as it does not support ad-hoc promotion of participants from an attendee to a presenter.
 
 ## What’s the supportability statement around PnP open-source components and solutions?
 
@@ -72,4 +70,5 @@ Following statements apply across all of the SharePoint PnP assets, including sa
 
 - [SharePoint developer portal](http://aka.ms/spdev)
 - [SharePoint developer samples](http://aka.ms/spdev-samples)
+- [SharePoint PnP open-source projects](open-source-projects.md)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md) 
