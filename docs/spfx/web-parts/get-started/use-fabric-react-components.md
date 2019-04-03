@@ -62,7 +62,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version fo the Office UI Fabric to your solution:
 
   ```
-  npm install office-ui-fabric-react@5.132.0
+  npm install office-ui-fabric-react@5.132.0 --save
   ```
 
 > [!NOTE]
