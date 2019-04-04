@@ -65,7 +65,7 @@ Before you start, complete the procedures in the following articles to ensure th
 
 Starting with the SharePoint Framework v1.8, scaffolding will also include additional **./teams** folder in the solution structure, with default configuration for your web parts, so that you can get started with Teams tab development as easily as possible.
 
-    ![Solution structure](../../../images/sp-teams-solution-structure.png)
+  ![Solution structure](../../../images/sp-teams-solution-structure.png)
 
 Teams folder contains the following two files:
 
