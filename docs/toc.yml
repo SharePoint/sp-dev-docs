@@ -1387,6 +1387,8 @@
           href: transform/modernize-userinterface-site-pages-security.md
         - name: Page transformation model
           href: transform/modernize-userinterface-site-pages-model.md
+        - name: Publishing Page transformation model
+          href: transform/modernize-userinterface-site-pages-model-publishing.md
         - name: Page transformation Functions and Selectors
           href: transform/modernize-userinterface-site-pages-api.md
         - name: Page layout mapping

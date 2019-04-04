@@ -127,10 +127,10 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
     using (var ccTarget = cc.Clone(targetSiteUrl))
     {  
       var pageTransformator = new PublishingPageTransformator(cc, ccTarget, "C:\\temp\\custompagelayoutmapping.xml");
-      var pages = cc.Web.GetPagesFromList("Pages");
+      var pages = cc.Web.GetPagesFromList("Pages", "a");
       foreach (var page in pages)
       {
-          PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page, "a")
+          PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
           {
               // If target page exists, then overwrite it
               Overwrite = true,
