@@ -1,7 +1,7 @@
 ---
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
-ms.date: 03/06/2019
+ms.date: 04/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -334,6 +334,20 @@ Name|Description
 Name|Description
 :-----|:----------
 {FileContents}|Text content of the file. Return empty string if file was not found
+### UserDocumentsToHighlightedContentProperties
+
+**Description:** Maps the user documents web part data into a properties collection and supporting serverProcessedContent nodes for the content rollup (= Highlighted Content) web part
+
+**Example:** `SiteDocumentsToHighlightedContentProperties()`
+
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{JsonProperties}|Properties collection for the contentrollup (= Highlighted Content) web part
+{SearchablePlainTexts}|SearchablePlainTexts nodes to be added in the serverProcessedContent node
+{Links}|Links nodes to be added in the serverProcessedContent node
+{ImageSources}|ImageSources nodes to be added in the serverProcessedContent node
 ### ContentBySearchToHighlightedContentProperties
 
 **Description:** Maps content by search web part data into a properties collection and supporting serverProcessedContent nodes for the content rollup (= Highlighted Content) web part
@@ -454,6 +468,49 @@ Name|Description
 {PersonDepartment}|User's department
 {PersonPhone}|Phone number of the user
 {PersonSip}|SIP address of the user
+### EmptyString
+
+**Description:** Returns an empty string
+
+**Example:** `EmptyString()`
+
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Empty string
+### ToImageUrl
+
+**Description:** Returns the server relative image url of a Publishing Image field value.
+
+**Example:** `ToImageUrl({PublishingPageImage})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{PublishingPageImage}|Publishing Image field value
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Server relative image url
+### ToImageAltText
+
+**Description:** Returns the image alternate text of a Publishing Image field value.
+
+**Example:** `ToImageAltText({PublishingPageImage})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{PublishingPageImage}|Publishing Image field value
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Image alternate text
 ## Selectors
 ### TextSelector
 
