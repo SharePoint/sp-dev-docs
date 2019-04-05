@@ -1,7 +1,8 @@
 ---
 title: Building Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 03/14/2019
+
+ms.date: 04/04/2019
 ms.prod: sharepoint
 ---
 
@@ -22,60 +23,61 @@ Before you start, complete the procedures in the following articles to ensure th
 
 1. Create a new project directory in your favorite location:
 
-  ```
-  md teams-tab-webpart
-  ```
+    ```shell
+    md teams-tab-webpart
+    ```
 
 2. Go to the project directory:
 
-  ```
-  cd teams-tab-webpart
-  ```
-    
+    ```shell
+    cd teams-tab-webpart
+    ```
+
 3. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
 
-  ```
-  yo @microsoft/sharepoint
-  ```
+    ```shell
+    yo @microsoft/sharepoint
+    ```
 
 4. When prompted:
 
-  * Accept the default **teams-tab-webpart** as your solution name, and then select Enter.
-  * Select **SharePoint Online only (latest)**, and then select Enter.
-  * Select **Use the current folder** as the location for the files.
-  * Select **y** to ensure that your web part is automatically deployed tenant wide when it's added to the tenant app catalog.
-  * Select **N** on the question if solution contains unique permissions.  
-  * Select **WebPart** as the client-side component type to be created.
+    * Accept the default **teams-tab-webpart** as your solution name, and then select Enter.
+    * Select **SharePoint Online only (latest)**, and then select Enter.
+    * Select **Use the current folder** as the location for the files.
+    * Select **y** to ensure that your web part is automatically deployed tenant wide when it's added to the tenant app catalog.
+    * Select **N** on the question if solution contains unique permissions.  
+    * Select **WebPart** as the client-side component type to be created.
 
 5. The next set of prompts ask for specific information about your web part:
 
-  * Enter **MyFirstTeamsTab** for the web part name, and then select Enter.
-  * Enter **My first Teams tab** as the description of the web part, and then select Enter. 
-  * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
+    * Enter **MyFirstTeamsTab** for the web part name, and then select Enter.
+    * Enter **My first Teams tab** as the description of the web part, and then select Enter. 
+    * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
 
-  ![Yeoman prompts](../../../images/yeoman-sp-teams-prompts.png)
+      ![Yeoman prompts](../../../images/yeoman-sp-teams-prompts.png)
 
-  At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **MyFirstTeamsTab** web part as well.
+    At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **MyFirstTeamsTab** web part as well.
 
 6. Next, enter the following to open the web part project in Visual Studio Code:
 
-    ```
+    ```shell
     code .
     ```
-Starting with the SharePoint Framework v1.8, scaffolding will also include additional **Teams** folder in the solution structure, with default configuration for your web parts, so that you can get started with Teams tab development as easily as possible.
+
+Starting with the SharePoint Framework v1.8, scaffolding will also include additional **./teams** folder in the solution structure, with default configuration for your web parts, so that you can get started with Teams tab development as easily as possible.
 
   ![Solution structure](../../../images/sp-teams-solution-structure.png)
 
 Teams folder contains the following two files:
 
-- **[webpartid]_color.png** - Default small picture for a tab
-- **[webpartid]_outline.png** - Default large picture for a tab
+    - **[componentId]_color.png** - Default small picture for a tab
+    - **[componentId]_outline.png** - Default large picture for a tab
 
 These images will be used as icons in Microsoft Teams.
 
 ## Updating the web part manifest to make it available for Microsoft Teams
 
-Locate the manifest json file for the web part you want to make available to Teams and modify the ```supportedHosts``` properties to include ```"TeamsTab"``` as in the following example.
+Locate the manifest json file for the web part you want to make available to Teams and modify the `supportedHosts` properties to include `"TeamsTab"` as in the following example.
 
 ```json
 {
@@ -92,7 +94,7 @@ Locate the manifest json file for the web part you want to make available to Tea
   // Components that allow authors to embed arbitrary script code should set this to true.
   // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
-  "supportedHosts": ["SharePointWebPart","TeamsTab"],
+  "supportedHosts": ["SharePointWebPart", "TeamsTab"],
 
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
@@ -120,27 +122,27 @@ Locate the manifest json file for the web part you want to make available to Tea
 1. Add the following private variable inside the **MyFirstTeamsTabWebPart** class. We will be storing information around the Microsoft Teams context in this variable.
 
     ```typescript
-      export default class MyFirstTeamsTabWebPart extends BaseClientSideWebPart<IMyFirstTeamsTabWebPartProps> {
+    export default class MyFirstTeamsTabWebPart extends BaseClientSideWebPart<IMyFirstTeamsTabWebPartProps> {
 
-      // This variable has been added
-      private _teamsContext: microsoftTeams.Context;
+    // This variable has been added
+    private _teamsContext: microsoftTeams.Context;
     ```
 
 1. Add new `onInit` method inside of the **MyFirstTeamsTabWebPart** class, just below the private variable, which we just added with following content.
 
     ```typescript
-      protected onInit(): Promise<any> {
-        let retVal: Promise<any> = Promise.resolve();
-        if (this.context.microsoftTeams) {
-          retVal = new Promise((resolve, reject) => {
-            this.context.microsoftTeams.getContext(context => {
-              this._teamsContext = context;
-              resolve();
-            });
+    protected onInit(): Promise<any> {
+      let retVal: Promise<any> = Promise.resolve();
+      if (this.context.microsoftTeams) {
+        retVal = new Promise((resolve, reject) => {
+          this.context.microsoftTeams.getContext(context => {
+            this._teamsContext = context;
+            resolve();
           });
-        }
-        return retVal;
+        });
       }
+      return retVal;
+    }
     ```
 
 1. Update the **render** method as follows. Notice how we are rendering different content dependent if the code is rendered as a tab in Microsoft Team or as a web part in SharePoint.
@@ -192,17 +194,18 @@ Locate the manifest json file for the web part you want to make available to Tea
 
 Ensure that your console is activated in the root folder of the solution, which was just created.
 
-1. Execute the following task to bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets. This URL is automatically updated based on your tenant CDN settings.
+1. Execute the following commands to build bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets. This URL is automatically updated based on your tenant CDN settings.
 
-  ```
-  gulp bundle --ship
-  ```
+    ```shell
+    gulp build
+    gulp bundle --ship
+    ```
 
-2. Execute the following task to package your solution. This creates an updated **teams-tab-webpart.sppkg** package on the **sharepoint/solution** folder.
+1. Execute the following task to package your solution. This creates an updated **teams-tab-webpart.sppkg** package on the **sharepoint/solution** folder.
 
-  ```
-  gulp package-solution --ship
-  ```
+    ```shell
+    gulp package-solution --ship
+    ```
 
 Next, you need to deploy the package that was generated to the tenant app catalog.
 
@@ -213,19 +216,19 @@ Next, you need to deploy the package that was generated to the tenant app catalo
 
 1. Upload or drag and drop the **teams-tab-webpart.sppkg** to the app catalog.
 
-  ![Upload solution to app catalog](../../../images/sp-teams-solution-upload-catalog.png)
+    ![Upload solution to app catalog](../../../images/sp-teams-solution-upload-catalog.png)
 
-  This deploys the client-side solution package. Because this is a full trust client-side solution, SharePoint displays a dialog and asks you to trust the client-side solution to deploy.
+    This deploys the client-side solution package. Because this is a full trust client-side solution, SharePoint displays a dialog and asks you to trust the client-side solution to deploy.
 
-  Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the app catalog, depending on the tenant settings.
+    Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the app catalog, depending on the tenant settings.
 
-  Ensure that the **Make this solution available to all sites in the organization** option is checked, so that the web part can be used from the Microsoft Teams side.
+    Ensure that the **Make this solution available to all sites in the organization** option is selected, so that the web part can be used from the Microsoft Teams side.
 
-  ![Trust client-side solution deployment](../../../images/sp-teams-upload-solution-deploy.png) 
+    ![Trust client-side solution deployment](../../../images/sp-teams-upload-solution-deploy.png) 
 
-3. Select **Deploy**.
+1. Select **Deploy**.
 
-  Notice that you can see if there's any exceptions or issues in the package by looking the *App Package Error Message* column in the app catalog.
+    Notice that you can see if there's any exceptions or issues in the package by looking the **App Package Error Message** column in the app catalog.
 
 Now the web part is deployed and is automatically available cross the SharePoint Online sites.
 
@@ -234,42 +237,30 @@ Now the web part is deployed and is automatically available cross the SharePoint
 
 ## Making the web part available in Microsoft Teams
 
-> [!IMPORTANT]
-> **Sync to Teams** functionality does not currently work and will be fixed within upcoming days. Please refer to [Creating a team manifest manually for a web part](../guidance/creating-team-manifest-manually-for-webpart.md) to proceed for now.
-
 In order to make your web part available in Microsoft Teams you will have synchronize your solution with teams. 
 
-- Locate the solution you just uploaded and deployed in your appcatalog. Highlight the entry and switch to the "Files" tab in the ribbon.
-
-- Click the 'Sync To Teams' ribbon button to make your web part available in Microsoft Teams:
-
-![Sync To Teams](../../../images/using-web-part-as-ms-teams-tab-sync-to-team.png)
-
- 
-> [!NOTE]
-> If this button is not enable, make sure that you added ```"TeamsTab"``` to the ```supportedHosts``` property in your web part manifest.
-
-
-- Move to a channel in a Team. In the below picture we have activated **General** channel in **Team**
+1. Create a Microsoft Teams app manifest file by following the instructions detailed here: [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/web-parts/creating-team-manifest-manually-for-webpart.md).
+1. Create a Microsoft Teams app package by zipping the contents of the **./teams** folder. Make sure to zip just the contents and not the folder itself. This ZIP archive should contain 3 files at the root: two images & the **manifest.json**.
+1. Move to a channel in a team. In the below picture we have activated **General** channel in **Team**
 
     ![Channel activated](../../../images/sp-teams-channel-activated.png)
 
-- Click `+` to add a new tab on the channel
+1. Select `+` to add a new tab on the channel
+1. In the **Add a tab** dialog, scroll to the bottom of the list and select **More Apps**
+1. Select the **Upload a custom app** > **Upload for ...** from the list of app categories:
+1. Select the Microsoft Teams application ZIP file previously created. This is the file that contains the **manifest.json** and two image files.
 
-- Click your custom Tab called **MyFirstTeamTab** in the list
+    After a moment, the application will appear next to your tenant name.
+
+    > You may need to refresh the page for the app to appear if you are using the browser Microsoft Teams client.
+
+1. Select your custom tab called **MyFirstTeamTab** in the list
 
     ![Add a tab](../../../images/sp-teams-add-a-tab.png)
 
-- Notice how you can parametrize the tab instance based on the exposed properties. Click **Save**
-
-    ![Add a tab](../../../images/sp-teams-configure-tab.png)
-
-Your custom tab has been added on the Microsoft Teams channel and you can see how the code is reacting that it's in Microsoft Teams context. Theme of the web part is by default coming from the underlaying SharePoint site.
+Your custom tab has been added on the Microsoft Teams channel and you can see how the code is reacting that it's in Microsoft Teams context. Theme of the web part is by default coming from the underlying SharePoint site.
 
 ![Custom tab added](../../../images/sp-teams-custom-tab-added.png)
-
-> [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
 
 ## See also
 

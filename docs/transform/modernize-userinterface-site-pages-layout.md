@@ -1,7 +1,7 @@
 ---
 title: Understanding how wiki and web part page layouts are mapped to modern page layouts
 description: Provides detailed information on the mapping of layouts between source pages and target modern client side pages
-ms.date: 07/13/2018
+ms.date: 04/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -35,6 +35,14 @@ Source page layout|Target page layout
 ![3 columns](media/modernize/layout_wiki_3c.png)|3 column row
 ![header, 3 columns](media/modernize/layout_wiki_h3c.png)|1 column row + 3 column row
 ![header, 3 columns, footer](media/modernize/layout_wiki_hf3c.png)|1 column row + 3 column row + 1 column row
+
+## Publishing page layout mapping
+
+As publishing pages do not have a fixed layout the default layout manager used by the publishing page transformator does work differently: it generates the needed rows and columns based upon the position of the web parts as defined in the used page layout mapping file. This layout behavior is defined in the mapping file using the `PageLayoutTemplate` attribute, which defaults to `AutoDetect`. If for some reason you don't like the automatic layout generation you can also use the earlier described wiki page layout types.
+
+```XML
+<PageLayout Name="WelcomeLinks" AssociatedContentType="" PageLayoutTemplate="AutoDetect" PageHeader="Custom">
+```
 
 ## Overriding the default layout transformation
 

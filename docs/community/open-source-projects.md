@@ -15,12 +15,13 @@ There are numerous open-source projects that are coordinated by the SharePoint P
 | Repository | Description |
 |--------|--------|
 | [SharePoint Starter kit](https://github.com/SharePoint/sp-starter-kit) | A starter kit for showing how to extend modern experiences in SharePoint Online by extending them with modern extensibility options. |
+| [SharePoint Provisioning Service templates](https://github.com/SharePoint/sp-dev-provisioning-templates) | Tenant templates used by the [SharePoint Provisioning Service](https://provisioning.sharepointpnp.com) to easily provision sample content and structures demonstrating what's possible with modern SharePoint experiences. |
 | [GDPR Activity Hub](https://github.com/SharePoint/sp-dev-gdpr-activity-hub) | A starter kit for building a management hub for EU GDPR (European Global Data Protection Regulation). |
 | [Office 365 CLI](https://sharepoint.github.io/office365-cli/) | A cross-platform command-line interface (CLI) that allows users on any platform to manage various configuration settings of Office 365. |
 | [Office 365 Developer PnP Core Component](https://github.com/SharePoint/PnP-Sites-Core) | An extension component that encapsulates commonly used remote CSOM/REST operations as reusable extension methods on out-of-the box CSOM objects.  |
-| [PnP Partner Pack](https://github.com/SharePoint/PnP-Partner-Pack) | A starter kit for customers and partners that combines numerous patterns and practices demonstrated within PnP samples into one reusable solution targeting the classic SharePoint experience. |
 | [PnP PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) | Allow you to perform complex provisioning and artifact management actions for SharePoint. The commands use CSOM and can work against both SharePoint Online as well as SharePoint on-premises. |
 | [PnP remote provisioning schema](https://github.com/SharePoint/PnP-provisioning-schema) | Designed to be used as remote creation instructions for the remote provisioning engine for Office 365. |
+| [SharePoint Modernization tooling and guidance](https://github.com/SharePoint/sp-dev-modernization) | Tools like page transformation (classic page to modern page) and a modernization scanner do make it easy to move your classic sites into the modern SharePoint world. |
 | [PnPJS](https://pnp.github.io/pnpjs/) | A fluent JavaScript API for consuming SharePoint and Office 365 REST APIs in a type-safe way. |
 | [PnP SPFx Yeoman Generator](https://pnp.github.io/generator-spfx/) | Open-source Yeoman generator which extends out-of-the-box Yeoman generator. |
 | [SharePoint Framework reusable property pane controls](https://sharepoint.github.io/sp-dev-fx-property-controls) | Can be used in SharePoint Framework (SPFx) solutions. |

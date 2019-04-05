@@ -1,14 +1,14 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 03/06/2019
+ms.date: 04/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
 # Page transformation configuration options
 
-When you use the page transformation framework you do have a lot of control on how the page transformation is done. The model to control this is by specifying the correct configuration as part of the `PageTransformationInformation` instance that you use to launch page transformation. In this article you'll learn more about the available options.
+When you use the page transformation framework you do have a lot of control on how the page transformation is done. The model to control this is by specifying the correct configuration as part of the `PageTransformationInformation` instance for wiki and web part pages or a `PublishingPageTransformationInformation` instance for publishing pages. The created transformation instance is what you use to launch page transformation. In this article you'll learn more about the available options.
 
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
@@ -23,6 +23,13 @@ When you configure `Overwrite = true` then the page transformation framework wil
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    Overwrite = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     Overwrite = true,
 };
@@ -47,6 +54,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 };
 ```
 
+> [!NOTE]
+> This option is not available for publishing page transformation.
+
 ## TargetPagePrefix option
 
 Type | Default value if not specified
@@ -61,6 +71,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
     TargetPagePrefix = "New_",
 };
 ```
+
+> [!NOTE]
+> This option is not available for publishing page transformation.
 
 ## TargetPageTakesSourcePageName option
 
@@ -80,6 +93,10 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 > [!IMPORTANT]
 > During the rename of the original page to a page starting with the Previous_ prefix the version history of the original page is not retained.
 
+
+> [!NOTE]
+> This option is not available for publishing page transformation.
+
 ## SourcePagePrefix option
 
 Type | Default value if not specified
@@ -94,6 +111,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
     SourcePagePrefix = "Old_",
 };
 ```
+
+> [!NOTE]
+> This option is not available for publishing page transformation.
 
 ## ReplaceHomePageWithDefaultHomePage option
 
@@ -110,6 +130,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 };
 ```
 
+> [!NOTE]
+> This option is not available for publishing page transformation.
+
 ## KeepPageSpecificPermissions option
 
 Type | Default value if not specified
@@ -120,6 +143,13 @@ The default behavior is to copy over any item level permissions that might exist
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    KeepPageSpecificPermissions = false,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     KeepPageSpecificPermissions = false,
 };
@@ -140,6 +170,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 };
 ```
 
+> [!NOTE]
+> This option is not available for publishing page transformation. Use the publishing page layout mapping model to define if metadata needs to be copied and how that needs to happen.
+
 ## RemoveEmptySectionsAndColumns option (as of March 2019 release)
 
 Type | Default value if not specified
@@ -150,6 +183,13 @@ The default behavior is to remove all empty sections and columns (e.g. you trans
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    RemoveEmptySectionsAndColumns = false,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     RemoveEmptySectionsAndColumns = false,
 };
@@ -175,6 +215,62 @@ pti.MappingProperties["SummaryLinksToQuickLinks"] = "false";
 pageTransformator.Transform(pti);
 ```
 
+```csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    // If target page exists, then overwrite it
+    Overwrite = true,
+};
+
+pti.MappingProperties["SummaryLinksToQuickLinks"] = "false";
+
+pageTransformator.Transform(pti);
+```
+
+## PublishCreatedPage option (as of April 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | true
+
+The default behavior is to publish the created modern page, use this option if you want to prevent that.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    PublishCreatedPage = false,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    PublishCreatedPage = false,
+};
+```
+
+## DisablePageComments option (as of April 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to leave page comments enabled, use this option if you want to create a page with disabled page comments
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    DisablePageComments = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    DisablePageComments = true,
+};
+```
+
 ## HandleWikiImagesAndVideos option
 
 Type | Default value if not specified
@@ -185,6 +281,13 @@ A wiki page can contain embedded video and text which is not possible in a moder
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    HandleWikiImagesAndVideos = false,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     HandleWikiImagesAndVideos = false,
 };
@@ -205,6 +308,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 };
 ```
 
+> [!NOTE]
+> This option is not available for publishing page transformation. Use the page layout mapping model to determine how the page header must be constructed.
+
 ## PageTitleOverride option
 
 Type | Default value if not specified
@@ -221,6 +327,19 @@ string titleOverride(string title)
 }
 
 PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    PageTitleOverride = titleOverride,
+};
+```
+
+```Csharp
+// Local functions
+string titleOverride(string title)
+{
+    return $"{title}_1";
+}
+
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     PageTitleOverride = titleOverride,
 };

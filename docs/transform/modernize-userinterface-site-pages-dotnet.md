@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using .Net
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .Net
-ms.date: 03/06/2019
+ms.date: 04/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -99,6 +99,46 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
           try
           {
               Console.WriteLine($"Transforming page {page.FieldValues["FileLeafRef"]}");
+              pageTransformator.Transform(pti);
+          }
+          catch(ArgumentException ex)
+          {
+              Console.WriteLine($"Page {page.FieldValues["FileLeafRef"]} could not be transformed: {ex.Message}");
+          }
+      }
+    }
+}
+```
+
+> [!Note]
+> Not all web parts lend themselves well for a cross site transfer, check the **Cross site support** column in [web part transformation list](modernize-userinterface-site-pages-webparts.md) to learn more.
+
+### I want to transform publishing pages (as of April 2019 release, version 1.0.1904.*)
+
+Publishing page transformation always will be a cross site transformation as mixing modern client side pages with publishing pages is unsupported. Below sample shows how all publishing pages starting with an "a" are transformed to client side pages in the https://contoso.sharepoint.com/sites/mycommunicationsite site. This sample also shows how to provide a custom page layout mapping file.
+
+```csharp
+string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
+string targetSiteUrl = "https://contoso.sharepoint.com/sites/mycommunicationsite";
+string userName = "joe@contoso.onmicrosoft.com";
+AuthenticationManager am = new AuthenticationManager();
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+{
+    using (var ccTarget = cc.Clone(targetSiteUrl))
+    {  
+      var pageTransformator = new PublishingPageTransformator(cc, ccTarget, "C:\\temp\\custompagelayoutmapping.xml");
+      var pages = cc.Web.GetPagesFromList("Pages", "a");
+      foreach (var page in pages)
+      {
+          PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+          {
+              // If target page exists, then overwrite it
+              Overwrite = true,
+          };
+
+          try
+          {
+              Console.WriteLine($"Transforming publishing page {page.FieldValues["FileLeafRef"]}");
               pageTransformator.Transform(pti);
           }
           catch(ArgumentException ex)

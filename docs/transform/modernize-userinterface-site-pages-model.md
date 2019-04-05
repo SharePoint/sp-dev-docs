@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the page transformation model
 description: Provides detailed guidance on how to configure and use the page transformation model
-ms.date: 01/30/2019
+ms.date: 04/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -116,10 +116,10 @@ Next up is explain the Mapping element itself.
 
 ### Mapping element
 
-Inside a Mapping element you can have one or more ClientSideText or ClientSideWebPart elements as shown in below snippet:
+Inside a Mapping element you can have one or more ClientSideText or ClientSideWebPart elements as shown in below snippet. Note that you can run functions on a Mapping, which is handy in case you want to do processing only if a particular mapping was selected.
 
 ```Xml
-<Mapping Name="List" Default="true">
+<Mapping Name="List" Default="true" Functions="{SampleVariable} = SampleFunction({ListId})>
   <ClientSideText Text="You can map a source web part ({Title}) to a combination of client side controls :-)" Order="10" />
   <ClientSideWebPart Type="List" Order="20" JsonControlData="&#123;&quot;serverProcessedContent&quot;&#58;&#123;&quot;htmlStrings&quot;&#58;&#123;&#125;,&quot;searchablePlainTexts&quot;&#58;&#123;&#125;,&quot;imageSources&quot;&#58;&#123;&#125;,&quot;links&quot;&#58;&#123;&#125;&#125;,&quot;dataVersion&quot;&#58;&quot;1.0&quot;,&quot;properties&quot;&#58;&#123;&quot;isDocumentLibrary&quot;&#58;false,&quot;selectedListId&quot;&#58;&quot;{ListId}&quot;,&quot;listTitle&quot;&#58;&quot;{Title}&quot;,&quot;selectedListUrl&quot;&#58;&quot;{ListServerRelativeUrl}&quot;,&quot;webRelativeListUrl&quot;&#58;&quot;{ListWebRelativeUrl}&quot;,&quot;webpartHeightKey&quot;&#58;4,&quot;selectedViewId&quot;&#58;&quot;{ListViewId}&quot;&#125;&#125;" />
 </Mapping>

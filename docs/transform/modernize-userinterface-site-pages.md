@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages
 description: Explains how to transform classic wiki and web part pages into modern client side pages
-ms.date: 02/19/2019
+ms.date: 04/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -13,16 +13,16 @@ Classic SharePoint sites typically have classic pages being wiki pages or web pa
 The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline), [source code](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/SharePointPnP.Modernization.Framework)) does bring page transformation capabilities which will be explained in the upcoming chapters.
 
 > [!IMPORTANT]
-> - Page transformation today works for wiki and web part pages. Publishing pages is something we're evaluating for a future release.
+> - Page transformation today works for wiki, web part pages and publishing pages. The publishing page transformation is currently in preview.
 > - The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
 Page transformation can be used in one ore more models and these models can used together:
 
-Model | Technique | DevOps/Developer/ISV | End user | Keep/Discard option | Comments
-------|---------- |----------------------|----------|---------------------|---------
-Empower my users to transform pages | [SharePoint Page Transformation UI](modernize-userinterface-site-pages-ui.md) | | X | Mandatory | If you want your end users to have the ability to self-service modernize pages. This approach will make it possible for end users to simply click a button to request a modern version of a page. The returned page is a preview and the end user will have the option to keep or discard the generated page.
-I want to transform pages for my users | [PowerShell](modernize-userinterface-site-pages-powershell.md) | X | | Optional | Typically used when you want to modernize pages for multiple site collections. Optionally you can configure the page accept banner to be shown which then enables your end users to keep or discard the pages you've created using PowerShell
-I want to have full control on the page transformation process | [.Net](modernize-userinterface-site-pages-dotnet.md) | X | | Optional | Typically used when you integrate page transformation into existing services or tools. Optionally you can configure the page accept banner to be shown which then enables your end users to keep or discard the pages you've created using .Net. The core of page transformation is the .Net based SharePoint PnP Modernization framework. Using .Net you can fully tailor the transformation process, this approach is recommended whenever you want full control on the transformation process or when you want to integrate page transformation into another solution/product.
+Model | Technique | Audience | Publishing Page support | Keep/Discard option | Comments
+------|---------- |----------|-------------------------|---------------------|---------
+I want to transform pages for my users | [PowerShell](modernize-userinterface-site-pages-powershell.md) | DevOps | Yes | Optional (not for publishing pages) | Typically used when you want to modernize pages for multiple site collections. Optionally you can configure the page accept banner to be shown which then enables your end users to keep or discard the pages you've created using PowerShell
+I want to have full control on the page transformation process | [.Net](modernize-userinterface-site-pages-dotnet.md) | DevOps | Yes | Optional (not for publishing pages) | Typically used when you integrate page transformation into existing services or tools. Optionally you can configure the page accept banner to be shown which then enables your end users to keep or discard the pages you've created using .Net. The core of page transformation is the .Net based SharePoint PnP Modernization framework. Using .Net you can fully tailor the transformation process, this approach is recommended whenever you want full control on the transformation process or when you want to integrate page transformation into another solution/product.
+Empower my users to transform pages | [SharePoint Page Transformation UI](modernize-userinterface-site-pages-ui.md) | End user | No | Mandatory | If you want your end users to have the ability to self-service modernize pages. This approach will make it possible for end users to simply click a button to request a modern version of a page. The returned page is a preview and the end user will have the option to keep or discard the generated page.
 
 ## See also
 

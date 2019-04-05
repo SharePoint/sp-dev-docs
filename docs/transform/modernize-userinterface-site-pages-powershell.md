@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint PowerShell
-ms.date: 03/06/2019
+ms.date: 04/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -22,21 +22,29 @@ The page transformation engine can also be used from PowerShell. This allows it 
 
 The **ConvertTo-PnPClientSidePage** cmdlet is the key cmdlet to modernize a given page. Below table lists the command line parameters that you can use to control the page transformation via this cmdlet.
 
-Parameter | Default | Description
-----------|---------|------------
-Identity (*) | | The page name (e.g. pageA.aspx)
-WebPartMappingFile | |  Page transformation is driven by a mapping file. The cmdlet has a default mapping file embedded, but you can also specify your custom web part mapping file (`webpartmapping.xml`) to fit your page transformation needs (e.g. transforming to 3rd party custom web parts). You do this by specifying the path to the file via the `-WebPartMappingFile` parameter.
-Overwrite | $false | When you add `-Overwrite` then the page transformation framework will overwrite the target page if needed. By default the new page name has a prefix of Migrated_, which then implies that if Migrated_YourPage.aspx already exists (typically from a previous page transformation effort) it will be overwritten.
-AddPageAcceptBanner | $false | Using `-AddPageAcceptBanner` will make the page transformation framework put the configured PageAcceptBanner web part on top of the created modern page. Using this web part the users accessing the page can decide whether they want to keep or discard the created modern page. See the [Page Transformation UI](modernize-userinterface-site-pages-ui.md) article to learn more on how to install and configure the default page banner web part.
-ReplaceHomePageWithDefault | $false | The default behavior is to transform your site's home page to a modern page like any other regular page. If you use `-ReplaceHomeWithDefault` then a site's home page will be transformed to a 'default' out-of-the-box modern home page, so the one you would get with a newly created modern team site.
-TakeSourcePageName | $false | The default behavior is to give the created modern page a name that starts with the prefix Migrated_ and let the original page keep it's existing name. When `-TakeSourcePageName` is specified the newly created page gets the name of the original page and the original page is renamed with a prefix Previous_. Set this option if you're sure you want to move forward with the modern page as it will ensure that all links pointing the original page now result in the new modern page being loaded.
-ClearCache (as of January 2019 release, version 3.5.1901.*) | $false | To optimize performance certain data (e.g. list of available client side web parts, calculated list of fields to copy metadata for) is cached after the first execution. This cache will stay valid during the complete PowerShell session unless you use the `-ClearCache` switch. Restarting your PowerShell session also clears the cache.
-CopyPageMetadata (as of February 2019 release, version 3.6.1902.*) | $false | The default behavior is to not copy page metadata (so additional columns added to the site pages library). When `-CopyPageMetadata` is specified the values of the custom metadata fields of the page to transform are copied to the newly created page.
-TargetWebUrl (as of March 2019 release, version 3.7.1903.*) | | If you want to create the transformed modern pages in another site collection then specify the URL to that other site collection. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to understand which web parts are transformed in a cross site collection transformation.
-UseCommunityScriptEditor (as of March 2019 release, version 3.7.1903.*) | $false | Use `-UseCommunityScriptEditor` if you've installed the community script editor and want to use it during transformation. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more.
-SummaryLinksToHtml (as of March 2019 release, version 3.7.1903.*) | $false | Use `-SummaryLinksToHtml` if you prefer to transform the SummaryLinks web part to HTML hosted in the text web part instead of the default transformation using the QuickLinks web part. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more.
+Parameter | Default | Supported For | Description
+----------|---------|---------------|------------
+Identity (`*`) | | All page types | The page name (e.g. pageA.aspx)
+WebPartMappingFile | |  All page types | Page transformation is driven by a mapping file. The cmdlet has a default mapping file embedded, but you can also specify your custom web part mapping file (`webpartmapping.xml`) to fit your page transformation needs (e.g. transforming to 3rd party custom web parts). You do this by specifying the path to the file via the `-WebPartMappingFile` parameter.
+Overwrite | $false | All page types | When you add `-Overwrite` then the page transformation framework will overwrite the target page if needed. By default the new page name has a prefix of Migrated_, which then implies that if Migrated_YourPage.aspx already exists (typically from a previous page transformation effort) it will be overwritten.
+AddPageAcceptBanner | $false | Wiki/webpart pages | Using `-AddPageAcceptBanner` will make the page transformation framework put the configured PageAcceptBanner web part on top of the created modern page. Using this web part the users accessing the page can decide whether they want to keep or discard the created modern page. See the [Page Transformation UI](modernize-userinterface-site-pages-ui.md) article to learn more on how to install and configure the default page banner web part.
+ReplaceHomePageWithDefault | $false | Wiki/webpart pages | The default behavior is to transform your site's home page to a modern page like any other regular page. If you use `-ReplaceHomeWithDefault` then a site's home page will be transformed to a 'default' out-of-the-box modern home page, so the one you would get with a newly created modern team site.
+TakeSourcePageName | $false | Wiki/webpart pages | The default behavior is to give the created modern page a name that starts with the prefix Migrated_ and let the original page keep it's existing name. When `-TakeSourcePageName` is specified the newly created page gets the name of the original page and the original page is renamed with a prefix Previous_. Set this option if you're sure you want to move forward with the modern page as it will ensure that all links pointing the original page now result in the new modern page being loaded.
+ClearCache (as of January 2019 release, version 3.5.1901.*) | $false | All page types | To optimize performance certain data (e.g. list of available client side web parts, calculated list of fields to copy metadata for) is cached after the first execution. This cache will stay valid during the complete PowerShell session unless you use the `-ClearCache` switch. Restarting your PowerShell session also clears the cache.
+CopyPageMetadata (as of February 2019 release, version 3.6.1902.*) | $false | Wiki/webpart pages | The default behavior is to not copy page metadata (so additional columns added to the site pages library). When `-CopyPageMetadata` is specified the values of the custom metadata fields of the page to transform are copied to the newly created page.
+TargetWebUrl (`**`) (as of March 2019 release, version 3.7.1903.*) | | All page types | If you want to create the transformed modern pages in another site collection then specify the URL to that other site collection. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to understand which web parts are transformed in a cross site collection transformation.
+UseCommunityScriptEditor (as of March 2019 release, version 3.7.1903.*) | $false | All page types | Use `-UseCommunityScriptEditor` if you've installed the community script editor and want to use it during transformation. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more.
+SummaryLinksToHtml (as of March 2019 release, version 3.7.1903.*) | $false | All page types | Use `-SummaryLinksToHtml` if you prefer to transform the SummaryLinks web part to HTML hosted in the text web part instead of the default transformation using the QuickLinks web part. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more.
+LogType (as of April 2019 release, version 3.8.1904.*) | None | All page types | Use `-LogType` to enabled logging: `File` will log to disk, `SharePoint` will create a log page in the SharePoint SitePages library.
+LogFolder (as of April 2019 release, version 3.8.1904.*) |  | All page types | If `LogType` is set to `File` then you can use `-LogFolder` to specify the folder where the log will be created.
+LogVerbose (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use `-LogVerbose` to generate a verbose log.
+LogSkipFlush (as of April 2019 release, version 3.8.1904.*) | $false | All page types | By default each cmdlet call generates a unique log file, use the `-LogSkipFlush` parameter to accumulate log entries. Note that you'll have to end with a call without LogSkipFlush to persist the assembled log file entries.
+DontPublish (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use the `-DontPublish` option to not publish the created modern page.
+DisablePageComments (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use `-DisablePageComments` if you want to disable the commenting option on the created page
+PublishingPage (as of April 2019 release, version 3.8.1904.*) | $false | Publishing pages | Set the `-PublishingPage` parameter if you're transforming a publishing page. For wiki and web part pages this parameter must be omitted or set to false.
+PageLayoutMapping as of April 2019 release, version 3.8.1904.*) |  | Publishing pages |Via `-PageLayoutMapping` you can specify the path the page layout mapping file that you'll use for your publishing page transformations when the publishing page is using a non out of the box page layout
 
-(*) Mandatory command line parameter
+(`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage` parameter was set
 
 ## FAQ
 
@@ -52,7 +60,7 @@ In order to make the banner webpart work there are 2 requirements that have to b
 To install the default banner web part follow these steps:
 
 - Open your tenant app catalog site collection and go to the **Apps for SharePoint** list
-- Download the banner web part solution (**sharepointpnp-pagetransformation-client.sppkg**) from the [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization/blob/master/Solutions/PageTransformationUI/assets/sharepointpnp-pagetransformation-client.sppkg?raw=true) repository
+- Download the latest banner web part solution (**sharepointpnp-pagetransformation-client.sppkg**) from the [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Solutions/PageTransformationUI/assets/sharepointpnp-pagetransformation-client.sppkg?raw=true) repository
 - Drag and drop the sppkg file in the **Apps for SharePoint** list. Doing so will ask to **make this solution available to all sites in your organization**. Check the box and click on **Deploy**.
 
 > [!NOTE]
