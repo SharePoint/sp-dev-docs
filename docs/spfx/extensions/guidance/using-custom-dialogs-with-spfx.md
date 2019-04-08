@@ -237,7 +237,7 @@ To associate the custom dialog box with your custom ListView Command Set, add th
           dialog.colorCode = this._colorCode || '#EEEEEE';
           dialog.show().then(() => {
             this._colorCode = dialog.colorCode;
-            Dialog.alert(`Picked color: ${dialog.colorCode}`);
+            Dialog.alert('Picked color: ${dialog.colorCode}');
           });
           break;
         default:
