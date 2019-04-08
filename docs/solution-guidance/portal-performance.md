@@ -92,9 +92,15 @@ The following sections provide performance guidance for achieving this goal.
 
 <a name="bk_features"> </a>
 
-### Disable the Device Channels and Search Engine Optimization features
+### Disable unnecessary features in classic portals
 
-If you create a new classic publishing portal then both the Device Channels as the Search Engine Optimization features are turned on with their default settings. If you keep these default settings there's no impact on your page rendering, but in SharePoint Online the presence of these two features does impact performance and therefore it's recommended to disable these features if you're no using them. See below [PnP PowerShell](https://aka.ms/sppnp-powershell) script to make this happen:
+When the Publishing features are activated on a portal, both the Device Channels and the Search Engine Optimization (SEO) features are turned on with their default settings. The SEO feature is designed to boost search relevance and ranking in a publicly consumed portal. Since SharePoint Online no longer offers public websites, this feature is no longer required. It does, however, still add additional costs to your page rendering. 
+
+The Device Channels feature was originally designed to facilitate mobile rendering of Publishing Portals, however, much of this functionality has been supplanted by modern features like the Mobile Apps and the Modern UI. If you have not designed custom mobile masterpages for your portal, this feature should be disabled. Similar to the SEO feature, it adds additional cost and complexity to the server rendering of the page, which will ultimately degrade performance. 
+
+Both of these features are hidden from the site UI, so they must be deactivated with code. See the [PnP PowerShell](https://aka.ms/sppnp-powershell) script at the bottom of this section to forcibly disable these features:
+
+The Metadata Navigation and Filtering feature, not to be confused with Managed Navigation, provides a way to dynamically filter list views based on metadata. While this may be useful for content authors to locate specific content requiring changes, it adds additional costs to each page render on sites where the feature is active. This is true not just of list views, but Publishing Pages as well. It is recommended to disable this feature on any portal where performance is of importance.
 
 ```PowerShell
 Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yourportal
@@ -103,9 +109,19 @@ Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yourportal
 Disable-PnPFeature -Scope Site -Identity 57cc6207-aebf-426e-9ece-45946ea82e4a -Force
 # SEO
 Disable-PnPFeature -Scope Site -Identity 17415b1d-5339-42f9-a10b-3fef756b84d1 -Force
+# MetadataNav
+Disable-PnPFeature -Scope Web -Identity 7201D6A4-A5D3-49A1-8C19-19C4BAC6E668 -Force
 ```
-
 <a name="bk_Telemetry"> </a>
+
+### Avoid XSLT based webparts
+
+XSLT adds significant cost overhead to the page render. These server controls require that the stylesheet be compiled into runnable code at request time. This can take time to complete, and is server specific. At cloud scales, compilation of custom XSLT can be a frequent event. To avoid these costs, consider using a client rendered control instead. XSLT based webparts include, but are not limited to:
+
+- Content Query Webpart
+- XSLT List View Webpart
+- RSS Viewer Webpart
+- DataForm Webpart
 
 ### Use telemetry
 
@@ -169,10 +185,17 @@ The proper management of client-side data request traffic is critical to the per
 - Defer the data request for as long as possible (that is, Lazy Load).
 - Request the data only if, and when, it is actually needed; for example, as in response to a browser event or user action (that is, do not request data for a collapsed/hidden control; wait until the control is expanded/rendered).
 
-#### Use a client-side cache to fulfill all data requests
- 
-- Consult the local data cache before issuing the data request to the server.
-- Return cached data if it is present and not yet expired (for example, upon a cache hit).
+#### Use a cache to fulfill all data requests
+
+- For content that is user specific, like user profile information, cache the content to LocalStorage on the client.
+	- Consult the local data cache before issuing the data request to the server.
+	- Return cached data if it is present and not yet expired (for example, upon a cache hit).
+- For content that is shared across multiple users - consider a middle-tier caching service.
+	- For content that is dynamically generated or updates frequently, like news articles, Azure Redis Cache or any similar such service should be used to cache the data.
+	- For static content, or content that is updated infrequently, like site navigation, consider writing this content to a JSON file and serving it from a CDN.
+	- To reduce costs at the middle-tier, clients can also cache the responses to LocalStorage.
+
+For additional information, see [Caching](https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching).
 
 #### Call the server (or other back-end data source) only when a cache miss occurs
 
@@ -188,11 +211,11 @@ The proper management of client-side data request traffic is critical to the per
 	- A request-independent representation decouples the data from its data source and request semantics; this allows the data source to be easily changed (static, mock, live) as the solution is developed. 
 	- JSON enables the use of JavaScript objects to which custom client-side display controls can easily bind; this also serves to define the working data contract between the UX and Data teams.
 
-#### Store the data response in the client-side cache 
+#### Store the data response in a cache 
 
-- Store the JSON representation of the data response in the local data cache (for example, Web Storage).
-	- Use a public (local storage) cache for shared data (for example, Global Menu).
-	- Use a private (session storage) cache for personal data (for example, My Stocks).
+- Store the JSON representation of the data response in the cache.
+	- Use a middle-tier cache for shared data (for example, Global Menu).
+	- Use a private (local storage) cache for personal data (for example, My Stocks).
 - Use component-specific expiration values that align with the volatility of the associated data; for example, Global Menu data (30 mins), Stock Ticker data (5 mins).
 - Be sure to store **No results** as well because it is a valid data response.
 - Ensure cached data is available across all pages and components of the client-side web application.
@@ -229,14 +252,24 @@ In general, use SharePoint REST APIs for client-side data requests. When perform
 - Keep the number of search queries as low as possible.
 - Conduct regular query audits to consolidate redundant/similar queries that target the same data.
 
-#### Client-side REST requests
+#### Eliminate redundant calls
+
+- Often multiple controls on a page will require data from a single source. If not properly planned, this can result in multiple similar service calls. Ensuring that the data retrieved by one control is available to others (where appropriate) can eliminate unnecessary round trips.
+
+#### Request only what is requried
+
+- The SharePoint client library allows a developer to specify the fields needed for their application and return only this data. This reduces costs at all layers.
+
+For code samples demonstrating this technique, please see [Complete basic operations using SharePoint client library code](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code#retrieve-only-selected-properties-of-a-website)
+
+#### Be mindful of aggregate request volumes
 
 - Client-side REST requests to SharePoint Online are now subject to request throttling and even request blocking. 
 - Pay attention to the HTTP response codes/warnings of your data requests and alter your data request behavior accordingly to avoid data service disruptions in your client-side web applications. 
 
 For details about how to avoid being throttled or blocked, see [Avoid getting throttled or blocked in SharePoint Online](../general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md). 
 
-#### REST request traffic
+#### Batch REST request traffic
 
 - REST request traffic can be now be optimized via OData Batching.  
 - For more information, see [OData Batch Request Tutorial](http://www.odata.org/getting-started/advanced-tutorial/#batch) and the [OData Batch Request Protocol Spec](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313). 
@@ -370,11 +403,11 @@ The [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/P
 
 - Performance is Feature #1.
 - Core component of the overall client-side framework; to be leveraged by all custom client-side web applications and components for consistency and performance.
-- Fulfill data requests via the client-side data cache; if a cache miss occurs, execute the client-to-server data fetch.
+- Fulfill data requests via a data cache; if a cache miss occurs, execute the client-to-server data fetch.
 - Fetch the server data via an asynchronous client-to-server AJAX call (never use a synchronous call).
 - Reduce cascading call failures by re-using stale data when/if a data request fails.
 - Honor request throttling responses and adjust behavior accordingly.
-- Store the server data response in the client-side cache using a minimal, request-independent JSON representation.
+- Store the server data response in the cache using a minimal, request-independent JSON representation.
 - Support transient and durable storage options.
 - Use transient storage for personal data and durable storage for shared data.
 - Support absolute and sliding expiration policies.
