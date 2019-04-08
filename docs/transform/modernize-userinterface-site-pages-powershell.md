@@ -42,11 +42,52 @@ LogSkipFlush (as of April 2019 release, version 3.8.1904.*) | $false | All page 
 DontPublish (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use the `-DontPublish` option to not publish the created modern page.
 DisablePageComments (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use `-DisablePageComments` if you want to disable the commenting option on the created page
 PublishingPage (as of April 2019 release, version 3.8.1904.*) | $false | Publishing pages | Set the `-PublishingPage` parameter if you're transforming a publishing page. For wiki and web part pages this parameter must be omitted or set to false.
-PageLayoutMapping as of April 2019 release, version 3.8.1904.*) |  | Publishing pages |Via `-PageLayoutMapping` you can specify the path the page layout mapping file that you'll use for your publishing page transformations when the publishing page is using a non out of the box page layout
+PageLayoutMapping as of April 2019 release, version 3.8.1904.*) |  | Publishing pages |Via `-PageLayoutMapping` you can specify the path the [page layout mapping file](modernize-userinterface-site-pages-model-publishing.md) that you'll use for your publishing page transformations when the publishing page is using a non out of the box page layout
 
 (`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage` parameter was set
 
 ## FAQ
+
+### How do I transform publishing pages
+
+Above shown sample shows in-place page transformation, for transforming publishing pages you need a slightly different syntax. Below sample shows how to modernize the mypage.aspx page and create a modern version of it in a communication site. During this transformation the page transformation will either use the built-in page layout mapping if the page is using an out of the box page layout or it will generate a page layout mapping on the fly for custom page layouts:
+
+```
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
+
+ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite
+```
+
+If you're using custom page layouts it's highly recommended to tweak the used page layout mapping file before using it. To do so follow these steps:
+
+#### Generate a custom page layout mapping file
+
+Use PnP PowerShell to analyze your existing page layouts and generate a mapping file:
+
+```
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
+
+Export-PnPClientSidePageMapping -CustomPageLayoutMapping -Folder c:\temp
+```
+
+#### Clean the generated mapping file
+
+Open the [created mapping file](modernize-userinterface-site-pages-model-publishing.md) and delete all the OOB page layouts (unless you've customized them) so you end up with a file containing only your custom page layout mappings. Then review each mapping:
+
+- Set the row and column values correctly for web parts, web part zones and fixed web parts so that content shows up on the right spot on the modern page. You can have as many rows as you want, each row will be a section on the modern page. Column values are restricted to 1, 2 or 3 which translates to the possible column options in a modern page
+- Define the fields that need to be transformed as metadata
+- Review the generated mapping of fields to web parts
+- Review the generated mapping of fields to header
+
+#### Use the custom mapping file
+
+Using the cleaned custom mapping file is simple via the `PageLayoutMapping` parameter:
+
+```
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
+
+ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -PageLayoutMapping c:\temp\mypagelayouts.xml
+```
 
 ### I used the "AddPageAcceptBanner" switch but don't see the banner web part on the created pages
 
