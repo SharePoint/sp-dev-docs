@@ -133,7 +133,7 @@ build.rig.addPreBuildTask(helloWorldTask);
 // execute after TypeScript subtask
 build.rig.addPostTypescriptTask(helloWorldTask);
 
-// execute after all tasks
+// execute after all build tasks
 build.rig.addPostBuildTask(helloWorldTask);
 ```
 
