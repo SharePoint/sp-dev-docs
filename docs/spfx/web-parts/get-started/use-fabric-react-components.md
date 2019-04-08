@@ -59,7 +59,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your DocumentCardExample web part as well.
 
-6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version fo the Office UI Fabric to your solution:
+6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version of the Office UI Fabric to your solution:
 
   ```
   npm install office-ui-fabric-react@5.132.0 --save
