@@ -378,7 +378,9 @@ In this example of using a web font, the following placeholders would be replace
   
 -  _SmallImgFile_ is the relative URL to the small thumbnail image that you want to use in the font scheme picker.
     
-  
+  > [!NOTE]
+  > The paths to the files have to be the full URL (i.e. https://tenant.sharepoint.com/sites/sitename/_catalogs/theme/15/fontfile.wof)
+  > The LargeImgFile and SmallImgFile attributes have to be present in the Latin tag even if given empty values.
 
 ### Font slots
 <a name="fontSlot"> </a>
