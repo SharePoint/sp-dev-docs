@@ -78,6 +78,12 @@ After the packages are installed, execute the following command to clean up any 
 gulp clean
 ```
 
+Furthermore, it is recommended to delete all old packages by deleting the **node_modules** folder and download (ie: reinstall) all dependencies with the updated package.json. Without this step, old versions may conflict with the newer versions the next time you build the project.
+
+```sh
+npm install
+```
+
 ## Update your code
 
 Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](https://aka.ms/spfx-release-notes) highlight any such breaking changes and the modifications required to your existing code. You must make sure you update your code with those fixes.
