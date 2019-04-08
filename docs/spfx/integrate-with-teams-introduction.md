@@ -55,7 +55,7 @@ In the future, Microsoft will implement a **Sync with Teams** button in the App 
 
 ### Alternative deployment options
 
-There is an alternative way to deploy your solution which will for instance allow you to make a solution available only to one specific team in your tenant. Please refer to [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/web-parts/creating-team-manifest-manually-for-webpart.md) how to create the manifest.
+There is an alternative way to deploy your solution which will for instance allow you to make a solution available only to one specific team in your tenant. Please refer to [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) how to create the manifest.
 
 1. Build your SharePoint Framework solution the normal way:
 
