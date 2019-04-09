@@ -154,6 +154,17 @@ Accept: 'application/json;odata=nometadata'
 > [!NOTE]
 > When you use the REST API to uninstall a solution package from the site, it is not relocated to the recycle bin.
 
+### Synchronize a solution to the Microsoft Teams App Catalog
+
+This REST call requires that you refer the **list item id** of the solution in the app catalog site.
+
+```
+url: /_api/web/tenantappcatalog/SyncSolutionToTeams(id=xxxxx)
+method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
+```
 
 ## SharePoint PnP PowerShell cmdlets 
 
