@@ -123,7 +123,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 The default value for the **includeClientSideAssets** is `true`, which means that static assets are packaged automatically inside of the *.sppkg* files, and you do not need to separately host your assets from an external system.
 
-Do **not** change this setting for this exerice, so that assets are automatically hosted when solution is deployed to your tenant.
+Do **not** change this setting for this exercise, so that assets are automatically hosted when solution is deployed to your tenant.
 
 If *Office 365 CDN* is enabled, it is used automatically with default settings. If *Office 365 CDN* is not enabled, assets are served from the app catalog site collection. This means that if you leave the **includeClientSideAssets** setting `true`, your solution assets are automatically hosted in the tenant.
 
