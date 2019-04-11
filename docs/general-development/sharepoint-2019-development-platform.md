@@ -37,4 +37,4 @@ Visual Studio 2017 v15.9 or includes SharePoint 2019 tooling extensions for Shar
 
 ## See also
 
-- [Community call where SharePoint 2019 developer platform is covered]https://www.youtube.com/watch?v=qPmr7c2B0uk) YouTube video
+- [Community call where SharePoint 2019 developer platform is covered](https://www.youtube.com/watch?v=qPmr7c2B0uk) YouTube video
