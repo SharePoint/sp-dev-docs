@@ -24,7 +24,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
 3. Create - and assign the JSON that describes the new script - to a variable as shown in the following PowerShell code. You can view and reference the latest JSON schema file here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
    ```powershell
-    $site_script = @'
+    $site_script = '
     {
         "$schema": "schema.json",
             "actions": [
@@ -70,7 +70,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
                 "bindata": { },
         "version": 1
     }
-    '@
+    '
    ```
 
 <br/>
