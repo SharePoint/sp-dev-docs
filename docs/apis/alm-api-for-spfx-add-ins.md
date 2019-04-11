@@ -1,7 +1,7 @@
 ---
 title:  Application Lifecycle Management (ALM) APIs 
 description: ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant.
-ms.date: 04/06/2018
+ms.date: 04/10/2019
 ms.prod: sharepoint
 ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
 localization_priority: Priority
