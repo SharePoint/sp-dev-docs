@@ -13,6 +13,9 @@ You can customize the look and feel of a SharePoint site in two ways:
 
 - **By creating custom cascading style sheets (CSS) to apply to SharePoint Online sites**. You can use a SharePoint Add-in and the remote provisioning pattern to provision SharePoint sites to use custom CSS.
 
+> [!IMPORTANT] 
+> These extensibility options are **only** available for classic SharePoint experiences. You cannot use these options with modern experiences in SharePoint Online, like with communication sites.
+
 Branding changes range from low-cost and simple to high-cost and complex. Users can use the UI to apply composed looks, which include a background image, color palette, fonts, a master page, and an associated .preview file for the master page. You can use the SharePoint theming engine to design composed looks and provision sites, and you can create custom CSS to modify the look and feel of your site and its elements.
 
 > [!IMPORTANT] 

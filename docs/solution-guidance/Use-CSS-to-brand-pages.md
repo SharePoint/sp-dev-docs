@@ -1,13 +1,16 @@
 ---
 title: Use CSS to brand SharePoint pages
 description: Use CSS to support branding and site design in SharePoint. Find out about CSS master pages, the corev15.css file, and composed looks in custom branding.
-ms.date: 4/25/2018
+ms.date: 4/12/2019
 localization_priority: Priority
 ---
 
 # Use CSS to brand SharePoint pages
 
 Cascading style sheet (CSS) plays a large role in SharePoint branding. To successfully customize the site design in SharePoint and SharePoint Online, it's useful to be familiar with how SharePoint uses CSS.
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites.
 
 ## CSS branding overview
 

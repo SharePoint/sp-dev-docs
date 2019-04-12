@@ -9,6 +9,9 @@ localization_priority: Priority
 
 **Composed looks** are out-of-the-box themes that are included in SharePoint and SharePoint Online. Apply composed looks, including colors, fonts, and a background image, to your SharePoint and SharePoint Online sites by using the SharePoint theming engine.
 
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites.
+
 To apply a composed look to a SharePoint site, select **Site Settings** > **Look and Feel** > **Change the look**. You can then use the Change the Look Wizard to customize the colors, fonts, master page, and background image of a composed look. The Change the Look Wizard copies, transforms, and stores CSS in SharePoint's content database. It also recolors images and stores them in the content database. 
 
 ## SharePoint theming engine
