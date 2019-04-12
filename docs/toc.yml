@@ -1375,6 +1375,8 @@
           items:
           - name: User manual
             href: transform/modernize-userinterface-site-pages-ui-guide.md
+        - name: Page transformation videos
+          href: transform/modernize-userinterface-site-pages-videos.md
         - name: Page transformation via PowerShell
           href: transform/modernize-userinterface-site-pages-powershell.md
         - name: Page transformation via .Net
