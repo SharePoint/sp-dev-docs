@@ -66,7 +66,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   ```
 
 > [!NOTE]
-> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.143.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.
+> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.
 
 
 7. Next, enter the following to open the web part project in Visual Studio Code:
