@@ -32,6 +32,25 @@ To upgrade your web part project, follow these steps:
 1. Update the existing `rush-stack-compiler` dependency to a version greater than `2.7` to be compatible with `office-ui-fabric-react`'s type definitions.
 1. Upgrade your SharePoint Framework to 1.8, if not already upgraded. 
 
+Before proceeding, we will need to update our web part's `tsconfig.json` to reference the updated version of `rush-stack-compiler` installed above.
+To do this, open `tsconfig.json` in your editor and replace the `extends` path to refer to the version of `rush-stack-compiler` recently installed.
+
+For example, upgrading from `rush-stack-compiler-2.7` to `rush-stack-compiler-2.9` would result in the following diff:
+
+```diff
+diff --git a/tsconfig.json b/tsconfig.json
+index e0d751e..131c5bb 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -1,5 +1,5 @@
+ {
+-  "extends": "./node_modules/@microsoft/rush-stack-compiler-2.7/includes/tsconfig-web.json",
++  "extends": "./node_modules/@microsoft/rush-stack-compiler-2.9/includes/tsconfig-web.json",
+   "compilerOptions": {
+     "target": "es5",
+     "forceConsistentCasingInFileNames": true,
+```
+
 With the above required dependencies installed, we can begin to theme our web part using Office UI Fabric React's offerings.
 
 First, the web part will need to import and render a component from Office UI Fabric React, such as `PrimaryButton`.
