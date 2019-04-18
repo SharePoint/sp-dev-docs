@@ -60,7 +60,7 @@ To create a custom dialog box, you need to follow the steps in [Set up your deve
 
   ![SharePoint client-side solution scaffolded successfully](../../../images/ext-com-dialog-yeoman-complete.png)
 
-6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version fo the Office UI Fabric to your solution:
+6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version of the Office UI Fabric to your solution:
 
   ```sh
   npm install office-ui-fabric-react@5.132.0  --save
