@@ -265,8 +265,6 @@
       href: spfx/use-developer-dashboard.md
   - name: Roadmap
     href: spfx/roadmap.md
-  - name: Known issues and FAQ
-    href: spfx/known-issues-and-common-questions.md 
 - name: Features
   items:
   - name: Connect to Office 365 group

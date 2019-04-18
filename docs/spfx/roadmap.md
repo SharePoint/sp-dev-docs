@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 06/25/2018
+ms.date: 04/18/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,6 +10,10 @@ localization_priority: Priority
 
 The first release of the SharePoint Framework contained only support for client-side web parts. This was, however, just a start on the journey for providing additional modern customization capabilities to SharePoint. Following is a list of key capabilities released after General Availability:
 
+- [Building Microsoft Team tabs using SharePoint Framework](./integrate-with-teams-introduction)
+- [Single Part App Pages](./web-parts/single-part-app-pages.md)
+- [Isolated web parts](./web-parts/isolated-web-parts.md)
+- [Dynamic data and web part connections](./dynamic-data.md)
 - [Tenant-scoped deployment support](./tenant-scoped-deployment.md)
 - [On-premises support for SharePoint 2016 (Feature Pack 2)](./sharepoint-2016-support.md)
 - [SharePoint Framework Extensions](./extensions/overview-extensions.md)
@@ -23,6 +27,7 @@ The first release of the SharePoint Framework contained only support for client-
 - Support for Yarn and PNPM package managers
 - Relocating preview code to isolated packages
 - SPFx Yeoman package extensibility
+- React 16 and TypeScript 3.x support
 
 > [!NOTE]
 > This is a list of areas that SharePoint engineering has in the backlog and is looking into. This does **NOT** mean that all of them will be delivered, but we are looking into getting items and topics from this list gradually released with the future releases of SharePoint Framework.
@@ -31,26 +36,21 @@ The first release of the SharePoint Framework contained only support for client-
 
 - Updated 'store' story with SharePoint Framework support
 - 'Store' story for SharePoint Framework solutions with easy distribution channel for ISVs 
-- React 16 support
-- Modern experiences in SharePoint 2019 - End-to-end SharePoint Framework support for modern sites with web parts and extensions
 - Content Security Policy (CSP) support
 - Additional placeholder, like content header, content footer, navigation extensions, search extensions
-- "App pages" - developer defined pages which end users cannot edit
+- Improved developer experience and tooling
 
 ## Client-side web parts++ and add-ins
 
 - Support more complex scenarios and interactions with web parts
-	- JavaScript Framework isolation
-    - "Citizen developer" model for lightweight development
+	- "Citizen developer" model for lightweight development
 
 - Bring add-ins to the modern world: let’s make them play nicer with the new UX
     - Azure AD registration
     - Native responsive support
     - Build add-ins with SharePoint Framework
 
-- Host SharePoint Framework web parts as Microsoft Teams tabs
-- Host Microsoft Team ISV solutions in SharePoint as "web parts"
-
+- Building Office add-ins using SharePoint Framework
 
 ## Application Lifecycle Management
 
@@ -59,13 +59,10 @@ The first release of the SharePoint Framework contained only support for client-
     - Tenant admin gets automatically notified.
     - Settings to control the default experience around approval process.
 
-- Tenant wide deployment of extensions
-
 ## Developer experience
 
 - SharePoint Framework Workbench 2.0: Development story for SharePoint Framework Extensions
 - Toolchain components
-- Additional Yeoman templates for different JavaScript frameworks
 
 ## Already shipped capabilities
 

@@ -17,8 +17,14 @@ App pages have following characteristics:
 * Page layout can only be changed programatically from normal page layout to a Single Page App Page
 * End-users cannot parametrize exposed web part or Teams application
 
+<br/>
+
+> [!Video https://www.youtube.com/embed/8BATz6LD6tA]
+
+<br/>
+
 > [!NOTE]
-> App pages will be exposed as an option in the upcoming modern page creation capability. This feature will be released to targeted release tenants after the SharePoint Framework 1.8 release. You can however enable app pages starting with 1.8 release using the code as demonstrated later in this document.
+> App pages are exposed as an option in the modern page creation capability. This feature is currently avaialble only in targeted release tenants, but will be released fully later on sprin 2019. You can however enable app pages starting with 1.8 release using the code as demonstrated later in this document.
 
 Web part can be configured to be exposed as an app page. This configuration is performed in the web part manifest file by adjusting the `supportedHosts` value. Web part will be exposed as an option in the upcoming app pages picker user interface, if the `supportedHosts` value contains `"SharePointFullPage"` value.
 
