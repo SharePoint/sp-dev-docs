@@ -363,7 +363,7 @@ The next step is to define the custom property pane control. This control is use
   
   The first set of properties are exposed publicly and are used to define the web part property inside the web part. These properties are component-specific properties, such as the label displayed next to the control, minimum and maximum values for a spinner, or available options for a dropdown. When defining a custom property pane control, the type describing these properties must be passed as the **TProperties** type when implementing the `IPropertyPaneField<TProperties>` interface.
 
-  The second set of properties are private properties used internally inside the custom property pane control. These properties have to adhere to the SharePoint Framework APIs for the custom control to render correctly. These properties must implement the **IPropertyPaneCustomFieldProps** interface from the **@microsoft/sp-webpart-base** package.
+  The second set of properties are private properties used internally inside the custom property pane control. These properties have to adhere to the SharePoint Framework APIs for the custom control to render correctly. These properties must implement the **IPropertyPaneCustomFieldProps** interface from the **@microsoft/sp-property-pane** package.
 
 2. Define the public properties for the asynchronous dropdown property pane control. In the **src/controls/PropertyPaneAsyncDropdown** folder, create a new file named **IPropertyPaneAsyncDropdownProps.ts**, and enter the following code:
 
@@ -389,7 +389,7 @@ The next step is to define the custom property pane control. This control is use
 3. Define the internal properties for the asynchronous dropdown property pane control. In the **src/controls/PropertyPaneAsyncDropdown** folder, create a new file named **IPropertyPaneAsyncDropdownInternalProps.ts**, and enter the following code:
 
   ```typescript
-  import { IPropertyPaneCustomFieldProps } from '@microsoft/sp-webpart-base';
+  import { IPropertyPaneCustomFieldProps } from '@microsoft/sp-property-pane';
   import { IPropertyPaneAsyncDropdownProps } from './IPropertyPaneAsyncDropdownProps';
 
   export interface IPropertyPaneAsyncDropdownInternalProps extends IPropertyPaneAsyncDropdownProps, IPropertyPaneCustomFieldProps {
@@ -406,7 +406,7 @@ The next step is to define the custom property pane control. This control is use
   import {
     IPropertyPaneField,
     PropertyPaneFieldType
-  } from '@microsoft/sp-webpart-base';
+  } from '@microsoft/sp-property-pane';
   import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
   import { IPropertyPaneAsyncDropdownProps } from './IPropertyPaneAsyncDropdownProps';
   import { IPropertyPaneAsyncDropdownInternalProps } from './IPropertyPaneAsyncDropdownInternalProps';
@@ -428,7 +428,8 @@ The next step is to define the custom property pane control. This control is use
         onPropertyChange: properties.onPropertyChange,
         selectedKey: properties.selectedKey,
         disabled: properties.disabled,
-        onRender: this.onRender.bind(this)
+        onRender: this.onRender.bind(this),
+        onDispose: this.onDispose.bind(this)
       };
     }
 
@@ -438,6 +439,10 @@ The next step is to define the custom property pane control. This control is use
       }
 
       this.onRender(this.elem);
+    }
+    
+    private onDispose(element: HTMLElement): void {
+      ReactDom.unmountComponentAtNode(element);
     }
 
     private onRender(elem: HTMLElement): void {
@@ -471,7 +476,7 @@ The next step is to define the custom property pane control. This control is use
 
   Notice how the **properties** property is of the internal **IPropertyPaneAsyncDropdownInternalProps** type rather than the public **IPropertyPaneAsyncDropdownProps** interface implemented by the class. This is on purpose so that the **properties** property can define the **onRender** method required by the SharePoint Framework. If the **onRender** method was a part of the public **IPropertyPaneAsyncDropdownProps** interface, when using the asynchronous dropdown control in the web part, you would be required to assign a value to it inside the web part, which isn't desirable.
 
-  The **PropertyPaneAsyncDropdown** class defines a public **render** method, which can be used to repaint the control. This is useful in situations such as when you have cascading dropdowns where the value set in one determines the options available in another. By calling the **render** method after selecting an item, you can have the dependent dropdown load available options. For this to work, you have to make React detect that the control has changed. This is done by setting the value of the **stateKey** to the current date. Using this trick, every time the **onRender** method is called, the component not only is re-rendered but also updates its available options.
+  The **PropertyPaneAsyncDropdown** class defines a public **render** method, which can be used to repaint the control. This is useful in situations such as when you have cascading dropdowns where the value set in one determines the options available in another. By calling the **render** method after selecting an item, you can have the dependent dropdown load available options. For this to work, you have to make React detect that the control has changed. This is done by setting the value of the **stateKey** to the current date. Using this trick, every time the **onRender** method is called, the component not only is re-rendered but also updates its available options. Do not forget to implement **onDispose** method to unmount the element every time you close the property pane.
 
 ## Use the asynchronous dropdown property pane control in the web part
 
