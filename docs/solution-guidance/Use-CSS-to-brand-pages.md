@@ -10,7 +10,7 @@ localization_priority: Priority
 Cascading style sheet (CSS) plays a large role in SharePoint branding. To successfully customize the site design in SharePoint and SharePoint Online, it's useful to be familiar with how SharePoint uses CSS.
 
 > [!IMPORTANT] 
-> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. Notice also that you should **not** take a dependency on the html page structure or on the out-of-the-box CSS style names as these might be adjusted without a notice. 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. Notice also that you should **not** take a dependency on the html page structure or on the out-of-the-box CSS style names as these might be adjusted without a notice.
 
 ## CSS branding overview
 
