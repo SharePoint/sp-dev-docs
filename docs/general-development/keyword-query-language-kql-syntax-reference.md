@@ -343,9 +343,18 @@ All date/time values must be specified according to the UTC (Coordinated Univers
 #### Relevant date intervals supported by KQL
 
 KQL enables you to build search queries that support relative "day" range query, with reserved keywords as shown in Table 4. Use double quotation marks ("") for date intervals with a space between their names.
-  
-    
-    
+
+Matches would include items modified today:
+
+ `LastModifiedTime=today`
+ 
+Matches would include items from the beginning of the current year until the end of the current year:
+
+ `LastModifiedTime="this year"`
+
+Matches would include items from January 1st of 2019 until April 26th of 2019:
+
+ `LastModifiedTime>=2019-01-01 AND LastModifiedTime<=2019-04-26`
 
 
 |**Name of date interval**|**Description**|
