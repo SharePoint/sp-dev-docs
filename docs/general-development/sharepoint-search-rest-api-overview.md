@@ -103,6 +103,16 @@ Use **POST** requests in the following scenarios:
 - When you use the  [ReorderingRules](#bk_ReorderingRules) parameter because it is supported only with **POST** requests.
     
   
+## Search REST results format
+By default, results are returned in XML format. To get results in JSON format, add the following header to your request:
+```
+accept: application/json;odata=verbose
+```
+
+If you don't need metadata, you can instead use:
+```
+accept: application/json;odata=nometadata
+```
 
 ## Using query parameters with the Search REST service
 <a name="bk_UsingQueryParams"> </a>
