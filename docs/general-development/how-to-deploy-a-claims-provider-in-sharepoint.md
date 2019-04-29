@@ -14,7 +14,7 @@ Learn how to deploy a SharePoint claims provider by using the features infrastru
 ## Deploying a claims provider as part of a setup
 <a name="SP15_HowToDeployClaimsProvider_DeployingClaimsSetup"> </a>
 
-The easiest way to deploy a claims provider is by using the features infrastructure. To do this, first define a feature and a feature receiver that derives from the  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) class, and override the base properties.
+The easiest way to deploy a claims provider is by using the features infrastructure. To do this, first define a Farm scoped feature and a feature receiver that derives from the  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) class, and override the base properties.
   
     
     
