@@ -73,7 +73,7 @@ The following example is a script that has two top-level actions. First, it appl
 
 ```json
 {
-  "$schema": "schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
   "actions": [
     {
       "verb": "applyTheme",
