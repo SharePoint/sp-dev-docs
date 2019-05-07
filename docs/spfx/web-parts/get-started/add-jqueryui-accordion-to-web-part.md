@@ -77,13 +77,13 @@ The developer toolchain uses Webpack, SystemJS, and CommonJS to bundle your web 
 1. In the console, enter the following to install the jQuery npm package:
 
   ```
-  npm install jquery@2
+  npm install jquery@2 --save
   ```
 
 2. Now enter the following to install the jQueryUI npm package:
 
   ```
-  npm install jqueryui
+  npm install jqueryui --save
   ```
 
   Next, we need to install the typings for our project. Starting from TypeScript 2.0, we can use npm to install needed typings.
@@ -91,8 +91,8 @@ The developer toolchain uses Webpack, SystemJS, and CommonJS to bundle your web 
 3. Open your console and install the needed types:
 
   ```
-  npm install @types/jquery@2
-  npm install @types/jqueryui
+  npm install @types/jquery@2 --save
+  npm install @types/jqueryui --save
   ```
 
 ### To unbundle external dependencies from web part bundle
