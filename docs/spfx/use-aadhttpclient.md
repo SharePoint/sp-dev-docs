@@ -317,7 +317,7 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
       // ...
 
       this.context.aadHttpClientFactory
-        .getClient('09c4b84d-13c4-4451-9350-3baedf70aab4')
+        .getClient('https://contoso.azurewebsites.net')
         .then((client: AadHttpClient): void => {
           // connect to the API
         });
@@ -338,7 +338,7 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
       // ...
 
       this.context.aadHttpClientFactory
-        .getClient('09c4b84d-13c4-4451-9350-3baedf70aab4')
+        .getClient('https://contoso.azurewebsites.net')
         .then((client: AadHttpClient): void => {
           client
             .get('https://contoso.azurewebsites.net/api/orders', AadHttpClient.configurations.v1)
