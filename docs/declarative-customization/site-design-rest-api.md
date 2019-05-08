@@ -313,7 +313,7 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 ## CreateSiteDesign
 
-Creates a new site design available to users when they create a new site from the SharePoint home page.
+Creates a new site design available to users when they create a new site from the SharePoint start page.
 
 ### Parameters
 
