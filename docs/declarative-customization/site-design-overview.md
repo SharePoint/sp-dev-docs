@@ -22,7 +22,7 @@ Site designs are like a template. They can be used each time a new site is creat
 
 You create site designs and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 
-1. Go to the SharePoint home page on your developer tenant. 
+1. Go to the SharePoint start page on your developer tenant. 
 
 2. Choose **Create site**.
 
