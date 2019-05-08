@@ -1062,7 +1062,7 @@ An optional property that allows an element to duplicate itself for each member 
 
 The field used in the loop must be in a supported field type with multi-value option enabled: Person, Lookup, and Choice.
 
-In the element with `forEach` or its childern elements, the iterator variable can be referred as if it is a new field. The index of the iterator can be accessed with `loopIndex` operator.
+In the element with `forEach` or its children elements, the iterator variable can be referred as if it is a new field. The index of the iterator can be accessed with `loopIndex` operator.
 
 `forEach` cannot be applied to the root element, and will render no element if there is no value in the field.
 
