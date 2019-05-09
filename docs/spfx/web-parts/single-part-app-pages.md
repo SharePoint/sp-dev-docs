@@ -8,14 +8,14 @@ localization_priority: Priority
 
 # Using single part app pages in SharePoint Online
 
-Single part app pages provides a capability to host SharePoint Framework web parts or Teams applications in SharePoint Online with locked layout. End users cannot modify or configure the page which is using Single Part App Page layout.
+Single part app pages provides a capability to host SharePoint Framework web parts or Teams applications in SharePoint Online with a locked layout. End users cannot modify or configure the page which is using the Single Part App Page layout.
 
 App pages have following characteristics:
 
-* Single Part App Pages cannot be edited by end users using browser
+* Single Part App Pages cannot be edited by end users using a browser
 * Currently supports hosting only single web part or Microsoft Teams application
 * Page layout can only be changed programatically from normal page layout to a Single Page App Page
-* End-users cannot parametrize exposed web part or Teams application
+* End-users cannot parameterize exposed web part or Teams application
 
 <br/>
 
@@ -24,7 +24,7 @@ App pages have following characteristics:
 <br/>
 
 > [!NOTE]
-> App pages are exposed as an option in the modern page creation capability. This feature is currently avaialble only in targeted release tenants, but will be released fully later on sprin 2019. You can however enable app pages starting with 1.8 release using the code as demonstrated later in this document.
+> App pages are exposed as an option in the modern page creation capability. This feature is currently avaialble only in targeted release tenants, but will be released fully later on Spring 2019. You can however enable app pages starting with 1.8 release using the code as demonstrated later in this document.
 
 Web part can be configured to be exposed as an app page. This configuration is performed in the web part manifest file by adjusting the `supportedHosts` value. Web part will be exposed as an option in the upcoming app pages picker user interface, if the `supportedHosts` value contains `"SharePointFullPage"` value.
 
