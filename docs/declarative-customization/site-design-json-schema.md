@@ -634,7 +634,7 @@ Use the **removeNavLink** verb to remove a navigation link from the site.
 
 #### JSON values
 
-- **url** &ndash; The url of the link to add.
+- **url** &ndash; The url of the link to remove.
 - **displayName** &ndash; The display name of the link.
 - **isWebRelative** &ndash; **True** if the link is web relative; otherwise, **false**.
 
@@ -666,6 +666,13 @@ Use the **removeNavLink** verb to remove a navigation link from the site.
     "displayName": "Teams",
     "isWebRelative": true
 }
+```
+
+#### Handle special characters
+The sites created in other languages than English may contain special characters. Use UTF-8 encoding to read the JSON content containing special characters. 
+
+```PowerShell
+Get-Content '<Folder_location_to_site_script>\site-script.json' -Raw -Encoding UTF8
 ```
 
 ## Apply a theme
