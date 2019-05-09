@@ -239,7 +239,7 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 <br/>
 
-In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPO-SiteDesign** cmdlet or **CreateSiteDesign** REST API.
+In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPOSiteDesign** cmdlet or **CreateSiteDesign** REST API.
 
 The **WebTemplate** parameter set to the value 64 indicates registering this site design with the Team site template. If you have disabled modern Group creation, then publish your site designs using WebTemplate 1 so that they display for the "Group-less" Team site template. The value 68 would indicate registering with the Communication site template. The **Title** and **Description** parameters are displayed when a user views site designs as they create a new Team site.
 
