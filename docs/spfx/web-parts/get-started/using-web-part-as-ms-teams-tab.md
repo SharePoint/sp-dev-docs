@@ -16,7 +16,7 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 > [!IMPORTANT]
-> This lab requires that you are using at least version 1.8 of the SharePoint Framework as these capabilities are not available in earlier versions.
+> This lab requires that you are using at least version 1.8 of the SharePoint Framework as these capabilities are not available in earlier versions.  Currently, the Teams mobile clients do not support 3rd party tabs.  When this support is delivered, the tabs you create will appear automatically.
 
 ## Create a new web part project
 
