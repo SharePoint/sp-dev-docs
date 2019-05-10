@@ -284,6 +284,32 @@ There is another problem with descendant selectors. Note in the previous example
 
 Say for example, for some reason at the app level we decide to make height 0 px on the myButton class. That results in all third-party web parts that use the myButton class to have a height of 0 px (that is, a serious regression in the user experience).
 
+### Usage of icons in SPFx components
+- #### Legacy way of using icons (before SPFx 1.8.2)
+~~~
+<i className={css('ms-Icon', 'ms-Icon--RecurringEvent')}></i>
+~~~
+
+- #### Recommended ways
+  - ##### Pure JavaScript way of consuming icons
+	Step 1: Add `@uifabric/styling` package to your `package.json`
+
+	Step 2: Make code changes similar to below code, to get the required icon into your code:
+	~~~
+	import { getIconClassName } from '@uifabric/styling';
+
+	return `<i class="${getIconClassName('Mail')}" />`;
+	~~~
+  - ##### React way of consuming icons
+	Step 1: Add `office-ui-fabric-react` package to your `package.json`, if not already added.
+    
+	Step 2: Make code changes similar to below code, to get the required icon into your code:
+    ~~~
+    import { Icon } from 'office-ui-fabric-react/lib/Icon';
+
+    <Icon iconName='Mail' />
+    ~~~
+
 ## See also
 
 - [Overview of the SharePoint Framework](sharepoint-framework-overview.md)
