@@ -59,14 +59,18 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your DocumentCardExample web part as well.
 
-6. When initial scaffolding is completed, enter the following to explicitly install the 5.x version of the Office UI Fabric to your solution:
+6. When initial scaffolding is completed, you may need to explicitly add a version of office-ui-fabric-react to your package.json file.  If you are using version 1.8.2 or later of the generator, you won't need to worry about this, but older versions will.  Open your package.json file, and look for an entry for 'office-ui-fabric-react'.  If there isn't one, add the following entry in your dependencies section
 
   ```
-  npm install office-ui-fabric-react@5.132.0 --save
+      "office-ui-fabric-react": "5.132.0"
+  ```
+  followed by the following command at your command prompt.
+  ```
+      npm install
   ```
 
 > [!NOTE]
-> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.
+> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.  To use fabric 6, you need to be on at least rush-stack-compiler-2.9 .  The default project created with version 1.8.2 for SharePoint Online will use rush-stack-compiler-2.9 and fabric 6 (and won't need the step to add office-ui-fabric-react to your package.json file). Previous versions use either rush-stack-compiler 2.7 or a build system that is locked to typescript 2.4.  In those cases, you'll need to reference fabric 5.132.0.  If you are targeting on-prem, you will also want to use fabric 5.132.0.
 
 
 7. Next, enter the following to open the web part project in Visual Studio Code:
@@ -187,60 +191,6 @@ Because we chose React as our framework when creating the solution, the generato
 
   The `previewProps` property includes some properties of the DocumentCardPreview.
 
-5. Notice the use of the relative path with a `require` statement to load images. Currently, you need to perform a small configuration in the gulpfile.js to enable these images to get processed properly by webpack.
-	
-6. Open **gulpfile.js** from the **root** folder. 
-	
-7. Add the following code just above the `build.initialize(gulp);` code line.
-	
-  ```js
-  build.configureWebpack.mergeConfig({  
-      additionalConfiguration: (generatedConfiguration) => {
-          if (build.getConfig().production) {
-              var basePath = build.writeManifests.taskConfig.cdnBasePath;
-              if (!basePath.endsWith('/')) {
-                  basePath += '/';
-              }
-              generatedConfiguration.output.publicPath = basePath;
-          }
-          else {
-              generatedConfiguration.output.publicPath = "/dist/";
-          }
-          return generatedConfiguration;
-      }
-  });
-  ```
-	
-8. Save the file.
-
-  Your full **gulpfile.js** file should look as follows.
-
-  ```js
-  'use strict';
-
-  const gulp = require('gulp');
-  const build = require('@microsoft/sp-build-web');
-  build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
-
-  build.configureWebpack.mergeConfig({
-    additionalConfiguration: (generatedConfiguration) => {
-        if (build.getConfig().production) {
-            var basePath = build.writeManifests.taskConfig.cdnBasePath;
-            if (!basePath.endsWith('/')) {
-                basePath += '/';
-            }
-            generatedConfiguration.output.publicPath = basePath;
-        }
-        else {
-            generatedConfiguration.output.publicPath = "/dist/";
-        }
-        return generatedConfiguration;
-    }
-  });
-
-  build.initialize(gulp);
-
-  ```
 
 ## Copy the image assets
 
