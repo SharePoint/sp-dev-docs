@@ -197,12 +197,11 @@ At this point, a user specifies which list the web part should use by manually e
 
   ```typescript
   import {
-    BaseClientSideWebPart,
     IPropertyPaneConfiguration,
     PropertyPaneTextField,
     PropertyPaneDropdown,
     IPropertyPaneDropdownOption
-  } from '@microsoft/sp-webpart-base';
+  } from '@microsoft/sp-property-pane';
   ```
 
 2. In the **ListItemsWebPart** class, add a new variable named **lists** to store information about all available lists in the current site:
