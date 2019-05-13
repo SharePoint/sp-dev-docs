@@ -160,100 +160,61 @@ if(CreateSelfSignedCertificate)
 
 You will be asked to give a password to encrypt your private key, and both the .PFX file and .CER file will be exported to the current folder. 
 
-Next step is registering an Azure AD application in the Azure Active Directory tenant that is linked to your Office 365 tenant. To do that, open the Office 365 Admin Center (https://portal.office.com) using the account of a user member of the Tenant Global Admins group. Click on the "Azure Active Directory" link that is available under the "Admin centers" group in the left-side treeview of the Office 365 Admin Center. In the new browser's tab that will be opened you will find the [Microsoft Azure portal](https://ms.portal.azure.com). If it is the first time that you access the Azure portal with your account, you will have to register a new Azure subscription, providing some information and a credit card for any payment need. But don't worry, in order to play with Azure AD and to register an Office 365 Application you will not pay anything. In fact, those are free capabilities. Once having access to the Azure portal, select the "Active Directory" section and choose the option "App Registrations". See the next figure for further details.
+Next step is registering an Azure AD application in the Azure Active Directory tenant that is linked to your Office 365 tenant. To do that, open the Office 365 Admin Center (https://admin.microsoft.com) using the account of a user member of the Tenant Global Admins group. Click on the "Azure Active Directory" link that is available under the "Admin centers" group in the left-side treeview of the Office 365 Admin Center. In the new browser's tab that will be opened you will find the [Microsoft Azure portal](https://portal.azure.com). If it is the first time that you access the Azure portal with your account, you will have to register a new Azure subscription, providing some information and a credit card for any payment need. But don't worry, in order to play with Azure AD and to register an Office 365 Application you will not pay anything. In fact, those are free capabilities. Once having access to the Azure portal, select the "Azure Active Directory" section and choose the option "App registrations". See the next figure for further details.
 
 ![shows azure ad portal](media/apponly/azureadapponly1.png)
 
-In the "App Registrations" tab you will find the list of Azure AD applications registered in your tenant. Click the "New application registration" button in the upper left part of the blade. Next, provide a name for your application, select the option "Web app / API", and fill in the "Sign-on URL" with a URL (does not have to exist, e.g. https://www.pnp.com). Click on “Create” to create the Azure AD application.
+In the "App registrations" tab you will find the list of Azure AD applications registered in your tenant. Click the "New registration" button in the upper left part of the blade. Next, provide a name for your application and click on "Register" at the bottom of the blade.
 
 ![creates a new azure ad application](media/apponly/azureadapponly2.png)
 
-Once created you need to look up your Azure AD application again and open it:
-
-![opens new azure ad application from portal](media/apponly/azureadapponly3.png)
-
 > [!IMPORTANT]
-> Once the application has been opened copy the application ID as you’ll need it later.
+> Once the application has been created copy the "Application (client) ID" as you’ll need it later.
 
-Now click on "Required Permissions", and click on the "Add" button, a new blade will appear. You need to configure the following permissions:
- - Office 365 SharePoint Online (Application Permission)
-	 - Read and write managed metadata
-	 - Have full control of all site collection
+Now click on "API permissions" in the left menu bar, and click on the "Add a permission" button. A new blade will appear. Here you choose the permissions that you will grant to this application. Choose i.e.:
 
-The "Application Permissions" are those granted to the application when running as App Only.
+- SharePoint
+	- Application permissions
+		- Sites
+			- Sites.FullControl.All
+			
+Click on the blue "Add permissions" button at the bottom to add the permissions to your application. The "Application permissions" are those granted to the application when running as App Only.
 
 ![granting permissions to azure ad application](media/apponly/azureadapponly4.png)
 
-Final step is “connecting” the certificate we created earlier to the application. You need to execute the Get-SelfSignedCertificateInformation.ps1 script. 
+Final step is “connecting” the certificate we created earlier to the application. Click on "Certificates & secrets" in the left menu bar. Click on the "Upload certificate" button, select the .CER file you generated earlier and click on "Add" to upload it.
 
-```powershell
-.\Get-SelfSignedCertificateInformation.ps1 | clip
-```
-
-The actual script can be copied from here:
-
-```powershell
-$certPath = Read-Host "Enter certificate path (.cer)"
-$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
-$cert.Import($certPath)
-$rawCert = $cert.GetRawCertData()
-$base64Cert = [System.Convert]::ToBase64String($rawCert)
-$rawCertHash = $cert.GetCertHash()
-$base64CertHash = [System.Convert]::ToBase64String($rawCertHash)
-$KeyId = [System.Guid]::NewGuid().ToString()
-
-$keyCredentials = 
-'"keyCredentials": [
-    {
-      "customKeyIdentifier": "'+ $base64CertHash + '",
-      "keyId": "' + $KeyId + '",
-      "type": "AsymmetricX509Cert",
-      "usage": "Verify",
-      "value":  "' + $base64Cert + '"
-     }
-  ],'
-Write-Host $keyCredentials
-
-Write-Host "Certificate Thumbprint:" $cert.Thumbprint
-```
-
-You will have to provide the full qualified path of the .CER file that you created when you created the certificate for the AppOnly context configuration. The command will copy into the clipboard a JSON snippet that you will use in the upcoming steps. Paste the content of the clipboard in a safe place (like a fresh new notepad file).
-
-Go back to the Azure AD Application that you created in the previous step and click the "Manifest" button at the top of the blade, then click Edit'. Search for the **keyCredentials** property and replace it with the snippet you generated before, this will be like:
+To confirm that the certificate was successfully registered, click on "Manifest" in the left menu bar. Search for the **keyCredentials** property. It should look like:
 
 ```JSON
   "keyCredentials": [
     {
       "customKeyIdentifier": "<$base64CertHash>",
-      "keyId": "<$KeyId>",
+      "endDate": "2021-05-01T00:00:00Z",
+      "keyId": "<$guid>",
+      "startDate": "2019-05-01T00:00:00Z",
       "type": "AsymmetricX509Cert",
       "usage": "Verify",
-      "value":  "<$base64Cert>"
+      "value": "<$base64Cert>",
+      "displayName": "CN=<$name of your cert>"      
      }
   ],
 ```
 
-Click Save when you complete this step.
+If you see a section looking somewhat similar to this, the certificate has been added successfully.
 
-In this sample the Sites.FullControl.All application permission require admin consent in a tenant before it can be used. Create a consent URL like the following:
-
-```
-https://login.microsoftonline.com/<tenant>/adminconsent?client_id=<application id>&state=<something>
-```
-
-Using the application id from my Azure AD app and consenting to the app from my tenant contoso.onmicrosoft.com, the URL looks like this:
-
-```
-https://login.microsoftonline.com/contoso.onmicrosoft.com/adminconsent?client_id=6e4433ca-7011-4a11-85b6-1195b0114fea&state=12345
-```
-
-Browsing to the created URL and log in as a tenant admin, and consent to the application. You can see the consent screen show the name of your application as well as the permission scopes you configured.
+In this sample the Sites.FullControl.All application permission require admin consent in a tenant before it can be used. In order to do this, click on "API permissions" in the left menu again. At the bottom you will see a section "Grand consent". Click on the "Grand admin constent for <organization name>" button and confirm the action by clicking on the "Yes" button that appears at the top.
 
 ![granting permissions to azure ad application](media/apponly/azureadapponly5.png)
 
-> [!NOTE]
-> After clicking “Accept” you’re redirected to the sign-in URL you specified earlier (https://www.pnp.com in our case) …if that URL is not valid the redirect will fail but the grant was done successful, so nothing to worry about.
+## Using this principal with PnP PowerShell
+If you want to use this AAD App Only principal with [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell), after you have installed the PnP PowerShell module, you can connect to your SharePoint Online environment using:
 
+```powershell
+Connect-PnPOnline -ClientId <$application client id as copied over from the AAD app registration above> -CertificatePath '<$path to the PFX file generated by the PowerShell script above>' -CertificatePassword (ConvertTo-SecureString -AsPlainText "<$password assigned to the generated certificate pair above>" -Force) -Url https://<$yourtenant>.sharepoint.com -Tenant "<$tenantname>.onmicrosoft.com"
+```
+
+You can now perform operations through PnP PowerShell against your SharePoint Online environment using this certificate App Only trust.
 
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 In a first step, you add the SharePointPnPCoreOnline library nuget package: https://www.nuget.org/packages/SharePointPnPCoreOnline. Once that’s done you can use below code construct:
@@ -315,6 +276,9 @@ $clientContext.Load($clientContext.Web)
 $clientContext.ExecuteQuery()
 $clientContext.Web.Title
 ```
+
+## Using this principal with the Pnp Modernization Scanner
+Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](https://docs.microsoft.com/en-us/sharepoint/dev/transform/modernize-scanner) to use this principal with the tool.
 
 ## FAQ
 ### Can I use other means besides certificates for realizing app-only access for my Azure AD app?
