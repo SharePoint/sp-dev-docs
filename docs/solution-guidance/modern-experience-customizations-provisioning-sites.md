@@ -30,7 +30,7 @@ In this section you learn how to provision a "modern" team site, and what the av
 
 There are numerous routes for a "modern" team site to get provisioned. You can start the provisioning directly from the SharePoint Online site, or alternatively provision an Office 365 group from other locations (for example, from Outlook), which then also triggers the provisioning of a "modern" team site. 
 
-- If your administrator enabled "modern" team sites in your tenant, you can create "modern" team sites from the SharePoint home page.
+- If your administrator enabled "modern" team sites in your tenant, you can create "modern" team sites from the SharePoint start page.
 
 - You can also create an Office 365 group from Office 365 Outlook, and when you access the site tab of that group, you land on a "modern" team site. 
 

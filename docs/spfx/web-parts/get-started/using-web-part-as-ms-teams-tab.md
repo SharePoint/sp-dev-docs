@@ -16,7 +16,7 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 > [!IMPORTANT]
-> This lab requires that you are using at least version 1.8 of the SharePoint Framework as these capabilities are not available in earlier versions.
+> This lab requires that you are using at least version 1.8 of the SharePoint Framework as these capabilities are not available in earlier versions.  Currently, the Teams mobile clients do not support 3rd party tabs.  When this support is delivered, the tabs you create will appear automatically.
 
 ## Create a new web part project
 
@@ -238,7 +238,7 @@ Now the web part is deployed and is automatically available cross the SharePoint
 
 In order to make your web part available in Microsoft Teams you will have synchronize your solution with teams. 
 
-1. Create a Microsoft Teams app manifest file by following the instructions detailed here: [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart).
+1. Create a Microsoft Teams app manifest file by following the instructions detailed here: [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](../guidance/creating-team-manifest-manually-for-webpart.md).
 1. Create a Microsoft Teams app package by zipping the contents of the **./teams** folder. Make sure to zip just the contents and not the folder itself. This ZIP archive should contain 3 files at the root: two images & the **manifest.json**.
 1. Move to a channel in a team. In the below picture we have activated **General** channel in **Team**
 

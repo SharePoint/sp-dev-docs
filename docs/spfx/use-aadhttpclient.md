@@ -317,7 +317,7 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
       // ...
 
       this.context.aadHttpClientFactory
-        .getClient('09c4b84d-13c4-4451-9350-3baedf70aab4')
+        .getClient('https://contoso.azurewebsites.net')
         .then((client: AadHttpClient): void => {
           // connect to the API
         });
@@ -338,7 +338,7 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
       // ...
 
       this.context.aadHttpClientFactory
-        .getClient('09c4b84d-13c4-4451-9350-3baedf70aab4')
+        .getClient('https://contoso.azurewebsites.net')
         .then((client: AadHttpClient): void => {
           client
             .get('https://contoso.azurewebsites.net/api/orders', AadHttpClient.configurations.v1)
@@ -385,6 +385,3 @@ All permissions granted through web API requests are stored with the **SharePoin
 
 The service principal can be re-enabled by using the `Enable-SPOTenantServicePrincipal` cmdlet. Alternatively, it's also possible to enable and disable the **SharePoint Online Client Extensibility** service principal through the Office 365 CLI by using the [spo serviceprincipal set](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-set/) command.
 
-### Access to the Microsoft Graph
-
-Even if you don't explicitly grant access to the Microsoft Graph, solutions are able to request an access token for it. The **SharePoint Online Client Extensibility** service principal issues an access token with the `user_impersonation` scope, which allows scripts to access basic information about the current user.

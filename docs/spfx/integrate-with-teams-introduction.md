@@ -147,7 +147,7 @@ this.context.microsoftTeams
 ```
 
 > [!NOTE]
-> See more information around th Microsoft Teams tab context from the [Microsoft Teams development documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-context?view=msteams-client-js-latest).
+> See more information around the Microsoft Teams tab context from the [Microsoft Teams development documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-context?view=msteams-client-js-latest).
 
 ## See also
 

@@ -1,17 +1,16 @@
 ---
 title: Using Office UI Fabric Core and Fabric React in SharePoint Framework
 description: Information about the Fabric Core and Fabric React packages, and challenges with using CSS.
-ms.date: 01/24/2018
+ms.date: 05/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
 
 # Using Office UI Fabric Core and Fabric React in SharePoint Framework
 
 The Office UI Fabric is the official front-end framework for building experiences in Office 365 and SharePoint. SharePoint provides seamless integration with Fabric that enables Microsoft to deliver a robust and consistent design language across various SharePoint experiences such as modern team sites, modern pages, and modern lists. Additionally, the Office UI Fabric is available for developers in the SharePoint Framework when building custom SharePoint solutions.
 
-Microsoft uses Fabric Core and Fabric React in SharePoint. Microsoft regularly pushes updates to SharePoint Online that could also update the Fabric Core and Fabric React versions as well. These updates could potentially conflict with third-party customer solutions built with previous versions of Fabric Core and Fabric React, which could cause exceptions in those customizations. The primary reason for these types of breaks is the use of **Global CSS styles** in both Fabric libraries. Such conflicts need to be avoided at all costs. 
+Microsoft uses Fabric Core and Fabric React in SharePoint. Microsoft regularly pushes updates to SharePoint Online that could also update the Fabric Core and Fabric React versions as well. These updates could potentially conflict with third-party customer solutions built with previous versions of Fabric Core and Fabric React, which could cause exceptions in those customizations. The primary reason for these types of breaks is the use of **Global CSS styles** in both Fabric libraries. Such conflicts need to be avoided at all costs.
 
 The challenge with Global CSS styles is explained in the following presentation within the context of React and JavaScript: [React CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js).
 
@@ -284,10 +283,40 @@ There is another problem with descendant selectors. Note in the previous example
 
 Say for example, for some reason at the app level we decide to make height 0 px on the myButton class. That results in all third-party web parts that use the myButton class to have a height of 0 px (that is, a serious regression in the user experience).
 
+### Usage of the Office UI Fabric icons in SPFx components
+
+There are changes on how to use Office UI Fabric icons in the rendering of the SharePoint Framework solutions starting from the SharePoint Framework version 1.8.2.
+
+#### Legacy way of using icons (before SPFx 1.8.2)
+
+```HTML
+<i className={css('ms-Icon', 'ms-Icon--RecurringEvent')}></i>
+```
+
+#### Updated way to use incons (after SPFx 1.8.2)
+
+Solutions build with *no JavaScript framework* option.
+
+1. Add `@uifabric/styling` package to your `package.json`
+1. Make code changes similar to below code, to get the required icon into your code:
+
+```ts
+  import { getIconClassName } from '@uifabric/styling';
+
+  return `<i class="${getIconClassName('Mail')}" />`;
+```
+
+Solutions build with *React* option or by using *React* in general.
+
+1. Add `office-ui-fabric-react` package to your `package.json`, if not already added.
+2. Make code changes similar to below code, to get the required icon into your code:
+
+```ts
+  import { Icon } from 'office-ui-fabric-react/lib/Icon';
+
+  <Icon iconName='Mail' />
+```
+
 ## See also
 
 - [Overview of the SharePoint Framework](sharepoint-framework-overview.md)
-
-
-
-
