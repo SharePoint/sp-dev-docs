@@ -45,22 +45,6 @@ You can use any code editor or IDE that supports client-side development to buil
 
 The steps and examples in this documentation use [Visual Studio Code](https://code.visualstudio.com/), but you can use any editor of your choice.
 
-### If you are using Ubuntu
-
-You need to install compiler tools by using the following command:
-
-```sh
-sudo apt-get install build-essential
-```
-
-### If you are using fedora
-
-You need to install compiler tools by using the following command:
-
-```sh
-sudo yum install make automake gcc gcc-c++ kernel-devel
-```
-
 ## Install Yeoman and gulp
 
 [Yeoman](http://yeoman.io/) helps you kick-start new projects, and prescribes best practices and tools to help you stay productive. SharePoint client-side development tools include a Yeoman generator for creating new web parts. The generator provides common build tools, common boilerplate code, and a common playground website to host web parts for testing.
