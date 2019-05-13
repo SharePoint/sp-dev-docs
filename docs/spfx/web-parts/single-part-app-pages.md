@@ -1,7 +1,7 @@
 ---
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
-ms.date: 03/14/2019
+ms.date: 05/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -23,8 +23,7 @@ App pages have following characteristics:
 
 <br/>
 
-> [!NOTE]
-> App pages are exposed as an option in the modern page creation capability. This feature is currently avaialble only in targeted release tenants, but will be released fully later on Spring 2019. You can however enable app pages starting with 1.8 release using the code as demonstrated later in this document.
+App pages are exposed as an option in the modern page creation capability when you chose the used page layout for your page. All web part swhich have been configured to be available also as an app page are available on the **Create page** capability.
 
 Web part can be configured to be exposed as an app page. This configuration is performed in the web part manifest file by adjusting the `supportedHosts` value. Web part will be exposed as an option in the upcoming app pages picker user interface, if the `supportedHosts` value contains `"SharePointFullPage"` value.
 
