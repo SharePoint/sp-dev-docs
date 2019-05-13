@@ -47,8 +47,8 @@ You can also follow these steps by watching this video on the SharePoint PnP You
   * Accept the default **documentcardexample-webpart** as your solution name, and select Enter.
   * Select **SharePoint Online only (latest)**, and select Enter.
   * Select **Use the current folder** for where to place the files.
-  * Select **N** to require the extension to be installed on each site explicitly when it's being used.
-  - Select **N** on the question if solution contains unique permissions.  
+  * Select **y** to require the extension to be installed on each site explicitly when it's being used.
+  - Select **N** on the question if solution contains unique permissions.cd
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
@@ -59,29 +59,21 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your DocumentCardExample web part as well.
 
-6. When initial scaffolding is completed, you may need to explicitly add a version of office-ui-fabric-react to your package.json file.  If you are using version 1.8.2 or later of the generator, you won't need to worry about this, but older versions will.  Open your package.json file, and look for an entry for 'office-ui-fabric-react'.  If there isn't one, add the following entry in your dependencies section
-
-  ```
-      "office-ui-fabric-react": "5.132.0"
-  ```
-  followed by the following command at your command prompt.
-  ```
-      npm install
-  ```
+  Starting from 1.8.2 version, Yeoman will automatically associate the recommended `@microsoft/sp-office-ui-fabric-core` package version to your solution when you select the **React** as the framework.
 
 > [!NOTE]
-> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.  To use fabric 6, you need to be on at least rush-stack-compiler-2.9 .  The default project created with version 1.8.2 for SharePoint Online will use rush-stack-compiler-2.9 and fabric 6 (and won't need the step to add office-ui-fabric-react to your package.json file). Previous versions use either rush-stack-compiler 2.7 or a build system that is locked to typescript 2.4.  In those cases, you'll need to reference fabric 5.132.0.  If you are targeting on-prem, you will also want to use fabric 5.132.0.
+> Starting with SharePoint Framework 1.8, you can use either Office UI Fabric version 5 or version 6. In this case we are using specifically Office UI Fabric version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric version 6.x, you'd also need to update the used TypeScript version of the solution.  To use fabric 6, you need to be on at least rush-stack-compiler-2.9.  The default project created with version 1.8.2 for SharePoint Online will use rush-stack-compiler-2.9 and fabric 6 (and won't need the step to add office-ui-fabric-react to your package.json file). Previous versions use either rush-stack-compiler 2.7 or a build system that is locked to typescript 2.4.  In those cases, you'll need to reference fabric 5.132.0.  If you are targeting on-prem, you will also want to use fabric 5.132.0.
 
 
-7. Next, enter the following to open the web part project in Visual Studio Code:
+6. Next, enter the following to open the web part project in Visual Studio Code:
 
   ```
   code .
   ```
-	
+
   You now have a web part project with the React framework.
   
-8. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
+7. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
 
   As you can see, the `render` method creates a react element and renders it in the web part DOM.
 
@@ -93,10 +85,13 @@ You can also follow these steps by watching this video on the SharePoint PnP You
           description: this.properties.description
         }
       );
+
+      ReactDom.render(element, this.domElement);
+    }
   ```
-	
-9. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
-	
+
+8. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder.
+
   This is the main react component that Yeoman added to your project that renders in the web part DOM.
 
   ```HTML
@@ -199,6 +194,9 @@ Copy the following images to your **src\webparts\documentCardExample\components*
 * [avatar-kat.png](https://github.com/SharePoint/sp-dev-docs/blob/master/assets/avatar-kat.png)
 * [icon-ppt.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/icon-ppt.png)
 * [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
+
+> [!NOTE]
+> In the code we were referencing these images using relative path from the root location. As your reference the images in the code, it will cause them to be included in the sppkg solution package as long as you have the `includeClientSideAssets` set as `true` in the **package-solution.json** file.
 
 ## Preview the web part in Workbench
 
