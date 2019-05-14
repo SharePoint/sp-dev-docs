@@ -283,17 +283,17 @@ There is another problem with descendant selectors. Note in the previous example
 
 Say for example, for some reason at the app level we decide to make height 0 px on the myButton class. That results in all third-party web parts that use the myButton class to have a height of 0 px (that is, a serious regression in the user experience).
 
-### Usage of the Office UI Fabric icons in SPFx components
+## Usage of the Office UI Fabric icons in SPFx components
 
 There are changes on how to use Office UI Fabric icons in the rendering of the SharePoint Framework solutions starting from the SharePoint Framework version 1.8.2.
 
-#### Legacy way of using icons (before SPFx 1.8.2)
+### Legacy way of using icons (before SPFx 1.8.2)
 
 ```HTML
 <i className={css('ms-Icon', 'ms-Icon--RecurringEvent')}></i>
 ```
 
-#### Updated way to use incons (after SPFx 1.8.2)
+### Updated way to use incons (after SPFx 1.8.2)
 
 Solutions build with *no JavaScript framework* option.
 
