@@ -8,6 +8,7 @@
 - [ ] Typo
 - [ ] Bug
 - [ ] Additional article idea
+- [x] Example checked item (*delete this line*)
 
 > For the above list, an empty checkbox is [ ] as in <kbd>[</kbd><kbd>SPACE</kbd><kbd>]</kbd>. A checked checkbox is [x] with no space between the brackets. Use the `PREVIEW` tab at the top right to preview the rendering before submitting your issue.
 >
