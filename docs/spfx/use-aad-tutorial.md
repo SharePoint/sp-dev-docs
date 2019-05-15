@@ -46,29 +46,30 @@ Next, create a new SharePoint Framework solution:
 
 1. Create a folder in your file system. You will store the solution source code and move the current path into this folder.
 
-2. Run the Yeoman generator to scaffold a new solution.
+1. Run the Yeoman generator to scaffold a new solution.
 
-   ```sh
-   yo @microsoft/sharepoint
-   ```
+    ```sh
+    yo @microsoft/sharepoint
+    ```
 
-3. In your solution, do the following:
-  * Provide a name for the solution (for example **spfx-api-scopes-tutorial**).
-  * Target the solution for **SharePoint Online only (latest)**.
-  * Use the current folder.
-  * Decide whether you want to globally deploy the solution to the target tenant.
-  * Choose to create a web part.
-  * Call the web part **GraphConsumer**.
-  * Provide a description.
-  * Choose to use React as the development framework.
+1. In your solution, do the following:
 
-  ![The UI of the Yeoman Generator while scaffolding the SPFx solution](../images/graphconsumer-yeoman-generator.png)
+    * Provide a name for the solution (for example **spfx-api-scopes-tutorial**).
+    * Target the solution for **SharePoint Online only (latest)**.
+    * Use the current folder.
+    * Decide whether you want to globally deploy the solution to the target tenant.
+    * Choose to create a web part.
+    * Call the web part **GraphConsumer**.
+    * Provide a description.
+    * Choose to use React as the development framework.
 
-4. Start Visual Studio Code (or your favorite code editor) within the context of the current folder.
+    ![The UI of the Yeoman Generator while scaffolding the SPFx solution](../images/graphconsumer-yeoman-generator.png)
 
-  ```sh
-  code .
-  ```
+1. Start Visual Studio Code (or your favorite code editor) within the context of the current folder.
+
+    ```sh
+    code .
+    ```
 
 <a name="ConfiguringBaseElements"></a>
 
@@ -83,25 +84,25 @@ Next, configure the initial elements of the client-side web part.
 1. Create a new source code file under the *src/webparts/graphConsumer/components* folder of the solution.
 Call the new file **ClientMode.ts** and use it to declare a TypeScript `enum` with the available options for the **ClientMode** property of the web part.
 
-  ```typescript
-  export enum ClientMode {
+    ```typescript
+    export enum ClientMode {
       aad,
       graph,
-  }
-  ```
+    }
+    ```
 
-2. Open the *GraphConsumerWebPart.ts* file in the *src/webparts/graphConsumer* folder of the solution.
+1. Open the *GraphConsumerWebPart.ts* file in the *src/webparts/graphConsumer* folder of the solution.
 Change the definition of the **IGraphConsumerWebPartProps** interface to accept a value of type **ClientMode**.
 
-  ```typescript
-  export interface IGraphConsumerWebPartProps {
-    clientMode: ClientMode;
-  }
-  ```
+    ```typescript
+    export interface IGraphConsumerWebPartProps {
+      clientMode: ClientMode;
+    }
+    ```
 
-3. Update the **getPropertyPaneConfiguration()** method of the client-side web part to support the choice selection in the property pane. The following example shows the new implementation of the method.
+1. Update the **getPropertyPaneConfiguration()** method of the client-side web part to support the choice selection in the property pane. The following example shows the new implementation of the method.
 
-  ```typescript
+    ```typescript
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
       return {
         pages: [
@@ -119,7 +120,7 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
                       { key: ClientMode.aad, text: "AadHttpClient"},
                       { key: ClientMode.graph, text: "MSGraphClient"},
                     ]
-                  }),              
+                  }),
                 ]
               }
             ]
@@ -127,11 +128,11 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
         ]
       };
     }
-  ```
+    ```
 
-4. In addition, you need to update the **render** method of the client-side web part to create a properly configured instance of the React component for rendering. The following code shows the updated method definition.
+1. In addition, you need to update the **render** method of the client-side web part to create a properly configured instance of the React component for rendering. The following code shows the updated method definition.
 
-  ```typescript
+    ```typescript
     public render(): void {
       const element: React.ReactElement<IGraphConsumerProps > = React.createElement(
         GraphConsumer,
@@ -143,57 +144,57 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
 
       ReactDom.render(element, this.domElement);
     }
-  ```
+    ```
 
-5. For this code to work, you need to add some import statements at the beginning of the *GraphConsumerWebPart.ts* file, as shown in the following example. Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
+1. For this code to work, you need to add some import statements at the beginning of the *GraphConsumerWebPart.ts* file, as shown in the following example. Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
 
-  ```typescript
-  import * as React from 'react';
-  import * as ReactDom from 'react-dom';
-  import { Version } from '@microsoft/sp-core-library';
-  import {
-    BaseClientSideWebPart,
-    IPropertyPaneConfiguration,
-    PropertyPaneChoiceGroup
-  } from '@microsoft/sp-webpart-base';
+    ```typescript
+    import * as React from 'react';
+    import * as ReactDom from 'react-dom';
+    import { Version } from '@microsoft/sp-core-library';
+    import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+    import {
+      IPropertyPaneConfiguration,
+      PropertyPaneChoiceGroup
+    } from '@microsoft/sp-property-pane';
 
-  import * as strings from 'GraphConsumerWebPartStrings';
-  import GraphConsumer from './components/GraphConsumer';
-  import { IGraphConsumerProps } from './components/IGraphConsumerProps';
-  import { ClientMode } from './components/ClientMode';
-  ```
+    import * as strings from 'GraphConsumerWebPartStrings';
+    import GraphConsumer from './components/GraphConsumer';
+    import { IGraphConsumerProps } from './components/IGraphConsumerProps';
+    import { ClientMode } from './components/ClientMode';
+    ```
 
 <a name="UpdateResourceStrings"></a>
 
 ### Update the resource strings
 
-To compile the solution, you need to update the *mystrings.d.ts* file under the *src/webparts/graphConsumer/loc* folder of the solution. 
+To compile the solution, you need to update the *mystrings.d.ts* file under the *src/webparts/graphConsumer/loc* folder of the solution.
 
 1. Rewrite the interface that defines the resource strings with the following code.
 
-  ```typescript
-  declare interface IGraphConsumerWebPartStrings {
-    PropertyPaneDescription: string;
-    BasicGroupName: string;
-    ClientModeLabel: string;
-    SearchFor: string;
-    SearchForValidationErrorMessage: string;
-  }
-  ```
-
-2. Configure proper values for the newly created resource strings by updating the *en-us.js* file within the same folder.
-
-  ```typescript
-  define([], function() {
-    return {
-      "PropertyPaneDescription": "Description",
-      "BasicGroupName": "Group Name",
-      "ClientModeLabel": "Client Mode",
-      "SearchFor": "Search for",
-      "SearchForValidationErrorMessage": "Invalid value for 'Search for' field"
+    ```typescript
+    declare interface IGraphConsumerWebPartStrings {
+      PropertyPaneDescription: string;
+      BasicGroupName: string;
+      ClientModeLabel: string;
+      SearchFor: string;
+      SearchForValidationErrorMessage: string;
     }
-  });
-  ```
+    ```
+
+1. Configure proper values for the newly created resource strings by updating the *en-us.js* file within the same folder.
+
+    ```typescript
+    define([], function() {
+      return {
+        "PropertyPaneDescription": "Description",
+        "BasicGroupName": "Group Name",
+        "ClientModeLabel": "Client Mode",
+        "SearchFor": "Search for",
+        "SearchForValidationErrorMessage": "Invalid value for 'Search for' field"
+      }
+    });
+    ```
 
 <a name="UpdateStyles"></a>
 
@@ -203,15 +204,15 @@ You also need to update the SCSS style file.
 
 Open the *GraphConsumer.module.scss* under the *src/webparts/graphConsumer/components* folder of the solution. Add the following style classes, right after the **.title** class:
 
-```SCSS
-  .form {
-    @include ms-font-l;
-    @include ms-fontColor-white;
-  }
+```scss
+.form {
+  @include ms-font-l;
+  @include ms-fontColor-white;
+}
 
-  label {
-    @include ms-fontColor-white;
-  }
+label {
+  @include ms-fontColor-white;
+}
 ```
 
 <a name="UpdateReactComponent"></a>
@@ -222,100 +223,100 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
 
 1. Update the *IGraphConsumerProps.ts* file to accept the custom properties required by the web part implementation. The following example shows the updated content of the *IGraphConsumerProps.ts* file. Notice the import of the **ClientMode** enum definition, as well as the import of the **WebPartContext** type. You will use that later.
 
-  ```typescript
-  import { WebPartContext } from '@microsoft/sp-webpart-base';
-  import { ClientMode } from './ClientMode';
+    ```typescript
+    import { WebPartContext } from '@microsoft/sp-webpart-base';
+    import { ClientMode } from './ClientMode';
 
-  export interface IGraphConsumerProps {
-    clientMode: ClientMode;
-    context: WebPartContext;
-  }
-  ```
+    export interface IGraphConsumerProps {
+      clientMode: ClientMode;
+      context: WebPartContext;
+    }
+    ```
 
-2. Create a new interface to hold the React component state. Create a new file in the *src/webparts/graphConsumer/components* folder, and call it *IGraphConsumerState.ts*. The following is the interface definition.
+1. Create a new interface to hold the React component state. Create a new file in the *src/webparts/graphConsumer/components* folder, and call it *IGraphConsumerState.ts*. The following is the interface definition.
 
-  ```typescript
-  import { IUserItem } from './IUserItem';
+    ```typescript
+    import { IUserItem } from './IUserItem';
 
-  export interface IGraphConsumerState {
+    export interface IGraphConsumerState {
       users: Array<IUserItem>;
       searchFor: string;
     }
-  ```
+    ```
 
-3. Define the **IUserItem** interface (within a file called *IUserItem.ts* stored in the *src/webparts/graphConsumer/components* folder). That interface is imported in the state file. The interface is used to define the outline of the users retrieved from the current tenant and bound to the **DetailsList** in the UI.
+1. Define the **IUserItem** interface (within a file called *IUserItem.ts* stored in the *src/webparts/graphConsumer/components* folder). That interface is imported in the state file. The interface is used to define the outline of the users retrieved from the current tenant and bound to the **DetailsList** in the UI.
 
-  ```typescript
-  export interface IUserItem {
+    ```typescript
+    export interface IUserItem {
       displayName: string;
       mail: string;
       userPrincipalName: string;
     }
-  ```
+    ```
 
-4. Update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier. Notice the import for **IGraphConsumerProps**, **IGraphConsumerState**, **ClientMode**, and **IUserItem**. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
+1. Update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier. Notice the import for **IGraphConsumerProps**, **IGraphConsumerState**, **ClientMode**, and **IUserItem**. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
 
-  ```typescript
-  import * as React from 'react';
-  import styles from './GraphConsumer.module.scss';
-  import * as strings from 'GraphConsumerWebPartStrings';
-  import { IGraphConsumerProps } from './IGraphConsumerProps';
-  import { IGraphConsumerState } from './IGraphConsumerState';
-  import { ClientMode } from './ClientMode';
-  import { IUserItem } from './IUserItem';
-  import { escape } from '@microsoft/sp-lodash-subset';
+    ```typescript
+    import * as React from 'react';
+    import styles from './GraphConsumer.module.scss';
+    import * as strings from 'GraphConsumerWebPartStrings';
+    import { IGraphConsumerProps } from './IGraphConsumerProps';
+    import { IGraphConsumerState } from './IGraphConsumerState';
+    import { ClientMode } from './ClientMode';
+    import { IUserItem } from './IUserItem';
+    import { escape } from '@microsoft/sp-lodash-subset';
 
-  import {
-    autobind,
-    PrimaryButton,
-    TextField,
-    Label,
-    DetailsList,
-    DetailsListLayoutMode,
-    CheckboxVisibility,
-    SelectionMode
-  } from 'office-ui-fabric-react';
+    import {
+      autobind,
+      PrimaryButton,
+      TextField,
+      Label,
+      DetailsList,
+      DetailsListLayoutMode,
+      CheckboxVisibility,
+      SelectionMode
+    } from 'office-ui-fabric-react';
 
-  import { AadHttpClient, MSGraphClient } from "@microsoft/sp-http";
-  ```
+    import { AadHttpClient, MSGraphClient } from "@microsoft/sp-http";
+    ```
 
-5. After the imports, define the outline of the columns for the **DetailsList** component of Office UI Fabric. 
+1. After the imports, define the outline of the columns for the **DetailsList** component of Office UI Fabric. 
 
-  ```typescript
-  // Configure the columns for the DetailsList component
-  let _usersListColumns = [
-    {
-      key: 'displayName',
-      name: 'Display name',
-      fieldName: 'displayName',
-      minWidth: 50,
-      maxWidth: 100,
-      isResizable: true
-    },
-    {
-      key: 'mail',
-      name: 'Mail',
-      fieldName: 'mail',
-      minWidth: 50,
-      maxWidth: 100,
-      isResizable: true
-    },
-    {
-      key: 'userPrincipalName',
-      name: 'User Principal Name',
-      fieldName: 'userPrincipalName',
-      minWidth: 100,
-      maxWidth: 200,
-      isResizable: true
-    },
-  ];
-  ```
+    ```typescript
+    // Configure the columns for the DetailsList component
+    let _usersListColumns = [
+      {
+        key: 'displayName',
+        name: 'Display name',
+        fieldName: 'displayName',
+        minWidth: 50,
+        maxWidth: 100,
+        isResizable: true
+      },
+      {
+        key: 'mail',
+        name: 'Mail',
+        fieldName: 'mail',
+        minWidth: 50,
+        maxWidth: 100,
+        isResizable: true
+      },
+      {
+        key: 'userPrincipalName',
+        name: 'User Principal Name',
+        fieldName: 'userPrincipalName',
+        minWidth: 100,
+        maxWidth: 200,
+        isResizable: true
+      },
+    ];
+    ```
 
-  This array is used in the settings of the **DetailsList** component, as you can see in the **render()** method of the React component.
+    This array is used in the settings of the **DetailsList** component, as you can see in the **render()** method of the React component.
   
-6. Replace this component with the following code.
+1. Replace this component with the following code.
 
-  ```typescript
+    ```typescript
     public render(): React.ReactElement<IGraphConsumerProps> {
       const { clientMode } = this.props;
       return (
@@ -365,30 +366,27 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
         </div>
       );
     }
-  ```
+    ```
 
-7. Update the React component type declaration and add a constructor, as shown in the following example.
+1. Update the React component type declaration and add a constructor, as shown in the following example.
 
-  ```typescript
-  export default class GraphConsumer extends React.Component<IGraphConsumerProps, IGraphConsumerState> {
+    ```typescript
+    export default class GraphConsumer extends React.Component<IGraphConsumerProps, IGraphConsumerState> {
 
-    constructor(props: IGraphConsumerProps, state: IGraphConsumerState) {
-      super(props);
-      
-      // Initialize the state of the component
-      this.state = {
-        users: [],
-        searchFor: ""
-      };
-    }
+      constructor(props: IGraphConsumerProps, state: IGraphConsumerState) {
+        super(props);
 
-  ```
+        // Initialize the state of the component
+        this.state = {
+          users: [],
+          searchFor: ""
+        };
+      }
+    ```
 
-<br/>
+    There are some validation rules and handling events for the **TextField** component to collect the search criteria. The following are the method implementations.
 
-There are some validation rules and handling events for the **TextField** component to collect the search criteria. The following are the method implementations.
-
-```typescript
+    ```typescript
     @autobind
     private _onSearchForChanged(newValue: string): void {
 
@@ -404,30 +402,28 @@ There are some validation rules and handling events for the **TextField** compon
         ? ''
         : `${strings.SearchForValidationErrorMessage}`;
     }
-```
+    ```
 
-<br/>
+    The **PrimaryButton** fires a **_search()** function, which determines what client technology to use to consume Microsoft Graph.
 
-The **PrimaryButton** fires a **_search()** function, which determines what client technology to use to consume Microsoft Graph.
+    ```typescript
+    @autobind
+    private _search(): void {
 
-```typescript
-  @autobind
-  private _search(): void {
+      console.log(this.props.clientMode);
 
-    console.log(this.props.clientMode);
-
-    // Based on the clientMode value search users
-    switch (this.props.clientMode)
-    {
-      case ClientMode.aad:
-        this._searchWithAad();
-        break;
-      case ClientMode.graph:
-        this._searchWithGraph();
-        break;
+      // Based on the clientMode value search users
+      switch (this.props.clientMode)
+      {
+        case ClientMode.aad:
+          this._searchWithAad();
+          break;
+        case ClientMode.graph:
+          this._searchWithGraph();
+          break;
+      }
     }
-  }
-```
+    ```
 
 The **DetailsList** component instance is rendered in the **render()** method, in case there are items in the **users** property of the component's state.
 
@@ -437,11 +433,11 @@ The **DetailsList** component instance is rendered in the **render()** method, i
 
 To consume Microsoft Graph or any other third-party REST API, you need to explicitly declare the permission requirements from an OAuth perspective in the manifest of your solution.
 
-In the SharePoint Framework v.1.4.1 or later, you can do that by configuring the **webApiPermissionRequests** property in the *package-solution.json* under the *config* folder of the solution. The following example shows an excerpt of that file for the current solution. 
+In the SharePoint Framework v.1.4.1 or later, you can do that by configuring the **webApiPermissionRequests** property in the *package-solution.json* under the *config* folder of the solution. The following example shows an excerpt of that file for the current solution.
 
 Copy the declaration of the **webApiPermissionRequests** property.
 
-```JSON
+```json
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
@@ -508,53 +504,53 @@ Because all these methods support the asynchronous development model of JavaScri
 The following example shows the **_searchWithAad()** method of the sample solution.
 
 ```typescript
-  private _searchWithAad(): void {
+private _searchWithAad(): void {
 
-    // Log the current operation
-    console.log("Using _searchWithAad() method");
+  // Log the current operation
+  console.log("Using _searchWithAad() method");
 
-    // Using Graph here, but any 1st or 3rd party REST API that requires Azure AD auth can be used here.
-    this.props.context.aadHttpClientFactory
-      .getClient('https://graph.microsoft.com')
-      .then((client: AadHttpClient) => {
-        // Search for the users with givenName, surname, or displayName equal to the searchFor value
-        return client
-          .get(
-            `https://graph.microsoft.com/v1.0/users?$select=displayName,mail,userPrincipalName&$filter=(givenName%20eq%20'${escape(this.state.searchFor)}')%20or%20(surname%20eq%20'${escape(this.state.searchFor)}')%20or%20(displayName%20eq%20'${escape(this.state.searchFor)}')`,
-            AadHttpClient.configurations.v1
-          );
-      })
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-
-        // Prepare the output array
-        var users: Array<IUserItem> = new Array<IUserItem>();
-
-        // Log the result in the console for testing purposes
-        console.log(json);
-
-        // Map the JSON response to the output array
-        json.value.map((item: any) => {
-          users.push( {
-            displayName: item.displayName,
-            mail: item.mail,
-            userPrincipalName: item.userPrincipalName,
-          });
-        });
-
-        // Update the component state accordingly to the result
-        this.setState(
-          {
-            users: users,
-          }
+  // Using Graph here, but any 1st or 3rd party REST API that requires Azure AD auth can be used here.
+  this.props.context.aadHttpClientFactory
+    .getClient('https://graph.microsoft.com')
+    .then((client: AadHttpClient) => {
+      // Search for the users with givenName, surname, or displayName equal to the searchFor value
+      return client
+        .get(
+          `https://graph.microsoft.com/v1.0/users?$select=displayName,mail,userPrincipalName&$filter=(givenName%20eq%20'${escape(this.state.searchFor)}')%20or%20(surname%20eq%20'${escape(this.state.searchFor)}')%20or%20(displayName%20eq%20'${escape(this.state.searchFor)}')`,
+          AadHttpClient.configurations.v1
         );
-      })
-      .catch(error => {
-        console.error(error);
+    })
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+
+      // Prepare the output array
+      var users: Array<IUserItem> = new Array<IUserItem>();
+
+      // Log the result in the console for testing purposes
+      console.log(json);
+
+      // Map the JSON response to the output array
+      json.value.map((item: any) => {
+        users.push( {
+          displayName: item.displayName,
+          mail: item.mail,
+          userPrincipalName: item.userPrincipalName,
+        });
       });
-  }
+
+      // Update the component state accordingly to the result
+      this.setState(
+        {
+          users: users,
+        }
+      );
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
 ```
 
 The **get()** method gets the URL of the OData request as the input argument. A successful request returns a JSON object with the response.
@@ -568,48 +564,48 @@ If you are targeting Microsoft Graph, you can use the **MSGraphClient** client o
 The following example shows the implementation of the **_searchWithGraph()** method of the sample solution.
 
 ```typescript
-  private _searchWithGraph(): void {
+private _searchWithGraph(): void {
 
-    // Log the current operation
-    console.log("Using _searchWithGraph() method");
+  // Log the current operation
+  console.log("Using _searchWithGraph() method");
 
-    this.props.context.msGraphClientFactory
-      .getClient()
-      .then((client: MSGraphClient): void => {
-        // From https://github.com/microsoftgraph/msgraph-sdk-javascript sample
-        client
-          .api("users")
-          .version("v1.0")
-          .select("displayName,mail,userPrincipalName")
-          .filter(`(givenName eq '${escape(this.state.searchFor)}') or (surname eq '${escape(this.state.searchFor)}') or (displayName eq '${escape(this.state.searchFor)}')`)
-          .get((err, res) => {  
+  this.props.context.msGraphClientFactory
+    .getClient()
+    .then((client: MSGraphClient): void => {
+      // From https://github.com/microsoftgraph/msgraph-sdk-javascript sample
+      client
+        .api("users")
+        .version("v1.0")
+        .select("displayName,mail,userPrincipalName")
+        .filter(`(givenName eq '${escape(this.state.searchFor)}') or (surname eq '${escape(this.state.searchFor)}') or (displayName eq '${escape(this.state.searchFor)}')`)
+        .get((err, res) => {  
 
-            if (err) {
-              console.error(err);
-              return;
-            }
+          if (err) {
+            console.error(err);
+            return;
+          }
 
-            // Prepare the output array
-            var users: Array<IUserItem> = new Array<IUserItem>();
+          // Prepare the output array
+          var users: Array<IUserItem> = new Array<IUserItem>();
 
-            // Map the JSON response to the output array
-            res.value.map((item: any) => {
-              users.push( { 
-                displayName: item.displayName,
-                mail: item.mail,
-                userPrincipalName: item.userPrincipalName,
-              });
+          // Map the JSON response to the output array
+          res.value.map((item: any) => {
+            users.push( { 
+              displayName: item.displayName,
+              mail: item.mail,
+              userPrincipalName: item.userPrincipalName,
             });
-
-            // Update the component state accordingly to the result
-            this.setState(
-              {
-                users: users,
-              }
-            );
           });
-      });
-  }
+
+          // Update the component state accordingly to the result
+          this.setState(
+            {
+              users: users,
+            }
+          );
+        });
+    });
+}
 ```
 
 You get an instance of the **MSGraphClient** type by calling the `context.msGraphClientFactory.getClient()` method.
@@ -629,44 +625,42 @@ You're now ready to build, bundle, package, and deploy the solution.
 
 1. Run the gulp commands to verify that the solution builds correctly.
 
-  ```sh
-  gulp build
-  ```
+    ```sh
+    gulp build
+    ```
 
-2. Use the following command to bundle and package the solution.
+1. Use the following command to bundle and package the solution.
 
-  ```sh
-  gulp bundle
-  gulp package-solution
-  ```
+    ```sh
+    gulp bundle
+    gulp package-solution
+    ```
 
-3. Browse to the app catalog of your target tenant and upload the solution package. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file. After you upload the solution package, the app catalog prompts you with a dialog box, similar to the one shown in the following screenshot.
+1. Browse to the app catalog of your target tenant and upload the solution package. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file. After you upload the solution package, the app catalog prompts you with a dialog box, similar to the one shown in the following screenshot.
 
-  ![Screenshot of the app catalog UI when uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
+    ![Screenshot of the app catalog UI when uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
 
-  A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the **webApiPermissionRequests** property in the *package-solution.json* file.
+    A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the **webApiPermissionRequests** property in the *package-solution.json* file.
 
-4. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, choose **Try the preview**.
+1. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, choose **Try the preview**.
 
-  ![Screenshot of the Try the new SharePoint admin center link](../images/use-aadhttpclient-enterpriseapi-grant-trypreview.png)
+    ![Screenshot of the Try the new SharePoint admin center link](../images/use-aadhttpclient-enterpriseapi-grant-trypreview.png)
 
-5. In the new Admin Center, in the left quick launch menu, choose the **API management** menu item. You will see a page similar to the following.
+1. In the new Admin Center, in the left quick launch menu, choose the **API management** menu item. You will see a page similar to the following.
 
-  ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
+    ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
-  > [!NOTE]
-  > Asterisks in the UI of the new Admin Center indicate that the features are in preview.
+    > [!NOTE]
+    > Asterisks in the UI of the new Admin Center indicate that the features are in preview.
 
-  Using this page, you (or any other admin of your SharePoint Online tenant) can approve or deny any pending permission request. Note that you don't see which solution package is requesting which permission because the permissions are defined at the tenant level and for a unique application.
+    Using this page, you (or any other admin of your SharePoint Online tenant) can approve or deny any pending permission request. Note that you don't see which solution package is requesting which permission because the permissions are defined at the tenant level and for a unique application.
 
-  > [!NOTE]
-  > For more information about how the tenant-level permission scopes work internally, see the articles in the [See also](#SeeAlso) section.
+    > [!NOTE]
+    > For more information about how the tenant-level permission scopes work internally, see the articles in the [See also](#SeeAlso) section.
 
-6. Choose the permission that you requested in the *package-solution.json* file of your solution, choose **Approve or reject access**, and then choose **Approve**. The following screenshot shows the panel in the Admin UI.
+1. Choose the permission that you requested in the *package-solution.json* file of your solution, choose **Approve or reject access**, and then choose **Approve**. The following screenshot shows the panel in the Admin UI.
 
-  ![Screenshot of the WebApiPermission management page during the approval process](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
-
-<br/>
+    ![Screenshot of the WebApiPermission management page during the approval process](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
 
 And you're now ready to go.
 
@@ -679,21 +673,21 @@ And you're now ready to go.
 
 1. Run your solution by using the following gulp command.
 
-  ```sh
-  gulp serve --nobrowser
-  ```
+    ```sh
+    gulp serve --nobrowser
+    ```
 
-2. Open the browser and go to the following URL to go to the SharePoint Framework Workbench page:
+1. Open the browser and go to the following URL to go to the SharePoint Framework Workbench page:
 
-  ```TXT
-  https://<your-tenant>.sharepoint.com/_layouts/15/Workbench.aspx
-  ```
+    ```text
+    https://<your-tenant>.sharepoint.com/_layouts/15/Workbench.aspx
+    ```
 
-3. Add the *GraphConsumer* client-side web part, configure the *Client Mode*, and search for users. 
+1. Add the *GraphConsumer* client-side web part, configure the *Client Mode*, and search for users.
 
-  When you make your first request, you will see a pop-up window appear and disappear. That's the sign-in window used by ADAL JS, which is used internally by the SharePoint Framework to get the access token from Azure AD by using an OAuth implicit flow.
+    When you make your first request, you will see a pop-up window appear and disappear. That's the sign-in window used by ADAL JS, which is used internally by the SharePoint Framework to get the access token from Azure AD by using an OAuth implicit flow.
 
-  ![Screenshot of the UI of the sample application](../images/use-aad-tutorial-video.gif)
+    ![Screenshot of the UI of the sample application](../images/use-aad-tutorial-video.gif)
 
 And that's it! Now you can build enterprise-level solutions that use Azure AD-secured REST APIs.
 
