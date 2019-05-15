@@ -39,27 +39,49 @@ ALM APIs are natively provided by using REST APIs, but there are additional CSOM
 
 This API is designed to be executed in the context of the app catalog site.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
 ```
-url: /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
-method: POST
-Authorization: Bearer <access token>
-X-RequestDigest: <form digest>
-Accept: 'application/json;odata=nometadata'
-binaryStringRequestBody: true
-body: 'byte array of the file'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| Content-Type            | `application/json`                  |
+| X-RequestDigest         | `{form digest}`                     |
+| binaryStringRequestBody | `true`                              |
+
+#### Request body
+
+Byte array of the file
 
 ### Deploy solution packages in the app catalog
 
 This enables the solution to be available to install to specific sites. This API is designed to be executed in the context of the app catalog site.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
-method: POST
-Authorization: Bearer <access token>
-X-RequestDigest: <form digest>
-Accept: 'application/json;odata=nometadata'
-Content-Type: 'application/json;odata=nometadata;charset=utf-8'
+
+#### Request headers
+
+|     Header      |                       Value                       |
+| :-------------- | :------------------------------------------------ |
+| Authorization   | `Bearer {token}`                                  |
+| Accept          | `application/json;odata=nometadata`               |
+| Content-Type    | `application/json;odata=nometadata;charset=utf-8` |
+| X-RequestDigest | `{form digest}`                                   |
+
+#### Request body
+
+```json
+{"skipFeatureDeployment":true}
 ```
 
 > [!NOTE]
@@ -69,13 +91,19 @@ Content-Type: 'application/json;odata=nometadata;charset=utf-8'
 
 This retracts the solution to be available from the sites. This API is designed to be executed in the context of the app catalog site.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
-method: POST
-Authorization: Bearer <access token>
-X-RequestDigest: <form digest>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
 
 > [!NOTE]
 > If you run this operation after you have installed solutions to the site, they stop working because the solution is disabled from the tenant level.
@@ -84,12 +112,19 @@ Accept: 'application/json;odata=nometadata'
 
 This API is designed to be executed in the context of the app catalog site.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
-method: POST
-Authorization: Bearer <access token>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+
 
 > [!NOTE]
 > If the Retract operation is not performed before the Remove operation, the solution is automatically retracted.
@@ -98,59 +133,90 @@ Accept: 'application/json;odata=nometadata'
 
 Use this REST API for getting a list of available SharePoint Framework solutions or add-ins in the app catalog.
 
+#### HTTP Request
+
+```http
+GET /_api/web/tenantappcatalog/AvailableApps
 ```
-url: /_api/web/tenantappcatalog/AvailableApps
-method: GET
-Authorization: Bearer <access token>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
 
 ### Get details about individual solution packages in the app catalog
 
 Use this REST API for getting details about individual SharePoint Framework solutions or add-ins available in the app catalog.
 
+#### HTTP Request
+
+```http
+GET /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
-method: GET
-Authorization: Bearer <access token>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
 
 ### Install solution package from the app catalog to a SharePoint site
 
 Install a solution package with a specific identifier from the app catalog to the site based on URL context. This REST call can be executed in the context of the site where the install operation should happen.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
-method: POST
-Authorization: Bearer <access token>
-X-RequestDigest: <form digest>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
 
 ### Upgrade solution packages on the SharePoint site
 
 Upgrade a solution package from the site to a newer version available in the app catalog. This REST call can be executed in the context of the site where the upgrade operation should happen.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade
-method: POST
-Authorization: Bearer <access token>
-X-RequestDigest: <form digest>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
 
 ### Uninstall solution packages from the SharePoint site
 
 This REST call can be executed in the context of the site where the uninstall operation should happen.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall
-method: POST
-Authorization: Bearer <access token>
-X-RequestDigest: <form digest>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
+
 > [!NOTE]
 > When you use the REST API to uninstall a solution package from the site, it is not relocated to the recycle bin.
 
@@ -158,13 +224,19 @@ Accept: 'application/json;odata=nometadata'
 
 This REST call requires that you refer the **list item id** of the solution in the app catalog site.
 
+#### HTTP Request
+
+```http
+POST /_api/web/tenantappcatalog/SyncSolutionToTeams(id=xxxxx)
 ```
-url: /_api/web/tenantappcatalog/SyncSolutionToTeams(id=xxxxx)
-method: POST
-Authorization: Bearer <access token>
-X-RequestDigest: <form digest>
-Accept: 'application/json;odata=nometadata'
-```
+
+#### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
 
 ## SharePoint PnP PowerShell cmdlets 
 
@@ -174,6 +246,7 @@ By using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint
 > Support for scope option was released on the April 2018 release of PnP PowerShell.
 
 ### Add and publish your app to the app catalog
+
 Adding your app (.sppkg file, .app file) to the app catalog is a prerequisite to making your app available for use on your SharePoint sites. You can do this by using the following cmdlet:
 
 ```powershell
@@ -182,57 +255,48 @@ Add-PnPApp -Path ./myapp.sppkg -Scope Tenant
 
 Once added, you need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. The following PnP PowerShell cmdlet shows how this can be done:
 
-```PowerShell
+```powershell
 Publish-PnPApp -Identity <app id> -SkipFeatureDeployment -Scope Tenant
 ```
 
-
 > [!NOTE]
 > Use the `SkipFeatureDeployment` flag to allow an app that was developed for tenant-wide deployment to be actually available as a tenant-wide deployed app.
-
-
 
 ### Remove the app from the app catalog
 
 To remove an app added earlier, use the following cmdlet:
 
-```PowerShell
+```powershell
 Remove-PnPApp -Identity <app id> -Scope Tenant
 ```
-
 
 ### Use apps on your site
 
 After the app is added to the app catalog and published, you can install the app to your site:
 
-```PowerShell
+```powershell
 Install-PnPApp -Identity <app id> -Scope Tenant
 ```
 
-
 To upgrade the app:
 
-```PowerShell
+```powershell
 Update-PnPApp -Identity <app id> -Scope Tenant
 ```
 
 To uninstall the app from your site:
 
-```PowerShell
+```powershell
 Uninstall-PnPApp -Identity <app id> -Scope Tenant
 ```
-
-
 > [!NOTE]
 > When you uninstall an app from your site, the app is completely deleted, so it does not end up in the site's recycle bin.
-
-
 
 ### Know which apps are there for you to use
 
 You can get a list of apps that can be added to the site by using:
 
-```PowerShell
+```powershell
 Get-PnPApp -Scope Tenant
 ```
 
@@ -254,11 +318,8 @@ Once added, you need to continue with publishing your app, effectively making th
 spo app deploy --id <app id> --skipFeatureDeployment
 ```
 
-
 > [!NOTE]
 > Use the **SkipFeatureDeployment** flag to allow an app that was developed for tenant-wide deployment to be actually available as a tenant-wide deployed app.
-
-
 
 ### Remove the app from the app catalog
 
@@ -268,7 +329,6 @@ You may want to remove an app that you added earlier, and you can do this by usi
 spo app remove --id <app id>
 ```
 
-
 ### Use apps on your site
 
 After the app is added to the app catalog and published, you can install the app to your site by using the [install](https://pnp.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
@@ -277,13 +337,11 @@ After the app is added to the app catalog and published, you can install the app
 spo app install --id <app id> --siteUrl <url>
 ```
 
-
 To upgrade the app, use the [upgrade](https://pnp.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
 ```shell
 spo app upgrade --id <app id> --siteUrl <url>
 ```
-
 
 To uninstall the app from your site, use the [uninstall](https://pnp.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
@@ -291,10 +349,8 @@ To uninstall the app from your site, use the [uninstall](https://pnp.github.io/o
 spo app uninstall --id <app id> --siteUrl <url>
 ```
 
-
 > [!NOTE]
 > When you uninstall an app from your site, the app is completely deleted, so it will not end up in the site's recycle bin.
-
 
 ### List and get apps in the app catalog
 You can see what apps have been added to the app catalog by using the [list](https://pnp.github.io/office365-cli/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
@@ -302,7 +358,6 @@ You can see what apps have been added to the app catalog by using the [list](htt
 ```shell
 spo app list
 ```
-
 
 You can get a single app's details by using the [get](https://pnp.github.io/office365-cli/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
