@@ -187,7 +187,7 @@ In this section, you include markup in the add-in that deploys a button to the l
     
     ```csharp
       // Go back to the Local Employees page
-    Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItems.aspx", true);
+    Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/Local%20Employees/AllItems.aspx", true);
 
     ```
 
@@ -206,7 +206,7 @@ In this section, you include markup in the add-in that deploys a button to the l
             AddLocalEmployeeToCorpDB(employeeName);
 
             // Go back to the preceding page
-            Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItems.aspx", true);
+            Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/Local%20Employees/AllItems.aspx", true);
         }
     ```
 
