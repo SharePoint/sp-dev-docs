@@ -386,6 +386,8 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
 
     There are some validation rules and handling events for the **TextField** component to collect the search criteria. The following are the method implementations.
 
+    Add these two methods to the end of the `GraphConsumer` class:
+
     ```typescript
     @autobind
     private _onSearchForChanged(newValue: string): void {
@@ -404,7 +406,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
     }
     ```
 
-    The **PrimaryButton** fires a **_search()** function, which determines what client technology to use to consume Microsoft Graph.
+    The **PrimaryButton** fires a **_search()** function, which determines what client technology to use to consume Microsoft Graph. Add this method to the end of the `GraphConsumer` class:
 
     ```typescript
     @autobind
