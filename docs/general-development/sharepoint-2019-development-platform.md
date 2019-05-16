@@ -15,7 +15,7 @@ This article contains details around supported development capabilities in the S
 * Modern and classic pages
 * Modern sites - modern team and communication site
     * Classic sites are also supported
-* Column formatting
+* Column formatting - Only supports "Basic Styled Syntax", "Excel Styled Syntax" is not supported. 
 * SharePoint Framework client-side web parts
 * SharePoint Framework extensions in modern experiences
 * Webhooks for list items
