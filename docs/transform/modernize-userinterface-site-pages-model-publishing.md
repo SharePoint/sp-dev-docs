@@ -142,15 +142,50 @@ When constructing a modern page header there are 4 page header fields that you c
 
 If you for example don't want to set a topic header you can simply remove or comment the respective Field element.
 
+#### Page Header image options
+
+The default mapping takes the image defined in the `PublishingRollupImage` field as page header but you can optionally pick another publishing image field or specify a hard coded value of an image living in either the source site or the target site. Below sample shows a header with a static image:
+
+```Xml
+<Header Type="FullWidthImage" Alignment="Left" ShowPublishedDate="true">
+  <!-- Note that static values do require specifying them between '' -->
+  <Field Name="PublishingRollupImage" HeaderProperty="ImageServerRelativeUrl" Functions="StaticString('/sites/classicportal/images/myimage.jpg')" />
+  <Field Name="ArticleByLine" HeaderProperty="TopicHeader" Functions=""/>
+  <Field Name="PublishingContact" HeaderProperty="Authors" Functions="ToAuthors({PublishingContact})"/>
+</Header>
+```
+
+> [!Note]
+> Static strings are introduced with the May 2019 release.
+
 ### MetaData element
 
 The metadata element defines which of the classic publishing page fields need to be taken over as metadata for the modern page. For each field that you want to take over you'll need to add a Field element specifying:
 
 - **Name**: the name of the field in the classic publishing page
 - **TargetFieldName**: the name of the field in the target modern page
+- **Functions**: If set to empty then the field value from the classic publishing page is taken as is, however if you specify a function here then the output of that function is used
 
 > [!Note]
-> Functions support is not yet available for metadata field elements.
+> Functions support is not available for taxonomy fields.
+
+#### Page preview image options
+
+When a page has a page header image that image will also be used as a page preview image. If you however want to control the page preview image then you can populate the `BannerImageUrl` field using either the `ToPreviewImageUrl` function or by specifying a hard coded value as shown in below samples.
+
+```XML
+<!-- When you do have a publishing image field that will need to be set as preview image -->
+<Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl({PreviewImage})" />
+
+<!-- When you do have a hard coded preview image already available on the target site. Note that the source field name (PublishingContactEmail in below sample) must exist, although it's not used here  -->
+<Field Name="PublishingContactEmail" TargetFieldName="BannerImageUrl" Functions="StaticString('https://contoso.sharepoint.com/_layouts/15/getpreview.ashx?guidSite=88eebac1710b464cb6816639340fac55&amp;guidWeb=277fe40db9d24da5bbc6827714184958&amp;guidFile=91bf17fd54e849149a3ad6b4f006304e&amp;ext=jpg')" />
+
+<!-- When you want to refer a static image living in the source site  -->
+<Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl('/sites/classicportal/images/myimage.jpg')" />
+```
+
+> [!Note]
+> Controlling the page preview image was introduced with the May 2019 release.
 
 ### WebParts element
 
@@ -191,7 +226,7 @@ For each "fixed" web part you need to define the relevant properties. Typically 
 
 - **Property**: Name of the property. These property names need to match with properties used in the [page transformation model](modernize-userinterface-site-pages-model.md).
 - **Type**: Type of the property. These property types need to match with properties used in the [page transformation model](modernize-userinterface-site-pages-model.md).
-- **Value**: the value this property has.
+- **Value**: the value this property has. Don't forget to XML encode the value.
 
 ## AddOns definition in the page layout model
 
