@@ -46,7 +46,7 @@ Microsoft.SharePoint.WebPartPages.SilverlightWebPart (running Silverlight apps) 
 Microsoft.SharePoint.Publishing.WebControls.MembersWebPart | Removed ([Text](https://support.office.com/en-us/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part added to explain why) | Managing site members now is done using the OOB site permissions functionality | Yes
 Microsoft.Office.InfoPath.Server.Controls.WebUI.BrowserFormWebPart (InfoPath web part) | Removed | | Yes
 Microsoft.SharePoint.WebPartPages.GettingStartedWebPart (getting started tiles) | Removed | No point in keeping a getting started for the classic team site experience | Yes
-Microsoft.SharePoint.WebPartPages.SPUserCodeWebPart (Sandbox web part)| Removed | Sandboxed web parts are possible anymore in SPO | Yes
+Microsoft.SharePoint.WebPartPages.SPUserCodeWebPart (Sandbox web part)| Removed | Sandboxed web parts are not possible anymore in SPO | Yes
 Microsoft.SharePoint.Publishing.WebControls.TableOfContentsWebPart | Removed | This data should be integrated into the site navigation if still relevant | Yes
 
 > [!NOTE]
