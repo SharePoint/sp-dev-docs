@@ -23,7 +23,7 @@ App pages have following characteristics:
 
 <br/>
 
-App pages are exposed as an option in the modern page creation capability when you chose the used page layout for your page. All web part swhich have been configured to be available also as an app page are available on the **Create page** capability.
+App pages are exposed as an option in the modern page creation capability when you chose the used page layout for your page. All web parts which have been configured to be available also as an app page are available on the **Create page** capability.
 
 Web part can be configured to be exposed as an app page. This configuration is performed in the web part manifest file by adjusting the `supportedHosts` value. Web part will be exposed as an option in the upcoming app pages picker user interface, if the `supportedHosts` value contains `"SharePointFullPage"` value.
 
