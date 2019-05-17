@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint PowerShell
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -42,7 +42,9 @@ LogSkipFlush (as of April 2019 release, version 3.8.1904.*) | $false | All page 
 DontPublish (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use the `-DontPublish` option to not publish the created modern page.
 DisablePageComments (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use `-DisablePageComments` if you want to disable the commenting option on the created page
 PublishingPage (as of April 2019 release, version 3.8.1904.*) | $false | Publishing pages | Set the `-PublishingPage` parameter if you're transforming a publishing page. For wiki and web part pages this parameter must be omitted or set to false.
-PageLayoutMapping as of April 2019 release, version 3.8.1904.*) |  | Publishing pages |Via `-PageLayoutMapping` you can specify the path the [page layout mapping file](modernize-userinterface-site-pages-model-publishing.md) that you'll use for your publishing page transformations when the publishing page is using a non out of the box page layout
+PageLayoutMapping (as of April 2019 release, version 3.8.1904.*) |  | Publishing pages |Via `-PageLayoutMapping` you can specify the path the [page layout mapping file](modernize-userinterface-site-pages-model-publishing.md) that you'll use for your publishing page transformations when the publishing page is using a non out of the box page layout
+PublishingTargetPageName (as of May 2019 release, version 3.9.1905.*) |  | Publishing pages | Use the `-PublishingTargetPageName` parameter to override the name for the modern page
+SkipUrlRewriting (as of May 2019 release, version 3.9.1905.*) |  | Publishing pages | During publishing page transformation URL's are rewritten to be valid in the target site collection, but using the `-SkipUrlRewriting` you can disable the URL rewriting
 
 (`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage` parameter was set
 

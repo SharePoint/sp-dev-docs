@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -22,7 +22,7 @@ If you're using custom page layouts then it's recommended to use a custom page l
 Using the `Export-PnPClientSidePageMapping` cmdlet you can:
 
 - Export the built in mapping file (`-BuiltInPageLayoutMapping` parameter): this file will be used for the out of the box page layouts. **If you specify a custom mapping for an out of the box page layout than that mapping will take preference**
-- Analyze the page layouts in the connected portal and export those as a mapping file (`-CustomPageLayoutMapping` parameter): **all** the found page layouts (so out of the box and custom) are analyzed and exported
+- Analyze the page layouts in the connected portal and export those as a mapping file (`-CustomPageLayoutMapping` parameter): all the found custom page layouts are analyzed and exported. If you also want to get your OOB page layouts analyzed then use the `-AnalyzeOOBPageLayouts` parameter.
 
 ```PowerShell
 # Connect to your "classic" portal
@@ -93,16 +93,16 @@ Let's analyze how a page layout mapping is configured in the page layout mapping
         <Field Name="MyCategory" TargetFieldName="Category" Functions="" />
       </MetaData>
       <WebParts>
-        <Field Name="PublishingPageImage" TargetWebPart="SharePointPnP.Modernization.WikiImagePart" Row="1" Column="1">
+        <Field Name="PublishingPageImage" TargetWebPart="SharePointPnP.Modernization.WikiImagePart" Row="1" Column="1" Order="1">
           <Property Name="ImageUrl" Type="string" Functions="ToImageUrl({PublishingPageImage})"/>
           <Property Name="AlternativeText" Type="string" Functions="ToImageAltText({PublishingPageImage})" />
         </Field>
-        <Field Name="PublishingPageContent" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="2">
+        <Field Name="PublishingPageContent" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="2" Order="1">
           <Property Name="Text" Type="string" Functions="" />
         </Field>
       </WebParts>
       <WebPartZones>
-        <WebPartZone Row="2" Column="1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0"/>
+        <WebPartZone Row="2" Column="1" Order = "1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0"/>
       </WebPartZones>
       <FixedWebParts>
         <WebPart Row="1" Column="2" Order="1" Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
@@ -195,6 +195,7 @@ Each field in the classic publishing page that needs to become a visual element 
 - **TargetWebPart**: the type of the target web part that will visualize this field on the modern page. Supported target web parts are `SharePointPnP.Modernization.WikiTextPart`, `SharePointPnP.Modernization.WikiImagePart` and `Microsoft.SharePoint.Publishing.WebControls.SummaryLinkWebPart, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c`.
 - **Row**: the row you want to put the target web part in. Needs to be 1 or greater.
 - **Column**: the column you want to put the target web part in. Needs to be 1, 2 or 3.
+- **Order**: the order of the target web part in the defined row/column.
 
 Depending the chosen TargetWebPart you'll need to provide the web part properties holding the data needed during transformation. Each property has the following properties:
 
@@ -210,6 +211,7 @@ If the page layout contains web part zones then these must be defined here. This
 - **ZoneIndex**: the index of the zone (integer)
 - **Row**: the row you want to put the web parts hosted in this zone in. Needs to be 1 or greater.
 - **Column**: the column you want to put the web parts hosted in this zone in. Needs to be 1, 2 or 3.
+- **Order**: order in the defined row/column for the web parts hosted in this zone
 
 ### FixedWebParts element
 
