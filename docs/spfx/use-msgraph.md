@@ -21,6 +21,9 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
 > [!NOTE]
 > The **MSGraphClient** is available only in projects built using SharePoint Framework v1.6.0 and later. While the **MSGraphClient** is explained in this article by using a client-side web part, you can also use it in SharePoint Framework Extensions.
 
+> [!NOTE]
+> The single sign-on for the **MSGraphClient** is only available in SharePoint Online today. You can leverage the client for on premises developments but your users will be requested to sign in again within the webpart.
+
 1. To use the **MSGraphClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
   ```typescript
