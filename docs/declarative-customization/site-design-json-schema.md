@@ -761,9 +761,6 @@ Use the **joinHubSite** verb to join the site to a designated hub site.
 
 #### Example
 
-> [!NOTE]
-> Hub sites are a new feature that are just rolling out to customers in Targeted Release in March 2018. This action might not be available for use in your environment. To learn more, see [SharePoint hub sites overview](https://docs.microsoft.com/en-us/sharepoint/dev/features/hub-site/hub-site-overview).
-
 ```json
 {
     "verb": "joinHubSite",
