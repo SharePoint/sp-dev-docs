@@ -50,7 +50,7 @@ You can configure and manage site collection app catalogs using the SharePoint O
 > [!NOTE]
 > Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) from November 2017 or newer.
 
-Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
+Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to [create the app catalog](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpsitecollectionappcatalog?view=sharepoint-ps) or [remove the app catalog](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/remove-pnpsitecollectionappcatalog?view=sharepoint-ps) is also an option when using Windows.
 
 ### Create a site collection app catalog
 
@@ -65,7 +65,7 @@ Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/off
 > "
 > ```
 >
-> Alternatively, if you are using the Office 365 CLI, you must first connect to your tenant using the `spo connect` command.
+> Alternatively, if you are using the Office 365 CLI, you must first connect to your tenant using the `spo connect` command. With PnP PowerShell you would use `Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -UseWebLogin` to set up the connection.
 
 To create a site collection app catalog, use the `Add-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be created as the `-Site` parameter.
 
@@ -78,7 +78,13 @@ $site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
 Add-SPOSiteCollectionAppCatalog -Site $site
 ```
 
-Alternatively, use the `spo site appcatalog add` command if you are using the Office 365 CLI
+Alternaively, use PnP PowerShell to add the site app catalog functionality to your site after having connected to the SharePoint Online Admin site:
+
+```powershell
+Add-PnPSiteCollectionAppCatalog -site https://<tenant>.sharepoint.com/sites/<sitename>
+```
+
+Alternatively, use the `spo site appcatalog add` command if you are using the Office 365 CLI:
 
 ```shell
 spo site appcatalog add --url https://contoso.sharepoint.com/sites/marketing
@@ -105,6 +111,12 @@ $site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
 Remove-SPOSiteCollectionAppCatalog -Site $site
 ```
 
+Alternaively, use PnP PowerShell to remove the site app catalog functionality to your site after having connected to the SharePoint Online Admin site:
+
+```powershell
+Remove-PnPSiteCollectionAppCatalog -site https://<tenant>.sharepoint.com/sites/<sitename>
+```
+
 Alternatively, use the `spo site appcatalog remove` command if you are using the Office 365 CLI
 
 ```shell
@@ -112,6 +124,8 @@ spo site appcatalog remove --url https://contoso.sharepoint.com/sites/marketing
 ```
 
 After executing this script, the **Apps for SharePoint** library will be still visible in your site collection, but you will not be able to deploy or use any solutions deployed in it.
+
+![Screenshot illustrating how the app catalog will disallow adding new apps after it has been removed](../images/site-collection-app-catalog-disabled.png)
 
 ## Considerations
 
