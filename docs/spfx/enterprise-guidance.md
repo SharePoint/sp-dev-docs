@@ -26,7 +26,7 @@ This new model is built from the ground-up by using a modern web stack that uses
 The SharePoint Framework reached the [General Available (GA) milestone](
 https://www.microsoft.com/en-us/microsoft-365/blog/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/), with version 1.0.0, in February 2017.
 
-Latest release news about the SharePoint Framework: https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.7-release-notes with version 1.7
+Latest release news about the SharePoint Framework: https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes with version 1.8
 
 ## From a developer's point of view
 
