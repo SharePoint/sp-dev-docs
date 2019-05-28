@@ -10,7 +10,7 @@ localization_priority: Normal
 
 # OneDrive for Business and SharePoint Online Migration API encryption
 
-Using the Migration API requires a temporary storage container in Azure. This Azure container is already only openable by someone having a SAS key access to the container. The gGoal of this feature is to allow to pass eEncrypted content at rest to the API meaning that even if a malicious user has access to the Container he won’t be able to use its content.
+Using the Migration API requires a temporary storage container in Azure. This Azure container is already only openable by someone having a SAS key access to the container. The Goal of this feature is to allow to pass Encrypted content at rest to the API meaning that even if a malicious user has access to the Container he won’t be able to use its content.
 
 ## What is stored in the Azure blob container
 
