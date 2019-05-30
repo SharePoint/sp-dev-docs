@@ -777,8 +777,9 @@ Use the **installSolution** action to install a deployed add-in or SharePoint Fr
 
 #### Example
 
-> [!NOTE]
-> To get the solution ID, sign in to a site by using the **Connect-PnPOnline** cmdlet, and then run **Get-PnPApp**. This returns a list of your deployed solutions.
+> [!NOTES]
+> To get the solution ID, sign in to a site by using the **Connect-PnPOnline** cmdlet, and then run **Get-PnPApp**. This returns a list of your deployed solutions. 
+> For multi-geo tenants, use the Product ID after setting up the solution in each geo location. Obtain the Product ID by uplaoding the solution to the app catalog or in the solution's definition. 
 
 ```json
 {
