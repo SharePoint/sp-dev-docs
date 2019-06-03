@@ -21,7 +21,7 @@ There are following benefits on using SharePoint Framework as the platform for y
 > [!IMPORTANT]
 > You may notice a menu item **Sync to Teams** in the App Catalog ribbon:
 >
-> ![Sync To Teams](../../../images/using-web-part-as-ms-teams-tab-sync-to-team.png)
+> ![Sync To Teams](./../images/using-web-part-as-ms-teams-tab-sync-to-team.png)
 >
 > At this time this functionality is not fully implemented and is not the recommended way to deploy your SharePoint Framework web part to Microsoft Teams as a custom tab. This document will be updated when this functionality has been deployed across SharePoint Online. Until that time, the recommended approach is to install SharePoint Framework web parts as custom Microsoft Teams tabs using the side loading approach. Please refer to [Creating a team manifest manually for a web part](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) to proceed for now and follow the steps in the 'Alternative deployment options' section of this article.
 
