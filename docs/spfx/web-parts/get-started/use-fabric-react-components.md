@@ -118,9 +118,6 @@ The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fa
 
 Because we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work.
 
-> [!NOTE]
-> With the current release of the SharePoint Framework, we recommend that you use the Office UI Fabric and Fabric React that ships with the generator. We do **not** recommend that you update the Office UI Fabric and Fabric React packages independently because that might conflict with the already available version in SharePoint, and as a result, your web part may fail to function as expected.
-
 ### To add an Office UI Fabric component
 
 1. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
