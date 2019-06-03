@@ -145,5 +145,5 @@ Ready to get started?
 
 ## See also
 
-- [Microsoft Virual Academy: Getting Started with SharePoint Add-Ins](https://mva.microsoft.com/en-US/training-courses/getting-started-with-sharepoint-addins-14053)
+- [Microsoft Virtual Academy: Getting Started with SharePoint Add-Ins](https://mva.microsoft.com/en-US/training-courses/getting-started-with-sharepoint-addins-14053)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md) 
