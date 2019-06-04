@@ -590,12 +590,13 @@ Subaction to remove a site column from a list or content type.
 
 ## Add a navigation link
 
-Use the **addNavLink** verb to add a new navigation link to the site. 
+Use the **addNavLink** verb to add a new navigation link to the site QuickLaunch or Hub navigation. 
 
 #### JSON values
 
 - **url** &ndash; The url of the link to add.
 - **displayName** &ndash; The display name of the link.
+- **navComponent** &ndash; The component where to add the link, QuickLaunch or Hub. The default is **QuickLaunch**.
 - **isWebRelative** &ndash; **true** if the link is web relative; otherwise, **false**. The default is **false**.
 - **parentDisplayName** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
 - **parentUrl** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this url. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
@@ -606,12 +607,12 @@ Use the **addNavLink** verb to add a new navigation link to the site.
 > [!NOTE]
 > If you add a link to a nested site item such as a list, be sure to add the path reference from the root. 
 
-
 ```json
 {
    "verb": "addNavLink",
    "url": "/Customer Event Collateral",
    "displayName": "Event Collateral",
+   "navComponent":"Hub",
    "isWebRelative": true
 },
 {
@@ -636,6 +637,7 @@ Use the **removeNavLink** verb to remove a navigation link from the site.
 
 - **url** &ndash; The url of the link to remove.
 - **displayName** &ndash; The display name of the link.
+- **navComponent** &ndash; The component where to remove the link from, QuickLaunch or Hub. The default is **QuickLaunch**.
 - **isWebRelative** &ndash; **True** if the link is web relative; otherwise, **false**.
 
 #### Example
@@ -729,6 +731,30 @@ Use the **createPage** verb to create a new page on the site.
 }
 ```
 -->
+
+## Set branding properties
+
+Use the **setSiteBranding** verb to specify the navigation layout, the header layout and header background. 
+
+> [!NOTE]
+> Setting the navigation layout only works on the communication site template and for the hub navigation. 
+
+#### JSON value
+
+- **navigationLayout** &ndash; Specify the navigation layout as Cascade or Megamenu
+- **headerLayout** &ndash; Specify the header layout as Standard or Compact
+- **headerBackground** &ndash; Specify the header background as None, Neutral, Soft or Stong
+
+#### Example
+
+```json
+{
+    "verb": "setSiteBranding",
+    "navigationLayout": "Megamenu",
+    "headerLayout": "Compact",
+    "headerBackground": "Strong"
+}
+```
 
 ## Set a site logo
 
