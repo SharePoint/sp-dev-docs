@@ -26,19 +26,19 @@ Before you start, complete the procedures in the following articles to ensure th
     md teams-tab-webpart
     ```
 
-2. Go to the project directory:
+1. Go to the project directory:
 
     ```shell
     cd teams-tab-webpart
     ```
 
-3. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
+1. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
 
     ```shell
     yo @microsoft/sharepoint
     ```
 
-4. When prompted:
+1. When prompted:
 
     * Accept the default **teams-tab-webpart** as your solution name, and then select Enter.
     * Select **SharePoint Online only (latest)**, and then select Enter.
@@ -47,17 +47,17 @@ Before you start, complete the procedures in the following articles to ensure th
     * Select **N** on the question if solution contains unique permissions.  
     * Select **WebPart** as the client-side component type to be created.
 
-5. The next set of prompts ask for specific information about your web part:
+1. The next set of prompts ask for specific information about your web part:
 
     * Enter **MyFirstTeamsTab** for the web part name, and then select Enter.
     * Enter **My first Teams tab** as the description of the web part, and then select Enter. 
     * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
 
-      ![Yeoman prompts](../../../images/yeoman-sp-teams-prompts.png)
+    ![Yeoman prompts](../../../images/yeoman-sp-teams-prompts.png)
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **MyFirstTeamsTab** web part as well.
 
-6. Next, enter the following to open the web part project in Visual Studio Code:
+1. Next, enter the following to open the web part project in Visual Studio Code:
 
     ```shell
     code .
@@ -69,8 +69,8 @@ Starting with the SharePoint Framework v1.8, scaffolding will also include addit
 
 Teams folder contains the following two files:
 
-    - **[componentId]_color.png** - Default small picture for a tab
-    - **[componentId]_outline.png** - Default large picture for a tab
+  * **[componentId]_color.png** - Default small picture for a tab
+  * **[componentId]_outline.png** - Default large picture for a tab
 
 These images will be used as icons in Microsoft Teams.
 
@@ -111,7 +111,6 @@ Locate the manifest json file for the web part you want to make available to Tea
 ## Updating code to be aware of the Microsoft Teams context
 
 1. Open **src\webparts\helloWorld\HelloWorldWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
-
 1. Add the following import statement at the top of your file:
 
     ```typescript
@@ -263,4 +262,4 @@ Your custom tab has been added on the Microsoft Teams channel and you can see ho
 
 ## See also
 
-- [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)
+* [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)
