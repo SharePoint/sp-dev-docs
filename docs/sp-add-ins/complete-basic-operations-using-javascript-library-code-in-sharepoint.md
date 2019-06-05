@@ -1,12 +1,15 @@
 ---
 title: Complete basic operations using JavaScript library code in SharePoint
 description: Write code to perform basic operations using the JavaScript client object model in SharePoint.
-ms.date: 11/4/2018
+ms.date: 5/6/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Complete basic operations using JavaScript library code in SharePoint
+
+> [!WARNING]
+> This information is only valid when you use classic SharePoint experiences in SharePoint Online or in on-premises. Usage of classic SharePoint JavaScript Client Object Model is not supported with the modern experiences or with SharePoint Framework.
 
 You can use the SharePoint client object model to retrieve, update, and manage data in SharePoint. SharePoint makes the object model available in several forms:
 
