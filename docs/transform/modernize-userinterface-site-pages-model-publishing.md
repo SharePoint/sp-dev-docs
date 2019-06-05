@@ -1,12 +1,12 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 04/17/2019
+ms.date: 06/06/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Understanding and configuring the publishing page transformation model (as of April 2019 version)
+# Understanding and configuring the publishing page transformation model (as of June 2019 version)
 
 Publishing pages are always based upon a page layout and a master page. Those two pages combined with fields containing data make up the page a user sees in the browser. When transforming publishing pages it's therefor mandatory to map the used page layouts into a publishing page transformation model. The publishing page transformation component will have a 'default' page layout mapping for all the out of the box page layouts, so if your portal is using those out of the box page layouts you're covered. Reality is that most portals use custom page layouts (and custom master pages) and therefor there's a need for page layout mappings for those custom page layouts. Custom page layouts can be handled in two ways:
 
@@ -21,7 +21,7 @@ If you're using custom page layouts then it's recommended to use a custom page l
 
 Using the `Export-PnPClientSidePageMapping` cmdlet you can:
 
-- Export the built in mapping file (`-BuiltInPageLayoutMapping` parameter): this file will be used for the out of the box page layouts. **If you specify a custom mapping for an out of the box page layout than that mapping will take preference**
+- Export the built in mapping file (`-BuiltInPageLayoutMapping` parameter): this file will be used for the out of the box page layouts. **If you specify a custom mapping for an out of the box page layout in your own mapping file, than that mapping will take preference over the OOB mapping**
 - Analyze the page layouts in the connected portal and export those as a mapping file (`-CustomPageLayoutMapping` parameter): all the found custom page layouts are analyzed and exported. If you also want to get your OOB page layouts analyzed then use the `-AnalyzeOOBPageLayouts` parameter.
 
 ```PowerShell
@@ -88,9 +88,9 @@ Let's analyze how a page layout mapping is configured in the page layout mapping
         <Field Name="ArticleByLine" HeaderProperty="TopicHeader" Functions=""/>
         <Field Name="PublishingContact" HeaderProperty="Authors" Functions="ToAuthors({PublishingContact})"/>
       </Header>
-      <MetaData>
+      <MetaData ShowPageProperties="true" PagePropertiesRow="1" PagePropertiesColumn="3" PagePropertiesOrder="1">
         <Field Name="PublishingContactEmail" TargetFieldName="MyPageContact" Functions="" />
-        <Field Name="MyCategory" TargetFieldName="Category" Functions="" />
+        <Field Name="MyCategory" TargetFieldName="Category" Functions="" ShowInPageProperties="true" />
       </MetaData>
       <WebParts>
         <Field Name="PublishingPageImage" TargetWebPart="SharePointPnP.Modernization.WikiImagePart" Row="1" Column="1" Order="1">
@@ -102,7 +102,7 @@ Let's analyze how a page layout mapping is configured in the page layout mapping
         </Field>
       </WebParts>
       <WebPartZones>
-        <WebPartZone Row="2" Column="1" Order = "1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0"/>
+        <WebPartZone Row="2" Column="1" Order="1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0"/>
       </WebPartZones>
       <FixedWebParts>
         <WebPart Row="1" Column="2" Order="1" Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
@@ -160,14 +160,23 @@ The default mapping takes the image defined in the `PublishingRollupImage` field
 
 ### MetaData element
 
-The metadata element defines which of the classic publishing page fields need to be taken over as metadata for the modern page. For each field that you want to take over you'll need to add a Field element specifying:
+The metadata element defines which of the classic publishing page fields need to be taken over as metadata for the modern page. As sometimes you want the metadata to be also represented using the OOB Page Properties web part you indicate that via these optional attributes:
+
+- **ShowPageProperties**: will the page properties web part be added on the resulting modern page
+- **PagePropertiesRow**: row that will hold the page properties web part
+- **PagePropertiesColumn**: column that will hold the page properties web part
+- **PagePropertiesOrder**: the order of the page properties web part in the defined row/column
+
+For each field that you want to take over you'll need to add a Field element specifying:
 
 - **Name**: the name of the field in the classic publishing page
 - **TargetFieldName**: the name of the field in the target modern page
 - **Functions**: If set to empty then the field value from the classic publishing page is taken as is, however if you specify a function here then the output of that function is used
+- **ShowInPageProperties**: If set to true and if showing the page properties web part was turned on than this field is shown in the page properties web part
 
 > [!Note]
-> Functions support is not available for taxonomy fields.
+> - Functions support is not available for taxonomy fields
+> - Page property web part configuration was introduced in the June 2019 release
 
 #### Page preview image options
 

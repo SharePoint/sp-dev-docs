@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using .Net
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .Net
-ms.date: 04/04/2019
+ms.date: 06/06/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -152,6 +152,51 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 > [!Note]
 > Not all web parts lend themselves well for a cross site transfer, check the **Cross site support** column in [web part transformation list](modernize-userinterface-site-pages-webparts.md) to learn more.
+
+### I want to use the logging features (as of April 2019 release, version 1.0.1904.*)
+
+By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .Net:
+
+```csharp
+string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
+string targetSiteUrl = "https://contoso.sharepoint.com/sites/mycommunicationsite";
+string userName = "joe@contoso.onmicrosoft.com";
+AuthenticationManager am = new AuthenticationManager();
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+{
+    using (var ccTarget = cc.Clone(targetSiteUrl))
+    {  
+      var pageTransformator = new PublishingPageTransformator(cc, ccTarget, "C:\\temp\\custompagelayoutmapping.xml");
+      
+      // Register the log observers
+      pageTransformator.RegisterObserver(new MarkdownObserver(folder: "c:\\temp", includeVerbose:true));
+      pageTransformator.RegisterObserver(new MarkdownToSharePointObserver(ccTarget, includeVerbose: true));
+      
+      var pages = cc.Web.GetPagesFromList("Pages", "a");
+      foreach (var page in pages)
+      {
+          PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+          {
+              // If target page exists, then overwrite it
+              Overwrite = true,
+          };
+
+          try
+          {
+              Console.WriteLine($"Transforming publishing page {page.FieldValues["FileLeafRef"]}");
+              pageTransformator.Transform(pti);
+          }
+          catch(ArgumentException ex)
+          {
+              Console.WriteLine($"Page {page.FieldValues["FileLeafRef"]} could not be transformed: {ex.Message}");
+          }
+      }
+
+      // Flush the log data
+      pageTransformator.FlushObservers();
+    }
+}
+```
 
 ### I choose the "AddPageAcceptBanner" option but don't see the banner web part on the created pages
 

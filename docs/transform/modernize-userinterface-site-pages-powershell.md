@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint PowerShell
-ms.date: 04/17/2019
+ms.date: 06/06/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -25,6 +25,8 @@ The **ConvertTo-PnPClientSidePage** cmdlet is the key cmdlet to modernize a give
 Parameter | Default | Supported For | Description
 ----------|---------|---------------|------------
 Identity (`*`) | | All page types | The page name (e.g. pageA.aspx)
+Library (as of May 2019 release, version 3.9.1905.*) | | Wiki/webpart pages | The library holding the page. Use this `-Library` parameter when your wiki or web part page lives outside of the default SitePages library.
+Folder (as of May 2019 release, version 3.9.1905.*) | | All page types | When the page you want to transform lives in a folder then you can specify that folder (e.g. `-Folder "Folder1/SubFolder"`).
 WebPartMappingFile | |  All page types | Page transformation is driven by a mapping file. The cmdlet has a default mapping file embedded, but you can also specify your custom web part mapping file (`webpartmapping.xml`) to fit your page transformation needs (e.g. transforming to 3rd party custom web parts). You do this by specifying the path to the file via the `-WebPartMappingFile` parameter.
 Overwrite | $false | All page types | When you add `-Overwrite` then the page transformation framework will overwrite the target page if needed. By default the new page name has a prefix of Migrated_, which then implies that if Migrated_YourPage.aspx already exists (typically from a previous page transformation effort) it will be overwritten.
 AddPageAcceptBanner | $false | Wiki/webpart pages | Using `-AddPageAcceptBanner` will make the page transformation framework put the configured PageAcceptBanner web part on top of the created modern page. Using this web part the users accessing the page can decide whether they want to keep or discard the created modern page. See the [Page Transformation UI](modernize-userinterface-site-pages-ui.md) article to learn more on how to install and configure the default page banner web part.
@@ -33,6 +35,7 @@ TakeSourcePageName | $false | Wiki/webpart pages | The default behavior is to gi
 ClearCache (as of January 2019 release, version 3.5.1901.*) | $false | All page types | To optimize performance certain data (e.g. list of available client side web parts, calculated list of fields to copy metadata for) is cached after the first execution. This cache will stay valid during the complete PowerShell session unless you use the `-ClearCache` switch. Restarting your PowerShell session also clears the cache.
 CopyPageMetadata (as of February 2019 release, version 3.6.1902.*) | $false | Wiki/webpart pages | The default behavior is to not copy page metadata (so additional columns added to the site pages library). When `-CopyPageMetadata` is specified the values of the custom metadata fields of the page to transform are copied to the newly created page.
 TargetWebUrl (`**`) (as of March 2019 release, version 3.7.1903.*) | | All page types | If you want to create the transformed modern pages in another site collection then specify the URL to that other site collection. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to understand which web parts are transformed in a cross site collection transformation.
+TargetConnection (`**`) (as of the June 2019 release, version 3.8.1906.) | | All page types | Allows for a more flexible definition of the target via a connection object. This allows for example to perform cross tenant transformation of transformation from on-premises to online.
 UseCommunityScriptEditor (as of March 2019 release, version 3.7.1903.*) | $false | All page types | Use `-UseCommunityScriptEditor` if you've installed the community script editor and want to use it during transformation. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more.
 SummaryLinksToHtml (as of March 2019 release, version 3.7.1903.*) | $false | All page types | Use `-SummaryLinksToHtml` if you prefer to transform the SummaryLinks web part to HTML hosted in the text web part instead of the default transformation using the QuickLinks web part. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more.
 LogType (as of April 2019 release, version 3.8.1904.*) | None | All page types | Use `-LogType` to enabled logging: `File` will log to disk, `SharePoint` will create a log page in the SharePoint SitePages library.
@@ -46,7 +49,7 @@ PageLayoutMapping (as of April 2019 release, version 3.8.1904.*) |  | Publishing
 PublishingTargetPageName (as of May 2019 release, version 3.9.1905.*) |  | Publishing pages | Use the `-PublishingTargetPageName` parameter to override the name for the modern page
 SkipUrlRewriting (as of May 2019 release, version 3.9.1905.*) |  | Publishing pages | During publishing page transformation URL's are rewritten to be valid in the target site collection, but using the `-SkipUrlRewriting` you can disable the URL rewriting
 
-(`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage` parameter was set
+(`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage` parameter was set (either `-TargetWebUrl` or `-TargetConnection`)
 
 ## FAQ
 
@@ -66,15 +69,17 @@ If you're using custom page layouts it's highly recommended to tweak the used pa
 
 Use PnP PowerShell to analyze your existing page layouts and generate a mapping file:
 
-```
+```Powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 
 Export-PnPClientSidePageMapping -CustomPageLayoutMapping -Folder c:\temp
 ```
 
-#### Clean the generated mapping file
+If you want to generate the mapping files for OOB page layouts then specify the `AnalyzeOOBPageLayouts` switch.
 
-Open the [created mapping file](modernize-userinterface-site-pages-model-publishing.md) and delete all the OOB page layouts (unless you've customized them) so you end up with a file containing only your custom page layout mappings. Then review each mapping:
+#### Tune the generated mapping file
+
+Open the [created mapping file](modernize-userinterface-site-pages-model-publishing.md) and review each mapping:
 
 - Set the row and column values correctly for web parts, web part zones and fixed web parts so that content shows up on the right spot on the modern page. You can have as many rows as you want, each row will be a section on the modern page. Column values are restricted to 1, 2 or 3 which translates to the possible column options in a modern page
 - Define the fields that need to be transformed as metadata
@@ -89,6 +94,29 @@ Using the cleaned custom mapping file is simple via the `PageLayoutMapping` para
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 
 ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -PageLayoutMapping c:\temp\mypagelayouts.xml
+```
+
+### Use the logging features (as of June 2019 release, version 3.10.1906.*)
+
+```Powershell
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
+
+# Convert a series of pages, logs are not yet written
+ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -LogSkipFlush -LogType SharePoint -LogVerbose
+ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -LogSkipFlush -LogType SharePoint -LogVerbose
+
+# persist the log data from all previous page transformations to the defined log
+Save-PnPClientSidePageConversionLog
+```
+
+### Transform a pages that lives at the root of the site (so outside of a library)
+
+Some older sites might have web part pages living outside of a library. If you want to modernize these you need to indicate that the page lives in the root of the site via `-Folder "<root>"` as shown below:
+
+```Powershell
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/sitetomodernize
+
+ConvertTo-PnPClientSidePage -Identity pageinroot.aspx -Overwrite -Folder "<root>"
 ```
 
 ### I used the "AddPageAcceptBanner" switch but don't see the banner web part on the created pages

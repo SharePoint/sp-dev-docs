@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 04/04/2019
+ms.date: 06/06/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -32,6 +32,47 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     Overwrite = true,
+};
+```
+
+## SourcePage option
+
+Type | Default value if not specified
+-----|----
+ListItem | null
+
+Typically set via the constructor as shown in below sample. This indicates the page to modernized when the page lives in a list
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    Overwrite = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    Overwrite = true,
+};
+```
+
+## SourceFile option (as of June 2019 release)
+
+Type | Default value if not specified
+-----|----
+File | null
+
+Used to define a page to be modernized when the page lives outside of a list, so in the root folder of the site. These pages can only be web part pages.
+
+```Csharp
+var fileToModernize = cc.Web.GetFileByServerRelativeUrl("/sites/myspecialsite/default.aspx");
+cc.Load(fileToModernize);
+cc.ExecuteQueryRetry();
+
+PageTransformationInformation pti = new PageTransformationInformation(null)
+{
+    SourceFile = true,
 };
 ```
 
