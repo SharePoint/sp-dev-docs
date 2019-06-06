@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint PowerShell
-ms.date: 06/06/2019
+ms.date: 06/07/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -33,6 +33,7 @@ AddPageAcceptBanner | $false | Wiki/webpart pages | Using `-AddPageAcceptBanner`
 ReplaceHomePageWithDefault | $false | Wiki/webpart pages | The default behavior is to transform your site's home page to a modern page like any other regular page. If you use `-ReplaceHomeWithDefault` then a site's home page will be transformed to a 'default' out-of-the-box modern home page, so the one you would get with a newly created modern team site.
 TakeSourcePageName | $false | Wiki/webpart pages | The default behavior is to give the created modern page a name that starts with the prefix Migrated_ and let the original page keep it's existing name. When `-TakeSourcePageName` is specified the newly created page gets the name of the original page and the original page is renamed with a prefix Previous_. Set this option if you're sure you want to move forward with the modern page as it will ensure that all links pointing the original page now result in the new modern page being loaded.
 ClearCache (as of January 2019 release, version 3.5.1901.*) | $false | All page types | To optimize performance certain data (e.g. list of available client side web parts, calculated list of fields to copy metadata for) is cached after the first execution. This cache will stay valid during the complete PowerShell session unless you use the `-ClearCache` switch. Restarting your PowerShell session also clears the cache.
+SkipItemLevelPermissionCopyToClientSidePage | $false | All page types | By default item level permissions are copied over to the modern page, use the `-SkipItemLevelPermissionCopyToClientSidePage` to prevent this.
 CopyPageMetadata (as of February 2019 release, version 3.6.1902.*) | $false | Wiki/webpart pages | The default behavior is to not copy page metadata (so additional columns added to the site pages library). When `-CopyPageMetadata` is specified the values of the custom metadata fields of the page to transform are copied to the newly created page.
 TargetWebUrl (`**`) (as of March 2019 release, version 3.7.1903.*) | | All page types | If you want to create the transformed modern pages in another site collection then specify the URL to that other site collection. Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to understand which web parts are transformed in a cross site collection transformation.
 TargetConnection (`**`) (as of the June 2019 release, version 3.8.1906.) | | All page types | Allows for a more flexible definition of the target via a connection object. This allows for example to perform cross tenant transformation of transformation from on-premises to online.
