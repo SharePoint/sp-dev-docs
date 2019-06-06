@@ -178,24 +178,6 @@ For each field that you want to take over you'll need to add a Field element spe
 > - Functions support is not available for taxonomy fields
 > - Page property web part configuration was introduced in the June 2019 release
 
-#### Page preview image options
-
-When a page has a page header image that image will also be used as a page preview image. If you however want to control the page preview image then you can populate the `BannerImageUrl` field using either the `ToPreviewImageUrl` function or by specifying a hard coded value as shown in below samples.
-
-```XML
-<!-- When you do have a publishing image field that will need to be set as preview image -->
-<Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl({PreviewImage})" />
-
-<!-- When you do have a hard coded preview image already available on the target site. Note that the source field name (PublishingContactEmail in below sample) must exist, although it's not used here  -->
-<Field Name="PublishingContactEmail" TargetFieldName="BannerImageUrl" Functions="StaticString('https://contoso.sharepoint.com/_layouts/15/getpreview.ashx?guidSite=88eebac1710b464cb6816639340fac55&amp;guidWeb=277fe40db9d24da5bbc6827714184958&amp;guidFile=91bf17fd54e849149a3ad6b4f006304e&amp;ext=jpg')" />
-
-<!-- When you want to refer a static image living in the source site  -->
-<Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl('/sites/classicportal/images/myimage.jpg')" />
-```
-
-> [!Note]
-> Controlling the page preview image was introduced with the May 2019 release.
-
 ### WebParts element
 
 Each field in the classic publishing page that needs to become a visual element on the target page (like a web part or text) must defined in the web parts section:
@@ -304,3 +286,61 @@ Now that the assembly has been defined you can use your functions and selectors 
 ```Xml
 <Property Name="ListId" Type="guid" Functions="{ListServerRelativeUrl} = Custom.MyListAddServerRelativeUrl({ListId})"/>
 ```
+
+## Page layout mapping FAQ
+
+### I want to keep the source page creation and modification information
+
+You can do this by altering your page layout mapping like shown in below sample:
+
+```XML
+<MetaData>
+  ...
+  <Field Name="Created" TargetFieldName="Created" Functions="" />
+  <Field Name="Modified" TargetFieldName="Modified" Functions="" />
+  <Field Name="Author" TargetFieldName="Author" Functions="" />
+  <Field Name="Editor" TargetFieldName="Editor" Functions="" />
+  ...
+</MetaData>
+```
+
+If you however publish this page the modification data will change again. If you want to keep the modification date and publish you can add these 2 additional fields:
+
+```XML
+<MetaData>
+  ...
+  <Field Name="PublishingStartDate" TargetFieldName="FirstPublishedDate" Functions="" />
+  <Field Name="ID" TargetFieldName="PromotedState" Functions="StaticString('2')" />
+  ...
+</MetaData>
+```
+
+### I want to promote the created pages as news
+
+Promoting pages created from a page layout as news pages can be be done by adding the below fields to your page layout mapping:
+
+```XML
+<MetaData>
+  ...
+  <Field Name="ID" TargetFieldName="PromotedState" Functions="StaticString('2')" />
+  ...
+</MetaData>
+```
+
+### Can I control the page preview image
+
+When a page has a page header image that image will also be used as a page preview image. If you however want to control the page preview image then you can populate the `BannerImageUrl` field using either the `ToPreviewImageUrl` function or by specifying a hard coded value as shown in below samples.
+
+```XML
+<!-- When you do have a publishing image field that will need to be set as preview image -->
+<Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl({PreviewImage})" />
+
+<!-- When you do have a hard coded preview image already available on the target site. Note that the source field name (PublishingContactEmail in below sample) must exist, although it's not used here  -->
+<Field Name="PublishingContactEmail" TargetFieldName="BannerImageUrl" Functions="StaticString('https://contoso.sharepoint.com/_layouts/15/getpreview.ashx?guidSite=88eebac1710b464cb6816639340fac55&amp;guidWeb=277fe40db9d24da5bbc6827714184958&amp;guidFile=91bf17fd54e849149a3ad6b4f006304e&amp;ext=jpg')" />
+
+<!-- When you want to refer a static image living in the source site  -->
+<Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl('/sites/classicportal/images/myimage.jpg')" />
+```
+
+> [!Note]
+> Controlling the page preview image was introduced with the May 2019 release.

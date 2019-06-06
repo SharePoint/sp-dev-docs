@@ -57,7 +57,7 @@ SkipUrlRewriting (as of May 2019 release, version 3.9.1905.*) |  | Publishing pa
 
 Above shown sample shows in-place page transformation, for transforming publishing pages you need a slightly different syntax. Below sample shows how to modernize the mypage.aspx page and create a modern version of it in a communication site. During this transformation the page transformation will either use the built-in page layout mapping if the page is using an out of the box page layout or it will generate a page layout mapping on the fly for custom page layouts:
 
-```
+```Powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 
 ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite
@@ -90,7 +90,7 @@ Open the [created mapping file](modernize-userinterface-site-pages-model-publish
 
 Using the cleaned custom mapping file is simple via the `PageLayoutMapping` parameter:
 
-```
+```Powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 
 ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -PageLayoutMapping c:\temp\mypagelayouts.xml
