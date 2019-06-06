@@ -97,6 +97,27 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -PageLayoutMapping c:\temp\mypagelayouts.xml
 ```
 
+### Read publishing page in on-premises SharePoint and create the modern page in SharePoint Online (as of June 2019 release, version 3.10.1906.*)
+
+When you want to bring over your classic on-premises publishing portals you could first move the complete portal from on-premises to a classic portal in SharePoint Online and then do the modernization work. However, often it's easier to directly read the classic publishing page from your SharePoint on-premises portal and create the modern version in SharePoint Online. To do this you need to use PnP PowerShell for SharePoint Online to connect to your on-premises portal like shown in below script:
+
+```Powershell
+# Setup connection the target site - must be SPO and must be a modern site
+$target = Connect-PnPOnline https://contoso.sharepoint.com/sites/moderncommunicationsite -ReturnConnection
+
+# Connect to your on-premises portal
+Connect-PnPOnline https://portal2013.pnp.com/sites/classicportal -CurrentCredentials
+
+# Convert a classic page living in the on-premises portal to a modern page in SharePoint Online. Dependent images and videos are copied as well from on-premises to online during this process.
+ConvertTo-PnPClientSidePage -Identity "page1.aspx" -PublishingPage -TargetConnection $target -LogVerbose -LogType File -LogFolder c:\temp
+```
+
+> [!NOTE]
+> - This feature is still in preview in the June 2019 release...it should support SharePoint 2013, 2016 and 2019
+> - It's important to use the SharePoint Online PnP PowerShell version, the machine running the PowerShell script needs to be able to connect to both the on-premises SharePoint server as the SharePoint Online environment
+> - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
+> - This approach can also be used for page transformation across tenants (whenever that would make sense)
+
 ### Use the logging features (as of June 2019 release, version 3.10.1906.*)
 
 ```Powershell

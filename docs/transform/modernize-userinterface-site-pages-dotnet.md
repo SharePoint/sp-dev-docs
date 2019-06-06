@@ -153,6 +153,63 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 > [!Note]
 > Not all web parts lend themselves well for a cross site transfer, check the **Cross site support** column in [web part transformation list](modernize-userinterface-site-pages-webparts.md) to learn more.
 
+
+### Read publishing page in on-premises SharePoint and create the modern page in SharePoint Online (as of June 2019 release, version 1.0.1906.*)
+
+When you want to bring over your classic on-premises publishing portals you could first move the complete portal from on-premises to a classic portal in SharePoint Online and then do the modernization work. However, often it's easier to directly read the classic publishing page from your SharePoint on-premises portal and create the modern version in SharePoint Online.
+
+```csharp
+string siteUrl = "https://sp.contoso.com/sites/myonpremisesportal";
+string targetSiteUrl = "https://contoso.sharepoint.com/sites/mycommunicationsite";
+string userName = "joe@contoso.onmicrosoft.com";
+AuthenticationManager am = new AuthenticationManager();
+
+// Setup on-premises client context
+using (var cc = new ClientContext(siteUrl))
+{
+    cc.Credentials = CredentialCache.DefaultCredentials;
+
+    // Setup SharePoint Online context
+    using (var ccTarget = am.GetSharePointOnlineAuthenticatedContextTenant(targetSiteUrl, userName, GetSecureString("Password")))
+    {  
+      var pageTransformator = new PublishingPageTransformator(cc, ccTarget, "C:\\temp\\custompagelayoutmapping.xml");
+      
+      // Register the log observers
+      pageTransformator.RegisterObserver(new MarkdownObserver(folder: "c:\\temp", includeVerbose:true));
+      pageTransformator.RegisterObserver(new MarkdownToSharePointObserver(ccTarget, includeVerbose: true));
+      
+      var pages = cc.Web.GetPagesFromList("Pages", "a");
+      foreach (var page in pages)
+      {
+          PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+          {
+              // If target page exists, then overwrite it
+              Overwrite = true,
+          };
+
+          try
+          {
+              Console.WriteLine($"Transforming publishing page {page.FieldValues["FileLeafRef"]}");
+              pageTransformator.Transform(pti);
+          }
+          catch(ArgumentException ex)
+          {
+              Console.WriteLine($"Page {page.FieldValues["FileLeafRef"]} could not be transformed: {ex.Message}");
+          }
+      }
+
+      // Flush the log data
+      pageTransformator.FlushObservers();
+    }
+}
+```
+
+> [!NOTE]
+> - This feature is still in preview in the June 2019 release...it should support SharePoint 2013, 2016 and 2019
+> - It's important to run your code on a machine that is able to connect to both the on-premises SharePoint server as the SharePoint Online environment
+> - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
+> - This approach can also be used for page transformation across tenants (whenever that would make sense)
+
 ### I want to use the logging features (as of April 2019 release, version 1.0.1904.*)
 
 By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .Net:
