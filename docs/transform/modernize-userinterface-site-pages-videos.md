@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # SharePoint Page Transformation webcast series
 
-SharePoint Page Transformation allows you to transform you classic wiki, web part and publishing pages into modern client-side pages. Most of SharePoint Online customers do have sites with classic pages which can be "upgraded" to modern client-side pages and to make this easier for you we've created this [series of short videos that walk you through the various aspects of Page Transformation](https://aka.ms/sppnp-pagetransformationvideos). Page transformation typically is done via PnP PowerShell and the videos in this series focus on that. You, however, can also use .Net code if you prefer that. If you're familiar with page transformation you can immediately jump to your session of interest, if you're new to it then it's recommended to watch the introduction session first.
+SharePoint Page Transformation allows you to transform you classic wiki, web part and publishing pages into modern client-side pages. Most of SharePoint Online customers do have sites with classic pages which can be "upgraded" to modern client-side pages and to make this easier for you we've created this [series of short videos that walk you through the various aspects of Page Transformation](https://aka.ms/sppnp-pagetransformationvideos). Page transformation typically is done via PnP PowerShell and the videos in this series focus on that. You, however, can also use .NET code if you prefer that. If you're familiar with page transformation you can immediately jump to your session of interest, if you're new to it then it's recommended to watch the introduction session first.
 
 Video | Description
 ------| -----------
