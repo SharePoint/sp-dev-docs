@@ -1,7 +1,7 @@
 ---
 title: Modernize classic publishing portals
 description: Modernize your classic publishing portals
-ms.date: 10/08/2018
+ms.date: 06/10/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
