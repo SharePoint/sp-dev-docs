@@ -1,78 +1,72 @@
 ---
-title: "SPO Migration API: Sharing"
+title: "SPO Migration API: Migrating sahred files and folders"
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
-ms.date: 6/10/2018
 ms.topic: article
-description: "The per user sharing model in SharePoint relies on both permissions and Shared With data references for an object to be considered shared with an individual."
+description: "Migrating sahred files and folders using item references."
 --- 
 
-# SPO Migration API: Sharing
 
-## Details on sharing and permissions
- 
-The per user sharing model in SharePoint relies on both permissions and “Shared With” data references for an object to be considered shared with an individual. If a user has access to content, but no *“Shared With”* references, they will not see the content show up in their **Shared With Me** view within their OneDrive For Business site.
+# Migrating shared files and folders
 
-However, if they are indicated in *“Shared With”* references but do not have any access to the content, they will either never see the content show up in their **Shared With Me** view within their OneDrive For Business site or when they try to use a link from there it will be denied access. To preserve sharing information, both the permissions and “Shared With” references will need to be correctly set. The permissions can be set at different levels of the content hierarchy using scopes (unique ACLs), that apply to that object and any of its children unless they themselves have unique permissions.
- 
-Using PRIME, content can be migrated in using SPFile/SPFolder objects with a document library followed by SPListItem objects that reference the imported File/Folder objects. During the ListItem import, the “Shared With” references data can be imported, and then the security can be applied afterward within the same migration package, by setting up scopes (ACLs) and role assignments (ACEs) for the content hierarchy as needed. Permissions migration is performed using the DeploymentRoleAssignments object with RoleAssignment entries representing specific scopes and Assignment entries representing assignments of specific roles to specific principals. Since this code ends up breaking inheritance for content and applying the specified role assignments, it has the same limitations as using other object model approaches to setting permissions in SharePoint.
- 
-> [!NOTE]
->  As you enumerate the security information on the source, you need to assess if you are at risk of hitting the SharePoint limits for ACL sizing (5000 max ACEs with recommendation of below 500 ACEs) and the maximum number of scopes - unique ACLs (There is a hard limit of 50,000 unique ACLs with a recommendation of below 5000 unique ACLs per document library). If you are close to reaching these limits, we recommend that the permission model be simplified on the source before migration.
- 
-### SharedWithUser column: 
- 
-`SharedWithUsers` column (not *SharedWithMe*) is not created during list creation. It is created during a share event which causes the specific columns to be ensured. If you share an item on a team site or ODB, you should see it get created. It is technically possible that the column could be explicitly created by code in advance of the migration (or in the migration package if we are allowing list column additions, which we may not be currently supporting), but we recommend against that in the case the SharedWithUsers column is not created correctly. 
+## Implementation
 
-For reference purposes, the SharedWithUsers column has a universal hard coded ID and is exported as the following information (note the SourceID value is the web’s ID):
+As documented in the Migration PRIME API, apply sharing metadata by using **item references**.  The older method of using the *Shared With* column should not be used any further.
 
-```xml
-<Field ID="{ef991a83-108d-4407-8ee5-ccc0c3d836b9}" Type="UserMulti" DisplayName="$Resources:core,SharedWithFieldDisplayName;" Mult="TRUE" Name="SharedWithUsers" StaticName="SharedWithUsers" Group="_Hidden" Sealed="TRUE" AllowDeletion="FALSE" ReadOnly="TRUE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" SourceID="{a785ad58-1d57-4f8a-aa71-77170459bd0d}" Version="1" ColName="int1" RowOrdinal="0"/>
+For an item that is shared with a user, add the **SharedWithEvents** block within its *ListItem* block. The **SharedWithEvents** block represents an occurrence when the item was shared, including the user who did the sharing (SharingInitatiorId and SharedById), as well as the time of sharing (SharedTime). 
+
+Add a SharedWithMember block for each person that the item was shared with during that occurrence.  All user ids must be valid entries in the UserGroup.xml.
+
+```XML
+<ListItem ParentWebId="79f949a2-f38b-40e3-91ef-ffdbe6214bef" 
+Id="a4bbc3c7-7ef1-47ef-8451-ea8e1a69cb88" 
+TimeLastModified="2018-11-06T22:43:49" 
+TimeCreated="2018-11-06T22:25:32" 
+
+
+<SharedWithEvents> 
+<SharedWithEvent SharedTime="2018-10-29T04:06:09.1385321Z" 
+SharingInitiatorId="2" 
+SharedById="2"> 
+<SharedWithMembers> 
+<SharedWithMember SharedWithId="1"/> 
+<SharedWithMember SharedWithId="2"/> 
+</SharedWithMembers> 
+</SharedWithEvent> 
+</SharedWithEvents> 
+</ListItem> 
+
 ```
+## Best Practices
+### The basics
+For each file or folder that was shared with a user in the source, create an item reference for that item in the recipient’s OneDrive. Every item reference created will appear in the user’s *Shared with Me* view in OneDrive. Remember to give the user permission to access the item as well.
 
- It may be simpler to try sharing a single test item to someone from the target list before importing the rest of the migration package.  This way the column is set up before you attempt to import the rest of the data. It is likely that you will need to verify some data on the target site first, so this could just be an additional preparation step.
+### Inheritance
+Be sure to use inheritance correctly for sharing. When creating an item reference for a file or folder, check if its parent folder (or higher) already has an item reference created for it. If so, do not create another one for the child item. This will prevent users from seeing duplicate items in their *Shared with Me* view and reduce migration and service load as well. 
 
-**Example:** 
- 
-Shared to single person:<br>
-In the case of a file shared to a single person, the following data structure highlighted in yellow would be seen. Note that the bolded values have different values depending on the field/property in question, and although their additional formatting is different between then, that you must ensure the data is consistent between the three fields/properties:
+**Example:** When a folder is shared and the recipient can access all of the folder’s contents, an item reference should *only* be created for the shared folder -- not for its contents. The only item that should appear in the recipients *Shared with Me* is the shared folder.
 
-```xml
-<SPObject …>
-    <File …>
-        <Properties>
-            <Property Name="SharedWithUsers" Type="String" Access="ReadWrite" Value="140;#user1" />
-            <Property Name="display_urn:schemas-microsoft-com:office:office#SharedWithUsers" Type="String" Access="ReadWrite" Value="user1" />
-        </Properties>
-    </File>
-</SPObject>
-<SPObject …>
-    <ListItem …>
-        <Fields>
-            <Field Name="SharedWithUsers" Value="140;# ;UserInfo" FieldId="ef991a83-108d-4407-8ee5-ccc0c3d836b9" />
-        </Fields>
-   </ListItem>
-</SPObject>
-```
+This same guidance should also be used for permissions (ACLs). Only apply permissions on a child item where the required permissions are different than its parent item. Make sure not to exceed 5000 unique ACLs on a site.  It may be useful to check how many ACLs you create and warn the user prior to migration. There is also a hard limit of 50,000 unique ACL's that will be enforced. If you are close to reaching the 5000 limits, we recommend that the permission model be simplified on the source before migration.
 
-Shared to multiple people:<br>
-In the case of sharing with multiple people, note that for the main SharedWithUsers property and field the separator value (“;#”) is used not only between the user identifier and user’s title but also between the individual users, whereas for the display url field, only a semicolon is used to separate the display names.
+### Sharing with groups
+For items shared with a group of individuals in the source, the content may be migrated into a shared library (eg. a team site) in which all of those individuals are given access.
 
-```xml
-<SPObject …>
-    <File …>
-        <Properties>
-            <Property Name="SharedWithUsers" Type="String" Access="ReadWrite" Value="140;#user1;#10;#Tenant Admin User" />
-            <Property Name="display_urn:schemas-microsoft-com:office:office#SharedWithUsers" Type="String" Access="ReadWrite" Value="user1;Tenant Admin User" />
-        </Properties>
-   </File>
-</SPObject>
-<SPObject …>
-    <ListItem …>
-        <Fields>
-            <Field Name="SharedWithUsers" Value="140;# ;#10;# ;UserInfo" FieldId="ef991a83-108d-4407-8ee5-ccc0c3d836b9" />
-        </Fields>
-   </ListItem>
-</SPObject>
-```
+### Anonymous sharing links
+Do not migrate anonymous sharing links from the source; this is not useful as it’s not possible to know which users used that link in the source. Users should evaluate whether anonymous links are still needed and create new ones on the destination if so.
+
+### Sharing with external users
+Before starting migration, you must ensure all users are provisioned in the customer tenant. For users external to the tenant (ie. from a different organization), provision them as B2B collaboration users in Azure Active Directory. This is done in the Azure portal following these steps: 
+
+- [Add Azure Active Directory B2B collaboration users in the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/b2b/add-users-administrator). 
+
+Once the external users are provisioned, share files and folders with them during migration the same way as internal users.
+
+### Permission and Sharing
+The per user sharing model in SharePoint relies on both permissions and “Shared With” data references for an object to be considered shared with an individual. If a user has access to content, but no “Shared With” references, they will not see the content show up in their Shared With Me view within their OneDrive For Business site.
+
+However, if they are indicated in “Shared With” references but do not have any access to the content, they will either never see the content show up in their Shared With Me view within their OneDrive For Business site or when they try to use a link from there it will be denied access. To preserve sharing information, both the permissions and “Shared With” references will need to be correctly set. The permissions can be set at different levels of the content hierarchy using scopes (unique ACLs), that apply to that object and any of its children unless they themselves have unique permissions.
+
+Using PRIME, content can be migrated by using SPFile/SPFolder objects with a document library followed by SPListItem objects that reference the imported File/Folder objects. During the ListItem import, the “Shared With” references data can be imported, and then the security can be applied afterward within the same migration package, by setting up scopes (ACLs) and role assignments (ACEs) for the content hierarchy as needed. 
+
+Permissions migration is performed using the DeploymentRoleAssignments object with RoleAssignment entries representing specific scopes and Assignment entries representing assignments of specific roles to specific principals. Since this code ends up breaking inheritance for content and applying the specified role assignments, it has the same limitations as using other object model approaches to setting permissions in SharePoint.
