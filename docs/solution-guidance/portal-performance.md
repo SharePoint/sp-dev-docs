@@ -15,14 +15,14 @@ Implementing customizations to SharePoint Online places an even greater emphasis
 > Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 
 ## Optimizing Classic Portal Pages
-If you have not implemented Modern pages yet and are looking to optimize your existing or new Classic portal pages then this section applies to you.
+If you have not implemented Modern pages yet and are looking to optimize your existing or new Classic portal pages, then this section applies to you.
 To assist with some initial page reviews and start the process of understanding performance on classic portal pages for SharePoint Online, the [Page Diagnostics tool for SharePoint](https://aka.ms/perftool) can be utilized.
 It is a Chrome extension developed by Microsoft to highlight guidance for optimizing Classic SharePoint portal pages.
 
-Whilst some of the items highlighted relate to existing out of the box functionality, we are working towards removing these components as there are better alternatives that provide a faster user experience.The biggest culprit is the use of structural navigation.
+Whilst some of the items highlighted relate to existing out of the box functionality, we are working towards removing these components as there are better alternatives that provide a faster user experience. The biggest culprit is the use of structural navigation.
 The tool also highlights enhanced functionality e.g. Content Delivery Networks (CDNs), that have been made available by Microsoft to further optimize the end user experience. Please also see [Tune SharePoint Online Performance](https://aka.ms/spoperformance)
 
-What you will see is that between the Page Diagnostics tool and tuning guidance, they provide a high level overview of what impacts performance whilst the details on this page take you deeper into how customizations should be built to avoid impacting a pages performance. 
+What you will see is that between the Page Diagnostics tool and tuning guidance, they provide a high-level overview of what impacts performance whilst the details on this page take you deeper into how customizations should be built to avoid impacting a page's performance. 
 
 <a name="bk_antiPatterns"> </a>
 
@@ -256,7 +256,7 @@ In general, use SharePoint REST APIs for client-side data requests. When perform
 
 - Often multiple controls on a page will require data from a single source. If not properly planned, this can result in multiple similar service calls. Ensuring that the data retrieved by one control is available to others (where appropriate) can eliminate unnecessary round trips.
 
-#### Request only what is requried
+#### Request only what is required
 
 - The SharePoint client library allows a developer to specify the fields needed for their application and return only this data. This reduces costs at all layers.
 
