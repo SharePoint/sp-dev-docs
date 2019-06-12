@@ -1,12 +1,12 @@
 ---
-title: Transform classic pages to modern client-side pages using .Net
-description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .Net
+title: Transform classic pages to modern client-side pages using .NET
+description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .NET
 ms.date: 06/06/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Transforming to modern site pages using .Net
+# Transforming to modern site pages using .NET
 
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
@@ -212,7 +212,7 @@ using (var cc = new ClientContext(siteUrl))
 
 ### I want to use the logging features (as of April 2019 release, version 1.0.1904.*)
 
-By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .Net:
+By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .NET:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
