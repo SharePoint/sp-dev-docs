@@ -35,13 +35,13 @@ The Build Definition, as its name suggests, includes all the definitions and the
 > [!NOTE] 
 > Build definitions can be described as a process template. It is a set of configured tasks that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
 
-### Installing NodeJS version 8
+### Installing NodeJS version 10
 
-Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 8, as SharePoint Framework depends on it.
-![installing node 8](../../images/azure-devops-spfx-02.png)
+Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 10, as SharePoint Framework depends on it.
+![installing node 10](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE] 
-> Make sure you specify `8.x` in the `Version Spec` field.
+> Make sure you specify `10.x` in the `Version Spec` field. If your project is based on SharePoint Framework 1.8.1 or earlier.
 
 ### Restoring dependencies
 
@@ -188,10 +188,10 @@ When you create your continuous deployment environment, you can give a name and 
 
 ### Installing NodeJS
 
-By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 8 or later.
-Add a `Node tool installer` task and define `8.X` in the `Version Spec` field.
+By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 10 or later.
+Add a `Node tool installer` task and define `10.X` in the `Version Spec` field.
 
-![installing node 8](../../images/azure-devops-spfx-13.png)
+![installing node 10](../../images/azure-devops-spfx-13.png)
 
 ### Installing the Office 365 CLI
 
