@@ -45,8 +45,9 @@ Once the Build Definition has been created, the first thing you need to do is in
 
 ### Restoring dependencies
 
-Because third party dependencies are not stored in the source control, you need to restore those before starting to build the project. To do so add a `npm` task and set the command to `install`.
+Because third party dependencies are not stored in the source control, you need to restore those before starting to build the project. To do so add a `npm` task and set the Command to `custom` and the Command and arguments to `ci`.
 ![installing dependencies](../../images/azure-devops-spfx-03.png)
+
 
 ### Executing Unit Tests
 
