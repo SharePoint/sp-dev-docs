@@ -1,60 +1,65 @@
 ---
-title: Create SharePoint Communication site using REST
-description: Create and get the status of a new modern SharePoint Communication site by using the REST interface.
+title: Create Modern SharePoint Sites using REST
+description: Create and get the status of a new modern SharePoint site by using the REST interface.
 ms.date: 4/19/2018
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# Create SharePoint Communication site using REST
+# Manage modern SharePoint sites using REST
 
 This topic assumes that you are already familiar with the following topics: 
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 
-This topic does not provide code snippets.
+This topic does not provide code snippets. The REST examples below assume an HTTP Accept header of 'application/json;odata.metadata=none'.
 
 The following REST commands are available for creating a modern SharePoint Communication site:
 
-- **Create**. Create a new SharePoint Communication site.
-- **Status**. Get the status of a SharePoint Communication site.
+- **Create**. Create a new SharePoint site.
+- **Delete**. Deletes a SharePoint site.
+- **Status**. Get the status of a SharePoint site.
 
-The URL for Communication site REST commands is based on `_api/sitepages/communicationsite`. For example, these are the endpoints for the REST commands listed earlier:
+The base URL for the REST commands is `_api/SPSiteManager`.
 
-- `http:///_api/sitepages/communicationsite/create`
-- `http:///_api/sitepages/communicationsite/status`
+## Create a modern site
 
-## Create Communication site
+Using the following REST api you can create both Communication sites and non-group associated Team Sites.
+
+To specify which type of site to create you use the WebTemplate attribute. Use one of the following templates to select which type of site to create:
+
+* Communication Site: `SITEPAGEPUBLISHING#0`
+* non-group associated Team Site: `STS#3`
 
 ```json
-url: /_api/sitepages/communicationsite/create
+url: /_api/SPSiteManager/create
+accept: application/json;odata.metadata=none
+odata-version: 4.0
 method: POST
 body:
 {
-   "request":{
-      "__metadata":{
-         "type":"SP.Publishing.CommunicationSiteCreationRequest"
-      },
-      "AllowFileSharingForGuestUsers":false,
-      "Classification":"LBI",
-      "Description":"Description",
-      "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
-      "Title":"Comm Site 1",
-      "Url":"https://vesku.sharepoint.com/sites/commsite132",
-      "lcid":1033
-   }
+  "Title": "Communication Site 1",
+  "Url":"https://contoso.sharepoint.com/sites/commsite1",
+  "Lcid": 1033,
+  "ShareByEmailEnabled":false,
+  "Classification":"Low Business Impact",
+  "Description":"Description",
+  "WebTemplate":"SITEPAGEPUBLISHING#0",
+  "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
+  "Owner":"owner@yourtenant.onmicrosoft.com"
 }
 ```
 
 > [!IMPORTANT]
-> The `lcid` parameter is not currently supported with this API. You can currently only create English sites. 
+> If you use an app-only context to create the site collection the **owner property is required**. In other cases this is an optional property and will default to the user calling the REST endpoint.
 
-New in this API is the concept of `SiteDesignID`. Much like the in-product site creation flow, the `SiteDesignID` parameter maps to the included site designs. They are:
+
+The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/powershell/module/sharepoint-pnp/get-pnpsitedesign) (PnP PowerShell) cmdlets. If you want to apply an out-of-the-box available site design, use the following values:
 
 - Topic: null
-- Showcase: 6142d2a0-63a5-4ba0-aede-d9fefca2c767
-- Blank: f6cc5403-0d63-442e-96c0-285923709ffc
+- Showcase: `6142d2a0-63a5-4ba0-aede-d9fefca2c767`
+- Blank: `f6cc5403-0d63-442e-96c0-285923709ffc`
 
 ### Response
 
@@ -62,24 +67,39 @@ If successful, this method returns a `200, OK` response code and simple JSON obj
 
 ```json
 {
-  "d":{
-      "Create":{
-           "__metadata":{"type":"SP.Publishing.CommunicationSiteCreationResponse"},
-          "SiteStatus":2,
-          "SiteUrl":"https://contoso.sharepoint.com/sites/comm1"
-      }
-  }
+  "SiteId":"d11e59ca-1465-424c-be90-c847ba849af5",
+  "SiteStatus":2,
+  "SiteUrl":"https://contoso.sharepoint.com/sites/commsite1"
 }
 ```
 
+## Delete a modern site
 
-## Get Communication site status
-
-The REST API for getting the status of a modern SharePoint Communication site:
+The REST API to delete a modern site is:
 
 ```json
-url: /_api/sitepages/communicationsite/status?url='https%3A%2F%2Fcontoso.sharepoint.com%2Fsites%2Fcomm1'
+url: /_api/SPSiteManager/delete
+method: POST
+accept: application/json;odata.metadata=none
+odata-version: 4.0
+body:
+{
+  "siteId":"d11e59ca-1465-424c-be90-c847ba849af5"
+}
+```
+### Response
+
+If succesfull this method returns a `200, OK` response code.
+
+## Get modern site status
+
+The REST API for getting the status of a modern SharePoint site:
+
+```json
+url: /_api/SPSiteManager/status?url='https%3A%2F%2Fcontoso.sharepoint.com%2Fsites%2Fcommsite1'
 method: GET
+accept: application/json;odata.metadata=none
+odata-version: 4.0
 body: none
 ```
 
@@ -91,29 +111,20 @@ If the site exists, the response returns the site status and site URL:
 
 ```json
 {
-  "d":{
-      "Status":{
-           "__metadata":{"type":"SP.Publishing.CommunicationSiteCreationResponse"},
-          "SiteStatus":2,
-          "SiteUrl":"https://contoso.sharepoint.com/sites/comm1"
-      }
-  }
+  "SiteId":"d11e59ca-1465-424c-be90-c847ba849af5",
+  "SiteStatus":2,
+  "SiteUrl":"https://contoso.sharepoint.com/sites/comm1"
 }
 ```
 
-<br/>
 
-If the site does not exist, the response returns a site status of 0 with no URL.
+If the site does not exist, the response returns a site status of 0 with no URL and no site id.
 
 ```json
-{
-  "d":{
-      "Status":{
-           "__metadata":{"type":"SP.Publishing.CommunicationSiteCreationResponse"},
-          "SiteStatus":0,
-          "SiteUrl":
-      }
-  }
+{ 
+  "SiteId":,
+  "SiteStatus":0,
+  "SiteUrl":
 }
 ```
 
