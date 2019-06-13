@@ -402,8 +402,8 @@
     href: declarative-customization/column-formatting.md   
   - name: View formatting
     href: declarative-customization/view-formatting.md       
-  - name: Communication site
-    href: apis/communication-site-creation-rest.md
+  - name: Creating modern sites
+    href: apis/site-creation-rest.md
   - name: Site Footer
     href: features/site-footer.md    
   - name: Shorter share links
