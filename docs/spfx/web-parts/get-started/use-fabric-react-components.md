@@ -8,9 +8,12 @@ localization_priority: Priority
 
 # Use Office UI Fabric React components in your SharePoint client-side web part
 
-This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric React](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences by using the Office Design Language. For a detailed API documentation along with implementation code examples for each control, go to the official [Fabric website](https://developer.microsoft.com/en-us/fabric#/controls/web). You can also find a detailed API reference on the docs.microsoft.com portal following this [link](https://docs.microsoft.com/en-us/javascript/api/office-ui-fabric-react?branch=live&view=office-ui-fabric-react-latest).
+Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. It includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences by using the Office Design Language. 
+- [Fabric website](https://developer.microsoft.com/en-us/fabric#/controls/web) - detailed API documentation along with implementation code examples for each control.
+- [API reference](https://docs.microsoft.com/en-us/javascript/api/office-ui-fabric-react?branch=live&view=office-ui-fabric-react-latest) - detailed API reference documentation.
+- [Office UI Fabric React](https://github.com/OfficeDev/office-ui-fabric-react) - source code repository on github.
 
-The following image shows a DocumentCard component created with Office UI Fabric React.
+This article describes how to build a simple web part like in the following image, that uses the DocumentCard component of Office UI Fabric React.
 
 ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 
