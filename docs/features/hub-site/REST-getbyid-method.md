@@ -1,14 +1,11 @@
 ---
 title: GetById REST method
 description: Gets or updates information about a hub site.
-ms.date: 4/20/2018
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # GetById
-
-> [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Gets or updates information about a hub site.
 

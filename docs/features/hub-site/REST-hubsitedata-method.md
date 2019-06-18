@@ -1,14 +1,11 @@
 ---
 title: HubSiteData REST method
 description: Gets hub site data for the current web.
-ms.date: 4/20/2018
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # HubSiteData
-
-> [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Gets hub site data for the current web.
 

@@ -18,13 +18,6 @@ There are following benefits on using SharePoint Framework as the platform for y
 
 ## Development process
 
-> [!IMPORTANT]
-> You may notice a menu item **Sync to Teams** in the App Catalog ribbon:
->
-> ![Sync To Teams](./../images/using-web-part-as-ms-teams-tab-sync-to-team.png)
->
-> At this time this functionality is not fully implemented and is not the recommended way to deploy your SharePoint Framework web part to Microsoft Teams as a custom tab. This document will be updated when this functionality has been deployed across SharePoint Online. Until that time, the recommended approach is to install SharePoint Framework web parts as custom Microsoft Teams tabs using the side loading approach. Please refer to [Creating a team manifest manually for a web part](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) to proceed for now and follow the steps in the 'Alternative deployment options' section of this article.
-
 You can start developing Microsoft Teams tabs simply by using the SharePoint Framework 1.8 or later packages. High level steps to get started are as follows:
 
 > [!NOTE]
@@ -48,10 +41,7 @@ There are multiple options to deploy Microsoft Teams tab. As both SharePoint and
 
 ### Tenant deployment
 
-In the future, Microsoft will implement a **Sync with Teams** button in the App Catalog ribbon that will automatically create the Microsoft Teams app manifest, app package and install it in the Microsoft Teams store. This will make your solution available for all users in your tenant and Microsoft Teams teams.
-
-> [IMPORTANT]
-> At this time this functionality is not fully implemented and is not the recommended way to deploy your SharePoint Framework web part to Microsoft Teams as a custom tab. This document will be updated when this functionality has been deployed across SharePoint Online. Until that time, the recommended approach is to install SharePoint Framework web parts as custom Microsoft Teams tabs using the side loading approach.
+You can use the **Sync with Teams** button in the App Catalog ribbon that will automatically create the Microsoft Teams app manifest, app package and install it in the Microsoft Teams store. This will make your solution available for all users in your tenant and Microsoft Teams teams.
 
 ### Alternative deployment options
 

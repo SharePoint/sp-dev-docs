@@ -1,14 +1,11 @@
 ---
 title: PowerShell cmdlets for SharePoint hub sites
 description: Use PowerShell cmdlets to create and manage SharePoint hub sites.
-ms.date: 4/20/2018
+ms.date: 6/18/2019
 localization_priority: Priority
 ---
 
 # PowerShell cmdlets for SharePoint hub sites
-
-> [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Use PowerShell cmdlets to create and manage SharePoint hub sites.
 

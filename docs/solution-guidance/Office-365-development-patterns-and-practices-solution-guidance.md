@@ -1,7 +1,7 @@
 ---
 title: Office 365 development and SharePoint patterns and practices (PnP) solution guidance
 description: Provides insights and details based on scenarios and functional requirements.
-ms.date: 5/2/2018
+ms.date: 6/18/2019
 localization_priority: Priority
 ---
 
@@ -16,7 +16,7 @@ Solution guidance, including insights and details based on scenarios and functio
 |[Modernizing your classic SharePoint sites](../transform/modernize-classic-sites.md)|Transform your classic SharePoint sites into modern group-connected sites.|
 |[Branding and site provisioning](Branding-and-site-provisioning-solutions-for-SharePoint.md)|Use SharePoint Add-ins to provision and manage SharePoint site branding.|
 |[Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)|Customize with SharePoint Online "modern" experiences.|
-|[OneDrive and SharePoint Online Multi-Geo scenarios](multigeo-introduction.md)| Preview the OneDrive and SharePoint Online Multi-Geo tenant, which allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 OneDrive and SharePoint Online tenancy to satisfy data residency requirements.|
+|[OneDrive and SharePoint Online Multi-Geo scenarios](multigeo-introduction.md)| OneDrive and SharePoint Online Multi-Geo tenant, which allows multinational corporations that have one or more geographical locations, to expand their Office 365 OneDrive and SharePoint Online tenancy to satisfy data residency requirements.|
 |[Building SharePoint Online portals](portal-overview.md) |Factor in SharePoint Online specific performance considerations when developing your new portal. |
 |[Composite business add-ins](composite-business-apps-for-sharepoint.md)|Use composite business add-ins to integrate your SharePoint solutions with your business processes and technologies. |
 |[ECM solutions](enterprise-content-management-solutions-for-sharepoint.md)|Perform common ECM tasks such as setting site policies, uploading files, synchronizing term groups, and more.|

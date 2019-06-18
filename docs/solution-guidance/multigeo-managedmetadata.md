@@ -1,14 +1,11 @@
 ---
 title: Manage metadata in a Multi-Geo tenant
 description: Managed metadata that you define for the default geo location of a Multi-Geo tenant is automatically replicated to the tenant's satellite locations, and is only available to the sites hosted in that geo location.
-ms.date: 4/27/2018
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # Manage metadata in a Multi-Geo tenant
-
-> [!IMPORTANT] 
-> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 Managed metadata in SharePoint is Multi-Geo-aware. This article describes how to manage metadata in a SharePoint Multi-Geo tenant.
 
@@ -40,4 +37,4 @@ The following are important points to know about managed metadata in Multi-Geo t
 ## See also
 
 - [Plan hybrid SharePoint taxonomy and hybrid content types](https://docs.microsoft.com/en-us/SharePoint/hybrid/plan-hybrid-sharepoint-taxonomy-and-hybrid-content-types) 
-- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
+- [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)
