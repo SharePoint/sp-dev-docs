@@ -1,45 +1,33 @@
 ---
 title: Cross-site publishing in SharePoint
-ms.date: 09/25/2017
+ms.date: 06/18/2019
 ms.prod: sharepoint
 ms.assetid: 33f49e69-c1d3-4a6e-8887-5df683cba022
 localization_priority: Normal
 ---
 
-
 # Cross-site publishing in SharePoint
 
 SharePoint introduces a cross-site publishing feature that enables you to reuse content across multiple site collections. It uses built-in search capabilities to enable publishing scenarios and architectures. For the first time, you can design sites that cross SharePoint farms—enabling your sites to span the boundary between intranets and the Internet.
-  
-    
-    
+
+> [!IMPORTANT]
+> This capability is not available in SharePoint Online. Cross-site publishing capability is only available in on-premises deployments. 
 
 Consider a site with one authoring site collection that feeds multiple publishing site collections, with different domains, all crawled by public search engines and optimized for search engine optimization (SEO). Cross-site publishing enables this scenario and others like it, without requiring you to use content deployment.
 Cross-site publishing was designed with some common scenarios in mind, including:
   
-    
-    
-
-
 - Share an item list or a page library as a publishing catalog
-    
-  
 - Consume a catalog from search
-    
-  
 - Combine cross-site publishing with the variations feature to enable authoring multilingual sites from a common authoring site collection
-    
   
-
 ## Catalogs
+
 <a name="SP15_CrossSitePublising_Catalog"> </a>
 
 Catalogs, introduced in SharePoint, include a list or library that is shared out to search for consumption on publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to really reuse content across your sites and across the boundary between your intranet sites, extranet sites, and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search web part in SharePoint](content-search-web-part-in-sharepoint.md).
   
-    
-    
-
 ## When should I use cross-site publishing?
+
 <a name="SP15_CrossSitePublising_WhenShouldIUseCrossSitePublishing"> </a>
 
 There are some cases where cross-site publishing is not efficient or appropriate. Whether you have external data sources and how you connect to them, variations, site type, search database implementation, and use of the product catalog are all factors that should influence your decision. Table 1 provides more information about these design considerations.
@@ -185,8 +173,4 @@ public CatalogConnectionSettings GetCatalogConnectionSettings(string catalogPath
 ## See also
 <a name="bk_addresources"> </a>
 
-
 -  [Publish SharePoint sites](publish-sharepoint-sites.md)
-    
-  
-
