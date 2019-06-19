@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Isolated web parts
 
-Using this capability you can build web parts that securely communicate with APIs secured with Azure AD without exposing the access token to other components on the page or even scripts in the tenant.
+Using this capability, you can build web parts that securely communicate with APIs secured with Azure AD without exposing the access token to other components on the page or even scripts in the tenant.
 
 ## Why isolated web parts
 
