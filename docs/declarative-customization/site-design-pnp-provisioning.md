@@ -212,7 +212,7 @@ Next, upload the files so that your Azure Function can use the module.
     ![Screenshot of Development Tools with Advanced Tools (Kudu) highlighted](images/pnpprovisioning-select-kudu.png)
 
 1. On the main Kudu page, select **Debug Console** and pick either **CMD** or **PowerShell**.
-1. Choose the file explorer on the upper part of the page, and go to **site\wwwroot\\[nameofyourazurefunction]**.
+1. Choose the file explorer on the upper part of the page, and go to **site\wwwroot\\**.
 1. Create a new folder named **modules**.
     
     ![Screenshot with the new folder option highlighted](images/pnpprovisioning-kudu-create-folder.png)
