@@ -1,12 +1,12 @@
 ---
-title: Use web parts with the full-width column
-description: Build web parts that can be used in the full-width column
+title: Use SPFx web parts with the full-width column
+description: Build SPFx web parts that can be used in the full-width column
 ms.date: 03/23/2018
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# Use web parts with the full-width column
+# Use SPFx web parts with the full-width column
 
 Modern SharePoint pages support layouts that allow users to organize the information they present on their pages. Users can choose from a number of different section layouts such as two columns, three columns, or one-third column. Modern pages in communication sites offer an additional section layout named **Full-width column**. This layout spans the full width of the page without any horizontal margin or padding. SharePoint Framework web parts can be placed in any layout, but due to extra requirements, web parts must explicitly enable support for the full-width column.
 
