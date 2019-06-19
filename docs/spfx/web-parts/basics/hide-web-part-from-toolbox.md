@@ -12,7 +12,7 @@ For scenarios where you automatically instantiate a custom web part on a modern 
 
 ## Configure hiding the web part from the toolbox
 
-By default a SharePoint Framework client-side web part will be displayed in the web part toolbox when a user edit a page. To allow hiding the web part from the toolbox you add set the `hiddenFromToolbox` property to `true` in the web part manifest.
+By default a SharePoint Framework client-side web part will be displayed in the web part toolbox when a user edit a page. To allow hiding the web part from the toolbox, you add set the `hiddenFromToolbox` property to `true` in the web part manifest.
 
 ```json
 {
