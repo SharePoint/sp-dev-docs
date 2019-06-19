@@ -122,6 +122,7 @@ XSLT adds significant cost overhead to the page render. These server controls re
 - XSLT List View Webpart
 - RSS Viewer Webpart
 - DataForm Webpart
+- Summary Links Webpart
 
 ### Use telemetry
 
