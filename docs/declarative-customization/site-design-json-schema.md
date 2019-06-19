@@ -26,9 +26,15 @@ The overall JSON structure is specified as follows:
 
 You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
+#### Applying site designs multiple times
+**Actions** can be runned more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema. 
+
 ## Create a new SharePoint list
 
 Use the **createSPList** verb to create a new SharePoint list.
+
+> [!NOTE]
+> Once **createSPList** is applied on a site, runnning the **createSPList** with the same list name will act as an update to the existing list.   
 
 #### JSON values
 
