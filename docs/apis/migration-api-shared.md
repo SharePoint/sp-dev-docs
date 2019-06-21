@@ -1,10 +1,10 @@
 ---
-title: "SPO Migration API: Migrating sahred files and folders"
+title: "SPO Migration API: Migrating shared files and folders"
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 ms.topic: article
-description: "Migrating sahred files and folders using item references."
+description: "Migrating shared files and folders using item references."
 --- 
 
 
