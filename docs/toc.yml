@@ -342,8 +342,6 @@
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
         href: apis/migration-api-encryption.md
-      - name: Throttling
-        href: apis/migration-api-handling-trottling.md        
       - name: Sharing
         href: apis/migration-api-shared.md           
   - name: Site design
