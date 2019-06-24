@@ -181,6 +181,22 @@ When the page transformation engine puts the banner web part on a page it gets i
 > [!NOTE]
 > You can use your own custom banner web part by simply deploying it and then updating the mapping in the used webpartmapping.xml file.
 
+#### What if you also want a banner on the classic pages pointing to the created modern page?
+
+You can also implement a banner on the classic pages so that users are aware a new, modern, page exists. To so follow below steps:
+
+- Upload [pnppagetransformationclassicbanner.js](https://github.com/SharePoint/sp-dev-modernization/blob/master/Solutions/PageTransformationUI/assets/pnppagetransformationclassicbanner.js) into a central location in your tenant. It's important that you provide read-only access to this location for all your users
+- Use below PnP PowerShell snippet to install the custom banner to the site collections that need it
+
+```PowerShell
+# Update the below link first
+$command = 'https://contoso.sharepoint.com/sites/centralassets/SiteAssets/pnppagetransformationclassicbanner.js?rev=beta.1'
+
+Connect-PnPOnline -Url "<your web url>"
+
+Add-PnPJavaScriptLink -Scope Site -Key "CA_PnP_Modernize_ClassicBanner" -Sequence 1000 -Url $command
+```
+
 ### Modern site pages don't work on the site I want to transform pages in
 
 By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
