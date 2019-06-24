@@ -211,7 +211,7 @@ If the page layout contains web part zones then these must be defined here. This
 - **Column**: the column you want to put the web parts hosted in this zone in. Needs to be 1, 2 or 3.
 - **Order**: order in the defined row/column for the web parts hosted in this zone
 
-Sometimes publishing pages have multiple web parts in a web part zone and you do want to position each web part differently on the target page. You can do that by using the optional WebPartZoneLayout element:
+Sometimes publishing pages have multiple web parts in a web part zone and you do want to position each web part differently on the target page. You can do that by using the optional WebPartZoneLayout element (as of the July 2019 release):
 
 ```Xml
 <WebPartZoneLayout>
@@ -364,7 +364,7 @@ When a page has a page header image that image will also be used as a page previ
 > [!Note]
 > Controlling the page preview image was introduced with the May 2019 release.
 
-### I want to use different defaults for the QuickLinks web part
+### I want to use different defaults for the QuickLinks web part (as of the July 2019 release)
 
 When transformation results in a modern QuickLinks web part (e.g. for transformation of the SummaryLinkWebPart) then the page transformation framework will use a default base configuration for the QuickLinks web part. If you, however, want a different configuration then you can do that by specifying the QuickLinksJsonProperties property. Wrap the encoded JSON properties in a StaticString function as shown in this sample:
 
