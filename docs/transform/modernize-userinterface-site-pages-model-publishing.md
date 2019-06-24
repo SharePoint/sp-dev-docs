@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 06/06/2019
+ms.date: 06/24/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -102,7 +102,14 @@ Let's analyze how a page layout mapping is configured in the page layout mapping
         </Field>
       </WebParts>
       <WebPartZones>
-        <WebPartZone Row="2" Column="1" Order="1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0"/>
+        <WebPartZone Row="2" Column="1" Order="1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0">
+          <!-- Optional element, only needed if you want to use custom position of the web parts coming from a web part zone -->
+          <WebPartZoneLayout>
+            <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="2"/>
+            <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="2"/>
+            <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="1"/>
+          </WebPartZoneLayout>
+        </WebPartZone>
       </WebPartZones>
       <FixedWebParts>
         <WebPart Row="1" Column="2" Order="1" Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
@@ -203,6 +210,18 @@ If the page layout contains web part zones then these must be defined here. This
 - **Row**: the row you want to put the web parts hosted in this zone in. Needs to be 1 or greater.
 - **Column**: the column you want to put the web parts hosted in this zone in. Needs to be 1, 2 or 3.
 - **Order**: order in the defined row/column for the web parts hosted in this zone
+
+Sometimes publishing pages have multiple web parts in a web part zone and you do want to position each web part differently on the target page. You can do that by using the optional WebPartZoneLayout element:
+
+```Xml
+<WebPartZoneLayout>
+  <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="2"/>
+  <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="2"/>
+  <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="1"/>
+</WebPartZoneLayout>
+```
+
+The above definition will have as a result that the first ContentEditorWebPart will go to row 3, column 2. The second ContentEditorWebPart will be put in row 3, column 1 with order 2 and the first XSLTListView web part will end up in row 3, column 1 with order 1. You can define as many WebPartOccurrence elements as needed, if there is no corresponding web part in the web part zone then the WebPartOccurrence element will be ignored. If there's a web part in the web part zone which is not listed as a WebPartOccurrence element then that web part will get it's row, column and order information from the WebPartZone element.
 
 ### FixedWebParts element
 
@@ -344,3 +363,22 @@ When a page has a page header image that image will also be used as a page previ
 
 > [!Note]
 > Controlling the page preview image was introduced with the May 2019 release.
+
+### I want to use different defaults for the QuickLinks web part
+
+When transformation results in a modern QuickLinks web part (e.g. for transformation of the SummaryLinkWebPart) then the page transformation framework will use a default base configuration for the QuickLinks web part. If you, however, want a different configuration then you can do that by specifying the QuickLinksJsonProperties property. Wrap the encoded JSON properties in a StaticString function as shown in this sample:
+
+```XML
+<WebParts>
+  ...
+  <Field Name="SummaryLinks" TargetWebPart="Microsoft.SharePoint.Publishing.WebControls.SummaryLinkWebPart, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="1" Column="2">
+    <!-- No function specified, means the content of the PublishingPageContent field will be assigned to the value of the first listed web part property -->
+    <Property Name="SummaryLinkStore" Type="string" />
+    <Property Name="Title" Type="string" Functions="EmptyString()"/>
+    <Property Name="QuickLinksJsonProperties" Type="string" Functions="StaticString('{&quot;isMigrated&quot;: false, &quot;layoutId&quot;: &quot;Button&quot;, &quot;shouldShowThumbnail&quot;: true, &quot;buttonLayoutOptions&quot;: { &quot;showDescription&quot;: false, &quot;buttonTreatment&quot;: 1, &quot;iconPositionType&quot;: 2, &quot;textAlignmentVertical&quot;: 1, &quot;textAlignmentHorizontal&quot;: 2, &quot;linesOfText&quot;: 2}, &quot;listLayoutOptions&quot;: { &quot;showDescription&quot;: false, &quot;showIcon&quot;: true}, &quot;waffleLayoutOptions&quot;: { &quot;iconSize&quot;: 1, &quot;onlyShowThumbnail&quot;: false}, &quot;hideWebPartWhenEmpty&quot;: true}')" />
+  </Field>
+  ...
+</WebParts>
+```
+
+The JSON in the sample shows all the possible configuration options you can set, but you can however also just define the ones you need. As long as the JSON is valid and the structure is maintained your custom QuickLinks configuration will be picked up.
