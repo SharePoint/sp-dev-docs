@@ -42,7 +42,7 @@ This API is designed to be executed in the context of the app catalog site.
 #### HTTP Request
 
 ```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 ```
 
 #### Request headers
@@ -66,7 +66,7 @@ This enables the solution to be available to install to specific sites. This API
 #### HTTP Request
 
 ```http
-POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
 ```
 
 #### Request headers
