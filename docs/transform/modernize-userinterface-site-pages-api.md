@@ -1,7 +1,7 @@
 ---
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
-ms.date: 04/04/2019
+ms.date: 06/24/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -120,6 +120,22 @@ Name|Description
 Name|Description
 :-----|:----------
 {CompleteString}|Concatenation of the passed strings
+### StaticString
+
+**Description:** Returns an the (static) string provided as input
+
+**Example:** `EmptyString('static string')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'static string'}|Static input string
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|String provided as input
 ### TextCleanup
 
 **Description:** Rewrites wiki page html to be compliant with the html supported by the client side text part.
@@ -431,13 +447,14 @@ Name|Description
 
 **Description:** Maps summarylinks web part data into a properties collection and supporting serverProcessedContent nodes for the quicklinks web part
 
-**Example:** `SummaryLinksToQuickLinksProperties({Text})`
+**Example:** `SummaryLinksToQuickLinksProperties({Text},{QuickLinksJsonProperties})`
 
 #### Input parameters
 
 Name|Description
 :-----|:----------
 {Text}|Original wiki html content
+{QuickLinksJsonProperties}|QuickLinks JSON properties blob (optional)
 #### Output parameters
 
 Name|Description
@@ -479,6 +496,22 @@ Name|Description
 Name|Description
 :-----|:----------
 {return value}|Empty string
+### StaticString
+
+**Description:** Returns an the (static) string provided as input
+
+**Example:** `EmptyString('static string')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'static string'}|Static input string
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|String provided as input
 ### ToImageUrl
 
 **Description:** Returns the server relative image url of a Publishing Image field value.
@@ -511,6 +544,54 @@ Name|Description
 Name|Description
 :-----|:----------
 {return value}|Image alternate text
+### ToImageAnchor
+
+**Description:** Returns the image anchor url of a Publishing Image field value.
+
+**Example:** `ToImageAnchor({PublishingPageImage})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{PublishingPageImage}|Publishing Image field value
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Image anchor url
+### ToImageCaption
+
+**Description:** Returns the image caption of a Publishing Html image caption field
+
+**Example:** `ToImageCaption({PublishingImageCaption})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{PublishingImageCaption}|Publishing Html image caption field value
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Image caption
+### ToPreviewImageUrl
+
+**Description:** Returns a page preview image url.
+
+**Example:** `ToPreviewImageUrl({PreviewImage})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{PreviewImage}|A publishing image field value or a string containing a server relative image path
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|A formatted preview image url
 ## Selectors
 ### TextSelector
 

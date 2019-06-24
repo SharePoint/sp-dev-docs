@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 06/06/2019
+ms.date: 06/24/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -309,6 +309,50 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     DisablePageComments = true,
+};
+```
+
+## SkipUrlRewrite option (as of May 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to leave URL rewriting enabled, use this option if you want to create a page with disabled URL rewriting. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipUrlRewrite = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipUrlRewrite = true,
+};
+```
+
+## UrlMappingFile option (as of July 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify a file with custom URL mappings. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    UrlMappingFile = @"c:\temp\urlmappingfile.csv",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    UrlMappingFile = @"c:\temp\urlmappingfile.csv",
 };
 ```
 

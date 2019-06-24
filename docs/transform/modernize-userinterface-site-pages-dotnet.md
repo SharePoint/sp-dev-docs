@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using .NET
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .NET
-ms.date: 06/06/2019
+ms.date: 06/24/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
