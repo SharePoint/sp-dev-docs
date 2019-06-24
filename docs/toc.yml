@@ -1391,6 +1391,8 @@
           href: transform/modernize-userinterface-site-pages-model-publishing.md
         - name: Page transformation Functions and Selectors
           href: transform/modernize-userinterface-site-pages-api.md
+        - name: URL mapping
+          href: transform/modernize-userinterface-site-pages-urlmapping.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
     - name: The SharePoint Modernization scanner
