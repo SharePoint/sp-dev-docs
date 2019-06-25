@@ -31,52 +31,6 @@ Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/
 
 [!IMPORTANT] ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
 
-<a name="Certificate"> </a>
-
-## Create a certificate and make it the security token service (STS) certificate of your on-premises installation of SharePoint
-
-You'll need to replace the default security token service (STS) certificate of your on-premises installation of SharePoint with your own certificate. This article gives you an example of how to create and export a test certificate by using the **Create Self Signed Certificate** option in IIS. You can also use a commercial certificate issued by a certificate authority.
-
-- [Create a test .pfx certificate file first, and then a corresponding test .cer file](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/software-publisher-certificate) 
- 
-- [You can also use the MakeCert test program to generate a test X.509 certificate](https://msdn.microsoft.com/en-us/library/ms537364(VS.85).aspx)
- 
-### To create a test .pfx certificate file
-
-1. In IIS Manager, select the _ServerName_ node in the tree view on the left.
-    
-2. Select **Server Certificates**, as shown in the following figure.
-    
-    ![Server Certificates option in IIS](../images/e38f9b7f-59a3-468c-bcde-a48272f1f217.gif)
-
-3. Select the **Create Self-Signed Certificate** link in the set of links on the right.
-    
-    ![Create Self-Signed Cerificate link](../images/3f0aae5a-e58b-4ec8-b67f-0024abfa2dab.gif)
-
-4. Name the certificate **SampleCert**, and then select **OK**.
-     
-5. Right-click the certificate, and then select **Export**.
-    
-    ![Exporting a test certificate](../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
-
-6. Export the file to a location you choose and give it a password. In this example, the password is **password**. In a production environment, use a strong password (for more information, see [Guidelines for creating strong passwords](https://msdn.microsoft.com/en-us/library/bb416446.aspx) and [Strong passwords](https://docs.microsoft.com/en-us/sql/relational-databases/security/strong-passwords)).
-    
-<a name="STSCertificate"> </a>
-
-## Make your certificate the STS certificate for your on-premises installation of SharePoint
-
-Now that you have a certificate, you make it the STS certificate for your on-premises SharePoint farm. 
- 
-Open the SharePoint Management Shell as an administrator, and run this Windows PowerShell script:
-
-```powershell
-$certPrKPath = "c:\location of your .pfx file"
-$certPassword = "password"
-$stsCertificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 $certPrKPath, $certPassword, 20
-Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCertificate -confirm:$false
-
-```
-
 <a name="ConnectAAD"> </a>
 
 ## Configure your on-premises installation of SharePoint to use ACS
@@ -99,7 +53,7 @@ The following function does all the work to configure your on-premises SharePoin
  
 ### To configure your on-premises SharePoint site to use ACS
 
-1. On the on-premises SharePoint server, copy the code in the function into a text file, and save it with the name MySharePointFunctions.psm1 to one or the other of the following folders (not both). You may have to create parts of the path, if it includes folders that do not already exist. Notice that in both cases, the lowest folder in the path has to have the same name as the file.
+1. On the on-premises SharePoint server, copy the code of the function Connect-SPFarmToAAD (available below) into a text file named MySharePointFunctions.psm1, and save it to one or the other of the following folders (not both). You may have to create parts of the path, if it includes folders that do not already exist. Notice that in both cases, the lowest folder in the path has to have the same name as the file.
 
     > [!TIP] 
     > The file has to be saved as ANSI format, not UTF-8. PowerShell may give syntax errors when it loads a file with a non-ANSI format. Windows NotePad defaults to saving it as ANSI. If you use any other editor to save the file, be sure you are saving it as ANSI.
@@ -109,31 +63,37 @@ The following function does all the work to configure your on-premises SharePoin
     - `C:\windows\system32\windowspowershell\V1.0\modules\MySharePointFunctions`
     
  
-2. Open the SharePoint Management Shell as an administrator and run the following cmdlet to verify that the MySharePointFunctions module is listed.
+2. Function Connect-SPFarmToAAD requires NuGet package MSOnlineExt to work, install it with the cmdlet below.
+    
+    ```powershell
+    Install-Module -Name MSOnlineExt
+    ```
+
+3. Open the SharePoint Management Shell as an administrator and run the following cmdlet to verify that the MySharePointFunctions module is listed.
     
     ```powershell 
     Get-Module -listavailable
     ```
 
-3. Run the following cmdlet to import the module.
+4. Run the following cmdlet to import the module.
     
     ```powershell
     Import-Module MySharePointFunctions
     ```
 
-4. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is listed as part of the module.
+5. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is listed as part of the module.
     
     ```powershell
     Get-Command -module MySharePointFunctions
     ```
 
-5. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is loaded.
+6. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is loaded.
     
     ```powershell
     ls function:\ | where {$_.Name -eq "Connect-SPFarmToAAD"}
     ```
 
-6. Run the `Connect-SPFarmToAAD` function. Be sure to provide the required parameters and any optional parameters that apply to your developer environment. See the next section for details and examples.
+7. Run the `Connect-SPFarmToAAD` function. Be sure to provide the required parameters and any optional parameters that apply to your developer environment. See the next section for details and examples.
     
  
 <a name="parameters"> </a>
@@ -170,7 +130,7 @@ Connect-SPFarmToAAD -AADDomain 'MyO365Domain.onmicrosoft.com' -SharePointOnlineU
 
 <a name="function"> </a>
 
-### Connect-SPFarmToAAD function script
+### Content of MySharePointFunctions.psm1
 
 ```powershell 
 function Connect-SPFarmToAAD {
