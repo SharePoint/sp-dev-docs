@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:America/New_York
+TZURL:http://tzurl.org/zoneinfo-outlook/America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20190625T152632Z
+DTSTART;TZID=America/New_York:20190703T100000
+DTEND;TZID=America/New_York:20190703T110000
+SUMMARY:SharePoint PnP | JavaScript + SharePoint Framework Summer Camp Ca
+ ll 1
+UID:20190625T152632Z-539917661@fe80:0:0:0:c34:59ff:fe8e:3043%eth0
+TZID:America/New_York
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://zoom.us/j/539917661\n	Description
+ : This is the one of the two special meetings that act as “stand-ins” fo
+ r the bi-weekly special interest group (SIG) meetings held by Microsoft 
+ &amp\; hosted by VesaJ.\n\nMicrosoft is not hosting the SIG meetings in 
+ July 2019 due to multiple timing conflicts by the usual hosts\, so I (An
+ drew Connell) volunteered to host them. This meeting will be the same fo
+ rmat as the SIG meeting.\n\nCheck this page for updated invites for SIG 
+ meetings after July 2019 when Microsoft will take over hosting the meeti
+ ngs again: https://docs.microsoft.com/sharepoint/dev/community/community
+ #community-calls\n
+LOCATION:https://zoom.us/j/539917661
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
