@@ -63,6 +63,9 @@ By default SharePoint Framework projects does not include a testing Framework. W
 npm i chai@4.X jest jest-junit @voitanos/jest-preset-spfx-react16 -D
 ```
 
+> [!NOTE] 
+> Projects generated on SharePoint Framework 1.7.1 and earlier rely on React version 15. If you are using React 15, you need to install @voitanos/jest-preset-spfx-react15 instead. For other Frameworks (Knockout, ...) you might need to install a different preset instead. 
+
 You also need to configure Jest, to do so create a file `config/jest.config.json` and add the following content.
 
 ```JSON
