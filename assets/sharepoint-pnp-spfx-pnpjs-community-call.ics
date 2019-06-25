@@ -1,0 +1,105 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Eastern Standard Time
+BEGIN:STANDARD
+DTSTART:16011104T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010311T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20190624T182257Z
+DESCRIPTION:Welcome to SharePoint PnP Bi-weekly Special Interest Group call
+	 around Client-side development. Topics covered in this call are SharePoin
+	t Framework latest updates\, PnPjs\, Office365Cli\, Reusable Controls\, an
+	d community demos.\n\n \n\nLink to join the call – https://aka.ms/spdev-
+	spfx-call-join\n\n \n\n-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+	-- -- -- --\n\n \n\nSharePoint Dev Community – http://aka.ms/sppnp Share
+	Point Dev Videos (including recorded community calls) – http://aka.ms/sp
+	dev-videos SharePoint Dev Documentation - http://aka.ms/spdev-docs SharePo
+	int Dev issues – http://aka.ms/spdev-issues SharePoint Dev UserVoice –
+	 http://aka.ms/spdev-uservoice\n\n
+DTEND;TZID="Eastern Standard Time":20190801T110000
+DTSTAMP:20190624T182203Z
+DTSTART;TZID="Eastern Standard Time":20190801T100000
+LAST-MODIFIED:20190624T182257Z
+LOCATION:Microsoft Teams Meeting
+ORGANIZER;CN="Patrick Rodgers":invalid:nomail
+PRIORITY:5
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=TH;WKST=SU
+SEQUENCE:2
+SUMMARY;LANGUAGE=en-us:SharePoint Patterns and Practices Client-side develo
+	pment SIG
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000C0BD1A15972AD501000000000000000
+	01000000044FD58F0AA2A1F4790EC41C4BE20606E
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+	12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta name=Generato
+	r content="Microsoft Word 15 (filtered medium)"><style><!--\n/* Font Defin
+	itions */\n@font-face\n	{font-family:"Cambria Math"\;\n	panose-1:2 4 5 3 5
+	 4 6 3 2 4\;}\n@font-face\n	{font-family:Calibri\;\n	panose-1:2 15 5 2 2 2
+	 4 3 2 4\;}\n@font-face\n	{font-family:"Segoe UI"\;\n	panose-1:2 11 5 2 4 
+	2 4 2 2 3\;}\n@font-face\n	{font-family:"Segoe UI Semibold"\;\n	panose-1:2
+	 11 7 2 4 2 4 2 2 3\;}\n/* Style Definitions */\np.MsoNormal\, li.MsoNorma
+	l\, div.MsoNormal\n	{margin:0in\;\n	margin-bottom:.0001pt\;\n	font-size:11
+	.0pt\;\n	font-family:"Calibri"\,sans-serif\;}\na:link\, span.MsoHyperlink\
+	n	{mso-style-priority:99\;\n	color:#0563C1\;\n	text-decoration:underline\;
+	}\na:visited\, span.MsoHyperlinkFollowed\n	{mso-style-priority:99\;\n	colo
+	r:#954F72\;\n	text-decoration:underline\;}\np.msonormal0\, li.msonormal0\,
+	 div.msonormal0\n	{mso-style-name:msonormal\;\n	mso-margin-top-alt:auto\;\
+	n	margin-right:0in\;\n	mso-margin-bottom-alt:auto\;\n	margin-left:0in\;\n	
+	font-size:11.0pt\;\n	font-family:"Calibri"\,sans-serif\;}\nspan.EmailStyle
+	18\n	{mso-style-type:personal-compose\;\n	font-family:"Calibri"\,sans-seri
+	f\;\n	color:windowtext\;}\n.MsoChpDefault\n	{mso-style-type:export-only\;\
+	n	font-size:10.0pt\;}\n@page WordSection1\n	{size:8.5in 11.0in\;\n	margin:
+	1.0in 1.0in 1.0in 1.0in\;}\ndiv.WordSection1\n	{page:WordSection1\;}\n--><
+	/style><!--[if gte mso 9]><xml>\n<o:shapedefaults v:ext="edit" spidmax="10
+	26" />\n</xml><![endif]--><!--[if gte mso 9]><xml>\n<o:shapelayout v:ext="
+	edit">\n<o:idmap v:ext="edit" data="1" />\n</o:shapelayout></xml><![endif]
+	--></head><body lang=EN-US link="#0563C1" vlink="#954F72"><div class=WordS
+	ection1><p class=MsoNormal>Welcome to SharePoint PnP Bi-weekly Special Int
+	erest Group call around Client-side development. Topics covered in this ca
+	ll are SharePoint Framework latest updates\, PnPjs\, Office365Cli\, Reusab
+	le Controls\, and community demos.<o:p></o:p></p><p class=MsoNormal><o:p>&
+	nbsp\;</o:p></p><p class=MsoNormal>Link to join the call &#8211\; <a href=
+	"https://aka.ms/spdev-spfx-call-join">https://aka.ms/spdev-spfx-call-join<
+	/a><o:p></o:p></p><p class=MsoNormal><o:p>&nbsp\;</o:p></p><p class=MsoNor
+	mal>-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --<o:p></o
+	:p></p><p class=MsoNormal><o:p>&nbsp\;</o:p></p><p class=MsoNormal>SharePo
+	int Dev Community &#8211\; <a href="http://aka.ms/sppnp">http://aka.ms/spp
+	np</a> SharePoint Dev Videos (including recorded community calls) &#8211\;
+	 <a href="http://aka.ms/spdev-videos">http://aka.ms/spdev-videos</a> Share
+	Point Dev Documentation - <a href="http://aka.ms/spdev-docs">http://aka.ms
+	/spdev-docs</a> SharePoint Dev issues &#8211\; <a href="http://aka.ms/spde
+	v-issues">http://aka.ms/spdev-issues</a> SharePoint Dev UserVoice &#8211\;
+	 <a href="http://aka.ms/spdev-uservoice">http://aka.ms/spdev-uservoice</a>
+	<o:p></o:p></p><p class=MsoNormal><o:p>&nbsp\;</o:p></p><p class=MsoNormal
+	><o:p>&nbsp\;</o:p></p></div><p class=MsoNormal><o:p>&nbsp\;</o:p></p></div></body></html>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-APPTLASTSEQUENCE:2
+X-MS-OLK-APPTSEQTIME:20190624T182203Z
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+X-MS-OLK-CONFTYPE:0
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
