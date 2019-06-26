@@ -10,9 +10,6 @@ localization_priority: Normal
 
 Starting with the SharePoint Framework v1.7, you can also surface existing Microsoft Teams tab implementations in the SharePoint pages. These applications are surfaced using a web part style experience where the application is surfaced using IFrame technique.
 
-> [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
-
 You can activate existing Microsoft Teams tab in SharePoint using following steps.
 
 1. Deploy Microsoft Teams zip file containing the manifest.json to the SharePoint tenant app catalog
