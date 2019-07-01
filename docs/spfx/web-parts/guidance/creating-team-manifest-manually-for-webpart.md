@@ -15,7 +15,7 @@ You can create the Microsoft Teams app manifest file using the [Teams App Studio
 >
 > ![Sync To Teams](../../../images/using-web-part-as-ms-teams-tab-sync-to-team.png)
 >
-> At this time this functionality is not fully implemented and is not the recommended way to deploy your SharePoint Framework web part to Microsoft Teams as a custom tab. This document will be updated when this functionality has been deployed across SharePoint Online. Until that time, the recommended approach is to install SharePoint Framework web parts as custom Microsoft Teams tabs using the side loading approach.
+> This functionality is perfect and ideal if the SPFx component is the only solution surfacing in Teams. However, Teams solutions can be complex and contain multiple capabilities such as tabs, bots, actionable cards etc. For such complex solutions, crafting the Teams manifest manually and deploying it in Teams App Catalog directly is the only option.
 
 ## Create a Microsoft Teams app manifest
 
