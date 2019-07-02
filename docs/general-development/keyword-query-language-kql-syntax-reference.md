@@ -1,6 +1,6 @@
 ﻿---
 title: Keyword Query Language (KQL) syntax reference
-ms.date: 09/25/2017
+ms.date: 07/22/2019
 ms.prod: sharepoint
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 localization_priority: Priority
@@ -356,6 +356,7 @@ Matches would include items from January 1st of 2019 until April 26th of 2019:
 
  `LastModifiedTime>=2019-01-01 AND LastModifiedTime<=2019-04-26`
 
+**Table 4. Date interval reserved keywords**
 
 |**Name of date interval**|**Description**|
 |:-----|:-----|
@@ -371,41 +372,63 @@ Matches would include items from January 1st of 2019 until April 26th of 2019:
 ### Using multiple property restrictions within a KQL query
 
 Search in SharePoint supports the use of multiple property restrictions within the same KQL query. You can use either the same property for more than one property restriction, or a different property for each property restriction. 
-  
     
-    
-When you use multiple instances of the same property restriction, matches are based on the union of the property restrictions in the KQL query. Matches would include content items authored by John Smith or Jane Smith, as follows:
-  
-    
+When you use multiple instances of the same property restriction, matches are based on the union of the property restrictions in the KQL query. Matches would include content items authored by John Smith or Jane Smith, as follows:    
     
  `author:"John Smith" author:"Jane Smith"`
-  
     
-    
-This functionally is the same as using the **OR** Boolean operator, as follows:
-  
-    
+This functionally is the same as using the **OR** Boolean operator, as follows:    
     
  `author:"John Smith" OR author:"Jane Smith"`
-  
-    
     
 When you use different property restrictions, matches are based on an intersection of the property restrictions in the KQL query, as follows:
-  
-    
     
  `author:"John Smith" filetype:docx`
-  
-    
     
 Matches would include Microsoft Word documents authored by John Smith. This is the same as using the **AND** Boolean operator, as follows:
-  
-    
     
  `author:"John Smith" AND filetype:docx`
-  
-    
-    
+
+
+
+### Grouping property restrictions within a KQL query
+_**Applies to:** Office 365 | SharePoint Online | SharePoint 2019_
+
+You may use parenthesis `()` to group multiple property restrictions related to a specific property of type *Text* with the following format:
+
+`<Property Name>:(<Expression>)`
+
+More advanced queries might benefit from using the `()` notation to construct more condensed and readable query expressions.
+
+The query:
+
+`author:"John Smith" AND author:"Jane Smith"`
+
+can be rewritten as:
+
+`author:("John Smith" "Jane Smith")`
+
+The query:
+
+`title:Advanced title:Search title:Query NOT title:"Advanced Search Query"`
+
+can be rewritten as:
+
+`title:((Advanced OR Search OR Query) -"Advanced Search Query")`
+
+The query:
+
+`title:Advanced XRANK(cb=1) title:Search XRANK(cb=1) title:Query`
+
+can be rewritten as:
+
+`title:(Advanced XRANK(cb=1) Search XRANK(cb=1) Query)`
+
+> [!NOTE]
+> When using `()` to group an expression on a property query the number of matches might increase as individual query words are lemmatized, which they are not otherwise. Phrases in quotes are not lemmatized.
+>
+> `title:page` return matches with the exact term *page* while `title:(page)` also return matches for the term *pages*.
+
 
 ## KQL operators for complex queries
 <a name="kql_operators"> </a>
@@ -439,9 +462,9 @@ You use Boolean operators to broaden or narrow your search. You can use Boolean 
 ### Proximity operators
 
 You use proximity operators to match the results where the specified search terms are within close proximity to each other. Proximity operators can be used with free-text expressions only; they are not supported with property restrictions in KQL queries. There are two proximity operators: **NEAR** and **ONEAR**.
-  
-    
-    
+
+
+
 
 #### NEAR operator
 
@@ -520,9 +543,9 @@ If you require a smaller distance between the terms, you can specify it as follo
 ### Synonym operators
 
 You use the **WORDS** operator to specify that the terms in the query are synonyms, and that results returned should match either of the specified terms. You can use the **WORDS** operator with free text expressions only; it is not supported with property restrictions in KQL queries.
-  
-    
-    
+
+
+
 The following query example matches results that contain either the term "TV" or the term "television". This matching behavior is the same as if you had used the following query:
   
     
@@ -571,7 +594,7 @@ You can specify whether the results that are returned should include or exclude 
 
 You use the **XRANK** operator to boost the dynamic rank of items based on certain term occurrences within the _match expression_, without changing which items match the query. An **XRANK** expression contains one component that must be matched, the _match expression_, and one or more components that contribute only to dynamic ranking, the  _rank expression_. At least **one** of the parameters, excluding _n_, must be specified for an **XRANK** expression to be valid.
   
- > [!NOTE]
+> [!NOTE]
 > Query latency (and probability of timeout) increases when using complex queries and especially when using xrank operators. The increase in query latency depends on the number of **XRANK** operators and the number of hits in the _match expression_ and _rank expression_ components in the query tree.   
     
  _Match expressions_ may be any valid KQL expression, including nested **XRANK** expressions. _Rank expressions_ may be any valid KQL expression without **XRANK** expressions. If your KQL queries have multiple **XRANK** operators, the final dynamic rank value is calculated as a sum of boosts across all **XRANK** operators.
