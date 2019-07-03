@@ -477,7 +477,7 @@ The following screenshot shows a list with a Flow button added to the Action col
 
 ![screenshot of the sample](../images/sp-columnformatting-flow.png)
 
-You can use column formatting to create buttons that, when selected, run Flows on the corresponding list item.  If the Flow is configured to gather data from the end user before running, the Flow Launch Panel will be displayed after choosing the button.  Otherwise, the Flow will just run.
+You can use column formatting to create buttons that, when selected, run Flows on the corresponding list item.  The Flow Launch Panel will be displayed after choosing the button and the Flow will just run.
 
 To use the sample below, you must substitute the ID of the Flow you want to run.  This ID is contained within the `customRowAction` attribute inside the `button` element.  To obtain a Flow's ID:
 
