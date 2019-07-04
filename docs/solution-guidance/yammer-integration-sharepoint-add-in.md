@@ -3,8 +3,8 @@ title: Yammer integration in the SharePoint Add-in model
 ms.date: 11/03/2017
 localization_priority: Normal
 ---
-Yammer integration in the SharePoint Add-in model
-=================================================
+
+# Yammer integration in the SharePoint Add-in model
 
 ## Summary
 
@@ -14,7 +14,7 @@ The approach you take to integrate Yammer with SharePoint is the same in the new
 
 As a rule of a thumb, we would like to provide the following high level guidelines to integrate Yammer with SharePoint.
 
-- Yammer integration may be used in both on-premises and Office 365  SharePoint environments.
+- Yammer integration may be used in both on-premises and Office 365 SharePoint environments.
 - You can use the remote provisioning pattern to create Yammer groups and/or Yammer OpenGraph objects to facilitate conversations when you create new SharePoint sites.
 - You can use the out-of-the-box embed functionality to quickly and easily integrate Yammer with SharePoint.
   - To use embed you need a HTML container 400 pixels or larger in your application.
@@ -24,10 +24,21 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 
 You have a few options to integrate Yammer with SharePoint.
 
+- Yammer Web Parts
 - Embed
   - Group, Topic, My, and User Feeds
   - OpenGraph Feeds
 - Yammer OpenGraph API and/or Yammer REST API with Yammer SDKs
+
+## Yammer Web Parts
+
+Two web parts are included for integrating Yammer conversations in a SharePoint webpage. When adding a web part to a modern page, enter the search term "yammer" to view the available web parts:
+
+![Default Yammer web parts included in SharePoint](media/Recipes/Yammer/YammerWebParts.png)
+
+Once you have added a web part to the page, configure it using the property pane to include the desired Yammer conversations.
+
+![Yammer Conversation web part configuration](media/Recipes/Yammer/YammerConversationWebPart.png)
 
 ## Embed
 
