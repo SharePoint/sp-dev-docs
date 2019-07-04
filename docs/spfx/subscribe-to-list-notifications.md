@@ -10,9 +10,6 @@ localization_priority: Normal
 
 Starting from SharePoint Framework v1.7.0, you can subscribe to changes to files stored in a SharePoint Document Library. This allows you to respond to changes when they happen, without having to regularly poll the contents of the library.
 
-> [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
-
 ## Prerequisites
 
 To use the SharePoint Framework list subscription capability, you first need to install the `@microsoft/sp-list-subscription` npm package. You can do it using the following code snippet:

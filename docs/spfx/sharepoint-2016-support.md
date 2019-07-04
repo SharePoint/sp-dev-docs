@@ -26,7 +26,7 @@ If you are planning to use the same client-side web parts in both SharePoint 201
 Starting from version 1.3, the SharePoint Framework Yeoman generator supports scaffolding solutions that use both the latest version of the SharePoint Framework meant for use with SharePoint Online, and solutions that can be used with SharePoint on-premises based on the v1.1.0 of the SharePoint Framework. You don't need to install a separate version of the SharePoint Framework Yeoman generator to scaffold solutions meant for use with SharePoint on-premises.
 
 > [!IMPORTANT]
-> Starting from version 1.4, the SharePoint Framework Yeoman generator supports a new attribute of `includeClientSideAssets`, which can be used to indicate that assets should be included in the *sppkg* package. This capability is, however, only currently supported in SharePoint Online. When a solution is targeted to on-premises, this attribute in `package-solution.json` should be updated as `false`.
+> Starting from version 1.4, the SharePoint Framework Yeoman generator supports a new attribute of `includeClientSideAssets`, which can be used to indicate that assets should be included in the *sppkg* package. This capability is, however, is not supported by SharePoint 2016. When a solution is targeted to SharePoint 2016, this attribute in `package-solution.json` should be updated as `false`.
 
 ## Hosting your solution for on-premises deployment
 
