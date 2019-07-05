@@ -45,7 +45,7 @@ Organizations typically want their portal to be unique. Custom branding can help
   - Customize the behavior of the portal navigation.
   - Add custom controls (web parts) on pages.
 
-In the following sections, we discuss how to address these requirements.
+In the following sections, we will discuss how to address these requirements.
 
 ### General principles
 
