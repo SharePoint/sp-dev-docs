@@ -112,7 +112,7 @@ The method for the `callbacks.disconnect` callback passes as an argument the rea
 - both web parts and extensions can use the list subscription capabilities
 - it is only possible to subscribe to notifications in SharePoint Document Libraries. SharePoint Lists don't support this capability at the moment
 - there is a few seconds delay between the change and the notification being received by the component
-- components can be subscribe to changes in multiple Document Libraries
+- components can subscribe to changes in multiple Document Libraries
 - the change notification doesn't pass any information about the added or changed document. To see what has changed, use the SharePoint REST API or Microsoft Graph
 
 ## See also
