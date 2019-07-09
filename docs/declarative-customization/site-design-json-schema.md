@@ -408,6 +408,7 @@ Registers field extension for a list field. For more information on these client
             "addToDefaultView": true
         },
         {
+            "verb": "addSPField",
             "fieldType": "Number",
             "displayName": "Number Field",
             "internalName": "ElectricSlide",
