@@ -155,10 +155,8 @@
       href: spfx/connect-to-sharepoint.md   
     - name: Connect to Microsoft Graph 
       href: spfx/use-msgraph.md
-    - name: Connect to APIs secured with Azure AD using the AadHttpClient
-      href: spfx/use-aadhttpclient.md
     - name: Connect to APIs secured with Azure AD
-      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md      
+      href: spfx/use-aadhttpclient.md
     - name: Call the Microsoft Graph API using OAuth
       href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
     - name: Connect to anonymous APIs
