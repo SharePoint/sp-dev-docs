@@ -10,13 +10,14 @@ localization_priority: Priority
 Footers are a common branding / navigation control in websites and portals. SharePoint Communication sites will have an out-of-the box footer control, which can be controlled either using UI elements or by using APIs. This control supports following elements
 
 - 8 links or labels
-- Footer logo or footer name
+- Footer logo 
+- Footer name
 
 > [!NOTE]
 > Site footers are current supported only in modern pages of communication sites. This feature is rolled out to Targeted Release (entire organization) customers and will GA in the Q3 CY2019 timeframe.
 
 > [!IMPORTANT]
-> Footer will be enabled by default for all new and existing communication sites when the feature is initially rolled out.
+> Footer will be enabled by default for all new communication sites after the feature is rolled out.
 
 ## Footer with a logo
 
@@ -31,8 +32,6 @@ Following picture demonstrates a footer with a label with additional labels and 
 ![Image showing a site footer with a label](../images/footer-with-a-label.png)
 
 ## Controlling footer rendering using code or PowerShell
-
-When this feature is initially released, all new and existing communication sites will get a footer by default. If you do not want the out-of-box footer in your existing communication site, you can pre-emptively turn it off before the feature rolls out to your site or disable the footer after feature is enabled.
 
 You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps):
 
