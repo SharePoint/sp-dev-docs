@@ -86,7 +86,7 @@ npm install
 
 ## Update your code
 
-Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](https://aka.ms/spfx-release-notes) highlight any such breaking changes and the modifications required to your existing code. You must make sure you update your code with those fixes.
+Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](https://github.com/SharePoint/sp-dev-docs/wiki#release-notes) highlight any such breaking changes and the modifications required to your existing code. You must make sure you update your code with those fixes.
 
 You can always build the project to see if you have any errors and warnings by running the command in a console in your project directory:
 
