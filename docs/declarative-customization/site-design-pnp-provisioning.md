@@ -170,7 +170,7 @@ Copy the following provisioning template XML to a new file and save the file as 
 1. Go to the [Azure Portal](https://portal.azure.com).
 1. Choose **+ Create a resource**.
 1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
-1. Currently Function apps a created with the V2 runtime which does not support PowerShell functions. Change the runtime of the function app to V1 by navigating selecting **Platform features**, **Function app settings** and change the Runtime version from **~2** to **~1**.
+1. Currently Function apps are created with the V2 runtime which does not support PowerShell functions. Change the runtime of the function app to V1 by navigating selecting **Platform features**, **Function app settings** and change the Runtime version from **~2** to **~1**.
 1. Create a new function: **Functions** > **New function**.
 
     ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
