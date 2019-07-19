@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Modernize the user interface
 
-One of the immediately visible elements of a modern team site or communication site is its modern user interface, as evidenced on its home page and lists and libraries pages. 
+One of the immediately visible elements of a modern team site or communication site is its modern user interface, as evidenced on its home page and lists and library pages. 
 
 But what if your site today still has lists and libraries, wiki pages, or web part pages that use the classic user interface?
 
