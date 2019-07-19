@@ -40,7 +40,7 @@ To identify the SharePoint Framework packages, look for the package names that s
 @microsoft/sp-
 ```
 
-Along with the framework packages, you may also need to update `react` and `office-ui-fabric-react` packages. Make sure you read the [release notes](https://aka.ms/spfx-release-notes) for that specific release to infer which packages require updates and plan accordingly.
+Along with the framework packages, you may also need to update `react` and `office-ui-fabric-react` packages. Make sure you read the [release notes](https://github.com/SharePoint/sp-dev-docs/wiki#release-notes) for that specific release to infer which packages require updates and plan accordingly.
 
 ### Using the "npm outdated" command with a project
 
