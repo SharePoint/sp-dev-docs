@@ -39,7 +39,7 @@ odata-version: 4.0
 method: POST
 body:
 {
-  "Request": {
+  "request": {
     "Title": "Communication Site 1",
     "Url":"https://contoso.sharepoint.com/sites/commsite1",
     "Lcid": 1033,
