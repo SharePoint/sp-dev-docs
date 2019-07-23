@@ -16,6 +16,9 @@ The following API description is based upon use of the SharePoint Client Side Ob
 > [!NOTE]
 > You can find latest version of the SharePoint Online Client Side Object Model from [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/).
 
+>[!NOTE]
+>The **SharePoint Migration Tool** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
+
 ## Methods
 
 ### CreateMigrationJob
