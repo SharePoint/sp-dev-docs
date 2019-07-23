@@ -1436,6 +1436,7 @@ There is no change from current published full 2013 [full 2013 package schema](h
 There is no change from current published [full 2013 package schema](https://docs.microsoft.com/en-us/sharepoint/dev/schema/content-migration-schemas).
 
 
-
+>[!NOTE]
+>The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
 
 
