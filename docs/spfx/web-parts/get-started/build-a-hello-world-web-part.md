@@ -239,7 +239,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
       PropertyPaneCheckbox,
       PropertyPaneDropdown,
       PropertyPaneToggle
-    } from '@microsoft/sp-property-pane';
+    } from '@microsoft/sp-webpart-base';
     ```
 
 1. Update the web part properties to include the new properties. This maps the fields to typed objects.
