@@ -337,8 +337,8 @@
     href: apis/migration-ISV-guidance.md
     items:
     - name: Migration API
-	    href:  apis/migration-api-overview.md
-	    items:
+      href:  apis/migration-api-overview.md
+      items:
       - name: Azure container and queue
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
