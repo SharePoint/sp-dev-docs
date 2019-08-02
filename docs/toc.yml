@@ -339,6 +339,8 @@
     - name: Migration API
       href:  apis/migration-api-overview.md
       items:
+      - name: Migrate web parts using the Migration API
+        href: apis/migrate-webparts-with-migrationAPI
       - name: Azure container and queue
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
