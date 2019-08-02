@@ -337,7 +337,7 @@
     href: apis/migration-ISV-guidance.md
     items:
     - name: Migration API
-      href:  apis/migration-api-overview.md
+      href: apis/migration-api-overview.md
       items:
       - name: Migrate web parts using the Migration API
         href: apis/migrate-webparts-with-migrationAPI
