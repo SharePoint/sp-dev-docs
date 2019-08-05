@@ -333,20 +333,23 @@
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
       - name: Make batch requests
         href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
-  - name: SharePoint Migration Guidance
-    href: apis/migration-ISV-guidance.md
-    items:
-    - name: Migration API
-      href: apis/migration-api-overview.md
+    - name: SharePoint Migration Guidance
       items:
-      - name: Migrate web parts using the Migration API
-        href: apis/migrate-webparts-with-migrationAPI
-      - name: Azure container and queue
-        href: apis/migration-api-azure-container-and-queue.md
-      - name: Encryption
-        href: apis/migration-api-encryption.md
-      - name: Sharing
-        href: apis/migration-api-shared.md       
+      - name: Migration Guidance for ISVs
+        href: apis/migration-ISV-guidance.md
+      - name: Migration API
+        items:
+        - name: Import Migration API (CreateMigrationjob)
+          href: apis/migration-api-overview.md
+          items:
+          - name: Sharing
+            href: apis/migration-api-shared.md  
+          - name: Migrate web parts using the Migration API
+            href: apis/migrate-webparts-with-migrationAPI
+        - name: Azure container and queue
+          href: apis/migration-api-azure-container-and-queue.md
+        - name: Encryption
+          href: apis/migration-api-encryption.md         
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
