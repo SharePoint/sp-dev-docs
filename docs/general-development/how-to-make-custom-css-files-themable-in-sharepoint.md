@@ -1,12 +1,16 @@
 ---
-title: How to Make custom CSS files themable in SharePoint
-ms.prod: SHAREPOINT
+title: Make custom CSS files themable in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
+localization_priority: Priority
 ---
 
 
-# How to: Make custom CSS files themable in SharePoint
+# Make custom CSS files themable in SharePoint
+
 Learn how to add comment-style markup to a CSS file so that it can be used in the SharePoint theming engine.
+
 ## Introduction to annotations
 <a name="Intro"> </a>
 
@@ -18,7 +22,7 @@ This article describes the available annotations and how to register CSS files.
   
     
     
-For more information about custom themes, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint) and [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint).
+For more information about custom themes, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md).
   
     
     
@@ -51,7 +55,7 @@ The following shows the format for the **ReplaceColor** annotation.
 
 ```
 
-Replace  _ColorSlot_ with the annotation name of the color slot to use. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint).
+Replace  _ColorSlot_ with the annotation name of the color slot to use. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint.md#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -101,7 +105,7 @@ The following shows the format for the **ReplaceFont** annotation.
 /* [ReplaceFont(themeFont:"FontSlot")] */
 ```
 
-Replace  _FontSlot_ with the name of the font slot to use. To see a list of available font slots, see the [Font slots](color-palettes-and-fonts-in-sharepoint#fontSlot) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint).
+Replace  _FontSlot_ with the name of the font slot to use. To see a list of available font slots, see the [Font slots](color-palettes-and-fonts-in-sharepoint.md#fontSlot) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -152,7 +156,7 @@ The following describes the format of the **RecolorImage** annotation.
 
 ```
 
-Replace  _ColorSlot_ with the annotation name of the color slot. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint).
+Replace  _ColorSlot_ with the annotation name of the color slot. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint.md#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -181,10 +185,7 @@ The following shows examples of the **RecolorImage** annotation being used in a 
 
 Place the custom CSS files in the Themable folder in the Style library (not the Themable folder in the Master Page Gallery). Only CSS files that are stored in the Themable folder in the Style library are recognized by the theming engine. The Themable folder is created automatically for publishing sites. Otherwise, you can create the Themable folder in the correct location (http://  _SiteCollectionName_/Style Library/ _language_/Themable/).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The name of the  _language_ folder must be in the 4-digit format _ll-cc_ to identify the language and culture, respectively. For example, en-us or ar-sa. For more information, see [Language identifiers and OptionState Id values in Office 2013](http://technet.microsoft.com/en-us/library/cc179219.aspx). 
   
     
@@ -226,37 +227,36 @@ The following is an example of an **<SharePoint:CssRegistration>** element.
 </head>
 ```
 
-
-> **Note:**
+> [!NOTE]
 > The **%$SPUrl** token cannot be used on SharePoint Foundation 2013. You must use a URL to specify the location of the CSS file.
   
     
     
 
 
-## Additional resources
+## See also
 <a name="addresources"> </a>
 
 
--  [Themes overview for SharePoint](themes-overview-for-sharepoint)
+-  [Themes overview for SharePoint](themes-overview-for-sharepoint.md)
     
   
--  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint)
+-  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
     
   
--  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint)
+-  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
     
   
--  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint)
+-  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
--  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint)
+-  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
 -  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
     
   
--  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
 

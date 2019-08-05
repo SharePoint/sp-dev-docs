@@ -1,10 +1,12 @@
 ---
 title: Excel Services Blogs, Forums, and Resources
+ms.date: 09/25/2017
 keywords: blogger
 f1_keywords:
 - blogger
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: c0b137cd-126d-4c74-a3f7-eb9debe3c35f
+localization_priority: Normal
 ---
 
 
@@ -19,15 +21,14 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 |**Blog Name**|**Links**|
 |:-----|:-----|
-|Cum Grano Salis  <br/> | [Home page](http://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](http://blogs.msdn.com/cumgranosalis/archive/category/12700.aspx) <br/> |
-|Microsoft Excel 2010: The official blog of the Microsoft Excel product team  <br/> | [Home page](http://blogs.msdn.com/excel) <br/>  [Excel Online page](http://blogs.msdn.com/excel/archive/2010/01/21/collaborative-editing-using-excel-web-app.aspx) <br/> |
-|Microsoft Office Web Apps: The official blog of the Microsoft Office Online team  <br/> | [Home page](http://blogs.msdn.com/officewebapps/default.aspx) <br/> |
+|Cum Grano Salis  <br/> | [Home page](http://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](https://blogs.msdn.microsoft.com/cumgranosalis/tag/excel-services/) <br/> |
+|Microsoft Excel: The official blog of the Microsoft Excel product team  <br/> | [Home page](https://www.microsoft.com/microsoft-365/blog/excel) <br/>  |
    
 
 
 |**Forum Name**|**Links**|
 |:-----|:-----|
-|SharePoint - Excel Services  <br/> | [Excel Services forum home page](http://social.msdn.microsoft.com/Forums/en-US/sharepointexcel/threads) <br/> |
+|SharePoint - Excel Services  <br/> | [Excel Services forum home page](/sharepoint/dev/general-development/excel-services-blogs-forums-and-resources) <br/> |
 |SharePoint Products and Technologies  <br/> | [List of SharePoint Products and Technologies forums](http://social.msdn.microsoft.com/forums/en-US/category/sharepoint) <br/> |
    
 
@@ -48,34 +49,34 @@ The following are links to blogs, forums, and additional resources related to Ex
   
     
     
- [Excel Services Overview](excel-services-overview)
+ [Excel Services Overview](excel-services-overview.md)
   
     
     
- [Excel Services Development Roadmap](excel-services-development-roadmap)
+ [Excel Services Development Roadmap](excel-services-development-roadmap.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices)
+ [Excel Services Best Practices](excel-services-best-practices.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
   
     
     

@@ -1,11 +1,14 @@
 ---
-title: How to Store and retrieve SharePoint list items on a Windows Phone
-ms.prod: SHAREPOINT
+title: Store and retrieve SharePoint list items on a Windows Phone
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 14ca37a2-5b45-430d-9004-ff3016f89834
+localization_priority: Normal
 ---
 
 
-# How to: Store and retrieve SharePoint list items on a Windows Phone
+# Store and retrieve SharePoint list items on a Windows Phone
+
 Learn about the Windows Phone application life cycle and storing network data locally.
 One of the most important considerations in the development of Windows Phone apps is the management of state information, both for the overall application and for individual pages or data items within the application. If you're developing Windows Phone apps, you must take into account that users of your apps might lose connectivity to network resources (such as SharePoint lists). The development infrastructure for Windows Phone apps provides mechanisms for handling state information at various stages in the life cycle of an app.
   
@@ -14,7 +17,7 @@ One of the most important considerations in the development of Windows Phone app
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
     
@@ -66,7 +69,7 @@ The **Application_Launching** and **Application_Closing** handlers for these eve
 ### To implement event handlers for storing and retrieving application state
 
 
-1. Create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app).
+1. Create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
     
   
 2. In **Solution Explorer**, choose the App.xaml file.
@@ -710,8 +713,9 @@ namespace SPListAppLocalStorage
   
 11. In the browser that opens, navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1.
     
-    > **Note:**
-      > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
+    > [!NOTE]
+    > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
+
 12. Choose the image file named appbar.back.rest.png, and choose **Add**. The image is added to the project under the **Images** node.
     
   
@@ -810,8 +814,9 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
   
 5. In the browser that opens, navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1.
     
-    > **Note:**
-      > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
+    > [!NOTE]
+    > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
+
 6. Choose the image file named appbar.folder.rest.png, and then choose **Add**. 
     
     The image is added is added to the project under the **Images** node.
@@ -850,7 +855,7 @@ If you start the project and deploy it to a Windows Phone Emulator, you see a **
   
     
     
-![Modified List Form with View Drafts button](../../images/921bd9ab-d9a4-4cb6-b168-9ae53401d6d6.gif)
+![Modified List Form with View Drafts button](../images/921bd9ab-d9a4-4cb6-b168-9ae53401d6d6.gif)
   
     
     
@@ -868,7 +873,7 @@ At first, because no drafts are saved, the page to display drafts will be empty.
   
     
     
-![Modified Edit Form with Save Draft button](../../images/ce88b78d-5d41-406f-bf51-bee45ad2fe8f.gif)
+![Modified Edit Form with Save Draft button](../images/ce88b78d-5d41-406f-bf51-bee45ad2fe8f.gif)
   
     
     
@@ -886,7 +891,7 @@ When the server becomes available again, you can choose the **View Drafts** butt
   
     
     
-![Drafts page displaying list items saved as drafts](../../images/99ff6118-ed5d-4a21-9c11-3aabec8df1e5.gif)
+![Drafts page displaying list items saved as drafts](../images/99ff6118-ed5d-4a21-9c11-3aabec8df1e5.gif)
   
     
     
@@ -904,7 +909,7 @@ If you choose an item on the Drafts page, the Draft Item Edit form (DraftItemEdi
   
     
     
-![The Draft Item Edit Form](../../images/e3718687-682a-41a8-92b5-4eff9070348d.gif)
+![The Draft Item Edit Form](../images/e3718687-682a-41a8-92b5-4eff9070348d.gif)
   
     
     
@@ -913,11 +918,11 @@ Notice the similarity between the Draft Item Edit form (Figure 4) and the standa
     
     
 
-## Additional resources
+## See also
 <a name="SP15StoreSPlist_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Local Data Storage for Windows Phone](http://msdn.microsoft.com/library/fdf7e973-5de5-4cfa-bf63-1e65c90744cc%28Office.15%29.aspx)
@@ -932,7 +937,7 @@ Notice the similarity between the Draft Item Edit form (Figure 4) and the standa
 -  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/en-us/download/details.aspx?id=36818)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=27570)

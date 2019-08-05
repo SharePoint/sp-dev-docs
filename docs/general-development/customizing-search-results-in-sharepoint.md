@@ -1,7 +1,9 @@
 ---
 title: Customizing search results in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
+localization_priority: Priority
 ---
 
 
@@ -227,10 +229,7 @@ Use **TrimDuplicatesOnProperty** to specify whether to use a non-default managed
     
  `TrimDuplicatesOnProperty = <managed property>`
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > In SharePoint, use **CollapseSpecification** wherever possible. **TrimDuplicatesOnProperty** is available for backward compatibility only.
   
     
@@ -270,17 +269,14 @@ The document ID,  _docid_, is used to retrieve the duplicates of a particular do
     
  `TrimDuplicatesIncludeId = <docid>`
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The  _fcoid_ managed property in FAST Search Server 2010 for SharePoint has been replaced with the _docid_ managed property in SharePoint.
   
     
     
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

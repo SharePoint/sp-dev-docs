@@ -1,13 +1,17 @@
 ---
-title: How to Use a custom security trimmer for SharePoint Server search results
-ms.prod: SHAREPOINT
+title: Use a custom security trimmer for SharePoint Server search results
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e1a8664e-fb43-45c2-83aa-9635fe1efc99
+localization_priority: Normal
 ---
 
 
-# How to: Use a custom security trimmer for SharePoint Server search results
+# Use a custom security trimmer for SharePoint Server search results
+
 This how-to guides you through the steps to implement—create, deploy, and register—a custom security trimmer for Search in SharePoint by using Microsoft Visual Studio 2010.
-Search in SharePoint performs query-time security trimming of search results. However, there may be scenarios in which you want to perform custom security trimming. Search in SharePoint provides support for these scenarios through the  [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) , [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) , and [ISecurityTrimmer2](https://msdn.microsoft.com/library/Microsft.Office.Server.Search.Query.ISecurityTrimmer2.aspx) (deprecated) interfaces in the [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace.
+
+Search in SharePoint performs query-time security trimming of search results. However, there may be scenarios in which you want to perform custom security trimming. Search in SharePoint provides support for these scenarios through the  [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) , [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) , and [ISecurityTrimmer2](https://msdn.microsoft.com/en-us/library/office/microsoft.office.server.search.query.isecuritytrimmer2.aspx) (deprecated) interfaces in the [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace.
   
     
     
@@ -415,8 +419,9 @@ Version=1.0.0.0, Culture=neutral, PublicKeyToken=token" -RulePath "xmldoc://*"
 
     In the command, replace  _ClassName_ either with **CustomSecurityPreTrimmer** or **CustomSecurityPostTrimmer** and _token_ with the Public Key Token for the CustomSecurityTrimmerSample.dll file. You must associate all post-trimmers with a crawl rule, _"xmldoc://*"_; but this is optional for pre-trimmers.
     
-    > **Note:**
-      > If you have multiple front-end web servers, you must deploy your security trimmer to the global assembly cache on all the front-end web servers in the farm. 
+    > [!NOTE]
+    > If you have multiple front-end web servers, you must deploy your security trimmer to the global assembly cache on all the front-end web servers in the farm. 
+
 6. Verify that your security trimmer is registered with the following PowerShell cmdlets.
     
 ```
@@ -442,11 +447,11 @@ net restart sphostcontrollerservice
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_sectrimmer_addlresources"> </a>
 
 
--  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server)
+-  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server.md)
     
   
 -  [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx)

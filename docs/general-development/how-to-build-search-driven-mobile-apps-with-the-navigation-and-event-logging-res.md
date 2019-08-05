@@ -1,11 +1,14 @@
 ---
-title: How to Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
-ms.prod: SHAREPOINT
+title: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
+localization_priority: Normal
 ---
 
 
-# How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+# Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+
 SharePoint introduces the Navigation and Event Logging REST interfaces, enabling you to create a search-driven mobile app for mobile devices such as phones and tablets that run on operating systems other than Windows—for example, Android and iOS.
 ## How apps work with the product catalog
 <a name="mobile_app_and_product_catalog"> </a>
@@ -47,7 +50,7 @@ Typically the **Home** page is displayed when the app starts up. The **Home** pa
   
     
     
-![Build search-driven mobile apps](../../images/SP15_Buildsearch-drivenmobileappspages_home.gif)
+![Build search-driven mobile apps](../images/SP15_Buildsearch-drivenmobileappspages_home.gif)
   
     
     
@@ -68,7 +71,7 @@ GET http://server/_api/navigation/menustate?mapprovidername='GlobalNavigationSwi
 
 ```
 
-A matching response is shown in  [Example response for a Navigation REST call for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res#response_navigation_rest).
+A matching response is shown in  [Example response for a Navigation REST call for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md#response_navigation_rest).
   
     
     
@@ -89,7 +92,7 @@ The **Category** page displays many items in a selected category. Each item list
   
     
     
-![Build search-driven mobile apps](../../images/Buildsearch-drivenmobileappspages.gif)
+![Build search-driven mobile apps](../images/Buildsearch-drivenmobileappspages.gif)
   
     
     
@@ -110,7 +113,7 @@ GET http://server/_api/search/query?querytext='owstaxidProductCatalogItemCategor
 
 ```
 
-A matching response is shown in  [Example response for a Search REST query for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res#response_search_rest).
+A matching response is shown in  [Example response for a Search REST query for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md#response_search_rest).
   
     
     
@@ -135,7 +138,7 @@ If you select an item in a category, the **Item details** page appears. On this 
   
     
     
-![Build search driven](../../images/Buildsearch-drivenmobileappspages_item_details.gif)
+![Build search driven](../images/Buildsearch-drivenmobileappspages_item_details.gif)
   
     
     
@@ -312,11 +315,11 @@ The service follows standard HTTP return codes: an HTTP 200 response indicates a
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

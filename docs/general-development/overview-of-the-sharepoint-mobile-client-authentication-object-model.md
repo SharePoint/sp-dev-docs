@@ -1,7 +1,9 @@
 ---
 title: Overview of the SharePoint mobile client authentication object model
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 00ee657f-a32a-495e-80b4-83ac0f60df44
+localization_priority: Normal
 ---
 
 
@@ -12,11 +14,8 @@ Get an overview of development with the authentication APIs of the SharePoint cl
 
 The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator** class or **ODataAuthenticator** class, which were added to the SharePointclient object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
   
-    
-    
-
-> **Note:**
-> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
+> [!NOTE]
+> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
   
     
     
@@ -35,8 +34,9 @@ The following are the required steps to get an authenticated client context obje
   
 2. Construct a new **Authenticator** object and initialize its properties.
     
-    > **Note:**
-      > One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
+    > [!NOTE]
+    > One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
+
 3. The **Authenticator** class implements the [ICredentials](http://msdn.microsoft.com/en-us/library/system.net.icredentials.aspx) interface, so you assign the object to the [Credentials](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientruntimecontext.credentials.aspx) property of the **ClientContext** object.
     
   
@@ -106,7 +106,7 @@ If the SharePoint URL has basic or forms-based authentication support, the **Exe
   
     
     
-![SharePointClientAuthentication](../../images/SP15Con_SharePointClientAuthenticationFig1.png)
+![SharePointClientAuthentication](../images/SP15Con_SharePointClientAuthenticationFig1.png)
   
     
     
@@ -260,10 +260,7 @@ at.AuthenticationMode = ClientAuthenticationMode.MicrosoftOnline;
 
 To authenticate against a SharePoint Online URL, set the **AuthenticationMode** property of the **Authenticator** object to **MicrosoftOnline** mode. The remaining steps in the procedure are the same as those for an on-premises SharePoint URL.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The user name and password cannot be hard-coded for SharePoint Online.The user will be prompted for logon credentials. 
   
     
@@ -296,7 +293,7 @@ ClientContext ctx = new ClientContext("SiteUrl");
 
 ```
 
- **ADFS** is an optional property which will be effective only when it is used with Microsoft SharePoint Online. Using **ADFS** authentication with any other authentication scheme will not have any effect. With Microsoft SharePoint online, if **ADFS** is not set then default scheme will be used, i.e. server preference.
+ **ADFS** is an optional property which will be effective only when it is used with Microsoft SharePoint Online. Using **ADFS** authentication with any other authentication scheme will not have any effect. With Microsoft SharePoint Online, if **ADFS** is not set then default scheme will be used, i.e. server preference.
   
     
     
@@ -304,19 +301,19 @@ ClientContext ctx = new ClientContext("SiteUrl");
 ## Cookie caching
 <a name="SP15Mobileclientauth_cookie"> </a>
 
-The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model).
+The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md).
   
     
     
 
-## Additional resources
+## See also
 <a name="SP15Mobileclientauth_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model)
+-  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md)
     
   
 

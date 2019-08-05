@@ -1,28 +1,27 @@
 ---
-title: How to Save from Excel Client to the Server
+title: Save from Excel client to the server
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 28716ba5-0774-44df-833b-0034d2c63319
+localization_priority: Normal
 ---
 
 
-# How to: Save from Excel Client to the Server
+# Save from Excel client to the server
 
 This example shows you how to:
-  
-    
-    
-
 
 1. Create a workbook with editable ranges.
     
   
 2. Save the workbook to a SharePoint document library that is a trusted location.
     
-    > **Note:**
-      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location). 
+    > [!NOTE]
+    > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md).
+
 3. Change values in a workbook by using the parameters pane in Excel Web Access.
     
   
@@ -110,26 +109,26 @@ This example shows you how to:
   
     
     
- [How to: Save to the Server to Prepare for Programmatic Access](how-to-save-to-the-server-to-prepare-for-programmatic-access)
+ [How to: Save to the Server to Prepare for Programmatic Access](how-to-save-to-the-server-to-prepare-for-programmatic-access.md)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

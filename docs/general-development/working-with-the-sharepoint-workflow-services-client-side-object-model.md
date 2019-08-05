@@ -1,7 +1,9 @@
 ---
 title: Working with the SharePoint Workflow Services Client Side Object Model
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e180c2fb-a903-4ded-884e-b7584fa99189
+localization_priority: Priority
 ---
 
 
@@ -67,10 +69,7 @@ This article focuses on the topic of workflow forms in the context of SharePoint
 
 This article focuses on the Workflow Services CSOM API and thus, by extension, the JSOM API as well; the server side Workflow Services API is not discussed here. The Workflow Services CSOM consists of several different services that are used to perform different tasks. Each of these is discussed in the following sections. 
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > There is one additional service that is not present in the CSOM, but is present instead with the server-side API. This is the Messaging Service, which is used to manage message queuing and message transport. 
   
     
@@ -150,7 +149,7 @@ When you create custom workflows using Visual Studio 2012, either using a soluti
   
     
     
-![Figure 1. Add a workflow association](../../images/ngSP2013WorkflowCSOM01.png)
+![Figure 1. Add a workflow association](../images/ngSP2013WorkflowCSOM01.png)
   
     
     
@@ -197,7 +196,7 @@ Service Bus is instrumental because it supports the publication and subscription
   
     
     
-SharePoint and Workflow Manager 1.0 use the PubSub model to create associations. Workflow associations are created as subscriptions on topics. For instance, an association for workflow definition may be created on list and set to start automatically when items are added to the list. When an item is added to the list, SharePoint publishes an event to Workflow Manager 1.0, which it sends to the Service Bus topic. The message is evaluated and the registered subscriptions are notified of the event. The subscribed association is found and the workflow is started. For more information about how this process works, see the MSDN article,  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals). 
+SharePoint and Workflow Manager 1.0 use the PubSub model to create associations. Workflow associations are created as subscriptions on topics. For instance, an association for workflow definition may be created on list and set to start automatically when items are added to the list. When an item is added to the list, SharePoint publishes an event to Workflow Manager 1.0, which it sends to the Service Bus topic. The message is evaluated and the registered subscriptions are notified of the event. The subscribed association is found and the workflow is started. For more information about how this process works, see the MSDN article,  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md). 
   
     
     
@@ -277,10 +276,7 @@ In previous versions of SharePoint, specifically SharePoint 2007 and SharePoint 
     
 However, to provide backward compatibility, Microsoft retained the legacy model of hosting pre-SharePoint-style workflows within SharePoint by keeping the Windows Workflow Foundation runtime engine. Therefore, all workflows created in SharePoint 2010 will still run as expected in a SharePoint environment. In addition, Microsoft included a new activity, **InvokeSharePointWorkflow**, which can be used in a SharePoint workflow to start an existing workflow in the SharePoint 2010 workflow host that is included in SharePoint. This allows you to take advantage of existing workflow investments migrated from previous versions.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The **InvokeSharePointWorkflow** activity is a wrapper for the CSOM method, [StartWorkflow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WorkflowServices.InteropService.StartWorkflow.aspx) .
   
     
@@ -677,7 +673,7 @@ To receive the message in the workflow, add a **WaitForCustomEvent** activity an
   
     
     
-![Figure 2. Input EventName and Output Result](../../images/ngSP2013WorkflowCSOM02.png)
+![Figure 2. Input EventName and Output Result](../images/ngSP2013WorkflowCSOM02.png)
   
     
     
@@ -697,7 +693,7 @@ One of the major improvements to workflows in SharePoint is the expansion of CSO
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

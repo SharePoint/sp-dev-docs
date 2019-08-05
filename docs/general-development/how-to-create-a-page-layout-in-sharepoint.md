@@ -1,12 +1,16 @@
 ---
-title: How to Create a page layout in SharePoint
-ms.prod: SHAREPOINT
+title: Create a page layout in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 5447e6a1-2f14-4667-81d0-7514b468be80
+localization_priority: Priority
 ---
 
 
-# How to: Create a page layout in SharePoint
+# Create a page layout in SharePoint
+
 When you use Design Manager to create a page layout, two files are created: an .aspx file that SharePoint uses, and an HTML version of that page layout that you can edit in your HTML editor. The HTML file and page layout are associated, so that whenever you edit and save the HTML file, your changes are synced to the associated page layout.
+
 ## Introduction to page layouts
 <a name="Introduction"> </a>
 
@@ -29,17 +33,15 @@ When you create a page layout:
 - All markup required by SharePoint is added to the .aspx file so that the page layout renders correctly.
     
   
-- Other markup such as comments, **<div>** tags, snippets, and content placeholders are added to the HTML file.
+- Other markup such as comments, tags, snippets, and content placeholders are added to the HTML file.
     
   
 - Page fields unique to the content type are added automatically to the page layout. Other page fields are available to be added from the ribbon in the Snippet Gallery.
     
   
-- The HTML file and the .aspx file are associated, so that any later edits to the HTML file are synced to the .aspx file whenever the HTML file is saved. Other markup such as comments, **<div>** tags, snippets, and content placeholders are added to the HTML file.
+- The HTML file and the .aspx file are associated, so that any later edits to the HTML file are synced to the .aspx file whenever the HTML file is saved. Other markup such as comments, tags, snippets, and content placeholders are added to the HTML file.
     
-  
-
-> **Note:**
+> [!NOTE]
 > The syncing goes in one direction only. Changes to the HTML page layout are synced to the associated .aspx file, but if you choose to edit the .aspx file directly, those changes are not synced to the HTML file. Every HTML page layout (and every HTML master page) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.
   
     
@@ -117,7 +119,7 @@ Before you begin, you need to know which content type and master page the page l
 
   
 
-  ![The menu that opens when the gear icon is clicked on a publishing site. One item is Design Manager.](../../images/43a35ca2-2c93-4323-a169-769c3a54fa38.PNG)
+  ![The menu that opens when the gear icon is clicked on a publishing site. One item is Design Manager.](../images/43a35ca2-2c93-4323-a169-769c3a54fa38.PNG)
   
 
   
@@ -136,8 +138,9 @@ Before you begin, you need to know which content type and master page the page l
     
     The master page that you choose here will be shown in the preview for this page layout. This master page also determines what content placeholders get added to the page layout.
     
-    > **Note:**
-      > After you choose this master page, you cannot preview the page layout with a different master page, even after you apply a different master page to the live site. 
+    > [!NOTE]
+    > After you choose this master page, you cannot preview the page layout with a different master page, even after you apply a different master page to the live site. 
+
 7. Select a content type. The content type for this page layout determines what page fields will be available for this page layout in the Snippet Gallery.
     
   
@@ -157,11 +160,11 @@ Before you begin, you need to know which content type and master page the page l
     
     The preview page is a live server-side preview of your page layout. The top of the preview displays any warnings or errors that you may have to resolve by editing the HTML file in an HTML editor. Errors must be fixed before the preview will display the page layout correctly.
     
-    For more information about resolving errors and warnings, see  [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint).
+    For more information about resolving errors and warnings, see  [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md).
     
-    For more information about previewing the page layout, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager).
+    For more information about previewing the page layout, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
     
-    The preview page also contains a **Snippets** link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing mockup controls in your design with dynamic SharePoint controls. For more information, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
+    The preview page also contains a **Snippets** link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing mockup controls in your design with dynamic SharePoint controls. For more information, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 10. To fix any errors, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time you save the HTML file, any changes are synced to the associated .aspx file.
@@ -174,16 +177,13 @@ Before you begin, you need to know which content type and master page the page l
 ## Determine where the styles for a page layout should go
 <a name="WhereStyles"> </a>
 
-When you create HTML mockups for your site, you may have HTML files that represent different classes of pages, such as an article page or an item details page that contains a Web Part to display the details of a single item from a catalog. After you create the page layout that represents that class of pages, you're ready to transfer the styles from your HTML mockup to the HTML version of your page layout.
+When you create HTML mockups for your site, you may have HTML files that represent different classes of pages, such as an article page or an item details page that contains a web part to display the details of a single item from a catalog. After you create the page layout that represents that class of pages, you're ready to transfer the styles from your HTML mockup to the HTML version of your page layout.
   
     
     
 You can simply put the styles for one or more page layouts into the same style sheet that the master page links to. But, if you want to minimize the weight of the CSS that is loaded per page, you can also use different style sheets for different page layouts. When you do this, it's important to know that a link to a style sheet cannot go in the **<head>** tag of a page layout. Instead, the link must go in the content placeholder named **PlaceHolderAdditionalPageHead**. 
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > In this markup, the attribute  `ms-design-css-conversion="no"` excludes the style sheet from theming. Also, the link to the style sheet should appear after the lines commented **<!--SPM**. 
   
     
@@ -206,11 +206,11 @@ When a site visitor browses a page that uses this page layout, this additional p
   
     
     
-In this way, each page layout can have its own style sheet. For example, you can have a **<div>** with `id="xyz"` in one page layout that appears on the left, and in another page layout appears on the right.
+In this way, each page layout can have its own style sheet. For example, you can have a `<div>` with `id="xyz"` in one page layout that appears on the left, and in another page layout appears on the right.
   
     
     
-Each page layout can also have one or more device channel-specific style sheets. For example, you might want a page layout to have a layout for phones that is different from the desktop layout. To do this, you can include one or more device channel panels inside **PlaceHolderAdditionalPageHead**, where each channel panel includes a link to a style sheet with channel-specific styles. This way, for example, a **<div>** with `id="abc"` can display large text in one channel and small text in a different channel.
+Each page layout can also have one or more device channel-specific style sheets. For example, you might want a page layout to have a layout for phones that is different from the desktop layout. To do this, you can include one or more device channel panels inside **PlaceHolderAdditionalPageHead**, where each channel panel includes a link to a style sheet with channel-specific styles. This way, for example, a `<div>` with `id="abc"` can display large text in one channel and small text in a different channel.
   
     
     
@@ -288,7 +288,7 @@ If you have different device channels, you likely want your page layouts to rend
 ## Understanding the markup in the HTML page layout
 <a name="UnderstandMarkup"> </a>
 
-When you create a page layout, an .aspx file gets created that SharePoint uses, and some HTML markup gets added to the HTML version of the page layout. When you edit the HTML page layout in your HTML editor, it might be helpful to understand the purpose of some of this markup. Most of it is similar to the markup that gets added to an HTML master page. For more information, see  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint).
+When you create a page layout, an .aspx file gets created that SharePoint uses, and some HTML markup gets added to the HTML version of the page layout. When you edit the HTML page layout in your HTML editor, it might be helpful to understand the purpose of some of this markup. Most of it is similar to the markup that gets added to an HTML master page. For more information, see  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md).
   
     
     
@@ -325,17 +325,17 @@ The markup that is unique to page layouts is page fields that are added to the p
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
 

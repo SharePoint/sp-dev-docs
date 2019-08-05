@@ -1,11 +1,13 @@
 ---
-title: How to Apply styles to page fields in SharePoint
-ms.prod: SHAREPOINT
+title: Apply styles to page fields in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e227613d-0e4d-4312-924d-bb55e1fe4293
+localization_priority: Priority
 ---
 
 
-# How to: Apply styles to page fields in SharePoint
+# Apply styles to page fields in SharePoint
 In a page layout, you can apply styles to a page field, and those styles are applied to any content added by content authors when they create a page from that page layout. Also, you have further options to control how content in a RichHtmlField page field is styled.
 ## Introduction to applying styles to page fields
 <a name="Introduction"> </a>
@@ -22,7 +24,7 @@ When you apply styles to page fields, there are two basic categories of field ty
 - **Field types other than RichHtmlField** The page fields that make up a page layout conform to the content type for that page layout. A page field can be of many types, such as a Single Line of Text (TextField) or Multiple Lines of Text (NoteField). As a designer, you can apply styles to all of these page fields in the same way, by applying styles to the page field directly on the page layout.
     
   
-- **RichHtmlField** The rich HTML field control (also known as a Publishing HTML field) is one of the most powerful and frequently used controls in page layouts. By default, in a rich HTML field, content authors use the ribbon to format and apply styles to content, and to insert tables, media such as images and video, and Web Parts. This field type is useful when you want to give content authors the freedom to add and style content within parameters that you can control. You can control a RichHtmlField in two ways:
+- **RichHtmlField** The rich HTML field control (also known as a Publishing HTML field) is one of the most powerful and frequently used controls in page layouts. By default, in a rich HTML field, content authors use the ribbon to format and apply styles to content, and to insert tables, media such as images and video, and web parts. This field type is useful when you want to give content authors the freedom to add and style content within parameters that you can control. You can control a RichHtmlField in two ways:
     
   - **Create a custom style sheet** By default, the styles available on the ribbon of a RichHtmlField come from a style sheet named HtmlEditorStyles.css. You can configure the **PrefixStyleSheet** property for this snippet so that your own custom styles appear on the ribbon for content authors to use.
     
@@ -61,7 +63,7 @@ In the HTML page layout, each page field is wrapped in a **\<div\>** tag. To app
 </div>
 ```
 
-For more information about where styles and style references for a page layout should go, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint).
+For more information about where styles and style references for a page layout should go, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
   
     
     
@@ -97,14 +99,13 @@ After you configure these properties in the Snippet Gallery and then update the 
 </div>
 ```
 
-
-> **Note:**
+> [!NOTE]
 > If you set **AllowFonts** to **False**, content authors can still use keyboard shortcuts such as CTRL+B (strong) to format text. To prevent authors from adding any styles to text, you can set **AllowTextMarkup** to **False**. With this setting, when content authors attempt to save content that contains styles applied to text, the HTML editor in the browser returns an error and prompts the author to remove the markup that is not valid. 
   
     
     
 
-A RichHtmlField page field contains 28 different **Allow** properties. For more information about what specific properties control, see [RichHtmlField properties](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.richhtmlfield_properties) For more information about adding and configuring snippets, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
+A RichHtmlField page field contains 28 different **Allow** properties. For more information about what specific properties control, see [RichHtmlField properties](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.richhtmlfield_properties) For more information about adding and configuring snippets, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
   
     
     
@@ -145,10 +146,7 @@ H1. ms-rteElement-H1
 
 When you change the value of the **PrefixStyleSheet** property, none of the existing **ms-rte** styles are available in the rich HTML editor, and only styles that you create that use the new prefix are available to content authors. This means if you want to use some of the default styles, they must be copied to your style sheet and modified so that they use the new prefix.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The **PrefixStyleSheet** property is defined per each RichHtmlField page field, but multiple page fields can use the same value for this property. So, if multiple page layouts reference the same style sheet, it's possible for multiple RichHtmlFields on those page layouts to have the same style prefix and reference the same styles.
   
     
@@ -188,8 +186,9 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
   
 10. In the mapped network drive on your computer, open the HTML page layout in your HTML editor.
     
-    > **Note:**
-      > For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery). 
+    > [!NOTE]
+    > For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md). 
+
 11. In the HTML page layout, paste the HTML snippet inside **PlaceHolderMain**.
     
   
@@ -204,8 +203,9 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
     
     It's useful to view the default styles, understand how they're written, and possibly reuse some of them by copying them to your style sheet and then modifying them. If you do this, replace the default **ms-rte** prefix with your own prefix.
     
-    > **Important:**
-      > Do not modify the default style sheet, HtmlEditorStyles.css. This style sheet provides styles for every RichHtmlField in the farm. Also, service updates or an upgrade may overwrite this file, causing you to lose any changes. 
+    > [!IMPORTANT]
+    > Do not modify the default style sheet, HtmlEditorStyles.css. This style sheet provides styles for every RichHtmlField in the farm. Also, service updates or an upgrade may overwrite this file, causing you to lose any changes. 
+
 14. In your style sheet, create a list of new styles that start with the new prefix.
     
     For example, if **customstyle** is the new prefix, your style sheet might contain the following style.
@@ -261,21 +261,21 @@ font-size: 16pt;
     
   
 
-    For more information about where styles for a page layout should reside, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint).
+    For more information about where styles for a page layout should reside, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
     
   
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
 

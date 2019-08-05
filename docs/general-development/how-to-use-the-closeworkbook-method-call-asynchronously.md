@@ -1,14 +1,16 @@
 ---
-title: How to Use the CloseWorkbook Method Call Asynchronously
+title: Use the CloseWorkbook method call asynchronously
+ms.date: 09/25/2017
 keywords: async,how to,howdoi,howto
 f1_keywords:
 - async,how to,howdoi,howto
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 6febe7dc-a552-4c79-aa3e-203d882286e3
+localization_priority: Normal
 ---
 
 
-# How to: Use the CloseWorkbook Method Call Asynchronously
+# Use the CloseWorkbook method call asynchronously
 
 When you are using Excel Web Services, it is good practice to close the workbook by calling the **CloseWorkbook** method if you are finished using the session. This closes the session and allows Excel Services to free resources in a predictable manner. This could potentially improve your server performance and robustness.
   
@@ -18,11 +20,7 @@ When you are using Excel Web Services, it is good practice to close the workbook
 However, any Web service call takes time. Depending on the way your server is installed, the way that you access it, and how much stress the server is under, the call can take anywhere between 50 milliseconds to 500 milliseconds. It can also take longer, but only if your server is under severe stress. 
 Because a failed **CloseWorkbook** method call is not actionable, you do not need to wait for it to finish to see whether it succeeds. Because of this, you can usually make the call asynchronously and save some operation time.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > If your application makes some calls to Excel Services and then exits, you may want to close a workbook synchronously instead of asynchronously. In this case, you call the **CloseWorkbook** method instead of the **CloseWorkbookAsync** method. The reason is if you immediately exit the process after issuing an asynchronous call, there is a good chance the call might not get through.
   
     
@@ -46,7 +44,8 @@ End Sub
 ```
 
 You don't have to implement the event that is called when the **CloseWorkbookAsync** method is called.You can find the signature in the "Reference.cs" file in your project "Web References" directory. 
-> **Note:**
+
+> [!NOTE]
 > You can find the **CloseWorkbookAsync** method in the proxy class that is generated when you add a Web reference using Microsoft Visual Studio 2005. If you are using Visual Studio 2003, you call the **BeginCloseWorkbook** method to close a workbook asynchronously instead.
   
     
@@ -191,42 +190,42 @@ In addition, make changes to the workbook path, sheet name, and so on, as approp
   
     
     
- [How to: Catch Exceptions](how-to-catch-exceptions)
+ [How to: Catch Exceptions](how-to-catch-exceptions.md)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
   
     
     
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server)
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
   
     
     
- [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes)
+ [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

@@ -1,7 +1,9 @@
 ---
 title: SharePoint Add-ins compared with SharePoint solutions
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
+localization_priority: Priority
 ---
 
 
@@ -21,7 +23,7 @@ This article compares the use cases of SharePoint Add-ins, farm solutions, and n
   
 
 > **Important:**
-> While developing sandboxed solutions that contain only declarative markup and JavaScript -- which we call no-code sandboxed solutions (NCSS)-- is still viable, we have deprecated the use of custom managed code within the sandboxed solution. We have introduced the new SharePoint add-in model as a replacement to those scenarios that required the use of managed code. The add-in model decouples the SharePoint core product from the add-in runtime, and this enables much more flexibility and gives you the ability to run the code in the environment of your choice. We realize that our customers have made investments in coded sandboxed solutions and we will phase them out responsibly. Existing coded sandboxed solutions will continue to work in on-premise SharePoint farms for the foreseeable future. Given the dynamic nature of online services, we will determine support needs for coded sandboxed solutions in SharePoint Online based on customer demand. NCSSs continue to be supported. All future investments will go to making the new SharePoint add-in model richer and more powerful. Accordingly, we recommend that all new development should use the new add-in model whenever possible. In scenarios where you have to develop a farm solution or coded sandboxed solution, we recommend that you design it so that it can easily evolve toward a more loosely coupled development model. 
+> While developing sandboxed solutions that contain only declarative markup and JavaScript -- which we call no-code sandboxed solutions (NCSS)-- is still viable, we have deprecated the use of custom managed code within the sandboxed solution. We have introduced the new SharePoint Add-in model as a replacement to those scenarios that required the use of managed code. The add-in model decouples the SharePoint core product from the add-in runtime, and this enables much more flexibility and gives you the ability to run the code in the environment of your choice. We realize that our customers have made investments in coded sandboxed solutions and we will phase them out responsibly. Existing coded sandboxed solutions will continue to work in on-premise SharePoint farms for the foreseeable future. Given the dynamic nature of online services, we will determine support needs for coded sandboxed solutions in SharePoint Online based on customer demand. NCSSs continue to be supported. All future investments will go to making the new SharePoint Add-in model richer and more powerful. Accordingly, we recommend that all new development should use the new add-in model whenever possible. In scenarios where you have to develop a farm solution or coded sandboxed solution, we recommend that you design it so that it can easily evolve toward a more loosely coupled development model. 
   
     
     
@@ -70,7 +72,7 @@ SharePoint Add-ins and NCSSs use one of the SharePoint client object models or R
   
     
     
-The server object model also has APIs for create, read, update, and delete (CRUD) operations on lists, libraries, and websites, and for operations on other SharePoint components. This means that the server object model can be used for extensions that are intended for end users, but for reasons given in the previous section, farm solutions are not usually the best choice for such extensions. Thus, it is no surprise that farm solutions cannot be installed on Microsoft SharePoint Online. Because Microsoft handles all the management of SharePoint Online, there is no need for administrative extensions. For more information about the different sets of APIs in SharePoint and where they overlap, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint).
+The server object model also has APIs for create, read, update, and delete (CRUD) operations on lists, libraries, and websites, and for operations on other SharePoint components. This means that the server object model can be used for extensions that are intended for end users, but for reasons given in the previous section, farm solutions are not usually the best choice for such extensions. Thus, it is no surprise that farm solutions cannot be installed on Microsoft SharePoint Online. Because Microsoft handles all the management of SharePoint Online, there is no need for administrative extensions. For more information about the different sets of APIs in SharePoint and where they overlap, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -89,8 +91,9 @@ You may encounter one of the small number of SharePoint development scenarios fo
 
 - **Branding:** SharePoint users often want to give their SharePoint sites, including their SharePoint Online sites, a custom appearance with their own colors, styles, layouts, and logos. This is generally easier to do with NCSSs than with SharePoint Add-ins. A SharePoint Add-in has declarative control over the appearance of only its own add-in web. For the host web, it can declaratively add only ribbon buttons and menu items (and add-in parts). Any other changes to a host web or its parent site collection, tenancy, or on-premisesSharePoint web application has to be done with code or script that uses one of the SharePoint's client object models. For example, new icons or CSS files would have to be programmatically deployed. This code could be run from the add-in itself after it is installed, or it could run in the add-in installation event handler. But it would take a considerable amount of work to create this code. In addition, the add-in would need site collection-scoped permissions to change any websites outside its own add-in web and host web, and it would need tenant-scoped permissions to change more than just its parent site collection. A branding NCSS, however, can be deployed and activated to any site collection; and it could consist of only a few purely declarative components. 
     
-    > **Note:**
-      > Note that SharePointfarm solutions are potentially more powerful than either NCSSs or SharePoint Add-ins for branding, but they are not an option on SharePoint Online. 
+    > [!NOTE]
+    > Note that SharePointfarm solutions are potentially more powerful than either NCSSs or SharePoint Add-ins for branding, but they are not an option on SharePoint Online. 
+
 - **"Template-like" extensions:** Suppose that you need to create a crisis management extension for SharePoint for the collaborative analysis and solution of business crises. Your extension includes several custom list types, no-code workflows, and other SharePoint components, all combined into a custom WebTemplate. Suppose you package and deploy the extension as an NCSS. After the Feature in the solution has been activated, users can create a crisis management subweb of their SharePoint website whenever a crisis occurs. They can populate the website with data that is specific to the crisis. On the other hand, you could implement the same extension as a SharePoint Add-in using exactly the same set of SharePoint components. When the add-in is installed on the team site, the subweb (known as the "add-in web") is immediately created. Again, users populate the website with relevant data.
     
     Now, what happens when a second crisis occurs? If you implemented the extension as an NCSS, your users can merely create another subweb from your custom WebTemplate. However, if you implemented the extension as a SharePoint Add-in, your users have a problem. They cannot install a second instance of the same add-in on the parent website. Only one instance of any add-in can be installed on a host web. The best that you can do is create a subsite of the parent website to serve as a location for another instance of the add-in to be installed. When the add-in is installed, a new add-in web, which is a sub-subweb of the parent website, is created for the add-in components. This comparison shows a general, but not absolute, principle: SharePoint extensions that have a "template-like" character - that is, a reusable collection of components that must be configured for each specific use case, but which naturally have multiple instances associated with the same SharePoint website - fit better with the NCSS development model than with the add-in model. In this example, the variable element is the crisis, but it is easy to imagine template-like SharePoint extensions in which the instances vary by region, date, or any number of other characteristics.
@@ -104,7 +107,7 @@ For information about how to expand the possibilities of SharePoint Add-ins, see
 ## Doing things the add-in way
 <a name="Questions"> </a>
 
-As noted earlier, custom code that runs on the SharePoint servers is not allowed in SharePoint Add-ins. This is  *not*  a significant limitation. It simply means that your custom business logic moves either "down" to the client device or "up" to the cloud. In either case, you can use the [SharePoint REST/OData service](http://msdn.microsoft.com/library/f60ed19e-9840-4f39-911e-4676751a2f6b%28Office.15%29.aspx) to accessSharePoint sites, lists, and other data. You can also remotely access SharePoint data through the [SharePoint JavaScript, Silverlight, or .NET Framework client object models](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). Finally, on Windows Phones, you can access SharePoint through the SharePointWindows Phone object model. For more information about the various sets of APIs in SharePoint, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint).
+As noted earlier, custom code that runs on the SharePoint servers is not allowed in SharePoint Add-ins. This is  *not*  a significant limitation. It simply means that your custom business logic moves either "down" to the client device or "up" to the cloud. In either case, you can use the [SharePoint REST/OData service](http://msdn.microsoft.com/library/f60ed19e-9840-4f39-911e-4676751a2f6b%28Office.15%29.aspx) to accessSharePoint sites, lists, and other data. You can also remotely access SharePoint data through the [SharePoint JavaScript, Silverlight, or .NET Framework client object models](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). Finally, on Windows Phones, you can access SharePoint through the SharePointWindows Phone object model. For more information about the various sets of APIs in SharePoint, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -120,13 +123,13 @@ The following table lists the SharePoint components that cannot be deployed in a
 
 |**If you want the functionality of ...**|**... try these approaches.**|
 |:-----|:-----|
-|Custom Web Parts  <br/> |A SharePoint Add-in can have remote pages that contain custom Web Parts. Another option is to expose a page from a remote web application in an add-in part on a SharePoint site page. The remote page can have basically the same UI controls and functionality as a Web Part. For more information, see  [Create add-in parts to install with your SharePoint Add-in](http://msdn.microsoft.com/library/a2664289-6c56-4cb1-987a-22367fad55eb%28Office.15%29.aspx).  <br/> |
+|Custom web parts  <br/> |A SharePoint Add-in can have remote pages that contain custom web parts. Another option is to expose a page from a remote web application in an add-in part on a SharePoint site page. The remote page can have basically the same UI controls and functionality as a web part. For more information, see  [Create add-in parts to install with your SharePoint Add-in](http://msdn.microsoft.com/library/a2664289-6c56-4cb1-987a-22367fad55eb%28Office.15%29.aspx).  <br/> |
 |Event receivers and Feature receivers  <br/> |A SharePoint Add-in can contain functionally equivalent remote event receivers. For more information, see  [Handle events in SharePoint Add-ins](http://msdn.microsoft.com/library/c050d056-8548-4496-a053-016779d723d9%28Office.15%29.aspx).  <br/> |
-|Custom field (column) types  <br/> |An add-in can deploy a new field (column) that is based on one of the  [existing field types](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldtype.aspx%28Office.15%29.aspx). The  [Calculated](http://msdn.microsoft.com/library/8703373d-bb55-4132-8c5f-37a41c383f81%28Office.15%29.aspx) and [Computed](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldcomputed.aspx%28Office.15%29.aspx) field types are especially flexible. Another option is to present your data in a remote web page by using customized controls or grids. <br/> |
+|Custom field (column) types  <br/> |An add-in can deploy a new field (column) that is based on one of the  [existing field types](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.spfieldtype). The  [Calculated](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.spfieldcalculated) and [Computed](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.spfieldcomputed) field types are especially flexible. Another option is to present your data in a remote webpage by using customized controls or grids. <br/> |
 |Custom web services built on the SharePoint  [Service Application Framework](http://msdn.microsoft.com/library/6d0300d2-5b5c-4477-a9e2-17594aea5a7d%28Office.15%29.aspx) <br/> |You can develop your custom web services as remote services.  <br/> |
-|Application pages  <br/> |A SharePoint Add-in can include remote web pages that are available from every website on which the add-in is installed. An add-in can also use any of the built-in SharePoint Web Parts on site pages.  <br/> |
+|Application pages  <br/> |A SharePoint Add-in can include remote webpages that are available from every website on which the add-in is installed. An add-in can also use any of the built-in SharePoint web parts on site pages.  <br/> |
    
-Some SharePoint components, listed below, are used in end-user scenarios, but have no equivalents in the SharePoint add-in model, and cannot be deployed in NCSSs. For these, you must use farm solutions.
+Some SharePoint components, listed below, are used in end-user scenarios, but have no equivalents in the SharePoint Add-in model, and cannot be deployed in NCSSs. For these, you must use farm solutions.
   
     
     
@@ -178,19 +181,20 @@ For more information about add-in event handlers, see the SDK node  [Handle even
 ### Add-ins that create extensions
 <a name="ExtensionFactories"> </a>
 
-Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning** section of [Site provisioning techniques and remote provisioning in SharePoint](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint.aspx), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web.
+Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning** section of [Site provisioning techniques and remote provisioning in SharePoint](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web.
   
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Programming models in SharePoint](programming-models-in-sharepoint)
+-  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
 -  [Using Solutions in SharePoint Foundation](http://msdn.microsoft.com/library/0da0518c-24eb-48e0-89bd-21282fdeef94%28Office.15%29.aspx)
     
   
+
 

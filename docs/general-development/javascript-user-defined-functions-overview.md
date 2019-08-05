@@ -1,7 +1,9 @@
 ---
 title: JavaScript user-defined functions overview
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: fee38837-1985-4319-ba4e-b99c6ec66336
+localization_priority: Normal
 ---
 
 
@@ -14,7 +16,7 @@ A user-defined function (UDF) is a function that you can create yourself and the
   
     
     
-Excel Services already allows you to create UDFs using managed code, so if you have worked with the existing Excel Services UDFs, JavaScript UDFs should look familiar to you. For more information about creating UDFs using managed code, see  [Excel Services User-Defined Functions](excel-services-user-defined-functions).
+Excel Services already allows you to create UDFs using managed code, so if you have worked with the existing Excel Services UDFs, JavaScript UDFs should look familiar to you. For more information about creating UDFs using managed code, see  [Excel Services User-Defined Functions](excel-services-user-defined-functions.md).
   
     
     
@@ -34,7 +36,7 @@ To use a JavaScript UDF, you have to have the ability to modify the content of t
   
     
     
-When the webpage with the Excel Web Access Web Part or embedded workbook renders, you can invoke the JavaScript UDF in the workbook just like any other Excel workbook.
+When the webpage with the Excel Web Access web part or embedded workbook renders, you can invoke the JavaScript UDF in the workbook just like any other Excel workbook.
   
     
     
@@ -80,7 +82,7 @@ You could then call the JavaScript UDF, StockInfo, in a formula from a cell insi
   
     
     
-![JavaScript UDF being invoked in Excel Online](../../images/SPS15CON_xls_JsUdfinWebApp.jpg)
+![JavaScript UDF being invoked in Excel Online](../images/SPS15CON_xls_JsUdfinWebApp.jpg)
   
     
     
@@ -96,7 +98,7 @@ You could then call the JavaScript UDF, StockInfo, in a formula from a cell insi
 ## Where can I use JavaScript UDFs?
 <a name="xlsWhereUseJsUdfs"> </a>
 
-You can create and use JavaScript UDFs either on workbooks displayed in SharePoint Excel Web Access Web Parts or on a host webpage that has an embedded workbook. The workbook must be stored on Microsoft OneDrive. The main difference is that JavaScript UDFs added to Excel Web Access Web Parts require a SharePoint server. JavaScript UDFs added to host webpages that have embedded workbooks require only that the workbook be stored on OneDrive.
+You can create and use JavaScript UDFs either on workbooks displayed in SharePoint Excel Web Access web parts or on a host webpage that has an embedded workbook. The workbook must be stored on Microsoft OneDrive. The main difference is that JavaScript UDFs added to Excel Web Access web parts require a SharePoint server. JavaScript UDFs added to host webpages that have embedded workbooks require only that the workbook be stored on OneDrive.
   
     
     
@@ -112,14 +114,11 @@ You can create and use JavaScript UDFs either on workbooks displayed in SharePoi
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Excel Services in SharePoint](excel-services-in-sharepoint)
-    
-  
--  [What's new in Excel Services for developers](http://msdn.microsoft.com/library/09e96c8b-cb55-4fd1-a797-b50fbf0f9296.aspx)
+-  [Excel Services in SharePoint](excel-services-in-sharepoint.md)
     
   
 -  [Excel Services User-Defined Functions](http://msdn.microsoft.com/en-us/library/ms493934)

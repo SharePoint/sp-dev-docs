@@ -1,7 +1,9 @@
 ---
 title: Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: bc8769c6-ae71-4519-abf3-c1b6fb071059
+localization_priority: Priority
 ---
 
 
@@ -21,7 +23,7 @@ One of the more significant changes to the workflow architecture is that now all
 For those customers who have created workflows using SharePoint Designer in the past, this is nothing new. Workflows authored using SharePoint Designer have always been fully declarative. This change does benefit customers who create workflows using SharePoint Designer 2013, however, because SharePoint Designer 2013 workflows now support calling and consuming web services.
 ## Why are web services important for SharePoint workflows
 
-Let's start by understanding scenarios in which using web services makes sense. In the days of SharePoint 2007 or SharePoint 2010, writing custom code was common when using Visual Studio to author workflows because that was the best way to perform calculations or implement custom business logic. Any time you encountered a situation in which the out-of-box actions and activities didn't meet your needs, you could fall back on custom code in a managed assembly.
+Let's start by understanding scenarios in which using web services makes sense. In the days of SharePoint 2007 or SharePoint 2010, writing custom code was common when using Visual Studio to author workflows because that was the best way to perform calculations or implement custom business logic. Any time you encountered a situation in which the out-of-the-box actions and activities didn't meet your needs, you could fall back on custom code in a managed assembly.
   
     
     
@@ -66,7 +68,7 @@ In SharePoint workflows, you call a web service using a new action introduced in
   
     
     
-![Figure 1. Call HTTP Web Service action](../../images/ngWSSP2013WorkflowSPD2013.png)
+![Figure 1. Call HTTP Web Service action](../images/ngWSSP2013WorkflowSPD2013.png)
   
     
     
@@ -174,7 +176,7 @@ The following walkthrough demonstrates how to create a custom workflow that call
 
   
 
-  ![Figure 2. Creating the Customers list in SP](../../images/ngWSSP2013WorkflowSPD201302.png)
+  ![Figure 2. Creating the Customers list in SP](../images/ngWSSP2013WorkflowSPD201302.png)
   
 
   
@@ -199,7 +201,7 @@ The following walkthrough demonstrates how to create a custom workflow that call
 
   
 
-  ![Figure 3. Creating a new List Workflow using SP](../../images/ngWSSP2013WorkflowSPD201303.png)
+  ![Figure 3. Creating a new List Workflow using SP](../images/ngWSSP2013WorkflowSPD201303.png)
   
 
   
@@ -234,7 +236,7 @@ Now that we've created the workflow, we want to enable it to call a web service,
 
   
 
-  ![Figure 4. Dynamically Creating the URL for the Web](../../images/ngWSSP2013WorkflowSPD201304.png)
+  ![Figure 4. Dynamically Creating the URL for the Web](../images/ngWSSP2013WorkflowSPD201304.png)
   
 
   
@@ -256,7 +258,7 @@ Now that we've created the workflow, we want to enable it to call a web service,
 
   
 
-  ![Figure 5. Writing the Web Service Response Code to](../../images/ngWSSP2013WorkflowSPD201305.png)
+  ![Figure 5. Writing the Web Service Response Code to](../images/ngWSSP2013WorkflowSPD201305.png)
   
 
   
@@ -292,7 +294,7 @@ To do this, we're going to add two **Get item from dictionary** actions to the w
 
   
 
-  ![Figure 6. Extracting Values from the Web Service D](../../images/ngWSSP2013WorkflowSPD201306.png)
+  ![Figure 6. Extracting Values from the Web Service D](../images/ngWSSP2013WorkflowSPD201306.png)
   
 
   
@@ -315,7 +317,7 @@ The final step is to update the list item using two of the **Set field in curren
   
     
     
-![Figure 7. Update the List Item](../../images/ngWSSP2013WorkflowSPD201307.png)
+![Figure 7. Update the List Item](../images/ngWSSP2013WorkflowSPD201307.png)
   
     
     
@@ -357,7 +359,7 @@ And finally, we complete the **Transition to stage** section of the workflow sta
 
   
 
-  ![Figure 8. List Items Updated by Custom Workflow](../../images/ngWSSP2013WorkflowSPD201308.png)
+  ![Figure 8. List Items Updated by Custom Workflow](../images/ngWSSP2013WorkflowSPD201308.png)
   
 
   
@@ -375,11 +377,11 @@ SharePointintroduced a new workflow architecture facilitated by a new product, W
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](workflows-in-sharepoint)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
 -  [OData](http://www.odata.org/)

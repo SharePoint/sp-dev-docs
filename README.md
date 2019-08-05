@@ -1,14 +1,55 @@
-# Welcome to the SharePoint Framework !
+# Welcome to the SharePoint Framework!
 
 The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
-* [Official SharePoint Framework Documentation](http://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview)
+* [Official SharePoint Framework Documentation](http://aka.ms/spfx)
 
-This repository contains the raw documents published to dev.office.com site. Feel free to use [Issues]((https://github.com/SharePoint/sp-dev-docs/issues)) list to report us findings or also submit pull requests around the existing documentation. 
+This repository contains the raw documents published to docs.microsoft.com site.
 
-The SharePoint Framework now generally available. Please check more release details either from the [GA release notes](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA) or from the [Office Blog post](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/) around the GA release. If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues). We’ll also be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
+## Questions & Help
+
+Feel free to use [Issues]((https://github.com/SharePoint/sp-dev-docs/issues)) list to report us potential issues around the SharePoint Framework or gaps in our documentation. You can also submit directly pull requests towards our documentation. 
+
+We’ll also monitor [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
+
+You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@officedevpnp](https://twitter.com/officedevpnp).
 
 ## SharePoint Framework Releases
+
+* **July 23, 2019**
+   * **SPFx v1.9** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9-release-notes)
+
+* **May 7, 2019**
+   * **SPFx v1.8.2** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8.2-release-notes)
+
+* **April 16, 2019**
+   * **SPFx v1.8.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8.1-release-notes)
+
+* **March 14, 2019**
+   * **SPFx v1.8** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes)
+
+* **December 18, 2018**
+   * **SPFx v1.7.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.7.1)
+
+* **November 8, 2018**
+   * **SPFx v1.7** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.7-release-notes)
+* **September 5, 2018**
+   * **SPFx v1.6** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.6-release-notes)
+
+* **June 26, 2018**
+   * **SPFx v1.5.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.5.1)
+   
+* **June 5, 2018**
+   * **SPFx v1.5** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SharePoint-Framework-Package-v1.5)
+
+* **February 15, 2018**
+   * **SPFx v1.4.1** [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.4.1)
+
+* **December 7, 2017**
+   *  **SPFx v1.4**. [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.4)
+
+* **September 25, 2017**
+   *  **GA of Extensions and SPFx v1.3**.
 
 * **June 6, 2017**
    *  **Dev Preview of extensions is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes---Extensions-Dev-Preview-Drop-1)
@@ -19,50 +60,38 @@ The SharePoint Framework now generally available. Please check more release deta
 * **Jan 9, 2017**
    *  **RC0 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-RC0)
 
-* **Nov 22, 2016**
-   *  **Drop 6 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-6)
-
-* **Oct 17, 2016**
-   *  **Drop 5 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-5)
-
-* **Sept 21, 2016**
-   *  **Drop 4 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-4-and-MDL2)
-
-* **Sep 14, 2016**
-   *  **Drop 3 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-3)
-   
-* **Sep 1, 2016**
-   * **Drop 2 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-2)
-
 * **Aug 17, 2016**
    * **Drop 1 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Drop-1)
    
 ## Get Started
 
-* [Setup your Office 365 Developer Tenant](http://dev.office.com/sharepoint/docs/spfx/set-up-your-developer-tenant)
-* [Setup your Machine](http://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment)
-* [Go build your first web part](http://dev.office.com/sharepoint/docs/spfx/web-parts/get-started/build-a-hello-world-web-part)
+* [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
+* [Setup your Machine](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
+* [Go build your first web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
 
 ## Reference
-* [sp-component-base](reference/spfx/sp-component-base-module.md)
-* [sp-core-library](reference/spfx/sp-core-library-module.md)
-* [sp-http](reference/spfx/sp-http-module.md)
-* [sp-loader](reference/spfx/sp-loader-module.md)
-* [sp-odata-types](reference/spfx/sp-odata-types-module.md)
-* [sp-page-context](reference/spfx/sp-page-context-module.md)
-* [sp-webpart-base](reference/spfx/sp-webpart-base-module.md)
+* [sp-application-base](https://docs.microsoft.com/en-us/javascript/api/sp-application-base)
+* [sp-component-base](https://docs.microsoft.com/en-us/javascript/api/sp-component-base)
+* [sp-core-library](https://docs.microsoft.com/en-us/javascript/api/sp-core-library)
+* [sp-dialog](https://docs.microsoft.com/en-us/javascript/api/sp-dialog)
+* [sp-extension-base](https://docs.microsoft.com/en-us/javascript/api/sp-extension-base)
+* [sp-http](https://docs.microsoft.com/en-us/javascript/api/sp-http)
+* [sp-listview-extensibility](https://docs.microsoft.com/en-us/javascript/api/sp-listview-extensibility)
+* [sp-odata-types](https://docs.microsoft.com/en-us/javascript/api/sp-odata-types)
+* [sp-page-context](https://docs.microsoft.com/en-us/javascript/api/sp-page-context)
+* [sp-webpart-base](https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base)
 
 ## Learn More
 
-* [Background and Philosophy](http://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview)
-* [Design Great Web Parts](http://dev.office.com/sharepoint/docs/spfx/web-parts/basics/design-considerations-for-web-parts)
-* [API Docs](https://sharepoint.github.io/)
+* [Background and Philosophy](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
+* [Design Great Web Parts](https://docs.microsoft.com/en-us/sharepoint/dev/design/design-guidance-overview)
+* [API Docs](https://docs.microsoft.com/en-us/javascript/api/sp-application-base)
 
 ## Updates & Feedback
 
 To keep track of improvements to the Office 365 Framework, please take a look at:
 
-* [@SharePoint](https://twitter.com/sharepoint) and [@OfficeDev](https://twitter.com/officedev) on Twitter
+* [@SharePoint](https://twitter.com/sharepoint), [@OfficeDev](https://twitter.com/officedev) and [@OfficeDevPnP](https://twitter.com/officedevpnp) on Twitter
 * [Office Developer Blog](http://dev.office.com/blogs)
 
 Provide Feedback:
@@ -79,4 +108,4 @@ The SharePoint Framework is now generally available at Office 365.
 
 ## Have Fun
 
-We look forward to seeing what you build! Please tweet us at @OfficeDev or @SharePoint with the #SPFx tag!
+We look forward to seeing what you build! Please tweet us at @OfficeDev, @OfficeDevPnP or @SharePoint with the #SPFx tag!

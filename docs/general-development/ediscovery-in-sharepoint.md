@@ -1,7 +1,9 @@
 ---
 title: eDiscovery in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 45cb324a-75f5-444d-a0fa-5c223df19016
+localization_priority: Priority
 ---
 
 
@@ -112,11 +114,11 @@ SharePoint provides a Microsoft .NET server programming model that you can use t
 | [SourceValidation](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceValidation.aspx) <br/> |Indicates whether the source is valid.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15_eDiscoveryInSP_AdditionalResources"> </a>
 
 
--  [What's new in SharePoint eDiscovery and compliance](what-s-new-in-sharepoint-ediscovery-and-compliance)
+-  [What's new in SharePoint eDiscovery and compliance](what-s-new-in-sharepoint-ediscovery-and-compliance.md)
     
   
 -  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)

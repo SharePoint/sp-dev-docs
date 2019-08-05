@@ -1,17 +1,19 @@
 ---
-title: How to Create a Windows Phone SharePoint list app
-ms.prod: SHAREPOINT
+title: Create a Windows Phone SharePoint list app
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 3e40c475-f4c1-4a4f-a3e5-1a55f814d272
+localization_priority: Normal
 ---
 
 
-# How to: Create a Windows Phone SharePoint list app
+# Create a Windows Phone SharePoint list app
 Create a Windows Phone app in Visual Studio based on the Windows Phone SharePoint List Application template.
-Installing the Windows Phone SharePoint SDK makes two Windows Phone SharePoint Application templates available to you in Visual Studio 2010 or Visual Studio 2010 Express for Windows Phone. (See  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint).) Using the Windows Phone SharePoint List Application template, you can follow the steps of a wizard to create a functional Windows Phone app that can access and manipulate data in a SharePoint list.
+Installing the Windows Phone SharePoint SDK makes two Windows Phone SharePoint Application templates available to you in Visual Studio 2010 or Visual Studio 2010 Express for Windows Phone. (See  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md).) Using the Windows Phone SharePoint List Application template, you can follow the steps of a wizard to create a functional Windows Phone app that can access and manipulate data in a SharePoint list.
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
 
 
 ## Create the Windows Phone SharePoint list application
@@ -31,7 +33,7 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
     
     
-![Contacts list for Contoso marketing team](../../images/8d56d824-d96a-4f1e-9040-ce1da9a734d8.gif)
+![Contacts list for Contoso marketing team](../images/8d56d824-d96a-4f1e-9040-ce1da9a734d8.gif)
   
     
     
@@ -49,8 +51,9 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
 3. In the **New Project** dialog box, expand the **Visual C#** node, and then choose the **Silverlight for Window Phone** node. (Ensure that the target .NET Framework version is set to 4.)
     
-    > **Note:**
-      > The templates installed by the Windows Phone SharePoint SDK work only in C# projects. The templates are not available for Visual Basic projects. 
+    > [!NOTE]
+    > The templates installed by the Windows Phone SharePoint SDK work only in C# projects. The templates are not available for Visual Basic projects. 
+
 4. In the **Templates** pane, choose the **Windows Phone SharePoint List Application** template and give the project a name, such asContosoSPListApp.
     
   
@@ -60,7 +63,7 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
 
   
 
-  ![SPList Wizard Error](../../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig3.png)
+  ![SPList Wizard Error](../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig3.png)
   
 
     You can resolve this error by giving sufficient privileges to the account with which the developer is running the SPList wizard. Rerun **Splist wizard** after sufficient rights are given.
@@ -96,12 +99,14 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
 14. Choose **Next**. The wizard displays the fields associated with the selected list on the SharePoint site.
     
-    > **Note:**
-      > A custom field will not be available to select from the SharePoint List wizard for mobile devices. However, you can write custom code to access any custom field. A field cannot be associated with its content type. However if multiple content types are enabled for the list, all the fields will be available for developers to consume in their phone apps. 
+    > [!NOTE]
+    > A custom field will not be available to select from the SharePoint List wizard for mobile devices. However, you can write custom code to access any custom field. A field cannot be associated with its content type. However if multiple content types are enabled for the list, all the fields will be available for developers to consume in their phone apps. 
+
 15. Select the check box next to each field you want to include in the list as it will appear in your Windows Phone app.
     
-    > **Note:**
-      > List fields that are designated in SharePoint Server as requiring information are selected already; they can't be cleared in the wizard. 
+    > [!NOTE]
+    > List fields that are designated in SharePoint Server as requiring information are selected already; they can't be cleared in the wizard. 
+
 16. Choose **Next**. The wizard gives you the opportunity to order the fields you selected in the previous step.
     
   
@@ -133,7 +138,7 @@ The deployment target for the solution is set to Windows Phone Emulator by defau
   
     
     
-![SharePoint list items in a Windows Phone app](../../images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
+![SharePoint list items in a Windows Phone app](../images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
   
     
     
@@ -151,7 +156,7 @@ While running a Windows Phone app, the authentication error shown in Figure 4 ca
   
     
     
-![Mobile App Error](../../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig4.png)
+![Mobile App Error](../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig4.png)
   
     
     
@@ -198,7 +203,7 @@ If you based your Windows Phone app on the data from a Contacts list, as shown i
   
     
     
-![DisplayForm view of a Contacts list item](../../images/e2cf6848-bd29-416b-b397-a1d670bd2910.gif)
+![DisplayForm view of a Contacts list item](../images/e2cf6848-bd29-416b-b397-a1d670bd2910.gif)
   
     
     
@@ -207,14 +212,14 @@ Notice the **Edit** and **Delete** buttons on the Application Bar in this page o
     
     
 
-## Additional resources
+## See also
 <a name="SP15Createwinphoneapp_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

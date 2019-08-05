@@ -1,3 +1,9 @@
+---
+title: Trigger expressions syntax in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+localization_priority: Normal
+---
 
 
 
@@ -25,9 +31,7 @@ Elements that can be used in a trigger expression are:
   
 - Constants
     
-  
-
-> **Note:**
+> [!NOTE] 
 > The string " **Null**" is reserved for the value **Null**. 
   
     
@@ -238,14 +242,14 @@ There are two sets of constants that can be used with specific functions: **Date
 |**RegexOptionConstant** <br/> |**IgnoreCase** <br/> |With the **IsMatch**, **Match**, **ReplaceRegex**, and **IndexOfRegex** functions. <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15triggerex_addresources"> </a>
 
 
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
     
   
--  [How to: Use the Content Enrichment web service callout for SharePoint Server](how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server)
+-  [How to: Use the Content Enrichment web service callout for SharePoint Server](how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server.md)
     
   
 

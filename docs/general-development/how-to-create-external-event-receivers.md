@@ -1,18 +1,22 @@
 ---
-title: How to Create external event receivers
-ms.prod: SHAREPOINT
+title: Create external event receivers
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c6d5f486-6247-47f9-9876-fab12f13342f
+localization_priority: Normal
 ---
 
 
-# How to: Create external event receivers
+# Create external event receivers
+
 Learn the steps for creating external event receivers for on-premises installations of Business Connectivity Services (BCS) external lists.
+
 External event receivers are classes that enable SharePoint Add-ins to respond to events that occur to SharePoint items, such as lists or list items. For example, you can respond to list events, such as adding or removing a field; list item events, such as adding or removing a list item or attachment to a list item; or web events, such as adding or deleting a site or site collection. You can add a remote event receiver to an existing Visual Studio solution that contains an SharePoint Add-in.
   
     
     
 
-This article accompanies the code sample  [SharePoint: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications.
+This article accompanies the code sample  [SharePoint: Create a remote event receiver for external data](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications.
 In this example, you will do the following:
   
     
@@ -98,7 +102,7 @@ However, if you don't have Northwind installed, see  [Installing the Northwind S
   
     
     
-The database is also included with the code sample:  [SharePoint: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c).
+The database is also included with the code sample:  [SharePoint: Create a remote event receiver for external data](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-095c594c).
   
     
     
@@ -251,9 +255,8 @@ GO
 
 ```
 
-
-> **Note:**
-> If you are using your own custom stored procedures as defined in your BDC model, you might also want to create the delete and update triggers. The additional triggers are not be covered as part of this scenario. 
+> [!NOTE]
+> f you are using your own custom stored procedures as defined in your BDC model, you might also want to create the delete and update triggers. The additional triggers are not be covered as part of this scenario. 
   
     
     
@@ -485,8 +488,7 @@ public string Subscribe(string deliveryUrl, string eventType)
             }
 ```
 
-
-> **Note:**
+> [!NOTE]
 > If SQL Server is set up for Windows authentication, it will try to authenticate the request with the App Pool identity. Make sure that the account configured in the App Pool has rights to read and write in the database. 
   
     
@@ -699,7 +701,7 @@ Office Developer Tools for Visual Studio 2013 added an autogeneration wizard tha
     
     This starts the **SharePoint Customization Wizard**, which is used to build the external content type automatically.
     
-    For more information about how to create external content types, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint).
+    For more information about how to create external content types, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md).
     
   
 You will now modify the XML that was generated in the previous step to add a method for Subscribe. This will allow BCS to communicate with the external system when someone subscribes to be notified about external data changes.
@@ -955,26 +957,26 @@ Now you can see the app in action.
     
   
 
-## Additional resources
+## See also
 <a name="bkmk_additionalresources"> </a>
 
 
--  [External events and alerts in SharePoint](external-events-and-alerts-in-sharepoint)
+-  [External events and alerts in SharePoint](external-events-and-alerts-in-sharepoint.md)
     
   
--  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint)
+-  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
     
   
--  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint)
+-  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
 

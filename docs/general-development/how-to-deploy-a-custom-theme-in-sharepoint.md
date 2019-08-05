@@ -1,16 +1,20 @@
 ---
-title: How to Deploy a custom theme in SharePoint
-ms.prod: SHAREPOINT
+title: Deploy a custom theme in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f703df24-8e56-4e6a-bc37-95acbb3c83e8
+localization_priority: Priority
 ---
 
 
-# How to: Deploy a custom theme in SharePoint
+# Deploy a custom theme in SharePoint
+
 Learn how to deploy a custom theme to a SharePoint site by using the user interface or by implementing a feature receiver.
-SharePoint includes preinstalled themes. You can create custom themes by creating additional color palettes, font schemes, and master pages. After the files are uploaded to the Theme Gallery and the Master Page Gallery, you can deploy a theme to a site by using the user interface or by using code. For more information about color palettes and font schemes, see  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint).
+SharePoint includes preinstalled themes. You can create custom themes by creating additional color palettes, font schemes, and master pages. After the files are uploaded to the Theme Gallery and the Master Page Gallery, you can deploy a theme to a site by using the user interface or by using code. For more information about color palettes and font schemes, see [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
-    
+> [!NOTE]
+> This article only applies in the context of classic SharePoint site experience. If you are looking for details around modern SharePoint sites and their theme support, please have a look on the following article - [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
 
 
 ## Core concepts to know to deploy a theme
@@ -26,7 +30,7 @@ Table 1 lists articles that can help you understand the core concepts of deployi
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Themes overview for SharePoint](themes-overview-for-sharepoint) <br/> |Learn about the theming experience in SharePoint.  <br/> |
+| [Themes overview for SharePoint](themes-overview-for-sharepoint.md) <br/> |Learn about the theming experience in SharePoint.  <br/> |
 | [Feature Events](http://msdn.microsoft.com/en-us/library/ms469501.aspx) <br/> |Learn about feature events, which enable you to trap and respond to an event that occurs when a feature is installed in the server farm.  <br/> |
    
 
@@ -50,10 +54,10 @@ You can create custom themes by creating additional color palettes and font sche
   
 - **Style library** Lists custom CSS files that you want to use in the theming experience. You can navigate directly to the Style library (replace _SiteCollectionName_ and _language_ in this URL: http:// _SiteCollectionName_/Style Library/ _language_/Themable/).
     
-    > **Note:**
-      > Place the custom CSS files in the Themable folder in the Style library, not the Themable folder in the Master Page Gallery. Only CSS files that are stored in the Themable folder in the Style library are recognized by the theming engine. 
+    > [!NOTE]
+    > Place the custom CSS files in the Themable folder in the Style library, not the Themable folder in the Master Page Gallery. Only CSS files that are stored in the Themable folder in the Style library are recognized by the theming engine. 
 
-> **Note:**
+> [!NOTE]
 > If you have versioning enabled on the Master Page Gallery and the Theme Gallery, you must also publish the design files before they can be used by the theming engine. 
   
     
@@ -65,10 +69,7 @@ You can create custom themes by creating additional color palettes and font sche
 
 A composed look, or design, is the color palette, font scheme, background image, and master page that determine the look and feel of a site. The Composed Looks list contains the composed looks that are available in the design gallery. You create a design by adding a list item in the Composed Looks list and specifying the master page, color palette, font scheme, and background image to use.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > A master page preview file is required if you want the master page to be available in the design gallery. 
   
     
@@ -110,8 +111,9 @@ A composed look, or design, is the color palette, font scheme, background image,
   
 11. Choose **Save**.
     
-    > **Note:**
-      > If there is an issue with the composed look values, the composed look is not added to the design gallery, and no message is recorded in the log files. The following are possible reasons why a composed look cannot be added: a file cannot be found, there is a formatting issue with one of the files, or SharePoint is unable to access the files. 
+    > [!NOTE]
+    > If there is an issue with the composed look values, the composed look is not added to the design gallery, and no message is recorded in the log files. The following are possible reasons why a composed look cannot be added: a file cannot be found, there is a formatting issue with one of the files, or SharePoint is unable to access the files. 
+
 You can now use the design gallery to apply the new design to your site. For more information, see  [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
   
     
@@ -169,8 +171,8 @@ theme.ApplyTo(Web, true);
 ```
 
 
-    > **Note:**
-      > The  _shareGenerated_ parameter in the **ApplyTo** method specifies whether the themed files can be shared across sites in a site collection. In general, it is set to **true** for SharePoint Server and SharePoint Online sites and set to **false** for SharePoint Foundation sites. The _shareGenerated_ parameter must be set to **true** if you intend the themed files to be shared. For more information, see [ApplyTo(SPWeb, Boolean)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPTheme.ApplyTo.aspx) .
+    > [!NOTE]
+    > The  _shareGenerated_ parameter in the **ApplyTo** method specifies whether the themed files can be shared across sites in a site collection. In general, it is set to **true** for SharePoint Server and SharePoint Online sites and set to **false** for SharePoint Foundation sites. The _shareGenerated_ parameter must be set to **true** if you intend the themed files to be shared. For more information, see [ApplyTo(SPWeb, Boolean)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPTheme.ApplyTo.aspx) .
 
     When a user applies a theme in the **Change the look** wizard, the wizard also updates a theme named Current in the Composed Looks list and the design gallery. When you apply a theme programmatically, you have to update the Current theme manually. The following example shows how to update the Current theme.
     
@@ -224,20 +226,20 @@ currentItem.Update();
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint)
+-  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint)
+-  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/en-us/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 

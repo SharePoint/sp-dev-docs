@@ -1,19 +1,18 @@
 ---
-title: How to Export the Name field in a Document Library list to a mobile app
-ms.prod: SHAREPOINT
+title: Export the Name field in a Document Library list to a mobile app
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 901c2012-18c6-4dbd-a787-f8650a0cc7a8
+localization_priority: Normal
 ---
 
 
-# How to: Export the Name field in a Document Library list to a mobile app
+# Export the Name field in a Document Library list to a mobile app
+
 Export the Name field of a Document Library list to a mobile app by using the Visual Studio SharePoint List wizard. The Name field does not appear automatically when a user creates a mobile app for a document library in SharePoint.
 In a Document Library list, a user can upload various documents. A list item for a document typically has **Title**, **Name**, and a link to the document as properties. If a developer creates a Windows Phone 7 app against the document library, the **Name** field is not exported in the IDE wizard. Thus the developer has no easy way of knowing the document name. (This is because SharePoint does not support fields of type "FILE" by default.)
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > The **Title** property does not include the file name extension.
   
     
@@ -27,7 +26,7 @@ So if you want to fetch a document, build the full URL of the document, and open
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
     
@@ -138,17 +137,17 @@ public string m_fileUrl;
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15StoreSPlist_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app)
+-  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=27570)

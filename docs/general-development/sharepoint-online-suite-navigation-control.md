@@ -1,7 +1,9 @@
 ---
 title: SharePoint Online Suite Navigation control
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ba93e5c0-e591-48d0-a716-a08ec7ef6cea
+localization_priority: Normal
 ---
 
 
@@ -54,7 +56,7 @@ For intranet sites, use the following master page markup for the Suite Navigatio
 
 |**Web Control**|**Description**|
 |:-----|:-----|
-|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET web page.  <br/> |
+|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET webpage.  <br/> |
 |SharePoint:MenuItemTemplate  <br/> |Represents a control that creates an item in a drop-down menu.  <br/> |
    
 
@@ -180,7 +182,7 @@ For public-facing sites, use the following master page markup for the Suite Navi
 |:-----|:-----|
 |SharePoint:DelegateControl  <br/> |Renders an ASP.NET web control. Delegate controls make their candidate controls pluggable and traceable.  <br/> |
 |SharePoint:FeatureMenuTemplate  <br/> |Represents a control that creates a template for a drop-down menu.  <br/> |
-|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET web page.  <br/> |
+|SharePoint:Menu  <br/> |Displays a menu in an ASP.NET webpage.  <br/> |
 |SharePoint:MenuItemTemplate  <br/> |Represents a control that creates an item in a drop-down menu.  <br/> |
 |SharePoint:ScriptBlock  <br/> |Represents a script block control on a page.  <br/> |
 |SharePoint:SiteActions  <br/> |Represents a template control for the Site Action menu.  <br/> |
@@ -299,17 +301,17 @@ var g_navBarHelpDefaultKey = "HelpHome";
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   
--  [Menu control overview (ASP.NET)](http://msdn.microsoft.com/en-us/library/ecs0x9w5%28v=vs.90%29.aspx.aspx)
+-  [Menu control overview (ASP.NET)](https://technet.microsoft.com/en-us/ecs0x9w5(v=vs.94))
     
   
 

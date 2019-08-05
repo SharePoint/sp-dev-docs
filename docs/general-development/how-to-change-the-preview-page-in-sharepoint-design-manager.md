@@ -1,11 +1,13 @@
 ---
-title: How to Change the preview page in SharePoint Design Manager
-ms.prod: SHAREPOINT
+title: Change the preview page in SharePoint Design Manager
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e5dfd8df-65de-44fc-aa97-23b4685d33ee
+localization_priority: Priority
 ---
 
 
-# How to: Change the preview page in SharePoint Design Manager
+# Change the preview page in SharePoint Design Manager
 Learn how to set, create, and change the preview page in Design Manager in SharePoint.
 The preview page is the page of your site that you use to see how your design looks. You can set the preview page to be either a specific page within your site or a generic preview. If you choose the generic preview, you'll see your master page with only a placeholder for content. You'll also see a message in the banner that you're currently previewing the master page without any content. If you choose a specific page, you'll see the page content rendered with the master page and the appropriate page layout.
   
@@ -16,7 +18,7 @@ As you interact with the page, you might do something that causes SharePoint to 
   
     
     
-![The Change Preview Page and Reset Preview buttons](../../images/design-manager-preview-UI.jpg)
+![The Change Preview Page and Reset Preview buttons](../images/design-manager-preview-UI.jpg)
   
     
     
@@ -94,23 +96,23 @@ Use this procedure to return to the preview page.
     
   
 
-## Additional resources
+## See also
 <a name="addresources"> </a>
 
 
--  [Master pages, the Master Page Gallery, and page layouts in SharePoint](master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
+-  [Master pages, the Master Page Gallery, and page layouts in SharePoint](master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery)
+-  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md)
     
   
--  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels)
+-  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md)
     
   
--  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions)
+-  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
     
   
 

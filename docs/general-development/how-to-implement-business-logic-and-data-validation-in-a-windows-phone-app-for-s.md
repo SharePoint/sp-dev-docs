@@ -1,11 +1,14 @@
 ---
-title: How to Implement business logic and data validation in a Windows Phone app for SharePoint
-ms.prod: SHAREPOINT
+title: Implement business logic and data validation in a Windows Phone app for SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: fbbedc38-9651-4cd6-b523-d93cbf1cd39d
+localization_priority: Normal
 ---
 
 
-# How to: Implement business logic and data validation in a Windows Phone app for SharePoint
+# Implement business logic and data validation in a Windows Phone app for SharePoint
+
 Implement data validation in a Windows Phone app created by using the Windows Phone SharePoint List Application template.
 In a Windows Phone app intended for production use, you likely need to validate data entered by users to, for example, enforce business logic relevant to your particular circumstances, or to ensure appropriate formatting of entered values, or simply to catch mistakes before saving values to a SharePoint list. Projects based on the Windows Phone SharePoint List Application template include default data validation logic, but such projects also provide a mechanism for developers to implement custom data validation.
   
@@ -14,7 +17,7 @@ In a Windows Phone app intended for production use, you likely need to validate 
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
     
@@ -25,10 +28,7 @@ In a Windows Phone app intended for production use, you likely need to validate 
 
 Some data types for fields in SharePoint lists are associated by default with simple formatting or data validation. If you enter an invalid URL for a field based on the Hyperlink or Picture field type in a SharePoint list and attempt to save your changes, you see a message indicating that the address you entered is invalid. If you enter a customer name as a value for a field based on the Date and Time field type, you receive a message directing you to enter a date within a valid range for the field.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Date input validation is with respect to SharePoint date format. If the date format of the phone locale is required, customize the field and add validations accordingly. 
   
     
@@ -48,7 +48,7 @@ Some of these basic validation rules are also enforced by default in a Windows P
   
     
     
-![Validation error cue in a Windows Phone app](../../images/49a93d59-6755-4afc-a703-ca8469b6fa74.gif)
+![Validation error cue in a Windows Phone app](../images/49a93d59-6755-4afc-a703-ca8469b6fa74.gif)
   
     
     
@@ -88,12 +88,9 @@ But some fields may not provide any notification for invalid data in the Windows
 ## Implement custom data-validation rules
 <a name="BKMK_CustomValidation"> </a>
 
-You can validate data entered by users of your Windows Phone app in several ways. A project created by using the Windows Phone SharePoint List Application template includes classes that serve as intermediaries between the forms (that is, the views) of the data in the Windows Phone app (for example, the EditForm.xaml file) and the data itself in the SharePoint list on which the app is based. These classes can be considered implementations of the ViewModel component of the  [Model-View-ViewModel design pattern](http://blogs.msdn.com/b/johngossman/archive/2005/10/08/478683.aspx) (Figure 2). (For more information about how the Windows Phone SharePoint List Application template conforms to the MVVM software design pattern, see [Architecture of the Windows Phone SharePoint List Application template](architecture-of-the-windows-phone-sharepoint-list-application-template).)
+You can validate data entered by users of your Windows Phone app in several ways. A project created by using the Windows Phone SharePoint List Application template includes classes that serve as intermediaries between the forms (that is, the views) of the data in the Windows Phone app (for example, the EditForm.xaml file) and the data itself in the SharePoint list on which the app is based. These classes can be considered implementations of the ViewModel component of the  [Model-View-ViewModel design pattern](http://blogs.msdn.com/b/johngossman/archive/2005/10/08/478683.aspx) (Figure 2). (For more information about how the Windows Phone SharePoint List Application template conforms to the MVVM software design pattern, see [Architecture of the Windows Phone SharePoint List Application template](architecture-of-the-windows-phone-sharepoint-list-application-template.md).)
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The SharePoint list templates do not include default validations (such as percentage complete in a SharePoint task list, post check for a team discussion list, and SP decimal field type validation), but you can implement such validations. 
   
     
@@ -109,7 +106,7 @@ You can validate data entered by users of your Windows Phone app in several ways
   
     
     
-![Template files in ViewModel component](../../images/2df9591d-a837-4130-98e4-5863d0c717e8.gif)
+![Template files in ViewModel component](../images/2df9591d-a837-4130-98e4-5863d0c717e8.gif)
   
     
     
@@ -167,7 +164,7 @@ Again, for the purposes of this example, assume that the following simple valida
 ### To implement custom validation rules
 
 
-1. Assuming you have created a SharePoint list based on the Custom List template that includes the columns and types specified in Table 1, create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps detailed in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app).
+1. Assuming you have created a SharePoint list based on the Custom List template that includes the columns and types specified in Table 1, create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps detailed in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
     
   
 2. In **Solution Explorer**, in the ViewModels folder for the project, double-click the EditItemViewModel.cs file (or choose the file and press F7) to open the file for editing.
@@ -290,7 +287,7 @@ If you build the project and deploy it to Windows Phone Emulator to run it, you 
   
     
     
-![Custom validation error cues](../../images/fada902b-fa38-4ac8-8566-3693b736ac35.gif)
+![Custom validation error cues](../images/fada902b-fa38-4ac8-8566-3693b736ac35.gif)
   
     
     
@@ -298,22 +295,22 @@ The code in this sample, if it is included in the EditItemViewModel.cs file only
   
     
     
-The validation logic in this sample enforces given business rules by indicating to the user that entered data is not in a format permitted by the rules, but the entered data is not intercepted and changed by this code. To intercept and, for example, format phone numbers in a consistent way before saving the data to the SharePoint list, you can implement custom data conversion for entered phone numbers. For an explanation of custom data conversion for list item fields, see  [How to: Support and convert SharePoint field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps).
+The validation logic in this sample enforces given business rules by indicating to the user that entered data is not in a format permitted by the rules, but the entered data is not intercepted and changed by this code. To intercept and, for example, format phone numbers in a consistent way before saving the data to the SharePoint list, you can implement custom data conversion for entered phone numbers. For an explanation of custom data conversion for list item fields, see  [How to: Support and convert SharePoint field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md).
   
     
     
 
-## Additional resources
+## See also
 <a name="SP15Implementbuslogic_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Silverlight Data Binding](http://msdn.microsoft.com/en-us/library/cc278072.aspx)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

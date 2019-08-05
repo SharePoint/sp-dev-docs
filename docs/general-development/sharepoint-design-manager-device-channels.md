@@ -1,7 +1,9 @@
 ---
 title: SharePoint Design Manager device channels
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a924bd7b-a5e3-41bf-b0a7-3e43945fa951
+localization_priority: Priority
 ---
 
 
@@ -15,7 +17,7 @@ Browsing the web on a mobile device is now so common that a SharePoint site must
   
     
     
-Device channels are available only for SharePoint publishing sites. Before you implement device channels, you should already have a general understanding of the parts of a SharePoint site, how a SharePoint page is put together, and a general understanding of design manager. For more information about the SharePoint page model, including master page and page layouts, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model). For more information about design manager, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint).
+Device channels are available only for SharePoint publishing sites. Before you implement device channels, you should already have a general understanding of the parts of a SharePoint site, how a SharePoint page is put together, and a general understanding of design manager. For more information about the SharePoint page model, including master page and page layouts, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). For more information about design manager, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md).
   
     
     
@@ -35,7 +37,7 @@ Figure 1. Using device channels across different device platforms
   
     
     
-![Using device channels across device platforms](../../images/sp15Con_DeviceChannels_Fig1.png)
+![Using device channels across device platforms](../images/sp15Con_DeviceChannels_Fig1.png)
   
     
     
@@ -56,13 +58,8 @@ You can create and configure a device channel from the **Site Settings** menu un
 |Active  <br/> |No  <br/> |Selecting this check box activates your device channel. If you are working on a live site, you should not activate the channel before you have finished designing it. For testing, you can use the query string  `?DeviceChannel=alias` within a browser to preview your site for a specific channel. <br/> |
    
 
-  
-    
-    
-
-    
-> **Note:**
-> For more information and steps for creating a device channel, see the  [Create a device channel](sharepoint-design-manager-device-channels#create) section of this article.
+> [!NOTE]
+> For more information and steps for creating a device channel, see the  [Create a device channel](sharepoint-design-manager-device-channels.md#create) section of this article.
   
     
     
@@ -81,7 +78,7 @@ After a device channel is created and activated, device redirection to a specifi
   
     
     
-![Setting master pages for mobile device and desktop](../../images/sp15Con_SiteMasterPage_Figure2.png)
+![Setting master pages for mobile device and desktop](../images/sp15Con_SiteMasterPage_Figure2.png)
   
     
     
@@ -110,22 +107,16 @@ When creating a device channel, you are asked to supply a user agent substring t
    
 In the **Device Inclusion Rules** field, you add just the substring value or values for the devices that you want to include.
   
-    
-    
-
-> **Important:**
-> User agent substring values differ from device manufacturer to device manufacturer, and possibly throughout a set of similarly branded devices, as seen above with Windows Phone. To achieve successful traffic redirection to a specific pool, you must provide a unique identifier for the user agent substring. For more information about how to isolate a substring across different devices, see the  [Planning your device channels experience](sharepoint-design-manager-device-channels#plan) section of this article.
+> [!IMPORTANT]
+> User agent substring values differ from device manufacturer to device manufacturer, and possibly throughout a set of similarly branded devices, as seen above with Windows Phone. To achieve successful traffic redirection to a specific pool, you must provide a unique identifier for the user agent substring. For more information about how to isolate a substring across different devices, see the  [Planning your device channels experience](sharepoint-design-manager-device-channels.md#plan) section of this article.
   
     
     
 
 After they are created, device channels are ordered and stored in a list. It is possible to support up to 10 device channels per site in SharePoint, so it may be necessary to rank your channels for proper traffic routing. You should order the most specific rules at the top for higher priority. For example, you may have multiple OS versions for Windows Phone devices in your organization, and want a unique master page rendering for Windows Phone 7.5 devices. All other Windows Phone devices would receive another mobile master page view. Table 3 shows two ordering schemes that could be applied, and the effects on the routing decision.
   
-    
-    
-
-> **Note:**
-> For more information about how to reorder device channels see the  [Create a device channel](sharepoint-design-manager-device-channels#create) section of this article.
+> [!NOTE]
+> For more information about how to reorder device channels see the  [Create a device channel](sharepoint-design-manager-device-channels.md#create) section of this article.
   
     
     
@@ -142,11 +133,8 @@ After they are created, device channels are ordered and stored in a list. It is 
    
 If you choose Order 1, where the device inclusion rule substring is set to **Windows Phone OS 7.5**, a user browsing to your site with a Windows Phone 7.5 device is directed to device channel 1. A user with any other Windows Phone version is directed to device channel 2, and any non-Windows Phone user receives channel 3. But, if you choose Order 2, which prioritizes the generic Windows Phone OS substring, all Windows Phone traffic is directed to device channel 1. Device channel 2 isn't invoked for Windows Phone 7.5 devices because of the prioritization and generic nature of device channel 1. If you create multiple device channels, it is important to understand how order and ranking affect traffic redirection for your device pools.
   
-    
-    
-
-> **Note:**
-> For more information and steps for ordering device channels, see the  [Change the order of device channels](sharepoint-design-manager-device-channels#reorder) section of this article.
+> [!NOTE]
+> For more information and steps for ordering device channels, see the  [Change the order of device channels](sharepoint-design-manager-device-channels.md#reorder) section of this article.
   
     
     
@@ -184,7 +172,7 @@ This paragraph of content shows up only in the default channel, which means that
 </div>
 ```
 
-If you want the content to be displayed on more than one channel, the aliases should be separated by commas within the quotation marks:  `IncludedChannels="alias1, alias2"` For more information about the device channel panel container, see [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model). For more information about using Design Manager snippets, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
+If you want the content to be displayed on more than one channel, the aliases should be separated by commas within the quotation marks:  `IncludedChannels="alias1, alias2"` For more information about the device channel panel container, see [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). For more information about using Design Manager snippets, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
   
     
     
@@ -227,10 +215,7 @@ To determine the number of device channels, you should reference the information
 
 There are some generic manufacturer user agent substrings that you can use for device redirection such as Windows Phone OS or iPhone, as shown in Table 2. The substring needed in the **Device Inclusion Rules** field is usually a subset of the much larger user agent string provided when the device connects to the site. It is recommended that you find a device-specific string by locating it on the manufacturer or software provider website, or through a general web-based search. Sometimes a specific, versioned substring might be difficult to isolate given similarities in user agent string construction. Table 4 provides two sample user agent strings, for Windows 8 desktop and for a tablet device.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The below strings are examples, and not genuine strings for the covered Windows devices. They are provided to illustrate the point of isolating a substring if needed. 
   
     
@@ -318,10 +303,7 @@ Use this procedure to create a new device channel.
 
 Use this procedure to change an existing device channel.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > You cannot modify the Default channel. 
   
     
@@ -348,8 +330,9 @@ Use this procedure to change an existing device channel.
   
 6. To change the alias of the device channel, enter a new alias in the **Alias** text box.
     
-    > **Note:**
-      > If you change a device channel's alias, you must manually change the alias in other places where you use it. For example, you must manually change the alias in custom code or markup, and you must manually change the mappings between the device channel and master pages. 
+    > [!NOTE]
+    > If you change a device channel's alias, you must manually change the alias in other places where you use it. For example, you must manually change the alias in custom code or markup, and you must manually change the mappings between the device channel and master pages. 
+
 7. To change the description of the device channel, enter a new description in the **Description** text box.
     
   
@@ -368,15 +351,8 @@ Use this procedure to change an existing device channel.
 
 Use this procedure to delete an existing device channel.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > You cannot delete the Default channel. 
-  
-    
-    
-
 
 ### To delete a device channel
 
@@ -430,16 +406,16 @@ Use this procedure to change the order of device channels.
     
   
 
-## Additional resources
+## See also
 <a name="PlanDeviceChannels_addresources"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   

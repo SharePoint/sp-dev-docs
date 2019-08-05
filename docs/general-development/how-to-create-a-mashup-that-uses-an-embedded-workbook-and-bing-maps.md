@@ -1,11 +1,13 @@
 ---
-title: How to Create a mashup that uses an embedded workbook and Bing Maps
-ms.prod: SHAREPOINT
+title: Create a mashup that uses an embedded workbook and Bing Maps
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 3cfeb8d7-84b8-4673-bc92-b176cba4ac3e
+localization_priority: Normal
 ---
 
 
-# How to: Create a mashup that uses an embedded workbook and Bing Maps
+# Create a mashup that uses an embedded workbook and Bing Maps
 
 This article walks you through a powerful Web-based mashup that combines an embedded Excel workbook and Bing Maps.
   
@@ -71,7 +73,7 @@ To create this mashup, we followed 3 basic steps:
 
 ## Mashup Excel Services and Bing Maps
 
-After storing the workbook in a public folder on OneDrive, and after embedding the workbook on the host web page, the Bing Maps functionality is combined with interactions on the embedded workbook to create the  *Destination Explorer*  Mashup.
+After storing the workbook in a public folder on OneDrive, and after embedding the workbook on the host webpage, the Bing Maps functionality is combined with interactions on the embedded workbook to create the  *Destination Explorer*  Mashup.
   
     
     
@@ -92,9 +94,9 @@ The integration happens in the following 3 steps:
 
 1. **Create the page structure for the mashup**
     
-    An HTML select control on the web page is populated with data from the Travel workbook when the page loads or whenever the user changes the current region or the destination type. The definition for this select control ( *destinations*  ) is shown in **Snippet 1**. **Snippet 1** also shows the definition for the other key elements on the page: **chartDiv**, **chartDiv2**, and **mapDiv**. The chart div elements are containers for the two charts defined in the Travel workbook. The map div is the container for the Bing Map control.
+    An HTML select control on the webpage is populated with data from the Travel workbook when the page loads or whenever the user changes the current region or the destination type. The definition for this select control ( *destinations*  ) is shown in **Snippet 1**. **Snippet 1** also shows the definition for the other key elements on the page: **chartDiv**, **chartDiv2**, and **mapDiv**. The chart div elements are containers for the two charts defined in the Travel workbook. The map div is the container for the Bing Map control.
     
-    **Snippet 1: Structuring the web page**
+    **Snippet 1: Structuring the webpage**
     
 
 
@@ -115,9 +117,9 @@ The integration happens in the following 3 steps:
 
 2. **Initialize the embedded workbook charts and the Bing Map**
     
-    The next step is to initialize the Excel components and the Bing Map when the page loads. In order to access an embedded Excel workbook programmatically, you need to refer to it by a file token. See  [http://msdn.microsoft.com/en-us/library/hh315812.aspx](http://msdn.microsoft.com/en-us/library/hh315812.aspx%28Office.15%29.aspx) for information on how to get the appropriate file token for your workbook.
+    The next step is to initialize the Excel components and the Bing Map when the page loads. In order to access an embedded Excel workbook programmatically, you need to refer to it by a file token. See  [http://msdn.microsoft.com/en-us/library/hh315812.aspx](http://msdn.microsoft.com/en-us/library/hh315812.aspx) for information on how to get the appropriate file token for your workbook.
     
-    The code in **Snippet 2** completes three main tasks inside the **Page_Load** event handler. First, it establishes a reference to the Travel workbook to display the chart named *Chart 1*  inside the **chartDiv** element on the web page. Second, it calls a simple function named **GetMap** to initialize the Bing Map. Third, it creates a second reference to the Travel workbook to display the chart named *Chart 2*  inside the **chartDiv2** element.
+    The code in **Snippet 2** completes three main tasks inside the **Page_Load** event handler. First, it establishes a reference to the Travel workbook to display the chart named *Chart 1*  inside the **chartDiv** element on the webpage. Second, it calls a simple function named **GetMap** to initialize the Bing Map. Third, it creates a second reference to the Travel workbook to display the chart named *Chart 2*  inside the **chartDiv2** element.
     
     **Snippet 2: Initializing the Page**
     

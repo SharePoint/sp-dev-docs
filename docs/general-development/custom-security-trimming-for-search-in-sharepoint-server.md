@@ -1,7 +1,9 @@
 ---
 title: Custom security trimming for Search in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
+localization_priority: Normal
 ---
 
 
@@ -14,7 +16,9 @@ At query time, Search in SharePoint performs security trimming of search results
     
 
 You might have certain scenarios, however, in which the built-in security trimming results aren't sufficient for your requirements. In such scenarios, you need to implement custom security trimming. Search in SharePoint provides support for custom security trimming through the  [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) interface, [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) interface, and [ISecurityTrimmer2](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmer2.aspx) interface (deprecated) in the [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace.
- **Note:** Custom pre-trimmers don't support Windows SIDs in ACLs, only claims. If any of the SID claim types are returned from a custom pre-trimmer, the resulting ACEs in the index will be encoded as a claim, not as SID. Hence they do not match Windows user identities that are based on SIDs.
+
+> [!NOTE]
+> Custom pre-trimmers don't support Windows SIDs in ACLs, only claims. If any of the SID claim types are returned from a custom pre-trimmer, the resulting ACEs in the index will be encoded as a claim, not as SID. Hence they do not match Windows user identities that are based on SIDs.
   
     
     
@@ -178,10 +182,10 @@ When working with post-trimmers, it is important to notice that there are two ty
     
     
 
-- Exclude the sensitive refiners from the refinement panel in the default Web Part so that no information is leaked via the refiners.
+- Exclude the sensitive refiners from the refinement panel in the default web part so that no information is leaked via the refiners.
     
   
-- Use a custom Web Part to display results or refiners when using post-trimmers so that the **RefinementResults** may be elegantly hidden in cases where the **RefinementResults** count exceeds the **RelevantResults** count.
+- Use a custom web part to display results or refiners when using post-trimmers so that the **RefinementResults** may be elegantly hidden in cases where the **RefinementResults** count exceeds the **RelevantResults** count.
     
   
 
@@ -206,7 +210,7 @@ public void Initialize(NameValueCollection staticProperties, SearchServiceApplic
 ## Deploying the custom security trimmer component
 <a name="Deploying_the_trimmer"> </a>
 
-After you create the custom security trimmer, you must deploy it to the global assembly cache on any server in the Query role. Step 2 in  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results) describes the process for deploying the custom security trimmer to the global assembly cache.
+After you create the custom security trimmer, you must deploy it to the global assembly cache on any server in the Query role. Step 2 in  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md) describes the process for deploying the custom security trimmer to the global assembly cache.
   
     
     
@@ -234,20 +238,20 @@ The following table describes the parameters that the cmdlet uses.
 |:-----|:-----|
 | _SearchApplication_ <br/> |Required. The name of the Search service application, for example "Search Service Application".  <br/> |
 | _typeName_ <br/> |Required. The strong name of the custom security trimmer assembly.  <br/> |
-| _RulePath_ <br/> |Required for post-trimmers; optional for pre-trimmers. The crawl rule for the security trimmer.  <br/> **Note:** We recommend using one crawl rule per content source.           |
+| _RulePath_ <br/> |Required for post-trimmers; optional for pre-trimmers. The crawl rule for the security trimmer.  <br/> **Note**: We recommend using one crawl rule per content source.           |
 | _id_ <br/> |Required. The security trimmer identifier (ID). This value is unique; if a security trimmer is registered with an ID that is already registered for another security trimmer, the registration for the first trimmer is overwritten with the registration for the second trimmer.  <br/> |
 | _properties_ <br/> |Optional. The name-value pairs specifying the configuration properties. Must be in the following format:  `Name1~Value1~Name2~Value~???` <br/> |
    
-For an example of a basic command for registering a custom security trimmer and a sample that specifies the configuration properties, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results).
+For an example of a basic command for registering a custom security trimmer and a sample that specifies the configuration properties, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md).
   
     
     
 
-## Additional resources
+## See also
 <a name="bk_sectrimmer_addlresources"> </a>
 
 
--  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results)
+-  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md)
     
   
 -  [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx)

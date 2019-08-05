@@ -1,7 +1,9 @@
 ---
 title: Step 1 Creating a ECMAScript Text File
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f1c2b359-5b0d-467d-a863-6732e23863b9
+localization_priority: Normal
 ---
 
 
@@ -121,7 +123,7 @@ function writelog(output, indentLevel)
     
      `http://` _myserver_ `/Docs/Documents/JSOM_FeedToContentEditor.txt`
     
-    In the next procedure, you will need this URL to feed to the Content Editor Web Part.
+    In the next procedure, you will need this URL to feed to the Content Editor web part.
     
   
 

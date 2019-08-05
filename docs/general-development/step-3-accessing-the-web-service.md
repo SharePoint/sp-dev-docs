@@ -1,7 +1,9 @@
 ---
 title: Step 3 Accessing the Web Service
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d27f654d-242f-4f34-8385-be857c170532
+localization_priority: Priority
 ---
 
 
@@ -79,40 +81,39 @@ Dim rangeCoordinates As New RangeCoordinates()
 
 3. Add the code to point to the worksheet you want to access. In this example, the worksheet is called "Sheet1". Add the following to your code: 
     
-```cs
-  
-string sheetName = "Sheet1";
-```
-
-
-```VB.net
-  Dim sheetName As String = "Sheet1"
-```
-
-
-    > **Note:**
-      > Make sure the workbook you want to open has a worksheet called "Sheet1" that contains values. Alternatively, you can change "Sheet1" in the code to the name of your worksheet. 
-4.  `Add the following code to point to the workbook you want to open`:
+    ```cs
     
-```cs
-  string targetWorkbookPath = "http://myserver02/example/Shared%20Documents/Book1.xlsx";
-```
+    string sheetName = "Sheet1";
+    ```
 
 
-```VB.net
-  Dim targetWorkbookPath As String = "http://myserver02/example/Shared%20Documents/Book1.xlsx"
-```
+    ```VB.net
+    Dim sheetName As String = "Sheet1"
+    ```
+    > [!NOTE]
+    > Make sure the workbook you want to open has a worksheet called "Sheet1" that contains values. Alternatively, you can change "Sheet1" in the code to the name of your worksheet. 
+
+4.  Add the following code to point to the workbook you want to open:
+
+    ```cs
+    string targetWorkbookPath = "http://myserver02/example/Shared%20Documents/Book1.xlsx";
+    ```
+
+    ```VB.net
+    Dim targetWorkbookPath As String = "http://myserver02/example/Shared%20Documents/Book1.xlsx"
+    ```
 
 
-    > **Important:**
-      > Change the workbook path to match the location of the workbook you are using for this walkthrough. Make sure the workbook exists and that the location where the workbook is saved is a trusted location. Using an HTTP URL to point to the location of a workbook allows you to access it remotely. 
+    > [!IMPORTANT]
+    > Change the workbook path to match the location of the workbook you are using for this walkthrough. Make sure the workbook exists and that the location where the workbook is saved is a trusted location. Using an HTTP URL to point to the location of a workbook allows you to access it remotely. 
 
-    > **Note:**
-      > You can get the path to a workbook in Microsoft SharePoint Server 2010 by right-clicking the workbook and selecting **Copy Shortcut**. Alternatively, you can select **Properties** and copy the path to the workbook from there.
+    > [!NOTE]
+    > You can get the path to a workbook in Microsoft SharePoint Server 2010 by right-clicking the workbook and selecting **Copy Shortcut**. Alternatively, you can select **Properties** and copy the path to the workbook from there.
+
 5. Add the following code to set the credentials for the request. 
     
-    > **Note:**
-      > You have to explicitly set the credentials even if you intend to use the default credentials. 
+    > [!NOTE]
+    > You have to explicitly set the credentials even if you intend to use the default credentials. 
 
 ```cs
   es.Credentials = System.Net.CredentialCache.DefaultCredentials;
@@ -350,26 +351,26 @@ End Namespace
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
   
     
     

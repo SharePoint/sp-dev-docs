@@ -1,11 +1,14 @@
 ---
-title: How to Convert an add-in-scoped external content type to tenant-scoped
-ms.prod: SHAREPOINT
+title: Convert an add-in-scoped external content type to tenant-scoped
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 35c5d670-e402-4641-b3c5-6f61ae1ec69b
+localization_priority: Normal
 ---
 
 
-# How to: Convert an add-in-scoped external content type to tenant-scoped
+# Convert an add-in-scoped external content type to tenant-scoped
+
 Learn how to create an OData-based external content type using Visual Studio 2012 auto-generation tools and import it into the Business Connectivity Services (BCS) metadata store so that it can be used across an entire tenant workspace.
 BDC models are complex XML definitions of an external data source. They are used when defining external content types for BCS. They are very difficult to build manually, so tools have been built to automatically generate the files using Visual Studio 2012 and Office Developer Tools for Visual Studio 2012. Using these tools, you can create an .app package using Visual Studio publishing, and then open that package to extract the model file.
   
@@ -41,8 +44,9 @@ The following steps show you how to create the OData-based external content type
     
     Specify a name for your OData source.
     
-    > **Note:**
-      > For this example, you will use the Northwind service that is available from the producers list located on the  [Open Data Protocol website](http://www.odata.org). 
+    > [!NOTE]
+    > For this example, you will use the Northwind service that is available from the producers list located on the  [Open Data Protocol website](http://www.odata.org). 
+
 6. A list appears showing data entities that are being exposed by the OData Service. Select one or more of the entities, and choose **Finish**.
     
   
@@ -107,20 +111,20 @@ The following steps show you how to create the OData-based external content type
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [External content types in SharePoint](external-content-types-in-sharepoint)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint)
+-  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
     
   
--  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
 -  [Open Data Protocol](http://www.odata.org)

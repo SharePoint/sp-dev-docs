@@ -1,7 +1,9 @@
 ---
 title: Discovery in Excel Services REST API
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e3a8e057-f803-446d-81c9-4eb8ef3691e1
+localization_priority: Normal
 ---
 
 
@@ -9,11 +11,7 @@ ms.assetid: e3a8e057-f803-446d-81c9-4eb8ef3691e1
 
 This topic discusses the discovery mechanisms built into the Excel Services REST API.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -39,7 +37,7 @@ Following is the construct of the REST URL to a specific element in a workbook:
 http://<ServerName>/_vti_bin/ExcelRest.aspx/<DocumentLibrary>/<FileName>/<ResourceLocation>
 ```
 
-As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path) topic, following is the REST URL to access a workbook named **sampleWorkbook.xlsx** and further view the chart called **SampleChart**: 
+As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path.md) topic, following is the REST URL to access a workbook named **sampleWorkbook.xlsx** and further view the chart called **SampleChart**: 
   
     
     
@@ -86,7 +84,7 @@ Following is a screen shot of the model page.
   
     
     
-![Excel Services REST model URL](../../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
+![Excel Services REST model URL](../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
   
     
     
@@ -109,7 +107,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
   
 
-  ![Excel Services REST discovery chart list](../../images/19126dce-b896-4623-8686-92f2fa807283.gif)
+  ![Excel Services REST discovery chart list](../images/19126dce-b896-4623-8686-92f2fa807283.gif)
   
 
   
@@ -121,7 +119,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
   
 
-  ![Viewing chart using REST](../../images/11734dcf-1b57-40cc-b1e8-8b10b7e5d5cb.gif)
+  ![Viewing chart using REST](../images/11734dcf-1b57-40cc-b1e8-8b10b7e5d5cb.gif)
   
 
   
@@ -136,7 +134,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
 ## Atom Feed
 
-Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the Web page, you get the XML. An example from the charts in **sampleWorkbook.xlsx** is shown below.
+Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the webpage, you get the XML. An example from the charts in **sampleWorkbook.xlsx** is shown below.
   
     
     
@@ -203,4 +201,4 @@ As can be seen in the XML, the feed contains traversable elements that enable co
   
     
     
- [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api)
+ [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api.md)

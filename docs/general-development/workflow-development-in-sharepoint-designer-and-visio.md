@@ -1,7 +1,9 @@
 ---
 title: Workflow development in SharePoint Designer and Visio
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 496780d5-47d6-4a43-bf14-70aefb8d820c
+localization_priority: Priority
 ---
 
 
@@ -12,10 +14,7 @@ Learn to use Visio 2013 and SharePoint Designer 2013 to create and publish workf
 
 Visio 2013 and SharePoint Designer 2013 make it easy for business analysts, process consultants, and IT professionals to collaborate and build workflows. Both Visio Professional 2013 and the Visual Designer in SharePoint Designer 2013 provide a rich representation of workflows in a format that is understandable to programmers and non-programmers alike.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > For guidance on setting up and configuring SharePoint and the Workflow Manager server, see  [Configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586.aspx). 
   
     
@@ -154,7 +153,7 @@ To open the SharePoint Workflow template in Visio 2013, do the following:
     The template opens and the drawing canvas is prepopulated with Start, and Stage shapes. The Stage shape contains an Enter and an Exit shape, joined by a single connector.
     
   
-With the SharePoint Workflow template open, drag actions, conditions, and other shapes onto the drawing canvas to design a workflow. For more information about individual shapes and what they mean, see the article  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio).
+With the SharePoint Workflow template open, drag actions, conditions, and other shapes onto the drawing canvas to design a workflow. For more information about individual shapes and what they mean, see the article  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md).
   
     
     
@@ -176,7 +175,7 @@ With the SharePoint Workflow template open, drag actions, conditions, and other 
   
     
     
-Validating the workflow in Visio 2013 is like validating any other connected diagram: Visio checks the diagram against a set of rules and returns a list of errors that it found in the diagram. See the article  [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio) to learn how to resolve validation issues.
+Validating the workflow in Visio 2013 is like validating any other connected diagram: Visio checks the diagram against a set of rules and returns a list of errors that it found in the diagram. See the article  [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio.md) to learn how to resolve validation issues.
   
     
     
@@ -190,7 +189,7 @@ Validating the workflow in Visio 2013 is like validating any other connected dia
 2. If any errors are found in the workflow, the **Issues** pane opens below the diagram. Choose each item in the list to select the shape in the diagram that caused the error.
     
   
-3. Resolve each validation error listed in the **Issues** list. Once all of the errors have been addressed, choose **Check Diagram** again. For more information about how to resolve validation issues in Visio 2013, see the article [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio).
+3. Resolve each validation error listed in the **Issues** list. Once all of the errors have been addressed, choose **Check Diagram** again. For more information about how to resolve validation issues in Visio 2013, see the article [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio.md).
     
   
 4. If no errors are found in the workflow, Visio displays a message stating that the diagram validation is complete and that no issues were found.
@@ -301,10 +300,7 @@ Once the SharePoint site is open, you can open the Visio 2013 .vsdx diagram with
   
 When you open a .vsdx file in SharePoint Designer 2013, the file is displayed in the Visual Designer, a Visio ActiveX control that is hosted within SharePoint Designer. The Visio 2013 diagram retains all of the shapes and shape text that was created in Visio. 
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > To switch between the Visual Designer and the Declarative Designer in SharePoint Designer 2013, on the **Workflow** tab, in the **Manage** group, choose **Views**. This process may take a few moments, as SharePoint Designer 2013 validates the workflow and then converts the workflow information from one format to another. During this process, another shape level validation will occur. If any errors are detected with the diagram, the errors will be displayed in an error pane at the bottom of the canvas (just like in Visio). 
   
     
@@ -316,11 +312,8 @@ The shapes that are displayed in the Visual Designer also have Action Tags (show
     
 For example, the **Send an email** shape has two properties associated with it: **Create Email** and **Properties**. When you choose **Create Email**, a **Define Email Message** dialog box appears in which you can create the message to be sent by the action. If you choose **Properties**, a **Send an Email Properties** dialog box appears that displays all of the parameters for the action.
   
-    
-    
-
-> **Note:**
-> For more information about individual actions, shapes, and their properties, see the articles  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio) and [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform). 
+> [!NOTE] 
+> For more information about individual actions, shapes, and their properties, see the articles  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md) and [Workflow actions quick reference (SharePoint Workflow platform.md)](workflow-actions-quick-reference-sharepoint-workflow-platform.md). 
   
     
     
@@ -354,7 +347,7 @@ After the workflow has been checked and no issues have been found, you can publi
     
     
 
-## Additional Resources
+## See also
 <a name="VSSPD_Additional"> </a>
 
 For more information, see the following resources:
@@ -362,13 +355,13 @@ For more information, see the following resources:
     
     
 
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
--  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio)
+-  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md)
     
   
--  [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio)
+-  [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio.md)
     
   
 -  [Create, import, and export SharePoint workflows in Visio 2010](http://office.microsoft.com/en-us/visio-help/create-import-and-export-sharepoint-workflows-in-visio-HA101888007.aspx)

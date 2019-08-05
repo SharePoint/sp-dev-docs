@@ -1,7 +1,9 @@
 ---
 title: Overview of the SharePoint mobile object model
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 72319846-d02d-49e7-b830-48eb8f5715cb
+localization_priority: Normal
 ---
 
 
@@ -12,8 +14,8 @@ Learn about the new public classes in the SharePoint server object model and Sil
 
 All classes in this section are in the **Microsoft.SharePoint.Client** namespace. In addition to the APIs in this section, most of the classes and members in the section Server Object Model for SharePoint Mobility are also callable in the client object model. For classes that begin with "SP", the client object model name has the "SP" removed. In other cases, the client object model name is specified. Member names are the same in the client object model except where specified otherwise.
   
-    
-    
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
 
 ### AlternateUrl class
 
@@ -943,10 +945,7 @@ The following methods are standard overrides of inherited methods that were in S
     
 Gets or sets the name of the JavaScript file that renders the fields of the **SPFieldGeolocation** type.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
   
     
@@ -1749,8 +1748,7 @@ Gets a collection of notification subscribers from the website's notification Su
 public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(string customArgs)
 ```
 
-
-> **Note:**
+> [!NOTE]
 > Client object model name is **GetPhoneNotificationSubscribersByArgs**. 
   
     
@@ -1764,8 +1762,7 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 
 ```
 
-
-> **Note:**
+> [!NOTE]
 > Client object model name is **GetPhoneNotificationSubscribersByUser**. 
   
     
@@ -2264,20 +2261,20 @@ public string MessageId
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15MobileOM_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Configure and use push notifications in SharePoint apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows)
+-  [How to: Configure and use push notifications in SharePoint apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md)
     
   
--  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint)
+-  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md)
     
   
--  [Overview of the SharePoint mobile client authentication object model](overview-of-the-sharepoint-mobile-client-authentication-object-model)
+-  [Overview of the SharePoint mobile client authentication object model](overview-of-the-sharepoint-mobile-client-authentication-object-model.md)
     
   
 

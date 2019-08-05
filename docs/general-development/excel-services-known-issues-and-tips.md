@@ -1,7 +1,9 @@
 ---
 title: Excel Services Known Issues and Tips
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: b4a41437-4f00-4f88-8510-627fa0252004
+localization_priority: Normal
 ---
 
 
@@ -30,7 +32,7 @@ If you do not have a custom site, you can view the WSDL by using the following U
   
     
     
-For more information, see  [Accessing the SOAP API](accessing-the-soap-api).
+For more information, see  [Accessing the SOAP API](accessing-the-soap-api.md).
   
     
     
@@ -58,7 +60,7 @@ In certain scenarios, you should link directly to Microsoft.Office.Excel.Server.
   
     
     
-For more information and guidelines on when to use direct linking, see  [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking).
+For more information and guidelines on when to use direct linking, see  [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md).
   
     
     
@@ -96,7 +98,7 @@ When you make changes to a workbook—for example, by setting values to a range 
   
     
     
-If you want to save changes to a workbook, you can use the **GetWorkbook** method and then save the workbook using the API of the destination file store. For more information, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot) and [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx).
+If you want to save changes to a workbook, you can use the **GetWorkbook** method and then save the workbook using the API of the destination file store. For more information, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md) and [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx).
   
     
     
@@ -156,7 +158,7 @@ Beware of the following issues regarding workbook permissions:
     
     
 
-- Excel Web Services uses the Microsoft SharePoint Foundation authorization scheme to verify that the caller has the right to call APIs (that is, make web service calls) on the SharePoint Foundation site (that is, the Web site where Excel Web Services is located) remotely. If the caller does not have the "Use Remote API" right, the Excel Web Services returns an "HTTP 401 (Unauthorized)" error, and logs an "API authorization failed" event. Excel Web Services performs these authorization checks only for calls that originate as SOAP calls. Calls from applications that link locally to Microsoft.Office.Excel.Server.WebServices.dll are not considered remote calls. Therefore, they are not subject to authorization checks. However, if the application that links locally to Microsoft.Office.Excel.Server.WebServices.dll is itself a SOAP service, and handles the service's SOAP calls, the call to Excel Web Services will seem like a SOAP call (even though the application links directly to Microsoft.Office.Excel.Server.WebServices.dll). In this scenario, Excel Web Services will perform the authorization checks.
+- Excel Web Services uses the Microsoft SharePoint Foundation authorization scheme to verify that the caller has the right to call APIs (that is, make web service calls) on the SharePoint Foundation site (that is, the website where Excel Web Services is located) remotely. If the caller does not have the "Use Remote API" right, the Excel Web Services returns an "HTTP 401 (Unauthorized)" error, and logs an "API authorization failed" event. Excel Web Services performs these authorization checks only for calls that originate as SOAP calls. Calls from applications that link locally to Microsoft.Office.Excel.Server.WebServices.dll are not considered remote calls. Therefore, they are not subject to authorization checks. However, if the application that links locally to Microsoft.Office.Excel.Server.WebServices.dll is itself a SOAP service, and handles the service's SOAP calls, the call to Excel Web Services will seem like a SOAP call (even though the application links directly to Microsoft.Office.Excel.Server.WebServices.dll). In this scenario, Excel Web Services will perform the authorization checks.
     
   
 - To get the entire workbook (for example, by calling the **GetWorkbook** method using the `WorkbookType.FullWorkbook` argument), the caller needs "open" permission for the workbook or "read" permission in a file share.
@@ -175,7 +177,7 @@ The workbooks you want to open in Excel Services must be placed in a trusted loc
   
     
     
-For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx).
+For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx).
   
     
     
@@ -296,31 +298,31 @@ You should not write an application that assumes the order of strings in the sha
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Best Practices](excel-services-best-practices)
+ [Excel Services Best Practices](excel-services-best-practices.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Supported and Unsupported Features](supported-and-unsupported-features)
+ [Supported and Unsupported Features](supported-and-unsupported-features.md)
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)

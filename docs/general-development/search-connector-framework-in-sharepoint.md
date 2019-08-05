@@ -1,7 +1,9 @@
 ---
 title: Search connector framework in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 38560a3b-69c6-4a56-97ca-3625bbd5755e
+localization_priority: Priority
 ---
 
 
@@ -68,7 +70,7 @@ Figure 1 provides a high-level overview of the SharePoint indexing connector sto
   
     
     
-![SharePoint indexing connectors](../../images/SP15Con_CF_IndexingConnectors.jpg)
+![SharePoint indexing connectors](../images/SP15Con_CF_IndexingConnectors.jpg)
   
     
     
@@ -102,7 +104,7 @@ BCS is the umbrella of tools and infrastructure that enables you to connect to e
   
     
     
-![BCS architecture](../../images/SP15Con_CF_BCS_Overview.jpg)
+![BCS architecture](../images/SP15Con_CF_BCS_Overview.jpg)
   
     
     
@@ -193,7 +195,7 @@ Figure 3 shows a high-level view of the search connector framework architecture.
   
     
     
-![Search connector framework architecture](../../images/SP15Con_CF_ConnFrwkArch.jpg)
+![Search connector framework architecture](../images/SP15Con_CF_ConnFrwkArch.jpg)
   
     
     
@@ -219,8 +221,9 @@ SharePoint supports the following types of BCS indexing connectors:
   
 - **WCF (web services) connector** SharePoint includes a predefined BCS connector that supports connecting to web services, so you can create a web service BCS indexing connector without writing any code—just create the BDC model file for the connector.
     
-    > **Note:**
-      > Although you don't have to write code to create a connector for web services, the web service must include methods that provide the same functionality that the .NET BCS connector provides, to pass the external business data to BCS. For information about creating a web service, see  [Creating .NET Connectivity Assemblies and Web Services](http://msdn.microsoft.com/library/9a6c6712-868a-4a9c-9645-3aa448ad5092%28Office.15%29.aspx). For code examples, see  [Sample Orders ASP.NET Web Service Sample](http://msdn.microsoft.com/library/10e46860-788f-4ed0-a4d8-1e17ada58e83%28Office.15%29.aspx) and [Sample Orders WCF Service Sample](http://msdn.microsoft.com/library/535277c8-9d5c-41eb-ab23-0ae141d726c5%28Office.15%29.aspx). 
+    > [!NOTE]
+    > Although you don't have to write code to create a connector for web services, the web service must include methods that provide the same functionality that the .NET BCS connector provides, to pass the external business data to BCS. For information about creating a web service, see  [Creating .NET Connectivity Assemblies and Web Services](http://msdn.microsoft.com/library/9a6c6712-868a-4a9c-9645-3aa448ad5092%28Office.15%29.aspx). For code examples, see  [Sample Orders ASP.NET Web Service Sample](http://msdn.microsoft.com/library/10e46860-788f-4ed0-a4d8-1e17ada58e83%28Office.15%29.aspx) and [Sample Orders WCF Service Sample](http://msdn.microsoft.com/library/535277c8-9d5c-41eb-ab23-0ae141d726c5%28Office.15%29.aspx). 
+
 - **.NET BCS connector** SharePoint does not include a predefined BCS connector for .NET connectors, so in addition to creating a BDC model file, you must also create a .NET component for the BCS indexing connector. You must implement the required stereotyped operations to support crawling the data, and implement methods for parsing the access URLs and BDC identifiers.
     
   
@@ -303,26 +306,24 @@ The connector framework also provides improved exception capturing and logging t
     
     
 
-## Additional resources
+## See also
 <a name="SP15searchconnect_addlresources"> </a>
 
 
--  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint)
+-  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
+    
     
   
--  [SharePoint: MyFileConnector custom BCS indexing connector sample](http://code.msdn.microsoft.com/SharePoint-MyFileConne-79d2ea26)
+-  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
     
   
--  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint)
+-  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint.md)
     
   
--  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint)
+-  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
     
   
--  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint)
-    
-  
--  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint)
+-  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint.md)
     
   
 

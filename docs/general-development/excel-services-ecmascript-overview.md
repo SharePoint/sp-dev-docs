@@ -1,7 +1,9 @@
 ---
 title: Excel Services ECMAScript Overview
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f8c1be86-df19-44c3-a3bc-c0da2b80df10
+localization_priority: Normal
 ---
 
 
@@ -12,8 +14,8 @@ In Microsoft SharePoint Server 2010, Excel Services added support for ECMAScript
     
     
 
-The JavaScript object model in Excel Services enables developers to automate, customize, and interact with the Excel Web Access Web Part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access Web Part controls on a page. It also enables you to add more capabilities to your workbooks and to code around them.
-By using the JavaScript object model, it is possible to detect and react to a user's interactions with an Excel Web Access Web Part and to programmatically interact with one or multiple Excel Web Access Web Parts.
+The JavaScript object model in Excel Services enables developers to automate, customize, and interact with the Excel Web Access web part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access web part controls on a page. It also enables you to add more capabilities to your workbooks and to code around them.
+By using the JavaScript object model, it is possible to detect and react to a user's interactions with an Excel Web Access web part and to programmatically interact with one or multiple Excel Web Access web parts.
   
     
     
@@ -21,7 +23,7 @@ By using the JavaScript object model, it is possible to detect and react to a us
 
 ## Using the ECMAScript Object Model
 
-To use the JavaScript object model in Excel Services, you insert the JavaScript code on the page that contains the Excel Web Access Web Part. This can be done by adding the code to the Web Part page by using the Content Editor Web Part or by directly editing the .aspx page.
+To use the JavaScript object model in Excel Services, you insert the JavaScript code on the page that contains the Excel Web Access web part. This can be done by adding the code to the web part page by using the Content Editor web part or by directly editing the .aspx page.
   
     
     
@@ -50,7 +52,7 @@ For more information, see the following links:
 - For more information about the JavaScript object model in Excel Services, see the  [Ewa](http://msdn.microsoft.com/library/6fe73191-3213-b986-1ad6-2c3b918a2241%28Office.15%29.aspx) namespace reference documentation.
     
   
-- For an example of how to interact with the JavaScript object model in Excel Services by using the Content Editor Web Part, see  [Walkthrough: Developing Using the Content Editor Web Part](walkthrough-developing-using-the-content-editor-web-part).
+- For an example of how to interact with the JavaScript object model in Excel Services by using the Content Editor web part, see  [Walkthrough: Developing Using the Content Editor web part](walkthrough-developing-using-the-content-editor-web-part.md).
     
   
 

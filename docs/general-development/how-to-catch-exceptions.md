@@ -1,14 +1,16 @@
 ---
-title: How to Catch Exceptions
+title: Catch exceptions
+ms.date: 09/25/2017
 keywords: errors,how to,howdoi,howto
 f1_keywords:
 - errors,how to,howdoi,howto
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: de5fdb67-201b-4d7a-90a8-99ab7e51ea4e
+localization_priority: Normal
 ---
 
 
-# How to: Catch Exceptions
+# Catch exceptions
 
 You place the sections of code that might throw exceptions in a try block and place code that handles exceptions in a catch block. The order of catch statements is important. When an exception occurs, it is passed up the stack and each catch block is given the opportunity to handle it. The catch block that should handle the exception is determined by matching the type of the exception to the name of the exception specified in the catch block. For example, the following catch block catches Simple Object Access Protocol (SOAP) exceptions:
   
@@ -204,38 +206,38 @@ End Namespace
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
   
     
     
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server)
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
   
     
     
- [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes)
+ [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

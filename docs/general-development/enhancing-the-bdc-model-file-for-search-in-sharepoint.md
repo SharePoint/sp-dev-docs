@@ -1,7 +1,9 @@
 ---
 title: Enhancing the BDC model file for Search in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 3c67b1cf-5fca-4805-a1b5-c9ac1ff8aede
+localization_priority: Normal
 ---
 
 
@@ -167,21 +169,15 @@ If the repository uses NTLM authentication, we recommend that you specify PassTh
     
 Profile pages may require that you use the Secure Store Service because of the multi-hop delegation problem from the front-end web server. If you encounter this problem, you can optimize the crawl while still allowing profile pages by creating two similar **LobSystemInstance** instances. The first instance should use credentials from the Secure Store Service authentication. This instance should not contain the **ShowInSearchUI** property. The second instance should use PassThrough authentication, and should contain the **ShowInSearchUI** property. Profile pages use the first **LobSystemInstance** instance, and the crawler uses the second instance.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > This requires that you set the **ShowInSearchUI** property at the **LobSystemInstance** level instead of at the **LobSystem** level.
-  
-    
-    
 
 
-## Additional resources
+## See also
 <a name="SP15enhanceBDC_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [BDC Model Infrastructure](http://msdn.microsoft.com/library/2818ebdd-6cda-4d8f-82b2-7fde9fbf2633%28Office.15%29.aspx)
@@ -190,7 +186,7 @@ Profile pages may require that you use the Secure Store Service because of the m
 -  [Authoring BDC Models](http://msdn.microsoft.com/library/170d1cfd-cf19-4162-b79f-ba6d3b4ad23b%28Office.15%29.aspx)
     
   
--  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint)
+-  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint.md)
     
   
 -  [How to: Use SharePoint Designer to Create a BDC Model File for a Custom Connector](http://msdn.microsoft.com/library/8f239482-0c82-4b60-817d-b0c4392e7e2e%28Office.15%29.aspx)

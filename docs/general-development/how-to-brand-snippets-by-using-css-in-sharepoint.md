@@ -1,12 +1,16 @@
 ---
-title: How to Brand snippets by using CSS in SharePoint
-ms.prod: SHAREPOINT
+title: Brand snippets by using CSS in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d18d07b6-1a6b-4589-a65c-932b67cef595
+localization_priority: Priority
 ---
 
 
-# How to: Brand snippets by using CSS in SharePoint
+# Brand snippets by using CSS in SharePoint
+
 To style a snippet, you override the default styles with custom CSS. You can use CSS IDs and element selectors to override all the default styles applied to elements, or you can use an HTML editor or a tool such as the F12 developer tools in Internet Explorer to identify and override specific default styles.
+
 ## Introduction to styling snippets with CSS
 <a name="Introduction"> </a>
 
@@ -16,11 +20,8 @@ After you convert an HTML master page or create an HTML page layout, you can pre
     
 After you copy a snippet into the HTML file in your mapped drive and then save the changes, you can refresh the server-side preview of the HTML file to see how the control is rendered. Snippets contain markup that provides a design-time preview in your HTML editor of choice, but you shouldn't edit this markup because it's read-only and doesn't affect how the control is rendered on the server. By contrast, the server-side preview shows a full-fidelity preview with live data, if available—for example, a navigation control will show the site's current navigation structure with live data from your data source, such as a SharePoint term store for managed navigation.
   
-    
-    
-
-> **Note:**
-> For more information about mapping a network drive, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery). 
+> [!NOTE]
+> For more information about mapping a network drive, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md). 
   
     
     
@@ -327,23 +328,23 @@ Instead of using only custom styles, you may have a scenario where you want to o
     
     
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
 

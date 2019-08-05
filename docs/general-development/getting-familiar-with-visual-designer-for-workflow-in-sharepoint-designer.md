@@ -1,7 +1,9 @@
 ---
 title: Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ff9b0314-eea1-47e4-87c7-53ed4de98c30
+localization_priority: Normal
 ---
 
 
@@ -31,7 +33,7 @@ SharePoint Designer 2013 includes a new workflow design surface called Visual De
   
     
     
-![Visual Designer not available without Visio](../../images/SPD15-VisualDesigner1.png)
+![Visual Designer not available without Visio](../images/SPD15-VisualDesigner1.png)
   
     
     
@@ -52,7 +54,7 @@ The **Shapes** pane on the left contains workflow shapes that you can drag to th
 
     
 > **Tip:**
-> For a complete list of shapes available in SharePoint Designer 2013, see  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio)
+> For a complete list of shapes available in SharePoint Designer 2013, see  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md)
   
     
     
@@ -71,7 +73,7 @@ The figure shows a workflow in Visual Designer.
   
     
     
-![Visual Designer in SharePoint Designer 2013](../../images/SPD15-VisualDesigner2.png)
+![Visual Designer in SharePoint Designer 2013](../images/SPD15-VisualDesigner2.png)
   
     
     
@@ -115,7 +117,7 @@ You can switch between **Views** in the **Manage** portion of the **Workflow** r
   
     
     
-![Switching between design views.](../../images/SPD15-VisualDesigner3.png)
+![Switching between design views.](../images/SPD15-VisualDesigner3.png)
   
     
     
@@ -124,7 +126,7 @@ A workflow can be developed in either the Text-Based Designer or the Visual Desi
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
@@ -137,10 +139,10 @@ A workflow can be developed in either the Text-Based Designer or the Visual Desi
 -  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 

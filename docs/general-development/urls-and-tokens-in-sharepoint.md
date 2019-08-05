@@ -1,4 +1,9 @@
-
+---
+title: URLs and tokens in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+localization_priority: Priority
+---
 
 
 
@@ -24,9 +29,7 @@ SharePoint parses URL strings to determine the form of URL based on a specified 
   
 - A **URL relative to a file or folder** is based on the folder containing the file. It does not contain _any_ forward slashes. It simply specifies the name of the file. For example, `AllItems.aspx`.
     
-  
-
-> **Note:**
+> [!NOTE] 
 > There is no concept of a "site collection-relative URL"; passing such a URL may cause the code to fail. 
   
     
@@ -89,7 +92,7 @@ Except where indicated otherwise, none of these tokens in the next table can be 
 |{Source}  <br/> |The HTTP Request URL.  <br/> |No  <br/> |Yes  <br/> |No  <br/> ||
    
 
-## Additional resources
+## See also
 <a name="SP15URLS_addlresources"> </a>
 
 

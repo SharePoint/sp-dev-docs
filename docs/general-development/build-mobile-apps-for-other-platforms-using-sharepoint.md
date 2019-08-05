@@ -1,7 +1,9 @@
 ---
 title: Build mobile apps for other platforms using SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 017df869-44fb-4ffe-82fb-4654e01329ad
+localization_priority: Priority
 ---
 
 
@@ -36,7 +38,7 @@ To use the REST capabilities that are built into SharePoint, you can construct a
   
     
     
-![SharePoint REST architecture](../../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
+![SharePoint REST architecture](../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
   
     
     
@@ -83,7 +85,7 @@ To authenticate your mobile app with SharePoint, you can use the MS-OFBA protoco
   
     
     
-When a user signs in to SharePoint, the user's token is validated and then used to sign in to SharePoint. The user's token is a security token that is issued by an identity provider. SharePoint supports several kinds of authentication. For more information, see  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint). To authenticate a user, you can use the REST interface. The authorization process verifies that an authenticated subject (an app or a user the app is acting on behalf of) has permission to perform certain operations or to access specific resources (for example, a list or a SharePoint document folder).
+When a user signs in to SharePoint, the user's token is validated and then used to sign in to SharePoint. The user's token is a security token that is issued by an identity provider. SharePoint supports several kinds of authentication. For more information, see  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md). To authenticate a user, you can use the REST interface. The authorization process verifies that an authenticated subject (an app or a user the app is acting on behalf of.md) has permission to perform certain operations or to access specific resources (for example, a list or a SharePoint document folder.md).
   
     
     
@@ -211,10 +213,8 @@ The following XML shows an example of the list item properties that are returned
 
 The following example shows how to **create** a list item.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
+> 
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     
@@ -240,10 +240,7 @@ headers:
 
 The following example shows how to **update** a list item.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     
@@ -293,33 +290,27 @@ For more information, see  [Complete basic operations using SharePoint REST endp
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Using the SharePoint REST service](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx)
+-  [Using the SharePoint REST service](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service)
     
   
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint)
+-  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
     
   
 -  [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
-    
-  
--  [Making REST calls with C# and JavaScript for SharePoint](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)
-    
-  
--  [Making REST calls with C# and JavaScript for SharePoint demo](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=b1e7c9c5-0f62-4a78-bb7b-8e283c86145c)
-    
+       
   
 -  [Open Data Protocol](http://www.odata.org/)
     

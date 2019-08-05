@@ -1,7 +1,9 @@
 ---
 title: SharePoint workflow fundamentals
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 1e622296-f78b-4e3a-a1e7-8effa24111a8
+localization_priority: Priority
 ---
 
 
@@ -56,7 +58,7 @@ Workflow Manager Client 1.0, SharePoint, and SharePoint Designer 2013 each provi
 ## Platform architecture
 <a name="bkm_Architecture"> </a>
 
-Figure 1 depicts a high-level view of the SharePoint workflow framework. Notice, first, how the new workflow infrastructure introduces Workflow Manager Client 1.0 as the new workflow execution host. Whereas in previous versions workflow execution was hosted in SharePoint itself, this has changed in SharePoint. Workflow Manager Client 1.0 is external to SharePoint and communicates using common protocols over the Microsoft Azure service bus, mediated by OAuth. Otherwise, SharePoint includes the feature that you would expect to see: content items, events, apps, and so on. But notice that there is also an implementation of the SharePoint 2010 workflow host (that is, the Windows Workflow Foundation 3 engine) for backward compatibility. You can read more about this in  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint).
+Figure 1 depicts a high-level view of the SharePoint workflow framework. Notice, first, how the new workflow infrastructure introduces Workflow Manager Client 1.0 as the new workflow execution host. Whereas in previous versions workflow execution was hosted in SharePoint itself, this has changed in SharePoint. Workflow Manager Client 1.0 is external to SharePoint and communicates using common protocols over the Microsoft Azure service bus, mediated by OAuth. Otherwise, SharePoint includes the feature that you would expect to see: content items, events, apps, and so on. But notice that there is also an implementation of the SharePoint 2010 workflow host (that is, the Windows Workflow Foundation 3 engine) for backward compatibility. You can read more about this in  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint.md).
   
     
     
@@ -70,7 +72,7 @@ Figure 1 depicts a high-level view of the SharePoint workflow framework. Notice,
   
     
     
-![High-level workflow architecture](../../images/wfArchitecture1.png)
+![High-level workflow architecture](../images/wfArchitecture1.png)
   
     
     
@@ -107,10 +109,7 @@ Before you can discuss workflow associations and subscriptions, you must look at
     
 This decoupling of message creation from message consumption allows for scalability and flexibility. It enables multicast messaging on the publisher side, and for promiscuous message consumption on the subscriber side.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The PubSub feature is a part of the Microsoft Azure Service Bus, which provides connectivity options for WCF and other service endpoints. These include REST endpoints, which can be located behind network address translation (NAT) boundaries, or bound to frequently changing, dynamically assigned IP addresses, or both. For more information about the Azure Service Bus, see  [Service Bus](http://msdn.microsoft.com/en-us/library/ee732537.aspx). 
   
     
@@ -194,9 +193,7 @@ Auto-start workflows are initiated by using an **Add** message to the PubSub ser
   
 - The workflow initiation parameters.
     
-  
-
-> **Note:**
+> [!NOTE]
 > If a workflow automatically starts on a repeatable event (for example, the **OnItemChanged** event), it cannot start another workflow of a given association until the existing running instance of the association's workflow has completed running.
   
     
@@ -229,31 +226,31 @@ This is important because you may have SharePoint 2010 that you may use to reuse
   
     
     
-For a full discussion of SharePoint workflow interop, see  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint).
+For a full discussion of SharePoint workflow interop, see  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint.md).
   
     
     
 
-## Additional resources
+## See also
 <a name="bk_additional"> </a>
 
 
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflows in SharePoint](workflows-in-sharepoint)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
--  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint)
+-  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint.md)
     
   
 

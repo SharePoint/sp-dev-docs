@@ -1,12 +1,16 @@
 ---
-title: How to Back up and restore SharePoint using a VSS requestor
-ms.prod: SHAREPOINT
+title: Back up and restore SharePoint using a VSS requestor
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: cab5ba90-bd23-4cec-82d7-529e3f86ba88
+localization_priority: Normal
 ---
 
 
-# How to: Back up and restore SharePoint using a VSS requestor
- **Summary:** Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint.
+# Back up and restore SharePoint using a VSS requestor
+
+Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint.
+
 ## Backing up and restoring with the requestor
 
 Use the following procedure to back up and restore Microsoft SharePoint Foundation data using your VSS requestor.
@@ -51,18 +55,17 @@ VSS has special requirements for the accounts running the writers on all targete
   
 Also, to be hosted by the SharePoint Foundation Timer service (owstimer.exe), the writer service must run under the administration application pool account, which is the "Network Service" account in a basic installation of SharePoint Foundation. 
   
-    
-    
- **Note** It is very unlikely that this account will be a local machine admin account, which differs from the requirement for VSS where the processing account must be running as local system.
+> [!NOTE]
+> It is very unlikely that this account will be a local machine admin account, which differs from the requirement for VSS where the processing account must be running as local system.
   
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
     
   
 

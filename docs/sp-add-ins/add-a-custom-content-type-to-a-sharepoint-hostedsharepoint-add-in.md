@@ -1,24 +1,30 @@
+---
+title: Add a custom content type to a SharePoint-hosted SharePoint Add-in
+ms.date: 10/26/2017
+ms.prod: sharepoint
+redirect_url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in/
+localization_priority: Normal
+---
+
 # Add a custom content type to a SharePoint-hosted SharePoint Add-in
 Learn how to include custom content types in an SharePoint Add-ins.
+
+
+This is the fourth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the other articles in this series:
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
- 
-
-This is the fourth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the other articles in this series:
- 
-
--  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
     
  
--  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in)
+-  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
--  [Add custom columns to a SharePoint-hostedSharePoint Add-in](add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in)
+-  [Add custom columns to a SharePoint-hostedSharePoint Add-in](add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md)
     
  
 
- **Note**  If you have been working through this series about SharePoint-hosted add-ins, then you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at  [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeContentType.sln file.
+> [!NOTE] 
+> If you have been working through this series about SharePoint-hosted add-ins, then you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at  [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeContentType.sln file.
  
 
 In this article you add a custom content type to the Employee Orientation SharePoint Add-in.
@@ -53,7 +59,7 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
     **Content Type Tab**
 
-  ![The Content Type Designer showing 'NewEmployee' as the type name, 'Represents a new employee' as the description, and 'Employee Orientation' as the group.](../../images/8a9768f4-315d-45c0-88d7-687dbf84495c.PNG)
+  ![The Content Type Designer showing 'NewEmployee' as the type name, 'Represents a new employee' as the description, and 'Employee Orientation' as the group.](../images/8a9768f4-315d-45c0-88d7-687dbf84495c.PNG)
  
  
 7. Open the  **Columns** tab in the designer.
@@ -62,7 +68,7 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
     **Columns Tab**
 
-    ![The Columns tab of the Content Type Designer with "Employee", "Division", and "Orientation Stage" listed in the grid.](../../images/835e78b3-a073-45b2-b4ee-3f9be9d88495.PNG)
+    ![The Columns tab of the Content Type Designer with "Employee", "Division", and "Orientation Stage" listed in the grid.](../images/835e78b3-a073-45b2-b4ee-3f9be9d88495.PNG)
  
  
 9. Save the file and close the designer.
@@ -104,7 +110,7 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
     **Content Type Settings dialog box**
 
-    ![The Content Type Settings dialog with just a single content type, named NewEmployee, listed.](../../images/b90699f4-40de-4f50-ad47-3e8773d0eb92.PNG)
+    ![The Content Type Settings dialog with just a single content type, named NewEmployee, listed.](../images/b90699f4-40de-4f50-ad47-3e8773d0eb92.PNG)
  
 19.  Choose **OK** to close the dialog box, and then save and close the file.
     
@@ -176,7 +182,7 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
     **New Employees in Seattle list**
 
-    ![The "New Employees in Seattle" list with the Division and Orientation Stage columns already present.](../../images/b654af45-663e-425c-b7c7-b8b5524cb316.PNG) 
+    ![The "New Employees in Seattle" list with the Division and Orientation Stage columns already present.](../images/b654af45-663e-425c-b7c7-b8b5524cb316.PNG) 
  
 4. Try adding new items to the list and editing existing items.
     
@@ -189,4 +195,4 @@ In this article you add a custom content type to the Employee Orientation ShareP
 ## 
 <a name="Nextsteps"> </a>
 
-In the next article in this series, you'll add a list view Web Part to the default page of the SharePoint Add-in:  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in).
+In the next article in this series, you'll add a list view web part to the default page of the SharePoint Add-in:  [Add a web part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md).

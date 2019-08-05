@@ -1,7 +1,9 @@
 ---
 title: Using the SharePoint search Query APIs
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ae9d73ed-1140-430b-9287-01dbbe8ae7d1
+localization_priority: Priority
 ---
 
 
@@ -45,7 +47,7 @@ Table 1 shows the APIs that you can use to program search queries and the path t
 |REST service endpoints  <br/> |http://server/_api/search/query <br/>http://server/_api/search/suggest  <br/> |
 |Server object model  <br/> |Microsoft.Office.Server.Search.dll <br/>%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI  <br/> |
    
-As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET, Silverlight, Phone, and JavaScript client object models, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint).
+As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET, Silverlight, Phone, and JavaScript client object models, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -53,11 +55,11 @@ As a best practice in SharePoint development, use client APIs when you can. Clie
 ### Query using the .NET client object model
 <a name="bk_QueryNETcsom"> </a>
 
-Search in SharePoint includes a client object model that enables access to search results for online, on-premises, and mobile development. The Search in SharePoint CSOM is built on the SharePoint CSOM. Therefore, your client code first needs to access the SharePoint CSOM and then access the Search in SharePoint CSOM. For more information about the SharePoint CSOM, see  [SharePoint 2010 Client Object Model](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the  [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) class, which is the entry point to the CSOM, see [Client Context as Central Object](http://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx).
+Search in SharePoint includes a client object model that enables access to search results for online, on-premises, and mobile development. The Search in SharePoint CSOM is built on the SharePoint CSOM. Therefore, your client code first needs to access the SharePoint CSOM and then access the Search in SharePoint CSOM. For more information about the SharePoint CSOM and the [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) class, which is the entry point to the CSOM, see [SharePoint Complete Basic Operations Using SharePoint Client Library Code](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code).
   
     
     
-For the .NET managed CSOM, get a **ClientContext** instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the **Microsoft.SharePoint.Search.Client.Query** namespace in the Microsoft.SharePoint.Search.Client.dll.
+For the .NET managed CSOM, get a **ClientContext** instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the **Microsoft.SharePoint.Client.Search.Query** namespace in the Microsoft.SharePoint.Client.Search.dll.
   
     
     
@@ -110,7 +112,7 @@ var results = searchExecutor.executeQuery(keywordQuery);
 context.executeQueryAsync(onQuerySuccess, onQueryError);
 ```
 
-To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint: Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-Querying-a629b53b).
+To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint: Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b).
   
     
     
@@ -126,7 +128,7 @@ The following is the access point for the service:  `http://server/_api/search/`
   
     
     
-See  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview) and [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service) for more information.
+See  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md) and [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service.md) for more information.
   
     
     
@@ -168,17 +170,17 @@ To download an example, see the following code sample posted by SharePoint MVP  
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Building search queries in SharePoint](building-search-queries-in-sharepoint)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   
--  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview)
+-  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
--  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
+-  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d)
     
   
 

@@ -1,20 +1,19 @@
 ---
-title: How to Include mentions, tags, and links to sites and documents in posts in SharePoint
-ms.prod: SHAREPOINT
+title: Include mentions, tags, and links to sites and documents in posts in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 975da333-372b-4bf6-a3f4-7452db369f04
+localization_priority: Normal
 ---
 
 
-# How to: Include mentions, tags, and links to sites and documents in posts in SharePoint
+# Include mentions, tags, and links to sites and documents in posts in SharePoint
+
 Learn how to add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to microblog posts, which render as mentions, tags, or links in SharePoint social feeds.
 In a social feed, the simplest form of post content contains only text, but you can also add links that render as mentions, tags, or links to websites, SharePoint sites, and documents. To do this, you add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that defines the post. Posts can contain multiple links.
   
-    
-    
-
-
-> **Note:**
-> To add embedded pictures, videos, or documents to a post's content, you add a  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object to the [SocialPostCreationData.Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property. For more information, see [How to: Embed images, videos, and documents in posts in SharePoint](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server). 
+> [!NOTE]
+> To add embedded pictures, videos, or documents to a post's content, you add a  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object to the [SocialPostCreationData.Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property. For more information, see [How to: Embed images, videos, and documents in posts in SharePoint](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md). 
   
     
     
@@ -43,7 +42,7 @@ The code examples in this article show how to add links to microblog posts. Thes
 - Microsoft.SharePoint.Client.UserProfilies
     
   
-For instructions about how to set up your development environment and create a console application, see  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli).
+For instructions about how to set up your development environment and create a console application, see  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md).
   
     
     
@@ -64,20 +63,15 @@ The following code example publishes a post that contains links to a website, a 
   
 - Add the link objects to the  [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
-  
-
-> **Note:**
-> Currently, SharePoint handles links to websites, SharePoint sites, and documents in the same way, but as a best practice, choose the  [Site](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Site.aspx) type and the [Document](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Document.aspx) type for SharePoint sites and documents.
+> [!NOTE]
+> Currently, SharePoint handles links to websites, SharePoint sites, and documents in the same way, but as a best practice, choose the  [Site](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) type and the [Document](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) type for SharePoint sites and documents.
   
     
     
 
 In the social feed, clicking a link to a website, SharePoint site, or document opens the item in a separate browser window.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the URL variables before you run the code. 
   
     
@@ -177,7 +171,7 @@ The following code example publishes a post that mentions a user. It shows how t
     
     
 
-- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent a mention, which is a link to a user. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.User](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.User.aspx) field and the mentioned person's account name. You can set the account name by using either the person's login or email address.
+- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent a mention, which is a link to a user. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.User](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) field and the mentioned person's account name. You can set the account name by using either the person's login or email address.
     
   
 - Add a placeholder to the post text to indicate where the mentioned person's display name should appear.
@@ -188,10 +182,7 @@ The following code example publishes a post that mentions a user. It shows how t
   
 In the social feed, clicking a mention redirects to the mentioned person's **About** page.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the **serverURL** and **accountName** variables before you run the code.
   
     
@@ -269,7 +260,7 @@ The following code example publishes a post that includes a tag. It shows how to
     
     
 
-- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Tag.aspx) field and the tag name, which must include a **#** character.
+- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.social.socialdataitemtype.aspx) field and the tag name, which must include a **#** character.
     
   
 - Add a placeholder to the post text to indicate where the tag should appear.
@@ -280,10 +271,7 @@ The following code example publishes a post that includes a tag. It shows how to
   
 In the social feed, clicking a tag redirects to the tag's **About** page. If the tag doesn't already exist, the server creates it.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the **serverURL** and **tagName** variables before you run the code.
   
     
@@ -354,11 +342,11 @@ namespace IncludeTagInPost
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
 -  [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) and [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) in the client object models
@@ -367,7 +355,7 @@ namespace IncludeTagInPost
 -  [SocialPostCreationData](http://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx) and [SocialDataItem](http://msdn.microsoft.com/library/757e7b62-66a6-b03f-0ff0-769a42eb2b4a%28Office.15%29.aspx) in the JavaScript object model
     
   
--  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint)
+-  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint.md)
     
   
 -  [SPSocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialPostCreationData.aspx) and [SPSocialDataItem](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialDataItem.aspx) in the server object model

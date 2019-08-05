@@ -1,7 +1,9 @@
 ---
 title: VSS requestors and SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 0b2e5a4e-40f0-4ccf-a21a-7274921f2169
+localization_priority: Normal
 ---
 
 
@@ -82,30 +84,30 @@ Learn how to create and use a VSS requestor for SharePoint:
     
     
 
--  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint)
+-  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint.md)
     
   
--  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor)
+-  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md)
     
   
--  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using)
+-  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md)
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
     
   
--  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint)
+-  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint.md)
     
   
--  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor)
+-  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md)
     
   
--  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using)
+-  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md)
     
   
 

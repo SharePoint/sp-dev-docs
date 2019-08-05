@@ -1,11 +1,14 @@
 ---
-title: How to Customize list item queries and filter data for Windows Phone apps
-ms.prod: SHAREPOINT
+title: Customize list item queries and filter data for Windows Phone apps
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 32f89b97-8274-4cb0-9164-7898735a18aa
+localization_priority: Normal
 ---
 
 
-# How to: Customize list item queries and filter data for Windows Phone apps
+# Customize list item queries and filter data for Windows Phone apps
+
 Customize the data queries on which the views in a Windows Phone app are based.
 With projects created from the Windows Phone SharePoint List Application template, developers can take advantage of a design pattern implemented in the template that allows them to customize parts of the data layer for a Windows Phone app. A view of a SharePoint list in a Windows Phone app can be configured in Microsoft SharePoint Server and included as is in the app on the phone, or a custom view can be created for the app.
   
@@ -14,7 +17,7 @@ With projects created from the Windows Phone SharePoint List Application templat
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
     
@@ -125,7 +128,7 @@ In your own projects, you can take advantage of the way the data layer is design
   
     
     
-For the following code sample, assume again that the target installation of SharePoint Server has a Product Orders list created from the Custom List template, configured with the fields and types indicated in Table 1 in the topic  [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s). Create a project based on the Windows Phone SharePoint List Application template that uses a list like the Product Orders list as a source (as described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app)). For the purposes of this example, we add a custom view to the Windows Phone app (not to the list on the server) that is filtered to display only those product orders in which the quantity ordered is 100 or more.
+For the following code sample, assume again that the target installation of SharePoint Server has a Product Orders list created from the Custom List template, configured with the fields and types indicated in Table 1 in the topic  [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s.md). Create a project based on the Windows Phone SharePoint List Application template that uses a list like the Product Orders list as a source (as described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md)). For the purposes of this example, we add a custom view to the Windows Phone app (not to the list on the server.md) that is filtered to display only those product orders in which the quantity ordered is 100 or more.
   
     
     
@@ -201,8 +204,8 @@ static Dictionary<string, string> ViewXmls = new Dictionary<string, string>()
 ```
 
 
-    > **Note:**
-      >  In particular that the value of the **Name** attribute ("View2") of the **PivotItem** control is the same as the key value of the entry added to the **Dictionary** type defined in step 2. This value is used to identify the appropriate CAML query to use to retrieve the data to be displayed in the **PivotItem**. Also note that the **ListBox** declared here (named "lstBox2" simply to distinguish it from the **ListBox** for the default view) is also bound to the view.
+    > [!NOTE]
+    > In particular that the value of the **Name** attribute ("View2") of the **PivotItem** control is the same as the key value of the entry added to the **Dictionary** type defined in step 2. This value is used to identify the appropriate CAML query to use to retrieve the data to be displayed in the **PivotItem**. Also note that the **ListBox** declared here (named "lstBox2" simply to distinguish it from the **ListBox** for the default view) is also bound to the view.
 
     
     
@@ -221,7 +224,7 @@ When you start your project (by pressing F5), the **Pivot** control for the app 
   
     
     
-![All orders (list items) in a sample list](../../images/e9cf225a-7040-4545-8db2-9e6f04e7a6eb.gif)
+![All orders (list items) in a sample list](../images/e9cf225a-7040-4545-8db2-9e6f04e7a6eb.gif)
   
     
     
@@ -239,7 +242,7 @@ And the custom view, as defined in the preceding procedure, displays a filtered 
   
     
     
-![Only the big orders](../../images/0d28b4f9-7f81-47c0-976e-247c2b9544d4.gif)
+![Only the big orders](../images/0d28b4f9-7f81-47c0-976e-247c2b9544d4.gif)
   
     
     
@@ -248,17 +251,17 @@ You can make many other customizations both to the CAML queries on which views a
     
     
 
-## Additional resources
+## See also
 <a name="SP15Custlistitem_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Introduction to Collaborative Application Markup Language (CAML)](http://msdn.microsoft.com/en-us/library/ms426449.aspx)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

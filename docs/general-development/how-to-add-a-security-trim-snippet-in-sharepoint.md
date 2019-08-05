@@ -1,16 +1,20 @@
 ---
-title: How to Add a Security Trim snippet in SharePoint
-ms.prod: SHAREPOINT
+title: Add a Security Trim snippet in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 4beaab08-760b-408a-b768-906312779379
+localization_priority: Priority
 ---
 
 
-# How to: Add a Security Trim snippet in SharePoint
+# Add a Security Trim snippet in SharePoint
+
 You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have and whether the users are authenticated or anonymous.
+
 ## Introduction to the Security Trim snippet
 <a name="Introduction"> </a>
 
-You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have, and whether those users are authenticated or anonymous. You can add a Security Trim panel to a master page or page layout. A Security Trim panel is a container that can include other components or snippets, such as Web Parts, in addition to static content.
+You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have, and whether those users are authenticated or anonymous. You can add a Security Trim panel to a master page or page layout. A Security Trim panel is a container that can include other components or snippets, such as web parts, in addition to static content.
   
     
     
@@ -19,19 +23,20 @@ For example, you can use a Security Trim panel to display the following content 
     
     
 
-- A Content by Search Web Part that displays which documents an authenticated user is currently working on.
+- A Content by Search web part that displays which documents an authenticated user is currently working on.
     
   
 - A list view of recently modified documents so that authenticated users can see what's new on the site.
     
   
-- A Content by Search Web Part that displays to non-authenticated visitors a list of recommended links based on the current article. Such a list of recommendations might be noise to authenticated content authors working in the site, but it's important for non-authenticated visitors.
+- A Content by Search web part that displays to non-authenticated visitors a list of recommended links based on the current article. Such a list of recommendations might be noise to authenticated content authors working in the site, but it's important for non-authenticated visitors.
     
   
 - A sign-in link separate from the ribbon, for non-authenticated users or users who have yet to be authenticated.
     
-    > **Note:**
-      > This sign-in link is inserted automatically into a master page that is created by using Design Manager, but you can delete it if it's not needed. 
+    > [!NOTE]
+    > This sign-in link is inserted automatically into a master page that is created by using Design Manager, but you can delete it if it's not needed. 
+
 A Security Trim panel has two important property settings, one for authentication and one for permissions (or authorization). For example, you can use a Security Trim panel to display the following content to specific users:
   
     
@@ -42,18 +47,15 @@ A Security Trim panel has two important property settings, one for authenticatio
   
 - **Permissions** With this property, you can select a specific permission that users must have to view the content in the panel.
     
-    > **Note:**
-      > You are selecting an individual permission, not a permission level. (A permission level is a set of granted permissions.) 
+    > [!NOTE]
+    > You are selecting an individual permission, not a permission level. (A permission level is a set of granted permissions.) 
 Of course, if you restrict the authentication to only anonymous users, it's typically not necessary to specify a specific permission because anonymous users have usually not been given any SharePoint permissions. It makes sense to use permissions only with all users or with all authenticated users.
   
     
     
 The Security Trim panel has three options on the ribbon, listed in the left column of Table 1. Table 1 shows how these settings determine the specific permission that users are required to have, the lowest default permission level that includes that specific permission, and the group that is linked to that permission level by default.)
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > These are the default settings, which can be changed for any given scope, such as a site collection, site, list, or item. 
   
     
@@ -160,23 +162,20 @@ The **<div>** where `class="DefaultContentBlock"` is what you replace with your 
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
-
-
--  [Introduction: Control user access with permissions](http://office.microsoft.com/en-us/sharepoint-foundation-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=1)
+   
+  
+-  [Understanding permission levels](https://support.office.com/en-us/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)
     
   
--  [Understanding permission levels](http://office.microsoft.com/en-us/products/default-permission-levels-HA102772313.aspx?CTT=5&amp;origin=HA102771919)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint)
-    
-  
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
 

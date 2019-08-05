@@ -1,7 +1,9 @@
 ---
 title: Getting Ranges Using Atom Feed and HTML Fragment
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
+localization_priority: Normal
 ---
 
 
@@ -9,11 +11,7 @@ ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
 
 This topic describes two ways to access ranges—Atom feed and HTML fragment, by using the REST API in Excel Services.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -27,7 +25,7 @@ The REST API in Excel Services supports two mechanisms for getting ranges. The f
   
     
     
-As described in the  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api) topic, the REST URL to the model page using discovery is:
+As described in the  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md) topic, the REST URL to the model page using discovery is:
   
     
     
@@ -50,19 +48,15 @@ Therefore, for a workbook with the file name **sampleWorkbook.xlsx** that is sav
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model
 ```
 
-Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
+Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
   
     
     
 
-> **Important:**
+> [!IMPORTANT]
 > You can also specify arbitrary ranges, and not just the ranges returned by discovery. Colon ":" must be replaced with "|". For example use "A1|G5" instead of "A1:G5". 
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > Characters like "?" and "#" are unsupported. To correctly reference sheet names that contain special characters, the basic guideline is "see what the Excel client does" when referencing a formula to a sheet with special characters and follow that example. 
   
     
@@ -78,7 +72,7 @@ Using the discovery mechanism described in  [Discovery in Excel Services REST AP
   
     
     
-![Excel Services REST named range discovery](../../images/159f676e-421e-4190-94a6-cf311f7db2ca.gif)
+![Excel Services REST named range discovery](../images/159f676e-421e-4190-94a6-cf311f7db2ca.gif)
   
     
     
@@ -108,7 +102,7 @@ Note that, in Internet Explorer, the resulting page looks like an error, as show
   
     
     
-![Excel Services REST range discovery using Atom](../../images/2d011e17-953f-42b1-97d3-2525372296c1.gif)
+![Excel Services REST range discovery using Atom](../images/2d011e17-953f-42b1-97d3-2525372296c1.gif)
   
     
     
@@ -224,31 +218,14 @@ http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/m
 
 In Internet Explorer, the page looks similar to the following figure.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > This HTML can be directly consumed in an **IFRAME**, or it can be used in JavaScript to create a more seamless experience. 
   
-    
-    
 
+    
+![Excel Services REST Discovery Get Range Using HTML](../images/558e6305-5a42-4b5c-9a70-1116ddcf6637.gif)
+  
 
-  
-    
-    
-![Excel Services REST Discovery Get Range Using HTML](../../images/558e6305-5a42-4b5c-9a70-1116ddcf6637.gif)
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
 
 ## See also
 
@@ -259,4 +236,4 @@ In Internet Explorer, the page looks similar to the following figure.
   
     
     
- [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api)
+ [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api.md)

@@ -1,11 +1,14 @@
 ---
-title: How to Create a claims provider in SharePoint
-ms.prod: SHAREPOINT
+title: Create a claims provider in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 8f3228ca-57fd-4253-a07d-abeb63298c58
+localization_priority: Normal
 ---
 
 
-# How to: Create a claims provider in SharePoint
+# Create a claims provider in SharePoint
+
 Learn how to create and implement a SharePoint claims provider that fulfills the requirements for claims augmentation and claims picking.
 A claims provider issues claims and packages claims into security tokens. A claims provider has two roles: augmentation and picking.
   
@@ -15,11 +18,7 @@ A claims provider issues claims and packages claims into security tokens. A clai
 Claims augmentation enables an application to augment additional claims into the user's token. For example, with Windows-based log-in, the Active Directory directory service can augment all of a user's security groups into the user's Windows token. With claims-based log-in, a customer relationship management (CRM) application can augment roles from a CRM database. By having these claims in the user's token, resources can be authorized against these claims. That is, these claims are used to determine whether a particular user has access to specific resources.
 Claims can be displayed in the people picker control through claims picking. Claims picking enables an application to surface claims in the people picker, for example, when configuring the security of a SharePoint site or SharePoint service. This functionality enables you to provide search, resolve, and friendly display of claims.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > A people picker with claims picking functionality is sometimes referred to as a claims picker. For more information, see  [People picker and claims provider planning](http://technet.microsoft.com/en-us/library/gg602063.aspx). 
   
     
@@ -154,20 +153,20 @@ protected SPClaim CreateClaim(String claimType, String value, String valueType)
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_HowToCreateClaimsProvider_AdditionalResources"> </a>
 
 
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
     
   
--  [Claims provider in SharePoint](claims-provider-in-sharepoint)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
     
   
--  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
     
   
 

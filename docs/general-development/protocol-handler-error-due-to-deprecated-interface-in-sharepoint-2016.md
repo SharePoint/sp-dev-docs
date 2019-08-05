@@ -1,7 +1,9 @@
 ---
 title: Protocol handler error due to deprecated interface in SharePoint 2016
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c80cb77c-89db-4c78-b576-f63d39ca330a
+localization_priority: Normal
 ---
 
 
@@ -189,7 +191,7 @@ struct AccessorInitParameters
     
     
 
-## Additional Resources
+## See also
 <a name="bk_addresources"> </a>
 
 For more information, see  [Enterprise Search Protocol Handlers](https://msdn.microsoft.com/en-us/library/office/aa981260%28v=office.12%29.aspx).

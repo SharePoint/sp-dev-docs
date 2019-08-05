@@ -1,21 +1,25 @@
 ---
-title: How to Extend the Geolocation field type using client-side rendering
-ms.prod: SHAREPOINT
+title: Extend the Geolocation field type by using client-side rendering
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 7360633a-a7cf-4194-8bbd-8dd7c323e80b
+localization_priority: Normal
 ---
 
 
-# How to: Extend the Geolocation field type using client-side rendering
+# Extend the Geolocation field type by using client-side rendering
+
 Learn how to customize the SharePoint Geolocation field type programmatically using client-side rendering.
 
-SharePoint introduces a new field type named Geolocation that enables you to annotate SharePoint lists with location information. In columns of type Geolocation, you can enter location information as a pair of latitude and longitude coordinates in decimal degrees, or retrieve the coordinates of the user's current location from the browser if it implements the W3C Geolocation API. For more information about the Geolocation field, see  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint). 
-The Geolocation field type is not available in the default content type of any list or document library in SharePoint. The Geolocation field type is included in SharePoint but isn't visible on the create column page for the list; you must add the Geolocation field type programmatically. For more information, see  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint). 
+SharePoint introduces a new field type named Geolocation that enables you to annotate SharePoint lists with location information. In columns of type Geolocation, you can enter location information as a pair of latitude and longitude coordinates in decimal degrees, or retrieve the coordinates of the user's current location from the browser if it implements the W3C Geolocation API. For more information about the Geolocation field, see  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md). 
+The Geolocation field type is not available in the default content type of any list or document library in SharePoint. The Geolocation field type is included in SharePoint but isn't visible on the create column page for the list; you must add the Geolocation field type programmatically. For more information, see  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md). 
   
     
     
 
-After you add the Geolocation field type to SharePoint, you can use it to render maps by using Bing Maps. The built-in Geolocation field can render only with Bing Maps. However, you can create a custom field by using the Geolocation field as a parent field type. Custom rendering can be provided through the **JSLink** property in the client-side rendering framework. The client-side rendering framework is introduced in SharePoint. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering). 
-> **Note:**
+After you add the Geolocation field type to SharePoint, you can use it to render maps by using Bing Maps. The built-in Geolocation field can render only with Bing Maps. However, you can create a custom field by using the Geolocation field as a parent field type. Custom rendering can be provided through the **JSLink** property in the client-side rendering framework. The client-side rendering framework is introduced in SharePoint. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
+
+> [!NOTE]
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
   
     
@@ -55,9 +59,9 @@ You must have the following:
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint) <br/> |Learn how to integrate location information and maps in SharePoint lists and location-based web and mobile apps by using the new Geolocation field, and by creating your own Geolocation-based field types.  <br/> |
-| [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering) <br/> |Learn more about the new client-side rendering introduced in SharePoint.  <br/> |
-| [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint) <br/> |Learn how to add a Geolocation column to a list programmatically in SharePoint.  <br/> |
+| [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md) <br/> |Learn how to integrate location information and maps in SharePoint lists and location-based web and mobile apps by using the new Geolocation field, and by creating your own Geolocation-based field types.  <br/> |
+| [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md) <br/> |Learn more about the new client-side rendering introduced in SharePoint.  <br/> |
+| [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md) <br/> |Learn how to add a Geolocation column to a list programmatically in SharePoint.  <br/> |
    
 
 ## Step 1: Set up the Visual Studio project
@@ -76,7 +80,7 @@ You must have the following:
 
   
 
-  ![SharePoint Project Visual Studio template](../../images/SharePointSolutionVSTemplate.png)
+  ![SharePoint Project Visual Studio template](../images/SharePointSolutionVSTemplate.png)
   
 
   
@@ -127,10 +131,7 @@ You must have the following:
 
  A field class is a class whose instances can represent particular fields that are based on your custom field type. This class must inherit from **SPField** or one of the classes in SharePoint Foundation that derive from it. To enable you to extend or customize the Geolocation field type, this class must inherit from **SPFieldGeolocation**. For more information about creating field types, see  [Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx). 
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > In this example, the class and solution are named **CustomGeolocationField**; you can specify the name of the class and project that you want as you create your Visual Studio project. 
   
     
@@ -182,7 +183,7 @@ public class CustomGeolocationField : SPFieldGeolocation
         }
 ```
 
-4. Add the following override of the **JSLink** method to the class. CustomGeolocationControl.js is a JavaScript file that you create in the following step. By providing your own JavaScript file, you are overriding the default rendering of Bing Maps. If you do not override this method, the default rendering will be from Bing Maps. The **JSLink** property is introduced in SharePoint. For more information about the **JSLink** property, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering).
+4. Add the following override of the **JSLink** method to the class. CustomGeolocationControl.js is a JavaScript file that you create in the following step. By providing your own JavaScript file, you are overriding the default rendering of Bing Maps. If you do not override this method, the default rendering will be from Bing Maps. The **JSLink** property is introduced in SharePoint. For more information about the **JSLink** property, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md).
     
 ```cs
   
@@ -239,7 +240,7 @@ public override string JSLink
 ## Step 3: Create rendering for the new custom field
 <a name="CreatingCustomGeolocationStep_3"> </a>
 
-Next, you should create the JavaScript file that the **JSLink** method of the field class points to. This file should define the rendering of the custom field type using the new client-side rendering framework. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering).
+Next, you should create the JavaScript file that the **JSLink** method of the field class points to. This file should define the rendering of the custom field type using the new client-side rendering framework. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md).
   
     
     
@@ -511,8 +512,9 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 
 1. Choose the F5 key.
     
-    > **Note:**
-      > When you choose F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
+    > [!NOTE]
+    > When you choose F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
+
 2. Create a custom list and add a new Custom Geolocation field column.
     
   
@@ -525,33 +527,33 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 
   
 
-  ![Creating a new custom Geolocation field type](../../images/SP15Con_HowToExtendGeolocationFieldTypeUsingClientSideRenderingFig2.png)
+  ![Creating a new custom Geolocation field type](../images/SP15Con_HowToExtendGeolocationFieldTypeUsingClientSideRenderingFig2.png)
   
 
   
 
   
 
-## Additional resources
+## See also
 <a name="SP15Createcustomgeo_addlresources"> </a>
 
 
--  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint)
+-  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md)
     
   
--  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint)
+-  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
     
   
--  [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering)
+-  [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md)
     
   
--  [SharePoint: Create a Geolocation field that renders maps using Nokia Maps](http://code.msdn.microsoft.com/SharePoint-Create-a-d9a91551)
+-  [SharePoint: Create a Geolocation field that renders maps using Nokia Maps](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-d9a91551)
     
   
 -  [How to: Create a Custom Field Type](http://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f%28Office.15%29.aspx)
     
   
--  [Deploying files using Mapped Folders](http://blogs.msdn.com/b/vssharepointtoolsblog/archive/2010/03/12/deploying-files-using-mapped-folders.aspx)
+-  [Add and Remove Mapped Folders](https://docs.microsoft.com/en-us/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders?view=vs-2017)
     
   
 

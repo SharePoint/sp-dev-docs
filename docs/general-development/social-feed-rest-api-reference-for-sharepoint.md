@@ -1,7 +1,9 @@
 ---
 title: Social feed REST API reference for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f1cb914f-1e91-4e23-bf53-d2ab323eac13
+localization_priority: Priority
 ---
 
 
@@ -20,37 +22,36 @@ The endpoint URIs for most feed tasks begin with the **SocialRestFeedManager** r
 - The  `post` resource represents a specific thread or post. When used inline in the endpoint URI, it sets the context of the request to the specified thread or post. For example, `http://contoso.com/_api/social.feed/post/lock` locks the specified thread.
     
   
-If the resource endpoint takes a parameter, the parameter metadata is specified in the URI or in the request body. By default, the REST service returns responses formatted in the Atom protocol, but you can request the JSON format by using HTTP **Accept** headers. See [Example REST requests for feed tasks](social-feed-rest-api-reference-for-sharepoint#bk_exampleRequests) for examples of complete requests.
+If the resource endpoint takes a parameter, the parameter metadata is specified in the URI or in the request body. By default, the REST service returns responses formatted in the Atom protocol, but you can request the JSON format by using HTTP **Accept** headers. See [Example REST requests for feed tasks](social-feed-rest-api-reference-for-sharepoint.md#bk_exampleRequests) for examples of complete requests.
 ## Resource endpoints for feed tasks
 <a name="bk_Overview"> </a>
 
 
 |**Endpoint**|**Description**|
 |:-----|:-----|
-| [My](social-feed-rest-api-reference-for-sharepoint#bk_my)|Gets information about the current user.|
-| [My/Feed/Post](social-feed-rest-api-reference-for-sharepoint#bk_myFeedPost)|Creates a root post in the current user's feed.|
-| [My/Feed](social-feed-rest-api-reference-for-sharepoint#bk_myFeed)|Gets the feed of activity by the current user.|
-| [My/News](social-feed-rest-api-reference-for-sharepoint#bk_myNews)|Gets the feed of activity by the current user and by people and content the user is following.|
-| [My/TimelineFeed](social-feed-rest-api-reference-for-sharepoint#bk_myTimelineFeed)|Gets the feed of activity by the current user and by people and content the user is following, sorted by created date.|
-| [My/Likes](social-feed-rest-api-reference-for-sharepoint#bk_myLikes)|Gets the feed of posts that the current user likes.|
-| [My/MentionFeed](social-feed-rest-api-reference-for-sharepoint#bk_myMentionFeed)|Gets the feed of posts that mention the current user.|
-| [My/MentionFeed/ClearUnreadMentionCount](social-feed-rest-api-reference-for-sharepoint#bk_myMentionFeedClearUnreadMentionCount)|Gets the feed of posts that mention the current user and clears the unread mention count.|
-| [My/UnreadMentionCount](social-feed-rest-api-reference-for-sharepoint#bk_myUnreadMentionCount)|Gets the count of unread mentions for the current user.|
-| [Actor](social-feed-rest-api-reference-for-sharepoint#bk_actor)|Gets information about the specified user and the current user.|
-| [Actor/Feed](social-feed-rest-api-reference-for-sharepoint#bk_actorFeed)|Gets the feed of activity by the specified user.|
-| [Actor/Feed/Post](social-feed-rest-api-reference-for-sharepoint#bk_actorFeedPost)|Creates a root post in the specified site feed.|
-| [Post](social-feed-rest-api-reference-for-sharepoint#bk_post)|Gets a full thread that contains the specified post.|
-| [Post/Reply](social-feed-rest-api-reference-for-sharepoint#bk_postReply)|Posts a reply to the specified post.|
-| [Post/Delete](social-feed-rest-api-reference-for-sharepoint#bk_postDelete)|Deletes the specified post.|
-| [Post/Like](social-feed-rest-api-reference-for-sharepoint#bk_postLike)|Makes the current user a liker of the specified post.|
-| [Post/Unlike](social-feed-rest-api-reference-for-sharepoint#bk_postUnlike)|Removes the current user from the list of likers for the specified post.|
-| [Post/Likers](social-feed-rest-api-reference-for-sharepoint#bk_postLikers)|Gets the users who like the specified post.|
-| [Post/Lock](social-feed-rest-api-reference-for-sharepoint#bk_postLock)|Locks the specified thread.|
-| [Post/Unlock](social-feed-rest-api-reference-for-sharepoint#bk_postUnlock)|Unlocks the specified thread.|
+| [My](social-feed-rest-api-reference-for-sharepoint.md#bk_my)|Gets information about the current user.|
+| [My/Feed/Post](social-feed-rest-api-reference-for-sharepoint.md#bk_myFeedPost)|Creates a root post in the current user's feed.|
+| [My/Feed](social-feed-rest-api-reference-for-sharepoint.md#bk_myFeed)|Gets the feed of activity by the current user.|
+| [My/News](social-feed-rest-api-reference-for-sharepoint.md#bk_myNews)|Gets the feed of activity by the current user and by people and content the user is following.|
+| [My/TimelineFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_myTimelineFeed)|Gets the feed of activity by the current user and by people and content the user is following, sorted by created date.|
+| [My/Likes](social-feed-rest-api-reference-for-sharepoint.md#bk_myLikes)|Gets the feed of posts that the current user likes.|
+| [My/MentionFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_myMentionFeed)|Gets the feed of posts that mention the current user.|
+| [My/MentionFeed/ClearUnreadMentionCount](social-feed-rest-api-reference-for-sharepoint.md#bk_myMentionFeedClearUnreadMentionCount)|Gets the feed of posts that mention the current user and clears the unread mention count.|
+| [My/UnreadMentionCount](social-feed-rest-api-reference-for-sharepoint.md#bk_myUnreadMentionCount)|Gets the count of unread mentions for the current user.|
+| [Actor](social-feed-rest-api-reference-for-sharepoint.md#bk_actor)|Gets information about the specified user and the current user.|
+| [Actor/Feed](social-feed-rest-api-reference-for-sharepoint.md#bk_actorFeed)|Gets the feed of activity by the specified user.|
+| [Actor/Feed/Post](social-feed-rest-api-reference-for-sharepoint.md#bk_actorFeedPost)|Creates a root post in the specified site feed.|
+| [Post](social-feed-rest-api-reference-for-sharepoint.md#bk_post)|Gets a full thread that contains the specified post.|
+| [Post/Reply](social-feed-rest-api-reference-for-sharepoint.md#bk_postReply)|Posts a reply to the specified post.|
+| [Post/Delete](social-feed-rest-api-reference-for-sharepoint.md#bk_postDelete)|Deletes the specified post.|
+| [Post/Like](social-feed-rest-api-reference-for-sharepoint.md#bk_postLike)|Makes the current user a liker of the specified post.|
+| [Post/Unlike](social-feed-rest-api-reference-for-sharepoint.md#bk_postUnlike)|Removes the current user from the list of likers for the specified post.|
+| [Post/Likers](social-feed-rest-api-reference-for-sharepoint.md#bk_postLikers)|Gets the users who like the specified post.|
+| [Post/Lock](social-feed-rest-api-reference-for-sharepoint.md#bk_postLock)|Locks the specified thread.|
+| [Post/Unlock](social-feed-rest-api-reference-for-sharepoint.md#bk_postUnlock)|Unlocks the specified thread.|
    
-
-> **Note:**
->  The following feed-related REST resources use the same pattern as the other SharePoint REST APIs to construct the endpoint URI.>  For **CreateImageAttachment**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/CreateImageAttachment`>  For **GetPreview**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/GetPreview`>  For **SuppressThreadNotifications**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/SuppressThreadNotifications`
+> [!NOTE]
+> The following feed-related REST resources use the same pattern as the other SharePoint REST APIs to construct the endpoint URI.>  For **CreateImageAttachment**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/CreateImageAttachment`>  For **GetPreview**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/GetPreview`>  For **SuppressThreadNotifications**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/SuppressThreadNotifications`
   
     
     
@@ -84,7 +85,7 @@ None.
 
 ### Response
 
-Type:  [SP.Social.SocialRestActor](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestActor)
+Type:  [SP.Social.SocialRestActor](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestActor)
   
     
     
@@ -144,12 +145,9 @@ Creates a root post in the current user's feed.
   
     
     
-You can post only in the context of the current user. You cannot create a root post in a different user's feed, but you can reply to another user's post. See  [Post/Reply](social-feed-rest-api-reference-for-sharepoint#bk_postReply).
+You can post only in the context of the current user. You cannot create a root post in a different user's feed, but you can reply to another user's post. See  [Post/Reply](social-feed-rest-api-reference-for-sharepoint.md#bk_postReply).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Don't confuse this  `Post` resource with the `Post` resource that represents a specific thread or post.
   
     
@@ -169,7 +167,7 @@ You can post only in the context of the current user. You cannot create a root p
   
     
     
-Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestPostCreationData)
+Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestPostCreationData)
   
     
     
@@ -198,7 +196,7 @@ A **null** ID and the properties of the new post, as shown in the following exam
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -309,7 +307,7 @@ Gets the feed of activity by the current user ( **Personal** feed type).
   
     
     
-Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint#bk_SocialFeedOptions)
+Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions)
   
     
     
@@ -324,7 +322,7 @@ You can use an **@** alias to pass special characters. For example, `<siteUri>/_
 
 ### Response
 
-Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestFeed)
+Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed)
   
     
     
@@ -664,7 +662,7 @@ Gets the feed of activity by the current user and by people and content the user
   
     
     
-Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint#bk_SocialFeedOptions)
+Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions)
   
     
     
@@ -679,7 +677,7 @@ You can use an **@** alias to pass special characters. For example, `<siteUri>/_
 
 ### Response
 
-Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestFeed)
+Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed)
   
     
     
@@ -897,7 +895,7 @@ Gets the feed of activity by the current user and by people and content the user
   
     
     
-Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint#bk_SocialFeedOptions)
+Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions)
   
     
     
@@ -912,7 +910,7 @@ You can use an **@** alias to pass special characters. For example, `<siteUri>/_
 
 ### Response
 
-Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestFeed)
+Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed)
   
     
     
@@ -1066,7 +1064,7 @@ The following response example represents the current user's timeline feed, whic
 ## My/Likes
 <a name="bk_myLikes"> </a>
 
-Gets the feed of microblog posts that the current user likes, represented by **LikeReference** thread types. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds).
+Gets the feed of microblog posts that the current user likes, represented by **LikeReference** thread types. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -1088,7 +1086,7 @@ Gets the feed of microblog posts that the current user likes, represented by **L
   
     
     
-Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint#bk_SocialFeedOptions)
+Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions)
   
     
     
@@ -1103,7 +1101,7 @@ You can optionally specify retrieval options in the query string. You can use an
 
 ### Response
 
-Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestFeed)
+Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed)
   
     
     
@@ -1267,7 +1265,7 @@ The following response example represents a reference to a post that the current
 ## My/MentionFeed
 <a name="bk_myMentionFeed"> </a>
 
-Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds).
+Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -1289,7 +1287,7 @@ Gets the feed of microblog posts that mention the current user, represented by *
   
     
     
-Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint#bk_SocialFeedOptions)
+Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions)
   
     
     
@@ -1304,7 +1302,7 @@ You can use an **@** alias to pass special characters. For example, `<siteUri>/_
 
 ### Response
 
-Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestFeed)
+Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed)
   
     
     
@@ -1461,7 +1459,7 @@ The following response example represents one thread that mentions the current u
 ## My/MentionFeed/ClearUnreadMentionCount
 <a name="bk_myMentionFeedClearUnreadMentionCount"> </a>
 
-Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types, and sets the user's unread mention count to 0. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds).
+Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types, and sets the user's unread mention count to 0. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -1479,7 +1477,7 @@ Gets the feed of microblog posts that mention the current user, represented by *
   
     
     
-Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint#bk_SocialFeedOptions)
+Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions)
   
     
     
@@ -1500,7 +1498,7 @@ This parameter must be sent as an empty string in the **data** attribute of the 
 
 ### Response
 
-Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestFeed)
+Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed)
   
     
     
@@ -1704,10 +1702,7 @@ The following response example represents an unread mention count of 1.
 
 Gets information about the specified user and the current user.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The  `actor` endpoint sets the specified user or site feed as the context for any subsequent resource in the URI. For example, `http://contoso.com/_api/social.feed/actor(item='domain\\user')/feed` gets the personal feed for the specified user and `http://contoso.com/_api/social.feed/actor(item=@v)/feed?@v='http://<server>/<teamSite>/newsfeed.aspx'` gets the site feed for the specified team site.
   
     
@@ -1746,7 +1741,7 @@ You send the  _item_ parameter in the query string. You can use an **@** alias t
 
 ### Response
 
-Type:  [SP.Social.SocialRestActor](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestActor)
+Type:  [SP.Social.SocialRestActor](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestActor)
   
     
     
@@ -1850,7 +1845,7 @@ Gets the feed of activity by the specified user ( **Personal** feed type) or get
   
     
     
-Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint#bk_SocialFeedOptions)
+Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions)
   
     
     
@@ -1865,7 +1860,7 @@ You can use an **@** alias to pass special characters. For example, `<siteUri>/_
 
 ### Response
 
-Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestFeed)
+Type:  [SP.Social.SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed)
   
     
     
@@ -2059,12 +2054,9 @@ Creates a root post in the specified site feed.
   
     
     
-You can post only in the context of the current user. You cannot create a root post in a different user's feed, but you can reply to another user's post. See  [Post/Reply](social-feed-rest-api-reference-for-sharepoint#bk_postReply).
+You can post only in the context of the current user. You cannot create a root post in a different user's feed, but you can reply to another user's post. See  [Post/Reply](social-feed-rest-api-reference-for-sharepoint.md#bk_postReply).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Don't confuse this  `Post` resource with the `Post` resource that represents a specific thread or post.
   
     
@@ -2084,7 +2076,7 @@ You can post only in the context of the current user. You cannot create a root p
   
     
     
-Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestPostCreationData)
+Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestPostCreationData)
   
     
     
@@ -2113,7 +2105,7 @@ A **null** ID and the properties of the new post, as shown in the following exam
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -2256,7 +2248,7 @@ The unique identifier of the post, as shown in the following example.
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -2401,7 +2393,7 @@ Posts a reply to the specified post.
   
     
     
-Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestPostCreationData)
+Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestPostCreationData)
   
     
     
@@ -2430,7 +2422,7 @@ The ID of the post to reply to and the properties of the reply, as shown in the 
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -2626,7 +2618,7 @@ The ID of the post to like, as shown in the following example.
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -2774,7 +2766,7 @@ The ID of the post to stop liking, as shown in the following example.
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -3006,7 +2998,7 @@ The ID of the thread to lock, as shown in the following example.
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -3155,7 +3147,7 @@ The ID of the thread to unlock, as shown in the following example.
 
 ### Response
 
-Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint#bk_SocialRestThread)
+Type:  [SP.Social.SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread)
   
     
     
@@ -3275,10 +3267,7 @@ The following response example represents the unlocked thread. The **Attributes*
     
  **Example:** How to specify the _ID_ parameter in the request body (in the **data** attribute).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The values of thread and post **Id** properties are too long to send in a URL, so you have to send them in the request body. As a result, even read-only operations that are logically **GET** requests must be sent as **POST** requests. For example, to get a thread, you have to send a **POST** request and pass the thread **Id** as an entity in the request body.
   
     
@@ -3567,20 +3556,20 @@ The following properties belong to the **SocialThread** object.
 |TotalReplyCount|**Int32**|The count of the total number of replies for the thread.|
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   
--  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s)
+-  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
     
   
--  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
--  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint)
+-  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint.md)
     
   
 - To see the members in the **SP.Social** OData schema used by the SharePoint REST service, browse to `http://<siteUri>/_api/$metadata`.

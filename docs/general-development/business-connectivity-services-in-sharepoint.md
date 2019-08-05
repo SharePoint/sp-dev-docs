@@ -1,7 +1,9 @@
 ---
 title: Business Connectivity Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 64b7d032-4b83-4e9e-bc08-f0a161af5457
+localization_priority: Priority
 ---
 
 
@@ -54,7 +56,7 @@ Figure 1 shows the features that are included in SharePoint and Office 2013.
   
     
     
-![Business Connectivity Services feature set](../../images/BCSin2013FeatureSet.jpg)
+![Business Connectivity Services feature set](../images/BCSin2013FeatureSet.jpg)
   
     
     
@@ -78,7 +80,7 @@ For example, consider a business entity, such as a customer. You want to be able
   
     
     
-For more information about using external content types in BCS, see  [External content types in SharePoint](external-content-types-in-sharepoint).
+For more information about using external content types in BCS, see  [External content types in SharePoint](external-content-types-in-sharepoint.md).
   
     
     
@@ -94,7 +96,7 @@ BCS empowers business users to quickly and easily address a broad array of exter
   
     
     
-For information about how to get started, see  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint).
+For information about how to get started, see  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint.md).
   
     
     
@@ -106,7 +108,7 @@ The Open Data Protocol (OData) is a web protocol that lets you expose data to th
   
     
     
-For more information, see  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint).
+For more information, see  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md).
   
     
     
@@ -115,42 +117,42 @@ For more information, see  [Using OData sources with Business Connectivity Servi
 <a name="bkmk_inthissection"> </a>
 
 
--  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [External content types in SharePoint](external-content-types-in-sharepoint)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint)
+-  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [External events and alerts in SharePoint](external-events-and-alerts-in-sharepoint)
+-  [External events and alerts in SharePoint](external-events-and-alerts-in-sharepoint.md)
     
   
--  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint)
+-  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint.md)
     
   
--  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint)
+-  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
--  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint)
+-  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint.md)
     
   
--  [SharePoint development overview](sharepoint-development-overview)
+-  [SharePoint development overview](sharepoint-development-overview.md)
     
   
 

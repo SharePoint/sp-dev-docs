@@ -1,7 +1,9 @@
 ---
 title: Create hybrid connectivity apps for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 311f036e-3442-4497-b35e-442b665462d3
+localization_priority: Normal
 ---
 
 
@@ -80,8 +82,9 @@ To create an OData endpoint, you will need to follow these steps for creating a 
 
 1. Create an IIS website running at least Microsoft .NET Framework 4. Secure the site using basic authentication.
     
-    > **Note:**
-      > It's not necessary for SharePoint to be installed on this server. In fact, for the sake of simplicity and performance, it's better if SharePoint is not installed on the server that hosts the WCF data service. 
+    > [!NOTE]
+    > It's not necessary for SharePoint to be installed on this server. In fact, for the sake of simplicity and performance, it's better if SharePoint is not installed on the server that hosts the WCF data service. 
+
 2. Create a new project in Visual Studio 2012 using the **ASP.NET Empty Web Application** template.
     
   
@@ -181,7 +184,7 @@ To add a BDC model or external content type to your project, do the following.
 8. Modify the  `ODataServiceUrl` property with the URL that allows access through the reverse proxy.
     
   
-For information about how to add an OData-based external content type, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint).
+For information about how to add an OData-based external content type, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md).
   
     
     
@@ -204,22 +207,22 @@ For information about deploying SharePoint Add-ins, see the following:
 -  [Publish SharePoint Add-ins by using Visual Studio](http://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)
     
   
-You can also take the BDCM file created for the external content type and extract that to be used at any level above the app. This is demonstrated in  [How to: Convert an add-in-scoped external content type to tenant-scoped](how-to-convert-an-add-in-scoped-external-content-type-to-tenant-scoped).
+You can also take the BDCM file created for the external content type and extract that to be used at any level above the app. This is demonstrated in  [How to: Convert an add-in-scoped external content type to tenant-scoped](how-to-convert-an-add-in-scoped-external-content-type-to-tenant-scoped.md).
   
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
 -  [Hybrid for SharePoint](http://technet.microsoft.com/en-us/library/jj838715.aspx)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
 -  [Publish SharePoint Add-ins by using Visual Studio](http://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)

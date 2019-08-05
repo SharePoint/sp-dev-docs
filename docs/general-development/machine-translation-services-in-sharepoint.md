@@ -1,7 +1,9 @@
 ---
 title: Machine Translation Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 15a81428-da94-40b8-8ed4-6a12f05661e2
+localization_priority: Priority
 ---
 
 
@@ -10,8 +12,7 @@ Learn about the Machine Translation Service, which is a new service application 
 ## Machine Translation Service overview
 <a name="TranslationSvc_Overview"> </a>
 
-
-> **Note:**
+> [!NOTE]
 > Using machine translation will allow users to send content to Microsoft for translation. Microsoft may use content users send us to improve the quality of translations. If you use the Machine Translation Service in your application, you are responsible for informing users that this application will allow users to send content to Microsoft for translation and that Microsoft may use content users send us to improve the quality of translations. See Microsoft Translator Privacy for more information. 
   
     
@@ -66,11 +67,11 @@ Using the server object model, you can submit requests to the Machine Translatio
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
-For sample code demonstrating how to use the server object model from a console application, see  [SharePoint: Access Machine Translation Service using server object model](http://code.msdn.microsoft.com/SharePoint-Access-86639c3d ).
+For sample code demonstrating how to use the server object model from a console application, see  [SharePoint: Access Machine Translation Service using server object model](http://code.msdn.microsoft.com/SharePoint-2013-Access-86639c3d ).
   
     
     
@@ -270,11 +271,11 @@ For the .NET managed CSOM, get a **ClientContext** instance (located in the **Mi
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
-For sample code demonstrating how to use the .NET Managed CSOM, see  [SharePoint: Access Machine Translation Service using the client object model](http://code.msdn.microsoft.com/SharePoint-Perform-a-8e53b06a).
+For sample code demonstrating how to use the .NET Managed CSOM, see  [SharePoint: Access Machine Translation Service using the client object model](http://code.msdn.microsoft.com/SharePoint-2013-Perform-a-8e53b06a).
   
     
     
@@ -286,11 +287,11 @@ For the Silverlight CSOM, get a **ClientContext** instance (located in the **Mic
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
-For sample code demonstrating how to use the Silverlight CSOM, see  [SharePoint: Access Machine Translation Service from Silverlight application](http://code.msdn.microsoft.com/SharePoint-Access-cdaff6b2).
+For sample code demonstrating how to use the Silverlight CSOM, see  [SharePoint: Access Machine Translation Service from Silverlight application](http://code.msdn.microsoft.com/SharePoint-2013-Access-cdaff6b2).
   
     
     
@@ -488,11 +489,11 @@ For the JavaScript CSOM, get an **SP.ClientContext** instance, and then use the 
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
-For sample code demonstrating how to use the JavaScript CSOM, see  [SharePoint: Accessing the Machine Translation Service with JavaScript](http://code.msdn.microsoft.com/SharePoint-Accessing-647f6dd9).
+For sample code demonstrating how to use the JavaScript CSOM, see  [SharePoint: Accessing the Machine Translation Service with JavaScript](http://code.msdn.microsoft.com/SharePoint-2013-Accessing-647f6dd9).
   
     
     
@@ -797,11 +798,11 @@ SharePoint Machine Translation Service uses the paragraph language as the Source
     
   
 
-## Additional resources
+## See also
 <a name="TranslationSvc_AR"> </a>
 
 
--  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services)
+-  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services.md)
     
   
 

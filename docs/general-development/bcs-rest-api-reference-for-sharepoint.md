@@ -1,7 +1,9 @@
 ---
 title: BCS REST API reference for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 364fb8d7-87d9-4be7-affd-90caba3cd0c0
+localization_priority: Normal
 ---
 
 
@@ -11,7 +13,7 @@ ms.assetid: 364fb8d7-87d9-4be7-affd-90caba3cd0c0
   
     
     
-![Class libraries and references](../../images/mod_icon_badge_reference.png)
+![Class libraries and references](../images/mod_icon_badge_reference.png)
   
     
     
@@ -33,10 +35,7 @@ The REST interface provided by SharePoint enables you to access most SharePoint 
     
 You can access external data by constructing URLs just as you would to access standard list items.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Access to entities through the BDC directly is not provided. To work with external data, you must create an external list and use the REST URLs to access the list items contained in the external list. 
   
     
@@ -81,22 +80,21 @@ In order to limit the amount of data returned, or make it more relevant to the u
 
 |**Operator**|**Description**|
 |:-----|:-----|
-|EQ  <br/> |Equals  <br/> **Note:** When you use **EQ** to filter, the filter criteria are passed to the external system where the filtering happens on the server.          |
-|GT  <br/> |Greater Than  <br/> **Note:** When you use the **GT** operator, only client-side filtering is executed.> For example:  `web/lists/getByTitle('ListName')/Items?$select=Title&amp;$filter=AverageRating gt 3` returns all titles with an average rating over 3.          |
+|EQ  <br/> |Equals  <br/> **Note**: When you use **EQ** to filter, the filter criteria are passed to the external system where the filtering happens on the server.          |
+|GT  <br/> |Greater Than  <br/> **Note**: When you use the **GT** operator, only client-side filtering is executed.> For example:  `web/lists/getByTitle('ListName')/Items?$select=Title&amp;$filter=AverageRating gt 3` returns all titles with an average rating over 3.          |
    
-
-> **Note:**
+> [!NOTE]
 > To retrieve columns that are part of an association, you must explicitly include the column in the URL using **$select** in the query string.
   
     
     
 
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
 -  [Complete basic operations using SharePoint REST endpoints](http://msdn.microsoft.com/library/e3000415-50a0-426e-b304-b7de18f2f7d9%28Office.15%29.aspx)
@@ -105,10 +103,11 @@ In order to limit the amount of data returned, or make it more relevant to the u
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
     
   
--  [SharePoint: Perform basic data access operations by using REST in apps](http://code.msdn.microsoft.com/SharePoint-Perform-335d925b)
-    
+-  [SharePoint 2013: Perform basic data access operations by using REST in apps](https://code.msdn.microsoft.com/officeapps/sharepoint-2013-perform-335d925b)
   
--  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint)
+-  [Basic CRUD operations in SharePoint Add-ins using the REST/OData APIs](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
+  
+-  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
     
   
 -  [Complete basic operations using JavaScript library code in SharePoint](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)

@@ -1,16 +1,18 @@
 ---
 title: Overview of Design Manager in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 29834b3f-3815-4347-91d3-296387663114
+localization_priority: Priority
 ---
 
 
 # Overview of Design Manager in SharePoint
-Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
+Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. 
 ## Introduction to Design Manager
 <a name="Introduction"> </a>
 
-If you want your SharePoint site to represent your organization's brand and not "look like SharePoint," you can create a custom design and use Design Manager to achieve that goal. Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
+If you want your SharePoint site to represent your organization's brand and not "look like SharePoint," you can create a custom design and use Design Manager to achieve that goal. Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. 
   
     
     
@@ -27,7 +29,7 @@ At a high level, the designer will perform the following tasks:
     
     
 
-- Understand core SharePoint design concepts. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model).
+- Understand core SharePoint design concepts. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md).
     
   
 - Create a mock-up of the design in HTML and CSS. Creating the design is a core skill of a web designer, and is not covered in this article.
@@ -35,13 +37,7 @@ At a high level, the designer will perform the following tasks:
   
 - Implement the design by using Design Manager. Sections of this article provide an introduction to Design Manager and the process of using Design Manager to implement a visual design.
     
-  
-
-> **Note:**
-> The design elements that you can create for a public-facing website in SharePoint Online are different from the design elements for other publishing sites. Also, you cannot create design packages in the version of Design Manager that is available in the public-facing website in SharePoint Online. 
-  
-    
-    
+ 
 
 
 ## Use Design Manager to implement a design
@@ -116,7 +112,7 @@ After you map a network drive, you can upload your design to SharePoint simply b
   
     
     
-For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery).
+For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -150,10 +146,7 @@ The core feature of Design Manager is that it converts your HTML design into a S
     
 After the conversion, your HTML file and the SharePoint master page are associated, so that when you edit and save the HTML file in your mapped drive, the master page is updated automatically. In Design Manager, the HTML master page has a property named **Associated File** that determines whether changes to the HTML file are synced to the .master file.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Design Manager also provides an option to begin your design by using a minimal master page. In this scenario, you don't have to begin with an HTML design; instead, you can create an HTML master page that contains the minimum page elements necessary to render the master page correctly in SharePoint, and then build out your design by editing the HTML master page. 
   
     
@@ -173,7 +166,7 @@ When you preview a master page, you can use the **Change Preview Page** option i
 
 #### Add snippets
 
-After you convert your master page and successfully preview it, you are ready to add snippets to the master page. A snippet is an HTML representation of a SharePoint component—such as a navigation control or search box or Web Part—that you can add to your master page. Adding snippets to your master page is how you quickly build the full range of SharePoint functionality into your master page. Adding snippets is basically a three-step process:
+After you convert your master page and successfully preview it, you are ready to add snippets to the master page. A snippet is an HTML representation of a SharePoint component—such as a navigation control or search box or web part—that you can add to your master page. Adding snippets to your master page is how you quickly build the full range of SharePoint functionality into your master page. Adding snippets is basically a three-step process:
   
     
     
@@ -186,7 +179,7 @@ After you convert your master page and successfully preview it, you are ready to
   
 3. Preview and style snippets by using CSS.
     
-For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
+For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 
@@ -217,7 +210,7 @@ By default, most snippets inherit styles from the main SharePoint style sheet, c
 
 ### Edit display templates
 
-If you are using an on-premises installation of SharePoint Server, you can use the Content Search Web Part and other search-driven Web Parts to display the results of search queries as content on your pages. Search-driven Web Parts use display templates for two main purposes:
+If you are using an on-premises installation of SharePoint Server, you can use the Content Search web part and other search-driven web parts to display the results of search queries as content on your pages. Search-driven web parts use display templates for two main purposes:
   
     
     
@@ -266,20 +259,18 @@ When you design a page layout, your basic task is to position and style the page
   
     
     
-For more information, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint).
+For more information, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
   
     
     
 
 ### Create themes and composed looks
 
-In the public-facing website in Office 365, but not in on-premises SharePoint installations, Design Manager has the option of creating themes and composed looks. A theme is a set of fonts and colors that can be applied to a custom design (meaning a master page). Themes are defined in .xml files that you upload to the Themes gallery. If you want a custom master page to be theme-able, you need to add special markup to the master page that SharePoint recognizes and uses to insert theme elements such as fonts and colors.
+In the Office 365, but not in on-premises SharePoint installations, Design Manager has the option of creating themes and composed looks. A theme is a set of fonts and colors that can be applied to a custom design (meaning a master page). Themes are defined in .xml files that you upload to the Themes gallery. If you want a custom master page to be theme-able, you need to add special markup to the master page that SharePoint recognizes and uses to insert theme elements such as fonts and colors.
   
     
-    
-A composed look is just an association between a background image, a theme (meaning fonts and colors), and a design (meaning a master page). A composed look takes predefined design elements—themes, background images, and master pages—and enables them to be used in many different combinations, so that the public-facing website has many more customization options.
+A composed look is just an association between a background image, a theme (meaning fonts and colors), and a design (meaning a master page). A composed look takes predefined design elements—themes, background images, and master pages—and enables them to be used in many different combinations.
   
-    
     
 
 ### Publish and apply design
@@ -305,27 +296,20 @@ A design package is an easy way to collect all the files and assets used by your
     
 A design package is a .wsp file, a SharePoint solution file, which is basically a special type of .cab file. When you create or import a design package, the .wsp file is stored in the Solutions gallery. After you import a design package, the package is automatically activated. If the master pages and page layouts were published before they were packaged, and if the master pages were assigned to device channels before they were packaged, the design will be automatically applied to the site when the design package is deployed. Otherwise, to apply the design to the new site, you just have to publish the design files and apply the master pages per device channel.
   
-    
-    
-
-> **Note:**
-> Design packages are not available in the public-facing website in Office 365. To implement a fully custom design with Design Manager, you can invite a designer into your site by temporarily granting that person the Designer permission level. 
-  
-    
-    
 
 
-## Additional resources
+
+## See also
 <a name="Additional"> </a>
 
 
--  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
 

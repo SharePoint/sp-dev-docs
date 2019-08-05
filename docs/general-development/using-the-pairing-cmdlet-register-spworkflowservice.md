@@ -1,7 +1,9 @@
 ---
 title: Using the pairing cmdlet Register-SPWorkflowService
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 91fca6c2-60ca-4177-8560-2b310dac0e2c
+localization_priority: Normal
 ---
 
 
@@ -62,7 +64,7 @@ PS> Register-SPWorkflowService -SPSite "https://myserver/mysitecollection" -Work
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

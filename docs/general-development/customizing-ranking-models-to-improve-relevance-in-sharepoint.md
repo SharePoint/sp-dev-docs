@@ -1,13 +1,15 @@
 ---
 title: Customizing ranking models to improve relevance in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
+localization_priority: Priority
 ---
 
 
 # Customizing ranking models to improve relevance in SharePoint
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
-You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
+You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint.md) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
   
     
     
@@ -208,7 +210,7 @@ To retrieve the rank detail, you need to be the administrator of the Search serv
     
 
 ### To retrieve the rank detail
-
+<a name="sp15_list_available_ranking_models"> </a>
 
 1. Open the SharePoint Management Shell as an Administrator.
     
@@ -275,10 +277,7 @@ Rank features work like tuning dials for a ranking model. The following sections
 
 The BM25 rank feature ranks items based on the appearance of query terms in the full-text index. The input to BM25 can be any of the managed properties in the full-text index.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The BM25 rank feature used in this context is the fielded version, BM25F. 
   
     
@@ -292,7 +291,7 @@ The BM25 rank feature calculates the relevance rank score using the following fo
   
     
     
-![BM25 formula for the BM25 rank feature](../../images/sp15_BM25_formula.gif)
+![BM25 formula for the BM25 rank feature](../images/sp15_BM25_formula.gif)
   
     
     
@@ -433,7 +432,7 @@ Weight groups are also known as context. See  [Influencing the ranking of search
 
 ### Static
 
-The static rank feature ranks items based on numeric managed properties that are stored in the search index. The numeric managed properties used for relevance rank calculation in static rank features must be of type  [Integer](https://msdn.microsoft.com/library/System.Integer.aspx) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the static rank feature.
+The static rank feature ranks items based on numeric managed properties that are stored in the search index. The numeric managed properties used for relevance rank calculation in static rank features must be of type  [Integer](https://docs.microsoft.com/en-us/dotnet/api/system.int32) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the static rank feature.
   
     
     
@@ -446,7 +445,7 @@ Before the static rank feature can be aggregated with other rank features, each 
 
     
     
-![Transform functions supported for rank features](../../images/sp15_transform_table_ranking_model.gif)
+![Transform functions supported for rank features](../images/sp15_transform_table_ranking_model.gif)
   
     
     
@@ -491,7 +490,7 @@ The bucketed static rank feature ranks documents based on their file type and la
   
     
     
-The managed properties used for relevance rank calculation in bucketed static rank features must be of type  [Integer](https://msdn.microsoft.com/library/System.Integer.aspx) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the bucketed static rank feature.
+The managed properties used for relevance rank calculation in bucketed static rank features must be of type  [Integer](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the bucketed static rank feature.
   
     
     
@@ -647,10 +646,7 @@ You must map the managed properties used in proximity rank features to the defau
 
 The dynamic rank feature ranks an item depending on whether the query property matches a given managed property. If there is a match, the item's rank score is multiplied with a specific value to distinguish that particular item. The weight attribute is used to control how much this feature affects the overall rank score.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The dynamic rank feature is not customizable; it's for internal use only. However, if you install the SharePoint cumulative update of August 2013, the AnchortextComplete rank feature is a customizable dynamic rank feature that is part of the default ranking model. 
   
     
@@ -688,7 +684,7 @@ The freshness transform is based on the following formula:
   
     
     
-![Freshness formula for ranking models](../../images/sp15_freshness_formula.gif)
+![Freshness formula for ranking models](../images/sp15_freshness_formula.gif)
   
     
     
@@ -774,10 +770,7 @@ When the ranking process in the first stage is complete, the search engine re-so
     
 However, to ensure that the search engine re-sorts the items accurately, items from the second stage must have a higher rank score than items from the first stage. To solve this dilemma, the rank scores of the second stage are boosted. The search engine performs this calculation automatically, based on a combination of rank features.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > If you install the SharePoint cumulative update of August 2013, the default ranking model uses a linear first stage and a neural network second stage. **The Search Ranking Model with Two Linear Stages** is a copy of the **Default Search Model** with two linear stages. We recommend using this model as the base model for your custom ranking model because it is easier to tune a linear model than a model containing a neural network.
   
     
@@ -798,7 +791,7 @@ The rank score provided by linear models is computed using the following formula
   
     
     
-![Linear model formula for ranking models](../../images/sp15_linear_model_formula.gif)
+![Linear model formula for ranking models](../images/sp15_linear_model_formula.gif)
   
     
     
@@ -845,7 +838,7 @@ The ranking score produced by a neural network is computed using the following f
   
     
     
-![Neural network formula for ranking models](../../images/sp15_neural_network_formula.gif)
+![Neural network formula for ranking models](../images/sp15_neural_network_formula.gif)
   
     
     
@@ -900,7 +893,7 @@ The overall schema of rank score computation with a two-layer neural network is 
   
     
     
-![Neural network in ranking models](../../images/sp15neuralnetworkinrankingmodels.gif)
+![Neural network in ranking models](../images/sp15neuralnetworkinrankingmodels.gif)
   
     
     
@@ -952,7 +945,7 @@ Query properties is a ranking mechanism that populates additional information us
 ## Example 1: Basic ranking model with one linear stage containing a single static rank feature
 <a name="sp15_example_1_ranking"> </a>
 
-This ranking model assumes that the customer has created a managed property named **CustomRating**. The static rank feature requires **CustomRating** to be of [Integer](https://msdn.microsoft.com/library/System.Integer.aspx) data type and to be configured as [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) or [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) in the search schema. For each document in the result set, the rank score produced by this ranking model is equal to the value of **CustomRating** for that document. The effect of this model is similar to sorting all search results, descending, with the **CustomRating** managed property.
+This ranking model assumes that the customer has created a managed property named **CustomRating**. The static rank feature requires **CustomRating** to be of [Integer](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int) data type and to be configured as [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) or [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) in the search schema. For each document in the result set, the rank score produced by this ranking model is equal to the value of **CustomRating** for that document. The effect of this model is similar to sorting all search results, descending, with the **CustomRating** managed property.
   
     
     
@@ -1005,8 +998,8 @@ This ranking model with one linear stage contains these four rank features:
   
 -  `InternalFileType` This rank feature boosts documents of type HTML, DOC, XLS, or PPT. The names of the buckets in the definition of the rank model are provided for readability only.
     
-    > **Note:**
-      > The  `InternalFileType` managed property, available by default, uses the value zero ( `0`) to encode HTML documents, value  `1` for DOC, value `2` for XLS and so on. See the definition of the Default SharePoint rank model for a list of all file types used for the **FileType** managed property.
+    > [!NOTE]
+    > The  `InternalFileType` managed property, available by default, uses the value zero ( `0`) to encode HTML documents, value  `1` for DOC, value `2` for XLS and so on. See the definition of the Default SharePoint rank model for a list of all file types used for the **FileType** managed property.
 
 ```xml
 
@@ -1076,23 +1069,23 @@ This ranking model with one linear stage contains these four rank features:
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference)
+-  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
     
   
--  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference)
+-  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
 -  [Overview of search result ranking in SharePoint](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
     
   
--  [Create a custom ranking model by using the Ranking Model Tuning App](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/create-a-custom-ranking-model-by-using-the-ranking-model-tuning-app-HA104104860.aspx?CTT=1)
+-  [Create a custom ranking model by using the Ranking Model Tuning App](https://docs.microsoft.com/sharepoint/search/create-custom-ranking-model)
     
   
 

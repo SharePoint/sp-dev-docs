@@ -1,7 +1,9 @@
 ---
 title: Supported and Unsupported Features
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 6e4acad6-7665-493c-94cc-d38684b2842f
+localization_priority: Priority
 ---
 
 
@@ -15,11 +17,7 @@ ms.assetid: 6e4acad6-7665-493c-94cc-d38684b2842f
 Microsoft Excel is feature-rich. With every release, the functionality gap between Excel and Excel Services gets narrower, and the number of unsupported features is reduced. But is not possible to support every Excel feature in the second version of Excel Services, in Microsoft SharePoint Server 2010. 
 When deciding which feature to support, priorities are given to features that are needed in key Excel Services scenarios, and to ensuring that Excel Services is a server-grade service that meets customers' expectations for reliability, scalability, and security.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > This topic assumes that you are familiar with what is supported and unsupported in Microsoft Office SharePoint Server 2007. You can find more information about the unsupported features in Office SharePoint Server 2007 in  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx). 
   
     
@@ -40,13 +38,13 @@ Most of the new features in Microsoft Excel 2010 work in some way in Excel Servi
 - Sparklines
     
   
--  [Icon set](http://blogs.msdn.com/excel/archive/2009/08/05/icon-set-improvements-in-excel-2010.aspx) and [data bar improvements](http://blogs.msdn.com/excel/archive/2009/08/07/data-bar-improvements-in-excel-2010.aspx)
+-  [Icon set](https://www.microsoft.com/en-us/microsoft-365/blog/2009/08/06/icon-set-improvements-in-excel-2010/) and [data bar improvements](https://www.microsoft.com/en-us/microsoft-365/blog/2009/08/07/data-bar-improvements-in-excel-2010/)
     
   
--  [PivotTable named sets](http://blogs.msdn.com/excel/archive/2009/10/05/pivottable-named-sets-in-excel-2010.aspx)
+-  [PivotTable named sets](https://www.microsoft.com/en-us/microsoft-365/blog/2009/10/05/pivottable-named-sets-in-excel-2010/)
     
   
--  [PivotTable improvements](http://blogs.msdn.com/excel/archive/2009/10/15/a-few-more-pivottable-improvements-in-excel-2010.aspx)
+-  [PivotTable improvements](https://www.microsoft.com/en-us/microsoft-365/blog/2009/10/15/a-few-more-pivottable-improvements-in-excel-2010/)
     
   
  **Following are new features that can be viewed and interacted with:**
@@ -134,17 +132,13 @@ In the following figure, clicking **Learn more about unsupported features** prov
   
     
     
-![Unsupported feature error message for VBA](../../images/aebc97ae-c886-4d50-94ff-238049a259c7.gif)
+![Unsupported feature error message for VBA](../images/aebc97ae-c886-4d50-94ff-238049a259c7.gif)
   
     
     
 Cropped images are not displayed (that is, missing features). 
   
-    
-    
-
-    
-> **Note:**
+> [!NOTE]
 > For workbooks that contain ignored or missing unsupported features that loaded in view mode with a notification bar, attempting to save a copy of the workbook involves removing the unsupported features. A dialog box alerts the user of this. 
   
     
@@ -155,18 +149,11 @@ Cropped images are not displayed (that is, missing features).
 
 All other unsupported features continue to behave as they do in Office SharePoint Server 2007 for Excel Services. That is, Excel Services blocks loading of a file if it detects the existence of one or more of these unsupported features. Users are informed that the file cannot be loaded, as shown in the following screen shot. 
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx) topic contains more details about these unsupported features.
   
-    
-    
-
-
-> **Caution:**
-> The information bar with the list of unsupported features is not displayed if the file is loaded from a Web Part. 
+> [!WARNING]
+> The information bar with the list of unsupported features is not displayed if the file is loaded from a web part. 
   
     
     
@@ -181,7 +168,7 @@ All other unsupported features continue to behave as they do in Office SharePoin
   
     
     
-![Unsupported feature error message for XML maps](../../images/7745688c-c612-4a38-b8aa-b5fdb5e4eeb8.gif)
+![Unsupported feature error message for XML maps](../images/7745688c-c612-4a38-b8aa-b5fdb5e4eeb8.gif)
   
     
     
@@ -199,19 +186,21 @@ Unlike workbooks with external links, charts with external links are blocked fro
   
     
     
- [Excel Services Overview](excel-services-overview)
+ [Excel Services Overview](excel-services-overview.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+
+

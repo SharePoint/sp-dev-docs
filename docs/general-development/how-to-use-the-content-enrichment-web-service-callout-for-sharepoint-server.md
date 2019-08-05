@@ -1,25 +1,24 @@
 ---
-title: How to Use the Content Enrichment web service callout for SharePoint Server
-ms.prod: SHAREPOINT
+title: Use the Content Enrichment web service callout for SharePoint Server
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d4e44498-9a3d-4f2f-b5ba-6ebef9971dcb
+localization_priority: Normal
 ---
 
 
-# How to: Use the Content Enrichment web service callout for SharePoint Server
+# Use the Content Enrichment web service callout for SharePoint Server
+
 Learn how to implement the Content Enrichment web service in SharePoint to modify the managed properties of crawled items before they are indexed.
+
 Search in SharePoint enables developers to add a custom step to content processing to modify the managed properties of crawled items before they are indexed. This custom step requires the implementation of an external web service--the Content Enrichment web service--that can enrich managed properties of items being processed; and then configuring the system to call this external web service.
-  
-    
-    
 
 Implementation of the external content enrichment web service relies on interfaces under the  [Microsoft.Office.Server.Search.ContentProcessingEnrichment](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.ContentProcessingEnrichment.aspx) namespace.
+
 ## Windows PowerShell Cmdlets to use with the Content Enrichment web service
 <a name="SP15_PowerShell_Cmdlets_Content_Enrichment"> </a>
 
 The Content Enrichment functionality is configured and enabled with the following Windows PowerShell cmdlets:
-  
-    
-    
 
 -  [Get-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219783%28office.15%29.aspx)
     
@@ -56,7 +55,7 @@ These Windows PowerShell cmdlets enable an administrator to configure the follow
 - A **SendRawData** switch that sends the raw data of an item in binary form. This is useful when more metadata is required than what can be retrieved from the parsed version of the item.
     
   
-In addition, there are options for specifying size limits and timeouts. See  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout) for a full list of configurable properties.
+In addition, there are options for specifying size limits and timeouts. See  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md) for a full list of configurable properties.
   
     
     
@@ -118,8 +117,8 @@ In this step, you will create the service implementation project and then add th
   
 2. Choose **Browse** and locate the **Microsoft.Office.Server.Search.ContentProcessingEnrichment** assembly in your SharePoint installation folder under _Installation Path_\\Microsoft Office Servers\\15.0\\Search\\Applications\\External. 
     
-    > **Note:**
-      > If SharePoint is installed on a machine other than your development machine, copy the assembly over to your development machine and reference it from there. 
+    > [!NOTE]
+    > If SharePoint is installed on a machine other than your development machine, copy the assembly over to your development machine and reference it from there. 
 
 ## Create a content enrichment service
 <a name="SP15ContentEnrich_createservice"> </a>
@@ -134,7 +133,8 @@ The implementation requires two managed properties for each item received via th
     
 The **IContentProcessingEnrichmentService** implementation writes the raw binary data to a temporary location on disk, with **Filename** as the name of the file. Then, a new name is added to the list of authors and returned to the content processing component.
   
-    
+    > [!NOTE]
+    > If the data source for the crawl is an external data source, the ItemRawData property will not have a data stream, but will be null. The string representation of the raw data will be returned in the Item.Body property. This is a limitation of the BCS data source crawler. 
     
 
 ### To create the class file for the content enrichment service
@@ -334,17 +334,17 @@ Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15ContentEnrich_addresources"> </a>
 
 
 -  [Start, pause, resume, or stop a crawl](http://technet.microsoft.com/en-us/library/jj219814%28office.15%29.aspx)
     
   
--  [Configure search in SharePoint](configure-search-in-sharepoint)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
     
   
 

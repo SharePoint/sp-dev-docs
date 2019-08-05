@@ -1,7 +1,9 @@
 ---
 title: Creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c05e0127-c6f5-48b8-b8f2-cbcc30149c8b
+localization_priority: Priority
 ---
 
 
@@ -20,7 +22,7 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
 ### To install SharePoint Designer 2013
 
 
-1. Open your web browser and navigate to the Microsoft Download Center:  [http://www.microsoft.com/download](http://www.microsoft.com/download.aspx). 
+1. Open your web browser and navigate to the Microsoft Download Center:  [http://www.microsoft.com/download](http://www.microsoft.com/download). 
     
   
 2. Type SharePoint Designer 2013 in the search field.
@@ -48,7 +50,7 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
   
     
     
-![The SharePoint Designer 2013 Download page.](../../images/SPD15-install-connect-1.png)
+![The SharePoint Designer 2013 Download page.](../images/SPD15-install-connect-1.png)
   
     
     
@@ -68,7 +70,7 @@ SharePoint Designer 2013 installs as an Office 2013 application. To open SharePo
   
     
     
-
+2013
 ### To open SharePoint Designer 2013 and connect to a SharePoint site
 
 
@@ -108,10 +110,11 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
 3. Select the list that you want to associate with the new workflow.
     
   
-4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint Workflow**, as shown in the figure.
+4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint 2013 Workflow**, as shown in the figure.
     
-    > **Note:**
-      > If you do not see SharePoint Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint farm. 
+    > [!NOTE]
+    > If you do not see SharePoint Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint farm. See [Configure Workflow Manager to work with the SharePoint Server 2013 Farm](https://technet.microsoft.com/library/jj658588.aspx#section5). 
+
 5. Click **OK** to create the workflow.
     
   
@@ -125,7 +128,7 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
   
     
     
-![SharePoint Designer 2013 - New List Workflow](../../images/SPD15-install-connect-2.png)
+![SharePoint Designer 2013 - New List Workflow](../images/SPD15-install-connect-2.png)
   
     
     
@@ -147,7 +150,7 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
   
     
     
-![Workflow Creation Dialog](../../images/SPD15-install-connect-3.png)
+![Workflow Creation Dialog](../images/SPD15-install-connect-3.png)
   
     
     
@@ -173,24 +176,20 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
   
     
     
-![Workflow items in the ribbon.](../../images/SPD15-install-connect-4.png)
+![Workflow items in the ribbon.](../images/SPD15-install-connect-4.png)
+  
+> [!NOTE]
+> The previous procedure is used to create a List workflow. A Reusable workflow or Site workflow can be created using the same procedure with the following modification. Instead of selecting the List Workflow button in the ribbon select the **Reusable Workflow** or **Site Workflow** button when creating the workflow.
   
     
     
 
-    
-> **Note:**
-> The above procedure is used to create a List workflow. A Reusable workflow or Site workflow can be created using the same procedure with the following modification. Instead of selecting the List Workflow button in the ribbon select the **Reusable Workflow** or **Site Workflow** button when creating the workflow.
+To learn more about the available components of workflow development, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md).
   
     
     
 
-To learn more about the available components of workflow development, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform).
-  
-    
-    
-
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
@@ -200,7 +199,7 @@ To learn more about the available components of workflow development, see  [Work
 -  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
 

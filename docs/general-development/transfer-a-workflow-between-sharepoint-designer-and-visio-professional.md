@@ -1,7 +1,9 @@
 ---
 title: Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: dbe6f019-b4f2-480f-a8e7-bcb8842ab924
+localization_priority: Normal
 ---
 
 
@@ -18,7 +20,7 @@ Business analysts and process analysts who are already familiar with flowchartin
   
     
     
-![Translate business logic to workflow rules](../../images/spd15-wf-importFromVisio.png)
+![Translate business logic to workflow rules](../images/spd15-wf-importFromVisio.png)
   
     
     
@@ -63,7 +65,7 @@ You can visualize workflows in SharePoint Designer in two ways:
   
     
     
-![Workflow diagrams can be exported to Visio](../../images/spd15-wf-exportToVisio.png)
+![Workflow diagrams can be exported to Visio](../images/spd15-wf-exportToVisio.png)
   
     
     
@@ -89,7 +91,7 @@ To import a SharePoint workflow, do the following:
   
 2. On the **Workflows** tab, in the **Manage** group, click **Import from Visio**.
     
-  ![Import workflow](../../images/spd15-ImportFromVisio.JPG)
+  ![Import workflow](../images/spd15-ImportFromVisio.JPG)
   
 
   
@@ -117,7 +119,7 @@ The imported workflow appears in the SharePoint Designer full-screen workflow ed
   
     
     
-![Imported workflow](../../images/spd15-wf-PO.JPG)
+![Imported workflow](../images/spd15-wf-PO.JPG)
   
     
     
@@ -131,10 +133,7 @@ After the workflow is imported to SharePoint Designer, it is editable and can be
 
 Once you have created or edited a workflow in SharePoint Designer 2013, you can export the workflow as a Visio drawing that can be opened in Visio Professional 2013. The ability to export a workflow back to Visio after it has been edited in SharePoint Designer—also known as "round-tripping"—enables deeper collaboration between business users and workflow designers. When you iterate the workflow design in this way, you can use Visio to define the business requirements and then use round-tripping to coordinate and approve changes.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > Visio Professional 2013 does not support steps. Step information that has been added in SharePoint Designer may be lost when the workflow is viewed in Visio and then re-imported into SharePoint Designer. 
   
     
@@ -155,17 +154,17 @@ To export a workflow, do the following:
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
     
   
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
 

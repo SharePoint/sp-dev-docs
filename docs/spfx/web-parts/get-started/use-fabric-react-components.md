@@ -1,235 +1,208 @@
+---
+title: Use Office UI Fabric React components in your SharePoint client-side web part
+description: Build a simple web part that uses the DocumentCard component of Office UI Fabric React.
+ms.date: 11/08/2018
+ms.prod: sharepoint
+localization_priority: Priority
+---
+
 # Use Office UI Fabric React components in your SharePoint client-side web part
 
-> **Important:** You must upgrade existing projects to use @microsoft/sp-build-web@1.0.1 or later to use Office UI Fabric React. Easiest way to achieve this is to ensure that you have latest package by running `npm install -g @microsoft/generator-sharepoint` in your console before completing this tutorial. 
+Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. It includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences by using the Office Design Language. 
+- [Fabric website](https://developer.microsoft.com/fabric#/controls/web) - detailed API documentation along with implementation code examples for each control.
+- [API reference](https://docs.microsoft.com/javascript/api/office-ui-fabric-react?branch=live&view=office-ui-fabric-react-latest) - detailed API reference documentation.
+- [Office UI Fabric React](https://github.com/OfficeDev/office-ui-fabric-react) - source code repository on github.
 
-This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric React](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences using the Office Design Language.
+This article describes how to build a simple web part like in the following image, that uses the DocumentCard component of Office UI Fabric React.
 
-The following image shows a DocumentCard component created with Office UI Fabric React.
+![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 
-![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+> [!Video https://www.youtube.com/embed/RnXD10a-2ww]
 
-<a href="https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial6.png" alt="Screenshot of the YouTube video player for this tutorial" />
-</a>
+## Create a new web part project
 
+1. Create a new project directory in your favorite location:
 
-## Creating a new Web Part project
+    ```shell
+    md documentcardexample-webpart
+    ```
 
-Make sure you're using the latest version of . Run `yo` and follow the prompts to create a skeleton project,.
+1. Go to the project directory:
 
-Create a new project directory in your favorite location:
+    ```shell
+    cd documentcardexample-webpart
+    ```
 
-```
-md documentcardexample-webpart
-```
-    
-Go to the project directory:
+1. Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new web part by running the Yeoman SharePoint generator:
 
-```
-cd documentcardexample-webpart
-```
+    ```shell
+    yo @microsoft/sharepoint
+    ```
 
-Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new web part by running the Yeoman SharePoint generator:
+1. When prompted:
 
-```
-yo @microsoft/sharepoint
-```
-    
-When prompted:
+    - Accept the default **documentcardexample-webpart** as your solution name, and select Enter.
+    - Select **SharePoint Online only (latest)**, and select <kbd>ENTER</kbd>.
+    - Select **Use the current folder** for where to place the files.
+    - Select **Y** to require the extension to be installed on each site explicitly when it's being used.
+    - Select **N** on the question if solution contains unique permissions.cd
+    - Select **WebPart** as the client-side component type to be created.
 
-* Accept the default **documentcardexample-webpart** as your solution name and choose **Enter**.
-* Select **WebPart** as the type of the client-side component and choose **Enter**
-* Use **DocumentCardExample** for your web part name and choose **Enter**.
-* Accept the default **DocumentCardExample description** and choose **Enter**.
-* Select **React** as the framework and choose **Enter**.
+1. The next set of prompts ask for specific information about your web part:
 
-At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your DocumentCardExample web part as well.
-	
-When the scaffold is complete, in the console, type the following to open the web part project in Visual Studio Code:
+    - Use **DocumentCardExample** for your web part name, and select <kbd>ENTER</kbd>.
+    - Accept the default **DocumentCardExample description**, and select <kbd>ENTER</kbd>.
+    - Select **React** as the framework, and select <kbd>ENTER</kbd>.
 
-```
-code .
-```
-	
-You now have a web part project with the React framework.
+    At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your DocumentCardExample web part as well.
 
-Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
+    Starting from 1.8.2 version, Yeoman will automatically associate the recommended `@microsoft/sp-office-ui-fabric-core` package version to your solution when you select the **React** as the framework.
 
-As you can see, the `render` method creates a react element and renders it in the web part DOM.
+    > [!NOTE]
+    > Starting with SharePoint Framework 1.8, you can use either Office UI Fabric React v5 or v6. In this case we are using specifically Office UI Fabric React version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric React v6.x, you'd also need to update the used TypeScript version of the solution. To use Office UI Fabric React v6, you need to be on at least rush-stack-compiler-2.9. The default project created with SPFx v1.8.2 for SharePoint Online will use rush-stack-compiler-2.9 and Office UI Fabric React v6 (*it won't need the step to add office-ui-fabric-react to your package.json file*). Previous versions use either rush-stack-compiler-2.7 or a build system that is locked to TypeScript 2.4. In those cases, you'll need to reference Office UI FabricReact v5.132.0. If you are targeting SharePoint Server 2016 / SharePoint Server 2019 on-prem, you will also want to use Office UI Fabric React v5.132.0.
 
-```ts
-  public render(): void {
-    const element: React.ReactElement<IDocumentCardExampleProps > = React.createElement(
-      DocumentCardExample,
-      {
-        description: this.properties.description
-      }
-    );
-```
-	
-Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
-	
-This is the main react component that Yeoman added to your project that renders in the web part DOM.
+1. Next, execute the following command to open the web part project in Visual Studio Code:
 
-```ts
-export default class DocumentCardExample extends React.Component<IDocumentCardExampleProps, void> {
-  public render(): React.ReactElement<IDocumentCardExampleProps> {
-    return (
-      <div className={styles.helloWorld}>
-        <div className={styles.container}>
-          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
-            <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
-              <p className="ms-font-l ms-fontColor-white">{escape(this.props.description)}</p>
-              <a href="https://aka.ms/spfx" className={styles.button}>
-                <span className={styles.label}>Learn more</span>
-              </a>
+    ```shell
+    code .
+    ```
+
+    You now have a web part project with the React web framework.
+  
+1. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder.
+
+    As you can see, the `render` method creates a react element and renders it in the web part DOM.
+
+    ```typescript
+    public render(): void {
+      const element: React.ReactElement<IDocumentCardExampleProps > = React.createElement(
+        DocumentCardExample,
+        {
+          description: this.properties.description
+        }
+      );
+
+      ReactDom.render(element, this.domElement);
+    }
+    ```
+
+1. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder.
+
+    This is the main react component that Yeoman added to your project that renders in the web part DOM.
+
+    ```tsx
+    export default class DocumentCardExample extends React.Component<IDocumentCardExampleProps, {}> {
+      public render(): React.ReactElement<IDocumentCardExampleProps> {
+        return (
+          <div className={ styles.documentCardExample }>
+            <div className={ styles.container }>
+              <div className={ styles.row }>
+                <div className={ styles.column }>
+                  <span className={ styles.title }>Welcome to SharePoint!</span>
+                  <p className={ styles.subTitle }>Customize SharePoint experiences using web parts.</p>
+                  <p className={ styles.description }>{escape(this.props.description)}</p>
+                  <a href="https://aka.ms/spfx" className={ styles.button }>
+                    <span className={ styles.label }>Learn more</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
-```
+        );
+      }
+    }
+    ```
 
-### Add an Office UI Fabric component
+## Add an Office UI Fabric component
 
-The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fabric React as the default front-end framework for building the new experiences. As a result, SharePoint Framework ships with a default version of Office UI Fabric and Fabric React which matches the version available in SharePoint. This ensures the web part you are building uses the right version of the Fabric styles and components when deployed to SharePoint. 
+The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fabric React as the default front-end framework for building the new experiences. As a result, SharePoint Framework ships with a default version of Office UI Fabric and Fabric React that matches the version available in SharePoint. This ensures that the web part you are building uses the right version of the Fabric styles and components when deployed to SharePoint.
 
-Since we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work. 
+Because we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work.
 
->**Note:** With the initial release of the SharePoint Framework, it is recommended to use the Office UI Fabric and Fabric React that ships with the generator. It is not recommended to update the Office UI Fabric and Fabric React packages independently as it might conflict with the already available version in SharePoint and as a result your web part may fail to function as expected.
+### To add an Office UI Fabric component
 
-Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
+1. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
 
-Add the following `import` statement to to the top of the file to import fabric react components that we want to use.
+1. Add the following `import` statement to the top of the file to import Fabric React components that we want to use.
 
-```ts
-import {
-	DocumentCard,
-	DocumentCardPreview,
-	DocumentCardTitle,
-	DocumentCardActivity,
-	IDocumentCardPreviewProps
-} from 'office-ui-fabric-react/lib/DocumentCard';
-```
+    ```typescript
+    import {
+      DocumentCard,
+      DocumentCardPreview,
+      DocumentCardTitle,
+      DocumentCardActivity,
+      IDocumentCardPreviewProps
+    } from 'office-ui-fabric-react/lib/DocumentCard';
+    ```
 
-Delete the current `render` method and add the following updated `render` method:
+1. Replace the existing `render` method with the following:
 
-```ts
-  public render(): JSX.Element {
-    const previewProps: IDocumentCardPreviewProps = {
-      previewImages: [
-        {
-          previewImageSrc: String(require('./document-preview.png')),
-          iconSrc: String(require('./icon-ppt.png')),
-          width: 318,
-          height: 196,
-          accentColor: '#ce4b1f'
-        }
-      ],
-    };
-
-    return (
-      <DocumentCard onClickHref='http://bing.com'>
-        <DocumentCardPreview { ...previewProps } />
-        <DocumentCardTitle title='Revenue stream proposal fiscal year 2016 version02.pptx' />
-        <DocumentCardActivity
-          activity='Created Feb 23, 2016'
-          people={
-            [
-              { name: 'Kat Larrson', profileImageSrc: String(require('./avatar-kat.png')) }
-            ]
+    ```typescript
+    public render(): JSX.Element {
+      const previewProps: IDocumentCardPreviewProps = {
+        previewImages: [
+          {
+            previewImageSrc: String(require('./document-preview.png')),
+            iconSrc: String(require('./icon-ppt.png')),
+            width: 318,
+            height: 196,
+            accentColor: '#ce4b1f'
           }
-        />
-      </DocumentCard>
-    );
-  }
-```
-Save the file.
+        ],
+      };
 
-In this code, the DocumentCard component includes some extra sections:
-
-* DocumentCardPreview
-* DocumentCardTitle
-* DocumentCardActivity
-
-The `previewProps` property includes some properties of the DocumentCardPreview.
-
-Notice the use of relative path with a `require` statement to load images. Currently, you need to perform small configuration in the gulpfile.js to enable these images to get processed properly by webpack.
-	
-Open **gulpfile.js** from the **root** folder. 
-	
-Add the following code just above the `build.initialize(gulp);` code line.
-	
-```js
-build.configureWebpack.mergeConfig({  
-    additionalConfiguration: (generatedConfiguration) => {
-        if (build.getConfig().production) {
-            var basePath = build.writeManifests.taskConfig.cdnBasePath;
-            if (!basePath.endsWith('/')) {
-                basePath += '/';
+      return (
+        <DocumentCard onClickHref='http://bing.com'>
+          <DocumentCardPreview { ...previewProps } />
+          <DocumentCardTitle title='Revenue stream proposal fiscal year 2016 version02.pptx' />
+          <DocumentCardActivity
+            activity='Created Feb 23, 2016'
+            people={
+              [
+                { name: 'Kat Larrson', profileImageSrc: String(require('./avatar-kat.png')) }
+              ]
             }
-            generatedConfiguration.output.publicPath = basePath;
-        }
-        else {
-            generatedConfiguration.output.publicPath = "/dist/";
-        }
-        return generatedConfiguration;
+          />
+        </DocumentCard>
+      );
     }
-});
-```
-	
-Save the file.
+    ```
 
-Your full **gulpfile.js** file should look as follows.
+1. Save the file.
 
-```js
-'use strict';
+    In this code, the `DocumentCard` component includes some extra sections:
 
-const gulp = require('gulp');
-const build = require('@microsoft/sp-build-web');
+    - DocumentCardPreview
+    - DocumentCardTitle
+    - DocumentCardActivity
 
-build.configureWebpack.mergeConfig({  
-    additionalConfiguration: (generatedConfiguration) => {
-        if (build.getConfig().production) {
-            var basePath = build.writeManifests.taskConfig.cdnBasePath;
-            if (!basePath.endsWith('/')) {
-                basePath += '/';
-            }
-            generatedConfiguration.output.publicPath = basePath;
-        }
-        else {
-            generatedConfiguration.output.publicPath = "/dist/";
-        }
-        return generatedConfiguration;
-    }
-});
+    The `previewProps` property includes some properties of the DocumentCardPreview.
 
-build.initialize(gulp);
-
-```
-
-### Copy the image assets
+## Copy the image assets
 
 Copy the following images to your **src\webparts\documentCardExample\components** folder:
 
-* [avatar-kat.png](https://github.com/SharePoint/sp-dev-docs/blob/master/assets/avatar-kat.png)
-* [icon-ppt.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/icon-ppt.png)
-* [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
+- [avatar-kat.png](https://github.com/SharePoint/sp-dev-docs/blob/master/assets/avatar-kat.png)
+- [icon-ppt.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/icon-ppt.png)
+- [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
 
-### Preview the web part in workbench
+> [!NOTE]
+> In the code we were referencing these images using relative path from the root location. As your reference the images in the code, it will cause them to be included in the sppkg solution package as long as you have the `includeClientSideAssets` set as `true` in the **package-solution.json** file.
 
-In the console, type the following to preview your web part in workbench:
-	
-```
-gulp serve
-```
-	
-In the toolbox, select your `DocumentCardExample` web part to add:
-	
-![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
+## Preview the web part in Workbench
+
+1. In the console, enter the following to preview your web part in Workbench:
+
+    ```shell
+    gulp serve
+    ```
+
+1. In the toolbox, select your `DocumentCardExample` web part to add:
+
+    ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
+
+## See also
+
+- [Build your first SharePoint client-side web part](build-a-hello-world-web-part.md)

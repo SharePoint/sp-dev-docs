@@ -1,12 +1,16 @@
 ---
-title: How to Create tabular data source editors for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
+title: Create tabular data source editors for PerformancePoint Services in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 3136420a-f8a2-4677-8b69-1d5d9705d96f
+localization_priority: Normal
 ---
 
 
-# How to: Create tabular data source editors for PerformancePoint Services in SharePoint
+# Create tabular data source editors for PerformancePoint Services in SharePoint
+
 Learn how to create the editor component of a custom tabular data source extension for PerformancePoint Services.
+
 ## What are custom data source editors for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
@@ -14,7 +18,7 @@ In PerformancePoint Services, custom data source editors enable users to set pro
   
     
     
-The following procedures and code examples are based on the **SampleDataSourceEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the name and description of the data source, enter stock symbols, and to specify a proxy server address and cache file location. For the complete code for the class, see  [Code example: Retrieve and update custom tabular data sources](#BKMK_ExampleCode).
+The following procedures and code examples are based on the **SampleDataSourceEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the name and description of the data source, enter stock symbols, and to specify a proxy server address and cache file location. For the complete code for the class, see  [Code example: Retrieve and update custom tabular data sources](#bk_example).
   
     
     
@@ -70,8 +74,8 @@ We recommend that you use the sample editor as a template. The sample shows how 
   
 7. Declare variables for the controls that expose the properties that you want users to view or modify. The sample data source editor first declares variables for the web server controls that are defined in the user interface component, which is an ASPX page. The sample editor also defines a button control that enables users to submit changes. Then, the editor calls the  [CreateChildControls()](https://msdn.microsoft.com/library/System.Web.UI.Control.CreateChildControls.aspx) method to make the controls available on the page.
     
-    > **Note:**
-      > The editor defines programming logic separately from the user interface. Instructions for creating the user interface component of the editor are beyond the scope of this documentation. 
+    > [!NOTE]
+    > The editor defines programming logic separately from the user interface. Instructions for creating the user interface component of the editor are beyond the scope of this documentation. 
 
     The sample data source editor performs steps 8 through 11 in the **Page_Load** method. **Page_Load** is also used to initialize and validate variables and controls, populate controls, and save state information for the custom data source and helper objects.
     
@@ -114,8 +118,8 @@ DataSourceRepositoryHelper = new DataSourceRepositoryHelper();
   
   - To create the custom data source, use the **DataSource()** constructor and then define the data source's [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) and [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) properties. [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) is the unique identifier for the data source, and it must match the **subType** attribute that you specify for your custom data source in the PerformancePoint Services web.config file.
     
-    > **Note:**
-      > The sample data source editor does not include logic to create a data source object. For examples of creating a custom object, see  [How to: Create report editors for PerformancePoint Services in SharePoint](how-to-create-report-editors-for-performancepoint-services-in-sharepoint) or [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint). 
+    > [!NOTE]
+    > The sample data source editor does not include logic to create a data source object. For examples of creating a custom object, see  [How to: Create report editors for PerformancePoint Services in SharePoint](how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md) or [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md). 
 
 ```cs
   if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
@@ -136,16 +140,17 @@ else
 ```
 
 
-    > **Note:**
-      > By default, users can create custom objects from PerformancePoint Dashboard Designer only. To enable users to create a custom object outside of Dashboard Designer, you must add a menu item that sends a  _CreateItem_ request to your editor from the content type in the repository. For more information, see [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
+    > [!NOTE]
+    > By default, users can create custom objects from PerformancePoint Dashboard Designer only. To enable users to create a custom object outside of Dashboard Designer, you must add a menu item that sends a  _CreateItem_ request to your editor from the content type in the repository. For more information, see [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
 
     The sample data source editor performs steps 12 and 13 in the **buttonOK_Click** and **CreateCacheFile** methods. **buttonOK_Click** is also used to call the **AreAllInputsValid** method to validate the contents of the controls and to retrieve state information for the custom data source and the helper object.
     
   
 12. Update the data source with user-defined changes. The sample data source editor calls the **DataSourceRepositoryHelper.Update** method to update the [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [CustomData](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.CustomData.aspx) properties of the data source object in the repository. You can use [CustomData](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.CustomData.aspx) to store a serialized object or string. The sample editor uses it to store user-defined stock symbols, the location of the cache file that stores stock quote values, and the address of the proxy server.
     
-    > **Note:**
-      > Users can edit a custom object's  [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [Owner](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Owner.aspx) ( **Person Responsible**) properties and delete custom objects directly from Dashboard Designer and the PerformancePoint Services repository. 
+    > [!NOTE]
+    > Users can edit a custom object's  [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [Owner](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Owner.aspx) ( **Person Responsible**) properties and delete custom objects directly from Dashboard Designer and the PerformancePoint Services repository. 
+
 13. Call the data source provider to define column mappings if they are not already defined.
     
   
@@ -157,7 +162,7 @@ The following code example retrieves and updates custom tabular data sources. Th
   
     
     
-Before you can compile this code example, you must configure your development environment as described in  [Create and configure the editor class for a tabular data source editor in PerformancePoint Services](#BKMK_DefineDSEd).
+Before you can compile this code example, you must configure your development environment as described in  [Create and configure the editor class for a tabular data source editor in PerformancePoint Services](#BKMK_ConfigDSEditor).
   
     
     
@@ -434,14 +439,14 @@ After you create a data source editor (including its user interface, if required
     
     
 
-## Additional resources
-<a name="bk_next"> </a>
+## See also
+<a name="bk_resources"> </a>
 
 
--  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha)
+-  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

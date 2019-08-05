@@ -1,13 +1,15 @@
 ---
 title: Loop-Back SOAP Calls and Direct Linking
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: bffc6565-636f-40d4-ba17-2511070ba5db
+localization_priority: Normal
 ---
 
 
 # Loop-Back SOAP Calls and Direct Linking
 
-If you are writing code within Microsoft SharePoint Foundation, for example, a custom Web Part, custom aspx page, and so on, you should make direct calls to Microsoft.Office.Excel.Server.WebServices.dll. You do this by linking directly to Microsoft.Office.Excel.Server.WebServices.dll. 
+If you are writing code within Microsoft SharePoint Foundation, for example, a custom web part, custom aspx page, and so on, you should make direct calls to Microsoft.Office.Excel.Server.WebServices.dll. You do this by linking directly to Microsoft.Office.Excel.Server.WebServices.dll. 
   
     
     
@@ -54,19 +56,19 @@ To link directly to Microsoft.Office.Excel.Server.WebServices.dll in your projec
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

@@ -1,12 +1,16 @@
 ---
-title: How to Create tabular data source providers for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
+title: Create tabular data source providers for PerformancePoint Services in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 8d734ed6-7636-40c5-a99b-bc038362cffe
+localization_priority: Normal
 ---
 
 
-# How to: Create tabular data source providers for PerformancePoint Services in SharePoint
+# Create tabular data source providers for PerformancePoint Services in SharePoint
+
 Learn how to create the data source provider component in a custom tabular data source extension for PerformancePoint Services.
+
 ## What are custom data source providers for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
@@ -88,7 +92,7 @@ We recommend that you use the sample data source provider as a template. The sam
 10. Override the  [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) method to return the unique identifier for your provider. [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) must return the same string as the **key** attribute that is registered in the PerformancePoint Services web.config file for the custom data source provider.
     
   
-11. Override the  [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) method to define column mappings. [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) calls the **CreateDataColumnMappings** method to define data source columns as [Fact](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.Fact.aspx) , [Dimension](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.Dimension.aspx) , and [TimeDimension](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.TimeDimension.aspx) types.
+11. Override the  [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) method to define column mappings. [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) calls the **CreateDataColumnMappings** method to define data source columns as [Fact](http://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) , [Dimension](http://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) , and [TimeDimension](http://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) types.
     
      [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) also retrieves the stock symbols, cache file location, and proxy server address from the [CustomData](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.CustomData.aspx) property of the custom data source object. These values are defined by dashboard authors in the sample data source editor.
     
@@ -417,14 +421,14 @@ After you create a data source provider and a data source editor (including its 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share)
+-  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

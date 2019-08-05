@@ -1,12 +1,16 @@
 ---
-title: How to Follow documents, sites, and tags by using the REST service in SharePoint
-ms.prod: SHAREPOINT
+title: Follow documents, sites, and tags by using the REST service in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
+localization_priority: Priority
 ---
 
 
-# How to: Follow documents, sites, and tags by using the REST service in SharePoint
+# Follow documents, sites, and tags by using the REST service in SharePoint
+
 Create SharePoint-hosted apps that use the REST service to follow content (documents, sites, and tags) and to get followed content.
+
 ## How do I use the SharePoint REST service to follow content?
 <a name="bk_intro"> </a>
 
@@ -50,10 +54,8 @@ To perform Following Content tasks by using the REST API, you send HTTP **GET** 
   
 - **my/followedcount** to get the count of followed documents, sites, and tags
     
-  
-
-> **Note:**
-> You also use these endpoints for Following People tasks, but the **followers** and **suggestions** resources available from **SocialRestFollowingManager** only support following people, not content. For more information about how you can use **SocialRestFollowingManager**, see  [Follow content in SharePoint](follow-content-in-sharepoint) and [Follow people in SharePoint](follow-people-in-sharepoint). 
+> [!NOTE]
+> You also use these endpoints for Following People tasks, but the **followers** and **suggestions** resources available from **SocialRestFollowingManager** only support following people, not content. For more information about how you can use **SocialRestFollowingManager**, see  [Follow content in SharePoint](follow-content-in-sharepoint.md) and [Follow people in SharePoint](follow-people-in-sharepoint.md). 
   
     
     
@@ -64,10 +66,7 @@ To perform Following Content tasks by using the REST API, you send HTTP **GET** 
 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Go to  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to sign up for a Developer Site and start using Napa.
   
     
@@ -92,14 +91,12 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
   - Local administrator permissions on the development computer.
     
   
-  - Manage Web Site and Create Subsites user permissions to the SharePoint site where you're installing the app. By default, these permissions are available only to users who have the Full Control permission level or who are in the site Owners group.
+  - Manage website and Create Subsites user permissions to the SharePoint site where you're installing the app. By default, these permissions are available only to users who have the Full Control permission level or who are in the site Owners group.
     
   
   - You must be logged on as someone other than the system account. The system account does not have permission to install the app.
     
-  
-
-> **Note:**
+> [!NOTE]
 > See  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) for guidance about on-premises setup (including how to disable the loopback check, if necessary).
   
     
@@ -139,10 +136,10 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
   
 4. Expand the **Scripts** node, choose the App.js file and replace its contents with the code from one of the following scenarios:
     
-   -  [Start following and stop following a document](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bkmk_FollowDocs)
-   -  [Start following and stop following a site](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bkmk_FollowSites)
-   -  [Start following and stop following a tag](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bkmk_FollowTags)
-   -  [Get followed content](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bkmk_GetFollowed)
+   -  [Start following and stop following a document](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bkmk_FollowDocs)
+   -  [Start following and stop following a site](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bkmk_FollowSites)
+   -  [Start following and stop following a tag](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bkmk_FollowTags)
+   -  [Get followed content](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bkmk_GetFollowed)
   
 5. To run the app, choose the **Run Project** button at the bottom of the page.
     
@@ -171,7 +168,7 @@ The following code example represents the contents of the App.js file and shows 
 - Build and send a **POST** request to the `stopfollowing` endpoint to stop following the document.
     
   
-- Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) See [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bk_exampleResponses).
+- Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) See [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses).
     
   
 Before you run the code, you'll need to upload a document and change the placeholder value for the **documentUrl** variable to the document's URL.
@@ -333,7 +330,7 @@ The following code example represents the contents of the App.js file and shows 
 - Build and send a **POST** request to the `stopfollowing` endpoint to stop following the site.
     
   
-- Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) See [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bk_exampleResponses).
+- Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) See [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses).
     
   
 Before you run the code, change the placeholder value for the **siteUrl** variable to match the site that you want to follow. Use the format **http://server/siteCollection/site** for a site in a site collection. You can follow a site from any page or library in that site. If the site uses a template that doesn't support following (like the My Site host or a personal site), you'll get an **UnsupportedSite** error (error code 10).
@@ -495,10 +492,10 @@ The following code example represents the contents of the App.js file and shows 
 - Build and send a **POST** request to the `stopfollowing` endpoint to stop following the tag.
     
   
-- Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) For more information, see [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bk_exampleResponses).
+- Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) For more information, see [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses).
     
   
-Before you run the code, change the placeholder value for the **tagGuid** variable to the GUID of an existing tag. The taxonomy API that you use to retrieve a tag from the **HashTagsTermSet** doesn't have a REST interface, so you have to use the .NET client object model or the JavaScript object model. See [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint#bk_getTagGuid) for an example.
+Before you run the code, change the placeholder value for the **tagGuid** variable to the GUID of an existing tag. The taxonomy API that you use to retrieve a tag from the **HashTagsTermSet** doesn't have a REST interface, so you have to use the .NET client object model or the JavaScript object model. See [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint.md#bk_getTagGuid) for an example.
   
     
     
@@ -654,7 +651,7 @@ The following code example represents the contents of the App.js file and shows 
 - Build and send a **GET** request to the `my/followed` endpoint to get the content that the current user is following.
     
   
-- Read the JSON response returned by the requests. See  [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2#bk_exampleResponses).
+- Read the JSON response returned by the requests. See  [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses).
     
   
 
@@ -777,8 +774,7 @@ Table 1 shows **SocialFollowResult** status codes and their values.
 |2|**LimitReached**. The request failed because an internal limit was reached.|
 |3|**InternalError**. The request failed due to an internal error.|
    
-
-> **Note:**
+> [!NOTE]
 > The REST service doesn't return a response for the **StopFollowing** request. It returns `{"d":{"StopFollowing":null}}`. 
   
     
@@ -902,17 +898,17 @@ The following response represents a count of three followed documents, sites, an
 ```
 
 
-## Additional resources
+## See also
 <a name="bkmk_AddtionalResources"> </a>
 
 
--  [Follow content in SharePoint](follow-content-in-sharepoint)
+-  [Follow content in SharePoint](follow-content-in-sharepoint.md)
     
   
--  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint)
+-  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint.md)
     
   
--  [How to: Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep)
+-  [How to: Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)
     
   
 

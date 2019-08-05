@@ -1,7 +1,9 @@
 ---
 title: Debugging SharePoint workflows
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a5adf39b-8640-4871-be60-b786dcf9fafc
+localization_priority: Priority
 ---
 
 
@@ -82,7 +84,7 @@ Another debugging option is to take advantage of breakpoints. Breakpoints are av
   
     
     
-![Figure 1 Starting workflow](../../images/ngDebuggingSP2013Workflows01.png)
+![Figure 1 Starting workflow](../images/ngDebuggingSP2013Workflows01.png)
   
     
     
@@ -100,7 +102,7 @@ Visual Studio will deploy the workflow to the target SharePoint environment and 
   
     
     
-![Figure 2. Workflow breakpoint](../../images/ngDebuggingSP2013Workflows02.png)
+![Figure 2. Workflow breakpoint](../images/ngDebuggingSP2013Workflows02.png)
   
     
     
@@ -129,7 +131,7 @@ The introduction of Workflow Manager to the SharePoint workflow story introduces
   
     
     
-![Figure 3. WriteLine activity](../../images/ngDebuggingSP2013Workflows.png)
+![Figure 3. WriteLine activity](../images/ngDebuggingSP2013Workflows.png)
   
     
     
@@ -147,7 +149,7 @@ This activity will write the message that resembles the **System.Diagnostics.Deb
   
     
     
-![Figure 4. Messages for WriteLine activity](../../images/ngDebuggingSP2013Workflows04.png)
+![Figure 4. Messages for WriteLine activity](../images/ngDebuggingSP2013Workflows04.png)
   
     
     
@@ -305,7 +307,7 @@ The next step is to configure Fiddler to intercept encrypted traffic and decrypt
   
     
     
-![Figure 5. UI for utilizing local HOSTS file](../../images/ngDebuggingSP2013Workflows05.png)
+![Figure 5. UI for utilizing local HOSTS file](../images/ngDebuggingSP2013Workflows05.png)
   
     
     
@@ -333,7 +335,7 @@ Next, configure Fiddler's connection options.
 
   
 
-  ![Figure 6. Fiddler connection options](../../images/ngDebuggingSP2013Workflows06.png)
+  ![Figure 6. Fiddler connection options](../images/ngDebuggingSP2013Workflows06.png)
   
 
   
@@ -374,12 +376,10 @@ This process will configure Windows to trust the certificate, although SharePoin
   
     
     
-![Figure 7. HTTPS tab](../../images/ngDebuggingSP2013Workflows07.png)
+![Figure 7. HTTPS tab](../images/ngDebuggingSP2013Workflows07.png)
   
-    
-    
- >**Note:**
- > If a security WRning appears with a message instructing not to trust the Fiddler certificate, click **Yes** to continue installing the certificate.
+> [!NOTE]
+> If a security WRning appears with a message instructing not to trust the Fiddler certificate, click **Yes** to continue installing the certificate.
   
     
     
@@ -420,7 +420,7 @@ PS C:\\> New-SPTrustedRootAuthority -Name "Fiddler" -Certificate $fiddlerCertifi
 
 ### Walkthrough: Debugging a SharePoint workflow with Fiddler
 
-This simple walkthrough demonstrates using Fiddler to debug a SharePoint workflow authored using Visual Studio 2012. When the workflow starts, it retrieves a customer ID from a field in a custom list. This customer ID is used to query a publically accessible service to retrieve additional details about the customer. It then uses these values to update the original list item. The workflow can be found in the following MSDN code sample:  [SharePoint Workflow: Call an External Web Service](http://code.msdn.microsoft.com/officeapps/SharePoint-workflow-48ea87d4.aspx).
+This simple walkthrough demonstrates using Fiddler to debug a SharePoint workflow authored using Visual Studio 2012. When the workflow starts, it retrieves a customer ID from a field in a custom list. This customer ID is used to query a publically accessible service to retrieve additional details about the customer. It then uses these values to update the original list item. The workflow can be found in the following MSDN code sample:  [SharePoint Workflow: Call an External Web Service](https://code.msdn.microsoft.com/office/SharePoint-2013-workflow-48ea87d4).
   
     
     
@@ -474,7 +474,7 @@ In the figure below, notice that sessions #18-36 originated from SharePoint and 
   
     
     
-![Figure 8. Starting Workflow](../../images/ngDebuggingSP2013Workflows08.png)
+![Figure 8. Starting Workflow](../images/ngDebuggingSP2013Workflows08.png)
   
     
     
@@ -492,7 +492,7 @@ Notice that in session #36, SharePoint is requesting that Workflow Manager start
   
     
     
-![Figure 10. Success message](../../images/ngDebuggingSP2013Workflows10.png)
+![Figure 10. Success message](../images/ngDebuggingSP2013Workflows10.png)
   
     
     
@@ -510,7 +510,7 @@ Session #40 is where Workflow Manager is retrieving the list item ID and GUID fr
   
     
     
-![Figure 10. Retrieving list item ID and GUID](../../images/ngDebuggingSP2013Workflows11.png)
+![Figure 10. Retrieving list item ID and GUID](../images/ngDebuggingSP2013Workflows11.png)
   
     
     
@@ -528,7 +528,7 @@ Session #43 is where Workflow Manager is updating the list item in SharePoint wi
   
     
     
-![Figure 11. Updating the list item in SharePoint](../../images/ngDebuggingSP2013Workflows12.png)
+![Figure 11. Updating the list item in SharePoint](../images/ngDebuggingSP2013Workflows12.png)
   
     
     
@@ -552,7 +552,7 @@ One task you need to perform when creating custom applications and business proc
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

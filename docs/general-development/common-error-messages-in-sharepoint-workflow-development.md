@@ -1,7 +1,9 @@
 ---
 title: Common error messages in SharePoint workflow development
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e9bf6878-c722-4b1f-b5b5-b302ae0ea4da
+localization_priority: Priority
 ---
 
 
@@ -134,13 +136,9 @@ Review the following to ensure that you have correctly configured incoming and o
     
     
 
--  [Deployment guide for Microsoft SharePoint](http://download.microsoft.com/download/1/F/6/1F6D3BE4-1174-4320-A1D1-C0E2681CCCF3/Deployment-guide-for-SharePoint.pdf)
+-  [Deployment guide for Microsoft SharePoint](http://download.microsoft.com/download/1/F/6/1F6D3BE4-1174-4320-A1D1-C0E2681CCCF3/Deployment-guide-for-SharePoint-2013.pdf)
     
   
--  [How to configure Incoming and Outgoing emails in SharePoint Server](http://blogs.msdn.com/b/pareshg/archive/2010/04/23/how-to-configure-incoming-and-outgoing-emails-in-sharepoint-server-2010.aspx)
-    
-  
-
 ### The workflow could not update the item, possibly because one or more columns for the item require a different type of information
 <a name="bkmk_error08"> </a>
 
@@ -196,14 +194,14 @@ See  [Microsoft Support Knowledge Base article ID 2557533](http://support.micros
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices)
+-  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

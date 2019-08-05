@@ -1,7 +1,9 @@
 ---
 title: Working with Web Services in SharePoint Workflows using Visual Studio 2012
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 5ffaa585-a872-4e14-bc0e-4a38c6a16b04
+localization_priority: Normal
 ---
 
 
@@ -9,15 +11,7 @@ ms.assetid: 5ffaa585-a872-4e14-bc0e-4a38c6a16b04
 Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
  **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
-    
-    
-
-
-  
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code in the MSDN Code Gallery, here:  [Working with Web Services in SharePoint Workflows using Visual Studio 2012](http://code.msdn.microsoft.com/Working-with-Web-in-46148199). 
   
     
@@ -65,7 +59,7 @@ Working with web services in SharePoint workflows involves two stages. The first
   
     
     
-![Figure 1. Properties Tool Window for the HttpSend](../../images/ngWSSP2013WorkflowVS201201.png)
+![Figure 1. Properties Tool Window for the HttpSend](../images/ngWSSP2013WorkflowVS201201.png)
   
     
     
@@ -219,7 +213,7 @@ When the workflow is completed, users will enter a customer ID, then start the w
 
   
 
-  ![Figure 2. Complete Customer Details Workflow](../../images/ngWSSP2013WorkflowVS201202.png)
+  ![Figure 2. Complete Customer Details Workflow](../images/ngWSSP2013WorkflowVS201202.png)
   
 
   
@@ -237,8 +231,9 @@ The first thing the workflow needs to do is retrieve the customer ID, as entered
     
   - **CustomerItemProperties** (data type = **DynamicValue**; scope = **Init**). Use this variable to store the result set returned by the activity that gets all properties from the list item.
     
-    > **Note:**
-      > The **DynamicValue** data type is not shown by default. To find it, select the **Browse for Types** option in the **Variable Type** column. In the search box at the top of the dialog, enter **DynamicValue**, and then select the **Microsoft.Activities.DynamicValue**. 
+    > [!NOTE] 
+    > The **DynamicValue** data type is not shown by default. To find it, select the **Browse for Types** option in the **Variable Type** column. In the search box at the top of the dialog, enter **DynamicValue**, and then select the **Microsoft.Activities.DynamicValue**. 
+
   - **CustomerId** (data type = **String**; scope = **Root**): Use this variable to store the customer ID entered by the user.
     
   
@@ -248,7 +243,7 @@ The first thing the workflow needs to do is retrieve the customer ID, as entered
 
   
 
-  ![Figure 3. Properties Tool Window](../../images/ngWSSP2013WorkflowVS201203.png)
+  ![Figure 3. Properties Tool Window](../images/ngWSSP2013WorkflowVS201203.png)
   
 
     This activity tells Workflow Manager to use the SharePoint REST API to retrieve the properties of the current list item and to store the **JSON** response in the **DynamicValue** variable that you just created.
@@ -269,7 +264,7 @@ The first thing the workflow needs to do is retrieve the customer ID, as entered
 
   
 
-  ![Figure 4. Properties dialog from the activity](../../images/ngWSSP2013WorkflowVS201204.png)
+  ![Figure 4. Properties dialog from the activity](../images/ngWSSP2013WorkflowVS201204.png)
   
 
   
@@ -303,7 +298,7 @@ The workflow now has a reference to the customer ID, so the next step is to call
 
   
 
-  ![FIgure 5. Assign Activity](../../images/ngWSSP2013WorkflowVS201205.png)
+  ![FIgure 5. Assign Activity](../images/ngWSSP2013WorkflowVS201205.png)
   
 
   
@@ -318,7 +313,7 @@ The workflow now has a reference to the customer ID, so the next step is to call
 
   
 
-  ![Figure 6. HttpSend Properties](../../images/ngWSSP2013WorkflowVS201206.png)
+  ![Figure 6. HttpSend Properties](../images/ngWSSP2013WorkflowVS201206.png)
   
 
   
@@ -370,7 +365,7 @@ Once the web service request has been made and the results are stored in a local
 
   
 
-  ![Figure 7. Properties tool window](../../images/ngWSSP2013WorkflowVS201207.png)
+  ![Figure 7. Properties tool window](../images/ngWSSP2013WorkflowVS201207.png)
   
 
   
@@ -401,7 +396,7 @@ The last step is to update the list item.
 
   
 
-  ![Figure 8. ListItemPropertiesDynamicValue Dialog](../../images/ngWSSP2013WorkflowVS201208.png)
+  ![Figure 8. ListItemPropertiesDynamicValue Dialog](../images/ngWSSP2013WorkflowVS201208.png)
   
 
   
@@ -424,7 +419,7 @@ The workflow is now complete and should function properly. To confirm its stabil
 
   
 
-  ![Figure 9. New List Item](../../images/ngWSSP2013WorkflowVS201209.png)
+  ![Figure 9. New List Item](../images/ngWSSP2013WorkflowVS201209.png)
   
 
   
@@ -436,7 +431,7 @@ The workflow is now complete and should function properly. To confirm its stabil
 
   
 
-  ![Figure 10 Updated List Item](../../images/ngWSSP2013WorkflowVS201210.png)
+  ![Figure 10 Updated List Item](../images/ngWSSP2013WorkflowVS201210.png)
   
 
     Notice that the list item was updated by the SharePoint hosted app on behalf of the person who started the workflow. In this walkthrough, however, it was started by the administrator.
@@ -455,7 +450,7 @@ SharePoint introduced a new workflow architecture facilitated by a new product: 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

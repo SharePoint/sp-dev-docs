@@ -1,16 +1,18 @@
 ---
-title: How to Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
+title: Locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto,WebUI DLL
 f1_keywords:
 - how to,howdoi,howto,WebUI DLL
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: 09ad5d5e-1678-45e4-8159-23ef56f84215
+localization_priority: Normal
 ---
 
 
-# How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
+# Locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
 
-If you want to programmatically add an Excel Web Access Web Part to a SharePoint page and programmatically change the Excel Web Access Web Part, you must add a reference to the required SharePoint DLLs. For example: 
+If you want to programmatically add an Excel Web Access web part to a SharePoint page and programmatically change the Excel Web Access web part, you must add a reference to the required SharePoint DLLs. For example: 
   
     
     
@@ -37,9 +39,7 @@ The following steps show how to:
   
 - Copy Microsoft.Office.Excel.WebUI.dll from the global assembly cache to a folder of your choice.
     
-  
-
-> **Note:**
+> [!NOTE]
 > Repeat the steps to copy Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder. 
   
     
@@ -59,22 +59,23 @@ The following steps show how to:
   
 3. Use the **cd** command to navigate to the "C:\\Windows\\assembly" directory:
     
-    > **Note:**
-      > The directory structure on your computer might be slightly different. This example uses a computer that has Windows Server 2008 installed. 
+    > [!NOTE]
+    > The directory structure on your computer might be slightly different. This example uses a computer that has Windows Server 2008 installed. 
 
-```
-  
-cd C:\\Windows\\assembly
-```
+
+    ```
+      
+    cd C:\\Windows\\assembly
+    ```
 
 4. Use the **dir** command to display the contents of the "C:\\Windows\\assembly" directory:
     
-```
-  C:\\Windows\\assembly>dir
-```
+    ```
+      C:\\Windows\\assembly>dir
+    ```
 
 
-    You will see contents similar to the following:
+  You will see contents similar to the following:
     
 
 
@@ -254,19 +255,19 @@ C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI\\14.0.0.0__71e9bce
   
     
     
- [How to: Programmatically Add an Excel Web Access Web Part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page)
+ [How to: Programmatically Add an Excel Web Access web part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)

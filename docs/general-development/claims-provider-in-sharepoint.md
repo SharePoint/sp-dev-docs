@@ -1,7 +1,9 @@
 ---
 title: Claims provider in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 5918d5b6-5fd6-4f41-9473-a15b1491d056
+localization_priority: Priority
 ---
 
 
@@ -15,11 +17,8 @@ A claims provider in SharePoint Server issues claims and packages claims into se
     
 A claims provider in SharePoint has two roles: augmentation and picking.
   
-    
-    
-
-> **Note:**
-> For information about how to create a claims provider, see  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint). 
+> [!NOTE]
+> For information about how to create a claims provider, see  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md). 
   
     
     
@@ -65,10 +64,7 @@ Users can override the built-in claims provider to implement custom search, name
 
 In SharePoint Server, there are some specific built-in claims providers that enable implementation support for concepts like authenticated users. This is also known as an All Users claim. This scenario enables you to grant rights to all users from a given authentication provider.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > An authentication provider can be a Windows Active Directory, forms-based authentication, or a trusted SAML token issuer (that is, an STS). 
   
     
@@ -97,20 +93,20 @@ Assume a scenario where your system has some specific requirements for people pi
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
     
   
--  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
     
   
--  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
     
   
 

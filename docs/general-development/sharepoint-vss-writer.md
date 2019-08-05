@@ -1,7 +1,9 @@
 ---
 title: SharePoint VSS Writer
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f83577e4-ebb8-44e5-8dec-a3ca5878b7fd
+localization_priority: Normal
 ---
 
 
@@ -46,13 +48,12 @@ Following are the SharePoint Foundation VSS solution features and characteristic
   
 - **Full rollback.** The SPF-VSS Writer handles all components within a SharePoint Foundation deployment, including the configuration database and the content databases and the Search database and index. As mentioned previously, the writer also has a dependency on the Search writer, which handles all the Search index files for backup and recovery. At the time of recovery, the writer can roll back the entire SharePoint Foundation deployment by restoring a previous farm backup. (The IIS configuration store is not included. It must be backed up and restored separately.)
     
-    > **Note:**
-      > See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint) for important information about restorations.
+    > [!NOTE]
+    > See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md) for important information about restorations.
+
 - **Post-restore synchronization of databases.** To ensure that all databases are synchronized with the farm after a restore operation is complete, each of the databases are automatically detached and reattached to the farm post recovery. Administrators do not need to run additional procedures to resynchronize the restored databases.
     
-  
-
-> **Important:**
+> [!IMPORTANT]
 > If you use SQL aliases in your SharePoint Foundation farm to connect to the SQL Server, then you must install the SQL client connectivity components on your farm servers in order to use the SPF-VSS writer for backup/restore. The components include SQL WMI provider for configuration management, which the SPF-VSS writer needs to resolve SQL aliases to the correct SQL Server. It is not necessary to install any of the management tools such as SQL Management Studio. You must use the same installation source (for example, a data DVD) that you would use to install the full SQL Server product. (Do not use the separate, stand-alone, version of the client components. That version does not include the SQL WMI provider.) Choose to make a custom installation and choose only the client components to install. 
   
     
@@ -75,7 +76,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../../images/99376713-6a54-4d88-9b05-068578169506.gif)
+  ![SharePoint and Volume Shadow Copy Service](../images/99376713-6a54-4d88-9b05-068578169506.gif)
   
 
   
@@ -87,7 +88,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
+  ![SharePoint and Volume Shadow Copy Service](../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
   
 
   
@@ -102,7 +103,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
+  ![SharePoint and Volume Shadow Copy Service](../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
   
 
   
@@ -117,15 +118,15 @@ Learn how to create and use a VSS requestor for SharePoint:
     
     
 
--  [VSS requestors and SharePoint](vss-requestors-and-sharepoint)
+-  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md)
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
     
   
 

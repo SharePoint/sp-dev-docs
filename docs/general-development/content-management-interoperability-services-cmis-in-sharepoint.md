@@ -1,7 +1,9 @@
 ---
 title: Content Management Interoperability Services (CMIS) in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a1def24c-b2db-4bf9-8d2c-02f5628832f8
+localization_priority: Priority
 ---
 
 
@@ -34,7 +36,7 @@ Figure 1. CMIS 1.0 capabilities implemented in SharePoint.
   
     
     
-![CMIS capabilities in SharePoint](../../images/SP15_CMISCapabilities.jpg)
+![CMIS capabilities in SharePoint](../images/SP15_CMISCapabilities.jpg)
   
     
     
@@ -99,7 +101,7 @@ Figure 2. Examples of the CMIS document object-type and folder object-type
   
     
     
-![Examples of CMIS object-types in SharePoint](../../images/SP15_CMISObjectTypeExamples.png)
+![Examples of CMIS object-types in SharePoint](../images/SP15_CMISObjectTypeExamples.png)
   
     
     
@@ -201,7 +203,7 @@ CMIS supports the development of a broad range of applications that consume data
 - Graphical user interfaces (GUIs) in apps that read data from multiple content repositories.
     
   
-- A SharePoint Web Part that uses CMIS to roll up personnel data from multiple legacy content management systems within an enterprise.
+- A SharePoint web part that uses CMIS to roll up personnel data from multiple legacy content management systems within an enterprise.
     
   
 - A mobile application that can access documents from any ECM system.
@@ -219,7 +221,7 @@ CMIS supports the development of a broad range of applications that consume data
 
 ### Example: Contoso Finances app
 
-Consider as an app a SharePoint Server Web Part that consumes data from multiple CMIS data providers—the Contoso Finances app. The Contoso Finances app gathers and tabulates financial data that is distributed across three servers: an IBM server, a server running SharePoint Server, and an in-house Contoso server. The SharePoint Server app uses a Web Part to display data from all three data sources within any SharePoint Server page . The app does not require any custom code that is specific to any implementation of the CMIS repository (the SharePoint Server document library).
+Consider as an app a SharePoint Server web part that consumes data from multiple CMIS data providers—the Contoso Finances app. The Contoso Finances app gathers and tabulates financial data that is distributed across three servers: an IBM server, a server running SharePoint Server, and an in-house Contoso server. The SharePoint Server app uses a web part to display data from all three data sources within any SharePoint Server page . The app does not require any custom code that is specific to any implementation of the CMIS repository (the SharePoint Server document library).
   
     
     
@@ -243,7 +245,7 @@ Developers can write CMIS clients in any language. For example, a SharePoint dev
 ## Finding and interoperating with open source CMIS implementations
 <a name="SP15CMIS_OpenSource"> </a>
 
-Many open source projects exist and can be tested with the SharePoint implementation of the CMIS 1.0 standard. Some examples include the  [Apache Chemistry Project](http://chemistry.apache.org); the  [Open CMIS project](http://chemistry.apache.org/java/opencmis.html), which tests both client and server CMIS implementations with Java; the  [DotCMIS](http://chemistry.apache.org/dotnet/dotcmisl) project for .NET client, the [cmislib, a CMIS client library for Python](http://chemistry.apache.org/python/cmislib.html) project; and the [phpclient, a CMIS client library for PHP](http://chemistry.apache.org/php/phpclient.html).
+Many open source projects exist and can be tested with the SharePoint implementation of the CMIS 1.0 standard. Some examples include the  [Apache Chemistry Project](http://chemistry.apache.org); the  [Open CMIS project](http://chemistry.apache.org/java/opencmis.html), which tests both client and server CMIS implementations with Java; the  [DotCMIS](http://chemistry.apache.org/dotnet/dotcmis) project for .NET client, the [cmislib, a CMIS client library for Python](http://chemistry.apache.org/python/cmislib.html) project; and the [phpclient, a CMIS client library for PHP](http://chemistry.apache.org/php/phpclient.html).
   
     
     
@@ -285,11 +287,11 @@ CMIS 1.1 is not supported in SharePoint, but the newer version of the CMIS speci
     
   
 
-## Additional resources
+## See also
 <a name="SP15CMIS_AdditionalResources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
 -  [Manage blocked file types](http://technet.microsoft.com/en-us/library/cc262496.aspx)

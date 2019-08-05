@@ -1,11 +1,14 @@
 ---
-title: How to Map a network drive to the SharePoint Master Page Gallery
-ms.prod: SHAREPOINT
+title: Map a network drive to the SharePoint Master Page Gallery
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 7d416f6e-2471-4d03-97ae-4e8d907784c6
+localization_priority: Priority
 ---
 
 
-# How to: Map a network drive to the SharePoint Master Page Gallery
+# Map a network drive to the SharePoint Master Page Gallery
+
 Learn how to map a network drive to the Master Page Gallery so that you can use Design Manager to upload design files in SharePoint.
 You can create a visual design for your website by using any web design tool or HTML editor, and then use Design Manager to import the design into SharePoint. To do this, you have to make sure that the design tool stores its files in your site's Master Page Gallery, which is where SharePoint expects to find the files. We recommend that you map a network drive to the Master Page Gallery to make it easier to save files in the correct location.
   
@@ -46,23 +49,23 @@ On the computer that runs your design tool or HTML editor, map a network drive t
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [How to: Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint)
+-  [How to: Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint.md)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels)
+-  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md)
     
   
--  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager)
+-  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md)
     
   
--  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions)
+-  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
     
   
 

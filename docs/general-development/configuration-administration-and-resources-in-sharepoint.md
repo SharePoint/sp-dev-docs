@@ -1,7 +1,9 @@
 ---
 title: Configuration, administration, and resources in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e7d8c919-7aa6-466a-acb0-27366129061c
+localization_priority: Priority
 ---
 
 
@@ -65,7 +67,7 @@ The following are links to some of the documentation and guidelines on TechNet:
     
   
 
-> **Note:**
+> [!NOTE]
 > For information about Windows Identity Foundation (WIF), see the  [Windows Identity Foundation SDK](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=C148B2DF-C7AF-46BB-9162-2C9422208504&amp;amp;displaylang=en). 
   
     
@@ -77,8 +79,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 
 |**Blog Name**|**Links**|
 |:-----|:-----|
-|Share-n-dipity  <br/> | [Blog home page](http://blogs.technet.com/speschka/) <br/> |
-|Microsoft SharePoint Developer Team Blog  <br/> | [Blog home page](http://blogs.msdn.com/b/sharepointdev/) <br/> |
+|Microsoft SharePoint Developer Team Blog  <br/> | [Blog home page](https://developer.microsoft.com/en-us/office/blogs/) <br/> |
 |||
    
 
@@ -107,23 +108,23 @@ The following tables list blogs, forums, and additional resources about claims-b
 |.NET Framework Class Library  <br/> | [.NET Framework Class Library](http://msdn.microsoft.com/en-us/library/ms229335.aspx) <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Authorization, users, groups, and the object model in SharePoint](authorization-users-groups-and-the-object-model-in-sharepoint)
+-  [Authorization, users, groups, and the object model in SharePoint](authorization-users-groups-and-the-object-model-in-sharepoint.md)
     
   
--  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint)
+-  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
     
   
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
 

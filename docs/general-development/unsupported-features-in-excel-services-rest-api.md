@@ -1,7 +1,9 @@
 ---
 title: Unsupported Features in Excel Services REST API
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 4139901f-255b-4556-b8c8-3d986a07c587
+localization_priority: Normal
 ---
 
 
@@ -9,11 +11,7 @@ ms.assetid: 4139901f-255b-4556-b8c8-3d986a07c587
 
 The first version of the Excel Services REST API does not support every Excel feature. 
   
-    
-    
-
-
-> **Note:**
+> [!NOTE] 
 > The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   

@@ -1,12 +1,16 @@
 ---
-title: How to Crawl binary large objects (BLOBs) in SharePoint
-ms.prod: SHAREPOINT
+title: Crawl binary large objects (BLOBs) in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 99b3dd51-1651-4300-a2de-33681f4cc258
+localization_priority: Normal
 ---
 
 
-# How to: Crawl binary large objects (BLOBs) in SharePoint
+# Crawl binary large objects (BLOBs) in SharePoint
+
 Learn how to modify the BDC model file for a database BCS indexing connector to enable the Search in SharePoint crawler to crawl binary large object (BLOB) data stored in a SQL Server database.
+
 ## Crawling BLOB data
 <a name="HowToCrawlBlobs_CrawlingBlobData"> </a>
 
@@ -81,8 +85,8 @@ After you create the BLOB external content type, you are ready to modify the BDC
   
 2. Create a new method that returns the BLOB field. You should define a **StreamAccessor** type method instance for this method, as shown in the following example.
     
-    > **Note:**
-      > The table name in this example is Attachment. 
+    > [!NOTE]
+    > The table name in this example is Attachment. 
 
 ```XML
   
@@ -162,11 +166,11 @@ with the following line of code:
     
   
 
-## Additional resources
+## See also
 <a name="SP15Crawlblobs_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [How to: Create External Content Types](http://msdn.microsoft.com/library/811b458c-e209-46df-ba02-8db02bc658db%28Office.15%29.aspx)

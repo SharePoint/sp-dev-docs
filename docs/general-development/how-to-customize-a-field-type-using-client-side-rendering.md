@@ -1,18 +1,20 @@
 ---
-title: How to Customize a field type using client-side rendering
-ms.prod: SHAREPOINT
+title: Customize a field type using client-side rendering
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
+localization_priority: Normal
 ---
 
 
 
-# How to: Customize a field type using client-side rendering
+# Customize a field type using client-side rendering
+
 Learn how to customize a field type by using the client-side rendering technology in SharePoint.
 Client-side rendering provides a mechanism that you can use to produce your own output for a set of controls that are hosted in a SharePoint page. This mechanism enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of custom field types. In client-side rendering you can specify your own JavaScript resources and host them in the data storage options available to your farm solution, such as the _layouts folder.
-  
-    
-    
 
+> [!IMPORTANT]
+> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
 
 ## Prerequisites for using the examples in this article
 <a name="SP15CustomizeafieldtypeusingCSR_Prereq"> </a>
@@ -31,7 +33,7 @@ To follow the steps in this example, you need the following:
 - A SharePoint development environment
     
   
-For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
+For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -48,7 +50,7 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
+| [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
 | [Custom Field Types](http://msdn.microsoft.com/en-us/library/ms446361.aspx) <br/> |Learn about creating custom field types. As you store your business information in SharePoint, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering.  <br/> |
    
 
@@ -86,7 +88,7 @@ Figure 1 shows a view form with a custom-rendered field type.
   
     
     
-  ![Custom client-side rendered field in a View form](../../images/CSRFieldType_result.png)
+  ![Custom client-side rendered field in a View form](../images/CSRFieldType_result.png)
   
     
     
@@ -106,7 +108,7 @@ Figure 1 shows a view form with a custom-rendered field type.
 
   
 
-  ![SharePoint Project Visual Studio template](../../images/SharePointSolutionVSTemplate.png)
+  ![SharePoint Project Visual Studio template](../images/SharePointSolutionVSTemplate.png)
   
 
   
@@ -135,8 +137,8 @@ Figure 1 shows a view form with a custom-rendered field type.
   
   - Overrides the **JSLink** property.
     
-    > **Note:**
-      > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
+    > [!NOTE]
+    > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
 ```cs
 using System;
@@ -298,8 +300,9 @@ function favoriteColorViewTemplate(ctx) {
 
 1. Press the F5 key.
     
-    > **Note:**
-      > When you press F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
+    > [!NOTE]
+    > When you press F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
+
 2. Create a custom list and add a new Favorite color field column.
     
   
@@ -312,7 +315,7 @@ function favoriteColorViewTemplate(ctx) {
 
   
 
-  ![Creating a new custom field type column](../../images/CSRFieldType_addcolumn.png)
+  ![Creating a new custom field type column](../images/CSRFieldType_addcolumn.png)
   
 
   
@@ -343,22 +346,19 @@ This article demonstrated how to customize the rendering process for a custom fi
     
   
 
-## Additional resources
+## See also
 <a name="SP15CustomizeafieldtypeusingCSR_AddResources"> </a>
 
 
--  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint)
+-  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [What's new for developers in SharePoint](what???s-new-for-developers-in-sharepoint)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
-    
-  
--  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint)
+-  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
     
   

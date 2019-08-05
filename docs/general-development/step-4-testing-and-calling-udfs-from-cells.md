@@ -1,7 +1,9 @@
 ---
 title: Step 4 Testing and Calling UDFs from Cells
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d3e6aa72-2eb8-4b4b-a0eb-273486890d00
+localization_priority: Normal
 ---
 
 
@@ -18,8 +20,9 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
 2. Save the workbook to a SharePoint document library that is a trusted location.
     
-    > **Note:**
-      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For information about how to trust a location, see the "Trusting a Location" section in  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs). 
+    > [!NOTE]
+    > It is assumed that you have already created a SharePoint document library and made it a trusted location. For information about how to trust a location, see the "Trusting a Location" section in  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+
 3. Change parameters to recalculate the workbook.
     
   
@@ -35,11 +38,12 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
 2. In cell A1, type the formula to call the  `MyDouble` function in SampleUdf.dll. The `MyDouble` function takes an argument of type **double**. In this example, you will take the argument from cell B1. In cell A1, type =MyDouble(B1).
     
-    > **Note:**
-      > The formula will evaluate to "#NAME?" in Excel. The formula will be evaluated only when the workbook is displayed in Excel Services. 
+    > [!NOTE]
+    > The formula will evaluate to "#NAME?" in Excel. The formula will be evaluated only when the workbook is displayed in Excel Services. 
 
-    > **Note:**
-      > You can run UDFs on both the client and server. A future article published on MSDN will explain the details. They are omitted here for the sake of simplicity. 
+    > [!NOTE]
+    > You can run UDFs on both the client and server. A future article published on MSDN will explain the details. They are omitted here for the sake of simplicity. 
+
 3. In cell B1, type the number 8.
     
   
@@ -94,8 +98,8 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
 10. Click **Save**. You should see TestSampleUdf.xlsx in Excel Web Access. In cell A1, you should see the number "72" because cell B1 * 9 = 8 * 9, which is 72. In cell A2 you should see a number. In cell A3, you should see the current date. 
     
-    > **Note:**
-      > In cell A2, the number represents the number of days since 1/1/1900 (or 1/1/1904 if you have "Use 1904 Date System" turned on). It's how Excel represents dates internally. 
+    > [!NOTE]
+    > In cell A2, the number represents the number of days since 1/1/1900 (or 1/1/1904 if you have "Use 1904 Date System" turned on). It's how Excel represents dates internally. 
 
 ### To change parameters to test the UDF
 
@@ -116,27 +120,27 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
   
     
     
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
+ [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

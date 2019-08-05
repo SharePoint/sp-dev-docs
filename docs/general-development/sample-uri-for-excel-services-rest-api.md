@@ -1,7 +1,9 @@
 ---
 title: Sample URI For Excel Services REST API
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 4ebe1da2-9861-416f-bef1-4a62599efe2e
+localization_priority: Priority
 ---
 
 
@@ -9,11 +11,7 @@ ms.assetid: 4ebe1da2-9861-416f-bef1-4a62599efe2e
 
 This topic lists sample URIs for the representational state transfer (REST) service commands in Excel Services.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   

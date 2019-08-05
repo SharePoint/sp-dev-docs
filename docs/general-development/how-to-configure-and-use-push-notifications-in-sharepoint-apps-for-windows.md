@@ -1,11 +1,14 @@
 ---
-title: How to Configure and use push notifications in SharePoint apps for Windows Phone
-ms.prod: SHAREPOINT
+title: Configure and use push notifications in SharePoint apps for Windows Phone
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 68fa2138-86d9-4e35-9c7c-5cd292087b80
+localization_priority: Normal
 ---
 
 
-# How to: Configure and use push notifications in SharePoint apps for Windows Phone
+# Configure and use push notifications in SharePoint apps for Windows Phone
+
 Create a solution in SharePoint Server for sending push notifications and develop a Windows Phone app for receiving the notifications.
 Using the Microsoft Push Notification Service (MPNS), Windows Phone apps can receive notifications through the Internet of events triggered on Microsoft SharePoint Server. The phone app doesn't have to poll the server for changes to, for example, the items in a list on which the phone app is based. The app can be registered to receive notifications from the server, and an event receiver can initiate a notification and send it to the receiving app for handling. The push notification is relayed to Windows Phone devices by MPNS.
   
@@ -380,10 +383,7 @@ In this code, after an item is added to the list to which the event receiver is 
     
 An empty string is simply being passed as the value of the **toastParam** parameter, which corresponds to the **Param** property in the XML schema for toast notifications. You could use this parameter to specify, for example, a page of the phone app to open when the user clicks the notification in the phone. In the sample phone app developed later in this topic for receiving these notifications from the server, the **Param** property is not used. The List form (List.xaml) in the app is simply opened when the user clicks the notification.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The **Param** property for toast notifications is supported only in Windows Phone OS version 7.1 or greater.
   
     
@@ -505,7 +505,7 @@ namespace PushNotificationsList
         /// <summary>
         /// Creates a SharePoint list (based on the Generic List template).
         /// </summary>
-        /// <param name="spWeb">The target Web site for the list.</param>
+        /// <param name="spWeb">The target website for the list.</param>
         /// <param name="listTitle">The title of the list.</param>
         /// <param name="listDescription">A description for the list.</param>
         /// <param name="columns">A Dictionary object containing field names and types.</param>
@@ -648,7 +648,7 @@ In this section, you create a Windows Phone app from the Windows Phone SharePoin
   
     
     
-To follow the procedures in this section, first perform the steps in the procedure described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app) to create a Visual Studio project from the Windows Phone SharePoint List Application template, using the Jobs list created in the preceding section as the target SharePoint list for the project. For the purposes of the procedures in this section, it is assumed that the name specified for the project isSPListAppForNotifications.
+To follow the procedures in this section, first perform the steps in the procedure described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md) to create a Visual Studio project from the Windows Phone SharePoint List Application template, using the Jobs list created in the preceding section as the target SharePoint list for the project. For the purposes of the procedures in this section, it is assumed that the name specified for the project isSPListAppForNotifications.
   
     
     
@@ -1146,8 +1146,9 @@ namespace SPListAppForNotifications
   
 10. Navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1.
     
-    > **Note:**
-      > The images with a light foreground and a dark background are in %PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark in a standard installation of the SDK. 
+    > [!NOTE]
+    > The images with a light foreground and a dark background are in %PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark in a standard installation of the SDK. 
+
 11. Choose the image file named appbar.check.rest.png and click **Add**. The image is added is added to the project under the Images node.
     
   
@@ -1286,7 +1287,7 @@ If you compile the project and deploy the app to the Windows Phone Emulator to r
   
     
     
-![Settings page for notification registration](../../images/bee8bbc5-a93d-4695-927b-c10e0e63ddf9.gif)
+![Settings page for notification registration](../images/bee8bbc5-a93d-4695-927b-c10e0e63ddf9.gif)
   
     
     
@@ -1304,7 +1305,7 @@ If you have deployed and activated the PushNotificationsList solution (developed
   
     
     
-![Toast notification (app running)](../../images/19b38f1b-8f98-4e91-8384-ba0e2d3da744.gif)
+![Toast notification (app running)](../images/19b38f1b-8f98-4e91-8384-ba0e2d3da744.gif)
   
     
     
@@ -1322,7 +1323,7 @@ The message displayed when your app received a toast notification while it's run
   
     
     
-![Raw notification](../../images/2e5dc58a-55d2-48c6-a162-974199ff5e5c.gif)
+![Raw notification](../images/2e5dc58a-55d2-48c6-a162-974199ff5e5c.gif)
   
     
     
@@ -1340,7 +1341,7 @@ If the app is not running when the item is added to the list, the phone should s
   
     
     
-![Toast notification (app not running)](../../images/c046bc5c-1e31-4ac6-9cba-05482cc36915.gif)
+![Toast notification (app not running)](../images/c046bc5c-1e31-4ac6-9cba-05482cc36915.gif)
   
     
     
@@ -1349,17 +1350,17 @@ When you add an item to the Jobs SharePoint list, the code in the event receiver
     
     
 
-## Additional resources
+## See also
 <a name="SP15Configurepushnot_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Push Notifications Overview for Windows Phone](http://msdn.microsoft.com/en-us/library/ff402558%28VS.92%29.aspx)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

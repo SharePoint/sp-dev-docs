@@ -1,7 +1,9 @@
 ---
 title: Claims-based identity in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 32b6af2a-72f3-4302-a6af-5f00143cbf67
+localization_priority: Priority
 ---
 
 
@@ -35,7 +37,7 @@ The word claim is used, instead of the wordattributes that is more commonly used
 
 ### Tokens: Information about an identity
 
-A token is a set of bytes that expresses information about an identity. This information consists of one or more claims, each of which contains some information about the subject to which this token applies. The claims in a token commonly contain information such as the name of the user who presents it. They can also contain many sorts of other information—claims are not limited to, and do not even need to include, a subject's name. And, as the word claims suggests, an application that receives a token does not automatically accept the information that it contains. Instead, a received token is usually validated in some way before an application uses any claims that it contains.
+A token is a set of bytes that expresses information about an identity. This information consists of one or more claims, each of which contains some information about the subject to which this token applies. The claims in a token commonly contain information such as the name of the user who presents it. They can also contain many sorts of other information—claims are not limited to, and do not even need to include, a subject's name. And, as the word claims suggest, an application that receives a token does not automatically accept the information that it contains. Instead, a received token is usually validated in some way before an application uses any claims that it contains.
   
     
     
@@ -44,23 +46,23 @@ The key concept is that a claim is not just a unique identifier that identifies 
     
     
 
-## Additional resources
+## See also
 <a name="SP15_RoleInheritance_AdditionalResources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
     
   
--  [Claims provider in SharePoint](claims-provider-in-sharepoint)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
     
   
--  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
     
   
--  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
     
   
 

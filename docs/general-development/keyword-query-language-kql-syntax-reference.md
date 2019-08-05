@@ -1,7 +1,9 @@
----
+﻿---
 title: Keyword Query Language (KQL) syntax reference
-ms.prod: SHAREPOINT
+ms.date: 07/22/2019
+ms.prod: sharepoint
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
+localization_priority: Priority
 ---
 
 
@@ -28,10 +30,7 @@ You can combine KQL query elements with one or more of the available operators.
     
 If the KQL query contains only operators or is empty, it isn't valid. KQL queries are case-insensitive but the operators are case-sensitive (uppercase).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The length limit of a KQL query varies depending on how you create it. If you create the KQL query by using the default SharePoint search front end, the length limit is 2,048 characters. However, KQL queries you create programmatically by using the Query object model have a default length limit of 4,096 characters. You can increase this limit up to 20,480 characters by using the  [MaxKeywordQueryTextLength](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.SearchServiceApplication.MaxKeywordQueryTextLength.aspx) property or the [DiscoveryMaxKeywordQueryTextLength](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.SearchServiceApplication.DiscoveryMaxKeywordQueryTextLength.aspx) property (for eDiscovery).
   
     
@@ -187,14 +186,14 @@ Search in SharePoint supports several property operators for property restrictio
 
 |**Operator**|**Description**|**Supported managed property type**|
 |:-----|:-----|:-----|
-|:  <br/> |Returns results where the value specified in the property restriction is equal to the property value that is stored in the Property Store database, or matches individual terms in the property value that is stored in the full-text index.  <br/> | [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Text.aspx) <br/>  [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/>  [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.YesNo.aspx) <br/> |
-|=  <br/> |Returns search results where the property value is equal to the value specified in the property restriction.  <br/> **Note:** We do not recommend combining the **=** operator together with asterisk ( **\***) when you do exact matching.           | [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Text.aspx) <br/>  [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/>  [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.YesNo.aspx) <br/> |
-|<  <br/> |Returns results where the property value is less than the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/> |
-|>  <br/> |Returns search results where the property value is greater than the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/> |
-|<=  <br/> |Returns search results where the property value is less than or equal to the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/> |
-|>=  <br/> |Returns search results where the property value is greater than or equal to the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/> |
-|\<\>  <br/> |Returns search results where the property value does not equal the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Text.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/>  [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.YesNo.aspx) <br/> |
-|..  <br/> |Returns search results where the property value falls within the range specified in the property restriction.  <br/> For example, the range A..B represents a set of values from A to B where both A and B are inclusive. For date ranges this means from the beginning of day A to the end of day B.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/> |
+|:  <br/> |Returns results where the value specified in the property restriction is equal to the property value that is stored in the Property Store database, or matches individual terms in the property value that is stored in the full-text index.  <br/> | [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Text) <br/>  [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/>  [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#YesNo) <br/> |
+|=  <br/> |Returns search results where the property value is equal to the value specified in the property restriction.  <br/> **Note**: We do not recommend combining the **=** operator together with asterisk ( **\***) when you do exact matching.           | [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Text) <br/>  [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/>  [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#YesNo) <br/> |
+|<  <br/> |Returns results where the property value is less than the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/> |
+|>  <br/> |Returns search results where the property value is greater than the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/> |
+|<=  <br/> |Returns search results where the property value is less than or equal to the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/> |
+|>=  <br/> |Returns search results where the property value is greater than or equal to the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/> |
+|\<\>  <br/> |Returns search results where the property value does not equal the value specified in the property restriction.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Text) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/>  [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#YesNo) <br/> |
+|..  <br/> |Returns search results where the property value falls within the range specified in the property restriction.  <br/> For example, the range A..B represents a set of values from A to B where both A and B are inclusive. For date ranges this means from the beginning of day A to the end of day B.  <br/> | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/>  [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/>  [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/>  [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/> |
    
 
 ### Specifying property values
@@ -209,12 +208,12 @@ You must specify a property value that is a valid data type for the managed prop
 
 |**Managed type**|**Data type**|
 |:-----|:-----|
-| [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Text.aspx) <br/> | [String](https://msdn.microsoft.com/library/System.String.aspx) <br/> |
-| [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) <br/> | [Int64](https://msdn.microsoft.com/library/System.Int64.aspx) <br/> |
-| [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) <br/> | [System.Double](https://msdn.microsoft.com/library/System.Double.aspx) <br/> |
-| [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) <br/> | [Decimal](https://msdn.microsoft.com/library/System.Decimal.aspx) <br/> |
-| [DateTime()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) <br/> | [DateTime](https://msdn.microsoft.com/library/System.DateTime.aspx) <br/> |
-| [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.YesNo.aspx) <br/> | [Boolean](https://msdn.microsoft.com/library/System.Boolean.aspx) <br/> |
+| [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Text) <br/> | [String](https://msdn.microsoft.com/library/System.String.aspx) <br/> |
+| [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Integer) <br/> | [Int64](https://msdn.microsoft.com/library/System.Int64.aspx) <br/> |
+| [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Double) <br/> | [System.Double](https://msdn.microsoft.com/library/System.Double.aspx) <br/> |
+| [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Decimal) <br/> | [Decimal](https://msdn.microsoft.com/library/System.Decimal.aspx) <br/> |
+| [DateTime()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#DateTime) <br/> | [DateTime](https://msdn.microsoft.com/library/System.DateTime.aspx) <br/> |
+| [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#YesNo) <br/> | [Boolean](https://msdn.microsoft.com/library/System.Boolean.aspx) <br/> |
    
 
 #### Text property values
@@ -250,7 +249,7 @@ Prefix matching is also supported. You can use the wildcard operator (*), but is
   
     
     
-When you specify a phrase for the property value, matched results must contain the specified phrase within the property value that is stored in the full-text index. The following query example returns content items with the text "Advanced Search" in the title, such as "Advanced Search XML", "Learning About the Advanced Search Web Part", and so on:
+When you specify a phrase for the property value, matched results must contain the specified phrase within the property value that is stored in the full-text index. The following query example returns content items with the text "Advanced Search" in the title, such as "Advanced Search XML", "Learning About the Advanced Search web part", and so on:
   
     
     
@@ -312,8 +311,9 @@ In these **datetime** formats:
 
 -  _YYYY_ specifies a four-digit year.
     
-    > **Note:**
-      > Only four-digit years are supported. 
+    > [!NOTE]
+    > Only four-digit years are supported. 
+
 -  _MM_ specifies a two-digit month. For example, 01 = January.
     
   
@@ -343,10 +343,20 @@ All date/time values must be specified according to the UTC (Coordinated Univers
 #### Relevant date intervals supported by KQL
 
 KQL enables you to build search queries that support relative "day" range query, with reserved keywords as shown in Table 4. Use double quotation marks ("") for date intervals with a space between their names.
-  
-    
-    
 
+Matches would include items modified today:
+
+ `LastModifiedTime=today`
+ 
+Matches would include items from the beginning of the current year until the end of the current year:
+
+ `LastModifiedTime="this year"`
+
+Matches would include items from January 1st of 2019 until April 26th of 2019:
+
+ `LastModifiedTime>=2019-01-01 AND LastModifiedTime<=2019-04-26`
+
+**Table 4. Date interval reserved keywords**
 
 |**Name of date interval**|**Description**|
 |:-----|:-----|
@@ -362,41 +372,63 @@ KQL enables you to build search queries that support relative "day" range query,
 ### Using multiple property restrictions within a KQL query
 
 Search in SharePoint supports the use of multiple property restrictions within the same KQL query. You can use either the same property for more than one property restriction, or a different property for each property restriction. 
-  
     
-    
-When you use multiple instances of the same property restriction, matches are based on the union of the property restrictions in the KQL query. Matches would include content items authored by John Smith or Jane Smith, as follows:
-  
-    
+When you use multiple instances of the same property restriction, matches are based on the union of the property restrictions in the KQL query. Matches would include content items authored by John Smith or Jane Smith, as follows:    
     
  `author:"John Smith" author:"Jane Smith"`
-  
     
-    
-This functionally is the same as using the **OR** Boolean operator, as follows:
-  
-    
+This functionally is the same as using the **OR** Boolean operator, as follows:    
     
  `author:"John Smith" OR author:"Jane Smith"`
-  
-    
     
 When you use different property restrictions, matches are based on an intersection of the property restrictions in the KQL query, as follows:
-  
-    
     
  `author:"John Smith" filetype:docx`
-  
-    
     
 Matches would include Microsoft Word documents authored by John Smith. This is the same as using the **AND** Boolean operator, as follows:
-  
-    
     
  `author:"John Smith" AND filetype:docx`
-  
-    
-    
+
+
+
+### Grouping property restrictions within a KQL query
+_**Applies to:** Office 365 | SharePoint Online | SharePoint 2019_
+
+You may use parenthesis `()` to group multiple property restrictions related to a specific property of type *Text* with the following format:
+
+`<Property Name>:(<Expression>)`
+
+More advanced queries might benefit from using the `()` notation to construct more condensed and readable query expressions.
+
+The query:
+
+`author:"John Smith" AND author:"Jane Smith"`
+
+can be rewritten as:
+
+`author:("John Smith" "Jane Smith")`
+
+The query:
+
+`title:Advanced title:Search title:Query NOT title:"Advanced Search Query"`
+
+can be rewritten as:
+
+`title:((Advanced OR Search OR Query) -"Advanced Search Query")`
+
+The query:
+
+`title:Advanced XRANK(cb=1) title:Search XRANK(cb=1) title:Query`
+
+can be rewritten as:
+
+`title:(Advanced XRANK(cb=1) Search XRANK(cb=1) Query)`
+
+> [!NOTE]
+> When using `()` to group an expression on a property query the number of matches might increase as individual query words are lemmatized, which they are not otherwise. Phrases in quotes are not lemmatized.
+>
+> `title:page` return matches with the exact term *page* while `title:(page)` also return matches for the term *pages*.
+
 
 ## KQL operators for complex queries
 <a name="kql_operators"> </a>
@@ -430,9 +462,9 @@ You use Boolean operators to broaden or narrow your search. You can use Boolean 
 ### Proximity operators
 
 You use proximity operators to match the results where the specified search terms are within close proximity to each other. Proximity operators can be used with free-text expressions only; they are not supported with property restrictions in KQL queries. There are two proximity operators: **NEAR** and **ONEAR**.
-  
-    
-    
+
+
+
 
 #### NEAR operator
 
@@ -470,10 +502,7 @@ If you need a smaller distance between the terms, you can specify it. The follow
     
  `"acquisition" NEAR(n=3) "debt"`
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > In SharePoint the **NEAR** operator no longer preserves the ordering of tokens. In addition, the **NEAR** operator now receives an optional parameter that indicates maximum token distance. However, the default value is still **8**. If you must use the previous behavior, use **ONEAR** instead.
   
     
@@ -514,9 +543,9 @@ If you require a smaller distance between the terms, you can specify it as follo
 ### Synonym operators
 
 You use the **WORDS** operator to specify that the terms in the query are synonyms, and that results returned should match either of the specified terms. You can use the **WORDS** operator with free text expressions only; it is not supported with property restrictions in KQL queries.
-  
-    
-    
+
+
+
 The following query example matches results that contain either the term "TV" or the term "television". This matching behavior is the same as if you had used the following query:
   
     
@@ -536,7 +565,7 @@ These queries differ in how the results are ranked. When you use the **WORDS** o
 
 ### Wildcard operator
 
-You use the wildcard operator—the asterisk character (" **\*** ")—to enable prefix matching. You can specify part of a word, from the beginning of the word, followed by the wildcard operator, in your query, as follows. This query would match results that include terms beginning with "serv", followed by zero or more characters, such as serve, server, service, and so on:
+You use the wildcard operator—the asterisk character (" **&ast;** ")—to enable prefix matching. You can specify part of a word, from the beginning of the word, followed by the wildcard operator, in your query, as follows. This query would match results that include terms beginning with "serv", followed by zero or more characters, such as serve, server, service, and so on:
   
     
     
@@ -565,14 +594,12 @@ You can specify whether the results that are returned should include or exclude 
 
 You use the **XRANK** operator to boost the dynamic rank of items based on certain term occurrences within the _match expression_, without changing which items match the query. An **XRANK** expression contains one component that must be matched, the _match expression_, and one or more components that contribute only to dynamic ranking, the  _rank expression_. At least **one** of the parameters, excluding _n_, must be specified for an **XRANK** expression to be valid.
   
-    
+> [!NOTE]
+> Query latency (and probability of timeout) increases when using complex queries and especially when using xrank operators. The increase in query latency depends on the number of **XRANK** operators and the number of hits in the _match expression_ and _rank expression_ components in the query tree.   
     
  _Match expressions_ may be any valid KQL expression, including nested **XRANK** expressions. _Rank expressions_ may be any valid KQL expression without **XRANK** expressions. If your KQL queries have multiple **XRANK** operators, the final dynamic rank value is calculated as a sum of boosts across all **XRANK** operators.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Use parenthesis to explicitly indicate the order of computation for KQL queries that have more than one **XRANK** operator at the same level.
   
     
@@ -594,7 +621,7 @@ The **XRANK** operator's dynamic ranking calculation is based on this formula:
   
     
     
-![Formula for XRANK operator](../../images/XRANKFormula.gif)
+![Formula for XRANK operator](../images/XRANKFormula.gif)
   
     
     
@@ -684,10 +711,10 @@ You can combine different parts of a keyword query by using the opening parenthe
     
     
 
-## Additional resources
+## See also
 <a name="SP15KQL_addlresources"> </a>
 
 
--  [Building search queries in SharePoint](building-search-queries-in-sharepoint)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   

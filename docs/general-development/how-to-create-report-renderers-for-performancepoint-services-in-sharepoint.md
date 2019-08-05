@@ -1,12 +1,20 @@
+---
+title: Create report renderers for PerformancePoint Services in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+localization_priority: Normal
+---
 
 
 
-# How to: Create report renderers for PerformancePoint Services in SharePoint
+# Create report renderers for PerformancePoint Services in SharePoint
+
 Learn how to create the renderer component in a custom report extension for PerformancePoint Services.
+
 ## What are custom report renderers for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
-In PerformancePoint Services, custom report renderers are web server controls that render a custom report in a Web Part. A renderer writes the HTML for the report visualization (such as a table or chart), provides logic to handle report parameters, and retrieves the report object from the repository.
+In PerformancePoint Services, custom report renderers are web server controls that render a custom report in a web part. A renderer writes the HTML for the report visualization (such as a table or chart), provides logic to handle report parameters, and retrieves the report object from the repository.
   
     
     
@@ -85,7 +93,7 @@ The class in the following code example creates a report renderer that displays 
   
     
     
-Before you can compile this code example, you must configure your development environment as described in  [To create and configure the renderer class](#BKMK_ConfigRR).
+Before you can compile this code example, you must configure your development environment as described in  [To create and configure the renderer class](#BKMK_ConfigRenderer).
   
     
     
@@ -261,14 +269,14 @@ After you create a report renderer and a report editor (including its user inter
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint)
+-  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

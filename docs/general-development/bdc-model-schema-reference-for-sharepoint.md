@@ -1,7 +1,9 @@
 ---
 title: BDC model schema reference for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 979a5ffc-f033-4e72-b2d1-11d8cb1b294a
+localization_priority: Normal
 ---
 
 
@@ -159,7 +161,7 @@ By default, the Business Data Connectivity (BDC) service provides actions such a
   
     
     
-Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data Web Part or in an External Data column. 
+Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data web part or in an External Data column. 
   
     
     
@@ -1032,11 +1034,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Namespace** <br/> |Required.  <br/> The namespace that this external content type belongs to.  <br/> Attribute type: **String** <br/> **Note:** The namespace should not contain the asterisk special character " **\***".           |
+|**Namespace** <br/> |Required.  <br/> The namespace that this external content type belongs to.  <br/> Attribute type: **String** <br/> **Note**: The namespace should not contain the asterisk special character " **\***".           |
 |**Version** <br/> |Required.  <br/> The version number of this external content type.  <br/> Attribute type: **String** <br/> **Caution:** When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder** or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.          |
 |**EstimatedInstanceCount** <br/> |Optional.  <br/> The estimated number of external items contained by the external system.  <br/> Default value: 10000  <br/> Attribute type: **Integer** <br/> |
 |**DefaultOperationMode** <br/> |Optional.  <br/> Specifies the default behavior when interacting with the external system while creating, deleting, updating, or reading external items.  <br/> Default value: Default  <br/> The following table lists the possible values for this attribute.  <br/> <table width="50%" cellspacing="2" cellpadding="5" frame="lhs"><thead><tr><th><p>Value</p></th><th><p>Description</p></th></tr></thead><tbody><tr><td><p>Online</p></td><td><p>Bypass the cached external items for all operations and interact with the external system directly.</p></td></tr><tr><td><p>Cached</p></td><td><p>Perform <b>Create</b>, <b>Read</b>, <b>Update</b>, and <b>Delete</b> operations directly against the cached external items. For <b>Read</b> operations, if the requested external items are available in the cache, use the external items in the cache. Otherwise, bypass the cache to obtain the external items from the external system, and put it in the cache for later use.</p></td></tr><tr><td><p>Offline</p></td><td><p>Perform <b>Create</b>, <b>Read</b>, <b>Update</b>, and <b>Delete</b> operations against only the cached external items.</p></td></tr><tr><td><p>Default</p></td><td><p>Use the System default behavior. This uses Cached mode if the environment supports caching external items.</p></td></tr></tbody></table>|
-|Name  <br/> |Required.  <br/> The name of the external content type.  <br/> Attribute type: **String** <br/> **Note:** The name of an external content type should not contain the asterisk special character " **\***".           |
+|Name  <br/> |Required.  <br/> The name of the external content type.  <br/> Attribute type: **String** <br/> **Note**: The name of an external content type should not contain the asterisk special character " **\***".           |
 |DefaultDisplayName  <br/> |Optional.  <br/> The default display name of the external content type.  <br/> Attribute type: **String** <br/> |
 |IsCached  <br/> |Optional.  <br/> Specifies whether this external content type will be frequently used. If set to true, Business Data Connectivity (BDC) service will cache this external content type in memory.  <br/> Default value: **true** <br/> Attribute type: **Boolean** <br/> |
    
@@ -1206,9 +1208,8 @@ Specifies an identifier of an external content type.
  **Schema:** BDCMetadata
   
     
-    
-
-> **Note:**
+> [!NOTE]
+> 
 > Business Data Connectivity (BDC) service enables the mapping of identifiers to fields with nullable data types. However, for primary identifiers, BDC will cause an error when the value of these identifiers are **null**. 
   
     
@@ -2239,7 +2240,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the parameter.  <br/> |
 | [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the parameter.  <br/> |
-| [TypeDescriptor](http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) <br/> |The root type descriptor of the parameter.  <br/> |
+| [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor) <br/> |The root type descriptor of the parameter.  <br/> |
    
  **Parent element**
   
@@ -2371,7 +2372,7 @@ None
 | [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> ||
 | [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](http://msdn.microsoft.com/library/8ce0a852-38f9-75d2-8258-27c57418f53c%28Office.15%29.aspx) <br/> ||
 | [Parameter Element in Parameters (BDCMetadata Schema)](http://msdn.microsoft.com/library/811cad0b-ba71-8be0-0765-3e0dec18a0d3%28Office.15%29.aspx) <br/> ||
-| [TypeDescriptor](http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) <br/> ||
+| [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor) <br/> ||
 | [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
 | [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> ||
 | [MethodInstance Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> ||
@@ -2650,7 +2651,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**UpdaterField** <br/> |Optional.  <br/> Specifies whether the **TypeDescriptor** represents a field for **MethodInstances** of type **Updater** that are contained by the **Method** that contains the **Parameter** containing the **TypeDescriptor**. When this attribute is specified, a **PreUpdaterField** attribute must not be specified. <br/> Default value: **false** <br/> Attribute type: **Boolean** <br/> |
 |**PreUpdaterField** <br/> |Optional.  <br/> Specifies whether data structure represented by the **TypeDescriptor** stores the latest data value received from the external system of a field for **MethodInstances** of type **Updater**. When this attribute is specified, a **UpdaterField** attribute must not be specified. <br/> Default value: **false** <br/> Attribute type: **Boolean** <br/> |
 |**Significant** <br/> |Optional.  <br/> Specifies whether values stored by the data structure represented by this **TypeDescriptor** are included in calculating a hash code or comparing values stored in the data structures. For example, a **TypeDescriptor** representing a customer's last name is taken into account when determining whether a record has been modified, and so it is significant, whereas the **TypeDescriptor** representing the date on which the customer record is last modified typically is not taken into account to determine whether a record has been modified, and so it is not significant. <br/> Default value: **true** <br/> Attribute type: **Boolean** <br/> |
-|**Name** <br/> |Required.  <br/> The name of the **TypeDescriptor**.  <br/> Attribute type: **String** <br/> **Note:** The name of a **TypeDescriptor** should not contain the special characters for forward slash ("/"), period ("."), or opening bracket ("[").          |
+|**Name** <br/> |Required.  <br/> The name of the **TypeDescriptor**.  <br/> Attribute type: **String** <br/> **Note**: The name of a **TypeDescriptor** should not contain the special characters for forward slash ("/"), period ("."), or opening bracket ("[").          |
 |**DefaultDisplayName** <br/> |Optional.  <br/> The display name of the **TypeDescriptor**.  <br/> Attribute type: **String** <br/> |
 |**IsCached** <br/> |Optional.  <br/> Specifies whether the **TypeDescriptor** is used frequently. <br/> Default value: **true** <br/> Attribute type: **Boolean** <br/> |
    
@@ -2732,31 +2733,31 @@ None
 |**Element**|**Description**|
 |:-----|:-----|
 | [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
-| [TypeDescriptor](http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) <br/> ||
+| [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor) <br/> ||
    
 
-## Additional resources
+## See also
 <a name="bkmk_Addres"> </a>
 
 
--  [Changes in the BDC model schema for SharePoint](changes-in-the-bdc-model-schema-for-sharepoint)
+-  [Changes in the BDC model schema for SharePoint](changes-in-the-bdc-model-schema-for-sharepoint.md)
     
   
--  [External content types in SharePoint](external-content-types-in-sharepoint)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint)
+-  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   

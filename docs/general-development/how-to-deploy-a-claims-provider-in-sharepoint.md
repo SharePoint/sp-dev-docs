@@ -1,16 +1,20 @@
 ---
-title: How to Deploy a claims provider in SharePoint
-ms.prod: SHAREPOINT
+title: Deploy a claims provider in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 3a5fcedc-aa9a-4ff4-95c0-0e0a7dea9d1f
+localization_priority: Normal
 ---
 
 
-# How to: Deploy a claims provider in SharePoint
+# Deploy a claims provider in SharePoint
+
 Learn how to deploy a SharePoint claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) .
+
 ## Deploying a claims provider as part of a setup
 <a name="SP15_HowToDeployClaimsProvider_DeployingClaimsSetup"> </a>
 
-The easiest way to deploy a claims provider is by using the features infrastructure. To do this, first define a feature and a feature receiver that derives from the  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) class, and override the base properties.
+The easiest way to deploy a claims provider is by using the features infrastructure. To do this, first define a Farm scoped feature and a feature receiver that derives from the  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) class, and override the base properties.
   
     
     
@@ -153,20 +157,20 @@ namespace MySample.Sample.Server.SampleClaimsProvider
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_HowToDeployClaimsProvider_AdditionalResources"> </a>
 
 
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
     
   
--  [Claims provider in SharePoint](claims-provider-in-sharepoint)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
     
   
--  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
     
   
 

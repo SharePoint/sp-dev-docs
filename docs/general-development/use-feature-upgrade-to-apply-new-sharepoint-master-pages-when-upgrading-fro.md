@@ -1,7 +1,9 @@
 ---
 title: Use Feature upgrade to apply new SharePoint master pages when upgrading from SharePoint 2010
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: de3169f1-715e-4f80-bfbf-caea744e2a0b
+localization_priority: Normal
 ---
 
 
@@ -77,7 +79,7 @@ In either case, during upgrade any custom master pages you've created will rever
 
   
 
-  ![After you create an event receiver to your feature, a code file appears under the feature.](../../images/SP15_FeatureReceiverVS.png)
+  ![After you create an event receiver to your feature, a code file appears under the feature.](../images/SP15_FeatureReceiverVS.png)
   
 
     This file contains a commented and empty  `FeatureUpgrading` method. You'll use this method in the following step.
@@ -125,19 +127,19 @@ public override void FeatureUpgrading(SPFeatureReceiverProperties properties, st
 
 ```
 
-Once you're done with the upgrade, you'll want to think about the future and long-term maintenance of your feature. Refer to  [Application Lifecycle Management in SharePoint 2010](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx) for guidance on maintaining full-trust code. Although this article refers to SharePoint 2010 specifically, it applies equally well to full-trust code in SharePoint. If you aren't familiar with feature versioning and upgrade actions, refer to the [Models for Solution Lifecycle Management](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx#sectionSection7) section of this article. You should also look at [Best Practices for Using Feature Versions](http://msdn.microsoft.com/en-us/library/office/ee535064%28v=office.14%29.aspx).
+Once you're done with the upgrade, you'll want to think about the future and long-term maintenance of your feature. Refer to  [Application Lifecycle Management in SharePoint 2010](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx) for guidance on maintaining full trust code. Although this article refers to SharePoint 2010 specifically, it applies equally well to full trust code in SharePoint. If you aren't familiar with feature versioning and upgrade actions, refer to the [Models for Solution Lifecycle Management](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx#sectionSection7) section of this article. You should also look at [Best Practices for Using Feature Versions](http://msdn.microsoft.com/en-us/library/office/ee535064%28v=office.14%29.aspx).
   
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
 -  [Deploy custom features to upgraded site collections in SharePoint](http://technet.microsoft.com/en-us/library/dn673579%28v=office.15%29.aspx)
     
   
--  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint)
+-  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint.md)
     
   
 -  [Upgrade to SharePoint](http://technet.microsoft.com/en-us/library/cc303420%28v=office.15%29.aspx)

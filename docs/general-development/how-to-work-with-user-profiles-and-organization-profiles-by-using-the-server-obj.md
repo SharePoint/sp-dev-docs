@@ -1,21 +1,22 @@
 ---
-title: How to Work with user profiles and organization profiles by using the server object model in SharePoint
-ms.prod: SHAREPOINT
+title: Work with user profiles and organization profiles by using the server object model in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b
+localization_priority: Normal
 ---
 
 
-# How to: Work with user profiles and organization profiles by using the server object model in SharePoint
+# Work with user profiles and organization profiles by using the server object model in SharePoint
+
 Learn how to create, retrieve, and change SharePoint user profiles and user profile properties programmatically by using the SharePoint server object model.
+
 ## What are user profiles in SharePoint?
 
 In SharePoint, user profiles represent SharePoint users. User profile properties represent information about the users and also about the properties themselves. For example, properties include the account name or email address of a user and the data type of a property. You can use the server object model to programmatically create, retrieve, and change user profiles, profile subtypes, and profile properties.
   
-    
-    
-
-> **Note:**
-> For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint). 
+> [!NOTE]
+> For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md). 
   
     
     
@@ -66,14 +67,14 @@ To create a console application that uses the server object model to work with u
   
 6. Replace the contents of the **Program** class with the code example from one of the following scenarios:
     
-  -  [Create a user profile](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_CreateUP)
-  -  [Create a user profile property](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_CreateUPProp)
-  -  [Retrieve and change user profiles](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_GetChangeUP)
-  -  [Retrieve and change attributes for user profile properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_GetChangePropAttributes)
-  -  [Retrieve and change values for user properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_GetChangePropValues)
+  -  [Create a user profile](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_CreateUP)
+  -  [Create a user profile property](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_CreateUPProp)
+  -  [Retrieve and change user profiles](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangeUP)
+  -  [Retrieve and change attributes for user profile properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangePropAttributes)
+  -  [Retrieve and change values for user properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangePropValues)
     
   
-7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service** page for the User Profile Service Application in Central Administration.
+7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service** page for the user profile service application in Central Administration.
     
   
 
@@ -86,10 +87,7 @@ In SharePoint, user profiles represent SharePoint users. Profile types and subty
     
 The following code example creates a  [UserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.aspx) object that is associated with the default user profile subtype. Some user profile properties are automatically populated with information that is imported from the directory that contains user accounts, such as Active Directory Domain Services. For a code example that creates a custom subtype, see [ProfileSubtype](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtype.aspx) .
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the domain\\username andservername placeholder values before you run the code.
   
     
@@ -157,10 +155,7 @@ A profile property and its attributes are represented by a set of linked objects
     
 The following code example creates a  [CoreProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CoreProperty.aspx) that has a URL data type (or optionally a [CoreProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CoreProperty.aspx) that has a multivalue string data type). In addition, it creates a [ProfileTypeProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypeProperty.aspx) and a [ProfileTypeProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypeProperty.aspx) that define availability, privacy, and other settings for the property. The [ProfileSubtypeProperty.DefaultPrivacy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.DefaultPrivacy.aspx) property controls the visibility of properties and other My Site content. For a complete list of the possible data types for profile property values, see [PropertyDataType](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyDataType.aspx) .
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the servername placeholder value before you run the code.
   
     
@@ -253,10 +248,7 @@ namespace UserProfilesSSOM
 
 The following code example retrieves all user profiles within the context and changes the value of a user's  [DisplayName](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.DisplayName.aspx) property. Most profile properties are accessed by using the [UserProfile.Item](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.Item.aspx) accessor.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the domain\\username andservername placeholder values before you run the code.
   
     
@@ -326,10 +318,7 @@ namespace UserProfilesSSOM
 
 The following code example retrieves the set of properties that represent a specific user property and its attributes, and then it changes the  [CoreProperty.DisplayName](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CoreProperty.DisplayName.aspx) attribute, [ProfileTypeProperty.IsVisibleOnViewer](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypeProperty.IsVisibleOnViewer.aspx) attribute, and [ProfileSubtypeProperty.PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) attribute. These changes apply globally to the property set. [ProfileSubtypeProperty.PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) specifies whether users are required to provide a value for the property. [PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) applies to user profile properties only.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the servername placeholder value before you run the code.
   
     
@@ -404,10 +393,7 @@ namespace UserProfilesSSOM
 
 The following code example retrieves all **UserProfile** type properties and retrieves the property values for a specific user. Then, it changes the single-value [PictureUrl](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PictureUrl.aspx) property and the multivalue [PastProjects](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PastProjects.aspx) property. For the complete list of profile property name constants, see [PropertyConstants](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.aspx) .
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the domain\\username, http://servername/docLib/pic.jpg, and servername placeholder values before you run the code.
   
     
@@ -474,7 +460,7 @@ namespace UserProfilesSSOM
 
                     // Add a value to a multivalue user property.
                     userProfile[PropertyConstants.PastProjects].Add((object)"Team Feed App");
-                    userProfile[PropertyConstants.PastProjects].Add((object)"Social Ratings View Web Part");
+                    userProfile[PropertyConstants.PastProjects].Add((object)"Social Ratings View web part");
 
                     // Save the changes to the server.
                     userProfile.Commit();
@@ -494,17 +480,17 @@ namespace UserProfilesSSOM
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
--  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint)
+-  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md)
     
   
--  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in)
+-  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
     
   
--  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in)
+-  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md)
     
   
 -  [Microsoft.Office.Server.UserProfiles](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.aspx)

@@ -1,12 +1,14 @@
 ---
 title: What's new in workflows for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 1d51421b-61ac-46b6-a865-52f968ddc5b3
+localization_priority: Priority
 ---
 
 
-# What's new in workflows for SharePoint
-Learn about the capabilities and features that are new to workflows in SharePoint.
+# What's new in workflows for SharePoint 2013
+Learn about the capabilities and features that are new to workflows in SharePoint Server 2013.
 The workflow framework in SharePoint is significantly changed from previous versions. The following sections provide brief summaries of the most significant updates and enhancements to the workflow infrastructure.
   
     
@@ -20,7 +22,7 @@ SharePoint workflows are powered by Windows Workflow Foundation 4 (WF), which wa
   
     
     
-Perhaps the most prominent feature of the new workflow infrastructure is the introduction of Microsoft Azure as the new workflow execution host. The workflow execution engine now lives outside of SharePoint, in Microsoft Azure. Figure 1 provides a generalized, high-level view of the new workflow infrastructure. For a more thorough discussion of the concepts presented in Figure 1, see  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals).
+Perhaps the most prominent feature of the new workflow infrastructure is the introduction of Microsoft Azure as the new workflow execution host. The workflow execution engine now lives outside of SharePoint, in Microsoft Azure. Figure 1 provides a generalized, high-level view of the new workflow infrastructure. For a more thorough discussion of the concepts presented in Figure 1, see  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md).
   
     
     
@@ -34,7 +36,7 @@ Perhaps the most prominent feature of the new workflow infrastructure is the int
   
     
     
-![High-level workflow architecture](../../images/wfArchitecture1.png)
+![High-level workflow architecture](../images/wfArchitecture1.png)
   
     
     
@@ -70,7 +72,7 @@ In short, the needs of both the information worker (the "power user") and the de
 ## Visual Studio 2012 workflow project type support
 <a name="SP15Whatsnewinworflow_VSworkflow"> </a>
 
-To make collaboration easier between information worker and software developer, Visual Studio 2012 provides SharePoint workflow project types and a workflow custom action-item type. For more information about developing workflows by using Visual Studio 2012, and for information about differentiating between SharePoint Designer 2013 and Visual Studio 2012 in workflow development, see  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio).
+To make collaboration easier between information worker and software developer, Visual Studio 2012 provides SharePoint workflow project types and a workflow custom action-item type. For more information about developing workflows by using Visual Studio 2012, and for information about differentiating between SharePoint Designer 2013 and Visual Studio 2012 in workflow development, see  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md).
   
     
     
@@ -78,7 +80,7 @@ To make collaboration easier between information worker and software developer, 
 ## Support for creating custom actions
 <a name="SP15Whatsnewinworflow_customactions"> </a>
 
-A lot of effort has gone into anticipating the business requirements of workflow authors in the providing of workflow templates, actions, and activities in SharePoint Designer 2013 and in Visual Studio 2012. However, we also know that we cannot anticipate each person's specific needs. For this reason, Visual Studio 2012 provides a workflow custom action-item type that lets developers create custom actions. For more information about workflow custom actions, see  [How to: Build and deploy workflow custom actions](how-to-build-and-deploy-workflow-custom-actions).
+A lot of effort has gone into anticipating the business requirements of workflow authors in the providing of workflow templates, actions, and activities in SharePoint Designer 2013 and in Visual Studio 2012. However, we also know that we cannot anticipate each person's specific needs. For this reason, Visual Studio 2012 provides a workflow custom action-item type that lets developers create custom actions. For more information about workflow custom actions, see  [How to: Build and deploy workflow custom actions](how-to-build-and-deploy-workflow-custom-actions.md).
   
     
     
@@ -94,7 +96,7 @@ Visual Studio 2012 provides templates and support for creating workflows on the 
 ## New workflow actions
 <a name="SP15Whatsnewinworflow_Newwfactions"> </a>
 
-Following are new workflow actions that are provided in SharePoint. For a full detailing of both new and deprecated actions, see  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint). New to workflows in SharePoint are a set of workflow actions that allow you to integrate with Project 2013 and let you create Project-based workflows.
+Following are new workflow actions that are provided in SharePoint. For a full detailing of both new and deprecated actions, see  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md). New to workflows in SharePoint are a set of workflow actions that allow you to integrate with Project 2013 and let you create Project-based workflows.
   
     
     
@@ -125,20 +127,18 @@ Following are new workflow actions that are provided in SharePoint. For a full d
 |Set this field in the project to this value [Microsoft Project]  <br/> |Sets the value for the enterprise custom field for a specified project.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15Whatsnewinworflow_Addresources"> </a>
 
 
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
+    
+     
+  
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint)
-    
-  
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
-    
-  
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 

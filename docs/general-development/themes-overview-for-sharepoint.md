@@ -1,7 +1,9 @@
 ---
 title: Themes overview for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ae585dd3-82fe-46bb-ac93-065edc0a16f4
+localization_priority: Priority
 ---
 
 
@@ -16,10 +18,7 @@ Themes provide a quick and easy way to apply lightweight branding to a SharePoin
     
 The theming experience in SharePoint was redesigned to simplify the process of customizing sites. The themes user interface was redesigned and there is a set of new file formats related to themes. The **Change the look** wizard is the entry point to the theming experience where you can change the look and feel of your site. You can select a design for the site. Then, you can customize the design by changing the site layout, background, color palette, or font scheme. You can preview the site before applying the design. For more information, see [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > Themes created in SharePoint 2010 cannot be used on SharePoint sites. But, themes created in SharePoint 2010 can still be used on site collections that have not been upgraded or on site collections that use the 2010 experience version. 
   
     
@@ -112,20 +111,20 @@ You can create new designs by creating new list items in the Composed Looks list
     
     
 
-## Additional resources
+## See also
 <a name="section4"> </a>
 
 
--  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
--  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint)
+-  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
--  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint)
+-  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
     
   
--  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint)
+-  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
 -  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)

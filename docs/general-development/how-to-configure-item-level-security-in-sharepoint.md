@@ -1,12 +1,16 @@
 ---
-title: How to Configure item-level security in SharePoint
-ms.prod: SHAREPOINT
+title: Configure item-level security in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
+localization_priority: Normal
 ---
 
 
-# How to: Configure item-level security in SharePoint
+# Configure item-level security in SharePoint
+
 Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint.
+
 ## External systems with NTLM authentication
 <a name="ItemLevelSecurity_NTLMAuth"> </a>
 
@@ -73,9 +77,8 @@ DefaultDisplayName="ReadSecurity">
 </Method>
 ```
 
-
-> **Note:**
-> If you return the security descriptor as a field of the external content type, you cannot use client caching. This is because cached items are limited to a specific size, which access control lists (ACL) can easily exceed. Therefore, the Search connector framework ignores requests to cache items if they contain a security descriptor field. 
+> [!NOTE]
+> ems are limited to a specific size, which access control lists (ACL) can easily exceed. Therefore, the Search connector framework ignores requests to cache items if they contain a security descriptor field. 
   
     
     
@@ -186,17 +189,17 @@ unchecked((int)0xffffffffL), InheritanceFlags.None, PropagationFlags.None);
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15Itemlevelsec_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [Implementing a BinarySecurityDescriptorAccessor](http://msdn.microsoft.com/library/6cf70490-dd3c-49cd-bb13-ed33e938435d%28Office.15%29.aspx)
     
   
--  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint)
+-  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
     
   
 

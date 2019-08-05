@@ -1,7 +1,9 @@
 ---
 title: Step 1 Creating a Project and Adding a UDF Reference
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 4c6f1279-28df-45af-8488-42a6573d526d
+localization_priority: Normal
 ---
 
 
@@ -17,10 +19,7 @@ In this step, you will create a project and add a reference to Microsoft.Office.
 
 The following project uses Microsoft Visual Studio 2005.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Depending on which settings you use in the Visual Studio integrated development environment (IDE), the process to create a project could be slightly different. 
   
     
@@ -96,43 +95,19 @@ The following steps show how to locate Microsoft.Office.Excel.Server.Udf.dll and
   
 2. In the **Add Reference** dialog box, on the **.NET** tab, select **Excel Services UDF Framework**.
     
-    > **Note:**
-      > You can also open the **Add Reference** dialog box in **Solution Explorer** by right-clicking **References** and selecting **Add Reference**. 
+    > [!NOTE]
+    > You can also open the **Add Reference** dialog box in **Solution Explorer** by right-clicking **References** and selecting **Add Reference**. 
+
 3. Click **OK**.
     
-    > **Note:**
-      > The previous steps assume that you are building the project on a computer that has Microsoft SharePoint Server 2010 installed. On the computer where you have installed SharePoint Server 2010, you can find a copy of Microsoft.Office.Excel.Server.Udf.dll at: > [drive:]\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\14\\ISAPI 
+    > [!NOTE]
+    > The previous steps assume that you are building the project on a computer that has Microsoft SharePoint Server 2010 installed. On the computer where you have installed SharePoint Server 2010, you can find a copy of Microsoft.Office.Excel.Server.Udf.dll at: > [drive:]\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\14\\ISAPI 
 
 ## See also
 
-
-#### Tasks
-
-
-  
-    
-    
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
-  
-    
-    
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
-  
-    
-    
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells)
-  
-    
-    
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
-#### Concepts
-
-
-  
-    
-    
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
-  
-    
-    
- [Understanding Excel Services UDFs](understanding-excel-services-udfs)
+- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
+- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
+- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
+- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

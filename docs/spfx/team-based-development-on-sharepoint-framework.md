@@ -1,10 +1,19 @@
+---
+title: Team-based development on the SharePoint Framework
+description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
+ms.date: 01/25/2018
+ms.prod: sharepoint
+localization_priority: Priority
+---
+
+
 # Team-based development on the SharePoint Framework
 
 SharePoint Framework is a new development model for building SharePoint customizations. Unlike other SharePoint development models available to date, the SharePoint Framework focuses on client-side development and is built on top of popular open source tools such as gulp and webpack. One big benefit of this change is that developers on any platform can build SharePoint customizations.
 
-SharePoint Framework is a development model, and despite the differences in the underlying technology, the same concepts apply when using it for building solutions, as to other development models SharePoint developers used in the past. Developers use the SharePoint Framework toolchain to build and test their solutions and once ready, they hand over the solution package to be deployed on the SharePoint tenant for further testing and release.
+SharePoint Framework is a development model, and despite the differences in the underlying technology, the same concepts apply when using it for building solutions as to other development models SharePoint developers used in the past. Developers use the SharePoint Framework toolchain to build and test their solutions and once ready, they hand over the solution package to be deployed on the SharePoint tenant for further testing and release.
 
-SharePoint Framework consists of a few different packages. These packages, each in its own specific version, make up a release of the SharePoint Framework. For example the General Availability release of the SharePoint Framework consists of the following package versions:
+SharePoint Framework consists of a few different packages. These packages, each in its own specific version, make up a release of the SharePoint Framework. For example, the General Availability release of the SharePoint Framework consists of the following package versions:
 
 - @microsoft/sp-client-base v1.0.0
 - @microsoft/sp-core-library v1.0.0
@@ -13,7 +22,7 @@ SharePoint Framework consists of a few different packages. These packages, each 
 - @microsoft/sp-module-interfaces v1.0.0
 - @microsoft/sp-webpart-workbench v1.0.0
 
-For a project to target a specific release of the SharePoint Framework it has to reference all the different packages in the correct versions. When scaffolding new projects, the SharePoint Framework Yeoman generator automatically adds the necessary references to the package from the corresponding release of the SharePoint Framework. But when upgrading the project to a newer version of the SharePoint Framework developers have to pay extra attention to correctly update version numbers of the SharePoint Framework packages.
+For a project to target a specific release of the SharePoint Framework, it has to reference all the different packages in the correct versions. When scaffolding new projects, the SharePoint Framework Yeoman generator automatically adds the necessary references to the package from the corresponding release of the SharePoint Framework. But when upgrading the project to a newer version of the SharePoint Framework, developers have to pay extra attention to correctly update version numbers of the SharePoint Framework packages.
 
 ## Preparing the development environment
 
@@ -29,11 +38,11 @@ Building SharePoint Framework solutions requires developers to use a certain set
 
 SharePoint Framework requires Node.js to be installed on the developer machine. Node.js is used as the runtime for design-time tools used to build and package the project. Node.js is installed globally on the developer machine and there are solutions available to support running multiple versions of Node.js side-by-side if necessary.
 
-> More information about installing Node.js and the supported versions is available at [https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment](https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment).
+For more information, see [installing Node.js and the supported versions](./set-up-your-development-environment.md).
 
-#### Npm
+#### npm
 
-Npm is the equivalent of NuGet in .NET projects: it allows developers to acquire and install packages for use in SharePoint Framework projects. Npm is also used to install the SharePoint Framework toolchain. Typically developers will use the latest version of npm and install it globally on their machine. Npm itself is a Node.js package so if you're running multiple versions of Node.js side-by-side each will have its own version of npm installed.
+npm is the equivalent of NuGet in .NET projects: it allows developers to acquire and install packages for use in SharePoint Framework projects. Npm is also used to install the SharePoint Framework toolchain. Typically developers will use the latest version of npm and install it globally on their machine. Npm itself is a Node.js package so if you're running multiple versions of Node.js side-by-side each will have its own version of npm installed.
 
 #### gulp
 
@@ -67,7 +76,7 @@ In the past it was challenging for many organizations to justify providing Share
 
 Probably the easiest option to setup a development environment for SharePoint Framework projects is to install all the tools directly on the host machine. If your team is working only on SharePoint Framework projects, then they can install Node.js on their machines. If they work on other Node.js projects as well then they could use third party solutions such as [nvm](https://github.com/creationix/nvm) to run multiple versions of Node.js side-by-side.
 
-Following the tools required by the SharePoint Framework toolchain, developers would install Yeoman and the SharePoint Framework Yeoman generator. Typically both these tools are installed globally. Given however, that the SharePoint Framework Yeoman generator is tied to a specific version of the SharePoint Framework and developers might need to work with projects created using a different version, they would have to uninstall and install the version of the generator specific for the particular project they are working on at the moment. A more viable approach would be to install both Yeoman and the SharePoint Framework Yeoman generator locally in the given project. While it introduces some overhead it helps developers ensure that should they need to add new elements to the project in the future they would be compatible with the rest of the project.
+Following the tools required by the SharePoint Framework toolchain, developers would install Yeoman and the SharePoint Framework Yeoman generator. Typically both these tools are installed globally. Given however, that the SharePoint Framework Yeoman generator is tied to a specific version of the SharePoint Framework and developers might need to work with projects created using a different version, they would have to uninstall and install the version of the generator specific for the particular project they are working on at the moment. A more viable approach would be to install Yeoman globally but the SharePoint Framework Yeoman generator locally in the given project. While it introduces some overhead, it helps developers ensure that should they need to add new elements to the project in the future they would be compatible with the rest of the project.
 
 Big benefit of developing on the host is that developers can configure their machine to their preferences once and use it across all projects. Also, as the software executes on the host, it has direct access to the CPU, memory and disk I/O without a virtualization layer in between which leads to a better performance than when running the same software virtualized.
 
@@ -85,7 +94,7 @@ An interesting middle ground between developing on the host and in a virtual mac
 
 Similarly to virtual machines, Docker containers run a virtualized instance of an operating system (most commonly based on Linux). All software installed in the image used to create the container runs isolated inside that container and has only access to the portion of the host file system explicitly shared with the container. As all changes to the filesystem inside a Docker container are discarded once the container is closed, developers share folders from their host to store the source code.
 
-Read more about [using Docker for building SharePoint Framework solutions](https://www.spcaf.com/blog/try-sharepoint-framework-without-installing/).
+Read more about [using Docker for building SharePoint Framework solutions](https://rencore.com/blog/try-sharepoint-framework-without-installing).
 
 ## Development workflow in SharePoint Framework projects
 
@@ -93,7 +102,7 @@ SharePoint Framework is based on open source toolchain and follows the general d
 
 ### Create new SharePoint Framework project
 
-When building SharePoint customizations using the SharePoint Framework the first step is to scaffold new SharePoint Framework project. This is done using the SharePoint Framework Yeoman generator. The generator will prompt you to answer a few questions regarding the name of the project or its location. It will also allow you to create the first web part. The important thing to remember is, that the framework you choose to build the first web part with, will be automatically used for all other web parts you will add to the project later on. While you are free to manually change the framework yourself, the general recommendation is to use a single framework per SharePoint Framework project.
+When building SharePoint customizations using the SharePoint Framework the first step is to scaffold new SharePoint Framework project. This is done using the SharePoint Framework Yeoman generator. The generator will prompt you to answer a few questions regarding the name of the project or its location. It will also allow you to create the first web part or extension. Although you are free to choose a different JavaScript framework for each of your components, the general recommendation is to use a single framework per SharePoint Framework project.
 
 ### Lock dependencies version
 
@@ -101,7 +110,8 @@ A new SharePoint Framework project scaffolded by the SharePoint Framework Yeoman
 
 A common solution to avoid the risk of dependencies changing during the project, in projects built on the open source toolchain, is to lock the version of all dependencies. When adding a dependency to the project developers can choose to install the dependency with a specific version rather than a version range by calling the `npm install` command with the `--save-exact` argument. This however doesn't affect the child dependencies of the particular package. To effectively lock the version of all dependencies and their children in the project, developers can use the `npm shrinkwrap` command. Once executed, it will generate a list of all dependencies and their versions at the moment of execution and record it in the **npm-shrinkwrap.json** file which should be included in the source control. When restoring dependencies npm will use the exact versions from this file rather than the latest version satisfying the particular version range.
 
-> Note: if you have any packages installed in the **node_modules** folder that are not listed as dependencies in the **package.json** file or are not a dependency of one of the packages, you will likely see an error when generating the **npm-shrinkwrap.json** file. In this case you can either see which packages are causing the error and add them to the **package.json** or remove them from the **node_modules** folder, or you can delete the **node_modules** folder altogether, restore all dependencies and generate the shrinkwrap file then.
+> [!NOTE] 
+> If you have any packages installed in the **node\_modules** folder that are not listed as dependencies in the **package.json** file or are not a dependency of one of the packages, you will likely see an error when generating the **npm-shrinkwrap.json** file. In this case, you can either see which packages are causing the error and add them to the **package.json**, or remove them from the **node\_modules** folder, or you can delete the **node_modules** folder altogether, restore all dependencies and generate the shrinkwrap file then.
 
 ### Add the project to source control
 
@@ -109,13 +119,14 @@ To allow the rest of the team to work on the same project add it to the source c
 
 SharePoint Framework projects are scaffolded with the **.gitignore** file which describes which files should be excluded from the source control. If your team is using a source control system other than Git (such as Visual Studio Team System with Team Foundation System repositories), you should ensure that you are including correct files from the project in the source control. Also excluding the dependencies and autogenerated files during the build process allows you to ensure that your team will work efficiently.
 
-One location developers should particularly pay attention not to include in the source control is the **node_modules** folder. This folder contains packages on which the project depends and which are automatically installed when restoring dependencies using the `npm install` command. Some packages compile to binaries where the compilation process depends on the operating system. If the team is working on different operating system then including the **node_modules** folder in the source control will likely break the build for some team members.
+One location developers should particularly pay attention not to include in the source control is the **node\_modules** folder. This folder contains packages on which the project depends and which are automatically installed when restoring dependencies using the `npm install` command. Some packages compile to binaries where the compilation process depends on the operating system. If the team is working on different operating system then including the **node\_modules** folder in the source control will likely break the build for some team members.
 
 ### Get the project from source control
 
 The first time you will get the project from source control, you will get the project's source code but none of the SharePoint Framework libraries required to build the project. Similarly to when working with .NET projects and using NuGet packages, you have to restore the dependencies first. In SharePoint Framework projects, similarly to all other projects built on top of Node.js, you do that by executing `npm install` in the command line. npm will use the information from the **package.json** file combined with the information from the **npm-shrinkwrap.json** file and install all packages.
 
-> Note: Typically restoring dependencies using the `npm install` command requires internet connectivity as packages are downloaded from _registry.npmjs.org_. If you experience network connectivity issues or the npmjs registry is unavailable your build will fail. There are a number of ways to mitigate this limitation. One of them is using [shrinkpack](https://github.com/JamieMason/shrinkpack) to download tarballs of all dependencies and have them stored in the source control. Shrinkpack automatically updates the npm-shrinkwrap.json file to use the local tarballs allowing for offline installation of the project's dependencies.
+> [!NOTE] 
+> Typically restoring dependencies using the `npm install` command requires internet connectivity as packages are downloaded from _registry.npmjs.org_. If you experience network connectivity issues or the npmjs registry is unavailable your build will fail. There are a number of ways to mitigate this limitation. One of them is using [shrinkpack](https://github.com/JamieMason/shrinkpack) to download tarballs of all dependencies and have them stored in the source control. Shrinkpack automatically updates the npm-shrinkwrap.json file to use the local tarballs allowing for offline installation of the project's dependencies.
 
 Some of the packages are compiled into binaries during the installation process. This compilation process is specific to the architecture and operating system. If you would for example restore dependencies in a Docker container running Linux and would then try to build the project on your Windows host you would get an error reporting the mismatch in the environment type used to build and run the binaries.
 
@@ -125,7 +136,8 @@ As your team develops the solution, new or updated dependencies might be added t
 
 Using existing packages to accomplish specific tasks allows you to be more productive. npmjs.com is a public registry of packages that you can use in your project.
 
-> Note: Since there is no formal verification process before a package is published to npmjs.com, you should carefully examine if you can use the particular package both from the contents and license point of view.
+> [!IMPORTANT] 
+> Since there is no formal verification process before a package is published to npmjs.com, you should carefully examine if you can use the particular package both from the contents and license point of view.
 
 To add a package to your SharePoint Framework project execute the `npm install <package> --save` or `npm install <package> --save-dev` command in the command line, eg. `npm install angular --save`. Using the `--save` or `--save-dev` argument ensures that the package is added to the **package.json** file and other developers on your team will get it as well when restoring dependencies. Without it building the project on a machine other than your own will fail. When adding packages that are required by your solution on runtime, such as Angular or jQuery, you should use the `--save` argument. Packages that are required in the build process, such as additional gulp tasks, should be installed with the `--save-dev` argument.
 
@@ -143,9 +155,10 @@ When using private package registries organizations can choose between different
 
 Using a private package registry allows organizations to centrally manage common code used across the different projects. By defining a separate governance plan around contributing changes to the shared code base, organizations can ensure that the code library is of high quality and that it offers all developers benefits as intended rather than being a burden slowing projects down.
 
-A popular private registry hosted in the cloud is [npm Enterprise](https://www.npmjs.com/enterprise). Organizations that are interested in hosting their registry themselves can choose from a number of open source implementations such as [Sinopia](https://github.com/rlidwka/sinopia) or its fork [Verdaccio](https://github.com/verdaccio/verdaccio) or [Nexus](https://www.sonatype.com/nexus-repository-oss).
+Organizations using Visual Studio Team Services or the Team Foundation Server, can conveniently [create a private npm registry directly in VSTS/TFS](https://docs.microsoft.com/en-us/vsts/package/overview). Organizations using other source control systems, can use other solutions for hosting their packages. A popular private registry hosted in the cloud is [npm Enterprise](https://www.npmjs.com/enterprise). Organizations that are interested in hosting their registry themselves can choose from a number of open source implementations such as [Sinopia](https://github.com/rlidwka/sinopia) or its fork [Verdaccio](https://github.com/verdaccio/verdaccio) or [Nexus](https://www.sonatype.com/nexus-repository-oss).
 
-> Note: Different engines for hosting private package registries are in different development stages and you should carefully evaluate that the particular engine meets your requirements, both from the functionality, license and support point of view.
+> [!NOTE] 
+> Different engines for hosting private package registries are in different development stages and you should carefully evaluate that the particular engine meets your requirements, both from the functionality, license and support point of view.
 
 To simplify the installation and management of a private package registry, most engines offer ready-to-use Docker images.
 
@@ -204,7 +217,7 @@ SharePoint Framework offers standard support for the [Karma](http://karma-runner
 
 Where linting is helpful to validate the syntax of the particular file, often developers need more support in order to verify that the project as a whole meets the guidelines. Generally linters focus on the code itself but miss the context of what the particular code file represents. In SharePoint Framework solutions artifacts have specific requirements, for example a web part should have a unique ID in the project. Also organizations might have other requirements such as not referencing scripts from CDN or only using a specific version of a particular library. This is where linters generally fall short and developers need other tools.
 
-[SharePoint Code Analysis Framework](https://spcaf.com) (SPCAF) is a third part solution frequently used by SharePoint developers, administrators and employees in quality assurance and security roles to verify that SharePoint customizations meet organizational quality guidelines. SPCAF integrates with the whole application lifecycle process helping organizations lower the total cost of ownership of SharePoint customizations. SPCAF offers a set of rules that specifically target SharePoint Framework solutions.
+[SharePoint Code Analysis Framework](http://rencore.com/spcaf) (SPCAF) is a third party solution frequently used by SharePoint developers, administrators and employees in quality assurance and security roles to verify that SharePoint customizations meet organizational quality guidelines. SPCAF integrates with the whole application lifecycle process helping organizations lower the total cost of ownership of SharePoint customizations. SPCAF offers a set of rules that specifically target SharePoint Framework solutions.
 
 ## Upgrading SharePoint Framework projects
 
@@ -214,7 +227,8 @@ Deploying a SharePoint customization to production usually doesn't mean the end 
 
 With a few exceptions SharePoint Framework uses semantic versioning (SemVer) for tracking version numbers. Semantic versioning is a versioning pattern widely adopted by software developers worldwide. A SemVer number consists of three numbers MAJOR.MINOR.PATCH and optional labels, eg. 1.0.1.
 
-> Note: Currently SharePoint Frameworks supports only the usage of the three numbers without labels.
+> [!NOTE] 
+> Currently SharePoint Frameworks supports only the usage of the three numbers without labels.
 
 Different parts of a SemVer number are increased depending on the type of change applied to the solution:
 
@@ -232,23 +246,31 @@ When updating a part of a SharePoint Framework solution, developers should incre
 
 #### Increase package version in package.json
 
-SharePoint Framework package is structured like a Node.js package. Its dependencies and metadata are stored in the **package.json** file in the project folder. One of the properties in the **package.json** file is the version property that denotes the version of the whole project. Although it's purely informational and it's not used by any of the deployed artifacts, developers should increase the version number in the **package.json** every time a new release of the project is planned following the SemVer convention.
+SharePoint Framework package is structured like a Node.js package. Its dependencies and metadata are stored in the **package.json** file in the project folder. One of the properties in the **package.json** file is the version property that denotes the version of the whole project. By default, all components in the current solution inherit this version number as their version. Developers should increase the version number in the **package.json** file every time a new release of the project is planned following the SemVer convention.
 
 #### Increase solution package version in package-solution.json
 
-SharePoint Framework solutions are deployed using an **.spapp** file installed in the App Catalog on a SharePoint tenant. An **.spapp** file is similar to a SharePoint add-in package and follows the same versioning conventions. The current version of the **.spapp** package is defined using a four-part (MAJOR.MINOR.REVISION.BUILD) number stored in the **config/package-solution.json** file. For clarity, developers should keep this number in sync with the version number in the **package.json** file as both number refer to the version of the project as a whole.
+SharePoint Framework solutions are deployed using an **.sppkg** file installed in the app catalog on a SharePoint tenant. An **.sppkg** file is similar to a SharePoint add-in package and follows the same versioning conventions. The current version of the **.sppkg** package is defined using a four-part (MAJOR.MINOR.REVISION.BUILD) number stored in the **config/package-solution.json** file. For clarity, developers should keep this number in sync with the version number in the **package.json** file as both number refer to the version of the project as a whole.
 
-> Note: Increasing the version number in the package-solution.json file between releases is required in order for the new version of the package to be correctly deployed in SharePoint.
-
-#### Increase web part version in the web part manifest
-
-Each client-side web part built on the SharePoint Framework contains a manifest that provides the SharePoint Framework with information about that web part such as its title, icon, properties and where the code bundle is located. Each web part also has its own version number stored in the manifest of each web part in the **version** property. The **version** property follows the SemVer schema with three numbers without a label. Web part manifest is included in the **.spapp** package which is deployed to SharePoint.
-
-When updating a web part, developers should change its version number in a way that corresponds to the scope of applied changes. If the project contains multiple web parts and the particular web part hasn't been changed between releases then the version number of that web part shouldn't be changed.
+> [!NOTE] 
+> Increasing the version number in the package-solution.json file between releases is required in order for the new version of the package to be correctly deployed in SharePoint.
 
 ### Update dependencies
 
 One of the reasons for an update of a SharePoint Framework project might be a change to one of the underlying dependencies, for example a new release of Angular with bug fixes and performance improvements. If your team follows the recommended approach of using npm shrinkwrap for locking dependencies' versions then you would use the `npm install <package>@<version> --save` command to update your dependency to the specific version and test your project to verify that it works as expected with the latest updates. Depending on how the changes to the underlying dependencies impact the project, the overall project update might vary from a patch to a full major release.
+
+> [!IMPORTANT] 
+> Don't modify the version numbers of dependencies in the **package.json** file manually. If you're using a lock file such as npm shrinkwrap, your manual changes to the package.json file will be ignored and the version numbers recorded in the lock files will be used instead which will lead to hard to track errors in your project.
+
+#### Mind project structure changes
+
+Updating your project to a newer version of the SharePoint Framework, might require changes to your project structure and project configuration files. Before updating the versions of the SharePoint Framework in your project dependencies, you should always create a new project using the version of the SharePoint Framework to which you want to upgrade and carefully compare its structure and contents with your existing project. This will allow you to determine the impact of the upgrade on your project and help you avoid applying breaking changes to your project.
+
+#### Beware of using npm outdated
+
+One of the ways to find out which dependencies in your project need updating, is to run the **npm outdated** command. This command will scan your dependency tree and will show you which packages could be updated. While using this command is convenient, it has to be done with caution.
+
+Starting from version 1.3, the SharePoint Framework Yeoman generator allows you to choose whether you want to scaffold a project that should work only in SharePoint Online or in both SharePoint 2016 Feature Pack 2 and up and SharePoint Online. SharePoint hosted on-premises uses an older version of the SharePoint Framework than the latest version available in SharePoint Online. If you would run the **npm outdated** command on a project compatible with SharePoint on-premises, it would suggest updating all core SharePoint Framework packages to the latest versions published to Npm. Unfortunately, by updating these packages to their latest versions, your project wouldn't work with SharePoint on-premises anymore. Before updating the versions of the SharePoint Framework packages, you should always verify if your project is meant to work with SharePoint hosted on-premises and if so, what version of the SharePoint Framework you have to support.
 
 ### Build and package project in release mode
 
@@ -258,6 +280,7 @@ Once you verified that the solution is working as expected, build the project in
 
 After building and packaging the project the next step is to deploy it. First deploy the updated web part bundles located in the **./temp/deploy** folder in your project. Publish the files next to web part bundles of the previous version of your solution.
 
-> Note: You shouldn't remove the previous versions of your solution as long as there are active instances of web parts using them. Each version of the bundle files has a unique name and removing previous versions before updating web parts will break these web parts.
+> [!NOTE] 
+> You shouldn't remove the previous versions of your solution as long as there are active instances of web parts using them. Each version of the bundle files has a unique name and removing previous versions before updating web parts will break these web parts.
 
 Next, deploy the new solution package to SharePoint app catalog. This is necessary to notify SharePoint of the new version of the solution which it should apply.

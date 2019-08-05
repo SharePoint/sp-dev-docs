@@ -1,7 +1,9 @@
 ---
 title: Step 4 Building and Testing the Application
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f2feeecb-1b4c-4049-be4e-11d414f13d9f
+localization_priority: Normal
 ---
 
 
@@ -31,20 +33,17 @@ In this step, you will build and test your application. Visual Studio offers sev
   
 2. The application prints the following output to the console.
     
-    > **Note:**
-      > These values vary depending on the values you have in your workbook, session ID, and so on. 
+    > [!NOTE]
+    > These values vary depending on the values you have in your workbook, session ID, and so on. 
 
-```
-  
-The Credential is: System.Net.SystemNetworkCredential
-Total rows in range: 18
-Value in range is: 4245.955129
-```
+    ```
+    The Credential is: System.Net.SystemNetworkCredential
+    Total rows in range: 18
+    Value in range is: 4245.955129
+    ```
 
 3. Press any key to close SampleApplication.exe.
     
-  
-
 ### File Not Found Exception
 
 
@@ -144,26 +143,26 @@ Console.ReadLine();
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
   
     
     

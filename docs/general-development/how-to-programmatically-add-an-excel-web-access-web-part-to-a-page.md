@@ -1,30 +1,29 @@
 ---
-title: How to Programmatically Add an Excel Web Access Web Part to a Page
+title: Programmatically add an Excel Web Access web part to a page
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto,webpart
 f1_keywords:
 - how to,howdoi,howto,webpart
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: 858bb0f6-654a-4f12-ba0b-4776bda5ff6d
+localization_priority: Normal
 ---
 
 
-# How to: Programmatically Add an Excel Web Access Web Part to a Page
+# Programmatically add an Excel Web Access web part to a page
 
-This example shows how to programmatically add an Excel Web Access Web Part to a SharePoint page. It also shows you how to display an Excel workbook programmatically in an Excel Web Access Web Part. 
+This example shows how to programmatically add an Excel Web Access web part to a SharePoint page. It also shows you how to display an Excel workbook programmatically in an Excel Web Access web part. 
   
     
     
 
 The following project uses Microsoft Visual Studio.
-> **Note:**
+
+> [!NOTE]
 > Depending on the Visual Studio version and the Visual Studio integrated development environment (IDE) settings that you are using, the process and steps to create a Visual Studio project could be slightly different from the procedures shown in this topic. 
   
-    
-    
-
-
-> **Note:**
-> It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location). 
+> [!NOTE]
+> It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
   
     
     
@@ -34,11 +33,8 @@ The following project uses Microsoft Visual Studio.
 
 The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how to add a reference to it. Repeat for Microsoft.Office.Excel.WebUI.Internal.dll and Microsoft.SharePoint.dll.
   
-    
-    
-
-> **Note:**
-> It is assumed that you have already copied Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder of your choice. For more information about how to locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, see  [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc). 
+> [!NOTE]
+> It is assumed that you have already copied Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder of your choice. For more information about how to locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, see  [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md). 
   
     
     
@@ -52,8 +48,9 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
   
 2. In the **Add Reference** dialog box, click **Browse**.
     
-    > **Note:**
-      > You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
+    > [!NOTE]
+    > You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
+    
 3. Browse to the location of Microsoft.Office.Excel.WebUI.dll.
     
   
@@ -64,10 +61,10 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
     
   
 
-## Instantiating a Web Part
+## Instantiating a web part
 
 
-### To instantiate the Excel Web Access Web Part
+### To instantiate the Excel Web Access web part
 
 
 1. Add the Microsoft.Office.Excel.WebUI namespace as a directive to your code, so that when you use the types in this namespace, you do not need to fully qualify them:
@@ -82,7 +79,7 @@ using Microsoft.Office.Excel.WebUI;
   Imports Microsoft.Office.Excel.WebUI
 ```
 
-2. Instantiate and initialize the Excel Web Access Web Part, as follows:
+2. Instantiate and initialize the Excel Web Access web part, as follows:
     
 ```cs
   
@@ -160,8 +157,8 @@ End Sub
 ```cs
   
 ...
-// Instantiate Excel Web Access Web Part.
-// Add an Excel Web Access Web Part in a shared view.
+// Instantiate Excel Web Access web part.
+// Add an Excel Web Access web part in a shared view.
 ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
 ewaWebPart.WorkbookUri = book;
 progressBar1.PerformStep();
@@ -187,8 +184,8 @@ catch (Exception exc)
 
 ```VB.net
   
-'Instantiate Excel Web Access Web Part.
-'Add an Excel Web Access Web Part in a shared view.
+'Instantiate Excel Web Access web part.
+'Add an Excel Web Access web part in a shared view.
 Dim ewaWebPart As New ExcelWebRenderer()
 ewaWebPart.WorkbookUri = book
 progressBar1.PerformStep()
@@ -206,7 +203,7 @@ End Try
 
 ## Example
 
-The following example is a Windows Forms application that enables a user to enter information on a SharePoint site and display an Excel workbook saved in a trusted location programmatically. It programmatically creates an Excel Web Access Web Part on the default.aspx page of the specified site and displays the specified Excel workbook.
+The following example is a Windows Forms application that enables a user to enter information on a SharePoint site and display an Excel workbook saved in a trusted location programmatically. It programmatically creates an Excel Web Access web part on the default.aspx page of the specified site and displays the specified Excel workbook.
   
     
     
@@ -239,11 +236,11 @@ namespace AddEWATool
         private string appName = "AddEWATool";
         private string specifyInputError = "Please add a site URL, for example: http://myserver/site/";
         private string openSiteError = "There was a problem with the site name. Please check that the site exists.";
-        private string addWebPartError = "There was a problem adding the Web Part.";
-        private string successMessage = "Web Part successfully added.";
+        private string addWebPartError = "There was a problem adding the web part.";
+        private string successMessage = "web part successfully added.";
 
         /// <summary>
-        /// Add the Excel Web Access Web Part to the Default.aspx page of the specified site.
+        /// Add the Excel Web Access web part to the Default.aspx page of the specified site.
         /// </summary>
         /// <param name="siteName">URL of the SharePoint site</param>
         /// <param name="book">URI to the workbook</param>
@@ -293,7 +290,7 @@ namespace AddEWATool
 
                 try
                 {
-                    // Get the shared Web Part manager on the Default.aspx page.
+                    // Get the shared web part manager on the Default.aspx page.
                     webPartManager = targetWeb.GetLimitedWebPartManager(
                         "Default.aspx",
                         System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared);
@@ -311,8 +308,8 @@ namespace AddEWATool
 
                 progressBar1.PerformStep();
 
-                // Instantiate Excel Web Access Web Part.
-                // Add an Excel Web Access Web Part in a shared view.
+                // Instantiate Excel Web Access web part.
+                // Add an Excel Web Access web part in a shared view.
                 ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
                 ewaWebPart.WorkbookUri = book;
                 progressBar1.PerformStep();
@@ -401,11 +398,11 @@ Namespace AddEWATool
         Private appName As String = "AddEWATool"
         Private specifyInputError As String = "Please add a site URL, for example, http://myserver/site/"
         Private openSiteError As String = "There was a problem with the site name. Please check that the site exists."
-        Private addWebPartError As String = "There was a problem adding the Web Part."
-        Private successMessage As String = "Web Part successfully added."
+        Private addWebPartError As String = "There was a problem adding the web part."
+        Private successMessage As String = "web part successfully added."
 
         ''' <summary>
-        ''' Add the Excel Web Access Web Part to the Default.aspx page of the specified site.
+        ''' Add the Excel Web Access web part to the Default.aspx page of the specified site.
         ''' </summary>
         ''' <param name="siteName">URL of the SharePoint site</param>
         ''' <param name="book">URI to the workbook</param>
@@ -440,7 +437,7 @@ Namespace AddEWATool
                 progressBar1.PerformStep()
 
                 Try
-                    ' Get the shared Web Part manager on the Default.aspx page.
+                    ' Get the shared web part manager on the Default.aspx page.
                     webPartManager = targetWeb.GetLimitedWebPartManager( _
                             "Default.aspx", _
                             System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)
@@ -452,8 +449,8 @@ Namespace AddEWATool
 
                 progressBar1.PerformStep()
 
-                'Instantiate Excel Web Access Web Part.
-                'Add an Excel Web Access Web Part in a shared view.
+                'Instantiate Excel Web Access web part.
+                'Add an Excel Web Access web part in a shared view.
                 Dim ewaWebPart As New ExcelWebRenderer()
                 ewaWebPart.WorkbookUri = book
                 progressBar1.PerformStep()
@@ -522,15 +519,15 @@ The Excel workbook that you are using must be in a trusted location.
   
     
     
- [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc)
+ [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)

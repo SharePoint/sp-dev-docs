@@ -1,7 +1,9 @@
 ---
 title: Authorization, users, groups, and the object model in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 11/15/2018
+ms.prod: sharepoint
 ms.assetid: aacf3398-f0b5-48cb-9071-440b4c3a9dd1
+localization_priority: Priority
 ---
 
 
@@ -43,10 +45,10 @@ Following are ways that SharePoint provides to control access to its objects:
 - Anonymous access allows users to contribute anonymously to lists and surveys, or to view pages anonymously. You can also grant access to "all authenticated users" to allow all members of your domain to access a website without having to enable anonymous access. 
     
   
-- Site creation rights ( **CreateSSCSite** and **ManageSubwebs**) control whether users can create top-level websites, subsites, or workspaces.
+- Site creation rights (**CreateSSCSite** and **ManageSubwebs**) control whether users can create top-level websites, subsites, or workspaces.
     
   
-Users become members of a SharePoint object indirectly through a group that has a role assignment, or directly through a role assignment. Users also can be members of a Microsoft Windows NT Domain Group that is added to a group or to a role. A role definition associates a user or group with a single right or set of rights corresponding to values of the  [Microsoft.SharePoint.SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx) enumeration. Each user or group has a unique member [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx) .You can use the object model to create or modify role assignments and definitions differently than the way you can through the functionality of the addrole.aspx file and the editrole.aspx file. Unlike these pages, which are presented in the user interface, the object model does not enforce rights dependency, so you can create a role definition with an arbitrary combination of rights. But, plan carefully when using the object model to customize role definitions and permissions, because a poorly planned role definition and inappropriately assigned rights can lead to a bad user experience.For more information about SharePoint rights, see  [SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx) .
+Users become members of a SharePoint object indirectly through a group that has a role assignment, or directly through a role assignment. Users also can be members of a Microsoft Windows NT Domain Group that is added to a group or to a role. A role definition associates a user or group with a single right or set of rights corresponding to values of the  [Microsoft.SharePoint.SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx) enumeration. Each user or group has a unique member [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx). You can use the object model to create or modify role assignments and definitions differently than the way you can through the functionality of the addrole.aspx file and the editrole.aspx file. Unlike these pages, which are presented in the user interface, the object model does not enforce rights dependency, so you can create a role definition with an arbitrary combination of rights. But, plan carefully when using the object model to customize role definitions and permissions, because a poorly planned role definition and inappropriately assigned rights can lead to a bad user experience. For more information about SharePoint rights, see  [SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx).
 ## Security policy
 <a name="SP15_AuthorizationUsersGroupsAndObjectModel_SecurityPolicy"> </a>
 
@@ -62,12 +64,12 @@ Rights can be granted or denied through policy. Granting a right gives that righ
   
     
     
-In policy roles, the users and groups are identified by both their security identifier (SID) and their login or user name. Applying a policy role is similar to managing permissions for a website, list, folder, or document: You add users or groups and assign them to one or more role definitions. Each web application has its own policy roles. Another difference between policy roles and managing permissions is that central administrators can deny a right to a user throughout a web application.
+In policy roles, the users and groups are identified by both their security identifier (SID) and their login or user name. Applying a policy role is similar to managing permissions for a website, list, folder, or document: you add users or groups and assign them to one or more role definitions. Each web application has its own policy roles. Another difference between policy roles and managing permissions is that central administrators can deny a right to a user throughout a web application.
   
     
     
 
-> **Note:**
+> [!NOTE]
 > Central administration policy roles differ from the role definitions for a site collection. 
   
     
@@ -119,7 +121,7 @@ Figure 1 shows a high-level view of the SharePoint Server security management sy
   
     
     
-![Authorization object relations](../../images/4a1e594e-cc3b-4bd6-bfe7-27568e30bb2b.gif)
+![Authorization object relations](../images/4a1e594e-cc3b-4bd6-bfe7-27568e30bb2b.gif)
   
     
     
@@ -245,23 +247,23 @@ The only way to remove a user from all scopes is to delete that user from the si
     
     
 
-## Additional resources
+## See also
 <a name="SP15_AuthorizationUsersGroupsAndObjectModel_AdditionalResources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint)
+-  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
     
   
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
--  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint)
+-  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint.md)
     
   
 

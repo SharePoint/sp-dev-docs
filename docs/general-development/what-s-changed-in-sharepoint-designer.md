@@ -1,7 +1,9 @@
 ---
 title: What's changed in SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f1cd30c9-9a73-428d-9151-f1813b43b020
+localization_priority: Priority
 ---
 
 
@@ -154,7 +156,7 @@ The following feature is not available in SharePoint.
 #### Design view and Split view
 <a name="WhatsChangedSharePointDesigner2013_DesignViewSplitView"> </a>
 
- **Description of the change.**SharePoint Designer 2010 has three views for editing HTML and ASPX pages: Code view, Design view, and Split view. Design view and Split view are removed from SharePoint Designer 2013. The removal of Design view and Split view affects the features of SharePoint Designer 2013 that are used for editing Web Parts and master pages. If you edit pages in SharePoint Designer 2013, you must use Code view.
+ **Description of the change.**SharePoint Designer 2010 has three views for editing HTML and ASPX pages: Code view, Design view, and Split view. Design view and Split view are removed from SharePoint Designer 2013. The removal of Design view and Split view affects the features of SharePoint Designer 2013 that are used for editing web parts and master pages. If you edit pages in SharePoint Designer 2013, you must use Code view.
   
     
     
@@ -171,11 +173,11 @@ If you want to visually design or brand your site, and you want a WYSIWYG ("what
     
     
 
-## Additional resources
+## See also
 <a name="WhatsChangedSharePointDesigner2013_AdditionalResources"> </a>
 
 
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 -  [Changes from SharePoint 2010 to SharePoint](http://technet.microsoft.com/en-us/library/ff607742%28v=office.15%29.aspx)

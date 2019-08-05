@@ -1,10 +1,12 @@
 ---
 title: Excel Services Best Practices
+ms.date: 09/25/2017
 keywords: guidelines
 f1_keywords:
 - guidelines
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: 56fa3913-c156-49da-bed0-a6a106fc129f
+localization_priority: Normal
 ---
 
 
@@ -31,9 +33,7 @@ The following settings combination gives anonymous users access to any files in 
   
 - You have a UNC trusted location and the **Process account** is turned on.
     
-  
-
-> **Note:**
+> [!NOTE]
 > The **Process account** is a global Excel Services setting that affects all trusted locations.
   
     
@@ -211,27 +211,27 @@ For example, use CompanyName.Hierarchichal.Namespace.ClassName instead ofNamespa
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
