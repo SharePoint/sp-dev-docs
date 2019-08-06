@@ -14,7 +14,7 @@ The tenant properties can be managed by tenant administrators by using the [Micr
 
 Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) can be used to manage the tenant properties. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
 
-Yet another alternative for managing tenant properties is [PnP PowerShell](https://aka.ms/sppnp-powershell). The advantage of PnP PowerShell is that it does not require tenant administrator privileges to set those properties. Any member of the Owners group of an app catalog site can do this. This applys to the tenant app catalog site as well as [site collection app catalogs](../general-development/site-collection-app-catalog.md).
+Yet another alternative for managing tenant properties is [PnP PowerShell](https://aka.ms/sppnp-powershell). The advantage of PnP PowerShell is that it does not require tenant administrator privileges to set those properties. Any member of the Owners group of an app catalog site can do this. This applies to the tenant app catalog site as well as [site collection app catalogs](../general-development/site-collection-app-catalog.md).
 
 ## Use Microsoft SharePoint Online Management Shell commands to get, set and remove tenant properties
 
