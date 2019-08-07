@@ -336,7 +336,7 @@
     - name: SharePoint Migration Guidance
       items:
       - name: Migration Guidance for ISVs
-        href: apis/migration-ISV-guidance.md
+        href: apis/migration-isv-guidance.md
       - name: Migration API
         items:
         - name: Import Migration API (CreateMigrationjob)
