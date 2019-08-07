@@ -48,14 +48,6 @@ There are numerous community calls for SharePoint development, and you can choos
 | [Special interest group call for SharePoint Framework](https://aka.ms/spdev-spfx-call)          | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT       | SharePoint Engineering updates, SharePoint Framework, PnPJS, Office 365 CLI, and reusable SPFx controls                                                                           | [Direct Skype link to meeting](https://aka.ms/spdev-spfx-call-join) |
 | [Special interest group call for general SharePoint development](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT       | SharePoint Engineering updates, end-to-end solution designs, provisioning, PnP CSOM, and PnP PowerShell                                                                           | [Direct Skype link to meeting](https://aka.ms/spdev-sig-call-join)  |
 
-## July 2019 Summer Camp Calls!
-
-The official Microsoft-hosted community calls listed above are taking a break for the month of July 2019. The community has organized the following calls that you can join:
-
-|                                            Community call                                             |                 When                  |                                                Description                                                 |                            Skype                            |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [JavaScript + SharePoint Framework Summer Camp Call 2](https://officedevblogs.wpengine.com/wp-content/uploads/2019/06/SharePointPnP-JSSPFxSummerCampCall2.ics) | July 18, 2019 7:00 AM PT / 2:00 PM GMT | SharePoint updates, SharePoint Framework, PnPJS, Office 365 CLI, reusable SPFx controls & community banter | [Direct Zoom link to meeting](https://zoom.us/j/533493686) |
-
 ## What’s the supportability statement around PnP open-source components and solutions?
 
 Following statements apply across all of the SharePoint PnP assets, including samples, controls, component and solutions, like SharePoint Starter Kit or the PnP Provisioning Service.
