@@ -222,6 +222,9 @@ Notice that we are performing an HTML escape on the property's value to ensure a
 
 Let's now add a few more properties to the property pane: a check box, a drop-down list, and a toggle. We first start by importing the respective property pane fields from the framework.
 
+> [!NOTE]
+> If you're targeting SharePoint Framework 1.7.1 for SharePoint on-premises, PropertyPane code would be located in sp-webpart-base. The change to move PropertyPane code to its own package (sp-property-pane) was part of [SharePoint Framework 1.8 release]:https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes#removing-propertypane-code-out-of-sp-webpart-base
+
 1. Scroll to the top of the file and add the following to the import section from `@microsoft/sp-property-pane`:
 
     ```typescript
