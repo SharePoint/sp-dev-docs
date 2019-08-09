@@ -757,7 +757,7 @@ Use the **setSiteBranding** verb to specify the navigation layout, the header la
 
 - **navigationLayout** &ndash; Specify the navigation layout as Cascade or Megamenu
 - **headerLayout** &ndash; Specify the header layout as Standard or Compact
-- **headerBackground** &ndash; Specify the header background as None, Neutral, Soft or Stong
+- **headerBackground** &ndash; Specify the header background as None, Neutral, Soft or Strong
 
 #### Example
 
