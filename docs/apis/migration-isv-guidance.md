@@ -76,6 +76,8 @@ The lastest supported features are:
 
 A new migration API, Asynchronous Metadata Read API (Export API) is currently being made available to ISVs for testing.  If you are interested, please contact Microsoft with your test tenant information.
 
+- [Asynchronous Metadata Read (Export API)](https://docs.microsoft.com/en-us/sharepoint/dev/apis/export-amr-api)
+
 The *AsynchronousMetadataRead* helps the ISVs export content from SharePoint and OneDrive.  Once the new API becomes available, we recommend that you transition to the new API to avoid throttling.
 
 ## Switch to the Microsoft Graph API 
