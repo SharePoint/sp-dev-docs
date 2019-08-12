@@ -37,7 +37,7 @@ Once the preparation work is done, let's continue with doing a scan.
 
 ## Step 3: Launch a scan using the user interface option
 
-The easiest approach is to simply launch SharePoint.Modernization.Scanner.exe as the scanner does have a UI. Alternatively you can start a (PowerShell) command prompt and navigate to that folder so that you can use the scanner via command line. This chapter will walk you through the UI option taking a typical **full** scan. Start by launching the the SharePoint.Modernization.Scanner.exe.
+The easiest approach is to simply launch SharePoint.Modernization.Scanner.exe as the scanner does have a UI. Alternatively you can start a (PowerShell) command prompt and navigate to that folder so that you can use the scanner via command line. This chapter will walk you through the UI option taking a typical **full** scan. Start by launching the SharePoint.Modernization.Scanner.exe.
 
 ### Page 1: Scanner authentication configuration
 
