@@ -75,7 +75,7 @@ Open the host web (your developer test website) and verify that there is a calen
       // Utility functions
 
     function getQueryStringParameter(paramToRetrieve) {
-         var params = document.URL.split("?")[1].split("&amp;");
+         var params = document.URL.split("?")[1].split("&");
          var strParams = "";
          for (var i = 0; i < params.length; i = i + 1) {
              var singleParam = params[i].split("=");

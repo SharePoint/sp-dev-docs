@@ -8,10 +8,8 @@ localization_priority: Priority
 
 # Building solutions with the library component type in SharePoint Framework 
 
-> [!IMPORTANT]
-> The library component type capability is currently in preview.
-
 ## How to create a 3rd party SPFx library
+
 1. Using the instructions [here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment), set up the dev environment.
 1. Create a new project directory in your favorite location
  
@@ -25,10 +23,10 @@ localization_priority: Priority
     cd corporate-library
     ```
  
-1. Create a new library by running the **beta** bits from the Yeoman SharePoint Generator
+1. Create a new library by running the Yeoman SharePoint Generator
 
     ```
-    yo @microsoft/sharepoint --plusbeta
+    yo @microsoft/sharepoint
     ```
  
 1. When prompted:
@@ -109,6 +107,7 @@ localization_priority: Priority
     ```
 
 ## How to deploy and consume a 3rd party SPFx library from tenant app catalog
+
 1. Navigate to the ```corporate-library``` root folder and bundle and package the solution:
 
     ```
@@ -127,7 +126,7 @@ localization_priority: Priority
     ```json
     "dependencies": {
         "corporate-library": "0.0.1", // here we added the reference to the library
-        "@microsoft/sp-core-library": "1.8.0-prbeta.1",
+        "@microsoft/sp-core-library": "1.9.0",
         "@types/webpack-env": "1.13.1",
         "@types/es6-promise": "0.0.33"
     },

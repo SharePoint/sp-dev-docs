@@ -1,13 +1,13 @@
 ---
-title: "SharePoint Online Migration API Overview"
+title: "SharePoint Online Import Migration API"
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
-ms.date: 6/20/2018
-description: "This document is to give more in depth Information about how to use the SPO Migration API."
+search.appverid: MET150
+description: "This document is to give more in depth information about how to use the SPO Migration API."
 localization_priority: Priority
 ---
-# SharePoint Online Migration API
+# SharePoint Import Migration API (CreationMigrationJob)
 
 ## API Documention
 
@@ -15,6 +15,9 @@ The following API description is based upon use of the SharePoint Client Side Ob
 
 > [!NOTE]
 > You can find latest version of the SharePoint Online Client Side Object Model from [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/).
+
+>[!NOTE]
+>The **SharePoint Migration Tool** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
 
 ## Methods
 
@@ -1436,6 +1439,7 @@ There is no change from current published full 2013 [full 2013 package schema](h
 There is no change from current published [full 2013 package schema](https://docs.microsoft.com/en-us/sharepoint/dev/schema/content-migration-schemas).
 
 
-
+>[!NOTE]
+>The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
 
 

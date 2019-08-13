@@ -101,10 +101,11 @@ Now that we have installed the developer certificate, enter the following comman
 gulp serve
 ```
 
-This command executes a series of gulp tasks to create a local, node-based HTTPS server on `localhost:4321` and launches your default browser to preview web parts from your local dev environment.
+This command executes a series of gulp tasks to create a local, node-based HTTPS server on `localhost:4321` and `localhost:5432`. The workbench is then launched in your default browser to preview web parts from your local dev environment.
 
 > [!NOTE]
 > If you are seeing issues with the certificate in browser, please see details on installing a developer certificate from the [Set up your development environment](../../set-up-your-development-environment.md) article.
+> If you are still seeing issues, please check nothing else is listening on the port numbers, by using resmon.exe, the network tab and looking at Listening Ports.
 
 ![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
 

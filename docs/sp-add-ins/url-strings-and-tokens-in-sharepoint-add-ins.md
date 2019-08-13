@@ -23,6 +23,8 @@ In each table:
 - The **Custom Action** column specifies whether the token can be used in the URL of a custom action on a host web. 
 - The **Add-in Part** column specifies whether the token can be used in the **Src** property of the add-in part.
 
+<br/>
+
 ## Tokens that you can use at the beginning of a URL
 
 |**Token**|**Resolves to**|**StartPage**|**Custom Action**|**Add-in Part**|**Remarks**|
@@ -35,6 +37,7 @@ In each table:
 |~remoteAppUrl|The URL of a remote web application in a SharePoint Add-in.|Yes|Yes, in the host web, but No in the add-in web.|Yes|If you are not using Microsoft Office Developer Tools for Visual Studio to develop your SharePoint Add-in, you cannot use **~remoteAppUrl** in the **StartPage** URL. However, when you are using Visual Studio and the tools, you can use this token for any provider-hosted add-in and it is resolved when Visual Studio packages the add-in. In this usage, it is really more of a Visual Studio token than a SharePoint token. It can be used outside the add-in manifest, even when you are not using Microsoft Office Developer Tools for Visual Studio.|
 |~site|The URL of the current website.|No|No|Yes||
 |~sitecollection|The URL of the parent site collection of the current website.|No|No|Yes||
+
 Except where indicated otherwise, none of the tokens in the next table can be used in the  *path*  portion of the **Src** property value of the add-in part. The **Add-in Part** column refers to their use in the *query string*  portion of the value.
  
 

@@ -7,7 +7,7 @@ localization_priority: Priority
 ---
 
 > [!NOTE]
-> The functionality of saving a site as a template described in this article is **only supported** in SharePoint Server 2013, SharePoint Server 2016, and SharePoint Server 2019 (classic sites only). It is **not supported** & **not supported** in SharePoint Online or SharePoint Server 2019 (modern sites).
+> The functionality of saving a site as a template described in this article is **only supported** in SharePoint Server 2013, SharePoint Server 2016, and SharePoint Server 2019 (classic sites only). It is **not supported** in SharePoint Online or SharePoint Server 2019 (modern sites).
 
 # Save, download, and upload a SharePoint site as a template
 Learn how to design and build robust applications by using SharePoint site templates.
