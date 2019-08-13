@@ -23,7 +23,7 @@ We recommend the first two solutions because information workers that don't know
 
 |**Alternative**|**Scenario**|
 |:-----|:-----|
-|Microsoft Flow and Microsoft PowerApps|This is the recommended approach for extending lists by SharePoint power users .|
+|Microsoft Flow and Microsoft PowerApps|This is the recommended approach for extending lists by SharePoint power users.|
 |New add-in model and client-side developments |You can convert complex forms driven by extensive code into provider-hosted add-ins or client-side web parts. This option requires developer resources.|
 
 ## See also
