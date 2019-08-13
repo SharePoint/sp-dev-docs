@@ -856,6 +856,28 @@ Use the **associateExtension** action to register a deployed SharePoint Framewor
 }
 ```
 
+## Activate a Feature
+
+Use the **activateSPFeature** action to activate a web scoped feature.
+
+> [!NOTE]
+> Site scoped features cannot be activated through Site Designs at this time.
+
+#### JSON values
+
+- **featureId** &ndash; The ID of the web scoped feature to activate. 
+
+#### Example
+
+To enable the web scoped feature which allows for Events Lists to be created (feature ID 00bfea71-ec85-4903-972d-ebe475780106):
+
+```json
+{
+    "verb": "activateSPFeature",
+    "featureId": "00bfea71-ec85-4903-972d-ebe475780106"
+}
+```
+
 ## Trigger a flow
 
 Use the **triggerFlow** verb to kick off a custom flow.
