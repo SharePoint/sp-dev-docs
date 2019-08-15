@@ -120,7 +120,6 @@ During incremental migration, instead of query everything again, by populating S
 
 Below is a sample of how the *startChangeToken* might work. This example uses the optional feature setting for initial call and the parameter setting for incremental passes.  
 
-![AMR flow](media/async-read-api-flow.png)
 
 #### Invalid Value
 
