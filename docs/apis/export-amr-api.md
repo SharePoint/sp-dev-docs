@@ -153,8 +153,12 @@ This function returns the changeToken associates with this query. By specifying 
 
 #### Manifest Output
 
-After the asyncMigrationRead function finishes execution, the final manifest will be placed in the container specified, with naming convention of “<jobid>/<filename>”.  Manifest export package structure will be like the *createMigration* Import Package structure. The general output structure is summarized in table below.
+After the asyncMigrationRead function finishes execution, the final manifest will be placed in the container specified, under a folder named **JobId**. Manifest export package structure will be like the *createMigration* Import Package structure. The general output structure is summarized in table below.
 
+Below is an example on how to query the folder:
+
+    CloudBlobDirectory folder = blobContainerObj.GetDirectoryReference(jobid);
+    CloudBlockBlob blob = folder.GetBlockBlobReference(manifestFileName);
 
 |**XML file**|**Schema File**|**Description**|
 |:-----|:-----|:-----|
