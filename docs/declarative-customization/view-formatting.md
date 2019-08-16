@@ -14,7 +14,14 @@ You can use view formatting to customize how views in SharePoint lists and libra
 
 ## Get started with view formatting
 
-To open the view formatting pane, open the view dropdown and choose **Format this view**.
+To open the view formatting pane, open the view dropdown and choose **Format current view**.
+![view dropdown options](../images/view-dropdown-menu.png)
+
+>[!NOTE]
+> To enbale the 'Tiles' layout, include tileProps property inside the JSON.
+
+To format rows in 'List' or 'Compact List' layout, use the `rowFormatter` or `additionalRowClass` properties. To format entries in 'Tiles' layout, use the `formatter` within `tileProps` property.
+
 
 The easiest way to use view formatting is to start from an example and edit it to apply to your specific view. The following sections contain examples that you can copy, paste, and customize for your specific needs. There are also several samples available in the [SharePoint/sp-dev-list-formatting repository](https://github.com/SharePoint/sp-dev-list-formatting).
 
@@ -130,6 +137,100 @@ This example uses the `rowFormatter` element, which totally overrides the render
 ```
 You can find this sample with additional details here: [Multi-line view rendering](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/multi-line-view)
 
+
+Similarly, to get the below format in ‘Tiles’ layout for the Feedback list, define the formatter within tileProps:
+![Feedback list formatted in Tiles layout](../images/feedback-tile-layout.png)
+
+```JSON
+{
+    "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+    "tileProps": {
+        "height": "250",
+        "width": "350",
+        "hideSelection": true,
+        "formatter": {
+        "elmType": "div",
+        "style": {
+            "display": "flex",
+            "align-items": "stretch",
+            "margin-bottom": "16px",
+            "min-width": "150px",
+            "flex-grow": "1",
+            "justify-content": "space-around",
+            "padding": "8px"
+        },
+        "children": [
+            {
+            "elmType": "div",
+            "style": {
+                "width": "97%",
+                "height": "97%",
+                "box-shadow": "4px 4px 8px #a9a9a985",
+                "overflow": "hidden",
+                "border-radius": "4px",
+                "padding-left": "12px"
+            },
+            "attributes": {
+                "class": "ms-bgColor-neutralLighter"
+            },
+            "children": [
+                {
+                "elmType": "div",
+                "style": {
+                    "text-align": "left"
+                },
+                "children": [
+                    {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "sp-row-title"
+                    },
+                    "txtContent": "[$Title]"
+                    },
+                    {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "sp-row-listPadding"
+                    },
+                    "txtContent": "[$Feedback]"
+                    },
+                    {
+                    "elmType": "button",
+                    "customRowAction": {
+                        "action": "defaultClick"
+                    },
+                    "txtContent": "Give feedback",
+                    "attributes": {
+                        "class": "sp-row-button"
+                    },
+                    "style": {
+                        "display": {
+                        "operator": "?",
+                        "operands": [
+                            {
+                            "operator": "==",
+                            "operands": [
+                                "@me",
+                                "[$Assigned_x0020_To.email]"
+                            ]
+                            },
+                            "",
+                            "none"
+                        ]
+                        }
+                    }
+                    }
+                ]
+                }
+            ]
+            }
+        ]
+        }
+    }
+}
+
+
+
 ### Alternate Row Formatting based on Modulus 
 
 This example applies `% (Mod)` to a list view row with alternate coloring the rows:
@@ -166,7 +267,7 @@ You now have validation and autocomplete to create your JSON. You can start addi
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list view row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference).
+Optional element. Specifies a JSON object that describes a list view row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
 
 >[!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -179,7 +280,7 @@ Despite sharing the same schema, there are some differences in behavior between 
 
 ### additionalRowClass
 
-Optional element. Specifies a CSS class(es) that is applied to the entire row. Supports expressions.
+Optional element. Specifies a CSS class(es) that is applied to the entire row. Supports expressions. Only valid for 'List' and 'Compact List' layouts.
 
 `additionalRowClass` only takes effect when there is no `rowFormatter` element specified.  If a `rowFormatter` is specified, then `additionalRowClass` is ignored.
 
@@ -187,8 +288,17 @@ Optional element. Specifies a CSS class(es) that is applied to the entire row. S
 
 Optional element. Specifies whether the ability to select rows in the view is disabled or not. *false* is the default behavior inside a list view (meaning selection is visible and enabled). *true* means that users will not be able to select list items.  
 
-`hideSelection` only takes effect when there's a `rowFormatter` element specified.  If no `rowFormatter` is specified, then `hideSelection` is ignored.
+For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored. For tile layout, `hideSelection` will only take effect if defined inside `tileProps` properties.
 
 ### hideColumnHeader
 
 Optional element. Specifies whether the column headers in the view are hidden or not. *false* is the default behavior inside a list view (meaning column headers will be visible). *true* means that the view will not display column headers.
+
+### tileProps
+
+Optional element. Specifies a JSON object that describes a tile view format. Elements of this property include:
+- height – defines the height of the card in pixels.
+- width – defines the width of the card in pixels. Can go from height/2 to 3 x height. 
+- hideSelection – as defined above
+- formatter – JSON object that defines the layout of tiles. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference).
+
