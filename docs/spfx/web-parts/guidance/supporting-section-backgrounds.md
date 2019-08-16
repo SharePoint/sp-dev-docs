@@ -94,7 +94,7 @@ public render(): void {
 
     const semanticColors: Readonly<ISemanticColors> | undefined = this._themeVariant && this._themeVariant.semanticColors;
 
-    const style: string = ` style="color:${semanticColors.bodyText}"`;
+    const style: string = ` style="background-color:${semanticColors.bodyBackground}"`;
     this.domElement.innerHTML = `<p${'' || (this._themeProvider && style)}>this is a demo</p>`;
 }
 ```
