@@ -1171,6 +1171,13 @@ Operators specify the type of operation to perform. The following operators are 
 - length
 - abs
 - loopIndex
+- floor
+- ceiling
+- pow
+- substring
+- getDate
+- getMonth
+- getYear
 
 **Binary arthmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1224,6 +1231,21 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=length(45)"` results in _1_
   - `"txtContent":"=length(0)"` results in _0_
 
+- **floor**: returns the largest integer les than or equal to a given number. - _Only available in SharePoint Online_
+  - `"txtContent":"=floor(45.5)"` results in _45_ 
+  
+- **ceiling**: rounds the given number up to the next largest whole number or integer. - _Only available in SharePoint Online_
+  - `"txtContent":"=ceiling(45.5)"` results in _46_ 
+  
+- **getDate**: returns the day of the month of the given date. - _Only available in SharePoint Online_
+  - `"txtContent":"=getDate(Date('12/26/1981'))"` results in _26_ 
+  
+- **getMonth**:  returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year). - _Only available in SharePoint Online_
+  - `"txtContent":"=getMonth(Date('12/26/1981'))"` results in _11_ 
+
+- **getYear**: returns the year of the given date. - _Only available in SharePoint Online_
+  - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_ 
+  
 **Binary operators** - The following are operators that expect two operands:
 
 - **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
@@ -1235,7 +1257,22 @@ Operators specify the type of operation to perform. The following operators are 
 - **join**: takes 2 operands. The first is an array (multi-select person or choice field) and the second is the separating string. Returns a string concatenation of the array values separated by the separating string. - _Only available in SharePoint Online_
   - `"txtContent": "=join(@currentField, ', ')"` might result in _"Apple, Orange, Cherry"_ (depending on the selected values)
   - `"txtContent": "=join(@currentField.title, '|')"` might result in _"Chris Kent|Vesa Juvonen|Jeff Teper"_ (depending on the selected persons)
+  
+- **pow**: returns the base to the exponent power. - _Only available in SharePoint Online_
+  - `"txtContent":"=pow(2,3)"` results in _8_
 
+**Ternary operators** - The following are operators that expect three operands:
+
+- **subString**: returns the part of the string between the start and end indicies. - _Only available in SharePoint Online_
+  - `"txtContent":"=subString('DogFood', 3, 4)"` results in _Fo_
+  - `"txtContent":"=subString('DogFood', 4, 3)"` results in _Fo_
+  - `"txtContent":"=subString('DogFood', 3, 6)"` results in _Food_
+  - `"txtContent":"=subString('DogFood', 6, 3)"` results in _Food_
+
+  The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
+
+  
+  
 **Conditional operator** - The conditional operator is:
 
 - **?**: Conditional operations written in Abstract Tree Syntax use `?` as the operator. This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c. For Excel style expressions you write these with an `if` statement. Regardless, there are 3 operands. The first is the condition to evaluate. The second is the result when the condition is true. The third is the result when the condition is false.
