@@ -120,7 +120,7 @@ During incremental migration, instead of query everything again, by populating S
 
 Below is a sample of how the *startChangeToken* might work. This example uses the optional feature setting for initial call and the parameter setting for incremental passes.  
 
-![Export API process](docs/images/async-read-api-flow.png)
+![Export API process](../images/async-read-api-flow.png)
 
 #### Invalid Value
 
@@ -153,8 +153,12 @@ This function returns the changeToken associates with this query. By specifying 
 
 #### Manifest Output
 
-After the asyncMigrationRead function finishes execution, the final manifest will be placed in the container specified, with naming convention of “<jobid>/<filename>”.  Manifest export package structure will be like the *createMigration* Import Package structure. The general output structure is summarized in table below.
+After the asyncMigrationRead function finishes execution, the final manifest will be placed in the container specified, under a folder named **JobId**. Manifest export package structure will be like the *createMigration* Import Package structure. The general output structure is summarized in table below.
 
+Below is an example on how to query the folder:
+
+    CloudBlobDirectory folder = blobContainerObj.GetDirectoryReference(jobid);
+    CloudBlockBlob blob = folder.GetBlockBlobReference(manifestFileName);
 
 |**XML file**|**Schema File**|**Description**|
 |:-----|:-----|:-----|
@@ -188,7 +192,7 @@ It returns the AES256CBC encryption key used to decrypt the message in azureMani
 ## Set up Guidelines
 The following provides high level guidelines for implementing the asynchronous metadata migration function. This documentation does not go into details on how to interact with SharePoint RESTful service. It is assumed that the ISV has prior knowledge and will be able to access the target website with proper permission. </br>,</br>For more information on how to access the Sharepoint website, refer to [Get to Know the SharePoint Rest Service](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service).
 
-1. Install and update the latest Microsoft.SharePointOnline.CSOM version. The minimum version requirement is V16.1.8600 or later.
+1. Install and update the latest Microsoft.SharePointOnline.CSOM version. The minimum version requirement is V16.1.9119.1200 or later.
 2. ISVs figure out the folder, document library or files of interested to be query and issued with CreateSPAsyncReadJob function. 
 3. Once successfully created, query the job status using the *jobQueueUri*. It provides the job process status and any error logging. After job completion, parse the Manifest to retrieve the metadata.
 
