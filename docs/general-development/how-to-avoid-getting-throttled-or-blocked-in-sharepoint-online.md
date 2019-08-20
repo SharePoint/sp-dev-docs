@@ -202,12 +202,21 @@ public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientCon
             }
             else
             {
-                // retry the previous request
+                //increment the retry count                
+                retryAttempts++;
+                
+                // retry the previous request using wrapper
                 if (wrapper != null && wrapper.Value != null)
                 {
                     clientContext.RetryQuery(wrapper.Value);
                     return;
-                }
+                } 
+                // retry the previous request as normal
+                else
+                {
+                    clientContext.ExecuteQuery();
+                    return;
+                }                
             }
         }
         catch (WebException ex)
@@ -237,8 +246,7 @@ public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientCon
                 // Delay for the requested seconds
                 Thread.Sleep(retryAfterInterval * 1000);
 
-                // Increase counters
-                retryAttempts++;
+                // Increase counters          
                 backoffInterval = backoffInterval * 2;
             }
             else
