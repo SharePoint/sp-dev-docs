@@ -717,24 +717,32 @@ This examples uses operator `loopIndex` to control the margins all rows but the 
 
 The following column types support column formatting:
 
-* Single line of text 
-* Number
+* Calculated
 * Choice
-* Person or Group
-* Yes/No
-* Hyperlink 
-* Picture
+* ContentType
+* Counter (ID)
+* Currency*
 * Date/Time
+* Hyperlink
+* Location*
 * Lookup
+* Multi-Choice
+* Multi-Line Text
+* Multi-Person
+* Number
+* Person or Group
+* Picture
+* Single line of text
 * Title (in Lists)
+* Yes/No
 
-The following are not currently supported:
+_* Formats for these column types can only be applied through Field Settings_
+
+The following are currently **not** supported:
 
 * Managed Metadata
 * Filename (in Document Libraries)
-* Calculated
 * Retention Label
-* Currency
 
 ## Style guidelines
 
@@ -1257,7 +1265,7 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=length(45)"` results in _1_
   - `"txtContent":"=length(0)"` results in _0_
 
-- **floor**: returns the largest integer les than or equal to a given number. - _Only available in SharePoint Online_
+- **floor**: returns the largest integer less than or equal to a given number. - _Only available in SharePoint Online_
   - `"txtContent":"=floor(45.5)"` results in _45_ 
   
 - **ceiling**: rounds the given number up to the next largest whole number or integer. - _Only available in SharePoint Online_
@@ -1331,7 +1339,7 @@ The values for `txtContent`, styles, and attributes can be either strings or Exp
 
 Will evaluate to the value of the current field. 
 
-Some field types are represented as objects. To output a value from an object, refer to a particular property inside that object. For example, if the current field is a person/group field, specify `@currentField.title` to retrieve the person's name, which is normally displayed in list views. The following are the field types that are represented as objects with a list their properties.
+Some field types are represented as objects. To output a value from an object, refer to a particular property inside that object. For example, if the current field is a person/group field, specify `@currentField.title` to retrieve the person's name, which is normally displayed in list views. The following are the field types that are represented as objects with a list of their properties.
 
 > [!NOTE]
 > The `@currentField.title` returns a person's name by default. However, if the person field's Show Field has been adjusted, it may change the value of the `title` property. For example, a person field with the Show Field configured as Department will have the person's department for the `title` property.
@@ -1346,8 +1354,8 @@ The people field object has the following properties (with example values):
    "title": "Kalya Tucker",
    "email": "kaylat@contoso.com",
    "sip": "kaylat@contoso.com",
-    "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
-    "department":"Human Resources",
+   "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
+   "department":"Human Resources",
    "jobTitle":"HR Manager"
 }
 ```
@@ -1381,6 +1389,70 @@ Here's the same sample from above, using the Excel-style expression syntax:
    "txtContent": "=toLocaleString(@currentField)"
 }
 ```
+
+**Location fields**
+
+The location field object has the following properties (with example values):
+
+```JSON
+{
+   "Address": {
+      "City": "Knoxville",
+      "CountryOrRegion": "United States",
+      "State": "TN",
+      "Street": "963 Worlds Fair Park Dr"
+   },
+   "Coordinates": {
+      "Latitude": "35.961673736572266",
+      "Longitude": "-83.92420959472656"
+   },
+   "DisplayName": "World's Fair Park",
+   "LocationUri: "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
+}
+```
+
+> [!NOTE] Location fields do not currently have a "Format this column" option in the list view and formats applied directly to these fields will need to be done through field settings.
+
+<br/>
+
+The following example shows how a location field might be used on a current field.
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "block"
+  },
+  "children": [
+    {
+      "elmType": "a",
+      "txtContent": "@currentField.DisplayName",
+      "attributes": {
+        "href": "='https://www.bing.com/maps?cp=' + @currentField.Coordinates.Latitude + '~' + @currentField.Coordinates.Longitude + '&lvl=17&sV=2'",
+        "target": "_blank",
+        "title": "=@currentField.Coordinates.Latitude + ', ' + @currentField.Coordinates.Longitude"
+      },
+      "style": {
+        "display": "block"
+      }
+    },
+    {
+      "elmType": "div",
+      "txtContent": "@currentField.Address.Street"
+    },
+    {
+      "elmType": "div",
+      "txtContent": "=@currentField.Address.City + ', ' + @currentField.Address.State"
+    },
+    {
+      "elmType": "div",
+      "txtContent": "@currentField.Address.CountryOrRegion"
+    }
+  ]
+}
+``` 
+
 
 **Lookup fields**
 
