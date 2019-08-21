@@ -50,13 +50,17 @@ To preview the formatting, select **Preview**. To commit your changes, select **
 
 The easiest way to use column formatting is to start from an example and edit it to apply to your specific field. The following sections contain examples that you can copy, paste, and edit for your scenarios. There are also several samples available in the [SharePoint/sp-dev-column-formatting repository](https://github.com/SharePoint/sp-dev-column-formatting).
 
+> [!NOTE]
+> All examples in this document refer to the json schema used in SharePoint Online. To format columns on SharePoint 2019, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
+
+
 ## Display field values (basic)
 
 The simplest column formatting is one that places the value of the field inside a `<div />` element. This example works for number, text, choice, and date fields:
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField"
 }
@@ -68,7 +72,7 @@ Some field types require a bit of extra work to retrieve their values. Person fi
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.title"
 }
@@ -80,7 +84,7 @@ Lookup fields are also represented as objects; the display text is stored in the
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.lookupValue"
 }
@@ -99,7 +103,7 @@ This example uses an Excel-style conditional expression (`=if`) to apply a class
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "div",
   "attributes": {
     "class": "=if(@currentField <= 70,'sp-field-severity--warning', '')"
@@ -135,7 +139,7 @@ This pattern is useful when you want different values to map to different levels
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "div",
   "attributes": {
     "class": "=if(@currentField == 'Done', 'sp-field-severity--good', if(@currentField == 'In progress', 'sp-field-severity--low', if(@currentField == 'In review', 'sp-field-severity--warning', if(@currentField == 'Has issues', 'sp-field-severity--severeWarning', 'sp-field-severity--blocked')))) + ' ms-fontColor-neutralSecondary'"
@@ -176,7 +180,7 @@ This example colors the current field red when the value inside an item's DueDat
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "div",
   "debugMode": true,
   "txtContent": "@currentField",
@@ -194,7 +198,7 @@ This example demonstrates an alternate syntax to express a conditional expressio
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -225,7 +229,7 @@ This example demonstrates an alternate syntax to express a conditional expressio
 Here's the same sample from above, using the Excel-style expression syntax:
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -241,7 +245,7 @@ To compare a date/time field value against another date constant, use the `Date(
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -271,7 +275,7 @@ To compare a date/time field value against another date constant, use the `Date(
 Here's the same sample from above, using the Excel-style expression syntax:
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField",
    "style": {
@@ -292,7 +296,7 @@ This example shows how to turn a text field that contains stock ticker symbols i
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField",
    "attributes": {
@@ -315,7 +319,7 @@ You can use column formatting to render quick action links next to fields. The f
 
 ```JSON
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "div",
     "children": [
         {
@@ -361,7 +365,7 @@ This example applies `background-color` and `border-top` styles to create a data
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "div",
   "children": [
     {
@@ -393,7 +397,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 
 ```JSON
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "div",
     "children": [
         {
@@ -453,7 +457,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 Here's the same sample from above, using the Excel-style expression syntax:
 ```JSON
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "div",
     "children": [
         {
@@ -487,7 +491,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "button",
   "customRowAction": {
     "action": "executeFlow",
@@ -533,7 +537,7 @@ This example uses the `length` operator to detect the number of members of the f
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "a",
     "style": {
         "display": "=if(length(@currentField) > 0, 'flex', 'none')"
@@ -588,7 +592,7 @@ This examples uses operator `loopIndex` and `length` to identify the last member
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "div",
     "style": {
         "display": "block"
@@ -626,7 +630,7 @@ This examples uses operator `loopIndex` to control the margins all rows but the 
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "div",
     "style": {
         "min-height": "1.5em",
@@ -772,7 +776,7 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 
    ```JSON
     {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json"
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"
     }
    ```
 
@@ -808,7 +812,7 @@ Any other value will result in an error.
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "button",
   "txtContent": "Open this item",
   "customRowAction": {
@@ -821,7 +825,7 @@ Any other value will result in an error.
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "button",
   "txtContent": "Share this item",
   "customRowAction": {
@@ -1009,7 +1013,7 @@ The following example shows the value of a style object. In this example, two st
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "style": {
       "padding": "4px",
@@ -1034,7 +1038,7 @@ The following example shows the value of a style object. In this example, two st
 Here's the same sample from above, using the Excel-style expression syntax:
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "style": {
       "padding": "4px",
@@ -1062,7 +1066,7 @@ Any other attribute name will result in an error. Attribute values can either be
 
 ```JSON
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "target": "_blank",
     "href": "='http://finance.yahoo.com/quote/' + @currentField"
 }
@@ -1129,7 +1133,7 @@ The following example contains an Expression object that performs the following 
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "operator": "?",
    "operands": [
       {
@@ -1285,11 +1289,11 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Ternary operators** - The following are operators that expect three operands:
 
-- **subString**: returns the part of the string between the start and end indicies. - _Only available in SharePoint Online_
-  - `"txtContent":"=subString('DogFood', 3, 4)"` results in _Fo_
-  - `"txtContent":"=subString('DogFood', 4, 3)"` results in _Fo_
-  - `"txtContent":"=subString('DogFood', 3, 6)"` results in _Food_
-  - `"txtContent":"=subString('DogFood', 6, 3)"` results in _Food_
+- **substring**: returns the part of the string between the start and end indicies. - _Only available in SharePoint Online_
+  - `"txtContent":"=substring('DogFood', 3, 4)"` results in _Fo_
+  - `"txtContent":"=substring('DogFood', 4, 3)"` results in _Fo_
+  - `"txtContent":"=substring('DogFood', 3, 6)"` results in _Food_
+  - `"txtContent":"=substring('DogFood', 6, 3)"` results in _Food_
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 
@@ -1360,7 +1364,7 @@ For example, the following JSON will display the current field (assuming it's a 
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": {
         "operator": "toLocaleString()",
@@ -1372,7 +1376,7 @@ For example, the following JSON will display the current field (assuming it's a 
 Here's the same sample from above, using the Excel-style expression syntax:
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "=toLocaleString(@currentField)"
 }
@@ -1395,7 +1399,7 @@ The following example shows how a lookup field might be used on a current field.
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField.lookupValue",
    "attributes": {
@@ -1429,7 +1433,7 @@ The following example shows how a hyperlink field might be used on a current fie
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "a",
    "txtContent": "@currentField.desc",
    "attributes": {
@@ -1457,7 +1461,7 @@ This field can be used to display the current user's email address, but more lik
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.title",
    "style": {
@@ -1482,7 +1486,7 @@ This field can be used to display the current user's email address, but more lik
 Here's the same sample from above, using the Excel-style expression syntax:
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "div",
    "txtContent": "@currentField.title",
    "style": {
@@ -1533,7 +1537,7 @@ These tokens will yield no value on non-file items including folders.
 
 ```json
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "img",
    "attributes": {
       "src": "@thumbnail.200x150",

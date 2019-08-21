@@ -12,6 +12,10 @@ You can use view formatting to customize how views in SharePoint lists and libra
 > [!TIP]
 > Samples demonstrated in this article and numerous other community samples are available from a GitHub repository dedicated for open-sourced list formatting definitions. You can find these samples in the [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) repository within the [SharePoint](https://github.com/SharePoint) GitHub organization.
 
+>[!NOTE]
+> View formatting is currently supported only in SharePoint Online. 
+
+
 ## Get started with view formatting
 
 To open the view formatting pane, open the view dropdown and choose **Format this view**.
