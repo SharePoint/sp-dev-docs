@@ -491,35 +491,40 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "span",
-   "style": {
-      "color": "#0078d7"
-   },
-   "children": [
-      {
-         "elmType": "span",
-	 "attributes": {
-	    "iconName": "Flow"
-	 }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "button",
+  "customRowAction": {
+    "action": "executeFlow",
+    "actionParams": "{\"id\": \"edf627d9-20f4-45ba-8bc9-4494bf2ff1be\"}"
+  },
+  "attributes": {
+    "class": "ms-fontColor-themePrimary ms-fontColor-themeDarker--hover"
+  },
+  "style": {
+    "border": "none",
+    "background-color": "transparent",
+    "cursor": "pointer"
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "attributes": {
+        "iconName": "Flow"
       },
-      {
-         "elmType": "button",
-	 "style": {
-	    "border": "none",
-	    "background-color": "transparent",
-	    "color": "#0078d7",
-	    "cursor": "pointer"
-	 },
-	 "txtContent": "Send to Manager",
-	 "customRowAction": {
-	    "action": "executeFlow",
-	    "actionParams": "{\"id\": \"183bedd4-6f2b-4264-855c-9dc7617b4dbe\"}"
-	 }
+      "style": {
+        "padding-right": "6px"
       }
-   ]
+    },
+    {
+      "elmType": "span",
+      "txtContent": "It's Flow Time!"
+    }
+  ]
 }
 ```
+
+Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#button-elements) portion of the Detailed syntax reference for more details.
+
 ## Formatting multi-value fields
 You can use column formatting to apply styles to each member of a multi-value field of type Person, Lookup and Choice.
 
@@ -801,9 +806,9 @@ Any other value will result in an error.
 
 #### button elements
 
-`Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a requred property, `customRowAction`, that specifies an `action` that's taken when the button is clicked.  This action must be one of the following values:
+`Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a requred property, `customRowAction`, that specifies an `action` that's taken when the button is clicked. This action must be one of the following values:
 
-- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view.  Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
+- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
 
 ```JSON
 {
@@ -816,7 +821,7 @@ Any other value will result in an error.
 }
 
 ```
-- **share**:  Clicking the button will open the sharing dialog.  Below is an example of this type of button.
+- **share**:  Clicking the button will open the sharing dialog. Below is an example of this type of button.
 
 ```JSON
 {
@@ -831,7 +836,24 @@ Any other value will result in an error.
 ```
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
-- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document.
+- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "It's Flow Time!",
+  "customRowAction": {
+    "action": "executeFlow",
+    "actionParams": "{\"id\":\"f7ecec0b-15c5-419f-8211-302a5d4e94f1\", \"headerText\":\"It's Flow Time!\",\"runFlowButtonText\":\"Do it\"}"
+  }
+}
+```
+The `actionParams` attribute can have the following options when using the `executeFlow` action:
+- **id**: ID of the Flow to launch _(required)_
+- **headerText**: Sets the text at the top of the flow panel _(optional)_
+- **runFlowButtonText**: Sets the text of the primary button in the flow panel _(optional)_
+
 
 ### txtContent
 
