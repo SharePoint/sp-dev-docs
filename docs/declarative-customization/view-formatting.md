@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 08/21/2019
+ms.date: 08/23/2019
 localization_priority: Priority
 ---
 
@@ -15,10 +15,6 @@ You can use view formatting to customize how views in SharePoint lists and libra
 >[!NOTE]
 > View formatting is currently supported only in SharePoint Online. 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2b6e565adb504e1c28cd702000ddbc156577f719
 ## Get started with view formatting
 
 To open the view formatting pane, open the view dropdown and choose **Format current view**.
