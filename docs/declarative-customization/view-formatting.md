@@ -12,15 +12,18 @@ You can use view formatting to customize how views in SharePoint lists and libra
 > [!TIP]
 > Samples demonstrated in this article and numerous other community samples are available from a GitHub repository dedicated for open-sourced list formatting definitions. You can find these samples in the [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) repository within the [SharePoint](https://github.com/SharePoint) GitHub organization.
 
+>[!NOTE]
+> View formatting is currently supported only in SharePoint Online. 
+
 ## Get started with view formatting
 
 To open the view formatting pane, open the view dropdown and choose **Format current view**.
 ![view dropdown options](../images/view-dropdown-menu.png)
 
 >[!NOTE]
-> To enbale the 'Tiles' layout, include tileProps property inside the JSON.
+> To enbale the 'Tile' layout, include `tileProps` property inside the JSON.
 
-To format rows in 'List' or 'Compact List' layout, use the `rowFormatter` or `additionalRowClass` properties. To format entries in 'Tiles' layout, use the `formatter` within `tileProps` property.
+To format rows in 'List' or 'Compact List' layout, use the `rowFormatter` or `additionalRowClass` properties. To format entries in 'Tile' layout, use the `formatter` within `tileProps` property.
 
 
 The easiest way to use view formatting is to start from an example and edit it to apply to your specific view. The following sections contain examples that you can copy, paste, and customize for your specific needs. There are also several samples available in the [SharePoint/sp-dev-list-formatting repository](https://github.com/SharePoint/sp-dev-list-formatting).
@@ -138,97 +141,105 @@ This example uses the `rowFormatter` element, which totally overrides the render
 You can find this sample with additional details here: [Multi-line view rendering](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/multi-line-view)
 
 
-Similarly, to get the below format in ‘Tiles’ layout for the Feedback list, define the formatter within tileProps:
-![Feedback list formatted in Tiles layout](../images/feedback-tile-layout.png)
+Similarly, to get the below format in ‘Tile’ layout for the Feedback list, define the formatter within `tileProps`:
+![Feedback list formatted in Tile layout](../images/feedback-tile-layout.png)
 
 ```JSON
 {
-    "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
-    "tileProps": {
-        "height": "250",
-        "width": "350",
-        "hideSelection": true,
-        "formatter": {
-        "elmType": "div",
-        "style": {
-            "display": "flex",
-            "align-items": "stretch",
-            "margin-bottom": "16px",
-            "min-width": "150px",
-            "flex-grow": "1",
-            "justify-content": "space-around",
-            "padding": "8px"
-        },
-        "children": [
+  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "tileProps": {
+    "height": "250",
+    "width": "350",
+    "hideSelection": true,
+    "formatter": {
+      "elmType": "div",
+      "style": {
+        "display": "flex",
+        "align-items": "stretch",
+        "margin-bottom": "16px",
+        "min-width": "150px",
+        "flex-grow": "1",
+        "justify-content": "space-around",
+        "padding": "5px"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "width": "95%",
+            "height": "92%",
+            "box-shadow": "0px 1.6px 3.6px 0 #00000024, 0px 0.3px 0.9px 0 #00000024",
+            "overflow": "hidden",
+            "border-radius": "2px",
+            "padding-left": "16px",
+            "padding-top": "16px"
+          },
+          "attributes": {
+            "class": "ms-bgColor-neutralLighterAlt"
+          },
+          "children": [
             {
-            "elmType": "div",
-            "style": {
-                "width": "97%",
-                "height": "97%",
-                "box-shadow": "4px 4px 8px #a9a9a985",
-                "overflow": "hidden",
-                "border-radius": "4px",
-                "padding-left": "12px"
-            },
-            "attributes": {
-                "class": "ms-bgColor-neutralLighter"
-            },
-            "children": [
+              "elmType": "div",
+              "style": {
+                "text-align": "left"
+              },
+              "children": [
                 {
-                "elmType": "div",
-                "style": {
-                    "text-align": "left"
+                  "elmType": "div",
+                  "style": {
+                    "color":"#333333",
+                    "font-size": "16px",
+                    "font-weight":"600",
+                    "margin-bottom":"5px"
                 },
-                "children": [
-                    {
-                    "elmType": "div",
-                    "attributes": {
-                        "class": "sp-row-title"
-                    },
-                    "txtContent": "[$Title]"
-                    },
-                    {
-                    "elmType": "div",
-                    "attributes": {
-                        "class": "sp-row-listPadding"
-                    },
-                    "txtContent": "[$Feedback]"
-                    },
-                    {
-                    "elmType": "button",
-                    "customRowAction": {
-                        "action": "defaultClick"
-                    },
-                    "txtContent": "Give feedback",
-                    "attributes": {
-                        "class": "sp-row-button"
-                    },
-                    "style": {
-                        "display": {
-                        "operator": "?",
-                        "operands": [
-                            {
-                            "operator": "==",
-                            "operands": [
-                                "@me",
-                                "[$Assigned_x0020_To.email]"
-                            ]
-                            },
-                            "",
-                            "none"
-                        ]
-                        }
+                  "txtContent": "[$Title]"
+                },
+                {
+                  "elmType": "div",
+                  "style": {
+                    "color":"#333333",
+                    "font-size": "14px",
+                    "line-height":"1.8"
+                },
+                  "attributes": {
+                    "class": "sp-row-listPadding"
+                  },
+                  "txtContent": "[$Feedback]"
+                },
+                {
+                  "elmType": "button",
+                  "customRowAction": {
+                    "action": "defaultClick"
+                  },
+                  "txtContent": "Give feedback",
+                  "attributes": {
+                    "class": "sp-row-button"
+                  },
+                  "style": {
+                    "display": {
+                      "operator": "?",
+                      "operands": [
+                        {
+                          "operator": "==",
+                          "operands": [
+                            "@me",
+                            "[$Assigned_x0020_To.email]"
+                          ]
+                        },
+                        "",
+                        "none"
+                      ]
                     }
-                    }
-                ]
+                  }
                 }
-            ]
+              ]
             }
-        ]
+          ]
         }
+      ]
     }
+  }
 }
-
 
 
 ### Alternate Row Formatting based on Modulus 
@@ -288,7 +299,7 @@ Optional element. Specifies a CSS class(es) that is applied to the entire row. S
 
 Optional element. Specifies whether the ability to select rows in the view is disabled or not. *false* is the default behavior inside a list view (meaning selection is visible and enabled). *true* means that users will not be able to select list items.  
 
-For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored. For tile layout, `hideSelection` will only take effect if defined inside `tileProps` properties.
+For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored. For 'Tile' layout, `hideSelection` will only take effect if defined inside `tileProps` properties.
 
 ### hideColumnHeader
 
@@ -296,7 +307,7 @@ Optional element. Specifies whether the column headers in the view are hidden or
 
 ### tileProps
 
-Optional element. Specifies a JSON object that describes a tile view format. Elements of this property include:
+Optional element. Specifies a JSON object that describes a 'Tile' view format. Elements of this property include:
 - height – defines the height of the card in pixels.
 - width – defines the width of the card in pixels. Can go from height/2 to 3 x height. 
 - hideSelection – as defined above
