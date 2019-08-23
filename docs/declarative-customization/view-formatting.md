@@ -17,9 +17,7 @@ You can use view formatting to customize how views in SharePoint lists and libra
 
 ## Get started with view formatting
 
-To open the view formatting pane, open the view dropdown and choose **Format current view**.
-![view dropdown options](../images/view-dropdown-menu.png =260x310)
-<img src="../images/view-dropdown-menu.png" alt="View dropdown menu" width="260" height="310"/>
+To open the view formatting pane, open the view dropdown and choose **Format current view**. <img src="../images/view-dropdown-menu.png" alt="View dropdown menu" width="260" height="310"/>
 
 >[!NOTE]
 > To enbale the 'Tile' layout, include `tileProps` property inside the JSON.
