@@ -242,6 +242,7 @@ Similarly, to get the below format in ‘Tile’ layout for the Feedback list, d
 ```
 
 
+
 ### Alternate Row Formatting based on Modulus 
 
 This example applies `% (Mod)` to a list view row with alternate coloring the rows:
