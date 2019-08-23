@@ -9,7 +9,7 @@ localization_priority: Normal
 
 # Accessibility in SharePoint
 Learn about the features, products, and services that make SharePoint accessible for people with disabilities, and find developer resources that can help you design and build apps and websites that support key accessibility scenarios.
-Accessible technology enables users to interact with computers and applications in different ways to help meet their visual, hearing, speech, dexterity, and cognitive needs. Accessible technology includes features, options, and utilities that are built into the Windows operating system and other Microsoft products, in addition to third-party hardware and software add-ons (also known asassistive technology).
+Accessible technology enables users to interact with computers and applications in different ways to help meet their visual, hearing, speech, dexterity, and cognitive needs. Accessible technology includes features, options, and utilities that are built into the Windows operating system and other Microsoft products, in addition to third-party hardware and software add-ons (also known as assistive technology).
   
     
     
