@@ -20,7 +20,7 @@ You can use view formatting to customize how views in SharePoint lists and libra
 To open the view formatting pane, open the view dropdown and choose **Format current view**. <img src="../images/view-dropdown-menu.png" alt="View dropdown menu" width="260" height="310"/>
 
 >[!NOTE]
-> To enbale the 'Tile' layout, include `tileProps` property inside the JSON.
+> To enable the 'Tile' layout, include `tileProps` property inside the JSON.
 
 To format rows in 'List' or 'Compact List' layout, use the `rowFormatter` or `additionalRowClass` properties. To format entries in 'Tile' layout, use the `formatter` within `tileProps` property.
 
@@ -240,8 +240,6 @@ Similarly, to get the below format in ‘Tile’ layout for the Feedback list, d
   }
 }
 ```
-
-
 
 ### Alternate Row Formatting based on Modulus 
 
