@@ -13,9 +13,6 @@ Footers are a common branding / navigation control in websites and portals. Shar
 - Footer logo 
 - Footer name
 
-> [!NOTE]
-> Site footers are current supported only in modern pages of communication sites. This feature is rolled out to Targeted Release (entire organization) customers and will GA in the Q3 CY2019 timeframe.
-
 > [!IMPORTANT]
 > Footer will be enabled by default for all new communication sites after the feature is rolled out. Along with this update, the content bar (also referred to as the “social bar”) - which contains the Like, Comment, View and Save for Later icons - will be docked permanently on top of the Comments section on all modern pages and news posts. 
 
