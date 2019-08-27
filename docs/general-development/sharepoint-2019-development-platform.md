@@ -1,6 +1,6 @@
 ---
 title: SharePoint Server 2019 development platform
-ms.date: 07/12/2018
+ms.date: 08/27/2019
 ms.prod: sharepoint
 ms.assetid: e0602381-ae11-41be-6a7e-9e47e9f246d6
 localization_priority: Priority
@@ -31,10 +31,11 @@ This article contains details around supported development capabilities in the S
 * "Tenant" properties
 * Custom modern themes for communication site or modern team site
 
-Supported SharePoint Framework version for the SharePoint 2019 will be SharePoint Framework v1.4.1 (except Microsoft Graph APIs). If you use the SharePoint Framework v1.7, you can target scaffolded solution to SharePoint 2019, which will ensure that packages are correct for your target environment.
+You should always have the latest SharePoint Framweork version installed and choose the target environment for the newly created solution to be **SharePoint 2019**. This will create you an optimal solution structure with the matching SharePoint Framework version for SharePoint 2019. 
 
 Visual Studio 2017 v15.9 or includes SharePoint 2019 tooling extensions for SharePoint add-ins, farm solutions and sandbox solutions. 
 
 ## See also
 
+- [Getting started with creating SharePoint Framework solutions for SharePoint 2019](https://www.youtube.com/watch?v=uewOxEnw2_A) YouTube video
 - [Community call where SharePoint 2019 developer platform is covered](https://www.youtube.com/watch?v=qPmr7c2B0uk) YouTube video
