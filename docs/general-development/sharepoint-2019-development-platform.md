@@ -31,7 +31,7 @@ This article contains details around supported development capabilities in the S
 * "Tenant" properties
 * Custom modern themes for communication site or modern team site
 
-You should always have the latest SharePoint Framweork version installed and choose the target environment for the newly created solution to be **SharePoint 2019**. This will create you an optimal solution structure with the matching SharePoint Framework version for SharePoint 2019. 
+You should always have the latest SharePoint Framework version installed and choose the target environment for the newly created solution to be **SharePoint 2019**. This will create you an optimal solution structure with the matching SharePoint Framework version for SharePoint 2019.
 
 Visual Studio 2017 v15.9 or includes SharePoint 2019 tooling extensions for SharePoint add-ins, farm solutions and sandbox solutions. 
 
