@@ -1,7 +1,7 @@
 ---
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
-ms.date: 06/24/2019
+ms.date: 09/03/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -124,7 +124,7 @@ Name|Description
 
 **Description:** Returns an the (static) string provided as input
 
-**Example:** `EmptyString('static string')`
+**Example:** `StaticString('static string')`
 
 #### Input parameters
 
@@ -500,7 +500,7 @@ Name|Description
 
 **Description:** Returns an the (static) string provided as input
 
-**Example:** `EmptyString('static string')`
+**Example:** `StaticString('static string')`
 
 #### Input parameters
 
@@ -592,6 +592,22 @@ Name|Description
 Name|Description
 :-----|:----------
 {return value}|A formatted preview image url
+### ToAuthors
+
+**Description:** Looksup user information for passed user id
+
+**Example:** `ToAuthors({PublishingContact})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{userId}|The id (int) of a user
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|A formatted json blob describing the user's details
 ## Selectors
 ### TextSelector
 

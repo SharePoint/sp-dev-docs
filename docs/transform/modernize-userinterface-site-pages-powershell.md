@@ -116,7 +116,7 @@ ConvertTo-PnPClientSidePage -Identity "page1.aspx" -PublishingPage -TargetConnec
 ```
 
 > [!NOTE]
-> - This feature is still in preview in the June 2019 release...it should support SharePoint 2013, 2016 and 2019
+> - This feature supports SharePoint 2010, 2013, 2016 and 2019 as a source environment. Target environment is SharePoint Online
 > - It's important to use the SharePoint Online PnP PowerShell version, the machine running the PowerShell script needs to be able to connect to both the on-premises SharePoint server as the SharePoint Online environment
 > - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
 > - This approach can also be used for page transformation across tenants (whenever that would make sense)

@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages
 description: Explains how to transform classic wiki and web part pages into modern client side pages
-ms.date: 04/04/2019
+ms.date: 03/09/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -13,7 +13,7 @@ Classic SharePoint sites typically have classic pages being wiki pages or web pa
 The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline), [source code](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/SharePointPnP.Modernization.Framework)) does bring page transformation capabilities which will be explained in the upcoming chapters.
 
 > [!IMPORTANT]
-> - Page transformation today works for wiki, web part pages and publishing pages. The publishing page transformation is currently in preview.
+> - Page transformation today works for wiki, web part pages and publishing pages.
 > - The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
 Page transformation can be used in one or more models and these models can used together:
