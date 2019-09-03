@@ -100,6 +100,10 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -PageLayoutMapping c:\temp\mypagelayouts.xml
 ```
 
+### Sample scripts for transforming (on-premises) publishing pages to modern pages in SharePoint Online
+
+Check out the scripts in https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/PageTransformation to get started.
+
 ### Read publishing page in on-premises SharePoint and create the modern page in SharePoint Online (as of June 2019 release, version 3.10.1906.*)
 
 When you want to bring over your classic on-premises publishing portals you could first move the complete portal from on-premises to a classic portal in SharePoint Online and then do the modernization work. However, often it's easier to directly read the classic publishing page from your SharePoint on-premises portal and create the modern version in SharePoint Online. To do this you need to use PnP PowerShell for SharePoint Online to connect to your on-premises portal like shown in below script:
