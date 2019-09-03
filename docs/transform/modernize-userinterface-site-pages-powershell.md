@@ -100,7 +100,7 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -PageLayoutMapping c:\temp\mypagelayouts.xml
 ```
 
-### Sample scripts for transforming (on-premises) publishing pages to modern pages in SharePoint Online
+#### Sample scripts for transforming (on-premises) publishing pages to modern pages in SharePoint Online
 
 Check out the scripts in https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/PageTransformation to get started.
 
