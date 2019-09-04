@@ -1,7 +1,7 @@
 ---
 title: Overview of the used web part mapping
 description: Explains which web parts are transformed and how
-ms.date: 04/04/2019
+ms.date: 09/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -34,7 +34,7 @@ Microsoft.SharePoint.Publishing.WebControls.ResultScriptWebPart (searching data 
 Microsoft.Office.Excel.WebUI.ExcelWebRenderer (embedding from Excel files) | [File viewer](https://support.office.com/en-us/article/use-the-file-viewer-web-part-e53a9602-e7b3-4fff-9126-de2f18d1900c#bkmk_document) web part | | No
 Microsoft.Office.Visio.Server.WebControls.VisioWebAccess (embedding from Visio files) | [File viewer](https://support.office.com/en-us/article/use-the-file-viewer-web-part-e53a9602-e7b3-4fff-9126-de2f18d1900c#bkmk_document) web part | | No
 Microsoft.SharePoint.WebPartPages.PageViewerWebPart (embedding from other pages) | [Embed](https://support.office.com/en-us/article/add-content-to-your-page-using-the-embed-web-part-721f3b2f-437f-45ef-ac4e-df29dba74de8) web part | | Yes
-Microsoft.SharePoint.WebPartPages.PictureLibrarySlideshowWebPart (picture slide show) | [Image gallery](https://support.office.com/en-us/article/use-the-image-gallery-web-part-bbcbe560-14a7-4369-8ef5-3255845e3bfd) web part | | Yes, if a picture library with the same name exists
+Microsoft.SharePoint.WebPartPages.PictureLibrarySlideshowWebPart (picture slide show) | [Image gallery](https://support.office.com/en-us/article/use-the-image-gallery-web-part-bbcbe560-14a7-4369-8ef5-3255845e3bfd) web part | Picture libraries do not support CDN's, it's recommended to copy the picture library content to a regular document library and then configure that one in the image gallery web part | Yes, if a picture library with the same name exists
 Microsoft.SharePoint.WebPartPages.SimpleFormWebPart (html form embedding) | Not transformed OOB, optionally a community open source script editor can be configured | See next chapter for more details | Yes
 Microsoft.SharePoint.Publishing.WebControls.SummaryLinkWebPart | [QuickLinks](https://support.office.com/en-us/article/use-the-quick-links-web-part-e1df7561-209d-4362-96d4-469f85ab2a82) web part or [Text](https://support.office.com/en-us/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part | Summary links html is transformed to [QuickLinks](https://support.office.com/en-us/article/use-the-quick-links-web-part-e1df7561-209d-4362-96d4-469f85ab2a82) by default, but optionally you can generate html which then is shown using using the [Text](https://support.office.com/en-us/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part. See next chapter for more details | Yes
 Microsoft.SharePoint.Portal.WebControls.ContactFieldControl (person card) | [People](https://support.office.com/en-us/article/show-people-profiles-on-your-page-with-the-people-web-part-7e52c5f6-2d72-48fa-a9d3-d2750765fa05) web part | | Yes
