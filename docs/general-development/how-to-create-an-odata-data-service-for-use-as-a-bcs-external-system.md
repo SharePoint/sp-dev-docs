@@ -34,10 +34,10 @@ The following are required to create the OData service in this article:
 - SharePoint
     
   
--  [AdventureWorks 20012 LT script](http://msftdbprodsamples.codeplex.com/releases/view/55330)
+-  [AdventureWorks 2012 LT script](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
     
   
--  [AdventureWorks 2012 LT Data](http://msftdbprodsamples.codeplex.com/releases/view/55330)
+-  [AdventureWorks 2012 LT Data](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
     
   
 - Visual Studio 2012
@@ -198,16 +198,14 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 - In the code for the data service, replace the placeholder code in the **InitializeService** function with the following.
     
 ```cs
-  
-      config.SetEntitySetAccessRule("*", EntitySetRights.All);
-      config.SetServiceOperationAccessRule("*", ServiceOperationRights.All);
+config.SetEntitySetAccessRule("*", EntitySetRights.All);
+config.SetServiceOperationAccessRule("*", ServiceOperationRights.All);
 ```
-
-
-    This enables authorized clients to have read and write access to resources for the specified entity sets.
+This enables authorized clients to have read and write access to resources for the specified entity sets.
+   
     
-    > [!NOTE]
-    > Any client that can access the ASP.NET application can also access the resources that are exposed by the data service. In a production data service, to prevent unauthorized access to resources, you should also secure the application itself. For more information, see  [Securing WCF Data Services](http://msdn.microsoft.com/en-us/library/dd728284.aspx). 
+> [!NOTE]
+> Any client that can access the ASP.NET application can also access the resources that are exposed by the data service. In a production data service, to prevent unauthorized access to resources, you should also secure the application itself. For more information, see  [Securing WCF Data Services](http://msdn.microsoft.com/en-us/library/dd728284.aspx). 
 
 For BCS to receive notifications, there must be a mechanism on the back-end data source that will accept a request to be added and removed from notification subscriptions. 
   
@@ -224,74 +222,69 @@ The last step in creating the service is to add service operations for the **Sub
 - In the AdventureWorks.cs page, add the following string variable declaration.
     
 ```cs
-  
 public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\SubscriptionStore.xml";
 ```
 
+> [!NOTE]
+> This file is an XML file that is updated with the new subscriptions. Access to this file will be made by the server process, so make sure you have granted sufficient rights for this file access. > You might also want to create a database solution for storing subscription information. 
 
-    > [!NOTE]
-    > This file is an XML file that is updated with the new subscriptions. Access to this file will be made by the server process, so make sure you have granted sufficient rights for this file access. > You might also want to create a database solution for storing subscription information. 
-
-    Then add the following two **WebGet** methods to handle the subscriptions.
-    
-
+Then add the following two **WebGet** methods to handle the subscriptions.
 
 ```cs
-  [WebGet]
-        public string Subscribe(string deliveryUrl, string eventType)
+[WebGet]
+public string Subscribe(string deliveryUrl, string eventType)
+{
+    string subscriptionId = Guid.NewGuid().ToString();
+
+    XmlDocument subscriptionStore = new XmlDocument();
+
+    subscriptionStore.Load(subscriptionStorePath);
+
+    // Add a new subscription element.
+    XmlNode newSubNode = subscriptionStore.CreateElement("Subscription");
+
+    // Add subscription ID element to the subscription element.
+    XmlNode subscriptionIdStart = subscriptionStore.CreateElement("SubscriptionID");
+    subscriptionIdStart.InnerText = subscriptionId;
+    newSubNode.AppendChild(subscriptionIdStart);
+
+    // Add delivery URL element to the subscription element.
+    XmlNode deliveryAddressStart = subscriptionStore.CreateElement("DeliveryAddress");
+    deliveryAddressStart.InnerText = deliveryUrl;
+    newSubNode.AppendChild(deliveryAddressStart);
+
+    // Add event type element to the subscription element.
+    XmlNode eventTypeStart = subscriptionStore.CreateElement("EventType");
+    eventTypeStart.InnerText = eventType;
+    newSubNode.AppendChild(eventTypeStart);
+
+    // Add the subscription element to the root element. 
+    subscriptionStore.AppendChild(newSubNode);
+
+    subscriptionStore.Save(subscriptionStorePath);
+
+    return subscriptionId;
+}
+
+[WebGet]
+public void Unsubscribe(string subscriptionId)
+{
+    XmlDocument subscriptionStore = new XmlDocument();
+    subscriptionStore.Load(subscriptionStorePath);
+
+    XmlNodeList subscriptions = subscriptionStore.DocumentElement.ChildNodes;
+    foreach (XmlNode subscription in subscriptions)
+    {
+        XmlNodeList subscriptionList = subscription.ChildNodes;
+        if (subscriptionList.Item(0).InnerText == subscriptionId)
         {
-            string subscriptionId = Guid.NewGuid().ToString();
-            
-            XmlDocument subscriptionStore = new XmlDocument();
-            
-            subscriptionStore.Load(subscriptionStorePath);
-
-            // Add a new subscription element.
-            XmlNode newSubNode = subscriptionStore.CreateElement("Subscription");
-
-            // Add subscription ID element to the subscription element.
-            XmlNode subscriptionIdStart = subscriptionStore.CreateElement("SubscriptionID");
-            subscriptionIdStart.InnerText = subscriptionId;
-            newSubNode.AppendChild(subscriptionIdStart);
-
-            // Add delivery URL element to the subscription element.
-            XmlNode deliveryAddressStart = subscriptionStore.CreateElement("DeliveryAddress");
-            deliveryAddressStart.InnerText = deliveryUrl;
-            newSubNode.AppendChild(deliveryAddressStart);
-
-            // Add event type element to the subscription element.
-            XmlNode eventTypeStart = subscriptionStore.CreateElement("EventType");
-            eventTypeStart.InnerText = eventType;
-            newSubNode.AppendChild(eventTypeStart);
-
-            // Add the subscription element to the root element. 
-            subscriptionStore.AppendChild(newSubNode);
-
-            
-            subscriptionStore.Save(subscriptionStorePath);
-
-            return subscriptionId;
+            subscriptionStore.DocumentElement.RemoveChild(subscription);
+            break;
         }
+    }
 
-        [WebGet]
-        public void Unsubscribe(string subscriptionId)
-        {
-            XmlDocument subscriptionStore = new XmlDocument();
-            subscriptionStore.Load(subscriptionStorePath);
-
-            XmlNodeList subscriptions = subscriptionStore.DocumentElement.ChildNodes;
-            foreach (XmlNode subscription in subscriptions)
-            {
-                XmlNodeList subscriptionList = subscription.ChildNodes;
-                if (subscriptionList.Item(0).InnerText == subscriptionId)
-                {
-                    subscriptionStore.DocumentElement.RemoveChild(subscription);
-                    break;
-                }
-            }
-
-            subscriptionStore.Save(subscriptionStorePath);
-        }
+    subscriptionStore.Save(subscriptionStorePath);
+}
 
 ```
 
