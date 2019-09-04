@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 09/03/2019
+ms.date: 09/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -365,7 +365,24 @@ Promoting pages created from a page layout as news pages can be be done by addin
 </MetaData>
 ```
 
-### Can I control the page preview image
+### I want to insert hard coded text on the created page (as of September 2019 release)
+
+Sometimes a page layout contains text snippets, which since they're not content in the actual page are not getting transformed. If that's the case then you can define a "fake" field to map like shown below:
+
+```XML
+<WebParts>
+  ...
+  <Field Name="ID" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="3">
+    <Property Name="Text" Type="string" Functions="StaticString('&lt;H1&gt;This is some extra text&lt;/H1&gt;')" />
+  </Field>
+  ...
+</WebParts>
+```
+
+> [!Note]
+> The HTML provided in the StaticString function must be XML encoded and must be formatted like the source page HTML as this HTML will still be converted to HTML which is compliant with the modern text editor
+
+### Can I control the page preview image (as of the May 2019 release)
 
 When a page has a page header image that image will also be used as a page preview image. If you however want to control the page preview image then you can populate the `BannerImageUrl` field using either the `ToPreviewImageUrl` function or by specifying a hard coded value as shown in below samples.
 
@@ -380,10 +397,7 @@ When a page has a page header image that image will also be used as a page previ
 <Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl('/sites/classicportal/images/myimage.jpg')" />
 ```
 
-> [!Note]
-> Controlling the page preview image was introduced with the May 2019 release.
-
-### I want to use different defaults for the QuickLinks web part
+### I want to use different defaults for the QuickLinks web part (as of the July 2019 release)
 
 When transformation results in a modern QuickLinks web part (e.g. for transformation of the SummaryLinkWebPart) then the page transformation framework will use a default base configuration for the QuickLinks web part. If you, however, want a different configuration then you can do that by specifying the QuickLinksJsonProperties property. Wrap the encoded JSON properties in a StaticString function as shown in this sample:
 
@@ -401,6 +415,3 @@ When transformation results in a modern QuickLinks web part (e.g. for transforma
 ```
 
 The JSON in the sample shows all the possible configuration options you can set, but you can however also just define the ones you need. As long as the JSON is valid and the structure is maintained your custom QuickLinks configuration will be picked up.
-
-> [!Note]
-> - The QuickLinks defaults override option was introduced in the July 2019 release
