@@ -13,7 +13,7 @@ localization_priority: Priority
 
 When a page is transformed from a classic page into a modern client side page then the most commonly used web parts are transformed as well. Classic web parts (e.g. XSLTListView) are replaced by their OOB modern counterparts (e.g. List web part) assuming there is a modern counterpart available. The next chapter provides an overview of which classic web parts are transformed and how.
 
-## Web part transformation list (updated for April 2018 release)
+## Web part transformation list (updated for September 2019 release)
 
 The page transformation uses a default web part mapping when it transforms classic pages to modern pages. The used mapping in this default modern is described here, but do know that you can update the mapping to for example add your own custom 3rd party web parts as a transformation target. How to extend the web part mapping model is described in the [Page transformation model](modernize-userinterface-site-pages-model.md) article.
 
@@ -25,8 +25,8 @@ Microsoft.SharePoint.Portal.WebControls.SiteFeedWebPart (Site feed on team sites
 Microsoft.SharePoint.WebPartPages.ContentEditorWebPart (embedding content) | [Embed](https://support.office.com/en-us/article/add-content-to-your-page-using-the-embed-web-part-721f3b2f-437f-45ef-ac4e-df29dba74de8) web part, [Text](https://support.office.com/en-us/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part and/or a community open source script editor as optional target web part | See next chapter for more details | Yes
 Microsoft.SharePoint.WebPartPages.ScriptEditorWebPart (embedding script) | Not transformed OOB, a community open source script editor can be configured as optional target web part | See next chapter for more details | Yes
 Microsoft.SharePoint.WebPartPages.ImageWebPart | [Image](https://support.office.com/en-us/article/use-the-image-web-part-a63b335b-ad0a-4954-a65d-33c6af68beb2) web part | | Yes
-Microsoft.SharePoint.WebPartPages.ClientSideWebPart (= modern SPFX based web part on classic page) | The same modern web part with it's configuration will be kept | | No
-Microsoft.SharePoint.WebPartPages.ClientWebPart (= SharePoint Add-In web part on classic page) | The same add-in can work on modern pages and will be taken over including it's configuration | | No
+Microsoft.SharePoint.WebPartPages.ClientSideWebPart (= modern SPFX based web part on classic page) | The same modern web part with it's configuration will be kept | | Yes, if same SPFX web part is available on the target site
+Microsoft.SharePoint.WebPartPages.ClientWebPart (= SharePoint Add-In web part on classic page) | The same add-in can work on modern pages and will be taken over including it's configuration | | Yes, if same add-in web part is available on the target site
 Microsoft.SharePoint.Publishing.WebControls.MediaWebPart (embedding videos) | [File viewer](https://support.office.com/en-us/article/use-the-file-viewer-web-part-e53a9602-e7b3-4fff-9126-de2f18d1900c#bkmk_document) web part | | Yes
 Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart (querying data and presenting it) | [Highlighted content](https://support.office.com/en-us/article/use-the-highlighted-content-web-part-e34199b0-ff1a-47fb-8f4d-dbcaed329efd) web part | | No
 Microsoft.SharePoint.Publishing.WebControls.ContentBySearchWebPart (searching data and presenting it) | [Highlighted content](https://support.office.com/en-us/article/use-the-highlighted-content-web-part-e34199b0-ff1a-47fb-8f4d-dbcaed329efd) web part | | No
