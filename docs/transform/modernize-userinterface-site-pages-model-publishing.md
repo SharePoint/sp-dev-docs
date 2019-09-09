@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 06/26/2019
+ms.date: 09/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -82,7 +82,7 @@ Upcoming chapters will provide more details.
 Let's analyze how a page layout mapping is configured in the page layout mapping model, which is best done based upon a sample definition:
 
 ```Xml
-    <PageLayout Name="MyPageLayout" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" PageHeader="Custom">
+    <PageLayout Name="MyPageLayout" AlsoAppliesTo="MyOtherPageLayout;MyOtherPageLayout2" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" PageHeader="Custom">
       <Header Type="FullWidthImage" Alignment="Left" ShowPublishedDate="true">
         <Field Name="PublishingRollupImage;PublishingPageImage" HeaderProperty="ImageServerRelativeUrl" Functions="ToImageUrl({@name})" />
         <Field Name="ArticleByLine" HeaderProperty="TopicHeader" Functions=""/>
@@ -128,9 +128,13 @@ Let's analyze how a page layout mapping is configured in the page layout mapping
 The following properties are used on the PageLayout element:
 
 - **Name**: contains the name of your page layout.
+- **AlsoAppliesTo**: when this mapping will be used for multiple page layouts then you can specify the names of those additional page layouts as a semi colon delimited list in this attribute. The **Name** property will be name of the first page layout, the **AlsoAppliesTo** just contains the additional ones.
 - **AssociatedContentType**: the name of the modern site page content type you want use. Leave this blank if you want to use the default site page content type.
 - **PageLayoutTemplate**: the layout system to use...defaults to `AutoDetect` which should work fine in all cases, but optionally you can pick a specific wiki layout as well.
 - **PageHeader**: controls the type of page header that will be used. Defaults to `Custom` as that allows for a nice header, but you can switch it to `None` for no header or `Default` for the default modern page header.
+
+> [!Note]
+> - The **AlsoAppliesTo** attribute  was introduced in the September 2019 release
 
 ### Header element
 
@@ -321,13 +325,14 @@ Now that the assembly has been defined you can use your functions and selectors 
 
 ## Page layout mapping FAQ
 
-### I want to keep the source page creation and modification information
+### I want to keep the source page creation information (as of September 2019 release)
 
 You can do this by altering your page layout mapping like shown in below sample:
 
 ```XML
 <MetaData>
   ...
+  <!-- Use below 4 fields to retain user created/date created, user modified/date modified will be overwritten afterwards, but you need to include them to make this "override" work -->
   <Field Name="Created" TargetFieldName="Created" Functions="" />
   <Field Name="Modified" TargetFieldName="Modified" Functions="" />
   <Field Name="Author" TargetFieldName="Author" Functions="" />
@@ -336,16 +341,17 @@ You can do this by altering your page layout mapping like shown in below sample:
 </MetaData>
 ```
 
-If you however publish this page the modification data will change again. If you want to keep the modification date and publish you can add these 2 additional fields:
+On publishing this page the modification data will change again. If you want to keep the modification date shown correctly in the modern page header you should set this field as well:
 
 ```XML
 <MetaData>
   ...
-  <Field Name="PublishingStartDate" TargetFieldName="FirstPublishedDate" Functions="" />
-  <Field Name="ID" TargetFieldName="PromotedState" Functions="StaticString('2')" />
+  <Field Name="Modified" TargetFieldName="FirstPublishedDate" Functions=""/>
   ...
 </MetaData>
 ```
+
+In above sample the page modification date is taken as FirstPublishedDate, but you can also take other DateTime fields like ArticleStartDate.
 
 ### I want to promote the created pages as news
 
@@ -359,7 +365,24 @@ Promoting pages created from a page layout as news pages can be be done by addin
 </MetaData>
 ```
 
-### Can I control the page preview image
+### I want to insert hard coded text on the created page (as of September 2019 release)
+
+Sometimes a page layout contains text snippets, which since they're not content in the actual page are not getting transformed. If that's the case then you can define a "fake" field to map like shown below:
+
+```XML
+<WebParts>
+  ...
+  <Field Name="ID" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="3">
+    <Property Name="Text" Type="string" Functions="StaticString('&lt;H1&gt;This is some extra text&lt;/H1&gt;')" />
+  </Field>
+  ...
+</WebParts>
+```
+
+> [!Note]
+> The HTML provided in the StaticString function must be XML encoded and must be formatted like the source page HTML as this HTML will still be converted to HTML which is compliant with the modern text editor
+
+### Can I control the page preview image (as of the May 2019 release)
 
 When a page has a page header image that image will also be used as a page preview image. If you however want to control the page preview image then you can populate the `BannerImageUrl` field using either the `ToPreviewImageUrl` function or by specifying a hard coded value as shown in below samples.
 
@@ -374,10 +397,7 @@ When a page has a page header image that image will also be used as a page previ
 <Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl('/sites/classicportal/images/myimage.jpg')" />
 ```
 
-> [!Note]
-> Controlling the page preview image was introduced with the May 2019 release.
-
-### I want to use different defaults for the QuickLinks web part
+### I want to use different defaults for the QuickLinks web part (as of the July 2019 release)
 
 When transformation results in a modern QuickLinks web part (e.g. for transformation of the SummaryLinkWebPart) then the page transformation framework will use a default base configuration for the QuickLinks web part. If you, however, want a different configuration then you can do that by specifying the QuickLinksJsonProperties property. Wrap the encoded JSON properties in a StaticString function as shown in this sample:
 
@@ -395,6 +415,3 @@ When transformation results in a modern QuickLinks web part (e.g. for transforma
 ```
 
 The JSON in the sample shows all the possible configuration options you can set, but you can however also just define the ones you need. As long as the JSON is valid and the structure is maintained your custom QuickLinks configuration will be picked up.
-
-> [!Note]
-> - The QuickLinks defaults override option was introduced in the July 2019 release

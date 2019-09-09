@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 06/24/2019
+ms.date: 09/03/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -353,6 +353,50 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     UrlMappingFile = @"c:\temp\urlmappingfile.csv",
+};
+```
+
+## SkipDefaultUrlRewrite option (as of September 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to perform default URL rewriting. In case you're using a custom URL mapping file and you do not want to apply the default URL rewrite logic then set this property. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipDefaultUrlRewrite = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipDefaultUrlRewrite = true,
+};
+```
+
+## AddTableListImageAsImageWebPart option (as of September 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+As of the September 2019 release images that are embedded inside tables/lists are not anymore created as separate image web parts underneath those tables/lists. The reason is that the modern text editor is not dropping these images anymore on page edit. If you prefer the pre September 2019 model you can set the AddTableListImageAsImageWebPart property.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    AddTableListImageAsImageWebPart = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    AddTableListImageAsImageWebPart = true,
 };
 ```
 

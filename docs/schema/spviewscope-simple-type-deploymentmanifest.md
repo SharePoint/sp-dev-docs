@@ -36,7 +36,7 @@ Provides values for specifying the recursive scope of a specified view into a do
 |:-----|:-----|
 |**Default** <br/> |Shows only the files and subfolders of a specific folder.  <br/> |
 |**Recursive** <br/> |Shows all files of all folders.  <br/> |
-|**RecursiveAll** <br/> |Shows all files and alll subfolders of all folders.  <br/> |
+|**RecursiveAll** <br/> |Shows all files and all subfolders of all folders.  <br/> |
 |**FilesOnly** <br/> |Shows only the files of a specific folder.  <br/> |
    
 ## See also
