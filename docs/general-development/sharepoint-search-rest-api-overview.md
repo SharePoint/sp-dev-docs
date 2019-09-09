@@ -58,7 +58,7 @@ The HTTP **POST** version of the Search REST service supports all parameters sup
 | [SelectProperties](#bk_SelectProperties)                 | string[]                                                                                                                                                                   |
 | [RefinementFilters](#bk_RefinementFilters)               | string[]                                                                                                                                                                   |
 | [SortList](#bk_SortList)                                 | [Sort](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.Sort.aspx)                                                                              |
-| [HithighlightedProperties](#bk_HithighlightedProperties) | ​string[]                                                                                                                                                                  |
+| [HitHighlightedProperties](#bk_HitHighlightedProperties) | string[]                                                                                                                                                                  |
 | [Properties](#bk_Properties)                             | [Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties.aspx) |
 
 Use **POST** requests in the following scenarios:
@@ -596,9 +596,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablefql=true
 }
 ```
 
-<a name="bk_HithighlightedProperties"> </a>
+<a name="bk_HitHighlightedProperties"> </a>
 
-### HithighlightedProperties
+### HitHighlightedProperties
 
 The properties to highlight in the search result summary when the property value matches the search terms entered by the user. For **GET** requests, Specify in a string containing a comma-separated list of properties. For **POST** requests, specify as an array of strings.
 

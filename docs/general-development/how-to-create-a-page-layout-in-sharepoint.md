@@ -33,13 +33,13 @@ When you create a page layout:
 - All markup required by SharePoint is added to the .aspx file so that the page layout renders correctly.
     
   
-- Other markup such as comments, **<div>** tags, snippets, and content placeholders are added to the HTML file.
+- Other markup such as comments, tags, snippets, and content placeholders are added to the HTML file.
     
   
 - Page fields unique to the content type are added automatically to the page layout. Other page fields are available to be added from the ribbon in the Snippet Gallery.
     
   
-- The HTML file and the .aspx file are associated, so that any later edits to the HTML file are synced to the .aspx file whenever the HTML file is saved. Other markup such as comments, **<div>** tags, snippets, and content placeholders are added to the HTML file.
+- The HTML file and the .aspx file are associated, so that any later edits to the HTML file are synced to the .aspx file whenever the HTML file is saved. Other markup such as comments, tags, snippets, and content placeholders are added to the HTML file.
     
 > [!NOTE]
 > The syncing goes in one direction only. Changes to the HTML page layout are synced to the associated .aspx file, but if you choose to edit the .aspx file directly, those changes are not synced to the HTML file. Every HTML page layout (and every HTML master page) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.

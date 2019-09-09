@@ -56,6 +56,13 @@ You will have to add a `supportsThemeVariants` property to the manifest of your 
 In order to make the web part aware of any theme changes you have to implement support for the ThemeProvider service which will raise an event in case a theme change has taken place.
 
 ```typescript
+import { ThemeProvider, ThemeChangedEventArgs, IReadonlyTheme, ISemanticColors } from '@microsoft/sp-component-base';
+
+...
+
+private _themeProvider: ThemeProvider;
+private _themeVariant: IReadonlyTheme | undefined;
+
 protected onInit(): Promise<void> {
     // Consume the new ThemeProvider service
     this._themeProvider = this.context.serviceScope.consume(ThemeProvider.serviceKey);
@@ -87,7 +94,7 @@ public render(): void {
 
     const semanticColors: Readonly<ISemanticColors> | undefined = this._themeVariant && this._themeVariant.semanticColors;
 
-    const style: string = ` style="color:${semanticColors.bodyText}"`;
+    const style: string = ` style="background-color:${semanticColors.bodyBackground}"`;
     this.domElement.innerHTML = `<p${'' || (this._themeProvider && style)}>this is a demo</p>`;
 }
 ```
@@ -97,6 +104,13 @@ public render(): void {
 For a React based web part you will have to implement code to consume the ThemeProvider, just like with a basic web part:
 
 ```typescript
+import { ThemeProvider, ThemeChangedEventArgs, IReadonlyTheme } from '@microsoft/sp-component-base';
+
+...
+
+private _themeProvider: ThemeProvider;
+private _themeVariant: IReadonlyTheme | undefined;
+  
 protected onInit(): Promise<void> {
     // Consume the new ThemeProvider service
     this._themeProvider = this.context.serviceScope.consume(ThemeProvider.serviceKey);
@@ -139,6 +153,8 @@ public render(): void {
 In order to use that property in your component you will have to add it to your properties interface definition, which in this case is called IBasicSectionBackgroundExampleProps:
 
 ```typescript
+import { IReadonlyTheme } from '@microsoft/sp-component-base';
+
 export interface IBasicSectionBackgroundExampleProps {
   themeVariant: IReadonlyTheme | undefined;
 }
@@ -152,7 +168,7 @@ public render(): React.ReactElement<IBasicSectionBackgroundExampleProps> {
     const { semanticColors }: IReadonlyTheme = this.props.themeVariant;
 
     return (
-      <div style={{color: semanticColors.bodyText}}>
+      <div style={{backgroundColor: semanticColors.bodyBackground}}>
         <p>This React web part has support for section backgrounds and will inherit its background from the section</p>
       </div>
     );
@@ -163,3 +179,4 @@ public render(): React.ReactElement<IBasicSectionBackgroundExampleProps> {
 
 - [Designing for section backgrounds using semantic slots](../../../design/semantic_slots.md)
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
+- [SPFx Section Background Samples](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/section-backgrounds)

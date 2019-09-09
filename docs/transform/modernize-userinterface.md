@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Modernize the user interface
 
-One of the immediately visible elements of a modern team site or communication site is its modern user interface, as evidenced on its home page and lists and libraries pages. 
+One of the immediately visible elements of a modern team site or communication site is its modern user interface, as evidenced on its home page and lists and library pages. 
 
 But what if your site today still has lists and libraries, wiki pages, or web part pages that use the classic user interface?
 
@@ -20,13 +20,13 @@ To make the switch to a modern user interface, you need to focus on the followin
 > [!IMPORTANT]
 > The "classic" experience is not being deprecated; both "classic" and "modern" will coexist.
 
-Where do you start when you want to modernize the user interface of your sites? What sites should be modernized first? These are very relevant questions, and are addressed in the following steps.
+Where do you start when you want to modernize the user interface of your sites? What sites should be modernized first? These are very relevant questions and are addressed in the following steps.
 
 ## Step 1: Identify and educate stakeholders
 
 Before embarking on this modernization journey, it's important that the following stakeholders become familiar with the SharePoint modern user interface.
 
-- **Key business stakeholders** - The modern user interface must meet the needs of the business user, and the key business stakeholders should be advocates of this change. Granting them access to a playground environment and closely working with them will help them understand what works well and what doesn't. Later on, these key business stakeholders will play a crucial role in helping your end users adopt the modern user interface.
+- **Key business stakeholders** - The modern user interface must meet the needs of the business user, and the key business stakeholders should be advocates of this change. Granting them access to a playground environment and closely working with them will help them understand what works well and what doesn't. Later on, these key business stakeholders will play a crucial role in helping your end-users adopt the modern user interface.
 - **Customization team and developers** - Because customizations built in the past may no longer work in the modern user interface, this team needs to be available to redesign those customizations.
 - **SharePoint administrators** -  The admins will be the ones that enable the modern user interface across your tenant and its sites.
 - **Change management and governance teams** - If these teams exist in your organization, they should be looped in as well because switching from the classic user interface to the modern user interface impacts change for users, and might require an update of internal training materials.

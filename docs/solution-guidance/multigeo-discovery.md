@@ -43,15 +43,19 @@ clientContext.ExecuteQuery();
 
 You can get the geo location information for a tenant by using Microsoft Graph. The following example returns a collection with one object per geo location.
 
+> [!NOTE]
+> The following code sample uses the `dataLocationCode` attribute on the `siteCollection` object. At the time of publishing, this property is only available in [Microsoft Graph beta endpoint](https://docs.microsoft.com/en-us/graph/api/resources/sitecollection?view=graph-rest-beta).
+
+
 ```
-GET https://graph.microsoft.com/v1.0/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
+GET https://graph.microsoft.com/beta/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
 ```
 
 #### Example response for a Multi-Geo tenant
 
 ```json
 {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites",
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#sites",
     "value": [
         {
             "webUrl": "https://contoso.sharepoint.com/",
@@ -92,14 +96,14 @@ The following example shows the results of a Microsoft Graph call to a single-ge
 <!-- Not sure where the output for a Multi-Geo tenant is. Provide a link? -->
 
 ```
-GET https://graph.microsoft.com/v1.0/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
+GET https://graph.microsoft.com/beta/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
 ```
 
 #### Example response for a single-geo tenant
 
 ```json
 {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites",
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#sites",
     "value": [
         {
             "webUrl": "https://singlegeotest.sharepoint.com/",

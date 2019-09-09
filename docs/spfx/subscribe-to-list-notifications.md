@@ -10,8 +10,8 @@ localization_priority: Normal
 
 Starting from SharePoint Framework v1.7.0, you can subscribe to changes to files stored in a SharePoint Document Library. This allows you to respond to changes when they happen, without having to regularly poll the contents of the library.
 
-> [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
+> [!NOTE]
+> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `-plusbeta` version of the library (*see [this issue for reference](https://github.com/SharePoint/sp-dev-docs/issues/4306)*)
 
 ## Prerequisites
 
@@ -115,7 +115,7 @@ The method for the `callbacks.disconnect` callback passes as an argument the rea
 - both web parts and extensions can use the list subscription capabilities
 - it is only possible to subscribe to notifications in SharePoint Document Libraries. SharePoint Lists don't support this capability at the moment
 - there is a few seconds delay between the change and the notification being received by the component
-- components can be subscribe to changes in multiple Document Libraries
+- components can subscribe to changes in multiple Document Libraries
 - the change notification doesn't pass any information about the added or changed document. To see what has changed, use the SharePoint REST API or Microsoft Graph
 
 ## See also

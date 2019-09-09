@@ -1,10 +1,10 @@
 ---
-title: "SPO Migration API: Migrating sahred files and folders"
+title: "SPO Migration API: Migrating shared files and folders"
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 ms.topic: article
-description: "Migrating sahred files and folders using item references."
+description: "Migrating shared files and folders using item references."
 --- 
 
 
@@ -70,3 +70,7 @@ However, if they are indicated in “Shared With” references but do not have a
 Using PRIME, content can be migrated by using SPFile/SPFolder objects with a document library followed by SPListItem objects that reference the imported File/Folder objects. During the ListItem import, the “Shared With” references data can be imported, and then the security can be applied afterward within the same migration package, by setting up scopes (ACLs) and role assignments (ACEs) for the content hierarchy as needed. 
 
 Permissions migration is performed using the DeploymentRoleAssignments object with RoleAssignment entries representing specific scopes and Assignment entries representing assignments of specific roles to specific principals. Since this code ends up breaking inheritance for content and applying the specified role assignments, it has the same limitations as using other object model approaches to setting permissions in SharePoint.
+
+
+>[!NOTE]
+>The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 

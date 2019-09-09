@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 04/18/2019
+ms.date: 09/01/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -39,6 +39,7 @@ The first release of the SharePoint Framework contained only support for client-
 - Content Security Policy (CSP) support
 - Additional placeholder, like content header, content footer, navigation extensions, search extensions
 - Improved developer experience and tooling
+- Pre-allocate space for the extensions while rendering page in server side
 
 ## Client-side web parts++ and add-ins
 
@@ -81,7 +82,7 @@ The following sections list older items that have already shipped.
 
 - ALM REST APIs. Deploy, activate, delete, and upgrade apps and add-ins.
 - ALM REST APIs targeted to support *everything* in the app catalog, including add-ins.
-- CSOM and PowerShell cmdlets released as an open source community initiative.
+- CSOM and PowerShell cmdlets released as an open-source community initiative.
 
 ### JavaScript embedding support (JSLink, User Custom Actions) 
 
