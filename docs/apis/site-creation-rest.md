@@ -39,15 +39,17 @@ odata-version: 4.0
 method: POST
 body:
 {
-  "Title": "Communication Site 1",
-  "Url":"https://contoso.sharepoint.com/sites/commsite1",
-  "Lcid": 1033,
-  "ShareByEmailEnabled":false,
-  "Classification":"Low Business Impact",
-  "Description":"Description",
-  "WebTemplate":"SITEPAGEPUBLISHING#0",
-  "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
-  "Owner":"owner@yourtenant.onmicrosoft.com"
+  "request":{
+    "Title": "Communication Site 1",
+    "Url":"https://contoso.sharepoint.com/sites/commsite1",
+    "Lcid": 1033,
+    "ShareByEmailEnabled":false,
+    "Classification":"Low Business Impact",
+    "Description":"Description",
+    "WebTemplate":"SITEPAGEPUBLISHING#0",
+    "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
+    "Owner":"owner@yourtenant.onmicrosoft.com"
+  }
 }
 ```
 
