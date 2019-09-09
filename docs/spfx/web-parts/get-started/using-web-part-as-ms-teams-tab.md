@@ -265,6 +265,22 @@ Your custom tab has been added on the Microsoft Teams channel and you can see ho
 
 ![Custom tab added](../../../images/sp-teams-custom-tab-added.png)
 
+## Updating your app package
+
+When you make changes to your app and create a new package, you might encounter an error when clicking "sync to teams".
+
+A notification "Failed to sync solution to teams" might appear on the top right of your page.
+
+If this happens follow these steps to delete your app from Microsoft Teams and then try to sync it again:
+
+1. Open Microsoft Teams
+1. When viewing your team channel, click + to "Add a tab"
+1. Click the "More apps" link at the top
+1. Find your app in the list, and click on the "..." menu
+1. Click "Delete" to remove the app from Microsoft Teams
+
+You should now be able to sync your new version to Microsoft Teams.
+
 ## See also
 
 * [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)
