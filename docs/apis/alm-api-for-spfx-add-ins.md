@@ -87,6 +87,9 @@ POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 > [!NOTE]
 > This operation is required to be completed after Add, before you can install packages to specific sites. 
 
+> [!NOTE]
+> It is currently not supported to deploy several packages in parallel - make sure to serialize your deployment operations to avoid deployment errors.
+
 ### Retract solution packages in the app catalog
 
 This retracts the solution to be available from the sites. This API is designed to be executed in the context of the app catalog site.

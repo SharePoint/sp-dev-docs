@@ -64,11 +64,11 @@ Use the [$top](http://www.odata.org/documentation/odata-version-2-0/uri-conventi
 
 The `$top` option enables you to select the first *n* items of the return set for return. For example, the following URI requests that only the first ten items in the prospective return set actually be returned:
 
-`http://server/site/_api/web/lists('<guid>')/items$top=10`
+`http://server/site/_api/web/lists('<guid>')/items?$top=10`
 
 The $skiptoken option enables you to skip over items until the specified item is reached and return the rest.
 
-`$skiptoken=Paged=TRUE%26p_ID=5`
+`?$skiptoken=Paged=TRUE%26p_ID=5`
  
 > [!NOTE] 
 > When using these query options, take into account that paging in OData is ordinal. For example, suppose you are implementing a next page button to display SharePoint list items. You use the REST service to enable the button to return items 1 through 20 when clicked, and then items 21 through 40, and so on. However, suppose another user deletes items 4 and 18 between clicks of the next button. In such a case, the ordinal positioning of the remaining items is reset, and displaying items 21 through 40 actually skips over two items.

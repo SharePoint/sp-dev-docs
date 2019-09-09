@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using .NET
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .NET
-ms.date: 06/24/2019
+ms.date: 09/03/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -205,7 +205,7 @@ using (var cc = new ClientContext(siteUrl))
 ```
 
 > [!NOTE]
-> - This feature is still in preview in the June 2019 release...it should support SharePoint 2013, 2016 and 2019
+> - This feature supports SharePoint 2010, 2013, 2016 and 2019 as source. Target is always SharePoint Online
 > - It's important to run your code on a machine that is able to connect to both the on-premises SharePoint server as the SharePoint Online environment
 > - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
 > - This approach can also be used for page transformation across tenants (whenever that would make sense)

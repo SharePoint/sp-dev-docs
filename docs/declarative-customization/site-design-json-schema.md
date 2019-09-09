@@ -14,27 +14,27 @@ The overall JSON structure is specified as follows:
 ```json
 {
     "$schema": "schema.json",
-        "actions": [
-            ...
-            <one or more verb actions>
-            ...
-        ],
-        "bindata": { },
-        "version": 1
+    "actions": [
+        ...
+        <one or more verb actions>
+        ...
+    ],
+    "bindata": { },
+    "version": 1
 };
 ```
 
 You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
 #### Applying site designs multiple times
-**Actions** can be runned more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema. 
+**Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema. 
 
 ## Create a new SharePoint list
 
 Use the **createSPList** verb to create a new SharePoint list.
 
 > [!NOTE]
-> Once **createSPList** is applied on a site, runnning the **createSPList** with the same list name will act as an update to the existing list.   
+> Once **createSPList** is applied on a site, runnning the **createSPList** with the same list name will act as an update to the existing list.
 
 #### JSON values
 
@@ -90,23 +90,6 @@ Use the **createSPList** verb to create a new SharePoint list.
 
 The subactions array provides additional actions to specify how to construct the list. Subactions are also specified using a **verb** value.
 
-### setTitle
-
-Sets a title which identifies the list in views.
-
-#### JSON value
-
-- **title** &ndash; The title of the new list.
-
-#### Example
-
-```json
-{
-   "verb": "setTitle",
-   "title": "Customers and Orders"
-}
-```
-
 ### setDescription
 
 Sets the description of the list.
@@ -132,6 +115,7 @@ Adds a new field.
 
 - **fieldType** &ndash; The field type can be set to **Text**, **Note**, **Number**, **Boolean**, **User**, or **DateTime**. For other data types, see the addSPFieldXml action.
 - **displayName** &ndash; The display name of the field.
+- **id** &ndash; An optional attribute. If provided, specifies the id of the field. It needs to be a unique, randomly generated GUID. Providing a value for this is strongly recommended to ensure the field is not added multiple times if the script is re-run.
 - **internalName** &ndash; An optional attribute. If provided, specifies the internal name of the field. If not provided, the internal name is based on the display name.
 - **isRequired** &ndash; **True** if this field is required to contain information; otherwise, **false**.
 - **addToDefaultView** &ndash; **True** if the field will be added to the default view; otherwise, **false**.
@@ -145,6 +129,7 @@ Adds a new field.
    "fieldType": "Text",
    "displayName": "Customer Name",
    "isRequired": false,
+   "id": "c532fcb9-cdb3-45c6-8247-c784dcd58e1a"
    "addToDefaultView": true
 }
 ```
@@ -168,7 +153,7 @@ Deletes a default field that was provided by the selected template type.
 
 ### addSPFieldXml
 
-Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field).
+Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
 
 Currently these field constructs cannot be designated as site columns nor added to content types. To create site columns with Field XML use the **createSiteColumnXml** action.
 
@@ -182,13 +167,13 @@ Currently these field constructs cannot be designated as site columns nor added 
 ```json
 {
     "verb": "addSPFieldXml",
-    "schemaXml": "<Field Type=\"Choice\" DisplayName=\"Project Category\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectCategory\" Name=\"ProjectCategory\"><Default>Operations</Default><CHOICES><CHOICE>Operations</CHOICE><CHOICE>IT</CHOICE><CHOICE>Legal</CHOICE><CHOICE>Engineering</CHOICE></CHOICES></Field>"
+    "schemaXml": "<Field ID=\"{596cbd92-36e3-40cc-a910-0f53468ce5e4}\" Type=\"Choice\" DisplayName=\"Project Category\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectCategory\" Name=\"ProjectCategory\"><Default>Operations</Default><CHOICES><CHOICE>Operations</CHOICE><CHOICE>IT</CHOICE><CHOICE>Legal</CHOICE><CHOICE>Engineering</CHOICE></CHOICES></Field>"
 }
 ```
 
 ### addSPLookupFieldXml
 
-Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field).
+Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
@@ -475,6 +460,26 @@ Associates a ListViewCommandSet to the list
 }
 ```
 
+### setTitle
+
+Renames the list. To create a new list with a specific name, instead of using setTitle use the **listName** parameter in the **CreateSPList** action. 
+
+> [!NOTE]
+> Using **setTitle** will rename the list, preventing the list from updating if the site design is reapplied. 
+
+#### JSON value
+
+- **title** &ndash; The title of the new list.
+
+#### Example
+
+```json
+{
+   "verb": "setTitle",
+   "title": "Customers and Orders"
+}
+```
+
 ## Define a new site column
 
 Use the **createSiteColumn** verb to define a new site column that can then be associated to a list directly or by using the addContentType action. 
@@ -485,6 +490,7 @@ Use the **createSiteColumn** verb to define a new site column that can then be a
 - **internalName** &ndash; The internal name of the site column.
 - **displayName** &ndash; The display name of the site column.  
 - **isRequired** &ndash; **True** if this field is required to contain information; otherwise, **false**.
+- **id** &ndash; An optional attribute. If provided, specifies the id of the field. It needs to be a unique, randomly generated GUID. Providing a value for this is strongly recommended to ensure the field is not added multiple times if the script is re-run.
 - **group** &ndash; An optional attribute to designate the column group.
 - **enforceUnique** &ndash; An optional attribute that defaults to **false**. If **true**, all values for this field must be unique.
 
@@ -496,11 +502,12 @@ Use the **createSiteColumn** verb to define a new site column that can then be a
     "fieldType": "User",
     "internalName": "siteColumn4User",
     "displayName": "Project Owner",
-    "isRequired": false
+    "isRequired": false,
+    "id": "181c4370-cdae-471b-9499-730046e55b75"
 }
 ```
 
-Use the **createSiteColumnXml** verb to define a new site column for those complex data types not supported by createSiteColumn. These columns can then be associated to a list directly or by using the addContentType action. 
+Use the **createSiteColumnXml** verb to define a new site column for those complex data types not supported by createSiteColumn. These columns can then be associated to a list directly or by using the addContentType action. Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
@@ -512,7 +519,7 @@ Use the **createSiteColumnXml** verb to define a new site column for those compl
 ```json
 {
     "verb": "createSiteColumnXml",
-    "schemaXml": "<Field Type=\"Choice\" DisplayName=\"Project Status\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectStatus\" Name=\"ProjectStatus\"><Default>In Progress</Default><CHOICES><CHOICE>In Progress</CHOICE><CHOICE>In Review</CHOICE><CHOICE>Done</CHOICE><CHOICE>Has Issues</CHOICE></CHOICES></Field>"
+    "schemaXml": "<Field ID=\"{82581bd1-356f-4206-8ff7-a3b6ad1f5553}\" Type=\"Choice\" DisplayName=\"Project Status\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectStatus\" Name=\"ProjectStatus\"><Default>In Progress</Default><CHOICES><CHOICE>In Progress</CHOICE><CHOICE>In Review</CHOICE><CHOICE>Done</CHOICE><CHOICE>Has Issues</CHOICE></CHOICES></Field>"
 }
 ```
 
@@ -750,7 +757,7 @@ Use the **setSiteBranding** verb to specify the navigation layout, the header la
 
 - **navigationLayout** &ndash; Specify the navigation layout as Cascade or Megamenu
 - **headerLayout** &ndash; Specify the header layout as Standard or Compact
-- **headerBackground** &ndash; Specify the header background as None, Neutral, Soft or Stong
+- **headerBackground** &ndash; Specify the header background as None, Neutral, Soft or Strong
 
 #### Example
 
@@ -846,6 +853,28 @@ Use the **associateExtension** action to register a deployed SharePoint Framewor
     "location": "ClientSideExtension.ApplicationCustomizer",
     "clientSideComponentId": "40d64749-a6e5-4691-b440-1e32fb6sean5",
     "scope": "Web"
+}
+```
+
+## Activate a Feature
+
+Use the **activateSPFeature** action to activate a web scoped feature.
+
+> [!NOTE]
+> Site scoped features cannot be activated through Site Designs at this time.
+
+#### JSON values
+
+- **featureId** &ndash; The ID of the web scoped feature to activate. 
+
+#### Example
+
+To enable the web scoped feature which allows for Events Lists to be created (feature ID 00bfea71-ec85-4903-972d-ebe475780106):
+
+```json
+{
+    "verb": "activateSPFeature",
+    "featureId": "00bfea71-ec85-4903-972d-ebe475780106"
 }
 ```
 
@@ -957,4 +986,3 @@ Use the **setSiteExternalSharingCapability** action to manage guest access. For 
 ## See also
 
 - [SharePoint site design and site script overview](site-design-overview.md)
-

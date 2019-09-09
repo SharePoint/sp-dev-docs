@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint PowerShell
-ms.date: 06/24/2019
+ms.date: 09/03/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -50,6 +50,8 @@ PageLayoutMapping (as of April 2019 release, version 3.8.1904.*) |  | Publishing
 PublishingTargetPageName (as of May 2019 release, version 3.9.1905.*) |  | Publishing pages | Use the `-PublishingTargetPageName` parameter to override the name for the modern page
 SkipUrlRewriting (as of May 2019 release, version 3.9.1905.*) | $false | Cross site transformation | During publishing page transformation URL's are rewritten to be valid in the target site collection, but using the `-SkipUrlRewriting` you can disable the URL rewriting. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
 UrlMappingFile (as of July 2019 release, version 3.11.1907.*) |  | Cross site transformation | File with custom URL mapping definitions allow you to do more than just the default URL mapping. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+SkipDefaultUrlRewriting (as of September 2019 release, version 3.13.1909.*) | | Cross site transformation | When you use a custom URL mapping and you want to disable the default URL rewrite logic then set the `-SkipDefaultUrlRewriting` parameter.
+AddTableListImageAsImageWebPart (as of September 2019 release, version 3.13.1909.*) | | All page types | Before the September 2019 release images living inside a table/list were also created as separate image web parts underneath that table/list. Since these images inside tables/lists now are not dropped anymore from the modern page on edit the default behavior has changed to not add separate image web parts anymore. Use the `-AddTableListImageAsImageWebPart` parameter to revert back the pre September 2019 default behavior.
 
 (`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage` parameter was set (either `-TargetWebUrl` or `-TargetConnection`)
 
@@ -98,6 +100,10 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/moderncommunicationsite -PageLayoutMapping c:\temp\mypagelayouts.xml
 ```
 
+#### Sample scripts for transforming (on-premises) publishing pages to modern pages in SharePoint Online
+
+Check out the scripts in https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/PageTransformation to get started.
+
 ### Read publishing page in on-premises SharePoint and create the modern page in SharePoint Online (as of June 2019 release, version 3.10.1906.*)
 
 When you want to bring over your classic on-premises publishing portals you could first move the complete portal from on-premises to a classic portal in SharePoint Online and then do the modernization work. However, often it's easier to directly read the classic publishing page from your SharePoint on-premises portal and create the modern version in SharePoint Online. To do this you need to use PnP PowerShell for SharePoint Online to connect to your on-premises portal like shown in below script:
@@ -114,7 +120,7 @@ ConvertTo-PnPClientSidePage -Identity "page1.aspx" -PublishingPage -TargetConnec
 ```
 
 > [!NOTE]
-> - This feature is still in preview in the June 2019 release...it should support SharePoint 2013, 2016 and 2019
+> - This feature supports SharePoint 2010, 2013, 2016 and 2019 as a source environment. Target environment is SharePoint Online
 > - It's important to use the SharePoint Online PnP PowerShell version, the machine running the PowerShell script needs to be able to connect to both the on-premises SharePoint server as the SharePoint Online environment
 > - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
 > - This approach can also be used for page transformation across tenants (whenever that would make sense)

@@ -293,7 +293,7 @@ There are changes on how to use Office UI Fabric icons in the rendering of the S
 <i className={css('ms-Icon', 'ms-Icon--RecurringEvent')}></i>
 ```
 
-### Updated way to use incons (after SPFx 1.8.2)
+### Updated way to use icons (after SPFx 1.8.2)
 
 Solutions build with *no JavaScript framework* option.
 

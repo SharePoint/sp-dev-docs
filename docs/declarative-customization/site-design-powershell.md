@@ -8,7 +8,7 @@ localization_priority: Priority
 # SharePoint site design: PowerShell cmdlets
 
 > [!NOTE]
-> Site designs and site scripts have been released to production and are available for general use. 
+> Site designs and site scripts have been released to production and are available for general use.
 
 Use PowerShell cmdlets to create, retrieve, update, and remove site designs and site scripts to new and existing modern site collections.
 
@@ -52,3 +52,4 @@ The following cmdlets are available for managing site designs and site scripts f
 - [REST API](site-design-rest-api.md)
 - [Apply a scope to your site design](site-design-scoping.md)
 - [SharePoint site design and site script overview](site-design-overview.md)
+- [SharePoint site design - Office 365 CLI commands](site-design-o365cli.md)
