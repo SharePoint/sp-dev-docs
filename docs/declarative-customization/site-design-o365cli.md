@@ -7,10 +7,10 @@ localization_priority: Priority
 
 # SharePoint site design: Office 365 CLI commands
 
-> [!NOTE]
-> Site designs and site scripts have been released to production and are available for general use.
-
 Use the Office 365 CLI to create, retrieve, update, and remove site designs and site scripts to new and existing modern site collections from any platform.
+
+> [!NOTE]
+> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
 
 ## Getting started
 
