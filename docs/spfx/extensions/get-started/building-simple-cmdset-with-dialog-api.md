@@ -362,7 +362,7 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
 }
 ```
 
-## Deploy the extension to SharePoint Online and host JavaScript from local host
+## Deploy the extension to SharePoint Online
 
 Now you are ready to deploy the solution to a SharePoint site and have the `CustomAction` automatically associated on the site level.
 
