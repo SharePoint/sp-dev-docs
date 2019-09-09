@@ -7,7 +7,7 @@ localization_priority: Priority
 
 # Reactive and nonreactive SharePoint web parts
 
-Reactive web parts are client-side only; nonreactive web parts have elements that require a server to operate. We recommend that you build your SharePoint web parts to be reactive, because that best fits the UX model and WYSIWYG principles for authoring. However, it might not be possible or cost-effective in all cases to build reactive web parts.
+Reactive web parts are client-side only; nonreactive web parts have elements that require a server to operate. We recommend that you build your SharePoint web parts to be reactive because that best fits the UX model and WYSIWYG principles for authoring. However, it might not be possible or cost-effective in all cases to build reactive web parts.
 
 
 ## Reactive web parts
