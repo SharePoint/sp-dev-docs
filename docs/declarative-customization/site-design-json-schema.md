@@ -610,7 +610,7 @@ Use the **addNavLink** verb to add a new navigation link to the site QuickLaunch
 
 - **url** &ndash; The url of the link to add.
 - **displayName** &ndash; The display name of the link.
-- **navComponent** &ndash; The component where to add the link, QuickLaunch or Hub. The default is **QuickLaunch**.
+- **navComponent** &ndash; The component where to add the link, QuickLaunch, Hub or Footer. The default is **QuickLaunch**.
 - **isWebRelative** &ndash; **true** if the link is web relative; otherwise, **false**. The default is **false**.
 - **parentDisplayName** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
 - **parentUrl** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this url. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
@@ -640,6 +640,12 @@ Use the **addNavLink** verb to add a new navigation link to the site QuickLaunch
     "url": "https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview",
     "displayName": "SharePoint Site Design Overview",
     "parentDisplayName": "Documents"
+ },
+ {
+     "verb": "addNavLink",
+     "url": "https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
+     "displayName": "About Site Footer",
+     "navComponent":"Footer"
  }
 ```
 
@@ -651,7 +657,7 @@ Use the **removeNavLink** verb to remove a navigation link from the site.
 
 - **url** &ndash; The url of the link to remove.
 - **displayName** &ndash; The display name of the link.
-- **navComponent** &ndash; The component where to remove the link from, QuickLaunch or Hub. The default is **QuickLaunch**.
+- **navComponent** &ndash; The component where to remove the link from, QuickLaunch, Hub or Footer. The default is **QuickLaunch**.
 - **isWebRelative** &ndash; **True** if the link is web relative; otherwise, **false**.
 
 #### Example
@@ -758,6 +764,7 @@ Use the **setSiteBranding** verb to specify the navigation layout, the header la
 - **navigationLayout** &ndash; Specify the navigation layout as Cascade or Megamenu
 - **headerLayout** &ndash; Specify the header layout as Standard or Compact
 - **headerBackground** &ndash; Specify the header background as None, Neutral, Soft or Strong
+- **showFooter** &ndash; Specify whether site footer should show or not
 
 #### Example
 
@@ -766,7 +773,8 @@ Use the **setSiteBranding** verb to specify the navigation layout, the header la
     "verb": "setSiteBranding",
     "navigationLayout": "Megamenu",
     "headerLayout": "Compact",
-    "headerBackground": "Strong"
+    "headerBackground": "Strong",
+    "showFooter": true
 }
 ```
 
