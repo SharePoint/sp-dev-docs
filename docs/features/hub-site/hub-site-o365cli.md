@@ -9,6 +9,9 @@ localization_priority: Priority
 
 Use the Office 365 CLI commands to create and manage SharePoint hub sites.
 
+> [!NOTE]
+> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 ## Get started
 
 To run the Office 365 CLI commands, you'll need to do the following:
