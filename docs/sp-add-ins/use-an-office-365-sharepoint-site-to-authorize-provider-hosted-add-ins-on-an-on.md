@@ -1,7 +1,7 @@
 ---
 title: Use ACS to authorize low-trust provider-hosted add-ins on an on-premises SharePoint site
 description: Create an environment where you can use ACS to establish trust between a low-trust provider-hosted add-in and an on-premises SharePoint farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
-ms.date: 12/28/2017
+ms.date: 09/11/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -20,51 +20,6 @@ Be sure that you have the following:
 - An Office 365 SharePoint site. If don't have one yet and you want to set up a development environment quickly, you can  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
 
 - [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) installed either remotely or on a computer running SharePoint, with the workload **Office/SharePoint development**. Earlier versions of Visual Studio require component **Microsoft Office Developer Tools for Visual Studio** instead. The latest version of this component is available [here for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), and [here for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
-    
-- Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
-
-- The 64-bit edition of [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=41950) installed on the computer where you installed SharePoint.
-    
--  [Microsoft Online Services Module for Windows PowerShell (64-bit)](https://docs.microsoft.com/en-us/powershell/module/Azuread/?view=azureadps-2.0) installed on the computer where you installed SharePoint.
-    
-Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/). 
-
-> [!IMPORTANT] 
-> ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
-
-<a name="Certificate"> </a>
-
-## Create a certificate and make it the security token service (STS) certificate of your on-premises installation of SharePoint
-
-You'll need to replace the default security token service (STS) certificate of your on-premises installation of SharePoint with your own certificate. This article gives you an example of how to create and export a test certificate by using the **Create Self Signed Certificate** option in IIS. You can also use a commercial certificate issued by a certificate authority.
-
-- [Create a test .pfx certificate file first, and then a corresponding test .cer file](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/software-publisher-certificate) 
- 
-- [You can also use the MakeCert test program to generate a test X.509 certificate](https://msdn.microsoft.com/en-us/library/ms537364(VS.85).aspx)
- 
-### To create a test .pfx certificate file
-
-1. In IIS Manager, select the _ServerName_ node in the tree view on the left.
-    
-2. Select **Server Certificates**, as shown in the following figure.
-    
-    ![Server Certificates option in IIS](../images/e38f9b7f-59a3-468c-bcde-a48272f1f217.gif)
-
-3. Select the **Create Self-Signed Certificate** link in the set of links on the right.
-    
-    ![Create Self-Signed Cerificate link](../images/3f0aae5a-e58b-4ec8-b67f-0024abfa2dab.gif)
-
-4. Name the certificate **SampleCert**, and then select **OK**.
-     
-5. Right-click the certificate, and then select **Export**.
-    
-    ![Exporting a test certificate](../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
-
-6. Export the file to a location you choose and give it a password. In this example, the password is **password**. In a production environment, use a strong password (for more information, see [Guidelines for creating strong passwords](https://msdn.microsoft.com/en-us/library/bb416446.aspx) and [Strong passwords](https://docs.microsoft.com/en-us/sql/relational-databases/security/strong-passwords)).
-    
-<a name="STSCertificate"> </a>
-
-## Make your certificate the STS certificate for your on-premises installation of SharePoint
 
 > [!IMPORTANT]
 > ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
