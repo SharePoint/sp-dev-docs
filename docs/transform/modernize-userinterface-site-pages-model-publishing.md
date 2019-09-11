@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 09/04/2019
+ms.date: 09/11/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -381,6 +381,57 @@ Sometimes a page layout contains text snippets, which since they're not content 
 
 > [!Note]
 > The HTML provided in the StaticString function must be XML encoded and must be formatted like the source page HTML as this HTML will still be converted to HTML which is compliant with the modern text editor
+
+### I want to add an extra web part on the created page
+
+When you transform you classic publishing page to a modern page you sometimes want to add an **additional** modern web part on the created page, without that there's a classic version of that web part on the classic publishing page. This can be done by adjusting your webpartmapping.xml and page layout mapping files as shown below.
+
+First define your custom web part in your **webpartmapping.xml** file by **adding** it the `WebParts` element in the file like shown in this [standard SPFX Hello World web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part):
+
+```XML
+<WebParts>
+  ...
+  <!-- Custom Hello world web part-->
+  <WebPart Type="SharePointPnP.Demo.HelloWorld" CrossSiteTransformationSupported="true">
+    <Properties>
+      <Property Name="HelloWorld" Type="string" />
+    </Properties>
+   <Mappings>
+    <Mapping Default="true" Name="default">
+      <ClientSideWebPart Type="Custom" ControlId="157b22d0-8006-4ec7-bf4b-ed62383fea76" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;"/>
+    </Mapping>
+  </Mappings>
+</WebPart>
+  ...
+</WebParts>
+```
+
+If you're not how to correctly define your custom web part in above **ClientSideWebPart** element then follow these steps:
+
+- Navigate to the SharePoint Framework Workbench in your site (e.g. https://contoso.sharepoint.com/sites/myportalsite/_layouts/workbench.aspx)
+- Add your custom web part to the workbench and configure it when needed
+- Click on the "Web part data" button in the toolbar and then on the "Modern Pages" button
+- Copy the **WebPartData** json structure and use it to complete next steps:
+  - The **ControlId** guid value is the value of the **id** json property
+  - Delete the following json properties from the copied snippet: id, instanceIf, title and description. At this point you have the following left:  `{"serverProcessedContent":{"htmlStrings":{},"searchablePlainTexts":{},"imageSources":{},"links":{}},"dataVersion":"1.0","properties":{"description":"HelloWorld from Bert","test":"Multi-line text field","test1":true,"test2":"2","test3":true}}`
+  - XML encode this string, this will give you this: `&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;HelloWorld from Bert&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;`
+  - If needed insert web part parameters in this string (e.g. {HelloWorld} in above sample): `&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;`
+  - Paste the resulting string in the **JsonControlData** property
+
+Once that's in place you need to update your page layout mapping by adding a field in the **WebParts** section that will be transformed to this custom web part:
+
+```XML
+<WebParts>
+  ...
+  <!-- Add an extra web part on the page -->
+  <Field Name="ID"  TargetWebPart="SharePointPnP.Demo.HelloWorld" Row="4" Column="1" Order="1">
+    <Property Name="HelloWorld" Type="string" Functions="StaticString('PnP Rocks!')"/>
+  </Field>
+  ...
+</WebParts>
+```
+
+Ensure that specify the custom **webpartmapping.xml** file as part of your transformation (`-WebPartMappingFile` PowerShell cmdlet parameter, `PublishingPageTransformator` constructor when using .Net).
 
 ### Can I control the page preview image (as of the May 2019 release)
 
