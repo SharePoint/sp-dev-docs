@@ -173,10 +173,24 @@ Below is an example on how to query the folder:
 
 #### JobQueueUri
 
-    public Uri JobQueueUri { get; set; }
+    public Uri JobQueueUri { get; set; } 
 
-The reporting features is the same as createMigrationJob. Logging will be provided to track the status of the asynchronous read.  In additional, the log will provide an estimate number of items to be read per url after scan through the database and a rough estimate for your tools.
-In terms of blob queue permission and settings, all access will be by default and the same as when the ISV called ProvisionMigrationContainer during the createMigrationJob.
+The reporting features are the same as they are for **CreateMigrationJob**. Logging is provided to track the status of the asynchronous metadata read. After a scan of the database and an estimate of your tools, the log provides an estimate of the number of items to be read per URL. By default, blob queue permissions and settings are set to "all access", the same as when the ISV calls **ProvisionMigrationContainer** during the **CreateMigrationJob**. 
+ 
+In addition to the events supported by the Import API (CreationMigrationJob), a new job event called  **FinishManifestFileUpload** will be added to the status queue in real time.  This is added after the manifest file is generated and uploaded.  
+ 
+As it’s a real time event, ISVs and developers can also immediately download and parse the manifest files once **FinishManifestFileUpload** is generated. Use the field *ManifestFileName* to parse this event to get every manifest file name, including systemdata.xml, usergroup.xml, etc. 
+
+The new event will look like this:  
+ 
+```XML
+
+{"Event", "FinishManifestFileUpload"}, 
+   {"JobId", “f8d7d577-676e-47ce-ab69-ae7803979883”}, 
+   {"Time", “2019-09-03T19:11:33.903”}, 
+   {"ManifestFileName", “f8d7d577-676e-47ce-ab69-ae7803979883/ExportSettings.xml”} 
+
+```
 
 #### EncryptionKey:
 public byte[] EncryptionKey { get; set; }</br></br>
