@@ -1513,7 +1513,7 @@
       href: solution-guidance/multigeo-bcsandsecurestore.md
     - name: Set up a sample application
       href: solution-guidance/multigeo-sampleapplicationsetup.md   
-  - name: Building SharePoint Online portals
+  - name: Building classic publishing portals for SharePoint Online
     href: solution-guidance/portal-overview.md
     items:
     - name: Performance
