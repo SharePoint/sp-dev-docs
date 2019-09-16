@@ -225,6 +225,7 @@ Defines and adds a view to the list. Use this action to specify the desired colu
 - **isPaged** &ndash; Specifies whether the view is paged.
 - **makeDefault** &ndash; If **true**, the view will be made the default for the list; otherwise, **false**.
 - **scope** &ndash; An optional setting to specify the scope of the view. For more details, see [SPViewScope enumeration](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spviewscope.aspx).
+- **formatterJSON** &ndash; An optional settings to specify the JSON column formatting for the view
 
 #### Example
 
