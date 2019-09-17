@@ -1,7 +1,7 @@
 ---
 title: Share data between client-side web parts
 description: Approaches you can use to share data and store retrieved data across multiple web parts in SharePoint.
-ms.date: 01/10/2018
+ms.date: 09/16/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -12,7 +12,7 @@ localization_priority: Priority
 When building client-side web parts, loading data once and reusing it across different web parts helps you improve the performance of your pages and decrease the load on your network. This article describes a number of approaches that you can use to share data across multiple web parts.
 
 > [!NOTE] 
-> When developing using SPFx v1.7.0 or newer it is recommended to use the [Dynamic Data feature of the SharePoint framework for passing data and events between web parts on page](../../dynamic-data.md).
+> When developing using SPFx v1.7.0 or newer it is recommended to use the [Dynamic Data feature of the SharePoint framework for passing data and events between web parts on page](../../dynamic-data.md). 
 
 ## Why share data between web parts
 

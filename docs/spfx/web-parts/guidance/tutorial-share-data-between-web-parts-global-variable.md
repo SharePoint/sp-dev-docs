@@ -1,7 +1,7 @@
 ---
 title: Share data between web parts by using a global variable (tutorial)
 description: Step-by-step instructions for sharing data between SharePoint client-side web parts.
-ms.date: 01/10/2018
+ms.date: 09/16/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,7 +9,10 @@ localization_priority: Priority
 
 # Share data between web parts by using a global variable (tutorial)
 
-When building client-side web parts, loading data once and reusing it across different web parts helps improve the performance of your pages and decrease the load on your network. 
+When building client-side web parts, loading data once and reusing it across different web parts helps improve the performance of your pages and decrease the load on your network.
+
+> [!NOTE] 
+> When developing using SPFx v1.7.0 or newer it is recommended to use the [Dynamic Data feature of the SharePoint framework for passing data and events between web parts on page](../../dynamic-data.md).
 
 > [!NOTE] 
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
