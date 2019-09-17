@@ -34,7 +34,7 @@ To solve this, you have to create a workflow with elevated permissions by doing 
 The first step is to allow the workflow to use add-in permissions. You configure a workflow to use add-in permissions on the **Site settings** page of the SharePoint site where the workflow runs. The following procedure configures the SharePoint site to allow the workflow to use add-in permissions.
   
 > [!IMPORTANT] 
-> The procedure must be completed by a **Site Collection Administrator**.
+> The procedure must be completed by a **Site owner**.
 
 ### To allow workflow to use add-in permissions
 
@@ -59,7 +59,7 @@ The first step is to allow the workflow to use add-in permissions. You configure
 For the workflow to function properly, it must be granted full control on the site. The following procedure grants full control permission to the workflow.
   
 > [!IMPORTANT] 
-> The procedure must be completed by a **Site Collection Administrator**. The workflow must already be published to the SharePoint site.
+> The procedure must be completed by a **Site owner**. The workflow must already be published to the SharePoint site.
 
 ### To grant full control permission to a workflow
 
@@ -70,6 +70,9 @@ For the workflow to function properly, it must be granted full control on the si
 2. Go to **Site settings**.    
   
 3. In the **Users and Permissions** section, select **Site app permissions**.    
+
+> [!IMPORTANT] 
+> In SharePoint Online, select **Site collection app permissions**. This option is only visible to **Site Collection Administrators**.
   
 4. Copy the **client** section of the **App Identifier**. This is the identifier between the last "|" and the "@" sign, as shown in the figure.
     
