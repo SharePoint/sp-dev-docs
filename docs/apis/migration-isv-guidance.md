@@ -69,7 +69,7 @@ The *CreateMigrationJob* helps the ISVs to import to SharePoint and OneDrive fas
 
 The lastest supported features are:
 
-- Migrate web parts using the Migration API
+- [Migrate web parts using the Migration API](https://docs.microsoft.com/en-us/sharepoint/dev/apis/migrate-webparts-with-migrationapi)
 
 
 ### Export API (Asynchronous Metadata Read)
