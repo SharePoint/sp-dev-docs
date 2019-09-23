@@ -126,7 +126,7 @@ localization_priority: Priority
    
     This will build any local changes made and package the solution into an _sppkg_ file which is located in the _sharepoint\solution_ folder.
  
-1. Deploy this package in the tenant app catalog and make it tenant wide deployed by checking the `Make this solution available to all sites in the organization` option.
+1. Deploy this package in the tenant app catalog and make it tenant wide deployed by checking the **Make this solution available to all sites in the organization** option.
  
 1. Navigate to the web part solution folder, and open the `package.json` file in the root of that folder.
  
