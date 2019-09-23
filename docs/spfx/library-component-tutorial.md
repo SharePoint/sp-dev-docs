@@ -41,7 +41,7 @@ localization_priority: Priority
     - Change the default Library name to **CorporateLibrary** as your library name, and then select Enter.
     - Accept the default **CorporateLibrary description** as your library description, and then select Enter.
  
-1. Once the project is scaffolded, you will see the library created with an `index.ts` file containing an export from the `CorporateLibrary` created.
+1. Once the project is scaffolded, you will see the library created with an **index.ts** file containing an export from the **CorporateLibrary** created.
  
 1. Open the solution in your favorite editor and navigate to **src\corporateLibrary\CorporateLibraryLibrary.ts**
 
@@ -119,7 +119,7 @@ localization_priority: Priority
 
 1. Navigate to the **corporate-library** root folder and bundle and package the solution:
 
-    ```
+    ```shell
     gulp bundle --ship
     gulp package-solution --ship
     ```
@@ -132,7 +132,7 @@ localization_priority: Priority
  
 1. Build the web part:
 
-    ```
+    ```shell
     gulp bundle --ship
     gulp package-solution --ship
     ```
