@@ -59,7 +59,7 @@ localization_priority: Priority
  
 1. From the root of the new web part folder, run the command `npm install <path to library component>`. In this case, the command is `npm install ..\corporate-library --save-dev`
  
-1. A symbolic link to the library component project gets created in your `node_modules` folder and adds the following entry in the **package.json** file.
+1. A symbolic link to the library component project gets created in your **node_modules** folder and adds the following entry in the **package.json** file.
 
     ```
       "devDependencies": {
