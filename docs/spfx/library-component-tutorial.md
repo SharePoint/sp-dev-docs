@@ -43,7 +43,7 @@ localization_priority: Priority
  
 1. Once the project is scaffolded, you will see the library created with an `index.ts` file containing an export from the `CorporateLibrary` created.
  
-1. Open the solution in your favorite editor and navigate to `src\corporateLibrary\CorporateLibraryLibrary.ts`
+1. Open the solution in your favorite editor and navigate to **src\corporateLibrary\CorporateLibraryLibrary.ts**
 
 1. You will notice that a default method, `name()` exist in the code. Rename this method as follows:
 
@@ -59,7 +59,7 @@ localization_priority: Priority
  
 1. From the root of the new web part folder, run the command `npm install <path to library component>`. In this case, the command is `npm install ..\corporate-library --save-dev`
  
-1. A symbolic link to the library component project gets created in your `node_modules` folder and adds the following entry in the `package.json` file.
+1. A symbolic link to the library component project gets created in your `node_modules` folder and adds the following entry in the **package.json** file.
 
     ```
       "devDependencies": {
@@ -128,7 +128,7 @@ localization_priority: Priority
  
 1. Deploy this package in the tenant app catalog and make it tenant wide deployed by checking the **Make this solution available to all sites in the organization** option.
  
-1. Navigate to the web part solution folder, and open the `package.json` file in the root of that folder.
+1. Navigate to the web part solution folder, and open the **package.json** file in the root of that folder.
  
 1. Build the web part:
 
