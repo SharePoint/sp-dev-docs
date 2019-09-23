@@ -61,7 +61,7 @@ localization_priority: Priority
  
 1. A symbolic link to the library component project gets created in your `node_modules` folder and adds the following entry in the `package.json` file.
 
-    ```json
+    ```
       "devDependencies": {
         ...
         "ajv": "~5.2.2",
@@ -72,9 +72,9 @@ localization_priority: Priority
     ```
 
 > [!NOTE]
-> This procedure work when the **corporate-library** and **corporate-webpart** exist in the same repository. ``npm install``` install offers more options to integrate library components like this. Git and other Repositories are also an option. For more information, look at the [npm install documentation](https://docs.npmjs.com/cli/install).
+> This procedure work when the **corporate-library** and **corporate-webpart** exist in the same repository. `npm install` install offers more options to integrate library components like this. Git and other Repositories are also an option. For more information, look at the [npm install documentation](https://docs.npmjs.com/cli/install).
  
-1. Open the web part solution in your preferred editor and navigate to `src\webparts\corporateWebPart\CorporateWebPartWebPart.ts`
+1. Open the web part solution in your preferred editor and navigate to **src\webparts\corporateWebPart\CorporateWebPartWebPart.ts**
 
 1. Add an import to refer to your library:
 
