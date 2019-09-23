@@ -43,9 +43,9 @@ localization_priority: Priority
  
 1. Once the project is scaffolded, you will see the library created with an `index.ts` file containing an export from the `CorporateLibrary` created.
  
-1. Open the solution in your favorite editor and navigate to ```src\corporateLibrary\CorporateLibraryLibrary.ts```
+1. Open the solution in your favorite editor and navigate to `src\corporateLibrary\CorporateLibraryLibrary.ts`
 
-1. You will notice that a default method, ```name()``` exist in the code. Rename this method as follows:
+1. You will notice that a default method, `name()` exist in the code. Rename this method as follows:
 
     ```typescript
     public getCurrentTime(): string {
@@ -57,7 +57,7 @@ localization_priority: Priority
 ## How to consume a 3rd party SPFx library (for local testing)
 1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions from [here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part 'CorporateWebPart'. Like the library before the web part also need to target to ***SharePoint Online only (latest)**.
  
-1. From the root of the new web part folder, run the command ```npm install <path to library component>```. In this case, the command is ```npm install ..\corporate-library --save-dev```
+1. From the root of the new web part folder, run the command `npm install <path to library component>`. In this case, the command is `npm install ..\corporate-library --save-dev`
  
 1. A symbolic link to the library component project gets created in your `node_modules` folder and adds the following entry in the **package.json** file.
 
@@ -82,7 +82,7 @@ localization_priority: Priority
     import * as myLibrary from 'corporate-library';
     ```
 
-1. Change the ```render``` method as follows:
+1. Change the `render` method as follows:
 
     ```typescript
     public render(): void {
@@ -107,7 +107,7 @@ localization_priority: Priority
     }
     ```
 
-    Notice that we are creating a new instance of the library, and then refer to the ```getCurrentTime``` method to retrieve the current time string from the library.
+    Notice that we are creating a new instance of the library, and then refer to the `getCurrentTime` method to retrieve the current time string from the library.
     
 1. Test your webpart by launching the local workbench and add the webpart to the page:
 
@@ -117,7 +117,7 @@ localization_priority: Priority
 
 ## How to deploy and consume a 3rd party SPFx library from the tenant app catalog
 
-1. Navigate to the ```corporate-library``` root folder and bundle and package the solution:
+1. Navigate to the `corporate-library` root folder and bundle and package the solution:
 
     ```
     gulp bundle --ship
@@ -126,9 +126,9 @@ localization_priority: Priority
    
     This will build any local changes made and package the solution into an _sppkg_ file which is located in the _sharepoint\solution_ folder.
  
-1. Deploy this package in the tenant app catalog and make it tenant wide deployed by checking the ```Make this solution available to all sites in the organization``` option.
+1. Deploy this package in the tenant app catalog and make it tenant wide deployed by checking the `Make this solution available to all sites in the organization` option.
  
-1. Navigate to the web part solution folder, and open the ```package.json``` file in the root of that folder.
+1. Navigate to the web part solution folder, and open the `package.json` file in the root of that folder.
  
 1. Build the web part:
 
