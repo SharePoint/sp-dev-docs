@@ -117,7 +117,7 @@ localization_priority: Priority
 
 ## How to deploy and consume a 3rd party SPFx library from the tenant app catalog
 
-1. Navigate to the `corporate-library` root folder and bundle and package the solution:
+1. Navigate to the **corporate-library** root folder and bundle and package the solution:
 
     ```
     gulp bundle --ship
