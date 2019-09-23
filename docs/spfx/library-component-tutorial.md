@@ -55,7 +55,7 @@ localization_priority: Priority
 1. Run `gulp` on the command prompt to see everything builds fine.
 
 ## How to consume a 3rd party SPFx library (for local testing)
-1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions on [how to create a new web part project](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part 'CorporateWebPart'. Like the library before the web part also need to target to **SharePoint Online only (latest)**.
+1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions on [how to create a new web part project](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part **CorporateWebPart**. Like the library before the web part also need to target to **SharePoint Online only (latest)**.
  
 1. From the root of the new web part folder, run the command `npm install <path to library component>`. In this case, the command is `npm install ..\corporate-library --save-dev`
  
