@@ -22,6 +22,9 @@ This scanner is a key tool to use if you want to prepare for modernizing your cl
 > [!NOTE]
 > The SharePoint modernization scanner only is supported for running against SharePoint Online.
 
+> [!IMPORTANT]
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
+
 ## Step 1: Get the latest version of the SharePoint modernization scanner
 
 Since SharePoint Online continuously evolves and more and more modern capabilities are added it's important to always download the latest version of the scanner. [Download the SharePoint Modernization executable](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true) and get started. This page contains all information to get you started, but if you want to get more details then checkout the [detailed user guide](https://github.com/SharePoint/sp-dev-modernization/blob/master/Tools/SharePoint.Modernization/Modernization%20Scanner.md).

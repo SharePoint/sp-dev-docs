@@ -1,7 +1,7 @@
 ---
 title: Modernize your classic SharePoint sites
 description: Steps to transform your SharePoint classic site into a modern Office 365 group-connected team site or communication site.
-ms.date: 03/04/2019
+ms.date: 10/03/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -16,6 +16,9 @@ All of this is great, but you might ask yourself, *I have lots of classic (team)
 
 > [!TIP]
 > You can decide which steps to run and the order in which to run them. Although there's no one-size-fits-all process to modernize your site, the following is the recommended approach.
+
+> [!IMPORTANT]
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
 
 > [!IMPORTANT]
 > For publishing portals (sites based upon BLANKINTERNET#0, ENTERWIKI#0, SRCHCEN#0, SRCHCENTERLITE#0, BICENTERSITE#0, POINTPUBLISHINGHUB#0, POINTPUBLISHINGTOPIC#0 or sites using the “Pages” library) it's not currently supported to connect these to an Office 365 group or to use modern pages. If you want to modernize your publishing portal it's recommended to start from a new communication site and configure that one accordingly. For more information, see [Modernize classic publishing portals](modernize-publishing-portal.md).
