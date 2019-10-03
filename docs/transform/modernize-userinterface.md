@@ -21,7 +21,7 @@ To make the switch to a modern user interface, you need to focus on the followin
 > The "classic" experience is not being deprecated; both "classic" and "modern" will coexist.
 
 > [!IMPORTANT]
-> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 Where do you start when you want to modernize the user interface of your sites? What sites should be modernized first? These are very relevant questions and are addressed in the following steps.
 

@@ -9,7 +9,7 @@ localization_priority: Priority
 # Modernize site branding
 
 > [!IMPORTANT]
-> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 The SharePoint modern user interface handles branding differently from classic SharePoint; in particular, it simply ignores custom master pages or alternate CSS configurations (which are incompatible in the modern user interface). You can opt to leave these configurations in place in your modernized site so that it still applies to a page being shown in a classic user interface, but it's cleaner to switch back the OOB master pages and remove the alternate CSS configuration.
 

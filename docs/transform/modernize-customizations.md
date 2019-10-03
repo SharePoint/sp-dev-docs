@@ -9,7 +9,7 @@ localization_priority: Priority
 # Modernize customizations
 
 > [!IMPORTANT]
-> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 An important aspect when modernizing a site is understanding the customizations used on that site because not all existing customizations continue to work after the site is modernized. A classic example that occurs frequently is a site banner that shows some type of company information (such as a legal notice). 
 

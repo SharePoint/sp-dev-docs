@@ -23,7 +23,7 @@ This scanner is a key tool to use if you want to prepare for modernizing your cl
 > The SharePoint modernization scanner only is supported for running against SharePoint Online.
 
 > [!IMPORTANT]
-> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 ## Step 1: Get the latest version of the SharePoint modernization scanner
 

@@ -17,7 +17,7 @@ You can't yet transform all lists and libraries to the modern experience because
 - Certain types of lists and libraries can be shown in modern, but are blocked due to an incompatible configuration or customization; you can take action here.
 
 > [!IMPORTANT]
-> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 ## List templates available in the modern user interface
 

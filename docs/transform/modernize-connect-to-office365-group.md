@@ -21,7 +21,7 @@ In this article, you'll learn how to prepare for such a bulk operation for assoc
 > It is **not** supported to connect a Communication site to Office 365 group.
 
 > [!IMPORTANT]
-> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from Microsoft support.
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 ## What connecting to a new Office 365 group does to your site
 
