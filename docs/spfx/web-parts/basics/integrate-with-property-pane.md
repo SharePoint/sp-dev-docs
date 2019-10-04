@@ -101,7 +101,7 @@ export interface IHelloWorldWebPartProps {
 This is then available in your web part by using **this.properties.targetProperty**.
 
 ```typescript
-<p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
+<p class="ms-font-l ms-fontColor-white">${escape(this.properties.targetProperty)}</p>
 ```
 
 When the properties are defined, you can access them in your web part by using the **this.properties.[property-name]**. For more information, see [render method of the HelloWorldWebPart](../get-started/build-a-hello-world-web-part.md#web-part-render-method).
