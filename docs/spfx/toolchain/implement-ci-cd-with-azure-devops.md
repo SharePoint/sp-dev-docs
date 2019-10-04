@@ -202,8 +202,8 @@ The Office 365 Common Language Interface (CLI) is an open source project built b
 > [!NOTE] 
 > Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
 
-### Connecting to the App Catalog
-Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo login https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
+### Connecting to SharePoint Online
+Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 login -t password -u $(username) -p $(password)
 `
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
@@ -217,14 +217,20 @@ Upload the solution package to your App Catalog by adding another `Command Line`
 > [!NOTE] 
 > The path of the package depends on your solution name (see your project configuration) as well as the `Source Alias` you defined earlier, make sure they match.
 
+> [!NOTE] 
+> You can upload a solution to a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope site`
+
 ![uploading the package to the catalog](../../images/azure-devops-spfx-16.png)
 
 ### Deploying the Application
 
-The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
+The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg`
 
 > [!NOTE] 
 > Make sure you update the package name.
+
+> [!NOTE] 
+> You can deploy a solution from a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope site`
 
 ![Deploying the package to the catalog](../../images/azure-devops-spfx-17.png)
 
@@ -234,10 +240,10 @@ The tasks you configured in the last step rely on Azure DevOps process variables
 Add the following variables
 | Name | Value |
 | ------ | ------ |
-| catalogsite | Server relative Path of the App Catalog Site eg `sites/appcatalog` |
+| catalogsite | Optional. Server relative Path of the App Catalog Site eg `sites/appcatalog` when uploading to a [site collection App Catalog](../../general-development/site-collection-app-catalog) |
 | password | Password of the user with administrative permissions on the tenant, do not forget to check the lockpad to mask it to other users |
 | username | Username of the user with administrative permissions on the tenant |
-| tenant | Tenant name in https://tenant.sharepoint.com eg `tenant` |
+| tenant | Optional. Tenant name in https://tenant.sharepoint.com eg `tenant` when uploading to a site collection App Catalog |
 
 ![Variables setup](../../images/azure-devops-spfx-18.png)  
 
