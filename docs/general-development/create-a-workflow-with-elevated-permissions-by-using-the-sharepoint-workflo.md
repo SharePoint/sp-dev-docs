@@ -70,6 +70,9 @@ For the workflow to function properly, it must be granted full control on the si
 2. Go to **Site settings**.    
   
 3. In the **Users and Permissions** section, select **Site app permissions**.    
+
+> [!IMPORTANT] 
+> In SharePoint Online, select **Site collection app permissions**. This option is only visible to **Site Collection Administrators**.
   
 4. Copy the **client** section of the **App Identifier**. This is the identifier between the last "|" and the "@" sign, as shown in the figure.
     

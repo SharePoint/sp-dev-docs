@@ -652,9 +652,6 @@ You're now ready to build, bundle, package, and deploy the solution.
 
     ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
-    > [!NOTE]
-    > Asterisks in the UI of the new Admin Center indicate that the features are in preview.
-
     Using this page, you (or any other admin of your SharePoint Online tenant) can approve or deny any pending permission request. Note that you don't see which solution package is requesting which permission because the permissions are defined at the tenant level and for a unique application.
 
     > [!NOTE]

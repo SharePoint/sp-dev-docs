@@ -18,7 +18,11 @@ In this article, you'll learn how to prepare for such a bulk operation for assoc
 > For publishing portals (sites based upon BLANKINTERNET#0, ENTERWIKI#0, SRCHCEN#0, SRCHCENTERLITE#0, BICENTERSITE#0, POINTPUBLISHINGHUB#0, POINTPUBLISHINGTOPIC#0 or sites using the “Pages” library) it's not currently supported to connect these to an Office 365 group or to use modern pages. If you want to modernize your publishing portal it's recommended to start from a new communication site and configure that one accordingly.
 
 > [!IMPORTANT]
-> It is **not** supported to connect a Communication site to Office 365 group.
+> - It is **not** supported to connect a Communication site to Office 365 group.
+> - You cannot group connect the root site collection in your tenant.
+
+> [!IMPORTANT]
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 ## What connecting to a new Office 365 group does to your site
 

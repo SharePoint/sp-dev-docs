@@ -29,7 +29,7 @@ If you’re using Visual Studio, the NuGet package manager dialog may look sligh
 
 1. Go to **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**, and search for **App for SharePoint**.
 
-2. Install the package called **AppForSharePointWebToolkit**.
+2. Install the package called **AppForSharePointOnlineWebToolkit**.
 
 3. The toolkit installs the required helper classes for working with the SharePoint client-side object model (CSOM).
 

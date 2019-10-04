@@ -32,7 +32,7 @@ Our passion is to help people achieve, and it has been for more than 30 years. W
 
 ### Forward-thinking
 
-We search for what’s possible beyond today’s way of getting things done. We’re energized by all that people are capable of achieving and seek to support and amplify it through our platform. We care about the needs of people not only today, but tomorrow—anticipating what and how they’ll want to achieve. So we build our technology around who they can be and what they can become.
+We search for what’s possible beyond today’s way of getting things done. We’re energized by all that people are capable of achieving and seek to support and amplify it through our platform. We care about the needs of people not only today but tomorrow—anticipating what and how they’ll want to achieve. So we build our technology around who they can be and what they can become.
 
 ### Accessible and optimized
 

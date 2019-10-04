@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 06/06/2019
+ms.date: 10/03/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -214,6 +214,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 > [!NOTE]
 > This option is not available for publishing page transformation. Use the publishing page layout mapping model to define if metadata needs to be copied and how that needs to happen.
 
+> [!NOTE]
+> As of the October 2019 release copying page metadata also works for when you do a cross site transformation, so when you create the modern page in a different site collection than the original source page.
+
 ## RemoveEmptySectionsAndColumns option (as of March 2019 release)
 
 Type | Default value if not specified
@@ -290,6 +293,53 @@ PublishingPageTransformationInformation pti = new PublishingPageTransformationIn
 };
 ```
 
+### KeepPageCreationModificationInformation option (as of October 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to not keep the author, editor, create data and modification date of the source page. Use this option to change that.
+
+> [!NOTE]
+> This option only works for when the source page is in the same SPO tenant as the target destination of the modern page. For pages transformed from on-premises SharePoint this feature will be enabled once we do have account mapping functionality implemented.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    KeepPageCreationModificationInformation = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    KeepPageCreationModificationInformation = true,
+};
+```
+
+### PostAsNews option (as of October 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+Post the created page as news. This implies that the page also will be published, even if you've used the `PublishCreatedPage` to prevent page publishing. 
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    PostAsNews = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    PostAsNews = true,
+};
+```
+
 ## DisablePageComments option (as of April 2019 release)
 
 Type | Default value if not specified
@@ -309,6 +359,94 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     DisablePageComments = true,
+};
+```
+
+## SkipUrlRewrite option (as of May 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to leave URL rewriting enabled, use this option if you want to create a page with disabled URL rewriting. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipUrlRewrite = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipUrlRewrite = true,
+};
+```
+
+## UrlMappingFile option (as of July 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify a file with custom URL mappings. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    UrlMappingFile = @"c:\temp\urlmappingfile.csv",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    UrlMappingFile = @"c:\temp\urlmappingfile.csv",
+};
+```
+
+## SkipDefaultUrlRewrite option (as of September 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to perform default URL rewriting. In case you're using a custom URL mapping file and you do not want to apply the default URL rewrite logic then set this property. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipDefaultUrlRewrite = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipDefaultUrlRewrite = true,
+};
+```
+
+## AddTableListImageAsImageWebPart option (as of October 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | true
+
+Images living inside a table/list are also created as separate image web parts underneath that table/list. Set the `AddTableListImageAsImageWebPart` property to false if you want to stop the creation of these separate image web parts.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    AddTableListImageAsImageWebPart = false,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    AddTableListImageAsImageWebPart = false,
 };
 ```
 

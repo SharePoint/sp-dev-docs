@@ -1,11 +1,11 @@
 ---
-title: Building SharePoint Online portals
+title: Building well performing classic publishing portals for SharePoint Online
 description: Guidelines for developing well-performing SharePoint Online portals. 
 ms.date: 4/30/2018
 localization_priority: Priority
 ---
 
-# Building SharePoint Online portals
+# Building well performing classic publishing portals for SharePoint Online
 
 SharePoint on-premises has been, and is, a popular platform for building enterprise portals (also known as intranets). You can build similar portals on SharePoint Online as well. However, because SharePoint Online is different from an infrastructure architecture point of view, it's important to factor in the SharePoint Online-specific performance considerations when developing your new portal. This set of articles gives you guidance on the key portal design areas.
 

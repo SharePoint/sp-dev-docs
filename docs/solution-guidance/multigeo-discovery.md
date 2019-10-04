@@ -1,14 +1,11 @@
 ---
 title: Discover a Multi-Geo tenant configuration
 description: When you're working with a SharePoint tenant, you'll need to be able to detect whether it's a Multi-Geo tenant and identify the default and satellite geo locations. 
-ms.date: 4/27/2018
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # Discover a Multi-Geo tenant configuration
-
-> [!IMPORTANT] 
-> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 When you're working with a SharePoint tenant, you'll need to be able to detect whether it's a Multi-Geo tenant and identify the default and satellite geo locations. 
 
@@ -46,15 +43,19 @@ clientContext.ExecuteQuery();
 
 You can get the geo location information for a tenant by using Microsoft Graph. The following example returns a collection with one object per geo location.
 
+> [!NOTE]
+> The following code sample uses the `dataLocationCode` attribute on the `siteCollection` object. At the time of publishing, this property is only available in [Microsoft Graph beta endpoint](https://docs.microsoft.com/en-us/graph/api/resources/sitecollection?view=graph-rest-beta).
+
+
 ```
-GET https://graph.microsoft.com/v1.0/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
+GET https://graph.microsoft.com/beta/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
 ```
 
 #### Example response for a Multi-Geo tenant
 
 ```json
 {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites",
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#sites",
     "value": [
         {
             "webUrl": "https://contoso.sharepoint.com/",
@@ -95,14 +96,14 @@ The following example shows the results of a Microsoft Graph call to a single-ge
 <!-- Not sure where the output for a Multi-Geo tenant is. Provide a link? -->
 
 ```
-GET https://graph.microsoft.com/v1.0/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
+GET https://graph.microsoft.com/beta/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
 ```
 
 #### Example response for a single-geo tenant
 
 ```json
 {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites",
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#sites",
     "value": [
         {
             "webUrl": "https://singlegeotest.sharepoint.com/",
@@ -120,4 +121,4 @@ GET https://graph.microsoft.com/v1.0/sites?filter=siteCollection/root%20ne%20nul
 - [Microsoft Graph Developer Center](https://developer.microsoft.com/en-us/graph)
 - [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
+- [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)

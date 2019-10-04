@@ -42,7 +42,7 @@ This API is designed to be executed in the context of the app catalog site.
 #### HTTP Request
 
 ```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 ```
 
 #### Request headers
@@ -66,7 +66,7 @@ This enables the solution to be available to install to specific sites. This API
 #### HTTP Request
 
 ```http
-POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
+POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
 ```
 
 #### Request headers
@@ -86,6 +86,9 @@ POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 
 > [!NOTE]
 > This operation is required to be completed after Add, before you can install packages to specific sites. 
+
+> [!NOTE]
+> It is currently not supported to deploy several packages in parallel - make sure to serialize your deployment operations to avoid deployment errors.
 
 ### Retract solution packages in the app catalog
 

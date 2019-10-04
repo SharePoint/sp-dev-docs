@@ -1,14 +1,11 @@
 ---
 title: PowerShell cmdlets for SharePoint hub sites
 description: Use PowerShell cmdlets to create and manage SharePoint hub sites.
-ms.date: 4/20/2018
+ms.date: 6/18/2019
 localization_priority: Priority
 ---
 
 # PowerShell cmdlets for SharePoint hub sites
-
-> [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Use PowerShell cmdlets to create and manage SharePoint hub sites.
 
@@ -16,7 +13,7 @@ Use PowerShell cmdlets to create and manage SharePoint hub sites.
 
 To run the PowerShell cmdlets:
 
-1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first, and then install the latest version. 
+1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first, and then install the latest version.
 
 2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
 
@@ -40,3 +37,4 @@ The following PowerShell cmdlets are available for managing hub sites:
 ## See also
 
 - [SharePoint hub sites overview](hub-site-overview.md)
+- [Office 365 CLI commands for SharePoint hub sites](hub-site-o365cli.md)

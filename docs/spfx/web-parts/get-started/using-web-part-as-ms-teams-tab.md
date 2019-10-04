@@ -1,7 +1,7 @@
 ---
 title: Building Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 04/04/2019
+ms.date: 06/18/2019
 ms.prod: sharepoint
 ---
 
@@ -235,10 +235,15 @@ Now the web part is deployed and is automatically available cross the SharePoint
 
 ## Making the web part available in Microsoft Teams
 
-In order to make your web part available in Microsoft Teams you will have synchronize your solution with teams. 
+In order to make your web part available in Microsoft Teams you will have synchronize your solution with teams.
 
-1. Create a Microsoft Teams app manifest file by following the instructions detailed here: [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](../guidance/creating-team-manifest-manually-for-webpart.md).
-1. Create a Microsoft Teams app package by zipping the contents of the **./teams** folder. Make sure to zip just the contents and not the folder itself. This ZIP archive should contain 3 files at the root: two images & the **manifest.json**.
+> [!NOTE]
+> In this tutorial case, we are using the automatic deployment option for the solution from the SharePoint app catalog. You can also perform these steps manually, if you want to provide alternative settings for your solutions. See more from [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](../guidance/creating-team-manifest-manually-for-webpart.md).
+
+1. Select the **teams-tab-webpart-client-side-solution** package in the SharePoint tenant app catalog and click the **Sync to Teams** button at in the ribbon at the **Files** tab.
+
+   ![Sync to Teams button in ribbon](../../../images/sp-teams-sync-to-teams-button.png)
+
 1. Move to a channel in a team. In the below picture we have activated **General** channel in **Team**
 
     ![Channel activated](../../../images/sp-teams-channel-activated.png)
@@ -259,6 +264,22 @@ In order to make your web part available in Microsoft Teams you will have synchr
 Your custom tab has been added on the Microsoft Teams channel and you can see how the code is reacting that it's in Microsoft Teams context. Theme of the web part is by default coming from the underlying SharePoint site.
 
 ![Custom tab added](../../../images/sp-teams-custom-tab-added.png)
+
+## Updating your app package
+
+When you make changes to your app and create a new package, you might encounter an error when clicking "sync to teams".
+
+A notification "Failed to sync solution to teams" might appear on the top right of your page.
+
+If this happens follow these steps to delete your app from Microsoft Teams and then try to sync it again:
+
+1. Open Microsoft Teams
+1. When viewing your team channel, click + to "Add a tab"
+1. Click the "More apps" link at the top
+1. Find your app in the list, and click on the "..." menu
+1. Click "Delete" to remove the app from Microsoft Teams
+
+You should now be able to sync your new version to Microsoft Teams.
 
 ## See also
 

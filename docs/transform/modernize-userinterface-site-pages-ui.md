@@ -42,7 +42,7 @@ Below steps describe the high level flow of the solution:
 1. From any of the UI elements the users triggers the creation of a modern version of the selected wiki or web part page. This will be done by calling a "central" proxy page which is hosted in the modernization center site collection
 2. The "central" proxy page contains an SPFX web part that makes a call to an Azure AD secured Azure Function
 3. The Azure Function uses the SharePoint Modernization Framework to create a modern version of the page. This created modern version does contain a banner web part which provides the end user with the option to keep or discard the created page. Important to understand is that this modern page is a new page with name like migrated_oldpagename.aspx
-4. If the page is discard a feedback dialog is shown asking the user for a reason why the page was not good. This information is then stored in a central list in the modernization center site collection.
+4. If the page is discarded, a feedback dialog is shown asking the user for a reason why the page was not good. This information is then stored in a central list in the modernization center site collection.
 5. If the users keeps the page then the modern page gets the name of the original page and the original page is renamed with an old_ prefix
 
 ![page transformation architecture](media/modernize/pagetransformation_ui_8.png)

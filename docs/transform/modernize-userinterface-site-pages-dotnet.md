@@ -1,22 +1,22 @@
 ---
-title: Transform classic pages to modern client-side pages using .Net
-description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .Net
-ms.date: 06/06/2019
+title: Transform classic pages to modern client-side pages using .NET
+description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .NET
+ms.date: 09/03/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Transforming to modern site pages using .Net
+# Transforming to modern site pages using .NET
 
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
-The page transformation engine is built using .Net and is distributed as a [nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline) package. Once you've added the nuget package you'll see that 2 additional files are added to your solution:
+The page transformation engine is built using .NET and is distributed as a [nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline) package. Once you've added the nuget package you'll see that 2 additional files are added to your solution:
 
 ![page transformation solution files](media/modernize/pagetransformation_2.png)
 
 > [!Note]
-> The minimal .Net Framework version for this solution to work is 4.5.
+> The minimal .NET Framework version for this solution to work is 4.5.
 
 The `webpartmapping.xml` and `webpartmapping_latestfrompackage.xml` represent the transformation model that describes how the transformation will happen. You typically will tweak the `webpartmapping.xml` file to your needs by for example adding additional mappings to your own web parts. If you later on install an updated version of the nuget package your `webpartmapping.xml` will not be overwritten by default but the `webpartmapping_latestfrompackage.xml` will be. You can use this latter file to compare the latest out-the-box mapping with your mapping and take over the changes you need.
 
@@ -205,14 +205,14 @@ using (var cc = new ClientContext(siteUrl))
 ```
 
 > [!NOTE]
-> - This feature is still in preview in the June 2019 release...it should support SharePoint 2013, 2016 and 2019
+> - This feature supports SharePoint 2010, 2013, 2016 and 2019 as source. Target is always SharePoint Online
 > - It's important to run your code on a machine that is able to connect to both the on-premises SharePoint server as the SharePoint Online environment
 > - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
 > - This approach can also be used for page transformation across tenants (whenever that would make sense)
 
 ### I want to use the logging features (as of April 2019 release, version 1.0.1904.*)
 
-By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .Net:
+By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .NET:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";

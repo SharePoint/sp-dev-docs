@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 06/06/2019
+ms.date: 09/11/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -82,14 +82,14 @@ Upcoming chapters will provide more details.
 Let's analyze how a page layout mapping is configured in the page layout mapping model, which is best done based upon a sample definition:
 
 ```Xml
-    <PageLayout Name="MyPageLayout" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" PageHeader="Custom">
+    <PageLayout Name="MyPageLayout" AlsoAppliesTo="MyOtherPageLayout;MyOtherPageLayout2" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" PageHeader="Custom">
       <Header Type="FullWidthImage" Alignment="Left" ShowPublishedDate="true">
-        <Field Name="PublishingRollupImage" HeaderProperty="ImageServerRelativeUrl" Functions="ToImageUrl({PublishingRollupImage})" />
+        <Field Name="PublishingRollupImage;PublishingPageImage" HeaderProperty="ImageServerRelativeUrl" Functions="ToImageUrl({@name})" />
         <Field Name="ArticleByLine" HeaderProperty="TopicHeader" Functions=""/>
         <Field Name="PublishingContact" HeaderProperty="Authors" Functions="ToAuthors({PublishingContact})"/>
       </Header>
       <MetaData ShowPageProperties="true" PagePropertiesRow="1" PagePropertiesColumn="3" PagePropertiesOrder="1">
-        <Field Name="PublishingContactEmail" TargetFieldName="MyPageContact" Functions="" />
+        <Field Name="PublishingContactName;PublishingContactEmail" TargetFieldName="MyPageContact" Functions="" />
         <Field Name="MyCategory" TargetFieldName="Category" Functions="" ShowInPageProperties="true" />
       </MetaData>
       <WebParts>
@@ -102,7 +102,14 @@ Let's analyze how a page layout mapping is configured in the page layout mapping
         </Field>
       </WebParts>
       <WebPartZones>
-        <WebPartZone Row="2" Column="1" Order="1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0"/>
+        <WebPartZone Row="2" Column="1" Order="1" ZoneId="g_0C7F16935FAC4709915E2D77092A90DE" ZoneIndex="0">
+          <!-- Optional element, only needed if you want to use custom position of the web parts coming from a web part zone -->
+          <WebPartZoneLayout>
+            <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="2"/>
+            <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="2"/>
+            <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="1"/>
+          </WebPartZoneLayout>
+        </WebPartZone>
       </WebPartZones>
       <FixedWebParts>
         <WebPart Row="1" Column="2" Order="1" Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
@@ -121,9 +128,13 @@ Let's analyze how a page layout mapping is configured in the page layout mapping
 The following properties are used on the PageLayout element:
 
 - **Name**: contains the name of your page layout.
+- **AlsoAppliesTo**: when this mapping will be used for multiple page layouts then you can specify the names of those additional page layouts as a semi colon delimited list in this attribute. The **Name** property will be name of the first page layout, the **AlsoAppliesTo** just contains the additional ones.
 - **AssociatedContentType**: the name of the modern site page content type you want use. Leave this blank if you want to use the default site page content type.
 - **PageLayoutTemplate**: the layout system to use...defaults to `AutoDetect` which should work fine in all cases, but optionally you can pick a specific wiki layout as well.
 - **PageHeader**: controls the type of page header that will be used. Defaults to `Custom` as that allows for a nice header, but you can switch it to `None` for no header or `Default` for the default modern page header.
+
+> [!Note]
+> - The **AlsoAppliesTo** attribute  was introduced in the September 2019 release
 
 ### Header element
 
@@ -133,7 +144,16 @@ The following properties are used on the Header element:
 - **Alignment**: controls how the page header content is aligned. Default is `Left`, alternative option is `Center`.
 - **ShowPublishedDate**: defines whether the page publication date is shown. Defaults to `true`.
 
-When constructing a modern page header there are 4 page header fields that you can populate with data coming from the publishing page:
+For each field that you want to use in the modern header you'll need to add a Field element specifying:
+
+- **Name**: the name of the field(s) in the classic publishing page. E.g. adding `PublishingRollupImage;PublishingPageImage` as value will mean that the `PublishingRollupImage` will be taken if it was populated, if not populated the `PublishingPageImage` will be tried. You can add as many overrides as you need
+- **HeaderProperty**: the name of the header property to set
+- **Functions**: If set to empty then the field value from the classic publishing page is taken as is, however if you specify a function here then the output of that function is used. If you've specified multiple fields (so using the field override option), then you need to specify the field to use in the function as `{@name}`
+
+> [!Note]
+> - The field override option was introduced in the July 2019 release
+
+When constructing a modern page header there are 4 page header properties that you can populate with data coming from the publishing page:
 
 - **ImageServerRelativeUrl**: If your header needs to show an image this field will need to defined a server relative image path for an image living in the same site collection as the page. By default the classic publishing page `PublishingRollupImage` field is used, but since that contains an Img tag the field contents is cleaned via the `ToImageUrl` function.
 - **TopicHeader**:  By default the classic publishing page `ArticleByLine` field is used as topic header for the modern page header
@@ -169,14 +189,15 @@ The metadata element defines which of the classic publishing page fields need to
 
 For each field that you want to take over you'll need to add a Field element specifying:
 
-- **Name**: the name of the field in the classic publishing page
+- **Name**: the name of the field(s) in the classic publishing page. E.g. adding `PublishingContactName;PublishingContactEmail` as value will mean that the `PublishingContactName` will be taken if it was populated, if not populated the `PublishingContactEmail` will be tried. You can add as many overrides as you need
 - **TargetFieldName**: the name of the field in the target modern page
-- **Functions**: If set to empty then the field value from the classic publishing page is taken as is, however if you specify a function here then the output of that function is used
+- **Functions**: If set to empty then the field value from the classic publishing page is taken as is, however if you specify a function here then the output of that function is used. If you've specified multiple fields (so using the field override option), then you need to specify the field to use in the function as `{@name}`
 - **ShowInPageProperties**: If set to true and if showing the page properties web part was turned on than this field is shown in the page properties web part
 
 > [!Note]
 > - Functions support is not available for taxonomy fields
 > - Page property web part configuration was introduced in the June 2019 release
+> - The field override option was introduced in the July 2019 release
 
 ### WebParts element
 
@@ -203,6 +224,21 @@ If the page layout contains web part zones then these must be defined here. This
 - **Row**: the row you want to put the web parts hosted in this zone in. Needs to be 1 or greater.
 - **Column**: the column you want to put the web parts hosted in this zone in. Needs to be 1, 2 or 3.
 - **Order**: order in the defined row/column for the web parts hosted in this zone
+
+Sometimes publishing pages have multiple web parts in a web part zone and you do want to position each web part differently on the target page. You can do that by using the optional WebPartZoneLayout element:
+
+```Xml
+<WebPartZoneLayout>
+  <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="2"/>
+  <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.ContentEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="2"/>
+  <WebPartOccurrence Type="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="3" Column="1" Order="1"/>
+</WebPartZoneLayout>
+```
+
+The above definition will have as a result that the first ContentEditorWebPart will go to row 3, column 2. The second ContentEditorWebPart will be put in row 3, column 1 with order 2 and the first XSLTListView web part will end up in row 3, column 1 with order 1. You can define as many WebPartOccurrence elements as needed, if there is no corresponding web part in the web part zone then the WebPartOccurrence element will be ignored. If there's a web part in the web part zone which is not listed as a WebPartOccurrence element then that web part will get it's row, column and order information from the WebPartZone element.
+
+> [!Note]
+> - The WebPartZoneLayout option was introduced in the July 2019 release
 
 ### FixedWebParts element
 
@@ -289,13 +325,14 @@ Now that the assembly has been defined you can use your functions and selectors 
 
 ## Page layout mapping FAQ
 
-### I want to keep the source page creation and modification information
+### I want to keep the source page creation information (as of September 2019 release)
 
 You can do this by altering your page layout mapping like shown in below sample:
 
 ```XML
 <MetaData>
   ...
+  <!-- Use below 4 fields to retain user created/date created, user modified/date modified will be overwritten afterwards, but you need to include them to make this "override" work -->
   <Field Name="Created" TargetFieldName="Created" Functions="" />
   <Field Name="Modified" TargetFieldName="Modified" Functions="" />
   <Field Name="Author" TargetFieldName="Author" Functions="" />
@@ -304,16 +341,17 @@ You can do this by altering your page layout mapping like shown in below sample:
 </MetaData>
 ```
 
-If you however publish this page the modification data will change again. If you want to keep the modification date and publish you can add these 2 additional fields:
+On publishing this page the modification data will change again. If you want to keep the modification date shown correctly in the modern page header you should set this field as well:
 
 ```XML
 <MetaData>
   ...
-  <Field Name="PublishingStartDate" TargetFieldName="FirstPublishedDate" Functions="" />
-  <Field Name="ID" TargetFieldName="PromotedState" Functions="StaticString('2')" />
+  <Field Name="Modified" TargetFieldName="FirstPublishedDate" Functions=""/>
   ...
 </MetaData>
 ```
+
+In above sample the page modification date is taken as FirstPublishedDate, but you can also take other DateTime fields like ArticleStartDate.
 
 ### I want to promote the created pages as news
 
@@ -327,7 +365,75 @@ Promoting pages created from a page layout as news pages can be be done by addin
 </MetaData>
 ```
 
-### Can I control the page preview image
+### I want to insert hard coded text on the created page (as of September 2019 release)
+
+Sometimes a page layout contains text snippets, which since they're not content in the actual page are not getting transformed. If that's the case then you can define a "fake" field to map like shown below:
+
+```XML
+<WebParts>
+  ...
+  <Field Name="ID" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="3">
+    <Property Name="Text" Type="string" Functions="StaticString('&lt;H1&gt;This is some extra text&lt;/H1&gt;')" />
+  </Field>
+  ...
+</WebParts>
+```
+
+> [!Note]
+> The HTML provided in the StaticString function must be XML encoded and must be formatted like the source page HTML as this HTML will still be converted to HTML which is compliant with the modern text editor
+
+### I want to add an extra web part on the created page
+
+When you transform you classic publishing page to a modern page you sometimes want to add an **additional** modern web part on the created page, without that there's a classic version of that web part on the classic publishing page. This can be done by adjusting your webpartmapping.xml and page layout mapping files as shown below.
+
+First define your custom web part in your **webpartmapping.xml** file by **adding** it the `WebParts` element in the file like shown in this [standard SPFX Hello World web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part):
+
+```XML
+<WebParts>
+  ...
+  <!-- Custom Hello world web part-->
+  <WebPart Type="SharePointPnP.Demo.HelloWorld" CrossSiteTransformationSupported="true">
+    <Properties>
+      <Property Name="HelloWorld" Type="string" />
+    </Properties>
+   <Mappings>
+    <Mapping Default="true" Name="default">
+      <ClientSideWebPart Type="Custom" ControlId="157b22d0-8006-4ec7-bf4b-ed62383fea76" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;"/>
+    </Mapping>
+  </Mappings>
+</WebPart>
+  ...
+</WebParts>
+```
+
+If you're not how to correctly define your custom web part in above **ClientSideWebPart** element then follow these steps:
+
+- Navigate to the SharePoint Framework Workbench in your site (e.g. https://contoso.sharepoint.com/sites/myportalsite/_layouts/workbench.aspx)
+- Add your custom web part to the workbench and configure it when needed
+- Click on the "Web part data" button in the toolbar and then on the "Modern Pages" button
+- Copy the **WebPartData** json structure and use it to complete next steps:
+  - The **ControlId** guid value is the value of the **id** json property
+  - Delete the following json properties from the copied snippet: id, instanceIf, title and description. At this point you have the following left:  `{"serverProcessedContent":{"htmlStrings":{},"searchablePlainTexts":{},"imageSources":{},"links":{}},"dataVersion":"1.0","properties":{"description":"HelloWorld from Bert","test":"Multi-line text field","test1":true,"test2":"2","test3":true}}`
+  - XML encode this string, this will give you this: `&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;HelloWorld from Bert&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;`
+  - If needed insert web part parameters in this string (e.g. {HelloWorld} in above sample): `&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;`
+  - Paste the resulting string in the **JsonControlData** property
+
+Once that's in place you need to update your page layout mapping by adding a field in the **WebParts** section that will be transformed to this custom web part:
+
+```XML
+<WebParts>
+  ...
+  <!-- Add an extra web part on the page -->
+  <Field Name="ID"  TargetWebPart="SharePointPnP.Demo.HelloWorld" Row="4" Column="1" Order="1">
+    <Property Name="HelloWorld" Type="string" Functions="StaticString('PnP Rocks!')"/>
+  </Field>
+  ...
+</WebParts>
+```
+
+Ensure that specify the custom **webpartmapping.xml** file as part of your transformation (`-WebPartMappingFile` PowerShell cmdlet parameter, `PublishingPageTransformator` constructor when using .Net).
+
+### Can I control the page preview image (as of the May 2019 release)
 
 When a page has a page header image that image will also be used as a page preview image. If you however want to control the page preview image then you can populate the `BannerImageUrl` field using either the `ToPreviewImageUrl` function or by specifying a hard coded value as shown in below samples.
 
@@ -342,5 +448,21 @@ When a page has a page header image that image will also be used as a page previ
 <Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl('/sites/classicportal/images/myimage.jpg')" />
 ```
 
-> [!Note]
-> Controlling the page preview image was introduced with the May 2019 release.
+### I want to use different defaults for the QuickLinks web part (as of the July 2019 release)
+
+When transformation results in a modern QuickLinks web part (e.g. for transformation of the SummaryLinkWebPart) then the page transformation framework will use a default base configuration for the QuickLinks web part. If you, however, want a different configuration then you can do that by specifying the QuickLinksJsonProperties property. Wrap the encoded JSON properties in a StaticString function as shown in this sample:
+
+```XML
+<WebParts>
+  ...
+  <Field Name="SummaryLinks" TargetWebPart="Microsoft.SharePoint.Publishing.WebControls.SummaryLinkWebPart, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Row="1" Column="2">
+    <!-- No function specified, means the content of the PublishingPageContent field will be assigned to the value of the first listed web part property -->
+    <Property Name="SummaryLinkStore" Type="string" />
+    <Property Name="Title" Type="string" Functions="EmptyString()"/>
+    <Property Name="QuickLinksJsonProperties" Type="string" Functions="StaticString('{&quot;isMigrated&quot;: false, &quot;layoutId&quot;: &quot;Button&quot;, &quot;shouldShowThumbnail&quot;: true, &quot;buttonLayoutOptions&quot;: { &quot;showDescription&quot;: false, &quot;buttonTreatment&quot;: 1, &quot;iconPositionType&quot;: 2, &quot;textAlignmentVertical&quot;: 1, &quot;textAlignmentHorizontal&quot;: 2, &quot;linesOfText&quot;: 2}, &quot;listLayoutOptions&quot;: { &quot;showDescription&quot;: false, &quot;showIcon&quot;: true}, &quot;waffleLayoutOptions&quot;: { &quot;iconSize&quot;: 1, &quot;onlyShowThumbnail&quot;: false}, &quot;hideWebPartWhenEmpty&quot;: true}')" />
+  </Field>
+  ...
+</WebParts>
+```
+
+The JSON in the sample shows all the possible configuration options you can set, but you can however also just define the ones you need. As long as the JSON is valid and the structure is maintained your custom QuickLinks configuration will be picked up.

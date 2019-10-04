@@ -122,11 +122,13 @@ The following table contains typical REST endpoint URL examples to get you start
 ```json
 {
   '__metadata': {
-    'type': SP.Data.'listname'.ListItem
+    'type': 'SP.Data.listname.ListItem'
   },
   'Title': 'MyItem'
 }
 ```
+
+In the above JSON, replace listname with the name of your SharePoint list by omitting the spaces.
 
 <a name="batch"> </a>
 
@@ -167,4 +169,3 @@ To learn more about using the SharePoint REST service, use the following resourc
 | [Social feed REST API reference for SharePoint](../general-development/social-feed-rest-api-reference-for-sharepoint.md)                                   | SharePoint REST endpoints for feed-related tasks.                                                                                                                                                                                                                                                                               |
 | [Following people and content REST API reference for SharePoint](../general-development/following-people-and-content-rest-api-reference-for-sharepoint.md) | SharePoint REST endpoints for following people and content.                                                                                                                                                                                                                                                                     |
 | [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)                                                                                                | Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.                                                                                                                                                                                                                      |
-| [REST API reference and samples](https://msdn.microsoft.com/library)                                                                                       | Comprehensive API reference for working with Microsoft tools, services, and technologies. Whether you're building apps, developing websites, or working with the cloud, you'll find detailed syntax, code snippets, and best practices.                                                                                         |

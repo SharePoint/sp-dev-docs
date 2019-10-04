@@ -155,10 +155,8 @@
       href: spfx/connect-to-sharepoint.md   
     - name: Connect to Microsoft Graph 
       href: spfx/use-msgraph.md
-    - name: Connect to APIs secured with Azure AD using the AadHttpClient
-      href: spfx/use-aadhttpclient.md
     - name: Connect to APIs secured with Azure AD
-      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md      
+      href: spfx/use-aadhttpclient.md
     - name: Call the Microsoft Graph API using OAuth
       href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
     - name: Connect to anonymous APIs
@@ -335,17 +333,27 @@
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
       - name: Make batch requests
         href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
-    - name: Migration API
-      href: apis/migration-api-overview.md
+    - name: SharePoint Migration Guidance
       items:
-      - name: Azure container and queue
-        href: apis/migration-api-azure-container-and-queue.md
-      - name: Encryption
-        href: apis/migration-api-encryption.md
-      - name: Throttling
-        href: apis/migration-api-handling-trottling.md        
-      - name: Sharing
-        href: apis/migration-api-shared.md           
+      - name: Migration Guidance for ISVs
+        href: apis/migration-isv-guidance.md
+      - name: Migration API
+        items:
+        - name: Import Migration API     
+          items:
+          - name: Import Migration API (CreateMigrationJob)
+            href: apis/migration-api-overview.md
+            items:
+            - name: Sharing
+              href: apis/migration-api-shared.md  
+            - name: Migrate web parts using the Migration API
+              href: apis/migrate-webparts-with-migrationapi.md
+        - name: Export Migration API (Asynchronous Metadata Read)         
+          href: apis/export-amr-api.md        
+        - name: Azure container and queue
+          href: apis/migration-api-azure-container-and-queue.md
+        - name: Encryption
+          href: apis/migration-api-encryption.md       
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
@@ -402,8 +410,8 @@
     href: declarative-customization/column-formatting.md   
   - name: View formatting
     href: declarative-customization/view-formatting.md       
-  - name: Communication site
-    href: apis/communication-site-creation-rest.md
+  - name: Creating modern sites
+    href: apis/site-creation-rest.md
   - name: Site Footer
     href: features/site-footer.md    
   - name: Shorter share links
@@ -1391,6 +1399,8 @@
           href: transform/modernize-userinterface-site-pages-model-publishing.md
         - name: Page transformation Functions and Selectors
           href: transform/modernize-userinterface-site-pages-api.md
+        - name: URL mapping
+          href: transform/modernize-userinterface-site-pages-urlmapping.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
     - name: The SharePoint Modernization scanner
@@ -1503,7 +1513,7 @@
       href: solution-guidance/multigeo-bcsandsecurestore.md
     - name: Set up a sample application
       href: solution-guidance/multigeo-sampleapplicationsetup.md   
-  - name: Building SharePoint Online portals
+  - name: Building classic publishing portals for SharePoint Online
     href: solution-guidance/portal-overview.md
     items:
     - name: Performance

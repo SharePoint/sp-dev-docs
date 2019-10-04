@@ -1,14 +1,12 @@
 ---
 title: Connect to external data using BCS and the Secure Store Service in a Multi-Geo tenant
 description: To use external data, such as data from your other business applications or partner resources in SharePoint Online, you can use Business Connectivity Services (BCS) together with the Secure Store Service. 
-ms.date: 4/27/2018
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # Connect to external data using BCS and the Secure Store Service in a Multi-Geo tenant 
 
-> [!IMPORTANT] 
-> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 When you want to use external data, such as data from your other business applications or partner resources in SharePoint Online, you can use Business Connectivity Services (BCS) together with the Secure Store Service. 
 
@@ -22,6 +20,6 @@ A SharePoint Multi-Geo tenant has one default geo location and one or more satel
 
 - [Business Connectivity Services in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/administration/business-connectivity-services-overview)
 - [Create or edit a Secure Store Target Application](https://support.office.com/en-us/article/Create-or-edit-a-Secure-Store-Target-Application-F724DEC2-CE28-4B76-9235-31728DCE64B5) 
-- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
+- [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)
 
 
