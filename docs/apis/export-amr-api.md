@@ -212,7 +212,7 @@ The following provides high level guidelines for implementing the asynchronous m
 
 ### Sharepoint Migration Export (Asynchronous Metadata Read) API Example 
 
-#### Scenario: Large FileShare with nested files/folders
+#### Scenario: Large file share with nested files/folders
 
 Suggestion:
 
@@ -224,6 +224,8 @@ Suggestion:
     a. Issue CreateSPAsyncReadJob with URL = root URL (e.g. <spam><spam>www.contoso.com/my-resource-document/a<spam><spam>) </br>
     b. Issue CreateSPAsyncReadJob with URL = root URL (e.g. <spam><spam>www.contoso.com/my-resource-document/b<spam><spam>) 
 
+>[!NOTE]
+>This scenario is only recommended for top level folders or if the sub-folder contains greater than 100k of objects. The performance of the asynchronous metadata read api is not as effective when reading a small set of items.
 
 #### Scenario: Tenant to tenant or large Sharepoint Migration
  
@@ -259,9 +261,11 @@ By default, each URL supports up to 1 million limits. At the start of the migrat
 
 
 ## Performance Expectation
-The preliminary performance test provides a rough estimate of more than 200 items per second throughput. This does not account for any potential throttle over the network. If the read asynchronous function fails to reach the server due to throttling, then performance will be impacted. At the start of read asynchronous migration, the server calculates the number of objects to confirm that it is within the 1 million object limit, hence there is an overhead.
+The preliminary performance test provides a rough estimate of more than 200 items per second throughput. This does not account for any potential throttle over the network. If the read asynchronous function fails to reach the server due to throttling, then performance will be impacted. 
+
+This measure of throughput assumes the software package has a sufficient items per read. The recommendation is to read greater than 10K per package. This is because at the start of read asynchronous migration, the server calculates the number of objects to confirm that it is within the 1 million object limit, hence there is an overhead.   If only a few thousand are being read, it results in a less than ideal performance. 
  
-For single read query or small items read (e.g. hundreds of items), it is faster to use Graph API or RESTful/CSOM query as the asynchronous read metadata will have the overhead cost.
+For single read query or small items read (e.g. 1000 items), it is faster to use Graph API or RESTful/CSOM query as the asynchronous read metadata will have the overhead cost.
 
 However, one of the key performance benefits of the asynchronous metadata read is the ability to balance the server-side load and the backend query is much more efficient than individual CSOM load reducing your chance of throttling. 
 
