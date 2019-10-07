@@ -135,7 +135,7 @@ For more information, see [EncryptionOption Class](https://docs.microsoft.com/en
 
 #### azureContainerManifestUri
 
-The valid URL including SAS token for accessing the Azure Blob Storage Container which contains the block blobs for the manifest and other package describing XML files. This location will also be used for the log output response. The SAS token must have been created with only Read, List and Write permissions or the asynchronous metadata read job will fail. The SAS token should at least have a lifetime that starts at from no later than when the job was submitted, until a reasonable time for successful import to have concluded.
+The valid URL including SAS token for accessing the Azure Blob Storage Container which contains the block blobs for the manifest and other package describing XML files. This location will also be used for the log output response. The SAS token must have been created with only Read and Write permissions or the asynchronous metadata read job will fail. The SAS token should at least have a lifetime that starts at from no later than when the job was submitted, until a reasonable time for successful import to have concluded.
  
 #### azureQueueReportUri
 The valid URL including SAS token for accessing the user provided Azure Queue used for returning notifications of asynchronous metadata read job progress. If this value is not null and proper access is granted in the SAS token in this URI, it will be used for real time status update. The SAS token must have been created with Add permissions or the migration job will be unable to add events to the queue. 
