@@ -281,9 +281,9 @@ The **BaseTemplateId** property is a child element, not an attribute of the **Ap
 
 SharePoint Add-ins that are installed to SharePoint are granted permissions when they are installed. Add-ins that are installed on other platforms but access SharePoint are granted permissions at runtime by the user who is running the add-in. Occasionally, the first kind of add-in may lose its permissions. You can regrant permissions to an add-in by using the following steps:
 
-1. On the **Site Contents** page of the website where the add-in seems to have lost permissions, select the **???** button on the add-in's tile. This opens a callout with either a **PERMISSIONS** link or another **???** button.
+1. On the **Site Contents** page of the website where the add-in seems to have lost permissions, select the **...** button on the add-in's tile. This opens a callout with either a **PERMISSIONS** link or another **...** button.
  
-2. Select the **PERMISSIONS** link if it is there and skip the next step, or select the **???** button.
+2. Select the **PERMISSIONS** link if it is there and skip the next step, or select the **...** button.
 
 3. Select the **Permissions** link.
  
