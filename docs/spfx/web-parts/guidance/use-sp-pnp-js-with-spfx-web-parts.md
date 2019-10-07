@@ -1,13 +1,12 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching. 
-ms.date: 01/29/2018
+ms.date: 07/05/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-
-# Use @pnp/sp with SharePoint Framework web parts
+# Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 
 You may choose to use the [@pnp/sp](https://www.npmjs.com/package/@pnp/sp) library when building your SharePoint Framework (SPFx) web parts. This library provides a fluent API to make building your REST queries intuitive and supports batching and caching. For more information, see the [project's homepage](https://github.com/pnp/pnpjs/), which has links to documentation, samples, and other resources to help you get started.
 

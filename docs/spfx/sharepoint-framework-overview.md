@@ -56,7 +56,7 @@ SharePoint Framework web parts and extensions have now reached General Availabil
 
 ## SharePoint Framework License
 
-The SharePoint Framework components are licensed under this [Microsoft EULA](https://github.com/SharePoint/sp-dev-docs/blob/master/LICENSE.md).
+The SharePoint Framework components are licensed under this [Microsoft EULA](https://unpkg.com/@microsoft/sp-core-library@1.8.2/EULA/Microsoft%20Sharepoint%20Framework%20-%20Standalone%20(free)%20Use%20Terms.docx).
 
 ## Questions?
 

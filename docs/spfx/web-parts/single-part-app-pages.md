@@ -1,24 +1,29 @@
 ---
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
-ms.date: 03/14/2019
+ms.date: 05/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Using single part app pages in SharePoint Online
 
-Single part app pages provides a capability to host SharePoint Framework web parts or Teams applications in SharePoint Online with locked layout. End users cannot modify or configure the page which is using Single Part App Page layout.
+Single part app pages provides a capability to host SharePoint Framework web parts or Teams applications in SharePoint Online with a locked layout. End users cannot modify or configure the page which is using the Single Part App Page layout.
 
 App pages have following characteristics:
 
-* Single Part App Pages cannot be edited by end users using browser
+* Single Part App Pages cannot be edited by end users using a browser
 * Currently supports hosting only single web part or Microsoft Teams application
 * Page layout can only be changed programatically from normal page layout to a Single Page App Page
-* End-users cannot parametrize exposed web part or Teams application
+* End-users cannot parameterize exposed web part or Teams application
 
-> [!NOTE]
-> App pages will be exposed as an option in the upcoming modern page creation capability. This feature will be released to targeted release tenants after the SharePoint Framework 1.8 release. You can however enable app pages starting with 1.8 release using the code as demonstrated later in this document.
+<br/>
+
+> [!Video https://www.youtube.com/embed/8BATz6LD6tA]
+
+<br/>
+
+App pages are exposed as an option in the modern page creation capability when you chose the used page layout for your page. All web parts which have been configured to be available also as an app page are available on the **Create page** capability.
 
 Web part can be configured to be exposed as an app page. This configuration is performed in the web part manifest file by adjusting the `supportedHosts` value. Web part will be exposed as an option in the upcoming app pages picker user interface, if the `supportedHosts` value contains `"SharePointFullPage"` value.
 

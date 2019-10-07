@@ -14,7 +14,7 @@ Links to shared files and folders in OneDrive and SharePoint are now shorter and
 
 |Old link format|New link format|
 |:--------------|:--------------|
-|[https://contoso-my.sharepoint.com/personal/john_contoso_com/_layouts/15/guestaccess.aspx?share=ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw](https://contoso-my.sharepoint.com/personal/john_contoso_com/_layouts/15/guestaccess.aspx?share=ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw)|[https://contoso-my.sharepoint.com/:w:/p/john/ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw](https://contoso-my.sharepoint.com/:w:/p/john/ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw)|
+|[https://contoso-my.sharepoint.com/personal/john_contoso_com/_layouts/15/guestaccess.aspx?share=ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw](https://contoso-my.sharepoint.com/personal/john_contoso_com/_layouts/15/guestaccess.aspx?share=ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw)|[https://contoso-my.sharepoint.com/:w:/p/john_contoso_com/ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw](https://contoso-my.sharepoint.com/:w:/p/john/ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw)|
 
 > [!NOTE]
 > Links that were shared before this change was introduced are not affected by the change and will continue to work.

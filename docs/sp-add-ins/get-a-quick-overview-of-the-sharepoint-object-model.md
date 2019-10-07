@@ -69,8 +69,8 @@ private string GetLocalEmployeeName()
     using (var clientContext = spContext.CreateUserClientContextForSPHost())
     {
         List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
-        selectedLocalEmployee = localEmployeesList.GetItemById(listItemID);
-        clientContext.Load(selectedLocalEmployee);
+        localEmployee = localEmployeesList.GetItemById(listItemID);
+        clientContext.Load(localEmployee);
         clientContext.ExecuteQuery();
     }
     return localEmployee["Title"].ToString();
@@ -81,7 +81,7 @@ Note the following about this method:
 
 - The first two lines in the **using** block appear to get references to the list and the list item object. But actually when these lines execute in the SharePoint client-side runtime, they are simply translated into an XML format. The **ExecuteQuery** method sends that XML to the server.
 
--  The **Load** method adds something extra to the message: it tells the server to send the specified object down to the client. The **ExecuteQuery** method receives this object (as JSON) and uses it to initialize the client-side `selectedLocalEmployee` variable. Subsequent client-side code then references that **ListItem** object and its members. As you can see, the next line references the value of the item's `"Title"` field. This line would have thrown an exception if the **Load** method had not been called because the object doesn't really exist on the client-side until it is loaded.
+-  The **Load** method adds something extra to the message: it tells the server to send the specified object down to the client. The **ExecuteQuery** method receives this object (as JSON) and uses it to initialize the client-side `localEmployee` variable. Subsequent client-side code then references that **ListItem** object and its members. As you can see, the next line references the value of the item's `"Title"` field. This line would have thrown an exception if the **Load** method had not been called because the object doesn't really exist on the client-side until it is loaded.
  
 ## Next steps
 <a name="Nextsteps"> </a>

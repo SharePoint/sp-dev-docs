@@ -11,6 +11,9 @@ You can apply and interact with themes by using remote provisioning features in 
 
 -  [ApplyTheme method](http://msdn.microsoft.com/library/52c567e8-03e6-7ba3-a9ed-cf4e3c22dbdd%28Office.15%29.aspx)
 -  [ThemeInfo class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.themeinfo.aspx)
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites.
     
 The **ApplyTheme** method powers the Change the Look Wizard. The wizard applies a composed look, or a custom look, to a SharePoint site by using specified components. Themes are applied on a site-by-site basis.
 

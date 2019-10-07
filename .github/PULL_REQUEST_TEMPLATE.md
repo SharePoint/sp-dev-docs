@@ -1,9 +1,18 @@
 #### Category
 - [ ] Content fix
 - [ ] New article
-- Related issues: fixes #X, partially #Y, mentioned in #Z
+- [x] Example checked item (*delete this line*)
 
 > For the above list, an empty checkbox is [ ] as in <kbd>[</kbd><kbd>SPACE</kbd><kbd>]</kbd>. A checked checkbox is [x] with no space between the brackets. Use the `PREVIEW` tab at the top right to preview the rendering before submitting your issue.
+> 
+> _(DELETE THIS PARAGRAPH AFTER READING)_
+
+#### Related issues:
+- fixes #issuenumber
+- partially #issuenumber
+- mentioned in #issuenumber
+
+> If this fixes (aka: closes) or references an issue, please reference it here. This helps maintaining the issue list as it will (1) link the PR to the issue & (2) automatically close the issue when this PR is merged in.
 > 
 > _(DELETE THIS PARAGRAPH AFTER READING)_
 

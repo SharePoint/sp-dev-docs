@@ -61,7 +61,7 @@ The **Performance** tab in the developer dashboard displays timing information f
 
 ![The 'Performance' tab activated in the developer dashboard](../images/developer-dashboard-performance.png)
 
-For each component, the developer dashboard shows how much time was spent on waiting on the response from the server, loading the module, intializing the component, retrieving the data and rendering the component. If the page loads slower after adding your component to the page, you can use this information to verify if any particular stage in the lifecycle of your component is slowing down the page.
+For each component, the developer dashboard shows how much time was spent on waiting on the response from the server, loading the module, initializing the component, retrieving the data and rendering the component. If the page loads slower after adding your component to the page, you can use this information to verify if any particular stage in the lifecycle of your component is slowing down the page.
 
 ### Manifests
 

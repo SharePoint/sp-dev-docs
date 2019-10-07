@@ -18,7 +18,7 @@ The following web parts have a content source set by default but no content to s
 - Hero
 - Image gallery
 
-Empty states are designed to convey the purpose, stucture, and layout options of web parts before the web part is configured or content is added. The empty state is also a perfect way to illustrate the vertical rhythm and layout of a page that starts from a template. Empty states behave similarly to fully configured web parts, and reflow to accommodate available space. They should support author-configured web part layouts. 
+Empty states are designed to convey the purpose, structure, and layout options of web parts before the web part is configured or content is added. The empty state is also a perfect way to illustrate the vertical rhythm and layout of a page that starts from a template. Empty states behave similarly to fully configured web parts, and reflow to accommodate available space. They should support author-configured web part layouts. 
 
 ![Image that shows sample web part empty states](../images/empty_state_template_01.png)
 

@@ -46,7 +46,7 @@ export default class MyApplicationCustomizer
 
 To make a request to Microsoft Graph:
 
-1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **@microsoft/sp-http** package.
+1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **\@microsoft/sp-http** package.
 
 2. Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
 

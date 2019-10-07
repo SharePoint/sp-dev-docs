@@ -26,7 +26,7 @@ You can also follow these steps by watching the video on the SharePoint PnP YouT
 Application Customizer extensions are supported with `Site`, `Web`, and `List` scopes. You can control the scope by deciding where or how the Application Customizer is registered in your SharePoint tenant.
 
 > [!NOTE] 
-> Feature xml based registration of application customizer is only supported with web or list level. You can however active application customizer more widely either using *tenant wide deployment of extensions capability* or by associating application customizer to the `UserCustomAction` collection in `Site` object level.
+> Feature xml based registration of application customizer is only supported with web or list level. You can however activate application customizer more widely either using *tenant wide deployment of extensions capability* or by associating application customizer to the `UserCustomAction` collection in `Site` object level.
 
 When the Application Customizer exists in the scope and is being rendered, you can use the following method to get access to the placeholder.
 

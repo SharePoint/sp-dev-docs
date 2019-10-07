@@ -1,13 +1,17 @@
 ---
 title: Update the branding of existing SharePoint sites and page regions
 description: Customize and then refresh the branding of existing SharePoint sites or regions of SharePoint pages, including the ribbon, the site navigation, the Settings menu, the tree view, and the page content.
-ms.date: 4/25/2018
+ms.date: 4/12/2019
 localization_priority: Normal
 ---
 
 # Update the branding of existing SharePoint sites and page regions
 
 You can refresh the branding on your existing SharePoint sites and site collections, as well as customize regions of SharePoint pages. You might want to do this, for example, when you update to a new version of the site. 
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites.
+
 
 ## Refresh branding of existing sites and subsites
 

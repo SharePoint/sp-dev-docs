@@ -125,7 +125,7 @@ When building SharePoint Framework solutions, you will be doing such tests regul
 
 ### Debug Extension solution using hosted workbench
 
-Debuging an Extension in a hosted workbench is very similar to the steps for a Web Part with a few key differences.  
+Debugging an Extension in a hosted workbench is very similar to the steps for a Web Part with a few key differences.  
 
 
 1. Open launch.json, and update the `url` property under the *Hosted workbench* configuration to your SharePoint site URL.

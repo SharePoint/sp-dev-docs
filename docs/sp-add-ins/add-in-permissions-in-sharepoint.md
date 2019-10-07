@@ -227,11 +227,12 @@ Table 6 shows the permission request scope for social features. It also lists th
 
 **Table 6. Social features add-in permission request scope URIs and available rights**
 
-|**Scope URI**|**Available rights**|
-|:-----|:-----|
-|http://sharepoint/social/tenant |Read, Write, Manage, FullControl|
-|http://sharepoint/social/core |Read, Write, Manage, FullControl|
-|http://sharepoint/social/microfeed |Read, Write, Manage, FullControl|
+|**Scope name**|**Description**|**Available rights**|
+|:-----|:-----|:-----|
+|User Profiles<br/>`http://sharepoint/social/tenant`|The permission request scope used to access all user profiles. Only the profile picture can be changed; all other user profile properties are read-only for SharePoint Add-ins. Must be installed by a tenant administrator.|Read, Write, Manage, FullControl|
+|Core<br/>`http://sharepoint/social/core`|The permission request scope used to access the user's followed content and shared metadata that is used by microblogging features. This scope applies only to personal sites that support following content. If the app installs on any other type of site, use the Tenant scope.|Read, Write, Manage, FullControl|
+|News Feed<br/>`http://sharepoint/social/microfeed`|The permission request scope used to access the user's feed or the team feed. This scope applies to personal sites that support microblogging or to team sites where the **Site Feed** feature is activated. If the app installs on any other type of site, use the Tenant scope.|Read, Write, Manage, FullControl|
+| `http://sharepoint/social/trimming`|This permission request scope used to determine whether to display security-trimmed content in the social feed to apps. If this high-trust permission is not granted, some content (such as activities about documents and sites that the app doesn't have permissions to) is trimmed from the feed data that's returned to the app, even if the user has sufficient permissions. This permission must be manually added to the app's manifest file.|Read, Write, Manage, FullControl|
 
 > [!NOTE] 
 > For more information about social features add-in permission request scope, see [Add-in permission requests for accessing social features](../general-development/get-started-developing-with-social-features-in-sharepoint.md#app-permission-requests-for-accessing-social-features-in-sharepoint-add-ins).
@@ -280,9 +281,9 @@ The **BaseTemplateId** property is a child element, not an attribute of the **Ap
 
 SharePoint Add-ins that are installed to SharePoint are granted permissions when they are installed. Add-ins that are installed on other platforms but access SharePoint are granted permissions at runtime by the user who is running the add-in. Occasionally, the first kind of add-in may lose its permissions. You can regrant permissions to an add-in by using the following steps:
 
-1. On the **Site Contents** page of the website where the add-in seems to have lost permissions, select the **???** button on the add-in's tile. This opens a callout with either a **PERMISSIONS** link or another **???** button.
+1. On the **Site Contents** page of the website where the add-in seems to have lost permissions, select the **...** button on the add-in's tile. This opens a callout with either a **PERMISSIONS** link or another **...** button.
  
-2. Select the **PERMISSIONS** link if it is there and skip the next step, or select the **???** button.
+2. Select the **PERMISSIONS** link if it is there and skip the next step, or select the **...** button.
 
 3. Select the **Permissions** link.
  

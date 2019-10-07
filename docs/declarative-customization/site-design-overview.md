@@ -22,7 +22,7 @@ Site designs are like a template. They can be used each time a new site is creat
 
 You create site designs and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 
-1. Go to the SharePoint home page on your developer tenant. 
+1. Go to the SharePoint start page on your developer tenant. 
 
 2. Choose **Create site**.
 
@@ -54,10 +54,6 @@ When the scripts are complete the notification bar message will change - allowin
 
 The site design information panel can be invoked by a site owner at any time to see what site designs have been applied to the site (and their script details) as well as to apply new or updated site designs. 
 
-
-> [!NOTE]
-> The site design information panel started rolling out to Target Release customers in December 2018 - and will complete WW rollout in early 2019.
-
 When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
 ![Site Design Information Panel](images/site-design-information-panel-applied-site-designs.png)
@@ -73,7 +69,7 @@ The following example is a script that has two top-level actions. First, it appl
 
 ```json
 {
-  "$schema": "schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
   "actions": [
     {
       "verb": "applyTheme",
@@ -130,9 +126,10 @@ Available actions include:
 
 - Creating a new list or library (or modifying the default one created with the site)
 - Creating site columns, content types, and configuring other list settings
+- Set site branding properties like navigation layout, header layout and header background
 - Applying a theme
 - Setting a site logo
-- Adding navigation
+- Adding links to quick launch or hub navigation
 - Triggering a Microsoft Flow
 - Installing a deployed solution from the app catalog
 - Setting regional settings for the site
@@ -140,6 +137,9 @@ Available actions include:
 - Setting external sharing capability for the site
 
 For a complete list of available actions and their parameters, see the [JSON schema](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema).
+
+> [!NOTE]
+> For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList?view=sharepoint-ps) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
 
@@ -239,7 +239,7 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 <br/>
 
-In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPO-SiteDesign** cmdlet or **CreateSiteDesign** REST API.
+In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPOSiteDesign** cmdlet or **CreateSiteDesign** REST API.
 
 The **WebTemplate** parameter set to the value 64 indicates registering this site design with the Team site template. If you have disabled modern Group creation, then publish your site designs using WebTemplate 1 so that they display for the "Group-less" Team site template. The value 68 would indicate registering with the Communication site template. The **Title** and **Description** parameters are displayed when a user views site designs as they create a new Team site.
 

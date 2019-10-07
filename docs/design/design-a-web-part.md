@@ -43,7 +43,7 @@ Use accordion panes when you need to apply categorization for a complex web part
 
 <br/>
 
-**Accordian groups example with last pane open**
+**Accordion groups example with last pane open**
 
 ![Accordion pane showing last pane open](../images/design-web-part-accordion-last-open.png)
 

@@ -138,7 +138,7 @@ The XXXL size has 12 columns, with 32 px gutters.
 <br/>
 
 #### Communication site multicolumn pages and web parts
-Web parts scale horizontally depending on the page layout. This example shows a communcation site and web parts for single to three column layouts.
+Web parts scale horizontally depending on the page layout. This example shows a communication site and web parts for single to three column layouts.
 
 ![Communication site multi-column with web parts](../images/design-grid-Communciation-site-web-parts.png)
 

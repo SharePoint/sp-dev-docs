@@ -1,14 +1,11 @@
 ---
 title: SP.HubSites.CanCreate REST method
 description: Returns whether the current user can create a hub site. Only tenant admins can create hub sites.
-ms.date: 4/20/2018
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # SP.HubSites.CanCreate
-
-> [!IMPORTANT]
-> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments. 
 
 Returns whether the current user can create a hub site. Only tenant admins can create hub sites.
 

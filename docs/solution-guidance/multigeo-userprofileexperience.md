@@ -1,14 +1,12 @@
 ---
 title: Work with user profiles in a Multi-Geo tenant
 description: Define a preferred data location for a user, detect a user's profile location and personal site URL, and read and update default and custom user profile properties.
-ms.date: 4/27/2018
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # Work with user profiles in a Multi-Geo tenant
 
-> [!IMPORTANT] 
-> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
 
 In a Multi-Geo tenant, you can define a preferred data location for a user, detect a user's profile location and personal site URL, and read and update default and custom user profile properties.
 
@@ -164,6 +162,4 @@ You can use the [bulk user profile update API](bulk-user-profile-update-api-for-
 ## See also
 
 - [User Profile Batch Update API sample](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.BatchUpdate.API)
-- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
-
-
+- [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)

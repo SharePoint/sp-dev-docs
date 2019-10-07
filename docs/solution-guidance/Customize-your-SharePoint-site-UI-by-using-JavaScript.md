@@ -1,6 +1,6 @@
 ---
 title: Customize your SharePoint site UI by using JavaScript
-ms.date: 11/03/2017
+ms.date: 04/29/2019
 localization_priority: Priority
 ---
 # Customize your SharePoint site UI by using JavaScript
@@ -8,6 +8,9 @@ localization_priority: Priority
 You can update your SharePoint site's UI by using JavaScript.
     
 _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. Notice also that you should **not** take a dependency on the html page structure or on the out-of-the-box CSS style names as these might be adjusted without a notice.
     
 The [Core.EmbedJavaScript](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScript) sample add-in adds a status bar message to all pages on a SharePoint site, and removes the **new subsite** link from the **Site Contents** page by using JavaScript. 
     

@@ -8,7 +8,7 @@ localization_priority: Normal
 
 # Understanding and configuring the page transformation model
 
-The heart of the page transformation solution is the model that feeds the transformation: the model tells the engine which web part properties are important, allows you to manipulate these properties and dynamically choose a mapping for your web part.The page transformation model is expressed in XMl and comes with a schema that's used to validate the correctness of the model.
+The heart of the page transformation solution is the model that feeds the transformation: the model tells the engine which web part properties are important, allows you to manipulate these properties and dynamically choose a mapping for your web part. The page transformation model is expressed in XML and comes with a schema that's used to validate the correctness of the model.
 
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
@@ -30,7 +30,7 @@ When you open the page transformation model the following top level elements are
 
 - **BaseWebPart**: this element contains the configuration that applies to all web parts e.g. it describes that the property "Title" will be fetched for all web parts. It's also the place that defines the default web part mapping: if a web part has no mapping defined the engine will fall back to this mapping to represent the web part on the target client side page.
 
-- **AddOns**: as user of page transformation you might have the needed to apply custom logic to realize your needs e.g. you need to transform a given property in a way that it can work with your custom client side web part. The framework supports this by allowing you to add your assemblies with functions and selectors...simply defining them in the AddOn section and then referencing your custom functions and selectors later on by prefixing them with the given name will make the page transformation use your custom code.
+- **AddOns**: as user of page transformation you might have needed to apply custom logic to realize your needs e.g. you need to transform a given property in a way that it can work with your custom client side web part. The framework supports this by allowing you to add your assemblies with functions and selectors...simply defining them in the AddOn section and then referencing your custom functions and selectors later on by prefixing them with the given name will make the page transformation use your custom code.
 
 - **WebParts**: this element contains information for each web part that you want to transform. For each web part you'll find a definition of the properties to use, the functions to execute on those properties, the possible mappings that define the target of the transformation combined with a selector that you dynamically select the needed mapping.
 
@@ -81,7 +81,7 @@ A function can have one or more input values which can be:
 - Properties that were the output of previous function executions (e.g. {ListWebRelativeUrl})
 - Default site scoped properties: {Host}, {Web}, {Site}, {WebId}, {SiteId}
 
-When a function runs it's output will either be:
+When a function runs its output will either be:
 
 - A single string value: this value ({Output} in the presented model) will be added to the list of web part properties with name "Output" and value the value that was returned from running `FunctionName`.
 - A list of key/value pairs (Dictionary<string,string>): in this case each returned key/value pair is added to the list of web part properties

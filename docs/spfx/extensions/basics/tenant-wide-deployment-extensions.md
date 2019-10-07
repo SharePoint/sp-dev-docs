@@ -11,7 +11,7 @@ localization_priority: Priority
 Tenant Wide Deployment option for SharePoint Framework Extensions is supported for application customizers and for List View Command Sets. It provides an easy option for tenant app catalog managers to manage which extensions are activated by default across the tenant or based on web / list templates used in the sites.
 
 > [!NOTE]
-> SharePoint Framework extensions are support with modern experiences regardless of the actual site template used when content site was created.
+> SharePoint Framework extensions are supported with modern experiences regardless of the actual site template used when content site was created.
 
 When developers create a new SharePoint Framework extension solution using standard SharePoint Framework Yeoman packages, automation is included in the solution package to activate extension cross the tenant.
 

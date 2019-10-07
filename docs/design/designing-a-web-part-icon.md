@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Designing a SharePoint web part icon
 
-Web part icons are designed to be simple, representative, and symbolic. Every icon is reduced to a minimalist style that represents the most essential attributes. Icons will display in the toolbox within SharePoint pages and optionally in the store. Examples of icon shapes are square, circle, veritical, and horizontal.
+Web part icons are designed to be simple, representative, and symbolic. Every icon is reduced to a minimalist style that represents the most essential attributes. Icons will display in the toolbox within SharePoint pages and optionally in the store. Examples of icon shapes are square, circle, vertical, and horizontal.
 
 ![Icon examples](../images/01_Icons_examples.png)
 

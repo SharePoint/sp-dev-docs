@@ -34,92 +34,88 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 1. Ensure that you have the latest version of the SharePoint Online Management Shell by downloading it from the [Microsoft Download site](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
-  > [!TIP]
-  > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
+    > [!TIP]
+    > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
 
-2. Connect to your SharePoint Online tenant with a PowerShell session.
+1. Connect to your SharePoint Online tenant with a PowerShell session.
 
-  ```powershell
-  Connect-SPOService -Url https://contoso-admin.sharepoint.com
-  ```
+    ```powershell
+    Connect-SPOService -Url https://contoso-admin.sharepoint.com
+    ```
 
-3. Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one. 
+1. Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one. 
 
+    ```powershell
+    Get-SPOTenantCdnEnabled -CdnType Public
+    Get-SPOTenantCdnOrigins -CdnType Public
+    Get-SPOTenantCdnPolicies -CdnType Public
+    ```
 
-  ```powershell
-  Get-SPOTenantCdnEnabled -CdnType Public
-  Get-SPOTenantCdnOrigins -CdnType Public
-  Get-SPOTenantCdnPolicies -CdnType Public
-  ```
+    SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
-  SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
+1. Enable public CDN in the tenant.
 
-4. Enable public CDN in the tenant.
+    ```powershell
+    Set-SPOTenantCdnEnabled -CdnType Public
+    ```
 
-  ```powershell
-  Set-SPOTenantCdnEnabled -CdnType Public
-  ```
+1. Confirm settings by selecting `Y` and then Enter.
 
-5. Confirm settings by selecting `Y` and then Enter.
+    ![Enable public CDN in tenant](../../../images/cdn-enable-o365-public-cdn.png)
 
-  ![Enable public CDN in tenant](../../../images/cdn-enable-o365-public-cdn.png)
+    Now the public CDN has been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
 
-  Now the public CDN has been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
+    SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it is enabled in your tenant. When the CDN is enabled, the `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
-  SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it is enabled in your tenant. When the CDN is enabled, the `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
+    > [!NOTE]
+    > If you have previously enabled Office 365 CDN, you should re-enable the public CDN so that you have the `*/CLIENTSIDEASSETS`entry added as a valid CDN origin for public CDN. If this entry is not present and the public CDN is enabled in your tenant, bundle requests will contain the token hostname `spclientsideassetlibrary` in their URL, causing the requests to fail. You can add this missing entry by using
+    >
+    >`Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */CLIENTSIDEASSETS`
 
-  > [!NOTE]
-  > If you have previously enabled Office 365 CDN, you should re-enable the public CDN so that you have the `*/CLIENTSIDEASSETS`entry added as a valid CDN origin for public CDN. If this entry is not present and the public CDN is enabled in your tenant, bundle requests will contain the token hostname `spclientsideassetlibrary` in their URL, causing the requests to fail. You can add this missing entry by using
-  >
-  >`Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */CLIENTSIDEASSETS`
+1. You can double-check the current setup of your end-points. Execute the following command to get the list of CDN origins from your tenant:
 
-6. You can double-check the current setup of your end-points. Execute the following command to get the list of CDN origins from your tenant:
+    ```powershell
+    Get-SPOTenantCdnOrigins -CdnType Public
+    ```
 
-  ```powershell
-  Get-SPOTenantCdnOrigins -CdnType Public
-  ```
+    Notice that when you enable the CDN for the first time, the default configuration to enable default origins will take a while (approximately 15 minutes). Configuration is completed when there is no **(configuration pending)** messages when you execute the `Get-SPOTenantCdnOrigins -CdnType Public` command.
 
-  Notice that when you enable the CDN for the first time, the default configuration to enable default origins will take a while (approximately 15 minutes). Configuration is completed when there is no **(configuration pending)** messages when you execute the `Get-SPOTenantCdnOrigins -CdnType Public` command.
+    ![List of public origins in tenant](../../../images/cdn-public-origins.png)
 
-  ![List of public origins in tenant](../../../images/cdn-public-origins.png)
-
-  > [!NOTE]
-  > When the origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and the CDN system.
-
+    > [!NOTE]
+    > When the origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and the CDN system.
 
 ## Finalize solution for deployment
 
 1. Switch to the console and make sure you are still in the project directory that you used to set up your web part project.
+1. End the possible `gulp serve` task by selecting Ctrl+C, and ensure that you are in your project directory:
 
-2. End the possible `gulp serve` task by selecting Ctrl+C, and ensure that you are in your project directory:
-
-  ```
-  cd helloworld-webpart
-  ```
+    ```shell
+    cd helloworld-webpart
+    ```
 
 ## Review solution settings 
 
 1. Open the **HelloWorldWebPart** web part project in Visual Studio Code or your preferred IDE.
+1. Open **package-solution.json** from the **config** folder.
 
-2. Open **package-solution.json** from the **config** folder.
+    The **package-solution.json** file defines the package metadata as shown in the following code:
 
-  The **package-solution.json** file defines the package metadata as shown in the following code:
-
-  ```json
-  {
-    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-    "solution": {
-      "name": "helloword-webpart-client-side-solution",
-      "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
-      "version": "1.0.0.0",
-      "includeClientSideAssets": true,
-      "isDomainIsolated": false
-    },
-    "paths": {
-      "zippedPackage": "solution/helloword-webpart.sppkg"
+    ```json
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+      "solution": {
+        "name": "helloword-webpart-client-side-solution",
+        "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
+        "version": "1.0.0.0",
+        "includeClientSideAssets": true,
+        "isDomainIsolated": false
+      },
+      "paths": {
+        "zippedPackage": "solution/helloword-webpart.sppkg"
+      }
     }
-  }
-  ```
+    ```
 
 The default value for the **includeClientSideAssets** is `true`, which means that static assets are packaged automatically inside of the *.sppkg* files, and you do not need to separately host your assets from an external system.
 
@@ -131,46 +127,42 @@ If *Office 365 CDN* is enabled, it is used automatically with default settings. 
 
 1. Execute the following task to bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets. This URL is automatically updated based on your tenant CDN settings.
 
-  ```
-  gulp bundle --ship
-  ```
+    ```shell
+    gulp bundle --ship
+    ```
 
-2. Execute the following task to package your solution. This creates an updated **helloworld-webpart.sppkg** package on the **sharepoint/solution** folder.
+1. Execute the following task to package your solution. This creates an updated **helloworld-webpart.sppkg** package on the **sharepoint/solution** folder.
 
-  ```
-  gulp package-solution --ship
-  ```
+    ```shell
+    gulp package-solution --ship
+    ```
 
-  > [!NOTE]
-  > If you are interested in what actually got packaged inside of the sppkg file, you can look in the content of the **sharepoint/solution/debug** folder.
+    > [!NOTE]
+    > If you are interested in what actually got packaged inside of the sppkg file, you can look in the content of the **sharepoint/solution/debug** folder.
 
-3. Upload or drag and drop the newly created client-side solution package to the app catalog in your tenant.
+1. Upload or drag and drop the newly created client-side solution package to the app catalog in your tenant.
+1. Because you already deployed the package, you are prompted as to whether to replace the existing package. Select **Replace It**.
 
-4. Because you already deployed the package, you are prompted as to whether to replace the existing package. Select **Replace It**.
+    ![Override existing solution](../../../images/cdn-override-helloworld-webpart-package.png)
 
-  ![Override existing solution](../../../images/cdn-override-helloworld-webpart-package.png)
+1. Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the app catalog, depending on the tenant settings. Select **Deploy**.
 
-5. Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the app catalog, depending on the tenant settings. Select **Deploy**.
+    ![Installation popup from app catalog for the SPFx solution](../../../images/cnd-trust-helloworld-webpart-solution.png)
 
-  ![Installation popup from app catalog for the SPFx solution](../../../images/cnd-trust-helloworld-webpart-solution.png)
+1. Open the site where you previously installed the **helloworld-webpart-client-side-solution** or install the solution to a new site.
+1. After the solution has been installed, select **Add a page** from the *gear* menu, and select **HelloWorld** from the modern page web part picker to add your custom web part to page.
 
-6. Open the site where you previously installed the **helloworld-webpart-client-side-solution** or install the solution to a new site.
+    ![HelloWorld web part visible in web part picker for modern page](../../../images/cdn-web-part-picker.png)
 
-7. After the solution has been installed, select **Add a page** from the *gear* menu, and select **HelloWorld** from the modern page web part picker to add your custom web part to page.
+1. Notice how the web part is rendered even though you are not running the node.js service locally. 
 
-  ![HelloWorld web part visible in web part picker for modern page](../../../images/cdn-web-part-picker.png)
+    ![HelloWorld web part rendering on a modern page, which is in edit mode](../../../images/cdn-web-part-rendering.png)
 
-8. Notice how the web part is rendered even though you are not running the node.js service locally. 
+1. Save changes on the page with the web part.
+1. Select **F12** to open up developer tools.
+1. Extend **publiccdn.sharepointonline.com** under the source and notice how the **hello-world-web-part** file is loaded from the Public CDN URL pointing dynamically to a library located under the app catalog site collection.
 
-  ![HelloWorld web part rendering on a modern page, which is in edit mode](../../../images/cdn-web-part-rendering.png)
-
-9. Save changes on the page with the web part.
-
-10. Select **F12** to open up developer tools.
-
-11. Extend **publiccdn.sharepointonline.com** under the source and notice how the **hello-world-web-part** file is loaded from the Public CDN URL pointing dynamically to a library located under the app catalog site collection.
-
-  ![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../images/cdn-web-part-f12-source.png)
+    ![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../images/cdn-web-part-f12-source.png)
 
 > [!NOTE]
 > If you would not have CDN enabled in your tenant, and the `includeClientSideAssets` setting would be `true`in the **package-solution.json**, the loading URL for the assets would be dynamically updated and pointing directly to the ClientSideAssets folder located in the app catalog site collection. In this example case, the URL would be `https://sppnp.microsoft.com/sites/apps/ClientSideAssets/`. This change is automatic depending on your tenant settings and it does not require any changes in the actual solution package.

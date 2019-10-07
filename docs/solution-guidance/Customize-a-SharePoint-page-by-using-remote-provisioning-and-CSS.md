@@ -1,7 +1,7 @@
 ---
 title: Customize a SharePoint page by using remote provisioning and CSS
 description: Use CSS to customize SharePoint rich text fields and web part zones.
-ms.date: 4/25/2018
+ms.date: 4/29/2019
 localization_priority: Priority
 ---
 
@@ -10,6 +10,9 @@ localization_priority: Priority
 You can use cascading style sheets (CSS) to customize SharePoint rich text fields and web part zones. To customize rich text fields, you can do this right on the page you're editing. For web part zones, you can use the Script Editor web part to add HTML or scripts, or associate a CSS style sheet.
 
 For a code sample that is associated with this article, see [Branding.AlternateCSSAndSiteLogo](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo) in the Office 365 Developer Patterns and Practices project on GitHub.
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. Notice also that you should **not** take a dependency on the html page structure or on the out-of-the-box CSS style names as these might be adjusted without a notice.
 
 ## Customize rich text fields
 

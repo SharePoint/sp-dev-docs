@@ -1,13 +1,13 @@
 ---
-title: Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
-description: Create an environment where you can use ACS to establish trust between a provider-hosted add-in and an on-premises SharePoint farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
+title: Use ACS to authorize low-trust provider-hosted add-ins on an on-premises SharePoint site
+description: Create an environment where you can use ACS to establish trust between a low-trust provider-hosted add-in and an on-premises SharePoint farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
 ms.date: 12/28/2017
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
 
-# Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
+# Use ACS to authorize low-trust provider-hosted add-ins on an on-premises SharePoint site
 
 <a name="Prerequisites"> </a> 
 
@@ -19,7 +19,7 @@ Be sure that you have the following:
 
 - An Office 365 SharePoint site. If don't have one yet and you want to set up a development environment quickly, you can  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
 
-- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) installed either remotely or on the computer where you installed SharePoint.
+- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) installed either remotely or on a computer running SharePoint, with the workload **Office/SharePoint development**. Earlier versions of Visual Studio require component **Microsoft Office Developer Tools for Visual Studio** instead. The latest version of this component is available [here for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), and [here for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
     
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
@@ -29,7 +29,8 @@ Be sure that you have the following:
     
 Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/). 
 
-[!IMPORTANT] ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
+> [!IMPORTANT] 
+> ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
 
 <a name="Certificate"> </a>
 
@@ -65,17 +66,8 @@ You'll need to replace the default security token service (STS) certificate of y
 
 ## Make your certificate the STS certificate for your on-premises installation of SharePoint
 
-Now that you have a certificate, you make it the STS certificate for your on-premises SharePoint farm. 
- 
-Open the SharePoint Management Shell as an administrator, and run this Windows PowerShell script:
-
-```powershell
-$certPrKPath = "c:\location of your .pfx file"
-$certPassword = "password"
-$stsCertificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 $certPrKPath, $certPassword, 20
-Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCertificate -confirm:$false
-
-```
+> [!IMPORTANT]
+> ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
 
 <a name="ConnectAAD"> </a>
 
@@ -99,7 +91,7 @@ The following function does all the work to configure your on-premises SharePoin
  
 ### To configure your on-premises SharePoint site to use ACS
 
-1. On the on-premises SharePoint server, copy the code in the function into a text file, and save it with the name MySharePointFunctions.psm1 to one or the other of the following folders (not both). You may have to create parts of the path, if it includes folders that do not already exist. Notice that in both cases, the lowest folder in the path has to have the same name as the file.
+1. On the on-premises SharePoint server, copy the code of the function Connect-SPFarmToAAD (available below) into a text file named MySharePointFunctions.psm1, and save it to one or the other of the following folders (not both). You may have to create parts of the path, if it includes folders that do not already exist. Notice that in both cases, the lowest folder in the path has to have the same name as the file.
 
     > [!TIP] 
     > The file has to be saved as ANSI format, not UTF-8. PowerShell may give syntax errors when it loads a file with a non-ANSI format. Windows NotePad defaults to saving it as ANSI. If you use any other editor to save the file, be sure you are saving it as ANSI.
@@ -109,31 +101,37 @@ The following function does all the work to configure your on-premises SharePoin
     - `C:\windows\system32\windowspowershell\V1.0\modules\MySharePointFunctions`
     
  
-2. Open the SharePoint Management Shell as an administrator and run the following cmdlet to verify that the MySharePointFunctions module is listed.
+2. Function Connect-SPFarmToAAD requires NuGet package MSOnlineExt to work, install it with the cmdlet below.
+    
+    ```powershell
+    Install-Module -Name MSOnlineExt
+    ```
+
+3. Open the SharePoint Management Shell as an administrator and run the following cmdlet to verify that the MySharePointFunctions module is listed.
     
     ```powershell 
     Get-Module -listavailable
     ```
 
-3. Run the following cmdlet to import the module.
+4. Run the following cmdlet to import the module.
     
     ```powershell
     Import-Module MySharePointFunctions
     ```
 
-4. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is listed as part of the module.
+5. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is listed as part of the module.
     
     ```powershell
     Get-Command -module MySharePointFunctions
     ```
 
-5. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is loaded.
+6. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is loaded.
     
     ```powershell
     ls function:\ | where {$_.Name -eq "Connect-SPFarmToAAD"}
     ```
 
-6. Run the `Connect-SPFarmToAAD` function. Be sure to provide the required parameters and any optional parameters that apply to your developer environment. See the next section for details and examples.
+7. Run the `Connect-SPFarmToAAD` function. Be sure to provide the required parameters and any optional parameters that apply to your developer environment. See the next section for details and examples.
     
  
 <a name="parameters"> </a>
@@ -170,7 +168,7 @@ Connect-SPFarmToAAD -AADDomain 'MyO365Domain.onmicrosoft.com' -SharePointOnlineU
 
 <a name="function"> </a>
 
-### Connect-SPFarmToAAD function script
+### Content of MySharePointFunctions.psm1
 
 ```powershell 
 function Connect-SPFarmToAAD {
@@ -197,7 +195,7 @@ param(
     #Import the Microsoft Online Services Sign-In Assistant.
     Import-Module -Name MSOnline
     #Import the Microsoft Online Services Module for Windows PowerShell.
-    Import-Module MSOnlineExtended -force -verbose 
+    Import-Module MSOnlineExt -force -verbose 
     #Set values for Constants.
     New-Variable -Option Constant -Name SP_APPPRINCIPALID -Value '00000003-0000-0ff1-ce00-000000000000' | Out-Null
     New-Variable -Option Constant -Name ACS_APPPRINCIPALID -Value '00000001-0000-0000-c000-000000000000' | Out-Null

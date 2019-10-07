@@ -36,7 +36,7 @@ For more information about using Design Manager to work with master pages, page 
 -  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md) : Learn how to create a master page by converting a typical HTML file into the .master file required by SharePoint.
     
   
--  [How to: Create a minimal master page in SharePoint](how-to-create-a-minimal-master-page-in-sharepoint.md) : A minimal master page contains only those page elements that are required by SharePointto render the page correctly in the browser. With Design Manager, you can quickly create a minimal master page without first having to design and convert an HTML file.
+-  [How to: Create a minimal master page in SharePoint](how-to-create-a-minimal-master-page-in-sharepoint.md) : A minimal master page contains only those page elements that are required by SharePoint to render the page correctly in the browser. With Design Manager, you can quickly create a minimal master page without first having to design and convert an HTML file.
     
   
 -  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md) : Learn how to set, create, and change the preview page in Design Manager in SharePoint.

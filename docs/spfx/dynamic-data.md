@@ -1,7 +1,7 @@
 ---
 title: Connect SharePoint Framework components using dynamic data
 description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
-ms.date: 11/08/2018
+ms.date: 09/16/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,6 +11,10 @@ localization_priority: Priority
 Using the dynamic data capability, you can connect SharePoint Framework client-side web parts and extensions to each other and exchange information between the components. This allows you to build rich experiences and compelling end-user solutions.
 
 ![Three SharePoint Framework web parts connected to each other showing information about events](../images/dynamic-data-webparts.png)
+
+
+> [!NOTE] 
+> Dynamic Data is the recommended pattern to share data between SharePoint Framework web parts or other components. It was introduced with the release of SharePoint Framework 1.7. If you are using older version of SharePoint Framework, this option is not available.
 
 ## Expose data using dynamic data source
 

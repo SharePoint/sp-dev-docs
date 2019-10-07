@@ -15,7 +15,7 @@ The key feature of the page transformation UI is creating modern pages for exist
 
 ## Trigger the migration of a wiki or web part page
 
-As a user you can self-service trigger the creation of a modern version of your page. **This modern version by default will not overwrite your current version**, there's no risk for loosing your current page. The SharePoint UI has several (ribbon) buttons that you can use to request a modern page version. You'll find a button in the wiki page or web part ribbons:
+As a user you can self-service trigger the creation of a modern version of your page. **This modern version by default will not overwrite your current version**, there's no risk for losing your current page. The SharePoint UI has several (ribbon) buttons that you can use to request a modern page version. You'll find a button in the wiki page or web part ribbons:
 
 ![page transformation UI extensions](media/modernize/pagetransformation_ui_3.png)
 

@@ -124,7 +124,7 @@ Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, y
 
         var i;
         for (i = 0; i < itemArray.length; i++) {
-            employeeList.getItemById(itemArray[i].get_id()).deleteObject();
+            itemArray[i].deleteObject();
         }
 
         clientContext.executeQueryAsync(onDeleteCompletedItemsSuccess, onDeleteCompletedItemsFail);

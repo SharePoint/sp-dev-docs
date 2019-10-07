@@ -1,7 +1,7 @@
 ---
 title: Building Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 04/04/2019
+ms.date: 06/18/2019
 ms.prod: sharepoint
 ---
 
@@ -16,7 +16,7 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 > [!IMPORTANT]
-> This lab requires that you are using at least version 1.8 of the SharePoint Framework as these capabilities are not available in earlier versions.
+> This lab requires that you are using at least version 1.8 of the SharePoint Framework as these capabilities are not available in earlier versions.  Currently, the Teams mobile clients do not support 3rd party tabs.  When this support is delivered, the tabs you create will appear automatically.
 
 ## Create a new web part project
 
@@ -26,19 +26,19 @@ Before you start, complete the procedures in the following articles to ensure th
     md teams-tab-webpart
     ```
 
-2. Go to the project directory:
+1. Go to the project directory:
 
     ```shell
     cd teams-tab-webpart
     ```
 
-3. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
+1. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
 
     ```shell
     yo @microsoft/sharepoint
     ```
 
-4. When prompted:
+1. When prompted:
 
     * Accept the default **teams-tab-webpart** as your solution name, and then select Enter.
     * Select **SharePoint Online only (latest)**, and then select Enter.
@@ -47,17 +47,17 @@ Before you start, complete the procedures in the following articles to ensure th
     * Select **N** on the question if solution contains unique permissions.  
     * Select **WebPart** as the client-side component type to be created.
 
-5. The next set of prompts ask for specific information about your web part:
+1. The next set of prompts ask for specific information about your web part:
 
     * Enter **MyFirstTeamsTab** for the web part name, and then select Enter.
     * Enter **My first Teams tab** as the description of the web part, and then select Enter. 
     * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
 
-      ![Yeoman prompts](../../../images/yeoman-sp-teams-prompts.png)
+    ![Yeoman prompts](../../../images/yeoman-sp-teams-prompts.png)
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **MyFirstTeamsTab** web part as well.
 
-6. Next, enter the following to open the web part project in Visual Studio Code:
+1. Next, enter the following to open the web part project in Visual Studio Code:
 
     ```shell
     code .
@@ -69,8 +69,8 @@ Starting with the SharePoint Framework v1.8, scaffolding will also include addit
 
 Teams folder contains the following two files:
 
-    - **[componentId]_color.png** - Default small picture for a tab
-    - **[componentId]_outline.png** - Default large picture for a tab
+  * **[componentId]_color.png** - Default small picture for a tab
+  * **[componentId]_outline.png** - Default large picture for a tab
 
 These images will be used as icons in Microsoft Teams.
 
@@ -111,7 +111,6 @@ Locate the manifest json file for the web part you want to make available to Tea
 ## Updating code to be aware of the Microsoft Teams context
 
 1. Open **src\webparts\helloWorld\HelloWorldWebPart.ts** for the needed edits on making our solution aware of the Microsoft Teams context, if it's used as a tab.
-
 1. Add the following import statement at the top of your file:
 
     ```typescript
@@ -236,10 +235,15 @@ Now the web part is deployed and is automatically available cross the SharePoint
 
 ## Making the web part available in Microsoft Teams
 
-In order to make your web part available in Microsoft Teams you will have synchronize your solution with teams. 
+In order to make your web part available in Microsoft Teams you will have synchronize your solution with teams.
 
-1. Create a Microsoft Teams app manifest file by following the instructions detailed here: [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./guidance/web-parts/creating-team-manifest-manually-for-webpart.md).
-1. Create a Microsoft Teams app package by zipping the contents of the **./teams** folder. Make sure to zip just the contents and not the folder itself. This ZIP archive should contain 3 files at the root: two images & the **manifest.json**.
+> [!NOTE]
+> In this tutorial case, we are using the automatic deployment option for the solution from the SharePoint app catalog. You can also perform these steps manually, if you want to provide alternative settings for your solutions. See more from [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](../guidance/creating-team-manifest-manually-for-webpart.md).
+
+1. Select the **teams-tab-webpart-client-side-solution** package in the SharePoint tenant app catalog and click the **Sync to Teams** button at in the ribbon at the **Files** tab.
+
+   ![Sync to Teams button in ribbon](../../../images/sp-teams-sync-to-teams-button.png)
+
 1. Move to a channel in a team. In the below picture we have activated **General** channel in **Team**
 
     ![Channel activated](../../../images/sp-teams-channel-activated.png)
@@ -261,6 +265,22 @@ Your custom tab has been added on the Microsoft Teams channel and you can see ho
 
 ![Custom tab added](../../../images/sp-teams-custom-tab-added.png)
 
+## Updating your app package
+
+When you make changes to your app and create a new package, you might encounter an error when clicking "sync to teams".
+
+A notification "Failed to sync solution to teams" might appear on the top right of your page.
+
+If this happens follow these steps to delete your app from Microsoft Teams and then try to sync it again:
+
+1. Open Microsoft Teams
+1. When viewing your team channel, click + to "Add a tab"
+1. Click the "More apps" link at the top
+1. Find your app in the list, and click on the "..." menu
+1. Click "Delete" to remove the app from Microsoft Teams
+
+You should now be able to sync your new version to Microsoft Teams.
+
 ## See also
 
-- [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)
+* [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)

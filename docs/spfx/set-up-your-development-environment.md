@@ -26,14 +26,14 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ### Install NodeJS
 
-Install [NodeJS LTS version 8](https://nodejs.org/dist/latest-v8.x/). 
+Install [NodeJS LTS version 10](https://nodejs.org). 
 
 - If you are in Windows, you can use the msi installers in this link for the easiest way to set up NodeJS.
-- If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org/dist/latest-v8.x/). 
+- If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org). 
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE]
-> NodeJS has two LTS versions - 8 and 10. The current supported LTS version of NodeJS for the SharePoint Framework is 8.x and can be downloaded from https://nodejs.org/en/download/releases/. Notice that 9.x or 10.x versions are currently not supported with SharePoint Framework development.
+> The current supported LTS version of NodeJS for the SharePoint Framework is both 8.x and 10.x. Notice that 9.x or 11.x versions are currently not supported with SharePoint Framework development.
 
 ### Install a code editor
 
@@ -44,22 +44,6 @@ You can use any code editor or IDE that supports client-side development to buil
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
 The steps and examples in this documentation use [Visual Studio Code](https://code.visualstudio.com/), but you can use any editor of your choice.
-
-### If you are using Ubuntu
-
-You need to install compiler tools by using the following command:
-
-```sh
-sudo apt-get install build-essential
-```
-
-### If you are using fedora
-
-You need to install compiler tools by using the following command:
-
-```sh
-sudo yum install make automake gcc gcc-c++ kernel-devel
-```
 
 ## Install Yeoman and gulp
 

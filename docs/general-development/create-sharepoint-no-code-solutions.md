@@ -33,7 +33,6 @@ The following articles describe how to create no-code solutions and provide link
 |**Article**|**Description**|
 |:-----|:-----|
 | [SharePoint Composites Handbook](sharepoint-composites-handbook.md) <br/> |Provides in-depth guidance to help you learn how to create a no-code solution.  <br/> |
-| [No-code solutions using SharePoint Composites](create-sharepoint-no-code-solutions) <br/> |Provides links to many practical articles, walkthroughs, demos, virtual labs, and other formats that show how to create no-code solutions.  <br/> |
 | [Save, download, and upload a SharePoint site as a template](save-download-and-upload-a-sharepoint-site-as-a-template.md) <br/> |Explains how to create site templates without using code so you can easily deploy no-code solutions.  <br/> |
    
 

@@ -17,7 +17,7 @@ Section background is a feature that applies background color to a canvas secti
 
 A variant describes different values of color generated from an existing theme. A variant will share the same set of colors as the original theme it was generated from, but will apply those colors differently. See [Office UI Fabric variant documentation](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/variants/README.md) for more detail.
 
-A Section Background allows the user to apply a variant color from the theme to a canvas section. Both concepts share "Neutral", "Soft", and "Strong" options and can be used interachangeably when describing color usage.
+A Section Background allows the user to apply a variant color from the theme to a canvas section. Both concepts share "Neutral", "Soft", and "Strong" options and can be used interchangeably when describing color usage.
 
 ## Semantic slots
 

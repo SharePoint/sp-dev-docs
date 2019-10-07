@@ -21,7 +21,7 @@ There are multiple ways to contribute to the SharePoint Developer Community (Sha
 
 ### Why would I contribute?
 
-Contributing to the official articles, samples, and open-source projects ensures that your work will get the maximum visibility through the official channels from Microsoft. We will also acknowledge your contribution in the monthly summary (see Contributors in the [March 2018](https://dev.office.com/blogs/pnp-march-2018-update) update as an example). We will also acknowledge your company if you send your company logo and permission to use it to us.
+Contributing to the official articles, samples, and open-source projects ensures that your work will get the maximum visibility through the official channels from Microsoft. We will also acknowledge your contribution in the monthly summary (see Contributors in the [April 2019](https://developer.microsoft.com/office/blogs/sharepoint-development-community-pnp-april-2019-update/) update as an example). We will also acknowledge your company if you send your company logo and permission to use it to us.
 
 ### Why won't you link samples from my repositories?
 

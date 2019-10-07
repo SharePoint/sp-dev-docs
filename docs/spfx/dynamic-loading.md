@@ -79,7 +79,7 @@ This can be achieved by changing `config/config.json` so that each web part is b
 
 ## Analyzing your bundle
 
-In order to get an overview of where to start optimize, see the article [Optimize SharePoint Framework builds for production](https://github.com/SharePoint/sp-dev-docs/blob/master/docs/spfx/toolchain/optimize-builds-for-production.md) which illustrates how you can get a visual map of which part of your code or third party library takes up space in your bundle.
+In order to get an overview of where to start optimize, see the article [Optimize SharePoint Framework builds for production](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/optimize-builds-for-production) which illustrates how you can get a visual map of which part of your code or third party library takes up space in your bundle.
 
 ## Loading third party components dynamically
 

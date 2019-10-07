@@ -35,13 +35,13 @@ The Build Definition, as its name suggests, includes all the definitions and the
 > [!NOTE] 
 > Build definitions can be described as a process template. It is a set of configured tasks that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
 
-### Installing NodeJS version 8
+### Installing NodeJS version 10
 
-Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 8, as SharePoint Framework depends on it.
-![installing node 8](../../images/azure-devops-spfx-02.png)
+Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 10, as SharePoint Framework depends on it.
+![installing node 10](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE] 
-> Make sure you specify `8.x` in the `Version Spec` field.
+> Make sure you specify `10.x` in the `Version Spec` field. If your project is based on SharePoint Framework 1.7.1 or earlier, use version 8.x.
 
 ### Restoring dependencies
 
@@ -62,6 +62,9 @@ By default SharePoint Framework projects does not include a testing Framework. W
 ```shell
 npm i chai@4.X jest jest-junit @voitanos/jest-preset-spfx-react16 -D
 ```
+
+> [!NOTE] 
+> Projects generated on SharePoint Framework 1.7.1 and earlier rely on React version 15. If you are using React 15, you need to install @voitanos/jest-preset-spfx-react15 instead. For other Frameworks (Knockout, ...) you might need to install a different preset instead. 
 
 You also need to configure Jest, to do so create a file `config/jest.config.json` and add the following content.
 
@@ -188,10 +191,10 @@ When you create your continuous deployment environment, you can give a name and 
 
 ### Installing NodeJS
 
-By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 8 or later.
-Add a `Node tool installer` task and define `8.X` in the `Version Spec` field.
+By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 10 or later.
+Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. If your project is based on SharePoint Framework version 1.7.1 or earlier, use version 8.X.
 
-![installing node 8](../../images/azure-devops-spfx-13.png)
+![installing node 10](../../images/azure-devops-spfx-13.png)
 
 ### Installing the Office 365 CLI
 
@@ -202,8 +205,8 @@ The Office 365 Common Language Interface (CLI) is an open source project built b
 > [!NOTE] 
 > Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
 
-### Connecting to the App Catalog
-Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo login https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
+### Connecting to SharePoint Online
+Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 login -t password -u $(username) -p $(password)
 `
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
@@ -217,14 +220,20 @@ Upload the solution package to your App Catalog by adding another `Command Line`
 > [!NOTE] 
 > The path of the package depends on your solution name (see your project configuration) as well as the `Source Alias` you defined earlier, make sure they match.
 
+> [!NOTE] 
+> You can upload a solution to a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope site`
+
 ![uploading the package to the catalog](../../images/azure-devops-spfx-16.png)
 
 ### Deploying the Application
 
-The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
+The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg`
 
 > [!NOTE] 
 > Make sure you update the package name.
+
+> [!NOTE] 
+> You can deploy a solution from a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope site`
 
 ![Deploying the package to the catalog](../../images/azure-devops-spfx-17.png)
 
@@ -234,10 +243,10 @@ The tasks you configured in the last step rely on Azure DevOps process variables
 Add the following variables
 | Name | Value |
 | ------ | ------ |
-| catalogsite | Server relative Path of the App Catalog Site eg `sites/appcatalog` |
+| catalogsite | Optional. Server relative Path of the App Catalog Site eg `sites/appcatalog` when uploading to a [site collection App Catalog](../../general-development/site-collection-app-catalog) |
 | password | Password of the user with administrative permissions on the tenant, do not forget to check the lockpad to mask it to other users |
 | username | Username of the user with administrative permissions on the tenant |
-| tenant | Tenant name in https://tenant.sharepoint.com eg `tenant` |
+| tenant | Optional. Tenant name in https://tenant.sharepoint.com eg `tenant` when uploading to a site collection App Catalog |
 
 ![Variables setup](../../images/azure-devops-spfx-18.png)  
 

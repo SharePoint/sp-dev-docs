@@ -83,10 +83,10 @@ When you know the kinds of SharePoint Add-in that you want to create, we provide
 |**Topic**|**Description**|
 |:-----|:-----|
 |||
-| [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) <br/> |Explains how to sign up for and use an Office 365 Developer Site for developing SharePoint Add-ins.  <br/> |
-| [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) <br/> |Explains how to set up a local, on-premises installation of SharePoint and configure it for developing SharePoint Add-ins.  <br/> |
-| [Get started creating provider-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/3038dd73-41ee-436f-8c78-ef8e6869bf7b%28Office.15%29.aspx) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted separately from a SharePoint site.  <br/> |
-| [Get started creating SharePoint-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/1b992485-6efe-4ea4-a18c-221689b0b66f%28Office.15%29.aspx) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted on a SharePoint site.  <br/> |
+| [Set up a development environment for SharePoint Add-ins on Office 365](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) <br/> |Explains how to sign up for and use an Office 365 Developer Site for developing SharePoint Add-ins.  <br/> |
+| [Set up an on-premises development environment for SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins) <br/> |Explains how to set up a local, on-premises installation of SharePoint and configure it for developing SharePoint Add-ins.  <br/> |
+| [Get started creating provider-hosted SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted separately from a SharePoint site.  <br/> |
+| [Get started creating SharePoint-hosted SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted on a SharePoint site.  <br/> |
 
 ## See also
 

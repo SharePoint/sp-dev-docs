@@ -63,7 +63,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
 - **Sporadic traffic**
     
-    Constant load or repetitive complex queries against SharePoint Online must be optimized for low impact.  Failing to follow [best practices for scanning applications](https://aka.ms/ScanGuidance) that process files in bulk will likely result in throttling.  These apps include sync engines, backup providers, search indexers, classification engines, data loss prevention tools, and any other which attempts to reason over the entirety of data and change. 
+    Constant load or repetitive complex queries against SharePoint Online must be optimized for low impact.  Failing to follow [best practices for scanning applications](https://aka.ms/ScanGuidance) that process files in bulk will likely result in throttling.  These apps include sync engines, backup providers, search indexers, classification engines, data loss prevention tools, and any other tool which attempts to reason over the entirety of data and apply changes to it. 
     
   - For example, after migrating files to SharePoint Online, you run a custom CSOM or REST script to update metadata on the files. The CSOM/REST script is updating a large number of files at a very high frequency, which triggers throttling. Similarly, an autocomplete UI widget using REST services, making too many calls to lists during each end user operation, may also cause throttling, depending on what other operations are consuming resources at the same time.
     

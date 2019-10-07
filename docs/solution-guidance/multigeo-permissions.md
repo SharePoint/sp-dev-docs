@@ -1,16 +1,13 @@
 ---
 title: Permission model in a Multi-Geo tenant
-description: The permission model in a OneDrive and SharePoint Online Multi-Geo Preview tenant is the same as that for a single geo tenant.
-ms.date: 4/27/2018
+description: The permission model in a OneDrive and SharePoint Online Multi-Geo tenant is the same as that for a single geo tenant.
+ms.date: 6/18/2019
 localization_priority: Normal
 ---
 
 # Permission model in a Multi-Geo tenant
 
-> [!IMPORTANT] 
-> OneDrive for Business Multi-Geo is available, SharePoint Online Multi-Geo is currently in preview and is subject to change.
-
-The permission model in a OneDrive and SharePoint Online Multi-Geo Preview tenant is the same as that for a single geo tenant.
+The permission model in a OneDrive and SharePoint Online Multi-Geo tenant is the same as that for a single geo tenant.
 
 A Multi-Geo tenant has a single Azure Active Directory (Azure AD) environment distributed across all geo locations. This Azure AD environment includes: 
 
@@ -33,4 +30,4 @@ To configure your applications for Multi-Geo tenants in Azure AD, see [Set up a 
 
 ## See also
 
-- [OneDrive and SharePoint Online Multi-Geo Preview](multigeo-introduction.md)
+- [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)

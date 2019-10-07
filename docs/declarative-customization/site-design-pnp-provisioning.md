@@ -170,7 +170,7 @@ Copy the following provisioning template XML to a new file and save the file as 
 1. Go to the [Azure Portal](https://portal.azure.com).
 1. Choose **+ Create a resource**.
 1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
-1. Currently Function apps a created with the V2 runtime which does not support PowerShell functions. Change the runtime of the function app to V1 by navigating selecting **Platform features**, **Function app settings** and change the Runtime version from **~2** to **~1**.
+1. Currently Function apps are created with the V2 runtime which does not support PowerShell functions. Change the runtime of the function app to V1 by navigating selecting **Platform features**, **Function app settings** and change the Runtime version from **~2** to **~1**.
 1. Create a new function: **Functions** > **New function**.
 
     ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
@@ -241,7 +241,7 @@ Next, upload the files so that your Azure Function can use the module.
     Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTemplate\FlowDemoTemplate.xml
     ```
 
-Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_AppSecret```. To set those variables, go to the main Function App page in the Azure Portal, select **Application Settings**, and add two new application settings:
+Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_AppSecret```. To set those variables, go to the main Function App page in the Azure Portal (the one with the yellow light bolt icon), select **Configuration** and add two new application settings:
 
 1. ```SPO_AppId``` - Set the value to the Client ID you copied in the first step when you created your app on your tenant.
 2. ```SPO_AppSecret``` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.

@@ -1,7 +1,7 @@
 ---
 title: OneDrive Multi-Geo 
-description: This offering allows multinational corporations that are part of the preview and have one or more geographical locations, to expand their Office 365 tenancy to satisfy data residency requirements.
-ms.date: 4/27/2018
+description: This offering allows multinational corporations which has one or more geographical locations, to expand their Office 365 tenancy to satisfy data residency requirements.
+ms.date: 6/18/2019
 localization_priority: Priority
 ---
 
@@ -15,15 +15,15 @@ In a OneDrive Multi-Geo configuration, your Office 365 tenant consists of a cent
 > [!NOTE] 
 > OneDrive Online Multi-Geo features are not designed to optimize performance. They are designed to meet data residency requirements.
 
-The following are key terms related to the OneDrive and SharePoint Online Multi-Geo Preview:
+The following are key terms related to the OneDrive and SharePoint Online Multi-Geo:
 
 - **Tenant**: An organization’s representation in Office 365, typically with one or more domains. For example, contoso.com.
 
-- **Geo location (or instance)**: A Multi-Geo tenant can have multiple geo locations (or instances) associated with it. Resources such as mailboxes or drives can be stored in these locations. For example, Contoso is a OneDrive and SharePoint Online Multi-Geo Preview tenant with three geo locations: NAM, EUR, and APC.
+- **Geo location (or instance)**: A Multi-Geo tenant can have multiple geo locations (or instances) associated with it. Resources such as mailboxes or drives can be stored in these locations. For example, Contoso is a OneDrive and SharePoint Online Multi-Geo tenant with three geo locations: NAM, EUR, and APC.
 
 - **Preferred Data Location (PDL)**: A property set by the Azure AD administrator for the user or group object that Office 365 services use to provision the corresponding data-at-rest resources (mailbox, OneDrive, groups sites, and so on).
 
-If you're developing new applications that need to work in a OneDrive and SharePoint Online Multi-Geo Preview tenant, or if you need to update your existing applications to be Multi-Geo-aware, use the content in the following table to learn more. 
+If you're developing new applications that need to work in a OneDrive and SharePoint Online Multi-Geo tenant, or if you need to update your existing applications to be Multi-Geo-aware, use the content in the following table to learn more. 
 
 <br/>
 
