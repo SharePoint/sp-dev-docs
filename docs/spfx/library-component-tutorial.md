@@ -148,6 +148,24 @@ localization_priority: Priority
  
 1. Making any changes to the library, and publishing the library to the app catalog again will automatically update the web part without the need to rebuild/republish the web part.
 
+
+## How to unlink SPFx library
+
+To unlink a SPFx library that was symlinked during development in your SPFx project, navigate to SPFx project root folder and run the command.
+```
+npm unlink corporate-library
+```
+
+To check the folder location of SPFx library.
+```
+npm ls -g 'corporate-library'
+```
+
+To remove local npm link to the library, navigate to the SPFx library root folder and run the command.
+```
+npm unlink
+```
+
 ## See also
 
 - [Using library component type in SharePoint Framework](./library-component-overview.md)
