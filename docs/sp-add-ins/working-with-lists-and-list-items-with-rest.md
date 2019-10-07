@@ -504,7 +504,14 @@ content-type: application/json;odata=nometadata
 The following example shows how to create a list item.
  
 > [!NOTE] 
-> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
+> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body. Following is a sample rest call to get the ListItemEntityTypeFullName
+> ```
+> url: http://site url/_api/web/lists/GetByTitle('Test')?$select=ListItemEntityTypeFullName,
+> method: GET
+> Headers:
+>    Authorization: "Bearer " + accessToken
+>    accept: "application/json;odata=verbose" or "application/atom+xml"
+> ```
  
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items
