@@ -12,7 +12,7 @@ SharePoint site owners have new options for applying custom styles and colors to
 These new features include:
 
 * The ability to define custom themes and make them available to site owners. Themes are defined in a [JSON schema](sharepoint-site-theming-json-schema.md) that stores color settings and related metadata for each theme.
-* An online [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) that you can use to define new custom themes.
+* An online [Theme Generator tool](https://aka.ms/themedesigner) that you can use to define new custom themes.
 * A simplified set of default themes, with six light themes and two dark themes presently available.
 * An updated color palette, with 12 light colors and 6 dark colors, as well as 16 supplementary themes.
 * Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
