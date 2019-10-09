@@ -742,7 +742,7 @@ Now that you can retrieve the information about the languages enabled on the cur
   }
   ```
 
-3. Change the **import** statement for the **@microsoft/sp-webpart-base** package to:
+3. Change the **import** statement for the **\@microsoft/sp-webpart-base** package to:
 
   ```typescript
   import {
