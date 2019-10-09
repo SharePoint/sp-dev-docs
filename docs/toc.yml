@@ -333,6 +333,8 @@
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
       - name: Make batch requests
         href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+    - name: SharePoint REST API v2
+      href: sp-add-ins/sharepoint-rest-graph.md
     - name: SharePoint Migration Guidance
       items:
       - name: Migration Guidance for ISVs
