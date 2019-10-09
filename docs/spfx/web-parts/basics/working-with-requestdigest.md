@@ -53,7 +53,7 @@ The benefit of using the DigestCache service over manually obtaining a valid req
 
 ### To use the DigestCache service in your code
 
-1. Import the **DigestCache** and **IDigestCache** types from the **@microsoft/sp-http** package:
+1. Import the **DigestCache** and **IDigestCache** types from the **\@microsoft/sp-http** package:
 
   ```typescript
   // ...
