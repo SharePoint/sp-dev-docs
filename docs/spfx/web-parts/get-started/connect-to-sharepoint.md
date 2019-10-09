@@ -265,7 +265,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
 
 ### To use the EnvironmentType module
 
-1. Import the **Environment** and the **EnvironmentType** modules from the **@microsoft/sp-core-library** bundle. Add it to the **import** section at the top as shown in the following code:
+1. Import the **Environment** and the **EnvironmentType** modules from the **\@microsoft/sp-core-library** bundle. Add it to the **import** section at the top as shown in the following code:
 
     ```typescript
     import {
