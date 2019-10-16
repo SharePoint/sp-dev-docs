@@ -1,33 +1,29 @@
 ---
 title: Publish SharePoint Add-ins
 description: Decide where to publish your SharePoint Add-ins.
-ms.date: 11/02/2017
+ms.date: 10/16/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Publish SharePoint Add-ins
 
-You've finished developing your SharePoint Add-in—the final step is to make it available to your users. You can do this by publishing the add-in to AppSource (formerly Office Store) and making it available within SharePoint.
+You've finished developing your SharePoint Add-in—the final step is to make it available to your users. You can do this by publishing the add-in to one of the following:
 
-- **AppSource** Publish your add-in to AppSource to make it publically available, so that it can be acquired by users of any SharePoint deployment.
+- **AppSource** - Publish your add-in to AppSource to make it publically available, so that it can be acquired by users of any SharePoint deployment.
 
-- **An internal organization add-in catalog** Publish your add-in to an internal organization add-in catalog, hosted on your SharePoint deployment, to make it available to users who access that SharePoint deployment.
+- **An internal organization add-in catalog** - Publish your add-in to an internal organization add-in catalog, hosted on your SharePoint deployment, to make it available to users who access that SharePoint deployment.
 
 For information about how to package your add-in for publication by using Visual Studio 2012, see [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md).
 
 ## Publishing to AppSource
 
-To publish an add-in to AppSource, you must first [register as a Microsoft developer](https://developer.microsoft.com/en-us/store/register). 
+To publish an add-in to AppSource, you must first [open a developer account](docs.microsoft.com/office/dev/store/open-a-developer-account). 
 
-When you upload an add-in to AppSource for publication, there is an approval process that Microsoft performs. For example, it checks that the add-in is free of viruses, whether the add-in manifest markup is valid and complete and verifies that any SharePoint solution packages (.wsp files) that you included in the add-in do not contain elements that aren't allowed, or SharePoint features with a scope that is broader than web. The package is also inspected for objectionable content. If the add-in package passes verification, it's wrapped into a file and signed by Microsoft.
+When you upload an add-in to AppSource for publication, Microsoft performs a validation check. For example, it checks that the add-in is free of viruses and that the add-in manifest markup is valid and complete, and verifies that any SharePoint solution packages (.wsp files) that you included in the add-in do not contain elements that aren't allowed, or SharePoint features with a scope that is broader than web. The package is also inspected for objectionable content. If the add-in package passes validation, it's wrapped into a file and signed by Microsoft.
 
-When you upload your add-in for publication on AppSource, you can choose the terms of the license you want to offer users when they download it. Use this add-in license to decide: 
-
-- Whether you are offering your add-in for free, trial, or for purchase.
-- Whether your add-in can be acquired on a per-user or site basis.
-
-SharePoint does not enforce license terms for add-in usage. Instead, it provides a licensing framework that lets you include code logic in your add-in to enforce whatever licensing restrictions you choose. For example, you can include code logic in your add-in that enables users to access certain add-in features if they have a paid license, but not if they have a trial license. For more information, see [License your Office and SharePoint Add-ins](https://docs.microsoft.com/en-us/office/dev/store/license-your-add-ins).
+> [!NOTE] 
+> Pricing model management is not supported for Office marketplace products. Existing paid products that migrated from Seller Dashboard will need to move to a SaaS model or be made free by July 2020. For details, see [Moving from paid to free add-ins](https://docs.microsoft.com/office/dev/store/moving-from-paid-to-free-addins). You can monetize your add-in through the Microsoft Commercial Marketplace; for details, see [Monetize your add-in](https://docs.microsoft.com/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). 
 
 ## Publishing to an add-in catalog
 
@@ -48,20 +44,20 @@ The following table offers a comparison of publishing to AppSource or to an add-
 |Add-in is publically available.|Add-in is available to users with access to this SharePoint deployment.|
 |Licensing framework is available.|Licensing framework is not available for use.|
 |Add-in package is verified by Microsoft for technical and content adherence to policies.|Add-in package verification is performed by SharePoint when add-in is uploaded.|
-|You must be signed up with the Microsoft Seller Dashboard to upload add-ins.|No registration with Microsoft is required.|
+|You must be signed up with Partner Center to upload add-ins.|No registration with Microsoft is required.|
 
 ## See also
 <a name="bk_addresources"> </a>
 
--  [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/en-us/office/dev/store/create-or-update-client-ids-and-secrets)
--  [Use the Seller Dashboard to submit Office and SharePoint Add-ins and Office 365 apps to the Office Store](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store)
--  [Validation policies for apps and add-ins submitted to AppSource](https://docs.microsoft.com/en-us/office/dev/store/validation-policies)
--  [Get started creating SharePoint-hosted SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins)
--  [Get started creating provider-hosted SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins)
--  [License your Office and SharePoint Add-ins](https://docs.microsoft.com/en-us/office/dev/store/license-your-add-ins)
+-  [Make your solutions available in AppSource and within Office](https://docs.microsoft.com/en-us/office/dev/store/submit-to-appsource-via-partner-center)
+-  [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/office/dev/store/create-or-update-client-ids-and-secrets)
+-  [Submit your Office solution to AppSource via Partner Center](https://docs.microsoft.com/en-us/office/dev/store/use-partner-center-to-submit-to-appsource)
+-  [Validation policies for apps and add-ins submitted to AppSource](https://docs.microsoft.com/office/dev/store/validation-policies)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins)
 -  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
 -  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md)
 -  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md)
--  [Submit your solutions to AppSource](https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store)
+
 
 
