@@ -103,14 +103,14 @@ In this section, you include markup in the add-in that deploys a button to the l
     
     ```csharp
       // Read from SharePoint 
-    string employeeName = GetLocalEmployeeName();
+      string employeeName = GetLocalEmployeeName();
     ```
 
 10. Under this line, add the call to the `AddLocalEmployeeToCorpDB` method.
     
     ```csharp
       // Write to remote database 
-    AddLocalEmployeeToCorpDB(employeeName);
+      AddLocalEmployeeToCorpDB(employeeName);
     ```
 
 11. Add a **using** statement to file for the namespace `Microsoft.SharePoint.Client`. (The Office Developer Tools for Visual Studio included the Microsoft.SharePoint.Client assembly in the **ChainStoreWeb** project when it was created.)
@@ -119,14 +119,14 @@ In this section, you include markup in the add-in that deploys a button to the l
     
     ```csharp
       private string GetLocalEmployeeName()
-    {
-        ListItem localEmployee;
+      {
+          ListItem localEmployee;
 
-        // TODO1: Initialize the localEmployee object by getting  
-        // the item from SharePoint.
+          // TODO1: Initialize the localEmployee object by getting  
+          // the item from SharePoint.
 
-        return localEmployee["Title"].ToString();
-    }
+          return localEmployee["Title"].ToString();
+      }
     ```
 
 13. Our code will need the list item's ID before it can retrieve it from SharePoint. Add the following declaration to the `EmployeeAdder` class just under the declaration for the `spContext` object.
@@ -139,11 +139,11 @@ In this section, you include markup in the add-in that deploys a button to the l
     
     ```csharp
       private int GetListItemIDFromQueryParameter()
-    {
-        int result;
-        Int32.TryParse(Request.QueryString["SPListItemId"], out result);
-        return result;
-    }
+      {
+          int result;
+          Int32.TryParse(Request.QueryString["SPListItemId"], out result);
+          return result;
+      }
     ```
 
 15. To initialize the `listItemID` variable, add the following line to the **Page_Load** method just under the line that initializes the `spContext` variable.
@@ -156,45 +156,44 @@ In this section, you include markup in the add-in that deploys a button to the l
     
     ```csharp
       using (var clientContext = spContext.CreateUserClientContextForSPHost())
-    {
-        List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
-        localEmployee = localEmployeesList.GetItemById(listItemID);
-        clientContext.Load(localEmployee);
-        clientContext.ExecuteQuery();
-    }
-
+      {
+          List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
+          localEmployee = localEmployeesList.GetItemById(listItemID);
+          clientContext.Load(localEmployee);
+          clientContext.ExecuteQuery();
+      }
     ```
-
-   The entire method should now look like the following.
+    
+    The entire method should now look like the following.
 
     ```csharp
       private string GetLocalEmployeeName()
-     {
-         ListItem localEmployee;
+      {
+          ListItem localEmployee;
 
-         using (var clientContext = spContext.CreateUserClientContextForSPHost())
-         {
-             List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
-             selectedLocalEmployee = localEmployeesList.GetItemById(listItemID);
-             clientContext.Load(selectedLocalEmployee);
-             clientContext.ExecuteQuery();
-         }
+          using (var clientContext = spContext.CreateUserClientContextForSPHost())
+          {
+              List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
+              selectedLocalEmployee = localEmployeesList.GetItemById(listItemID);
+              clientContext.Load(selectedLocalEmployee);
+              clientContext.ExecuteQuery();
+          }
          return localEmployee["Title"].ToString();
-     }
+      }
      ```
 
 17. The EmployeeAdder page should not actually render, so add the following as the last line in the **Page_Load** method. This redirects the browser back to the list view page for the **Local Employees** list.
     
     ```csharp
       // Go back to the Local Employees page
-    Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/Local%20Employees/AllItems.aspx", true);
+      Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/Local%20Employees/AllItems.aspx", true);
 
     ```
-
-   The entire **Page_Load** method should now look like the following.
+    
+    The entire **Page_Load** method should now look like the following.
 
     ```csharp
-          protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
             spContext = Session["SPContext"] as SharePointContext;
             listItemID = GetListItemIDFromQueryParameter();
