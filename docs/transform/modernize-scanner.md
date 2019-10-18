@@ -90,7 +90,7 @@ This option makes it possible to select one or more site collections by either p
 - **The fully qualified URL** of the site collection(s) that need need(s) to be scanned
 - **A wildcard URL**: by adding an URL that ends on an star you'll include all sites that match that filter. Only ending on an star is a supported wildcard
 
-If you're using URL's that do not end on sharepoint.com (so called vanity URL's) you'll also need to specify the URL of your tenant admin center site (e.g. https://admin-sharepoint.contoso.com).
+If you're using URL's that do not end on sharepoint.com (so called vanity URL's) you'll also need to specify the URL of your tenant admin center site (e.g. https://contoso-admin.contoso.com).
 
 #### Scan a list of site collections defined in a CSV file
 
