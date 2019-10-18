@@ -26,7 +26,7 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong s
 > 1. Right-click the solution node at the top of **Solution Explorer**, and then select **Set startup projects**.  
 > 2. Ensure that all three projects are set to **Start** in the **Action** column.
 
-1. In **Solution Explorer**, open the EmployeeAdder.cs file.
+1. In **Solution Explorer**, open the EmployeeAdder.aspx.cs file.
 
 2. Add the following line to the **Page_Load** method between the call of `AddLocalEmployeeToCorpDB` and the call of `Response.Redirect`. In the next step, you create the **SetLocalEmployeeSyncStatus** method.
     
