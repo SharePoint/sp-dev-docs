@@ -11,6 +11,9 @@ The PnP provisioning engine is the heart of the provisioning framework, and at i
 
 Comprised of extension methods on the SharePoint CSOM/REST object model, the Core library enables provisioning tasks such as enumerating and getting provisioning templates as well as storing and then applying templates to new and existing sites. It also allows you to automate provisioning tasks and to introduce coded logic into your provisioning routines.
 
+> [!NOTE]
+> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 > [!NOTE] 
 > To see a video walkthrough of creating, persisting, and applying a provisioning template, go to [Getting Started with PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 

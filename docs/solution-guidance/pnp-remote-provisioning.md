@@ -9,6 +9,9 @@ localization_priority: Priority
 
 Microsoft SharePoint and the new SharePoint Add-in model allow you to use remote provisioning for your Office 365, SharePoint, and SharePoint Online site collections. You can easily create a provisioning template, and then apply and reuse the template by using simple Windows PowerShell scripts or C# code.
 
+> [!NOTE]
+> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 See the following audio/video introduction to the PnP provisioning engine delivered by Paolo Pialorsi.
 
 <br/>
