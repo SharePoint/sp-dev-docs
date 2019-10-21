@@ -128,7 +128,7 @@ After executing this script, the **Apps for SharePoint** library will be still v
 
 ### Governance
 
-Currently, it's not possible to list all site collections in the tenant that have the site collection app catalog enabled.
+To list all site collections in the tenant that have the site collection app catalog enabled, use the URL `https://<tenant-app-catalog-URL>/Lists/SiteCollectionAppCatalogs/AllItems.aspx`.
 
 ### Security
 
