@@ -226,16 +226,15 @@ yo @microsoft/sharepoint
 
 When prompted, use the following values:
 
-- **contoso-api** as the solution name
-- **SharePoint Online only (latest)** as the baseline packages
-- **Use the current folder** as the location to place files
-- **Y** as the choice for enabling tenant-wide deployment
-- **WebPart** as the type of component to create
-- **Orders** as the name of the web part to create
-- **Shows recent orders** as the web part description
-- **No JavaScript framework** as the framework to use
-
-![SharePoint Framework Yeoman generator prompts in a terminal window](../images/use-aadhttpclient-enterpriseapi-yeoman.png)
+- **What is your solution name?** contoso-api
+- **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
+- **Where do you want to place the files?** Use the current folder
+- **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?** No
+- **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?** No
+- **Which type of client-side component to create?** WebPart
+- **What is your Web part name?** Orders
+- **What is your Web part description?** Show recent orders
+- **Which framework would you like to use?** No JavaScript framework
 
 After the project is created, open it in a code editor. In this tutorial, you will use Visual Studio Code:
 
