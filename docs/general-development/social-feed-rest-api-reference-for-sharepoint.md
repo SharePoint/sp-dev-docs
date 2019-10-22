@@ -315,7 +315,7 @@ The maximum number of threads, date-time range, and sort order. You can optional
   
     
     
-You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/feed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
+You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/feed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **\@v** alias to send a **:** character.
   
     
     
