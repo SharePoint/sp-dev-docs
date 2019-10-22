@@ -278,7 +278,7 @@ Requests are sent to the resource endpoint that's specified in the **url** prope
  
 `<site url>/_api/<context>/<resource>` (example, https://contoso.com/_api/web/lists)
 
-Cross-domain library requests use this format when they access data on the add-in web, which is the default context for cross-domain library requests. But to access data on the host web or on another site collection, the requests need to initialize the host web or other site collection as the context. To do this, they use the **SP.AppContextSite** endpoint in the URI, as shown in Table 1. The example URIs in Table 1 use the **@target** alias to send the target URL in the query string because the URL contains a special character (':').
+Cross-domain library requests use this format when they access data on the add-in web, which is the default context for cross-domain library requests. But to access data on the host web or on another site collection, the requests need to initialize the host web or other site collection as the context. To do this, they use the **SP.AppContextSite** endpoint in the URI, as shown in Table 1. The example URIs in Table 1 use the **\@target** alias to send the target URL in the query string because the URL contains a special character (':').
  
 > [!NOTE] 
 > An add-in web instance is required for a cloud-hosted add-in to access SharePoint data when using the cross-domain library.
