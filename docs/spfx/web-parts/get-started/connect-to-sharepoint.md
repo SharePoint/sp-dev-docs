@@ -87,7 +87,7 @@ this.context.pageContext
 
 ## Define list model
 
-You need a list model to start working with SharePoint list data. To retrieve the lists, you need two models. 
+You need a list model to start working with SharePoint list data. To retrieve the lists, you need two models.
 
 1. Switch to Visual Studio Code and go to **src\webparts\helloWorld\HelloWorldWebPart.ts**.
 1. Define the following `interface` models just above the **HelloWorldWebPart** class:
@@ -103,7 +103,7 @@ You need a list model to start working with SharePoint list data. To retrieve th
     }
     ```
 
-    The **ISPList** interface holds the SharePoint list information that we are connecting to. 
+    The **ISPList** interface holds the SharePoint list information that we are connecting to.
 
 ## Retrieve lists from mock store
 
@@ -122,7 +122,7 @@ To test in the local Workbench, you need a mock store that returns mock data.
         private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' },
                                             { Title: 'Mock List 2', Id: '2' },
                                             { Title: 'Mock List 3', Id: '3' }];
-        
+
         public static get(): Promise<ISPList[]> {
         return new Promise<ISPList[]>((resolve) => {
                 resolve(MockHttpClient._items);
@@ -134,10 +134,10 @@ To test in the local Workbench, you need a mock store that returns mock data.
     Things to note about the code:
 
     - Because there are multiple exports in **HelloWorldWebPart.ts**, the specific one to import is specified by using `{ }`. In this case, only the data model `ISPList` is required.
-    - You do not need to type the file extension when importing from the default module, which in this case is **HelloWorldWebPart**. 
+    - You do not need to type the file extension when importing from the default module, which in this case is **HelloWorldWebPart**.
     - It exports the **MockHttpClient** class as a default module so that it can be imported in other files.
     - It builds the initial `ISPList` mock array and returns.
-    
+
 1. Save the file.
 
 You can now use the **MockHttpClient** class in the **HelloWorldWebPart** class. You first need to import the **MockHttpClient** module.
@@ -150,7 +150,7 @@ You can now use the **MockHttpClient** class in the **HelloWorldWebPart** class.
     ```ts
     import MockHttpClient from './MockHttpClient';
     ```
- 
+
 1. Add the following private method that mocks the list retrieval inside the **HelloWorldWebPart** class.
 
     ```ts
@@ -173,13 +173,13 @@ SharePoint Framework includes a helper class **spHttpClient** to execute REST AP
 
 ### To use this helper class, import them from the @microsoft/sp-http module
 
-1. Scroll to the top of the **HelloWorldWebPart.ts** file. 
+1. Scroll to the top of the **HelloWorldWebPart.ts** file.
 1. Copy and paste the following code just under `import MockHttpClient from './MockHttpClient';`:
 
     ```ts
     import {
       SPHttpClient,
-      SPHttpClientResponse   
+      SPHttpClientResponse
     } from '@microsoft/sp-http';
     ```
 
@@ -196,7 +196,7 @@ SharePoint Framework includes a helper class **spHttpClient** to execute REST AP
 
     The method uses the **spHttpClient** helper class and issues a `get` request. It uses the **ISPLists** model and also applies a filter to not retrieve hidden lists.
 
-1. Save the file. 
+1. Save the file.
 1. Switch to the console window that is running `gulp serve` and check if there are any errors. If there are errors, gulp reports them in the console, and you need to fix them before proceeding.
 
 ## Add new styles
@@ -255,7 +255,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 
 Open the **HelloWorldWebPart** class.
 
-SharePoint Workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the **EnvironmentType** module. 
+SharePoint Workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the **EnvironmentType** module.
 
 ### To use the EnvironmentType module
 
@@ -300,7 +300,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
           this._renderList(response.value);
         });
       }
-      else if (Environment.type == EnvironmentType.SharePoint || 
+      else if (Environment.type == EnvironmentType.SharePoint ||
                 Environment.type == EnvironmentType.ClassicSharePoint) {
         this._getListData()
           .then((response) => {
@@ -364,7 +364,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
 
 ## Next steps
 
-Congratulations on connecting your web part to SharePoint list data! 
+Congratulations on connecting your web part to SharePoint list data!
 
 You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md). You will learn how to deploy and preview the Hello World web part in a SharePoint page.
 

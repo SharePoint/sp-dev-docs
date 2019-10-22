@@ -299,7 +299,7 @@ In the web part manifest, add web part properties so that users can configure th
 
 For users to be able to use the newly defined properties to configure the web part, the properties must be displayed in the web part property pane. 
 
-1. In the code editor, open the **./src/webparts/gallery/GalleryWebPart.ts** file. In the top section of the file, change the **@microsoft/sp-webpart-base** import statement to:
+1. In the code editor, open the **./src/webparts/gallery/GalleryWebPart.ts** file. In the top section of the file, change the **\@microsoft/sp-webpart-base** import statement to:
 
   ```typescript
   import {
