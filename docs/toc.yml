@@ -1407,6 +1407,26 @@
           href: transform/modernize-userinterface-site-pages-layout.md
     - name: The SharePoint Modernization scanner
       href: transform/modernize-scanner.md
+      items:
+      - name: Understand the created reports
+        href: transform/modernize-scanner-reports.md
+        items:
+        - name: Office 365 Group connect report
+          href: transform/modernize-scanner-reports-groupconnect.md
+        - name: Modern list and libraries report
+          href: transform/modernize-scanner-reports-lists.md
+        - name: Page modernization report
+          href: transform/modernize-scanner-reports-pages.md
+        - name: Publishing portal modernization report
+          href: transform/modernize-scanner-reports-publishingportals.md
+        - name: Workflow usage report
+          href: transform/modernize-scanner-reports-workflow.md
+        - name: InfoPath usage report
+          href: transform/modernize-scanner-reports-infopath.md
+        - name: Blog usage report
+          href: transform/modernize-scanner-reports-blogs.md
+      - name: Scanner FAQ
+        href: transform/modernize-scanner-faq.md
     - name: Modernization scripts
       href: transform/modernize-sample-scripts.md
     - name: Modernize customizations
