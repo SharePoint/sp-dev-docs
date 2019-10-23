@@ -249,7 +249,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 	  var arrived = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Arrived"]);
 	var addedToInventory = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Added_x0020_to_x0020_Inventory"]);
 
-	if (arrived &amp;&amp; !addedToInventory)
+	if (arrived && !addedToInventory)
 	{
 
 	    // TODO15: Add the item to inventory
@@ -296,7 +296,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 	    var arrived = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Arrived"]);
 	    var addedToInventory = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Added_x0020_to_x0020_Inventory"]);
 
-	    if (arrived &amp;&amp; !addedToInventory)
+	    if (arrived && !addedToInventory)
 	    {
 		using (SqlConnection conn = SQLAzureUtilities.GetActiveSqlConnection())
 		using (SqlCommand cmd = conn.CreateCommand())
@@ -356,7 +356,7 @@ The Office Developer Tools for Visual Studio includes a **Remote Event Receiver*
 		var arrived = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Arrived"]);
 		var addedToInventory = Convert.ToBoolean(properties.ItemEventProperties.AfterProperties["Added_x0020_to_x0020_Inventory"]);
 
-		if (arrived &amp;&amp; !addedToInventory)
+		if (arrived && !addedToInventory)
 		{
 		    using (SqlConnection conn = SQLAzureUtilities.GetActiveSqlConnection())
 		    using (SqlCommand cmd = conn.CreateCommand())
