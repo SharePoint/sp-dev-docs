@@ -35,6 +35,9 @@ Although this list doesn't cover every possible error you may encounter when dev
     
   
 -  [The e-mail message cannot be sent. Make sure the outgoing e-mail settings for the server are configured correctly](#bkmk_error07)
+
+
+- [The e-mail message cannot be sent. Email non-delivery reports in Exchange Online](https://docs.microsoft.com/en-us/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
     
   
 -  [The workflow could not update the item, possibly because one or more columns for the item require a different type of information](#bkmk_error08)
@@ -137,7 +140,15 @@ Review the following to ensure that you have correctly configured incoming and o
     
 
 -  [Deployment guide for Microsoft SharePoint](http://download.microsoft.com/download/1/F/6/1F6D3BE4-1174-4320-A1D1-C0E2681CCCF3/Deployment-guide-for-SharePoint-2013.pdf)
-    
+
+
+
+Errors sending e-mail can also happen because of Exchange non-delivery.  Review the following to ensure that you are not having this issue:
+
+
+
+- [Email non-delivery reports in Exchange Online](https://docs.microsoft.com/en-us/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)    
+
   
 ### The workflow could not update the item, possibly because one or more columns for the item require a different type of information
 <a name="bkmk_error08"> </a>
