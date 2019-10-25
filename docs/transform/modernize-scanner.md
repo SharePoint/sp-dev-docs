@@ -131,7 +131,7 @@ Following scan options are available:
 - **Separator**: the default separator for the generated CSV files is a comma, but you can change this to semi-colon if you would prefer that
 - **Date format**: the default date format in the generated CSV files is month/day/year. You can optionally switch this to day/month/year
 
-## Step 4: Launch a scan using command line
+## Step 3 (alternative option): Launch a scan using command line
 
 Below option is the default usage of the tool for most customers: you specify the mode, your tenant name and the created client id and secret:
 
