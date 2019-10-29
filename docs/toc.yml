@@ -56,11 +56,6 @@
         href: spfx/web-parts/single-part-app-pages.md
       - name: Supporting section backgrounds
         href: spfx/web-parts/guidance/supporting-section-backgrounds.md                
-      - name: Share data between web parts
-        href: spfx/web-parts/guidance/share-data-between-web-parts.md
-        items:
-        - name: Tutorial
-          href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
       - name: Extend property pane
         items:
         - name: Build custom controls
@@ -157,8 +152,6 @@
       href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD
       href: spfx/use-aadhttpclient.md
-    - name: Call the Microsoft Graph API using OAuth
-      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
     - name: Connect to anonymous APIs
       href: spfx/connect-to-anonymous-apis.md
     - name: Subscribe to list notifications
