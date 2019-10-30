@@ -12,10 +12,6 @@ As you learned in [PnP provisioning framework](pnp-provisioning-framework.md) an
 > [!IMPORTANT] 
 > While the provisioning schema obviously supports XML serialization of provisioning templates, it also provides the structure for serialization in JSON format. More generally, the schema provides the model for defining provisioning structures.
 
-> [!NOTE]
-> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
-
-
 ## Provisioning schema resources
 
 You can get the provisioning schema, along with its supporting files, on GitHub at [PnP-Provisioning-Schema](https://github.com/SharePoint/PnP-Provisioning-Schema).
