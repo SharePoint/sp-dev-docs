@@ -9,6 +9,9 @@ localization_priority: Priority
 
 This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library. 
 
+> [!NOTE] 
+> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 <a name="thegoal"> </a>
 
 ## The goal

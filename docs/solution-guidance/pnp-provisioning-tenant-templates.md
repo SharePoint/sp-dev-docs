@@ -9,9 +9,11 @@ localization_priority: Priority
 
 Think of Tenant Templates as an extension on top of PnP Provisioning or Site Templates. Instead of just provisioning artifacts to a site, you can now create sites, create teams, provision Azure AD entries, provision taxonomy etc.
 
+> [!NOTE]
+> PnP Provisioning Tenant Templates is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 > [!NOTE] 
 > A good resource for tenant templates is the [PnP Provisioning Templates Repository](https://github.com/sharepoint/sp-dev-provisioning-templates) which contains all the templates used in the lookbook service at https://lookbook.microsoft.com. You'll find a tenant folder, and in there several folders, each containing a template. In the subfolders you will find a source folder. In the source folder you'll find a template.xml file which is a tenant template.
-
 
 ## The Sequence
 
@@ -73,7 +75,7 @@ You can easily configure a team to be created:
 
   The above sample creates a team, adds a channel, and adds 2 tabs to the channel.
 
-  ## See also
+## See also
 
 - [SharePoint Patterns and Practices](https://github.com/SharePoint/PnP/)
 - [SharePoint Developer Group at Microsoft Tech Community](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev) 

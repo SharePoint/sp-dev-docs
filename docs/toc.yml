@@ -1752,8 +1752,12 @@
       href: solution-guidance/pnp-provisioning-framework.md
     - name: PnP provisioning engine and the Core library
       href: solution-guidance/pnp-provisioning-engine-and-the-core-library.md
+    - name: Provisioning Tenant Templates
+      href: solution-guidance/pnp-provisioning-tenant-templates.md
+    - name: PnP Open XML File format
+      href: solution-guidance/the-pnp-office-open-xml-file-format.md
     - name: PnP provisioning schema
-      href: solution-guidance/pnp-provisioning-schema.md
+      href: solution-guidance/pnp-provisioning-schema.md      
     - name: Provisioning console application sample
       href: solution-guidance/provisioning-console-application-sample.md
   - name: PnP remote timer job framework

@@ -12,12 +12,15 @@ To support the new add-in model, the Office 365 Developer Patterns and Practices
 - Persist the model as a provisioning template. 
 - Apply the custom template to new or existing site collections as needed.
 
+> [!NOTE] 
+> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 In this sample, we create a basic console application that implements classes in the provisioning PnP Core library to enable the PnP provisioning engine to complete these essential provisioning tasks: 
 
 - Design and model your site customization. This can be a new site design, or you can point to an existing site and save it as a provisioning template.
 - Save and persist the site model as a provisioning template so that you can reuse it.
 - Apply the provisioning template to a new or existing site collection.
-    
+
 > [!NOTE] 
 > This sample walkthrough is a companion to a sample currently available on GitHub at [Getting Started with the PnP provisioning engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site, [Getting Started with the PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 

@@ -9,6 +9,9 @@ localization_priority: Priority
 
 If you have a template which contains file references (through the ```<pnp:Files />``` element) you will have to distribute both the xml file _and_ the files that are referred to. While this of course works, it is very easy to miss files when copying them to another location.
 
+> [!NOTE] 
+> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 For this reason we introduced a specific Office Open XML format called a 'pnp file'. Effectively it is a zip file with a specific structure in it. If you rename the .pnp file to have a .zip extension you can simply open the file and have a look in it.
 
 ![Contents of a PnP file](./media/the-pnp-office-open-xml-file-format/figure1-contents-of-file.png)
