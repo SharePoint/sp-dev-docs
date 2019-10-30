@@ -31,7 +31,7 @@ The Machine Translation Service application processes translation requests async
 
 ```
 
-$tj = get-sptimerjob "Sharepoint Translation Services"
+$tj = get-sptimerjob "SharePoint Translation Services"
 $tj.Runnow()
 ```
 

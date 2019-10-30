@@ -108,7 +108,7 @@ The use case for this function:  The ISV can issue a default read to retrieve th
 
 This flag indicates whether to return the extended set of metadata content of object query. By default this option is off and only basic content is provided (e.g. names, URL, author, modifier, dates) . Turning  this flag on provides all the metadata content; however, it will also impact the performance as query will take longer. 
 
-Recommendation is to keep the default for file share migration, but consider setting this flag on for SharePoint on-prem or other more complex migration.
+Recommendation is to keep the default for file share migration, but consider setting this flag on for SharePoint on-premises or other more complex migration.
 
     public string StartChangeToken { get; set; }
 

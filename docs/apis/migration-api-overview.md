@@ -337,7 +337,7 @@ If the Migration API was unable to resolve a user using the login provided in th
 a)       This user will be replaced by “System Account” in the associated metadata within the package ( author, editor etc.).
 b)      A warning will be reported in the ImportLogs –  “Failed to ensure user 'user@contoso.com'”
  
-If the migration API was unable to resolve a user using the login provided in the UserGroup.xml and the System ID is provided (which is the SID for the user in the on-prem AD), then:
+If the migration API was unable to resolve a user using the login provided in the UserGroup.xml and the System ID is provided (which is the SID for the user in the on-premises AD), then:
 a)       A new deleted user with the provided login and SystemId is created and is used in the associated metadata within the package.
 b)      A warning will be reported in the ImportLogs- “Failed to retrieve user 'user@contoso.com' attributes from the SiteUsers; falling back to passed in values”
 

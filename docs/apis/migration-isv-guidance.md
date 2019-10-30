@@ -44,7 +44,7 @@ Azure Active Directory (AAD) provides two type of permission : delegated permiss
 
 - [Permissions and consent in the Azure Active Directory v1.0 endpoint](https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-permissions-and-consent). 
 
-For Sharepoint and Onedrive migration scenarios, the guidance is to follow the AAD permission specification. 
+For SharePoint and OneDrive migration scenarios, the guidance is to follow the AAD permission specification. 
 
 For migration tool that relies on end user signed in and presence, delegated permission is recommended. 
 
@@ -87,7 +87,7 @@ If a feature is not supported by the migration API, we recommend that you use th
 
 ### CSOM Guidance (fallback only)
 
-The following provides guidance on specific CSOM implementation scenarios to help improve migration performance with Sharepoint and OneDrive.
+The following provides guidance on specific CSOM implementation scenarios to help improve migration performance with SharePoint and OneDrive.
 
 #### Enumeration Query Ordering guidance 
 There are two kinds of enumeration queries, assuming the client intends to read every item with no server-side filtering.
