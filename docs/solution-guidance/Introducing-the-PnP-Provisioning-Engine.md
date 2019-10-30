@@ -162,8 +162,8 @@ By default, the site will look like the following figure, which is the default l
 You can now apply a custom site template by using a PnP PowerShell cmdlet
 
 ```PowerShell
-Connect-PnPOnline https://yourtenant.sharepoint.com/sites/targetcommunciationsite
-Apply-PnPProvisioningTemplate -Path "PnP-Provisioning-File.xml"`.
+Connect-PnPOnline -Url "https://yourtenant.sharepoint.com/sites/targetcommunicationsite"
+Apply-PnPProvisioningTemplate -Path "PnP-Provisioning-File.xml"
 ```
 
 The `–Path` argument refers to the source template file, which the cmdlet automatically applies to the currently connected site (implied by the ```Connect-PnPOnline``` cmdlet).
