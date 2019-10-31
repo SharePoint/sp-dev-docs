@@ -4,6 +4,7 @@ description: Use Visual Studio or your own custom development environment to bui
 ms.date: 08/20/2018
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 
