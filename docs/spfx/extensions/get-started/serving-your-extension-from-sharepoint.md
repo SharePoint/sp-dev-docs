@@ -4,6 +4,7 @@ description: Deploy your SharePoint Framework Application Customizer to SharePoi
 ms.date: 11/8/2018
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 # Deploy your extension to SharePoint (Hello World part 3)
