@@ -4,6 +4,7 @@ description: Build and deploy client-side web parts using the SharePoint Framewo
 ms.date: 08/20/2018
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 
