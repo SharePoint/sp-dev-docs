@@ -4,6 +4,7 @@ description: Build a simple web part that uses the DocumentCard component of Off
 ms.date: 11/08/2018
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 # Use Office UI Fabric React components in your SharePoint client-side web part
