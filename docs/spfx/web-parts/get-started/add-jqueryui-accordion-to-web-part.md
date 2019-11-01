@@ -4,6 +4,7 @@ description: Adding the jQueryUI Accordion to your web part project involves cre
 ms.date: 11/08/2018
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 

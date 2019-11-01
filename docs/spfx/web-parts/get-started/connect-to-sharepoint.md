@@ -4,6 +4,7 @@ description: Access functionality and data in SharePoint and provide a more inte
 ms.date: 10/22/2019
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 # Connect your client-side web part to SharePoint (Hello World part 2)
 

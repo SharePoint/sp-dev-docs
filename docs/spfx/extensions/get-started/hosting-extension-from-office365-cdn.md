@@ -4,6 +4,7 @@ description: Deploy your SharePoint Framework Application Customizer to be hoste
 ms.date: 08/27/2018
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 # Host extension from Office 365 CDN (Hello World part 4)
