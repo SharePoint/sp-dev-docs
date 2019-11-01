@@ -101,7 +101,7 @@ SPOCustomUI.loadCSS = function (url) {
 }
 
 SPOCustomUI.init = function (whenReadyDoFunc) {
-    // avoid executing inside iframes (used by Sharepoint for dialogs)
+    // avoid executing inside iframes (used by SharePoint for dialogs)
     if (self !== top) return;
 
     if (!window.jQuery) {
