@@ -1394,6 +1394,8 @@
           href: transform/modernize-userinterface-site-pages-model-publishing.md
         - name: Page transformation Functions and Selectors
           href: transform/modernize-userinterface-site-pages-api.md
+        - name: User mapping
+          href: transform/modernize-userinterface-site-pages-usermapping.md
         - name: URL mapping
           href: transform/modernize-userinterface-site-pages-urlmapping.md
         - name: Page layout mapping
