@@ -1,7 +1,7 @@
 ---
 title: URL mapping during cross site page transformation
 description: Explains how to the default URL mapping works when transforming pages cross site collection + also explains how to use a custom URL mapping file
-ms.date: 09/03/2019
+ms.date: 11/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -16,6 +16,7 @@ URL mapping/rewriting applies to the following locations:
 
 - All content ending up as text parts on the modern page (as of May 2019 release)
 - SummaryLinks transformation into either text content or the modern QuickLinks web part (as of May 2019 release)
+- Anchor tags of images (as of November 2019 release)
 
 ## Default URL mapping logic
 

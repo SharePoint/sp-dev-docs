@@ -1,7 +1,7 @@
 ---
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
-ms.date: 09/03/2019
+ms.date: 11/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -283,6 +283,24 @@ Name|Description
 Name|Description
 :-----|:----------
 {ServerRelativeFileName}|New target location for the asset if transferred.
+### ImageAnchorUrlRewrite
+
+**Description:** Rewrite the image anchor tag url.
+
+**Example:** `ImageAnchorUrlRewrite({Anchor},{ImageUrl},{ServerRelativeFileName})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{Anchor}|Original anchor tag fetched from the source image
+{ImageUrl}|Original image url
+{ServerRelativeFileName}|New image url
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{Anchor}|The url after url rewrite. If the anchor and original image url were the same then the anchor will be set to the new image url
 ### ExtractWebpartProperties
 
 **Description:** Extracts the client side web part properties so they can be reused.
@@ -594,7 +612,7 @@ Name|Description
 {return value}|A formatted preview image url
 ### ToAuthors
 
-**Description:** Looksup user information for passed user id
+**Description:** Looks up user information for passed user id
 
 **Example:** `ToAuthors({PublishingContact})`
 
