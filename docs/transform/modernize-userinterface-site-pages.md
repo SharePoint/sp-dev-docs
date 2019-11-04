@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages
 description: Explains how to transform classic wiki and web part pages into modern client side pages
-ms.date: 10/22/2019
+ms.date: 11/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -33,7 +33,7 @@ Page Type | SharePoint 2010 | SharePoint 2013 | SharePoint 2016 | SharePoint 201
 ----------|-----------------|-----------------|-----------------|-----------------|------------------
 Wiki page | x | x | x | x | x
 Webpart page | x | x | x | x | x
-Blog page | | x | x | x | x
+Blog page | x (as of November 2019 release) | x | x | x | x
 Publishing page | x | x | x | x | x
 
 ## See also
