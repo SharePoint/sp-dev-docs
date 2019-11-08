@@ -1,7 +1,7 @@
 ---
 title: User mapping during page transformation
 description: Explains how to the user mapping works when transforming pages
-ms.date: 11/04/2019
+ms.date: 11/08/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -30,12 +30,13 @@ sharepoint\system,admin@contoso.onmicrosoft.com
 contoso\paul,paul@contoso.onmicrosoft.com
 contoso\bert,bert@contoso.com
 s-1-5-21-3138640143-967965215-2549001177-3604,SalesGroup
+s-1-5-21-2364077317-3999105188-691961326-1128,c:0t.c|tenant|b0f984d9-e9d5-432a-bec9-896f910254ba
 ```
 
 Some things to note:
 
 - You can map the **system account** via sharepoint\system
-- Groups have to be specified via the group sid
+- Groups have to be specified via the group sid as source. Group targets can be specified by Azure AD group name but it's better to unique identify them via using the Azure AD group id like shown in c:0t.c|tenant|b0f984d9-e9d5-432a-bec9-896f910254ba
 
 Creating the mapping file is the first step, to actually use it you need to specify the file via the `UserMappingFile` parameter to the `ConvertTo-PnPClientSidePage` cmdlet if you're using PnP PowerShell. If you're using .Net then you can specify the file via the  `UserMappingFile` attribute of the .Net page transformation configuration objects (`PageTransformationInformation` and `PublishingPageTransformationInformation`).
 
