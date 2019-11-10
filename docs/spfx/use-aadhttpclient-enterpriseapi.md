@@ -24,7 +24,8 @@ In the [Azure portal](https://portal.azure.com/), create a new Function App.
 
 In the Function App, you will create a new HTTP-triggered function. In this example, you will build the function using C#, but, in general, there is no restriction on which programming language you must use.
 
-In the Function App, press the **Create new** button:
+In the Function App, press the **New Function** button:
+
 
 ![The 'Create new' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function.png)
 
