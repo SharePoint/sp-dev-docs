@@ -52,8 +52,6 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 {
     log.LogInformation("C# HTTP trigger function processed a request.");
 
-    string name = req.Query["name"];
-
     return (ActionResult)new OkObjectResult(new List<object> {
         new {
             Id = 1,
