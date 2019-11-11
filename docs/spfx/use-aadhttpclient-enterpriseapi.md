@@ -26,18 +26,13 @@ In the Function App, you will create a new HTTP-triggered function. In this exam
 
 In the Function App, press the **New Function** button:
 
-
 ![The 'Create new' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function.png)
-
-Next, click the **Custom function** link to create a custom HTTP-triggered function:
-
-![The 'Custom function' link highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-custom-function.png)
 
 From the list of templates, choose **HTTP trigger**:
 
 ![The 'HTTP trigger' function template highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-http-trigger.png)
 
-In the New Function panel, choose **C#** as the language, specify the function name, set the **Authorization level** to **Anonymous**, and click the **Create** button:
+In the New Function panel, specify the function name, set the **Authorization level** to **Anonymous**, and click the **Create** button:
 
 ![Settings for the new Azure function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
 
@@ -46,13 +41,20 @@ In the New Function panel, choose **C#** as the language, specify the function n
 Once the function is created, replace its contents with the following snippet:
 
 ```cs
+#r "Newtonsoft.Json" 
+
 using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
 
-public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 {
-    log.Info("C# HTTP trigger function processed a request.");
+    log.LogInformation("C# HTTP trigger function processed a request.");
 
-    return req.CreateResponse(HttpStatusCode.OK, new List<object> {
+    string name = req.Query["name"];
+
+    return (ActionResult)new OkObjectResult(new List<object> {
         new {
             Id = 1,
             OrderDate = new DateTime(2016, 1, 6),
@@ -105,6 +107,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         }
     });
 }
+
 ```
 
 Verify that the function is working correctly, by pressing the **Save and run** button:
@@ -230,7 +233,7 @@ When prompted, use the following values:
 - **What is your solution name?** contoso-api
 - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
 - **Where do you want to place the files?** Use the current folder
-- **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?** No
+- **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?** Yes
 - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?** No
 - **Which type of client-side component to create?** WebPart
 - **What is your Web part name?** Orders
@@ -260,9 +263,10 @@ In the **solution** property, add a new property named `webApiPermissionRequests
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
     "webApiPermissionRequests": [
       {
-        "resource": "contoso-api",
+        "resource": "contoso-api-dp20191109",
         "scope": "user_impersonation"
       }
     ]
@@ -311,7 +315,7 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
   protected onInit(): Promise<void> {
     return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
       this.context.aadHttpClientFactory
-        .getClient('594e83da-9618-438f-a40a-4a977c03bc16')
+        .getClient('6bc8bca8-5866-405d-b236-9200bdbb73c0')
         .then((client: AadHttpClient): void => {
           this.ordersClient = client;
           resolve();
@@ -334,7 +338,7 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
   protected onInit(): Promise<void> {
     return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
       this.context.aadHttpClientFactory
-        .getClient('594e83da-9618-438f-a40a-4a977c03bc16')
+        .getClient('6bc8bca8-5866-405d-b236-9200bdbb73c0')
         .then((client: AadHttpClient): void => {
           this.ordersClient = client;
           resolve();
@@ -346,7 +350,7 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'orders');
 
     this.ordersClient
-      .get('https://contoso-apis.azurewebsites.net/api/Orders', AadHttpClient.configurations.v1)
+      .get('https://contoso-api-dp20191109.azurewebsites.net/api/Orders', AadHttpClient.configurations.v1)
       .then((res: HttpClientResponse): Promise<any> => {
         return res.json();
       })
@@ -360,7 +364,7 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
                   <span class="${ styles.title}">Orders</span>
                   <p class="${ styles.description}">
                     <ul>
-                      ${orders.map(o => `<li>${o.Rep} $${o.Total}</li>`).join('')}
+                      ${orders.map(o => `<li>${o.rep} $${o.total}</li>`).join('')}
                     </ul>
                   </p>
                   <a href="https://aka.ms/spfx" class="${ styles.button}">
