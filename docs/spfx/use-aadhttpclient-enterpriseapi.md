@@ -439,6 +439,9 @@ In the side panel, grant the access to the API by pressing the **Approve** butto
 
 ![The 'Approve' button highlighted in the side panel for managing an API request in the new SharePoint admin center](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
 
+> [!NOTE]
+> It is possible to create a domain isolated web part that connects to the API secured with AAD. In this case, the CORS for the API has to be re-configured appropriately, because each instance of domain isolated web part execute in dedicated app web with unique domain.
+
 ### Add the Orders web part to the page
 
 To verify that everything is working as expected, add the previously created Orders web part to a page.
