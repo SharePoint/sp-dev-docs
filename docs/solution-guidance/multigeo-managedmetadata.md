@@ -1,7 +1,7 @@
 ---
 title: Manage metadata in a Multi-Geo tenant
 description: Managed metadata that you define for the default geo location of a Multi-Geo tenant is automatically replicated to the tenant's satellite locations, and is only available to the sites hosted in that geo location.
-ms.date: 6/18/2019
+ms.date: 11/12/2019
 localization_priority: Normal
 ---
 
