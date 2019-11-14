@@ -23,7 +23,7 @@ ALM APIs provide simple APIs to manage deployment of your SharePoint Framework s
 ALM APIs can be used to perform exactly the same operations that are available from a UI perspective. When these APIs are used, all typical actions are performed. Following are some of the characteristics of ALM APIs:
 
 - `Install` and `UnInstall` events are being fired for provider-hosted add-ins when corresponding operations occur.
-- ALM APIs support app-only-based operations.
+- ALM APIs support app-only-based operations for SharePoint Framework solutions only. 
 
 ALM APIs are natively provided by using REST APIs, but there are additional CSOM extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
 
