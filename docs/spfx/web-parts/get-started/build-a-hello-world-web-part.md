@@ -244,8 +244,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
     } from '@microsoft/sp-property-pane';
     ```
 
-1. Update the web part properties to include the new properties. This maps the fields to typed objects.
-1. Replace the **IHelloWorldWebPartProps** interface with the following code.
+1. Update the web part properties to include the new properties. This maps the fields to typed objects. Replace the **IHelloWorldWebPartProps** interface with the following code.
 
     ```typescript
     export interface IHelloWorldWebPartProps {
