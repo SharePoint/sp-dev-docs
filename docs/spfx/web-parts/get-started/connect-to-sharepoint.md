@@ -311,7 +311,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
     }
     ```
 
-    Things to note about hostType in the **_renderListAsync** method:
+    Things to note about **EnvironmentType** in the **_renderListAsync** method:
 
     - The `Environment.type` property helps you check if you are in a local or SharePoint environment.
     - The correct method is called depending on where your Workbench is hosted.
