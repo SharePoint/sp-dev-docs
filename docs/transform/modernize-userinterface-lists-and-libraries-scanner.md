@@ -28,7 +28,7 @@ Filter | Validation
 ---------|----------
 ![slicer filtering on blocked by OOB = false](media/modernize/modernuiscanner_3.png) | ![resulting graph](media/modernize/modernuiscanner_4.png)
 
-At this point you've filtered out all the lists which are **not only** blocked due to an OOB reason, meaning a list can be blocked by multiple reasons. For example a list can be blocked due to JSLink usage and due to an not supported list template.
+At this point you've filtered out all the lists which are **not only** blocked due to an OOB reason, meaning a list can be blocked by multiple reasons. For example a list can be blocked due to JSLink usage and due to a not supported list template.
 
 With this filter applied the next step is reviewing the "List page render type results":
 
