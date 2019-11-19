@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 11/12/2019
+ms.date: 11/19/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -103,7 +103,13 @@ If you're using URL's that do not end on sharepoint.com (so called vanity URL's)
 
 ![CSV file](media/modernize/scanner_p2_3_2.6.png)
 
-As a third option you can provide the scanner with a CSV file listing the site collections to scan.
+As a third option you can provide the scanner with a CSV file listing the site collections to scan. This CSV file is a simple list of site collections, the file does not have a header as shown in this sample:
+
+```Text
+https://contoso.sharepoint.com/sites/hrteam
+https://contoso.sharepoint.com/sites/funatwork
+https://contoso.sharepoint.com/sites/opensourcerocks
+```
 
 ### Page 3: Scanner mode configuration
 
