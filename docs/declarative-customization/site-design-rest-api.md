@@ -174,7 +174,7 @@ Gets the site script syntax for a specific SharePoint site.
 
 ### Examples
 
-Here's an example of retrieving a site script JSON object from the Contoso site collection.
+Here is an example of retrieving a site script JSON object from the Contoso site collection.
 
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromWeb", { 
