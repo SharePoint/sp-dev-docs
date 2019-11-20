@@ -1422,6 +1422,8 @@
           href: transform/modernize-scanner-reports-blogs.md
       - name: Scanner FAQ
         href: transform/modernize-scanner-faq.md
+    - name: Modernization partner guidance
+      href: transform/modernize-partner-guidance.md
     - name: Modernization scripts
       href: transform/modernize-sample-scripts.md
     - name: Modernize customizations
