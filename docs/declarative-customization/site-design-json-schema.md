@@ -814,7 +814,7 @@ Use the **joinHubSite** verb to join the site to a designated hub site.
 $hubSiteName = "My Hub Site"
 Get-PnPHubSite | Where-Object { $_.Title -eq $hubSiteName }
 ```
-This returns information about the current site's Hub Site. The hubSiteId is returned as the SiteId.
+This returns information about the Hub Site named $hubSiteName. The hubSiteId is returned as the SiteId.
 
 ```json
 {
