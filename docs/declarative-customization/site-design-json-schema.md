@@ -809,6 +809,13 @@ Use the **joinHubSite** verb to join the site to a designated hub site.
 
 #### Example
 
+[!NOTE] To get the hubSiteId, sign in to a site by using the Connect-PnPOnline cmdlet, and then run:
+```PowerShell
+$hubSiteName = "My Hub Site"
+Get-PnPHubSite | Where-Object { $_.Title -eq $hubSiteName }
+```
+This returns information about the current site's Hub Site. The hubSiteId is returned as the SiteId.
+
 ```json
 {
     "verb": "joinHubSite",
