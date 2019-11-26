@@ -198,22 +198,22 @@ For more information about Windows Workflow Foundation 4, see the following:
     
     
 
--  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](http://msdn.microsoft.com/en-us/library/ee342461.aspx)
+-  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](http://msdn.microsoft.com/library/ee342461.aspx)
     
   
--  [What's New in Windows Workflow Foundation](http://msdn.microsoft.com/en-us/library/dd489410%28v=vs.110%29.aspx)
+-  [What's New in Windows Workflow Foundation](http://msdn.microsoft.com/library/dd489410%28v=vs.110%29.aspx)
     
   
--  [Beginner's Guide to Windows Workflow Foundation](http://msdn.microsoft.com/en-us/netframework/first-steps-with-wf.aspx)
+-  [Beginner's Guide to Windows Workflow Foundation](http://msdn.microsoft.com/netframework/first-steps-with-wf.aspx)
     
   
--  [The Workflow Way: Understanding Windows Workflow Foundation](http://msdn.microsoft.com/en-us/library/dd851337.aspx)
+-  [The Workflow Way: Understanding Windows Workflow Foundation](http://msdn.microsoft.com/library/dd851337.aspx)
     
   
--  [Introduction to the Windows Workflow Foundation Rules Engine](http://msdn.microsoft.com/en-us/library/dd554919.aspx)
+-  [Introduction to the Windows Workflow Foundation Rules Engine](http://msdn.microsoft.com/library/dd554919.aspx)
     
   
--  [Windows Workflow Foundation integration with Windows Communication Foundation](http://msdn.microsoft.com/en-us/library/cc626077.aspx)
+-  [Windows Workflow Foundation integration with Windows Communication Foundation](http://msdn.microsoft.com/library/cc626077.aspx)
     
   
 

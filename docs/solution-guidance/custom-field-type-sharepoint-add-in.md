@@ -92,7 +92,7 @@ When you need to define a specific view for a given SharePoint field and ensure 
 The following articles demonstrate how to set the JSLink property on a SPField.
 
 - [Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 (Tobias Zimmergren)](http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013)
-- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/en-us/magazine/dn745867.aspx)
+- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/magazine/dn745867.aspx)
 
 Challenges with implementing client-side rendering with JavaScript files via the JSLink property
 ------------------------------------------------------------------------------------------------
@@ -124,9 +124,9 @@ As you develop custom client-side rendering components, keep in mind the followi
 
 Related links
 =============
-- [SPField.JSLink property (MSDN API Docs)](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfield.jslink.aspx)
+- [SPField.JSLink property (MSDN API Docs)](https://msdn.microsoft.com/library/microsoft.sharepoint.spfield.jslink.aspx)
 - [Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 (Tobias Zimmergren)](http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013)
-- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/en-us/magazine/dn745867.aspx)
+- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/magazine/dn745867.aspx)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")

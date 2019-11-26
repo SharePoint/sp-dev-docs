@@ -12,7 +12,7 @@ Provides a high-level overview of the workflow infrastructure in SharePoint, inc
 ## Overview of workflows in SharePoint
 <a name="bkm_overview"> </a>
 
-SharePoint workflows are powered by Windows Workflow Foundation 4, which was substantially redesigned from earlier versions. Windows Workflow Foundation (WF), in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/en-us/library/vstudio/ms735119%28v=vs.90%29.aspx).
+SharePoint workflows are powered by Windows Workflow Foundation 4, which was substantially redesigned from earlier versions. Windows Workflow Foundation (WF), in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/library/vstudio/ms735119%28v=vs.90%29.aspx).
   
     
     
@@ -32,7 +32,7 @@ The activities, which are implementations of activity classes, are implemented d
   
     
     
-Workflow activities are invoked using loosely coupled web services that use messaging APIs to communicate with SharePoint. These APIs are built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/en-us/library/vstudio/ms735119%28v=vs.90%29.aspx).
+Workflow activities are invoked using loosely coupled web services that use messaging APIs to communicate with SharePoint. These APIs are built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/library/vstudio/ms735119%28v=vs.90%29.aspx).
   
     
     
@@ -110,7 +110,7 @@ Before you can discuss workflow associations and subscriptions, you must look at
 This decoupling of message creation from message consumption allows for scalability and flexibility. It enables multicast messaging on the publisher side, and for promiscuous message consumption on the subscriber side.
   
 > [!NOTE]
-> The PubSub feature is a part of the Microsoft Azure Service Bus, which provides connectivity options for WCF and other service endpoints. These include REST endpoints, which can be located behind network address translation (NAT) boundaries, or bound to frequently changing, dynamically assigned IP addresses, or both. For more information about the Azure Service Bus, see  [Service Bus](http://msdn.microsoft.com/en-us/library/ee732537.aspx). 
+> The PubSub feature is a part of the Microsoft Azure Service Bus, which provides connectivity options for WCF and other service endpoints. These include REST endpoints, which can be located behind network address translation (NAT) boundaries, or bound to frequently changing, dynamically assigned IP addresses, or both. For more information about the Azure Service Bus, see  [Service Bus](http://msdn.microsoft.com/library/ee732537.aspx). 
   
     
     

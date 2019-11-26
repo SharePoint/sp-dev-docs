@@ -15,7 +15,7 @@ In Visual Studio, you navigate to Debug, start debugging and receive a message t
 
 ![](media/development-experience-tenant-apponly-permissions-in-spo-01.png)
 
-The reason why you can't click **trust it** is because Visual Studio is working against the dev site collection you've specified in your project settings whereas tenant level permissions with app-only can only be granted via [trusting it against your tenant administration site](https://msdn.microsoft.com/en-us/pnp_articles/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online).
+The reason why you can't click **trust it** is because Visual Studio is working against the dev site collection you've specified in your project settings whereas tenant level permissions with app-only can only be granted via [trusting it against your tenant administration site](https://msdn.microsoft.com/pnp_articles/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online).
 
 ## Walkthrough
 
@@ -87,6 +87,6 @@ In Visual Studio right click your web project and select **Debug** Start new ins
 ## See also
 <a name="bk_addresources"> </a>
 
-- [Add-in app only tenant administrative permissions in SharePoint Online](https://msdn.microsoft.com/en-us/pnp_articles/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online)
-- [Add-in permissions in SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/fp142383.aspx)
-- [Explore the app manifest structure and the package of a SharePoint Add-in](https://msdn.microsoft.com/en-us/library/office/fp179918.aspx)
+- [Add-in app only tenant administrative permissions in SharePoint Online](https://msdn.microsoft.com/pnp_articles/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online)
+- [Add-in permissions in SharePoint 2013](https://msdn.microsoft.com/library/office/fp142383.aspx)
+- [Explore the app manifest structure and the package of a SharePoint Add-in](https://msdn.microsoft.com/library/office/fp179918.aspx)

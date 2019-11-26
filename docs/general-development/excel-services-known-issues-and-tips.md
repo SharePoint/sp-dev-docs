@@ -143,7 +143,7 @@ string sessionId = xlservice.OpenWorkbook(targetWorkbookPath, "en-US",
                 
 ```
 
-For more information, see  [WebClientProtocol.Url Property](http://go.microsoft.com/fwlink/?LinkId=64908) (http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemWebServicesProtocolsWebClientProtocolClassUrlTopic.asp).
+For more information, see  [WebClientProtocol.Url Property](http://go.microsoft.com/fwlink/?LinkId=64908) (http://msdn.microsoft.com/library/default.asp?url=/library/cpref/html/frlrfSystemWebServicesProtocolsWebClientProtocolClassUrlTopic.asp).
   
     
     

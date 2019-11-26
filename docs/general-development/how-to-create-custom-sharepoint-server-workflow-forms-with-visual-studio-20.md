@@ -658,7 +658,7 @@ SharePoint introduced several improvements to workflows. This article detailed t
 <a name="sec7"> </a>
 
 
--  [Workflow Association and Initiation Forms (SharePoint Foundation)](http://msdn.microsoft.com/en-us/library/office/ms481192%28v=office.14%29.aspx)
+-  [Workflow Association and Initiation Forms (SharePoint Foundation)](http://msdn.microsoft.com/library/office/ms481192%28v=office.14%29.aspx)
     
   
 -  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md)

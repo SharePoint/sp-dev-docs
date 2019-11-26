@@ -42,7 +42,7 @@ The code examples in this article show how to add image, video, and document att
 - Microsoft.SharePoint.Client.UserProfilies
     
   
-To use the examples in this article, you'll need to upload an image, a video, and a document. To use the video example, the video feature must be enabled on the server and the video file must be stored in an asset library. To use the document example in an on-premises environment, Office Online must be configured in the environment. For more information, see  [Plan digital asset libraries in SharePoint](http://technet.microsoft.com/en-us/library/ee414275.aspx) and [Configure SharePoint to use Office Online](http://technet.microsoft.com/en-us/library/ff431687.aspx).
+To use the examples in this article, you'll need to upload an image, a video, and a document. To use the video example, the video feature must be enabled on the server and the video file must be stored in an asset library. To use the document example in an on-premises environment, Office Online must be configured in the environment. For more information, see  [Plan digital asset libraries in SharePoint](http://technet.microsoft.com/library/ee414275.aspx) and [Configure SharePoint to use Office Online](http://technet.microsoft.com/library/ff431687.aspx).
   
     
     
@@ -59,7 +59,7 @@ The following code example publishes a post that contains an embedded image. It 
     
     
 
-- Create a  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object that represents the image. The [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) specifies the [SocialAttachmentKind.Image](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.social.socialattachmentkind.aspx) field and the URI of the image file.
+- Create a  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object that represents the image. The [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) specifies the [SocialAttachmentKind.Image](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialattachmentkind.aspx) field and the URI of the image file.
     
   
 - Add the image object to the  [Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.

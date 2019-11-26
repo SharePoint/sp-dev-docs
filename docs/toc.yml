@@ -1778,11 +1778,11 @@
   - name: PnP Office 365 CLI
     href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
   - name: PnP PowerShell reference
-    href: https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps
+    href: https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps
   - name: PnP Sites Core API reference
-    href: https://docs.microsoft.com/en-us/dotnet/api/?term=Officedevpnp
+    href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
-    href: https://docs.microsoft.com/en-us/dotnet/api/?term=microsoft.sharepoint
+    href: https://docs.microsoft.com/dotnet/api/?term=microsoft.sharepoint
 - name: SharePoint schema reference
   href: schema/schema-reference-for-sharepoint.md
   items:

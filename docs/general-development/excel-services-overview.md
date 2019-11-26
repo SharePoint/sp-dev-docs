@@ -49,7 +49,7 @@ You can also extend Excel Calculation Services by using user-defined functions (
 By using Excel Services, you can view live, interactive workbooks by using only a browser. This means that you can save Excel workbooks and interact with them from within portal sites.You can also interact with Excel-based data by sorting, filtering, expanding, or collapsing PivotTables, and by passing in parameters; this provides the ability to perform analysis on published workbooks. You can interact with a workbook without changing the published workbook—which is valuable for report authors and report consumers.Excel Services supports workbooks that are connected to external data sources. You can embed connection strings to external data sources in the workbook or save them centrally in a data connection library file.You can also make selected cells in worksheets editable by making them named ranges (parameters). Items that you choose to make viewable, when you save to Excel Services, appear in the **Parameters** pane in Excel Web Access. You can change the values of these named ranges in the **Parameters** pane and refresh the workbook. You can also use the portal's filter web part to filter several web parts (Excel Web Access and other types of web parts) together.However, you cannot use Excel Services to create new workbooks or to edit existing workbooks. To author a workbook for use with Excel Services, you can use Microsoft Excel 2013.
 
 > [!NOTE]
-> Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser. For more information about Excel Online, see  [Get started with the new Office](http://office.microsoft.com/en-us/support/getting-started-with-office-FX102809998.aspx). 
+> Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser. For more information about Excel Online, see  [Get started with the new Office](http://office.microsoft.com/support/getting-started-with-office-FX102809998.aspx). 
   
     
     
@@ -105,7 +105,7 @@ In addition to participating in integrated dashboards, Excel Services can also b
 If you want to use certain functionalities in Excel or if you want to analyze a workbook by using all Excel functionalities, you can open a workbook in Excel by clicking **Open in Excel**. You can also open a workbook in Excel to print it and to work offline.
   
 > [!NOTE]
-> To open a workbook by using the **Open in Excel** command, you must have "open" rights. For more information, see the next section, **Managing Workbooks**, and  [User Permissions and Permission Levels](http://technet.microsoft.com/en-us/library/cc721640%28office.14%29.aspx) on [TechNet](http://technet.microsoft.com/en-us/library/cc263215%28office.14%29.aspx). Users who do not have "open" rights can still open a snapshot in Excel. 
+> To open a workbook by using the **Open in Excel** command, you must have "open" rights. For more information, see the next section, **Managing Workbooks**, and  [User Permissions and Permission Levels](http://technet.microsoft.com/library/cc721640%28office.14%29.aspx) on [TechNet](http://technet.microsoft.com/library/cc263215%28office.14%29.aspx). Users who do not have "open" rights can still open a snapshot in Excel. 
   
     
     
@@ -153,7 +153,7 @@ Excel Services is optimized for many users and many workbooks. It can also help 
   
     
     
-For more information about managing workbooks by using Excel Services, see the SharePoint Server documentation on  [TechNet](http://technet.microsoft.com/en-us/library/ee424405%28office.14%29.aspx) or SharePoint Server Help.
+For more information about managing workbooks by using Excel Services, see the SharePoint Server documentation on  [TechNet](http://technet.microsoft.com/library/ee424405%28office.14%29.aspx) or SharePoint Server Help.
   
     
     
@@ -199,7 +199,7 @@ New in Microsoft Excel Services and Microsoft SharePoint, ECMAScript (JavaScript
   
     
     
-JavaScript UDFs are similar to  [UDFs](http://msdn.microsoft.com/en-us/library/ms499792.aspx) that you can create for Microsoft Excel. The difference is that JavaScript UDFs are only used in workbooks embedded in a webpage and only exist on that webpage.
+JavaScript UDFs are similar to  [UDFs](http://msdn.microsoft.com/library/ms499792.aspx) that you can create for Microsoft Excel. The difference is that JavaScript UDFs are only used in workbooks embedded in a webpage and only exist on that webpage.
   
     
     
@@ -248,7 +248,7 @@ http://\<ServerName\>/_vti_bin/ExcelRest.aspx/Docs/Documents/SampleWorkbook.xlsx
   
     
     
- [Excel Services 2010 REST API](http://msdn.microsoft.com/en-us/library/ee556413.aspx) documentation in the SharePoint SDK documentation.
+ [Excel Services 2010 REST API](http://msdn.microsoft.com/library/ee556413.aspx) documentation in the SharePoint SDK documentation.
   
     
     

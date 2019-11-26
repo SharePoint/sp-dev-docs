@@ -22,7 +22,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_dev-ops.svg" alt="Setup dev environment" />
+                            <img src="https://docs.microsoft.com/media/common/i_dev-ops.svg" alt="Setup dev environment" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -40,7 +40,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_get-started.svg" alt="Get started" />
+                            <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="Get started" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -58,7 +58,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_benefits.svg" alt="Community" />
+                            <img src="https://docs.microsoft.com/media/common/i_benefits.svg" alt="Community" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -76,7 +76,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" alt="Blog" />
+                            <img src="https://docs.microsoft.com/media/common/i_whats-new.svg" alt="Blog" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -106,13 +106,13 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
         </a>
     </li>
     <li>
-        <a href="https://developer.microsoft.com/en-us/SharePoint/gallery/?filterBy=SharePoint,Samples">
+        <a href="https://developer.microsoft.com/SharePoint/gallery/?filterBy=SharePoint,Samples">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_investigate.svg" alt="Samples" />
+                            <img src="https://docs.microsoft.com/media/common/i_investigate.svg" alt="Samples" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -130,7 +130,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_feedback.svg" alt="Ideas" />
+                            <img src="https://docs.microsoft.com/media/common/i_feedback.svg" alt="Ideas" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -148,7 +148,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_bug.svg" alt="Ideas" />
+                            <img src="https://docs.microsoft.com/media/common/i_bug.svg" alt="Ideas" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -166,7 +166,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg" alt="Forum" />
+                            <img src="https://docs.microsoft.com/media/common/i_support.svg" alt="Forum" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -204,7 +204,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
                         <h3>SharePoint REST service</h3>
                         <p><a href="/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service">Get to know the SharePoint REST service</a></p>
                         <p><a href="/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints">Complete basic operations</a></p>
-                        <p><a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/sharepoint">SharePoint in Microsoft Graph</a></p>
+                        <p><a href="https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/sharepoint">SharePoint in Microsoft Graph</a></p>
                      </div>
                 </div>
             </div>

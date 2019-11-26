@@ -98,7 +98,7 @@ When writing code that interacts with an embedded workbook that is stored on One
     /*
     * This code uses the Microsoft Office Excel JavaScript object model to programmatically insert the
     * Excel Web App into a div with id=myExcelDiv. The full API is documented at
-    * http://msdn.microsoft.com/en-us/library/hh315812.aspx. There you can find out how to programmatically get
+    * http://msdn.microsoft.com/library/hh315812.aspx. There you can find out how to programmatically get
     * values from your Excel file and how to use the rest of the object model. 
     */
 
@@ -165,7 +165,7 @@ Writing a solution that uses the JavaScript object model is basically the same w
 <a name="SP15DevKitchenCon_AnatomyofanappSignupsheets_Additionalresources"> </a>
 
 
--  [Using the Excel Services JavaScript API to Work with Embedded Excel Workbooks](http://msdn.microsoft.com/en-us/library/hh315812.aspx)
+-  [Using the Excel Services JavaScript API to Work with Embedded Excel Workbooks](http://msdn.microsoft.com/library/hh315812.aspx)
     
   
 -  [Ewa.EwaControl.loadEwaAsync](http://msdn.microsoft.com/library/a7ee4d6d-5472-b942-c78e-b368d30bcb0e%28Office.15%29.aspx)

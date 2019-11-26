@@ -136,16 +136,16 @@ Available actions include:
 - Adding principals (users and groups) to SharePoint roles
 - Setting external sharing capability for the site
 
-For a complete list of available actions and their parameters, see the [JSON schema](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema).
+For a complete list of available actions and their parameters, see the [JSON schema](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema).
 
 > [!NOTE]
-> For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList?view=sharepoint-ps) to create the site script syntax from an existing SharePoint list. 
+> For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList?view=sharepoint-ps) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
 
 For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list. 
 
-We'd previously capped the limit of site script actions to 30. This remains the limit for scripts applied synchronously using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps)  command, but based on customer feedback and support for additional actions we have bumped this limit to 300 actions (or 100,000 characters) when the scripts are applied asynchronously (either through the UI or using the [Add-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Add-SPOSiteDesignTask?view=sharepoint-ps) command).
+We'd previously capped the limit of site script actions to 30. This remains the limit for scripts applied synchronously using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps)  command, but based on customer feedback and support for additional actions we have bumped this limit to 300 actions (or 100,000 characters) when the scripts are applied asynchronously (either through the UI or using the [Add-SPOSiteDesignTask](https://docs.microsoft.com/powershell/module/sharepoint-online/Add-SPOSiteDesignTask?view=sharepoint-ps) command).
 
 There is also a limit of 100 site scripts and 100 site designs per tenant.
 

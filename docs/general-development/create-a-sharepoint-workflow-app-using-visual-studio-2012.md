@@ -45,10 +45,10 @@ For assistance setting up and configuring your SharePoint workflow development e
 -  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md)
     
   
--  [Configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586%28v=office.15%29)
+-  [Configure workflow in SharePoint](http://technet.microsoft.com/library/jj658586%28v=office.15%29)
     
   
--  [Video series: Install and configure Workflow in SharePoint](http://technet.microsoft.com/en-us/library/dn201724%28v=office.15%29)
+-  [Video series: Install and configure Workflow in SharePoint](http://technet.microsoft.com/library/dn201724%28v=office.15%29)
     
   
 
@@ -101,7 +101,7 @@ In summary, the workflow does the following:
 
     
 > **Important:**
-> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md). Also, ensure that you have a SharePoint instance that you can develop your workflow against. For more information, see  [Install SharePoint](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
+> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md). Also, ensure that you have a SharePoint instance that you can develop your workflow against. For more information, see  [Install SharePoint](http://technet.microsoft.com/library/cc303424.aspx). 
   
     
     
@@ -257,7 +257,7 @@ Now we're ready to create the workflow itself.
   
 
   
-5. Finally, configure your SharePoint Server to manage outgoing email using the SMTP service. For instructions, see  [Configure outgoing email for a SharePoint farm](http://technet.microsoft.com/en-us/library/cc263462.aspx). This is necessary to allow the workflow to send email notifications related to workflow tasks.
+5. Finally, configure your SharePoint Server to manage outgoing email using the SMTP service. For instructions, see  [Configure outgoing email for a SharePoint farm](http://technet.microsoft.com/library/cc263462.aspx). This is necessary to allow the workflow to send email notifications related to workflow tasks.
     
   
 
@@ -272,7 +272,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 1. Open the workflow designer by double-clicking on the workflow project item in **Solution Explorer**. You will see the workflow designer surface (and the workflow toolbox); the designer is populated with an initial workflow stage named **Sequence**.
     
   
-2. Our first step is to grab the **LookupSPListItem** activity from the toolbox (see Figure 10) and drop it in the **Sequence** stage on the designer surface. We use this activity to get the status of the document at any given time, which the **LookupSPListItem** activity returns as a [DynamicValue](http://msdn.microsoft.com/en-us/library/windowsazure/microsoft.activities.dynamicvalue%28v=azure.10%29.aspx) object that contains a set of SharePoint list item properties as key-value pairs.
+2. Our first step is to grab the **LookupSPListItem** activity from the toolbox (see Figure 10) and drop it in the **Sequence** stage on the designer surface. We use this activity to get the status of the document at any given time, which the **LookupSPListItem** activity returns as a [DynamicValue](http://msdn.microsoft.com/library/windowsazure/microsoft.activities.dynamicvalue%28v=azure.10%29.aspx) object that contains a set of SharePoint list item properties as key-value pairs.
     
    **Figure 10. LookupSPListItem activity selector.**
 
@@ -510,13 +510,13 @@ Following are resources that provide guidance for packaging and deploying your w
     
     
 
--  [Deploying and installing apps for SharePoint: methods and options](http://msdn.microsoft.com/en-us/library/fp179933.aspx)
+-  [Deploying and installing apps for SharePoint: methods and options](http://msdn.microsoft.com/library/fp179933.aspx)
     
   
--  [Publish apps for SharePoint](http://msdn.microsoft.com/en-us/library/jj164070.aspx)
+-  [Publish apps for SharePoint](http://msdn.microsoft.com/library/jj164070.aspx)
     
   
--  [How to: Create and Deploy Declarative Workflows in Sandboxed Solutions](http://msdn.microsoft.com/en-us/library/gg615452%28v=office.14%29.aspx) (Using SharePoint Designer 2013)
+-  [How to: Create and Deploy Declarative Workflows in Sandboxed Solutions](http://msdn.microsoft.com/library/gg615452%28v=office.14%29.aspx) (Using SharePoint Designer 2013)
     
   
 

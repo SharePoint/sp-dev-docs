@@ -28,7 +28,7 @@ ALM APIs can be used to perform exactly the same operations that are available f
 ALM APIs are natively provided by using REST APIs, but there are additional CSOM extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
 
 > [!IMPORTANT]
-> Tenant-scoped permissions which require [tenant administrative approval](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online) are not supported with the ALM APIs.
+> Tenant-scoped permissions which require [tenant administrative approval](https://docs.microsoft.com/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online) are not supported with the ALM APIs.
 
 ## REST API
 
@@ -243,7 +243,7 @@ POST /_api/web/tenantappcatalog/SyncSolutionToTeams(id=xxxxx)
 
 ## SharePoint PnP PowerShell cmdlets 
 
-By using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), you can automate deploying, publishing, installing, upgrading, and retracting your apps. 
+By using [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), you can automate deploying, publishing, installing, upgrading, and retracting your apps. 
 
 > [!NOTE]
 > Support for scope option was released on the April 2018 release of PnP PowerShell.

@@ -62,7 +62,7 @@ Gets the zone of the alternate URL.
 public UrlZone UrlZone
 ```
 
-The UrlZone class is the client object model version of the SPUrlZone class in the server object model. For more information about it, see the  [SharePoint 2010 Software Development Kit (SDK)](http://msdn.microsoft.com/en-us/library/ee557253.aspx).
+The UrlZone class is the client object model version of the SPUrlZone class in the server object model. For more information about it, see the  [SharePoint 2010 Software Development Kit (SDK)](http://msdn.microsoft.com/library/ee557253.aspx).
   
     
     
@@ -345,7 +345,7 @@ public NetworkCredential GetCredential(Uri uri, string authType)
 -  _authType_ is the type of authentication requested.
     
   
-This method is only used for anonymous authentication. If  _authType_ is not "Basic", an empty object is returned. For more information about the **NetworkCredential** class, see [NetworkCredential Class](http://msdn.microsoft.com/en-us/library/system.net.networkcredential.aspx).
+This method is only used for anonymous authentication. If  _authType_ is not "Basic", an empty object is returned. For more information about the **NetworkCredential** class, see [NetworkCredential Class](http://msdn.microsoft.com/library/system.net.networkcredential.aspx).
   
     
     

@@ -36,7 +36,7 @@ As a rule of a thumb, we recommend the following high-level guidelines for perfo
 - Using AppOnly authentication is not supported for any User Profile service operations.
 - Execute the CSOM code with an account that has the appropriate permissions to perform UPS CRUD operations.
 - When synchronizing Active Directory to the user profile service some attributes are synchronized by default.
-	+ The [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/en-us/library/hh147510.aspx) contains a list of the attributes synchronized by default.
+	+ The [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/library/hh147510.aspx) contains a list of the attributes synchronized by default.
 	+ If you need to synchronize additional attributes you will need to create a custom tool using one of the approaches described in this article.
 
 Options to copy and synchronize UPS data
@@ -123,7 +123,7 @@ Related links
 =============
 - [User profile CSOM for reading and updates (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/User-profile-CSOM-for-reading-and-updates)
 - [Remote timer jobs (SharePoint Add-in Model Recipe)](remote-timer-jobs-sharepoint-add-in.md)
-- [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/en-us/library/hh147510.aspx)
+- [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/library/hh147510.aspx)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")

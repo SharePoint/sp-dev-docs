@@ -136,7 +136,7 @@ The following table provides some guidance for the properties your code should i
 
 The following shows the decoded **actortoken**. The small JavaScript Object Notation (JSON) header object at the top contains metadata about the token, including the type of token and the algorithm that is used to sign it. The **x5t** property of the header is a digest made from the thumbprint of the X.509 certificate that is officially the issuer of the token. To construct this value, your code does the following:
 
-1. Obtain the byte array (not string) version of the thumbprint of the certificate. This is a SHA-1 digest of the certificate. (In managed code, this can be done with the [GetCertHash()](https://msdn.microsoft.com/EN-US/library/4f9acc3f) method. You need something equivalent in the language you are using.)
+1. Obtain the byte array (not string) version of the thumbprint of the certificate. This is a SHA-1 digest of the certificate. (In managed code, this can be done with the [GetCertHash()](https://msdn.microsoft.com/library/4f9acc3f) method. You need something equivalent in the language you are using.)
 
 2. Encode the byte array with Base 64 URL encoding.
 

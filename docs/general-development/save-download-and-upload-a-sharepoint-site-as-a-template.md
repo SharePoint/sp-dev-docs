@@ -177,13 +177,13 @@ After you add a site template to the solutions gallery and the template is activ
 <a name="bkmk_additionalresources"> </a>
 
 
--  [Site Types: WebTemplates and Site Definitions](http://msdn.microsoft.com/en-us/library/ms434313.aspx)
+-  [Site Types: WebTemplates and Site Definitions](http://msdn.microsoft.com/library/ms434313.aspx)
     
   
--  [Understanding how to package and deploy workflow in SharePoint](http://msdn.microsoft.com/en-us/library/jj819316%28v=office.15%29.aspx)
+-  [Understanding how to package and deploy workflow in SharePoint](http://msdn.microsoft.com/library/jj819316%28v=office.15%29.aspx)
     
   
--  [Build farm solutions in SharePoint](http://msdn.microsoft.com/en-us/library/jj163902%28v=office.15%29.aspx)
+-  [Build farm solutions in SharePoint](http://msdn.microsoft.com/library/jj163902%28v=office.15%29.aspx)
     
   
 -  [Copy or move lists by using list templates](http://office.com/redir/HA101782479.aspx)

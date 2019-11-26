@@ -10,7 +10,7 @@ localization_priority: Priority
 
 ## How to create a 3rd party SPFx library
 
-1. Using the instructions [here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment), set up the dev environment.
+1. Using the instructions [here](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment), set up the dev environment.
 1. Create a new project directory in your favorite location
  
     ```
@@ -59,7 +59,7 @@ localization_priority: Priority
  
 1. This will create a local npm link to the library with the name which is provided in the ```package.json```.
  
-1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions from [here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part 'CorporateWebPart'
+1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions from [here](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part 'CorporateWebPart'
  
 1. From the root of the new web part folder, run the command ```npm link corporate-library```
  

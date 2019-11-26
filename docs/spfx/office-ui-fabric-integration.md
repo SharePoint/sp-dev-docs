@@ -28,9 +28,9 @@ In accordance with these goals, following are the key design principles:
 
 There are two parts of the Office UI Fabric that are available for use by developers:
 
-* [Office UI Fabric Core](https://developer.microsoft.com/en-us/fabric). A set of core styles, typography, a responsive grid, animations, icons, and other fundamental building blocks of the overall design language.
+* [Office UI Fabric Core](https://developer.microsoft.com/fabric). A set of core styles, typography, a responsive grid, animations, icons, and other fundamental building blocks of the overall design language.
 
-* [Office UI Fabric React](https://developer.microsoft.com/en-us/fabric#/components). A set of React components built on top of the Fabric design language for use in React-based projects.
+* [Office UI Fabric React](https://developer.microsoft.com/fabric#/components). A set of React components built on top of the Fabric design language for use in React-based projects.
 
 ## Office UI Fabric Core package
 
@@ -133,16 +133,16 @@ The following concepts and references provide insights on the challenge with usi
 
 How to avoid Global CSS styles at all costs is a big problem. Today, both Fabric Core and Fabric React have global styles. A lack of any native solutions from the browser to manage the style scoping makes this a very difficult problem.
   
-  - [Scope CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope) is in early stages of discussion.
+  - [Scope CSS](https://developer.mozilla.org/docs/Web/CSS/:scope) is in early stages of discussion.
   - iframes are not a good option to isolate styles.
-  - [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is another standard that talks about scoped styles but is still in the discussion stage.
+  - [Web Components](https://developer.mozilla.org/docs/Web/Web_Components) is another standard that talks about scoped styles but is still in the discussion stage.
   - [The React: CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) discussion explains the problem well. 
   
 There is plenty of other documentation on the web about the solutions to the global namespace menace.
 
 ### CSS specificity
 
-How [CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) applies to web UI. Higher specificity styles override lower specificity styles, but the key thing to understand is how the specificity rules apply. In general, the precedence order from highest to lowest is as follows:
+How [CSS specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) applies to web UI. Higher specificity styles override lower specificity styles, but the key thing to understand is how the specificity rules apply. In general, the precedence order from highest to lowest is as follows:
   - The style attribute (for example, `style="background:red;"`)
   - ID selectors (`#myDiv { }`)
   - Class selectors (`.myCssClass{}`), attribute selectors (`[type="radio"]`), and pseudo-classes (`:hover`)

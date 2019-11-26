@@ -59,7 +59,7 @@ Because all your code uses the custom *MySolution* namespace, you can avoid any 
 
 ## Namespaces and Minimal Download Strategy (MDS)
 
-With the [Minimal Download Strategy Feature](https://msdn.microsoft.com/en-us/library/office/dn456544.aspx) enabled, Global Namespaces and Variables are cleared on MDS navigation.   
+With the [Minimal Download Strategy Feature](https://msdn.microsoft.com/library/office/dn456544.aspx) enabled, Global Namespaces and Variables are cleared on MDS navigation.   
 To retain your Namespace, declare it as:
 
 ```JavaScript

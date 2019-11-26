@@ -97,7 +97,7 @@ In the extension manifest, configure the extension to have only one button. In t
 
 1. Create a new file called **ColorPickerDialog.tsx** in the **./src/extensions/dialogDemo/** folder.
 
-2. Add the following import statements at the top of the newly created file. You're creating your custom dialog box by using the [Office UI Fabric React components](https://developer.microsoft.com/en-us/fabric#/components), so the implementation is in React. 
+2. Add the following import statements at the top of the newly created file. You're creating your custom dialog box by using the [Office UI Fabric React components](https://developer.microsoft.com/fabric#/components), so the implementation is in React. 
 
   ```typescript
 import * as React from 'react';

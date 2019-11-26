@@ -130,7 +130,7 @@ A workflow can be developed in either the Text-Based Designer or the Visual Desi
 <a name="bk_addresources"> </a>
 
 
--  [Workflow in SharePoint ](http://technet.microsoft.com/en-us/sharepoint/jj556245.aspx)
+-  [Workflow in SharePoint ](http://technet.microsoft.com/sharepoint/jj556245.aspx)
     
   
 -  [What's new in workflow in SharePoint](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)

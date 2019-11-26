@@ -15,7 +15,7 @@ Get an overview of development with the authentication APIs of the SharePoint cl
 The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator** class or **ODataAuthenticator** class, which were added to the SharePointclient object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
   
 > [!NOTE]
-> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
+> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/library/ee538971.aspx). 
   
     
     
@@ -29,7 +29,7 @@ The following are the required steps to get an authenticated client context obje
     
     
 
-1. Obtain a  [ClientContext](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientcontext.aspx) object.
+1. Obtain a  [ClientContext](http://msdn.microsoft.com/library/microsoft.sharepoint.client.clientcontext.aspx) object.
     
   
 2. Construct a new **Authenticator** object and initialize its properties.
@@ -37,7 +37,7 @@ The following are the required steps to get an authenticated client context obje
     > [!NOTE]
     > One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
 
-3. The **Authenticator** class implements the [ICredentials](http://msdn.microsoft.com/en-us/library/system.net.icredentials.aspx) interface, so you assign the object to the [Credentials](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientruntimecontext.credentials.aspx) property of the **ClientContext** object.
+3. The **Authenticator** class implements the [ICredentials](http://msdn.microsoft.com/library/system.net.icredentials.aspx) interface, so you assign the object to the [Credentials](http://msdn.microsoft.com/library/microsoft.sharepoint.client.clientruntimecontext.credentials.aspx) property of the **ClientContext** object.
     
   
 You can then add the rest of your client object model code and call **ExecuteQueryAsync**.
@@ -269,7 +269,7 @@ To authenticate against a SharePoint Online URL, set the **AuthenticationMode** 
 
 #### Federation Authentication
 
- **FederationAuthURI** property is used to pass **ADFS** authentication scheme preference where, **ADFS** is configured to use multiple authentication handlers. **FederationAuthURI** specifies the type of authentication required by Authentication request when, SharePoint Online authentication is used with Federation. This parameter can override the priority established by the order in which authentication handlers are configured. To know more about Authentication handler, see [Authentication Handler Overview](http://msdn.microsoft.com/en-us/library/ee895365.aspx).
+ **FederationAuthURI** property is used to pass **ADFS** authentication scheme preference where, **ADFS** is configured to use multiple authentication handlers. **FederationAuthURI** specifies the type of authentication required by Authentication request when, SharePoint Online authentication is used with Federation. This parameter can override the priority established by the order in which authentication handlers are configured. To know more about Authentication handler, see [Authentication Handler Overview](http://msdn.microsoft.com/library/ee895365.aspx).
   
     
     

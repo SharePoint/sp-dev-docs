@@ -345,7 +345,7 @@ For cloud-hosted SharePoint applications, the components of the solution that re
 #### Creating a build for SharePoint applications
 <a name="CreateBuild"> </a>
 
-TFS provides build services that can compile solutions checked into source control and place the output in a centralized drop location for deployment to target environments in an automated manner. The primary method of configuring TFS to conduct automated builds, deployments, and testing of SharePoint applications is to create a build definition in Visual Studio. The build definition contains information about which code projects to compile, as well as any post-compilation activities such as testing and actual deployment to the target environments. For more information about the Team Foundation Build Service, see  [Set up Team Foundation Build Service](http://msdn.microsoft.com/en-us/library/vstudio/ee259687.aspx).
+TFS provides build services that can compile solutions checked into source control and place the output in a centralized drop location for deployment to target environments in an automated manner. The primary method of configuring TFS to conduct automated builds, deployments, and testing of SharePoint applications is to create a build definition in Visual Studio. The build definition contains information about which code projects to compile, as well as any post-compilation activities such as testing and actual deployment to the target environments. For more information about the Team Foundation Build Service, see  [Set up Team Foundation Build Service](http://msdn.microsoft.com/library/vstudio/ee259687.aspx).
   
     
     
@@ -376,7 +376,7 @@ Figure 9 shows a standard process for SharePoint application builds and deployme
     
     
     
-The developer checks in the SharePoint application Visual Studio 2012 solution. Depending on the desired configuration (that is, continuous integration or scheduled build), TFS build services will execute the steps defined by the SharePoint application build definition. This definition, configured by developers, contains the continuous integration build process template as well as post-build instructions to execute Windows PowerShell scripts for application deployment. Note that the SharePoint Online Management Shell extensions will be required in order to deploy the application to SharePoint Online. For more information about SharePoint Online Management Shell extensions, see  [SharePoint Online Management Shell page](http://www.microsoft.com/en-us/download/details.aspx?id=35588) on the Download Center.
+The developer checks in the SharePoint application Visual Studio 2012 solution. Depending on the desired configuration (that is, continuous integration or scheduled build), TFS build services will execute the steps defined by the SharePoint application build definition. This definition, configured by developers, contains the continuous integration build process template as well as post-build instructions to execute Windows PowerShell scripts for application deployment. Note that the SharePoint Online Management Shell extensions will be required in order to deploy the application to SharePoint Online. For more information about SharePoint Online Management Shell extensions, see  [SharePoint Online Management Shell page](http://www.microsoft.com/download/details.aspx?id=35588) on the Download Center.
   
     
     
@@ -454,7 +454,7 @@ The following sections review the considerations for coded UI tests and other te
 #### Client-side code and coded UI tests
 <a name="CodedUITests"> </a>
 
-For build verification testing (BVT) as well as complete system testing, coded UI tests are recommended. These tests rely on recorded actions to test not only the business logic and middle tier of the application, but the user experience as well. For SharePoint applications that use client-side code, much of the business logic's entry points and execution may exist in the user experience tier. For this reason, coded UI tests can not only test the user experience, but the business logic of the application as well. For more information about the coded UI test, see  [Verifying Code by Using UI Automation](http://msdn.microsoft.com/en-us/library/dd286726.aspx).
+For build verification testing (BVT) as well as complete system testing, coded UI tests are recommended. These tests rely on recorded actions to test not only the business logic and middle tier of the application, but the user experience as well. For SharePoint applications that use client-side code, much of the business logic's entry points and execution may exist in the user experience tier. For this reason, coded UI tests can not only test the user experience, but the business logic of the application as well. For more information about the coded UI test, see  [Verifying Code by Using UI Automation](http://msdn.microsoft.com/library/dd286726.aspx).
   
     
     
@@ -482,7 +482,7 @@ Note that the testing of the infrastructure is not a primary goal of these tests
   
     
     
-For more information about web performance and load tests, see  [Run performance tests on an application before a release](http://msdn.microsoft.com/en-us/library/vstudio/dn250793.aspx).
+For more information about web performance and load tests, see  [Run performance tests on an application before a release](http://msdn.microsoft.com/library/vstudio/dn250793.aspx).
   
     
     
@@ -640,7 +640,7 @@ The information in  [SharePoint Add-ins update process](http://msdn.microsoft.co
 -  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
     
   
--  [Set up Team Foundation Build Service](http://msdn.microsoft.com/en-us/library/vstudio/ee259687.aspx)
+-  [Set up Team Foundation Build Service](http://msdn.microsoft.com/library/vstudio/ee259687.aspx)
     
   
 -  [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](http://msdn.microsoft.com/library/2f65ba3f-b246-4064-b4fb-ad18399d387a%28Office.15%29.aspx)

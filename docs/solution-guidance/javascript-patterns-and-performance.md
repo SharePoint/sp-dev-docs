@@ -19,7 +19,7 @@ There are several options:
 
 |Option|Description|
 |:---|:---|
-|JavaScript Embedding | [Site.UserCustomActions](https://msdn.microsoft.com/EN-US/library/office/microsoft.sharepoint.client.site.usercustomactions.aspx) or [Web.UserCustomActions](https://msdn.microsoft.com/EN-US/library/office/microsoft.sharepoint.client.web.usercustomactions.aspx) allow for the inclusion of script directly into the page markup. This is used in the [Loader Pattern](#LoaderPattern) discussed below|
+|JavaScript Embedding | [Site.UserCustomActions](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.site.usercustomactions.aspx) or [Web.UserCustomActions](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.web.usercustomactions.aspx) allow for the inclusion of script directly into the page markup. This is used in the [Loader Pattern](#LoaderPattern) discussed below|
 |Display Templates | Applies to Views and Search. You don't have to deploy any kind of an app or provider hosted code. It's simply a JavaScript file that can be uploaded to (for example) the style library to customize views. You can create any view required by using JavaScript|
 |SharePoint Hosted Add-Ins | Uses JSOM to communicate back to the host web or the add-in web. It gives access to the Web Proxy for cross domain calls|
 |Provider Hosted Add-Ins | Enables the creation of complex applications across a variety of technology stacks - while maintaining secure integration with SharePoint|
@@ -438,10 +438,10 @@ For a more complex usage of asynchronous and Deferred, you can refer to the deve
 ### See Also
 - [JavaScript – Patterns and Usage](http://dev.office.com/blogs/javascript-development-patterns-with-sharepoint)
 - [JavaScript – Performance Considerations](http://dev.office.com/blogs/javascript-performance-considerations-with-sharepoint)
-- [Complete basic operations using JavaScript library code in SharePoint 2013](https://msdn.microsoft.com/EN-US/library/office/jj163201.aspx)
+- [Complete basic operations using JavaScript library code in SharePoint 2013](https://msdn.microsoft.com/library/office/jj163201.aspx)
 - [Client-side rendering (JS Link) code samples](https://code.msdn.microsoft.com/office/Client-side-rendering-JS-2ed3538a)
-- [JavaScript Embedding (Customize your SharePoint site UI by using JavaScript)](https://msdn.microsoft.com/EN-US/library/dn913116.aspx)
-- [Search customizations for SharePoint](https://msdn.microsoft.com/EN-US/library/mt210901.aspx)
+- [JavaScript Embedding (Customize your SharePoint site UI by using JavaScript)](https://msdn.microsoft.com/library/dn913116.aspx)
+- [Search customizations for SharePoint](https://msdn.microsoft.com/library/mt210901.aspx)
 - [SharePoint Add-in Recipe – Custom field type (by using Client Side Rendering)](custom-field-type-sharepoint-add-in.md)
 
 ### Samples

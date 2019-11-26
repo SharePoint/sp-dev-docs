@@ -80,7 +80,7 @@ A color palette is the combination of colors that are used in a SharePoint site.
   
 
 > **Tip:**
-> You can use the SharePoint color palette tool to help you create SharePoint designs. You can  [download the SharePoint color palette tool](http://www.microsoft.com/en-us/download/details.aspx?id=38182) from the Microsoft Download Center.
+> You can use the SharePoint color palette tool to help you create SharePoint designs. You can  [download the SharePoint color palette tool](http://www.microsoft.com/download/details.aspx?id=38182) from the Microsoft Download Center.
   
     
     

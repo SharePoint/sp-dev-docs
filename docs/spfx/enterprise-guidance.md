@@ -24,7 +24,7 @@ This new model is built from the ground-up by using a modern web stack that uses
 ## Current status of SharePoint Framework
 
 The SharePoint Framework reached the [General Available (GA) milestone](
-https://www.microsoft.com/en-us/microsoft-365/blog/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/), with version 1.0.0, in February 2017.
+https://www.microsoft.com/microsoft-365/blog/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/), with version 1.0.0, in February 2017.
 
 Latest release news about the SharePoint Framework: https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9.1-release-notes with version 1.9.1
 
@@ -143,7 +143,7 @@ Given that the above mentioned *Custom Script* control methods are in place, the
 
 For web developers or user experience/interface designers, the SharePoint Framework will be very valuable. The Workbench allows front-end developers to work with a SharePoint Framework solution on any operating system and by using their preferred editing tools without SharePoint, given that they use mock data, and focus on the user experience. 
 
-The SharePoint Framework is released in parallel with [Office UI Fabric](https://developer.microsoft.com/en-us/fabric), which is the official front-end development framework for Office and Office 365, and allows the user experience designers to create a seamless experience across Office, Office 365, and the custom-built solutions.
+The SharePoint Framework is released in parallel with [Office UI Fabric](https://developer.microsoft.com/fabric), which is the official front-end development framework for Office and Office 365, and allows the user experience designers to create a seamless experience across Office, Office 365, and the custom-built solutions.
 
 ### System Integrators (SI)
 

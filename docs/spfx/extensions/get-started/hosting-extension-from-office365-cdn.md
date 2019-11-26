@@ -29,7 +29,7 @@ You can also follow these steps by watching the video on the SharePoint PnP YouT
 
 Office 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
 
-1. Download the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) to ensure that you have the latest version.
+1. Download the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) to ensure that you have the latest version.
 
 2. Connect to your SharePoint Online tenant by using PowerShell:
     

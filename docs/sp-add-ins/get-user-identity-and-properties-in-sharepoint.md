@@ -17,7 +17,7 @@ There are different ways to retrieve user identity and information, depending on
 
 - Prepare your add-in development environment as described in [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md).
     
-- If you don't already have **Visual Studio** 2013 or later installed, install it with the instructions at [Install Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+- If you don't already have **Visual Studio** 2013 or later installed, install it with the instructions at [Install Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
 
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**, but sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013) or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
@@ -70,7 +70,7 @@ If you are using SharePoint on-premises, and the user is signed in by using a fa
 The following is another way to retrieve a user's sign-in name. If you have the user's email address or display name, you can use the **ResolvePrincipal** method to get the user's sign-in name.
  
 > [!NOTE] 
-> The APIs are in the Microsoft.SharePoint.Client.Utilities namespace in the [Microsoft.SharePoint.Client.dll](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.utilities.utility.resolveprincipal.aspx) assembly.
+> The APIs are in the Microsoft.SharePoint.Client.Utilities namespace in the [Microsoft.SharePoint.Client.dll](https://msdn.microsoft.com/library/microsoft.sharepoint.client.utilities.utility.resolveprincipal.aspx) assembly.
 
 The following is sample code to show how to get the user sign-in information.
 

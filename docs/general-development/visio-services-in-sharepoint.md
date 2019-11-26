@@ -78,7 +78,7 @@ Visio Services in Microsoft SharePoint and in Microsoft SharePoint Online includ
 
 |||
 |:-----|:-----|
-|![In the cloud behavior note](../images/mod_icon_incloud.gif)           <br/> ![On-premises behavior note](../images/mod_icon_onpremises.gif)|The  [Vwa namespace](http://msdn.microsoft.com/library/b67939fa-d3db-41ff-8864-eabd318ba7c4%28Office.15%29.aspx) in the JavaScript object model in Visio Services gives you programmatic access to Visio drawings displayed in the Visio Web Access web part. Using the JavaScript object model, you can access data about diagrams, pages, and shapes; shape hyperlinks; and shape bounding box properties. With this access, you can create mashups that highlight shapes, place overlays on the diagram, respond to diagram and mouse events, and change the panning and zooming properties of the viewport. <br/> For information about adding a Visio Web Access web part to a SharePoint page and programming that page by using the JavaScript APIs in Visio 2013, see  [Customizing Visio Web Drawings in the Visio Web Access web part](http://msdn.microsoft.com/en-us/library/ff394649.aspx).  <br/> |
+|![In the cloud behavior note](../images/mod_icon_incloud.gif)           <br/> ![On-premises behavior note](../images/mod_icon_onpremises.gif)|The  [Vwa namespace](http://msdn.microsoft.com/library/b67939fa-d3db-41ff-8864-eabd318ba7c4%28Office.15%29.aspx) in the JavaScript object model in Visio Services gives you programmatic access to Visio drawings displayed in the Visio Web Access web part. Using the JavaScript object model, you can access data about diagrams, pages, and shapes; shape hyperlinks; and shape bounding box properties. With this access, you can create mashups that highlight shapes, place overlays on the diagram, respond to diagram and mouse events, and change the panning and zooming properties of the viewport. <br/> For information about adding a Visio Web Access web part to a SharePoint page and programming that page by using the JavaScript APIs in Visio 2013, see  [Customizing Visio Web Drawings in the Visio Web Access web part](http://msdn.microsoft.com/library/ff394649.aspx).  <br/> |
    
 
 ## Visio Services Class Library
@@ -87,7 +87,7 @@ Visio Services in Microsoft SharePoint and in Microsoft SharePoint Online includ
 
 |||
 |:-----|:-----|
-|![On-premises behavior note](../images/mod_icon_onpremises.gif)|You can use the Visio Services class library, in the  [Microsoft.Office.Visio.Server](https://msdn.microsoft.com/library/Microsoft.Office.Visio.Server.aspx) namespace, to build custom Visio Services data providers. These data providers permit you to programmatically refresh data derived from custom data sources in Visio 2013 diagrams hosted on a SharePoint site. <br/> For more information about creating a custom data provider and to work through a complete end-to-end solution, see  [Creating a Custom Data Provider with Visio Services](http://msdn.microsoft.com/en-us/library/ff394595.aspx).  <br/> |
+|![On-premises behavior note](../images/mod_icon_onpremises.gif)|You can use the Visio Services class library, in the  [Microsoft.Office.Visio.Server](https://msdn.microsoft.com/library/Microsoft.Office.Visio.Server.aspx) namespace, to build custom Visio Services data providers. These data providers permit you to programmatically refresh data derived from custom data sources in Visio 2013 diagrams hosted on a SharePoint site. <br/> For more information about creating a custom data provider and to work through a complete end-to-end solution, see  [Creating a Custom Data Provider with Visio Services](http://msdn.microsoft.com/library/ff394595.aspx).  <br/> |
    
 
 ## See also
@@ -100,10 +100,10 @@ Visio Services in Microsoft SharePoint and in Microsoft SharePoint Online includ
 -  [Vwa namespace](http://msdn.microsoft.com/library/b67939fa-d3db-41ff-8864-eabd318ba7c4%28Office.15%29.aspx)
     
   
--  [Creating a Custom Data Provider with Visio Services](http://msdn.microsoft.com/en-us/library/ff394595.aspx)
+-  [Creating a Custom Data Provider with Visio Services](http://msdn.microsoft.com/library/ff394595.aspx)
     
   
--  [Customizing Visio Web Drawings in the Visio Web Access web part](http://msdn.microsoft.com/en-us/library/ff394649.aspx)
+-  [Customizing Visio Web Drawings in the Visio Web Access web part](http://msdn.microsoft.com/library/ff394649.aspx)
     
   
 -  [New in Visio for developers](http://msdn.microsoft.com/library/7e3fb858-0ab8-bd2e-217c-c85b10d79785%28Office.15%29.aspx)

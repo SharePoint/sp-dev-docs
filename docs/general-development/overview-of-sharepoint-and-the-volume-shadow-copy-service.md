@@ -111,10 +111,10 @@ The following is the high-level sequence of events during backup or restore oper
 -  [Starting and Configuring the WSS Writer Service](http://msdn.microsoft.com/library/c9243dd6-e61e-4783-9fef-48d0122f1c09.aspx)
     
   
--  [Volume Shadow Copy Service](http://msdn.microsoft.com/en-us/library/windows/desktop/bb968832%28v=vs.85%29.aspx)
+-  [Volume Shadow Copy Service](http://msdn.microsoft.com/library/windows/desktop/bb968832%28v=vs.85%29.aspx)
     
   
--  [Volume Shadow Copy Service Technical Reference](http://msdn.microsoft.com/en-us/library/windows/desktop/aa384648%28v=vs.85%29.aspx)
+-  [Volume Shadow Copy Service Technical Reference](http://msdn.microsoft.com/library/windows/desktop/aa384648%28v=vs.85%29.aspx)
     
   
 

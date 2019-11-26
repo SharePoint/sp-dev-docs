@@ -35,7 +35,7 @@ Create custom workflows
 In this option custom workflows are created, deployed, and associated with the Host-web in SharePoint.
 
 - Custom workflows may be created with Visual Studio or SharePoint Designer.
-	+ See the [Develop SharePoint 2013 workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/jj163199.aspx) that summarizes both options and discusses the advantages and disadvantages of each.
+	+ See the [Develop SharePoint 2013 workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/library/office/jj163199.aspx) that summarizes both options and discusses the advantages and disadvantages of each.
 - Custom workflows may be deployed and associated with the Host-web in SharePoint in several ways.
 	- Workflows created in Visual Studio are automatically packaged inside features for deployment.
 	- Workflows created in SharePoint designer must be exported and imported to deploy them from a development server to a production server.
@@ -131,8 +131,8 @@ When you need to create custom workflows with code behind them this option is a 
 
 The following articles demonstrate how to create custom workflows.
 
-- [Create a SharePoint workflow app using Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn456545.aspx)
-- [How to: Create SharePoint 2013 Workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn584771.aspx)
+- [Create a SharePoint workflow app using Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/library/office/dn456545.aspx)
+- [How to: Create SharePoint 2013 Workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/library/office/dn584771.aspx)
 
 Create custom workflow activities
 ---------------------------------
@@ -150,7 +150,7 @@ When you need to implement workflows in business processes whose requirements ar
 
 The following article demonstrates how to create a custom workflow activity with Visual Studio.
 
-- [How to: Build and deploy workflow custom actions (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/jj163911.aspx)
+- [How to: Build and deploy workflow custom actions (MSDN Article)](https://msdn.microsoft.com/library/office/jj163911.aspx)
 
 The [Workflow.Activities (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) includes several custom workflow activities created with Visual Studio.  It also demonstrates how to use the custom workflow activities in a workflow.
 
@@ -186,7 +186,7 @@ When you need to implement workflows in business processes whose requirements re
 
 The following article demonstrates how to create custom workflow association and initiation forms and use them in a workflow.
 
-- [How to: Create Custom SharePoint Server 2013 Workflow Forms with Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn518136.aspx)
+- [How to: Create Custom SharePoint Server 2013 Workflow Forms with Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/library/office/dn518136.aspx)
 
 The [Workflow.CustomTasks (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CustomTasks) demonstrates how to create custom task and initiation forms and use them in a workflow.
 
@@ -239,20 +239,20 @@ See the [Call Web Api service via web proxy](https://github.com/SharePoint/PnP/t
 
 The other sections in the [Workflow.CallServiceUpdateSPViaProxy (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallServiceUpdateSPViaProxy) README provide detailed information about the entire workflow and remote service and also walk you through setting up all of the components in Microsoft Azure.
 
-See the [Query a remote service using the web proxy in SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/fp179895.aspx) for more information about the SharePoint Web Proxy.
+See the [Query a remote service using the web proxy in SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/library/office/fp179895.aspx) for more information about the SharePoint Web Proxy.
 
 Related links
 =============
-- [SharePoint 2013 workflow object model (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/jj163969.aspx)
-- [Common error messages in SharePoint workflow development (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn449112.aspx)
-- [Use workflow interop for SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/jj670125.aspx)
-- [Develop SharePoint 2013 workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/jj163199.aspx)
+- [SharePoint 2013 workflow object model (MSDN Article)](https://msdn.microsoft.com/library/office/jj163969.aspx)
+- [Common error messages in SharePoint workflow development (MSDN Article)](https://msdn.microsoft.com/library/office/dn449112.aspx)
+- [Use workflow interop for SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/library/office/jj670125.aspx)
+- [Develop SharePoint 2013 workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/library/office/jj163199.aspx)
 - [Site provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)
-- [Create a SharePoint workflow app using Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn456545.aspx)
-- [How to: Create SharePoint 2013 Workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn584771.aspx)
-- [How to: Build and deploy workflow custom actions (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/jj163911.aspx)
-- [How to: Create Custom SharePoint Server 2013 Workflow Forms with Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn518136.aspx)
-- [Query a remote service using the web proxy in SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/fp179895.aspx)
+- [Create a SharePoint workflow app using Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/library/office/dn456545.aspx)
+- [How to: Create SharePoint 2013 Workflows using Visual Studio (MSDN Article)](https://msdn.microsoft.com/library/office/dn584771.aspx)
+- [How to: Build and deploy workflow custom actions (MSDN Article)](https://msdn.microsoft.com/library/office/jj163911.aspx)
+- [How to: Create Custom SharePoint Server 2013 Workflow Forms with Visual Studio 2012 (MSDN Article)](https://msdn.microsoft.com/library/office/dn518136.aspx)
+- [Query a remote service using the web proxy in SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/library/office/fp179895.aspx)
 - [Modules (SharePoint Add-in Recipe)](modules-sharepoint-add-in.md)
 - [Site provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")

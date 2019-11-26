@@ -59,10 +59,10 @@ Have a solid design for your add-in? Get ready to build your add-in and publish 
 <a name="SP15Design_AddRes"> </a>
 
 -  [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
--  [Reimagine SharePoint development](http://msdn.microsoft.com/en-US/office/apps/dn133840)
+-  [Reimagine SharePoint development](http://msdn.microsoft.com/office/apps/dn133840)
 -  [SharePoint Add-ins](sharepoint-add-ins.md)
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
--  [Blog for add-ins](https://developer.microsoft.com/en-us/office/blogs/technology/add-ins/)
+-  [Blog for add-ins](https://developer.microsoft.com/office/blogs/technology/add-ins/)
     
  
 

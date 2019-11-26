@@ -553,7 +553,7 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 -  [How to: Create a Custom Field Type](http://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f%28Office.15%29.aspx)
     
   
--  [Add and Remove Mapped Folders](https://docs.microsoft.com/en-us/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders?view=vs-2017)
+-  [Add and Remove Mapped Folders](https://docs.microsoft.com/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders?view=vs-2017)
     
   
 

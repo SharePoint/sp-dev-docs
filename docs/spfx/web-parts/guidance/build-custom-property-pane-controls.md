@@ -349,8 +349,8 @@ When creating a custom property pane control that uses React in the SharePoint F
 
     - When the component first loads, the **componentDidMount** method, or its **disabled** or **stateKey** properties, change, and it loads the available options by calling the **loadOptions** method passed through the properties.
     - After the options are loaded, the component updates its state showing the available options.
-    - The dropdown itself is rendered by using the [Office UI Fabric React dropdown component](https://developer.microsoft.com/en-us/fabric#/components/dropdown).
-    - When the component is loading the available options, it displays a spinner by using the [Office UI Fabric React spinner component](https://developer.microsoft.com/en-us/fabric#/components/spinner).
+    - The dropdown itself is rendered by using the [Office UI Fabric React dropdown component](https://developer.microsoft.com/fabric#/components/dropdown).
+    - When the component is loading the available options, it displays a spinner by using the [Office UI Fabric React spinner component](https://developer.microsoft.com/fabric#/components/spinner).
 
 The next step is to define the custom property pane control. This control is used inside the web part when defining properties in the property pane, and renders using the previously defined React component.
 

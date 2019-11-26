@@ -23,7 +23,7 @@ Contains an access control entry (ACE) that specifies access rights for the pare
   
     
     
-See  [Business Connectivity Services security overview](http://technet.microsoft.com/en-us/library/ee661734%28office.14%29.aspx) to learn more about the Business Connectivity Services and security.
+See  [Business Connectivity Services security overview](http://technet.microsoft.com/library/ee661734%28office.14%29.aspx) to learn more about the Business Connectivity Services and security.
   
     
     

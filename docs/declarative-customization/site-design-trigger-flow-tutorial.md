@@ -106,7 +106,7 @@ In order to capture the site creation event and create the corresponding list it
 
 ## Create the site design
 
-1. Open PowerShell and make sure that you have the latest [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) installed.
+1. Open PowerShell and make sure that you have the latest [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) installed.
 
 2. Connect to your tenant using **Connect-SPOService**.
 

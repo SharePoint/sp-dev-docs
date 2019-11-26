@@ -31,7 +31,7 @@ Widgets must:
 
 ![Office Web Widgets - Experimental demo](../images/OfficeWebWidgetsOverview_demo.png)
  
-You can use the widgets by installing the **Office Web Widgets - Experimental** NuGet package from Visual Studio. For more information, see [NuGet Package Manager UI](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui). You can also browse the [NuGet gallery page](https://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).
+You can use the widgets by installing the **Office Web Widgets - Experimental** NuGet package from Visual Studio. For more information, see [NuGet Package Manager UI](https://docs.microsoft.com/nuget/tools/package-manager-ui). You can also browse the [NuGet gallery page](https://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).
  
 Your feedback and comments helped us decide which widgets to provide. As you can see in the previous figure, the (1) People Picker and (2) Desktop List View widgets are ready for you to try. Please keep the feedback coming at the [Office Developer Platform UserVoice site](http://officespdev.uservoice.com/)
  

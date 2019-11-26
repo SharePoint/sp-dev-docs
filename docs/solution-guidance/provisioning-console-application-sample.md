@@ -49,7 +49,7 @@ To begin, create a Visual Studio project. In this sample, for simplicity, we cre
 
 8. Follow directions to download and install the **SharePointPnPCoreOnline** library, following the given directions.
 
-   After the PnP Core library is referenced in your Visual Studio project, all library members are available to you as [extension methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) on existing object instances, for example, **web** and **list** instances.
+   After the PnP Core library is referenced in your Visual Studio project, all library members are available to you as [extension methods](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) on existing object instances, for example, **web** and **list** instances.
 
 9. Ensure that your Program.cs file contains all of the following `using` statements.
 

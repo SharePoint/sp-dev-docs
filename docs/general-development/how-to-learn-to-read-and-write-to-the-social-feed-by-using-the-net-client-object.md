@@ -32,7 +32,7 @@ To create the console application, you'll need the following:
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
 > [!NOTE]
-> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
+> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
     
@@ -86,7 +86,7 @@ Table 1 contains links to articles that describe core concepts you should know b
     
      - **Microsoft.SharePoint.Client.UserProfiles**  
 
-   If you are developing on the computer that is running SharePoint, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585)).
+   If you are developing on the computer that is running SharePoint, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](http://www.microsoft.com/download/details.aspx?id=35585)).
     
   
 7. In the Program.cs file, add the following **using** statements.
@@ -139,14 +139,14 @@ using Microsoft.SharePoint.Client.Social;
     clientContext.ExecuteQuery();
     ```
 
-    [GetFeedFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeedFor.aspx) returns a **ClientResult<T>** object that stores the collection of threads in its [Value]( https://msdn.microsoft.com/EN-US/library/ee543385.aspx ) property.
+    [GetFeedFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeedFor.aspx) returns a **ClientResult<T>** object that stores the collection of threads in its [Value]( https://msdn.microsoft.com/library/ee543385.aspx ) property.
     
   
 
 ## Iterate through and read from the social feed by using the SharePoint .NET client object model
 <a name="bkmk_ReadFeed"> </a>
 
-The following code iterates through the threads in the feed. It checks whether each thread has the  [CanReply](https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-csom/jj163554(v=office.15)) attribute and then gets the thread identifier and the text of the root post. The code also creates a dictionary to store the thread identifier (which is used to reply to a thread) and writes the text of the root post to the console.
+The following code iterates through the threads in the feed. It checks whether each thread has the  [CanReply](https://docs.microsoft.com/previous-versions/office/sharepoint-csom/jj163554(v=office.15)) attribute and then gets the thread identifier and the text of the root post. The code also creates a dictionary to store the thread identifier (which is used to reply to a thread) and writes the text of the root post to the console.
 
 ```cs
 Dictionary<int, string> idDictionary = new Dictionary<int, string>();

@@ -18,7 +18,7 @@ Microsoft Excel is feature-rich. With every release, the functionality gap betwe
 When deciding which feature to support, priorities are given to features that are needed in key Excel Services scenarios, and to ensuring that Excel Services is a server-grade service that meets customers' expectations for reliability, scalability, and security.
   
 > [!NOTE]
-> This topic assumes that you are familiar with what is supported and unsupported in Microsoft Office SharePoint Server 2007. You can find more information about the unsupported features in Office SharePoint Server 2007 in  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx). 
+> This topic assumes that you are familiar with what is supported and unsupported in Microsoft Office SharePoint Server 2007. You can find more information about the unsupported features in Office SharePoint Server 2007 in  [Unsupported Features in Excel Services](http://msdn.microsoft.com/library/ms496823.aspx). 
   
     
     
@@ -38,13 +38,13 @@ Most of the new features in Microsoft Excel 2010 work in some way in Excel Servi
 - Sparklines
     
   
--  [Icon set](https://www.microsoft.com/en-us/microsoft-365/blog/2009/08/06/icon-set-improvements-in-excel-2010/) and [data bar improvements](https://www.microsoft.com/en-us/microsoft-365/blog/2009/08/07/data-bar-improvements-in-excel-2010/)
+-  [Icon set](https://www.microsoft.com/microsoft-365/blog/2009/08/06/icon-set-improvements-in-excel-2010/) and [data bar improvements](https://www.microsoft.com/microsoft-365/blog/2009/08/07/data-bar-improvements-in-excel-2010/)
     
   
--  [PivotTable named sets](https://www.microsoft.com/en-us/microsoft-365/blog/2009/10/05/pivottable-named-sets-in-excel-2010/)
+-  [PivotTable named sets](https://www.microsoft.com/microsoft-365/blog/2009/10/05/pivottable-named-sets-in-excel-2010/)
     
   
--  [PivotTable improvements](https://www.microsoft.com/en-us/microsoft-365/blog/2009/10/15/a-few-more-pivottable-improvements-in-excel-2010/)
+-  [PivotTable improvements](https://www.microsoft.com/microsoft-365/blog/2009/10/15/a-few-more-pivottable-improvements-in-excel-2010/)
     
   
  **Following are new features that can be viewed and interacted with:**
@@ -150,7 +150,7 @@ Cropped images are not displayed (that is, missing features).
 All other unsupported features continue to behave as they do in Office SharePoint Server 2007 for Excel Services. That is, Excel Services blocks loading of a file if it detects the existence of one or more of these unsupported features. Users are informed that the file cannot be loaded, as shown in the following screen shot. 
   
 > [!NOTE]
-> The  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx) topic contains more details about these unsupported features.
+> The  [Unsupported Features in Excel Services](http://msdn.microsoft.com/library/ms496823.aspx) topic contains more details about these unsupported features.
   
 > [!WARNING]
 > The information bar with the list of unsupported features is not displayed if the file is loaded from a web part. 

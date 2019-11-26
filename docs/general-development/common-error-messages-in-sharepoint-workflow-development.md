@@ -37,7 +37,7 @@ Although this list doesn't cover every possible error you may encounter when dev
 -  [The e-mail message cannot be sent. Make sure the outgoing e-mail settings for the server are configured correctly](#bkmk_error07)
 
 
-- [The e-mail message cannot be sent. Email non-delivery reports in Exchange Online](https://docs.microsoft.com/en-us/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
+- [The e-mail message cannot be sent. Email non-delivery reports in Exchange Online](https://docs.microsoft.com/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
     
   
 -  [The workflow could not update the item, possibly because one or more columns for the item require a different type of information](#bkmk_error08)
@@ -98,7 +98,7 @@ Add-pssnapin microsoft.sharepoint.powershell
 ### The worker process handling this request was ended because it exceeded the resource {0}
 <a name="bkmk_error03"> </a>
 
-In the error string, the value of  `{0}` is a placeholder for the specific resource whose threshold has been exceeded. To alleviate this problem, you should modify your code so that it does not exceed the resource threshold. These resource values are documented in [Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](http://msdn.microsoft.com/en-us/library/gg615462%28v=office.14%29.aspx).
+In the error string, the value of  `{0}` is a placeholder for the specific resource whose threshold has been exceeded. To alleviate this problem, you should modify your code so that it does not exceed the resource threshold. These resource values are documented in [Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](http://msdn.microsoft.com/library/gg615462%28v=office.14%29.aspx).
   
     
     
@@ -114,7 +114,7 @@ The workflow code threw an unhandled exception. Resolving this error requires de
 ### This workflow could not run because the sandbox failed: Could not get a process from the process pool
 <a name="bkmk_error05"> </a>
 
-There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](http://msdn.microsoft.com/en-us/library/ee536577%28v=office.14%29.aspx).
+There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](http://msdn.microsoft.com/library/ee536577%28v=office.14%29.aspx).
   
     
     
@@ -122,7 +122,7 @@ There is an error in your sandbox configuration. For information about configuri
 ### This workflow could not run because the sandbox failed: The sandboxed code worker process exited unexpectedly
 <a name="bkmk_error06"> </a>
 
-There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](http://msdn.microsoft.com/en-us/library/ee536577%28v=office.14%29.aspx).
+There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](http://msdn.microsoft.com/library/ee536577%28v=office.14%29.aspx).
   
     
     
@@ -147,7 +147,7 @@ Errors sending e-mail can also happen because of Exchange non-delivery.  Review 
 
 
 
-- [Email non-delivery reports in Exchange Online](https://docs.microsoft.com/en-us/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)    
+- [Email non-delivery reports in Exchange Online](https://docs.microsoft.com/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)    
 
   
 ### The workflow could not update the item, possibly because one or more columns for the item require a different type of information

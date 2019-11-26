@@ -75,13 +75,13 @@ For more information, see the following:
     
     
 
--  [Workflow actions in SharePoint Designer 2010: A quick reference guide](https://support.office.com/en-us/article/Workflow-actions-in-SharePoint-Designer-2010-A-quick-reference-guide-5a7ad276-0ed7-49b0-b652-e56a77dd96c6?CorrelationId=9cff0340-2d05-4878-b3a0-aecb30b862ed&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA010376961)
+-  [Workflow actions in SharePoint Designer 2010: A quick reference guide](https://support.office.com/article/Workflow-actions-in-SharePoint-Designer-2010-A-quick-reference-guide-5a7ad276-0ed7-49b0-b652-e56a77dd96c6?CorrelationId=9cff0340-2d05-4878-b3a0-aecb30b862ed&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA010376961)
     
   
 -  [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class
     
   
--  [How to: Log to the History List from a Workflow Activity](http://msdn.microsoft.com/en-us/library/ff798337.aspx)
+-  [How to: Log to the History List from a Workflow Activity](http://msdn.microsoft.com/library/ff798337.aspx)
     
   
 -  [Using the Log to History List SharePoint workflow action for debugging](http://www.documentmanagementworkflowinfo.com/sample-sharepoint-workflows/use-log-to-history-list-sharepoint-designer-workflow-action-debug)
@@ -100,13 +100,13 @@ For more information, see the following:
     
     
 
--  [Workflow actions in SharePoint Designer 2010: A quick reference guide](https://support.office.com/en-us/article/Workflow-actions-in-SharePoint-Designer-2010-A-quick-reference-guide-5a7ad276-0ed7-49b0-b652-e56a77dd96c6?CorrelationId=9cff0340-2d05-4878-b3a0-aecb30b862ed&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA010376961)
+-  [Workflow actions in SharePoint Designer 2010: A quick reference guide](https://support.office.com/article/Workflow-actions-in-SharePoint-Designer-2010-A-quick-reference-guide-5a7ad276-0ed7-49b0-b652-e56a77dd96c6?CorrelationId=9cff0340-2d05-4878-b3a0-aecb30b862ed&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA010376961)
     
   
 -  [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class
     
   
--  [How to: Log to the History List from a Workflow Activity](http://msdn.microsoft.com/en-us/library/ff798337.aspx)
+-  [How to: Log to the History List from a Workflow Activity](http://msdn.microsoft.com/library/ff798337.aspx)
     
   
 -  [Using the Log to History List SharePoint workflow action for debugging](http://www.documentmanagementworkflowinfo.com/sample-sharepoint-workflows/use-log-to-history-list-sharepoint-designer-workflow-action-debug)
@@ -121,17 +121,17 @@ To assist with debugging workflows, it is important that you capture meaningful 
     
     
 
--  [Writing to the Trace Log](http://msdn.microsoft.com/en-us/library/aa979595.aspx)
+-  [Writing to the Trace Log](http://msdn.microsoft.com/library/aa979595.aspx)
     
   
--  [Using Event and Trace Logs in SharePoint](http://msdn.microsoft.com/en-us/library/ff647362.aspx)
+-  [Using Event and Trace Logs in SharePoint](http://msdn.microsoft.com/library/ff647362.aspx)
     
   
 
 ### Verify that variables are non-null and contain expected values
 <a name="bkm_04"> </a>
 
-Before using variables in your workflows, ensure there are no null variables. Also, ensure that variables contain expected values and are of the correct data type. For more information, see  [Variables and Arguments](http://msdn.microsoft.com/en-us/library/dd489456.aspx).
+Before using variables in your workflows, ensure there are no null variables. Also, ensure that variables contain expected values and are of the correct data type. For more information, see  [Variables and Arguments](http://msdn.microsoft.com/library/dd489456.aspx).
   
     
     

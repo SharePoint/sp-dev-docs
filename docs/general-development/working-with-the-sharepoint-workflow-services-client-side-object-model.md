@@ -697,10 +697,10 @@ One of the major improvements to workflows in SharePoint is the expansion of CSO
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](http://msdn.microsoft.com/en-us/library/jj163986.aspx)
+-  [Workflows in SharePoint](http://msdn.microsoft.com/library/jj163986.aspx)
     
   
--  [What is Workflow Manager 1.0?](http://msdn.microsoft.com/en-us/library/windowsazure/jj193471%28v=azure.10%29.aspx)
+-  [What is Workflow Manager 1.0?](http://msdn.microsoft.com/library/windowsazure/jj193471%28v=azure.10%29.aspx)
     
   
 

@@ -136,9 +136,9 @@ You can host a provider-hosted SharePoint Add-in on an Azure web role instead of
 
 See the following links for more information about Azure web roles.
 
--  [What is a cloud service?](http://www.windowsazure.com/en-us/manage/services/cloud-services/what-is-a-cloud-service/)
--  [Introducing Microsoft Azure](http://www.windowsazure.com/en-us/develop/net/fundamentals/intro-to-windows-azure/)
--  [Autoscaling and Microsoft Azure](http://msdn.microsoft.com/en-us/library/hh680945%28v=pandp.50%29.aspx)
+-  [What is a cloud service?](http://www.windowsazure.com/manage/services/cloud-services/what-is-a-cloud-service/)
+-  [Introducing Microsoft Azure](http://www.windowsazure.com/develop/net/fundamentals/intro-to-windows-azure/)
+-  [Autoscaling and Microsoft Azure](http://msdn.microsoft.com/library/hh680945%28v=pandp.50%29.aspx)
 
 As a prerequisite, you will need the Microsoft Azure SDK for .NET (Visual Studio 2012) 1.8.1, which you can install by using the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx).
 

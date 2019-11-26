@@ -112,7 +112,7 @@ The following table provides a side-by-side comparison of the features and requi
 ## Developing workflows using Visual Studio
 <a name="bkm_Developing"> </a>
 
-Unlike earlier versions, workflows in SharePoint are entirely declarative. Built now on Windows Workflow Foundation 4, Visual Studio provides a visual workflow designer surface that lets you create custom workflows, workflow templates, forms, and custom workflow activities entirely in the designer environment. Your workflow is then packaged and deployed as a SharePoint Feature. For information about Feature packaging, see  [Using Features in SharePoint Foundation](http://msdn.microsoft.com/en-us/library/ms461324.aspx).
+Unlike earlier versions, workflows in SharePoint are entirely declarative. Built now on Windows Workflow Foundation 4, Visual Studio provides a visual workflow designer surface that lets you create custom workflows, workflow templates, forms, and custom workflow activities entirely in the designer environment. Your workflow is then packaged and deployed as a SharePoint Feature. For information about Feature packaging, see  [Using Features in SharePoint Foundation](http://msdn.microsoft.com/library/ms461324.aspx).
   
     
     
@@ -160,7 +160,7 @@ To debug SharePoint Online workflows in Visual Studio, perform the following ste
     
     
 
-1. If you're behind a firewall, you may need to install a proxy client (such as the  [Forefront Threat Management Gateway (TMG) Client](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=10504)), depending on your company's network topology.
+1. If you're behind a firewall, you may need to install a proxy client (such as the  [Forefront Threat Management Gateway (TMG) Client](http://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=10504)), depending on your company's network topology.
     
   
 2. Register for a Microsoft Azure account if you haven't already, and then sign into that account.
@@ -170,10 +170,10 @@ To debug SharePoint Online workflows in Visual Studio, perform the following ste
   
 3. Create a Microsoft Azure Service Bus namespace, which you can use to debug remote workflows. You can do this on the [Microsoft Azure portal](https://ms.portal.azure.com).
     
-    For more information about the Microsoft Azure Service Bus, see  [Create a Service Bus namespace using the Azure portal](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-create-namespace-portal).
+    For more information about the Microsoft Azure Service Bus, see  [Create a Service Bus namespace using the Azure portal](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-create-namespace-portal).
     
     > [!NOTE]
-    > SharePoint Online workflow debugging uses the Relay Service component of the Microsoft Azure Service Bus, so you'll be charged for using the Service Bus. See  [Service Bus Pricing FAQ](http://msdn.microsoft.com/library/hh667438.aspx). You get free access to Microsoft Azure each month that you subscribe to Visual Studio Professional with MSDN, Visual Studio Premium with MSDN, or Visual Studio Ultimate with MSDN. With this access, you can use the Service Bus relay for 1,500, 3,000, or 3,000 hours, depending on your MSDN subscription. See  [Get some amount of Microsoft Azure Services each month at no additional charge](http://www.windowsazure.com/en-us/pricing/member-offers/msdn-benefits/). 
+    > SharePoint Online workflow debugging uses the Relay Service component of the Microsoft Azure Service Bus, so you'll be charged for using the Service Bus. See  [Service Bus Pricing FAQ](http://msdn.microsoft.com/library/hh667438.aspx). You get free access to Microsoft Azure each month that you subscribe to Visual Studio Professional with MSDN, Visual Studio Premium with MSDN, or Visual Studio Ultimate with MSDN. With this access, you can use the Service Bus relay for 1,500, 3,000, or 3,000 hours, depending on your MSDN subscription. See  [Get some amount of Microsoft Azure Services each month at no additional charge](http://www.windowsazure.com/pricing/member-offers/msdn-benefits/). 
 4. In Microsoft Azure, choose your service namespace, choose the **Access Key** link, and then copy the text in the **Connection String** box.
     
   
@@ -202,12 +202,12 @@ A great deal of developing SharePoint workflows remains unchanged for the Visual
     
     
 
-- For information about using the Visual StudioWorkflow Designer, see  [Visual Studio Designer for Windows Workflow Foundation Overview](http://msdn.microsoft.com/en-us/library/ms441543.aspx).
+- For information about using the Visual StudioWorkflow Designer, see  [Visual Studio Designer for Windows Workflow Foundation Overview](http://msdn.microsoft.com/library/ms441543.aspx).
     
   
-- For information about creating forms by using Microsoft ASP.NET, see  [Workflow Forms Overview](http://msdn.microsoft.com/en-us/library/ms457061.aspx).
+- For information about creating forms by using Microsoft ASP.NET, see  [Workflow Forms Overview](http://msdn.microsoft.com/library/ms457061.aspx).
     
   
-- For information about Feature packaging, see  [Using Features in SharePoint Foundation](http://msdn.microsoft.com/en-us/library/ms461324.aspx).
+- For information about Feature packaging, see  [Using Features in SharePoint Foundation](http://msdn.microsoft.com/library/ms461324.aspx).
     
   

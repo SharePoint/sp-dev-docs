@@ -234,4 +234,4 @@ Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web -F
 
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
 - [Understanding and configuring the page transformation model](modernize-userinterface-site-pages-model.md)
-- [Classic and modern web part experiences](https://support.office.com/en-us/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64)
+- [Classic and modern web part experiences](https://support.office.com/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64)

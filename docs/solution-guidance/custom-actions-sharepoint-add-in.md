@@ -20,7 +20,7 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 
 - Custom actions may be used to modify list item menus and the ribbon.
 - You cannot hide menu items using a custom action directly from an Add-in that implements a custom action.
-	+ This is because the [HideCustomAction Element (MSDN API Documentation)](https://msdn.microsoft.com/en-us/library/office/ms414790.aspx) is not available in the SharePoint ECMA Clients-ide Object Model (CSOM) - [UserCustomAction properties (MSDN API Documentation)](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.usercustomaction_properties.aspx), or the SharePoint/Office 365 REST APIs - [SP.UserCustomActionCollection object (sp.js) (MSDN API Documentation)](https://msdn.microsoft.com/en-us/library/office/jj247124.aspx).
+	+ This is because the [HideCustomAction Element (MSDN API Documentation)](https://msdn.microsoft.com/library/office/ms414790.aspx) is not available in the SharePoint ECMA Clients-ide Object Model (CSOM) - [UserCustomAction properties (MSDN API Documentation)](https://msdn.microsoft.com/library/microsoft.sharepoint.client.usercustomaction_properties.aspx), or the SharePoint/Office 365 REST APIs - [SP.UserCustomActionCollection object (sp.js) (MSDN API Documentation)](https://msdn.microsoft.com/library/office/jj247124.aspx).
 	+ If you need to hide menu items, you must use a custom action to embed JavaScript or customized CSS in SharePoint pages. The JavaScript or CSS embedded in the SharePoint pages hides the menu item.
 - Use the SharePoint Client-side Object Model (CSOM), and/or the SharePoint/Office 365 REST APIs to implement custom actions.
 

@@ -131,7 +131,7 @@ The following are restrictions on individual source data files:
 
 ## Queue the import process
 
-You can queue the CSOM API for the bulk import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later. 
+You can queue the CSOM API for the bulk import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later. 
 
 Following is the full signature of the method:
 
@@ -145,7 +145,7 @@ public ClientResult<Guid> QueueImportProfileProperties(
 
 ### Parameters
 
-- **idType**: [ImportProfilePropertiesUserIdType](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesuseridtype.aspx)
+- **idType**: [ImportProfilePropertiesUserIdType](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesuseridtype.aspx)
 
   The type of id to use when looking up the user profile. Possible values are **Email**, **CloudId**, and **PrincipalName**. Note that regardless of the type, the user must already exist in the user profile service for the import to work. We recommend using the **CloudId** value to ensure uniqueness.
 
@@ -216,7 +216,7 @@ You can check the status of the user profile service import jobs by using the CS
 
 ### Individual import job
 
-You can check the status of an individual import job by using the [GetImportProfilePropertyJob](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjob.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. You must have the unique identifier of a specific import job provided as a parameter to this method. 
+You can check the status of an individual import job by using the [GetImportProfilePropertyJob](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjob.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. You must have the unique identifier of a specific import job provided as a parameter to this method. 
 
 Following is the full signature of the method:
 
@@ -232,7 +232,7 @@ public ImportProfilePropertiesJobInfo GetImportProfilePropertyJob(Guid jobId);
 
 #### Return value
 
-An [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object with high level status information about the specified job.
+An [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object with high level status information about the specified job.
 
 #### Example
 
@@ -248,7 +248,7 @@ ctx.ExecuteQuery();
 
 ### All import jobs
 
-You can check the status of all import jobs by using the [GetImportProfilePropertyJobs](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjobs.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. 
+You can check the status of all import jobs by using the [GetImportProfilePropertyJobs](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjobs.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. 
 
 Following is the full signature of the method:
 
@@ -258,13 +258,13 @@ public ImportProfilePropertiesJobStatusCollection GetImportProfilePropertyJobs()
 
 #### Parameters
 
-An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object returned with the import status information has the following properties. 
+An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) object returned with the import status information has the following properties. 
 
 - **JobId**: System.Guid
 
   The ID of the import job.
 
-- **State**: [ImportProfilePropertiesJobState](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstate.aspx)
+- **State**: [ImportProfilePropertiesJobState](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstate.aspx)
 
   An enum with following values:
   - **Unknown** - We cannot determine the state of the job.
@@ -278,7 +278,7 @@ An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/en-us/library/off
 
   The URI to the data source file.
 
-- **Error**: [ImportProfilePropertiesJobError](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjoberror.aspx)
+- **Error**: [ImportProfilePropertiesJobError](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjoberror.aspx)
 
   An enum representing the possible error:
 
@@ -301,7 +301,7 @@ An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/en-us/library/off
 
 #### Return value
 
-An [ImportProfilePropertiesJobStatusCollection](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstatuscollection.aspx) object, which is a collection of [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/en-us/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) objects with high level status information about each of the jobs.
+An [ImportProfilePropertiesJobStatusCollection](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstatuscollection.aspx) object, which is a collection of [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) objects with high level status information about each of the jobs.
 
 #### Example
 
@@ -404,7 +404,7 @@ Yes, you need to register the client ID and secret to be able to execute the API
 
 ### This API is updating properties in the user profile service, but how would I create those properties in the tenant?
 
-There’s no remote API to create custom user profile properties programmatically, so this is a manual operation that needs to be completed once per given tenant. For instructions about how to create these custom properties, see [Add and edit user profile properties in SharePoint Online](https://support.office.com/en-us/article/add-and-edit-user-profile-properties-in-sharepoint-online-85091402-737f-4bb9-99a7-bc5f194502a8?ui=en-US&rs=en-US&ad=US).
+There’s no remote API to create custom user profile properties programmatically, so this is a manual operation that needs to be completed once per given tenant. For instructions about how to create these custom properties, see [Add and edit user profile properties in SharePoint Online](https://support.office.com/article/add-and-edit-user-profile-properties-in-sharepoint-online-85091402-737f-4bb9-99a7-bc5f194502a8?ui=en-US&rs=en-US&ad=US).
 
 ### Is this capability available in on-premises SharePoint?
 

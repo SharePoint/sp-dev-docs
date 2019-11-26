@@ -39,7 +39,7 @@ Use the **createSPList** verb to create a new SharePoint list.
 #### JSON values
 
 - **listName** &ndash; The name of the list.
-- **templateType** &ndash; Which template to apply to the list. Typically you would use value 100. The full list of template type values are documented in [SPListTemplateType enumeration](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splisttemplatetype.aspx) - but the ones we currently support include:
+- **templateType** &ndash; Which template to apply to the list. Typically you would use value 100. The full list of template type values are documented in [SPListTemplateType enumeration](https://msdn.microsoft.com/library/microsoft.sharepoint.splisttemplatetype.aspx) - but the ones we currently support include:
 
   | List Template Name | Enum |
   |--------------|---------|
@@ -153,7 +153,7 @@ Deletes a default field that was provided by the selected template type.
 
 ### addSPFieldXml
 
-Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
 
 Currently these field constructs cannot be designated as site columns nor added to content types. To create site columns with Field XML use the **createSiteColumnXml** action.
 
@@ -173,7 +173,7 @@ Currently these field constructs cannot be designated as site columns nor added 
 
 ### addSPLookupFieldXml
 
-Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
@@ -220,11 +220,11 @@ Defines and adds a view to the list. Use this action to specify the desired colu
 
 - **name** &ndash; The name of the view.
 - **viewFields** &ndash; An array of the internal names of the fields in your view.
-- **query** &ndash; A CAML query string that contains the `where` clause for the view's query. See [CAML schemas] (https://docs.microsoft.com/en-us/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas). 
+- **query** &ndash; A CAML query string that contains the `where` clause for the view's query. See [CAML schemas] (https://docs.microsoft.com/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas). 
 - **rowLimit** &ndash; The row limit of the view.
 - **isPaged** &ndash; Specifies whether the view is paged.
 - **makeDefault** &ndash; If **true**, the view will be made the default for the list; otherwise, **false**.
-- **scope** &ndash; An optional setting to specify the scope of the view. For more details, see [SPViewScope enumeration](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spviewscope.aspx).
+- **scope** &ndash; An optional setting to specify the scope of the view. For more details, see [SPViewScope enumeration](https://msdn.microsoft.com/library/microsoft.sharepoint.spviewscope.aspx).
 - **formatterJSON** &ndash; An optional settings to specify the JSON formatting for the view
 #### Example
 
@@ -365,7 +365,7 @@ In this example, we are formatting a number column as a data bar.
 
 ### associateFieldCustomizer
 
-Registers field extension for a list field. For more information on these client-side extensions, see [Build field customizer](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) tutorial.
+Registers field extension for a list field. For more information on these client-side extensions, see [Build field customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) tutorial.
 
 #### JSON values
 
@@ -637,13 +637,13 @@ Use the **addNavLink** verb to add a new navigation link to the site QuickLaunch
  },
  {
     "verb": "addNavLink",
-    "url": "https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview",
+    "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview",
     "displayName": "SharePoint Site Design Overview",
     "parentDisplayName": "Documents"
  },
  {
      "verb": "addNavLink",
-     "url": "https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
+     "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
      "displayName": "About Site Footer",
      "navComponent":"Footer"
  }
@@ -847,7 +847,7 @@ Use the **installSolution** action to install a deployed add-in or SharePoint Fr
 Use the **associateExtension** action to register a deployed SharePoint Framework extension from the tenant app catalog. 
 
 > [!NOTE]
-> For more details on how to create and configure a SharePoint Framework extension, check out: [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
+> For more details on how to create and configure a SharePoint Framework extension, check out: [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions).
 
 #### JSON values
 
@@ -925,8 +925,8 @@ Use the **setRegionalSettings** action to configure the regional settings of the
 #### JSON values
 
 - **timeZone** &ndash; A number specifying the time zone. For a list of permissible values, see https://msdn.microsoft.com/library/microsoft.sharepoint.spregionalsettings.timezones.aspx
-- **locale** &ndash; A number specifying the culture LCID. For a list of permissible values, see https://msdn.microsoft.com/en-us/library/ms912047(v=winembedded.10).aspx
-- **sortOrder** &ndash; A number specifying the sort order. For a list of permissible values, see https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spregionalsettings.collation.aspx
+- **locale** &ndash; A number specifying the culture LCID. For a list of permissible values, see https://msdn.microsoft.com/library/ms912047(v=winembedded.10).aspx
+- **sortOrder** &ndash; A number specifying the sort order. For a list of permissible values, see https://msdn.microsoft.com/library/microsoft.sharepoint.spregionalsettings.collation.aspx
 - **hourFormat** &ndash; Specifies whether the site should use 12-hour or 24-hour time format.
 
 #### Example
@@ -944,7 +944,7 @@ Use the **setRegionalSettings** action to configure the regional settings of the
 
 ## Add users (principals) to SharePoint Groups
 
-Use the **addPrincipalToSPGroup** action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/en-us/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Office 365 Groups.
+Use the **addPrincipalToSPGroup** action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Office 365 Groups.
 
 #### JSON values
 
@@ -981,7 +981,7 @@ Use the **addPrincipalToSPGroup** action to manage addition of users and groups 
 
 ## Manage guest access
 
-Use the **setSiteExternalSharingCapability** action to manage guest access. For more information, see [Manage external sharing for your SharePoint Online environment](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
+Use the **setSiteExternalSharingCapability** action to manage guest access. For more information, see [Manage external sharing for your SharePoint Online environment](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 
 <!-- update this table matrix -->
 

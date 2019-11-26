@@ -66,7 +66,7 @@ Use the AddList method in the SharePoint CSOM to create a list instance via the 
 	    }
 	}
 
-The following code sample illustrates how to create a list instance with the SharePoint REST API.  This sample comes from the [Lists and list items REST API reference (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/dn531433.aspx)
+The following code sample illustrates how to create a list instance with the SharePoint REST API.  This sample comes from the [Lists and list items REST API reference (MSDN Article)](https://msdn.microsoft.com/library/office/dn531433.aspx)
 
 	executor.executeAsync({
 	  url: "<app web url>/_api/SP.AppContextSite(@target)/web/lists
@@ -81,7 +81,7 @@ The following code sample illustrates how to create a list instance with the Sha
 
 Related links
 =============
-- [Lists and list items REST API reference (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/dn531433.aspx)
+- [Lists and list items REST API reference (MSDN Article)](https://msdn.microsoft.com/library/office/dn531433.aspx)
 - [List Definitions / List Templates (SharePoint Add-in model recipe)](list-definition-template-sharepoint-add-in.md)
 - [Document and list templates with app model (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")

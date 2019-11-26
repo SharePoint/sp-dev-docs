@@ -97,7 +97,7 @@ The resource folder is the storage location for any file, such as a document tem
 
 ## See also
 
-- [ResourceFolder](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.spcontenttype.resourcefolder.aspx)
+- [ResourceFolder](https://msdn.microsoft.com/library/office/microsoft.sharepoint.spcontenttype.resourcefolder.aspx)
 - [Content Type Definitions](content-type-definitions.md)
 - [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 

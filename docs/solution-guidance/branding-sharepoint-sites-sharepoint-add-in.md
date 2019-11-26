@@ -21,7 +21,7 @@ Terminology
 
 This article uses the term **SharePoint theme**, which has overloaded meanings in other articles on MSDN, MS Blogs, and all across the Internet.  In MSDN terminology, **SharePoint theme** specifically refers to the color palette / color scheme (.spcolor file) applied to a SharePoint site.  In PnP terminology, the terms **SharePoint theme** and **composed look** are the same thing.
 
-A SharePoint theme is one of many [SharePoint theming experience components](https://msdn.microsoft.com/en-us/library/office/jj927174.aspx).
+A SharePoint theme is one of many [SharePoint theming experience components](https://msdn.microsoft.com/library/office/jj927174.aspx).
 
 In this article we chose to align the term **SharePoint theme** with the specific technical item it refers to in order to succinctly describe all your branding options. 
 
@@ -86,7 +86,7 @@ See the [Customize the Office 365 theme for your organization](https://support.o
 - master page
 - master page preview
 
-See the [Themes overview for SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/jj927174.aspx) article to learn more about these components.
+See the [Themes overview for SharePoint 2013](https://msdn.microsoft.com/library/office/jj927174.aspx) article to learn more about these components.
 
 **Composed looks used for Office 365 SharePoint sites** include one or more of the following components.  
 

@@ -11,8 +11,8 @@ localization_priority: Priority
 You can use SharePoint Framework (SPFx) Extensions to extend the SharePoint user experience. With SharePoint Framework Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views. SharePoint Framework Extensions are available in all Office 365 subscriptions for production usage. 
 
 > [!NOTE] 
-> You can get an Office 365 developer subscription when you join the [Office 365 Developer Program](https://developer.microsoft.com/en-us/office/dev-program). 
-> See the [Office 365 Developer Program documentation](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
+> You can get an Office 365 developer subscription when you join the [Office 365 Developer Program](https://developer.microsoft.com/office/dev-program). 
+> See the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 SharePoint Framework Extensions enable you to extend the SharePoint user experience within modern pages and document libraries, while using the familiar SharePoint Framework tools and libraries for client-side development. Specifically, the SharePoint Framework includes three new extension types:
 

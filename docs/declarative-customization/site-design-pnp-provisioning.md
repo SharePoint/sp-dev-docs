@@ -248,7 +248,7 @@ Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_Ap
 
 ## Create the site design
 
-Open PowerShell and make sure that you have the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) installed.
+Open PowerShell and make sure that you have the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) installed.
 
 Connect to your tenant using **Connect-SPOService**.
 

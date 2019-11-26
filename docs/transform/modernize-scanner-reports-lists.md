@@ -26,7 +26,7 @@ Column | Description
 **Blocked at site level** | TRUE if the list is blocked because the **site** scoped feature (E3540C7D-6BEA-403C-A224-1A12EAFEE4C4) was enabled.
 **Blocked at web level** | TRUE if the list is blocked because the **web** scoped feature (52E14B6F-B1BB-4969-B89B-C4FAA56745EF) was enabled.
 **Blocked at list level** | TRUE if the user changed the list experience setting to "classic experience".
-**List page render type** | The value of the PageRenderType property as explained in [docs.microsoft.com](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries#programmatically-detect-if-your-librarylist-will-be-shown-using-modern-or-classic).
+**List page render type** | The value of the PageRenderType property as explained in [docs.microsoft.com](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries#programmatically-detect-if-your-librarylist-will-be-shown-using-modern-or-classic).
 **List experience** | The set list experience setting: auto (default), modern or classic. 
 **Blocked by not being able to load page** | TRUE if the page associated with the list default view could not be loaded.
 **Blocked by not being able to load page exception** | The error that was triggered when the page could not be loaded.

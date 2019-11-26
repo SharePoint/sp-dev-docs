@@ -27,17 +27,17 @@ For more information about accessibility features in SharePoint, see the followi
     
     
 
--  [Accessibility features in SharePoint products](http://office.microsoft.com/en-us/sharepoint-foundation-help/accessibility-features-in-sharepoint-products-HA102772892.aspx?CTT=1)
+-  [Accessibility features in SharePoint products](http://office.microsoft.com/sharepoint-foundation-help/accessibility-features-in-sharepoint-products-HA102772892.aspx?CTT=1)
     
   
--  [Keyboard shortcuts in SharePoint Online](https://support.office.com/en-us/article/keyboard-shortcuts-in-sharepoint-online-466e33ee-613b-4f47-96bb-1c20f20b1015)
+-  [Keyboard shortcuts in SharePoint Online](https://support.office.com/article/keyboard-shortcuts-in-sharepoint-online-466e33ee-613b-4f47-96bb-1c20f20b1015)
     
   
-Users who have site administrator responsibilities typically use the SharePoint Central Administration site to manage deployments. A mouse and keyboard are the typical devices that you use to interact with Central Administration. For more information about accessibility for administrators and other IT pros in SharePoint, see  [Accessibility for SharePoint](http://technet.microsoft.com/en-us/library/jj219681.aspx).
+Users who have site administrator responsibilities typically use the SharePoint Central Administration site to manage deployments. A mouse and keyboard are the typical devices that you use to interact with Central Administration. For more information about accessibility for administrators and other IT pros in SharePoint, see  [Accessibility for SharePoint](http://technet.microsoft.com/library/jj219681.aspx).
   
     
     
-Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](https://docs.microsoft.com/windows/desktop/uxguide/inter-touch) on MSDN, and the [Office Touch Guide](http://office.microsoft.com/en-us/support/office-touch-guide-HA102823845.aspx) on Office.com.
+Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](https://docs.microsoft.com/windows/desktop/uxguide/inter-touch) on MSDN, and the [Office Touch Guide](http://office.microsoft.com/support/office-touch-guide-HA102823845.aspx) on Office.com.
   
     
     
@@ -58,16 +58,16 @@ For information about Windows app development and providing accessibility in Win
     
     
 
--  [Accessibility](http://msdn.microsoft.com/en-us/windows/bb735024.aspx)
+-  [Accessibility](http://msdn.microsoft.com/windows/bb735024.aspx)
     
   
--  [Design for Accessibility (Windows Store apps)](http://msdn.microsoft.com/en-us/library/windows/apps/hh700407.aspx)
+-  [Design for Accessibility (Windows Store apps)](http://msdn.microsoft.com/library/windows/apps/hh700407.aspx)
     
   
--  [Meeting basic accessibility requirements (Windows Store apps using JavaScript and HTML)](http://msdn.microsoft.com/en-us/library/windows/apps/hh700338.aspx)
+-  [Meeting basic accessibility requirements (Windows Store apps using JavaScript and HTML)](http://msdn.microsoft.com/library/windows/apps/hh700338.aspx)
     
   
--  [Accessibility in Windows Store apps using JavaScript](http://msdn.microsoft.com/en-us/library/windows/apps/hh452702.aspx)
+-  [Accessibility in Windows Store apps using JavaScript](http://msdn.microsoft.com/library/windows/apps/hh452702.aspx)
     
   
 
@@ -102,13 +102,13 @@ SharePoint administrators and users depend on the accessibility features that we
 <a name="bk_addresources"> </a>
 
 
--  [Accessibility](http://msdn.microsoft.com/en-us/windows/bb735024.aspx)
+-  [Accessibility](http://msdn.microsoft.com/windows/bb735024.aspx)
     
   
 -  [Microsoft Accessibility Resource Centers](http://www.microsoft.com/enable/centers/)
     
   
--  [Guidelines and checklist for accessibility](http://msdn.microsoft.com/en-us/library/windows/apps/hh700325.aspx)
+-  [Guidelines and checklist for accessibility](http://msdn.microsoft.com/library/windows/apps/hh700325.aspx)
     
   
 -  [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx)
@@ -123,7 +123,7 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [Accessibility in Microsoft Products](http://www.microsoft.com/enable/products/default.aspx)
     
   
--  [Accessibility for SharePoint](http://technet.microsoft.com/en-us/library/jj219681.aspx)
+-  [Accessibility for SharePoint](http://technet.microsoft.com/library/jj219681.aspx)
     
   
 

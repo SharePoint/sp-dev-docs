@@ -157,7 +157,7 @@ You can create or modify lists programmatically through the object model (for ex
   
 - [\<ViewData\>](viewdata-element-list.md)
   
-    - [\<FieldRef\>](https://msdn.microsoft.com/en-us/library/ms436424.aspx)
+    - [\<FieldRef\>](https://msdn.microsoft.com/library/ms436424.aspx)
   
 - [\<ViewEmpty\>](viewempty-element-list.md)
   

@@ -68,7 +68,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text**. Specifies the content type name. The value can be a reference to a resource in the format `$Resources:String`. For more information, see <a href="http://msdn.microsoft.com/en-us/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.</p><p>The name itself cannot be longer than 128 characters and cannot contain the characters `\ / : * ? " # % < > { } | ~ &amp;`, two consecutive periods (`..`), or special characters such as a tab.</p>
+<td align="left"><p>Required **Text**. Specifies the content type name. The value can be a reference to a resource in the format `$Resources:String`. For more information, see <a href="http://msdn.microsoft.com/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.</p><p>The name itself cannot be longer than 128 characters and cannot contain the characters `\ / : * ? " # % < > { } | ~ &amp;`, two consecutive periods (`..`), or special characters such as a tab.</p>
 <p>An error occurs if another content type with the same name exists in the collection where the content type is added.</p></td>
 </tr>
 <tr class="even">

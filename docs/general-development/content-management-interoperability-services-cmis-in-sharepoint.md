@@ -233,7 +233,7 @@ The SharePoint object model offers developers many extensibility options that ar
   
     
     
-The SharePoint Server implementation of CMIS uses the  [BlockedFileExtensions](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.SPWebApplication.BlockedFileExtensions.aspx) property to get a list of file extensions that cannot be uploaded or downloaded from sites in the Web application. CMIS respects the [file types that SharePoint blocks by default](http://technet.microsoft.com/en-us/library/cc262496.aspx).
+The SharePoint Server implementation of CMIS uses the  [BlockedFileExtensions](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.SPWebApplication.BlockedFileExtensions.aspx) property to get a list of file extensions that cannot be uploaded or downloaded from sites in the Web application. CMIS respects the [file types that SharePoint blocks by default](http://technet.microsoft.com/library/cc262496.aspx).
   
     
     
@@ -294,7 +294,7 @@ CMIS 1.1 is not supported in SharePoint, but the newer version of the CMIS speci
 -  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Manage blocked file types](http://technet.microsoft.com/en-us/library/cc262496.aspx)
+-  [Manage blocked file types](http://technet.microsoft.com/library/cc262496.aspx)
     
   
 -  [OASIS Content Management Interoperability Specification (CMIS) version 1.0](http://docs.oasis-open.org/cmis/CMIS/v1.0/os/cmis-spec-v1.0.html)

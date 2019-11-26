@@ -31,7 +31,7 @@ The easiest way to use view formatting is to start from an example and edit it t
 
 You can use view formatting to apply one or more classes to the entire list view row depending on the value of one or more fields in the row. These examples leave the content and structure of list view rows intact.
 
-For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#style-guidelines) in the [Column Formatting reference document](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting).
+For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#style-guidelines) in the [Column Formatting reference document](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting).
 
 > [!TIP]
 > Using the `additionalRowClass` property to apply classes to list view rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
@@ -277,7 +277,7 @@ You now have validation and autocomplete to create your JSON. You can start addi
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list view row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
+Optional element. Specifies a JSON object that describes a list view row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
 
 >[!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -310,5 +310,5 @@ Optional element. Specifies a JSON object that describes a 'Tile' view format. E
 - height – defines the height of the card in pixels.
 - width – defines the width of the card in pixels. Can go from height/2 to 3 x height. 
 - hideSelection – as defined above
-- formatter – JSON object that defines the layout of tiles. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference).
+- formatter – JSON object that defines the layout of tiles. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference).
 

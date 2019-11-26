@@ -11,7 +11,7 @@ localization_priority: Normal
 Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint.
 Social and collaboration features in SharePoint make it easy for users to communicate and to stay engaged and informed. The improved social feed on personal sites and team sites helps users to keep up-to-date with the people and content that they care about. The new Community Site feature provides a rich community experience that lets users easily find and share information and find people who have similar interests.
   
-For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
+For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](http://technet.microsoft.com/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
 ## New and changed My Site features in SharePoint
 <a name="bkmk_Social"> </a>
 
@@ -60,7 +60,7 @@ My Site Host administrators can use the **ProfileLoader.CreatePersonalSiteEnqueu
 The following code example uses the .NET client object model in a console application. Before you run the example, add references to Microsoft.SharePoint.Client.dll, Microsoft.SharePoint.Client.Runtime.dll and Microsoft.SharePoint.Client.UserProfiles.dll, and change the placeholder values for the **userName**, **passwordStr**, and **serverUrl** variables. The **serverUrl** variable must be the URL of the SharePoint Online Administration Center.
   
 > [!NOTE] 
-> To get the required client DLLs, download the  [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038). 
+> To get the required client DLLs, download the  [SharePoint Online Client Components SDK](http://www.microsoft.com/download/details.aspx?id=42038). 
   
     
     
@@ -152,7 +152,7 @@ $loader.CreatePersonalSiteEnqueueBulk(@("user1@domain.com"))
 $loader.Context.ExecuteQuery()
 ```
 
-For more information, see [Use Windows PowerShell to administer SharePoint](http://technet.microsoft.com/en-us/library/ee806878%28v=office.15%29.aspx).
+For more information, see [Use Windows PowerShell to administer SharePoint](http://technet.microsoft.com/library/ee806878%28v=office.15%29.aspx).
   
     
     
@@ -243,7 +243,7 @@ The following list contains information for developing with Community Site featu
     
     
 
-- Community Sites use the **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-server/ee541191(v=office.15)) (value = **108**).
+- Community Sites use the **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://docs.microsoft.com/previous-versions/office/sharepoint-server/ee541191(v=office.15)) (value = **108**).
     
   
 - Activating the **Community Site** feature activates the **CommunityEventReceiver** event receiver.
@@ -289,6 +289,6 @@ while (retries <= 10)
   
 -  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
--  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29)
+-  [What's new in social computing in SharePoint](http://technet.microsoft.com/library/jj219766%28v=office.15%29)
     
 

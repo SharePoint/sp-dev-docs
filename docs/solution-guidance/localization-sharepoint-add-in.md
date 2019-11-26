@@ -44,7 +44,7 @@ When you are creating a SharePoint-hosted Add-in, using JavaScript is your best 
 
 Scenario 2 in the [Core.JavaScriptCustomization (O365 PnP Sample))](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization) demonstrates how to use JavaScript to localize the text in an Add-in as well as attributes associated with the HTML elements in the Add-in.
 
-The [Localize SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/fp179919(v=office.15).aspx) also demonstrates how to use JavaScript to localize assets in the add-in web.
+The [Localize SharePoint Add-ins](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx) also demonstrates how to use JavaScript to localize assets in the add-in web.
 
 Remote components
 -------------------------
@@ -61,13 +61,13 @@ When you are creating a Provider-hosted Add-in, using the localization technolog
 
 The following articles describes how to localize Provider-hosted Add-ins with resource files and JavaScript.
 
-- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/en-us/library/fp179919(v=office.15).aspx)
+- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx)
 - [Localize the add-in web, host web, and remote components of an add-in  (MSDN Code Sample)](https://code.msdn.microsoft.com/office/SharePoint-2013-Bookstore-328060fc)
 
 Related links
 =============
 
-- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/en-us/library/fp179919(v=office.15).aspx)
+- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx)
 - [Localize the add-in web, host web, and remote components of an add-in  (Office Dev GitHub sample)](https://github.com/OfficeDev/SharePoint-Add-in-Localization)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")

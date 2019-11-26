@@ -42,11 +42,11 @@ Before you run this add-in, do the following:
     
 	3. Verify that  **Scope** is set to **Web**, and  **Permission** is set to **Manage**.
     
-3. To run this code sample, you need an Azure subscription. To sign up for a trial, see [Free one-month trial](http://azure.microsoft.com/en-us/pricing/free-trial/).
+3. To run this code sample, you need an Azure subscription. To sign up for a trial, see [Free one-month trial](http://azure.microsoft.com/pricing/free-trial/).
     
 4. Create an Azure Service Bus Namespace.
     
-	1. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-create-namespace-portal).
+	1. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-create-namespace-portal).
 
     2. Copy **Primary Connection String** from the just created Service Bus Namespace
 	

@@ -43,7 +43,7 @@ In the low-trust authorization system, the access tokens are created by Azure AC
 
 - Optionally, **forward the access token to back-end systems** so they can directly access SharePoint.
     
-These tasks must be done with server-side code. If you are using managed code, sample code for some of these tasks is in the SharePointContext.cs (or .vb) and TokenHelper.cs (or .vb) files that are part of Microsoft Office Developer Tools for Visual Studio. For an example of PHP code that carries out some of these tasks, see [Understanding and Using the SharePoint REST Interface](https://msdn.microsoft.com/en-us/magazine/dn198245.aspx).
+These tasks must be done with server-side code. If you are using managed code, sample code for some of these tasks is in the SharePointContext.cs (or .vb) and TokenHelper.cs (or .vb) files that are part of Microsoft Office Developer Tools for Visual Studio. For an example of PHP code that carries out some of these tasks, see [Understanding and Using the SharePoint REST Interface](https://msdn.microsoft.com/magazine/dn198245.aspx).
  
 
 <a name="CacheAccessToken"> </a> 
@@ -55,7 +55,7 @@ Depending on your SharePoint Add-in's architecture and the hosting platform, the
 - In session state
 - In application state
 - In [Windows Server AppFabric Caching](http://msdn.microsoft.com/library/8aef3f5d-2a77-46d9-b951-0768fedd31a1%28Office.15%29.aspx) or its equivalent in a non-Microsoft operating system
-- In the [Microsoft Azure Caching Service](https://docs.microsoft.com/en-us/azure/redis-cache/cache-faq) or its equivalent in a non-Microsoft cloud service
+- In the [Microsoft Azure Caching Service](https://docs.microsoft.com/azure/redis-cache/cache-faq) or its equivalent in a non-Microsoft cloud service
 - In a database
 - In a [memcached](http://www.memcached.org/) system
     
@@ -128,7 +128,7 @@ Note that all the values must be lowercase. (User+add-in access tokens are the s
 
 |**Claim**|**Description**|**Corresponding value in the sample access token**|
 |:-----|:-----|:-----|
-| `aud`|Short for "audience", meaning the principal for which the token is intended.<br/><br/>The format is `audience principal ID/SharePoint domain@SharePoint realm`, where _audience principal ID_ is a permanent security principal ID for SharePoint (see [Microsoft Product Application Principal Constants](https://msdn.microsoft.com/en-us/library/hh629982(v=office.12).aspx)).<br/><br/>_SharePoint realm_ is the GUID of the SharePoint Online tenancy, or the on-premises SharePoint farm, that the access token is used to access. This GUID functions as the realm's ID for the token issuer, in this case Azure ACS.|`00000003-0000-0ff1-ce00-000000000000/company.sharepoint.com@040f2415-e6e3-4480-96ce-26ef73275f73`|
+| `aud`|Short for "audience", meaning the principal for which the token is intended.<br/><br/>The format is `audience principal ID/SharePoint domain@SharePoint realm`, where _audience principal ID_ is a permanent security principal ID for SharePoint (see [Microsoft Product Application Principal Constants](https://msdn.microsoft.com/library/hh629982(v=office.12).aspx)).<br/><br/>_SharePoint realm_ is the GUID of the SharePoint Online tenancy, or the on-premises SharePoint farm, that the access token is used to access. This GUID functions as the realm's ID for the token issuer, in this case Azure ACS.|`00000003-0000-0ff1-ce00-000000000000/company.sharepoint.com@040f2415-e6e3-4480-96ce-26ef73275f73`|
 | `iss`|Short for "issuer". It represents the principal that created the token. The format is `Issuer GUID@SharePoint realm GUID`.In the low-trust authorization system, the issuer is Azure ACS and its GUID is `00000001-0000-0000-c000-000000000000`.|`00000001-0000-0000-c000-000000000000@040f2415-e6e3-4480-96ce-26ef73275f73`|
 | `nbf`|Short for "not before". It represents the time at which the token *starts* being valid, in seconds since midnight, January 1, 1970. By default, it is set to the moment the token is created (see [JWT time values](#JWTtimes)).|`1377549246`|
 | `exp`|Short for "expiration". It represents the time the token expires. By default, this is 12 hours after the **nbf** time (see [JWT time values](#JWTtimes)).|`1377592446`|

@@ -48,5 +48,5 @@ Web part icons can contain one color or be full color. Most icons work best when
 
 Export icons as SVGs at 64x64 px with transparent backgrounds.
 
-You can find the icon grid in the [SharePoint Design toolkit](https://developer.microsoft.com/en-us/fabric#/resources).
+You can find the icon grid in the [SharePoint Design toolkit](https://developer.microsoft.com/fabric#/resources).
 

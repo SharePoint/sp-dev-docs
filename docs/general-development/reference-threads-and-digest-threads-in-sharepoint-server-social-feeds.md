@@ -57,7 +57,7 @@ Not all feed-related activities are posted to the feed as reference threads. For
     
     
 
-Reply, like, and mention references are stored indefinitely in the user's personal feed. Tag references are stored in the Distributed Cache, so they are stored temporarily. For more information about caching, see  [Overview of microblog features, feeds, and the Distributed Cache service in SharePoint](http://technet.microsoft.com/en-us/library/jj219700%28v=office.15%29.aspx#cache).
+Reply, like, and mention references are stored indefinitely in the user's personal feed. Tag references are stored in the Distributed Cache, so they are stored temporarily. For more information about caching, see  [Overview of microblog features, feeds, and the Distributed Cache service in SharePoint](http://technet.microsoft.com/library/jj219700%28v=office.15%29.aspx#cache).
   
     
     
@@ -65,7 +65,7 @@ Reply, like, and mention references are stored indefinitely in the user's person
 ## What are digest threads in SharePoint social feeds?
 <a name="bk_whatAreDigests"> </a>
 
-A digest thread represents a compact version of a conversation—it contains the thread's root post and two most recent replies. You can identify a digest thread by checking whether the thread has the  [IsDigest](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.social.socialthreadattributes.aspx) attribute applied in its [Attributes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.Attributes.aspx) property. To see whether a thread has more than two threads, check the [TotalReplyCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.TotalReplyCount.aspx) property.
+A digest thread represents a compact version of a conversation—it contains the thread's root post and two most recent replies. You can identify a digest thread by checking whether the thread has the  [IsDigest](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadattributes.aspx) attribute applied in its [Attributes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.Attributes.aspx) property. To see whether a thread has more than two threads, check the [TotalReplyCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.TotalReplyCount.aspx) property.
   
     
     

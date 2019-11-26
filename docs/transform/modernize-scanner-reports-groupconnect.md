@@ -128,4 +128,4 @@ Load the ModernizationUserCustomActionScanResults.csv into Microsoft Excel and u
 
 Filter | Takeaway
 ---------|----------
-**No filter** | Will give you one row per found incompatible user custom action. You need to assess how important these user custom actions are: if they are business critical it's better to either build an alternative [SharePoint Framework extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions) or move the site back to "classic"
+**No filter** | Will give you one row per found incompatible user custom action. You need to assess how important these user custom actions are: if they are business critical it's better to either build an alternative [SharePoint Framework extension](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions) or move the site back to "classic"

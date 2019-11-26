@@ -65,27 +65,27 @@ You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@off
    
 ## Get Started
 
-* [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-* [Setup your Machine](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
-* [Go build your first web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
+* [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
+* [Setup your Machine](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
+* [Go build your first web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
 
 ## Reference
-* [sp-application-base](https://docs.microsoft.com/en-us/javascript/api/sp-application-base)
-* [sp-component-base](https://docs.microsoft.com/en-us/javascript/api/sp-component-base)
-* [sp-core-library](https://docs.microsoft.com/en-us/javascript/api/sp-core-library)
-* [sp-dialog](https://docs.microsoft.com/en-us/javascript/api/sp-dialog)
-* [sp-extension-base](https://docs.microsoft.com/en-us/javascript/api/sp-extension-base)
-* [sp-http](https://docs.microsoft.com/en-us/javascript/api/sp-http)
-* [sp-listview-extensibility](https://docs.microsoft.com/en-us/javascript/api/sp-listview-extensibility)
-* [sp-odata-types](https://docs.microsoft.com/en-us/javascript/api/sp-odata-types)
-* [sp-page-context](https://docs.microsoft.com/en-us/javascript/api/sp-page-context)
-* [sp-webpart-base](https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base)
+* [sp-application-base](https://docs.microsoft.com/javascript/api/sp-application-base)
+* [sp-component-base](https://docs.microsoft.com/javascript/api/sp-component-base)
+* [sp-core-library](https://docs.microsoft.com/javascript/api/sp-core-library)
+* [sp-dialog](https://docs.microsoft.com/javascript/api/sp-dialog)
+* [sp-extension-base](https://docs.microsoft.com/javascript/api/sp-extension-base)
+* [sp-http](https://docs.microsoft.com/javascript/api/sp-http)
+* [sp-listview-extensibility](https://docs.microsoft.com/javascript/api/sp-listview-extensibility)
+* [sp-odata-types](https://docs.microsoft.com/javascript/api/sp-odata-types)
+* [sp-page-context](https://docs.microsoft.com/javascript/api/sp-page-context)
+* [sp-webpart-base](https://docs.microsoft.com/javascript/api/sp-webpart-base)
 
 ## Learn More
 
-* [Background and Philosophy](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
-* [Design Great Web Parts](https://docs.microsoft.com/en-us/sharepoint/dev/design/design-guidance-overview)
-* [API Docs](https://docs.microsoft.com/en-us/javascript/api/sp-application-base)
+* [Background and Philosophy](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
+* [Design Great Web Parts](https://docs.microsoft.com/sharepoint/dev/design/design-guidance-overview)
+* [API Docs](https://docs.microsoft.com/javascript/api/sp-application-base)
 
 ## Updates & Feedback
 

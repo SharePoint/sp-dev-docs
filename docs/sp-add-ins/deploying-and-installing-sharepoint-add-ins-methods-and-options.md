@@ -40,7 +40,7 @@ All the add-ins that the user can install immediately are listed. Users can filt
 <a name="Installing"> </a>
 ## Installing SharePoint Add-ins
 
-Website owners install SharePoint Add-ins from the **Your Add-ins** page as described earlier in this topic. Installation creates an instance of the add-in. For more information about installing add-ins, see [Add SharePoint Add-ins to a SharePoint site](https://technet.microsoft.com/en-us/library/fp161231.aspx). 
+Website owners install SharePoint Add-ins from the **Your Add-ins** page as described earlier in this topic. Installation creates an instance of the add-in. For more information about installing add-ins, see [Add SharePoint Add-ins to a SharePoint site](https://technet.microsoft.com/library/fp161231.aspx). 
  
 > [!NOTE]
 > Sometimes a temporary loss of a network connection can block installation. If installation fails for any reason, the installation infrastructure will retry three times. If it does not succeed, an indication of the failure appears in the UI. Users can retry the installation later. 

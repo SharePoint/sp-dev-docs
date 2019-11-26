@@ -18,7 +18,7 @@ When developers create a new SharePoint Framework extension solution using stand
 > [!WARNING]
 > Starting from SharePoint Framework v1.6, default scaffolding will automatically create example files in SharePoint Solution to activate extension across the tenant if you chose to use the tenant-scoped deployment option.
 
-SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality. This means that the `skipFeatureDeployment` attribute in the `package-solution.json` will need to be set as *true*. 
+SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality. This means that the `skipFeatureDeployment` attribute in the `package-solution.json` will need to be set as *true*. 
 
 # Controlling tenant wide deployment from app catalog site collection
 

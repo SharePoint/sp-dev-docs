@@ -248,7 +248,7 @@ The add-in manifest file is in XML format and can be edited directly. To get per
 -  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint.md)
     
   
--  [Export and import customized search configuration settings in SharePoint (TechNet)](http://technet.microsoft.com/en-us/library/jj871675.aspx)
+-  [Export and import customized search configuration settings in SharePoint (TechNet)](http://technet.microsoft.com/library/jj871675.aspx)
     
   
 

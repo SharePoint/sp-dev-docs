@@ -33,7 +33,7 @@ Table 1 lists some useful articles that can help you to understand the concepts 
 | [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)|Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio.|
 | [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md)|Learn how to create a basic high-trust SharePoint Add-in with the Office Developer Tools for Visual Studio by using a self-signed certificate and an associated issuer ID.|
 | [Web Deploy](https://www.iis.net/downloads/microsoft/web-deploy)|Web Deploy simplifies deployment of web applications and websites to IIS servers.|
-| [Digital Certificates](https://msdn.microsoft.com/library/e523b335-0156-4f47-b55c-b80495587c4f.aspx) and<br/>[Working with Certificates](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/working-with-certificates)|Learn the basic ideas behind digital certificates.|
+| [Digital Certificates](https://msdn.microsoft.com/library/e523b335-0156-4f47-b55c-b80495587c4f.aspx) and<br/>[Working with Certificates](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/working-with-certificates)|Learn the basic ideas behind digital certificates.|
 
 > [!NOTE] 
 > High-trust SharePoint Add-ins can only be installed to an on-premises SharePoint, not to SharePoint Online, and they are primarily intended for use with an on-premises, rather than cloud-based, web application. This article explains how to publish the add-in in that scenario. Also, in this article, 'customer' refers to the business that installs the SharePoint Add-in and hosts the remote components of the add-in.
@@ -74,7 +74,7 @@ This annoyance might be acceptable for a developer, but it would be unacceptable
 
 The certificate should be in two formats, Personal Information Exchange (pfx) and Security Certificate (cer). If it is not in either of these formats when originally obtained, the customer can convert it by using a utility. Also, after a pfx format version has been obtained, the pfx file can be imported into IIS, and then the cer version exported as described later in this article.
 
-If the certificate is originally obtained is a cer format, it contains both the private and public keys. As a general practice, the .cer file that is used by SharePoint should not contain the private key. Consider importing the original certificate to IIS and then exporting a new cer version that does not include the private key as described later. For more information about .pfx and .cer files, see [Software Publisher Certificate](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/software-publisher-certificate).
+If the certificate is originally obtained is a cer format, it contains both the private and public keys. As a general practice, the .cer file that is used by SharePoint should not contain the private key. Consider importing the original certificate to IIS and then exporting a new cer version that does not include the private key as described later. For more information about .pfx and .cer files, see [Software Publisher Certificate](https://docs.microsoft.com/windows-hardware/drivers/install/software-publisher-certificate).
 
 In addition, the customer has to consider whether to use a single certificate for all high-trust SharePoint Add-ins or separate certificates for each. For more information about this decision, see [Deciding between using one certificate or many for high-trust SharePoint Add-ins](creating-sharepoint-add-ins-that-use-high-trust-authorization.md#Deciding).
  
@@ -87,7 +87,7 @@ The following procedures are performed on the remote web server hosting the remo
 
 ### To configure the remote web server and pfx certificate
 
-1. Give the .pfx certificate a strong password. For more information, see [Guidelines for creating strong passwords](https://msdn.microsoft.com/en-us/library/bb416446.aspx) and [Strong passwords](https://docs.microsoft.com/en-us/sql/relational-databases/security/strong-passwords).
+1. Give the .pfx certificate a strong password. For more information, see [Guidelines for creating strong passwords](https://msdn.microsoft.com/library/bb416446.aspx) and [Strong passwords](https://docs.microsoft.com/sql/relational-databases/security/strong-passwords).
 
 2. Import the certificate into IIS on the remote web server with these steps:
     
@@ -108,9 +108,9 @@ The following procedures are performed on the remote web server hosting the remo
  
 ### To open the Windows Certificate Store
 
-1. On the same server, open the **Microsoft Management Console** as described in [Open MMC 3.0](https://technet.microsoft.com/en-us/library/cc766121.aspx).    
+1. On the same server, open the **Microsoft Management Console** as described in [Open MMC 3.0](https://technet.microsoft.com/library/cc766121.aspx).    
  
-2. Add the **Certificates** snap-in for the computer account as described in [Add the Certificates Snap-in to an MMC](https://technet.microsoft.com/en-us/library/cc754431.aspx). Be sure to use the procedure for the *computer*, not a user or service. Select the *local*  computer, not "another" computer, when prompted.
+2. Add the **Certificates** snap-in for the computer account as described in [Add the Certificates Snap-in to an MMC](https://technet.microsoft.com/library/cc754431.aspx). Be sure to use the procedure for the *computer*, not a user or service. Select the *local*  computer, not "another" computer, when prompted.
     
 Skip the next procedure if you are using ISS Manager 8.
 
@@ -128,7 +128,7 @@ Skip the next procedure if you are using ISS Manager 8.
 
 5. Export the file to the folder that you created, and enter its password.
 
-6. In the **Microsoft Management Console**, import the certificate as described in [Import a Certificate](https://technet.microsoft.com/en-us/library/cc754489.aspx). Be sure to specify the **Personal** store.
+6. In the **Microsoft Management Console**, import the certificate as described in [Import a Certificate](https://technet.microsoft.com/library/cc754489.aspx). Be sure to specify the **Personal** store.
 
 7. Leave the console open for the next procedure.
 
@@ -412,9 +412,9 @@ The TokenHelper.cs (or .vb) file generated by Office Developer Tools for Visual 
  
 ### To upload and install the SharePoint Add-in
 
-1. Upload the *.app package file of the SharePoint Add-in to the organization add-in catalog. (High-trust SharePoint Add-ins cannot be distributed through the Office Store.) For details, see [Add add-ins to the Add-in Catalog](http://technet.microsoft.com/en-us/library/fp161234.aspx#AddApps).
+1. Upload the *.app package file of the SharePoint Add-in to the organization add-in catalog. (High-trust SharePoint Add-ins cannot be distributed through the Office Store.) For details, see [Add add-ins to the Add-in Catalog](http://technet.microsoft.com/library/fp161234.aspx#AddApps).
     
-2. Install the add-in on any website within the same parent SharePoint web application that contains the add-in catalog. For details about uploading and installing the SharePoint Add-in, see [Add SharePoint Add-ins to a SharePoint site](http://technet.microsoft.com/en-us/library/fp161231).
+2. Install the add-in on any website within the same parent SharePoint web application that contains the add-in catalog. For details about uploading and installing the SharePoint Add-in, see [Add SharePoint Add-ins to a SharePoint site](http://technet.microsoft.com/library/fp161231).
     
  
 

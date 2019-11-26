@@ -17,9 +17,9 @@ A site design is a collection of actions that SharePoint runs when creating a ne
 
 Each action is specified by the "verb" value in the JSON script. Also, actions can have subactions that are also "verb" values. In the following JSON, the script specifies to create a new list named **Customer Tracking**, and then subactions set the description and add several fields to define the list.
 
-1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
+1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
 
-2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
+2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx) to connect to your SharePoint tenant.
 
 3. Create - and assign the JSON that describes the new script - to a variable as shown in the following PowerShell code. You can view and reference the latest JSON schema file here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
@@ -138,7 +138,7 @@ Now that you've added a site script and site design, you can use it to create ne
 
 ### Apply to an existing site collection
 
-You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet. 
+You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet. 
 
 You can apply a published site design to: 
 1. Group-connected Team site
@@ -149,7 +149,7 @@ You can apply a published site design to:
 
 ### Associate with a hub site
 
-You can also associate a published site design to a hub site in hub site settings so it can be applied to all joining sites. For details on how to associate the site design either through the UI or using the Set-SPOHubSite command please review the [Set up a site design for your hub site](https://docs.microsoft.com/en-us/sharepoint/set-up-site-design-hub-site) article.
+You can also associate a published site design to a hub site in hub site settings so it can be applied to all joining sites. For details on how to associate the site design either through the UI or using the Set-SPOHubSite command please review the [Set up a site design for your hub site](https://docs.microsoft.com/sharepoint/set-up-site-design-hub-site) article.
 
 ## See also
 

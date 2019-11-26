@@ -50,7 +50,7 @@ There are some cases where cross-site publishing is not efficient or appropriate
 ## How can I set up a catalog?
 <a name="SP15_CrossSitePublising_WhenShouldIUseCrossSitePublishing"> </a>
 
-Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. SharePoint enables you to create and customize page layouts for SharePoint and above. For more information, see  [Customize page layouts for a catalog-based site in SharePoint](https://msdn.microsoft.com/en-us/library/office/dn144674.aspx 
+Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. SharePoint enables you to create and customize page layouts for SharePoint and above. For more information, see  [Customize page layouts for a catalog-based site in SharePoint](https://msdn.microsoft.com/library/office/dn144674.aspx 
 ).
   
     

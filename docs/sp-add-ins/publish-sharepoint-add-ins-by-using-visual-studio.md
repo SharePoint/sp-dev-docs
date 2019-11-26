@@ -128,10 +128,10 @@ Perform the following procedure if you want to submit your SharePoint Add-in to 
 
 1. On the  **Publish your add-in** page, choose the **Visit the Seller Dashboard** button, and then sign in to your Microsoft Seller Dashboard account.
     
-    See  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
+    See  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
     
  
-2. Choose  **add a new app**, fill out the information, and then submit the add-in to the Office Store. For details, see  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
+2. Choose  **add a new app**, fill out the information, and then submit the add-in to the Office Store. For details, see  [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
     
  
 

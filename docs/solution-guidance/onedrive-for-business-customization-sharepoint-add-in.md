@@ -66,7 +66,7 @@ Office 365 suite level settings
 
 Office 365 is much more than just SharePoint, like you know. You can find more and more additional services which are not based on even the SharePoint architecture, like Delve, Yammer and many upcoming services. This means that the enterprise branding and configuration is not just about controlling what we have in the SharePoint sites, rather we should be thinking the overall end user experience and how we provide consistent configurations cross different services.
 
-Classic example of these enterprise requirements is branding and for that we have already Office 365 theming introduced, which can be used to control some level of branding. We have also other upcoming features, which will help to control your site governance and other settings, from centralized location outside of the site collection settings, like the upcoming Compliance Center for Office 365, which is currently listed in the [Office 365 roadmap](http://office.microsoft.com/en-us/products/office-365-roadmap-FX104343353.aspx).
+Classic example of these enterprise requirements is branding and for that we have already Office 365 theming introduced, which can be used to control some level of branding. We have also other upcoming features, which will help to control your site governance and other settings, from centralized location outside of the site collection settings, like the upcoming Compliance Center for Office 365, which is currently listed in the [Office 365 roadmap](http://office.microsoft.com/products/office-365-roadmap-FX104343353.aspx).
 
 Following picture shows the different settings right now for the Office 365 theming, which will be then applied cross all Office 365 services.
 

@@ -224,10 +224,10 @@ Additional properties that can be used to restrict how content authors can use z
 -  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
--  [WebPartZone class](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webparts.webpartzone.aspx)
+-  [WebPartZone class](http://msdn.microsoft.com/library/system.web.ui.webcontrols.webparts.webpartzone.aspx)
     
   
--  [WebPartZoneBase properties](http://msdn.microsoft.com/en-us/library/335sw9k3.aspx)
+-  [WebPartZoneBase properties](http://msdn.microsoft.com/library/335sw9k3.aspx)
     
   
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)

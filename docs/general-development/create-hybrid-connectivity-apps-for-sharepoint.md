@@ -20,13 +20,13 @@ The Business Connectivity Services (BCS) hybrid connectivity capability lets Sha
   
     
     
-For a complete description of how to configure a working hybrid solution, see  [Hybrid for SharePoint](http://technet.microsoft.com/en-us/library/jj838715.aspx). This series of articles walks you through all the requirements of configuring data sources, reverse proxies, search, security, networking, and everything else needed to set up the end-to-end scenario.
+For a complete description of how to configure a working hybrid solution, see  [Hybrid for SharePoint](http://technet.microsoft.com/library/jj838715.aspx). This series of articles walks you through all the requirements of configuring data sources, reverse proxies, search, security, networking, and everything else needed to set up the end-to-end scenario.
   
     
     
 
 > **Caution:**
-> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](http://www.microsoft.com/en-us/microsoftservices/deploy.aspx). 
+> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](http://www.microsoft.com/microsoftservices/deploy.aspx). 
   
     
     
@@ -119,10 +119,10 @@ For a complete tutorial of how to set this up, see the following:
     
     
 
--  [Getting Started With OData Part 1: Building an OData Service](http://msdn.microsoft.com/en-us/data/gg601462)
+-  [Getting Started With OData Part 1: Building an OData Service](http://msdn.microsoft.com/data/gg601462)
     
   
--  [Quickstart (WCF Data Services)](http://msdn.microsoft.com/en-us/library/cc668796.aspx)
+-  [Quickstart (WCF Data Services)](http://msdn.microsoft.com/library/cc668796.aspx)
     
   
 
@@ -216,7 +216,7 @@ You can also take the BDCM file created for the external content type and extrac
 <a name="bk_addresources"> </a>
 
 
--  [Hybrid for SharePoint](http://technet.microsoft.com/en-us/library/jj838715.aspx)
+-  [Hybrid for SharePoint](http://technet.microsoft.com/library/jj838715.aspx)
     
   
 -  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)

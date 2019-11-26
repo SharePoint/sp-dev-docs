@@ -41,7 +41,7 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 	Additionally, if there is a bug in poorly written event receiver code there is no way to notify SharePoint the bug occurred and the event should be executed again.  You can work around this to some degree with event receivers attached to SharePoint lists.  See below for more information about this approach.  
 - When an event receiver executes a significant amount of code an asynchronous pattern should be used.
 	+ See the following MSDN blog post for more information about this pattern. [Using Azure storage queues and WebJobs for async actions in Office 365 (MSDN Blog Post)](http://blogs.msdn.com/b/vesku/archive/2015/03/02/using-azure-storage-queues-and-webjobs-for-async-actions-in-office-365.aspx)
-	+ See the following MSDN article for more information about timeouts in event receivers.  (Search for timeout in the article.)  [Handle events in add-ins for SharePoint (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/jj220048.aspx)
+	+ See the following MSDN article for more information about timeouts in event receivers.  (Search for timeout in the article.)  [Handle events in add-ins for SharePoint (MSDN Article)](https://msdn.microsoft.com/library/office/jj220048.aspx)
 - When event receivers operate on SharePoint lists we recommend using a specific change tracking mechanism along with the event receiver to ensure higher quality processing.
 	+ See the following O365 PnP Code Sample for more information about this pattern and how to implement it.  [Core.ListItemChangeMonitor (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ListItemChangeMonitor)
 
@@ -49,7 +49,7 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 Debugging Event Receivers
 -------------------------
 To debug event receivers you need to configure a few different things in Azure and Visual Studio.  The following article provide step by step instructions and more information related to debugging. 
-- [Debug and troubleshoot a remote event receiver in an add-in for SharePoint MSDN Blog Post)](https://msdn.microsoft.com/en-us/library/office/dn275975.aspx) 
+- [Debug and troubleshoot a remote event receiver in an add-in for SharePoint MSDN Blog Post)](https://msdn.microsoft.com/library/office/dn275975.aspx) 
 
 
 More Examples
@@ -70,9 +70,9 @@ More Examples
 
 Related links
 =============
-- [Remote event receivers in SharePoint 2013 FAQ (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/dn456315.aspx)
-- [Create a remote event receiver in add-ins for SharePoint (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/jj220043.aspx)
-- [Create an app event receiver in SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/EN-US/library/office/jj220052.aspx)
+- [Remote event receivers in SharePoint 2013 FAQ (MSDN Article)](https://msdn.microsoft.com/library/office/dn456315.aspx)
+- [Create a remote event receiver in add-ins for SharePoint (MSDN Article)](https://msdn.microsoft.com/library/office/jj220043.aspx)
+- [Create an app event receiver in SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/library/office/jj220052.aspx)
 - Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")

@@ -14,7 +14,7 @@ SharePoint introduces a new field type named Geolocation that enables you to ann
     
     
 
-An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint front-end web server to view the geolocation field value or data in a list. This package installs components that implement the new geometry, geography, and hierarchy ID types in SQL Server 2008. By default, this file is installed for SharePoint Online. However, it is not for an on-premises deployment of SharePoint. You must be a member of the Farm Administrators group to perform this operation. To download SQLSysClrTypes.msi, see  [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=26728) for SQL Server 2008, or [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=29065)for SQL Server 2012 in the Microsoft Download Center.
+An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint front-end web server to view the geolocation field value or data in a list. This package installs components that implement the new geometry, geography, and hierarchy ID types in SQL Server 2008. By default, this file is installed for SharePoint Online. However, it is not for an on-premises deployment of SharePoint. You must be a member of the Farm Administrators group to perform this operation. To download SQLSysClrTypes.msi, see  [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=26728) for SQL Server 2008, or [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065)for SQL Server 2012 in the Microsoft Download Center.
 ## Prerequisites for adding a Geolocation column
 <a name="SP15addgeo_prereq"> </a>
 
@@ -31,7 +31,7 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
     > **Important:**
       > Please note that you are responsible for compliance with terms and conditions applicable to your use of the Bing Maps key, and any necessary disclosures to users of your application regarding data passed to the Bing Maps service. 
 - Visual Studio 2010.
-- SharePoint Online Management Shell - https://www.microsoft.com/en-us/download/details.aspx?id=35588 
+- SharePoint Online Management Shell - https://www.microsoft.com/download/details.aspx?id=35588 
 - SharePoint PnP PowerShell - https://github.com/SharePoint/PnP-PowerShell/ 
     
   
@@ -210,7 +210,7 @@ private void AddListItem()
 -  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists.md)
     
   
--  [Use the SharePoint location field type in mobile applications](http://technet.microsoft.com/en-us/library/fp161355%28v=office.15%29.aspx)
+-  [Use the SharePoint location field type in mobile applications](http://technet.microsoft.com/library/fp161355%28v=office.15%29.aspx)
     
   
 

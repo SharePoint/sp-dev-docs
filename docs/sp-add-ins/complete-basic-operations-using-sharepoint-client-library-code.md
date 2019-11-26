@@ -41,7 +41,7 @@ All of these examples assume that the code is in a code-behind file for a Micros
 using Microsoft.SharePoint.Client;
 ```
 
-Except where specified otherwise, you can assume that each of these examples is in a parameterless method that is defined in the page's class. Also, `label1`, `label2`, and so on, are the names of [Label](https://msdn.microsoft.com/EN-US/library/620f4ses) objects on the page.
+Except where specified otherwise, you can assume that each of these examples is in a parameterless method that is defined in the page's class. Also, `label1`, `label2`, and so on, are the names of [Label](https://msdn.microsoft.com/library/620f4ses) objects on the page.
 
 > [!NOTE]
 > When you are making a provider-hosted SharePoint Add-in with an ASP.NET web application, and you add a reference to an assembly to the web application project in Visual Studio, set the **Copy Local** property of the assembly to **True**, unless you know that the assembly is already installed on the web server, or you can ensure that it is installed before you deploy your add-in.
@@ -81,7 +81,7 @@ label1.Text = web.Title;
 
 Sometimes, the client is interested only in a few properties of an object. The SharePoint .NET Framework CSOM does not require you to get all properties from the object on a server—you can use anonymous methods, which can be lambda expressions, to specifically request property names. The client library queries only for those properties on the server, and the server sends only those properties to the client. This technique reduces unnecessary data transfer between the client and the server. It is also useful when the user does not have permission to one or more of the other, unused properties on an object.
 
-Note that you need to add a **using** statement for [System.Linq](https://msdn.microsoft.com/EN-US/library/bb336768).
+Note that you need to add a **using** statement for [System.Linq](https://msdn.microsoft.com/library/bb336768).
 
 ```csharp
 // Starting with ClientContext, the constructor requires a URL to the
@@ -133,7 +133,7 @@ context.ExecuteQuery();
 
 ### Create a new SharePoint website
 
-This example shows how to create a new SharePoint site as a subsite of the current website. Use the **WebCreationInformation** class to create a new website. You also need to add **using** statements for [System.Collections.Generic](https://msdn.microsoft.com/EN-US/library/0sbxh9x2) and [System.Text](https://msdn.microsoft.com/EN-US/library/x76y3wky).
+This example shows how to create a new SharePoint site as a subsite of the current website. Use the **WebCreationInformation** class to create a new website. You also need to add **using** statements for [System.Collections.Generic](https://msdn.microsoft.com/library/0sbxh9x2) and [System.Text](https://msdn.microsoft.com/library/x76y3wky).
 
 ```csharp
 // Starting with ClientContext, the constructor requires a URL to the
@@ -160,7 +160,7 @@ These examples show how to use the .NET Framework CSOM to complete list-related 
 
 ### Retrieve all SharePoint lists in a website
 
-This example retrieves all SharePoint lists in a SharePoint website. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768).
+This example retrieves all SharePoint lists in a SharePoint website. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/library/bb336768).
 
 ```csharp
 // Starting with ClientContext, the constructor requires a URL to the
@@ -187,7 +187,7 @@ foreach (List list in web.Lists)
 ```
 
 > [!NOTE]
-> Alternatively, you can use the **LoadQuery** method to store the return value in another collection, rather than use the **web.Lists** property. You will also need to add **using** statements for [System.Collections.Generic](http://msdn.microsoft.com/EN-US/library/0sbxh9x2) and [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the using statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+> Alternatively, you can use the **LoadQuery** method to store the return value in another collection, rather than use the **web.Lists** property. You will also need to add **using** statements for [System.Collections.Generic](http://msdn.microsoft.com/library/0sbxh9x2) and [System.Linq](http://msdn.microsoft.com/library/bb336768). Also, add an alias to the using statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
 ```csharp
 // Starting with ClientContext, the constructor requires a URL to the
@@ -409,7 +409,7 @@ foreach (SP.Field field in list.Fields)
 
 ### Retrieve a specific field from the list
 
-If you want to retrieve information about a specific field, use the **Fields.GetByInternalNameOrTitle** method. The return type of this method is **Field**. Before the query is executed, the client does not know the type of object, and C# syntax is not available for casting it to the derived type. Therefore, use the **ClientContext.CastTo** method to cast it, which instructs the client library to recreate an object. You also need to add a **using** statement for [System.Collections.Generic](http://msdn.microsoft.com/EN-US/library/0sbxh9x2). You also need to add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+If you want to retrieve information about a specific field, use the **Fields.GetByInternalNameOrTitle** method. The return type of this method is **Field**. Before the query is executed, the client does not know the type of object, and C# syntax is not available for casting it to the derived type. Therefore, use the **ClientContext.CastTo** method to cast it, which instructs the client library to recreate an object. You also need to add a **using** statement for [System.Collections.Generic](http://msdn.microsoft.com/library/0sbxh9x2). You also need to add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
 > [!NOTE]
 > The **GetByInternalNameOrTitle** method used in this example is a remote method. It does not use the data from the client collection even if the client collection is already populated.
@@ -555,7 +555,7 @@ This code fails because SharePoint .NET Framework CSOM code must:
 
 In SharePoint .NET Framework CSOM, when you call a method, you build a query. Queries accumulate and are not sent to the server until  **ExecuteQuery** is called.
 
-The following example shows the code that is required to display the website's title. You also need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+The following example shows the code that is required to display the website's title. You also need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
 ```csharp
 // Starting with ClientContext, the constructor requires a URL to the
@@ -595,7 +595,7 @@ creationInfo.Title = web.Title;
 List newList = web.Lists.Add(creationInfo);
 ```
 
-An exception is thrown because the property is not available before you execute the query. In SQL, you would declare a local variable to hold the value for `web.Title` and use the local variable for web creation. In the client library, you can't create a local variable. You have to split functionality into two separate queries as is shown in the following example. You also need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the using statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+An exception is thrown because the property is not available before you execute the query. In SQL, you would declare a local variable to hold the value for `web.Title` and use the local variable for web creation. In the client library, you can't create a local variable. You have to split functionality into two separate queries as is shown in the following example. You also need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/library/bb336768). Also, add an alias to the using statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
 ```csharp
 // Starting with ClientContext, the constructor requires a URL to the
@@ -652,7 +652,7 @@ When the SharePoint .NET Framework CSOM passes this information to the server, y
 
 ### Group data retrieval on the same object together to improve performance
 
-When reading multiple pieces of data from the same object, you should try to get all of it in a single query; that is, a single call to the  **Load<T>(T, [])** method. The following code shows two ways to retrieve a website's title and description and the **Announcements** list's description. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the using **statement** for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+When reading multiple pieces of data from the same object, you should try to get all of it in a single query; that is, a single call to the  **Load<T>(T, [])** method. The following code shows two ways to retrieve a website's title and description and the **Announcements** list's description. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/library/bb336768). Also, add an alias to the using **statement** for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
 ```csharp
 static void Method1()
@@ -713,7 +713,7 @@ Console.WriteLine(web.Title);
 Console.WriteLine(web.HasUniqueRoleAssignments);
 ```
 
-To get the code to compile successfully, update it to the following. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+To get the code to compile successfully, update it to the following. To compile this code, you need to add a **using** statement for [System.Linq](http://msdn.microsoft.com/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
 ```csharp
 // Starting with ClientContext, the constructor requires a URL to the
@@ -731,7 +731,7 @@ Console.WriteLine(web.HasUniqueRoleAssignments);
 
 ### Use conditional scope to test for preconditions before loading data
 
-To conditionally execute code, set a conditional scope by using a **ConditionalScope** object. For example, retrieve the list property when the list is not null. You also need to add **using** statements for [System.Collections.Generic](http://msdn.microsoft.com/EN-US/library/0sbxh9x2) and [System.Linq](http://msdn.microsoft.com/EN-US/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+To conditionally execute code, set a conditional scope by using a **ConditionalScope** object. For example, retrieve the list property when the list is not null. You also need to add **using** statements for [System.Collections.Generic](http://msdn.microsoft.com/library/0sbxh9x2) and [System.Linq](http://msdn.microsoft.com/library/bb336768). Also, add an alias to the **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
 
 > [!NOTE]
 > Calling method and setting properties within a conditional scope are not permitted, because the client library does not track the side effects of method calls and property settings. You should use only **Load** inside the conditional scope.

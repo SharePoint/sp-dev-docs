@@ -25,7 +25,7 @@ To follow the steps in this example, you must have the following:
 - A SharePoint cross-site publishing environment
     
   
-For information about how to set up a SharePoint cross-site publishing environment, see  [Configure cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj656774.aspx).
+For information about how to set up a SharePoint cross-site publishing environment, see  [Configure cross-site publishing in SharePoint](http://technet.microsoft.com/library/jj656774.aspx).
   
     
     
@@ -42,7 +42,7 @@ Table 1 lists useful articles that can help you understand the concepts and step
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj635883.aspx) <br/> |Learn about how to use cross-site publishing and Search web parts to create adaptive SharePoint Internet, intranet, and extranet sites.  <br/> |
+| [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/library/jj635883.aspx) <br/> |Learn about how to use cross-site publishing and Search web parts to create adaptive SharePoint Internet, intranet, and extranet sites.  <br/> |
 | [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md) <br/> |Learn about how to create page layouts in SharePoint.  <br/> |
 | [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md) <br/> |Learn about how to resolve any issues that prevent the server-side preview from rendering your page.  <br/> |
 | [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md) <br/> |Learn about how to use snippets to add SharePoint functionality to your HTML master page or page layout.  <br/> |
@@ -51,7 +51,7 @@ Table 1 lists useful articles that can help you understand the concepts and step
 ## Introduction to category page layouts and catalog item page layouts
 <a name="bk_introduction"> </a>
 
-Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. By default, SharePoint can automatically create one category page layout and one catalog item page layout per catalog connection. Pages based on these layouts are created in the Pages library of a publishing site when you connect the site to a catalog. For more information about page layouts, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md). For more information about features that are specific to category page layouts and catalog item page layouts, see  [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj635883.aspx).
+Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. By default, SharePoint can automatically create one category page layout and one catalog item page layout per catalog connection. Pages based on these layouts are created in the Pages library of a publishing site when you connect the site to a catalog. For more information about page layouts, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md). For more information about features that are specific to category page layouts and catalog item page layouts, see  [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/library/jj635883.aspx).
   
     
     
@@ -149,7 +149,7 @@ The simplest way to create a category page layout is to let SharePoint create th
 9. To configure and copy the HTML for the Content Search Snippet and any other snippets you want to add to the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
     > [!NOTE]
-    > When you add the Content Search Snippet to the page layout, be sure to change the query to use the result source that was created when you connected the publishing site to a catalog. For more information, see  [Configure result sources for web content management in SharePoint](http://technet.microsoft.com/en-us/library/jj715262.aspx). 
+    > When you add the Content Search Snippet to the page layout, be sure to change the query to use the result source that was created when you connected the publishing site to a catalog. For more information, see  [Configure result sources for web content management in SharePoint](http://technet.microsoft.com/library/jj715262.aspx). 
 
 10. Make any other required changes to the markup, and then save the file.
     
@@ -474,7 +474,7 @@ If the catalog item page layout was created automatically when the publishing si
 |**PublishingPageLayoutOWSURLH** <br/> |The URL to the page layout that was used to create the page.  <br/> |Pages library only  <br/> |
 |**Title** <br/> |The title of the page or list item.  <br/> |Pages library and list  <br/> |
    
-The managed properties for custom columns that you add to the Pages library or list are also included in Catalog-Item Reuse Snippets. The managed property name will vary, based on the site column type that you use when you create the site column. For more information, see  [Automatically created managed properties in SharePoint](http://technet.microsoft.com/en-us/library/jj613136.aspx), and  [Overview of the search schema in SharePoint](http://technet.microsoft.com/en-us/library/jj219669.aspx).
+The managed properties for custom columns that you add to the Pages library or list are also included in Catalog-Item Reuse Snippets. The managed property name will vary, based on the site column type that you use when you create the site column. For more information, see  [Automatically created managed properties in SharePoint](http://technet.microsoft.com/library/jj613136.aspx), and  [Overview of the search schema in SharePoint](http://technet.microsoft.com/library/jj219669.aspx).
   
     
     

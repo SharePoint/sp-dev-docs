@@ -29,8 +29,8 @@ How are unique identifiers set on documents?
 
 The SharePoint (CSOM) and/or REST APIs may be used to set column values, and therefor they may be used to set unique identifiers for documents. See the following articles to learn more about these APIs and how to set column values with them.  
 
-- [Complete basic operations using SharePoint 2013 client library code (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/fp179912.aspx#BasicOps_SPListItemTasks) 
-- [Working with lists and list items with REST (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/dn292552.aspx#ListItems)
+- [Complete basic operations using SharePoint 2013 client library code (MSDN Article)](https://msdn.microsoft.com/library/office/fp179912.aspx#BasicOps_SPListItemTasks) 
+- [Working with lists and list items with REST (MSDN Article)](https://msdn.microsoft.com/library/office/dn292552.aspx#ListItems)
 
 Options to set unique identifiers for documents
 -----------------------------------------------

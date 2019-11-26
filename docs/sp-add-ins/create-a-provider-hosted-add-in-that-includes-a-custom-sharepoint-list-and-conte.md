@@ -29,7 +29,7 @@ Most classic SharePoint components, such as custom content types, custom list de
 
 ## Prerequisites for creating this SharePoint Add-in
 
-- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)
+- [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio)
 
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**, but sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013) or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
@@ -301,7 +301,7 @@ Develop the web application as you would any other web application for your pref
 
 For the continuing example, you develop an ASP.NET web application. Take the following steps.
     
-1. Open the Default.aspx file and replace the body element of the file with the following markup. The markup adds a **Get the Cast** button that, when chosen, reads the **Characters in Hamlet** list that is in the add-in web and presents its data in a [GridView](https://msdn.microsoft.com/EN-US/library/4w7ya1ts) control that appears only after the button is pressed.
+1. Open the Default.aspx file and replace the body element of the file with the following markup. The markup adds a **Get the Cast** button that, when chosen, reads the **Characters in Hamlet** list that is in the add-in web and presents its data in a [GridView](https://msdn.microsoft.com/library/4w7ya1ts) control that appears only after the button is pressed.
     
   ```HTML
     <body >
@@ -347,7 +347,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-4. Replace the **Page_Load** method with the following code that uses the **TokenHelper** class to obtain tokens from the OAuth-compliant secure token server. The access token is then stored in the [CommandArgument](https://msdn.microsoft.com/EN-US/library/hykdabtx) property of the button for later retrieval by the button's click event handler.
+4. Replace the **Page_Load** method with the following code that uses the **TokenHelper** class to obtain tokens from the OAuth-compliant secure token server. The access token is then stored in the [CommandArgument](https://msdn.microsoft.com/library/hykdabtx) property of the button for later retrieval by the button's click event handler.
       
   ```csharp
       protected void Page_Load(object sender, EventArgs e)
@@ -372,7 +372,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-5. Add the following event handler to the **Default** class. The handler begins by retrieving the access token that was stored in the button's [CommandArgument](https://msdn.microsoft.com/EN-US/library/hykdabtx) property.
+5. Add the following event handler to the **Default** class. The handler begins by retrieving the access token that was stored in the button's [CommandArgument](https://msdn.microsoft.com/library/hykdabtx) property.
     
   ```csharp
       protected void Button1_Click(object sender, EventArgs e)
@@ -407,7 +407,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-8. Add the following code that uses the [HttpWebRequest](https://msdn.microsoft.com/EN-US/library/8y7x3zz2) and [HttpWebResponse](https://msdn.microsoft.com/EN-US/library/ww5755y6) classes of the [System.Net](https://msdn.microsoft.com/EN-US/library/btdf6a7e) namespace to construct the HTTP request and response objects.
+8. Add the following code that uses the [HttpWebRequest](https://msdn.microsoft.com/library/8y7x3zz2) and [HttpWebResponse](https://msdn.microsoft.com/library/ww5755y6) classes of the [System.Net](https://msdn.microsoft.com/library/btdf6a7e) namespace to construct the HTTP request and response objects.
     
   ```csharp
     // HTTP Request and Response construction section
@@ -421,9 +421,9 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-9. Add the following code to parse the ATOM-formatted response XML. It uses the classes of the [System.Xml.Linq](https://msdn.microsoft.com/EN-US/library/bb299195) namespace to parse the data that is returned and construct a [List<T>](https://msdn.microsoft.com/EN-US/library/6sh2ey19) of the items from the SharePoint list. (You could also use the classes of the [System.Xml](https://msdn.microsoft.com/EN-US/library/y3y47afh) namespace.) 
+9. Add the following code to parse the ATOM-formatted response XML. It uses the classes of the [System.Xml.Linq](https://msdn.microsoft.com/library/bb299195) namespace to parse the data that is returned and construct a [List<T>](https://msdn.microsoft.com/library/6sh2ey19) of the items from the SharePoint list. (You could also use the classes of the [System.Xml](https://msdn.microsoft.com/library/y3y47afh) namespace.) 
 
-  Note that, in the XML that SharePoint returns, the child elements of the **entry** element hold metadata about the list item. The actual row data of a SharePoint list item is nested two layers down in the **properties** element. For that reason the [Elements<T>](https://msdn.microsoft.com/EN-US/library/bb348465) extension method is used twice to filter out the higher levels.
+  Note that, in the XML that SharePoint returns, the child elements of the **entry** element hold metadata about the list item. The actual row data of a SharePoint list item is nested two layers down in the **properties** element. For that reason the [Elements<T>](https://msdn.microsoft.com/library/bb348465) extension method is used twice to filter out the higher levels.
       
   ```csharp
     // Response markup parsing section
@@ -440,7 +440,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-10. Add the following LINQ query to construct an [IEnumerable<T>](https://msdn.microsoft.com/EN-US/library/9eekhta0) collection of an anonymous type that has just the properties you need and no others. Note that although the code must refer to the item title field by its internal name `Title`, the property name in the anonymous type, to which the value is assigned, can be named `Character`. One effect of this is that when the collection is bound to a grid control, the more appropriate name **Character** appears on the page.
+10. Add the following LINQ query to construct an [IEnumerable<T>](https://msdn.microsoft.com/library/9eekhta0) collection of an anonymous type that has just the properties you need and no others. Note that although the code must refer to the item title field by its internal name `Title`, the property name in the anonymous type, to which the value is assigned, can be named `Character`. One effect of this is that when the collection is bound to a grid control, the more appropriate name **Character** appears on the page.
       
   ```csharp
     var entryFieldValues = from entry in entries
@@ -451,7 +451,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-11. Finish the handler with the following code to bind the data to a [GridView](https://msdn.microsoft.com/EN-US/library/4w7ya1ts) control on the page. The column headers in the grid default to the property names of the anonymous type: `Character`, `Actor`, and `CastingStatus`. The GridView control has properties that enable you to control the name and formatting column headers, so you could have **Actor/Actress** and **Casting Status** to match the column headers in SharePoint. For simplicity, these techniques are not described here. (You could also use a [DataGrid](https://msdn.microsoft.com/EN-US/library/e1zk1ey1) control.)
+11. Finish the handler with the following code to bind the data to a [GridView](https://msdn.microsoft.com/library/4w7ya1ts) control on the page. The column headers in the grid default to the property names of the anonymous type: `Character`, `Actor`, and `CastingStatus`. The GridView control has properties that enable you to control the name and formatting column headers, so you could have **Actor/Actress** and **Casting Status** to match the column headers in SharePoint. For simplicity, these techniques are not described here. (You could also use a [DataGrid](https://msdn.microsoft.com/library/e1zk1ey1) control.)
     
   ```csharp
       GridView1.DataSource = entryFieldValues;

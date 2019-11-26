@@ -157,16 +157,16 @@ These solutions can be used to see what can be done with Duet Enterprise 2.0 and
 <a name="ConNavExample_resources"> </a>
 
 
--  [Duet Enterprise for Microsoft SharePoint and SAP Server 2.0](http://technet.microsoft.com/en-us/library/ff972436.aspx)
+-  [Duet Enterprise for Microsoft SharePoint and SAP Server 2.0](http://technet.microsoft.com/library/ff972436.aspx)
     
   
 -  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
--  [Visual Studio Developer Center](http://msdn.microsoft.com/en-us/vstudio/default)
+-  [Visual Studio Developer Center](http://msdn.microsoft.com/vstudio/default)
     
   
--  [Office Development with Visual Studio](http://msdn.microsoft.com/en-us/office/hh133430)
+-  [Office Development with Visual Studio](http://msdn.microsoft.com/office/hh133430)
     
   
 

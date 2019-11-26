@@ -45,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Language**</p></td>
-<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States" (see <a href="http://msdn.microsoft.com/en-us/library/ms776260.aspx">Locale Identifier Constants and Strings</a>).</p></td>
+<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States" (see <a href="http://msdn.microsoft.com/library/ms776260.aspx">Locale Identifier Constants and Strings</a>).</p></td>
 </tr>
 </tbody>
 </table>
@@ -82,8 +82,8 @@ The following XML demonstrates how to construct the **WorkflowInfo** element so 
 ## See also
 
 - [Actions Schema Reference](actions-schema-reference-workflowinfo.md)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

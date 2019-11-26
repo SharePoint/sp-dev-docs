@@ -41,7 +41,7 @@ First off, get acquainted with the new app model and the concepts underlying Sha
 
 |||
 |:-----|:-----|
-| [SharePoint for developers](http://msdn.microsoft.com/en-us/sharepoint) <br/> |Portal to the SharePoint developer site, where the emphasis is on apps for SharePoint.  <br/> |
+| [SharePoint for developers](http://msdn.microsoft.com/sharepoint) <br/> |Portal to the SharePoint developer site, where the emphasis is on apps for SharePoint.  <br/> |
 | [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn what apps for SharePoint are, why you should build them, and the concepts that are fundamental to building them in SharePoint.  <br/> |
 | [SharePoint development overview](sharepoint-development-overview.md) <br/> |SharePoint is a development platform for apps for SharePoint and farm solutions. Get acquainted with the capabilities and features of SharePoint to start your development.  <br/> |
 | [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md) <br/> |Provides a high-level overview of the workflow infrastructure in SharePoint, including a view of the platform architecture and the workflow interop bridge.  <br/> |

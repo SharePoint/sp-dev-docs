@@ -19,8 +19,8 @@ High-level guidelines
 As a rule of a thumb, we would like to provide the following high-level guidelines to configure variations in the new SharePoint Add-in model.
 
 - Use the SharePoint Client-side Object Model (CSOM) API to configure variations whenever possible.
-	- .Net Client side object model [Variations class (MSDN API Documentation)](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.variations.aspx)
-	- JavaScript Client side object model [Variations class (MSDN API Documentation)](https://msdn.microsoft.com/en-us/library/office/jj994778.aspx)
+	- .Net Client side object model [Variations class (MSDN API Documentation)](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.variations.aspx)
+	- JavaScript Client side object model [Variations class (MSDN API Documentation)](https://msdn.microsoft.com/library/office/jj994778.aspx)
 - Not all variation configuration settings are currently available via the SharePoint CSOM API Variations classes listed above.
 - You can go beyond what the CSOM API Variations classes listed above provide and configure some variations settings.  To do this, you set the values for variations settings stored in site property bags and/or modify list items in the lists associated with variations.
 	+ The [VariationsExtensions.cs class (O365 PnP Sample)](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core/Extensions/VariationExtensions.cs) contains several examples that modify property bag and list item values to configure variations settings.

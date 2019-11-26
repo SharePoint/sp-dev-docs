@@ -69,7 +69,7 @@ These areas consist of components and databases that work cohesively to perform 
   
     
     
-For a more detailed view, see  [Technical Diagrams -- Search](http://technet.microsoft.com/en-us/library/cc263199.aspx#search) and [Overview of search in SharePoint](http://technet.microsoft.com/en-us/library/jj219738.aspx).
+For a more detailed view, see  [Technical Diagrams -- Search](http://technet.microsoft.com/library/cc263199.aspx#search) and [Overview of search in SharePoint](http://technet.microsoft.com/library/jj219738.aspx).
   
     
     
@@ -236,7 +236,7 @@ For more information, see  [Using the SharePoint search Query APIs](using-the-sh
 
 ### Analytics
 
-To help identify and surface the content that users consider to be the most useful and relevant, the analytics processing component analyzes both the content itself, and also the way that users interact with it. These analyses are done by timer jobs that are responsible for performing analysis lifecycle tasks such as starting, stopping, pausing, and resuming an analysis job when requested. You can manipulate these timer jobs through the  [Microsoft.Office.Server.Search.Analytics](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Analytics.aspx) namespace. For in-depth information about analytics in SharePoint, see [Overview of analytics processing in SharePoint](http://technet.microsoft.com/en-us/library/jj219554.aspx).
+To help identify and surface the content that users consider to be the most useful and relevant, the analytics processing component analyzes both the content itself, and also the way that users interact with it. These analyses are done by timer jobs that are responsible for performing analysis lifecycle tasks such as starting, stopping, pausing, and resuming an analysis job when requested. You can manipulate these timer jobs through the  [Microsoft.Office.Server.Search.Analytics](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Analytics.aspx) namespace. For in-depth information about analytics in SharePoint, see [Overview of analytics processing in SharePoint](http://technet.microsoft.com/library/jj219554.aspx).
   
     
     
@@ -310,10 +310,10 @@ SharePoint provides two new REST interfaces: Navigation and Event Logging. You c
 ## See also
 
 
--  [Changes from SharePoint 2010 to SharePoint](http://technet.microsoft.com/en-us/library/ff607742.aspx)
+-  [Changes from SharePoint 2010 to SharePoint](http://technet.microsoft.com/library/ff607742.aspx)
     
   
--  [Technical Diagrams -- Search](http://technet.microsoft.com/en-us/library/cc263199.aspx#search)
+-  [Technical Diagrams -- Search](http://technet.microsoft.com/library/cc263199.aspx#search)
     
   
 -  [Add SharePoint capabilities](add-sharepoint-capabilities.md)

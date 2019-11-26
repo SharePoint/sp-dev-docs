@@ -1179,10 +1179,10 @@ After you create a filter editor (including its user interface, if required) and
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create filter data providers for PerformancePoint Services in SharePoint](https://msdn.microsoft.com/en-us/library/office/cc159445.aspx)
+-  [How to: Create filter data providers for PerformancePoint Services in SharePoint](https://msdn.microsoft.com/library/office/cc159445.aspx)
     
   
--  [PerformancePoint Services in SharePoint](https://msdn.microsoft.com/en-us/library/office/ee559635.aspx)
+-  [PerformancePoint Services in SharePoint](https://msdn.microsoft.com/library/office/ee559635.aspx)
     
   
 

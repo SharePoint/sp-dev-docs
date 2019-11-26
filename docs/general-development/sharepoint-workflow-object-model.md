@@ -12,7 +12,7 @@ Get a brief introduction to the workflow object model in SharePoint.
 ## SharePoint workflow object model
 <a name="bk_SPwfom"> </a>
 
-The SharePoint object model is built on top of the .NET Framework 4 object model for Windows Workflow Foundation 4, but with innovations that enable workflow functionality in SharePoint generally, and in SharePoint Add-ins in particular. The native .NET Framework 4 object model for Windows Workflow Foundation 4 is located in the .NET Framework  [System.Workflow namespaces](http://msdn.microsoft.com/en-us/library/gg145026.aspx).
+The SharePoint object model is built on top of the .NET Framework 4 object model for Windows Workflow Foundation 4, but with innovations that enable workflow functionality in SharePoint generally, and in SharePoint Add-ins in particular. The native .NET Framework 4 object model for Windows Workflow Foundation 4 is located in the .NET Framework  [System.Workflow namespaces](http://msdn.microsoft.com/library/gg145026.aspx).
   
     
     
@@ -108,13 +108,13 @@ Reference content for SharePoint schemas is contained in the reference node enti
 <a name="bk_additionalresources"> </a>
 
 
--  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](http://msdn.microsoft.com/en-us/library/ee342461.aspx)
+-  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](http://msdn.microsoft.com/library/ee342461.aspx)
     
   
 -  [Windows Workflow Foundation 4.0: Hello, workflow!](http://weblogs.asp.net/gunnarpeipman/archive/2009/07/08/windows-workflow-foundation-4-0-hello-workflow.aspx)
     
   
--  [Windows Workflow Foundation (WF) Screencasts](http://msdn.microsoft.com/en-us/netframework/dd733248)
+-  [Windows Workflow Foundation (WF) Screencasts](http://msdn.microsoft.com/netframework/dd733248)
     
   
 -  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)

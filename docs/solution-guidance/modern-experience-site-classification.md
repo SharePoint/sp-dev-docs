@@ -232,7 +232,7 @@ If your target is a  "modern" communication site, you can use the **Classificati
 If your target is a "modern" team site and you want to update the classification value, you should use the Microsoft Graph because the **Classification** property of CSOM simply replicates the value of the **classification** property of the Office 365 group.
 
 > [!NOTE]
-> You can find further details about how to update an Office 365 group using the Microsoft Graph in the document [Update group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_update).
+> You can find further details about how to update an Office 365 group using the Microsoft Graph in the document [Update group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/api/group_update).
 
 To make it easier for you to update the classification of a site, in the PnP Core library there is an extension method that applies the right behavior for you, depending on the "modern" site type. In the following code excerpt you can see how to use it.
 

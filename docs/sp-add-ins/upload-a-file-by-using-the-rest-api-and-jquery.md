@@ -31,7 +31,7 @@ The first example uses **SP.AppContextSite** to make calls across SharePoint dom
 The second example makes same-domain calls, like a SharePoint-hosted add-in would do when uploading files to the add-in web, or a solution that's running on the server would do when uploading files.
 
 > [!NOTE]
-> Provider-hosted add-ins written in JavaScript must use the SP.RequestExecutor cross-domain library to send requests to a SharePoint domain. For an example, see [upload a file by using the cross-domain library](https://msdn.microsoft.com/en-us/library/office/dn450841.aspx).
+> Provider-hosted add-ins written in JavaScript must use the SP.RequestExecutor cross-domain library to send requests to a SharePoint domain. For an example, see [upload a file by using the cross-domain library](https://msdn.microsoft.com/library/office/dn450841.aspx).
 
 To use the examples in this article, you'll need the following:
 

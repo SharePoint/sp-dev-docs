@@ -21,7 +21,7 @@ This article concentrates on the available extensibility options within "modern"
 
 - [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://blogs.office.com/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups)
 - [Create connected SharePoint Online team sites in seconds](https://blogs.office.com/2016/11/08/create-connected-sharepoint-online-team-sites-in-seconds)
-- [Allow or prevent custom script](https://support.office.com/en-us/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US)
+- [Allow or prevent custom script](https://support.office.com/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US)
 
 > [!IMPORTANT]
 > We're not deprecating the "classic" experience; both "classic" and "modern" will coexist.
@@ -40,7 +40,7 @@ This article concentrates on the available extensibility options within "modern"
 - Configure site settings, such as regional settings, languages, and auditing settings.
 
 > [!NOTE]
-> By default, a "modern" team site has scripting capabilities turned off. You can still apply a custom theme, but you cannot introduce a custom theme to the theme gallery as an option for end users. If you want to add a theme to the theme gallery, you need to [enable scripting](https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f) on the site.
+> By default, a "modern" team site has scripting capabilities turned off. You can still apply a custom theme, but you cannot introduce a custom theme to the theme gallery as an option for end users. If you want to add a theme to the theme gallery, you need to [enable scripting](https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f) on the site.
 
 <a name="notsupported"> </a>
 
@@ -52,7 +52,7 @@ In numerous areas on the "modern" team sites, the typical customizations are not
 - Changing "modern" site to use "classic" seattle.master or oslo.master.
 - Custom page layouts; we are looking to have support for multiple canvases in the future.
 - Enabling site or site collection scoped publishing features; technically, features can be currently activated, but this is not a supported configuration.
-- User custom actions / custom JavaScript; there will be a more controlled way to embed JavaScript on the pages through [SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
+- User custom actions / custom JavaScript; there will be a more controlled way to embed JavaScript on the pages through [SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions).
 - "Modern" subsites; subsites created on "modern" team sites use the "classic" experience, but you can change the user experience to be similar to "modern" sites.
 - Ability to control available subsite template options.
 - "Classic" publishing features (WCM).
@@ -71,13 +71,13 @@ When you design your solutions, consider these key areas related to the NoScript
 - Ability to access or update site property bag entries.
 
 > [!NOTE]
-> You can find the full list of impacted capabilities from the Microsoft Support article [Allow or prevent custom script](https://support.office.com/en-us/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US) under the "Features affected when custom script is blocked" section.
+> You can find the full list of impacted capabilities from the Microsoft Support article [Allow or prevent custom script](https://support.office.com/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US) under the "Features affected when custom script is blocked" section.
 
 <a name="pnpprovisioningengine"> </a>
 
 ### Using PnP provisioning engine with "modern" team sites
 
-You can use the [PnP provisioning engine](https://msdn.microsoft.com/en-us/pnp_articles/pnp-provisioning-engine-and-the-core-library) with "modern" team sites. The PnP provisioning engine automatically detects if a site is a "modern" team site and adjusts its behavior based on the supported capabilities. The process is exactly the same as using the PnP provisioning engine with "classic" sites where the scripting capabilities are not disabled.
+You can use the [PnP provisioning engine](https://msdn.microsoft.com/pnp_articles/pnp-provisioning-engine-and-the-core-library) with "modern" team sites. The PnP provisioning engine automatically detects if a site is a "modern" team site and adjusts its behavior based on the supported capabilities. The process is exactly the same as using the PnP provisioning engine with "classic" sites where the scripting capabilities are not disabled.
 
 The following elements are ignored when a remote template is applied to a "modern" team site or a site that has NoScript enabled:
 
@@ -97,7 +97,7 @@ The following elements are ignored when a remote template is applied to a "moder
 ## Apply a custom theme to a "modern" team site
 
 > [!NOTE]
-> The following method was written before **Tenant Themes** came out, to read about the new way of theming "modern" read [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
+> The following method was written before **Tenant Themes** came out, to read about the new way of theming "modern" read [SharePoint site theming](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
 
 "Modern" team sites support custom themes even though you cannot upload a new gallery entry for end users. This can be achieved by uploading the needed assets to the site and then executing the **ApplyTheme** method. The following PowerShell script shows how to perform this for a "modern" team site.
 
@@ -134,9 +134,9 @@ $web.Context.ExecuteQuery()
 !["Modern" team site with custom theme](media/modern-experiences/modern-site-with-custom-theme.png)
 
 > [!NOTE]
-> - You can use the [SharePoint Color Palette Tool](https://www.microsoft.com/en-us/download/details.aspx?id=38182) to create a custom theme file (.spcolor) with the custom color definition. In general, "modern" team sites try to preserve the feel of the theme by automatically converting "classic" site theming elements to the "modern" side. Preserved areas are background image and the following theme slots: ContentAccent1, PageBackground, and BackgroundOverlay.
+> - You can use the [SharePoint Color Palette Tool](https://www.microsoft.com/download/details.aspx?id=38182) to create a custom theme file (.spcolor) with the custom color definition. In general, "modern" team sites try to preserve the feel of the theme by automatically converting "classic" site theming elements to the "modern" side. Preserved areas are background image and the following theme slots: ContentAccent1, PageBackground, and BackgroundOverlay.
 > - You can change the logo of "modern" team site by using the Groups Graph API as shown by the SharePoint [PnP UpdateUnifiedGroup method](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Framework/Graph/UnifiedGroupsUtility.cs#L350).
-> - Applying a custom theme to a "modern" team site can cause timeouts. The resolution for this is to turn off all available [user interface languages](https://support.office.com/en-us/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) for the site before applying the theme, and turn them back on afterwards.
+> - Applying a custom theme to a "modern" team site can cause timeouts. The resolution for this is to turn off all available [user interface languages](https://support.office.com/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) for the site before applying the theme, and turn them back on afterwards.
 
 ## Determine if a site is a "modern" team site
 

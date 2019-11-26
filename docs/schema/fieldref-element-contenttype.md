@@ -302,7 +302,7 @@ The following example shows two **FieldRef** elements specifying columns to incl
 
 - [Content Type Definitions](content-type-definitions.md)
 - [Fields and Field References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
-- [SPFieldLink](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.spfieldlink.aspx)
+- [SPFieldLink](https://msdn.microsoft.com/library/office/microsoft.sharepoint.spfieldlink.aspx)
 
 
 

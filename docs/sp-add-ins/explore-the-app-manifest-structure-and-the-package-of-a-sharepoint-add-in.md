@@ -13,7 +13,7 @@ localization_priority: Priority
 
 ## Add-in for SharePoint package structure
 
-A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](https://msdn.microsoft.com/en-us/library/windows/desktop/dd742818(v=vs.85).aspx). The package contains the following items:
+A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](https://msdn.microsoft.com/library/windows/desktop/dd742818(v=vs.85).aspx). The package contains the following items:
 
 - **Add-in manifest**: This is a required file that is named appmanifest.xml. It tells SharePoint about some important properties of the add-in, such as its title and the permissions it needs to run. For more information about the contents of this file, see [Add-in for SharePoint manifest file](#AppManifest).
     
@@ -65,7 +65,7 @@ Every SharePoint Add-in includes an appmanifest.xml file. The appmanifest.xml te
 > [!NOTE] 
 > The add-in manifest file is the only required item in the add-in package, but not all of the items in the previous list are required parts of the file. 
  
-For detailed information about the add-in manifest markup, see [Schema reference for manifests of SharePoint Add-ins](http://msdn.microsoft.com/library/1f8c5d44-3b60-0bfe-9069-1df821220691%28Office.15%29.aspx). This topic is not a substitute for the information in that node, including information about required elements and attributes. Also, note that SharePoint add-in manifests have a different schema from Office Add-in manifests. You can find information about the latter at [Schema reference for Office Add-ins manifests (v1.1)](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests).
+For detailed information about the add-in manifest markup, see [Schema reference for manifests of SharePoint Add-ins](http://msdn.microsoft.com/library/1f8c5d44-3b60-0bfe-9069-1df821220691%28Office.15%29.aspx). This topic is not a substitute for the information in that node, including information about required elements and attributes. Also, note that SharePoint add-in manifests have a different schema from Office Add-in manifests. You can find information about the latter at [Schema reference for Office Add-ins manifests (v1.1)](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests).
  
 The following is an example of an appmanifest.xml file. Note that in this example, the start page for the add-in is an ASP.NET page that is on a remote server, not a page on the SharePoint site. The URL for the page includes a query string that passes to the remote web application the URL of the host web. The `{HostUrl}` part of the string is a token that is resolved when the add-in is launched. The add-in is requesting Write permission to all the lists in the host web. The add-in principal that must be granted this permission is the remote web application.
 
@@ -120,7 +120,7 @@ For detailed information about all the tokens and where they can be used, see [U
 
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 -  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
--  [Data-Tier Application Connection (DAC)](http://msdn.microsoft.com/en-us/library/ee210546)
+-  [Data-Tier Application Connection (DAC)](http://msdn.microsoft.com/library/ee210546)
 -  [Web Deploy 2.0](http://www.iis.net/download/WebDeploy)
     
  

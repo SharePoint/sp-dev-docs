@@ -507,7 +507,7 @@ By using the building blocks provided with the SharePoint Framework, you can ext
 ![Multiple text fields rendered in the web part property pane to allow translation of the web part values](../../../images/localization-multilingual-properties.png)
 
 > [!NOTE]
-> The SharePoint site used to test the web part shown in this article is a multilingual site with the US English, Dutch, and German languages enabled. For more information about enabling additional languages on SharePoint sites, see [Choose the languages you want to make available for a site’s user interface](https://support.office.com/en-us/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8).
+> The SharePoint site used to test the web part shown in this article is a multilingual site with the US English, Dutch, and German languages enabled. For more information about enabling additional languages on SharePoint sites, see [Choose the languages you want to make available for a site’s user interface](https://support.office.com/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8).
 
 ### Add list of languages supported by SharePoint Online
 

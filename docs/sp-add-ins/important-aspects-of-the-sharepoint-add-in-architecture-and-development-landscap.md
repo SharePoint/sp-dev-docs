@@ -50,7 +50,7 @@ Another tool you can use to help your add-ins maintain a consistent look and fee
 <a name="SPAppModelArch_Package"> </a>
 ## Add-in package structure
 
-A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](http://msdn.microsoft.com/en-us/magazine/cc163372.aspx). (You can open the file by adding ".zip" as an extra extension on the filename and then opening it in Windows Explorer.) It contains an add-in manifest that specifies certain properties of the add-in and instructions to the SharePoint installation infrastructure. For more information about the add-in manifest and package, see [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md).
+A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](http://msdn.microsoft.com/magazine/cc163372.aspx). (You can open the file by adding ".zip" as an extra extension on the filename and then opening it in Windows Explorer.) It contains an add-in manifest that specifies certain properties of the add-in and instructions to the SharePoint installation infrastructure. For more information about the add-in manifest and package, see [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md).
 
 <a name="SPAppModelArch_Running"> </a>
 ## Permissions, authentication, and authorization for SharePoint add-ins
@@ -124,7 +124,7 @@ Your options for secure data access, of course, depend on your choice of storage
 
 Site collection administrators and tenant administrators can monitor add-ins and change the resources allocated to them. In addition, Microsoft personnel for the add-in store can flag add-ins and disable them.
 
-For more information about managing add-ins, see [Install and manage SharePoint Add-ins](http://msdn.microsoft.com/en-us/library/733647a3-a5d3-475b-967d-3bb627c2a0c2) on TechNet.
+For more information about managing add-ins, see [Install and manage SharePoint Add-ins](http://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2) on TechNet.
 
 <a name="SPAppModelArch_Monitoring"> </a>
 ### Monitoring add-ins

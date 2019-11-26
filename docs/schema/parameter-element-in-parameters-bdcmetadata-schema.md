@@ -127,7 +127,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>The properties of the parameter.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/schema/typedescriptor-element-bdcmetadata-schema">TypeDescriptor</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/sharepoint/dev/schema/typedescriptor-element-bdcmetadata-schema">TypeDescriptor</a></p></td>
 <td align="left"><p>The root type descriptor of the parameter.</p></td>
 </tr>
 </tbody>

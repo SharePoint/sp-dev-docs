@@ -36,7 +36,7 @@ Excel Services is part of Microsoft SharePoint Server 2010. Excel Services is bu
 - Excel Calculation Services
     
 > [!NOTE]
-> Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser. For more information about Excel Online, see  [documentation about Office Web Apps](https://technet.microsoft.com/en-us/library/ee855124.aspx). 
+> Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser. For more information about Excel Online, see  [documentation about Office Web Apps](https://technet.microsoft.com/library/ee855124.aspx). 
   
     
     
@@ -74,7 +74,7 @@ In the simplest configuration in SharePoint Server 2010—that is, a single comp
   
     
     
-For information about Excel Services topology, scalability, performance, and security, see the SharePoint Server 2010 documentation on  [TechNet](http://technet.microsoft.com/en-us/library/cc303422%28office.14%29.aspx). 
+For information about Excel Services topology, scalability, performance, and security, see the SharePoint Server 2010 documentation on  [TechNet](http://technet.microsoft.com/library/cc303422%28office.14%29.aspx). 
   
     
     

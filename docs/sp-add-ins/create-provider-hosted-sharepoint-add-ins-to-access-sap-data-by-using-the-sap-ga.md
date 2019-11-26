@@ -31,11 +31,11 @@ The following are the prerequisites to the procedures in this article:
 
 - **A SAP OData endpoint** with sample data in it. See the documentation for [SAP Gateway for Microsoft](https://help.sap.com/saphelp_nwgwpam_1/helpdata/en/b5/74d3ad2f33428193a32c09c351e0b3/frameset.htm).
     
-- **A basic familiarity with Azure AD.** See [Get started with Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/get-started-azure-ad).
+- **A basic familiarity with Azure AD.** See [Get started with Azure AD](https://docs.microsoft.com/azure/active-directory/get-started-azure-ad).
     
 - **A basic familiarity with creating SharePoint Add-ins.** See [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
 
-- **A basic familiarity with OAuth 2.0 in Azure AD**. See [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code) and its child topics.
+- **A basic familiarity with OAuth 2.0 in Azure AD**. See [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code) and its child topics.
     
 - **Code sample:** [SharePoint: Using the SAP Gateway to Microsoft in a SharePoint Add-in](https://code.msdn.microsoft.com/office/sharepoint-2013-using-the-0931abce)
  
@@ -54,7 +54,7 @@ The process involves an OAuth "flow" in which the application, which can be a Sh
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
-For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Azure AD, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code). 
+For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Azure AD, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code). 
 
 For a similar description and a diagram of the flow for accessing SharePoint, see [the steps in the Context Token flow](context-token-oauth-flow-for-sharepoint-add-ins.md#OAuth_ProcessFlowSteps).
 
@@ -361,7 +361,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 
 > [!TIP] 
-> The AADAuthHelper class has only minimal error handling. For a robust, production quality SharePoint Add-in, add more error handling as described in this MSDN node: [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code).
+> The AADAuthHelper class has only minimal error handling. For a robust, production quality SharePoint Add-in, add more error handling as described in this MSDN node: [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 
 ### To create data model classes
@@ -486,7 +486,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 Of course, your SharePoint Add-in doesn't have to expose only SAP data in a webpage launched from SharePoint. It can also create, read, update, and delete (CRUD) SharePoint data. Your code-behind can do this by using either the SharePoint client object model (CSOM) or the REST APIs of SharePoint. The CSOM is deployed as a pair of assemblies that the Office Developer Tools for Visual Studio automatically included in the ASP.NET project and set to **Copy Local** in Visual Studio so that they are included in the ASP.NET application package. 
 
-For information about using CSOM, start with [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md). For information about using the REST APIs, start with  [Understanding and Using the SharePoint REST Interface](https://msdn.microsoft.com/en-us/magazine/dn198245.aspx). 
+For information about using CSOM, start with [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md). For information about using the REST APIs, start with  [Understanding and Using the SharePoint REST Interface](https://msdn.microsoft.com/magazine/dn198245.aspx). 
 
 Regardless of whether you use CSOM or the REST APIs to access SharePoint, your ASP.NET application must get an access token to SharePoint, just as it does to SAP Gateway for Microsoft. See [Understand authentication and authorization to SAP Gateway for Microsoft and SharePoint](#AuthOverview) earlier in this article. 
 
@@ -602,11 +602,11 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
 
 ### Publish the ASP.NET application to Azure and install the add-in to SharePoint
 
-1. There are several ways to publish an ASP.NET application to an Azure website. For more information, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git).
+1. There are several ways to publish an ASP.NET application to an Azure website. For more information, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-deploy-local-git).
     
 2. In Visual Studio, right-click the SharePoint Add-in project and select **Package**. On the **Publish your add-in** page that opens, select **Package the add-in**. File Explorer opens to the folder with the add-in package.    
  
-3. Sign in to Office 365 as a global administrator, and navigate to the organization add-in catalog site collection. (If there isn't one, create it. See [Use the Add-in Catalog to make custom business add-ins available for your SharePoint Online environment](https://support.office.com/en-us/article/Use-the-App-Catalog-to-make-custom-business-apps-available-for-your-SharePoint-Online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0?CorrelationId=40e9dc6b-213e-4496-8c5f-40ca27922fa1&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA102772362).)    
+3. Sign in to Office 365 as a global administrator, and navigate to the organization add-in catalog site collection. (If there isn't one, create it. See [Use the Add-in Catalog to make custom business add-ins available for your SharePoint Online environment](https://support.office.com/article/Use-the-App-Catalog-to-make-custom-business-apps-available-for-your-SharePoint-Online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0?CorrelationId=40e9dc6b-213e-4496-8c5f-40ca27922fa1&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA102772362).)    
  
 4. Upload the add-in package to the add-in catalog.    
  

@@ -11,7 +11,7 @@ In 2016, the "modern" page experience was released by the SharePoint team. Moder
 
 SharePoint pages are built with web parts, which you can customize according to your needs. You can add documents, videos, images, site activities, Yammer feeds, and more. Just select the + sign and pick a web part from the toolbox to add content to your page. The new “highlighted content” web part lets you set criteria so that specific content automatically and dynamically populates in that area of the page. By using the SharePoint Framework, developers can build custom web parts that show up right in the toolbox.
 
-This article focuses on the extensibility options within the "modern" page experience. However, if you want to learn more about the functionalities offered by the "modern" experiences, see [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://www.microsoft.com/en-us/microsoft-365/blog/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/).
+This article focuses on the extensibility options within the "modern" page experience. However, if you want to learn more about the functionalities offered by the "modern" experiences, see [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://www.microsoft.com/microsoft-365/blog/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/).
 
 In the remainder of this article, we'll use "modern" for the new user experience and "classic" for the legacy user experience. 
 
@@ -280,5 +280,5 @@ We'll gradually introduce more customization options for the "modern" pages expe
 
 ## See also
 
-- [Allow or prevent creation of modern site pages by end users](https://support.office.com/en-us/article/Allow-or-prevent-creation-of-modern-site-pages-by-end-users-c41d9cc8-c5c0-46b4-8b87-ea66abc6e63b?ui=en-US&rs=en-US&ad=US)
+- [Allow or prevent creation of modern site pages by end users](https://support.office.com/article/Allow-or-prevent-creation-of-modern-site-pages-by-end-users-c41d9cc8-c5c0-46b4-8b87-ea66abc6e63b?ui=en-US&rs=en-US&ad=US)
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)

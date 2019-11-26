@@ -51,7 +51,7 @@ Following are the key scenarios currently supported by the "modern" experiences.
 
 ## Converting existing sites to "modern" team sites
 
-Existing collaboration sites cannot be converted to "modern" team sites with an associated Office 365 group, but you can however [associate a new Office 365 group](https://docs.microsoft.com/en-us/sharepoint/dev/transform/modernize-connect-to-office365-group) to existing collaboration site. You can also start using modern page and list experiences in the classic sites, which will make them look like a modern group associated team sites.
+Existing collaboration sites cannot be converted to "modern" team sites with an associated Office 365 group, but you can however [associate a new Office 365 group](https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group) to existing collaboration site. You can also start using modern page and list experiences in the classic sites, which will make them look like a modern group associated team sites.
 
 "Modern" lists and library usage can be controlled at site, web, and list/library level. You can find more details about the available options in our ["modern" list and libraries](modern-experience-customizations-customize-lists-and-libraries.md) article.
 
@@ -90,11 +90,11 @@ The SharePoint "modern" experiences are supported in SharePoint 2019 in on-premi
 
 ## See also
 
--  [Create connected SharePoint Online team sites in seconds](https://blogs.office.com/en-us/2016/11/08/create-connected-sharepoint-online-team-sites-in-seconds/)
--  [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://blogs.office.com/en-us/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/)
-- [Create a team site in SharePoint Online](https://support.office.com/en-US/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d?ui=en-US)
--  [Turn scripting capabilities on or off](https://support.office.com/en-us/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US)
--  ["Modern" SharePoint lists are here - including integration with Microsoft Flow and PowerApps](https://blogs.office.com/en-us/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/)
+-  [Create connected SharePoint Online team sites in seconds](https://blogs.office.com/2016/11/08/create-connected-sharepoint-online-team-sites-in-seconds/)
+-  [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://blogs.office.com/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/)
+- [Create a team site in SharePoint Online](https://support.office.com/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d?ui=en-US)
+-  [Turn scripting capabilities on or off](https://support.office.com/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US)
+-  ["Modern" SharePoint lists are here - including integration with Microsoft Flow and PowerApps](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/)
 -  [Update on "Modern" Document Libraries and Extensibility](https://dev.office.com/blogs/update-on-modern-document-libraries-and-extensiblity)
--  [Switch the default experience for lists or document libraries from "modern" or "classic"](https://support.office.com/en-us/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9?ui=en-US&rs=en-US&ad=US)
+-  [Switch the default experience for lists or document libraries from "modern" or "classic"](https://support.office.com/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9?ui=en-US&rs=en-US&ad=US)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
