@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 09/11/2019
+ms.date: 11/04/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -82,13 +82,16 @@ Upcoming chapters will provide more details.
 Let's analyze how a page layout mapping is configured in the page layout mapping model, which is best done based upon a sample definition:
 
 ```Xml
-    <PageLayout Name="MyPageLayout" AlsoAppliesTo="MyOtherPageLayout;MyOtherPageLayout2" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" PageHeader="Custom">
+    <PageLayout Name="MyPageLayout" AlsoAppliesTo="MyOtherPageLayout;MyOtherPageLayout2" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" IncludeVerticalColumn="true" PageHeader="Custom">
+      <SectionEmphasis VerticalColumnEmphasis="Soft">
+        <Section Row="3" Emphasis="Neutral" />
+      </SectionEmphasis>
       <Header Type="FullWidthImage" Alignment="Left" ShowPublishedDate="true">
         <Field Name="PublishingRollupImage;PublishingPageImage" HeaderProperty="ImageServerRelativeUrl" Functions="ToImageUrl({@name})" />
         <Field Name="ArticleByLine" HeaderProperty="TopicHeader" Functions=""/>
         <Field Name="PublishingContact" HeaderProperty="Authors" Functions="ToAuthors({PublishingContact})"/>
       </Header>
-      <MetaData ShowPageProperties="true" PagePropertiesRow="1" PagePropertiesColumn="3" PagePropertiesOrder="1">
+      <MetaData ShowPageProperties="true" PagePropertiesRow="1" PagePropertiesColumn="4" PagePropertiesOrder="1">
         <Field Name="PublishingContactName;PublishingContactEmail" TargetFieldName="MyPageContact" Functions="" />
         <Field Name="MyCategory" TargetFieldName="Category" Functions="" ShowInPageProperties="true" />
       </MetaData>
@@ -131,10 +134,26 @@ The following properties are used on the PageLayout element:
 - **AlsoAppliesTo**: when this mapping will be used for multiple page layouts then you can specify the names of those additional page layouts as a semi colon delimited list in this attribute. The **Name** property will be name of the first page layout, the **AlsoAppliesTo** just contains the additional ones.
 - **AssociatedContentType**: the name of the modern site page content type you want use. Leave this blank if you want to use the default site page content type.
 - **PageLayoutTemplate**: the layout system to use...defaults to `AutoDetect` which should work fine in all cases, but optionally you can pick a specific wiki layout as well.
+- **IncludeVerticalColumn**: optional element to specify the created target page should have a vertical column. When using a vertical column you target the vertical column as an extra column, so if you before adding a vertical column had 3 columns you'll now have 4 and as such you can set the column value of page content to 4 to put it in the vertical column.
 - **PageHeader**: controls the type of page header that will be used. Defaults to `Custom` as that allows for a nice header, but you can switch it to `None` for no header or `Default` for the default modern page header.
 
 > [!Note]
-> - The **AlsoAppliesTo** attribute  was introduced in the September 2019 release
+> - The **AlsoAppliesTo** attribute was introduced in the September 2019 release
+> - The **IncludeVerticalColumn** attribute was introduced in the November 2019 release
+
+### SectionEmphasis element
+
+The following properties are used on the optional SectionEmphasis element:
+
+- **VerticalColumnEmphasis**: use this property to set the vertical column emphasis to None, Neutral, Soft or Strong
+
+For each section you optionally can specify a section emphasis via the Section element:
+
+- **Row**: indicates the row number of this section, first section will have number 1
+- **Emphasis**: sets the section emphasis to None, Neutral, Soft or Strong
+
+> [!Note]
+> The **SectionEmphasis** element was introduced in the November 2019 release
 
 ### Header element
 

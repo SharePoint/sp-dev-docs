@@ -91,7 +91,7 @@ The following sections list older items that have already shipped.
 - Enable modern extension usage with modern experiences similar to Custom Actions and JSLink in classic experience.
 - Work with NoScript via tenant app catalog.
 
-### On-premises support - Sharepoint 2016 Feature Pack 2
+### On-premises support - SharePoint 2016 Feature Pack 2
 
 - Shipping as part of Feature Pack 2 for SharePoint 2016.
 - Similar feature capabilities as in SharePoint Online.

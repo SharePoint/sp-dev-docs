@@ -20,7 +20,7 @@ Access 2013 features a new application model that is designed for one purpose―
 ## Architecture
 <a name="SP15_access15overview_Architecture"> </a>
 
-In an on-premise environment, Access 2013 apps are hosted by SharePoint while the data is stored in SQL Server 2012. SharePoint provides authentication, authorization, and security for Access 2013 apps. The back-end tables, views, macros, and queries are stored in an SQL Server 2012 database.
+In an on-premises environment, Access 2013 apps are hosted by SharePoint while the data is stored in SQL Server 2012. SharePoint provides authentication, authorization, and security for Access 2013 apps. The back-end tables, views, macros, and queries are stored in an SQL Server 2012 database.
   
     
     
