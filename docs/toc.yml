@@ -131,7 +131,9 @@
     - name: Library component overview
       href: spfx/library-component-overview.md      
     - name: Library component tutorial
-      href: spfx/library-component-tutorial.md                  
+      href: spfx/library-component-tutorial.md
+    - name: Hyperlinking considerations
+      href: spfx/hyperlinking.md
   - name: External libraries
     items:
     - name: Add external libraries
