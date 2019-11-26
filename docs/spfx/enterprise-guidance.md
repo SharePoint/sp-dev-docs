@@ -42,6 +42,9 @@ One of the most common patterns in SharePoint Online extensibility has been the 
 
 The SharePoint Framework is a new model, an addition to already existing methods, but focused on leveraging more value to user interface customizations such as client-side web parts. This framework is designed to work in conjunction with already existing working models and makes it easier to create new user interface customizations in a more supported and sustainable way.
 
+> [!IMPORTANT] 
+> The SharePoint DOM is not a supported API. You should avoid taking any dependencies on the DOM structure or CSS styles, which are subject to change and potentially break your solutions. SharePoint Framework provides a rich API to customize the SharePoint experience and is the only supported means to interact with the SharePoint DOM. 
+
 ### Compared with add-ins
 
 SharePoint Add-ins, previously known as SharePoint Apps and introduced in SharePoint 2013, have been one of the only available options of adding customizations to SharePoint Online in a supported and governed way. However, SharePoint Add-ins require a lot more infrastructure than necessary in many cases where a simple user interface customization is needed. 
