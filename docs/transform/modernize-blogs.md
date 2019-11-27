@@ -1,12 +1,12 @@
 ---
-title: Modernize classic blogs
-description: Modernize your classic blogs
+title: Modernize Delve blogs and classic blogs
+description: Modernize your Delve blogs and classic blogs
 ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Modernize classic blogs
+# Modernize Delve blogs and classic blogs
 
 > [!IMPORTANT]
 > Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
