@@ -24,7 +24,6 @@ The following REST commands are available for working with site designs and site
 
 - **CreateSiteScript** &ndash; Creates a new site script.
 - **GetSiteScripts** &ndash; Gets a list of information on existing site scripts.
-- **GetSiteScriptFromWeb** &ndash; Creates site script syntax from an existing SharePoint site.
 - **GetSiteScriptFromList** &ndash; Creates site script syntax from an existing SharePoint list.
 - **GetSiteScriptMetadata** &ndash; Gets information about a specific site script.
 - **UpdateSiteScript** &ndash; Updates a site script with new values.
