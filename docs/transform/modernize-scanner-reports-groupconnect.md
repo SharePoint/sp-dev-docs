@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the Office 365 group connect scanner mode
 description: Explains the Office 365 group connect output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -31,6 +31,7 @@ Column | Description
 **ModernUIWarnings** | This is a collection of warnings indicating either some modern UI component was turned off or incompatible features/customizations have been detected. Possible values are `ModernPageFeatureDisabled` (modern pages are disabled for this site), `ModernListsBlockedAtSiteLevel` (modern UI for lists has been purposely been blocked at site collection level), `ModernListsBlockedAtWebLevel` (modern UI for lists has been purposely been blocked at web collection level), `MasterPageUsed` (a custom master page has been used), `AlternateCSSUsed` (alternate CSS was defined), `UserCustomActionUsed` (incompatible user custom actions have been found) and `PublishingFeatureEnabled` (publishing features are enabled).
 **WebTemplate** | The web template used by the site.
 **Office365GroupId** | If this site is already connected to an Office 365 group is shows the id if that group.
+**HasTeamsTeam** | Is there a Teams team created for the Office 365 Group connected to this site collection (as of version 2.7)
 **MasterPage** | Was a custom master page used?
 **AlternateCSS** | Was alternate CSS defined?
 **UserCustomActions** | Are there incompatible user custom actions used?
@@ -72,6 +73,7 @@ Filter | Takeaway
 **ReadyForGroupify = TRUE** | Will give you all the site collections that can be "Office 365 group connected". There might still be warnings to check, but we did not find any blocking issues
 **ReadyForGroupify = FALSE AND Office365GroupId = ""** | Will give you all the sites which do not yet have an Office 365 group connected and which can't be "Office 365 group connected"
 **ReadyForGroupify = TRUE AND GroupMode = PUBLIC** | Will give you all the site collections that can be "Office 365 group connected" and for which we'll default to a public group (based on the presence of the `everyone` or `everyone except external users` in the site members or site owners
+**HasTeamsTeam = FALSE AND WebTemplate = GROUP#0** | Modern group connected team sites that do not yet have a Teams team created for their Office 365 group (as of version 2.7)
 
 ## Understanding the ModernizationWebScanResults.csv file ##
 

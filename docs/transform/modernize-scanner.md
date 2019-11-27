@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 11/19/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -38,7 +38,9 @@ Since a typical scan needs to be able to scan all site collections it's recommen
 - [Granting access via SharePoint App-Only](../solution-guidance/security-apponly-azureacs.md)
 
 > [!IMPORTANT]
-> If you're choosing for Azure AD app-only, then above mentioned instructions grant the Azure AD app the **Sites.FullControl.All** permission, which is needed if you want to run all scan components. If you're not interested in workflow scanning you can also use **Sites.Read.All** as a permission as of version 2.6 of the SharePoint Modernization Scanner.
+> If you're choosing for Azure AD app-only, then above mentioned instructions grant the Azure AD app the **Sites.FullControl.All** permission, which is needed if you want to run **all** scan components.
+> If you're not interested in workflow scanning you can also use **Sites.Read.All** as a permission (as of version 2.6).
+> If you want to report on site collections that have a Teams team linked then you also need to add the **Group.Read.All** permission (as of version 2.7).
 
 Once the preparation work is done, let's continue with doing a scan.
 
@@ -60,6 +62,9 @@ If you've [setup access via Azure AD App-Only](../solution-guidance/security-app
 - **Azure AD Domain name**: the default domain of your Azure AD environment. You can find this from the overview page of the Azure AD management portal
 - **Certificate file**: the certificate that you granted app-only access to the Azure AD app, this needs to be presented as a password protected PFX file
 - **Password for the PFX file**: the password used to secure the previously provided PFX file
+
+> [!NOTE]
+> You can also opt to install the certificate on your computer and refence it via the -w command line parameters. To reference the certificate you would use this value for the -w parameter "My|CurrentUser|1FG498B468AV3895E7659C8A6F098FB701C8CDB1". You can use My/Root and CurrentUser/LocalMachine to identify the store. The last argument is the certificate thumbprint. This option is available as of the 2.7 release.
 
 > [!IMPORTANT]
 > The default instructions mentioned to grant the Azure AD app the **Sites.FullControl.All** permission which is needed if you want to run all scan components. If you're not interested in workflow scanning you can also use **Sites.Read.All** as a permission as of version 2.6 of the SharePoint Modernization Scanner.
@@ -180,7 +185,7 @@ Mode | Description
 ### Command line parameter overview
 
 ```Console
-SharePoint PnP Modernization scanner 2.6.0.0
+SharePoint PnP Modernization scanner 2.7.0.0
 Copyright (C) 2019 SharePoint PnP
 ==========================================================
 
@@ -286,6 +291,10 @@ https://contoso-admin.contoso.com -u spadmin@contoso.com -p pwd
   -h, --threads                            (Default: 10) Number of parallel threads, maximum = 100
 
   -e, --separator                          (Default: ,) Separator used in output CSV files (e.g. ";")
+
+  -w, --storedcertificate                  (Default: ) Path to stored certificate in the form of
+                                           StoreName|StoreLocation|Thumbprint. E.g.
+                                           My|LocalMachine|3FG496B468BE3828E2359A8A6F092FB701C8CDB1
 
   --help                                   Display this help screen.
 ```

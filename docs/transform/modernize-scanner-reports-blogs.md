@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the blog scanner mode
 description: Explains the blog output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -21,6 +21,7 @@ Column | Description
 **Site Collection Url** | Url of the scanned site collection.
 **SiteUrl** | Url of the scanned web.
 **Web Relative Url** | Relative Url of the scanned web.
+**Blog Type** | Is this a classic blog or Delve blog (requires scanner 2.7+).
 **Web Template** | Used web template (should all be BLOG#0).
 **Language** | Language used to create the blog site.
 **Blog Page Count** | Number of blog posts in this site.
@@ -38,6 +39,7 @@ Filter | Takeaway
 ---------|----------
 **No filter** | Lists all the blog sites found in your tenant.
 **Blog Page Count > 10 AND Change Year = this year** | A good filter to identify the actively used blog sites in your tenant. These sites are good candidates for modernization.
+**Blog Type = "Delve blogs"** | As Delve blogs are retired it's good to understand where they are used in your tenant. (requires scanner 2.7+)
 
 ## Understanding the ModernizationBlogPageScanResults.csv file
 
@@ -48,6 +50,7 @@ Column | Description
 **Site Collection Url** | Url of the scanned site collection.
 **SiteUrl** | Url of the scanned web.
 **Web Relative Url** | Relative Url of the scanned web.
+**Blog Type** | Is this a classic blog page or Delve blog page (requires scanner 2.7+).
 **Page Title** | Title of this blog post.
 **Modified At** | Last modified date of this blog post.
 **Modified By** | This blog post was last modified by.
