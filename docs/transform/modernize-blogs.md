@@ -16,10 +16,7 @@ SharePoint started supporting classic blogging via a blog site template as of Sh
 Next to the above mentioned classic blog pages SharePoint Online users can also use Delve blogs. Delve blogs are being deprecated and therefore it's highly recommended that you transform your business relevant Delve blog pages to modern pages in a modern communication site.
 
 > [!IMPORTANT]
-> Delve blogs are deprecated and will follow this timeline:
-> - January 18th,2020: No tenants will have the ability to create new Delve blogs.
-> - February 18th,2020: The ability to create new or edit posts in existing Delve blogs will be disabled. Blogs will become read only for 5 months.
-> - July 17th,2020: Existing Delve blogs will be deleted and removed from Delve profiles.
+> Delve blogs are retired.  
 
 ## Step 1: Understand where there are actively used blogs in your tenant
 
