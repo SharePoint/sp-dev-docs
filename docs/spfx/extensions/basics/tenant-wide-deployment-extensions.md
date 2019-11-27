@@ -20,7 +20,7 @@ When developers create a new SharePoint Framework extension solution using stand
 
 SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality. This means that the `skipFeatureDeployment` attribute in the `package-solution.json` will need to be set as *true*. 
 
-# Controlling tenant wide deployment from app catalog site collection
+## Controlling tenant wide deployment from app catalog site collection
 
 App catalog site collection is used to deploy SharePoint add-ins and SharePoint Framework components to the tenant. This site collection is created by tenant administrator and it is used to manage what customizations are available for end users in actual content site collections.
 
@@ -79,7 +79,7 @@ Supported location values are following. These are specific for the the componen
 > [!NOTE]
 > Technically this list defines the dynamic entries which will be automatically added to the Web or List UserCustomAction collection when a page from a site is being rendered. List information is cached and it's content output as part of the page rendering on runtime.
 
-# Automating tenant wide deployment from solution package
+## Automating tenant wide deployment from solution package
 
 SharePoint Framework solutions default scaffolding creates an automation file to the SharePoint Framework solution when an extension component type is created with initial solution creation. Default deployment activation is located in **ClientSideInstance.xml** file in the `sharepoint\assets` folder.
 

@@ -18,7 +18,7 @@ description: Used in the global Onet.xml to contain metadata for list base types
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Used in the global [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) to contain metadata for list base types. 
+Used in the global [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) to contain metadata for list base types. 
   
 ```XML
 <MetaData>

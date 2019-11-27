@@ -23,7 +23,7 @@ In SharePoint, you can use the .NET client object model (CSOM), Silverlight, and
   
     
     
-To learn more, see the reference home pages for sites and content for  [.NET server](http://msdn.microsoft.com/library/8a93e838-234c-41d8-b990-7ac1a415dd5e%28Office.15%29.aspx),  [.NET client](http://msdn.microsoft.com/library/e6542022-a459-4c3b-aee0-e350c6397139%28Office.15%29.aspx), and  [JavaScript](http://msdn.microsoft.com/library/1ead2f8d-a541-4a50-89fa-f195f2ba14e5%28Office.15%29.aspx). Or, start with the  [reference home page](http://msdn.microsoft.com/library/7940ba4e-f6f0-4bc0-b995-ceb2d358ca0d%28Office.15%29.aspx) if you want to start at the top and then explore the contents of each programming model.
+To learn more, see the reference home pages for sites and content for  [.NET server](https://msdn.microsoft.com/library/8a93e838-234c-41d8-b990-7ac1a415dd5e%28Office.15%29.aspx),  [.NET client](https://msdn.microsoft.com/library/e6542022-a459-4c3b-aee0-e350c6397139%28Office.15%29.aspx), and  [JavaScript](https://msdn.microsoft.com/library/1ead2f8d-a541-4a50-89fa-f195f2ba14e5%28Office.15%29.aspx). Or, start with the  [reference home page](https://msdn.microsoft.com/library/7940ba4e-f6f0-4bc0-b995-ceb2d358ca0d%28Office.15%29.aspx) if you want to start at the top and then explore the contents of each programming model.
   
     
     
@@ -233,7 +233,7 @@ Use the topic pages feature to customize the landing page experience for content
   
     
     
-To learn more about cross-site publishing, see  [Scenario: Create SharePoint sites by using cross-site publishing in SharePoint](http://technet.microsoft.com/sharepoint/jj872721). To learn more about development options for cross-site publishing, see  [Cross-site publishing in SharePoint](cross-site-publishing-in-sharepoint.md).
+To learn more about cross-site publishing, see  [Scenario: Create SharePoint sites by using cross-site publishing in SharePoint](https://technet.microsoft.com/sharepoint/jj872721). To learn more about development options for cross-site publishing, see  [Cross-site publishing in SharePoint](cross-site-publishing-in-sharepoint.md).
   
     
     
@@ -275,10 +275,10 @@ You can use the variations feature in SharePoint to create multilingual sites or
 <a name="SP15_WhatsNewSiteDevelopment_AdditionalResources"> </a>
 
 
--  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
--  [Complete basic operations using JavaScript library code in SharePoint](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)
+-  [Complete basic operations using JavaScript library code in SharePoint](https://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)
     
   
 -  [How to: Customize page layouts for a catalog-based site in SharePoint](how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint.md)

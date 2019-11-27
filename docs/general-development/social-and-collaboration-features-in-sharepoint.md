@@ -59,13 +59,13 @@ People can use the rich, forum-like experience in Community Sites to find and sh
 <a name="bk_addresources"> </a>
 
 
--  [Plan for social computing and collaboration in SharePoint](http://technet.microsoft.com/library/ee662531%28v=office.15%29)
+-  [Plan for social computing and collaboration in SharePoint](https://technet.microsoft.com/library/ee662531%28v=office.15%29)
     
   
--  [Social client class library](http://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)
+-  [Social client class library](https://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)
     
   
--  [SharePoint Social server class library](http://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)
+-  [SharePoint Social server class library](https://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)
     
   
 

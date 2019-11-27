@@ -85,7 +85,7 @@ Each content type defined in the workflow configuration file must be added to th
 
 Use the TaskListId attribute of the [Association Element (WorkflowConfig)](association-element-workflowconfig.md) element to specify the task list the workflow should use.
 
-For more information about content type IDs, see [Content Type IDs](http://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx).
+For more information about content type IDs, see [Content Type IDs](https://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx).
 
 The ContentType element allows any additional attributes.
 

@@ -210,7 +210,7 @@ private void AddListItem()
 -  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists.md)
     
   
--  [Use the SharePoint location field type in mobile applications](http://technet.microsoft.com/library/fp161355%28v=office.15%29.aspx)
+-  [Use the SharePoint location field type in mobile applications](https://technet.microsoft.com/library/fp161355%28v=office.15%29.aspx)
     
   
 

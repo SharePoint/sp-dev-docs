@@ -429,31 +429,31 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 <tr class="odd">
 <td align="left"><p>**CommandUI.Ribbon.ListView**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p>See <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
+<td align="left"><p>See <a href="https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
 <td align="left"><p>**Location** corresponds to the list view.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**CommandUI.Ribbon.NewForm**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p>See <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
+<td align="left"><p>See <a href="https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
 <td align="left"><p>**Location** corresponds to the new form for the list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**CommandUI.Ribbon.EditForm**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p>See <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
+<td align="left"><p>See <a href="https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
 <td align="left"><p>**Location** corresponds to the edit form for the list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**CommandUI.Ribbon.DisplayForm**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p>See <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
+<td align="left"><p>See <a href="https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
 <td align="left"><p>**Location** corresponds to the display form for the list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**CommandUI.Ribbon**</p></td>
 <td align="left"><p>Not applicable</p></td>
-<td align="left"><p>See <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
+<td align="left"><p>See <a href="https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a></p></td>
 <td align="left"><p>**Location** corresponds to the list view and edit, new, and display forms for the list.</p></td>
 </tr>
 </tbody>
@@ -464,7 +464,7 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 ## See also 
 
 - [Custom Action Definition Schema](custom-action-definition-schema.md)
-- [How to: Add Actions to the User Interface](http://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)
+- [How to: Add Actions to the User Interface](https://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)
 - [Schema reference for SharePoint](schema-reference-for-sharepoint.md)
 
 <br/>

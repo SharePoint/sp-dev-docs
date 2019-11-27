@@ -15,7 +15,7 @@ Learn to use Visio 2013 and SharePoint Designer 2013 to create and publish workf
 Visio 2013 and SharePoint Designer 2013 make it easy for business analysts, process consultants, and IT professionals to collaborate and build workflows. Both Visio Professional 2013 and the Visual Designer in SharePoint Designer 2013 provide a rich representation of workflows in a format that is understandable to programmers and non-programmers alike.
   
 > [!NOTE] 
-> For guidance on setting up and configuring SharePoint and the Workflow Manager server, see  [Configure workflow in SharePoint](http://technet.microsoft.com/library/jj658586.aspx). 
+> For guidance on setting up and configuring SharePoint and the Workflow Manager server, see  [Configure workflow in SharePoint](https://technet.microsoft.com/library/jj658586.aspx). 
   
     
     
@@ -367,10 +367,10 @@ For more information, see the following resources:
 -  [Create, import, and export SharePoint workflows in Visio 2010](http://office.microsoft.com/visio-help/create-import-and-export-sharepoint-workflows-in-visio-HA101888007.aspx)
     
   
--  [SharePoint Developer Center](http://msdn.microsoft.com/sharepoint/default.aspx)
+-  [SharePoint Developer Center](https://msdn.microsoft.com/sharepoint/default.aspx)
     
   
--  [Visio Developer Center](http://msdn.microsoft.com/office/aa905478)
+-  [Visio Developer Center](https://msdn.microsoft.com/office/aa905478)
     
   
 

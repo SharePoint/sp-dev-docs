@@ -323,10 +323,10 @@ query.Refiners);
 <a name="SP15_Query_refinement_addresources"> </a>
 
 
--  [Configure properties of the Refinement web part in SharePoint](http://technet.microsoft.com/library/gg549985.aspx)
+-  [Configure properties of the Refinement web part in SharePoint](https://technet.microsoft.com/library/gg549985.aspx)
     
   
--  [Overview of the search schema in SharePoint](http://technet.microsoft.com/library/jj219669%28office.15%29.aspx)
+-  [Overview of the search schema in SharePoint](https://technet.microsoft.com/library/jj219669%28office.15%29.aspx)
     
   
 
@@ -340,8 +340,8 @@ query.Refiners);
   
     
     
- [Index Schema (FAST Search Server 2010 for SharePoint)](http://msdn.microsoft.com/library/3e1eed3f-8a6f-4911-9607-f1616e6a44f3%28Office.15%29.aspx)
+ [Index Schema (FAST Search Server 2010 for SharePoint)](https://msdn.microsoft.com/library/3e1eed3f-8a6f-4911-9607-f1616e6a44f3%28Office.15%29.aspx)
   
     
     
- [Refiner Element in Microsoft.Search.Query Schema](http://msdn.microsoft.com/library/0512c17a-18e9-45e3-9061-9dba9cd45ef4%28Office.15%29.aspx)
+ [Refiner Element in Microsoft.Search.Query Schema](https://msdn.microsoft.com/library/0512c17a-18e9-45e3-9061-9dba9cd45ef4%28Office.15%29.aspx)

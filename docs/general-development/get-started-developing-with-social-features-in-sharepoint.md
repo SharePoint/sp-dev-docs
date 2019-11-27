@@ -72,7 +72,7 @@ To get started developing with social features, you'll need:
   
 
   
-For more guidance, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md) and [Configure social computing features in SharePoint](http://technet.microsoft.com/library/fp161267%28v=office.15%29.aspx).
+For more guidance, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md) and [Configure social computing features in SharePoint](https://technet.microsoft.com/library/fp161267%28v=office.15%29.aspx).
   
     
     
@@ -143,12 +143,12 @@ Although apps and solutions access SharePoint differently, after you do access S
 
 |**API name**|**Source and path**|
 |:-----|:-----|
-| [.NET client object model](http://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)|Microsoft.SharePoint.Client.UserProfiles.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI|
+| [.NET client object model](https://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)|Microsoft.SharePoint.Client.UserProfiles.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI|
 |Silverlight client object model|Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\ClientBin|
 |Mobile client object model|Microsoft.SharePoint.Client.UserProfiles.Phone.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\ClientBin|
-| [JavaScript object model](http://msdn.microsoft.com/library/95cb5427-8514-4e9a-8eee-7ed4b82ec01b%28Office.15%29.aspx)|SP.UserProfiles.js<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS|
-|Representational State Transfer (REST) service| [`http://<site url>/_api/social.feed`](social-feed-rest-api-reference-for-sharepoint.md)<br/>[`http://<site url>/_api/social.following`](following-people-and-content-rest-api-reference-for-sharepoint.md)<br/>[`http://<site url>/_api/SP.UserProfiles.PeopleManager`](http://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx.md#bk_PeopleManager)|
-| [Server object model](http://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)|Microsoft.Office.Server.UserProfiles.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI|
+| [JavaScript object model](https://msdn.microsoft.com/library/95cb5427-8514-4e9a-8eee-7ed4b82ec01b%28Office.15%29.aspx)|SP.UserProfiles.js<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS|
+|Representational State Transfer (REST) service| [`http://<site url>/_api/social.feed`](social-feed-rest-api-reference-for-sharepoint.md)<br/>[`http://<site url>/_api/social.following`](following-people-and-content-rest-api-reference-for-sharepoint.md)<br/>[`http://<site url>/_api/SP.UserProfiles.PeopleManager`](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx.md#bk_PeopleManager)|
+| [Server object model](https://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)|Microsoft.Office.Server.UserProfiles.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI|
    
 > [!NOTE]
 > Not all server-side functionality in the Microsoft.Office.Server.UserProfiles assembly is available from client APIs. To see which APIs are available, see the  [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) namespace and the [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) namespace.
@@ -164,7 +164,7 @@ An SharePoint Add-in must request the permissions that it needs to access ShareP
   
     
     
-App permission requests are scoped to the SharePoint deployment landscape. Table 3 shows the scope names (with corresponding scope URIs) and the available rights for accessing social features. For more information, see  [Add-in permissions in SharePoint](http://msdn.microsoft.com/library/5f7a8440-3c09-4cf8-83ec-c236bfa2d6c4%28Office.15%29.aspx),  [Add-in authorization policy types in SharePoint](http://msdn.microsoft.com/library/124879c7-a746-4c10-96a7-da76ad5327f0%28Office.15%29.aspx), and  [Plan app permissions management in SharePoint](http://technet.microsoft.com/library/jj219576%28office.15%29.aspx).
+App permission requests are scoped to the SharePoint deployment landscape. Table 3 shows the scope names (with corresponding scope URIs) and the available rights for accessing social features. For more information, see  [Add-in permissions in SharePoint](https://msdn.microsoft.com/library/5f7a8440-3c09-4cf8-83ec-c236bfa2d6c4%28Office.15%29.aspx),  [Add-in authorization policy types in SharePoint](https://msdn.microsoft.com/library/124879c7-a746-4c10-96a7-da76ad5327f0%28Office.15%29.aspx), and  [Plan app permissions management in SharePoint](https://technet.microsoft.com/library/jj219576%28office.15%29.aspx).
   
     
     
@@ -196,7 +196,7 @@ You should be aware of the following considerations when you specify app permiss
 - During development, use the Tenant scope if you get a "SocialListNotFound : The Social list does not exist in your personal site" or "File Not Found" message. If you want to use the Core or News Feed scope in your app, you can test the permissions by opening the app from the app catalog.
     
   
-- The Core scope applies to personal sites that support following content. The News Feed scope applies to personal sites that support microblogging or to team sites where the **Site Feed** feature is activated. If the app will be installed on any other type of site, you must use the Tenant scope. See [Tenancies and deployment scopes for SharePoint Add-ins](http://msdn.microsoft.com/library/1ceb3142-a7a5-453e-920f-5f953a79401a%28Office.15%29.aspx).
+- The Core scope applies to personal sites that support following content. The News Feed scope applies to personal sites that support microblogging or to team sites where the **Site Feed** feature is activated. If the app will be installed on any other type of site, you must use the Tenant scope. See [Tenancies and deployment scopes for SharePoint Add-ins](https://msdn.microsoft.com/library/1ceb3142-a7a5-453e-920f-5f953a79401a%28Office.15%29.aspx).
     
   
 - Apps that request rights for the User Profiles scope must be installed by a tenant administrator, and they cannot be installed in Office 365 Small Business Premium version of SharePoint Online.
@@ -205,7 +205,7 @@ You should be aware of the following considerations when you specify app permiss
 - If licensing or feature activation requirements for social and microblogging features are not met, users get a message saying that they can't install the app.
     
   
-- Apps that are launched outside of SharePoint can request permission on-the-fly (except **Full Control**). For more information, see  [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx).
+- Apps that are launched outside of SharePoint can request permission on-the-fly (except **Full Control**). For more information, see  [Authorization Code OAuth flow for SharePoint Add-ins](https://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx).
     
   
 
@@ -223,13 +223,13 @@ You should be aware of the following considerations when you specify app permiss
 -  [What's new for developers in social and collaboration features in SharePoint](what-s-new-for-developers-in-social-and-collaboration-features-in-sharepoint-201.md)
     
   
--  [Plan for social computing and collaboration in SharePoint](http://technet.microsoft.com/library/ee662531%28v=office.15%29)
+-  [Plan for social computing and collaboration in SharePoint](https://technet.microsoft.com/library/ee662531%28v=office.15%29)
     
   
--  [Configure social computing features in SharePoint](http://technet.microsoft.com/library/fp161267%28v=office.15%29.aspx)
+-  [Configure social computing features in SharePoint](https://technet.microsoft.com/library/fp161267%28v=office.15%29.aspx)
     
   
--  [Social computing terminology and concepts in SharePoint](http://technet.microsoft.com/library/jj219804%28v=office.15%29.aspx)
+-  [Social computing terminology and concepts in SharePoint](https://technet.microsoft.com/library/jj219804%28v=office.15%29.aspx)
     
   
  **Reference documentation**
@@ -237,10 +237,10 @@ You should be aware of the following considerations when you specify app permiss
     
     
 
--  [Social client class library](http://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)
+-  [Social client class library](https://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)
     
   
--  [SP.UserProfiles.js JavaScript Reference](http://msdn.microsoft.com/library/80cf5436-6aa2-6f11-a782-66a04f6e2fb0%28Office.15%29.aspx)
+-  [SP.UserProfiles.js JavaScript Reference](https://msdn.microsoft.com/library/80cf5436-6aa2-6f11-a782-66a04f6e2fb0%28Office.15%29.aspx)
     
   
 -  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint.md)
@@ -249,9 +249,9 @@ You should be aware of the following considerations when you specify app permiss
 -  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint.md)
     
   
--  [User profiles REST API reference](http://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx)
+-  [User profiles REST API reference](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx)
     
   
--  [SharePoint Social server class library](http://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)
+-  [SharePoint Social server class library](https://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)
     
   

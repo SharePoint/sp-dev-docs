@@ -132,7 +132,7 @@ The following example shows how to add a button control to the server ribbon. Th
       <CommandUIHandlers>
         <CommandUIHandler
          Command="ShowHelp"
-         CommandAction="javascript:window.open('http://msdn.microsoft.com/library/ee539395%28office.14%29.aspx');" />
+         CommandAction="javascript:window.open('https://msdn.microsoft.com/library/ee539395%28office.14%29.aspx');" />
       </CommandUIHandlers>
     </CommandUIExtension>
   </CustomAction>
@@ -141,5 +141,5 @@ The following example shows how to add a button control to the server ribbon. Th
 
 ## See also
 
-- [Walkthrough: Adding a Button to the Server Ribbon](http://msdn.microsoft.com/library/82d7078a-696d-4c93-99bf-d40cfb4db305%28Office.15%29.aspx)
+- [Walkthrough: Adding a Button to the Server Ribbon](https://msdn.microsoft.com/library/82d7078a-696d-4c93-99bf-d40cfb4db305%28Office.15%29.aspx)
 

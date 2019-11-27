@@ -103,7 +103,7 @@ Retry after is the fastest way to handle being throttled because SharePoint Onli
 
 For information about ways to monitor your SharePoint Online activity, see  [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86).
 
-For a broader discussion of throttling on the Microsoft Cloud, see  [Throttling Pattern](http://msdn.microsoft.com/library/4baf5af2-32fc-47ab-8569-3e5c59a5ebd5.aspx).
+For a broader discussion of throttling on the Microsoft Cloud, see  [Throttling Pattern](https://msdn.microsoft.com/library/4baf5af2-32fc-47ab-8569-3e5c59a5ebd5.aspx).
 
 ## How to decorate your http traffic to avoid throttling?
 <a name="BKMK_DecorateSharePointOnlineThrottling"> </a>

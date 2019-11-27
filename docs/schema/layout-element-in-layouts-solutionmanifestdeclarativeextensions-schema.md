@@ -85,7 +85,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx">Properties</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx">Properties</a></p></td>
 <td align="left"><p>Can contain a property named **AssociatedActionType** to specify the type of action that is associated with this layout. Accepted values are Edit, Create, and ViewDetails.</p></td>
 </tr>
 </tbody>

@@ -53,7 +53,7 @@ The SharePoint client object model provides a way to access external data using 
 
 |**Article**|**Description**|
 |:-----|:-----|
-| [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx) <br/> |Learn how to write code to peform basic operations with the SharePoint .NET Framework client object model (CSOM).  <br/> |
+| [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx) <br/> |Learn how to write code to peform basic operations with the SharePoint .NET Framework client object model (CSOM).  <br/> |
    
 
 ## Create an SharePoint Add-in to access external data using the client object model
@@ -73,7 +73,7 @@ The following procedures show how to set up an SharePoint Add-in and configure a
 2. Create an **App for SharePoint** project.
     
   
-3. Specify the app settings, including app name, the site URL for debugging the app, and how you want to host the app (Autohosted, Provider-hosted, SharePoint-hosted). For more information about hosting options, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
+3. Specify the app settings, including app name, the site URL for debugging the app, and how you want to host the app (Autohosted, Provider-hosted, SharePoint-hosted). For more information about hosting options, see  [Choose patterns for developing and hosting your SharePoint Add-in](https://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
     
   
 4. Click **Finish** to create the app.
@@ -210,10 +210,10 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
--  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
+-  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
--  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
+-  [Choose patterns for developing and hosting your SharePoint Add-in](https://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
     
   
 -  [BCS client object model reference for SharePoint](bcs-client-object-model-reference-for-sharepoint.md)
@@ -222,7 +222,7 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
 

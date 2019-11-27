@@ -45,5 +45,5 @@ These are "presentations in a box" that include slides, demos, videos & hands on
 
 ## Other resources and assets
 
-* [SharePoint Development YouTube channel](http://aka.ms/spdev-videos)
-* [SharePoint developer samples](http://aka.ms/spdev-samples)
+* [SharePoint Development YouTube channel](https://aka.ms/spdev-videos)
+* [SharePoint developer samples](https://aka.ms/spdev-samples)

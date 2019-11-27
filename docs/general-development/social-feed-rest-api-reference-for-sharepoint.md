@@ -2702,7 +2702,7 @@ The ID of the post to get the likers for, as shown in the following example.
 
 
 
-Type:  [SP.Social.SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)[]
+Type:  [SP.Social.SocialActor](https://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)[]
 
 
 
@@ -2790,7 +2790,7 @@ A digest of the locked thread.
 
 
 
-The following response example represents a locked thread. The **Attributes** property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](http://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
+The following response example represents a locked thread. The **Attributes** property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](https://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
 
 ```json
 {"d":{
@@ -2933,7 +2933,7 @@ A digest of the unlocked thread.
 
 
 
-The following response example represents the unlocked thread. The **Attributes** property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](http://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
+The following response example represents the unlocked thread. The **Attributes** property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](https://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
 
 
 
@@ -3197,8 +3197,8 @@ The server returns a **SocialRestActor** resource in the response to a client-si
 |**Property**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |FollowableItem|**String**|The unique identifier of the specified actor. Returns the account name for a user or the URI for a document, site, or tag.|
-|FollowableItemActor| [SP.Social.SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)|The specified user. Returns **null** if the user is the current user or if the resource is not a user-type actor.|
-|Me| [SP.Social.SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)|The current user.|
+|FollowableItemActor| [SP.Social.SocialActor](https://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)|The specified user. Returns **null** if the user is the current user or if the resource is not a user-type actor.|
+|Me| [SP.Social.SocialActor](https://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)|The current user.|
 
 
 
@@ -3220,17 +3220,17 @@ The server returns a **SocialRestFeed** resource in the response to a client-sid
 
 
 
- **SocialRestFeed** contains a wrapped [SP.Social.SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) object, which has the following properties.
+ **SocialRestFeed** contains a wrapped [SP.Social.SocialFeed](https://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) object, which has the following properties.
 
 
 
 
 |**Property**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|Attributes| [SP.Social.SocialFeedAttributes](http://msdn.microsoft.com/library/9ea7d3c5-7f96-88a6-5bdf-d7749b044ad3%28Office.15%29.aspx)|A bitwise set of attributes that apply to the feed.|
+|Attributes| [SP.Social.SocialFeedAttributes](https://msdn.microsoft.com/library/9ea7d3c5-7f96-88a6-5bdf-d7749b044ad3%28Office.15%29.aspx)|A bitwise set of attributes that apply to the feed.|
 |NewestProcessed|**DateTime**|The date and time of the newest retrieved post.|
 |OldestProcessed|**DateTime**|The date and time of the oldest retrieved post.|
-|Threads| [SP.Social.SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx)[]|The threads that make up the feed.|
+|Threads| [SP.Social.SocialThread](https://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx)[]|The threads that make up the feed.|
 |UnreadMentionCount|**Int32**|The count of unread mentions for the current user.|
 
 
@@ -3253,7 +3253,7 @@ Clients specify **SocialRestPostCreationData** properties as parameters in a req
 
 
 
- **SocialRestPostCreationData** contains an **ID** property and a wrapped [SP.Social.SocialPostCreationData](http://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx) object. **ID** is required but the **SocialPostCreationData** properties are optional.
+ **SocialRestPostCreationData** contains an **ID** property and a wrapped [SP.Social.SocialPostCreationData](https://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx) object. **ID** is required but the **SocialPostCreationData** properties are optional.
 
 
 
@@ -3269,11 +3269,11 @@ The following properties belong to the **SocialPostCreationData** object.
 
 |**Property**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|Attachment| [SP.Social.SocialAttachment](http://msdn.microsoft.com/library/dfdee790-a1b0-19c8-0e92-5a6e058ba4db%28Office.15%29.aspx)|An image, video, or document attachment for the post.|
-|ContentItems| [SP.Social.SocialDataItem](http://msdn.microsoft.com/library/757e7b62-66a6-b03f-0ff0-769a42eb2b4a%28Office.15%29.aspx)[]|The items to replace the corresponding tokens in the post's content text|
+|Attachment| [SP.Social.SocialAttachment](https://msdn.microsoft.com/library/dfdee790-a1b0-19c8-0e92-5a6e058ba4db%28Office.15%29.aspx)|An image, video, or document attachment for the post.|
+|ContentItems| [SP.Social.SocialDataItem](https://msdn.microsoft.com/library/757e7b62-66a6-b03f-0ff0-769a42eb2b4a%28Office.15%29.aspx)[]|The items to replace the corresponding tokens in the post's content text|
 |ContentText|**String**|The plain text of the post, which can include positional insertion tokens (for example, "Today is {0}'s birthday!").|
 |SecurityUris|**String[]**|String representations of the URIs to SharePoint objects that define access permissions for the post.|
-|Source| [SP.Social.SocialLink](http://msdn.microsoft.com/library/c71efc66-c9ca-ea35-b1c0-cb9ec3bbfcd3%28Office.15%29.aspx)|The source of the post.|
+|Source| [SP.Social.SocialLink](https://msdn.microsoft.com/library/c71efc66-c9ca-ea35-b1c0-cb9ec3bbfcd3%28Office.15%29.aspx)|The source of the post.|
 |UpdateStatusText|**Boolean**|A value that controls whether the post's plain-text content should replace the current user's status text.|
 
 
@@ -3296,7 +3296,7 @@ The server returns a **SocialRestThread** resource in the response to a client-s
 
 
 
- **SocialRestThread** contains an **ID** property and a wrapped [SP.Social.SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) object.
+ **SocialRestThread** contains an **ID** property and a wrapped [SP.Social.SocialThread](https://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) object.
 
 
 
@@ -3312,16 +3312,16 @@ The following properties belong to the **SocialThread** object.
 
 |**Property**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|Actors| [SP.Social.SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)[]|The merged array of participating actors.|
-|Attributes|**Int32**|The bitwise value that represents the set of attributes for the thread. See  [SP.Social.SocialThreadAttributes](http://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx).|
+|Actors| [SP.Social.SocialActor](https://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)[]|The merged array of participating actors.|
+|Attributes|**Int32**|The bitwise value that represents the set of attributes for the thread. See  [SP.Social.SocialThreadAttributes](https://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx).|
 |Id|**String**|The unique identifier of the thread.|
 |OwnerIndex|**Int32**|The index of the thread's owner within the thread's actors.|
 |Permalink|**String**|The string representation of the stable URI for navigating directly to the thread, if one is available.|
-|PostReference| [SP.Social.SocialPostReference](http://msdn.microsoft.com/library/529e1db7-2e9a-5141-6b1e-94a5c63e7c16%28Office.15%29.aspx)|The referenced post.|
-|Replies| [SP.Social.SocialPost](http://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx)[]|The replies to the thread.|
-|RootPost| [SP.Social.SocialPost](http://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx)|The root post of the thread.|
-|Status|**Int32**|The code that identifies recoverable errors that occurred during thread retrieval. See  [SP.Social.SocialStatusCode](http://msdn.microsoft.com/library/79292329-19de-43e1-5928-60b0edc36c94%28Office.15%29.aspx).|
-|ThreadType| [SP.Social.SocialThreadType](http://msdn.microsoft.com/library/7444217e-ddda-d3a0-b19f-146cf8c6fcaa%28Office.15%29.aspx)|The thread type.|
+|PostReference| [SP.Social.SocialPostReference](https://msdn.microsoft.com/library/529e1db7-2e9a-5141-6b1e-94a5c63e7c16%28Office.15%29.aspx)|The referenced post.|
+|Replies| [SP.Social.SocialPost](https://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx)[]|The replies to the thread.|
+|RootPost| [SP.Social.SocialPost](https://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx)|The root post of the thread.|
+|Status|**Int32**|The code that identifies recoverable errors that occurred during thread retrieval. See  [SP.Social.SocialStatusCode](https://msdn.microsoft.com/library/79292329-19de-43e1-5928-60b0edc36c94%28Office.15%29.aspx).|
+|ThreadType| [SP.Social.SocialThreadType](https://msdn.microsoft.com/library/7444217e-ddda-d3a0-b19f-146cf8c6fcaa%28Office.15%29.aspx)|The thread type.|
 |TotalReplyCount|**Int32**|The count of the total number of replies for the thread.|
 
 ## See also

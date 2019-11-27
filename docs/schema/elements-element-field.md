@@ -73,8 +73,8 @@ For an example of how this element is used, see [Field Definitions](field-defini
 
 - [Field Definitions](field-definitions.md)
 - [Field Element(List)](field-element-list.md)
-- [Columns](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432(Office.15).aspx)
-- [Introduction to Columns](http://msdn.microsoft.com/library/2482a1a0-c75e-40a9-9cdb-bc1548dc10c0(Office.15).aspx)
+- [Columns](https://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432(Office.15).aspx)
+- [Introduction to Columns](https://msdn.microsoft.com/library/2482a1a0-c75e-40a9-9cdb-bc1548dc10c0(Office.15).aspx)
 
 
 

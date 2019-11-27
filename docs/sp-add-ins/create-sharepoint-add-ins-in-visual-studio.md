@@ -19,7 +19,7 @@ When you use a project template in Visual Studio, it creates a solution that con
 
 Creates a webpage that's hosted inside an Office application, such as Excel or Outlook. An Office Add-in provides additional content and functionality in a document or Outlook item. 
 
-For more information, see [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
+For more information, see [Office Add-ins platform overview](https://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
 
 ### SharePoint Add-in
 
@@ -40,7 +40,7 @@ After you create a SharePoint solution, you can add project items to it by using
 
 Adds an Office Add-in to your SharePoint Add-in. You can add a task pane add-in, a content add-in, or a mail add-in. 
 
-For more information, see [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
+For more information, see [Office Add-ins platform overview](https://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
 
 ### Client web part (Host Web)
 
@@ -57,7 +57,7 @@ Adds a content type to your SharePoint Add-in, similar to content types that wer
 
 When you add a content type to your SharePoint Add-in, you specify the base content type from which the new content type inherits. For example, it can inherit from an announcement, a contact, a document, or an item content type. You then use the **Content Type** designer to configure the columns for the content type and its other properties, such as its name and its description. The values that you choose are added to the `ContentType` and `FieldRef` elements in the Elements.xml file. 
 
-For more information, see [Building Block: SharePoint 2010 Content Types](http://msdn.microsoft.com/library/277dfc42-d9a8-4fae-9ae1-0d202b14674f%28Office.15%29.aspx).
+For more information, see [Building Block: SharePoint 2010 Content Types](https://msdn.microsoft.com/library/277dfc42-d9a8-4fae-9ae1-0d202b14674f%28Office.15%29.aspx).
 
 ### Empty Element
 
@@ -67,7 +67,7 @@ Adds a project item for an empty element to your SharePoint Add-in. This project
 
 Adds two project items to your SharePoint Add-in: a list definition and an instance of the list. When you add a list to your add-in, you specify what to name the list and whether to create either a blank list or a list that's based on an existing list type. You also specify whether the list can be customized. You then use the **List Designer** to configure the columns and views for the list and other properties, such as the list's name and description. 
 
-For more information about list properties, see [ListTemplate Element (List Template)](http://msdn.microsoft.com/library/e565ead9-adcb-4a90-97e3-04850719420a%28Office.15%29.aspx) and [ListInstance Element (List Instance)](http://msdn.microsoft.com/library/cfefe8e5-2656-4d71-bb4e-5f991a800598%28Office.15%29.aspx).
+For more information about list properties, see [ListTemplate Element (List Template)](https://msdn.microsoft.com/library/e565ead9-adcb-4a90-97e3-04850719420a%28Office.15%29.aspx) and [ListInstance Element (List Instance)](https://msdn.microsoft.com/library/cfefe8e5-2656-4d71-bb4e-5f991a800598%28Office.15%29.aspx).
 
 ### Menu Item Custom Action
 
@@ -108,11 +108,11 @@ Adds a project item for a site column to your SharePoint Add-in. The site column
 |Required|If the column is required, the property is set to **True**; otherwise, the property is set to **False**.|
 |Group|Specifies the name of the group to which the site column is assigned. The default value for this property is **Custom Site Columns**.|
 
-For more information, see [Building Block: Columns and Field Types](http://msdn.microsoft.com/library/58548ade-e439-4931-82a2-fa29bd5afdb7%28Office.15%29.aspx).
+For more information, see [Building Block: Columns and Field Types](https://msdn.microsoft.com/library/58548ade-e439-4931-82a2-fa29bd5afdb7%28Office.15%29.aspx).
 
 ### Workflow
 
-Adds a project item for a Microsoft Azure workflow to your SharePoint Add-in. For more information, see [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx). 
+Adds a project item for a Microsoft Azure workflow to your SharePoint Add-in. For more information, see [Workflows in SharePoint](https://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx). 
 
 When you add this type of item, you specify a name for the workflow and whether it's a list or site workflow. As the names suggest, a list workflow works only with a list, and a site workflow works only with the SharePoint site. When you're creating the workflow, you also specify whether to automatically associate the workflow with lists and libraries, and if so, which ones. For every association that you add, a file for it is added to the workflow project. A workflow contains the following files.
 
@@ -130,7 +130,7 @@ When you add this type of item, you specify a name for the workflow and whether 
 
 Adds a project item for a workflow custom activity to your SharePoint Add-in. By adding a workflow custom activity, you can create additional workflow actions that you can then import as custom actions in SharePoint Designer. The workflow custom activity contains an Elements.xml file, which defines the properties of the action, and a .xaml file for the workflow designer. 
 
-For more information, see [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
+For more information, see [Workflows in SharePoint](https://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
 
 ## See also
 <a name="SP15Projecttemplates_addlresources"> </a>

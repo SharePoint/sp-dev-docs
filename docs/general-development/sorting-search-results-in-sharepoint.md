@@ -30,10 +30,10 @@ You can sort the search results for SharePoint in four ways:
 
 This article focuses on sorting search results programmatically. To learn how to sort search results using SharePoint query rules, see the following articles:
 
--  [Change ranked search results in Manage query rules](http://technet.microsoft.com/library/jj871676.aspx#BKMK_ChangeRankedSearchResults)
+-  [Change ranked search results in Manage query rules](https://technet.microsoft.com/library/jj871676.aspx#BKMK_ChangeRankedSearchResults)
     
   
--  [Change ranked search results in Create query rules for web content management](http://technet.microsoft.com/library/jj871014.aspx#BKMK_ChangeRankedSearchResults)
+-  [Change ranked search results in Create query rules for web content management](https://technet.microsoft.com/library/jj871014.aspx#BKMK_ChangeRankedSearchResults)
     
   
 <a name="SP15_Specify_sorting_in_query_request"> </a>
@@ -551,7 +551,7 @@ using (var context = new ClientContext("http://localhost"))
 - [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) 
 - [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
 - [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md) 
-- [Overview of crawled and managed properties in SharePoint](http://technet.microsoft.com/library/jj219630%28office.15%29.aspx)
+- [Overview of crawled and managed properties in SharePoint](https://technet.microsoft.com/library/jj219630%28office.15%29.aspx)
     
   
 

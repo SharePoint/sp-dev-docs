@@ -29,7 +29,7 @@ This article shows how to perform basic operations using the JavaScript object m
 - [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)
 - [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
 - [Build Windows Phone apps that access SharePoint](../general-development/build-windows-phone-apps-that-access-sharepoint.md)
-- [Using the Silverlight Object Model](http://msdn.microsoft.com/library/cea7829d-f360-4052-8b76-91d90bcefd2a%28Office.15%29.aspx) in the SharePoint 2010 SDK
+- [Using the Silverlight Object Model](https://msdn.microsoft.com/library/cea7829d-f360-4052-8b76-91d90bcefd2a%28Office.15%29.aspx) in the SharePoint 2010 SDK
 
 <a name="BasicOps_SPJSOMOps"> </a>
 
@@ -918,7 +918,7 @@ function onQueryFailed(sender, args) {
 Four properties of **ListItem** objects are not available by default when you return the list items **displayName**, **effectiveBasePermissions**, **hasUniqueRoleAssignments**, and **roleAssignments**. The previous example returns a **PropertyOrFieldNotInitializedException** if you try to access one of these properties. To access these properties, use the **Include** method as part of the query string, as shown in the following example.
  
 > [!NOTE] 
-> When you use LINQ to create queries against the client object model, you are using  [LINQ to Objects](http://msdn.microsoft.com/library/bb397919), not the [LINQ to SharePoint provider](http://msdn.microsoft.com/library/ee535491), which can only be used when you write code against the server object model.
+> When you use LINQ to create queries against the client object model, you are using  [LINQ to Objects](https://msdn.microsoft.com/library/bb397919), not the [LINQ to SharePoint provider](https://msdn.microsoft.com/library/ee535491), which can only be used when you write code against the server object model.
 
 ```js
 function retrieveListItemsInclude(siteUrl) {

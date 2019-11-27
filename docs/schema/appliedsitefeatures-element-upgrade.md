@@ -46,7 +46,7 @@ None
    
 ### Remarks
 
-The **AppliedSiteFeatures** element actually activates each feature, including running a [Feature activating event handler](http://msdn.microsoft.com/library/8d61e0ce-9f47-4320-aa19-7043e5dccedb%28Office.15%29.aspx), when the site collection is upgraded. This allows you to run custom code during upgrade, and implement custom features solely for the purpose of doing custom site transformation.
+The **AppliedSiteFeatures** element actually activates each feature, including running a [Feature activating event handler](https://msdn.microsoft.com/library/8d61e0ce-9f47-4320-aa19-7043e5dccedb%28Office.15%29.aspx), when the site collection is upgraded. This allows you to run custom code during upgrade, and implement custom features solely for the purpose of doing custom site transformation.
 
 ## Example
  

@@ -44,7 +44,7 @@ To make your customization easier, start by using one of the default ranking mod
   
     
     
-SharePoint provides 14 ranking models by default. See  [What is a ranking model?](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Models) (on TechNet) for detailed information about these ranking models and their purpose.
+SharePoint provides 14 ranking models by default. See  [What is a ranking model?](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Models) (on TechNet) for detailed information about these ranking models and their purpose.
   
     
     
@@ -60,16 +60,16 @@ You use the following Windows PowerShell cmdlets to customize ranking models:
     
     
 
--  [Get-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/library/ff607990.aspx)
+-  [Get-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607990.aspx)
     
   
--  [New-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/library/ff607980.aspx)
+-  [New-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607980.aspx)
     
   
--  [Remove-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/library/ff608045.aspx)
+-  [Remove-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff608045.aspx)
     
   
--  [Set-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/library/ff607940.aspx)
+-  [Set-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607940.aspx)
     
   
 
@@ -149,7 +149,7 @@ $rm.RankingModelXML > myrm.xml
 3. Edit the  `myrm.xml` file in an XML editor. You must use new GUID values for the **id** attributes in _RankModel2Stage_ element and all _RankingModel2NN_ elements. To get a new GUID value you can for example use the following Windows PowerShell command: `[guid]::NewGuid()`
     
   
-4. Create a new ranking model with the  [New-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/library/ff607980.aspx) cmdlet by running the following commands.
+4. Create a new ranking model with the  [New-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607980.aspx) cmdlet by running the following commands.
     
 ```powershell
   
@@ -425,7 +425,7 @@ In a custom ranking model, you can have two or more managed properties that are 
   
     
     
-Weight groups are also known as context. See  [Influencing the ranking of search results by using the search schema](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Schema) (on TechNet) for more information about the relationship between a managed property and its context.
+Weight groups are also known as context. See  [Influencing the ranking of search results by using the search schema](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Schema) (on TechNet) for more information about the relationship between a managed property and its context.
   
     
     
@@ -1082,7 +1082,7 @@ This ranking model with one linear stage contains these four rank features:
 -  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
--  [Overview of search result ranking in SharePoint](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
+-  [Overview of search result ranking in SharePoint](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
     
   
 -  [Create a custom ranking model by using the Ranking Model Tuning App](https://docs.microsoft.com/sharepoint/search/create-custom-ranking-model)

@@ -49,9 +49,9 @@ This section contains the following information:
 Related links
 =============
 - [Customizing OneDrive for Business sites with app model (MSDN blog article)](http://blogs.msdn.com/b/vesku/archive/2015/01/01/customizing-onedrive-for-business-sites-with-app-model.aspx)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
 Related PnP samples
 ===================
@@ -59,7 +59,7 @@ Related PnP samples
 - Customizing OD4B sites using Async pattern
 - Classic add-in part and sync process for OD4B site customization
 - Pre-create OD4B sites for users
-- Samples and content at http://aka.ms/OfficeDevPnP
+- Samples and content at https://aka.ms/OfficeDevPnP
 
 Applies to
 ==========

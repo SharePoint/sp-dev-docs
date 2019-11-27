@@ -73,7 +73,7 @@ The workflow task content types defined for workflows should ultimately inherit 
 
 Use the TaskListId attribute of the [Association Element (WorkflowConfig)](association-element-workflowconfig.md) element to specify the task list the workflow should use.
 
-For more information about the base content types included with SharePoint Foundation, see [Base Content Type Hierarchy](http://msdn.microsoft.com/library/3fdb242a-504c-4c60-b564-491f760be1c8(Office.15).aspx).
+For more information about the base content types included with SharePoint Foundation, see [Base Content Type Hierarchy](https://msdn.microsoft.com/library/3fdb242a-504c-4c60-b564-491f760be1c8(Office.15).aspx).
 
 Each content type defined in the workflow configuration file must be added to the task list specified for the workflow.
 

@@ -147,7 +147,7 @@ In order to provide a way for the user to work with the new functionality added 
   
   - Declare the app webpage target and the values that are passed to it through the query string. 
     
-    The **UrlAction** element uses several tokens. For more information, see [URL strings and tokens in SharePoint Add-ins](http://msdn.microsoft.com/library/800ec8cd-a448-46bc-b41e-d4030eeb4048%28Office.15%29.aspx).
+    The **UrlAction** element uses several tokens. For more information, see [URL strings and tokens in SharePoint Add-ins](https://msdn.microsoft.com/library/800ec8cd-a448-46bc-b41e-d4030eeb4048%28Office.15%29.aspx).
     
   
 
@@ -801,10 +801,10 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
+-  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
--  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
 -  [An introduction to SAP Business Workflow](http://scn.sap.com/docs/DOC-31056)

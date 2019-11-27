@@ -2,7 +2,7 @@
 
 The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
-* [Official SharePoint Framework Documentation](http://aka.ms/spfx)
+* [Official SharePoint Framework Documentation](https://aka.ms/spfx)
 
 This repository contains the raw documents published to docs.microsoft.com site.
 
@@ -92,7 +92,7 @@ You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@off
 To keep track of improvements to the Office 365 Framework, please take a look at:
 
 * [@SharePoint](https://twitter.com/sharepoint), [@OfficeDev](https://twitter.com/officedev) and [@OfficeDevPnP](https://twitter.com/officedevpnp) on Twitter
-* [Office Developer Blog](http://dev.office.com/blogs)
+* [Office Developer Blog](https://developer.microsoft.com/en-us/office/blogs/)
 
 Provide Feedback:
 

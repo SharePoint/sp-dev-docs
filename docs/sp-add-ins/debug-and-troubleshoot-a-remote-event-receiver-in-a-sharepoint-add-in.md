@@ -25,7 +25,7 @@ When a SharePoint Add-in project in Visual Studio includes a remote event receiv
 
 ### To configure the SharePoint Add-in project in Visual Studio
 
-1. You should have the latest version of the Office Developer Tools for Visual Studio, so [run the WebPI installer here](http://aka.ms/OfficeDevToolsForVS2013), or  [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015).
+1. You should have the latest version of the Office Developer Tools for Visual Studio, so [run the WebPI installer here](https://aka.ms/OfficeDevToolsForVS2013), or  [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015).
 
 2. After you add an RER or add-in event handler to a SharePoint Add-in project in Visual Studio, right-click the project in **Solution Explorer** and select **Properties**.
 

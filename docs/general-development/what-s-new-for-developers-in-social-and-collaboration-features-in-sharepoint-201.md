@@ -11,7 +11,7 @@ localization_priority: Normal
 Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint.
 Social and collaboration features in SharePoint make it easy for users to communicate and to stay engaged and informed. The improved social feed on personal sites and team sites helps users to keep up-to-date with the people and content that they care about. The new Community Site feature provides a rich community experience that lets users easily find and share information and find people who have similar interests.
   
-For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](http://technet.microsoft.com/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
+For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](https://technet.microsoft.com/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
 ## New and changed My Site features in SharePoint
 <a name="bkmk_Social"> </a>
 
@@ -26,7 +26,7 @@ The **Newsfeed** page on SharePoint displays several of these improvements, incl
 
 ### New Social namespace provides APIs for social feeds and following people and content
 
-The **Social** namespace contains the primary API for working with feeds and microblog posts and for following people and content. For more information, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) for the .NET client object model, [SP.Social](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) for the JavaScript object model, and [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) for the server object model.
+The **Social** namespace contains the primary API for working with feeds and microblog posts and for following people and content. For more information, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) for the .NET client object model, [SP.Social](https://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) for the JavaScript object model, and [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) for the server object model.
   
 > [!NOTE] 
 > The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. See [Deprecated and removed My Site Social API and features](#bkmk_DeprecatedAPI). 
@@ -152,7 +152,7 @@ $loader.CreatePersonalSiteEnqueueBulk(@("user1@domain.com"))
 $loader.Context.ExecuteQuery()
 ```
 
-For more information, see [Use Windows PowerShell to administer SharePoint](http://technet.microsoft.com/library/ee806878%28v=office.15%29.aspx).
+For more information, see [Use Windows PowerShell to administer SharePoint](https://technet.microsoft.com/library/ee806878%28v=office.15%29.aspx).
   
     
     
@@ -184,7 +184,7 @@ SharePoint also includes a new client-side  [UserProfile](https://msdn.microsoft
 ### New client-side people picker control
 <a name="bkmk_NewUserObjects"> </a>
 
-The client-side People Picker control is an HTML and JavaScript control that provides cross-browser support for selecting people, groups, and claims. You can configure the picker with the same settings as the server-side version of the control, including control-specific properties (like allowing multiple users or users and groups) and web application-level configuration settings (like Active Directory Domain Services parameters or targeting particular forests). For more information, see  [Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/383f265f-ed44-4d09-b2f6-366f13d52347%28Office.15%29.aspx).
+The client-side People Picker control is an HTML and JavaScript control that provides cross-browser support for selecting people, groups, and claims. You can configure the picker with the same settings as the server-side version of the control, including control-specific properties (like allowing multiple users or users and groups) and web application-level configuration settings (like Active Directory Domain Services parameters or targeting particular forests). For more information, see  [Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins](https://msdn.microsoft.com/library/383f265f-ed44-4d09-b2f6-366f13d52347%28Office.15%29.aspx).
   
     
     
@@ -249,7 +249,7 @@ The following list contains information for developing with Community Site featu
 - Activating the **Community Site** feature activates the **CommunityEventReceiver** event receiver.
     
   
-- To customize the client-side rendered list view, you must use JavaScript overrides to replace the view. List views cannot be extended through the SharePoint API. For more information, see  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
+- To customize the client-side rendered list view, you must use JavaScript overrides to replace the view. List views cannot be extended through the SharePoint API. For more information, see  [Customize a list view in SharePoint Add-ins using client-side rendering](https://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
     
   
 - Community Sites use asynchronous events to update objects. If asynchronous events run in the background, you may encounter  *Save*  conflicts when you attempt to update lists or list items, and your handle to the object may become stale.
@@ -289,6 +289,6 @@ while (retries <= 10)
   
 -  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
--  [What's new in social computing in SharePoint](http://technet.microsoft.com/library/jj219766%28v=office.15%29)
+-  [What's new in social computing in SharePoint](https://technet.microsoft.com/library/jj219766%28v=office.15%29)
     
 

@@ -95,4 +95,4 @@ The download provides the handbook in both.docx and .pdf file formats.
   
     
     
- [No code solutions using SharePoint Composites](http://msdn.microsoft.com/sharepoint/fp161345)
+ [No code solutions using SharePoint Composites](https://msdn.microsoft.com/sharepoint/fp161345)

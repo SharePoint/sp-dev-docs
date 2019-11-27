@@ -14,11 +14,11 @@ Learn how to create the data provider component in a custom filter extension for
 ## What are custom data providers for PerformancePoint Services?
 <a name="bk_introduction"> </a>
 
-In PerformancePoint Services, custom data providers retrieve data from a filter's underlying data source and define how to use the data. Most importantly, data providers specify the data values to expose in the filter control and the data that can be used as the filter's beginpoint. A data provider also stores the value that a user selects from the filter control, which is then sent to filter consumers. Data providers use two  [DataTable](https://msdn.microsoft.com/library/System.Data.DataTable.aspx) objects to organize and store data. For more information, see [Filters Overview](http://msdn.microsoft.com/library/915382d0-3997-495c-a65a-7db3fe0b8f85%28Office.15%29.aspx).
+In PerformancePoint Services, custom data providers retrieve data from a filter's underlying data source and define how to use the data. Most importantly, data providers specify the data values to expose in the filter control and the data that can be used as the filter's beginpoint. A data provider also stores the value that a user selects from the filter control, which is then sent to filter consumers. Data providers use two  [DataTable](https://msdn.microsoft.com/library/System.Data.DataTable.aspx) objects to organize and store data. For more information, see [Filters Overview](https://msdn.microsoft.com/library/915382d0-3997-495c-a65a-7db3fe0b8f85%28Office.15%29.aspx).
   
     
     
-The following procedures and examples that show you how to create, configure, and define a filter data provider are based on the **SampleFilterDataProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint](#bk_example).
+The following procedures and examples that show you how to create, configure, and define a filter data provider are based on the **SampleFilterDataProvider** class from the [custom objects sample](https://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint](#bk_example).
   
     
     
@@ -31,12 +31,12 @@ We recommend that you use the sample data provider as a template. The sample sho
 <a name="bk_createconfig"> </a>
 
 
-1. Install PerformancePoint Services, or copy the DLLs that your extension uses (listed in step 3) to your computer. For more information, see  [DLLs with Class Libraries](http://msdn.microsoft.com/library/41e92619-8253-481d-82f9-35b6a6abc477%28Office.15%29.aspx).
+1. Install PerformancePoint Services, or copy the DLLs that your extension uses (listed in step 3) to your computer. For more information, see  [DLLs with Class Libraries](https://msdn.microsoft.com/library/41e92619-8253-481d-82f9-35b6a6abc477%28Office.15%29.aspx).
     
   
 2. In Visual Studio, create a C# class library. If you have already created a class library for your extension, add a new C# class.
     
-    You must sign your DLL with a strong name. In addition, ensure that all assemblies referenced by your DLL have strong names. For information about how to sign an assembly with a strong name and how to create a public/private key pair, see  [How to: Create a Public/Private Key Pair](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114.aspx).
+    You must sign your DLL with a strong name. In addition, ensure that all assemblies referenced by your DLL have strong names. For information about how to sign an assembly with a strong name and how to create a public/private key pair, see  [How to: Create a Public/Private Key Pair](https://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114.aspx).
     
   
 3. Add the following PerformancePoint Services DLLs as assembly references to the project:
@@ -66,7 +66,7 @@ We recommend that you use the sample data provider as a template. The sample sho
 5. Inherit from the  [CustomParameterDataProvider](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.aspx) base class.
     
   
-6. Set the string identifier for the data provider name. This must match the key that you add to the **CustomParameterDataProviders** section of the web.config file when you register the extension. For more information, see [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
+6. Set the string identifier for the data provider name. This must match the key that you add to the **CustomParameterDataProviders** section of the web.config file when you register the extension. For more information, see [How to: Manually Register PerformancePoint Services Extensions](https://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
     
   
 7. Override the  [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetId.aspx) method to return the identifier for your data provider.
@@ -300,7 +300,7 @@ namespace Microsoft.PerformancePoint.SDK.Samples.SampleFilter
 ## Next steps
 <a name="bk_next"> </a>
 
-After you create a data provider and a filter editor (including its user interface, if required), deploy the extension as described in  [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
+After you create a data provider and a filter editor (including its user interface, if required), deploy the extension as described in  [How to: Manually Register PerformancePoint Services Extensions](https://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
   
     
     

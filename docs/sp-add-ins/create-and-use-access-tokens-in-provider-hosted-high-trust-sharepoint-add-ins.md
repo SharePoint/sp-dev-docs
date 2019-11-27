@@ -67,7 +67,7 @@ After a token is created, it can be reused in later calls to SharePoint until it
 
 - In session state
 - In application state
-- In [Windows Server AppFabric Caching](http://msdn.microsoft.com/library/8aef3f5d-2a77-46d9-b951-0768fedd31a1%28Office.15%29.aspx).
+- In [Windows Server AppFabric Caching](https://msdn.microsoft.com/library/8aef3f5d-2a77-46d9-b951-0768fedd31a1%28Office.15%29.aspx).
 - In a database
 - In a [memcached](http://www.memcached.org/) system
     

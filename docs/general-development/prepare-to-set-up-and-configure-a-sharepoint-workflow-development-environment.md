@@ -8,7 +8,7 @@ localization_priority: Normal
 
 
 # Prepare to set up and configure a SharePoint workflow development environment
-Learn how to set up a workflow development environment to develop SharePoint workflows as free-standing  [apps for SharePoint](http://msdn.microsoft.com/library/fp179930.aspx) by using Visual Studio 2012.
+Learn how to set up a workflow development environment to develop SharePoint workflows as free-standing  [apps for SharePoint](https://msdn.microsoft.com/library/fp179930.aspx) by using Visual Studio 2012.
 ## Overview of workflow development in SharePoint
 
 Although workflows have been a part of SharePoint since early versions, workflows for SharePoint are a much enhanced and improved platform. 
@@ -16,10 +16,10 @@ Although workflows have been a part of SharePoint since early versions, workflow
     
     
 
-- First, SharePoint workflows are now built on  [Windows Workflow Foundation 4.5](http://msdn.microsoft.com/library/dd489441%28v=vs.110%29), which is part of the .NET Framework 4.5.
+- First, SharePoint workflows are now built on  [Windows Workflow Foundation 4.5](https://msdn.microsoft.com/library/dd489441%28v=vs.110%29), which is part of the .NET Framework 4.5.
     
   
-- Second, the workflow execution engine,  [Workflow Manager](http://msdn.microsoft.com/library/windowsazure/jj193528%28v=azure.10%29.aspx), has been decoupled from SharePoint and runs independently. This provides both flexibility and scalability. (Note that for backward compatibility, the legacy 2010 workflow engine remains a part of SharePoint.)
+- Second, the workflow execution engine,  [Workflow Manager](https://msdn.microsoft.com/library/windowsazure/jj193528%28v=azure.10%29.aspx), has been decoupled from SharePoint and runs independently. This provides both flexibility and scalability. (Note that for backward compatibility, the legacy 2010 workflow engine remains a part of SharePoint.)
     
   
 - Instead of developing workflows by writing C# code, you now build workflows in Visual Studio using a workflow designer that uses declarative expressions.
@@ -41,8 +41,8 @@ First off, get acquainted with the new app model and the concepts underlying Sha
 
 |||
 |:-----|:-----|
-| [SharePoint for developers](http://msdn.microsoft.com/sharepoint) <br/> |Portal to the SharePoint developer site, where the emphasis is on apps for SharePoint.  <br/> |
-| [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn what apps for SharePoint are, why you should build them, and the concepts that are fundamental to building them in SharePoint.  <br/> |
+| [SharePoint for developers](https://msdn.microsoft.com/sharepoint) <br/> |Portal to the SharePoint developer site, where the emphasis is on apps for SharePoint.  <br/> |
+| [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn what apps for SharePoint are, why you should build them, and the concepts that are fundamental to building them in SharePoint.  <br/> |
 | [SharePoint development overview](sharepoint-development-overview.md) <br/> |SharePoint is a development platform for apps for SharePoint and farm solutions. Get acquainted with the capabilities and features of SharePoint to start your development.  <br/> |
 | [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md) <br/> |Provides a high-level overview of the workflow infrastructure in SharePoint, including a view of the platform architecture and the workflow interop bridge.  <br/> |
    
@@ -60,7 +60,7 @@ Here are the components you need. It is important that you install these items i
   -  [SharePoint update (KB2767999)](http://support.microsoft.com/kb/2767999)
     
   
-  - Optionally, you can subscribe to an  [Office 365 development environment](http://msdn.microsoft.com/library/office/apps/fp179924%28v=office.15%29)
+  - Optionally, you can subscribe to an  [Office 365 development environment](https://msdn.microsoft.com/library/office/apps/fp179924%28v=office.15%29)
     
   
 2. **Install the Workflow Manager environment**
@@ -79,7 +79,7 @@ Here are the components you need. It is important that you install these items i
   -  [.NET Framework 4.5 update (KB2750149)](http://support.microsoft.com/kb/2750149/en-us)
     
   
-  -  [Office Developer Tools for Visual Studio 2012](http://aka.ms/OfficeDevToolsForVS2012)
+  -  [Office Developer Tools for Visual Studio 2012](https://aka.ms/OfficeDevToolsForVS2012)
     
   
 
@@ -134,7 +134,7 @@ Here is a summary of changes that require you to update your workflow projects:
 <a name="bk_addresources"> </a>
 
 
--  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx)
+-  [Set up an on-premises development environment for SharePoint Add-ins](https://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx)
     
   
 -  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)

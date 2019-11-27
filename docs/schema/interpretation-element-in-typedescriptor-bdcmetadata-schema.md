@@ -80,7 +80,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
 <td align="left"><p>The **TypeDescriptor** element.</p></td>
 </tr>
 <tr class="even">

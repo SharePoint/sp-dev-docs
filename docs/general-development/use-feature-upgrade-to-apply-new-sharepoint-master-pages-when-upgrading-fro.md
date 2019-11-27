@@ -17,7 +17,7 @@ When you upgrade your SharePoint 2010 customizations to SharePoint, any referenc
 
 ## Use custom upgrade code to reset a master page
 
-As the guidance in  [Deploy custom features to upgraded site collections in SharePoint](http://technet.microsoft.com/library/dn673579%28v=office.15%29.aspx) explains, when you upgrade from SharePoint 2010 to SharePoint, the site collections in your farm will run in SharePoint 2010 compatibility mode by default. Depending on the approach to upgrading your custom features that you've taken, you'll have deployed any given feature by using either one or two solution packages:
+As the guidance in  [Deploy custom features to upgraded site collections in SharePoint](https://technet.microsoft.com/library/dn673579%28v=office.15%29.aspx) explains, when you upgrade from SharePoint 2010 to SharePoint, the site collections in your farm will run in SharePoint 2010 compatibility mode by default. Depending on the approach to upgrading your custom features that you've taken, you'll have deployed any given feature by using either one or two solution packages:
   
     
     
@@ -127,7 +127,7 @@ public override void FeatureUpgrading(SPFeatureReceiverProperties properties, st
 
 ```
 
-Once you're done with the upgrade, you'll want to think about the future and long-term maintenance of your feature. Refer to  [Application Lifecycle Management in SharePoint 2010](http://msdn.microsoft.com/library/office/gg604045%28v=office.14%29.aspx) for guidance on maintaining full trust code. Although this article refers to SharePoint 2010 specifically, it applies equally well to full trust code in SharePoint. If you aren't familiar with feature versioning and upgrade actions, refer to the [Models for Solution Lifecycle Management](http://msdn.microsoft.com/library/office/gg604045%28v=office.14%29.aspx#sectionSection7) section of this article. You should also look at [Best Practices for Using Feature Versions](http://msdn.microsoft.com/library/office/ee535064%28v=office.14%29.aspx).
+Once you're done with the upgrade, you'll want to think about the future and long-term maintenance of your feature. Refer to  [Application Lifecycle Management in SharePoint 2010](https://msdn.microsoft.com/library/office/gg604045%28v=office.14%29.aspx) for guidance on maintaining full trust code. Although this article refers to SharePoint 2010 specifically, it applies equally well to full trust code in SharePoint. If you aren't familiar with feature versioning and upgrade actions, refer to the [Models for Solution Lifecycle Management](https://msdn.microsoft.com/library/office/gg604045%28v=office.14%29.aspx#sectionSection7) section of this article. You should also look at [Best Practices for Using Feature Versions](https://msdn.microsoft.com/library/office/ee535064%28v=office.14%29.aspx).
   
     
     
@@ -136,19 +136,19 @@ Once you're done with the upgrade, you'll want to think about the future and lon
 <a name="bk_addresources"> </a>
 
 
--  [Deploy custom features to upgraded site collections in SharePoint](http://technet.microsoft.com/library/dn673579%28v=office.15%29.aspx)
+-  [Deploy custom features to upgraded site collections in SharePoint](https://technet.microsoft.com/library/dn673579%28v=office.15%29.aspx)
     
   
 -  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint.md)
     
   
--  [Upgrade to SharePoint](http://technet.microsoft.com/library/cc303420%28v=office.15%29.aspx)
+-  [Upgrade to SharePoint](https://technet.microsoft.com/library/cc303420%28v=office.15%29.aspx)
     
   
 -  [SharePoint and SharePoint Online solution pack for branding and site provisioning](http://www.microsoft.com/download/details.aspx?id=42030)
     
   
--  [Install and manage solutions for SharePoint](http://technet.microsoft.com/library/cc263205%28v=office.15%29.aspx)
+-  [Install and manage solutions for SharePoint](https://technet.microsoft.com/library/cc263205%28v=office.15%29.aspx)
     
   
 

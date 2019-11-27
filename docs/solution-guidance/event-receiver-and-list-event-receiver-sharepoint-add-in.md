@@ -73,9 +73,9 @@ Related links
 - [Remote event receivers in SharePoint 2013 FAQ (MSDN Article)](https://msdn.microsoft.com/library/office/dn456315.aspx)
 - [Create a remote event receiver in add-ins for SharePoint (MSDN Article)](https://msdn.microsoft.com/library/office/jj220043.aspx)
 - [Create an app event receiver in SharePoint 2013 (MSDN Article)](https://msdn.microsoft.com/library/office/jj220052.aspx)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
 Related PnP samples
 ===================

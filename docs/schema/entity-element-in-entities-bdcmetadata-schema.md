@@ -202,7 +202,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ## See also
 
-- [What Are External Content Types?](http://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
+- [What Are External Content Types?](https://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
 
 
 

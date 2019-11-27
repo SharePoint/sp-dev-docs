@@ -31,7 +31,7 @@ Table 1 lists articles that can help you understand the core concepts of deployi
 |**Article title**|**Description**|
 |:-----|:-----|
 | [Themes overview for SharePoint](themes-overview-for-sharepoint.md) <br/> |Learn about the theming experience in SharePoint.  <br/> |
-| [Feature Events](http://msdn.microsoft.com/library/ms469501.aspx) <br/> |Learn about feature events, which enable you to trap and respond to an event that occurs when a feature is installed in the server farm.  <br/> |
+| [Feature Events](https://msdn.microsoft.com/library/ms469501.aspx) <br/> |Learn about feature events, which enable you to trap and respond to an event that occurs when a feature is installed in the server farm.  <br/> |
    
 
 ## Upload files to the Theme Gallery and the Master Page Gallery

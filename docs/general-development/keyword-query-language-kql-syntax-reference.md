@@ -165,7 +165,7 @@ You must specify a valid managed property name for the property restriction. By 
   
     
     
-To specify a property restriction for a crawled property value, you must first map the crawled property to a managed property. See **Managed and crawled properties** in [Plan the end-user search experience](http://technet.microsoft.com/library/cc263089.aspx). 
+To specify a property restriction for a crawled property value, you must first map the crawled property to a managed property. See **Managed and crawled properties** in [Plan the end-user search experience](https://technet.microsoft.com/library/cc263089.aspx). 
   
     
     

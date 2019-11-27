@@ -38,7 +38,7 @@ You can build extensions alongside common scripting frameworks, such as AngularJ
 To keep track of improvements to the SharePoint Framework, including updates to extensions, see the following:
 
 * [@SharePoint](https://twitter.com/sharepoint) and [@OfficeDev](https://twitter.com/officedev) on Twitter
-* [Office Developer Blog](http://dev.office.com/blogs)
+* [Office Developer Blog](https://developer.microsoft.com/en-us/office/blogs/)
 
 ## Provide feedback 
 We invite you to give us your feedback on the SharePoint Framework General Availability release. You can use the following resources to provide feedback directly to the SharePoint engineering team:

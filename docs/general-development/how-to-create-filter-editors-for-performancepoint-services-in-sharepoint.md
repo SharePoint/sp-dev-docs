@@ -13,11 +13,11 @@ Learn how to create the editor component of a custom filter extension for Perfor
 ## What are custom filter editors for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
-In PerformancePoint Services, custom filter editors enable users to set properties on custom filters. Filter editors must also initialize a filter's  [BeginPoints](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.BeginPoints.aspx) property, which defines the filter beginpoint that contains parameter values for scorecard and report consumers. For more information about editor requirements and functionality, see [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx).
+In PerformancePoint Services, custom filter editors enable users to set properties on custom filters. Filter editors must also initialize a filter's  [BeginPoints](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.BeginPoints.aspx) property, which defines the filter beginpoint that contains parameter values for scorecard and report consumers. For more information about editor requirements and functionality, see [Editors for Custom PerformancePoint Services Objects](https://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx).
   
     
     
-The following procedures and examples are based on the **SampleFilterEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the filter's name and description and to select the underlying data source. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint](#bk_example).
+The following procedures and examples are based on the **SampleFilterEditor** class from the [custom objects sample](https://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the filter's name and description and to select the underlying data source. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint](#bk_example).
   
     
     
@@ -34,12 +34,12 @@ We recommend that you use the sample editor as a template. The sample shows how 
     
     
 
-1. Install PerformancePoint Services, or copy the DLLs that your extension uses (see step 3) to your computer. For more information, see  [DLLs with Class Libraries](http://msdn.microsoft.com/library/41e92619-8253-481d-82f9-35b6a6abc477%28Office.15%29.aspx).
+1. Install PerformancePoint Services, or copy the DLLs that your extension uses (see step 3) to your computer. For more information, see  [DLLs with Class Libraries](https://msdn.microsoft.com/library/41e92619-8253-481d-82f9-35b6a6abc477%28Office.15%29.aspx).
     
   
 2. In Visual Studio, create a C# class library. If you have created a class library for your extension, add a new C# class.
     
-    You must sign your DLL with a strong name. In addition, ensure that all assemblies referenced by your DLL have strong names. For information about how to sign an assembly with a strong name and how to create a public/private key pair, see  [How to: Create a public/private key pair](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114.aspx).
+    You must sign your DLL with a strong name. In addition, ensure that all assemblies referenced by your DLL have strong names. For information about how to sign an assembly with a strong name and how to create a public/private key pair, see  [How to: Create a public/private key pair](https://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114.aspx).
     
   
 3. Add the following DLLs as assembly references to the project:
@@ -134,7 +134,7 @@ Dim action As String = Request.QueryString(ClickOnceLaunchKeys.LaunchOperation)
 ```
 
 
-    For information about query string parameters, see  [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx).
+    For information about query string parameters, see  [Editors for Custom PerformancePoint Services Objects](https://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx).
     
   
 10. Retrieve the **FilterRepositoryHelper** object, which is used to make calls to the repository, as shown in the following code example.
@@ -210,7 +210,7 @@ End If
 
 
     > [!NOTE]
-    > By default, users can create custom objects from PerformancePoint Dashboard Designer only. To enable users to create a custom object outside of Dashboard Designer, you must add a menu item that sends a  _CreateItem_ request to your editor from the content type in the repository. For more information, see [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
+    > By default, users can create custom objects from PerformancePoint Dashboard Designer only. To enable users to create a custom object outside of Dashboard Designer, you must add a menu item that sends a  _CreateItem_ request to your editor from the content type in the repository. For more information, see [Editors for Custom PerformancePoint Services Objects](https://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
 
 13. Retrieve the filter's underlying data source from the repository. The sample filter editor uses the **FilterRepositoryHelper.DataSourceHelper** property to call the **DataSourceConsumerHelper.GetDataSource** method, which is used to retrieve the data source by its location in the repository. This is shown in the following code example.
     
@@ -1170,7 +1170,7 @@ End Namespace
 ## Next steps
 <a name="bk_example"> </a>
 
-After you create a filter editor (including its user interface, if required) and a data provider, deploy the extension as described in  [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
+After you create a filter editor (including its user interface, if required) and a data provider, deploy the extension as described in  [How to: Manually Register PerformancePoint Services Extensions](https://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
   
     
     

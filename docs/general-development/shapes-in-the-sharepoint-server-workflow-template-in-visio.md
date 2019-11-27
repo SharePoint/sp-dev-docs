@@ -136,9 +136,9 @@ The following table shows a list of all the shapes that are contained in the Sha
 -  [SharePoint Workflow template shapes guide](http://office.microsoft.com/visio-help/sharepoint-workflow-template-shapes-guide-HA101903894.aspx)
     
   
--  [SharePoint Developer Center](http://msdn.microsoft.com/sharepoint/default.aspx)
+-  [SharePoint Developer Center](https://msdn.microsoft.com/sharepoint/default.aspx)
     
   
--  [Visio Developer Center](http://msdn.microsoft.com/office/aa905478)
+-  [Visio Developer Center](https://msdn.microsoft.com/office/aa905478)
     
   

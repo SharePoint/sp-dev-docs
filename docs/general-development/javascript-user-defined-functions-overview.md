@@ -121,7 +121,7 @@ You can create and use JavaScript UDFs either on workbooks displayed in SharePoi
 -  [Excel Services in SharePoint](excel-services-in-sharepoint.md)
     
   
--  [Excel Services User-Defined Functions](http://msdn.microsoft.com/library/ms493934)
+-  [Excel Services User-Defined Functions](https://msdn.microsoft.com/library/ms493934)
     
   
 

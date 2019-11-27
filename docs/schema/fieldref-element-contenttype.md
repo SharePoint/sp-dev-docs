@@ -86,7 +86,7 @@ The following sections describe attributes, child elements, and parent elements.
 <li><p>first   Applies property promotion and demotion to the first element in the collection.</p></li>
 <li><p>last   Applies property promotion and demotion to the last element in the collection.</p></li>
 </ul>
-<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **PrimaryPIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **PrimaryPIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="https://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Customization**</p></td>
@@ -153,7 +153,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="even">
 <td align="left"><p>**Node**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the XML node in the document which contains the column value. Used for property promotion and demotion in XML documents.</p>
-<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="https://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**NumLines**</p></td>
@@ -163,26 +163,26 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>**PIAttribute**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the attribute in the document processing instruction (specified by the **PITarget** attribute) to use as the column value. Used for property promotion and demotion in XML documents.</p>
 <p>If you specify the **PIAttribute** attribute, you must also specify the **PITarget** attribute.</p>
-<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="https://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PITarget**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the document processing instruction in which the column value is stored in documents of this content type. Used for property promotion and demotion in XML documents.</p>
 <p>If you specify the **PIAttribute** attribute, you must also specify the **PITarget** attribute.</p>
-<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="https://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PrimaryPIAttribute**</p></td>
 <td align="left"><p>Optional **Text**. Specifies an alternate attribute in the document processing instruction, specified by the **PrimaryPITarget**, to use as the column value.</p>
 <p>If you specify the **PrimaryPIAttribute** attribute, you must also specify the **PrimaryPITarget** attribute. If specified, SharePoint Foundation uses these values before those specified in the **PITarget** and **PIAttribute** attributes.</p>
 <p>Used for property promotion and demotion in XML documents.</p>
-<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="https://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PrimaryPITarget**</p></td>
 <td align="left"><p>Optional **Text**. Specifies an alternative document processing instruction in which the column value is stored for documents of this content type.</p>
 <p>If you specify the **PrimaryPIAttribute** attribute, you must also specify the **PrimaryPITarget** attribute. If specified, SharePoint Foundation uses these values before those specified in the **PITarget** and **PIAttribute** attributes.</p>
-<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **Primary PIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="https://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ReadOnly**</p></td>
@@ -301,7 +301,7 @@ The following example shows two **FieldRef** elements specifying columns to incl
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-- [Fields and Field References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
+- [Fields and Field References](https://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
 - [SPFieldLink](https://msdn.microsoft.com/library/office/microsoft.sharepoint.spfieldlink.aspx)
 
 

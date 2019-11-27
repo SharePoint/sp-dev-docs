@@ -66,9 +66,9 @@ For an example of how this element is used, see [Event Registrations](event-regi
 
 ## See also
 
-- [Event Fundamentals](http://msdn.microsoft.com/library/4a20751f-877a-48ca-9d37-c3d4e6df9f30(Office.15).aspx)
-- [Registering an Event Handler](http://msdn.microsoft.com/library/c86de04e-6f5b-4082-9ed4-203b6303007b(Office.15).aspx)
-- [How to: Create an Event Handler Feature](http://msdn.microsoft.com/library/4f70b1ea-dafe-4068-a6b0-55402b7618dc(Office.15).aspx)
+- [Event Fundamentals](https://msdn.microsoft.com/library/4a20751f-877a-48ca-9d37-c3d4e6df9f30(Office.15).aspx)
+- [Registering an Event Handler](https://msdn.microsoft.com/library/c86de04e-6f5b-4082-9ed4-203b6303007b(Office.15).aspx)
+- [How to: Create an Event Handler Feature](https://msdn.microsoft.com/library/4f70b1ea-dafe-4068-a6b0-55402b7618dc(Office.15).aspx)
 
 
 

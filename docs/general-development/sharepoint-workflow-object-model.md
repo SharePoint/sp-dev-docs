@@ -12,7 +12,7 @@ Get a brief introduction to the workflow object model in SharePoint.
 ## SharePoint workflow object model
 <a name="bk_SPwfom"> </a>
 
-The SharePoint object model is built on top of the .NET Framework 4 object model for Windows Workflow Foundation 4, but with innovations that enable workflow functionality in SharePoint generally, and in SharePoint Add-ins in particular. The native .NET Framework 4 object model for Windows Workflow Foundation 4 is located in the .NET Framework  [System.Workflow namespaces](http://msdn.microsoft.com/library/gg145026.aspx).
+The SharePoint object model is built on top of the .NET Framework 4 object model for Windows Workflow Foundation 4, but with innovations that enable workflow functionality in SharePoint generally, and in SharePoint Add-ins in particular. The native .NET Framework 4 object model for Windows Workflow Foundation 4 is located in the .NET Framework  [System.Workflow namespaces](https://msdn.microsoft.com/library/gg145026.aspx).
   
     
     
@@ -86,21 +86,21 @@ The SharePoint workflow object model, on the other hand, is contained in ten nam
 
 ### SharePoint workflow schemas
 
-Reference content for SharePoint schemas is contained in the reference node entitled  [Workflow schemas](http://msdn.microsoft.com/library/b36ded16-3ffd-4931-811e-c402c1e35b07%28Office.15%29.aspx), and contain the following:
+Reference content for SharePoint schemas is contained in the reference node entitled  [Workflow schemas](https://msdn.microsoft.com/library/b36ded16-3ffd-4931-811e-c402c1e35b07%28Office.15%29.aspx), and contain the following:
   
     
     
 
--  [WorkflowActions4 schema reference](http://msdn.microsoft.com/library/1c0112de-0139-e64d-d3d6-658541695391%28Office.15%29.aspx)
+-  [WorkflowActions4 schema reference](https://msdn.microsoft.com/library/1c0112de-0139-e64d-d3d6-658541695391%28Office.15%29.aspx)
     
   
--  [WorkflowActions3 schema reference](http://msdn.microsoft.com/library/7a03ead8-30e0-4601-9c6f-edfb04ce57f9%28Office.15%29.aspx)
+-  [WorkflowActions3 schema reference](https://msdn.microsoft.com/library/7a03ead8-30e0-4601-9c6f-edfb04ce57f9%28Office.15%29.aspx)
     
   
--  [Workflow configuration schema reference](http://msdn.microsoft.com/library/63824239-6eb2-4cf1-ba84-44eace4d3781%28Office.15%29.aspx)
+-  [Workflow configuration schema reference](https://msdn.microsoft.com/library/63824239-6eb2-4cf1-ba84-44eace4d3781%28Office.15%29.aspx)
     
   
--  [WorkflowInfo schema reference](http://msdn.microsoft.com/library/f3bdcc70-15a0-44b2-9b01-330f13430354%28Office.15%29.aspx)
+-  [WorkflowInfo schema reference](https://msdn.microsoft.com/library/f3bdcc70-15a0-44b2-9b01-330f13430354%28Office.15%29.aspx)
     
   
 
@@ -108,13 +108,13 @@ Reference content for SharePoint schemas is contained in the reference node enti
 <a name="bk_additionalresources"> </a>
 
 
--  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](http://msdn.microsoft.com/library/ee342461.aspx)
+-  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](https://msdn.microsoft.com/library/ee342461.aspx)
     
   
 -  [Windows Workflow Foundation 4.0: Hello, workflow!](http://weblogs.asp.net/gunnarpeipman/archive/2009/07/08/windows-workflow-foundation-4-0-hello-workflow.aspx)
     
   
--  [Windows Workflow Foundation (WF) Screencasts](http://msdn.microsoft.com/netframework/dd733248)
+-  [Windows Workflow Foundation (WF) Screencasts](https://msdn.microsoft.com/netframework/dd733248)
     
   
 -  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)

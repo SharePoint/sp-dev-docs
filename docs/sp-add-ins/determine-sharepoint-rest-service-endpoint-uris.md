@@ -208,7 +208,7 @@ The following figure shows the REST service syntax for parameters in the query s
 
 ## Specify static methods and properties as REST service URIs
 
-To construct URIs that correspond to static methods or properties, use the corresponding API name from the ECMAScript object model, starting with the namespace declaration and using dot notation. For example,  [SP.Utilities.Utility.getImageUrl(imageName)](http://msdn.microsoft.com/library/ee658947.aspx) in the ECMAScript client object model would have the following REST equivalent:
+To construct URIs that correspond to static methods or properties, use the corresponding API name from the ECMAScript object model, starting with the namespace declaration and using dot notation. For example,  [SP.Utilities.Utility.getImageUrl(imageName)](https://msdn.microsoft.com/library/ee658947.aspx) in the ECMAScript client object model would have the following REST equivalent:
 
 `http://server/site/_api/SP.Utilities.Utility.getImageUrl('imageName')`
 

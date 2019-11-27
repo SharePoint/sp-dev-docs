@@ -81,7 +81,7 @@ For more information, see the following:
 -  [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class
     
   
--  [How to: Log to the History List from a Workflow Activity](http://msdn.microsoft.com/library/ff798337.aspx)
+-  [How to: Log to the History List from a Workflow Activity](https://msdn.microsoft.com/library/ff798337.aspx)
     
   
 -  [Using the Log to History List SharePoint workflow action for debugging](http://www.documentmanagementworkflowinfo.com/sample-sharepoint-workflows/use-log-to-history-list-sharepoint-designer-workflow-action-debug)
@@ -106,7 +106,7 @@ For more information, see the following:
 -  [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class
     
   
--  [How to: Log to the History List from a Workflow Activity](http://msdn.microsoft.com/library/ff798337.aspx)
+-  [How to: Log to the History List from a Workflow Activity](https://msdn.microsoft.com/library/ff798337.aspx)
     
   
 -  [Using the Log to History List SharePoint workflow action for debugging](http://www.documentmanagementworkflowinfo.com/sample-sharepoint-workflows/use-log-to-history-list-sharepoint-designer-workflow-action-debug)
@@ -121,17 +121,17 @@ To assist with debugging workflows, it is important that you capture meaningful 
     
     
 
--  [Writing to the Trace Log](http://msdn.microsoft.com/library/aa979595.aspx)
+-  [Writing to the Trace Log](https://msdn.microsoft.com/library/aa979595.aspx)
     
   
--  [Using Event and Trace Logs in SharePoint](http://msdn.microsoft.com/library/ff647362.aspx)
+-  [Using Event and Trace Logs in SharePoint](https://msdn.microsoft.com/library/ff647362.aspx)
     
   
 
 ### Verify that variables are non-null and contain expected values
 <a name="bkm_04"> </a>
 
-Before using variables in your workflows, ensure there are no null variables. Also, ensure that variables contain expected values and are of the correct data type. For more information, see  [Variables and Arguments](http://msdn.microsoft.com/library/dd489456.aspx).
+Before using variables in your workflows, ensure there are no null variables. Also, ensure that variables contain expected values and are of the correct data type. For more information, see  [Variables and Arguments](https://msdn.microsoft.com/library/dd489456.aspx).
   
     
     

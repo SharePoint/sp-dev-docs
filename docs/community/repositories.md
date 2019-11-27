@@ -14,13 +14,13 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 > We welcome community contributions to all of these GitHub repositories. All contributors are acknowledged in our monthly communications. Join hundreds of other SharePoint community members and help us build an even stronger community together. *Sharing is caring!*
 
 > [!NOTE]
-> You can also use the [SharePoint Developer Sample Gallery](http://aka.ms/spdev-samples) in the SharePoint Developer portal to find samples relevant to you.
+> You can also use the [SharePoint Developer Sample Gallery](https://aka.ms/spdev-samples) in the SharePoint Developer portal to find samples relevant to you.
 
 ## SharePoint repositories
 
 | Repository | Description |
 |--------|--------|
-| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at http://docs.microsoft.com/sharepoint/dev/ |
+| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at https://docs.microsoft.com/sharepoint/dev/ |
 | [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) | Samples and tutorial code around SharePoint Framework client-side web parts |
 | [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions) | Samples and tutorial code around SharePoint Framework extensions |
 | [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization) | Solutions, tools and script to help you modernize your sites |

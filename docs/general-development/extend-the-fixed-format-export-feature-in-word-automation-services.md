@@ -11,7 +11,7 @@ localization_priority: Normal
 Extend Word Automation Services in Microsoft Office 2013 to replace the library used by the fixed-format export feature.
 ## Introduction to the Word file conversion service fixed-format export feature
 
-This article describes how to extend the fixed-format export feature of Word Automation Services to use different fixed-format export DLLs, so third-party developers can replace those provided by Microsoft. This mechanism requires and extends the Office client fixed-format extensibility COM interface. For more information, see  [Extending the Office 2007 Fixed-Format Export Feature](http://msdn.microsoft.com/library/aa338206.aspx).
+This article describes how to extend the fixed-format export feature of Word Automation Services to use different fixed-format export DLLs, so third-party developers can replace those provided by Microsoft. This mechanism requires and extends the Office client fixed-format extensibility COM interface. For more information, see  [Extending the Office 2007 Fixed-Format Export Feature](https://msdn.microsoft.com/library/aa338206.aspx).
   
     
     
@@ -70,7 +70,7 @@ If the function returns failure the service will not fall back to the Microsoft-
 
 ## IMsoDocExporter
 
-The **IMsoDocExporter** interface is identical to the existing interface documented on MSDN. For more information, see [Extending the Office 2007 Fixed-Format Export Feature](http://msdn.microsoft.com/library/aa338206.aspx). When the previous method returns success, this interface performs the conversion.
+The **IMsoDocExporter** interface is identical to the existing interface documented on MSDN. For more information, see [Extending the Office 2007 Fixed-Format Export Feature](https://msdn.microsoft.com/library/aa338206.aspx). When the previous method returns success, this interface performs the conversion.
   
     
     
@@ -182,7 +182,7 @@ For more information, see the following resources:
     
     
 
--  [Extending the Office 2007 Fixed-Format Export Feature](http://msdn.microsoft.com/library/office/aa338206%28v=office.12%29.aspx)
+-  [Extending the Office 2007 Fixed-Format Export Feature](https://msdn.microsoft.com/library/office/aa338206%28v=office.12%29.aspx)
     
   
 

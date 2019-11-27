@@ -83,7 +83,7 @@ Since users continuously create new site collections it’s important to run the
 
 ##### Full Control
 To give users full control to specific (or all) SharePoint sites, you can use SharePoint PowerShell to make the target users Site Collection admins of the target sites (including all). This can be done by a Global administrator or SharePoint Service administrator.
-It is recommended that access be added on an as-needed basis, and then removed. For example, the script below assigns a list of administrators to all site collections in a tenant. The example uses the [SharePoint Patterns and Practices (PnP) of PowerShell commands](http://aka.ms/sppnp-powershell) to make two users admins of all site collections in the tenant.
+It is recommended that access be added on an as-needed basis, and then removed. For example, the script below assigns a list of administrators to all site collections in a tenant. The example uses the [SharePoint Patterns and Practices (PnP) of PowerShell commands](https://aka.ms/sppnp-powershell) to make two users admins of all site collections in the tenant.
 
 ```PowerShell
 # comma separated list of users and groups to be added
@@ -111,7 +111,7 @@ foreach($sitecollection in $sitecollections) {
 ##### Full Read
 To give users full read to specific (or all) SharePoint sites, you can use SharePoint PowerShell to add the target users to a site collection Read Role. This can be done by a Global administrator or SharePoint Service administrator.
 The general steps include defining a SharePoint Read Role for the site collection, or reuse an existing one, and then assigning users or groups to the Role. To use Azure AD groups, including those with dynamic membership, to control access to resources refer to: [Manage access to resources with Azure Active Directory groups](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups#https%3A%2F%2Fchannel9.msdn.com%2FSeries%2FAzure-Active-Directory-Videos-Demos%2FAzure-AD--Introduction-to-Dynamic-Memberships-for-Groups%2Fplayer). 
-The example uses the [SharePoint Patterns and Practices (PnP) of PowerShell commands](http://aka.ms/sppnp-powershell) to create a new Read Role for all site collections in the tenant.
+The example uses the [SharePoint Patterns and Practices (PnP) of PowerShell commands](https://aka.ms/sppnp-powershell) to create a new Read Role for all site collections in the tenant.
 
 ```PowerShell
 # Specify the tenant here

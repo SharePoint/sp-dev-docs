@@ -9,7 +9,7 @@ localization_priority: Normal
 
 You can apply and interact with themes by using remote provisioning features in SharePoint. These features are provided by the following APIs:
 
--  [ApplyTheme method](http://msdn.microsoft.com/library/52c567e8-03e6-7ba3-a9ed-cf4e3c22dbdd%28Office.15%29.aspx)
+-  [ApplyTheme method](https://msdn.microsoft.com/library/52c567e8-03e6-7ba3-a9ed-cf4e3c22dbdd%28Office.15%29.aspx)
 -  [ThemeInfo class](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.themeinfo.aspx)
 
 > [!IMPORTANT] 

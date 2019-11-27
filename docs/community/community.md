@@ -13,8 +13,8 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 
 ## Blog posts, videos, and social media
 
-- [SharePoint Developer Blog](http://dev.office.com/blogs) - Latest developer news around SharePoint and Office 365
-- [SharePoint Developer Videos](http://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
+- [SharePoint Developer Blog](https://developer.microsoft.com/en-us/office/blogs/) - Latest developer news around SharePoint and Office 365
+- [SharePoint Developer Videos](https://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
 - [OfficeDev Twitter](https://twitter.com/officedev) - Official communication channel for SharePoint and Office 365 developer topics
 - [OfficeDevPnP Twitter](https://twitter.com/officedevpnp) - Community account for SharePoint and Office 365 developer topics
 - [OfficeDev Facebook](https://www.facebook.com/OfficeDev/) - Official communication channel for SharePoint and Office 365 developer topics
@@ -61,7 +61,7 @@ Following statements apply across all of the SharePoint PnP assets, including sa
 
 ## See also
 
-- [SharePoint developer portal](http://aka.ms/spdev)
-- [SharePoint developer samples](http://aka.ms/spdev-samples)
+- [SharePoint developer portal](https://aka.ms/spdev)
+- [SharePoint developer samples](https://aka.ms/spdev-samples)
 - [SharePoint PnP open-source projects](open-source-projects.md)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md) 

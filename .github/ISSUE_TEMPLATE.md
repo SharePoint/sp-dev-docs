@@ -12,7 +12,7 @@
 
 > For the above list, an empty checkbox is [ ] as in <kbd>[</kbd><kbd>SPACE</kbd><kbd>]</kbd>. A checked checkbox is [x] with no space between the brackets. Use the `PREVIEW` tab at the top right to preview the rendering before submitting your issue.
 >
-> If you are planning to share a new feature request (enhancement / suggestion), please use SP Dev UserVoice at http://aka.ms/sp-dev-uservoice. (DELETE THIS PARAGRAPH AFTER READING)
+> If you are planning to share a new feature request (enhancement / suggestion), please use SP Dev UserVoice at https://aka.ms/sp-dev-uservoice. (DELETE THIS PARAGRAPH AFTER READING)
 >
 > _(DELETE THIS PARAGRAPH AFTER READING)_
 >

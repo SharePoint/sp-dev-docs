@@ -88,7 +88,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
         </a>
     </li>    
     <li>
-        <a href="http://aka.ms/spdev-videos/">
+        <a href="https://aka.ms/spdev-videos/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

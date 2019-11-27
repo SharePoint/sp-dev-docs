@@ -519,7 +519,7 @@ Figure 5 shows the Developer Dashboard.
 
 It is important to understand how these requests and the number of images and queries affect performance. There are similarities when it comes to server-side rendered list views (XSL or CAML) as they follow the same size recommendations as client-side rendered list views. However, server list view guidance is to create only list views necessary to accomplish your requirements when your goal is optimal performance, as thousands of views will cause greater degradation in performance due to compilation cache management. The physical characteristics of the computer, such as memory and processor speed, will factor into the overall speed. 
 
-There is also consideration for where the requests route or how they are distributed. To better understand how SharePoint routes and distributes requests, you can use the Request Manager tool. However, discussing request distribution is beyond the scope of this article. For more information, see [Configure Request Manager in SharePoint](http://technet.microsoft.com/library/jj712708.aspx).
+There is also consideration for where the requests route or how they are distributed. To better understand how SharePoint routes and distributes requests, you can use the Request Manager tool. However, discussing request distribution is beyond the scope of this article. For more information, see [Configure Request Manager in SharePoint](https://technet.microsoft.com/library/jj712708.aspx).
 
 ## Conclusion
 <a name="bk_conclusion"> </a>

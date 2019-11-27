@@ -18,7 +18,7 @@ description: Contains a collection of modules in the configuration of a site def
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Contains a collection of modules in the configuration of a site definition within [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx). 
+Contains a collection of modules in the configuration of a site definition within [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx). 
   
 ```XML
 <Modules>

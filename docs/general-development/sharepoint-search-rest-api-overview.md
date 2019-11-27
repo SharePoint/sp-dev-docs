@@ -314,7 +314,7 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;selectproperti
 
 ### Culture
 
-The locale ID (LCID) for the query (see  [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx)).
+The locale ID (LCID) for the query (see  [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx)).
 
 #### Sample GET request
 
@@ -1050,7 +1050,7 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;generateblockr
 
 ### UIlanguage
 
-The locale identifier (LCID) of the user interface (see  [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664)).
+The locale identifier (LCID) of the user interface (see  [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664)).
 
 #### Sample GET request
 
@@ -1189,7 +1189,7 @@ You can configure search to support Search REST queries from anonymous users. Si
 
 ### To enable anonymous Search REST queries
 
-1. Enable anonymous access on the web application and publishing site. For more information about how to do this, see  [Manage permission policies for a web application in SharePoint](http://technet.microsoft.com/library/ff608071.aspx) and [Plan for user authentication methods in SharePoint](http://technet.microsoft.com/library/cc262350.aspx) on [TechNet](http://technet.microsoft.com/).
+1. Enable anonymous access on the web application and publishing site. For more information about how to do this, see  [Manage permission policies for a web application in SharePoint](https://technet.microsoft.com/library/ff608071.aspx) and [Plan for user authentication methods in SharePoint](https://technet.microsoft.com/library/cc262350.aspx) on [TechNet](https://technet.microsoft.com/).
 1. Add a new document library named QueryPropertiesTemplate to the publishing site.
 1. Create an XML file named queryparametertemplate.xml, and copy the following XML to the file.
 

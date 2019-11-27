@@ -70,7 +70,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ## Example
 
-The following example shows the form definitions that are specified in the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for Announcements lists. 
+The following example shows the form definitions that are specified in the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for Announcements lists. 
   
 ```XML
 <Forms>

@@ -59,7 +59,7 @@ These customizations are currently not supported for "modern" lists and librarie
  - SharePoint server publishing
 
 > [!NOTE]
-> In June 2017, [SharePoint Framework Extensions went into developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](http://aka.ms/spfx-extensions). 
+> In June 2017, [SharePoint Framework Extensions went into developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions). 
 
 <a name="supportedcustomactions"> </a>
 
@@ -93,7 +93,7 @@ Adding custom links to the context menu can be done by using the `EditControlBlo
 </pnp:ProvisioningTemplate>
 ```
 
-You can apply this [PnP provisioning template](https://msdn.microsoft.com/pnp_articles/pnp-provisioning-engine-and-the-core-library) to a site using the PnP Core library or [PnP PowerShell](http://aka.ms/sppnp-powershell). We've opted to show the PowerShell approach in this article. A first step is to [install the PnP PowerShell module](https://github.com/SharePoint/PnP-PowerShell). After that's done, save the PnP provisioning XML to a file, and the two simple lines of PnP PowerShell are enough to apply the template:
+You can apply this [PnP provisioning template](https://msdn.microsoft.com/pnp_articles/pnp-provisioning-engine-and-the-core-library) to a site using the PnP Core library or [PnP PowerShell](https://aka.ms/sppnp-powershell). We've opted to show the PowerShell approach in this article. A first step is to [install the PnP PowerShell module](https://github.com/SharePoint/PnP-PowerShell). After that's done, save the PnP provisioning XML to a file, and the two simple lines of PnP PowerShell are enough to apply the template:
 
 ```powershell
 

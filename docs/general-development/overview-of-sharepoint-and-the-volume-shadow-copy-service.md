@@ -108,13 +108,13 @@ The following is the high-level sequence of events during backup or restore oper
 -  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md)
     
   
--  [Starting and Configuring the WSS Writer Service](http://msdn.microsoft.com/library/c9243dd6-e61e-4783-9fef-48d0122f1c09.aspx)
+-  [Starting and Configuring the WSS Writer Service](https://msdn.microsoft.com/library/c9243dd6-e61e-4783-9fef-48d0122f1c09.aspx)
     
   
--  [Volume Shadow Copy Service](http://msdn.microsoft.com/library/windows/desktop/bb968832%28v=vs.85%29.aspx)
+-  [Volume Shadow Copy Service](https://msdn.microsoft.com/library/windows/desktop/bb968832%28v=vs.85%29.aspx)
     
   
--  [Volume Shadow Copy Service Technical Reference](http://msdn.microsoft.com/library/windows/desktop/aa384648%28v=vs.85%29.aspx)
+-  [Volume Shadow Copy Service Technical Reference](https://msdn.microsoft.com/library/windows/desktop/aa384648%28v=vs.85%29.aspx)
     
   
 

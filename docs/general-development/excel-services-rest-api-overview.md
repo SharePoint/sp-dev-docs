@@ -33,7 +33,7 @@ REST services are based on two requirements:
 REST services are resource-centric. With REST, data is divided into resources, each resource is given a URL, and standard operations are implemented on the resources, which enable operations like creation, retrieval, update, and deletion. 
 
 > [!NOTE]
-> For more information about the difference between REST services and custom Web services, see  [Custom Service or RESTful Service](http://msdn.microsoft.com/magazine/dd882522.aspx). 
+> For more information about the difference between REST services and custom Web services, see  [Custom Service or RESTful Service](https://msdn.microsoft.com/magazine/dd882522.aspx). 
   
     
     

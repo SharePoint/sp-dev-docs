@@ -32,11 +32,11 @@ For a list of available workflow actions, see  [Workflow actions quick reference
 ## Windows Workflow Foundation 4.0 activities
 <a name="bkm_WF4"> </a>
 
-Although the SharePoint platform and infrastructure provide you with specially crafted activity classes for creating custom SharePoint workflows, you can also use any of the activities that are provided by Windows Workflow Foundation (WF) 4.0. These WF 4.0 activity classes are available in the Microsoft .NET Framework 4 in the  [System.Activities.Statements](http://msdn.microsoft.com/library/system.activities.statements.aspx) namespace.
+Although the SharePoint platform and infrastructure provide you with specially crafted activity classes for creating custom SharePoint workflows, you can also use any of the activities that are provided by Windows Workflow Foundation (WF) 4.0. These WF 4.0 activity classes are available in the Microsoft .NET Framework 4 in the  [System.Activities.Statements](https://msdn.microsoft.com/library/system.activities.statements.aspx) namespace.
   
     
     
-The WF 4.0 activity classes provide some useful features that you may not find in the SharePoint activity class library. For example, WF 4.0 includes the **If** class, which allows you to create conditional activities. Additionally, you can use the [System.ServiceModel.Activities.Send](http://msdn.microsoft.com/library/system.servicemodel.activities.send.aspx) activity to connect to web services.
+The WF 4.0 activity classes provide some useful features that you may not find in the SharePoint activity class library. For example, WF 4.0 includes the **If** class, which allows you to create conditional activities. Additionally, you can use the [System.ServiceModel.Activities.Send](https://msdn.microsoft.com/library/system.servicemodel.activities.send.aspx) activity to connect to web services.
   
     
     

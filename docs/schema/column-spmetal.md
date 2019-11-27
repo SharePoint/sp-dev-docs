@@ -34,7 +34,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Name** (required)  <br/> |The  *internal*  Microsoft SharePoint Foundation name of the column (field).  <br/> |
 |**Member** (optional)  <br/> |The name SPMetal gives to the property that it generates to represent the column.  <br/> |
-|**Type** (optional)  <br/> |Used only for Choice and MultiChoice columns that do not allow 'Fill-in' choices. If present and set to "String", forces SPMetal to generate a class of [String](https://msdn.microsoft.com/library/System.String.aspx) constants to represent the possible choices rather than an enum class.<br/><br/>For more information about how LINQ to SharePoint maps Choice and MultiChoice fields to .NET 3.5 data types, see [Type Mapping: From LINQ to SharePoint Provider to .NET](http://msdn.microsoft.com/library/6a1dff92-d3cf-46ec-9e51-372e5b9ff7c4%28Office.15%29.aspx).  <br/> |
+|**Type** (optional)  <br/> |Used only for Choice and MultiChoice columns that do not allow 'Fill-in' choices. If present and set to "String", forces SPMetal to generate a class of [String](https://msdn.microsoft.com/library/System.String.aspx) constants to represent the possible choices rather than an enum class.<br/><br/>For more information about how LINQ to SharePoint maps Choice and MultiChoice fields to .NET 3.5 data types, see [Type Mapping: From LINQ to SharePoint Provider to .NET](https://msdn.microsoft.com/library/6a1dff92-d3cf-46ec-9e51-372e5b9ff7c4%28Office.15%29.aspx).  <br/> |
    
 #### Possible values of Type attribute
 
@@ -81,7 +81,7 @@ One **Column** element represents the Choice column "Category". It uses the Type
 
 ## See also
 
-- [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx) 
-- [Overriding SPMetal Defaults by Using a Parameters XML File](http://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
-- [Type Mapping: From LINQ to SharePoint Provider to .NET](http://msdn.microsoft.com/library/6a1dff92-d3cf-46ec-9e51-372e5b9ff7c4%28Office.15%29.aspx)
+- [SPMetal Default Code Generation Rules](https://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx) 
+- [Overriding SPMetal Defaults by Using a Parameters XML File](https://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
+- [Type Mapping: From LINQ to SharePoint Provider to .NET](https://msdn.microsoft.com/library/6a1dff92-d3cf-46ec-9e51-372e5b9ff7c4%28Office.15%29.aspx)
 

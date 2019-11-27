@@ -71,7 +71,7 @@ For instance, to get all the properties of a specific item, the **Uri** would co
   
     
     
-The second stage of working with web services that we're going to cover involves submitting or receiving data from a web service. Regardless of whether you use the **RequestContent** or **ResponseContent** properties on the **HttpSend** activity) you can pass the data as a complex structure, which are formatted as JavaScript Object Notation (JSON) strings. The good news is, you don't have to create and manipulate these json strings manually. Instead, Microsoft gives you a new object type, the [DynamicValue](http://msdn.microsoft.com/library/windowsazure/jj193446%28v=azure.10%29.aspx), that makes your task much easier. 
+The second stage of working with web services that we're going to cover involves submitting or receiving data from a web service. Regardless of whether you use the **RequestContent** or **ResponseContent** properties on the **HttpSend** activity) you can pass the data as a complex structure, which are formatted as JavaScript Object Notation (JSON) strings. The good news is, you don't have to create and manipulate these json strings manually. Instead, Microsoft gives you a new object type, the [DynamicValue](https://msdn.microsoft.com/library/windowsazure/jj193446%28v=azure.10%29.aspx), that makes your task much easier. 
   
     
     
@@ -87,7 +87,7 @@ With the support for calling web services and the lack of supporting custom code
   
     
     
-OData is a protocol for creating and consuming data based on the principles of REST services. It was developed in an effort to standardize exchanging data using the mature, reliable, and robust HTTP protocol. Once the OData specification was complete, different organizations implemented the protocol on their own technology stacks. Microsoft implemented its own version of OData and branded it  [Windows Communication Foundation (WCF) Data Services 5.0](http://msdn.microsoft.com/library/hh487257%28v=vs.103%29.aspx).
+OData is a protocol for creating and consuming data based on the principles of REST services. It was developed in an effort to standardize exchanging data using the mature, reliable, and robust HTTP protocol. Once the OData specification was complete, different organizations implemented the protocol on their own technology stacks. Microsoft implemented its own version of OData and branded it  [Windows Communication Foundation (WCF) Data Services 5.0](https://msdn.microsoft.com/library/hh487257%28v=vs.103%29.aspx).
   
     
     
@@ -103,7 +103,7 @@ A common use for web services is performing simple create, read, update, delete,
     
     
 
-1. Create a model of your database using the  [Entity Framework](http://msdn.microsoft.com/library/bb399567%28v=vs.110%29.aspx). There is no code required (Visual Studio, provides a wizard).
+1. Create a model of your database using the  [Entity Framework](https://msdn.microsoft.com/library/bb399567%28v=vs.110%29.aspx). There is no code required (Visual Studio, provides a wizard).
     
   
 2. Create a new WCF data service. There is no code required (Visual Studio provides a wizard).
@@ -122,7 +122,7 @@ Another task you'll want to accomplish using web services is running business lo
   
     
     
-OData and WCF data services support this scenario by providing you with  [service operations](http://msdn.microsoft.com/library/cc668788%28v=vs.110%29.aspx). Service operations are common and are even used within SharePoint services, for instance, when retrieving a specific list using the address  `http://[..]/_api/web/lists/GetByTitle('ListTitle')`. The **GetByTitle** method is a service operator the SharePoint team created. Developers create their own custom service operations in custom web services created using WCF Data Services.
+OData and WCF data services support this scenario by providing you with  [service operations](https://msdn.microsoft.com/library/cc668788%28v=vs.110%29.aspx). Service operations are common and are even used within SharePoint services, for instance, when retrieving a specific list using the address  `http://[..]/_api/web/lists/GetByTitle('ListTitle')`. The **GetByTitle** method is a service operator the SharePoint team created. Developers create their own custom service operations in custom web services created using WCF Data Services.
   
     
     
@@ -454,10 +454,10 @@ SharePoint introduced a new workflow architecture facilitated by a new product: 
 <a name="bk_addresources"> </a>
 
 
--  [Working with complex data in a workflow](http://msdn.microsoft.com/library/windowsazure/jj193446%28v=azure.10%29.aspx)
+-  [Working with complex data in a workflow](https://msdn.microsoft.com/library/windowsazure/jj193446%28v=azure.10%29.aspx)
     
   
--  [Workflows in SharePoint](http://msdn.microsoft.com/library/jj163986.aspx)
+-  [Workflows in SharePoint](https://msdn.microsoft.com/library/jj163986.aspx)
     
   
 

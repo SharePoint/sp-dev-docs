@@ -35,8 +35,8 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 |**Additional Resources**|**Links**|
 |:-----|:-----|
-|Excel Services Resource Center  <br/> | [Excel Services Resource Center on MSDN](http://msdn.microsoft.com/office/bb203828.aspx) <br/> |
-|IT Pro \\ Administration Documentation  <br/> | [TechNet](http://technet.microsoft.com/library/ee424401%28office.14%29.aspx) <br/> |
+|Excel Services Resource Center  <br/> | [Excel Services Resource Center on MSDN](https://msdn.microsoft.com/office/bb203828.aspx) <br/> |
+|IT Pro \\ Administration Documentation  <br/> | [TechNet](https://technet.microsoft.com/library/ee424401%28office.14%29.aspx) <br/> |
 |Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser.  <br/> |For more information about Excel Online, see the  [documentation](https://technet.microsoft.com/library/ee855124.aspx) on Technet. <br/> |
    
 
@@ -80,4 +80,4 @@ The following are links to blogs, forums, and additional resources related to Ex
   
     
     
- [Unsupported Features in Excel Services](http://msdn.microsoft.com/library/5868e672-4786-4fed-9168-07ff538f6f5c%28Office.15%29.aspx)
+ [Unsupported Features in Excel Services](https://msdn.microsoft.com/library/5868e672-4786-4fed-9168-07ff538f6f5c%28Office.15%29.aspx)

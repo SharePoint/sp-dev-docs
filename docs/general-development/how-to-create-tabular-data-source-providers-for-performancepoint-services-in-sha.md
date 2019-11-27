@@ -22,7 +22,7 @@ The main function of a tabular data source provider is to create and populate a 
   
     
     
-The procedures and code examples in this topic are based on the **WSTabularDataSourceProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The provider retrieves stock quotes from an external web service for specified stock symbols. It stores historical stock quote data in a cache file, which enables the data to be sliced by time. For the complete code for the class, see  [Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint](#bk_example).
+The procedures and code examples in this topic are based on the **WSTabularDataSourceProvider** class from the [custom objects sample](https://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The provider retrieves stock quotes from an external web service for specified stock symbols. It stores historical stock quote data in a cache file, which enables the data to be sliced by time. For the complete code for the class, see  [Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint](#bk_example).
   
     
     
@@ -35,12 +35,12 @@ We recommend that you use the sample data source provider as a template. The sam
 <a name="BKMK_CreateClass"> </a>
 
 
-1. Install PerformancePoint Services, or copy the DLLs that your extension uses (listed in step 3) to your computer. For instructions, see  [DLLs with Class Libraries](http://msdn.microsoft.com/library/41e92619-8253-481d-82f9-35b6a6abc477%28Office.15%29.aspx).
+1. Install PerformancePoint Services, or copy the DLLs that your extension uses (listed in step 3) to your computer. For instructions, see  [DLLs with Class Libraries](https://msdn.microsoft.com/library/41e92619-8253-481d-82f9-35b6a6abc477%28Office.15%29.aspx).
     
   
 2. In Visual Studio, create a C# class library. If you have already created a class library for your extension, add a new C# class.
     
-    You must sign your DLL with a strong name. In addition, ensure that all assemblies referenced by your DLL have strong names. For information about how to sign an assembly with a strong name and how to create a public/private key pair, see  [How to: Create a Public/Private Key Pair](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114.aspx).
+    You must sign your DLL with a strong name. In addition, ensure that all assemblies referenced by your DLL have strong names. For information about how to sign an assembly with a strong name and how to create a public/private key pair, see  [How to: Create a Public/Private Key Pair](https://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114.aspx).
     
   
 3. Add the following PerformancePoint Services DLLs as assembly references to the project:
@@ -92,7 +92,7 @@ We recommend that you use the sample data source provider as a template. The sam
 10. Override the  [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) method to return the unique identifier for your provider. [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) must return the same string as the **key** attribute that is registered in the PerformancePoint Services web.config file for the custom data source provider.
     
   
-11. Override the  [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) method to define column mappings. [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) calls the **CreateDataColumnMappings** method to define data source columns as [Fact](http://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) , [Dimension](http://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) , and [TimeDimension](http://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) types.
+11. Override the  [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) method to define column mappings. [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) calls the **CreateDataColumnMappings** method to define data source columns as [Fact](https://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) , [Dimension](https://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) , and [TimeDimension](https://msdn.microsoft.com/Library/microsoft.performancepoint.scorecards.mappedcolumntypes.aspx) types.
     
      [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) also retrieves the stock symbols, cache file location, and proxy server address from the [CustomData](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.CustomData.aspx) property of the custom data source object. These values are defined by dashboard authors in the sample data source editor.
     
@@ -416,7 +416,7 @@ namespace Microsoft.PerformancePoint.SDK.Samples.SampleDataSource
 ## Next steps
 <a name="bk_next"> </a>
 
-After you create a data source provider and a data source editor (including its user interface, if required), deploy the extension as described in  [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx). 
+After you create a data source provider and a data source editor (including its user interface, if required), deploy the extension as described in  [How to: Manually Register PerformancePoint Services Extensions](https://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx). 
   
     
     

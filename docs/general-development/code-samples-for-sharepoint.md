@@ -24,4 +24,4 @@ Find and download code samples for SharePoint, including samples that demonstrat
 -  [How-tos for SharePoint](how-tos-for-sharepoint.md)
 -  [SharePoint Dev Center](https://developer.microsoft.com/sharepoint)
 -  [SharePoint Code Samples](https://developer.microsoft.com/SharePoint/gallery?filterBy=SharePoint,Samples)
--  [Microsoft SharePoint Team Blog](http://dev.office.com/blogs)
+-  [Microsoft SharePoint Team Blog](https://developer.microsoft.com/en-us/office/blogs/)

@@ -360,7 +360,7 @@ b)      A warning will be reported in the ImportLogs- “Failed to retrieve user
  
 * [Azure Windows Azure SDK for .NET - 2.4](http://www.microsoft.com/download/details.aspx?id=43709)
 
-* [Bulk Creation of OneDrive for Business sites](http://msdn.microsoft.com/library/office/jj163783(v=office.15).aspx) 
+* [Bulk Creation of OneDrive for Business sites](https://msdn.microsoft.com/library/office/jj163783(v=office.15).aspx) 
 
 * [Restrictions and limitations when you sync SharePoint libraries to your computer through OneDrive for Business](https://support.office.com/article/restrictions-and-limitations-when-you-sync-files-and-folders-7787566e-c352-4bd4-9409-fd100a0165f6)
 

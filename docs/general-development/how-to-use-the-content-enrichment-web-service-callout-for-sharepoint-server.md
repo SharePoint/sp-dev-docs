@@ -20,16 +20,16 @@ Implementation of the external content enrichment web service relies on interfac
 
 The Content Enrichment functionality is configured and enabled with the following Windows PowerShell cmdlets:
 
--  [Get-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/library/jj219783%28office.15%29.aspx)
+-  [Get-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219783%28office.15%29.aspx)
     
   
--  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/library/jj219659%28office.15%29.aspx)
+-  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219659%28office.15%29.aspx)
     
   
--  [Remove-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/library/jj219742%28office.15%29.aspx)
+-  [Remove-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219742%28office.15%29.aspx)
     
   
--  [New-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/library/jj219502%28office.15%29.aspx)
+-  [New-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219502%28office.15%29.aspx)
     
   
 These Windows PowerShell cmdlets enable an administrator to configure the following:
@@ -309,11 +309,11 @@ Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication
 $ssa -ContentEnrichmentConfiguration $config
 ```
 
-The sequence of Windows PowerShell cmdlets help you to first create a configuration object by using the  [New-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/library/jj219502%28office.15%29.aspx) cmdlet. The configuration object is then pointed toward your service implementation; as a best practice, use `http://localhost:808` for _Site_URL_.
+The sequence of Windows PowerShell cmdlets help you to first create a configuration object by using the  [New-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219502%28office.15%29.aspx) cmdlet. The configuration object is then pointed toward your service implementation; as a best practice, use `http://localhost:808` for _Site_URL_.
   
     
     
-The managed properties **Author** and **Filename** are sent to your service for every item that is being processed. In addition, you have informed the web service client that the service will output a single managed property, **Author**. In additional to managed properties, the web service client is configured to send the raw data of the item with a limitation on the size of the data. Finally, the  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/library/jj219659%28office.15%29.aspx)cmdlet is used to store the entire configuration. After this cmdlet returns, the configuration is active and the crawl component uses this configuration for its next crawl process.
+The managed properties **Author** and **Filename** are sent to your service for every item that is being processed. In addition, you have informed the web service client that the service will output a single managed property, **Author**. In additional to managed properties, the web service client is configured to send the raw data of the item with a limitation on the size of the data. Finally, the  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219659%28office.15%29.aspx)cmdlet is used to store the entire configuration. After this cmdlet returns, the configuration is active and the crawl component uses this configuration for its next crawl process.
   
     
     
@@ -338,7 +338,7 @@ Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 <a name="SP15ContentEnrich_addresources"> </a>
 
 
--  [Start, pause, resume, or stop a crawl](http://technet.microsoft.com/library/jj219814%28office.15%29.aspx)
+-  [Start, pause, resume, or stop a crawl](https://technet.microsoft.com/library/jj219814%28office.15%29.aspx)
     
   
 -  [Configure search in SharePoint](configure-search-in-sharepoint.md)

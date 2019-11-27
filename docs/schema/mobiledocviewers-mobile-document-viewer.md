@@ -64,5 +64,5 @@ The following example shows this element in use.
 
 ## See also
 
-- [Developing Mobile Document Viewers](http://msdn.microsoft.com/library/acd5386d-7808-4fd8-843f-0a4ac9ddd6b0%28Office.15%29.aspx)
+- [Developing Mobile Document Viewers](https://msdn.microsoft.com/library/acd5386d-7808-4fd8-843f-0a4ac9ddd6b0%28Office.15%29.aspx)
 

@@ -74,7 +74,7 @@ In the simplest configuration in SharePoint Server 2010—that is, a single comp
   
     
     
-For information about Excel Services topology, scalability, performance, and security, see the SharePoint Server 2010 documentation on  [TechNet](http://technet.microsoft.com/library/cc303422%28office.14%29.aspx). 
+For information about Excel Services topology, scalability, performance, and security, see the SharePoint Server 2010 documentation on  [TechNet](https://technet.microsoft.com/library/cc303422%28office.14%29.aspx). 
   
     
     
@@ -118,7 +118,7 @@ The JavaScript object model in Excel Services enables developers to customize, a
   
     
     
-For more information about the JavaScript object model in Excel Services, see the  [Ewa](http://msdn.microsoft.com/library/6fe73191-3213-b986-1ad6-2c3b918a2241%28Office.15%29.aspx) namespace reference documentation.
+For more information about the JavaScript object model in Excel Services, see the  [Ewa](https://msdn.microsoft.com/library/6fe73191-3213-b986-1ad6-2c3b918a2241%28Office.15%29.aspx) namespace reference documentation.
   
     
     

@@ -25,9 +25,9 @@ The following articles were written for SharePoint Server 2010 and SharePoint De
 
 |**Task**|**Description**|
 |:-----|:-----|
-| [Adding Associations Between External Content Types](http://msdn.microsoft.com/library/ff394528.aspx) <br/> |Provides overview information about associations.  <br/> |
-| [Creating SharePoint Server External Content Type Associations with SharePoint Designer](http://msdn.microsoft.com/library/ff728816.aspx) <br/> |Shows how to create associations between external content types in SharePoint Designer without using code.  <br/> |
-| [Defining Associations in Business Connectivity Services Using SharePoint Designer](http://msdn.microsoft.com/library/gg607166.aspx) <br/> |Shows how to create advanced associations between external content types.  <br/> |
+| [Adding Associations Between External Content Types](https://msdn.microsoft.com/library/ff394528.aspx) <br/> |Provides overview information about associations.  <br/> |
+| [Creating SharePoint Server External Content Type Associations with SharePoint Designer](https://msdn.microsoft.com/library/ff728816.aspx) <br/> |Shows how to create associations between external content types in SharePoint Designer without using code.  <br/> |
+| [Defining Associations in Business Connectivity Services Using SharePoint Designer](https://msdn.microsoft.com/library/gg607166.aspx) <br/> |Shows how to create advanced associations between external content types.  <br/> |
    
 
 ## See also

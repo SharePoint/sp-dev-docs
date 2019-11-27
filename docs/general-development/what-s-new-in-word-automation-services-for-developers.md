@@ -86,10 +86,10 @@ With the addition of on demand file conversion requests and support for converti
 <a name="was15AdditionalResources"> </a>
 
 
--  [Word Automation Services in SharePoint Server 2010](http://msdn.microsoft.com/library/ee558278)
+-  [Word Automation Services in SharePoint Server 2010](https://msdn.microsoft.com/library/ee558278)
     
   
--  [Word Automation Services Class Library](http://msdn.microsoft.com/library/ee559408)
+-  [Word Automation Services Class Library](https://msdn.microsoft.com/library/ee559408)
     
   
 

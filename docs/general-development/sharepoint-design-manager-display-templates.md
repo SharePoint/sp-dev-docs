@@ -31,7 +31,7 @@ You can view existing display templates in Design Manager, but you don't create 
 - Open one of the four folders in the **Display Templates** folder.
     
     > [!NOTE]
-    > The folder you choose depends on the type of display template you want to use. For example, if your site uses cross-site publishing, copy a display template from the **Content Web Parts** folder. For more information, see [Display template reference in SharePoint](http://technet.microsoft.com/library/jj944947.aspx). 
+    > The folder you choose depends on the type of display template you want to use. For example, if your site uses cross-site publishing, copy a display template from the **Content Web Parts** folder. For more information, see [Display template reference in SharePoint](https://technet.microsoft.com/library/jj944947.aspx). 
 
 - Copy the HTML file for an existing display template that's similar to what you want. The exact location that you copy the file to does not matter, as long as it is in the **Master Page Gallery**.
     
@@ -77,7 +77,7 @@ There are two primary types of display templates:
 - **Item templates** determine how each result in the set is displayed. Includes images, text, video, and other items.
     
   
-For more information about these and other display templates, see  [Display template reference in SharePoint](http://technet.microsoft.com/library/jj944947.aspx).
+For more information about these and other display templates, see  [Display template reference in SharePoint](https://technet.microsoft.com/library/jj944947.aspx).
   
     
     
@@ -331,7 +331,7 @@ Before you can create a display template by using the following procedure, you m
 2. Open the **Display Templates** folder, and then open the **Content Web Parts** folder.
     
   
-3. Copy the HTML file for a display template that is similar to what you want to create. For a list of the default display templates and their descriptions, see  [Display template reference in SharePoint](http://technet.microsoft.com/library/jj944947.aspx).
+3. Copy the HTML file for a display template that is similar to what you want to create. For a list of the default display templates and their descriptions, see  [Display template reference in SharePoint](https://technet.microsoft.com/library/jj944947.aspx).
     
     At this point, SharePoint copies the HTML file into a .js file that has the same name. For example, if the copied HTML file is named Item_Picture3Line_copy.html, a corresponding .js file named Item_Picture3Lines_copy.js is also created. If you choose to rename the file, the corresponding .js file name also changes.
     

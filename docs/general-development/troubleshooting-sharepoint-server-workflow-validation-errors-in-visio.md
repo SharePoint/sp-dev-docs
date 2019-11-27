@@ -62,10 +62,10 @@ The following table lists all of the validation issues that can appear in the Is
 -  [Create, import, and export SharePoint workflows in Visio 2010](http://office.microsoft.com/visio-help/create-import-and-export-sharepoint-workflows-in-visio-HA101888007.aspx)
     
   
--  [SharePoint Developer Center](http://msdn.microsoft.com/sharepoint/default.aspx)
+-  [SharePoint Developer Center](https://msdn.microsoft.com/sharepoint/default.aspx)
     
   
--  [Visio Developer Center](http://msdn.microsoft.com/office/aa905478)
+-  [Visio Developer Center](https://msdn.microsoft.com/office/aa905478)
     
   
 

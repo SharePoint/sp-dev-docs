@@ -180,10 +180,10 @@ If you want to visually design or brand your site, and you want a WYSIWYG ("what
 -  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
--  [Changes from SharePoint 2010 to SharePoint](http://technet.microsoft.com/library/ff607742%28v=office.15%29.aspx)
+-  [Changes from SharePoint 2010 to SharePoint](https://technet.microsoft.com/library/ff607742%28v=office.15%29.aspx)
     
   
--  [What's new in workflow in SharePoint](http://technet.microsoft.com/library/jj219638%28v=office.15%29.aspx)
+-  [What's new in workflow in SharePoint](https://technet.microsoft.com/library/jj219638%28v=office.15%29.aspx)
     
   
 

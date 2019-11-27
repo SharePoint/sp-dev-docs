@@ -39,7 +39,7 @@ Before you get started implementing user segmentation in SharePoint, be sure to 
 - Visual Studio 2012
     
   
-This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](http://msdn.microsoft.com/library/ee535520%28v=office.14%29.aspx)
+This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](https://msdn.microsoft.com/library/ee535520%28v=office.14%29.aspx)
   
     
     
@@ -77,7 +77,7 @@ Figure 1 shows the basic steps to add user segmentation functionality to your Sh
 ## Create a term set
 <a name="SP15_Create_a_term_set"> </a>
 
-A term is a word or a phrase that can be associated with an item in SharePoint. Aterm set is a collection of related terms. For more information, see [Overview of managed metadata in SharePoint](http://technet.microsoft.com/library/ee424402.aspx). You can create term sets either through the SharePoint Term Store Management Tool, or programmatically. 
+A term is a word or a phrase that can be associated with an item in SharePoint. Aterm set is a collection of related terms. For more information, see [Overview of managed metadata in SharePoint](https://technet.microsoft.com/library/ee424402.aspx). You can create term sets either through the SharePoint Term Store Management Tool, or programmatically. 
   
 > [!NOTE] 
 > See the following topics for detailed instructions on how to use the Term Store Management Tool to create your term set:>  [Set up a new term set](https://docs.microsoft.com/sharepoint/set-up-new-term-set)>  [Create and manage terms in a term set](https://docs.microsoft.com/sharepoint/create-and-manage-terms)
@@ -139,7 +139,7 @@ static void CreateNavigationTermSet(string siteUrl)
 In Visual Studio 2012, create a custom web part by using the Visual web parts template from the SharePoint category. Your custom web part must inherit from the  [ContentBySearchWebPart](https://docs.microsoft.com/sharepoint/dev/general-development/content-search-web-part-in-sharepoint) object.
   
 > [!NOTE] 
-> This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](http://msdn.microsoft.com/library/ee535520%28v=office.14%29.aspx)
+> This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](https://msdn.microsoft.com/library/ee535520%28v=office.14%29.aspx)
   
     
     

@@ -260,6 +260,6 @@ For an example of a basic command for registering a custom security trimmer and 
 -  [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx)
     
   
--  [Overview of Business Connectivity Services in SharePoint](http://technet.microsoft.com/library/ee661740.aspx)
+-  [Overview of Business Connectivity Services in SharePoint](https://technet.microsoft.com/library/ee661740.aspx)
     
   

@@ -59,7 +59,7 @@ The value of the **Select** attribute varies in the different schema files:
     
 - `/FORMS/Form` for enumerating all the forms for a particular list (very similar to views).
     
-- `/LISTTEMPLATES/ListTemplate` for enumerating all the server-supported list definitions specified in the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file (for announcements, tasks, contacts, events, and so on). 
+- `/LISTTEMPLATES/ListTemplate` for enumerating all the server-supported list definitions specified in the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file (for announcements, tasks, contacts, events, and so on). 
     
 - `/DOCUMENTTEMPLATES/DocumentTemplate` for enumerating all the server-supported document library template files (Microsoft Excel worksheet, Microsoft Word document, etc.).
     

@@ -23,14 +23,14 @@ To program a backup and restore solution for SharePoint, you need to understand 
 
 |**Article**|**Description**|
 |:-----|:-----|
-| [Volume Shadow Copy Service](http://msdn.microsoft.com/library/windows/desktop/bb968832%28v=vs.85%29.aspx) and its child articles. |Learn about the VSS and how to program for it.  |
-| [Windows SharePoint Services and the Volume Shadow Copy Service](http://msdn.microsoft.com/library/adae101a-078e-40b9-9cfa-db2cfb10270a%28Office.15%29.aspx) and its child articles. |Overview information and step-by-step, how-to procedures for backing up and restoring SharePoint data using the VSS and the SharePoint interface with VSS.  |
+| [Volume Shadow Copy Service](https://msdn.microsoft.com/library/windows/desktop/bb968832%28v=vs.85%29.aspx) and its child articles. |Learn about the VSS and how to program for it.  |
+| [Windows SharePoint Services and the Volume Shadow Copy Service](https://msdn.microsoft.com/library/adae101a-078e-40b9-9cfa-db2cfb10270a%28Office.15%29.aspx) and its child articles. |Overview information and step-by-step, how-to procedures for backing up and restoring SharePoint data using the VSS and the SharePoint interface with VSS.  |
    
 
 ## Use the Volume Shadow Copy Service to back up and restore a search service application
 <a name="Use"> </a>
 
-The following procedures are intended to help developers with creating a backup/restore application that uses the VSS. If you are an IT professional looking for instructions for how to back up or restore a SharePoint search service application, see  [Backup and restore SharePoint](http://technet.microsoft.com/library/ee662536.aspx). 
+The following procedures are intended to help developers with creating a backup/restore application that uses the VSS. If you are an IT professional looking for instructions for how to back up or restore a SharePoint search service application, see  [Backup and restore SharePoint](https://technet.microsoft.com/library/ee662536.aspx). 
   
     
     
@@ -40,7 +40,7 @@ The following procedures are intended to help developers with creating a backup/
     
 
 > **Tip:**
-> For details about the Windows PowerShell cmdlets mentioned in this article, see  [Windows PowerShell for SharePoint reference](http://technet.microsoft.com/library/ee890108.aspx). 
+> For details about the Windows PowerShell cmdlets mentioned in this article, see  [Windows PowerShell for SharePoint reference](https://technet.microsoft.com/library/ee890108.aspx). 
   
     
     
@@ -282,7 +282,7 @@ The following procedures are intended to help developers with creating a backup/
 <a name="bk_addresources"> </a>
 
 
--  [Windows SharePoint Services and the Volume Shadow Copy Service](http://msdn.microsoft.com/library/adae101a-078e-40b9-9cfa-db2cfb10270a%28Office.15%29.aspx)
+-  [Windows SharePoint Services and the Volume Shadow Copy Service](https://msdn.microsoft.com/library/adae101a-078e-40b9-9cfa-db2cfb10270a%28Office.15%29.aspx)
     
   
 

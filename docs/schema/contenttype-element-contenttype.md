@@ -64,11 +64,11 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Required **Text**. Specifies the content type ID of the content type. A content type ID has a very specific format. If the value that you assign the **ID** attribute is not in the correct format, you will get an error when the Feature activates. For more information, see <a href="http://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx">Content Type IDs</a>.</p></td>
+<td align="left"><p>Required **Text**. Specifies the content type ID of the content type. A content type ID has a very specific format. If the value that you assign the **ID** attribute is not in the correct format, you will get an error when the Feature activates. For more information, see <a href="https://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx">Content Type IDs</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text**. Specifies the content type name. The value can be a reference to a resource in the format `$Resources:String`. For more information, see <a href="http://msdn.microsoft.com/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.</p><p>The name itself cannot be longer than 128 characters and cannot contain the characters `\ / : * ? " # % < > { } | ~ &amp;`, two consecutive periods (`..`), or special characters such as a tab.</p>
+<td align="left"><p>Required **Text**. Specifies the content type name. The value can be a reference to a resource in the format `$Resources:String`. For more information, see <a href="https://msdn.microsoft.com/library/ee696750(VS.100).aspx">Localizing SharePoint Solutions</a>.</p><p>The name itself cannot be longer than 128 characters and cannot contain the characters `\ / : * ? " # % < > { } | ~ &amp;`, two consecutive periods (`..`), or special characters such as a tab.</p>
 <p>An error occurs if another content type with the same name exists in the collection where the content type is added.</p></td>
 </tr>
 <tr class="even">
@@ -119,7 +119,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**ReadOnly**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** to specify that the content type cannot be edited without explicitly removing the read-only setting. This can be done either in the user interface or in code. For more information, see <a href="http://msdn.microsoft.com/library/203da792-bd6e-41b9-8f42-ffe397d0cbdd(Office.15).aspx">Content Type Change Control</a>.</p>
+<td align="left"><p>Optional **Boolean**. **TRUE** to specify that the content type cannot be edited without explicitly removing the read-only setting. This can be done either in the user interface or in code. For more information, see <a href="https://msdn.microsoft.com/library/203da792-bd6e-41b9-8f42-ffe397d0cbdd(Office.15).aspx">Content Type Change Control</a>.</p>
 <p>If you do not include this attribute, SharePoint Foundation treats the content type as if the attribute was set to **FALSE**.</p></td>
 </tr>
 <tr class="odd">
@@ -228,7 +228,7 @@ The following example is the content type definition of the **Document** content
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 - [How to: Add a Content Type to a Site](https://msdn.microsoft.com/library/8c448bfb-4036-451c-ac7d-2eccf13ccd5e(Office.15).aspx)
 - [How to: Add a Content Type to a SharePoint List](https://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666(Office.15).aspx)
 

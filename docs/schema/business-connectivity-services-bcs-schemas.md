@@ -26,7 +26,7 @@ This section provides reference documentation for the Microsoft Business Connect
 
 - [BDCMetadataResource schema](bdcmetadataresource-schema.md)
 
-<!-- [BDCSchemaAnnotations schema](http://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
+<!-- [BDCSchemaAnnotations schema](https://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
 
  
 

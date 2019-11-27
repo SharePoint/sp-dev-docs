@@ -258,7 +258,7 @@ You can make many other customizations both to the CAML queries on which views a
 -  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Introduction to Collaborative Application Markup Language (CAML)](http://msdn.microsoft.com/library/ms426449.aspx)
+-  [Introduction to Collaborative Application Markup Language (CAML)](https://msdn.microsoft.com/library/ms426449.aspx)
     
   
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)

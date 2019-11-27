@@ -98,7 +98,7 @@ When you make changes to a workbook—for example, by setting values to a range 
   
     
     
-If you want to save changes to a workbook, you can use the **GetWorkbook** method and then save the workbook using the API of the destination file store. For more information, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md) and [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx).
+If you want to save changes to a workbook, you can use the **GetWorkbook** method and then save the workbook using the API of the destination file store. For more information, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md) and [How to: Save a Workbook](https://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx).
   
     
     
@@ -143,7 +143,7 @@ string sessionId = xlservice.OpenWorkbook(targetWorkbookPath, "en-US",
                 
 ```
 
-For more information, see  [WebClientProtocol.Url Property](http://go.microsoft.com/fwlink/?LinkId=64908) (http://msdn.microsoft.com/library/default.asp?url=/library/cpref/html/frlrfSystemWebServicesProtocolsWebClientProtocolClassUrlTopic.asp).
+For more information, see  [WebClientProtocol.Url Property](http://go.microsoft.com/fwlink/?LinkId=64908) (https://msdn.microsoft.com/library/default.asp?url=/library/cpref/html/frlrfSystemWebServicesProtocolsWebClientProtocolClassUrlTopic.asp).
   
     
     
@@ -177,7 +177,7 @@ The workbooks you want to open in Excel Services must be placed in a trusted loc
   
     
     
-For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx).
+For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](https://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx).
   
     
     

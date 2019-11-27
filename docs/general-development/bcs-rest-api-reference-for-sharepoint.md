@@ -97,10 +97,10 @@ In order to limit the amount of data returned, or make it more relevant to the u
 -  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Complete basic operations using SharePoint REST endpoints](http://msdn.microsoft.com/library/e3000415-50a0-426e-b304-b7de18f2f7d9%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint REST endpoints](https://msdn.microsoft.com/library/e3000415-50a0-426e-b304-b7de18f2f7d9%28Office.15%29.aspx)
     
   
--  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
+-  [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
     
   
 -  [SharePoint 2013: Perform basic data access operations by using REST in apps](https://code.msdn.microsoft.com/officeapps/sharepoint-2013-perform-335d925b)
@@ -110,6 +110,6 @@ In order to limit the amount of data returned, or make it more relevant to the u
 -  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
     
   
--  [Complete basic operations using JavaScript library code in SharePoint](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)
+-  [Complete basic operations using JavaScript library code in SharePoint](https://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)
     
   

@@ -118,7 +118,7 @@ Find how-to articles and related code examples that show how to perform basic de
 |**Title**|**Summary**|
 |:-----|:-----|
 | [Use code to pin terms to navigation term sets in SharePoint](how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md) <br/> |Learn how to use code to pin terms to navigation term sets.  <br/> |
-| [Create device channels in SharePoint](http://msdn.microsoft.com/library/339c7dba-95ee-46e0-8c76-0fe1adb6f366.aspx) <br/> |Learn how to create a device channel, change a device channel, delete a device channel, and reorder device channels in SharePoint.  <br/> |
+| [Create device channels in SharePoint](https://msdn.microsoft.com/library/339c7dba-95ee-46e0-8c76-0fe1adb6f366.aspx) <br/> |Learn how to create a device channel, change a device channel, delete a device channel, and reorder device channels in SharePoint.  <br/> |
 | [Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md) <br/> |Learn how to map a network drive to the Master Page Gallery so that you can use Design Manager to upload design files in SharePoint.  <br/> |
 | [Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md) <br/> |With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.  <br/> |
 | [Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint.md) <br/> |Learn how to map a master page to a SharePoint site.  <br/> |
@@ -219,4 +219,4 @@ Find how-to articles and related code examples that show how to perform basic de
 -  [SharePoint development](https://docs.microsoft.com/sharepoint/dev/)
 -  [SharePoint Dev Center](https://developer.microsoft.com/sharepoint)
 -  [SharePoint Code Samples](https://developer.microsoft.com/SharePoint/gallery?filterBy=SharePoint,Samples)
--  [Microsoft SharePoint Team Blog](http://dev.office.com/blogs)
+-  [Microsoft SharePoint Team Blog](https://developer.microsoft.com/en-us/office/blogs/)

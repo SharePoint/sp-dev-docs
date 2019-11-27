@@ -66,7 +66,7 @@ Unlike many of the SharePointapplication services, Access Services 2013 doesn't 
   
     
     
-For more information about how to develop Access 2013 apps, see  [How to: Create and customize a web app in Access](http://msdn.microsoft.com/library/628745f4-82e9-4838-9726-6f3e506a654f%28Office.15%29.aspx)
+For more information about how to develop Access 2013 apps, see  [How to: Create and customize a web app in Access](https://msdn.microsoft.com/library/628745f4-82e9-4838-9726-6f3e506a654f%28Office.15%29.aspx)
   
     
     
@@ -75,10 +75,10 @@ For more information about how to develop Access 2013 apps, see  [How to: Create
 <a name="SP15_access15overview_addres"> </a>
 
 
--  [New in Access for developers](http://msdn.microsoft.com/library/df778f51-d65e-4c30-b618-65003ceb39b3%28Office.15%29.aspx)
+-  [New in Access for developers](https://msdn.microsoft.com/library/df778f51-d65e-4c30-b618-65003ceb39b3%28Office.15%29.aspx)
     
   
--  [Access custom web app reference](http://msdn.microsoft.com/library/8d696fa4-a6f2-4fb1-8662-a313bf0b5989%28Office.15%29.aspx)
+-  [Access custom web app reference](https://msdn.microsoft.com/library/8d696fa4-a6f2-4fb1-8662-a313bf0b5989%28Office.15%29.aspx)
     
   
 

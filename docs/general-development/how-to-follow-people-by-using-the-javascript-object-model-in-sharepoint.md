@@ -14,10 +14,10 @@ Learn how to work with Following People features by using the SharePoint JavaScr
 ## Why use Following People features in SharePoint?
 <a name="bk_FollowingPeopleFeatures"> </a>
 
-In SharePoint, Following People features help users to stay connected with each other. For example, when a user follows someone, that person's posts and activities show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the JavaScript object model, people that you follow are represented by  [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx) objects. To perform core Following People tasks in the JavaScript object model, you use the [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) object. This article shows how to use the JavaScript object model to work with Following People features.
+In SharePoint, Following People features help users to stay connected with each other. For example, when a user follows someone, that person's posts and activities show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the JavaScript object model, people that you follow are represented by  [SocialActor](https://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx) objects. To perform core Following People tasks in the JavaScript object model, you use the [SocialFollowingManager](https://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) object. This article shows how to use the JavaScript object model to work with Following People features.
   
 > [!NOTE]
-> [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) is the recommended API to use for following people and content. However, the [PeopleManager](http://msdn.microsoft.com/library/985fd2df-0e31-6ece-b846-ba2ccb156d00%28Office.15%29.aspx) object contains additional functionality for following people, such as the [amIFollowedBy](http://msdn.microsoft.com/library/3641c469-0063-054d-355d-e56697cb08ae%28Office.15%29.aspx) method and methods that obtain the following status of other users.
+> [SocialFollowingManager](https://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) is the recommended API to use for following people and content. However, the [PeopleManager](https://msdn.microsoft.com/library/985fd2df-0e31-6ece-b846-ba2ccb156d00%28Office.15%29.aspx) object contains additional functionality for following people, such as the [amIFollowedBy](https://msdn.microsoft.com/library/3641c469-0063-054d-355d-e56697cb08ae%28Office.15%29.aspx) method and methods that obtain the following status of other users.
   
     
     
@@ -112,16 +112,16 @@ The following code example makes the current user start following or stop follow
     
     
 
-- Check whether the current user is following a target user by using the  [isFollowed](http://msdn.microsoft.com/library/2c1f62e6-fb75-ad4d-c081-36408b418c21%28Office.15%29.aspx) method.
+- Check whether the current user is following a target user by using the  [isFollowed](https://msdn.microsoft.com/library/2c1f62e6-fb75-ad4d-c081-36408b418c21%28Office.15%29.aspx) method.
     
   
-- Get the count of people who the current user is following by using the  [getFollowedCount](http://msdn.microsoft.com/library/97b53b4f-481a-cf41-1854-8f3ff860b2bb%28Office.15%29.aspx) method.
+- Get the count of people who the current user is following by using the  [getFollowedCount](https://msdn.microsoft.com/library/97b53b4f-481a-cf41-1854-8f3ff860b2bb%28Office.15%29.aspx) method.
     
   
-- Start following the target user by using the  [follow](http://msdn.microsoft.com/library/40d14320-27ba-2941-b0e2-be3b5a407c89%28Office.15%29.aspx) method.
+- Start following the target user by using the  [follow](https://msdn.microsoft.com/library/40d14320-27ba-2941-b0e2-be3b5a407c89%28Office.15%29.aspx) method.
     
   
-- Stop following the target user by using the  [stopFollowing](http://msdn.microsoft.com/library/65b0e9be-dc5e-09fb-c57f-7a933de09a4c%28Office.15%29.aspx) method.
+- Stop following the target user by using the  [stopFollowing](https://msdn.microsoft.com/library/65b0e9be-dc5e-09fb-c57f-7a933de09a4c%28Office.15%29.aspx) method.
     
   
 
@@ -211,10 +211,10 @@ The following code example gets the people who the current user is following and
     
     
 
-- Get the people who the current user is following by using the  [getFollowed](http://msdn.microsoft.com/library/432a7cec-6add-fdb1-a79f-a93414ee8cd3%28Office.15%29.aspx) method.
+- Get the people who the current user is following by using the  [getFollowed](https://msdn.microsoft.com/library/432a7cec-6add-fdb1-a79f-a93414ee8cd3%28Office.15%29.aspx) method.
     
   
-- Get the people who are following the current user by using the  [getFollowers](http://msdn.microsoft.com/library/ae4a944b-c043-05fb-c74b-101d2ce4a813%28Office.15%29.aspx) method and passing **1** to represent **User** actor types.
+- Get the people who are following the current user by using the  [getFollowers](https://msdn.microsoft.com/library/ae4a944b-c043-05fb-c74b-101d2ce4a813%28Office.15%29.aspx) method and passing **1** to represent **User** actor types.
     
   
 - Iterate through the groups of people and get each person's display name, personal site URI, and picture URI.

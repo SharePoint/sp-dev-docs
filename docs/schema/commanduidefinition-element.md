@@ -42,7 +42,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the location of this command. See <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a> for a list of the default locations that are used in Microsoft SharePoint Foundation.</p></td>
+<td align="left"><p>Optional **Text**. Specifies the location of this command. See <a href="https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a> for a list of the default locations that are used in Microsoft SharePoint Foundation.</p></td>
 </tr>
 </tbody>
 </table>

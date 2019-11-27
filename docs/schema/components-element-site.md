@@ -18,7 +18,7 @@ description: Used in the Onet.xml file of a site definition to provide informati
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Used in the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file of a site definition to provide information about Microsoft SharePoint Foundation components. 
+Used in the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file of a site definition to provide information about Microsoft SharePoint Foundation components. 
   
 ```XML
 <Components>
@@ -53,7 +53,7 @@ Both child elements of the **Components** element are optional, and neither elem
   
 ## Example
 
-The following example from an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file shows how the **Components** element is used. 
+The following example from an [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file shows how the **Components** element is used. 
   
 ```XML
 <Components>

@@ -24,7 +24,7 @@ Before you begin, identify the following:
 
 Also, be aware of the following:
 
-- The procedures in this article assume that you are using the most recent version of [Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or [Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015).
+- The procedures in this article assume that you are using the most recent version of [Office Developer Tools for Visual Studio 2013](https://aka.ms/OfficeDevToolsForVS2013), or [Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015).
     
     > [!NOTE] 
     > If your test SharePoint website is an on-premises SharePoint farm instead of a Microsoft SharePoint Online Developer Site, you may need to install the language packs for the languages in which you are translating your SharePoint Add-in. For more information, see [Install or uninstall language packs for SharePoint](https://technet.microsoft.com/library/b1926e3b-5263-46e0-ac35-433236dae704(v=office.16).aspx) and [Download language packs for SharePoint Server 2013](https://www.microsoft.com/download/details.aspx?id=37140).
@@ -444,7 +444,7 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
 
 ### To test your add-in on an on-premises website
 
-1. Install the language pack in which you want to test your add-in. For more information, see [Install or uninstall language packs for SharePoint](http://technet.microsoft.com/library/cc262108.aspx) and [Download language packs for SharePoint Server 2013](https://www.microsoft.com/download/details.aspx?id=37140).
+1. Install the language pack in which you want to test your add-in. For more information, see [Install or uninstall language packs for SharePoint](https://technet.microsoft.com/library/cc262108.aspx) and [Download language packs for SharePoint Server 2013](https://www.microsoft.com/download/details.aspx?id=37140).
 
 2. Open Central Administration for the farm.
 

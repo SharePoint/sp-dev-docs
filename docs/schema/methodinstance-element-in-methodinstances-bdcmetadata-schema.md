@@ -24,7 +24,7 @@ Specifies a **MethodInstance**.
 
 > [!NOTE] 
 > The following two cases in a BDC model result in an
-[InvalidOperationException](http://msdn.microsoft.com/library/frlrfSystemInvalidOperationExceptionClassTopic.aspx)
+[InvalidOperationException](https://msdn.microsoft.com/library/frlrfSystemInvalidOperationExceptionClassTopic.aspx)
 at run time:
 > 
 > - Two **SpecificFinder** method instances that return the same set of fields.

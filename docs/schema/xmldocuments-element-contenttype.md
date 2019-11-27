@@ -96,13 +96,13 @@ The **XmlDocuments** element contains a collection of **XmlDocument** elements.
 
 You can include custom information in content type definitions by adding special XML nodes. These XML nodes are represented by the **XmlDocument** element in the content type definition and can be accessed programmatically through the object model. A content type can include any number of **XmlDocument** elements. The contents of each **XmlDocument** element can conform to any given schema; they only need to be valid XML.
 
-For more information about using **XmlDocument** elements to encapsulate custom information within your content type, see [Custom Information in Content Types](http://msdn.microsoft.com/library/83cc5cea-0422-4115-b330-2283283718d7(Office.15).aspx).
+For more information about using **XmlDocument** elements to encapsulate custom information within your content type, see [Custom Information in Content Types](https://msdn.microsoft.com/library/83cc5cea-0422-4115-b330-2283283718d7(Office.15).aspx).
 
 ## Example
 
 The following example shows an **XmlDocuments** element that contains an **XmlDocument** element containing custom information that specifies which form templates to use in displaying this content type.
 
-For more information on the actual information contained in the **XmlDocument** element, see [FormTemplates Schema Overview](http://msdn.microsoft.com/library/88de244c-8d40-4f4d-953d-c7bbbc1dac24(Office.15).aspx).
+For more information on the actual information contained in the **XmlDocument** element, see [FormTemplates Schema Overview](https://msdn.microsoft.com/library/88de244c-8d40-4f4d-953d-c7bbbc1dac24(Office.15).aspx).
 
 ```XML
     <XmlDocuments>
@@ -119,7 +119,7 @@ For more information on the actual information contained in the **XmlDocument** 
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 
 
 

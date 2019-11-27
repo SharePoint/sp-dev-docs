@@ -79,7 +79,7 @@ A BDC model is the core of Business Connectivity Services. It's an XML file that
 ## Step 2: Grant permissions
 <a name="HowToCreateSimpleExternalListBasedPhoneApp_Step2"> </a>
 
-Next you need to set permissions on the BDC model to specify who can execute the methods described in the model. This is a required step. We recommend that you give specific permissions to each user or group that needs them, in such a way that the credentials provide the least privilege necessary to perform the needed tasks. For more information about setting permissions, see Business Connectivity Service permissions overview in  [Business Connectivity Services security overview (SharePoint Server 2010)](http://technet.microsoft.com/library/ee661740.aspx). In this step, you give permission to yourself to execute the methods described in the Northwind sample BDC model.
+Next you need to set permissions on the BDC model to specify who can execute the methods described in the model. This is a required step. We recommend that you give specific permissions to each user or group that needs them, in such a way that the credentials provide the least privilege necessary to perform the needed tasks. For more information about setting permissions, see Business Connectivity Service permissions overview in  [Business Connectivity Services security overview (SharePoint Server 2010)](https://technet.microsoft.com/library/ee661740.aspx). In this step, you give permission to yourself to execute the methods described in the Northwind sample BDC model.
   
     
     
@@ -278,7 +278,7 @@ Now that the app is ready to run, you can test it using phone emulator.
 -  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md)
     
   
--  [How to: Create External Lists in SharePoint](http://msdn.microsoft.com/library/ee558778.aspx)
+-  [How to: Create External Lists in SharePoint](https://msdn.microsoft.com/library/ee558778.aspx)
     
   
 -  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md)

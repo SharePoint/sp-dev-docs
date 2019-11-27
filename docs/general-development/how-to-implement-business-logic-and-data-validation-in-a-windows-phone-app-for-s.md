@@ -307,7 +307,7 @@ The validation logic in this sample enforces given business rules by indicating 
 -  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Silverlight Data Binding](http://msdn.microsoft.com/library/cc278072.aspx)
+-  [Silverlight Data Binding](https://msdn.microsoft.com/library/cc278072.aspx)
     
   
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)

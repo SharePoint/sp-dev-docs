@@ -17,7 +17,7 @@ Workbooks that you want to access must be placed in a trusted location. If they 
     
     
 
-You can also trust a location by using Windows PowerShell. For more information, see the Microsoft SharePoint Server 2010 IT Pro and administration documentation on  [TechNet](http://technet.microsoft.com/library/ee428287%28office.14%29.aspx). 
+You can also trust a location by using Windows PowerShell. For more information, see the Microsoft SharePoint Server 2010 IT Pro and administration documentation on  [TechNet](https://technet.microsoft.com/library/ee428287%28office.14%29.aspx). 
 
 
 ### To trust a location

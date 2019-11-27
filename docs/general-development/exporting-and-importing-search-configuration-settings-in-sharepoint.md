@@ -68,7 +68,7 @@ private static void Import(string fileName)
 -  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [Export and import customized search configuration settings in SharePoint](http://technet.microsoft.com/library/jj871675.aspx)
+-  [Export and import customized search configuration settings in SharePoint](https://technet.microsoft.com/library/jj871675.aspx)
     
   
 

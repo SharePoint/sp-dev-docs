@@ -85,9 +85,9 @@ For an example of how this element is used, see [Content Type Definitions](conte
 
 ## See also
 
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-- [Introduction to Content Types](http://msdn.microsoft.com/library/a345a6c5-7031-46ab-a2c2-37bedc3012f4(Office.15).aspx)
-- [Content Type Deployment Using Features](http://msdn.microsoft.com/library/f680072c-3759-4141-b027-165ac0795a72(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Introduction to Content Types](https://msdn.microsoft.com/library/a345a6c5-7031-46ab-a2c2-37bedc3012f4(Office.15).aspx)
+- [Content Type Deployment Using Features](https://msdn.microsoft.com/library/f680072c-3759-4141-b027-165ac0795a72(Office.15).aspx)
 
 
 

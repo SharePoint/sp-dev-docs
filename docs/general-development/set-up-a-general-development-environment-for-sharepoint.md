@@ -15,7 +15,7 @@ Learn the steps to set up a SharePoint development environment by installing Sha
 ## How to determine the SharePoint development environment you need
 <a name="SP15_bk_determinedevenv"> </a>
 
-First, decide what you want to build (to learn more about SharePoint Add-ins, see  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)):
+First, decide what you want to build (to learn more about SharePoint Add-ins, see  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)):
   
     
     
@@ -23,7 +23,7 @@ First, decide what you want to build (to learn more about SharePoint Add-ins, se
 - If you want to build farm solutions, we provide those steps in this article. 
     
   
-- If you want to create SharePoint Add-ins, see  [Tools and environments for developing SharePoint Add-ins](http://msdn.microsoft.com/library/6906eb86-8270-4098-8106-1e8d0d3c212e%28Office.15%29.aspx). 
+- If you want to create SharePoint Add-ins, see  [Tools and environments for developing SharePoint Add-ins](https://msdn.microsoft.com/library/6906eb86-8270-4098-8106-1e8d0d3c212e%28Office.15%29.aspx). 
     
   
 
@@ -62,7 +62,7 @@ The requirements for a development environment for an installation of SharePoint
 - Install SharePoint on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 (or later).
     
   
-- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 guest operating system. See  [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](http://technet.microsoft.com/library/ff621103%28v=office.15%29.aspx) for guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint.
+- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 guest operating system. See  [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](https://technet.microsoft.com/library/ff621103%28v=office.15%29.aspx) for guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint.
     
   
 
@@ -128,7 +128,7 @@ When you install Visual Studio, you get all of the templates, tools, and assembl
   
     
     
-See  [Installing Visual Studio](http://msdn.microsoft.com/library/e2h7fzkw.aspx) for instructions about installing Visual Studio.
+See  [Installing Visual Studio](https://msdn.microsoft.com/library/e2h7fzkw.aspx) for instructions about installing Visual Studio.
   
     
     
@@ -166,10 +166,10 @@ If you will be creating workflows, continue with  [Set up and configure SharePoi
 <a name="SP15_bk_AddlResources"> </a>
 
 
--  [Installing Visual Studio](http://msdn.microsoft.com/library/e2h7fzkw%28v=vs.110%29.aspx)
+-  [Installing Visual Studio](https://msdn.microsoft.com/library/e2h7fzkw%28v=vs.110%29.aspx)
     
   
--  [Tools and environments for developing SharePoint Add-ins](http://msdn.microsoft.com/library/6906eb86-8270-4098-8106-1e8d0d3c212e%28Office.15%29.aspx)
+-  [Tools and environments for developing SharePoint Add-ins](https://msdn.microsoft.com/library/6906eb86-8270-4098-8106-1e8d0d3c212e%28Office.15%29.aspx)
     
   
 

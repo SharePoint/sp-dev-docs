@@ -54,7 +54,7 @@ Depending on your SharePoint Add-in's architecture and the hosting platform, the
 
 - In session state
 - In application state
-- In [Windows Server AppFabric Caching](http://msdn.microsoft.com/library/8aef3f5d-2a77-46d9-b951-0768fedd31a1%28Office.15%29.aspx) or its equivalent in a non-Microsoft operating system
+- In [Windows Server AppFabric Caching](https://msdn.microsoft.com/library/8aef3f5d-2a77-46d9-b951-0768fedd31a1%28Office.15%29.aspx) or its equivalent in a non-Microsoft operating system
 - In the [Microsoft Azure Caching Service](https://docs.microsoft.com/azure/redis-cache/cache-faq) or its equivalent in a non-Microsoft cloud service
 - In a database
 - In a [memcached](http://www.memcached.org/) system

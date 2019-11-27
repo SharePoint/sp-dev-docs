@@ -18,7 +18,7 @@ description: Used in the DocIcon.xml file to map particular document types to th
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Used in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to map particular document types to their respective icons. 
+Used in the [DocIcon.xml](https://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to map particular document types to their respective icons. 
   
 ```XML
 <Mapping

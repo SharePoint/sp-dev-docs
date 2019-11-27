@@ -21,7 +21,7 @@ Both SharePoint 2007 and SharePoint 2010 implemented workflow tasks in a similar
   
     
     
-However, the default rendering of the task form in SharePoint was pre-determined, even for custom workflows. For full flexibility, you needed to use ASP.NET [Web Forms](http://www.asp.net/web-forms) or [InfoPath Forms](http://msdn.microsoft.com/library/ms540731%28v=office.14%29.aspx) when you created custom form solutions to support your tasks.
+However, the default rendering of the task form in SharePoint was pre-determined, even for custom workflows. For full flexibility, you needed to use ASP.NET [Web Forms](http://www.asp.net/web-forms) or [InfoPath Forms](https://msdn.microsoft.com/library/ms540731%28v=office.14%29.aspx) when you created custom form solutions to support your tasks.
   
     
     
@@ -51,7 +51,7 @@ You may sometimes need to customize the appearance or the behavior of task field
   
     
     
-For more information about using client-side rendering, see  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](http://msdn.microsoft.com/library/jj220045.aspx).
+For more information about using client-side rendering, see  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](https://msdn.microsoft.com/library/jj220045.aspx).
   
     
     
@@ -730,13 +730,13 @@ This article discussed the changes related to workflow tasks that were driven fr
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](http://msdn.microsoft.com/library/jj163986.aspx)
+-  [Workflows in SharePoint](https://msdn.microsoft.com/library/jj163986.aspx)
     
   
--  [Authorization and authentication for apps in SharePoint](http://msdn.microsoft.com/library/office/fp142384.aspx)
+-  [Authorization and authentication for apps in SharePoint](https://msdn.microsoft.com/library/office/fp142384.aspx)
     
   
--  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](http://msdn.microsoft.com/library/jj220045.aspx)
+-  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](https://msdn.microsoft.com/library/jj220045.aspx)
     
   
 
