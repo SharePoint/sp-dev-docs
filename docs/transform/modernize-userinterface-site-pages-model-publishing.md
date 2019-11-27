@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 11/04/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -451,6 +451,57 @@ Once that's in place you need to update your page layout mapping by adding a fie
 ```
 
 Ensure that specify the custom **webpartmapping.xml** file as part of your transformation (`-WebPartMappingFile` PowerShell cmdlet parameter, `PublishingPageTransformator` constructor when using .Net).
+
+### I'm using a lot of Add-In parts and want to transform these to custom SPFX web parts (as of the December 2019 release)
+
+The default behavior of page transformation is simply take over the add-in part on the modern client side page as add-in's do work on modern pages. If you however want to selectively transform some add-in parts to custom SPFX based web parts, drop some of add-in parts and keep the remaining add-in parts then the default mapping will not be sufficient. In the below example you see that the `StaticString` function is used to feed the add-in title as mapping selector value. So based up on the title of the web part a mapping will be selected. The first add-in will be taken over as add-in on the modern page, the second one will be transformed to a custom SPFX based alternative and the last one will be simply dropped.
+
+When mapping to a custom SPFX based web part you can use any of your add-in part properties to configure the SPFX based alternative (e.g. {HelloWorld} in below sample), even if those properties are not listed in the Properties node in the mapping file. See also the previous chapter if you want to learn more about how to create a custom mapping file.
+
+```XML
+<WebPart Type="Microsoft.SharePoint.WebPartPages.ClientWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" CrossSiteTransformationSupported="true">
+  <!-- Note: the add-in can depend on assets that live in the source site, which is not something we can detect -->
+  <Properties>
+    <Property Name="FeatureId" Type="guid"/>
+    <Property Name="ProductWebId" Type="guid"/>
+    <Property Name="ProductId" Type="guid"/>
+  </Properties>
+  <Mappings Selector="StaticString({Title})">
+    <Mapping Name="My Custom Report" Default="true">
+      <!-- We keep this web part -->
+      <ClientSideWebPart Type="ClientWebPart" Order="10" JsonControlData="{}"/>
+    </Mapping>
+    <Mapping Name="News Ticker" Default="false">
+      <!--This web part will be transformed to a custom SPFX based web part -->
+      <ClientSideWebPart Type="Custom" ControlId="157b22d0-8006-4ec7-bf4b-ed62383fea76" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;"/>
+    </Mapping>
+    <Mapping Name="Some other add-in" Default="false">
+      <!-- This add-in will not be taken over -->
+    </Mapping>
+  </Mappings>
+</WebPart>
+```
+
+You can even make the mapping more precise by taking in account add-in part properties by combining the add-in part properties to generate a selector string.
+
+```XML
+<WebPart Type="Microsoft.SharePoint.WebPartPages.ClientWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" CrossSiteTransformationSupported="true">
+  <!-- Note: the add-in can depend on assets that live in the source site, which is not something we can detect -->
+  <Properties>
+    <Property Name="FeatureId" Type="guid"/>
+    <Property Name="ProductWebId" Type="guid"/>
+    <Property Name="ProductId" Type="guid"/>
+  </Properties>
+  <Mappings Selector="ConcatenateWithPipeDelimiter({Title},{effect})">
+    <Mapping Name="News Ticker|Slide" Default="true">
+      <ClientSideText Text="***TEST.{Title} web part - Slide mapping chosen! Slider theme = {theme}***" Order="10" />
+    </Mapping>
+    <Mapping Name="News Ticker|Scroll" Default="false">
+      <ClientSideText Text="***TEST.{Title} web part - Scroll mapping chosen! Slider theme = {theme}***" Order="10" />
+    </Mapping>
+  </Mappings>
+</WebPart>
+```
 
 ### Can I control the page preview image (as of the May 2019 release)
 
