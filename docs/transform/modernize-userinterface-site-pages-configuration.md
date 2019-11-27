@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 11/04/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -200,6 +200,28 @@ PublishingPageTransformationInformation pti = new PublishingPageTransformationIn
 };
 ```
 
+## TargetPageFolderOverridesDefaultFolder option (as of December 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+You can force page transformation to use the folder specified via the `TargetPageFolder` property, regardless whether there was an automatically created folder or not.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TargetPageFolderOverridesDefaultFolder = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TargetPageFolderOverridesDefaultFolder = true,
+};
+```
+
 ## ReplaceHomePageWithDefaultHomePage option
 
 Type | Default value if not specified
@@ -346,7 +368,7 @@ Bool | false
 The default behavior is to not keep the author, editor, create data and modification date of the source page. Use this option to change that.
 
 > [!NOTE]
-> This option only works for when the source page is in the same SPO tenant as the target destination of the modern page. For pages transformed from on-premises SharePoint this feature will be enabled once we do have account mapping functionality implemented.
+> This option only works for when the source page is in the same SPO tenant as the target destination of the modern page.
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)

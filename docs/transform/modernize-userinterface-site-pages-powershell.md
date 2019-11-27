@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern client-side pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint PowerShell
-ms.date: 11/04/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -24,7 +24,7 @@ The **ConvertTo-PnPClientSidePage** cmdlet is the key cmdlet to modernize a give
 
 Parameter | Default | Supported For | Description
 ----------|---------|---------------|------------
-Identity (`*`) | | All page types | The page name (e.g. pageA.aspx) for wiki, web part and publishing pages or the blog title for blog pages. In case of blog pages the first blog page where the title starts with the provided `Identity` will be used.
+Identity (`*`) | | All page types | The page name (e.g. pageA.aspx) for wiki, web part and publishing pages or the blog title for classic and Delve blog pages. In case of classic and Delve blog pages the first blog page where the title starts with the provided `Identity` will be used. As of the December 2019 release you can also specify the id (integer value) of the page.
 Library (as of May 2019 release, version 3.9.1905.*) | | Wiki/webpart pages | The library holding the page. Use this `-Library` parameter when your wiki or web part page lives outside of the default SitePages library.
 Folder (as of May 2019 release, version 3.9.1905.*) | | Wiki/webpart/publishing pages | When the page you want to transform lives in a folder then you can specify that folder (e.g. `-Folder "Folder1/SubFolder"`).
 WebPartMappingFile | |  All page types | Page transformation is driven by a mapping file. The cmdlet has a default mapping file embedded, but you can also specify your custom web part mapping file (`webpartmapping.xml`) to fit your page transformation needs (e.g. transforming to 3rd party custom web parts). You do this by specifying the path to the file via the `-WebPartMappingFile` parameter.
@@ -48,21 +48,24 @@ KeepPageCreationModificationInformation (as of October 2019 release, version 3.1
 PostAsNews (as of October 2019 release, version 3.14.1910.*) | $false | All page types | Use the `-PostAsNews` parameter if you want to post the created modern page as news on the site. This also implies that the page will be published, even if you've configured to skip publishing.
 SetAuthorInPageHeader (as of October 2019 release, version 3.14.1910.*) | $false | Wiki/webpart/blog pages | Use the `-SetAuthorInPageHeader` parameter if you want to populate the author in the header of the created page. The author will be set the (user mapped) source page author.
 DisablePageComments (as of April 2019 release, version 3.8.1904.*) | $false | All page types | Use `-DisablePageComments` if you want to disable the commenting option on the created page
-PublishingPage (as of April 2019 release, version 3.8.1904.*) | $false | Publishing pages | Set the `-PublishingPage` parameter if you're transforming a publishing page. For wiki,web part and blog pages this parameter must be omitted or set to false.
+PublishingPage (as of April 2019 release, version 3.8.1904.*) | $false | Publishing pages | Set the `-PublishingPage` parameter if you're transforming a publishing page. For wiki,web part classic blog and Delve blog pages this parameter must be omitted or set to false.
 PageLayoutMapping (as of April 2019 release, version 3.8.1904.*) |  | Publishing pages |Via `-PageLayoutMapping` you can specify the path the [page layout mapping file](modernize-userinterface-site-pages-model-publishing.md) that you'll use for your publishing page transformations when the publishing page is using a non out of the box page layout
 TargetPageName (as of Oct 2019 release, version 3.14.1910.*) |  | Wiki/webpart/blog pages | Use the `-TargetPageName` parameter to override the default name for the modern page. This is for example needed to prevent overwriting the existing home.aspx page if you a cross site transformation of a classic team site home page to a modern communication site.
 PublishingTargetPageName (as of May 2019 release, version 3.9.1905.*) |  | Publishing pages | Use the `-PublishingTargetPageName` parameter to override the name for the modern page
 TargetPageFolder (as of November 2019 release, version 3.15.1911.*) |  | All page types | Use the `-TargetPageFolder` parameter to specify a target folder for the modern page. Note that if a folder was created automatically (e.g. because you were transforming from an extra wiki page library) then the folder specified by this parameter will be combined with the auto-generated folder. You can specify a folder like this: `MyFolder` or `MyFolder/SubFolder` when you want to create a nested folder structure.
+TargetPageFolderOverridesDefaultFolder (as of December 2019 release, version 3.16.1912.*) | $false | All page types | Using the `-TargetPageFolderOverridesDefaultFolder` parameter you can force page transformation to use the folder specified via `-TargetPageFolder`, regardless whether there was an automatically created folder
 UrlMappingFile (as of July 2019 release, version 3.11.1907.*) |  | Cross site transformation | File with custom URL mapping definitions allow you to do more than just the default URL mapping. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
 SkipUrlRewriting (as of May 2019 release, version 3.9.1905.*) | $false | Cross site transformation | During publishing page transformation URL's are rewritten to be valid in the target site collection, but using the `-SkipUrlRewriting` you can disable the URL rewriting. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
 SkipDefaultUrlRewriting (as of September 2019 release, version 3.13.1909.*) | | Cross site transformation | When you use a custom URL mapping and you want to disable the default URL rewrite logic then set the `-SkipDefaultUrlRewriting` parameter.
 AddTableListImageAsImageWebPart (as of October 2019 release, version 3.14.1910.*) | $true | All page types | Images living inside a table/list are also created as separate image web parts underneath that table/list. Use the `-AddTableListImageAsImageWebPart` parameter to stop the creation of these separate image web parts.
-BlogPage (as of the October 2019 release, version 3.14.1910.*) | $false | Blog pages | Set the `-BlogPage` parameter if you're transforming a classic blog page. For wiki,web part and publishing pages this parameter must be omitted or set to false.
+BlogPage (as of the October 2019 release, version 3.14.1910.*) | $false | Blog pages | Set the `-BlogPage` parameter if you're transforming a classic blog page. For wiki,web part, Delve blog and publishing pages this parameter must be omitted or set to false.
 UserMappingFile (as of November 2019 release, version 3.15.1911.*) |  | All page types | File with user mapping information. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
 LDAPConnectionString (as of November 2019 release, version 3.15.1911.*) |  | All page types | LDAP connection string to query active directory. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
 SkipUserMapping (as of November 2019 release, version 3.15.1911.*) | $false  | All page types | Skips the user mapping. For SPO transformations user mapping is off unless you specify a mapping file, for on-premises SharePoint user mapping is always on unless you set this flag. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
+DelveBlogPage (as of December 2019 release, version 3.16.1912.*) | $false | Delve blog pages | Set the `-DelveBlogPage` parameter if you're transforming a Delve blog page. For wiki,web part, classic blog and publishing pages this parameter must be omitted or set to false.
+DelveKeepSubtitle (as of December 2019 release, version 3.16.1912.*) | $false | Delve blog pages | When the `-DelveKeepSubtitle` parameter is set then the sub title of a Delve blog page will be used for the modern page topic header. This value will be truncated at 40 characters.
 
-(`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage` parameter was set (either `-TargetWebUrl` or `-TargetConnection`)
+(`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage`, `-BlogPage` or `-DelveBlogPage` parameter was set (either `-TargetWebUrl` or `-TargetConnection`)
 
 ## FAQ
 
