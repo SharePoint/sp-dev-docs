@@ -18,9 +18,13 @@ The scanner is an executable file which you can download from https://aka.ms/spp
 
 ### Ensuring scanner access
 
-The scanner will read every site collection and as such needs to have read permissions to each site collection that needs to be scanned. **Important:** the scanner can also show if a site has a Teams team, this however only works using version 2.7+ and does require the Groups.Read.All application permission to be granted to the Azure AD app used for scanning.
+The scanner will read every site collection and as such needs to have read permissions to each site collection that needs to be scanned. 
+
+> [!IMPORTANT]
+> The scanner can also show if a site has a Teams team, this however only works using version 2.7+ and does require the Groups.Read.All application permission to be granted to the Azure AD app used for scanning.
 
 **Task:** Configure Azure AD App-Only access as outlined in https://aka.ms/sppnp-modernizationscanner-azureadsetup. You’ll end with an Application ID, a certificate as PFX file and the password for that PFX file.
+
 **Task:** Validate obtained Azure AD App-Only access by running a scan for a single site collection (see next slides)
 
 ### Frequently Asked Questions
@@ -42,11 +46,13 @@ A scan can take a long time to run (up to days), so ideally, it’s ran from a m
 ### Configure Authentication
 
 **Task:** Choose the Azure AD App Only authentication option
+
 **Task:** Fill-in the Application ID, domain name, path to the PFX file and PFX file password and press Next
 
 ### Configure the sites to scan
 
 **Task:** When validating the scanner use Selected site collections and then enter the url of one or more site collections to scan and press Next
+
 **Task:** For the final run use Complete tenant, enter the tenant name and press Next
 
 ### Configure the scan mode
