@@ -265,7 +265,7 @@ The preliminary performance test provides a rough estimate of more than 400 item
 This measure of throughput assumes the software package has a sufficient number of items per read. Microsoft recommends the following:
 
 |**Folder size**|**Recommendation**|
-|:-----|:-----|:-----|:-----|
+|:-----|:-----|
 |Less than 10,000 items|Combine the URLs of multiple folders into a single call|
 |Greater than 10,000 items but less than 1,000,000|Run AMR at the root folder level|
 
