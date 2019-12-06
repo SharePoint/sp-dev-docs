@@ -268,7 +268,6 @@ This measure of throughput assumes the software package has a sufficient number 
 |:-----|:-----|:-----|:-----|
 |Less than 10,000 items|Combine the URLs of multiple folders into a single call|
 |Greater than 10,000 items but less than 1,000,000|Run AMR at the root folder level|
-|Greater than 1,000,000 items|Run AMR at the root folder level</br>or</br>Scan the top level with *includeDirectDescendantOnly* set to "true" to return the folder structure of the top level object. Then issue AMR on the first-level sub-folder.|
 
 For a single read query, it is faster to use the Graph API or a RESTful/CSOM query.
  
