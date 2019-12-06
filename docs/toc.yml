@@ -1426,6 +1426,15 @@
         href: transform/modernize-scanner-faq.md
     - name: Modernization partner guidance
       href: transform/modernize-partner-guidance.md
+      items:
+        - name: Assessment
+          href: transform/modernize-partner-guidance-assessment.md
+        - name: Strategy
+          href: transform/modernize-partner-guidance-strategy.md
+        - name: Execution
+          href: transform/modernize-partner-guidance-execution.md
+        - name: Support
+          href: transform/modernize-partner-guidance-support.md
     - name: Modernization scripts
       href: transform/modernize-sample-scripts.md
     - name: Modernize customizations
