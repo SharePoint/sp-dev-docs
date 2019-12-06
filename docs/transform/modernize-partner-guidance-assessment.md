@@ -18,14 +18,14 @@ The scanner is an executable file which you can download from https://aka.ms/spp
 
 ### Ensuring scanner access
 
-The scanner will read every site collection and as such needs to have read permissions to each site collection that needs to be scanned. 
+The scanner will read every site collection and as such needs to have read permissions to each site collection that needs to be scanned.
 
 > [!IMPORTANT]
 > The scanner can also show if a site has a Teams team, this however only works using version 2.7+ and does require the Groups.Read.All application permission to be granted to the Azure AD app used for scanning.
 
 **Task:** Configure Azure AD App-Only access as outlined in https://aka.ms/sppnp-modernizationscanner-azureadsetup. You’ll end with an Application ID, a certificate as PFX file and the password for that PFX file.
 
-**Task:** Validate obtained Azure AD App-Only access by running a scan for a single site collection (see next slides)
+**Task:** Validate obtained Azure AD App-Only access by running a scan for a single site collection.
 
 ### Frequently Asked Questions
 
@@ -41,27 +41,27 @@ A scan can take a long time to run (up to days), so ideally, it’s ran from a m
 
 ### Launch the scanner
 
-**Task:** Start a scan by launching the SharePoint.Modernization.Scanner.exe
+**Task:** Start a scan by launching the SharePoint.Modernization.Scanner.exe.
 
 ### Configure Authentication
 
-**Task:** Choose the Azure AD App Only authentication option
+**Task:** Choose the **Azure AD App Only** authentication option.
 
-**Task:** Fill-in the Application ID, domain name, path to the PFX file and PFX file password and press Next
+**Task:** Fill-in the Application ID, domain name, path to the PFX file and PFX file password and press **Next**.
 
 ### Configure the sites to scan
 
-**Task:** When validating the scanner use Selected site collections and then enter the url of one or more site collections to scan and press Next
+**Task:** When validating the scanner use **Selected site collections** and then enter the url of one or more site collections to scan and press **Next**.
 
-**Task:** For the final run use Complete tenant, enter the tenant name and press Next
+**Task:** For the final run use **Complete tenant**, enter the tenant name and press **Next**.
 
 ### Configure the scan mode
 
-**Task:** Select the Office 365 Group connection readiness mode and press Next
+**Task:** Select the **Office 365 Group connection readiness** mode and press **Next**.
 
 ### Configure the scanner options
 
-**Task:** Increase the Number of parallel threads to 20 and press Start scan. The scan now starts to run
+**Task:** Increase the Number of parallel threads to 20 and press **Start scan**. The scan now starts to run.
 
 ### Frequently Asked Questions
 
@@ -71,19 +71,19 @@ Yes, assuming that the provided credentials have read access to the site collect
 
 #### Can I used the scanned via command-line?
 
-Yes that’s possible. Check the scanner documentation at https://aka.ms/sppnp-modernizationscanner 
+Yes that’s possible. Check the scanner documentation at https://aka.ms/sppnp-modernizationscanner.
 
 #### Can I scan a specific set of site collections?
 
-Yes, in the Selected site collections option you can use wildcards to scope the sites. Alternatively you can use the CSV file listing sites to scan option and provide a CSV file with the needed site collections. Check the scanner documentation at https://aka.ms/sppnp-modernizationscanner 
+Yes, in the Selected site collections option you can use wildcards to scope the sites. Alternatively you can use the CSV file listing sites to scan option and provide a CSV file with the needed site collections. Check the scanner documentation at https://aka.ms/sppnp-modernizationscanner.
 
 #### Can I run a scan for everything?
 
-Yes, you can via selecting the All of the above (full scan) option. However, be aware that the scan run time will be substantially longer. It’s recommended to first run the scanner with the requested Office 365 Group connection readiness option and then run a second full scan
+Yes, you can via selecting the All of the above (full scan) option. However, be aware that the scan run time will be substantially longer. It’s recommended to first run the scanner with the requested Office 365 Group connection readiness option and then run a second full scan.
 
 #### I’m in Europe, can I format my data accordingly?
 
-Yes, you can opt to use semi-colon as separator for the generated CSV files + you opt to change the way how date values are written in the generated CSV files
+Yes, you can opt to use semi-colon as separator for the generated CSV files + you opt to change the way how date values are written in the generated CSV files.
 
 ## Validate the scan run and collect the scan results
 
@@ -97,10 +97,10 @@ Yes, you can opt to use semi-colon as separator for the generated CSV files + yo
 
 ### The scan results need to be analyzed. If needed copy them to the computer used for analysis work 
 
-**Task:** Navigate to the folder holding the scanner executable. Each scan run creates a folder (=timestamp). Locate the folder from the scanner run you need, zip the complete folder and copy
+**Task:** Navigate to the folder holding the scanner executable. Each scan run creates a folder (=timestamp). Locate the folder from the scanner run you need, zip the complete folder and copy.
 
 ### Frequently Asked Questions
 
 #### I see entries in error.csv…is this bad?
 
-It depends, large scans will always have some errors. If you see large quantities of errors than something is wrong, typically these are access denied errors because the used credentials/app-only principal are not having the required permissions
+It depends, large scans will always have some errors. If you see large quantities of errors than something is wrong, typically these are access denied errors because the used credentials/app-only principal are not having the required permissions.

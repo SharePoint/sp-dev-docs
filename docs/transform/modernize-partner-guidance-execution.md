@@ -10,20 +10,20 @@ localization_priority: Priority
 
 Next is using the scan results from step 1 to build your modernization plan: you'll learn how to use the scan output to identify the sites to modernize and how to structure them in waves. Next you'll review and tailor the modernization scrips, prepare and validate the input for these scripts and finally run the modernization scripts.
 
-## Identify sites for Teamwork Transformation
+## Identify sites for Modernization
 
-The scan results will help you identify site collections which are good candidates for Teamwork Transformation. The **Office 365 Group connect** reports will contain information about all the scanned site collections, so a filtering is needed to identify the sites that are Teamwork Transformation candidates. Once there’s a list of sites for Teamwork Transformation the next step is splitting them up in waves. The recommended approach is to start with a pilot wave that runs Teamwork Transformation on a relatively small amount of sites. Goal is to gather customer feedback and finetune the modernization script if needed. Depending on the amount of sites and the input from the customer the remaining sites are handled in a series of additional waves. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner-reports-groupconnect to learn more about the Office 365 Group connect reports.
+The scan results will help you identify site collections which are good candidates for Modernization. The **Office 365 Group connect** reports will contain information about all the scanned site collections, so a filtering is needed to identify the sites that are Modernization candidates. Once there’s a list of sites for Modernization the next step is splitting them up in waves. The recommended approach is to start with a pilot wave that runs Modernization on a relatively small amount of sites. Goal is to gather customer feedback and finetune the modernization script if needed. Depending on the amount of sites and the input from the customer the remaining sites are handled in a series of additional waves. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner-reports-groupconnect to learn more about the Office 365 Group connect reports.
 
-Filtering the Office 365 Group connect (= “groupify”) report to identify sites for Teamwork Transformation:
+Filtering the Office 365 Group connect (= “groupify”) report to identify sites for Modernization:
 
 - **Task:** copy the Office 365 Group connect report files to the computer used for analysis:
   - Office 365 Group Connection Readiness.xlsx
   - ModernizationSiteScanResults.csv
   - ModernizationWebScanResults.csv
   - ModernizationUserCustomActionScanResults.csv
-- **Task:** Right click the Dashboard sheet and unhide the ReadyForGroupify sheet
+- **Task:** Right click the Dashboard sheet and unhide the ReadyForGroupify sheet.
 - **Task:** Applying “ReadyForGroupify = TRUE” and “WebTemplate = STS#0” does give you a good starting point as these are team sites without an Office 365 Group connect blocker.
-- **Task:** Applying “WebTemplate = GROUP#0” and “HasTeamsTeam = FALSE” does give you the modern team sites that do not yet have a Teams team
+- **Task:** Applying “WebTemplate = GROUP#0” and “HasTeamsTeam = FALSE” does give you the modern team sites that do not yet have a Teams team.
 
 ### What about warnings in the Office 365 Group Connect report?
 
@@ -37,22 +37,22 @@ If a site collection has sub sites, then this warning will be shown.
 
 These warnings are triggered if there are settings on the site that prevent optimal use of the modern SharePoint UI. Of the 6 possible warnings 4 can be fixed by the modernization script: AlternateCSS and MasterPage impact the branding of classic pages and can be reset to their default values, ModernListsBlocked due blocking at site, web or list level will be undone and ModernPagesBlocked due to blocking at web level will be undone.
 
-- **Task:** Review the sites with publishingFeature enabled: if there are also custom publishing pages used then the site should not be group connected, if not assess if the publishing features can be disabled
+- **Task:** Review the sites with publishingFeature enabled: if there are also custom publishing pages used then the site should not be group connected, if not assess if the publishing features can be disabled.
 - **Task:** If there are usercustomactions then review these, quite often these are not relevant anymore. If still relevant consider building an SPFX based equivalent and deploy that as part of the modernization script.
 
 #### The Permission warnings?
 
 Sites with a security setting that might be impacted by the security changes created by the Office 365 Group connect are listed here. The modernization script will not address any of these warnings.
 
-- **Task:** Sites with the ADGroupWillNotBeExpanded warning do have AD groups in their default SharePoint groups and since the Office 365 Group owners and members can’t contain other groups these are not copied over. Quite often the groups are used to give a large people read-only access to the SharePoint site and that’s fine. If it’s important that the people in the AD group also have access to the other Office 365 Group connected services, then these people have to be added individually to the Office 365 Group owners and members
+- **Task:** Sites with the ADGroupWillNotBeExpanded warning do have AD groups in their default SharePoint groups and since the Office 365 Group owners and members can’t contain other groups these are not copied over. Quite often the groups are used to give a large people read-only access to the SharePoint site and that’s fine. If it’s important that the people in the AD group also have access to the other Office 365 Group connected services, then these people have to be added individually to the Office 365 Group owners and members.
 - **Task:** SharingDisabled implies that the SharePoint site is not shared with external users while the Office 365 Group can be. The SharePoint settings are not overridden by the Office 365 Group settings, so this should be fine. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-externalsharing to learn more.
-- **Task:** Review the sites that have SubSitesWithBrokenPermissions: since group owners are also site collection administrators, they also will be able to see all SharePoint objects (sites, libraries, items) with specific permissions. If this is not desired, then it’s recommended to move the impacted subsites to their own modern group connected site collection
+- **Task:** Review the sites that have SubSitesWithBrokenPermissions: since group owners are also site collection administrators, they also will be able to see all SharePoint objects (sites, libraries, items) with specific permissions. If this is not desired, then it’s recommended to move the impacted subsites to their own modern group connected site collection.
 
 #### Frequently Asked Questions
 
 ##### Can I have an Office 365 Group for a sub site?
 
-No, this is not possible. There can only be one Office 365 Group per site collection
+No, this is not possible. There can only be one Office 365 Group per site collection.
 
 ##### Can sub sites still use Office 365 Group connected services?
 
@@ -60,16 +60,16 @@ Yes, depending on the Office 365 Group connected service, there options to use t
 
 ##### Can I automatically convert the sub sites in individual site collections?
 
-No, there is not native SharePoint feature to do this. You can however use migration tools to copy over the sub site contents into a newly created modern site collection. You can use page transformation to modernize the wiki and web part pages in that sub site
+No, there is not native SharePoint feature to do this. You can however use migration tools to copy over the sub site contents into a newly created modern site collection. You can use page transformation to modernize the wiki and web part pages in that sub site.
 
 ## Group the selected site collections in transformation waves
 
 The actual transformation work should be done in waves. A waved approach allows you to start small followed by gathering feedback and if needed adjusting the approach for the next wave. After each transformation wave this feedback and adjustment step should be taken.
 
 - **Task:** Split the list of site collections you’ve gathered in waves:
-  - One or more pilot waves: these are small waves, typically with sites from IT savvy users or from the folks in the organization that live to embrace change
+  - One or more pilot waves: these are small waves, typically with sites from IT savvy users or from the folks in the organization that live to embrace change.
   - The following “production” waves can be organized in various ways: by department, by country, by complexity, …
-  - The time it will take of modernize a site collection in seconds is approximately 120 + (15 seconds * number of classic pages)
+  - The time it will take of modernize a site collection in seconds is approximately 120 + (15 seconds * number of classic pages).
 
 ### Frequently Asked Questions
 
@@ -84,9 +84,9 @@ Navigate to https://aka.ms/sppnp-modernization-sitecollectionscripts to get the 
 > [!IMPORTANT] 
 > These scripts require the December 2019 (3.16.1912.*) release of PnP PowerShell
 
-- **Task:** Copy the ModernizeSiteCollections.ps1, ValidateSiteCollectionsInput.ps1 and sitecollections.csv file to your machine
-- **Task:** Review the ModernizeSite function in the ModernizeSiteCollections.ps1 script: Most steps of the script are controlled via the input you provide but you can optionally remove some steps (e.g. resetting master pages and alternate css) if that’s better for your customer. You can also add additional steps (e.g. deploying and configuring SPFX based customizations)
-- **Task:** Test the ModernizeSiteCollections.ps1 script by running it and providing a single site collection to modernize
+- **Task:** Copy the ModernizeSiteCollections.ps1, ValidateSiteCollectionsInput.ps1 and sitecollections.csv file to your machine.
+- **Task:** Review the ModernizeSite function in the ModernizeSiteCollections.ps1 script: Most steps of the script are controlled via the input you provide but you can optionally remove some steps (e.g. resetting master pages and alternate css) if that’s better for your customer. You can also add additional steps (e.g. deploying and configuring SPFX based customizations).
+- **Task:** Test the ModernizeSiteCollections.ps1 script by running it and providing a single site collection to modernize.
 
 ### Frequently Asked Questions
 
@@ -104,14 +104,14 @@ The modernization scripts take a CSV file as input. This CSV drives the script�
   - AddTeamsTeam: true to create a Teams team (if not yet available) for the Office 365 group linked to this site collection
   - ModernizePages: modernizes the classic pages in the site to become modern pages. The classic pages are not deleted but renamed and are still available in the SitePages library
   - ModernizeBranding: cleans the old branding settings (master pages, alternate css)
-  - TenantTheme: if set this tenant theme will be configured for the site collection 
+  - TenantTheme: if set this tenant theme will be configured for the site collection
   - Classification: if set this value will be set as site classification (see https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-groups-with-powershell)
 
 ## Run a validation on the CSV files
 
-Before running the Teamwork Transformation it’s important to validate the input (alias must be valid and unique, theme needs to exist, classification must be available).
+Before running the Modernization it’s important to validate the input (alias must be valid and unique, theme needs to exist, classification must be available).
 
-- **Task:** Run the ValidateSiteCollectionsInput.ps1 and provide your CSV file as input. Check the console and log outputs to understand what errors were found
+- **Task:** Run the ValidateSiteCollectionsInput.ps1 and provide your CSV file as input. Check the console and log outputs to understand what errors were found.
 
 ### Frequently Asked Questions
 
@@ -124,13 +124,13 @@ Before running the Teamwork Transformation it’s important to validate the inpu
 
 ## Modernize a wave of site collections
 
-Yes, you’re ready to run Teamwork Transformation for your site collections! 
+Yes, you’re ready to run Teamwork Transformation for your site collections!
 
-- **Task:** Run the ModernizeSiteCollections.ps1 script and provide it your prepared site collection CSV file and the other information in needs
-- **Task:** Review the created logs (there are the modernization log files and the page transformation log file) for issues
+- **Task:** Run the ModernizeSiteCollections.ps1 script and provide it your prepared site collection CSV file and the other information in needs.
+- **Task:** Review the created logs (there are the modernization log files and the page transformation log file) for issues.
 
 ### Frequently Asked Questions
 
 #### Can I run the script without being prompted for credentials?
 
-Yes, you can define the credentials (via credential manager) in your script
+Yes, you can define the credentials (via credential manager) in your script.

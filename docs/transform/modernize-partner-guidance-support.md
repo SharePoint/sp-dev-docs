@@ -16,8 +16,8 @@ For questions on this deck and on the used scripts the best place to get help is
 
 You’ve added a cool extension, fixed a type, fixed a bug…any contribution to the existing content that you can share back will help the SharePoint community:
 
-- Sharing can be done by creating a Pull Request against the dev branch of the https://github.com/SharePoint/sp-dev-modernization repository
-- If you’re unfamiliar with Git you can also describe the change in the issue list
+- Sharing can be done by creating a Pull Request against the dev branch of the https://github.com/SharePoint/sp-dev-modernization repository.
+- If you’re unfamiliar with Git you can also describe the change in the issue list.
 
 ## What's next?
 
