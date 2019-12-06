@@ -10,11 +10,11 @@ localization_priority: Priority
 
 Understanding which sites are candidates to be modernized is essential to understand the scope of the work. You can either follow the steps described in the [delivery guide](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Modernization%20partner%20guidance/Microsoft%20Teamwork%20Transformation%20Delivery%20Guide.pptx?raw=true) or follow below steps.
 
-## 1. Download the scanner
+## Download the scanner
 
 The scanner is an executable file which you can download from https://aka.ms/sppnp-modernizationscanner.
 
-## 2. Preparing for scanning
+## Preparing for scanning
 
 ### Ensuring scanner access
 
@@ -33,7 +33,7 @@ If the Azure AD application was granted the SharePoint.Read.All application perm
 
 A scan can take a long time to run (up to days), so ideally, it’s ran from a machine that can stay up and that’s in the same region as the SharePoint tenant. An Azure VM might be good candidate for this.
 
-## 3. Run a scan
+## Run a scan
 
 ### Launch the scanner
 
@@ -79,7 +79,7 @@ Yes, you can via selecting the All of the above (full scan) option. However, be 
 
 Yes, you can opt to use semi-colon as separator for the generated CSV files + you opt to change the way how date values are written in the generated CSV files
 
-## 4. Validate the scan run and collect the scan results
+## Validate the scan run and collect the scan results
 
 ### Yeah, the scan ended…but was it a good one?
 
