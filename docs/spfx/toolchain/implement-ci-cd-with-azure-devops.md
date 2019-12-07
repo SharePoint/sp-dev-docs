@@ -13,8 +13,8 @@ Azure DevOps (Visual Studio Team Services / Team Foundation Server) consists of 
 This article explains the steps involved in setting up your Azure DevOps environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
 ## Chosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
-There are currently two approaches available to implement Continuous Integration, Testing and Deployement in Azure DevOps.  
-Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a json document hidden from the user.  
+There are currently two approaches available to implement continuous integration, and deployement in Azure DevOps.  
+Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
 Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history and repeatability.  
 Both approaches are decribed for the SharePoint Framework:
 - [Azure Build and Release](./implement-ci-cd-with-azure-pipelines.md)
