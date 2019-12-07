@@ -1,6 +1,6 @@
 ---
-title: Modernization Partner Guidance - Execution step
-description: Modernization offerings that partners can use with their customers - Execution step
+title: SharePoint modernization guidance - Execution step
+description: Modernization offerings that IT Teams and partners can use with their customers - Execution step
 ms.date: 12/06/2019
 ms.prod: sharepoint
 localization_priority: Priority
@@ -38,7 +38,7 @@ If a site collection has sub sites, then this warning will be shown.
 These warnings are triggered if there are settings on the site that prevent optimal use of the modern SharePoint UI. Of the 6 possible warnings 4 can be fixed by the modernization script: AlternateCSS and MasterPage impact the branding of classic pages and can be reset to their default values, ModernListsBlocked due blocking at site, web or list level will be undone and ModernPagesBlocked due to blocking at web level will be undone.
 
 - **Task:** Review the sites with publishingFeature enabled: if there are also custom publishing pages used then the site should not be group connected, if not assess if the publishing features can be disabled.
-- **Task:** If there are usercustomactions then review these, quite often these are not relevant anymore. If still relevant consider building an SPFX based equivalent and deploy that as part of the modernization script.
+- **Task:** If there are user custom actions then review these, quite often these are not relevant anymore. If still relevant consider building an SPFX based equivalent and deploy that as part of the modernization script.
 
 #### The Permission warnings?
 

@@ -1,6 +1,6 @@
 ---
-title: Modernization Partner Guidance - Assesment
-description: Modernization offerings that partners can use with their customers - assessment step
+title: SharePoint modernization guidance - Assessment
+description: Modernization offerings that IT Teams and partners can use with their customers - assessment step
 ms.date: 12/06/2019
 ms.prod: sharepoint
 localization_priority: Priority

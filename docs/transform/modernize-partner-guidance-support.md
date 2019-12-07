@@ -1,6 +1,6 @@
 ---
-title: Modernization Partner Guidance - Support step
-description: Modernization offerings that partners can use with their customers - Support step
+title: SharePoint modernization guidance - Support step
+description: MModernization offerings that IT Teams and partners can use with their customers - Support step
 ms.date: 12/06/2019
 ms.prod: sharepoint
 localization_priority: Priority
@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Support
 
-This step talks about how to get help for the open source partner guidance and provide some ideas about potential next steps.
+This step talks about how to get help for the open source SharePoint modernization guidance and provide some ideas about potential next steps.
 
 ## Getting help
 
