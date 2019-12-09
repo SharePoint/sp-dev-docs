@@ -251,7 +251,7 @@ Asynchronous Metadata Read (Export API) now supports unlimited list, document li
 
 ## Performance Expectation
 
-The preliminary performance test provides a rough estimate of more than 400 items per second throughput for every 250K of objects read. This does not account for any potential throttle over the network. If the asynchronous read function fails to reach the server due to throttling, then performance will be impacted.
+The preliminary performance test provides a rough estimate of more than 400 items per second throughput for every 250K of objects read. We have seen over 700 items per second throughput in a testing environment.  However, this is highly dependent on the number of items that are being read plus the implementation of the AMR API. This does not account for any potential throttle over the network. If the asynchronous read function fails to reach the server due to throttling, then performance will be impacted.
  
 This measure of throughput assumes the software package has a sufficient number of items per read. Microsoft recommends the following:
 
@@ -259,6 +259,7 @@ This measure of throughput assumes the software package has a sufficient number 
 |:-----|:-----|
 |Less than 10,000 items|Combine the URLs of multiple folders into a single call|
 |Greater than 10,000 items but less than 1,000,000|Run AMR at the root folder level|
+|Greater than 1,000,000|Method is at the discretion of the ISV|
 
 For a single read query, it is faster to use the Graph API or a RESTful/CSOM query.
  
