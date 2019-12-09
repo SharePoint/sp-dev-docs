@@ -248,15 +248,6 @@ Suggestion:
 
 Asynchronous Metadata Read (Export API) now supports unlimited list, document library, file, and folder metadata export.
 
-**SharePoint Migration Export (Asynchronous Metadata Read) API Limitations**</br>
-
-
-|**Type**|**SharePoint Online Limit**|**Recommended limit</br>for async read**|**Description**|
-|:-----|:-----|:-----|:-----|
-|Lists|30 million items|1 million|Per list URL, the migration read will process up to 1 million rea|
-|Document Library|30 million files/folders|1 million|Per list URL, the migration job will process up to 1 million reads|
-|Users|2 million per site collection|1 million|Per site collection. This is only supported in a future permission setting.|
-
 
 ## Performance Expectation
 
